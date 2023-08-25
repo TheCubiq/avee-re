@@ -2396,7 +2396,7 @@
 
     const/4 v0, 0x1
 
-    const-string v1, "\u1d21 \u1d21 \u1d21 . \u0493 \u1d00 \u0280 s \u0280 \u1d0f \u026a \u1d05 . \u1d04 \u1d0f \u1d0d"
+    const-string v1, "Farsroid + Cubiq \uD83E\uDD0D"
 
     invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
