@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ky1 {
-    void a(String str);
+    /* renamed from: a */
+    void mo16378a(String str);
 
-    void b(jy1 jy1Var);
+    /* renamed from: b */
+    void mo16377b(jy1 jy1Var);
 
-    void c();
+    /* renamed from: c */
+    void mo16376c();
 }

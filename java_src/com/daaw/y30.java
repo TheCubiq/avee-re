@@ -3,5 +3,6 @@ package com.daaw;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public interface y30 {
-    void a(String str, Bundle bundle);
+    /* renamed from: a */
+    void m4230a(String str, Bundle bundle);
 }

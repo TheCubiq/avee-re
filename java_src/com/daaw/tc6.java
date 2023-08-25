@@ -5,42 +5,49 @@ import java.util.List;
 /* loaded from: classes2.dex */
 public final class tc6 extends y98 implements be8 {
     public tc6() {
-        super(wd6.I());
+        super(wd6.m6148I());
     }
 
     public /* synthetic */ tc6(t66 t66Var) {
-        super(wd6.I());
+        super(wd6.m6148I());
     }
 
-    public final int s() {
-        return ((wd6) this.q).E();
+    /* renamed from: s */
+    public final int m9312s() {
+        return ((wd6) this.f33442q).m6152E();
     }
 
-    public final qb6 t(int i) {
-        return ((wd6) this.q).G(i);
+    /* renamed from: t */
+    public final qb6 m9311t(int i) {
+        return ((wd6) this.f33442q).m6150G(i);
     }
 
-    public final tc6 u() {
-        o();
-        wd6.R((wd6) this.q);
+    /* renamed from: u */
+    public final tc6 m9310u() {
+        m3973o();
+        wd6.m6139R((wd6) this.f33442q);
         return this;
     }
 
-    public final tc6 v(int i, na6 na6Var) {
-        o();
-        wd6.Q((wd6) this.q, i, (qb6) na6Var.m());
+    /* renamed from: v */
+    public final tc6 m9309v(int i, na6 na6Var) {
+        m3973o();
+        wd6.m6140Q((wd6) this.f33442q, i, (qb6) na6Var.m3975m());
         return this;
     }
 
-    public final String w() {
-        return ((wd6) this.q).L();
+    /* renamed from: w */
+    public final String m9308w() {
+        return ((wd6) this.f33442q).m6145L();
     }
 
-    public final List x() {
-        return Collections.unmodifiableList(((wd6) this.q).M());
+    /* renamed from: x */
+    public final List m9307x() {
+        return Collections.unmodifiableList(((wd6) this.f33442q).m6144M());
     }
 
-    public final List y() {
-        return Collections.unmodifiableList(((wd6) this.q).N());
+    /* renamed from: y */
+    public final List m9306y() {
+        return Collections.unmodifiableList(((wd6) this.f33442q).m6143N());
     }
 }

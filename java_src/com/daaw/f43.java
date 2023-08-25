@@ -4,42 +4,51 @@ import android.os.RemoteException;
 import com.google.android.gms.ads.internal.client.zzba;
 /* loaded from: classes.dex */
 public final class f43 {
-    public final byte[] a;
-    public int b;
-    public final /* synthetic */ g43 c;
+
+    /* renamed from: a */
+    public final byte[] f9094a;
+
+    /* renamed from: b */
+    public int f9095b;
+
+    /* renamed from: c */
+    public final /* synthetic */ g43 f9096c;
 
     public /* synthetic */ f43(g43 g43Var, byte[] bArr, e43 e43Var) {
-        this.c = g43Var;
-        this.a = bArr;
+        this.f9096c = g43Var;
+        this.f9094a = bArr;
     }
 
-    public final f43 a(int i) {
-        this.b = i;
+    /* renamed from: a */
+    public final f43 m22929a(int i) {
+        this.f9095b = i;
         return this;
     }
 
-    public final synchronized void c() {
-        if (((Boolean) zzba.zzc().b(g93.h9)).booleanValue()) {
-            g43.a(this.c).execute(new Runnable() { // from class: com.daaw.a43
+    /* renamed from: c */
+    public final synchronized void m22927c() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10708h9)).booleanValue()) {
+            g43.m21969a(this.f9096c).execute(new Runnable() { // from class: com.daaw.a43
                 @Override // java.lang.Runnable
                 public final void run() {
-                    f43.this.d();
+                    f43.this.m22926d();
                 }
             });
         } else {
-            d();
+            m22926d();
         }
     }
 
-    public final synchronized void d() {
+    /* renamed from: d */
+    public final synchronized void m22926d() {
         try {
-            g43 g43Var = this.c;
-            if (g43Var.b) {
-                g43Var.a.w(this.a);
-                this.c.a.C(0);
-                this.c.a.c(this.b);
-                this.c.a.E(null);
-                this.c.a.zzf();
+            g43 g43Var = this.f9096c;
+            if (g43Var.f10255b) {
+                g43Var.f10254a.mo21359w(this.f9094a);
+                this.f9096c.f10254a.mo21363C(0);
+                this.f9096c.f10254a.mo21360c(this.f9095b);
+                this.f9096c.f10254a.mo21362E(null);
+                this.f9096c.f10254a.zzf();
             }
         } catch (RemoteException e) {
             k04.zzf("Clearcut log failed", e);

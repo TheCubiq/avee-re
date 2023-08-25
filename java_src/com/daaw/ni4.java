@@ -3,23 +3,31 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class ni4 {
-    public static final ni4 b = new ni4(y17.u());
-    public static final th8 c = new th8() { // from class: com.daaw.ff4
+
+    /* renamed from: b */
+    public static final ni4 f20135b = new ni4(y17.m4260u());
+
+    /* renamed from: c */
+    public static final th8 f20136c = new th8() { // from class: com.daaw.ff4
     };
-    public final y17 a;
+
+    /* renamed from: a */
+    public final y17 f20137a;
 
     public ni4(List list) {
-        this.a = y17.s(list);
+        this.f20137a = y17.m4262s(list);
     }
 
-    public final y17 a() {
-        return this.a;
+    /* renamed from: a */
+    public final y17 m15163a() {
+        return this.f20137a;
     }
 
-    public final boolean b(int i) {
-        for (int i2 = 0; i2 < this.a.size(); i2++) {
-            kh4 kh4Var = (kh4) this.a.get(i2);
-            if (kh4Var.c() && kh4Var.a() == i) {
+    /* renamed from: b */
+    public final boolean m15162b(int i) {
+        for (int i2 = 0; i2 < this.f20137a.size(); i2++) {
+            kh4 kh4Var = (kh4) this.f20137a.get(i2);
+            if (kh4Var.m17747c() && kh4Var.m17749a() == i) {
                 return true;
             }
         }
@@ -33,10 +41,10 @@ public final class ni4 {
         if (obj == null || ni4.class != obj.getClass()) {
             return false;
         }
-        return this.a.equals(((ni4) obj).a);
+        return this.f20137a.equals(((ni4) obj).f20137a);
     }
 
     public final int hashCode() {
-        return this.a.hashCode();
+        return this.f20137a.hashCode();
     }
 }

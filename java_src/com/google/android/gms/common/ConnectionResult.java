@@ -9,11 +9,21 @@ import com.daaw.z71;
 import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes.dex */
 public final class ConnectionResult extends AbstractSafeParcelable {
-    public final int p;
-    public final int q;
-    public final PendingIntent r;
-    public final String s;
-    public static final ConnectionResult t = new ConnectionResult(0);
+
+    /* renamed from: p */
+    public final int f36573p;
+
+    /* renamed from: q */
+    public final int f36574q;
+
+    /* renamed from: r */
+    public final PendingIntent f36575r;
+
+    /* renamed from: s */
+    public final String f36576s;
+
+    /* renamed from: t */
+    public static final ConnectionResult f36572t = new ConnectionResult(0);
     public static final Parcelable.Creator<ConnectionResult> CREATOR = new iy2();
 
     public ConnectionResult(int i) {
@@ -21,10 +31,10 @@ public final class ConnectionResult extends AbstractSafeParcelable {
     }
 
     public ConnectionResult(int i, int i2, PendingIntent pendingIntent, String str) {
-        this.p = i;
-        this.q = i2;
-        this.r = pendingIntent;
-        this.s = str;
+        this.f36573p = i;
+        this.f36574q = i2;
+        this.f36575r = pendingIntent;
+        this.f36576s = str;
     }
 
     public ConnectionResult(int i, PendingIntent pendingIntent) {
@@ -35,7 +45,8 @@ public final class ConnectionResult extends AbstractSafeParcelable {
         this(1, i, pendingIntent, str);
     }
 
-    public static String v(int i) {
+    /* renamed from: v */
+    public static String m1204v(int i) {
         if (i != 99) {
             if (i != 1500) {
                 switch (i) {
@@ -107,50 +118,55 @@ public final class ConnectionResult extends AbstractSafeParcelable {
         }
         if (obj instanceof ConnectionResult) {
             ConnectionResult connectionResult = (ConnectionResult) obj;
-            return this.q == connectionResult.q && ot0.a(this.r, connectionResult.r) && ot0.a(this.s, connectionResult.s);
+            return this.f36574q == connectionResult.f36574q && ot0.m13981a(this.f36575r, connectionResult.f36575r) && ot0.m13981a(this.f36576s, connectionResult.f36576s);
         }
         return false;
     }
 
-    public int h() {
-        return this.q;
+    /* renamed from: h */
+    public int m1209h() {
+        return this.f36574q;
     }
 
     public int hashCode() {
-        return ot0.b(Integer.valueOf(this.q), this.r, this.s);
+        return ot0.m13980b(Integer.valueOf(this.f36574q), this.f36575r, this.f36576s);
     }
 
-    public String q() {
-        return this.s;
+    /* renamed from: q */
+    public String m1208q() {
+        return this.f36576s;
     }
 
-    public PendingIntent s() {
-        return this.r;
+    /* renamed from: s */
+    public PendingIntent m1207s() {
+        return this.f36575r;
     }
 
-    public boolean t() {
-        return (this.q == 0 || this.r == null) ? false : true;
+    /* renamed from: t */
+    public boolean m1206t() {
+        return (this.f36574q == 0 || this.f36575r == null) ? false : true;
     }
 
     public String toString() {
-        ot0.a c = ot0.c(this);
-        c.a("statusCode", v(this.q));
-        c.a("resolution", this.r);
-        c.a("message", this.s);
-        return c.toString();
+        ot0.C2476a m13979c = ot0.m13979c(this);
+        m13979c.m13978a("statusCode", m1204v(this.f36574q));
+        m13979c.m13978a("resolution", this.f36575r);
+        m13979c.m13978a("message", this.f36576s);
+        return m13979c.toString();
     }
 
-    public boolean u() {
-        return this.q == 0;
+    /* renamed from: u */
+    public boolean m1205u() {
+        return this.f36574q == 0;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.p);
-        z71.k(parcel, 2, h());
-        z71.p(parcel, 3, s(), i, false);
-        z71.q(parcel, 4, q(), false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f36573p);
+        z71.m2723k(parcel, 2, m1209h());
+        z71.m2718p(parcel, 3, m1207s(), i, false);
+        z71.m2717q(parcel, 4, m1208q(), false);
+        z71.m2732b(parcel, m2733a);
     }
 }

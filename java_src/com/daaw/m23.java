@@ -4,15 +4,18 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public final class m23 extends v23 {
-    public FullScreenContentCallback p;
 
-    public final void g3(FullScreenContentCallback fullScreenContentCallback) {
-        this.p = fullScreenContentCallback;
+    /* renamed from: p */
+    public FullScreenContentCallback f18388p;
+
+    /* renamed from: g3 */
+    public final void m16294g3(FullScreenContentCallback fullScreenContentCallback) {
+        this.f18388p = fullScreenContentCallback;
     }
 
     @Override // com.daaw.w23
     public final void zzb() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f18388p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdClicked();
         }
@@ -20,7 +23,7 @@ public final class m23 extends v23 {
 
     @Override // com.daaw.w23
     public final void zzc() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f18388p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdDismissedFullScreenContent();
         }
@@ -28,7 +31,7 @@ public final class m23 extends v23 {
 
     @Override // com.daaw.w23
     public final void zzd(zze zzeVar) {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f18388p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdFailedToShowFullScreenContent(zzeVar.zza());
         }
@@ -36,7 +39,7 @@ public final class m23 extends v23 {
 
     @Override // com.daaw.w23
     public final void zze() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f18388p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdImpression();
         }
@@ -44,7 +47,7 @@ public final class m23 extends v23 {
 
     @Override // com.daaw.w23
     public final void zzf() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f18388p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdShowedFullScreenContent();
         }

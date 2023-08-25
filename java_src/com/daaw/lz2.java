@@ -3,60 +3,75 @@ package com.daaw;
 import android.os.SystemClock;
 /* loaded from: classes.dex */
 public final class lz2 implements ez2 {
-    public boolean a;
-    public long b;
-    public long c;
-    public fq2 d = fq2.d;
 
-    public final void a(long j) {
-        this.b = j;
-        if (this.a) {
-            this.c = SystemClock.elapsedRealtime();
+    /* renamed from: a */
+    public boolean f17918a;
+
+    /* renamed from: b */
+    public long f17919b;
+
+    /* renamed from: c */
+    public long f17920c;
+
+    /* renamed from: d */
+    public fq2 f17921d = fq2.f9781d;
+
+    /* renamed from: a */
+    public final void m16362a(long j) {
+        this.f17919b = j;
+        if (this.f17918a) {
+            this.f17920c = SystemClock.elapsedRealtime();
         }
     }
 
-    public final void b() {
-        if (this.a) {
+    /* renamed from: b */
+    public final void m16361b() {
+        if (this.f17918a) {
             return;
         }
-        this.c = SystemClock.elapsedRealtime();
-        this.a = true;
+        this.f17920c = SystemClock.elapsedRealtime();
+        this.f17918a = true;
     }
 
-    public final void c() {
-        if (this.a) {
-            a(h());
-            this.a = false;
+    /* renamed from: c */
+    public final void m16360c() {
+        if (this.f17918a) {
+            m16362a(mo9952h());
+            this.f17918a = false;
         }
     }
 
-    public final void d(ez2 ez2Var) {
-        a(ez2Var.h());
-        this.d = ez2Var.n();
+    /* renamed from: d */
+    public final void m16359d(ez2 ez2Var) {
+        m16362a(ez2Var.mo9952h());
+        this.f17921d = ez2Var.mo9951n();
     }
 
     @Override // com.daaw.ez2
-    public final long h() {
-        long j = this.b;
-        if (this.a) {
-            long elapsedRealtime = SystemClock.elapsedRealtime() - this.c;
-            fq2 fq2Var = this.d;
-            return j + (fq2Var.a == 1.0f ? jp2.a(elapsedRealtime) : fq2Var.a(elapsedRealtime));
+    /* renamed from: h */
+    public final long mo9952h() {
+        long j = this.f17919b;
+        if (this.f17918a) {
+            long elapsedRealtime = SystemClock.elapsedRealtime() - this.f17920c;
+            fq2 fq2Var = this.f17921d;
+            return j + (fq2Var.f9782a == 1.0f ? jp2.m18345a(elapsedRealtime) : fq2Var.m22414a(elapsedRealtime));
         }
         return j;
     }
 
     @Override // com.daaw.ez2
-    public final fq2 n() {
+    /* renamed from: n */
+    public final fq2 mo9951n() {
         throw null;
     }
 
     @Override // com.daaw.ez2
-    public final fq2 o(fq2 fq2Var) {
-        if (this.a) {
-            a(h());
+    /* renamed from: o */
+    public final fq2 mo9950o(fq2 fq2Var) {
+        if (this.f17918a) {
+            m16362a(mo9952h());
         }
-        this.d = fq2Var;
+        this.f17921d = fq2Var;
         return fq2Var;
     }
 }

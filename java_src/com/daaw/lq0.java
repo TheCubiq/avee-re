@@ -3,72 +3,89 @@ package com.daaw;
 import java.util.Queue;
 /* loaded from: classes.dex */
 public class lq0<A, B> {
-    public final vl0<b<A>, B> a;
 
+    /* renamed from: a */
+    public final vl0<C2109b<A>, B> f17625a;
+
+    /* renamed from: com.daaw.lq0$a */
     /* loaded from: classes.dex */
-    public class a extends vl0<b<A>, B> {
-        public a(int i) {
+    public class C2108a extends vl0<C2109b<A>, B> {
+        public C2108a(int i) {
             super(i);
         }
 
         @Override // com.daaw.vl0
         /* renamed from: n */
-        public void j(b<A> bVar, B b) {
-            bVar.c();
+        public void mo3586j(C2109b<A> c2109b, B b) {
+            c2109b.m16669c();
         }
     }
 
+    /* renamed from: com.daaw.lq0$b */
     /* loaded from: classes.dex */
-    public static final class b<A> {
-        public static final Queue<b<?>> d = tq1.d(0);
-        public int a;
-        public int b;
-        public A c;
+    public static final class C2109b<A> {
 
-        public static <A> b<A> a(A a, int i, int i2) {
-            b<A> bVar = (b<A>) d.poll();
-            if (bVar == null) {
-                bVar = new b<>();
+        /* renamed from: d */
+        public static final Queue<C2109b<?>> f17627d = tq1.m8867d(0);
+
+        /* renamed from: a */
+        public int f17628a;
+
+        /* renamed from: b */
+        public int f17629b;
+
+        /* renamed from: c */
+        public A f17630c;
+
+        /* renamed from: a */
+        public static <A> C2109b<A> m16671a(A a, int i, int i2) {
+            C2109b<A> c2109b = (C2109b<A>) f17627d.poll();
+            if (c2109b == null) {
+                c2109b = new C2109b<>();
             }
-            bVar.b(a, i, i2);
-            return bVar;
+            c2109b.m16670b(a, i, i2);
+            return c2109b;
         }
 
-        public final void b(A a, int i, int i2) {
-            this.c = a;
-            this.b = i;
-            this.a = i2;
+        /* renamed from: b */
+        public final void m16670b(A a, int i, int i2) {
+            this.f17630c = a;
+            this.f17629b = i;
+            this.f17628a = i2;
         }
 
-        public void c() {
-            d.offer(this);
+        /* renamed from: c */
+        public void m16669c() {
+            f17627d.offer(this);
         }
 
         public boolean equals(Object obj) {
-            if (obj instanceof b) {
-                b bVar = (b) obj;
-                return this.b == bVar.b && this.a == bVar.a && this.c.equals(bVar.c);
+            if (obj instanceof C2109b) {
+                C2109b c2109b = (C2109b) obj;
+                return this.f17629b == c2109b.f17629b && this.f17628a == c2109b.f17628a && this.f17630c.equals(c2109b.f17630c);
             }
             return false;
         }
 
         public int hashCode() {
-            return (((this.a * 31) + this.b) * 31) + this.c.hashCode();
+            return (((this.f17628a * 31) + this.f17629b) * 31) + this.f17630c.hashCode();
         }
     }
 
     public lq0(int i) {
-        this.a = new a(i);
+        this.f17625a = new C2108a(i);
     }
 
-    public B a(A a2, int i, int i2) {
-        b<A> a3 = b.a(a2, i, i2);
-        B g = this.a.g(a3);
-        a3.c();
-        return g;
+    /* renamed from: a */
+    public B m16674a(A a, int i, int i2) {
+        C2109b<A> m16671a = C2109b.m16671a(a, i, i2);
+        B m7063g = this.f17625a.m7063g(m16671a);
+        m16671a.m16669c();
+        return m7063g;
     }
 
-    public void b(A a2, int i, int i2, B b2) {
-        this.a.k(b.a(a2, i, i2), b2);
+    /* renamed from: b */
+    public void m16673b(A a, int i, int i2, B b) {
+        this.f17625a.m7061k(C2109b.m16671a(a, i, i2), b);
     }
 }

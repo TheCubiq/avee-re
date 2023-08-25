@@ -1,72 +1,86 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class z52 extends y52 {
-    public final ik5 b;
-    public final ik5 c;
-    public int d;
-    public boolean e;
-    public boolean f;
-    public int g;
+
+    /* renamed from: b */
+    public final ik5 f34467b;
+
+    /* renamed from: c */
+    public final ik5 f34468c;
+
+    /* renamed from: d */
+    public int f34469d;
+
+    /* renamed from: e */
+    public boolean f34470e;
+
+    /* renamed from: f */
+    public boolean f34471f;
+
+    /* renamed from: g */
+    public int f34472g;
 
     public z52(m42 m42Var) {
         super(m42Var);
-        this.b = new ik5(c42.a);
-        this.c = new ik5(4);
+        this.f34467b = new ik5(c42.f5462a);
+        this.f34468c = new ik5(4);
     }
 
     @Override // com.daaw.y52
-    public final boolean a(ik5 ik5Var) {
-        int s = ik5Var.s();
-        int i = s >> 4;
-        int i2 = s & 15;
+    /* renamed from: a */
+    public final boolean mo2810a(ik5 ik5Var) {
+        int m19703s = ik5Var.m19703s();
+        int i = m19703s >> 4;
+        int i2 = m19703s & 15;
         if (i2 == 7) {
-            this.g = i;
+            this.f34472g = i;
             return i != 5;
         }
         throw new x52("Video format not supported: " + i2);
     }
 
     @Override // com.daaw.y52
-    public final boolean b(ik5 ik5Var, long j) {
-        int s = ik5Var.s();
-        long n = j + (ik5Var.n() * 1000);
-        if (s == 0) {
-            if (!this.e) {
-                ik5 ik5Var2 = new ik5(new byte[ik5Var.i()]);
-                ik5Var.b(ik5Var2.h(), 0, ik5Var.i());
-                gz8 a = gz8.a(ik5Var2);
-                this.d = a.b;
+    /* renamed from: b */
+    public final boolean mo2809b(ik5 ik5Var, long j) {
+        int m19703s = ik5Var.m19703s();
+        long m19708n = j + (ik5Var.m19708n() * 1000);
+        if (m19703s == 0) {
+            if (!this.f34470e) {
+                ik5 ik5Var2 = new ik5(new byte[ik5Var.m19713i()]);
+                ik5Var.m19720b(ik5Var2.m19714h(), 0, ik5Var.m19713i());
+                gz8 m21127a = gz8.m21127a(ik5Var2);
+                this.f34469d = m21127a.f11900b;
                 b72 b72Var = new b72();
-                b72Var.s("video/avc");
-                b72Var.f0(a.f);
-                b72Var.x(a.c);
-                b72Var.f(a.d);
-                b72Var.p(a.e);
-                b72Var.i(a.a);
-                this.a.f(b72Var.y());
-                this.e = true;
+                b72Var.m26372s("video/avc");
+                b72Var.m26387f0(m21127a.f11904f);
+                b72Var.m26367x(m21127a.f11901c);
+                b72Var.m26388f(m21127a.f11902d);
+                b72Var.m26375p(m21127a.f11903e);
+                b72Var.m26382i(m21127a.f11899a);
+                this.f33371a.mo16218f(b72Var.m26366y());
+                this.f34470e = true;
                 return false;
             }
-        } else if (s == 1 && this.e) {
-            int i = this.g == 1 ? 1 : 0;
-            if (this.f || i != 0) {
-                byte[] h = this.c.h();
-                h[0] = 0;
-                h[1] = 0;
-                h[2] = 0;
-                int i2 = 4 - this.d;
+        } else if (m19703s == 1 && this.f34470e) {
+            int i = this.f34472g == 1 ? 1 : 0;
+            if (this.f34471f || i != 0) {
+                byte[] m19714h = this.f34468c.m19714h();
+                m19714h[0] = 0;
+                m19714h[1] = 0;
+                m19714h[2] = 0;
+                int i2 = 4 - this.f34469d;
                 int i3 = 0;
-                while (ik5Var.i() > 0) {
-                    ik5Var.b(this.c.h(), i2, this.d);
-                    this.c.f(0);
-                    int v = this.c.v();
-                    this.b.f(0);
-                    this.a.c(this.b, 4);
-                    this.a.c(ik5Var, v);
-                    i3 = i3 + 4 + v;
+                while (ik5Var.m19713i() > 0) {
+                    ik5Var.m19720b(this.f34468c.m19714h(), i2, this.f34469d);
+                    this.f34468c.m19716f(0);
+                    int m19700v = this.f34468c.m19700v();
+                    this.f34467b.m19716f(0);
+                    this.f33371a.mo16221c(this.f34467b, 4);
+                    this.f33371a.mo16221c(ik5Var, m19700v);
+                    i3 = i3 + 4 + m19700v;
                 }
-                this.a.b(n, i, i3, 0, null);
-                this.f = true;
+                this.f33371a.mo16222b(m19708n, i, i3, 0, null);
+                this.f34471f = true;
                 return true;
             }
             return false;

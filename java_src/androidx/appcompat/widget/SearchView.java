@@ -39,16 +39,16 @@ import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.customview.view.AbsSavedState;
+import com.daaw.AbstractC2317nn;
+import com.daaw.C2682q3;
+import com.daaw.InterfaceC1278fg;
 import com.daaw.bi1;
 import com.daaw.c21;
 import com.daaw.em1;
-import com.daaw.fg;
 import com.daaw.g11;
 import com.daaw.hu1;
 import com.daaw.i21;
-import com.daaw.nn;
 import com.daaw.o11;
-import com.daaw.q3;
 import com.daaw.ul1;
 import com.daaw.x01;
 import com.daaw.x21;
@@ -56,66 +56,171 @@ import com.daaw.xs1;
 import java.lang.reflect.Method;
 import java.util.WeakHashMap;
 /* loaded from: classes.dex */
-public class SearchView extends androidx.appcompat.widget.b implements fg {
-    public static final o F0;
-    public View.OnKeyListener A0;
-    public final TextView.OnEditorActionListener B0;
-    public final AdapterView.OnItemClickListener C0;
-    public final AdapterView.OnItemSelectedListener D0;
-    public final SearchAutoComplete E;
-    public TextWatcher E0;
-    public final View F;
-    public final View G;
-    public final View H;
-    public final ImageView I;
-    public final ImageView J;
-    public final ImageView K;
-    public final ImageView L;
-    public final View M;
-    public p N;
-    public Rect O;
-    public Rect P;
-    public int[] Q;
-    public int[] R;
-    public final ImageView S;
-    public final Drawable T;
-    public final int U;
-    public final int V;
-    public final Intent W;
-    public final Intent a0;
-    public final CharSequence b0;
-    public m c0;
-    public l d0;
-    public View.OnFocusChangeListener e0;
-    public n f0;
-    public View.OnClickListener g0;
-    public boolean h0;
-    public boolean i0;
-    public nn j0;
-    public boolean k0;
-    public CharSequence l0;
-    public boolean m0;
-    public boolean n0;
-    public int o0;
-    public boolean p0;
-    public CharSequence q0;
-    public CharSequence r0;
-    public boolean s0;
-    public int t0;
-    public SearchableInfo u0;
-    public Bundle v0;
-    public final Runnable w0;
-    public Runnable x0;
-    public final WeakHashMap<String, Drawable.ConstantState> y0;
-    public final View.OnClickListener z0;
+public class SearchView extends C0164b implements InterfaceC1278fg {
+
+    /* renamed from: F0 */
+    public static final C0149o f625F0;
+
+    /* renamed from: A0 */
+    public View.OnKeyListener f626A0;
+
+    /* renamed from: B0 */
+    public final TextView.OnEditorActionListener f627B0;
+
+    /* renamed from: C0 */
+    public final AdapterView.OnItemClickListener f628C0;
+
+    /* renamed from: D0 */
+    public final AdapterView.OnItemSelectedListener f629D0;
+
+    /* renamed from: E */
+    public final SearchAutoComplete f630E;
+
+    /* renamed from: E0 */
+    public TextWatcher f631E0;
+
+    /* renamed from: F */
+    public final View f632F;
+
+    /* renamed from: G */
+    public final View f633G;
+
+    /* renamed from: H */
+    public final View f634H;
+
+    /* renamed from: I */
+    public final ImageView f635I;
+
+    /* renamed from: J */
+    public final ImageView f636J;
+
+    /* renamed from: K */
+    public final ImageView f637K;
+
+    /* renamed from: L */
+    public final ImageView f638L;
+
+    /* renamed from: M */
+    public final View f639M;
+
+    /* renamed from: N */
+    public C0150p f640N;
+
+    /* renamed from: O */
+    public Rect f641O;
+
+    /* renamed from: P */
+    public Rect f642P;
+
+    /* renamed from: Q */
+    public int[] f643Q;
+
+    /* renamed from: R */
+    public int[] f644R;
+
+    /* renamed from: S */
+    public final ImageView f645S;
+
+    /* renamed from: T */
+    public final Drawable f646T;
+
+    /* renamed from: U */
+    public final int f647U;
+
+    /* renamed from: V */
+    public final int f648V;
+
+    /* renamed from: W */
+    public final Intent f649W;
+
+    /* renamed from: a0 */
+    public final Intent f650a0;
+
+    /* renamed from: b0 */
+    public final CharSequence f651b0;
+
+    /* renamed from: c0 */
+    public InterfaceC0147m f652c0;
+
+    /* renamed from: d0 */
+    public InterfaceC0146l f653d0;
+
+    /* renamed from: e0 */
+    public View.OnFocusChangeListener f654e0;
+
+    /* renamed from: f0 */
+    public InterfaceC0148n f655f0;
+
+    /* renamed from: g0 */
+    public View.OnClickListener f656g0;
+
+    /* renamed from: h0 */
+    public boolean f657h0;
+
+    /* renamed from: i0 */
+    public boolean f658i0;
+
+    /* renamed from: j0 */
+    public AbstractC2317nn f659j0;
+
+    /* renamed from: k0 */
+    public boolean f660k0;
+
+    /* renamed from: l0 */
+    public CharSequence f661l0;
+
+    /* renamed from: m0 */
+    public boolean f662m0;
+
+    /* renamed from: n0 */
+    public boolean f663n0;
+
+    /* renamed from: o0 */
+    public int f664o0;
+
+    /* renamed from: p0 */
+    public boolean f665p0;
+
+    /* renamed from: q0 */
+    public CharSequence f666q0;
+
+    /* renamed from: r0 */
+    public CharSequence f667r0;
+
+    /* renamed from: s0 */
+    public boolean f668s0;
+
+    /* renamed from: t0 */
+    public int f669t0;
+
+    /* renamed from: u0 */
+    public SearchableInfo f670u0;
+
+    /* renamed from: v0 */
+    public Bundle f671v0;
+
+    /* renamed from: w0 */
+    public final Runnable f672w0;
+
+    /* renamed from: x0 */
+    public Runnable f673x0;
+
+    /* renamed from: y0 */
+    public final WeakHashMap<String, Drawable.ConstantState> f674y0;
+
+    /* renamed from: z0 */
+    public final View.OnClickListener f675z0;
 
     /* loaded from: classes.dex */
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new a();
-        public boolean r;
+        public static final Parcelable.Creator<SavedState> CREATOR = new C0133a();
 
+        /* renamed from: r */
+        public boolean f676r;
+
+        /* renamed from: androidx.appcompat.widget.SearchView$SavedState$a */
         /* loaded from: classes.dex */
-        public class a implements Parcelable.ClassLoaderCreator<SavedState> {
+        public class C0133a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             /* renamed from: a */
             public SavedState createFromParcel(Parcel parcel) {
@@ -137,7 +242,7 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
 
         public SavedState(Parcel parcel, ClassLoader classLoader) {
             super(parcel, classLoader);
-            this.r = ((Boolean) parcel.readValue(null)).booleanValue();
+            this.f676r = ((Boolean) parcel.readValue(null)).booleanValue();
         }
 
         public SavedState(Parcelable parcelable) {
@@ -145,42 +250,51 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         }
 
         public String toString() {
-            return "SearchView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " isIconified=" + this.r + "}";
+            return "SearchView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " isIconified=" + this.f676r + "}";
         }
 
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
-            parcel.writeValue(Boolean.valueOf(this.r));
+            parcel.writeValue(Boolean.valueOf(this.f676r));
         }
     }
 
     /* loaded from: classes.dex */
-    public static class SearchAutoComplete extends q3 {
-        public int t;
-        public SearchView u;
-        public boolean v;
-        public final Runnable w;
+    public static class SearchAutoComplete extends C2682q3 {
 
+        /* renamed from: t */
+        public int f677t;
+
+        /* renamed from: u */
+        public SearchView f678u;
+
+        /* renamed from: v */
+        public boolean f679v;
+
+        /* renamed from: w */
+        public final Runnable f680w;
+
+        /* renamed from: androidx.appcompat.widget.SearchView$SearchAutoComplete$a */
         /* loaded from: classes.dex */
-        public class a implements Runnable {
-            public a() {
+        public class RunnableC0134a implements Runnable {
+            public RunnableC0134a() {
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                SearchAutoComplete.this.d();
+                SearchAutoComplete.this.m30018d();
             }
         }
 
         public SearchAutoComplete(Context context, AttributeSet attributeSet) {
-            this(context, attributeSet, x01.p);
+            this(context, attributeSet, x01.f31706p);
         }
 
         public SearchAutoComplete(Context context, AttributeSet attributeSet, int i) {
             super(context, attributeSet, i);
-            this.w = new a();
-            this.t = getThreshold();
+            this.f680w = new RunnableC0134a();
+            this.f677t = getThreshold();
         }
 
         private int getSearchViewTextMinWidthDp() {
@@ -196,39 +310,42 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
             return 256;
         }
 
-        public void b() {
+        /* renamed from: b */
+        public void m30020b() {
             if (Build.VERSION.SDK_INT < 29) {
-                SearchView.F0.c(this);
+                SearchView.f625F0.m30011c(this);
                 return;
             }
-            k.b(this, 1);
+            C0145k.m30016b(this, 1);
             if (enoughToFilter()) {
                 showDropDown();
             }
         }
 
-        public boolean c() {
+        /* renamed from: c */
+        public boolean m30019c() {
             return TextUtils.getTrimmedLength(getText()) == 0;
         }
 
-        public void d() {
-            if (this.v) {
+        /* renamed from: d */
+        public void m30018d() {
+            if (this.f679v) {
                 ((InputMethodManager) getContext().getSystemService("input_method")).showSoftInput(this, 0);
-                this.v = false;
+                this.f679v = false;
             }
         }
 
         @Override // android.widget.AutoCompleteTextView
         public boolean enoughToFilter() {
-            return this.t <= 0 || super.enoughToFilter();
+            return this.f677t <= 0 || super.enoughToFilter();
         }
 
-        @Override // com.daaw.q3, android.widget.TextView, android.view.View
+        @Override // com.daaw.C2682q3, android.widget.TextView, android.view.View
         public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
             InputConnection onCreateInputConnection = super.onCreateInputConnection(editorInfo);
-            if (this.v) {
-                removeCallbacks(this.w);
-                post(this.w);
+            if (this.f679v) {
+                removeCallbacks(this.f680w);
+                post(this.f680w);
             }
             return onCreateInputConnection;
         }
@@ -242,7 +359,7 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         @Override // android.widget.AutoCompleteTextView, android.widget.TextView, android.view.View
         public void onFocusChanged(boolean z, int i, Rect rect) {
             super.onFocusChanged(z, i, rect);
-            this.u.Z();
+            this.f678u.m30036Z();
         }
 
         @Override // android.widget.AutoCompleteTextView, android.widget.TextView, android.view.View
@@ -260,7 +377,7 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
                         keyDispatcherState2.handleUpEvent(keyEvent);
                     }
                     if (keyEvent.isTracking() && !keyEvent.isCanceled()) {
-                        this.u.clearFocus();
+                        this.f678u.clearFocus();
                         setImeVisibility(false);
                         return true;
                     }
@@ -272,10 +389,10 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         @Override // android.widget.AutoCompleteTextView, android.widget.TextView, android.view.View
         public void onWindowFocusChanged(boolean z) {
             super.onWindowFocusChanged(z);
-            if (z && this.u.hasFocus() && getVisibility() == 0) {
-                this.v = true;
-                if (SearchView.M(getContext())) {
-                    b();
+            if (z && this.f678u.hasFocus() && getVisibility() == 0) {
+                this.f679v = true;
+                if (SearchView.m30049M(getContext())) {
+                    m30020b();
                 }
             }
         }
@@ -291,32 +408,33 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         public void setImeVisibility(boolean z) {
             InputMethodManager inputMethodManager = (InputMethodManager) getContext().getSystemService("input_method");
             if (!z) {
-                this.v = false;
-                removeCallbacks(this.w);
+                this.f679v = false;
+                removeCallbacks(this.f680w);
                 inputMethodManager.hideSoftInputFromWindow(getWindowToken(), 0);
             } else if (!inputMethodManager.isActive(this)) {
-                this.v = true;
+                this.f679v = true;
             } else {
-                this.v = false;
-                removeCallbacks(this.w);
+                this.f679v = false;
+                removeCallbacks(this.f680w);
                 inputMethodManager.showSoftInput(this, 0);
             }
         }
 
         public void setSearchView(SearchView searchView) {
-            this.u = searchView;
+            this.f678u = searchView;
         }
 
         @Override // android.widget.AutoCompleteTextView
         public void setThreshold(int i) {
             super.setThreshold(i);
-            this.t = i;
+            this.f677t = i;
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$a */
     /* loaded from: classes.dex */
-    public class a implements TextWatcher {
-        public a() {
+    public class C0135a implements TextWatcher {
+        public C0135a() {
         }
 
         @Override // android.text.TextWatcher
@@ -329,138 +447,147 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
 
         @Override // android.text.TextWatcher
         public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-            SearchView.this.Y(charSequence);
+            SearchView.this.m30037Y(charSequence);
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$b */
     /* loaded from: classes.dex */
-    public class b implements Runnable {
-        public b() {
+    public class RunnableC0136b implements Runnable {
+        public RunnableC0136b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            SearchView.this.f0();
+            SearchView.this.m30030f0();
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$c */
     /* loaded from: classes.dex */
-    public class c implements Runnable {
-        public c() {
+    public class RunnableC0137c implements Runnable {
+        public RunnableC0137c() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            nn nnVar = SearchView.this.j0;
-            if (nnVar instanceof bi1) {
-                nnVar.a(null);
+            AbstractC2317nn abstractC2317nn = SearchView.this.f659j0;
+            if (abstractC2317nn instanceof bi1) {
+                abstractC2317nn.mo13286a(null);
             }
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$d */
     /* loaded from: classes.dex */
-    public class d implements View.OnFocusChangeListener {
-        public d() {
+    public class View$OnFocusChangeListenerC0138d implements View.OnFocusChangeListener {
+        public View$OnFocusChangeListenerC0138d() {
         }
 
         @Override // android.view.View.OnFocusChangeListener
         public void onFocusChange(View view, boolean z) {
             SearchView searchView = SearchView.this;
-            View.OnFocusChangeListener onFocusChangeListener = searchView.e0;
+            View.OnFocusChangeListener onFocusChangeListener = searchView.f654e0;
             if (onFocusChangeListener != null) {
                 onFocusChangeListener.onFocusChange(searchView, z);
             }
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$e */
     /* loaded from: classes.dex */
-    public class e implements View.OnLayoutChangeListener {
-        public e() {
+    public class View$OnLayoutChangeListenerC0139e implements View.OnLayoutChangeListener {
+        public View$OnLayoutChangeListenerC0139e() {
         }
 
         @Override // android.view.View.OnLayoutChangeListener
         public void onLayoutChange(View view, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
-            SearchView.this.B();
+            SearchView.this.m30060B();
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$f */
     /* loaded from: classes.dex */
-    public class f implements View.OnClickListener {
-        public f() {
+    public class View$OnClickListenerC0140f implements View.OnClickListener {
+        public View$OnClickListenerC0140f() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             SearchView searchView = SearchView.this;
-            if (view == searchView.I) {
-                searchView.V();
-            } else if (view == searchView.K) {
-                searchView.R();
-            } else if (view == searchView.J) {
-                searchView.W();
-            } else if (view == searchView.L) {
-                searchView.a0();
-            } else if (view == searchView.E) {
-                searchView.H();
+            if (view == searchView.f635I) {
+                searchView.m30040V();
+            } else if (view == searchView.f637K) {
+                searchView.m30044R();
+            } else if (view == searchView.f636J) {
+                searchView.m30039W();
+            } else if (view == searchView.f638L) {
+                searchView.m30035a0();
+            } else if (view == searchView.f630E) {
+                searchView.m30054H();
             }
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$g */
     /* loaded from: classes.dex */
-    public class g implements View.OnKeyListener {
-        public g() {
+    public class View$OnKeyListenerC0141g implements View.OnKeyListener {
+        public View$OnKeyListenerC0141g() {
         }
 
         @Override // android.view.View.OnKeyListener
         public boolean onKey(View view, int i, KeyEvent keyEvent) {
             SearchView searchView = SearchView.this;
-            if (searchView.u0 == null) {
+            if (searchView.f670u0 == null) {
                 return false;
             }
-            if (!searchView.E.isPopupShowing() || SearchView.this.E.getListSelection() == -1) {
-                if (!SearchView.this.E.c() && keyEvent.hasNoModifiers() && keyEvent.getAction() == 1 && i == 66) {
+            if (!searchView.f630E.isPopupShowing() || SearchView.this.f630E.getListSelection() == -1) {
+                if (!SearchView.this.f630E.m30019c() && keyEvent.hasNoModifiers() && keyEvent.getAction() == 1 && i == 66) {
                     view.cancelLongPress();
                     SearchView searchView2 = SearchView.this;
-                    searchView2.P(0, null, searchView2.E.getText().toString());
+                    searchView2.m30046P(0, null, searchView2.f630E.getText().toString());
                     return true;
                 }
                 return false;
             }
-            return SearchView.this.X(view, i, keyEvent);
+            return SearchView.this.m30038X(view, i, keyEvent);
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$h */
     /* loaded from: classes.dex */
-    public class h implements TextView.OnEditorActionListener {
-        public h() {
+    public class C0142h implements TextView.OnEditorActionListener {
+        public C0142h() {
         }
 
         @Override // android.widget.TextView.OnEditorActionListener
         public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-            SearchView.this.W();
+            SearchView.this.m30039W();
             return true;
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$i */
     /* loaded from: classes.dex */
-    public class i implements AdapterView.OnItemClickListener {
-        public i() {
+    public class C0143i implements AdapterView.OnItemClickListener {
+        public C0143i() {
         }
 
         @Override // android.widget.AdapterView.OnItemClickListener
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
-            SearchView.this.S(i, 0, null);
+            SearchView.this.m30043S(i, 0, null);
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$j */
     /* loaded from: classes.dex */
-    public class j implements AdapterView.OnItemSelectedListener {
-        public j() {
+    public class C0144j implements AdapterView.OnItemSelectedListener {
+        public C0144j() {
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long j) {
-            SearchView.this.T(i);
+            SearchView.this.m30042T(i);
         }
 
         @Override // android.widget.AdapterView.OnItemSelectedListener
@@ -468,77 +595,94 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$k */
     /* loaded from: classes.dex */
-    public static class k {
-        public static void a(AutoCompleteTextView autoCompleteTextView) {
+    public static class C0145k {
+        /* renamed from: a */
+        public static void m30017a(AutoCompleteTextView autoCompleteTextView) {
             autoCompleteTextView.refreshAutoCompleteResults();
         }
 
-        public static void b(SearchAutoComplete searchAutoComplete, int i) {
+        /* renamed from: b */
+        public static void m30016b(SearchAutoComplete searchAutoComplete, int i) {
             searchAutoComplete.setInputMethodMode(i);
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$l */
     /* loaded from: classes.dex */
-    public interface l {
+    public interface InterfaceC0146l {
         boolean onClose();
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$m */
     /* loaded from: classes.dex */
-    public interface m {
+    public interface InterfaceC0147m {
         boolean onQueryTextChange(String str);
 
         boolean onQueryTextSubmit(String str);
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$n */
     /* loaded from: classes.dex */
-    public interface n {
-        boolean a(int i);
+    public interface InterfaceC0148n {
+        /* renamed from: a */
+        boolean m30015a(int i);
 
-        boolean b(int i);
+        /* renamed from: b */
+        boolean m30014b(int i);
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$o */
     /* loaded from: classes.dex */
-    public static class o {
-        public Method a;
-        public Method b;
-        public Method c;
+    public static class C0149o {
+
+        /* renamed from: a */
+        public Method f692a;
+
+        /* renamed from: b */
+        public Method f693b;
+
+        /* renamed from: c */
+        public Method f694c;
 
         @SuppressLint({"DiscouragedPrivateApi", "SoonBlockedPrivateApi"})
-        public o() {
-            this.a = null;
-            this.b = null;
-            this.c = null;
-            d();
+        public C0149o() {
+            this.f692a = null;
+            this.f693b = null;
+            this.f694c = null;
+            m30010d();
             try {
                 Method declaredMethod = AutoCompleteTextView.class.getDeclaredMethod("doBeforeTextChanged", new Class[0]);
-                this.a = declaredMethod;
+                this.f692a = declaredMethod;
                 declaredMethod.setAccessible(true);
             } catch (NoSuchMethodException unused) {
             }
             try {
                 Method declaredMethod2 = AutoCompleteTextView.class.getDeclaredMethod("doAfterTextChanged", new Class[0]);
-                this.b = declaredMethod2;
+                this.f693b = declaredMethod2;
                 declaredMethod2.setAccessible(true);
             } catch (NoSuchMethodException unused2) {
             }
             try {
                 Method method = AutoCompleteTextView.class.getMethod("ensureImeVisible", Boolean.TYPE);
-                this.c = method;
+                this.f694c = method;
                 method.setAccessible(true);
             } catch (NoSuchMethodException unused3) {
             }
         }
 
-        public static void d() {
+        /* renamed from: d */
+        public static void m30010d() {
             if (Build.VERSION.SDK_INT >= 29) {
                 throw new UnsupportedClassVersionError("This function can only be used for API Level < 29.");
             }
         }
 
-        public void a(AutoCompleteTextView autoCompleteTextView) {
-            d();
-            Method method = this.b;
+        /* renamed from: a */
+        public void m30013a(AutoCompleteTextView autoCompleteTextView) {
+            m30010d();
+            Method method = this.f693b;
             if (method != null) {
                 try {
                     method.invoke(autoCompleteTextView, new Object[0]);
@@ -547,9 +691,10 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
             }
         }
 
-        public void b(AutoCompleteTextView autoCompleteTextView) {
-            d();
-            Method method = this.a;
+        /* renamed from: b */
+        public void m30012b(AutoCompleteTextView autoCompleteTextView) {
+            m30010d();
+            Method method = this.f692a;
             if (method != null) {
                 try {
                     method.invoke(autoCompleteTextView, new Object[0]);
@@ -558,9 +703,10 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
             }
         }
 
-        public void c(AutoCompleteTextView autoCompleteTextView) {
-            d();
-            Method method = this.c;
+        /* renamed from: c */
+        public void m30011c(AutoCompleteTextView autoCompleteTextView) {
+            m30010d();
+            Method method = this.f694c;
             if (method != null) {
                 try {
                     method.invoke(autoCompleteTextView, Boolean.TRUE);
@@ -570,32 +716,46 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         }
     }
 
+    /* renamed from: androidx.appcompat.widget.SearchView$p */
     /* loaded from: classes.dex */
-    public static class p extends TouchDelegate {
-        public final View a;
-        public final Rect b;
-        public final Rect c;
-        public final Rect d;
-        public final int e;
-        public boolean f;
+    public static class C0150p extends TouchDelegate {
 
-        public p(Rect rect, Rect rect2, View view) {
+        /* renamed from: a */
+        public final View f695a;
+
+        /* renamed from: b */
+        public final Rect f696b;
+
+        /* renamed from: c */
+        public final Rect f697c;
+
+        /* renamed from: d */
+        public final Rect f698d;
+
+        /* renamed from: e */
+        public final int f699e;
+
+        /* renamed from: f */
+        public boolean f700f;
+
+        public C0150p(Rect rect, Rect rect2, View view) {
             super(rect, view);
-            this.e = ViewConfiguration.get(view.getContext()).getScaledTouchSlop();
-            this.b = new Rect();
-            this.d = new Rect();
-            this.c = new Rect();
-            a(rect, rect2);
-            this.a = view;
+            this.f699e = ViewConfiguration.get(view.getContext()).getScaledTouchSlop();
+            this.f696b = new Rect();
+            this.f698d = new Rect();
+            this.f697c = new Rect();
+            m30009a(rect, rect2);
+            this.f695a = view;
         }
 
-        public void a(Rect rect, Rect rect2) {
-            this.b.set(rect);
-            this.d.set(rect);
-            Rect rect3 = this.d;
-            int i = this.e;
+        /* renamed from: a */
+        public void m30009a(Rect rect, Rect rect2) {
+            this.f696b.set(rect);
+            this.f698d.set(rect);
+            Rect rect3 = this.f698d;
+            int i = this.f699e;
             rect3.inset(-i, -i);
-            this.c.set(rect2);
+            this.f697c.set(rect2);
         }
 
         @Override // android.view.TouchDelegate
@@ -610,15 +770,15 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
             boolean z3 = true;
             if (action != 0) {
                 if (action == 1 || action == 2) {
-                    z2 = this.f;
-                    if (z2 && !this.d.contains(x, y)) {
+                    z2 = this.f700f;
+                    if (z2 && !this.f698d.contains(x, y)) {
                         z3 = z2;
                         z = false;
                     }
                 } else {
                     if (action == 3) {
-                        z2 = this.f;
-                        this.f = false;
+                        z2 = this.f700f;
+                        this.f700f = false;
                     }
                     z = true;
                     z3 = false;
@@ -626,31 +786,31 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
                 z3 = z2;
                 z = true;
             } else {
-                if (this.b.contains(x, y)) {
-                    this.f = true;
+                if (this.f696b.contains(x, y)) {
+                    this.f700f = true;
                     z = true;
                 }
                 z = true;
                 z3 = false;
             }
             if (z3) {
-                if (!z || this.c.contains(x, y)) {
-                    Rect rect = this.c;
+                if (!z || this.f697c.contains(x, y)) {
+                    Rect rect = this.f697c;
                     f = x - rect.left;
                     i = y - rect.top;
                 } else {
-                    f = this.a.getWidth() / 2;
-                    i = this.a.getHeight() / 2;
+                    f = this.f695a.getWidth() / 2;
+                    i = this.f695a.getHeight() / 2;
                 }
                 motionEvent.setLocation(f, i);
-                return this.a.dispatchTouchEvent(motionEvent);
+                return this.f695a.dispatchTouchEvent(motionEvent);
             }
             return false;
         }
     }
 
     static {
-        F0 = Build.VERSION.SDK_INT < 29 ? new o() : null;
+        f625F0 = Build.VERSION.SDK_INT < 29 ? new C0149o() : null;
     }
 
     public SearchView(Context context) {
@@ -661,104 +821,105 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         this(context, attributeSet, x01.searchViewStyle);
     }
 
-    public SearchView(Context context, AttributeSet attributeSet, int i2) {
-        super(context, attributeSet, i2);
-        this.O = new Rect();
-        this.P = new Rect();
-        this.Q = new int[2];
-        this.R = new int[2];
-        this.w0 = new b();
-        this.x0 = new c();
-        this.y0 = new WeakHashMap<>();
-        f fVar = new f();
-        this.z0 = fVar;
-        this.A0 = new g();
-        h hVar = new h();
-        this.B0 = hVar;
-        i iVar = new i();
-        this.C0 = iVar;
-        j jVar = new j();
-        this.D0 = jVar;
-        this.E0 = new a();
-        int[] iArr = x21.f2;
-        ul1 v = ul1.v(context, attributeSet, iArr, i2, 0);
-        xs1.p0(this, context, iArr, attributeSet, v.r(), i2, 0);
-        LayoutInflater.from(context).inflate(v.n(x21.p2, c21.abc_search_view), (ViewGroup) this, true);
+    public SearchView(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+        this.f641O = new Rect();
+        this.f642P = new Rect();
+        this.f643Q = new int[2];
+        this.f644R = new int[2];
+        this.f672w0 = new RunnableC0136b();
+        this.f673x0 = new RunnableC0137c();
+        this.f674y0 = new WeakHashMap<>();
+        View$OnClickListenerC0140f view$OnClickListenerC0140f = new View$OnClickListenerC0140f();
+        this.f675z0 = view$OnClickListenerC0140f;
+        this.f626A0 = new View$OnKeyListenerC0141g();
+        C0142h c0142h = new C0142h();
+        this.f627B0 = c0142h;
+        C0143i c0143i = new C0143i();
+        this.f628C0 = c0143i;
+        C0144j c0144j = new C0144j();
+        this.f629D0 = c0144j;
+        this.f631E0 = new C0135a();
+        int[] iArr = x21.f31910f2;
+        ul1 m8037v = ul1.m8037v(context, attributeSet, iArr, i, 0);
+        xs1.m4706p0(this, context, iArr, attributeSet, m8037v.m8041r(), i, 0);
+        LayoutInflater.from(context).inflate(m8037v.m8045n(x21.f31960p2, c21.abc_search_view), (ViewGroup) this, true);
         SearchAutoComplete searchAutoComplete = (SearchAutoComplete) findViewById(o11.search_src_text);
-        this.E = searchAutoComplete;
+        this.f630E = searchAutoComplete;
         searchAutoComplete.setSearchView(this);
-        this.F = findViewById(o11.search_edit_frame);
+        this.f632F = findViewById(o11.search_edit_frame);
         View findViewById = findViewById(o11.search_plate);
-        this.G = findViewById;
+        this.f633G = findViewById;
         View findViewById2 = findViewById(o11.submit_area);
-        this.H = findViewById2;
+        this.f634H = findViewById2;
         ImageView imageView = (ImageView) findViewById(o11.search_button);
-        this.I = imageView;
+        this.f635I = imageView;
         ImageView imageView2 = (ImageView) findViewById(o11.search_go_btn);
-        this.J = imageView2;
+        this.f636J = imageView2;
         ImageView imageView3 = (ImageView) findViewById(o11.search_close_btn);
-        this.K = imageView3;
+        this.f637K = imageView3;
         ImageView imageView4 = (ImageView) findViewById(o11.search_voice_btn);
-        this.L = imageView4;
+        this.f638L = imageView4;
         ImageView imageView5 = (ImageView) findViewById(o11.search_mag_icon);
-        this.S = imageView5;
-        xs1.v0(findViewById, v.g(x21.q2));
-        xs1.v0(findViewById2, v.g(x21.u2));
-        int i3 = x21.t2;
-        imageView.setImageDrawable(v.g(i3));
-        imageView2.setImageDrawable(v.g(x21.n2));
-        imageView3.setImageDrawable(v.g(x21.k2));
-        imageView4.setImageDrawable(v.g(x21.w2));
-        imageView5.setImageDrawable(v.g(i3));
-        this.T = v.g(x21.s2);
-        em1.a(imageView, getResources().getString(i21.abc_searchview_description_search));
-        this.U = v.n(x21.v2, c21.abc_search_dropdown_item_icons_2line);
-        this.V = v.n(x21.l2, 0);
-        imageView.setOnClickListener(fVar);
-        imageView3.setOnClickListener(fVar);
-        imageView2.setOnClickListener(fVar);
-        imageView4.setOnClickListener(fVar);
-        searchAutoComplete.setOnClickListener(fVar);
-        searchAutoComplete.addTextChangedListener(this.E0);
-        searchAutoComplete.setOnEditorActionListener(hVar);
-        searchAutoComplete.setOnItemClickListener(iVar);
-        searchAutoComplete.setOnItemSelectedListener(jVar);
-        searchAutoComplete.setOnKeyListener(this.A0);
-        searchAutoComplete.setOnFocusChangeListener(new d());
-        setIconifiedByDefault(v.a(x21.o2, true));
-        int f2 = v.f(x21.h2, -1);
-        if (f2 != -1) {
-            setMaxWidth(f2);
+        this.f645S = imageView5;
+        xs1.m4694v0(findViewById, m8037v.m8052g(x21.f31965q2));
+        xs1.m4694v0(findViewById2, m8037v.m8052g(x21.f31985u2));
+        int i2 = x21.f31980t2;
+        imageView.setImageDrawable(m8037v.m8052g(i2));
+        imageView2.setImageDrawable(m8037v.m8052g(x21.f31950n2));
+        imageView3.setImageDrawable(m8037v.m8052g(x21.f31935k2));
+        imageView4.setImageDrawable(m8037v.m8052g(x21.f31995w2));
+        imageView5.setImageDrawable(m8037v.m8052g(i2));
+        this.f646T = m8037v.m8052g(x21.f31975s2);
+        em1.m23375a(imageView, getResources().getString(i21.abc_searchview_description_search));
+        this.f647U = m8037v.m8045n(x21.f31990v2, c21.abc_search_dropdown_item_icons_2line);
+        this.f648V = m8037v.m8045n(x21.f31940l2, 0);
+        imageView.setOnClickListener(view$OnClickListenerC0140f);
+        imageView3.setOnClickListener(view$OnClickListenerC0140f);
+        imageView2.setOnClickListener(view$OnClickListenerC0140f);
+        imageView4.setOnClickListener(view$OnClickListenerC0140f);
+        searchAutoComplete.setOnClickListener(view$OnClickListenerC0140f);
+        searchAutoComplete.addTextChangedListener(this.f631E0);
+        searchAutoComplete.setOnEditorActionListener(c0142h);
+        searchAutoComplete.setOnItemClickListener(c0143i);
+        searchAutoComplete.setOnItemSelectedListener(c0144j);
+        searchAutoComplete.setOnKeyListener(this.f626A0);
+        searchAutoComplete.setOnFocusChangeListener(new View$OnFocusChangeListenerC0138d());
+        setIconifiedByDefault(m8037v.m8058a(x21.f31955o2, true));
+        int m8053f = m8037v.m8053f(x21.f31920h2, -1);
+        if (m8053f != -1) {
+            setMaxWidth(m8053f);
         }
-        this.b0 = v.p(x21.m2);
-        this.l0 = v.p(x21.r2);
-        int k2 = v.k(x21.j2, -1);
-        if (k2 != -1) {
-            setImeOptions(k2);
+        this.f651b0 = m8037v.m8043p(x21.f31945m2);
+        this.f661l0 = m8037v.m8043p(x21.f31970r2);
+        int m8048k = m8037v.m8048k(x21.f31930j2, -1);
+        if (m8048k != -1) {
+            setImeOptions(m8048k);
         }
-        int k3 = v.k(x21.i2, -1);
-        if (k3 != -1) {
-            setInputType(k3);
+        int m8048k2 = m8037v.m8048k(x21.f31925i2, -1);
+        if (m8048k2 != -1) {
+            setInputType(m8048k2);
         }
-        setFocusable(v.a(x21.g2, true));
-        v.w();
+        setFocusable(m8037v.m8058a(x21.f31915g2, true));
+        m8037v.m8036w();
         Intent intent = new Intent("android.speech.action.WEB_SEARCH");
-        this.W = intent;
+        this.f649W = intent;
         intent.addFlags(268435456);
         intent.putExtra("android.speech.extra.LANGUAGE_MODEL", "web_search");
         Intent intent2 = new Intent("android.speech.action.RECOGNIZE_SPEECH");
-        this.a0 = intent2;
+        this.f650a0 = intent2;
         intent2.addFlags(268435456);
         View findViewById3 = findViewById(searchAutoComplete.getDropDownAnchor());
-        this.M = findViewById3;
+        this.f639M = findViewById3;
         if (findViewById3 != null) {
-            findViewById3.addOnLayoutChangeListener(new e());
+            findViewById3.addOnLayoutChangeListener(new View$OnLayoutChangeListenerC0139e());
         }
-        k0(this.h0);
-        g0();
+        m30025k0(this.f657h0);
+        m30029g0();
     }
 
-    public static boolean M(Context context) {
+    /* renamed from: M */
+    public static boolean m30049M(Context context) {
         return context.getResources().getConfiguration().orientation == 2;
     }
 
@@ -771,95 +932,99 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
     }
 
     private void setQuery(CharSequence charSequence) {
-        this.E.setText(charSequence);
-        this.E.setSelection(TextUtils.isEmpty(charSequence) ? 0 : charSequence.length());
+        this.f630E.setText(charSequence);
+        this.f630E.setSelection(TextUtils.isEmpty(charSequence) ? 0 : charSequence.length());
     }
 
-    public void B() {
-        if (this.M.getWidth() > 1) {
+    /* renamed from: B */
+    public void m30060B() {
+        if (this.f639M.getWidth() > 1) {
             Resources resources = getContext().getResources();
-            int paddingLeft = this.G.getPaddingLeft();
+            int paddingLeft = this.f633G.getPaddingLeft();
             Rect rect = new Rect();
-            boolean b2 = hu1.b(this);
-            int dimensionPixelSize = this.h0 ? resources.getDimensionPixelSize(g11.abc_dropdownitem_icon_width) + resources.getDimensionPixelSize(g11.abc_dropdownitem_text_padding_left) : 0;
-            this.E.getDropDownBackground().getPadding(rect);
-            int i2 = rect.left;
-            this.E.setDropDownHorizontalOffset(b2 ? -i2 : paddingLeft - (i2 + dimensionPixelSize));
-            this.E.setDropDownWidth((((this.M.getWidth() + rect.left) + rect.right) + dimensionPixelSize) - paddingLeft);
+            boolean m20417b = hu1.m20417b(this);
+            int dimensionPixelSize = this.f657h0 ? resources.getDimensionPixelSize(g11.abc_dropdownitem_icon_width) + resources.getDimensionPixelSize(g11.abc_dropdownitem_text_padding_left) : 0;
+            this.f630E.getDropDownBackground().getPadding(rect);
+            int i = rect.left;
+            this.f630E.setDropDownHorizontalOffset(m20417b ? -i : paddingLeft - (i + dimensionPixelSize));
+            this.f630E.setDropDownWidth((((this.f639M.getWidth() + rect.left) + rect.right) + dimensionPixelSize) - paddingLeft);
         }
     }
 
-    public final Intent C(String str, Uri uri, String str2, String str3, int i2, String str4) {
+    /* renamed from: C */
+    public final Intent m30059C(String str, Uri uri, String str2, String str3, int i, String str4) {
         Intent intent = new Intent(str);
         intent.addFlags(268435456);
         if (uri != null) {
             intent.setData(uri);
         }
-        intent.putExtra("user_query", this.r0);
+        intent.putExtra("user_query", this.f667r0);
         if (str3 != null) {
             intent.putExtra("query", str3);
         }
         if (str2 != null) {
             intent.putExtra("intent_extra_data_key", str2);
         }
-        Bundle bundle = this.v0;
+        Bundle bundle = this.f671v0;
         if (bundle != null) {
             intent.putExtra("app_data", bundle);
         }
-        if (i2 != 0) {
-            intent.putExtra("action_key", i2);
+        if (i != 0) {
+            intent.putExtra("action_key", i);
             intent.putExtra("action_msg", str4);
         }
-        intent.setComponent(this.u0.getSearchActivity());
+        intent.setComponent(this.f670u0.getSearchActivity());
         return intent;
     }
 
-    public final Intent D(Cursor cursor, int i2, String str) {
-        int i3;
-        String o2;
+    /* renamed from: D */
+    public final Intent m30058D(Cursor cursor, int i, String str) {
+        int i2;
+        String m26157o;
         try {
             try {
-                String o3 = bi1.o(cursor, "suggest_intent_action");
-                if (o3 == null) {
-                    o3 = this.u0.getSuggestIntentAction();
+                String m26157o2 = bi1.m26157o(cursor, "suggest_intent_action");
+                if (m26157o2 == null) {
+                    m26157o2 = this.f670u0.getSuggestIntentAction();
                 }
-                if (o3 == null) {
-                    o3 = "android.intent.action.SEARCH";
+                if (m26157o2 == null) {
+                    m26157o2 = "android.intent.action.SEARCH";
                 }
-                String str2 = o3;
-                String o4 = bi1.o(cursor, "suggest_intent_data");
-                if (o4 == null) {
-                    o4 = this.u0.getSuggestIntentData();
+                String str2 = m26157o2;
+                String m26157o3 = bi1.m26157o(cursor, "suggest_intent_data");
+                if (m26157o3 == null) {
+                    m26157o3 = this.f670u0.getSuggestIntentData();
                 }
-                if (o4 != null && (o2 = bi1.o(cursor, "suggest_intent_data_id")) != null) {
-                    o4 = o4 + "/" + Uri.encode(o2);
+                if (m26157o3 != null && (m26157o = bi1.m26157o(cursor, "suggest_intent_data_id")) != null) {
+                    m26157o3 = m26157o3 + "/" + Uri.encode(m26157o);
                 }
-                return C(str2, o4 == null ? null : Uri.parse(o4), bi1.o(cursor, "suggest_intent_extra_data"), bi1.o(cursor, "suggest_intent_query"), i2, str);
+                return m30059C(str2, m26157o3 == null ? null : Uri.parse(m26157o3), bi1.m26157o(cursor, "suggest_intent_extra_data"), bi1.m26157o(cursor, "suggest_intent_query"), i, str);
             } catch (RuntimeException unused) {
-                i3 = -1;
+                i2 = -1;
                 StringBuilder sb = new StringBuilder();
                 sb.append("Search suggestions cursor at row ");
-                sb.append(i3);
+                sb.append(i2);
                 sb.append(" returned exception.");
                 return null;
             }
         } catch (RuntimeException unused2) {
-            i3 = cursor.getPosition();
+            i2 = cursor.getPosition();
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Search suggestions cursor at row ");
-            sb2.append(i3);
+            sb2.append(i2);
             sb2.append(" returned exception.");
             return null;
         }
     }
 
-    public final Intent E(Intent intent, SearchableInfo searchableInfo) {
+    /* renamed from: E */
+    public final Intent m30057E(Intent intent, SearchableInfo searchableInfo) {
         ComponentName searchActivity = searchableInfo.getSearchActivity();
         Intent intent2 = new Intent("android.intent.action.SEARCH");
         intent2.setComponent(searchActivity);
         PendingIntent activity = PendingIntent.getActivity(getContext(), 0, intent2, 1107296256);
         Bundle bundle = new Bundle();
-        Bundle bundle2 = this.v0;
+        Bundle bundle2 = this.f671v0;
         if (bundle2 != null) {
             bundle.putParcelable("app_data", bundle2);
         }
@@ -879,75 +1044,84 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         return intent3;
     }
 
-    public final Intent F(Intent intent, SearchableInfo searchableInfo) {
+    /* renamed from: F */
+    public final Intent m30056F(Intent intent, SearchableInfo searchableInfo) {
         Intent intent2 = new Intent(intent);
         ComponentName searchActivity = searchableInfo.getSearchActivity();
         intent2.putExtra("calling_package", searchActivity == null ? null : searchActivity.flattenToShortString());
         return intent2;
     }
 
-    public final void G() {
-        this.E.dismissDropDown();
+    /* renamed from: G */
+    public final void m30055G() {
+        this.f630E.dismissDropDown();
     }
 
-    public void H() {
+    /* renamed from: H */
+    public void m30054H() {
         if (Build.VERSION.SDK_INT >= 29) {
-            k.a(this.E);
+            C0145k.m30017a(this.f630E);
             return;
         }
-        o oVar = F0;
-        oVar.b(this.E);
-        oVar.a(this.E);
+        C0149o c0149o = f625F0;
+        c0149o.m30012b(this.f630E);
+        c0149o.m30013a(this.f630E);
     }
 
-    public final void I(View view, Rect rect) {
-        view.getLocationInWindow(this.Q);
-        getLocationInWindow(this.R);
-        int[] iArr = this.Q;
-        int i2 = iArr[1];
-        int[] iArr2 = this.R;
-        int i3 = i2 - iArr2[1];
-        int i4 = iArr[0] - iArr2[0];
-        rect.set(i4, i3, view.getWidth() + i4, view.getHeight() + i3);
+    /* renamed from: I */
+    public final void m30053I(View view, Rect rect) {
+        view.getLocationInWindow(this.f643Q);
+        getLocationInWindow(this.f644R);
+        int[] iArr = this.f643Q;
+        int i = iArr[1];
+        int[] iArr2 = this.f644R;
+        int i2 = i - iArr2[1];
+        int i3 = iArr[0] - iArr2[0];
+        rect.set(i3, i2, view.getWidth() + i3, view.getHeight() + i2);
     }
 
-    public final CharSequence J(CharSequence charSequence) {
-        if (!this.h0 || this.T == null) {
+    /* renamed from: J */
+    public final CharSequence m30052J(CharSequence charSequence) {
+        if (!this.f657h0 || this.f646T == null) {
             return charSequence;
         }
-        double textSize = this.E.getTextSize();
+        double textSize = this.f630E.getTextSize();
         Double.isNaN(textSize);
-        int i2 = (int) (textSize * 1.25d);
-        this.T.setBounds(0, 0, i2, i2);
+        int i = (int) (textSize * 1.25d);
+        this.f646T.setBounds(0, 0, i, i);
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder("   ");
-        spannableStringBuilder.setSpan(new ImageSpan(this.T), 1, 2, 33);
+        spannableStringBuilder.setSpan(new ImageSpan(this.f646T), 1, 2, 33);
         spannableStringBuilder.append(charSequence);
         return spannableStringBuilder;
     }
 
-    public final boolean K() {
-        SearchableInfo searchableInfo = this.u0;
+    /* renamed from: K */
+    public final boolean m30051K() {
+        SearchableInfo searchableInfo = this.f670u0;
         if (searchableInfo == null || !searchableInfo.getVoiceSearchEnabled()) {
             return false;
         }
         Intent intent = null;
-        if (this.u0.getVoiceSearchLaunchWebSearch()) {
-            intent = this.W;
-        } else if (this.u0.getVoiceSearchLaunchRecognizer()) {
-            intent = this.a0;
+        if (this.f670u0.getVoiceSearchLaunchWebSearch()) {
+            intent = this.f649W;
+        } else if (this.f670u0.getVoiceSearchLaunchRecognizer()) {
+            intent = this.f650a0;
         }
         return (intent == null || getContext().getPackageManager().resolveActivity(intent, 65536) == null) ? false : true;
     }
 
-    public boolean L() {
-        return this.i0;
+    /* renamed from: L */
+    public boolean m30050L() {
+        return this.f658i0;
     }
 
-    public final boolean N() {
-        return (this.k0 || this.p0) && !L();
+    /* renamed from: N */
+    public final boolean m30048N() {
+        return (this.f660k0 || this.f665p0) && !m30050L();
     }
 
-    public final void O(Intent intent) {
+    /* renamed from: O */
+    public final void m30047O(Intent intent) {
         if (intent == null) {
             return;
         }
@@ -960,353 +1134,378 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
         }
     }
 
-    public void P(int i2, String str, String str2) {
-        getContext().startActivity(C("android.intent.action.SEARCH", null, null, str2, i2, str));
+    /* renamed from: P */
+    public void m30046P(int i, String str, String str2) {
+        getContext().startActivity(m30059C("android.intent.action.SEARCH", null, null, str2, i, str));
     }
 
-    public final boolean Q(int i2, int i3, String str) {
-        Cursor b2 = this.j0.b();
-        if (b2 == null || !b2.moveToPosition(i2)) {
+    /* renamed from: Q */
+    public final boolean m30045Q(int i, int i2, String str) {
+        Cursor mo13285b = this.f659j0.mo13285b();
+        if (mo13285b == null || !mo13285b.moveToPosition(i)) {
             return false;
         }
-        O(D(b2, i3, str));
+        m30047O(m30058D(mo13285b, i2, str));
         return true;
     }
 
-    public void R() {
-        if (!TextUtils.isEmpty(this.E.getText())) {
-            this.E.setText("");
-            this.E.requestFocus();
-            this.E.setImeVisibility(true);
-        } else if (this.h0) {
-            l lVar = this.d0;
-            if (lVar == null || !lVar.onClose()) {
+    /* renamed from: R */
+    public void m30044R() {
+        if (!TextUtils.isEmpty(this.f630E.getText())) {
+            this.f630E.setText("");
+            this.f630E.requestFocus();
+            this.f630E.setImeVisibility(true);
+        } else if (this.f657h0) {
+            InterfaceC0146l interfaceC0146l = this.f653d0;
+            if (interfaceC0146l == null || !interfaceC0146l.onClose()) {
                 clearFocus();
-                k0(true);
+                m30025k0(true);
             }
         }
     }
 
-    public boolean S(int i2, int i3, String str) {
-        n nVar = this.f0;
-        if (nVar == null || !nVar.b(i2)) {
-            Q(i2, 0, null);
-            this.E.setImeVisibility(false);
-            G();
+    /* renamed from: S */
+    public boolean m30043S(int i, int i2, String str) {
+        InterfaceC0148n interfaceC0148n = this.f655f0;
+        if (interfaceC0148n == null || !interfaceC0148n.m30014b(i)) {
+            m30045Q(i, 0, null);
+            this.f630E.setImeVisibility(false);
+            m30055G();
             return true;
         }
         return false;
     }
 
-    public boolean T(int i2) {
-        n nVar = this.f0;
-        if (nVar == null || !nVar.a(i2)) {
-            c0(i2);
+    /* renamed from: T */
+    public boolean m30042T(int i) {
+        InterfaceC0148n interfaceC0148n = this.f655f0;
+        if (interfaceC0148n == null || !interfaceC0148n.m30015a(i)) {
+            m30033c0(i);
             return true;
         }
         return false;
     }
 
-    public void U(CharSequence charSequence) {
+    /* renamed from: U */
+    public void m30041U(CharSequence charSequence) {
         setQuery(charSequence);
     }
 
-    public void V() {
-        k0(false);
-        this.E.requestFocus();
-        this.E.setImeVisibility(true);
-        View.OnClickListener onClickListener = this.g0;
+    /* renamed from: V */
+    public void m30040V() {
+        m30025k0(false);
+        this.f630E.requestFocus();
+        this.f630E.setImeVisibility(true);
+        View.OnClickListener onClickListener = this.f656g0;
         if (onClickListener != null) {
             onClickListener.onClick(this);
         }
     }
 
-    public void W() {
-        Editable text = this.E.getText();
+    /* renamed from: W */
+    public void m30039W() {
+        Editable text = this.f630E.getText();
         if (text == null || TextUtils.getTrimmedLength(text) <= 0) {
             return;
         }
-        m mVar = this.c0;
-        if (mVar == null || !mVar.onQueryTextSubmit(text.toString())) {
-            if (this.u0 != null) {
-                P(0, null, text.toString());
+        InterfaceC0147m interfaceC0147m = this.f652c0;
+        if (interfaceC0147m == null || !interfaceC0147m.onQueryTextSubmit(text.toString())) {
+            if (this.f670u0 != null) {
+                m30046P(0, null, text.toString());
             }
-            this.E.setImeVisibility(false);
-            G();
+            this.f630E.setImeVisibility(false);
+            m30055G();
         }
     }
 
-    public boolean X(View view, int i2, KeyEvent keyEvent) {
-        if (this.u0 != null && this.j0 != null && keyEvent.getAction() == 0 && keyEvent.hasNoModifiers()) {
-            if (i2 == 66 || i2 == 84 || i2 == 61) {
-                return S(this.E.getListSelection(), 0, null);
+    /* renamed from: X */
+    public boolean m30038X(View view, int i, KeyEvent keyEvent) {
+        if (this.f670u0 != null && this.f659j0 != null && keyEvent.getAction() == 0 && keyEvent.hasNoModifiers()) {
+            if (i == 66 || i == 84 || i == 61) {
+                return m30043S(this.f630E.getListSelection(), 0, null);
             }
-            if (i2 == 21 || i2 == 22) {
-                this.E.setSelection(i2 == 21 ? 0 : this.E.length());
-                this.E.setListSelection(0);
-                this.E.clearListSelection();
-                this.E.b();
+            if (i == 21 || i == 22) {
+                this.f630E.setSelection(i == 21 ? 0 : this.f630E.length());
+                this.f630E.setListSelection(0);
+                this.f630E.clearListSelection();
+                this.f630E.m30020b();
                 return true;
-            } else if (i2 == 19) {
-                this.E.getListSelection();
+            } else if (i == 19) {
+                this.f630E.getListSelection();
                 return false;
             }
         }
         return false;
     }
 
-    public void Y(CharSequence charSequence) {
-        Editable text = this.E.getText();
-        this.r0 = text;
+    /* renamed from: Y */
+    public void m30037Y(CharSequence charSequence) {
+        Editable text = this.f630E.getText();
+        this.f667r0 = text;
         boolean z = !TextUtils.isEmpty(text);
-        j0(z);
-        l0(!z);
-        e0();
-        i0();
-        if (this.c0 != null && !TextUtils.equals(charSequence, this.q0)) {
-            this.c0.onQueryTextChange(charSequence.toString());
+        m30026j0(z);
+        m30024l0(!z);
+        m30031e0();
+        m30027i0();
+        if (this.f652c0 != null && !TextUtils.equals(charSequence, this.f666q0)) {
+            this.f652c0.onQueryTextChange(charSequence.toString());
         }
-        this.q0 = charSequence.toString();
+        this.f666q0 = charSequence.toString();
     }
 
-    public void Z() {
-        k0(L());
-        b0();
-        if (this.E.hasFocus()) {
-            H();
+    /* renamed from: Z */
+    public void m30036Z() {
+        m30025k0(m30050L());
+        m30034b0();
+        if (this.f630E.hasFocus()) {
+            m30054H();
         }
     }
 
-    public void a0() {
-        Intent E;
-        SearchableInfo searchableInfo = this.u0;
+    /* renamed from: a0 */
+    public void m30035a0() {
+        Intent m30057E;
+        SearchableInfo searchableInfo = this.f670u0;
         if (searchableInfo == null) {
             return;
         }
         try {
             if (searchableInfo.getVoiceSearchLaunchWebSearch()) {
-                E = F(this.W, searchableInfo);
+                m30057E = m30056F(this.f649W, searchableInfo);
             } else if (!searchableInfo.getVoiceSearchLaunchRecognizer()) {
                 return;
             } else {
-                E = E(this.a0, searchableInfo);
+                m30057E = m30057E(this.f650a0, searchableInfo);
             }
-            getContext().startActivity(E);
+            getContext().startActivity(m30057E);
         } catch (ActivityNotFoundException unused) {
         }
     }
 
-    public final void b0() {
-        post(this.w0);
+    /* renamed from: b0 */
+    public final void m30034b0() {
+        post(this.f672w0);
     }
 
-    @Override // com.daaw.fg
-    public void c() {
-        if (this.s0) {
+    @Override // com.daaw.InterfaceC1278fg
+    /* renamed from: c */
+    public void mo18347c() {
+        if (this.f668s0) {
             return;
         }
-        this.s0 = true;
-        int imeOptions = this.E.getImeOptions();
-        this.t0 = imeOptions;
-        this.E.setImeOptions(imeOptions | 33554432);
-        this.E.setText("");
+        this.f668s0 = true;
+        int imeOptions = this.f630E.getImeOptions();
+        this.f669t0 = imeOptions;
+        this.f630E.setImeOptions(imeOptions | 33554432);
+        this.f630E.setText("");
         setIconified(false);
     }
 
-    public final void c0(int i2) {
-        CharSequence c2;
-        Editable text = this.E.getText();
-        Cursor b2 = this.j0.b();
-        if (b2 == null) {
+    /* renamed from: c0 */
+    public final void m30033c0(int i) {
+        CharSequence mo13284c;
+        Editable text = this.f630E.getText();
+        Cursor mo13285b = this.f659j0.mo13285b();
+        if (mo13285b == null) {
             return;
         }
-        if (!b2.moveToPosition(i2) || (c2 = this.j0.c(b2)) == null) {
+        if (!mo13285b.moveToPosition(i) || (mo13284c = this.f659j0.mo13284c(mo13285b)) == null) {
             setQuery(text);
         } else {
-            setQuery(c2);
+            setQuery(mo13284c);
         }
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void clearFocus() {
-        this.n0 = true;
+        this.f663n0 = true;
         super.clearFocus();
-        this.E.clearFocus();
-        this.E.setImeVisibility(false);
-        this.n0 = false;
+        this.f630E.clearFocus();
+        this.f630E.setImeVisibility(false);
+        this.f663n0 = false;
     }
 
-    public void d0(CharSequence charSequence, boolean z) {
-        this.E.setText(charSequence);
+    /* renamed from: d0 */
+    public void m30032d0(CharSequence charSequence, boolean z) {
+        this.f630E.setText(charSequence);
         if (charSequence != null) {
-            SearchAutoComplete searchAutoComplete = this.E;
+            SearchAutoComplete searchAutoComplete = this.f630E;
             searchAutoComplete.setSelection(searchAutoComplete.length());
-            this.r0 = charSequence;
+            this.f667r0 = charSequence;
         }
         if (!z || TextUtils.isEmpty(charSequence)) {
             return;
         }
-        W();
+        m30039W();
     }
 
-    public final void e0() {
+    /* renamed from: e0 */
+    public final void m30031e0() {
         boolean z = true;
-        boolean z2 = !TextUtils.isEmpty(this.E.getText());
-        if (!z2 && (!this.h0 || this.s0)) {
+        boolean z2 = !TextUtils.isEmpty(this.f630E.getText());
+        if (!z2 && (!this.f657h0 || this.f668s0)) {
             z = false;
         }
-        this.K.setVisibility(z ? 0 : 8);
-        Drawable drawable = this.K.getDrawable();
+        this.f637K.setVisibility(z ? 0 : 8);
+        Drawable drawable = this.f637K.getDrawable();
         if (drawable != null) {
             drawable.setState(z2 ? ViewGroup.ENABLED_STATE_SET : ViewGroup.EMPTY_STATE_SET);
         }
     }
 
-    @Override // com.daaw.fg
-    public void f() {
-        d0("", false);
+    @Override // com.daaw.InterfaceC1278fg
+    /* renamed from: f */
+    public void mo18346f() {
+        m30032d0("", false);
         clearFocus();
-        k0(true);
-        this.E.setImeOptions(this.t0);
-        this.s0 = false;
+        m30025k0(true);
+        this.f630E.setImeOptions(this.f669t0);
+        this.f668s0 = false;
     }
 
-    public void f0() {
-        int[] iArr = this.E.hasFocus() ? ViewGroup.FOCUSED_STATE_SET : ViewGroup.EMPTY_STATE_SET;
-        Drawable background = this.G.getBackground();
+    /* renamed from: f0 */
+    public void m30030f0() {
+        int[] iArr = this.f630E.hasFocus() ? ViewGroup.FOCUSED_STATE_SET : ViewGroup.EMPTY_STATE_SET;
+        Drawable background = this.f633G.getBackground();
         if (background != null) {
             background.setState(iArr);
         }
-        Drawable background2 = this.H.getBackground();
+        Drawable background2 = this.f634H.getBackground();
         if (background2 != null) {
             background2.setState(iArr);
         }
         invalidate();
     }
 
-    public final void g0() {
+    /* renamed from: g0 */
+    public final void m30029g0() {
         CharSequence queryHint = getQueryHint();
-        SearchAutoComplete searchAutoComplete = this.E;
+        SearchAutoComplete searchAutoComplete = this.f630E;
         if (queryHint == null) {
             queryHint = "";
         }
-        searchAutoComplete.setHint(J(queryHint));
+        searchAutoComplete.setHint(m30052J(queryHint));
     }
 
     public int getImeOptions() {
-        return this.E.getImeOptions();
+        return this.f630E.getImeOptions();
     }
 
     public int getInputType() {
-        return this.E.getInputType();
+        return this.f630E.getInputType();
     }
 
     public int getMaxWidth() {
-        return this.o0;
+        return this.f664o0;
     }
 
     public CharSequence getQuery() {
-        return this.E.getText();
+        return this.f630E.getText();
     }
 
     public CharSequence getQueryHint() {
-        CharSequence charSequence = this.l0;
+        CharSequence charSequence = this.f661l0;
         if (charSequence != null) {
             return charSequence;
         }
-        SearchableInfo searchableInfo = this.u0;
-        return (searchableInfo == null || searchableInfo.getHintId() == 0) ? this.b0 : getContext().getText(this.u0.getHintId());
+        SearchableInfo searchableInfo = this.f670u0;
+        return (searchableInfo == null || searchableInfo.getHintId() == 0) ? this.f651b0 : getContext().getText(this.f670u0.getHintId());
     }
 
     public int getSuggestionCommitIconResId() {
-        return this.V;
+        return this.f648V;
     }
 
     public int getSuggestionRowLayout() {
-        return this.U;
+        return this.f647U;
     }
 
-    public nn getSuggestionsAdapter() {
-        return this.j0;
+    public AbstractC2317nn getSuggestionsAdapter() {
+        return this.f659j0;
     }
 
-    public final void h0() {
-        this.E.setThreshold(this.u0.getSuggestThreshold());
-        this.E.setImeOptions(this.u0.getImeOptions());
-        int inputType = this.u0.getInputType();
+    /* renamed from: h0 */
+    public final void m30028h0() {
+        this.f630E.setThreshold(this.f670u0.getSuggestThreshold());
+        this.f630E.setImeOptions(this.f670u0.getImeOptions());
+        int inputType = this.f670u0.getInputType();
         if ((inputType & 15) == 1) {
             inputType &= -65537;
-            if (this.u0.getSuggestAuthority() != null) {
+            if (this.f670u0.getSuggestAuthority() != null) {
                 inputType = inputType | 65536 | 524288;
             }
         }
-        this.E.setInputType(inputType);
-        nn nnVar = this.j0;
-        if (nnVar != null) {
-            nnVar.a(null);
+        this.f630E.setInputType(inputType);
+        AbstractC2317nn abstractC2317nn = this.f659j0;
+        if (abstractC2317nn != null) {
+            abstractC2317nn.mo13286a(null);
         }
-        if (this.u0.getSuggestAuthority() != null) {
-            bi1 bi1Var = new bi1(getContext(), this, this.u0, this.y0);
-            this.j0 = bi1Var;
-            this.E.setAdapter(bi1Var);
-            ((bi1) this.j0).y(this.m0 ? 2 : 1);
+        if (this.f670u0.getSuggestAuthority() != null) {
+            bi1 bi1Var = new bi1(getContext(), this, this.f670u0, this.f674y0);
+            this.f659j0 = bi1Var;
+            this.f630E.setAdapter(bi1Var);
+            ((bi1) this.f659j0).m26148y(this.f662m0 ? 2 : 1);
         }
     }
 
-    public final void i0() {
-        this.H.setVisibility((N() && (this.J.getVisibility() == 0 || this.L.getVisibility() == 0)) ? 0 : 8);
+    /* renamed from: i0 */
+    public final void m30027i0() {
+        this.f634H.setVisibility((m30048N() && (this.f636J.getVisibility() == 0 || this.f638L.getVisibility() == 0)) ? 0 : 8);
     }
 
-    public final void j0(boolean z) {
-        this.J.setVisibility((this.k0 && N() && hasFocus() && (z || !this.p0)) ? 0 : 8);
+    /* renamed from: j0 */
+    public final void m30026j0(boolean z) {
+        this.f636J.setVisibility((this.f660k0 && m30048N() && hasFocus() && (z || !this.f665p0)) ? 0 : 8);
     }
 
-    public final void k0(boolean z) {
-        this.i0 = z;
-        int i2 = 0;
-        int i3 = z ? 0 : 8;
-        boolean z2 = !TextUtils.isEmpty(this.E.getText());
-        this.I.setVisibility(i3);
-        j0(z2);
-        this.F.setVisibility(z ? 8 : 0);
-        this.S.setVisibility((this.S.getDrawable() == null || this.h0) ? 8 : 8);
-        e0();
-        l0(!z2);
-        i0();
+    /* renamed from: k0 */
+    public final void m30025k0(boolean z) {
+        this.f658i0 = z;
+        int i = 0;
+        int i2 = z ? 0 : 8;
+        boolean z2 = !TextUtils.isEmpty(this.f630E.getText());
+        this.f635I.setVisibility(i2);
+        m30026j0(z2);
+        this.f632F.setVisibility(z ? 8 : 0);
+        this.f645S.setVisibility((this.f645S.getDrawable() == null || this.f657h0) ? 8 : 8);
+        m30031e0();
+        m30024l0(!z2);
+        m30027i0();
     }
 
-    public final void l0(boolean z) {
-        int i2 = 8;
-        if (this.p0 && !L() && z) {
-            this.J.setVisibility(8);
-            i2 = 0;
+    /* renamed from: l0 */
+    public final void m30024l0(boolean z) {
+        int i = 8;
+        if (this.f665p0 && !m30050L() && z) {
+            this.f636J.setVisibility(8);
+            i = 0;
         }
-        this.L.setVisibility(i2);
+        this.f638L.setVisibility(i);
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
-        removeCallbacks(this.w0);
-        post(this.x0);
+        removeCallbacks(this.f672w0);
+        post(this.f673x0);
         super.onDetachedFromWindow();
     }
 
-    @Override // androidx.appcompat.widget.b, android.view.ViewGroup, android.view.View
-    public void onLayout(boolean z, int i2, int i3, int i4, int i5) {
-        super.onLayout(z, i2, i3, i4, i5);
+    @Override // androidx.appcompat.widget.C0164b, android.view.ViewGroup, android.view.View
+    public void onLayout(boolean z, int i, int i2, int i3, int i4) {
+        super.onLayout(z, i, i2, i3, i4);
         if (z) {
-            I(this.E, this.O);
-            Rect rect = this.P;
-            Rect rect2 = this.O;
-            rect.set(rect2.left, 0, rect2.right, i5 - i3);
-            p pVar = this.N;
-            if (pVar != null) {
-                pVar.a(this.P, this.O);
+            m30053I(this.f630E, this.f641O);
+            Rect rect = this.f642P;
+            Rect rect2 = this.f641O;
+            rect.set(rect2.left, 0, rect2.right, i4 - i2);
+            C0150p c0150p = this.f640N;
+            if (c0150p != null) {
+                c0150p.m30009a(this.f642P, this.f641O);
                 return;
             }
-            p pVar2 = new p(this.P, this.O, this.E);
-            this.N = pVar2;
-            setTouchDelegate(pVar2);
+            C0150p c0150p2 = new C0150p(this.f642P, this.f641O, this.f630E);
+            this.f640N = c0150p2;
+            setTouchDelegate(c0150p2);
         }
     }
 
@@ -1315,66 +1514,47 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
      */
     /* JADX WARN: Removed duplicated region for block: B:25:0x0043  */
     /* JADX WARN: Removed duplicated region for block: B:28:0x004b  */
-    @Override // androidx.appcompat.widget.b, android.view.View
+    @Override // androidx.appcompat.widget.C0164b, android.view.View
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void onMeasure(int r4, int r5) {
-        /*
-            r3 = this;
-            boolean r0 = r3.L()
-            if (r0 == 0) goto La
-            super.onMeasure(r4, r5)
-            return
-        La:
-            int r0 = android.view.View.MeasureSpec.getMode(r4)
-            int r4 = android.view.View.MeasureSpec.getSize(r4)
-            r1 = -2147483648(0xffffffff80000000, float:-0.0)
-            r2 = 1073741824(0x40000000, float:2.0)
-            if (r0 == r1) goto L2c
-            if (r0 == 0) goto L22
-            if (r0 == r2) goto L1d
-            goto L39
-        L1d:
-            int r0 = r3.o0
-            if (r0 <= 0) goto L39
-            goto L30
-        L22:
-            int r4 = r3.o0
-            if (r4 <= 0) goto L27
-            goto L39
-        L27:
-            int r4 = r3.getPreferredWidth()
-            goto L39
-        L2c:
-            int r0 = r3.o0
-            if (r0 <= 0) goto L31
-        L30:
-            goto L35
-        L31:
-            int r0 = r3.getPreferredWidth()
-        L35:
-            int r4 = java.lang.Math.min(r0, r4)
-        L39:
-            int r0 = android.view.View.MeasureSpec.getMode(r5)
-            int r5 = android.view.View.MeasureSpec.getSize(r5)
-            if (r0 == r1) goto L4b
-            if (r0 == 0) goto L46
-            goto L53
-        L46:
-            int r5 = r3.getPreferredHeight()
-            goto L53
-        L4b:
-            int r0 = r3.getPreferredHeight()
-            int r5 = java.lang.Math.min(r0, r5)
-        L53:
-            int r4 = android.view.View.MeasureSpec.makeMeasureSpec(r4, r2)
-            int r5 = android.view.View.MeasureSpec.makeMeasureSpec(r5, r2)
-            super.onMeasure(r4, r5)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.appcompat.widget.SearchView.onMeasure(int, int):void");
+    public void onMeasure(int i, int i2) {
+        int i3;
+        int mode;
+        if (m30050L()) {
+            super.onMeasure(i, i2);
+            return;
+        }
+        int mode2 = View.MeasureSpec.getMode(i);
+        int size = View.MeasureSpec.getSize(i);
+        if (mode2 != Integer.MIN_VALUE) {
+            if (mode2 == 0) {
+                size = this.f664o0;
+                if (size <= 0) {
+                    size = getPreferredWidth();
+                }
+            } else if (mode2 == 1073741824) {
+                i3 = this.f664o0;
+            }
+            mode = View.MeasureSpec.getMode(i2);
+            int size2 = View.MeasureSpec.getSize(i2);
+            if (mode != Integer.MIN_VALUE) {
+                size2 = Math.min(getPreferredHeight(), size2);
+            } else if (mode == 0) {
+                size2 = getPreferredHeight();
+            }
+            super.onMeasure(View.MeasureSpec.makeMeasureSpec(size, 1073741824), View.MeasureSpec.makeMeasureSpec(size2, 1073741824));
+        }
+        i3 = this.f664o0;
+        if (i3 <= 0) {
+            i3 = getPreferredWidth();
+        }
+        size = Math.min(i3, size);
+        mode = View.MeasureSpec.getMode(i2);
+        int size22 = View.MeasureSpec.getSize(i2);
+        if (mode != Integer.MIN_VALUE) {
+        }
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(size, 1073741824), View.MeasureSpec.makeMeasureSpec(size22, 1073741824));
     }
 
     @Override // android.view.View
@@ -1384,33 +1564,33 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
             return;
         }
         SavedState savedState = (SavedState) parcelable;
-        super.onRestoreInstanceState(savedState.a());
-        k0(savedState.r);
+        super.onRestoreInstanceState(savedState.m29657a());
+        m30025k0(savedState.f676r);
         requestLayout();
     }
 
     @Override // android.view.View
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
-        savedState.r = L();
+        savedState.f676r = m30050L();
         return savedState;
     }
 
     @Override // android.view.View
     public void onWindowFocusChanged(boolean z) {
         super.onWindowFocusChanged(z);
-        b0();
+        m30034b0();
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    public boolean requestFocus(int i2, Rect rect) {
-        if (!this.n0 && isFocusable()) {
-            if (L()) {
-                return super.requestFocus(i2, rect);
+    public boolean requestFocus(int i, Rect rect) {
+        if (!this.f663n0 && isFocusable()) {
+            if (m30050L()) {
+                return super.requestFocus(i, rect);
             }
-            boolean requestFocus = this.E.requestFocus(i2, rect);
+            boolean requestFocus = this.f630E.requestFocus(i, rect);
             if (requestFocus) {
-                k0(false);
+                m30025k0(false);
             }
             return requestFocus;
         }
@@ -1418,93 +1598,93 @@ public class SearchView extends androidx.appcompat.widget.b implements fg {
     }
 
     public void setAppSearchData(Bundle bundle) {
-        this.v0 = bundle;
+        this.f671v0 = bundle;
     }
 
     public void setIconified(boolean z) {
         if (z) {
-            R();
+            m30044R();
         } else {
-            V();
+            m30040V();
         }
     }
 
     public void setIconifiedByDefault(boolean z) {
-        if (this.h0 == z) {
+        if (this.f657h0 == z) {
             return;
         }
-        this.h0 = z;
-        k0(z);
-        g0();
+        this.f657h0 = z;
+        m30025k0(z);
+        m30029g0();
     }
 
-    public void setImeOptions(int i2) {
-        this.E.setImeOptions(i2);
+    public void setImeOptions(int i) {
+        this.f630E.setImeOptions(i);
     }
 
-    public void setInputType(int i2) {
-        this.E.setInputType(i2);
+    public void setInputType(int i) {
+        this.f630E.setInputType(i);
     }
 
-    public void setMaxWidth(int i2) {
-        this.o0 = i2;
+    public void setMaxWidth(int i) {
+        this.f664o0 = i;
         requestLayout();
     }
 
-    public void setOnCloseListener(l lVar) {
-        this.d0 = lVar;
+    public void setOnCloseListener(InterfaceC0146l interfaceC0146l) {
+        this.f653d0 = interfaceC0146l;
     }
 
     public void setOnQueryTextFocusChangeListener(View.OnFocusChangeListener onFocusChangeListener) {
-        this.e0 = onFocusChangeListener;
+        this.f654e0 = onFocusChangeListener;
     }
 
-    public void setOnQueryTextListener(m mVar) {
-        this.c0 = mVar;
+    public void setOnQueryTextListener(InterfaceC0147m interfaceC0147m) {
+        this.f652c0 = interfaceC0147m;
     }
 
     public void setOnSearchClickListener(View.OnClickListener onClickListener) {
-        this.g0 = onClickListener;
+        this.f656g0 = onClickListener;
     }
 
-    public void setOnSuggestionListener(n nVar) {
-        this.f0 = nVar;
+    public void setOnSuggestionListener(InterfaceC0148n interfaceC0148n) {
+        this.f655f0 = interfaceC0148n;
     }
 
     public void setQueryHint(CharSequence charSequence) {
-        this.l0 = charSequence;
-        g0();
+        this.f661l0 = charSequence;
+        m30029g0();
     }
 
     public void setQueryRefinementEnabled(boolean z) {
-        this.m0 = z;
-        nn nnVar = this.j0;
-        if (nnVar instanceof bi1) {
-            ((bi1) nnVar).y(z ? 2 : 1);
+        this.f662m0 = z;
+        AbstractC2317nn abstractC2317nn = this.f659j0;
+        if (abstractC2317nn instanceof bi1) {
+            ((bi1) abstractC2317nn).m26148y(z ? 2 : 1);
         }
     }
 
     public void setSearchableInfo(SearchableInfo searchableInfo) {
-        this.u0 = searchableInfo;
+        this.f670u0 = searchableInfo;
         if (searchableInfo != null) {
-            h0();
-            g0();
+            m30028h0();
+            m30029g0();
         }
-        boolean K = K();
-        this.p0 = K;
-        if (K) {
-            this.E.setPrivateImeOptions("nm");
+        boolean m30051K = m30051K();
+        this.f665p0 = m30051K;
+        if (m30051K) {
+            this.f630E.setPrivateImeOptions("nm");
         }
-        k0(L());
+        m30025k0(m30050L());
     }
 
     public void setSubmitButtonEnabled(boolean z) {
-        this.k0 = z;
-        k0(L());
+        this.f660k0 = z;
+        m30025k0(m30050L());
     }
 
-    public void setSuggestionsAdapter(nn nnVar) {
-        this.j0 = nnVar;
-        this.E.setAdapter(nnVar);
+    public void setSuggestionsAdapter(AbstractC2317nn abstractC2317nn) {
+        this.f659j0 = abstractC2317nn;
+        this.f630E.setAdapter(abstractC2317nn);
     }
 }

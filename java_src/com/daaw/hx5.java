@@ -9,12 +9,14 @@ public final class hx5 extends sz4 {
     }
 
     @Override // com.daaw.sz4
-    public final Set f(ip4 ip4Var) {
+    /* renamed from: f */
+    public final Set mo9684f(ip4 ip4Var) {
         return Collections.emptySet();
     }
 
     @Override // com.daaw.sz4
-    public final Set g(ip4 ip4Var) {
+    /* renamed from: g */
+    public final Set mo9683g(ip4 ip4Var) {
         return Collections.emptySet();
     }
 }

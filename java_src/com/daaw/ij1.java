@@ -6,24 +6,29 @@ import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 /* loaded from: classes.dex */
 public class ij1 extends gj1 {
-    public WindowInsetsController e;
+
+    /* renamed from: e */
+    public WindowInsetsController f13682e;
 
     public ij1(View view, int i, Window window) {
         super(view, i);
-        this.e = window.getInsetsController();
+        this.f13682e = window.getInsetsController();
     }
 
     @Override // com.daaw.gj1
-    public void a() {
-        this.e.hide(WindowInsets.Type.systemBars());
+    /* renamed from: a */
+    public void mo19755a() {
+        this.f13682e.hide(WindowInsets.Type.systemBars());
     }
 
     @Override // com.daaw.gj1
-    public void c() {
+    /* renamed from: c */
+    public void mo19754c() {
     }
 
     @Override // com.daaw.gj1
-    public void d() {
-        this.e.show(WindowInsets.Type.systemBars());
+    /* renamed from: d */
+    public void mo19753d() {
+        this.f13682e.show(WindowInsets.Type.systemBars());
     }
 }

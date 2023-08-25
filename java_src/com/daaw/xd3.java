@@ -9,9 +9,10 @@ public final class xd3 extends bp2 implements zd3 {
     }
 
     @Override // com.daaw.zd3
-    public final void g0(pd3 pd3Var) {
-        Parcel D = D();
-        dp2.g(D, pd3Var);
-        M(1, D);
+    /* renamed from: g0 */
+    public final void mo2464g0(pd3 pd3Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, pd3Var);
+        m25950M(1, m25952D);
     }
 }

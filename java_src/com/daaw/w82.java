@@ -6,7 +6,8 @@ public final class w82 extends h42 implements x82 {
     }
 
     @Override // com.daaw.x82
-    public final long e(long j) {
+    /* renamed from: e */
+    public final long mo2629e(long j) {
         return 0L;
     }
 

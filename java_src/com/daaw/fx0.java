@@ -3,108 +3,152 @@ package com.daaw;
 import android.os.Handler;
 /* loaded from: classes.dex */
 public final class fx0 {
-    public final b a;
-    public final a b;
-    public final nl1 c;
-    public int d;
-    public Object e;
-    public Handler f;
-    public int g;
-    public long h = -9223372036854775807L;
-    public boolean i = true;
-    public boolean j;
-    public boolean k;
-    public boolean l;
-    public boolean m;
 
+    /* renamed from: a */
+    public final InterfaceC1343b f10063a;
+
+    /* renamed from: b */
+    public final InterfaceC1342a f10064b;
+
+    /* renamed from: c */
+    public final nl1 f10065c;
+
+    /* renamed from: d */
+    public int f10066d;
+
+    /* renamed from: e */
+    public Object f10067e;
+
+    /* renamed from: f */
+    public Handler f10068f;
+
+    /* renamed from: g */
+    public int f10069g;
+
+    /* renamed from: h */
+    public long f10070h = -9223372036854775807L;
+
+    /* renamed from: i */
+    public boolean f10071i = true;
+
+    /* renamed from: j */
+    public boolean f10072j;
+
+    /* renamed from: k */
+    public boolean f10073k;
+
+    /* renamed from: l */
+    public boolean f10074l;
+
+    /* renamed from: m */
+    public boolean f10075m;
+
+    /* renamed from: com.daaw.fx0$a */
     /* loaded from: classes.dex */
-    public interface a {
-        void b(fx0 fx0Var);
+    public interface InterfaceC1342a {
+        /* renamed from: b */
+        void mo7617b(fx0 fx0Var);
     }
 
+    /* renamed from: com.daaw.fx0$b */
     /* loaded from: classes.dex */
-    public interface b {
-        void r(int i, Object obj);
+    public interface InterfaceC1343b {
+        /* renamed from: r */
+        void mo5354r(int i, Object obj);
     }
 
-    public fx0(a aVar, b bVar, nl1 nl1Var, int i, Handler handler) {
-        this.b = aVar;
-        this.a = bVar;
-        this.c = nl1Var;
-        this.f = handler;
-        this.g = i;
+    public fx0(InterfaceC1342a interfaceC1342a, InterfaceC1343b interfaceC1343b, nl1 nl1Var, int i, Handler handler) {
+        this.f10064b = interfaceC1342a;
+        this.f10063a = interfaceC1343b;
+        this.f10065c = nl1Var;
+        this.f10068f = handler;
+        this.f10069g = i;
     }
 
-    public synchronized boolean a() {
-        s6.f(this.j);
-        s6.f(this.f.getLooper().getThread() != Thread.currentThread());
-        while (!this.l) {
+    /* renamed from: a */
+    public synchronized boolean m22168a() {
+        C2914s6.m10685f(this.f10072j);
+        C2914s6.m10685f(this.f10068f.getLooper().getThread() != Thread.currentThread());
+        while (!this.f10074l) {
             wait();
         }
-        return this.k;
+        return this.f10073k;
     }
 
-    public boolean b() {
-        return this.i;
+    /* renamed from: b */
+    public boolean m22167b() {
+        return this.f10071i;
     }
 
-    public Handler c() {
-        return this.f;
+    /* renamed from: c */
+    public Handler m22166c() {
+        return this.f10068f;
     }
 
-    public Object d() {
-        return this.e;
+    /* renamed from: d */
+    public Object m22165d() {
+        return this.f10067e;
     }
 
-    public long e() {
-        return this.h;
+    /* renamed from: e */
+    public long m22164e() {
+        return this.f10070h;
     }
 
-    public b f() {
-        return this.a;
+    /* renamed from: f */
+    public InterfaceC1343b m22163f() {
+        return this.f10063a;
     }
 
-    public nl1 g() {
-        return this.c;
+    /* renamed from: g */
+    public nl1 m22162g() {
+        return this.f10065c;
     }
 
-    public int h() {
-        return this.d;
+    /* renamed from: h */
+    public int m22161h() {
+        return this.f10066d;
     }
 
-    public int i() {
-        return this.g;
+    /* renamed from: i */
+    public int m22160i() {
+        return this.f10069g;
     }
 
-    public synchronized boolean j() {
-        return this.m;
+    /* renamed from: j */
+    public synchronized boolean m22159j() {
+        return this.f10075m;
     }
 
-    public synchronized void k(boolean z) {
-        this.k = z | this.k;
-        this.l = true;
+    /* renamed from: k */
+    public synchronized void m22158k(boolean z) {
+        this.f10073k = z | this.f10073k;
+        this.f10074l = true;
         notifyAll();
     }
 
-    public fx0 l() {
-        s6.f(!this.j);
-        if (this.h == -9223372036854775807L) {
-            s6.a(this.i);
+    /* renamed from: l */
+    public fx0 m22157l() {
+        C2914s6.m10685f(!this.f10072j);
+        if (this.f10070h == -9223372036854775807L) {
+            C2914s6.m10690a(this.f10071i);
         }
-        this.j = true;
-        this.b.b(this);
+        this.f10072j = true;
+        this.f10064b.mo7617b(this);
         return this;
     }
 
-    public fx0 m(Object obj) {
-        s6.f(!this.j);
-        this.e = obj;
+    /* renamed from: m */
+    public fx0 m22156m(Object obj) {
+        C2914s6.m10685f(!this.f10072j);
+        this.f10067e = obj;
         return this;
     }
 
-    public fx0 n(int i) {
-        s6.f(!this.j);
-        this.d = i;
+    /* renamed from: n */
+    public fx0 m22155n(int i) {
+        C2914s6.m10685f(!this.f10072j);
+        this.f10066d = i;
         return this;
     }
 }

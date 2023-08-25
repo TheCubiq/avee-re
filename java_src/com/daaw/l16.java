@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class l16 implements wz7 {
-    public static l16 a() {
+    /* renamed from: a */
+    public static l16 m17203a() {
         l16 l16Var;
-        l16Var = k16.a;
+        l16Var = k16.f15601a;
         return l16Var;
     }
 

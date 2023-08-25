@@ -12,41 +12,41 @@ public final class tc3 extends bp2 implements vc3 {
 
     @Override // com.daaw.vc3
     public final double zzb() {
-        Parcel I = I(3, D());
-        double readDouble = I.readDouble();
-        I.recycle();
+        Parcel m25951I = m25951I(3, m25952D());
+        double readDouble = m25951I.readDouble();
+        m25951I.recycle();
         return readDouble;
     }
 
     @Override // com.daaw.vc3
     public final int zzc() {
-        Parcel I = I(5, D());
-        int readInt = I.readInt();
-        I.recycle();
+        Parcel m25951I = m25951I(5, m25952D());
+        int readInt = m25951I.readInt();
+        m25951I.recycle();
         return readInt;
     }
 
     @Override // com.daaw.vc3
     public final int zzd() {
-        Parcel I = I(4, D());
-        int readInt = I.readInt();
-        I.recycle();
+        Parcel m25951I = m25951I(4, m25952D());
+        int readInt = m25951I.readInt();
+        m25951I.recycle();
         return readInt;
     }
 
     @Override // com.daaw.vc3
     public final Uri zze() {
-        Parcel I = I(2, D());
-        Uri uri = (Uri) dp2.a(I, Uri.CREATOR);
-        I.recycle();
+        Parcel m25951I = m25951I(2, m25952D());
+        Uri uri = (Uri) dp2.m24107a(m25951I, Uri.CREATOR);
+        m25951I.recycle();
         return uri;
     }
 
     @Override // com.daaw.vc3
     public final yd0 zzf() {
-        Parcel I = I(1, D());
-        yd0 I2 = yd0.a.I(I.readStrongBinder());
-        I.recycle();
-        return I2;
+        Parcel m25951I = m25951I(1, m25952D());
+        yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(m25951I.readStrongBinder());
+        m25951I.recycle();
+        return m3857I;
     }
 }

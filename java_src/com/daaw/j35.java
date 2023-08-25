@@ -10,36 +10,83 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class j35 {
-    public int a;
-    public zzdq b;
-    public nc3 c;
-    public View d;
-    public List e;
-    public zzel g;
-    public Bundle h;
-    public a74 i;
-    public a74 j;
-    public a74 k;
-    public yd0 l;
-    public View m;
-    public View n;
-    public yd0 o;
-    public double p;
-    public vc3 q;
-    public vc3 r;
-    public String s;
-    public float v;
-    public String w;
-    public final cd1 t = new cd1();
-    public final cd1 u = new cd1();
-    public List f = Collections.emptyList();
 
-    public static j35 C(on3 on3Var) {
+    /* renamed from: a */
+    public int f14193a;
+
+    /* renamed from: b */
+    public zzdq f14194b;
+
+    /* renamed from: c */
+    public nc3 f14195c;
+
+    /* renamed from: d */
+    public View f14196d;
+
+    /* renamed from: e */
+    public List f14197e;
+
+    /* renamed from: g */
+    public zzel f14199g;
+
+    /* renamed from: h */
+    public Bundle f14200h;
+
+    /* renamed from: i */
+    public a74 f14201i;
+
+    /* renamed from: j */
+    public a74 f14202j;
+
+    /* renamed from: k */
+    public a74 f14203k;
+
+    /* renamed from: l */
+    public yd0 f14204l;
+
+    /* renamed from: m */
+    public View f14205m;
+
+    /* renamed from: n */
+    public View f14206n;
+
+    /* renamed from: o */
+    public yd0 f14207o;
+
+    /* renamed from: p */
+    public double f14208p;
+
+    /* renamed from: q */
+    public vc3 f14209q;
+
+    /* renamed from: r */
+    public vc3 f14210r;
+
+    /* renamed from: s */
+    public String f14211s;
+
+    /* renamed from: v */
+    public float f14214v;
+
+    /* renamed from: w */
+    public String f14215w;
+
+    /* renamed from: t */
+    public final cd1 f14212t = new cd1();
+
+    /* renamed from: u */
+    public final cd1 f14213u = new cd1();
+
+    /* renamed from: f */
+    public List f14198f = Collections.emptyList();
+
+    /* renamed from: C */
+    public static j35 m19153C(on3 on3Var) {
         try {
-            i35 G = G(on3Var.h3(), null);
-            nc3 i3 = on3Var.i3();
+            i35 m19149G = m19149G(on3Var.m14138h3(), null);
+            nc3 m14137i3 = on3Var.m14137i3();
             String zzo = on3Var.zzo();
-            List m3 = on3Var.m3();
+            List m14133m3 = on3Var.m14133m3();
             String zzm = on3Var.zzm();
             Bundle zzf = on3Var.zzf();
             String zzn = on3Var.zzn();
@@ -47,23 +94,23 @@ public final class j35 {
             String zzq = on3Var.zzq();
             String zzp = on3Var.zzp();
             double zze = on3Var.zze();
-            vc3 j3 = on3Var.j3();
+            vc3 m14136j3 = on3Var.m14136j3();
             j35 j35Var = new j35();
-            j35Var.a = 2;
-            j35Var.b = G;
-            j35Var.c = i3;
-            j35Var.d = (View) I(on3Var.k3());
-            j35Var.u("headline", zzo);
-            j35Var.e = m3;
-            j35Var.u("body", zzm);
-            j35Var.h = zzf;
-            j35Var.u("call_to_action", zzn);
-            j35Var.m = (View) I(on3Var.l3());
-            j35Var.o = zzl;
-            j35Var.u("store", zzq);
-            j35Var.u("price", zzp);
-            j35Var.p = zze;
-            j35Var.q = j3;
+            j35Var.f14193a = 2;
+            j35Var.f14194b = m19149G;
+            j35Var.f14195c = m14137i3;
+            j35Var.f14196d = (View) m19147I(on3Var.m14135k3());
+            j35Var.m19101u("headline", zzo);
+            j35Var.f14197e = m14133m3;
+            j35Var.m19101u("body", zzm);
+            j35Var.f14200h = zzf;
+            j35Var.m19101u("call_to_action", zzn);
+            j35Var.f14205m = (View) m19147I(on3Var.m14134l3());
+            j35Var.f14207o = zzl;
+            j35Var.m19101u("store", zzq);
+            j35Var.m19101u("price", zzp);
+            j35Var.f14208p = zze;
+            j35Var.f14209q = m14136j3;
             return j35Var;
         } catch (RemoteException e) {
             k04.zzk("Failed to get native ad from app install ad mapper", e);
@@ -71,32 +118,33 @@ public final class j35 {
         }
     }
 
-    public static j35 D(pn3 pn3Var) {
+    /* renamed from: D */
+    public static j35 m19152D(pn3 pn3Var) {
         try {
-            i35 G = G(pn3Var.h3(), null);
-            nc3 i3 = pn3Var.i3();
+            i35 m19149G = m19149G(pn3Var.m13281h3(), null);
+            nc3 m13280i3 = pn3Var.m13280i3();
             String zzo = pn3Var.zzo();
-            List m3 = pn3Var.m3();
+            List m13276m3 = pn3Var.m13276m3();
             String zzm = pn3Var.zzm();
             Bundle zze = pn3Var.zze();
             String zzn = pn3Var.zzn();
-            yd0 l3 = pn3Var.l3();
+            yd0 m13277l3 = pn3Var.m13277l3();
             String zzl = pn3Var.zzl();
-            vc3 j3 = pn3Var.j3();
+            vc3 m13279j3 = pn3Var.m13279j3();
             j35 j35Var = new j35();
-            j35Var.a = 1;
-            j35Var.b = G;
-            j35Var.c = i3;
-            j35Var.d = (View) I(pn3Var.zzi());
-            j35Var.u("headline", zzo);
-            j35Var.e = m3;
-            j35Var.u("body", zzm);
-            j35Var.h = zze;
-            j35Var.u("call_to_action", zzn);
-            j35Var.m = (View) I(pn3Var.k3());
-            j35Var.o = l3;
-            j35Var.u("advertiser", zzl);
-            j35Var.r = j3;
+            j35Var.f14193a = 1;
+            j35Var.f14194b = m19149G;
+            j35Var.f14195c = m13280i3;
+            j35Var.f14196d = (View) m19147I(pn3Var.zzi());
+            j35Var.m19101u("headline", zzo);
+            j35Var.f14197e = m13276m3;
+            j35Var.m19101u("body", zzm);
+            j35Var.f14200h = zze;
+            j35Var.m19101u("call_to_action", zzn);
+            j35Var.f14205m = (View) m19147I(pn3Var.m13278k3());
+            j35Var.f14207o = m13277l3;
+            j35Var.m19101u("advertiser", zzl);
+            j35Var.f14210r = m13279j3;
             return j35Var;
         } catch (RemoteException e) {
             k04.zzk("Failed to get native ad from content ad mapper", e);
@@ -104,320 +152,378 @@ public final class j35 {
         }
     }
 
-    public static j35 E(on3 on3Var) {
+    /* renamed from: E */
+    public static j35 m19151E(on3 on3Var) {
         try {
-            return H(G(on3Var.h3(), null), on3Var.i3(), (View) I(on3Var.k3()), on3Var.zzo(), on3Var.m3(), on3Var.zzm(), on3Var.zzf(), on3Var.zzn(), (View) I(on3Var.l3()), on3Var.zzl(), on3Var.zzq(), on3Var.zzp(), on3Var.zze(), on3Var.j3(), null, 0.0f);
+            return m19148H(m19149G(on3Var.m14138h3(), null), on3Var.m14137i3(), (View) m19147I(on3Var.m14135k3()), on3Var.zzo(), on3Var.m14133m3(), on3Var.zzm(), on3Var.zzf(), on3Var.zzn(), (View) m19147I(on3Var.m14134l3()), on3Var.zzl(), on3Var.zzq(), on3Var.zzp(), on3Var.zze(), on3Var.m14136j3(), null, 0.0f);
         } catch (RemoteException e) {
             k04.zzk("Failed to get native ad assets from app install ad mapper", e);
             return null;
         }
     }
 
-    public static j35 F(pn3 pn3Var) {
+    /* renamed from: F */
+    public static j35 m19150F(pn3 pn3Var) {
         try {
-            return H(G(pn3Var.h3(), null), pn3Var.i3(), (View) I(pn3Var.zzi()), pn3Var.zzo(), pn3Var.m3(), pn3Var.zzm(), pn3Var.zze(), pn3Var.zzn(), (View) I(pn3Var.k3()), pn3Var.l3(), null, null, -1.0d, pn3Var.j3(), pn3Var.zzl(), 0.0f);
+            return m19148H(m19149G(pn3Var.m13281h3(), null), pn3Var.m13280i3(), (View) m19147I(pn3Var.zzi()), pn3Var.zzo(), pn3Var.m13276m3(), pn3Var.zzm(), pn3Var.zze(), pn3Var.zzn(), (View) m19147I(pn3Var.m13278k3()), pn3Var.m13277l3(), null, null, -1.0d, pn3Var.m13279j3(), pn3Var.zzl(), 0.0f);
         } catch (RemoteException e) {
             k04.zzk("Failed to get native ad assets from content ad mapper", e);
             return null;
         }
     }
 
-    public static i35 G(zzdq zzdqVar, sn3 sn3Var) {
+    /* renamed from: G */
+    public static i35 m19149G(zzdq zzdqVar, sn3 sn3Var) {
         if (zzdqVar == null) {
             return null;
         }
         return new i35(zzdqVar, sn3Var);
     }
 
-    public static j35 H(zzdq zzdqVar, nc3 nc3Var, View view, String str, List list, String str2, Bundle bundle, String str3, View view2, yd0 yd0Var, String str4, String str5, double d, vc3 vc3Var, String str6, float f) {
+    /* renamed from: H */
+    public static j35 m19148H(zzdq zzdqVar, nc3 nc3Var, View view, String str, List list, String str2, Bundle bundle, String str3, View view2, yd0 yd0Var, String str4, String str5, double d, vc3 vc3Var, String str6, float f) {
         j35 j35Var = new j35();
-        j35Var.a = 6;
-        j35Var.b = zzdqVar;
-        j35Var.c = nc3Var;
-        j35Var.d = view;
-        j35Var.u("headline", str);
-        j35Var.e = list;
-        j35Var.u("body", str2);
-        j35Var.h = bundle;
-        j35Var.u("call_to_action", str3);
-        j35Var.m = view2;
-        j35Var.o = yd0Var;
-        j35Var.u("store", str4);
-        j35Var.u("price", str5);
-        j35Var.p = d;
-        j35Var.q = vc3Var;
-        j35Var.u("advertiser", str6);
-        j35Var.p(f);
+        j35Var.f14193a = 6;
+        j35Var.f14194b = zzdqVar;
+        j35Var.f14195c = nc3Var;
+        j35Var.f14196d = view;
+        j35Var.m19101u("headline", str);
+        j35Var.f14197e = list;
+        j35Var.m19101u("body", str2);
+        j35Var.f14200h = bundle;
+        j35Var.m19101u("call_to_action", str3);
+        j35Var.f14205m = view2;
+        j35Var.f14207o = yd0Var;
+        j35Var.m19101u("store", str4);
+        j35Var.m19101u("price", str5);
+        j35Var.f14208p = d;
+        j35Var.f14209q = vc3Var;
+        j35Var.m19101u("advertiser", str6);
+        j35Var.m19106p(f);
         return j35Var;
     }
 
-    public static Object I(yd0 yd0Var) {
+    /* renamed from: I */
+    public static Object m19147I(yd0 yd0Var) {
         if (yd0Var == null) {
             return null;
         }
-        return nt0.M(yd0Var);
+        return nt0.m14831M(yd0Var);
     }
 
-    public static j35 a0(sn3 sn3Var) {
+    /* renamed from: a0 */
+    public static j35 m19128a0(sn3 sn3Var) {
         try {
-            return H(G(sn3Var.zzj(), sn3Var), sn3Var.zzk(), (View) I(sn3Var.zzm()), sn3Var.zzs(), sn3Var.zzv(), sn3Var.zzq(), sn3Var.zzi(), sn3Var.zzr(), (View) I(sn3Var.zzn()), sn3Var.zzo(), sn3Var.b(), sn3Var.zzt(), sn3Var.zze(), sn3Var.zzl(), sn3Var.zzp(), sn3Var.zzf());
+            return m19148H(m19149G(sn3Var.zzj(), sn3Var), sn3Var.zzk(), (View) m19147I(sn3Var.zzm()), sn3Var.zzs(), sn3Var.zzv(), sn3Var.zzq(), sn3Var.zzi(), sn3Var.zzr(), (View) m19147I(sn3Var.zzn()), sn3Var.zzo(), sn3Var.mo10146b(), sn3Var.zzt(), sn3Var.zze(), sn3Var.zzl(), sn3Var.zzp(), sn3Var.zzf());
         } catch (RemoteException e) {
             k04.zzk("Failed to get native ad assets from unified ad mapper", e);
             return null;
         }
     }
 
-    public final synchronized double A() {
-        return this.p;
+    /* renamed from: A */
+    public final synchronized double m19155A() {
+        return this.f14208p;
     }
 
-    public final synchronized void B(yd0 yd0Var) {
-        this.l = yd0Var;
+    /* renamed from: B */
+    public final synchronized void m19154B(yd0 yd0Var) {
+        this.f14204l = yd0Var;
     }
 
-    public final synchronized float J() {
-        return this.v;
+    /* renamed from: J */
+    public final synchronized float m19146J() {
+        return this.f14214v;
     }
 
-    public final synchronized int K() {
-        return this.a;
+    /* renamed from: K */
+    public final synchronized int m19145K() {
+        return this.f14193a;
     }
 
-    public final synchronized Bundle L() {
-        if (this.h == null) {
-            this.h = new Bundle();
+    /* renamed from: L */
+    public final synchronized Bundle m19144L() {
+        if (this.f14200h == null) {
+            this.f14200h = new Bundle();
         }
-        return this.h;
+        return this.f14200h;
     }
 
-    public final synchronized View M() {
-        return this.d;
+    /* renamed from: M */
+    public final synchronized View m19143M() {
+        return this.f14196d;
     }
 
-    public final synchronized View N() {
-        return this.m;
+    /* renamed from: N */
+    public final synchronized View m19142N() {
+        return this.f14205m;
     }
 
-    public final synchronized View O() {
-        return this.n;
+    /* renamed from: O */
+    public final synchronized View m19141O() {
+        return this.f14206n;
     }
 
-    public final synchronized cd1 P() {
-        return this.t;
+    /* renamed from: P */
+    public final synchronized cd1 m19140P() {
+        return this.f14212t;
     }
 
-    public final synchronized cd1 Q() {
-        return this.u;
+    /* renamed from: Q */
+    public final synchronized cd1 m19139Q() {
+        return this.f14213u;
     }
 
-    public final synchronized zzdq R() {
-        return this.b;
+    /* renamed from: R */
+    public final synchronized zzdq m19138R() {
+        return this.f14194b;
     }
 
-    public final synchronized zzel S() {
-        return this.g;
+    /* renamed from: S */
+    public final synchronized zzel m19137S() {
+        return this.f14199g;
     }
 
-    public final synchronized nc3 T() {
-        return this.c;
+    /* renamed from: T */
+    public final synchronized nc3 m19136T() {
+        return this.f14195c;
     }
 
-    public final vc3 U() {
-        List list = this.e;
+    /* renamed from: U */
+    public final vc3 m19135U() {
+        List list = this.f14197e;
         if (list != null && !list.isEmpty()) {
-            Object obj = this.e.get(0);
+            Object obj = this.f14197e.get(0);
             if (obj instanceof IBinder) {
-                return uc3.g3((IBinder) obj);
+                return uc3.m8320g3((IBinder) obj);
             }
         }
         return null;
     }
 
-    public final synchronized vc3 V() {
-        return this.q;
+    /* renamed from: V */
+    public final synchronized vc3 m19134V() {
+        return this.f14209q;
     }
 
-    public final synchronized vc3 W() {
-        return this.r;
+    /* renamed from: W */
+    public final synchronized vc3 m19133W() {
+        return this.f14210r;
     }
 
-    public final synchronized a74 X() {
-        return this.j;
+    /* renamed from: X */
+    public final synchronized a74 m19132X() {
+        return this.f14202j;
     }
 
-    public final synchronized a74 Y() {
-        return this.k;
+    /* renamed from: Y */
+    public final synchronized a74 m19131Y() {
+        return this.f14203k;
     }
 
-    public final synchronized a74 Z() {
-        return this.i;
+    /* renamed from: Z */
+    public final synchronized a74 m19130Z() {
+        return this.f14201i;
     }
 
-    public final synchronized String a() {
-        return this.w;
+    /* renamed from: a */
+    public final synchronized String m19129a() {
+        return this.f14215w;
     }
 
-    public final synchronized String b() {
-        return d("price");
+    /* renamed from: b */
+    public final synchronized String m19127b() {
+        return m19123d("price");
     }
 
-    public final synchronized yd0 b0() {
-        return this.o;
+    /* renamed from: b0 */
+    public final synchronized yd0 m19126b0() {
+        return this.f14207o;
     }
 
-    public final synchronized String c() {
-        return d("store");
+    /* renamed from: c */
+    public final synchronized String m19125c() {
+        return m19123d("store");
     }
 
-    public final synchronized yd0 c0() {
-        return this.l;
+    /* renamed from: c0 */
+    public final synchronized yd0 m19124c0() {
+        return this.f14204l;
     }
 
-    public final synchronized String d(String str) {
-        return (String) this.u.get(str);
+    /* renamed from: d */
+    public final synchronized String m19123d(String str) {
+        return (String) this.f14213u.get(str);
     }
 
-    public final synchronized String d0() {
-        return d("advertiser");
+    /* renamed from: d0 */
+    public final synchronized String m19122d0() {
+        return m19123d("advertiser");
     }
 
-    public final synchronized List e() {
-        return this.e;
+    /* renamed from: e */
+    public final synchronized List m19121e() {
+        return this.f14197e;
     }
 
-    public final synchronized String e0() {
-        return d("body");
+    /* renamed from: e0 */
+    public final synchronized String m19120e0() {
+        return m19123d("body");
     }
 
-    public final synchronized List f() {
-        return this.f;
+    /* renamed from: f */
+    public final synchronized List m19119f() {
+        return this.f14198f;
     }
 
-    public final synchronized String f0() {
-        return d("call_to_action");
+    /* renamed from: f0 */
+    public final synchronized String m19118f0() {
+        return m19123d("call_to_action");
     }
 
-    public final synchronized void g() {
-        a74 a74Var = this.i;
+    /* renamed from: g */
+    public final synchronized void m19117g() {
+        a74 a74Var = this.f14201i;
         if (a74Var != null) {
             a74Var.destroy();
-            this.i = null;
+            this.f14201i = null;
         }
-        a74 a74Var2 = this.j;
+        a74 a74Var2 = this.f14202j;
         if (a74Var2 != null) {
             a74Var2.destroy();
-            this.j = null;
+            this.f14202j = null;
         }
-        a74 a74Var3 = this.k;
+        a74 a74Var3 = this.f14203k;
         if (a74Var3 != null) {
             a74Var3.destroy();
-            this.k = null;
+            this.f14203k = null;
         }
-        this.l = null;
-        this.t.clear();
-        this.u.clear();
-        this.b = null;
-        this.c = null;
-        this.d = null;
-        this.e = null;
-        this.h = null;
-        this.m = null;
-        this.n = null;
-        this.o = null;
-        this.q = null;
-        this.r = null;
-        this.s = null;
+        this.f14204l = null;
+        this.f14212t.clear();
+        this.f14213u.clear();
+        this.f14194b = null;
+        this.f14195c = null;
+        this.f14196d = null;
+        this.f14197e = null;
+        this.f14200h = null;
+        this.f14205m = null;
+        this.f14206n = null;
+        this.f14207o = null;
+        this.f14209q = null;
+        this.f14210r = null;
+        this.f14211s = null;
     }
 
-    public final synchronized String g0() {
-        return this.s;
+    /* renamed from: g0 */
+    public final synchronized String m19116g0() {
+        return this.f14211s;
     }
 
-    public final synchronized void h(nc3 nc3Var) {
-        this.c = nc3Var;
+    /* renamed from: h */
+    public final synchronized void m19115h(nc3 nc3Var) {
+        this.f14195c = nc3Var;
     }
 
-    public final synchronized String h0() {
-        return d("headline");
+    /* renamed from: h0 */
+    public final synchronized String m19114h0() {
+        return m19123d("headline");
     }
 
-    public final synchronized void i(String str) {
-        this.s = str;
+    /* renamed from: i */
+    public final synchronized void m19113i(String str) {
+        this.f14211s = str;
     }
 
-    public final synchronized void j(zzel zzelVar) {
-        this.g = zzelVar;
+    /* renamed from: j */
+    public final synchronized void m19112j(zzel zzelVar) {
+        this.f14199g = zzelVar;
     }
 
-    public final synchronized void k(vc3 vc3Var) {
-        this.q = vc3Var;
+    /* renamed from: k */
+    public final synchronized void m19111k(vc3 vc3Var) {
+        this.f14209q = vc3Var;
     }
 
-    public final synchronized void l(String str, dc3 dc3Var) {
+    /* renamed from: l */
+    public final synchronized void m19110l(String str, dc3 dc3Var) {
         if (dc3Var == null) {
-            this.t.remove(str);
+            this.f14212t.remove(str);
         } else {
-            this.t.put(str, dc3Var);
+            this.f14212t.put(str, dc3Var);
         }
     }
 
-    public final synchronized void m(a74 a74Var) {
-        this.j = a74Var;
+    /* renamed from: m */
+    public final synchronized void m19109m(a74 a74Var) {
+        this.f14202j = a74Var;
     }
 
-    public final synchronized void n(List list) {
-        this.e = list;
+    /* renamed from: n */
+    public final synchronized void m19108n(List list) {
+        this.f14197e = list;
     }
 
-    public final synchronized void o(vc3 vc3Var) {
-        this.r = vc3Var;
+    /* renamed from: o */
+    public final synchronized void m19107o(vc3 vc3Var) {
+        this.f14210r = vc3Var;
     }
 
-    public final synchronized void p(float f) {
-        this.v = f;
+    /* renamed from: p */
+    public final synchronized void m19106p(float f) {
+        this.f14214v = f;
     }
 
-    public final synchronized void q(List list) {
-        this.f = list;
+    /* renamed from: q */
+    public final synchronized void m19105q(List list) {
+        this.f14198f = list;
     }
 
-    public final synchronized void r(a74 a74Var) {
-        this.k = a74Var;
+    /* renamed from: r */
+    public final synchronized void m19104r(a74 a74Var) {
+        this.f14203k = a74Var;
     }
 
-    public final synchronized void s(String str) {
-        this.w = str;
+    /* renamed from: s */
+    public final synchronized void m19103s(String str) {
+        this.f14215w = str;
     }
 
-    public final synchronized void t(double d) {
-        this.p = d;
+    /* renamed from: t */
+    public final synchronized void m19102t(double d) {
+        this.f14208p = d;
     }
 
-    public final synchronized void u(String str, String str2) {
+    /* renamed from: u */
+    public final synchronized void m19101u(String str, String str2) {
         if (str2 == null) {
-            this.u.remove(str);
+            this.f14213u.remove(str);
         } else {
-            this.u.put(str, str2);
+            this.f14213u.put(str, str2);
         }
     }
 
-    public final synchronized void v(int i) {
-        this.a = i;
+    /* renamed from: v */
+    public final synchronized void m19100v(int i) {
+        this.f14193a = i;
     }
 
-    public final synchronized void w(zzdq zzdqVar) {
-        this.b = zzdqVar;
+    /* renamed from: w */
+    public final synchronized void m19099w(zzdq zzdqVar) {
+        this.f14194b = zzdqVar;
     }
 
-    public final synchronized void x(View view) {
-        this.m = view;
+    /* renamed from: x */
+    public final synchronized void m19098x(View view) {
+        this.f14205m = view;
     }
 
-    public final synchronized void y(a74 a74Var) {
-        this.i = a74Var;
+    /* renamed from: y */
+    public final synchronized void m19097y(a74 a74Var) {
+        this.f14201i = a74Var;
     }
 
-    public final synchronized void z(View view) {
-        this.n = view;
+    /* renamed from: z */
+    public final synchronized void m19096z(View view) {
+        this.f14206n = view;
     }
 }

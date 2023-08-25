@@ -6,47 +6,58 @@ import java.net.UnknownHostException;
 import org.checkerframework.dataflow.qual.Pure;
 /* loaded from: classes.dex */
 public final class s95 {
-    public static final Object a = new Object();
-    public static final p85 b = p85.a;
+
+    /* renamed from: a */
+    public static final Object f26027a = new Object();
+
+    /* renamed from: b */
+    public static final p85 f26028b = p85.f22702a;
 
     @Pure
-    public static void a(String str, String str2) {
-        synchronized (a) {
+    /* renamed from: a */
+    public static void m10497a(String str, String str2) {
+        synchronized (f26027a) {
         }
     }
 
     @Pure
-    public static void b(String str, String str2) {
-        synchronized (a) {
+    /* renamed from: b */
+    public static void m10496b(String str, String str2) {
+        synchronized (f26027a) {
         }
     }
 
     @Pure
-    public static void c(String str, String str2, Throwable th) {
-        b(str, g(str2, th));
+    /* renamed from: c */
+    public static void m10495c(String str, String str2, Throwable th) {
+        m10496b(str, m10491g(str2, th));
     }
 
     @Pure
-    public static void d(String str, String str2) {
-        synchronized (a) {
+    /* renamed from: d */
+    public static void m10494d(String str, String str2) {
+        synchronized (f26027a) {
         }
     }
 
     @Pure
-    public static void e(String str, String str2) {
-        synchronized (a) {
+    /* renamed from: e */
+    public static void m10493e(String str, String str2) {
+        synchronized (f26027a) {
         }
     }
 
     @Pure
-    public static void f(String str, String str2, Throwable th) {
-        e(str, g(str2, th));
+    /* renamed from: f */
+    public static void m10492f(String str, String str2, Throwable th) {
+        m10493e(str, m10491g(str2, th));
     }
 
     @Pure
-    public static String g(String str, Throwable th) {
+    /* renamed from: g */
+    public static String m10491g(String str, Throwable th) {
         String replace;
-        synchronized (a) {
+        synchronized (f26027a) {
             try {
                 if (th != null) {
                     Throwable th2 = th;

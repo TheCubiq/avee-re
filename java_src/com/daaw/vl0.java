@@ -4,71 +4,88 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public class vl0<T, Y> {
-    public int b;
-    public final int c;
-    public final LinkedHashMap<T, Y> a = new LinkedHashMap<>(100, 0.75f, true);
-    public int d = 0;
+
+    /* renamed from: b */
+    public int f30295b;
+
+    /* renamed from: c */
+    public final int f30296c;
+
+    /* renamed from: a */
+    public final LinkedHashMap<T, Y> f30294a = new LinkedHashMap<>(100, 0.75f, true);
+
+    /* renamed from: d */
+    public int f30297d = 0;
 
     public vl0(int i) {
-        this.c = i;
-        this.b = i;
+        this.f30296c = i;
+        this.f30295b = i;
     }
 
-    public void d() {
-        m(0);
+    /* renamed from: d */
+    public void m7065d() {
+        m7059m(0);
     }
 
-    public final void f() {
-        m(this.b);
+    /* renamed from: f */
+    public final void m7064f() {
+        m7059m(this.f30295b);
     }
 
-    public Y g(T t) {
-        return this.a.get(t);
+    /* renamed from: g */
+    public Y m7063g(T t) {
+        return this.f30294a.get(t);
     }
 
-    public int h() {
-        return this.d;
+    /* renamed from: h */
+    public int m7062h() {
+        return this.f30297d;
     }
 
-    public int i(Y y) {
+    /* renamed from: i */
+    public int mo3587i(Y y) {
         return 1;
     }
 
-    public void j(T t, Y y) {
+    /* renamed from: j */
+    public void mo3586j(T t, Y y) {
     }
 
-    public Y k(T t, Y y) {
-        if (i(y) >= this.b) {
-            j(t, y);
+    /* renamed from: k */
+    public Y m7061k(T t, Y y) {
+        if (mo3587i(y) >= this.f30295b) {
+            mo3586j(t, y);
             return null;
         }
-        Y put = this.a.put(t, y);
+        Y put = this.f30294a.put(t, y);
         if (y != null) {
-            this.d += i(y);
+            this.f30297d += mo3587i(y);
         }
         if (put != null) {
-            this.d -= i(put);
+            this.f30297d -= mo3587i(put);
         }
-        f();
+        m7064f();
         return put;
     }
 
-    public Y l(T t) {
-        Y remove = this.a.remove(t);
+    /* renamed from: l */
+    public Y m7060l(T t) {
+        Y remove = this.f30294a.remove(t);
         if (remove != null) {
-            this.d -= i(remove);
+            this.f30297d -= mo3587i(remove);
         }
         return remove;
     }
 
-    public void m(int i) {
-        while (this.d > i) {
-            Map.Entry<T, Y> next = this.a.entrySet().iterator().next();
+    /* renamed from: m */
+    public void m7059m(int i) {
+        while (this.f30297d > i) {
+            Map.Entry<T, Y> next = this.f30294a.entrySet().iterator().next();
             Y value = next.getValue();
-            this.d -= i(value);
+            this.f30297d -= mo3587i(value);
             T key = next.getKey();
-            this.a.remove(key);
-            j(key, value);
+            this.f30294a.remove(key);
+            mo3586j(key, value);
         }
     }
 }

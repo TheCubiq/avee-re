@@ -4,14 +4,17 @@ import com.google.android.gms.appset.zzc;
 import com.google.android.gms.common.api.Status;
 /* loaded from: classes2.dex */
 public final class bk8 extends me5 {
-    public final /* synthetic */ tj1 p;
+
+    /* renamed from: p */
+    public final /* synthetic */ tj1 f4881p;
 
     public bk8(pm8 pm8Var, tj1 tj1Var) {
-        this.p = tj1Var;
+        this.f4881p = tj1Var;
     }
 
     @Override // com.daaw.a86
-    public final void x1(Status status, zzc zzcVar) {
-        ck1.a(status, zzcVar != null ? new m5(zzcVar.h(), zzcVar.zza()) : null, this.p);
+    /* renamed from: x1 */
+    public final void mo26080x1(Status status, zzc zzcVar) {
+        ck1.m25258a(status, zzcVar != null ? new C2151m5(zzcVar.m1222h(), zzcVar.zza()) : null, this.f4881p);
     }
 }

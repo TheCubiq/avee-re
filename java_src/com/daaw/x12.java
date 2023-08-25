@@ -8,21 +8,21 @@ import java.util.ArrayList;
 public final class x12 implements Parcelable.Creator<zag> {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ zag createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         ArrayList<String> arrayList = null;
         String str = null;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            int l = y71.l(r);
-            if (l == 1) {
-                arrayList = y71.h(parcel, r);
-            } else if (l != 2) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            int m4047l = y71.m4047l(m4041r);
+            if (m4047l == 1) {
+                arrayList = y71.m4051h(parcel, m4041r);
+            } else if (m4047l != 2) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                str = y71.f(parcel, r);
+                str = y71.m4053f(parcel, m4041r);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zag(arrayList, str);
     }
 

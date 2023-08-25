@@ -8,11 +8,18 @@ import java.util.Map;
 import java.util.Set;
 /* loaded from: classes.dex */
 public abstract class ht1 {
-    public final Map<String, Object> a = new HashMap();
-    public final Set<Closeable> b = new LinkedHashSet();
-    public volatile boolean c = false;
 
-    public static void b(Object obj) {
+    /* renamed from: a */
+    public final Map<String, Object> f12914a = new HashMap();
+
+    /* renamed from: b */
+    public final Set<Closeable> f12915b = new LinkedHashSet();
+
+    /* renamed from: c */
+    public volatile boolean f12916c = false;
+
+    /* renamed from: b */
+    public static void m20432b(Object obj) {
         if (obj instanceof Closeable) {
             try {
                 ((Closeable) obj).close();
@@ -22,39 +29,42 @@ public abstract class ht1 {
         }
     }
 
-    public final void a() {
-        this.c = true;
-        Map<String, Object> map = this.a;
+    /* renamed from: a */
+    public final void m20433a() {
+        this.f12916c = true;
+        Map<String, Object> map = this.f12914a;
         if (map != null) {
             synchronized (map) {
-                for (Object obj : this.a.values()) {
-                    b(obj);
+                for (Object obj : this.f12914a.values()) {
+                    m20432b(obj);
                 }
             }
         }
-        Set<Closeable> set = this.b;
+        Set<Closeable> set = this.f12915b;
         if (set != null) {
             synchronized (set) {
-                for (Closeable closeable : this.b) {
-                    b(closeable);
+                for (Closeable closeable : this.f12915b) {
+                    m20432b(closeable);
                 }
             }
         }
-        d();
+        mo7531d();
     }
 
-    public <T> T c(String str) {
+    /* renamed from: c */
+    public <T> T m20431c(String str) {
         T t;
-        Map<String, Object> map = this.a;
+        Map<String, Object> map = this.f12914a;
         if (map == null) {
             return null;
         }
         synchronized (map) {
-            t = (T) this.a.get(str);
+            t = (T) this.f12914a.get(str);
         }
         return t;
     }
 
-    public void d() {
+    /* renamed from: d */
+    public void mo7531d() {
     }
 }

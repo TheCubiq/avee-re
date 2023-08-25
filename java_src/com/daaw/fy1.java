@@ -5,41 +5,52 @@ import android.os.Looper;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public class fy1 implements wj1 {
-    public final mb1 a;
-    public final Handler b = new Handler(Looper.getMainLooper());
-    public final Executor c = new a();
 
+    /* renamed from: a */
+    public final mb1 f10091a;
+
+    /* renamed from: b */
+    public final Handler f10092b = new Handler(Looper.getMainLooper());
+
+    /* renamed from: c */
+    public final Executor f10093c = new ExecutorC1345a();
+
+    /* renamed from: com.daaw.fy1$a */
     /* loaded from: classes.dex */
-    public class a implements Executor {
-        public a() {
+    public class ExecutorC1345a implements Executor {
+        public ExecutorC1345a() {
         }
 
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
-            fy1.this.d(runnable);
+            fy1.this.m22135d(runnable);
         }
     }
 
     public fy1(Executor executor) {
-        this.a = new mb1(executor);
+        this.f10091a = new mb1(executor);
     }
 
     @Override // com.daaw.wj1
-    public Executor a() {
-        return this.c;
+    /* renamed from: a */
+    public Executor mo6052a() {
+        return this.f10093c;
     }
 
     @Override // com.daaw.wj1
-    public void b(Runnable runnable) {
-        this.a.execute(runnable);
+    /* renamed from: b */
+    public void mo6051b(Runnable runnable) {
+        this.f10091a.execute(runnable);
     }
 
     @Override // com.daaw.wj1
-    public mb1 c() {
-        return this.a;
+    /* renamed from: c */
+    public mb1 mo6050c() {
+        return this.f10091a;
     }
 
-    public void d(Runnable runnable) {
-        this.b.post(runnable);
+    /* renamed from: d */
+    public void m22135d(Runnable runnable) {
+        this.f10092b.post(runnable);
     }
 }

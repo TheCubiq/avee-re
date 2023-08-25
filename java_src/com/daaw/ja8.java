@@ -10,9 +10,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public abstract class ja8<MessageType extends ja8<MessageType, BuilderType>, BuilderType extends y98<MessageType, BuilderType>> extends w48<MessageType, BuilderType> {
     private static final Map zza = new ConcurrentHashMap();
     private int zzd = -1;
-    public qg8 zzc = qg8.c();
+    public qg8 zzc = qg8.m12544c();
 
-    public static ja8 B(Class cls) {
+    /* renamed from: B */
+    public static ja8 m18674B(Class cls) {
         Map map = zza;
         ja8 ja8Var = (ja8) map.get(cls);
         if (ja8Var == null) {
@@ -24,7 +25,7 @@ public abstract class ja8<MessageType extends ja8<MessageType, BuilderType>, Bui
             }
         }
         if (ja8Var == null) {
-            ja8Var = (ja8) ((ja8) ih8.j(cls)).C(6, null, null);
+            ja8Var = (ja8) ((ja8) ih8.m19803j(cls)).mo4853C(6, null, null);
             if (ja8Var == null) {
                 throw new IllegalStateException();
             }
@@ -33,29 +34,35 @@ public abstract class ja8<MessageType extends ja8<MessageType, BuilderType>, Bui
         return ja8Var;
     }
 
-    public static xa8 l() {
-        return ma8.f();
+    /* renamed from: l */
+    public static xa8 m18670l() {
+        return ma8.m16125f();
     }
 
-    public static ab8 m() {
-        return cd8.e();
+    /* renamed from: m */
+    public static ab8 m18669m() {
+        return cd8.m25415e();
     }
 
-    public static ab8 n(ab8 ab8Var) {
+    /* renamed from: n */
+    public static ab8 m18668n(ab8 ab8Var) {
         int size = ab8Var.size();
         return ab8Var.zze(size == 0 ? 10 : size + size);
     }
 
-    public static db8 o() {
-        return re8.e();
+    /* renamed from: o */
+    public static db8 m18667o() {
+        return re8.m11356e();
     }
 
-    public static db8 p(db8 db8Var) {
+    /* renamed from: p */
+    public static db8 m18666p(db8 db8Var) {
         int size = db8Var.size();
-        return db8Var.b(size == 0 ? 10 : size + size);
+        return db8Var.mo5295b(size == 0 ? 10 : size + size);
     }
 
-    public static Object r(Method method, Object obj, Object... objArr) {
+    /* renamed from: r */
+    public static Object m18665r(Method method, Object obj, Object... objArr) {
         try {
             return method.invoke(obj, objArr);
         } catch (IllegalAccessException e) {
@@ -72,45 +79,52 @@ public abstract class ja8<MessageType extends ja8<MessageType, BuilderType>, Bui
         }
     }
 
-    public static Object s(zd8 zd8Var, String str, Object[] objArr) {
+    /* renamed from: s */
+    public static Object m18664s(zd8 zd8Var, String str, Object[] objArr) {
         return new te8(zd8Var, str, objArr);
     }
 
-    public static void v(Class cls, ja8 ja8Var) {
+    /* renamed from: v */
+    public static void m18661v(Class cls, ja8 ja8Var) {
         zza.put(cls, ja8Var);
-        ja8Var.t();
+        ja8Var.m18663t();
     }
 
-    public final y98 A() {
-        y98 y98Var = (y98) C(5, null, null);
-        y98Var.j(this);
+    /* renamed from: A */
+    public final y98 m18675A() {
+        y98 y98Var = (y98) mo4853C(5, null, null);
+        y98Var.m3977j(this);
         return y98Var;
     }
 
-    public abstract Object C(int i, Object obj, Object obj2);
+    /* renamed from: C */
+    public abstract Object mo4853C(int i, Object obj, Object obj2);
 
     @Override // com.daaw.zd8
-    public final /* synthetic */ xd8 a() {
-        return (y98) C(5, null, null);
+    /* renamed from: a */
+    public final /* synthetic */ xd8 mo2463a() {
+        return (y98) mo4853C(5, null, null);
     }
 
     @Override // com.daaw.zd8
-    public final void b(w78 w78Var) {
-        pe8.a().b(getClass()).f(this, z78.J(w78Var));
+    /* renamed from: b */
+    public final void mo2462b(w78 w78Var) {
+        pe8.m13418a().m13417b(getClass()).mo7200f(this, z78.m2669J(w78Var));
     }
 
     @Override // com.daaw.zd8
-    public final int c() {
+    /* renamed from: c */
+    public final int mo2461c() {
         int i;
-        if (x()) {
-            i = j(null);
+        if (m18659x()) {
+            i = m18672j(null);
             if (i < 0) {
                 throw new IllegalStateException("serialized size must be non-negative, was " + i);
             }
         } else {
             i = this.zzd & Integer.MAX_VALUE;
             if (i == Integer.MAX_VALUE) {
-                i = j(null);
+                i = m18672j(null);
                 if (i < 0) {
                     throw new IllegalStateException("serialized size must be non-negative, was " + i);
                 }
@@ -121,29 +135,31 @@ public abstract class ja8<MessageType extends ja8<MessageType, BuilderType>, Bui
     }
 
     @Override // com.daaw.be8
-    public final /* synthetic */ zd8 d() {
-        return (ja8) C(6, null, null);
+    /* renamed from: d */
+    public final /* synthetic */ zd8 mo18673d() {
+        return (ja8) mo4853C(6, null, null);
     }
 
     @Override // com.daaw.w48
-    public final int e(ve8 ve8Var) {
-        if (x()) {
-            int j = j(ve8Var);
-            if (j >= 0) {
-                return j;
+    /* renamed from: e */
+    public final int mo6533e(ve8 ve8Var) {
+        if (m18659x()) {
+            int m18672j = m18672j(ve8Var);
+            if (m18672j >= 0) {
+                return m18672j;
             }
-            throw new IllegalStateException("serialized size must be non-negative, was " + j);
+            throw new IllegalStateException("serialized size must be non-negative, was " + m18672j);
         }
         int i = this.zzd & Integer.MAX_VALUE;
         if (i != Integer.MAX_VALUE) {
             return i;
         }
-        int j2 = j(ve8Var);
-        if (j2 >= 0) {
-            this.zzd = (this.zzd & Integer.MIN_VALUE) | j2;
-            return j2;
+        int m18672j2 = m18672j(ve8Var);
+        if (m18672j2 >= 0) {
+            this.zzd = (this.zzd & Integer.MIN_VALUE) | m18672j2;
+            return m18672j2;
         }
-        throw new IllegalStateException("serialized size must be non-negative, was " + j2);
+        throw new IllegalStateException("serialized size must be non-negative, was " + m18672j2);
     }
 
     public final boolean equals(Object obj) {
@@ -151,58 +167,66 @@ public abstract class ja8<MessageType extends ja8<MessageType, BuilderType>, Bui
             return true;
         }
         if (obj != null && getClass() == obj.getClass()) {
-            return pe8.a().b(getClass()).e(this, (ja8) obj);
+            return pe8.m13418a().m13417b(getClass()).mo7201e(this, (ja8) obj);
         }
         return false;
     }
 
     public final int hashCode() {
-        if (x()) {
-            return y();
+        if (m18659x()) {
+            return m18658y();
         }
         int i = this.zzb;
         if (i == 0) {
-            int y = y();
-            this.zzb = y;
-            return y;
+            int m18658y = m18658y();
+            this.zzb = m18658y;
+            return m18658y;
         }
         return i;
     }
 
-    public final int j(ve8 ve8Var) {
-        return ve8Var == null ? pe8.a().b(getClass()).zza(this) : ve8Var.zza(this);
+    /* renamed from: j */
+    public final int m18672j(ve8 ve8Var) {
+        return ve8Var == null ? pe8.m13418a().m13417b(getClass()).zza(this) : ve8Var.zza(this);
     }
 
-    public final ja8 k() {
-        return (ja8) C(4, null, null);
+    /* renamed from: k */
+    public final ja8 m18671k() {
+        return (ja8) mo4853C(4, null, null);
     }
 
-    public final void t() {
-        pe8.a().b(getClass()).b(this);
-        u();
+    /* renamed from: t */
+    public final void m18663t() {
+        pe8.m13418a().m13417b(getClass()).mo7204b(this);
+        m18662u();
     }
 
     public final String toString() {
-        return de8.a(this, super.toString());
+        return de8.m24440a(this, super.toString());
     }
 
-    public final void u() {
+    /* renamed from: u */
+    public final void m18662u() {
         this.zzd &= Integer.MAX_VALUE;
     }
 
-    public final void w(int i) {
+    /* renamed from: w */
+    public final void m18660w(int i) {
         this.zzd = (this.zzd & Integer.MIN_VALUE) | Integer.MAX_VALUE;
     }
 
-    public final boolean x() {
+    /* renamed from: x */
+    public final boolean m18659x() {
         return (this.zzd & Integer.MIN_VALUE) != 0;
     }
 
-    public final int y() {
-        return pe8.a().b(getClass()).a(this);
+    /* renamed from: y */
+    public final int m18658y() {
+        return pe8.m13418a().m13417b(getClass()).mo7205a(this);
     }
 
-    public final y98 z() {
-        return (y98) C(5, null, null);
+    /* renamed from: z */
+    public final y98 m18657z() {
+        return (y98) mo4853C(5, null, null);
     }
 }

@@ -13,38 +13,48 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class ts3 {
     @GuardedBy("InternalQueryInfoGenerator.class")
-    public static zy3 d;
-    public final Context a;
-    public final AdFormat b;
-    public final zzdx c;
+
+    /* renamed from: d */
+    public static zy3 f28018d;
+
+    /* renamed from: a */
+    public final Context f28019a;
+
+    /* renamed from: b */
+    public final AdFormat f28020b;
+
+    /* renamed from: c */
+    public final zzdx f28021c;
 
     public ts3(Context context, AdFormat adFormat, zzdx zzdxVar) {
-        this.a = context;
-        this.b = adFormat;
-        this.c = zzdxVar;
+        this.f28019a = context;
+        this.f28020b = adFormat;
+        this.f28021c = zzdxVar;
     }
 
-    public static zy3 a(Context context) {
+    /* renamed from: a */
+    public static zy3 m8842a(Context context) {
         zy3 zy3Var;
         synchronized (ts3.class) {
-            if (d == null) {
-                d = zzay.zza().zzr(context, new xm3());
+            if (f28018d == null) {
+                f28018d = zzay.zza().zzr(context, new xm3());
             }
-            zy3Var = d;
+            zy3Var = f28018d;
         }
         return zy3Var;
     }
 
-    public final void b(QueryInfoGenerationCallback queryInfoGenerationCallback) {
+    /* renamed from: b */
+    public final void m8841b(QueryInfoGenerationCallback queryInfoGenerationCallback) {
         String str;
-        zy3 a = a(this.a);
-        if (a == null) {
+        zy3 m8842a = m8842a(this.f28019a);
+        if (m8842a == null) {
             str = "Internal Error, query info generator is null.";
         } else {
-            yd0 g3 = nt0.g3(this.a);
-            zzdx zzdxVar = this.c;
+            yd0 m14830g3 = nt0.m14830g3(this.f28019a);
+            zzdx zzdxVar = this.f28021c;
             try {
-                a.zze(g3, new zzcgj(null, this.b.name(), null, zzdxVar == null ? new zzm().zza() : zzp.zza.zza(this.a, zzdxVar)), new ss3(this, queryInfoGenerationCallback));
+                m8842a.zze(m14830g3, new zzcgj(null, this.f28020b.name(), null, zzdxVar == null ? new zzm().zza() : zzp.zza.zza(this.f28019a, zzdxVar)), new ss3(this, queryInfoGenerationCallback));
                 return;
             } catch (RemoteException unused) {
                 str = "Internal Error.";

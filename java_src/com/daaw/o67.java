@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface o67 {
-    void a(Object obj);
+    /* renamed from: a */
+    void mo2151a(Object obj);
 
-    void b(Throwable th);
+    /* renamed from: b */
+    void mo2150b(Throwable th);
 }

@@ -4,9 +4,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /* loaded from: classes2.dex */
 public abstract class w78 extends n58 {
-    public static final Logger b = Logger.getLogger(w78.class.getName());
-    public static final boolean c = ih8.C();
-    public z78 a;
+
+    /* renamed from: b */
+    public static final Logger f31024b = Logger.getLogger(w78.class.getName());
+
+    /* renamed from: c */
+    public static final boolean f31025c = ih8.m19815C();
+
+    /* renamed from: a */
+    public z78 f31026a;
 
     public w78() {
     }
@@ -14,31 +20,36 @@ public abstract class w78 extends n58 {
     public /* synthetic */ w78(t78 t78Var) {
     }
 
-    public static int A(ub8 ub8Var) {
-        int a = ub8Var.a();
-        return a(a) + a;
+    /* renamed from: A */
+    public static int m6388A(ub8 ub8Var) {
+        int m8343a = ub8Var.m8343a();
+        return m6384a(m8343a) + m8343a;
     }
 
-    public static int B(zd8 zd8Var, ve8 ve8Var) {
-        int e = ((w48) zd8Var).e(ve8Var);
-        return a(e) + e;
+    /* renamed from: B */
+    public static int m6387B(zd8 zd8Var, ve8 ve8Var) {
+        int mo6533e = ((w48) zd8Var).mo6533e(ve8Var);
+        return m6384a(mo6533e) + mo6533e;
     }
 
-    public static int C(String str) {
+    /* renamed from: C */
+    public static int m6386C(String str) {
         int length;
         try {
-            length = ei8.c(str);
+            length = ei8.m23449c(str);
         } catch (ci8 unused) {
-            length = str.getBytes(gb8.b).length;
+            length = str.getBytes(gb8.f11017b).length;
         }
-        return a(length) + length;
+        return m6384a(length) + length;
     }
 
-    public static int D(int i) {
-        return a(i << 3);
+    /* renamed from: D */
+    public static int m6385D(int i) {
+        return m6384a(i << 3);
     }
 
-    public static int a(int i) {
+    /* renamed from: a */
+    public static int m6384a(int i) {
         if ((i & (-128)) == 0) {
             return 1;
         }
@@ -51,7 +62,8 @@ public abstract class w78 extends n58 {
         return (i & (-268435456)) == 0 ? 4 : 5;
     }
 
-    public static int b(long j) {
+    /* renamed from: b */
+    public static int m6383b(long j) {
         int i;
         if (((-128) & j) == 0) {
             return 1;
@@ -72,77 +84,100 @@ public abstract class w78 extends n58 {
         return (j & (-16384)) != 0 ? i + 1 : i;
     }
 
-    public static w78 c(byte[] bArr) {
+    /* renamed from: c */
+    public static w78 m6382c(byte[] bArr) {
         return new n78(bArr, 0, bArr.length);
     }
 
-    public static int x(y68 y68Var) {
-        int f = y68Var.f();
-        return a(f) + f;
+    /* renamed from: x */
+    public static int m6361x(y68 y68Var) {
+        int mo2805f = y68Var.mo2805f();
+        return m6384a(mo2805f) + mo2805f;
     }
 
     @Deprecated
-    public static int y(int i, zd8 zd8Var, ve8 ve8Var) {
-        int a = a(i << 3);
-        return a + a + ((w48) zd8Var).e(ve8Var);
+    /* renamed from: y */
+    public static int m6360y(int i, zd8 zd8Var, ve8 ve8Var) {
+        int m6384a = m6384a(i << 3);
+        return m6384a + m6384a + ((w48) zd8Var).mo6533e(ve8Var);
     }
 
-    public static int z(int i) {
+    /* renamed from: z */
+    public static int m6359z(int i) {
         if (i >= 0) {
-            return a(i);
+            return m6384a(i);
         }
         return 10;
     }
 
-    public final void d() {
-        if (g() != 0) {
+    /* renamed from: d */
+    public final void m6381d() {
+        if (mo6378g() != 0) {
             throw new IllegalStateException("Did not write as much data as expected.");
         }
     }
 
-    public final void e(String str, ci8 ci8Var) {
-        b.logp(Level.WARNING, "com.google.protobuf.CodedOutputStream", "inefficientWriteStringNoTag", "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) ci8Var);
-        byte[] bytes = str.getBytes(gb8.b);
+    /* renamed from: e */
+    public final void m6380e(String str, ci8 ci8Var) {
+        f31024b.logp(Level.WARNING, "com.google.protobuf.CodedOutputStream", "inefficientWriteStringNoTag", "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) ci8Var);
+        byte[] bytes = str.getBytes(gb8.f11017b);
         try {
             int length = bytes.length;
-            u(length);
-            q(bytes, 0, length);
+            mo6364u(length);
+            mo6368q(bytes, 0, length);
         } catch (IndexOutOfBoundsException e) {
             throw new q78(e);
         }
     }
 
-    public abstract int g();
+    /* renamed from: g */
+    public abstract int mo6378g();
 
-    public abstract void h(byte b2);
+    /* renamed from: h */
+    public abstract void mo6377h(byte b);
 
-    public abstract void i(int i, boolean z);
+    /* renamed from: i */
+    public abstract void mo6376i(int i, boolean z);
 
-    public abstract void j(int i, y68 y68Var);
+    /* renamed from: j */
+    public abstract void mo6375j(int i, y68 y68Var);
 
-    public abstract void k(int i, int i2);
+    /* renamed from: k */
+    public abstract void mo6374k(int i, int i2);
 
-    public abstract void l(int i);
+    /* renamed from: l */
+    public abstract void mo6373l(int i);
 
-    public abstract void m(int i, long j);
+    /* renamed from: m */
+    public abstract void mo6372m(int i, long j);
 
-    public abstract void n(long j);
+    /* renamed from: n */
+    public abstract void mo6371n(long j);
 
-    public abstract void o(int i, int i2);
+    /* renamed from: o */
+    public abstract void mo6370o(int i, int i2);
 
-    public abstract void p(int i);
+    /* renamed from: p */
+    public abstract void mo6369p(int i);
 
-    public abstract void q(byte[] bArr, int i, int i2);
+    /* renamed from: q */
+    public abstract void mo6368q(byte[] bArr, int i, int i2);
 
-    public abstract void r(int i, String str);
+    /* renamed from: r */
+    public abstract void mo6367r(int i, String str);
 
-    public abstract void s(int i, int i2);
+    /* renamed from: s */
+    public abstract void mo6366s(int i, int i2);
 
-    public abstract void t(int i, int i2);
+    /* renamed from: t */
+    public abstract void mo6365t(int i, int i2);
 
-    public abstract void u(int i);
+    /* renamed from: u */
+    public abstract void mo6364u(int i);
 
-    public abstract void v(int i, long j);
+    /* renamed from: v */
+    public abstract void mo6363v(int i, long j);
 
-    public abstract void w(long j);
+    /* renamed from: w */
+    public abstract void mo6362w(long j);
 }

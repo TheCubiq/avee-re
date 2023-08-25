@@ -9,30 +9,36 @@ import java.util.TreeMap;
 import org.checkerframework.checker.nullness.qual.RequiresNonNull;
 /* loaded from: classes.dex */
 public final class z72 implements Iterable, gl2, og2 {
-    public final SortedMap p;
-    public final Map q;
+
+    /* renamed from: p */
+    public final SortedMap f34551p;
+
+    /* renamed from: q */
+    public final Map f34552q;
 
     public z72() {
-        this.p = new TreeMap();
-        this.q = new TreeMap();
+        this.f34551p = new TreeMap();
+        this.f34552q = new TreeMap();
     }
 
     public z72(List list) {
         this();
         if (list != null) {
             for (int i = 0; i < list.size(); i++) {
-                s(i, (gl2) list.get(i));
+                m2696s(i, (gl2) list.get(i));
             }
         }
     }
 
     @Override // com.daaw.gl2
-    public final gl2 d(String str, w07 w07Var, List list) {
-        return ("concat".equals(str) || "every".equals(str) || "filter".equals(str) || "forEach".equals(str) || "indexOf".equals(str) || "join".equals(str) || "lastIndexOf".equals(str) || "map".equals(str) || "pop".equals(str) || "push".equals(str) || "reduce".equals(str) || "reduceRight".equals(str) || "reverse".equals(str) || "shift".equals(str) || "slice".equals(str) || "some".equals(str) || "sort".equals(str) || "splice".equals(str) || "toString".equals(str) || "unshift".equals(str)) ? sz2.a(str, this, w07Var, list) : fe2.a(this, new wp2(str), w07Var, list);
+    /* renamed from: d */
+    public final gl2 mo2708d(String str, w07 w07Var, List list) {
+        return ("concat".equals(str) || "every".equals(str) || "filter".equals(str) || "forEach".equals(str) || "indexOf".equals(str) || "join".equals(str) || "lastIndexOf".equals(str) || "map".equals(str) || "pop".equals(str) || "push".equals(str) || "reduce".equals(str) || "reduceRight".equals(str) || "reverse".equals(str) || "shift".equals(str) || "slice".equals(str) || "some".equals(str) || "sort".equals(str) || "splice".equals(str) || "toString".equals(str) || "unshift".equals(str)) ? sz2.m9694a(str, this, w07Var, list) : fe2.m22750a(this, new wp2(str), w07Var, list);
     }
 
-    public final int e() {
-        return this.p.size();
+    /* renamed from: e */
+    public final int m2707e() {
+        return this.f34551p.size();
     }
 
     public final boolean equals(Object obj) {
@@ -41,14 +47,14 @@ public final class z72 implements Iterable, gl2, og2 {
         }
         if (obj instanceof z72) {
             z72 z72Var = (z72) obj;
-            if (j() != z72Var.j()) {
+            if (m2704j() != z72Var.m2704j()) {
                 return false;
             }
-            if (this.p.isEmpty()) {
-                return z72Var.p.isEmpty();
+            if (this.f34551p.isEmpty()) {
+                return z72Var.f34551p.isEmpty();
             }
-            for (int intValue = ((Integer) this.p.firstKey()).intValue(); intValue <= ((Integer) this.p.lastKey()).intValue(); intValue++) {
-                if (!k(intValue).equals(z72Var.k(intValue))) {
+            for (int intValue = ((Integer) this.f34551p.firstKey()).intValue(); intValue <= ((Integer) this.f34551p.lastKey()).intValue(); intValue++) {
+                if (!m2703k(intValue).equals(z72Var.m2703k(intValue))) {
                     return false;
                 }
             }
@@ -58,22 +64,24 @@ public final class z72 implements Iterable, gl2, og2 {
     }
 
     @Override // com.daaw.og2
-    public final gl2 f(String str) {
+    /* renamed from: f */
+    public final gl2 mo2706f(String str) {
         gl2 gl2Var;
-        return "length".equals(str) ? new tb2(Double.valueOf(j())) : (!zzt(str) || (gl2Var = (gl2) this.q.get(str)) == null) ? gl2.g : gl2Var;
+        return "length".equals(str) ? new tb2(Double.valueOf(m2704j())) : (!zzt(str) || (gl2Var = (gl2) this.f34552q.get(str)) == null) ? gl2.f11420g : gl2Var;
     }
 
     @Override // com.daaw.og2
-    public final void h(String str, gl2 gl2Var) {
+    /* renamed from: h */
+    public final void mo2705h(String str, gl2 gl2Var) {
         if (gl2Var == null) {
-            this.q.remove(str);
+            this.f34552q.remove(str);
         } else {
-            this.q.put(str, gl2Var);
+            this.f34552q.put(str, gl2Var);
         }
     }
 
     public final int hashCode() {
-        return this.p.hashCode() * 31;
+        return this.f34551p.hashCode() * 31;
     }
 
     @Override // java.lang.Iterable
@@ -81,32 +89,35 @@ public final class z72 implements Iterable, gl2, og2 {
         return new c72(this);
     }
 
-    public final int j() {
-        if (this.p.isEmpty()) {
+    /* renamed from: j */
+    public final int m2704j() {
+        if (this.f34551p.isEmpty()) {
             return 0;
         }
-        return ((Integer) this.p.lastKey()).intValue() + 1;
+        return ((Integer) this.f34551p.lastKey()).intValue() + 1;
     }
 
-    public final gl2 k(int i) {
+    /* renamed from: k */
+    public final gl2 m2703k(int i) {
         gl2 gl2Var;
-        if (i < j()) {
-            return (!t(i) || (gl2Var = (gl2) this.p.get(Integer.valueOf(i))) == null) ? gl2.g : gl2Var;
+        if (i < m2704j()) {
+            return (!m2695t(i) || (gl2Var = (gl2) this.f34551p.get(Integer.valueOf(i))) == null) ? gl2.f11420g : gl2Var;
         }
         throw new IndexOutOfBoundsException("Attempting to get element outside of current array");
     }
 
-    public final String m(String str) {
+    /* renamed from: m */
+    public final String m2702m(String str) {
         if (str == null) {
             str = "";
         }
         StringBuilder sb = new StringBuilder();
-        if (!this.p.isEmpty()) {
-            for (int i = 0; i < j(); i++) {
-                gl2 k = k(i);
+        if (!this.f34551p.isEmpty()) {
+            for (int i = 0; i < m2704j(); i++) {
+                gl2 m2703k = m2703k(i);
                 sb.append(str);
-                if (!(k instanceof br2) && !(k instanceof xi2)) {
-                    sb.append(k.zzi());
+                if (!(m2703k instanceof br2) && !(m2703k instanceof xi2)) {
+                    sb.append(m2703k.zzi());
                 }
             }
             sb.delete(0, str.length());
@@ -114,95 +125,102 @@ public final class z72 implements Iterable, gl2, og2 {
         return sb.toString();
     }
 
-    public final Iterator n() {
-        return this.p.keySet().iterator();
+    /* renamed from: n */
+    public final Iterator m2701n() {
+        return this.f34551p.keySet().iterator();
     }
 
-    public final List o() {
-        ArrayList arrayList = new ArrayList(j());
-        for (int i = 0; i < j(); i++) {
-            arrayList.add(k(i));
+    /* renamed from: o */
+    public final List m2700o() {
+        ArrayList arrayList = new ArrayList(m2704j());
+        for (int i = 0; i < m2704j(); i++) {
+            arrayList.add(m2703k(i));
         }
         return arrayList;
     }
 
-    public final void p() {
-        this.p.clear();
+    /* renamed from: p */
+    public final void m2699p() {
+        this.f34551p.clear();
     }
 
-    public final void q(int i, gl2 gl2Var) {
+    /* renamed from: q */
+    public final void m2698q(int i, gl2 gl2Var) {
         if (i < 0) {
             throw new IllegalArgumentException("Invalid value index: " + i);
-        } else if (i >= j()) {
-            s(i, gl2Var);
+        } else if (i >= m2704j()) {
+            m2696s(i, gl2Var);
         } else {
-            for (int intValue = ((Integer) this.p.lastKey()).intValue(); intValue >= i; intValue--) {
-                SortedMap sortedMap = this.p;
+            for (int intValue = ((Integer) this.f34551p.lastKey()).intValue(); intValue >= i; intValue--) {
+                SortedMap sortedMap = this.f34551p;
                 Integer valueOf = Integer.valueOf(intValue);
                 gl2 gl2Var2 = (gl2) sortedMap.get(valueOf);
                 if (gl2Var2 != null) {
-                    s(intValue + 1, gl2Var2);
-                    this.p.remove(valueOf);
+                    m2696s(intValue + 1, gl2Var2);
+                    this.f34551p.remove(valueOf);
                 }
             }
-            s(i, gl2Var);
+            m2696s(i, gl2Var);
         }
     }
 
-    public final void r(int i) {
-        int intValue = ((Integer) this.p.lastKey()).intValue();
+    /* renamed from: r */
+    public final void m2697r(int i) {
+        int intValue = ((Integer) this.f34551p.lastKey()).intValue();
         if (i > intValue || i < 0) {
             return;
         }
-        this.p.remove(Integer.valueOf(i));
+        this.f34551p.remove(Integer.valueOf(i));
         if (i == intValue) {
-            SortedMap sortedMap = this.p;
+            SortedMap sortedMap = this.f34551p;
             int i2 = i - 1;
             Integer valueOf = Integer.valueOf(i2);
             if (sortedMap.containsKey(valueOf) || i2 < 0) {
                 return;
             }
-            this.p.put(valueOf, gl2.g);
+            this.f34551p.put(valueOf, gl2.f11420g);
             return;
         }
         while (true) {
             i++;
-            if (i > ((Integer) this.p.lastKey()).intValue()) {
+            if (i > ((Integer) this.f34551p.lastKey()).intValue()) {
                 return;
             }
-            SortedMap sortedMap2 = this.p;
+            SortedMap sortedMap2 = this.f34551p;
             Integer valueOf2 = Integer.valueOf(i);
             gl2 gl2Var = (gl2) sortedMap2.get(valueOf2);
             if (gl2Var != null) {
-                this.p.put(Integer.valueOf(i - 1), gl2Var);
-                this.p.remove(valueOf2);
+                this.f34551p.put(Integer.valueOf(i - 1), gl2Var);
+                this.f34551p.remove(valueOf2);
             }
         }
     }
 
     @RequiresNonNull({"elements"})
-    public final void s(int i, gl2 gl2Var) {
+    /* renamed from: s */
+    public final void m2696s(int i, gl2 gl2Var) {
         if (i > 32468) {
             throw new IllegalStateException("Array too large");
         }
         if (i < 0) {
             throw new IndexOutOfBoundsException("Out of bounds index: " + i);
         } else if (gl2Var == null) {
-            this.p.remove(Integer.valueOf(i));
+            this.f34551p.remove(Integer.valueOf(i));
         } else {
-            this.p.put(Integer.valueOf(i), gl2Var);
+            this.f34551p.put(Integer.valueOf(i), gl2Var);
         }
     }
 
-    public final boolean t(int i) {
-        if (i < 0 || i > ((Integer) this.p.lastKey()).intValue()) {
+    /* renamed from: t */
+    public final boolean m2695t(int i) {
+        if (i < 0 || i > ((Integer) this.f34551p.lastKey()).intValue()) {
             throw new IndexOutOfBoundsException("Out of bounds index: " + i);
         }
-        return this.p.containsKey(Integer.valueOf(i));
+        return this.f34551p.containsKey(Integer.valueOf(i));
     }
 
     public final String toString() {
-        return m(",");
+        return m2702m(",");
     }
 
     @Override // com.daaw.gl2
@@ -211,13 +229,13 @@ public final class z72 implements Iterable, gl2, og2 {
         Integer num;
         gl2 zzd;
         z72 z72Var = new z72();
-        for (Map.Entry entry : this.p.entrySet()) {
+        for (Map.Entry entry : this.f34551p.entrySet()) {
             if (entry.getValue() instanceof og2) {
-                sortedMap = z72Var.p;
+                sortedMap = z72Var.f34551p;
                 num = (Integer) entry.getKey();
                 zzd = (gl2) entry.getValue();
             } else {
-                sortedMap = z72Var.p;
+                sortedMap = z72Var.f34551p;
                 num = (Integer) entry.getKey();
                 zzd = ((gl2) entry.getValue()).zzd();
             }
@@ -233,21 +251,21 @@ public final class z72 implements Iterable, gl2, og2 {
 
     @Override // com.daaw.gl2
     public final Double zzh() {
-        return this.p.size() == 1 ? k(0).zzh() : this.p.size() <= 0 ? Double.valueOf(0.0d) : Double.valueOf(Double.NaN);
+        return this.f34551p.size() == 1 ? m2703k(0).zzh() : this.f34551p.size() <= 0 ? Double.valueOf(0.0d) : Double.valueOf(Double.NaN);
     }
 
     @Override // com.daaw.gl2
     public final String zzi() {
-        return m(",");
+        return m2702m(",");
     }
 
     @Override // com.daaw.gl2
     public final Iterator zzl() {
-        return new g62(this, this.p.keySet().iterator(), this.q.keySet().iterator());
+        return new g62(this, this.f34551p.keySet().iterator(), this.f34552q.keySet().iterator());
     }
 
     @Override // com.daaw.og2
     public final boolean zzt(String str) {
-        return "length".equals(str) || this.q.containsKey(str);
+        return "length".equals(str) || this.f34552q.containsKey(str);
     }
 }

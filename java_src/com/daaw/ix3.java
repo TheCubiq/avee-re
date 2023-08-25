@@ -4,31 +4,40 @@ import android.content.Context;
 import com.google.android.gms.ads.internal.client.zzff;
 /* loaded from: classes.dex */
 public final class ix3 {
-    public final ag a;
-    public final gx3 b;
 
-    public ix3(ag agVar, gx3 gx3Var) {
-        this.a = agVar;
-        this.b = gx3Var;
+    /* renamed from: a */
+    public final InterfaceC0623ag f14105a;
+
+    /* renamed from: b */
+    public final gx3 f14106b;
+
+    public ix3(InterfaceC0623ag interfaceC0623ag, gx3 gx3Var) {
+        this.f14105a = interfaceC0623ag;
+        this.f14106b = gx3Var;
     }
 
-    public static ix3 a(Context context) {
-        return ly3.d(context).b();
+    /* renamed from: a */
+    public static ix3 m19298a(Context context) {
+        return ly3.m16372d(context).mo10846b();
     }
 
-    public final void b(int i, long j) {
-        this.b.b(i, j);
+    /* renamed from: b */
+    public final void m19297b(int i, long j) {
+        this.f14106b.m21144b(i, j);
     }
 
-    public final void c() {
-        this.b.a();
+    /* renamed from: c */
+    public final void m19296c() {
+        this.f14106b.m21145a();
     }
 
-    public final void d(zzff zzffVar) {
-        this.b.b(-1, this.a.a());
+    /* renamed from: d */
+    public final void m19295d(zzff zzffVar) {
+        this.f14106b.m21144b(-1, this.f14105a.mo15860a());
     }
 
-    public final void e() {
-        this.b.b(-1, this.a.a());
+    /* renamed from: e */
+    public final void m19294e() {
+        this.f14106b.m21144b(-1, this.f14105a.mo15860a());
     }
 }

@@ -10,7 +10,8 @@ public final class tw5 extends gj4 {
     }
 
     @Override // com.daaw.gj4
-    public final as4 d(Set set) {
+    /* renamed from: d */
+    public final as4 mo8754d(Set set) {
         return new as4(Collections.emptySet());
     }
 }

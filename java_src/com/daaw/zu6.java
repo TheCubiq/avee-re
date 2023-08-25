@@ -4,9 +4,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadFactory;
 /* loaded from: classes.dex */
 public interface zu6 {
-    ExecutorService a(int i);
+    /* renamed from: a */
+    ExecutorService mo1869a(int i);
 
-    ExecutorService b(int i, ThreadFactory threadFactory, int i2);
+    /* renamed from: b */
+    ExecutorService mo1868b(int i, ThreadFactory threadFactory, int i2);
 
-    ExecutorService c(ThreadFactory threadFactory, int i);
+    /* renamed from: c */
+    ExecutorService mo1867c(ThreadFactory threadFactory, int i);
 }

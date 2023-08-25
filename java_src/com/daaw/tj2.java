@@ -10,7 +10,8 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public abstract class tj2 {
-    public static HashMap a(String str) {
+    /* renamed from: a */
+    public static HashMap m9077a(String str) {
         try {
             if (TextUtils.isEmpty(str)) {
                 return null;
@@ -21,13 +22,14 @@ public abstract class tj2 {
         }
     }
 
-    public abstract HashMap b();
+    /* renamed from: b */
+    public abstract HashMap mo2114b();
 
     public final String toString() {
         try {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-            objectOutputStream.writeObject(b());
+            objectOutputStream.writeObject(mo2114b());
             objectOutputStream.close();
             return Base64.encodeToString(byteArrayOutputStream.toByteArray(), 0);
         } catch (IOException unused) {

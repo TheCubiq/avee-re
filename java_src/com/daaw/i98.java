@@ -1,27 +1,38 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface i98 extends w88 {
-    String a();
+    /* renamed from: a */
+    String mo9751a();
 
-    void b(long j);
+    /* renamed from: b */
+    void mo15113b(long j);
 
-    void d();
+    /* renamed from: d */
+    void mo15112d();
 
-    void e(float f, float f2);
+    /* renamed from: e */
+    void mo9749e(float f, float f2);
 
-    void f(f92[] f92VarArr, mt8 mt8Var, long j, long j2);
+    /* renamed from: f */
+    void mo15111f(f92[] f92VarArr, mt8 mt8Var, long j, long j2);
 
-    boolean g();
+    /* renamed from: g */
+    boolean mo15110g();
 
-    void i(long j, long j2);
+    /* renamed from: i */
+    void mo20009i(long j, long j2);
 
-    boolean j();
+    /* renamed from: j */
+    boolean mo15109j();
 
-    void k(int i, lh8 lh8Var);
+    /* renamed from: k */
+    void mo15108k(int i, lh8 lh8Var);
 
-    int m();
+    /* renamed from: m */
+    int mo15107m();
 
-    void n(x98 x98Var, f92[] f92VarArr, mt8 mt8Var, long j, boolean z, boolean z2, long j2, long j3);
+    /* renamed from: n */
+    void mo15106n(x98 x98Var, f92[] f92VarArr, mt8 mt8Var, long j, boolean z, boolean z2, long j2, long j3);
 
     void zzA();
 

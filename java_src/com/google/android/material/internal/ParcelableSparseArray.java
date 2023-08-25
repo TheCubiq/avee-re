@@ -5,10 +5,11 @@ import android.os.Parcelable;
 import android.util.SparseArray;
 /* loaded from: classes2.dex */
 public class ParcelableSparseArray extends SparseArray<Parcelable> implements Parcelable {
-    public static final Parcelable.Creator<ParcelableSparseArray> CREATOR = new a();
+    public static final Parcelable.Creator<ParcelableSparseArray> CREATOR = new C4111a();
 
+    /* renamed from: com.google.android.material.internal.ParcelableSparseArray$a */
     /* loaded from: classes2.dex */
-    public static class a implements Parcelable.ClassLoaderCreator<ParcelableSparseArray> {
+    public static class C4111a implements Parcelable.ClassLoaderCreator<ParcelableSparseArray> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public ParcelableSparseArray createFromParcel(Parcel parcel) {

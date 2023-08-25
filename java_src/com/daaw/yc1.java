@@ -1,15 +1,19 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class yc1 {
-    public boolean a = false;
 
-    public synchronized void a() {
-        this.a = true;
+    /* renamed from: a */
+    public boolean f33518a = false;
+
+    /* renamed from: a */
+    public synchronized void m3864a() {
+        this.f33518a = true;
         notifyAll();
     }
 
-    public synchronized void b() {
-        while (!this.a) {
+    /* renamed from: b */
+    public synchronized void m3863b() {
+        while (!this.f33518a) {
             wait();
         }
     }

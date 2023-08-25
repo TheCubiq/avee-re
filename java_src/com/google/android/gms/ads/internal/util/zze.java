@@ -8,7 +8,7 @@ public final class zze extends k04 {
         if (!zzc() || str == null || str.length() <= 4000) {
             return;
         }
-        for (String str2 : k04.a.d(str)) {
+        for (String str2 : k04.f15577a.m22121d(str)) {
         }
     }
 
@@ -17,6 +17,6 @@ public final class zze extends k04 {
     }
 
     public static boolean zzc() {
-        return k04.zzm(2) && ((Boolean) ib3.a.e()).booleanValue();
+        return k04.zzm(2) && ((Boolean) ib3.f13436a.m16137e()).booleanValue();
     }
 }

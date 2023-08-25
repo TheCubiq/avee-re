@@ -8,15 +8,20 @@ public enum zn7 implements ns7 {
     CRUNCHY(4),
     UNRECOGNIZED(-1);
     
-    public static final os7 w = new os7() { // from class: com.daaw.yn7
+
+    /* renamed from: w */
+    public static final os7 f35269w = new os7() { // from class: com.daaw.yn7
     };
-    public final int p;
+
+    /* renamed from: p */
+    public final int f35271p;
 
     zn7(int i) {
-        this.p = i;
+        this.f35271p = i;
     }
 
-    public static zn7 a(int i) {
+    /* renamed from: a */
+    public static zn7 m2096a(int i) {
         if (i != 0) {
             if (i != 1) {
                 if (i != 2) {
@@ -42,7 +47,7 @@ public enum zn7 implements ns7 {
 
     public final int zza() {
         if (this != UNRECOGNIZED) {
-            return this.p;
+            return this.f35271p;
         }
         throw new IllegalArgumentException("Can't get the number of an unknown enum value.");
     }

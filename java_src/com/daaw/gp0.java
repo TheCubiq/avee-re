@@ -9,42 +9,52 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 /* loaded from: classes.dex */
 public class gp0 {
-    public final Runnable a;
-    public final CopyOnWriteArrayList<mp0> b = new CopyOnWriteArrayList<>();
-    public final Map<mp0, Object> c = new HashMap();
+
+    /* renamed from: a */
+    public final Runnable f11553a;
+
+    /* renamed from: b */
+    public final CopyOnWriteArrayList<mp0> f11554b = new CopyOnWriteArrayList<>();
+
+    /* renamed from: c */
+    public final Map<mp0, Object> f11555c = new HashMap();
 
     public gp0(Runnable runnable) {
-        this.a = runnable;
+        this.f11553a = runnable;
     }
 
-    public void a(Menu menu, MenuInflater menuInflater) {
-        Iterator<mp0> it = this.b.iterator();
+    /* renamed from: a */
+    public void m21367a(Menu menu, MenuInflater menuInflater) {
+        Iterator<mp0> it = this.f11554b.iterator();
         while (it.hasNext()) {
-            it.next().c(menu, menuInflater);
+            it.next().m15866c(menu, menuInflater);
         }
     }
 
-    public void b(Menu menu) {
-        Iterator<mp0> it = this.b.iterator();
+    /* renamed from: b */
+    public void m21366b(Menu menu) {
+        Iterator<mp0> it = this.f11554b.iterator();
         while (it.hasNext()) {
-            it.next().b(menu);
+            it.next().m15867b(menu);
         }
     }
 
-    public boolean c(MenuItem menuItem) {
-        Iterator<mp0> it = this.b.iterator();
+    /* renamed from: c */
+    public boolean m21365c(MenuItem menuItem) {
+        Iterator<mp0> it = this.f11554b.iterator();
         while (it.hasNext()) {
-            if (it.next().a(menuItem)) {
+            if (it.next().m15868a(menuItem)) {
                 return true;
             }
         }
         return false;
     }
 
-    public void d(Menu menu) {
-        Iterator<mp0> it = this.b.iterator();
+    /* renamed from: d */
+    public void m21364d(Menu menu) {
+        Iterator<mp0> it = this.f11554b.iterator();
         while (it.hasNext()) {
-            it.next().d(menu);
+            it.next().m15865d(menu);
         }
     }
 }

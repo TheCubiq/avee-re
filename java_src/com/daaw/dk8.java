@@ -3,54 +3,59 @@ package com.daaw;
 import java.util.NoSuchElementException;
 /* loaded from: classes2.dex */
 public abstract class dk8 extends bd2 {
-    public final int p;
-    public int q;
+
+    /* renamed from: p */
+    public final int f7219p;
+
+    /* renamed from: q */
+    public int f7220q;
 
     public dk8(int i, int i2) {
-        jf8.b(i2, i, "index");
-        this.p = i;
-        this.q = i2;
+        jf8.m18535b(i2, i, "index");
+        this.f7219p = i;
+        this.f7220q = i2;
     }
 
-    public abstract Object a(int i);
+    /* renamed from: a */
+    public abstract Object mo22357a(int i);
 
     @Override // java.util.Iterator, java.util.ListIterator
     public final boolean hasNext() {
-        return this.q < this.p;
+        return this.f7220q < this.f7219p;
     }
 
     @Override // java.util.ListIterator
     public final boolean hasPrevious() {
-        return this.q > 0;
+        return this.f7220q > 0;
     }
 
     @Override // java.util.Iterator, java.util.ListIterator
     public final Object next() {
         if (hasNext()) {
-            int i = this.q;
-            this.q = i + 1;
-            return a(i);
+            int i = this.f7220q;
+            this.f7220q = i + 1;
+            return mo22357a(i);
         }
         throw new NoSuchElementException();
     }
 
     @Override // java.util.ListIterator
     public final int nextIndex() {
-        return this.q;
+        return this.f7220q;
     }
 
     @Override // java.util.ListIterator
     public final Object previous() {
         if (hasPrevious()) {
-            int i = this.q - 1;
-            this.q = i;
-            return a(i);
+            int i = this.f7220q - 1;
+            this.f7220q = i;
+            return mo22357a(i);
         }
         throw new NoSuchElementException();
     }
 
     @Override // java.util.ListIterator
     public final int previousIndex() {
-        return this.q - 1;
+        return this.f7220q - 1;
     }
 }

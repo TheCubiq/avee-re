@@ -3,19 +3,21 @@ package com.google.android.gms.ads.internal.client;
 import com.google.android.gms.ads.AdListener;
 /* loaded from: classes.dex */
 public final class zzg extends zzbg {
-    public final AdListener p;
+
+    /* renamed from: p */
+    public final AdListener f36189p;
 
     public zzg(AdListener adListener) {
-        this.p = adListener;
+        this.f36189p = adListener;
     }
 
     public final AdListener zzb() {
-        return this.p;
+        return this.f36189p;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzc() {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdClicked();
         }
@@ -23,7 +25,7 @@ public final class zzg extends zzbg {
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzd() {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdClosed();
         }
@@ -35,7 +37,7 @@ public final class zzg extends zzbg {
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzf(zze zzeVar) {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdFailedToLoad(zzeVar.zzb());
         }
@@ -43,7 +45,7 @@ public final class zzg extends zzbg {
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzg() {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdImpression();
         }
@@ -55,7 +57,7 @@ public final class zzg extends zzbg {
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzi() {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdLoaded();
         }
@@ -63,7 +65,7 @@ public final class zzg extends zzbg {
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzj() {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdOpened();
         }
@@ -71,7 +73,7 @@ public final class zzg extends zzbg {
 
     @Override // com.google.android.gms.ads.internal.client.zzbh
     public final void zzk() {
-        AdListener adListener = this.p;
+        AdListener adListener = this.f36189p;
         if (adListener != null) {
             adListener.onAdSwipeGestureClicked();
         }

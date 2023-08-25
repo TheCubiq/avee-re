@@ -9,98 +9,113 @@ import android.view.ViewGroup;
 @Deprecated
 /* loaded from: classes.dex */
 public abstract class x30 extends kv0 {
-    public final FragmentManager c;
-    public FragmentTransaction d = null;
-    public Fragment e = null;
+
+    /* renamed from: c */
+    public final FragmentManager f32044c;
+
+    /* renamed from: d */
+    public FragmentTransaction f32045d = null;
+
+    /* renamed from: e */
+    public Fragment f32046e = null;
 
     @Deprecated
     public x30(FragmentManager fragmentManager) {
-        this.c = fragmentManager;
+        this.f32044c = fragmentManager;
     }
 
-    public static String r(int i, long j) {
+    /* renamed from: r */
+    public static String m5592r(int i, long j) {
         return "android:switcher:" + i + ":" + j;
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public void a(ViewGroup viewGroup, int i, Object obj) {
-        if (this.d == null) {
-            this.d = this.c.beginTransaction();
+    /* renamed from: a */
+    public void mo5602a(ViewGroup viewGroup, int i, Object obj) {
+        if (this.f32045d == null) {
+            this.f32045d = this.f32044c.beginTransaction();
         }
-        this.d.detach((Fragment) obj);
+        this.f32045d.detach((Fragment) obj);
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public void b(ViewGroup viewGroup) {
-        FragmentTransaction fragmentTransaction = this.d;
+    /* renamed from: b */
+    public void mo5601b(ViewGroup viewGroup) {
+        FragmentTransaction fragmentTransaction = this.f32045d;
         if (fragmentTransaction != null) {
             fragmentTransaction.commitAllowingStateLoss();
-            this.d = null;
-            this.c.executePendingTransactions();
+            this.f32045d = null;
+            this.f32044c.executePendingTransactions();
         }
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public Object g(ViewGroup viewGroup, int i) {
-        if (this.d == null) {
-            this.d = this.c.beginTransaction();
+    /* renamed from: g */
+    public Object mo5600g(ViewGroup viewGroup, int i) {
+        if (this.f32045d == null) {
+            this.f32045d = this.f32044c.beginTransaction();
         }
-        long q = q(i);
-        Fragment findFragmentByTag = this.c.findFragmentByTag(r(viewGroup.getId(), q));
+        long m5593q = m5593q(i);
+        Fragment findFragmentByTag = this.f32044c.findFragmentByTag(m5592r(viewGroup.getId(), m5593q));
         if (findFragmentByTag != null) {
-            this.d.attach(findFragmentByTag);
+            this.f32045d.attach(findFragmentByTag);
         } else {
-            findFragmentByTag = p(i);
-            this.d.add(viewGroup.getId(), findFragmentByTag, r(viewGroup.getId(), q));
+            findFragmentByTag = mo5594p(i);
+            this.f32045d.add(viewGroup.getId(), findFragmentByTag, m5592r(viewGroup.getId(), m5593q));
         }
-        if (findFragmentByTag != this.e) {
+        if (findFragmentByTag != this.f32046e) {
             findFragmentByTag.setMenuVisibility(false);
-            q30.a(findFragmentByTag, false);
+            q30.m12793a(findFragmentByTag, false);
         }
         return findFragmentByTag;
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public boolean h(View view, Object obj) {
+    /* renamed from: h */
+    public boolean mo5599h(View view, Object obj) {
         return ((Fragment) obj).getView() == view;
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public void j(Parcelable parcelable, ClassLoader classLoader) {
+    /* renamed from: j */
+    public void mo5598j(Parcelable parcelable, ClassLoader classLoader) {
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public Parcelable k() {
+    /* renamed from: k */
+    public Parcelable mo5597k() {
         return null;
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public void l(ViewGroup viewGroup, int i, Object obj) {
+    /* renamed from: l */
+    public void mo5596l(ViewGroup viewGroup, int i, Object obj) {
         Fragment fragment = (Fragment) obj;
-        Fragment fragment2 = this.e;
+        Fragment fragment2 = this.f32046e;
         if (fragment != fragment2) {
             if (fragment2 != null) {
                 fragment2.setMenuVisibility(false);
-                q30.a(this.e, false);
+                q30.m12793a(this.f32046e, false);
             }
             if (fragment != null) {
                 fragment.setMenuVisibility(true);
-                q30.a(fragment, true);
+                q30.m12793a(fragment, true);
             }
-            this.e = fragment;
+            this.f32046e = fragment;
         }
     }
 
     @Override // com.daaw.kv0
     @Deprecated
-    public void n(ViewGroup viewGroup) {
+    /* renamed from: n */
+    public void mo5595n(ViewGroup viewGroup) {
         if (viewGroup.getId() != -1) {
             return;
         }
@@ -108,10 +123,12 @@ public abstract class x30 extends kv0 {
     }
 
     @Deprecated
-    public abstract Fragment p(int i);
+    /* renamed from: p */
+    public abstract Fragment mo5594p(int i);
 
     @Deprecated
-    public long q(int i) {
+    /* renamed from: q */
+    public long m5593q(int i) {
         return i;
     }
 }

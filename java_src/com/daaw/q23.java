@@ -10,23 +10,25 @@ public final class q23 extends bp2 implements s23 {
     }
 
     @Override // com.daaw.s23
-    public final void i2(zze zzeVar) {
-        Parcel D = D();
-        dp2.e(D, zzeVar);
-        M(3, D);
+    /* renamed from: i2 */
+    public final void mo10752i2(zze zzeVar) {
+        Parcel m25952D = m25952D();
+        dp2.m24103e(m25952D, zzeVar);
+        m25950M(3, m25952D);
     }
 
     @Override // com.daaw.s23
-    public final void r2(p23 p23Var) {
-        Parcel D = D();
-        dp2.g(D, p23Var);
-        M(1, D);
+    /* renamed from: r2 */
+    public final void mo10751r2(p23 p23Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, p23Var);
+        m25950M(1, m25952D);
     }
 
     @Override // com.daaw.s23
     public final void zzb(int i) {
-        Parcel D = D();
-        D.writeInt(i);
-        M(2, D);
+        Parcel m25952D = m25952D();
+        m25952D.writeInt(i);
+        m25950M(2, m25952D);
     }
 }

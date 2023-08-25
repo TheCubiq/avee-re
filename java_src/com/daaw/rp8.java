@@ -3,9 +3,11 @@ package com.daaw;
 import android.media.MediaCodecInfo;
 /* loaded from: classes.dex */
 public interface rp8 {
-    boolean a(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities);
+    /* renamed from: a */
+    boolean mo11079a(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities);
 
-    boolean b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities);
+    /* renamed from: b */
+    boolean mo11078b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities);
 
     int zza();
 

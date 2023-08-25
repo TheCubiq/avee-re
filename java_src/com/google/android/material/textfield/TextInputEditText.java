@@ -24,19 +24,23 @@ import com.daaw.xk1;
 import com.daaw.xm0;
 /* loaded from: classes2.dex */
 public class TextInputEditText extends AppCompatEditText {
-    public final Rect u;
-    public boolean v;
+
+    /* renamed from: u */
+    public final Rect f37662u;
+
+    /* renamed from: v */
+    public boolean f37663v;
 
     public TextInputEditText(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, w01.l);
+        this(context, attributeSet, w01.f30752l);
     }
 
     public TextInputEditText(Context context, AttributeSet attributeSet, int i) {
-        super(qn0.c(context, attributeSet, i, 0), attributeSet, i);
-        this.u = new Rect();
-        TypedArray h = xk1.h(context, attributeSet, m21.O4, i, k21.Widget_Design_TextInputEditText, new int[0]);
-        setTextInputLayoutFocusedRectEnabled(h.getBoolean(m21.P4, false));
-        h.recycle();
+        super(qn0.m12324c(context, attributeSet, i, 0), attributeSet, i);
+        this.f37662u = new Rect();
+        TypedArray m5026h = xk1.m5026h(context, attributeSet, m21.f18110O4, i, k21.Widget_Design_TextInputEditText, new int[0]);
+        setTextInputLayoutFocusedRectEnabled(m5026h.getBoolean(m21.f18117P4, false));
+        m5026h.recycle();
     }
 
     private CharSequence getHintFromLayout() {
@@ -56,7 +60,8 @@ public class TextInputEditText extends AppCompatEditText {
         return null;
     }
 
-    public final String c(TextInputLayout textInputLayout) {
+    /* renamed from: c */
+    public final String m320c(TextInputLayout textInputLayout) {
         Editable text = getText();
         CharSequence hint = textInputLayout.getHint();
         boolean z = !TextUtils.isEmpty(text);
@@ -80,20 +85,20 @@ public class TextInputEditText extends AppCompatEditText {
     public void getFocusedRect(Rect rect) {
         super.getFocusedRect(rect);
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout == null || !this.v || rect == null) {
+        if (textInputLayout == null || !this.f37663v || rect == null) {
             return;
         }
-        textInputLayout.getFocusedRect(this.u);
-        rect.bottom = this.u.bottom;
+        textInputLayout.getFocusedRect(this.f37662u);
+        rect.bottom = this.f37662u.bottom;
     }
 
     @Override // android.view.View
     public boolean getGlobalVisibleRect(Rect rect, Point point) {
         boolean globalVisibleRect = super.getGlobalVisibleRect(rect, point);
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout != null && this.v && rect != null) {
-            textInputLayout.getGlobalVisibleRect(this.u, point);
-            rect.bottom = this.u.bottom;
+        if (textInputLayout != null && this.f37663v && rect != null) {
+            textInputLayout.getGlobalVisibleRect(this.f37662u, point);
+            rect.bottom = this.f37662u.bottom;
         }
         return globalVisibleRect;
     }
@@ -101,14 +106,14 @@ public class TextInputEditText extends AppCompatEditText {
     @Override // android.widget.TextView
     public CharSequence getHint() {
         TextInputLayout textInputLayout = getTextInputLayout();
-        return (textInputLayout == null || !textInputLayout.O()) ? super.getHint() : textInputLayout.getHint();
+        return (textInputLayout == null || !textInputLayout.m300O()) ? super.getHint() : textInputLayout.getHint();
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout != null && textInputLayout.O() && super.getHint() == null && xm0.a()) {
+        if (textInputLayout != null && textInputLayout.m300O() && super.getHint() == null && xm0.m5007a()) {
             setHint("");
         }
     }
@@ -129,21 +134,21 @@ public class TextInputEditText extends AppCompatEditText {
         if (Build.VERSION.SDK_INT >= 23 || textInputLayout == null) {
             return;
         }
-        accessibilityNodeInfo.setText(c(textInputLayout));
+        accessibilityNodeInfo.setText(m320c(textInputLayout));
     }
 
     @Override // android.view.View
     public boolean requestRectangleOnScreen(Rect rect) {
         boolean requestRectangleOnScreen = super.requestRectangleOnScreen(rect);
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout != null && this.v) {
-            this.u.set(0, textInputLayout.getHeight() - getResources().getDimensionPixelOffset(f11.mtrl_edittext_rectangle_top_offset), textInputLayout.getWidth(), textInputLayout.getHeight());
-            textInputLayout.requestRectangleOnScreen(this.u, true);
+        if (textInputLayout != null && this.f37663v) {
+            this.f37662u.set(0, textInputLayout.getHeight() - getResources().getDimensionPixelOffset(f11.mtrl_edittext_rectangle_top_offset), textInputLayout.getWidth(), textInputLayout.getHeight());
+            textInputLayout.requestRectangleOnScreen(this.f37662u, true);
         }
         return requestRectangleOnScreen;
     }
 
     public void setTextInputLayoutFocusedRectEnabled(boolean z) {
-        this.v = z;
+        this.f37663v = z;
     }
 }

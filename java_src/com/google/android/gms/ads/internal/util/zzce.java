@@ -3,39 +3,43 @@ package com.google.android.gms.ads.internal.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.webkit.WebSettings;
+import com.daaw.C3327vf;
 import com.daaw.c80;
 import com.daaw.lc1;
-import com.daaw.vf;
 /* loaded from: classes.dex */
 public final class zzce {
-    public static zzce b;
-    public String a;
+
+    /* renamed from: b */
+    public static zzce f36290b;
+
+    /* renamed from: a */
+    public String f36291a;
 
     public static zzce zza() {
-        if (b == null) {
-            b = new zzce();
+        if (f36290b == null) {
+            f36290b = new zzce();
         }
-        return b;
+        return f36290b;
     }
 
     public final void zzb(Context context) {
         zze.zza("Updating user agent.");
         String defaultUserAgent = WebSettings.getDefaultUserAgent(context);
-        if (!defaultUserAgent.equals(this.a)) {
-            Context c = c80.c(context);
-            if (!vf.a()) {
-                if (c == null) {
-                    c = null;
+        if (!defaultUserAgent.equals(this.f36291a)) {
+            Context m25525c = c80.m25525c(context);
+            if (!C3327vf.m7198a()) {
+                if (m25525c == null) {
+                    m25525c = null;
                 }
-                this.a = defaultUserAgent;
+                this.f36291a = defaultUserAgent;
             }
             SharedPreferences.Editor putString = context.getSharedPreferences("admob_user_agent", 0).edit().putString("user_agent", WebSettings.getDefaultUserAgent(context));
-            if (c == null) {
+            if (m25525c == null) {
                 putString.apply();
             } else {
-                lc1.a(context, putString, "admob_user_agent");
+                lc1.m17052a(context, putString, "admob_user_agent");
             }
-            this.a = defaultUserAgent;
+            this.f36291a = defaultUserAgent;
         }
         zze.zza("User agent is updated.");
     }

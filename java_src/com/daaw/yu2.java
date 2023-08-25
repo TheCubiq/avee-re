@@ -8,7 +8,8 @@ public final class yu2 implements wu2 {
     }
 
     @Override // com.daaw.wu2
-    public final boolean a(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+    /* renamed from: a */
+    public final boolean mo1871a(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
         return "video/avc".equals(str);
     }
 

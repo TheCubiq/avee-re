@@ -9,41 +9,45 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class dm5 extends jm5 {
-    public zzcbj h;
+
+    /* renamed from: h */
+    public zzcbj f7482h;
 
     public dm5(Context context, ScheduledExecutorService scheduledExecutorService) {
-        this.e = context;
-        this.f = zzt.zzt().zzb();
-        this.g = scheduledExecutorService;
+        this.f15210e = context;
+        this.f15211f = zzt.zzt().zzb();
+        this.f15212g = scheduledExecutorService;
     }
 
-    @Override // com.daaw.pa.a
-    public final synchronized void M(Bundle bundle) {
-        if (this.c) {
+    @Override // com.daaw.AbstractC2527pa.InterfaceC2528a
+    /* renamed from: M */
+    public final synchronized void mo2196M(Bundle bundle) {
+        if (this.f15208c) {
             return;
         }
-        this.c = true;
+        this.f15208c = true;
         try {
-            this.d.J().U1(this.h, new im5(this));
+            this.f15209d.m10957J().mo1906U1(this.f7482h, new im5(this));
         } catch (RemoteException unused) {
-            this.a.c(new pk5(1));
+            this.f15206a.m23796c(new pk5(1));
         }
     }
 
-    public final synchronized f77 c(zzcbj zzcbjVar, long j) {
-        if (this.b) {
-            return s67.o(this.a, j, TimeUnit.MILLISECONDS, this.g);
+    /* renamed from: c */
+    public final synchronized f77 m24215c(zzcbj zzcbjVar, long j) {
+        if (this.f15207b) {
+            return s67.m10628o(this.f15206a, j, TimeUnit.MILLISECONDS, this.f15212g);
         }
-        this.b = true;
-        this.h = zzcbjVar;
-        a();
-        f77 o = s67.o(this.a, j, TimeUnit.MILLISECONDS, this.g);
-        o.f(new Runnable() { // from class: com.daaw.cm5
+        this.f15207b = true;
+        this.f7482h = zzcbjVar;
+        m18408a();
+        f77 m10628o = s67.m10628o(this.f15206a, j, TimeUnit.MILLISECONDS, this.f15212g);
+        m10628o.mo6515f(new Runnable() { // from class: com.daaw.cm5
             @Override // java.lang.Runnable
             public final void run() {
-                dm5.this.b();
+                dm5.this.m18407b();
             }
-        }, z04.f);
-        return o;
+        }, z04.f34310f);
+        return m10628o;
     }
 }

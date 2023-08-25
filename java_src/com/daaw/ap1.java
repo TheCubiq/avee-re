@@ -25,14 +25,17 @@ import org.conscrypt.NativeConstants;
 /* loaded from: classes.dex */
 public class ap1 {
 
+    /* renamed from: com.daaw.ap1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static ParcelFileDescriptor a(ContentResolver contentResolver, Uri uri, String str, CancellationSignal cancellationSignal) {
+    public static class C0665a {
+        /* renamed from: a */
+        public static ParcelFileDescriptor m27266a(ContentResolver contentResolver, Uri uri, String str, CancellationSignal cancellationSignal) {
             return contentResolver.openFileDescriptor(uri, str, cancellationSignal);
         }
     }
 
-    public static void a(Closeable closeable) {
+    /* renamed from: a */
+    public static void m27274a(Closeable closeable) {
         if (closeable != null) {
             try {
                 closeable.close();
@@ -41,32 +44,34 @@ public class ap1 {
         }
     }
 
-    public static ByteBuffer b(Context context, Resources resources, int i) {
-        File e = e(context);
-        if (e == null) {
+    /* renamed from: b */
+    public static ByteBuffer m27273b(Context context, Resources resources, int i) {
+        File m27270e = m27270e(context);
+        if (m27270e == null) {
             return null;
         }
         try {
-            if (c(e, resources, i)) {
-                return g(e);
+            if (m27272c(m27270e, resources, i)) {
+                return m27268g(m27270e);
             }
             return null;
         } finally {
-            e.delete();
+            m27270e.delete();
         }
     }
 
-    public static boolean c(File file, Resources resources, int i) {
+    /* renamed from: c */
+    public static boolean m27272c(File file, Resources resources, int i) {
         InputStream inputStream;
         try {
             inputStream = resources.openRawResource(i);
             try {
-                boolean d = d(file, inputStream);
-                a(inputStream);
-                return d;
+                boolean m27271d = m27271d(file, inputStream);
+                m27274a(inputStream);
+                return m27271d;
             } catch (Throwable th) {
                 th = th;
-                a(inputStream);
+                m27274a(inputStream);
                 throw th;
             }
         } catch (Throwable th2) {
@@ -75,7 +80,8 @@ public class ap1 {
         }
     }
 
-    public static boolean d(File file, InputStream inputStream) {
+    /* renamed from: d */
+    public static boolean m27271d(File file, InputStream inputStream) {
         FileOutputStream fileOutputStream;
         StrictMode.ThreadPolicy allowThreadDiskWrites = StrictMode.allowThreadDiskWrites();
         FileOutputStream fileOutputStream2 = null;
@@ -93,7 +99,7 @@ public class ap1 {
             while (true) {
                 int read = inputStream.read(bArr);
                 if (read == -1) {
-                    a(fileOutputStream);
+                    m27274a(fileOutputStream);
                     StrictMode.setThreadPolicy(allowThreadDiskWrites);
                     return true;
                 }
@@ -105,19 +111,20 @@ public class ap1 {
             StringBuilder sb = new StringBuilder();
             sb.append("Error copying resource contents to temp file: ");
             sb.append(e.getMessage());
-            a(fileOutputStream2);
+            m27274a(fileOutputStream2);
             StrictMode.setThreadPolicy(allowThreadDiskWrites);
             return false;
         } catch (Throwable th2) {
             th = th2;
             fileOutputStream2 = fileOutputStream;
-            a(fileOutputStream2);
+            m27274a(fileOutputStream2);
             StrictMode.setThreadPolicy(allowThreadDiskWrites);
             throw th;
         }
     }
 
-    public static File e(Context context) {
+    /* renamed from: e */
+    public static File m27270e(Context context) {
         File cacheDir = context.getCacheDir();
         if (cacheDir == null) {
             return null;
@@ -132,21 +139,22 @@ public class ap1 {
         return null;
     }
 
-    public static ByteBuffer f(Context context, CancellationSignal cancellationSignal, Uri uri) {
+    /* renamed from: f */
+    public static ByteBuffer m27269f(Context context, CancellationSignal cancellationSignal, Uri uri) {
         try {
-            ParcelFileDescriptor a2 = a.a(context.getContentResolver(), uri, "r", cancellationSignal);
-            if (a2 == null) {
-                if (a2 != null) {
-                    a2.close();
+            ParcelFileDescriptor m27266a = C0665a.m27266a(context.getContentResolver(), uri, "r", cancellationSignal);
+            if (m27266a == null) {
+                if (m27266a != null) {
+                    m27266a.close();
                 }
                 return null;
             }
-            FileInputStream fileInputStream = new FileInputStream(a2.getFileDescriptor());
+            FileInputStream fileInputStream = new FileInputStream(m27266a.getFileDescriptor());
             try {
                 FileChannel channel = fileInputStream.getChannel();
                 MappedByteBuffer map = channel.map(FileChannel.MapMode.READ_ONLY, 0L, channel.size());
                 fileInputStream.close();
-                a2.close();
+                m27266a.close();
                 return map;
             } catch (Throwable th) {
                 try {
@@ -161,7 +169,8 @@ public class ap1 {
         }
     }
 
-    public static ByteBuffer g(File file) {
+    /* renamed from: g */
+    public static ByteBuffer m27268g(File file) {
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             FileChannel channel = fileInputStream.getChannel();
@@ -173,13 +182,14 @@ public class ap1 {
         }
     }
 
-    public static Map<Uri, ByteBuffer> h(Context context, b30.b[] bVarArr, CancellationSignal cancellationSignal) {
+    /* renamed from: h */
+    public static Map<Uri, ByteBuffer> m27267h(Context context, b30.C0805b[] c0805bArr, CancellationSignal cancellationSignal) {
         HashMap hashMap = new HashMap();
-        for (b30.b bVar : bVarArr) {
-            if (bVar.b() == 0) {
-                Uri d = bVar.d();
-                if (!hashMap.containsKey(d)) {
-                    hashMap.put(d, f(context, cancellationSignal, d));
+        for (b30.C0805b c0805b : c0805bArr) {
+            if (c0805b.m26506b() == 0) {
+                Uri m26504d = c0805b.m26504d();
+                if (!hashMap.containsKey(m26504d)) {
+                    hashMap.put(m26504d, m27269f(context, cancellationSignal, m26504d));
                 }
             }
         }

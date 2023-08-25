@@ -13,7 +13,7 @@ public final class km8 extends BroadcastReceiver {
 
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
-        j04.i();
+        j04.m19191i();
         zzd.zza(context);
     }
 }

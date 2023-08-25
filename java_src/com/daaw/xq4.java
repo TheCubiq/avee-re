@@ -9,31 +9,33 @@ public final class xq4 extends kw4 implements pq4 {
     }
 
     @Override // com.daaw.pq4
-    public final void b(final zze zzeVar) {
-        B0(new jw4() { // from class: com.daaw.uq4
+    /* renamed from: b */
+    public final void mo4815b(final zze zzeVar) {
+        m17378B0(new jw4() { // from class: com.daaw.uq4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((er4) obj).A(zze.this);
+                ((er4) obj).mo9178A(zze.this);
             }
         });
     }
 
     @Override // com.daaw.pq4
-    public final void s(final b15 b15Var) {
-        B0(new jw4() { // from class: com.daaw.wq4
+    /* renamed from: s */
+    public final void mo4814s(final b15 b15Var) {
+        m17378B0(new jw4() { // from class: com.daaw.wq4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((er4) obj).A(tj6.d(12, b15.this.getMessage(), null));
+                ((er4) obj).mo9178A(tj6.m9071d(12, b15.this.getMessage(), null));
             }
         });
     }
 
     @Override // com.daaw.pq4
     public final void zzb() {
-        B0(new jw4() { // from class: com.daaw.vq4
+        m17378B0(new jw4() { // from class: com.daaw.vq4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((er4) obj).A(tj6.d(11, null, null));
+                ((er4) obj).mo9178A(tj6.m9071d(11, null, null));
             }
         });
     }

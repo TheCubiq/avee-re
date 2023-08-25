@@ -6,19 +6,33 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 /* loaded from: classes.dex */
 public class nk0 extends mk0 {
-    public static boolean c;
-    public final sj0 a;
-    public final b b;
 
+    /* renamed from: c */
+    public static boolean f20178c;
+
+    /* renamed from: a */
+    public final sj0 f20179a;
+
+    /* renamed from: b */
+    public final C2303b f20180b;
+
+    /* renamed from: com.daaw.nk0$a */
     /* loaded from: classes.dex */
-    public static class a<D> extends kr0<D> {
-        public final int l;
-        public final Bundle m;
-        public sj0 n;
+    public static class C2302a<D> extends kr0<D> {
+
+        /* renamed from: l */
+        public final int f20181l;
+
+        /* renamed from: m */
+        public final Bundle f20182m;
+
+        /* renamed from: n */
+        public sj0 f20183n;
 
         @Override // androidx.lifecycle.LiveData
-        public void f() {
-            if (nk0.c) {
+        /* renamed from: f */
+        public void mo15136f() {
+            if (nk0.f20178c) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("  Starting: ");
                 sb.append(this);
@@ -27,8 +41,9 @@ public class nk0 extends mk0 {
         }
 
         @Override // androidx.lifecycle.LiveData
-        public void g() {
-            if (nk0.c) {
+        /* renamed from: g */
+        public void mo15135g() {
+            if (nk0.f20178c) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("  Stopping: ");
                 sb.append(this);
@@ -38,18 +53,21 @@ public class nk0 extends mk0 {
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // androidx.lifecycle.LiveData
-        public void i(qt0<? super D> qt0Var) {
-            super.i(qt0Var);
-            this.n = null;
+        /* renamed from: i */
+        public void mo15134i(qt0<? super D> qt0Var) {
+            super.mo15134i(qt0Var);
+            this.f20183n = null;
         }
 
         @Override // com.daaw.kr0, androidx.lifecycle.LiveData
-        public void j(D d) {
-            super.j(d);
+        /* renamed from: j */
+        public void mo15133j(D d) {
+            super.mo15133j(d);
         }
 
-        public kk0<D> k(boolean z) {
-            if (nk0.c) {
+        /* renamed from: k */
+        public kk0<D> m15132k(boolean z) {
+            if (nk0.f20178c) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("  Destroying: ");
                 sb.append(this);
@@ -57,12 +75,13 @@ public class nk0 extends mk0 {
             throw null;
         }
 
-        public void l(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+        /* renamed from: l */
+        public void m15131l(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
             printWriter.print(str);
             printWriter.print("mId=");
-            printWriter.print(this.l);
+            printWriter.print(this.f20181l);
             printWriter.print(" mArgs=");
-            printWriter.println(this.m);
+            printWriter.println(this.f20182m);
             printWriter.print(str);
             printWriter.print("mLoader=");
             printWriter.println((Object) null);
@@ -72,7 +91,8 @@ public class nk0 extends mk0 {
             throw null;
         }
 
-        public void m() {
+        /* renamed from: m */
+        public void m15130m() {
         }
 
         public String toString() {
@@ -80,86 +100,102 @@ public class nk0 extends mk0 {
             sb.append("LoaderInfo{");
             sb.append(Integer.toHexString(System.identityHashCode(this)));
             sb.append(" #");
-            sb.append(this.l);
+            sb.append(this.f20181l);
             sb.append(" : ");
-            bq.a(null, sb);
+            C0882bq.m25924a(null, sb);
             sb.append("}}");
             return sb.toString();
         }
     }
 
+    /* renamed from: com.daaw.nk0$b */
     /* loaded from: classes.dex */
-    public static class b extends ht1 {
-        public static final jt1.b f = new a();
-        public me1<a> d = new me1<>();
-        public boolean e = false;
+    public static class C2303b extends ht1 {
 
+        /* renamed from: f */
+        public static final jt1.InterfaceC1864b f20184f = new C2304a();
+
+        /* renamed from: d */
+        public me1<C2302a> f20185d = new me1<>();
+
+        /* renamed from: e */
+        public boolean f20186e = false;
+
+        /* renamed from: com.daaw.nk0$b$a */
         /* loaded from: classes.dex */
-        public static class a implements jt1.b {
-            @Override // com.daaw.jt1.b
-            public <T extends ht1> T a(Class<T> cls) {
-                return new b();
+        public static class C2304a implements jt1.InterfaceC1864b {
+            @Override // com.daaw.jt1.InterfaceC1864b
+            /* renamed from: a */
+            public <T extends ht1> T mo5153a(Class<T> cls) {
+                return new C2303b();
             }
 
-            @Override // com.daaw.jt1.b
-            public /* synthetic */ ht1 b(Class cls, hn hnVar) {
-                return kt1.b(this, cls, hnVar);
+            @Override // com.daaw.jt1.InterfaceC1864b
+            /* renamed from: b */
+            public /* synthetic */ ht1 mo5152b(Class cls, AbstractC1589hn abstractC1589hn) {
+                return kt1.m17441b(this, cls, abstractC1589hn);
             }
         }
 
-        public static b f(mt1 mt1Var) {
-            return (b) new jt1(mt1Var, f).a(b.class);
+        /* renamed from: f */
+        public static C2303b m15128f(mt1 mt1Var) {
+            return (C2303b) new jt1(mt1Var, f20184f).m18255a(C2303b.class);
         }
 
         @Override // com.daaw.ht1
-        public void d() {
-            super.d();
-            int m = this.d.m();
-            for (int i = 0; i < m; i++) {
-                this.d.n(i).k(true);
+        /* renamed from: d */
+        public void mo7531d() {
+            super.mo7531d();
+            int m16051m = this.f20185d.m16051m();
+            for (int i = 0; i < m16051m; i++) {
+                this.f20185d.m16050n(i).m15132k(true);
             }
-            this.d.b();
+            this.f20185d.m16059b();
         }
 
-        public void e(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
-            if (this.d.m() > 0) {
+        /* renamed from: e */
+        public void m15129e(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+            if (this.f20185d.m16051m() > 0) {
                 printWriter.print(str);
                 printWriter.println("Loaders:");
                 String str2 = str + "    ";
-                for (int i = 0; i < this.d.m(); i++) {
-                    a n = this.d.n(i);
+                for (int i = 0; i < this.f20185d.m16051m(); i++) {
+                    C2302a m16050n = this.f20185d.m16050n(i);
                     printWriter.print(str);
                     printWriter.print("  #");
-                    printWriter.print(this.d.j(i));
+                    printWriter.print(this.f20185d.m16053j(i));
                     printWriter.print(": ");
-                    printWriter.println(n.toString());
-                    n.l(str2, fileDescriptor, printWriter, strArr);
+                    printWriter.println(m16050n.toString());
+                    m16050n.m15131l(str2, fileDescriptor, printWriter, strArr);
                 }
             }
         }
 
-        public void g() {
-            int m = this.d.m();
-            for (int i = 0; i < m; i++) {
-                this.d.n(i).m();
+        /* renamed from: g */
+        public void m15127g() {
+            int m16051m = this.f20185d.m16051m();
+            for (int i = 0; i < m16051m; i++) {
+                this.f20185d.m16050n(i).m15130m();
             }
         }
     }
 
     public nk0(sj0 sj0Var, mt1 mt1Var) {
-        this.a = sj0Var;
-        this.b = b.f(mt1Var);
+        this.f20179a = sj0Var;
+        this.f20180b = C2303b.m15128f(mt1Var);
     }
 
     @Override // com.daaw.mk0
     @Deprecated
-    public void a(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
-        this.b.e(str, fileDescriptor, printWriter, strArr);
+    /* renamed from: a */
+    public void mo15138a(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+        this.f20180b.m15129e(str, fileDescriptor, printWriter, strArr);
     }
 
     @Override // com.daaw.mk0
-    public void c() {
-        this.b.g();
+    /* renamed from: c */
+    public void mo15137c() {
+        this.f20180b.m15127g();
     }
 
     public String toString() {
@@ -167,7 +203,7 @@ public class nk0 extends mk0 {
         sb.append("LoaderManager{");
         sb.append(Integer.toHexString(System.identityHashCode(this)));
         sb.append(" in ");
-        bq.a(this.a, sb);
+        C0882bq.m25924a(this.f20179a, sb);
         sb.append("}}");
         return sb.toString();
     }

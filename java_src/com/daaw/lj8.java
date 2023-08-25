@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface lj8 {
-    void a(Exception exc);
+    /* renamed from: a */
+    void mo16898a(Exception exc);
 
     void zzb();
 }

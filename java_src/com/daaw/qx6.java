@@ -18,152 +18,194 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes.dex */
 public final class qx6 {
-    public static final Map o = new HashMap();
-    public final Context a;
-    public final cx6 b;
-    public boolean g;
-    public final Intent h;
-    public ServiceConnection l;
-    public IInterface m;
-    public final kw6 n;
-    public final List d = new ArrayList();
-    public final Set e = new HashSet();
-    public final Object f = new Object();
-    public final IBinder.DeathRecipient j = new IBinder.DeathRecipient() { // from class: com.daaw.fx6
+
+    /* renamed from: o */
+    public static final Map f24606o = new HashMap();
+
+    /* renamed from: a */
+    public final Context f24607a;
+
+    /* renamed from: b */
+    public final cx6 f24608b;
+
+    /* renamed from: g */
+    public boolean f24613g;
+
+    /* renamed from: h */
+    public final Intent f24614h;
+
+    /* renamed from: l */
+    public ServiceConnection f24618l;
+
+    /* renamed from: m */
+    public IInterface f24619m;
+
+    /* renamed from: n */
+    public final kw6 f24620n;
+
+    /* renamed from: d */
+    public final List f24610d = new ArrayList();
+
+    /* renamed from: e */
+    public final Set f24611e = new HashSet();
+
+    /* renamed from: f */
+    public final Object f24612f = new Object();
+
+    /* renamed from: j */
+    public final IBinder.DeathRecipient f24616j = new IBinder.DeathRecipient() { // from class: com.daaw.fx6
         @Override // android.os.IBinder.DeathRecipient
         public final void binderDied() {
-            qx6.h(qx6.this);
+            qx6.m11963h(qx6.this);
         }
     };
-    public final AtomicInteger k = new AtomicInteger(0);
-    public final String c = "OverlayDisplayService";
-    public final WeakReference i = new WeakReference(null);
+
+    /* renamed from: k */
+    public final AtomicInteger f24617k = new AtomicInteger(0);
+
+    /* renamed from: c */
+    public final String f24609c = "OverlayDisplayService";
+
+    /* renamed from: i */
+    public final WeakReference f24615i = new WeakReference(null);
 
     public qx6(Context context, cx6 cx6Var, String str, Intent intent, kw6 kw6Var, lx6 lx6Var, byte[] bArr) {
-        this.a = context;
-        this.b = cx6Var;
-        this.h = intent;
-        this.n = kw6Var;
+        this.f24607a = context;
+        this.f24608b = cx6Var;
+        this.f24614h = intent;
+        this.f24620n = kw6Var;
     }
 
-    public static /* synthetic */ void h(qx6 qx6Var) {
-        qx6Var.b.d("reportBinderDeath", new Object[0]);
-        lx6 lx6Var = (lx6) qx6Var.i.get();
+    /* renamed from: h */
+    public static /* synthetic */ void m11963h(qx6 qx6Var) {
+        qx6Var.f24608b.m24909d("reportBinderDeath", new Object[0]);
+        lx6 lx6Var = (lx6) qx6Var.f24615i.get();
         if (lx6Var != null) {
-            qx6Var.b.d("calling onBinderDied", new Object[0]);
+            qx6Var.f24608b.m24909d("calling onBinderDied", new Object[0]);
             lx6Var.zza();
         } else {
-            qx6Var.b.d("%s : Binder has died.", qx6Var.c);
-            for (dx6 dx6Var : qx6Var.d) {
-                dx6Var.c(qx6Var.s());
+            qx6Var.f24608b.m24909d("%s : Binder has died.", qx6Var.f24609c);
+            for (dx6 dx6Var : qx6Var.f24610d) {
+                dx6Var.m23825c(qx6Var.m11952s());
             }
-            qx6Var.d.clear();
+            qx6Var.f24610d.clear();
         }
-        qx6Var.t();
+        qx6Var.m11951t();
     }
 
-    public static /* bridge */ /* synthetic */ void m(qx6 qx6Var, dx6 dx6Var) {
-        if (qx6Var.m != null || qx6Var.g) {
-            if (!qx6Var.g) {
+    /* renamed from: m */
+    public static /* bridge */ /* synthetic */ void m11958m(qx6 qx6Var, dx6 dx6Var) {
+        if (qx6Var.f24619m != null || qx6Var.f24613g) {
+            if (!qx6Var.f24613g) {
                 dx6Var.run();
                 return;
             }
-            qx6Var.b.d("Waiting to bind to the service.", new Object[0]);
-            qx6Var.d.add(dx6Var);
+            qx6Var.f24608b.m24909d("Waiting to bind to the service.", new Object[0]);
+            qx6Var.f24610d.add(dx6Var);
             return;
         }
-        qx6Var.b.d("Initiate binding to the service.", new Object[0]);
-        qx6Var.d.add(dx6Var);
+        qx6Var.f24608b.m24909d("Initiate binding to the service.", new Object[0]);
+        qx6Var.f24610d.add(dx6Var);
         px6 px6Var = new px6(qx6Var, null);
-        qx6Var.l = px6Var;
-        qx6Var.g = true;
-        if (qx6Var.a.bindService(qx6Var.h, px6Var, 1)) {
+        qx6Var.f24618l = px6Var;
+        qx6Var.f24613g = true;
+        if (qx6Var.f24607a.bindService(qx6Var.f24614h, px6Var, 1)) {
             return;
         }
-        qx6Var.b.d("Failed to bind to the service.", new Object[0]);
-        qx6Var.g = false;
-        for (dx6 dx6Var2 : qx6Var.d) {
-            dx6Var2.c(new rx6());
+        qx6Var.f24608b.m24909d("Failed to bind to the service.", new Object[0]);
+        qx6Var.f24613g = false;
+        for (dx6 dx6Var2 : qx6Var.f24610d) {
+            dx6Var2.m23825c(new rx6());
         }
-        qx6Var.d.clear();
+        qx6Var.f24610d.clear();
     }
 
-    public static /* bridge */ /* synthetic */ void n(qx6 qx6Var) {
-        qx6Var.b.d("linkToDeath", new Object[0]);
+    /* renamed from: n */
+    public static /* bridge */ /* synthetic */ void m11957n(qx6 qx6Var) {
+        qx6Var.f24608b.m24909d("linkToDeath", new Object[0]);
         try {
-            qx6Var.m.asBinder().linkToDeath(qx6Var.j, 0);
+            qx6Var.f24619m.asBinder().linkToDeath(qx6Var.f24616j, 0);
         } catch (RemoteException e) {
-            qx6Var.b.c(e, "linkToDeath failed", new Object[0]);
+            qx6Var.f24608b.m24910c(e, "linkToDeath failed", new Object[0]);
         }
     }
 
-    public static /* bridge */ /* synthetic */ void o(qx6 qx6Var) {
-        qx6Var.b.d("unlinkToDeath", new Object[0]);
-        qx6Var.m.asBinder().unlinkToDeath(qx6Var.j, 0);
+    /* renamed from: o */
+    public static /* bridge */ /* synthetic */ void m11956o(qx6 qx6Var) {
+        qx6Var.f24608b.m24909d("unlinkToDeath", new Object[0]);
+        qx6Var.f24619m.asBinder().unlinkToDeath(qx6Var.f24616j, 0);
     }
 
-    public final Handler c() {
+    /* renamed from: c */
+    public final Handler m11968c() {
         Handler handler;
-        Map map = o;
+        Map map = f24606o;
         synchronized (map) {
-            if (!map.containsKey(this.c)) {
-                HandlerThread handlerThread = new HandlerThread(this.c, 10);
+            if (!map.containsKey(this.f24609c)) {
+                HandlerThread handlerThread = new HandlerThread(this.f24609c, 10);
                 handlerThread.start();
-                map.put(this.c, new Handler(handlerThread.getLooper()));
+                map.put(this.f24609c, new Handler(handlerThread.getLooper()));
             }
-            handler = (Handler) map.get(this.c);
+            handler = (Handler) map.get(this.f24609c);
         }
         return handler;
     }
 
-    public final IInterface e() {
-        return this.m;
+    /* renamed from: e */
+    public final IInterface m11966e() {
+        return this.f24619m;
     }
 
-    public final void p(dx6 dx6Var, final tj1 tj1Var) {
-        synchronized (this.f) {
-            this.e.add(tj1Var);
-            tj1Var.a().b(new cu0() { // from class: com.daaw.ex6
+    /* renamed from: p */
+    public final void m11955p(dx6 dx6Var, final tj1 tj1Var) {
+        synchronized (this.f24612f) {
+            this.f24611e.add(tj1Var);
+            tj1Var.m9082a().mo11248b(new cu0() { // from class: com.daaw.ex6
                 @Override // com.daaw.cu0
-                public final void a(rj1 rj1Var) {
-                    qx6.this.q(tj1Var, rj1Var);
+                /* renamed from: a */
+                public final void mo6614a(rj1 rj1Var) {
+                    qx6.this.m11954q(tj1Var, rj1Var);
                 }
             });
         }
-        synchronized (this.f) {
-            if (this.k.getAndIncrement() > 0) {
-                this.b.a("Already connected to the service.", new Object[0]);
+        synchronized (this.f24612f) {
+            if (this.f24617k.getAndIncrement() > 0) {
+                this.f24608b.m24912a("Already connected to the service.", new Object[0]);
             }
         }
-        c().post(new gx6(this, dx6Var.b(), dx6Var));
+        m11968c().post(new gx6(this, dx6Var.m23826b(), dx6Var));
     }
 
-    public final /* synthetic */ void q(tj1 tj1Var, rj1 rj1Var) {
-        synchronized (this.f) {
-            this.e.remove(tj1Var);
+    /* renamed from: q */
+    public final /* synthetic */ void m11954q(tj1 tj1Var, rj1 rj1Var) {
+        synchronized (this.f24612f) {
+            this.f24611e.remove(tj1Var);
         }
     }
 
-    public final void r() {
-        synchronized (this.f) {
-            if (this.k.get() > 0 && this.k.decrementAndGet() > 0) {
-                this.b.d("Leaving the connection open for other ongoing calls.", new Object[0]);
+    /* renamed from: r */
+    public final void m11953r() {
+        synchronized (this.f24612f) {
+            if (this.f24617k.get() > 0 && this.f24617k.decrementAndGet() > 0) {
+                this.f24608b.m24909d("Leaving the connection open for other ongoing calls.", new Object[0]);
                 return;
             }
-            c().post(new hx6(this));
+            m11968c().post(new hx6(this));
         }
     }
 
-    public final RemoteException s() {
-        return new RemoteException(String.valueOf(this.c).concat(" : Binder has died."));
+    /* renamed from: s */
+    public final RemoteException m11952s() {
+        return new RemoteException(String.valueOf(this.f24609c).concat(" : Binder has died."));
     }
 
-    public final void t() {
-        synchronized (this.f) {
-            for (tj1 tj1Var : this.e) {
-                tj1Var.d(s());
+    /* renamed from: t */
+    public final void m11951t() {
+        synchronized (this.f24612f) {
+            for (tj1 tj1Var : this.f24611e) {
+                tj1Var.m9079d(m11952s());
             }
-            this.e.clear();
+            this.f24611e.clear();
         }
     }
 }

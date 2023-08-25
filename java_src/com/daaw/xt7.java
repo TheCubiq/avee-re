@@ -1,13 +1,18 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface xt7 extends yt7 {
-    byte[] a();
+    /* renamed from: a */
+    byte[] mo4516a();
 
-    wt7 b();
+    /* renamed from: b */
+    wt7 mo4515b();
 
-    yq7 d();
+    /* renamed from: d */
+    yq7 mo4514d();
 
-    void e(qr7 qr7Var);
+    /* renamed from: e */
+    void mo4513e(qr7 qr7Var);
 
-    int i();
+    /* renamed from: i */
+    int mo4512i();
 }

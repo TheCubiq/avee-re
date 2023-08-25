@@ -8,6 +8,7 @@ import java.math.BigInteger;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.interfaces.ECKey;
 import java.security.interfaces.ECPrivateKey;
 import java.security.spec.ECParameterSpec;
@@ -72,48 +73,24 @@ final class OpenSSLECPrivateKey implements ECPrivateKey, OpenSSLKeyHolder {
     /* JADX WARN: Removed duplicated region for block: B:13:0x001c  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static org.conscrypt.OpenSSLKey wrapJCAPrivateKeyForTLSStackOnly(java.security.PrivateKey r3, java.security.PublicKey r4) {
-        /*
-            boolean r0 = r3 instanceof java.security.interfaces.ECKey
-            if (r0 == 0) goto Lc
-            r0 = r3
-            java.security.interfaces.ECKey r0 = (java.security.interfaces.ECKey) r0
-        L7:
-            java.security.spec.ECParameterSpec r0 = r0.getParams()
-            goto L15
-        Lc:
-            boolean r0 = r4 instanceof java.security.interfaces.ECKey
-            if (r0 == 0) goto L14
-            r0 = r4
-            java.security.interfaces.ECKey r0 = (java.security.interfaces.ECKey) r0
-            goto L7
-        L14:
-            r0 = 0
-        L15:
-            if (r0 == 0) goto L1c
-            org.conscrypt.OpenSSLKey r3 = wrapJCAPrivateKeyForTLSStackOnly(r3, r0)
-            return r3
-        L1c:
-            java.security.InvalidKeyException r0 = new java.security.InvalidKeyException
-            java.lang.StringBuilder r1 = new java.lang.StringBuilder
-            r1.<init>()
-            java.lang.String r2 = "EC parameters not available. Private: "
-            r1.append(r2)
-            r1.append(r3)
-            java.lang.String r3 = ", public: "
-            r1.append(r3)
-            r1.append(r4)
-            java.lang.String r3 = r1.toString()
-            r0.<init>(r3)
-            goto L3c
-        L3b:
-            throw r0
-        L3c:
-            goto L3b
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.OpenSSLECPrivateKey.wrapJCAPrivateKeyForTLSStackOnly(java.security.PrivateKey, java.security.PublicKey):org.conscrypt.OpenSSLKey");
+    public static OpenSSLKey wrapJCAPrivateKeyForTLSStackOnly(PrivateKey privateKey, PublicKey publicKey) {
+        ECParameterSpec eCParameterSpec;
+        ECKey eCKey;
+        if (privateKey instanceof ECKey) {
+            eCKey = (ECKey) privateKey;
+        } else if (!(publicKey instanceof ECKey)) {
+            eCParameterSpec = null;
+            if (eCParameterSpec == null) {
+                return wrapJCAPrivateKeyForTLSStackOnly(privateKey, eCParameterSpec);
+            }
+            throw new InvalidKeyException("EC parameters not available. Private: " + privateKey + ", public: " + publicKey);
+        } else {
+            eCKey = (ECKey) publicKey;
+        }
+        eCParameterSpec = eCKey.getParams();
+        if (eCParameterSpec == null) {
+        }
     }
 
     public static OpenSSLKey wrapJCAPrivateKeyForTLSStackOnly(PrivateKey privateKey, ECParameterSpec eCParameterSpec) {

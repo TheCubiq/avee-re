@@ -1,16 +1,20 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class u18 implements Runnable {
-    public final /* synthetic */ Boolean p;
-    public final /* synthetic */ p28 q;
+
+    /* renamed from: p */
+    public final /* synthetic */ Boolean f28327p;
+
+    /* renamed from: q */
+    public final /* synthetic */ p28 f28328q;
 
     public u18(p28 p28Var, Boolean bool) {
-        this.q = p28Var;
-        this.p = bool;
+        this.f28328q = p28Var;
+        this.f28327p = bool;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.q.O(this.p, true);
+        this.f28328q.m13707O(this.f28327p, true);
     }
 }

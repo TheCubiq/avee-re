@@ -8,7 +8,8 @@ public final class hx8 extends ad2 {
     }
 
     @Override // com.daaw.ad2
-    public final gl2 a(w07 w07Var, List list) {
+    /* renamed from: a */
+    public final gl2 mo5780a(w07 w07Var, List list) {
         return new tb2(Double.valueOf(0.0d));
     }
 }

@@ -1,13 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class hi4 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f12553a;
 
     public hi4(int i) {
-        this.a = i;
+        this.f12553a = i;
     }
 
-    public final int a() {
-        return this.a;
+    /* renamed from: a */
+    public final int m20733a() {
+        return this.f12553a;
     }
 }

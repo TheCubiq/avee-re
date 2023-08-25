@@ -6,26 +6,30 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 /* loaded from: classes.dex */
 public final class te2 {
-    public static long a(ByteBuffer byteBuffer) {
-        g(byteBuffer);
-        return e(byteBuffer, byteBuffer.position() + 16);
+    /* renamed from: a */
+    public static long m9224a(ByteBuffer byteBuffer) {
+        m9218g(byteBuffer);
+        return m9220e(byteBuffer, byteBuffer.position() + 16);
     }
 
-    public static long b(ByteBuffer byteBuffer) {
-        g(byteBuffer);
-        return e(byteBuffer, byteBuffer.position() + 12);
+    /* renamed from: b */
+    public static long m9223b(ByteBuffer byteBuffer) {
+        m9218g(byteBuffer);
+        return m9220e(byteBuffer, byteBuffer.position() + 12);
     }
 
-    public static Pair c(RandomAccessFile randomAccessFile) {
+    /* renamed from: c */
+    public static Pair m9222c(RandomAccessFile randomAccessFile) {
         if (randomAccessFile.length() < 22) {
             return null;
         }
-        Pair f = f(randomAccessFile, 0);
-        return f != null ? f : f(randomAccessFile, 65535);
+        Pair m9219f = m9219f(randomAccessFile, 0);
+        return m9219f != null ? m9219f : m9219f(randomAccessFile, 65535);
     }
 
-    public static void d(ByteBuffer byteBuffer, long j) {
-        g(byteBuffer);
+    /* renamed from: d */
+    public static void m9221d(ByteBuffer byteBuffer, long j) {
+        m9218g(byteBuffer);
         int position = byteBuffer.position() + 16;
         if (j >= 0 && j <= 4294967295L) {
             byteBuffer.putInt(byteBuffer.position() + position, (int) j);
@@ -34,11 +38,13 @@ public final class te2 {
         throw new IllegalArgumentException("uint32 value of out range: " + j);
     }
 
-    public static long e(ByteBuffer byteBuffer, int i) {
+    /* renamed from: e */
+    public static long m9220e(ByteBuffer byteBuffer, int i) {
         return byteBuffer.getInt(i) & 4294967295L;
     }
 
-    public static Pair f(RandomAccessFile randomAccessFile, int i) {
+    /* renamed from: f */
+    public static Pair m9219f(RandomAccessFile randomAccessFile, int i) {
         int i2;
         long length = randomAccessFile.length();
         if (length < 22) {
@@ -49,7 +55,7 @@ public final class te2 {
         long capacity = length - allocate.capacity();
         randomAccessFile.seek(capacity);
         randomAccessFile.readFully(allocate.array(), allocate.arrayOffset(), allocate.capacity());
-        g(allocate);
+        m9218g(allocate);
         int capacity2 = allocate.capacity();
         if (capacity2 >= 22) {
             int i3 = capacity2 - 22;
@@ -71,7 +77,8 @@ public final class te2 {
         return Pair.create(slice, Long.valueOf(capacity + i2));
     }
 
-    public static void g(ByteBuffer byteBuffer) {
+    /* renamed from: g */
+    public static void m9218g(ByteBuffer byteBuffer) {
         if (byteBuffer.order() != ByteOrder.LITTLE_ENDIAN) {
             throw new IllegalArgumentException("ByteBuffer byte order must be little endian");
         }

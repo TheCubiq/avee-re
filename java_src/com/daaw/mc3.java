@@ -10,7 +10,8 @@ public abstract class mc3 extends cp2 implements nc3 {
         super("com.google.android.gms.ads.internal.formats.client.IAttributionInfo");
     }
 
-    public static nc3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static nc3 m16089g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -19,7 +20,8 @@ public abstract class mc3 extends cp2 implements nc3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 2) {
             String zzg = zzg();
             parcel2.writeNoException();

@@ -3,28 +3,39 @@ package com.daaw;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class r66 implements h76 {
-    public final String a;
-    public final String b;
-    public final String c;
-    public final String d;
-    public final Long e;
+
+    /* renamed from: a */
+    public final String f24895a;
+
+    /* renamed from: b */
+    public final String f24896b;
+
+    /* renamed from: c */
+    public final String f24897c;
+
+    /* renamed from: d */
+    public final String f24898d;
+
+    /* renamed from: e */
+    public final Long f24899e;
 
     public r66(String str, String str2, String str3, String str4, Long l) {
-        this.a = str;
-        this.b = str2;
-        this.c = str3;
-        this.d = str4;
-        this.e = l;
+        this.f24895a = str;
+        this.f24896b = str2;
+        this.f24897c = str3;
+        this.f24898d = str4;
+        this.f24899e = l;
     }
 
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
         Bundle bundle = (Bundle) obj;
-        cj6.c(bundle, "gmp_app_id", this.a);
-        cj6.c(bundle, "fbs_aiid", this.b);
-        cj6.c(bundle, "fbs_aeid", this.c);
-        cj6.c(bundle, "apm_id_origin", this.d);
-        Long l = this.e;
+        cj6.m25316c(bundle, "gmp_app_id", this.f24895a);
+        cj6.m25316c(bundle, "fbs_aiid", this.f24896b);
+        cj6.m25316c(bundle, "fbs_aeid", this.f24897c);
+        cj6.m25316c(bundle, "apm_id_origin", this.f24898d);
+        Long l = this.f24899e;
         if (l != null) {
             bundle.putLong("sai_timeout", l.longValue());
         }

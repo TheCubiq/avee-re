@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class sw6 {
-    public abstract sw6 a(String str);
+    /* renamed from: a */
+    public abstract sw6 mo5762a(String str);
 
-    public abstract sw6 b(int i);
+    /* renamed from: b */
+    public abstract sw6 mo5761b(int i);
 
-    public abstract tw6 c();
+    /* renamed from: c */
+    public abstract tw6 mo5760c();
 }

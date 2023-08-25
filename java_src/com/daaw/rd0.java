@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface rd0 {
-    float c();
+    /* renamed from: c */
+    float mo11409c();
 
-    float j();
+    /* renamed from: j */
+    float mo11408j();
 }

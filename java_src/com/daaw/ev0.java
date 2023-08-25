@@ -1,12 +1,17 @@
 package com.daaw;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 /* loaded from: classes.dex */
 public class ev0 implements pe1 {
-    public static final wk[] a = {new wk(new String[]{".plp"}, new String[]{"text/plain"}, new gx0[0], "Sansa Playlist File")};
+
+    /* renamed from: a */
+    public static final C3445wk[] f8836a = {new C3445wk(new String[]{".plp"}, new String[]{"text/plain"}, new gx0[0], "Sansa Playlist File")};
 
     /* JADX WARN: Code restructure failed: missing block: B:23:0x0059, code lost:
-        r12.f(r10);
+        r12.mo23392f(r10);
         r10 = null;
      */
     /* JADX WARN: Code restructure failed: missing block: B:31:0x0085, code lost:
@@ -16,135 +21,105 @@ public class ev0 implements pe1 {
         if (r5 == null) goto L29;
      */
     /* JADX WARN: Code restructure failed: missing block: B:33:0x0089, code lost:
-        r10.d(r5);
+        r10.m23930d(r5);
      */
     /* JADX WARN: Code restructure failed: missing block: B:34:0x008c, code lost:
         return r10;
      */
     @Override // com.daaw.pe1
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public com.daaw.oe1 a(java.io.InputStream r10, java.lang.String r11, com.daaw.bl0 r12) {
-        /*
-            r9 = this;
-            if (r11 != 0) goto L4
-            java.lang.String r11 = "UTF-16LE"
-        L4:
-            java.io.BufferedReader r0 = new java.io.BufferedReader
-            java.io.InputStreamReader r1 = new java.io.InputStreamReader
-            r1.<init>(r10, r11)
-            r0.<init>(r1)
-            com.daaw.dv0 r10 = new com.daaw.dv0
-            r10.<init>()
-            r10.e(r9)
-            r11 = 1
-            r1 = 0
-            r2 = 0
-            r5 = r2
-            r3 = 0
-            r4 = 0
-        L1c:
-            java.lang.String r6 = r0.readLine()
-            if (r6 == 0) goto L85
-            java.lang.String r6 = r6.trim()
-            int r7 = r6.length()
-            if (r7 <= 0) goto L1c
-            if (r3 != 0) goto L40
-            java.lang.String r3 = "PLP PLAYLIST"
-            boolean r3 = r3.equals(r6)
-            if (r3 == 0) goto L38
-            r3 = 1
-            goto L1c
-        L38:
-            java.lang.IllegalArgumentException r10 = new java.lang.IllegalArgumentException
-            java.lang.String r11 = "Not a PLP playlist format"
-            r10.<init>(r11)
-            throw r10
-        L40:
-            if (r4 != 0) goto L4f
-            java.lang.String r4 = "VERSION 1.20"
-            boolean r4 = r4.equals(r6)
-            if (r4 != 0) goto L4d
-            java.lang.String r10 = "Malformed PLP playlist (no version information)"
-            goto L59
-        L4d:
-            r4 = 1
-            goto L1c
-        L4f:
-            r7 = 44
-            int r7 = r6.indexOf(r7)
-            if (r7 > 0) goto L5e
-            java.lang.String r10 = "Malformed PLP playlist (playlist entry line format)"
-        L59:
-            r12.f(r10)
-            r10 = r2
-            goto L85
-        L5e:
-            java.lang.String r8 = r6.substring(r1, r7)
-            java.lang.String r8 = r8.trim()
-            if (r5 != 0) goto L6a
-            r5 = r8
-            goto L73
-        L6a:
-            boolean r8 = r5.equals(r8)
-            if (r8 != 0) goto L73
-            java.lang.String r10 = "Malformed PLP playlist (inconsistent disk specifier)"
-            goto L59
-        L73:
-            java.util.List r8 = r10.c()
-            int r7 = r7 + 1
-            java.lang.String r6 = r6.substring(r7)
-            java.lang.String r6 = r6.trim()
-            r8.add(r6)
-            goto L1c
-        L85:
-            if (r10 == 0) goto L8c
-            if (r5 == 0) goto L8c
-            r10.d(r5)
-        L8c:
-            return r10
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.ev0.a(java.io.InputStream, java.lang.String, com.daaw.bl0):com.daaw.oe1");
-    }
-
-    @Override // com.daaw.pe1
-    public wk[] b() {
-        return (wk[]) a.clone();
-    }
-
-    @Override // com.daaw.pe1
-    public oe1 c(ix0 ix0Var) {
+    public oe1 mo13427a(InputStream inputStream, String str, bl0 bl0Var) {
+        String str2;
+        if (str == null) {
+            str = "UTF-16LE";
+        }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, str));
         dv0 dv0Var = new dv0();
-        dv0Var.e(this);
-        d(dv0Var.c(), ix0Var.a());
+        dv0Var.m23929e(this);
+        String str3 = null;
+        boolean z = false;
+        boolean z2 = false;
+        while (true) {
+            String readLine = bufferedReader.readLine();
+            if (readLine == null) {
+                break;
+            }
+            String trim = readLine.trim();
+            if (trim.length() > 0) {
+                if (z) {
+                    if (z2) {
+                        int indexOf = trim.indexOf(44);
+                        if (indexOf <= 0) {
+                            str2 = "Malformed PLP playlist (playlist entry line format)";
+                            break;
+                        }
+                        String trim2 = trim.substring(0, indexOf).trim();
+                        if (str3 != null) {
+                            if (!str3.equals(trim2)) {
+                                str2 = "Malformed PLP playlist (inconsistent disk specifier)";
+                                break;
+                            }
+                        } else {
+                            str3 = trim2;
+                        }
+                        dv0Var.m23931c().add(trim.substring(indexOf + 1).trim());
+                    } else if (!"VERSION 1.20".equals(trim)) {
+                        str2 = "Malformed PLP playlist (no version information)";
+                        break;
+                    } else {
+                        z2 = true;
+                    }
+                } else if (!"PLP PLAYLIST".equals(trim)) {
+                    throw new IllegalArgumentException("Not a PLP playlist format");
+                } else {
+                    z = true;
+                }
+            }
+        }
+    }
+
+    @Override // com.daaw.pe1
+    /* renamed from: b */
+    public C3445wk[] mo13426b() {
+        return (C3445wk[]) f8836a.clone();
+    }
+
+    @Override // com.daaw.pe1
+    /* renamed from: c */
+    public oe1 mo13425c(ix0 ix0Var) {
+        dv0 dv0Var = new dv0();
+        dv0Var.m23929e(this);
+        m23175d(dv0Var.m23931c(), ix0Var.m19301a());
         return dv0Var;
     }
 
-    public final void d(List<String> list, n nVar) {
-        if (!(nVar instanceof fb1)) {
-            if (nVar instanceof yn0) {
-                yn0 yn0Var = (yn0) nVar;
-                if (yn0Var.b() != null) {
+    /* renamed from: d */
+    public final void m23175d(List<String> list, AbstractC2227n abstractC2227n) {
+        if (!(abstractC2227n instanceof fb1)) {
+            if (abstractC2227n instanceof yn0) {
+                yn0 yn0Var = (yn0) abstractC2227n;
+                if (yn0Var.m3487b() != null) {
                     throw new IllegalArgumentException("A PLP playlist cannot handle a timed media");
                 }
-                if (yn0Var.a() < 0) {
+                if (yn0Var.m15649a() < 0) {
                     throw new IllegalArgumentException("A PLP playlist cannot handle a media repeated indefinitely");
                 }
-                yn0Var.c();
+                yn0Var.m3486c();
                 return;
             }
             return;
         }
-        fb1 fb1Var = (fb1) nVar;
-        if (fb1Var.a() < 0) {
+        fb1 fb1Var = (fb1) abstractC2227n;
+        if (fb1Var.m15649a() < 0) {
             throw new IllegalArgumentException("A PLP playlist cannot handle a sequence repeated indefinitely");
         }
-        n[] b = fb1Var.b();
-        for (int i = 0; i < fb1Var.a(); i++) {
-            for (n nVar2 : b) {
-                d(list, nVar2);
+        AbstractC2227n[] m13789b = fb1Var.m13789b();
+        for (int i = 0; i < fb1Var.m15649a(); i++) {
+            for (AbstractC2227n abstractC2227n2 : m13789b) {
+                m23175d(list, abstractC2227n2);
             }
         }
     }

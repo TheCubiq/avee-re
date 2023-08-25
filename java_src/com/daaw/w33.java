@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface w33 {
-    void a(u53 u53Var);
+    /* renamed from: a */
+    void mo2497a(u53 u53Var);
 }

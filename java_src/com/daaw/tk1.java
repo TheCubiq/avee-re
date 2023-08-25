@@ -11,9 +11,11 @@ import android.widget.TextView;
 /* loaded from: classes.dex */
 public final class tk1 implements hu0 {
 
+    /* renamed from: com.daaw.tk1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public static CharSequence a(Context context, ClipData.Item item, int i) {
+    public static final class C3089a {
+        /* renamed from: a */
+        public static CharSequence m9046a(Context context, ClipData.Item item, int i) {
             if ((i & 1) != 0) {
                 CharSequence coerceToText = item.coerceToText(context);
                 return coerceToText instanceof Spanned ? coerceToText.toString() : coerceToText;
@@ -22,11 +24,13 @@ public final class tk1 implements hu0 {
         }
     }
 
-    public static CharSequence b(Context context, ClipData.Item item, int i) {
-        return a.a(context, item, i);
+    /* renamed from: b */
+    public static CharSequence m9048b(Context context, ClipData.Item item, int i) {
+        return C3089a.m9046a(context, item, i);
     }
 
-    public static void c(Editable editable, CharSequence charSequence) {
+    /* renamed from: c */
+    public static void m9047c(Editable editable, CharSequence charSequence) {
         int selectionStart = Selection.getSelectionStart(editable);
         int selectionEnd = Selection.getSelectionEnd(editable);
         int max = Math.max(0, Math.min(selectionStart, selectionEnd));
@@ -36,29 +40,30 @@ public final class tk1 implements hu0 {
     }
 
     @Override // com.daaw.hu0
-    public tk a(View view, tk tkVar) {
+    /* renamed from: a */
+    public C3081tk mo9049a(View view, C3081tk c3081tk) {
         if (Log.isLoggable("ReceiveContent", 3)) {
             StringBuilder sb = new StringBuilder();
             sb.append("onReceive: ");
-            sb.append(tkVar);
+            sb.append(c3081tk);
         }
-        if (tkVar.d() == 2) {
-            return tkVar;
+        if (c3081tk.m9064d() == 2) {
+            return c3081tk;
         }
-        ClipData b = tkVar.b();
-        int c = tkVar.c();
+        ClipData m9066b = c3081tk.m9066b();
+        int m9065c = c3081tk.m9065c();
         TextView textView = (TextView) view;
         Editable editable = (Editable) textView.getText();
         Context context = textView.getContext();
         boolean z = false;
-        for (int i = 0; i < b.getItemCount(); i++) {
-            CharSequence b2 = b(context, b.getItemAt(i), c);
-            if (b2 != null) {
+        for (int i = 0; i < m9066b.getItemCount(); i++) {
+            CharSequence m9048b = m9048b(context, m9066b.getItemAt(i), m9065c);
+            if (m9048b != null) {
                 if (z) {
                     editable.insert(Selection.getSelectionEnd(editable), "\n");
-                    editable.insert(Selection.getSelectionEnd(editable), b2);
+                    editable.insert(Selection.getSelectionEnd(editable), m9048b);
                 } else {
-                    c(editable, b2);
+                    m9047c(editable, m9048b);
                     z = true;
                 }
             }

@@ -10,23 +10,27 @@ public final class v17 extends r17 {
     }
 
     @Override // com.daaw.s17
-    public final /* synthetic */ s17 a(Object obj) {
-        super.c(obj);
+    /* renamed from: a */
+    public final /* synthetic */ s17 mo7549a(Object obj) {
+        super.m11837c(obj);
         return this;
     }
 
-    public final v17 f(Object obj) {
-        super.c(obj);
+    /* renamed from: f */
+    public final v17 m7548f(Object obj) {
+        super.m11837c(obj);
         return this;
     }
 
-    public final v17 g(Iterable iterable) {
-        super.d(iterable);
+    /* renamed from: g */
+    public final v17 m7547g(Iterable iterable) {
+        super.m11836d(iterable);
         return this;
     }
 
-    public final y17 h() {
-        this.c = true;
-        return y17.q(this.a, this.b);
+    /* renamed from: h */
+    public final y17 m7546h() {
+        this.f24735c = true;
+        return y17.m4264q(this.f24733a, this.f24734b);
     }
 }

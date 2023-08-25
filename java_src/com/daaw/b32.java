@@ -16,24 +16,29 @@ public enum b32 {
     ITEM_NOT_OWNED(8),
     EXPIRED_OFFER_TOKEN(11);
     
-    public static final ix8 E;
-    public final int p;
+
+    /* renamed from: E */
+    public static final ix8 f4250E;
+
+    /* renamed from: p */
+    public final int f4262p;
 
     static {
         b32[] values;
         bw8 bw8Var = new bw8();
         for (b32 b32Var : values()) {
-            bw8Var.a(Integer.valueOf(b32Var.p), b32Var);
+            bw8Var.m25782a(Integer.valueOf(b32Var.f4262p), b32Var);
         }
-        E = bw8Var.b();
+        f4250E = bw8Var.m25781b();
     }
 
     b32(int i) {
-        this.p = i;
+        this.f4262p = i;
     }
 
-    public static b32 a(int i) {
-        ix8 ix8Var = E;
+    /* renamed from: a */
+    public static b32 m26498a(int i) {
+        ix8 ix8Var = f4250E;
         Integer valueOf = Integer.valueOf(i);
         return !ix8Var.containsKey(valueOf) ? RESPONSE_CODE_UNSPECIFIED : (b32) ix8Var.get(valueOf);
     }

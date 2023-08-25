@@ -6,38 +6,44 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class c67 extends o57 {
     @CheckForNull
-    public List E;
+
+    /* renamed from: E */
+    public List f5556E;
 
     public c67(t17 t17Var, boolean z) {
         super(t17Var, true, true);
-        List emptyList = t17Var.isEmpty() ? Collections.emptyList() : p27.a(t17Var.size());
+        List emptyList = t17Var.isEmpty() ? Collections.emptyList() : p27.m13723a(t17Var.size());
         for (int i = 0; i < t17Var.size(); i++) {
             emptyList.add(null);
         }
-        this.E = emptyList;
+        this.f5556E = emptyList;
     }
 
     @Override // com.daaw.o57
-    public final void Q(int i, Object obj) {
-        List list = this.E;
+    /* renamed from: Q */
+    public final void mo14546Q(int i, Object obj) {
+        List list = this.f5556E;
         if (list != null) {
             list.set(i, new b67(obj));
         }
     }
 
     @Override // com.daaw.o57
-    public final void R() {
-        List list = this.E;
+    /* renamed from: R */
+    public final void mo14545R() {
+        List list = this.f5556E;
         if (list != null) {
-            h(W(list));
+            mo14486h(mo5515W(list));
         }
     }
 
     @Override // com.daaw.o57
-    public final void V(int i) {
-        super.V(i);
-        this.E = null;
+    /* renamed from: V */
+    public final void mo14541V(int i) {
+        super.mo14541V(i);
+        this.f5556E = null;
     }
 
-    public abstract Object W(List list);
+    /* renamed from: W */
+    public abstract Object mo5515W(List list);
 }

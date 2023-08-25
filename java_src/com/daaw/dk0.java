@@ -2,22 +2,26 @@ package com.daaw;
 
 import android.widget.ListView;
 /* loaded from: classes.dex */
-public class dk0 extends w7 {
-    public final ListView H;
+public class dk0 extends AbstractView$OnTouchListenerC3402w7 {
+
+    /* renamed from: H */
+    public final ListView f7213H;
 
     public dk0(ListView listView) {
         super(listView);
-        this.H = listView;
+        this.f7213H = listView;
     }
 
-    @Override // com.daaw.w7
-    public boolean a(int i) {
+    @Override // com.daaw.AbstractView$OnTouchListenerC3402w7
+    /* renamed from: a */
+    public boolean mo6514a(int i) {
         return false;
     }
 
-    @Override // com.daaw.w7
-    public boolean b(int i) {
-        ListView listView = this.H;
+    @Override // com.daaw.AbstractView$OnTouchListenerC3402w7
+    /* renamed from: b */
+    public boolean mo6513b(int i) {
+        ListView listView = this.f7213H;
         int count = listView.getCount();
         if (count == 0) {
             return false;
@@ -39,8 +43,9 @@ public class dk0 extends w7 {
         return true;
     }
 
-    @Override // com.daaw.w7
-    public void j(int i, int i2) {
-        ek0.a(this.H, i2);
+    @Override // com.daaw.AbstractView$OnTouchListenerC3402w7
+    /* renamed from: j */
+    public void mo6505j(int i, int i2) {
+        ek0.m23433a(this.f7213H, i2);
     }
 }

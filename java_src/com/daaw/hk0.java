@@ -3,21 +3,30 @@ package com.daaw;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 /* loaded from: classes.dex */
 public interface hk0 {
-    void a();
+    /* renamed from: a */
+    void mo16637a();
 
-    boolean b();
+    /* renamed from: b */
+    boolean mo16636b();
 
-    void c(a41[] a41VarArr, TrackGroupArray trackGroupArray, um1 um1Var);
+    /* renamed from: c */
+    void mo16635c(a41[] a41VarArr, TrackGroupArray trackGroupArray, um1 um1Var);
 
-    long d();
+    /* renamed from: d */
+    long mo16634d();
 
-    boolean e(long j, float f, boolean z);
+    /* renamed from: e */
+    boolean mo16633e(long j, float f, boolean z);
 
-    boolean f(long j, float f);
+    /* renamed from: f */
+    boolean mo16632f(long j, float f);
 
-    void g();
+    /* renamed from: g */
+    void mo16631g();
 
-    l2 h();
+    /* renamed from: h */
+    InterfaceC2006l2 mo16630h();
 
-    void i();
+    /* renamed from: i */
+    void mo16629i();
 }

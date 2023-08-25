@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface i42 {
-    g42 b(long j);
+    /* renamed from: b */
+    g42 mo2631b(long j);
 
     long zze();
 

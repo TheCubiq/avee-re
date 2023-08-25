@@ -11,13 +11,14 @@ public abstract class zzdi extends cp2 implements zzdj {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             String readString = parcel.readString();
-            yd0 I = yd0.a.I(parcel.readStrongBinder());
-            yd0 I2 = yd0.a.I(parcel.readStrongBinder());
-            dp2.c(parcel);
-            zze(readString, I, I2);
+            yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
+            yd0 m3857I2 = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
+            dp2.m24105c(parcel);
+            zze(readString, m3857I, m3857I2);
             parcel2.writeNoException();
             return true;
         }

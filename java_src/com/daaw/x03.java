@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class x03 implements wz7 {
-    public static x03 a() {
+    /* renamed from: a */
+    public static x03 m5667a() {
         x03 x03Var;
-        x03Var = w03.a;
+        x03Var = w03.f30759a;
         return x03Var;
     }
 

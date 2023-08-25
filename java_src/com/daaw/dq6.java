@@ -10,14 +10,16 @@ public enum dq6 {
     AUDIBLE("audible"),
     OTHER("other");
     
-    public final String p;
+
+    /* renamed from: p */
+    public final String f7639p;
 
     dq6(String str) {
-        this.p = str;
+        this.f7639p = str;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return this.p;
+        return this.f7639p;
     }
 }

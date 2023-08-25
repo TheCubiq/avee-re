@@ -6,8 +6,9 @@ public final class zn2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        this.e.s(-1L);
-        this.e.s(((Long) this.f.invoke(null, this.b.b())).longValue());
+    /* renamed from: a */
+    public final void mo2099a() {
+        this.f20528e.m20747s(-1L);
+        this.f20528e.m20747s(((Long) this.f20529f.invoke(null, this.f20525b.m6004b())).longValue());
     }
 }

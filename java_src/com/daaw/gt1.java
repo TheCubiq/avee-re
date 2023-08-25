@@ -4,10 +4,11 @@ import android.content.Context;
 import android.view.ViewGroup;
 /* loaded from: classes.dex */
 public class gt1 {
-    public static eb a(Context context, ViewGroup viewGroup, int i, wc0 wc0Var) {
+    /* renamed from: a */
+    public static AbstractC1172eb m21239a(Context context, ViewGroup viewGroup, int i, wc0 wc0Var) {
         switch (i) {
             case 0:
-                return new uk(viewGroup);
+                return new C3223uk(viewGroup);
             case 1:
                 return new c30(context, viewGroup, 0);
             case 2:
@@ -41,7 +42,7 @@ public class gt1 {
             case 16:
                 return new c30(context, viewGroup, 2);
             default:
-                q6.k("viewType: " + i);
+                C2691q6.m12747k("viewType: " + i);
                 return null;
         }
     }

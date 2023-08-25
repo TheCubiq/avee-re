@@ -10,118 +10,147 @@ import android.util.TypedValue;
 import com.daaw.j51;
 /* loaded from: classes.dex */
 public class ul1 {
-    public final Context a;
-    public final TypedArray b;
-    public TypedValue c;
+
+    /* renamed from: a */
+    public final Context f29169a;
+
+    /* renamed from: b */
+    public final TypedArray f29170b;
+
+    /* renamed from: c */
+    public TypedValue f29171c;
 
     public ul1(Context context, TypedArray typedArray) {
-        this.a = context;
-        this.b = typedArray;
+        this.f29169a = context;
+        this.f29170b = typedArray;
     }
 
-    public static ul1 t(Context context, int i, int[] iArr) {
+    /* renamed from: t */
+    public static ul1 m8039t(Context context, int i, int[] iArr) {
         return new ul1(context, context.obtainStyledAttributes(i, iArr));
     }
 
-    public static ul1 u(Context context, AttributeSet attributeSet, int[] iArr) {
+    /* renamed from: u */
+    public static ul1 m8038u(Context context, AttributeSet attributeSet, int[] iArr) {
         return new ul1(context, context.obtainStyledAttributes(attributeSet, iArr));
     }
 
-    public static ul1 v(Context context, AttributeSet attributeSet, int[] iArr, int i, int i2) {
+    /* renamed from: v */
+    public static ul1 m8037v(Context context, AttributeSet attributeSet, int[] iArr, int i, int i2) {
         return new ul1(context, context.obtainStyledAttributes(attributeSet, iArr, i, i2));
     }
 
-    public boolean a(int i, boolean z) {
-        return this.b.getBoolean(i, z);
+    /* renamed from: a */
+    public boolean m8058a(int i, boolean z) {
+        return this.f29170b.getBoolean(i, z);
     }
 
-    public int b(int i, int i2) {
-        return this.b.getColor(i, i2);
+    /* renamed from: b */
+    public int m8057b(int i, int i2) {
+        return this.f29170b.getColor(i, i2);
     }
 
-    public ColorStateList c(int i) {
+    /* renamed from: c */
+    public ColorStateList m8056c(int i) {
         int resourceId;
-        ColorStateList a;
-        return (!this.b.hasValue(i) || (resourceId = this.b.getResourceId(i, 0)) == 0 || (a = r4.a(this.a, resourceId)) == null) ? this.b.getColorStateList(i) : a;
+        ColorStateList m11784a;
+        return (!this.f29170b.hasValue(i) || (resourceId = this.f29170b.getResourceId(i, 0)) == 0 || (m11784a = C2818r4.m11784a(this.f29169a, resourceId)) == null) ? this.f29170b.getColorStateList(i) : m11784a;
     }
 
-    public float d(int i, float f) {
-        return this.b.getDimension(i, f);
+    /* renamed from: d */
+    public float m8055d(int i, float f) {
+        return this.f29170b.getDimension(i, f);
     }
 
-    public int e(int i, int i2) {
-        return this.b.getDimensionPixelOffset(i, i2);
+    /* renamed from: e */
+    public int m8054e(int i, int i2) {
+        return this.f29170b.getDimensionPixelOffset(i, i2);
     }
 
-    public int f(int i, int i2) {
-        return this.b.getDimensionPixelSize(i, i2);
+    /* renamed from: f */
+    public int m8053f(int i, int i2) {
+        return this.f29170b.getDimensionPixelSize(i, i2);
     }
 
-    public Drawable g(int i) {
+    /* renamed from: g */
+    public Drawable m8052g(int i) {
         int resourceId;
-        return (!this.b.hasValue(i) || (resourceId = this.b.getResourceId(i, 0)) == 0) ? this.b.getDrawable(i) : r4.b(this.a, resourceId);
+        return (!this.f29170b.hasValue(i) || (resourceId = this.f29170b.getResourceId(i, 0)) == 0) ? this.f29170b.getDrawable(i) : C2818r4.m11783b(this.f29169a, resourceId);
     }
 
-    public Drawable h(int i) {
+    /* renamed from: h */
+    public Drawable m8051h(int i) {
         int resourceId;
-        if (!this.b.hasValue(i) || (resourceId = this.b.getResourceId(i, 0)) == 0) {
+        if (!this.f29170b.hasValue(i) || (resourceId = this.f29170b.getResourceId(i, 0)) == 0) {
             return null;
         }
-        return d4.b().d(this.a, resourceId, true);
+        return C1046d4.m24713b().m24711d(this.f29169a, resourceId, true);
     }
 
-    public float i(int i, float f) {
-        return this.b.getFloat(i, f);
+    /* renamed from: i */
+    public float m8050i(int i, float f) {
+        return this.f29170b.getFloat(i, f);
     }
 
-    public Typeface j(int i, int i2, j51.f fVar) {
-        int resourceId = this.b.getResourceId(i, 0);
+    /* renamed from: j */
+    public Typeface m8049j(int i, int i2, j51.AbstractC1794f abstractC1794f) {
+        int resourceId = this.f29170b.getResourceId(i, 0);
         if (resourceId == 0) {
             return null;
         }
-        if (this.c == null) {
-            this.c = new TypedValue();
+        if (this.f29171c == null) {
+            this.f29171c = new TypedValue();
         }
-        return j51.g(this.a, resourceId, this.c, i2, fVar);
+        return j51.m18893g(this.f29169a, resourceId, this.f29171c, i2, abstractC1794f);
     }
 
-    public int k(int i, int i2) {
-        return this.b.getInt(i, i2);
+    /* renamed from: k */
+    public int m8048k(int i, int i2) {
+        return this.f29170b.getInt(i, i2);
     }
 
-    public int l(int i, int i2) {
-        return this.b.getInteger(i, i2);
+    /* renamed from: l */
+    public int m8047l(int i, int i2) {
+        return this.f29170b.getInteger(i, i2);
     }
 
-    public int m(int i, int i2) {
-        return this.b.getLayoutDimension(i, i2);
+    /* renamed from: m */
+    public int m8046m(int i, int i2) {
+        return this.f29170b.getLayoutDimension(i, i2);
     }
 
-    public int n(int i, int i2) {
-        return this.b.getResourceId(i, i2);
+    /* renamed from: n */
+    public int m8045n(int i, int i2) {
+        return this.f29170b.getResourceId(i, i2);
     }
 
-    public String o(int i) {
-        return this.b.getString(i);
+    /* renamed from: o */
+    public String m8044o(int i) {
+        return this.f29170b.getString(i);
     }
 
-    public CharSequence p(int i) {
-        return this.b.getText(i);
+    /* renamed from: p */
+    public CharSequence m8043p(int i) {
+        return this.f29170b.getText(i);
     }
 
-    public CharSequence[] q(int i) {
-        return this.b.getTextArray(i);
+    /* renamed from: q */
+    public CharSequence[] m8042q(int i) {
+        return this.f29170b.getTextArray(i);
     }
 
-    public TypedArray r() {
-        return this.b;
+    /* renamed from: r */
+    public TypedArray m8041r() {
+        return this.f29170b;
     }
 
-    public boolean s(int i) {
-        return this.b.hasValue(i);
+    /* renamed from: s */
+    public boolean m8040s(int i) {
+        return this.f29170b.hasValue(i);
     }
 
-    public void w() {
-        this.b.recycle();
+    /* renamed from: w */
+    public void m8036w() {
+        this.f29170b.recycle();
     }
 }

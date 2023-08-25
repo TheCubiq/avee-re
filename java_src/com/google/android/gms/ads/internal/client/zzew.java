@@ -12,7 +12,9 @@ import com.daaw.s23;
 import com.daaw.yd0;
 /* loaded from: classes.dex */
 public final class zzew extends zzbt {
-    public zzbh p;
+
+    /* renamed from: p */
+    public zzbh f36183p;
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzA() {
@@ -28,7 +30,7 @@ public final class zzew extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzD(zzbh zzbhVar) {
-        this.p = zzbhVar;
+        this.f36183p = zzbhVar;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -120,7 +122,7 @@ public final class zzew extends zzbt {
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final boolean zzaa(zzl zzlVar) {
         k04.zzg("This app is using a lightweight version of the Google Mobile Ads SDK that requires the latest Google Play services to be installed, but Google Play services is either missing or out of date.");
-        d04.b.post(new j26(this));
+        d04.f6340b.post(new j26(this));
         return false;
     }
 

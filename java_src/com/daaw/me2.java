@@ -5,19 +5,26 @@ import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 /* loaded from: classes.dex */
 public final class me2 implements le2 {
-    public final FileChannel a;
-    public final long b;
-    public final long c;
+
+    /* renamed from: a */
+    public final FileChannel f18841a;
+
+    /* renamed from: b */
+    public final long f18842b;
+
+    /* renamed from: c */
+    public final long f18843c;
 
     public me2(FileChannel fileChannel, long j, long j2) {
-        this.a = fileChannel;
-        this.b = j;
-        this.c = j2;
+        this.f18841a = fileChannel;
+        this.f18842b = j;
+        this.f18843c = j2;
     }
 
     @Override // com.daaw.le2
-    public final void a(MessageDigest[] messageDigestArr, long j, int i) {
-        MappedByteBuffer map = this.a.map(FileChannel.MapMode.READ_ONLY, this.b + j, i);
+    /* renamed from: a */
+    public final void mo16049a(MessageDigest[] messageDigestArr, long j, int i) {
+        MappedByteBuffer map = this.f18841a.map(FileChannel.MapMode.READ_ONLY, this.f18842b + j, i);
         map.load();
         for (MessageDigest messageDigest : messageDigestArr) {
             map.position(0);
@@ -27,6 +34,6 @@ public final class me2 implements le2 {
 
     @Override // com.daaw.le2
     public final long zza() {
-        return this.c;
+        return this.f18843c;
     }
 }

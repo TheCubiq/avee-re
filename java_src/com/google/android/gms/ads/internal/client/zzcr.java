@@ -19,7 +19,8 @@ public abstract class zzcr extends cp2 implements zzcs {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             zze();
             parcel2.writeNoException();

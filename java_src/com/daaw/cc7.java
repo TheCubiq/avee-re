@@ -3,23 +3,29 @@ package com.daaw;
 import java.security.GeneralSecurityException;
 /* loaded from: classes.dex */
 public final class cc7 {
-    public static final String a;
+
+    /* renamed from: a */
+    public static final String f5719a;
     @Deprecated
-    public static final co7 b;
+
+    /* renamed from: b */
+    public static final co7 f5720b;
     @Deprecated
-    public static final co7 c;
+
+    /* renamed from: c */
+    public static final co7 f5721c;
 
     static {
         new bc7();
-        a = "type.googleapis.com/google.crypto.tink.AesSivKey";
-        b = co7.M();
-        c = co7.M();
+        f5719a = "type.googleapis.com/google.crypto.tink.AesSivKey";
+        f5720b = co7.m25169M();
+        f5721c = co7.m25169M();
         try {
-            w97.o(new ec7());
-            if (yb7.b()) {
+            w97.m6284o(new ec7());
+            if (yb7.m3938b()) {
                 return;
             }
-            w97.n(new bc7(), true);
+            w97.m6285n(new bc7(), true);
         } catch (GeneralSecurityException e) {
             throw new ExceptionInInitializerError(e);
         }

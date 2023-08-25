@@ -5,7 +5,7 @@ import java.io.File;
 public class u00 implements d51<File, File> {
     @Override // com.daaw.d51
     /* renamed from: a */
-    public z41<File> c(File file, int i, int i2) {
+    public z41<File> mo2793c(File file, int i, int i2) {
         return new f10(file);
     }
 

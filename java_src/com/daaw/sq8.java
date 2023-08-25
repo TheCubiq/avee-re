@@ -5,79 +5,96 @@ import java.util.HashMap;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public abstract class sq8 extends lq8 {
-    public final HashMap h = new HashMap();
-    public Handler i;
-    public qz6 j;
 
-    public final void A(final Object obj, rr8 rr8Var) {
-        uo4.d(!this.h.containsKey(obj));
+    /* renamed from: h */
+    public final HashMap f26538h = new HashMap();
+
+    /* renamed from: i */
+    public Handler f26539i;
+
+    /* renamed from: j */
+    public qz6 f26540j;
+
+    /* renamed from: A */
+    public final void m9988A(final Object obj, rr8 rr8Var) {
+        uo4.m7874d(!this.f26538h.containsKey(obj));
         qr8 qr8Var = new qr8() { // from class: com.daaw.pq8
             @Override // com.daaw.qr8
-            public final void a(rr8 rr8Var2, l64 l64Var) {
-                sq8.this.E(obj, rr8Var2, l64Var);
+            /* renamed from: a */
+            public final void mo4028a(rr8 rr8Var2, l64 l64Var) {
+                sq8.this.mo9984E(obj, rr8Var2, l64Var);
             }
         };
         qq8 qq8Var = new qq8(this, obj);
-        this.h.put(obj, new rq8(rr8Var, qr8Var, qq8Var));
-        Handler handler = this.i;
+        this.f26538h.put(obj, new rq8(rr8Var, qr8Var, qq8Var));
+        Handler handler = this.f26539i;
         Objects.requireNonNull(handler);
-        rr8Var.f(handler, qq8Var);
-        Handler handler2 = this.i;
+        rr8Var.mo11005f(handler, qq8Var);
+        Handler handler2 = this.f26539i;
         Objects.requireNonNull(handler2);
-        rr8Var.d(handler2, qq8Var);
-        rr8Var.m(qr8Var, this.j, o());
-        if (z()) {
+        rr8Var.mo11006d(handler2, qq8Var);
+        rr8Var.mo10998m(qr8Var, this.f26540j, m16644o());
+        if (m16638z()) {
             return;
         }
-        rr8Var.a(qr8Var);
+        rr8Var.mo11008a(qr8Var);
     }
 
-    public int B(Object obj, int i) {
+    /* renamed from: B */
+    public int mo9987B(Object obj, int i) {
         return i;
     }
 
-    public long C(Object obj, long j) {
+    /* renamed from: C */
+    public long mo9986C(Object obj, long j) {
         return j;
     }
 
-    public abstract pr8 D(Object obj, pr8 pr8Var);
+    /* renamed from: D */
+    public abstract pr8 mo9985D(Object obj, pr8 pr8Var);
 
-    public abstract void E(Object obj, rr8 rr8Var, l64 l64Var);
+    /* renamed from: E */
+    public abstract void mo9984E(Object obj, rr8 rr8Var, l64 l64Var);
 
     @Override // com.daaw.rr8
-    public void e() {
-        for (rq8 rq8Var : this.h.values()) {
-            rq8Var.a.e();
+    /* renamed from: e */
+    public void mo9983e() {
+        for (rq8 rq8Var : this.f26538h.values()) {
+            rq8Var.f25525a.mo9983e();
         }
     }
 
     @Override // com.daaw.lq8
-    public final void u() {
-        for (rq8 rq8Var : this.h.values()) {
-            rq8Var.a.a(rq8Var.b);
+    /* renamed from: u */
+    public final void mo9982u() {
+        for (rq8 rq8Var : this.f26538h.values()) {
+            rq8Var.f25525a.mo11008a(rq8Var.f25526b);
         }
     }
 
     @Override // com.daaw.lq8
-    public final void v() {
-        for (rq8 rq8Var : this.h.values()) {
-            rq8Var.a.j(rq8Var.b);
+    /* renamed from: v */
+    public final void mo9981v() {
+        for (rq8 rq8Var : this.f26538h.values()) {
+            rq8Var.f25525a.mo11001j(rq8Var.f25526b);
         }
     }
 
     @Override // com.daaw.lq8
-    public void w(qz6 qz6Var) {
-        this.j = qz6Var;
-        this.i = it5.d(null);
+    /* renamed from: w */
+    public void mo9980w(qz6 qz6Var) {
+        this.f26540j = qz6Var;
+        this.f26539i = it5.m19399d(null);
     }
 
     @Override // com.daaw.lq8
-    public void y() {
-        for (rq8 rq8Var : this.h.values()) {
-            rq8Var.a.n(rq8Var.b);
-            rq8Var.a.g(rq8Var.c);
-            rq8Var.a.i(rq8Var.c);
+    /* renamed from: y */
+    public void mo9979y() {
+        for (rq8 rq8Var : this.f26538h.values()) {
+            rq8Var.f25525a.mo10997n(rq8Var.f25526b);
+            rq8Var.f25525a.mo11004g(rq8Var.f25527c);
+            rq8Var.f25525a.mo11002i(rq8Var.f25527c);
         }
-        this.h.clear();
+        this.f26538h.clear();
     }
 }

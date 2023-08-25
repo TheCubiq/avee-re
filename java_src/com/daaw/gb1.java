@@ -2,16 +2,22 @@ package com.daaw;
 /* loaded from: classes.dex */
 public interface gb1 {
 
+    /* renamed from: com.daaw.gb1$a */
     /* loaded from: classes.dex */
-    public interface a<T extends gb1> {
-        void n(T t);
+    public interface InterfaceC1390a<T extends gb1> {
+        /* renamed from: n */
+        void mo2077n(T t);
     }
 
-    long b();
+    /* renamed from: b */
+    long mo2087b();
 
-    boolean c(long j);
+    /* renamed from: c */
+    boolean mo2086c(long j);
 
-    long f();
+    /* renamed from: f */
+    long mo2083f();
 
-    void g(long j);
+    /* renamed from: g */
+    void mo2082g(long j);
 }

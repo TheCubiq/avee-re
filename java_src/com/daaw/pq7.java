@@ -15,6 +15,6 @@ public final class pq7 implements Comparator {
                 return compareTo;
             }
         }
-        return Integer.valueOf(yq7Var.o()).compareTo(Integer.valueOf(yq7Var2.o()));
+        return Integer.valueOf(yq7Var.mo3411o()).compareTo(Integer.valueOf(yq7Var2.mo3411o()));
     }
 }

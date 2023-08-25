@@ -24,25 +24,40 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class sw3 extends RewardedInterstitialAd {
-    public final String a;
-    public final wv3 b;
-    public final Context c;
-    public final qw3 d = new qw3();
-    public FullScreenContentCallback e;
-    public OnAdMetadataChangedListener f;
-    public OnPaidEventListener g;
+
+    /* renamed from: a */
+    public final String f26713a;
+
+    /* renamed from: b */
+    public final wv3 f26714b;
+
+    /* renamed from: c */
+    public final Context f26715c;
+
+    /* renamed from: d */
+    public final qw3 f26716d = new qw3();
+
+    /* renamed from: e */
+    public FullScreenContentCallback f26717e;
+
+    /* renamed from: f */
+    public OnAdMetadataChangedListener f26718f;
+
+    /* renamed from: g */
+    public OnPaidEventListener f26719g;
 
     public sw3(Context context, String str) {
-        this.a = str;
-        this.c = context.getApplicationContext();
-        this.b = zzay.zza().zzq(context, str, new xm3());
+        this.f26713a = str;
+        this.f26715c = context.getApplicationContext();
+        this.f26714b = zzay.zza().zzq(context, str, new xm3());
     }
 
-    public final void a(zzdx zzdxVar, RewardedInterstitialAdLoadCallback rewardedInterstitialAdLoadCallback) {
+    /* renamed from: a */
+    public final void m9793a(zzdx zzdxVar, RewardedInterstitialAdLoadCallback rewardedInterstitialAdLoadCallback) {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
-                wv3Var.zzg(zzp.zza.zza(this.c, zzdxVar), new rw3(rewardedInterstitialAdLoadCallback, this));
+                wv3Var.zzg(zzp.zza.zza(this.f26715c, zzdxVar), new rw3(rewardedInterstitialAdLoadCallback, this));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
@@ -52,7 +67,7 @@ public final class sw3 extends RewardedInterstitialAd {
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final Bundle getAdMetadata() {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
                 return wv3Var.zzb();
             }
@@ -64,29 +79,29 @@ public final class sw3 extends RewardedInterstitialAd {
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final String getAdUnitId() {
-        return this.a;
+        return this.f26713a;
     }
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final FullScreenContentCallback getFullScreenContentCallback() {
-        return this.e;
+        return this.f26717e;
     }
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final OnAdMetadataChangedListener getOnAdMetadataChangedListener() {
-        return this.f;
+        return this.f26718f;
     }
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final OnPaidEventListener getOnPaidEventListener() {
-        return this.g;
+        return this.f26719g;
     }
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final ResponseInfo getResponseInfo() {
         zzdn zzdnVar = null;
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
                 zzdnVar = wv3Var.zzc();
             }
@@ -99,7 +114,7 @@ public final class sw3 extends RewardedInterstitialAd {
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final RewardItem getRewardItem() {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             tv3 zzd = wv3Var != null ? wv3Var.zzd() : null;
             if (zzd != null) {
                 return new gw3(zzd);
@@ -112,14 +127,14 @@ public final class sw3 extends RewardedInterstitialAd {
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final void setFullScreenContentCallback(FullScreenContentCallback fullScreenContentCallback) {
-        this.e = fullScreenContentCallback;
-        this.d.g3(fullScreenContentCallback);
+        this.f26717e = fullScreenContentCallback;
+        this.f26716d.m12015g3(fullScreenContentCallback);
     }
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final void setImmersiveMode(boolean z) {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
                 wv3Var.zzh(z);
             }
@@ -130,9 +145,9 @@ public final class sw3 extends RewardedInterstitialAd {
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final void setOnAdMetadataChangedListener(OnAdMetadataChangedListener onAdMetadataChangedListener) {
-        this.f = onAdMetadataChangedListener;
+        this.f26718f = onAdMetadataChangedListener;
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
                 wv3Var.zzi(new zzfd(onAdMetadataChangedListener));
             }
@@ -143,9 +158,9 @@ public final class sw3 extends RewardedInterstitialAd {
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final void setOnPaidEventListener(OnPaidEventListener onPaidEventListener) {
-        this.g = onPaidEventListener;
+        this.f26719g = onPaidEventListener;
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
                 wv3Var.zzj(new zzfe(onPaidEventListener));
             }
@@ -157,7 +172,7 @@ public final class sw3 extends RewardedInterstitialAd {
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final void setServerSideVerificationOptions(ServerSideVerificationOptions serverSideVerificationOptions) {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
                 wv3Var.zzl(new zzcdy(serverSideVerificationOptions));
             }
@@ -168,12 +183,12 @@ public final class sw3 extends RewardedInterstitialAd {
 
     @Override // com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
     public final void show(Activity activity, OnUserEarnedRewardListener onUserEarnedRewardListener) {
-        this.d.h3(onUserEarnedRewardListener);
+        this.f26716d.m12014h3(onUserEarnedRewardListener);
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f26714b;
             if (wv3Var != null) {
-                wv3Var.zzk(this.d);
-                this.b.zzm(nt0.g3(activity));
+                wv3Var.zzk(this.f26716d);
+                this.f26714b.zzm(nt0.m14830g3(activity));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);

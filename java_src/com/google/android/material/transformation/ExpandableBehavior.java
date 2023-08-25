@@ -5,91 +5,106 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.daaw.InterfaceC3653xz;
 import com.daaw.xs1;
-import com.daaw.xz;
 import java.util.List;
 @Deprecated
 /* loaded from: classes2.dex */
-public abstract class ExpandableBehavior extends CoordinatorLayout.c<View> {
-    public int a;
+public abstract class ExpandableBehavior extends CoordinatorLayout.AbstractC0194c<View> {
 
+    /* renamed from: a */
+    public int f37873a;
+
+    /* renamed from: com.google.android.material.transformation.ExpandableBehavior$a */
     /* loaded from: classes2.dex */
-    public class a implements ViewTreeObserver.OnPreDrawListener {
-        public final /* synthetic */ View p;
-        public final /* synthetic */ int q;
-        public final /* synthetic */ xz r;
+    public class ViewTreeObserver$OnPreDrawListenerC4171a implements ViewTreeObserver.OnPreDrawListener {
 
-        public a(View view, int i, xz xzVar) {
-            this.p = view;
-            this.q = i;
-            this.r = xzVar;
+        /* renamed from: p */
+        public final /* synthetic */ View f37874p;
+
+        /* renamed from: q */
+        public final /* synthetic */ int f37875q;
+
+        /* renamed from: r */
+        public final /* synthetic */ InterfaceC3653xz f37876r;
+
+        public ViewTreeObserver$OnPreDrawListenerC4171a(View view, int i, InterfaceC3653xz interfaceC3653xz) {
+            this.f37874p = view;
+            this.f37875q = i;
+            this.f37876r = interfaceC3653xz;
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
         public boolean onPreDraw() {
-            this.p.getViewTreeObserver().removeOnPreDrawListener(this);
-            if (ExpandableBehavior.this.a == this.q) {
+            this.f37874p.getViewTreeObserver().removeOnPreDrawListener(this);
+            if (ExpandableBehavior.this.f37873a == this.f37875q) {
                 ExpandableBehavior expandableBehavior = ExpandableBehavior.this;
-                xz xzVar = this.r;
-                expandableBehavior.H((View) xzVar, this.p, xzVar.a(), false);
+                InterfaceC3653xz interfaceC3653xz = this.f37876r;
+                expandableBehavior.mo98H((View) interfaceC3653xz, this.f37874p, interfaceC3653xz.mo465a(), false);
             }
             return false;
         }
     }
 
     public ExpandableBehavior() {
-        this.a = 0;
+        this.f37873a = 0;
     }
 
     public ExpandableBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.a = 0;
+        this.f37873a = 0;
     }
 
-    public final boolean F(boolean z) {
+    /* renamed from: F */
+    public final boolean m129F(boolean z) {
         if (!z) {
-            return this.a == 1;
+            return this.f37873a == 1;
         }
-        int i = this.a;
+        int i = this.f37873a;
         return i == 0 || i == 2;
     }
 
-    public xz G(CoordinatorLayout coordinatorLayout, View view) {
-        List<View> r = coordinatorLayout.r(view);
-        int size = r.size();
+    /* renamed from: G */
+    public InterfaceC3653xz m128G(CoordinatorLayout coordinatorLayout, View view) {
+        List<View> m29789r = coordinatorLayout.m29789r(view);
+        int size = m29789r.size();
         for (int i = 0; i < size; i++) {
-            View view2 = r.get(i);
-            if (e(coordinatorLayout, view, view2)) {
-                return (xz) view2;
+            View view2 = m29789r.get(i);
+            if (mo99e(coordinatorLayout, view, view2)) {
+                return (InterfaceC3653xz) view2;
             }
         }
         return null;
     }
 
-    public abstract boolean H(View view, View view2, boolean z, boolean z2);
+    /* renamed from: H */
+    public abstract boolean mo98H(View view, View view2, boolean z, boolean z2);
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public abstract boolean e(CoordinatorLayout coordinatorLayout, View view, View view2);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: e */
+    public abstract boolean mo99e(CoordinatorLayout coordinatorLayout, View view, View view2);
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean h(CoordinatorLayout coordinatorLayout, View view, View view2) {
-        xz xzVar = (xz) view2;
-        if (F(xzVar.a())) {
-            this.a = xzVar.a() ? 1 : 2;
-            return H((View) xzVar, view, xzVar.a(), true);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: h */
+    public boolean mo127h(CoordinatorLayout coordinatorLayout, View view, View view2) {
+        InterfaceC3653xz interfaceC3653xz = (InterfaceC3653xz) view2;
+        if (m129F(interfaceC3653xz.mo465a())) {
+            this.f37873a = interfaceC3653xz.mo465a() ? 1 : 2;
+            return mo98H((View) interfaceC3653xz, view, interfaceC3653xz.mo465a(), true);
         }
         return false;
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean l(CoordinatorLayout coordinatorLayout, View view, int i) {
-        xz G;
-        if (xs1.V(view) || (G = G(coordinatorLayout, view)) == null || !F(G.a())) {
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: l */
+    public boolean mo126l(CoordinatorLayout coordinatorLayout, View view, int i) {
+        InterfaceC3653xz m128G;
+        if (xs1.m4742V(view) || (m128G = m128G(coordinatorLayout, view)) == null || !m129F(m128G.mo465a())) {
             return false;
         }
-        int i2 = G.a() ? 1 : 2;
-        this.a = i2;
-        view.getViewTreeObserver().addOnPreDrawListener(new a(view, i2, G));
+        int i2 = m128G.mo465a() ? 1 : 2;
+        this.f37873a = i2;
+        view.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver$OnPreDrawListenerC4171a(view, i2, m128G));
         return false;
     }
 }

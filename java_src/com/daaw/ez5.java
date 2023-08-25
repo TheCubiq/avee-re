@@ -7,15 +7,18 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class ez5 implements zza, vy4 {
     @GuardedBy("this")
-    public zzbe p;
 
-    public final synchronized void b(zzbe zzbeVar) {
-        this.p = zzbeVar;
+    /* renamed from: p */
+    public zzbe f8972p;
+
+    /* renamed from: b */
+    public final synchronized void m22977b(zzbe zzbeVar) {
+        this.f8972p = zzbeVar;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zza
     public final synchronized void onAdClicked() {
-        zzbe zzbeVar = this.p;
+        zzbe zzbeVar = this.f8972p;
         if (zzbeVar != null) {
             try {
                 zzbeVar.zzb();
@@ -27,7 +30,7 @@ public final class ez5 implements zza, vy4 {
 
     @Override // com.daaw.vy4
     public final synchronized void zzq() {
-        zzbe zzbeVar = this.p;
+        zzbe zzbeVar = this.f8972p;
         if (zzbeVar != null) {
             try {
                 zzbeVar.zzb();

@@ -7,18 +7,23 @@ import java.security.MessageDigest;
 import javax.crypto.AEADBadTagException;
 /* loaded from: classes.dex */
 public abstract class rb7 {
-    public final mb7 a;
-    public final mb7 b;
+
+    /* renamed from: a */
+    public final mb7 f25112a;
+
+    /* renamed from: b */
+    public final mb7 f25113b;
 
     public rb7(byte[] bArr) {
-        if (!xb7.a(1)) {
+        if (!xb7.m5296a(1)) {
             throw new GeneralSecurityException("Can not use ChaCha20Poly1305 in FIPS-mode.");
         }
-        this.a = a(bArr, 1);
-        this.b = a(bArr, 0);
+        this.f25112a = mo9366a(bArr, 1);
+        this.f25113b = mo9366a(bArr, 0);
     }
 
-    public static byte[] f(byte[] bArr, ByteBuffer byteBuffer) {
+    /* renamed from: f */
+    public static byte[] m11442f(byte[] bArr, ByteBuffer byteBuffer) {
         int length = bArr.length;
         int i = length & 15;
         int i2 = i == 0 ? length : (length + 16) - i;
@@ -35,22 +40,25 @@ public abstract class rb7 {
         return order.array();
     }
 
-    public abstract mb7 a(byte[] bArr, int i);
+    /* renamed from: a */
+    public abstract mb7 mo9366a(byte[] bArr, int i);
 
-    public final void b(ByteBuffer byteBuffer, byte[] bArr, byte[] bArr2, byte[] bArr3) {
+    /* renamed from: b */
+    public final void m11446b(ByteBuffer byteBuffer, byte[] bArr, byte[] bArr2, byte[] bArr3) {
         if (byteBuffer.remaining() < bArr2.length + 16) {
             throw new IllegalArgumentException("Given ByteBuffer output is too small");
         }
         int position = byteBuffer.position();
-        this.a.d(byteBuffer, bArr, bArr2);
+        this.f25112a.m16112d(byteBuffer, bArr, bArr2);
         byteBuffer.position(position);
         byteBuffer.limit(byteBuffer.limit() - 16);
-        byte[] a = ub7.a(e(bArr), f(bArr3, byteBuffer));
+        byte[] m8347a = ub7.m8347a(m11443e(bArr), m11442f(bArr3, byteBuffer));
         byteBuffer.limit(byteBuffer.limit() + 16);
-        byteBuffer.put(a);
+        byteBuffer.put(m8347a);
     }
 
-    public final byte[] c(ByteBuffer byteBuffer, byte[] bArr, byte[] bArr2) {
+    /* renamed from: c */
+    public final byte[] m11445c(ByteBuffer byteBuffer, byte[] bArr, byte[] bArr2) {
         if (byteBuffer.remaining() >= 16) {
             int position = byteBuffer.position();
             byte[] bArr3 = new byte[16];
@@ -62,11 +70,11 @@ public abstract class rb7 {
                 bArr2 = new byte[0];
             }
             try {
-                if (!MessageDigest.isEqual(ub7.a(e(bArr), f(bArr2, byteBuffer)), bArr3)) {
+                if (!MessageDigest.isEqual(ub7.m8347a(m11443e(bArr), m11442f(bArr2, byteBuffer)), bArr3)) {
                     throw new GeneralSecurityException("invalid MAC");
                 }
                 byteBuffer.position(position);
-                return this.a.e(bArr, byteBuffer);
+                return this.f25112a.m16111e(bArr, byteBuffer);
             } catch (GeneralSecurityException e) {
                 throw new AEADBadTagException(e.toString());
             }
@@ -74,19 +82,21 @@ public abstract class rb7 {
         throw new GeneralSecurityException("ciphertext too short");
     }
 
-    public final byte[] d(byte[] bArr, byte[] bArr2, byte[] bArr3) {
+    /* renamed from: d */
+    public final byte[] m11444d(byte[] bArr, byte[] bArr2, byte[] bArr3) {
         int length = bArr2.length;
         if (length <= 2147483631) {
             ByteBuffer allocate = ByteBuffer.allocate(length + 16);
-            b(allocate, bArr, bArr2, bArr3);
+            m11446b(allocate, bArr, bArr2, bArr3);
             return allocate.array();
         }
         throw new GeneralSecurityException("plaintext too long");
     }
 
-    public final byte[] e(byte[] bArr) {
+    /* renamed from: e */
+    public final byte[] m11443e(byte[] bArr) {
         byte[] bArr2 = new byte[32];
-        this.b.c(bArr, 0).get(bArr2);
+        this.f25113b.m16113c(bArr, 0).get(bArr2);
         return bArr2;
     }
 }

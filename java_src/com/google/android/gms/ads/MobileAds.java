@@ -73,18 +73,18 @@ public class MobileAds {
 
     public static void registerWebView(WebView webView) {
         zzej.zzf();
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         if (webView == null) {
             k04.zzg("The webview to be registered cannot be null.");
             return;
         }
-        zy3 a = ts3.a(webView.getContext());
-        if (a == null) {
+        zy3 m8842a = ts3.m8842a(webView.getContext());
+        if (m8842a == null) {
             k04.zzj("Internal error, query info generator is null.");
             return;
         }
         try {
-            a.zzi(nt0.g3(webView));
+            m8842a.zzi(nt0.m14830g3(webView));
         } catch (RemoteException e) {
             k04.zzh("", e);
         }

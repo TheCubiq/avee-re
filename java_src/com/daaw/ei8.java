@@ -1,16 +1,19 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class ei8 {
-    public static final yh8 a;
+
+    /* renamed from: a */
+    public static final yh8 f8510a;
 
     static {
-        if (ih8.C() && ih8.D()) {
-            int i = b58.a;
+        if (ih8.m19815C() && ih8.m19814D()) {
+            int i = b58.f4320a;
         }
-        a = new ai8();
+        f8510a = new ai8();
     }
 
-    public static /* bridge */ /* synthetic */ int a(byte[] bArr, int i, int i2) {
+    /* renamed from: a */
+    public static /* bridge */ /* synthetic */ int m23451a(byte[] bArr, int i, int i2) {
         byte b = bArr[i - 1];
         int i3 = i2 - i;
         if (i3 != 0) {
@@ -37,19 +40,78 @@ public final class ei8 {
     /* JADX WARN: Code restructure failed: missing block: B:51:0x00fe, code lost:
         return r9 + r0;
      */
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static int b(java.lang.CharSequence r7, byte[] r8, int r9, int r10) {
-        /*
-            Method dump skipped, instructions count: 255
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.ei8.b(java.lang.CharSequence, byte[], int, int):int");
+    public static int m23450b(CharSequence charSequence, byte[] bArr, int i, int i2) {
+        int i3;
+        int i4;
+        int i5;
+        char charAt;
+        int length = charSequence.length();
+        int i6 = i2 + i;
+        int i7 = 0;
+        while (i7 < length && (i5 = i7 + i) < i6 && (charAt = charSequence.charAt(i7)) < 128) {
+            bArr[i5] = (byte) charAt;
+            i7++;
+        }
+        int i8 = i + i7;
+        while (i7 < length) {
+            char charAt2 = charSequence.charAt(i7);
+            if (charAt2 >= 128 || i8 >= i6) {
+                if (charAt2 < 2048 && i8 <= i6 - 2) {
+                    int i9 = i8 + 1;
+                    bArr[i8] = (byte) ((charAt2 >>> 6) | 960);
+                    i8 = i9 + 1;
+                    bArr[i9] = (byte) ((charAt2 & '?') | 128);
+                } else if ((charAt2 >= 55296 && charAt2 <= 57343) || i8 > i6 - 3) {
+                    if (i8 > i6 - 4) {
+                        if (charAt2 < 55296 || charAt2 > 57343 || ((i4 = i7 + 1) != charSequence.length() && Character.isSurrogatePair(charAt2, charSequence.charAt(i4)))) {
+                            throw new ArrayIndexOutOfBoundsException("Failed writing " + charAt2 + " at index " + i8);
+                        }
+                        throw new ci8(i7, length);
+                    }
+                    int i10 = i7 + 1;
+                    if (i10 != charSequence.length()) {
+                        char charAt3 = charSequence.charAt(i10);
+                        if (Character.isSurrogatePair(charAt2, charAt3)) {
+                            int codePoint = Character.toCodePoint(charAt2, charAt3);
+                            int i11 = i8 + 1;
+                            bArr[i8] = (byte) ((codePoint >>> 18) | 240);
+                            int i12 = i11 + 1;
+                            bArr[i11] = (byte) (((codePoint >>> 12) & 63) | 128);
+                            int i13 = i12 + 1;
+                            bArr[i12] = (byte) (((codePoint >>> 6) & 63) | 128);
+                            i8 = i13 + 1;
+                            bArr[i13] = (byte) ((codePoint & 63) | 128);
+                            i7 = i10;
+                        } else {
+                            i7 = i10;
+                        }
+                    }
+                    throw new ci8(i7 - 1, length);
+                } else {
+                    int i14 = i8 + 1;
+                    bArr[i8] = (byte) ((charAt2 >>> '\f') | 480);
+                    int i15 = i14 + 1;
+                    bArr[i14] = (byte) (((charAt2 >>> 6) & 63) | 128);
+                    i3 = i15 + 1;
+                    bArr[i15] = (byte) ((charAt2 & '?') | 128);
+                }
+                i7++;
+            } else {
+                i3 = i8 + 1;
+                bArr[i8] = (byte) charAt2;
+            }
+            i8 = i3;
+            i7++;
+        }
+        return i8;
     }
 
-    public static int c(CharSequence charSequence) {
+    /* renamed from: c */
+    public static int m23449c(CharSequence charSequence) {
         int length = charSequence.length();
         int i = 0;
         int i2 = 0;
@@ -91,7 +153,8 @@ public final class ei8 {
         throw new IllegalArgumentException("UTF-8 length does not fit in int: " + (i3 + 4294967296L));
     }
 
-    public static String d(byte[] bArr, int i, int i2) {
+    /* renamed from: d */
+    public static String m23448d(byte[] bArr, int i, int i2) {
         int length = bArr.length;
         if ((i | i2 | ((length - i) - i2)) >= 0) {
             int i3 = i + i2;
@@ -99,7 +162,7 @@ public final class ei8 {
             int i4 = 0;
             while (i < i3) {
                 byte b = bArr[i];
-                if (!kh8.d(b)) {
+                if (!kh8.m17736d(b)) {
                     break;
                 }
                 i++;
@@ -109,7 +172,7 @@ public final class ei8 {
             while (i < i3) {
                 int i5 = i + 1;
                 byte b2 = bArr[i];
-                if (kh8.d(b2)) {
+                if (kh8.m17736d(b2)) {
                     int i6 = i4 + 1;
                     cArr[i4] = (char) b2;
                     i = i5;
@@ -117,7 +180,7 @@ public final class ei8 {
                         i4 = i6;
                         if (i < i3) {
                             byte b3 = bArr[i];
-                            if (!kh8.d(b3)) {
+                            if (!kh8.m17736d(b3)) {
                                 break;
                             }
                             i++;
@@ -127,25 +190,25 @@ public final class ei8 {
                     }
                 } else if (b2 < -32) {
                     if (i5 >= i3) {
-                        throw mb8.c();
+                        throw mb8.m16107c();
                     }
-                    kh8.c(b2, bArr[i5], cArr, i4);
+                    kh8.m17737c(b2, bArr[i5], cArr, i4);
                     i = i5 + 1;
                     i4++;
                 } else if (b2 < -16) {
                     if (i5 >= i3 - 1) {
-                        throw mb8.c();
+                        throw mb8.m16107c();
                     }
                     int i7 = i5 + 1;
-                    kh8.b(b2, bArr[i5], bArr[i7], cArr, i4);
+                    kh8.m17738b(b2, bArr[i5], bArr[i7], cArr, i4);
                     i = i7 + 1;
                     i4++;
                 } else if (i5 >= i3 - 2) {
-                    throw mb8.c();
+                    throw mb8.m16107c();
                 } else {
                     int i8 = i5 + 1;
                     int i9 = i8 + 1;
-                    kh8.a(b2, bArr[i5], bArr[i8], bArr[i9], cArr, i4);
+                    kh8.m17739a(b2, bArr[i5], bArr[i8], bArr[i9], cArr, i4);
                     i4 += 2;
                     i = i9 + 1;
                 }
@@ -155,11 +218,13 @@ public final class ei8 {
         throw new ArrayIndexOutOfBoundsException(String.format("buffer length=%d, index=%d, size=%d", Integer.valueOf(length), Integer.valueOf(i), Integer.valueOf(i2)));
     }
 
-    public static boolean e(byte[] bArr) {
-        return a.b(bArr, 0, bArr.length);
+    /* renamed from: e */
+    public static boolean m23447e(byte[] bArr) {
+        return f8510a.m3735b(bArr, 0, bArr.length);
     }
 
-    public static boolean f(byte[] bArr, int i, int i2) {
-        return a.b(bArr, i, i2);
+    /* renamed from: f */
+    public static boolean m23446f(byte[] bArr, int i, int i2) {
+        return f8510a.m3735b(bArr, i, i2);
     }
 }

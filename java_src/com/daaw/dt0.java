@@ -13,360 +13,534 @@ import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class dt0 {
 
+    /* renamed from: com.daaw.dt0$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public final Bundle a;
-        public IconCompat b;
-        public final s31[] c;
-        public final s31[] d;
-        public boolean e;
-        public boolean f;
-        public final int g;
-        public final boolean h;
-        @Deprecated
-        public int i;
-        public CharSequence j;
-        public PendingIntent k;
-        public boolean l;
+    public static class C1133a {
 
-        public a(int i, CharSequence charSequence, PendingIntent pendingIntent) {
-            this(i != 0 ? IconCompat.g(null, "", i) : null, charSequence, pendingIntent);
+        /* renamed from: a */
+        public final Bundle f7721a;
+
+        /* renamed from: b */
+        public IconCompat f7722b;
+
+        /* renamed from: c */
+        public final s31[] f7723c;
+
+        /* renamed from: d */
+        public final s31[] f7724d;
+
+        /* renamed from: e */
+        public boolean f7725e;
+
+        /* renamed from: f */
+        public boolean f7726f;
+
+        /* renamed from: g */
+        public final int f7727g;
+
+        /* renamed from: h */
+        public final boolean f7728h;
+        @Deprecated
+
+        /* renamed from: i */
+        public int f7729i;
+
+        /* renamed from: j */
+        public CharSequence f7730j;
+
+        /* renamed from: k */
+        public PendingIntent f7731k;
+
+        /* renamed from: l */
+        public boolean f7732l;
+
+        public C1133a(int i, CharSequence charSequence, PendingIntent pendingIntent) {
+            this(i != 0 ? IconCompat.m29726g(null, "", i) : null, charSequence, pendingIntent);
         }
 
-        public a(IconCompat iconCompat, CharSequence charSequence, PendingIntent pendingIntent) {
+        public C1133a(IconCompat iconCompat, CharSequence charSequence, PendingIntent pendingIntent) {
             this(iconCompat, charSequence, pendingIntent, new Bundle(), null, null, true, 0, true, false, false);
         }
 
-        public a(IconCompat iconCompat, CharSequence charSequence, PendingIntent pendingIntent, Bundle bundle, s31[] s31VarArr, s31[] s31VarArr2, boolean z, int i, boolean z2, boolean z3, boolean z4) {
-            this.f = true;
-            this.b = iconCompat;
-            if (iconCompat != null && iconCompat.j() == 2) {
-                this.i = iconCompat.h();
+        public C1133a(IconCompat iconCompat, CharSequence charSequence, PendingIntent pendingIntent, Bundle bundle, s31[] s31VarArr, s31[] s31VarArr2, boolean z, int i, boolean z2, boolean z3, boolean z4) {
+            this.f7726f = true;
+            this.f7722b = iconCompat;
+            if (iconCompat != null && iconCompat.m29723j() == 2) {
+                this.f7729i = iconCompat.m29725h();
             }
-            this.j = d.d(charSequence);
-            this.k = pendingIntent;
-            this.a = bundle == null ? new Bundle() : bundle;
-            this.c = s31VarArr;
-            this.d = s31VarArr2;
-            this.e = z;
-            this.g = i;
-            this.f = z2;
-            this.h = z3;
-            this.l = z4;
+            this.f7730j = C1136d.m23974d(charSequence);
+            this.f7731k = pendingIntent;
+            this.f7721a = bundle == null ? new Bundle() : bundle;
+            this.f7723c = s31VarArr;
+            this.f7724d = s31VarArr2;
+            this.f7725e = z;
+            this.f7727g = i;
+            this.f7726f = z2;
+            this.f7728h = z3;
+            this.f7732l = z4;
         }
 
-        public PendingIntent a() {
-            return this.k;
+        /* renamed from: a */
+        public PendingIntent m23990a() {
+            return this.f7731k;
         }
 
-        public boolean b() {
-            return this.e;
+        /* renamed from: b */
+        public boolean m23989b() {
+            return this.f7725e;
         }
 
-        public s31[] c() {
-            return this.d;
+        /* renamed from: c */
+        public s31[] m23988c() {
+            return this.f7724d;
         }
 
-        public Bundle d() {
-            return this.a;
+        /* renamed from: d */
+        public Bundle m23987d() {
+            return this.f7721a;
         }
 
-        public IconCompat e() {
+        /* renamed from: e */
+        public IconCompat m23986e() {
             int i;
-            if (this.b == null && (i = this.i) != 0) {
-                this.b = IconCompat.g(null, "", i);
+            if (this.f7722b == null && (i = this.f7729i) != 0) {
+                this.f7722b = IconCompat.m29726g(null, "", i);
             }
-            return this.b;
+            return this.f7722b;
         }
 
-        public s31[] f() {
-            return this.c;
+        /* renamed from: f */
+        public s31[] m23985f() {
+            return this.f7723c;
         }
 
-        public int g() {
-            return this.g;
+        /* renamed from: g */
+        public int m23984g() {
+            return this.f7727g;
         }
 
-        public boolean h() {
-            return this.f;
+        /* renamed from: h */
+        public boolean m23983h() {
+            return this.f7726f;
         }
 
-        public CharSequence i() {
-            return this.j;
+        /* renamed from: i */
+        public CharSequence m23982i() {
+            return this.f7730j;
         }
 
-        public boolean j() {
-            return this.l;
+        /* renamed from: j */
+        public boolean m23981j() {
+            return this.f7732l;
         }
 
-        public boolean k() {
-            return this.h;
+        /* renamed from: k */
+        public boolean m23980k() {
+            return this.f7728h;
         }
     }
 
+    /* renamed from: com.daaw.dt0$b */
     /* loaded from: classes.dex */
-    public static class b extends e {
-        public CharSequence e;
+    public static class C1134b extends AbstractC1137e {
 
-        @Override // com.daaw.dt0.e
-        public void a(Bundle bundle) {
-            super.a(bundle);
+        /* renamed from: e */
+        public CharSequence f7733e;
+
+        @Override // com.daaw.dt0.AbstractC1137e
+        /* renamed from: a */
+        public void mo23960a(Bundle bundle) {
+            super.mo23960a(bundle);
             if (Build.VERSION.SDK_INT < 21) {
-                bundle.putCharSequence("android.bigText", this.e);
+                bundle.putCharSequence("android.bigText", this.f7733e);
             }
         }
 
-        @Override // com.daaw.dt0.e
-        public void b(ct0 ct0Var) {
-            Notification.BigTextStyle bigText = new Notification.BigTextStyle(ct0Var.a()).setBigContentTitle(this.b).bigText(this.e);
-            if (this.d) {
-                bigText.setSummaryText(this.c);
+        @Override // com.daaw.dt0.AbstractC1137e
+        /* renamed from: b */
+        public void mo23959b(ct0 ct0Var) {
+            Notification.BigTextStyle bigText = new Notification.BigTextStyle(ct0Var.mo23208a()).setBigContentTitle(this.f7782b).bigText(this.f7733e);
+            if (this.f7784d) {
+                bigText.setSummaryText(this.f7783c);
             }
         }
 
-        @Override // com.daaw.dt0.e
-        public String c() {
+        @Override // com.daaw.dt0.AbstractC1137e
+        /* renamed from: c */
+        public String mo23958c() {
             return "androidx.core.app.NotificationCompat$BigTextStyle";
         }
 
-        public b h(CharSequence charSequence) {
-            this.e = d.d(charSequence);
+        /* renamed from: h */
+        public C1134b m23979h(CharSequence charSequence) {
+            this.f7733e = C1136d.m23974d(charSequence);
             return this;
         }
     }
 
+    /* renamed from: com.daaw.dt0$c */
     /* loaded from: classes.dex */
-    public static final class c {
-        public static Notification.BubbleMetadata a(c cVar) {
+    public static final class C1135c {
+        /* renamed from: a */
+        public static Notification.BubbleMetadata m23978a(C1135c c1135c) {
             return null;
         }
     }
 
+    /* renamed from: com.daaw.dt0$d */
     /* loaded from: classes.dex */
-    public static class d {
-        public boolean A;
-        public boolean B;
-        public String C;
-        public Bundle D;
-        public int E;
-        public int F;
-        public Notification G;
-        public RemoteViews H;
-        public RemoteViews I;
-        public RemoteViews J;
-        public String K;
-        public int L;
-        public String M;
-        public long N;
-        public int O;
-        public int P;
-        public boolean Q;
-        public Notification R;
-        public boolean S;
-        public Icon T;
+    public static class C1136d {
+
+        /* renamed from: A */
+        public boolean f7734A;
+
+        /* renamed from: B */
+        public boolean f7735B;
+
+        /* renamed from: C */
+        public String f7736C;
+
+        /* renamed from: D */
+        public Bundle f7737D;
+
+        /* renamed from: E */
+        public int f7738E;
+
+        /* renamed from: F */
+        public int f7739F;
+
+        /* renamed from: G */
+        public Notification f7740G;
+
+        /* renamed from: H */
+        public RemoteViews f7741H;
+
+        /* renamed from: I */
+        public RemoteViews f7742I;
+
+        /* renamed from: J */
+        public RemoteViews f7743J;
+
+        /* renamed from: K */
+        public String f7744K;
+
+        /* renamed from: L */
+        public int f7745L;
+
+        /* renamed from: M */
+        public String f7746M;
+
+        /* renamed from: N */
+        public long f7747N;
+
+        /* renamed from: O */
+        public int f7748O;
+
+        /* renamed from: P */
+        public int f7749P;
+
+        /* renamed from: Q */
+        public boolean f7750Q;
+
+        /* renamed from: R */
+        public Notification f7751R;
+
+        /* renamed from: S */
+        public boolean f7752S;
+
+        /* renamed from: T */
+        public Icon f7753T;
         @Deprecated
-        public ArrayList<String> U;
-        public Context a;
-        public ArrayList<a> b;
-        public ArrayList<lw0> c;
-        public ArrayList<a> d;
-        public CharSequence e;
-        public CharSequence f;
-        public PendingIntent g;
-        public PendingIntent h;
-        public RemoteViews i;
-        public Bitmap j;
-        public CharSequence k;
-        public int l;
-        public int m;
-        public boolean n;
-        public boolean o;
-        public e p;
-        public CharSequence q;
-        public CharSequence r;
-        public CharSequence[] s;
-        public int t;
-        public int u;
-        public boolean v;
-        public String w;
-        public boolean x;
-        public String y;
-        public boolean z;
+
+        /* renamed from: U */
+        public ArrayList<String> f7754U;
+
+        /* renamed from: a */
+        public Context f7755a;
+
+        /* renamed from: b */
+        public ArrayList<C1133a> f7756b;
+
+        /* renamed from: c */
+        public ArrayList<lw0> f7757c;
+
+        /* renamed from: d */
+        public ArrayList<C1133a> f7758d;
+
+        /* renamed from: e */
+        public CharSequence f7759e;
+
+        /* renamed from: f */
+        public CharSequence f7760f;
+
+        /* renamed from: g */
+        public PendingIntent f7761g;
+
+        /* renamed from: h */
+        public PendingIntent f7762h;
+
+        /* renamed from: i */
+        public RemoteViews f7763i;
+
+        /* renamed from: j */
+        public Bitmap f7764j;
+
+        /* renamed from: k */
+        public CharSequence f7765k;
+
+        /* renamed from: l */
+        public int f7766l;
+
+        /* renamed from: m */
+        public int f7767m;
+
+        /* renamed from: n */
+        public boolean f7768n;
+
+        /* renamed from: o */
+        public boolean f7769o;
+
+        /* renamed from: p */
+        public AbstractC1137e f7770p;
+
+        /* renamed from: q */
+        public CharSequence f7771q;
+
+        /* renamed from: r */
+        public CharSequence f7772r;
+
+        /* renamed from: s */
+        public CharSequence[] f7773s;
+
+        /* renamed from: t */
+        public int f7774t;
+
+        /* renamed from: u */
+        public int f7775u;
+
+        /* renamed from: v */
+        public boolean f7776v;
+
+        /* renamed from: w */
+        public String f7777w;
+
+        /* renamed from: x */
+        public boolean f7778x;
+
+        /* renamed from: y */
+        public String f7779y;
+
+        /* renamed from: z */
+        public boolean f7780z;
 
         @Deprecated
-        public d(Context context) {
+        public C1136d(Context context) {
             this(context, null);
         }
 
-        public d(Context context, String str) {
-            this.b = new ArrayList<>();
-            this.c = new ArrayList<>();
-            this.d = new ArrayList<>();
-            this.n = true;
-            this.z = false;
-            this.E = 0;
-            this.F = 0;
-            this.L = 0;
-            this.O = 0;
-            this.P = 0;
+        public C1136d(Context context, String str) {
+            this.f7756b = new ArrayList<>();
+            this.f7757c = new ArrayList<>();
+            this.f7758d = new ArrayList<>();
+            this.f7768n = true;
+            this.f7780z = false;
+            this.f7738E = 0;
+            this.f7739F = 0;
+            this.f7745L = 0;
+            this.f7748O = 0;
+            this.f7749P = 0;
             Notification notification = new Notification();
-            this.R = notification;
-            this.a = context;
-            this.K = str;
+            this.f7751R = notification;
+            this.f7755a = context;
+            this.f7744K = str;
             notification.when = System.currentTimeMillis();
-            this.R.audioStreamType = -1;
-            this.m = 0;
-            this.U = new ArrayList<>();
-            this.Q = true;
+            this.f7751R.audioStreamType = -1;
+            this.f7767m = 0;
+            this.f7754U = new ArrayList<>();
+            this.f7750Q = true;
         }
 
-        public static CharSequence d(CharSequence charSequence) {
+        /* renamed from: d */
+        public static CharSequence m23974d(CharSequence charSequence) {
             return (charSequence != null && charSequence.length() > 5120) ? charSequence.subSequence(0, 5120) : charSequence;
         }
 
-        public d a(int i, CharSequence charSequence, PendingIntent pendingIntent) {
-            this.b.add(new a(i, charSequence, pendingIntent));
+        /* renamed from: a */
+        public C1136d m23977a(int i, CharSequence charSequence, PendingIntent pendingIntent) {
+            this.f7756b.add(new C1133a(i, charSequence, pendingIntent));
             return this;
         }
 
-        public Notification b() {
-            return new et0(this).c();
+        /* renamed from: b */
+        public Notification m23976b() {
+            return new et0(this).m23206c();
         }
 
-        public Bundle c() {
-            if (this.D == null) {
-                this.D = new Bundle();
+        /* renamed from: c */
+        public Bundle m23975c() {
+            if (this.f7737D == null) {
+                this.f7737D = new Bundle();
             }
-            return this.D;
+            return this.f7737D;
         }
 
-        public d e(boolean z) {
-            k(16, z);
+        /* renamed from: e */
+        public C1136d m23973e(boolean z) {
+            m23967k(16, z);
             return this;
         }
 
-        public d f(String str) {
-            this.K = str;
+        /* renamed from: f */
+        public C1136d m23972f(String str) {
+            this.f7744K = str;
             return this;
         }
 
-        public d g(PendingIntent pendingIntent) {
-            this.g = pendingIntent;
+        /* renamed from: g */
+        public C1136d m23971g(PendingIntent pendingIntent) {
+            this.f7761g = pendingIntent;
             return this;
         }
 
-        public d h(CharSequence charSequence) {
-            this.f = d(charSequence);
+        /* renamed from: h */
+        public C1136d m23970h(CharSequence charSequence) {
+            this.f7760f = m23974d(charSequence);
             return this;
         }
 
-        public d i(CharSequence charSequence) {
-            this.e = d(charSequence);
+        /* renamed from: i */
+        public C1136d m23969i(CharSequence charSequence) {
+            this.f7759e = m23974d(charSequence);
             return this;
         }
 
-        public d j(PendingIntent pendingIntent) {
-            this.R.deleteIntent = pendingIntent;
+        /* renamed from: j */
+        public C1136d m23968j(PendingIntent pendingIntent) {
+            this.f7751R.deleteIntent = pendingIntent;
             return this;
         }
 
-        public final void k(int i, boolean z) {
+        /* renamed from: k */
+        public final void m23967k(int i, boolean z) {
             Notification notification;
             int i2;
             if (z) {
-                notification = this.R;
+                notification = this.f7751R;
                 i2 = i | notification.flags;
             } else {
-                notification = this.R;
+                notification = this.f7751R;
                 i2 = (i ^ (-1)) & notification.flags;
             }
             notification.flags = i2;
         }
 
-        public d l(boolean z) {
-            this.z = z;
+        /* renamed from: l */
+        public C1136d m23966l(boolean z) {
+            this.f7780z = z;
             return this;
         }
 
-        public d m(int i) {
-            this.m = i;
+        /* renamed from: m */
+        public C1136d m23965m(int i) {
+            this.f7767m = i;
             return this;
         }
 
-        public d n(int i) {
-            this.R.icon = i;
+        /* renamed from: n */
+        public C1136d m23964n(int i) {
+            this.f7751R.icon = i;
             return this;
         }
 
-        public d o(e eVar) {
-            if (this.p != eVar) {
-                this.p = eVar;
-                if (eVar != null) {
-                    eVar.g(this);
+        /* renamed from: o */
+        public C1136d m23963o(AbstractC1137e abstractC1137e) {
+            if (this.f7770p != abstractC1137e) {
+                this.f7770p = abstractC1137e;
+                if (abstractC1137e != null) {
+                    abstractC1137e.m23954g(this);
                 }
             }
             return this;
         }
 
-        public d p(CharSequence charSequence) {
-            this.R.tickerText = d(charSequence);
+        /* renamed from: p */
+        public C1136d m23962p(CharSequence charSequence) {
+            this.f7751R.tickerText = m23974d(charSequence);
             return this;
         }
 
-        public d q(long j) {
-            this.R.when = j;
+        /* renamed from: q */
+        public C1136d m23961q(long j) {
+            this.f7751R.when = j;
             return this;
         }
     }
 
+    /* renamed from: com.daaw.dt0$e */
     /* loaded from: classes.dex */
-    public static abstract class e {
-        public d a;
-        public CharSequence b;
-        public CharSequence c;
-        public boolean d = false;
+    public static abstract class AbstractC1137e {
 
-        public void a(Bundle bundle) {
-            if (this.d) {
-                bundle.putCharSequence("android.summaryText", this.c);
+        /* renamed from: a */
+        public C1136d f7781a;
+
+        /* renamed from: b */
+        public CharSequence f7782b;
+
+        /* renamed from: c */
+        public CharSequence f7783c;
+
+        /* renamed from: d */
+        public boolean f7784d = false;
+
+        /* renamed from: a */
+        public void mo23960a(Bundle bundle) {
+            if (this.f7784d) {
+                bundle.putCharSequence("android.summaryText", this.f7783c);
             }
-            CharSequence charSequence = this.b;
+            CharSequence charSequence = this.f7782b;
             if (charSequence != null) {
                 bundle.putCharSequence("android.title.big", charSequence);
             }
-            String c = c();
-            if (c != null) {
-                bundle.putString("androidx.core.app.extra.COMPAT_TEMPLATE", c);
+            String mo23958c = mo23958c();
+            if (mo23958c != null) {
+                bundle.putString("androidx.core.app.extra.COMPAT_TEMPLATE", mo23958c);
             }
         }
 
-        public abstract void b(ct0 ct0Var);
+        /* renamed from: b */
+        public abstract void mo23959b(ct0 ct0Var);
 
-        public abstract String c();
+        /* renamed from: c */
+        public abstract String mo23958c();
 
-        public RemoteViews d(ct0 ct0Var) {
+        /* renamed from: d */
+        public RemoteViews m23957d(ct0 ct0Var) {
             return null;
         }
 
-        public RemoteViews e(ct0 ct0Var) {
+        /* renamed from: e */
+        public RemoteViews m23956e(ct0 ct0Var) {
             return null;
         }
 
-        public RemoteViews f(ct0 ct0Var) {
+        /* renamed from: f */
+        public RemoteViews m23955f(ct0 ct0Var) {
             return null;
         }
 
-        public void g(d dVar) {
-            if (this.a != dVar) {
-                this.a = dVar;
-                if (dVar != null) {
-                    dVar.o(this);
+        /* renamed from: g */
+        public void m23954g(C1136d c1136d) {
+            if (this.f7781a != c1136d) {
+                this.f7781a = c1136d;
+                if (c1136d != null) {
+                    c1136d.m23963o(this);
                 }
             }
         }
     }
 
-    public static Bundle a(Notification notification) {
+    /* renamed from: a */
+    public static Bundle m23991a(Notification notification) {
         return notification.extras;
     }
 }

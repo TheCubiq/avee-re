@@ -15,8 +15,12 @@ import java.util.Map;
 @Deprecated
 /* loaded from: classes2.dex */
 public class AppMeasurement {
-    public static volatile AppMeasurement b;
-    public final uk4 a;
+
+    /* renamed from: b */
+    public static volatile AppMeasurement f37049b;
+
+    /* renamed from: a */
+    public final uk4 f37050a;
 
     /* loaded from: classes2.dex */
     public static class ConditionalUserProperty {
@@ -57,32 +61,32 @@ public class AppMeasurement {
         }
 
         public ConditionalUserProperty(Bundle bundle) {
-            ry0.j(bundle);
-            this.mAppId = (String) ag7.a(bundle, "app_id", String.class, null);
-            this.mOrigin = (String) ag7.a(bundle, "origin", String.class, null);
-            this.mName = (String) ag7.a(bundle, "name", String.class, null);
-            this.mValue = ag7.a(bundle, "value", Object.class, null);
-            this.mTriggerEventName = (String) ag7.a(bundle, "trigger_event_name", String.class, null);
-            this.mTriggerTimeout = ((Long) ag7.a(bundle, "trigger_timeout", Long.class, 0L)).longValue();
-            this.mTimedOutEventName = (String) ag7.a(bundle, "timed_out_event_name", String.class, null);
-            this.mTimedOutEventParams = (Bundle) ag7.a(bundle, "timed_out_event_params", Bundle.class, null);
-            this.mTriggeredEventName = (String) ag7.a(bundle, "triggered_event_name", String.class, null);
-            this.mTriggeredEventParams = (Bundle) ag7.a(bundle, "triggered_event_params", Bundle.class, null);
-            this.mTimeToLive = ((Long) ag7.a(bundle, "time_to_live", Long.class, 0L)).longValue();
-            this.mExpiredEventName = (String) ag7.a(bundle, "expired_event_name", String.class, null);
-            this.mExpiredEventParams = (Bundle) ag7.a(bundle, "expired_event_params", Bundle.class, null);
-            this.mActive = ((Boolean) ag7.a(bundle, "active", Boolean.class, Boolean.FALSE)).booleanValue();
-            this.mCreationTimestamp = ((Long) ag7.a(bundle, "creation_timestamp", Long.class, 0L)).longValue();
-            this.mTriggeredTimestamp = ((Long) ag7.a(bundle, "triggered_timestamp", Long.class, 0L)).longValue();
+            ry0.m10830j(bundle);
+            this.mAppId = (String) ag7.m27483a(bundle, "app_id", String.class, null);
+            this.mOrigin = (String) ag7.m27483a(bundle, "origin", String.class, null);
+            this.mName = (String) ag7.m27483a(bundle, "name", String.class, null);
+            this.mValue = ag7.m27483a(bundle, "value", Object.class, null);
+            this.mTriggerEventName = (String) ag7.m27483a(bundle, "trigger_event_name", String.class, null);
+            this.mTriggerTimeout = ((Long) ag7.m27483a(bundle, "trigger_timeout", Long.class, 0L)).longValue();
+            this.mTimedOutEventName = (String) ag7.m27483a(bundle, "timed_out_event_name", String.class, null);
+            this.mTimedOutEventParams = (Bundle) ag7.m27483a(bundle, "timed_out_event_params", Bundle.class, null);
+            this.mTriggeredEventName = (String) ag7.m27483a(bundle, "triggered_event_name", String.class, null);
+            this.mTriggeredEventParams = (Bundle) ag7.m27483a(bundle, "triggered_event_params", Bundle.class, null);
+            this.mTimeToLive = ((Long) ag7.m27483a(bundle, "time_to_live", Long.class, 0L)).longValue();
+            this.mExpiredEventName = (String) ag7.m27483a(bundle, "expired_event_name", String.class, null);
+            this.mExpiredEventParams = (Bundle) ag7.m27483a(bundle, "expired_event_params", Bundle.class, null);
+            this.mActive = ((Boolean) ag7.m27483a(bundle, "active", Boolean.class, Boolean.FALSE)).booleanValue();
+            this.mCreationTimestamp = ((Long) ag7.m27483a(bundle, "creation_timestamp", Long.class, 0L)).longValue();
+            this.mTriggeredTimestamp = ((Long) ag7.m27483a(bundle, "triggered_timestamp", Long.class, 0L)).longValue();
         }
     }
 
     public AppMeasurement(dr6 dr6Var) {
-        this.a = new d32(dr6Var);
+        this.f37050a = new d32(dr6Var);
     }
 
     public AppMeasurement(s28 s28Var) {
-        this.a = new zx2(s28Var);
+        this.f37050a = new zx2(s28Var);
     }
 
     /*  JADX ERROR: JadxRuntimeException in pass: BlockProcessor
@@ -95,11 +99,11 @@ public class AppMeasurement {
     @java.lang.Deprecated
     public static com.google.android.gms.measurement.AppMeasurement getInstance(android.content.Context r14) {
         /*
-            com.google.android.gms.measurement.AppMeasurement r0 = com.google.android.gms.measurement.AppMeasurement.b
+            com.google.android.gms.measurement.AppMeasurement r0 = com.google.android.gms.measurement.AppMeasurement.f37049b
             if (r0 != 0) goto L59
             java.lang.Class<com.google.android.gms.measurement.AppMeasurement> r0 = com.google.android.gms.measurement.AppMeasurement.class
             monitor-enter(r0)
-            com.google.android.gms.measurement.AppMeasurement r1 = com.google.android.gms.measurement.AppMeasurement.b     // Catch: java.lang.Throwable -> L56
+            com.google.android.gms.measurement.AppMeasurement r1 = com.google.android.gms.measurement.AppMeasurement.f37049b     // Catch: java.lang.Throwable -> L56
             if (r1 != 0) goto L54
             r1 = 0
             java.lang.Class<com.google.firebase.analytics.FirebaseAnalytics> r2 = com.google.firebase.analytics.FirebaseAnalytics.class
@@ -125,7 +129,7 @@ public class AppMeasurement {
             if (r2 == 0) goto L39
             com.google.android.gms.measurement.AppMeasurement r14 = new com.google.android.gms.measurement.AppMeasurement     // Catch: java.lang.Throwable -> L56
             r14.<init>(r2)     // Catch: java.lang.Throwable -> L56
-            com.google.android.gms.measurement.AppMeasurement.b = r14     // Catch: java.lang.Throwable -> L56
+            com.google.android.gms.measurement.AppMeasurement.f37049b = r14     // Catch: java.lang.Throwable -> L56
             goto L54
         L39:
             com.google.android.gms.internal.measurement.zzcl r13 = new com.google.android.gms.internal.measurement.zzcl     // Catch: java.lang.Throwable -> L56
@@ -139,10 +143,10 @@ public class AppMeasurement {
             r12 = 0
             r2 = r13
             r2.<init>(r3, r5, r7, r8, r9, r10, r11, r12)     // Catch: java.lang.Throwable -> L56
-            com.daaw.dr6 r14 = com.daaw.dr6.H(r14, r13, r1)     // Catch: java.lang.Throwable -> L56
+            com.daaw.dr6 r14 = com.daaw.dr6.m24051H(r14, r13, r1)     // Catch: java.lang.Throwable -> L56
             com.google.android.gms.measurement.AppMeasurement r1 = new com.google.android.gms.measurement.AppMeasurement     // Catch: java.lang.Throwable -> L56
             r1.<init>(r14)     // Catch: java.lang.Throwable -> L56
-            com.google.android.gms.measurement.AppMeasurement.b = r1     // Catch: java.lang.Throwable -> L56
+            com.google.android.gms.measurement.AppMeasurement.f37049b = r1     // Catch: java.lang.Throwable -> L56
         L54:
             monitor-exit(r0)     // Catch: java.lang.Throwable -> L56
             goto L59
@@ -151,7 +155,7 @@ public class AppMeasurement {
             monitor-exit(r0)     // Catch: java.lang.Throwable -> L56
             throw r14
         L59:
-            com.google.android.gms.measurement.AppMeasurement r14 = com.google.android.gms.measurement.AppMeasurement.b
+            com.google.android.gms.measurement.AppMeasurement r14 = com.google.android.gms.measurement.AppMeasurement.f37049b
             return r14
         */
         throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.measurement.AppMeasurement.getInstance(android.content.Context):com.google.android.gms.measurement.AppMeasurement");
@@ -159,34 +163,34 @@ public class AppMeasurement {
 
     @Keep
     public void beginAdUnitExposure(String str) {
-        this.a.r(str);
+        this.f37050a.mo1801r(str);
     }
 
     @Keep
     public void clearConditionalUserProperty(String str, String str2, Bundle bundle) {
-        this.a.e(str, str2, bundle);
+        this.f37050a.mo1802e(str, str2, bundle);
     }
 
     @Keep
     public void endAdUnitExposure(String str) {
-        this.a.zzr(str);
+        this.f37050a.zzr(str);
     }
 
     @Keep
     public long generateEventId() {
-        return this.a.zzb();
+        return this.f37050a.zzb();
     }
 
     @Keep
     public String getAppInstanceId() {
-        return this.a.zzh();
+        return this.f37050a.zzh();
     }
 
     @Keep
     public List<ConditionalUserProperty> getConditionalUserProperties(String str, String str2) {
-        List<Bundle> a = this.a.a(str, str2);
-        ArrayList arrayList = new ArrayList(a == null ? 0 : a.size());
-        for (Bundle bundle : a) {
+        List<Bundle> mo1806a = this.f37050a.mo1806a(str, str2);
+        ArrayList arrayList = new ArrayList(mo1806a == null ? 0 : mo1806a.size());
+        for (Bundle bundle : mo1806a) {
             arrayList.add(new ConditionalUserProperty(bundle));
         }
         return arrayList;
@@ -194,38 +198,38 @@ public class AppMeasurement {
 
     @Keep
     public String getCurrentScreenClass() {
-        return this.a.zzi();
+        return this.f37050a.zzi();
     }
 
     @Keep
     public String getCurrentScreenName() {
-        return this.a.zzj();
+        return this.f37050a.zzj();
     }
 
     @Keep
     public String getGmpAppId() {
-        return this.a.zzk();
+        return this.f37050a.zzk();
     }
 
     @Keep
     public int getMaxUserProperties(String str) {
-        return this.a.zza(str);
+        return this.f37050a.zza(str);
     }
 
     @Keep
     public Map<String, Object> getUserProperties(String str, String str2, boolean z) {
-        return this.a.b(str, str2, z);
+        return this.f37050a.mo1805b(str, str2, z);
     }
 
     @Keep
     public void logEventInternal(String str, String str2, Bundle bundle) {
-        this.a.d(str, str2, bundle);
+        this.f37050a.mo1803d(str, str2, bundle);
     }
 
     @Keep
     public void setConditionalUserProperty(ConditionalUserProperty conditionalUserProperty) {
-        ry0.j(conditionalUserProperty);
-        uk4 uk4Var = this.a;
+        ry0.m10830j(conditionalUserProperty);
+        uk4 uk4Var = this.f37050a;
         Bundle bundle = new Bundle();
         String str = conditionalUserProperty.mAppId;
         if (str != null) {
@@ -241,7 +245,7 @@ public class AppMeasurement {
         }
         Object obj = conditionalUserProperty.mValue;
         if (obj != null) {
-            ag7.b(bundle, obj);
+            ag7.m27482b(bundle, obj);
         }
         String str4 = conditionalUserProperty.mTriggerEventName;
         if (str4 != null) {
@@ -276,6 +280,6 @@ public class AppMeasurement {
         bundle.putLong("creation_timestamp", conditionalUserProperty.mCreationTimestamp);
         bundle.putBoolean("active", conditionalUserProperty.mActive);
         bundle.putLong("triggered_timestamp", conditionalUserProperty.mTriggeredTimestamp);
-        uk4Var.c(bundle);
+        uk4Var.mo1804c(bundle);
     }
 }

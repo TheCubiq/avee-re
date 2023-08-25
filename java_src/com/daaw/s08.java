@@ -4,16 +4,19 @@ import android.net.Uri;
 import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public final class s08 {
-    public final cd1 a;
+
+    /* renamed from: a */
+    public final cd1 f25755a;
 
     public s08(cd1 cd1Var) {
-        this.a = cd1Var;
+        this.f25755a = cd1Var;
     }
 
     @Nullable
-    public final String a(@Nullable Uri uri, @Nullable String str, @Nullable String str2, String str3) {
+    /* renamed from: a */
+    public final String m10800a(@Nullable Uri uri, @Nullable String str, @Nullable String str2, String str3) {
         if (uri != null) {
-            cd1 cd1Var = (cd1) this.a.get(uri.toString());
+            cd1 cd1Var = (cd1) this.f25755a.get(uri.toString());
             if (cd1Var == null) {
                 return null;
             }

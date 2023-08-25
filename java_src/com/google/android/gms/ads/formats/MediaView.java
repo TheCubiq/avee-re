@@ -9,8 +9,12 @@ import com.google.android.gms.ads.MediaContent;
 @Deprecated
 /* loaded from: classes.dex */
 public class MediaView extends FrameLayout {
-    public MediaContent p;
-    public ImageView.ScaleType q;
+
+    /* renamed from: p */
+    public MediaContent f36053p;
+
+    /* renamed from: q */
+    public ImageView.ScaleType f36054q;
 
     public MediaView(Context context) {
         super(context);
@@ -30,10 +34,10 @@ public class MediaView extends FrameLayout {
     }
 
     public void setImageScaleType(ImageView.ScaleType scaleType) {
-        this.q = scaleType;
+        this.f36054q = scaleType;
     }
 
     public void setMediaContent(MediaContent mediaContent) {
-        this.p = mediaContent;
+        this.f36053p = mediaContent;
     }
 }

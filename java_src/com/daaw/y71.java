@@ -8,81 +8,71 @@ import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class y71 {
 
+    /* renamed from: com.daaw.y71$a */
     /* loaded from: classes.dex */
-    public static class a extends RuntimeException {
+    public static class C3677a extends RuntimeException {
         /* JADX WARN: Illegal instructions before constructor call */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
         */
-        public a(java.lang.String r3, android.os.Parcel r4) {
-            /*
-                r2 = this;
-                int r0 = r4.dataPosition()
-                int r4 = r4.dataSize()
-                java.lang.StringBuilder r1 = new java.lang.StringBuilder
-                r1.<init>()
-                r1.append(r3)
-                java.lang.String r3 = " Parcel: pos="
-                r1.append(r3)
-                r1.append(r0)
-                java.lang.String r3 = " size="
-                r1.append(r3)
-                r1.append(r4)
-                java.lang.String r3 = r1.toString()
-                r2.<init>(r3)
-                return
-            */
-            throw new UnsupportedOperationException("Method not decompiled: com.daaw.y71.a.<init>(java.lang.String, android.os.Parcel):void");
+        public C3677a(String str, Parcel parcel) {
+            super(str + " Parcel: pos=" + r0 + " size=" + r4);
+            int dataPosition = parcel.dataPosition();
+            int dataSize = parcel.dataSize();
         }
     }
 
-    public static void A(Parcel parcel, int i, int i2) {
-        int w = w(parcel, i);
-        if (w == i2) {
+    /* renamed from: A */
+    public static void m4059A(Parcel parcel, int i, int i2) {
+        int m4036w = m4036w(parcel, i);
+        if (m4036w == i2) {
             return;
         }
-        String hexString = Integer.toHexString(w);
-        throw new a("Expected size " + i2 + " got " + w + " (0x" + hexString + ")", parcel);
+        String hexString = Integer.toHexString(m4036w);
+        throw new C3677a("Expected size " + i2 + " got " + m4036w + " (0x" + hexString + ")", parcel);
     }
 
-    public static Bundle a(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: a */
+    public static Bundle m4058a(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         Bundle readBundle = parcel.readBundle();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return readBundle;
     }
 
-    public static byte[] b(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: b */
+    public static byte[] m4057b(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         byte[] createByteArray = parcel.createByteArray();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return createByteArray;
     }
 
-    public static int[] c(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: c */
+    public static int[] m4056c(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         int[] createIntArray = parcel.createIntArray();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return createIntArray;
     }
 
-    public static ArrayList<Integer> d(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: d */
+    public static ArrayList<Integer> m4055d(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -90,185 +80,207 @@ public class y71 {
         for (int i2 = 0; i2 < readInt; i2++) {
             arrayList.add(Integer.valueOf(parcel.readInt()));
         }
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return arrayList;
     }
 
-    public static <T extends Parcelable> T e(Parcel parcel, int i, Parcelable.Creator<T> creator) {
-        int w = w(parcel, i);
+    /* renamed from: e */
+    public static <T extends Parcelable> T m4054e(Parcel parcel, int i, Parcelable.Creator<T> creator) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         T createFromParcel = creator.createFromParcel(parcel);
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return createFromParcel;
     }
 
-    public static String f(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: f */
+    public static String m4053f(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         String readString = parcel.readString();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return readString;
     }
 
-    public static String[] g(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: g */
+    public static String[] m4052g(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         String[] createStringArray = parcel.createStringArray();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return createStringArray;
     }
 
-    public static ArrayList<String> h(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: h */
+    public static ArrayList<String> m4051h(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         ArrayList<String> createStringArrayList = parcel.createStringArrayList();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return createStringArrayList;
     }
 
-    public static <T> T[] i(Parcel parcel, int i, Parcelable.Creator<T> creator) {
-        int w = w(parcel, i);
+    /* renamed from: i */
+    public static <T> T[] m4050i(Parcel parcel, int i, Parcelable.Creator<T> creator) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         T[] tArr = (T[]) parcel.createTypedArray(creator);
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return tArr;
     }
 
-    public static <T> ArrayList<T> j(Parcel parcel, int i, Parcelable.Creator<T> creator) {
-        int w = w(parcel, i);
+    /* renamed from: j */
+    public static <T> ArrayList<T> m4049j(Parcel parcel, int i, Parcelable.Creator<T> creator) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         ArrayList<T> createTypedArrayList = parcel.createTypedArrayList(creator);
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return createTypedArrayList;
     }
 
-    public static void k(Parcel parcel, int i) {
+    /* renamed from: k */
+    public static void m4048k(Parcel parcel, int i) {
         if (parcel.dataPosition() == i) {
             return;
         }
-        throw new a("Overread allowed size end=" + i, parcel);
+        throw new C3677a("Overread allowed size end=" + i, parcel);
     }
 
-    public static int l(int i) {
+    /* renamed from: l */
+    public static int m4047l(int i) {
         return (char) i;
     }
 
-    public static boolean m(Parcel parcel, int i) {
-        A(parcel, i, 4);
+    /* renamed from: m */
+    public static boolean m4046m(Parcel parcel, int i) {
+        m4059A(parcel, i, 4);
         return parcel.readInt() != 0;
     }
 
-    public static Boolean n(Parcel parcel, int i) {
-        int w = w(parcel, i);
-        if (w == 0) {
+    /* renamed from: n */
+    public static Boolean m4045n(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
+        if (m4036w == 0) {
             return null;
         }
-        z(parcel, i, w, 4);
+        m4033z(parcel, i, m4036w, 4);
         return Boolean.valueOf(parcel.readInt() != 0);
     }
 
-    public static Double o(Parcel parcel, int i) {
-        int w = w(parcel, i);
-        if (w == 0) {
+    /* renamed from: o */
+    public static Double m4044o(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
+        if (m4036w == 0) {
             return null;
         }
-        z(parcel, i, w, 8);
+        m4033z(parcel, i, m4036w, 8);
         return Double.valueOf(parcel.readDouble());
     }
 
-    public static float p(Parcel parcel, int i) {
-        A(parcel, i, 4);
+    /* renamed from: p */
+    public static float m4043p(Parcel parcel, int i) {
+        m4059A(parcel, i, 4);
         return parcel.readFloat();
     }
 
-    public static Float q(Parcel parcel, int i) {
-        int w = w(parcel, i);
-        if (w == 0) {
+    /* renamed from: q */
+    public static Float m4042q(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
+        if (m4036w == 0) {
             return null;
         }
-        z(parcel, i, w, 4);
+        m4033z(parcel, i, m4036w, 4);
         return Float.valueOf(parcel.readFloat());
     }
 
-    public static int r(Parcel parcel) {
+    /* renamed from: r */
+    public static int m4041r(Parcel parcel) {
         return parcel.readInt();
     }
 
-    public static IBinder s(Parcel parcel, int i) {
-        int w = w(parcel, i);
+    /* renamed from: s */
+    public static IBinder m4040s(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
         int dataPosition = parcel.dataPosition();
-        if (w == 0) {
+        if (m4036w == 0) {
             return null;
         }
         IBinder readStrongBinder = parcel.readStrongBinder();
-        parcel.setDataPosition(dataPosition + w);
+        parcel.setDataPosition(dataPosition + m4036w);
         return readStrongBinder;
     }
 
-    public static int t(Parcel parcel, int i) {
-        A(parcel, i, 4);
+    /* renamed from: t */
+    public static int m4039t(Parcel parcel, int i) {
+        m4059A(parcel, i, 4);
         return parcel.readInt();
     }
 
-    public static long u(Parcel parcel, int i) {
-        A(parcel, i, 8);
+    /* renamed from: u */
+    public static long m4038u(Parcel parcel, int i) {
+        m4059A(parcel, i, 8);
         return parcel.readLong();
     }
 
-    public static Long v(Parcel parcel, int i) {
-        int w = w(parcel, i);
-        if (w == 0) {
+    /* renamed from: v */
+    public static Long m4037v(Parcel parcel, int i) {
+        int m4036w = m4036w(parcel, i);
+        if (m4036w == 0) {
             return null;
         }
-        z(parcel, i, w, 8);
+        m4033z(parcel, i, m4036w, 8);
         return Long.valueOf(parcel.readLong());
     }
 
-    public static int w(Parcel parcel, int i) {
+    /* renamed from: w */
+    public static int m4036w(Parcel parcel, int i) {
         return (i & (-65536)) != -65536 ? (char) (i >> 16) : parcel.readInt();
     }
 
-    public static void x(Parcel parcel, int i) {
-        parcel.setDataPosition(parcel.dataPosition() + w(parcel, i));
+    /* renamed from: x */
+    public static void m4035x(Parcel parcel, int i) {
+        parcel.setDataPosition(parcel.dataPosition() + m4036w(parcel, i));
     }
 
-    public static int y(Parcel parcel) {
-        int r = r(parcel);
-        int w = w(parcel, r);
+    /* renamed from: y */
+    public static int m4034y(Parcel parcel) {
+        int m4041r = m4041r(parcel);
+        int m4036w = m4036w(parcel, m4041r);
         int dataPosition = parcel.dataPosition();
-        if (l(r) == 20293) {
-            int i = w + dataPosition;
+        if (m4047l(m4041r) == 20293) {
+            int i = m4036w + dataPosition;
             if (i < dataPosition || i > parcel.dataSize()) {
-                throw new a("Size read is invalid start=" + dataPosition + " end=" + i, parcel);
+                throw new C3677a("Size read is invalid start=" + dataPosition + " end=" + i, parcel);
             }
             return i;
         }
-        throw new a("Expected object header. Got 0x".concat(String.valueOf(Integer.toHexString(r))), parcel);
+        throw new C3677a("Expected object header. Got 0x".concat(String.valueOf(Integer.toHexString(m4041r))), parcel);
     }
 
-    public static void z(Parcel parcel, int i, int i2, int i3) {
+    /* renamed from: z */
+    public static void m4033z(Parcel parcel, int i, int i2, int i3) {
         if (i2 == i3) {
             return;
         }
         String hexString = Integer.toHexString(i2);
-        throw new a("Expected size " + i3 + " got " + i2 + " (0x" + hexString + ")", parcel);
+        throw new C3677a("Expected size " + i3 + " got " + i2 + " (0x" + hexString + ")", parcel);
     }
 }

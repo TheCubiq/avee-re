@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class z84 extends cp2 implements a94 {
-    public static a94 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static a94 m2623g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

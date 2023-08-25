@@ -4,66 +4,94 @@ import android.content.Context;
 import android.view.TextureView;
 /* loaded from: classes.dex */
 public abstract class e24 extends TextureView implements e34 {
-    public final s24 p;
-    public final f34 q;
-    public final Integer r;
+
+    /* renamed from: p */
+    public final s24 f8052p;
+
+    /* renamed from: q */
+    public final f34 f8053q;
+
+    /* renamed from: r */
+    public final Integer f8054r;
 
     public e24(Context context, Integer num) {
         super(context);
-        this.p = new s24();
-        this.q = new f34(context, this);
-        this.r = num;
+        this.f8052p = new s24();
+        this.f8053q = new f34(context, this);
+        this.f8054r = num;
     }
 
-    public void A(int i) {
+    /* renamed from: A */
+    public void mo9600A(int i) {
     }
 
-    public void a(int i) {
+    /* renamed from: a */
+    public void mo9574a(int i) {
     }
 
-    public void b(String str, String[] strArr) {
-        u(str);
+    /* renamed from: b */
+    public void mo9572b(String str, String[] strArr) {
+        mo9552u(str);
     }
 
-    public abstract int h();
+    /* renamed from: h */
+    public abstract int mo9565h();
 
-    public abstract int i();
+    /* renamed from: i */
+    public abstract int mo9564i();
 
-    public abstract int j();
+    /* renamed from: j */
+    public abstract int mo9563j();
 
-    public abstract int k();
+    /* renamed from: k */
+    public abstract int mo9562k();
 
-    public abstract int l();
+    /* renamed from: l */
+    public abstract int mo9561l();
 
-    public abstract long m();
+    /* renamed from: m */
+    public abstract long mo9560m();
 
-    public abstract long n();
+    /* renamed from: n */
+    public abstract long mo9559n();
 
-    public abstract long o();
+    /* renamed from: o */
+    public abstract long mo9558o();
 
-    public abstract String p();
+    /* renamed from: p */
+    public abstract String mo9557p();
 
-    public abstract void q();
+    /* renamed from: q */
+    public abstract void mo9556q();
 
-    public abstract void r();
+    /* renamed from: r */
+    public abstract void mo9555r();
 
-    public abstract void s(int i);
+    /* renamed from: s */
+    public abstract void mo9554s(int i);
 
-    public abstract void t(d24 d24Var);
+    /* renamed from: t */
+    public abstract void mo9553t(d24 d24Var);
 
-    public abstract void u(String str);
+    /* renamed from: u */
+    public abstract void mo9552u(String str);
 
-    public abstract void v();
+    /* renamed from: v */
+    public abstract void mo9551v();
 
-    public abstract void w(float f, float f2);
+    /* renamed from: w */
+    public abstract void mo9550w(float f, float f2);
 
-    public void x(int i) {
+    /* renamed from: x */
+    public void mo9549x(int i) {
     }
 
-    public void y(int i) {
+    /* renamed from: y */
+    public void mo9548y(int i) {
     }
 
-    public void z(int i) {
+    /* renamed from: z */
+    public void mo9547z(int i) {
     }
 
     public abstract void zzn();

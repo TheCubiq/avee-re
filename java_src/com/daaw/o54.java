@@ -6,18 +6,23 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class o54 {
-    public final ArrayList a = new ArrayList();
-    public long b;
 
-    public final long a() {
-        Iterator it = this.a.iterator();
+    /* renamed from: a */
+    public final ArrayList f21055a = new ArrayList();
+
+    /* renamed from: b */
+    public long f21056b;
+
+    /* renamed from: a */
+    public final long m14553a() {
+        Iterator it = this.f21055a.iterator();
         while (it.hasNext()) {
             Map zze = ((ox2) it.next()).zze();
             if (zze != null) {
                 for (Map.Entry entry : zze.entrySet()) {
                     try {
                         if ("content-length".equalsIgnoreCase((String) entry.getKey())) {
-                            this.b = Math.max(this.b, Long.parseLong((String) ((List) entry.getValue()).get(0)));
+                            this.f21056b = Math.max(this.f21056b, Long.parseLong((String) ((List) entry.getValue()).get(0)));
                         }
                     } catch (RuntimeException unused) {
                     }
@@ -25,10 +30,11 @@ public final class o54 {
                 it.remove();
             }
         }
-        return this.b;
+        return this.f21056b;
     }
 
-    public final void b(ox2 ox2Var) {
-        this.a.add(ox2Var);
+    /* renamed from: b */
+    public final void m14552b(ox2 ox2Var) {
+        this.f21055a.add(ox2Var);
     }
 }

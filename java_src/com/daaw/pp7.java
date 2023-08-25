@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface pp7 {
-    byte[] a(byte[] bArr);
+    /* renamed from: a */
+    byte[] mo13232a(byte[] bArr);
 
-    byte[] b(byte[] bArr);
+    /* renamed from: b */
+    byte[] mo13231b(byte[] bArr);
 }

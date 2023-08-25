@@ -4,14 +4,16 @@ import android.content.DialogInterface;
 import android.webkit.JsPromptResult;
 /* loaded from: classes.dex */
 public final class w64 implements DialogInterface.OnClickListener {
-    public final /* synthetic */ JsPromptResult p;
+
+    /* renamed from: p */
+    public final /* synthetic */ JsPromptResult f30922p;
 
     public w64(JsPromptResult jsPromptResult) {
-        this.p = jsPromptResult;
+        this.f30922p = jsPromptResult;
     }
 
     @Override // android.content.DialogInterface.OnClickListener
     public final void onClick(DialogInterface dialogInterface, int i) {
-        this.p.cancel();
+        this.f30922p.cancel();
     }
 }

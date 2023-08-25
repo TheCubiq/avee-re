@@ -3,27 +3,39 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class nx2 {
-    public int b;
-    public int c;
-    public int d = 0;
-    public hx2[] e = new hx2[100];
-    public final hx2[] a = new hx2[1];
+
+    /* renamed from: b */
+    public int f20819b;
+
+    /* renamed from: c */
+    public int f20820c;
+
+    /* renamed from: d */
+    public int f20821d = 0;
+
+    /* renamed from: e */
+    public hx2[] f20822e = new hx2[100];
+
+    /* renamed from: a */
+    public final hx2[] f20818a = new hx2[1];
 
     public nx2(boolean z, int i) {
     }
 
-    public final synchronized int a() {
-        return this.c * 65536;
+    /* renamed from: a */
+    public final synchronized int m14751a() {
+        return this.f20820c * 65536;
     }
 
-    public final synchronized hx2 b() {
+    /* renamed from: b */
+    public final synchronized hx2 m14750b() {
         hx2 hx2Var;
-        this.c++;
-        int i = this.d;
+        this.f20820c++;
+        int i = this.f20821d;
         if (i > 0) {
-            hx2[] hx2VarArr = this.e;
+            hx2[] hx2VarArr = this.f20822e;
             int i2 = i - 1;
-            this.d = i2;
+            this.f20821d = i2;
             hx2Var = hx2VarArr[i2];
             hx2VarArr[i2] = null;
         } else {
@@ -32,49 +44,54 @@ public final class nx2 {
         return hx2Var;
     }
 
-    public final synchronized void c(hx2 hx2Var) {
-        hx2[] hx2VarArr = this.a;
+    /* renamed from: c */
+    public final synchronized void m14749c(hx2 hx2Var) {
+        hx2[] hx2VarArr = this.f20818a;
         hx2VarArr[0] = hx2Var;
-        d(hx2VarArr);
+        m14748d(hx2VarArr);
     }
 
-    public final synchronized void d(hx2[] hx2VarArr) {
-        int length = this.d + hx2VarArr.length;
-        hx2[] hx2VarArr2 = this.e;
+    /* renamed from: d */
+    public final synchronized void m14748d(hx2[] hx2VarArr) {
+        int length = this.f20821d + hx2VarArr.length;
+        hx2[] hx2VarArr2 = this.f20822e;
         int length2 = hx2VarArr2.length;
         if (length >= length2) {
-            this.e = (hx2[]) Arrays.copyOf(hx2VarArr2, Math.max(length2 + length2, length));
+            this.f20822e = (hx2[]) Arrays.copyOf(hx2VarArr2, Math.max(length2 + length2, length));
         }
         for (hx2 hx2Var : hx2VarArr) {
-            byte[] bArr = hx2Var.a;
-            hx2[] hx2VarArr3 = this.e;
-            int i = this.d;
-            this.d = i + 1;
+            byte[] bArr = hx2Var.f13046a;
+            hx2[] hx2VarArr3 = this.f20822e;
+            int i = this.f20821d;
+            this.f20821d = i + 1;
             hx2VarArr3[i] = hx2Var;
         }
-        this.c -= hx2VarArr.length;
+        this.f20820c -= hx2VarArr.length;
         notifyAll();
     }
 
-    public final synchronized void e() {
-        f(0);
+    /* renamed from: e */
+    public final synchronized void m14747e() {
+        m14746f(0);
     }
 
-    public final synchronized void f(int i) {
-        int i2 = this.b;
-        this.b = i;
+    /* renamed from: f */
+    public final synchronized void m14746f(int i) {
+        int i2 = this.f20819b;
+        this.f20819b = i;
         if (i < i2) {
-            g();
+            m14745g();
         }
     }
 
-    public final synchronized void g() {
-        int max = Math.max(0, pz2.d(this.b, 65536) - this.c);
-        int i = this.d;
+    /* renamed from: g */
+    public final synchronized void m14745g() {
+        int max = Math.max(0, pz2.m12846d(this.f20819b, 65536) - this.f20820c);
+        int i = this.f20821d;
         if (max >= i) {
             return;
         }
-        Arrays.fill(this.e, max, i, (Object) null);
-        this.d = max;
+        Arrays.fill(this.f20822e, max, i, (Object) null);
+        this.f20821d = max;
     }
 }

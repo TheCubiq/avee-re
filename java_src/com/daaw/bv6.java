@@ -12,19 +12,22 @@ public final class bv6 implements zu6 {
     }
 
     @Override // com.daaw.zu6
-    public final ExecutorService a(int i) {
-        return b(1, Executors.defaultThreadFactory(), 2);
+    /* renamed from: a */
+    public final ExecutorService mo1869a(int i) {
+        return mo1868b(1, Executors.defaultThreadFactory(), 2);
     }
 
     @Override // com.daaw.zu6
-    public final ExecutorService b(int i, ThreadFactory threadFactory, int i2) {
+    /* renamed from: b */
+    public final ExecutorService mo1868b(int i, ThreadFactory threadFactory, int i2) {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(i, i, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), threadFactory);
         threadPoolExecutor.allowCoreThreadTimeOut(true);
         return Executors.unconfigurableExecutorService(threadPoolExecutor);
     }
 
     @Override // com.daaw.zu6
-    public final ExecutorService c(ThreadFactory threadFactory, int i) {
-        return b(1, threadFactory, 1);
+    /* renamed from: c */
+    public final ExecutorService mo1867c(ThreadFactory threadFactory, int i) {
+        return mo1868b(1, threadFactory, 1);
     }
 }

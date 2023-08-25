@@ -5,11 +5,14 @@ import java.util.List;
 @AutoValue
 /* loaded from: classes2.dex */
 public abstract class ya0 {
-    public static ya0 a(String str, List<String> list) {
-        return new e9(str, list);
+    /* renamed from: a */
+    public static ya0 m3962a(String str, List<String> list) {
+        return new C1170e9(str, list);
     }
 
-    public abstract List<String> b();
+    /* renamed from: b */
+    public abstract List<String> mo3961b();
 
-    public abstract String c();
+    /* renamed from: c */
+    public abstract String mo3960c();
 }

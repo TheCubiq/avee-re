@@ -10,25 +10,29 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.regex.Pattern;
 import org.conscrypt.NativeConstants;
 /* loaded from: classes.dex */
 public class cr1 {
 
+    /* renamed from: com.daaw.cr1$a */
     /* loaded from: classes.dex */
-    public class a implements MediaScannerConnection.OnScanCompletedListener {
+    public class C0991a implements MediaScannerConnection.OnScanCompletedListener {
         @Override // android.media.MediaScannerConnection.OnScanCompletedListener
         public void onScanCompleted(String str, Uri uri) {
         }
     }
 
+    /* renamed from: com.daaw.cr1$b */
     /* loaded from: classes.dex */
-    public static class b extends RuntimeException {
-        public b(String str) {
+    public static class C0992b extends RuntimeException {
+        public C0992b(String str) {
             super(str);
         }
     }
 
-    public static void a(InputStream inputStream, File file) {
+    /* renamed from: a */
+    public static void m25079a(InputStream inputStream, File file) {
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             byte[] bArr = new byte[NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV];
@@ -53,38 +57,43 @@ public class cr1 {
         }
     }
 
-    public static File b(File file, String str) {
-        String c = c(str);
-        String d = d(str);
+    /* renamed from: b */
+    public static File m25078b(File file, String str) {
+        String m25077c = m25077c(str);
+        String m25076d = m25076d(str);
         File file2 = new File(file, str);
         int i = 0;
         while (file2.exists()) {
             i++;
-            file2 = new File(file, d + " (" + i + ")" + c);
+            file2 = new File(file, m25076d + " (" + i + ")" + m25077c);
         }
         return file2;
     }
 
-    public static String c(String str) {
+    /* renamed from: c */
+    public static String m25077c(String str) {
         if (str == null || str.lastIndexOf(46) == -1) {
             return null;
         }
         return str.substring(str.lastIndexOf(46));
     }
 
-    public static String d(String str) {
+    /* renamed from: d */
+    public static String m25076d(String str) {
         int lastIndexOf = str.lastIndexOf(46);
         return lastIndexOf >= 0 ? str.substring(0, lastIndexOf) : str;
     }
 
-    public static void e(Context context) {
+    /* renamed from: e */
+    public static void m25075e(Context context) {
         try {
-            f(context.getCacheDir());
+            m25074f(context.getCacheDir());
         } catch (Exception unused) {
         }
     }
 
-    public static boolean f(File file) {
+    /* renamed from: f */
+    public static boolean m25074f(File file) {
         if (file == null || !file.isDirectory()) {
             if (file == null || !file.isFile()) {
                 return false;
@@ -92,14 +101,15 @@ public class cr1 {
             return file.delete();
         }
         for (File file2 : file.listFiles()) {
-            if (!f(file2)) {
+            if (!m25074f(file2)) {
                 return false;
             }
         }
         return file.delete();
     }
 
-    public static String g(String str) {
+    /* renamed from: g */
+    public static String m25073g(String str) {
         try {
             return str.substring(str.lastIndexOf("/") + 1);
         } catch (Exception unused) {
@@ -107,7 +117,8 @@ public class cr1 {
         }
     }
 
-    public static String h(String str, char c) {
+    /* renamed from: h */
+    public static String m25072h(String str, char c) {
         try {
             return str.substring(Math.max(str.lastIndexOf(47), Math.max(str.lastIndexOf(92), str.lastIndexOf(c))) + 1);
         } catch (Exception unused) {
@@ -115,11 +126,13 @@ public class cr1 {
         }
     }
 
-    public static String i(File file) {
-        return j(file.getName());
+    /* renamed from: i */
+    public static String m25071i(File file) {
+        return m25070j(file.getName());
     }
 
-    public static String j(String str) {
+    /* renamed from: j */
+    public static String m25070j(String str) {
         if (str != null) {
             try {
                 return str.substring(str.lastIndexOf(".") + 1).toLowerCase();
@@ -130,7 +143,8 @@ public class cr1 {
         return "";
     }
 
-    public static String k(String str) {
+    /* renamed from: k */
+    public static String m25069k(String str) {
         String str2 = "";
         if (str != null) {
             try {
@@ -142,7 +156,8 @@ public class cr1 {
         return "";
     }
 
-    public static String l(String str) {
+    /* renamed from: l */
+    public static String m25068l(String str) {
         try {
             str = str.substring(str.lastIndexOf("/") + 1);
         } catch (Exception unused) {
@@ -158,11 +173,13 @@ public class cr1 {
         return str;
     }
 
-    public static boolean m(String str) {
+    /* renamed from: m */
+    public static boolean m25067m(String str) {
         return new File(str).exists();
     }
 
-    public static String n(String str) {
+    /* renamed from: n */
+    public static String m25066n(String str) {
         return str.replaceAll("[^a-zA-Z0-9(){}.-]", "_");
     }
 
@@ -213,128 +230,36 @@ public class cr1 {
     /* JADX WARN: Code restructure failed: missing block: B:32:0x00a9, code lost:
         return r0.toString();
      */
+    /* renamed from: o */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static java.lang.String o(java.lang.String r9, java.lang.String r10, java.lang.String r11) {
-        /*
-            java.lang.String r0 = "/"
-            boolean r0 = r11.equals(r0)
-            java.lang.String r1 = "'"
-            if (r0 == 0) goto L13
-            java.lang.String r9 = s(r9)
-            java.lang.String r0 = s(r10)
-            goto L23
-        L13:
-            java.lang.String r0 = "\\"
-            boolean r0 = r11.equals(r0)
-            if (r0 == 0) goto Lcc
-            java.lang.String r9 = t(r9)
-            java.lang.String r0 = t(r10)
-        L23:
-            java.lang.String r2 = java.util.regex.Pattern.quote(r11)
-            java.lang.String[] r2 = r0.split(r2)
-            java.lang.String r3 = java.util.regex.Pattern.quote(r11)
-            java.lang.String[] r3 = r9.split(r3)
-            java.lang.StringBuffer r4 = new java.lang.StringBuffer
-            r4.<init>()
-            r5 = 0
-            r6 = 0
-        L3a:
-            int r7 = r3.length
-            if (r6 >= r7) goto L61
-            int r7 = r2.length
-            if (r6 >= r7) goto L61
-            r7 = r3[r6]
-            r8 = r2[r6]
-            boolean r7 = r7.equals(r8)
-            if (r7 == 0) goto L61
-            java.lang.StringBuilder r7 = new java.lang.StringBuilder
-            r7.<init>()
-            r8 = r3[r6]
-            r7.append(r8)
-            r7.append(r11)
-            java.lang.String r7 = r7.toString()
-            r4.append(r7)
-            int r6 = r6 + 1
-            goto L3a
-        L61:
-            if (r6 == 0) goto Laa
-            java.io.File r1 = new java.io.File
-            r1.<init>(r0)
-            boolean r0 = r1.exists()
-            r3 = 1
-            if (r0 == 0) goto L74
-            boolean r10 = r1.isFile()
-            goto L7d
-        L74:
-            boolean r10 = r10.endsWith(r11)
-            if (r10 == 0) goto L7c
-            r10 = 0
-            goto L7d
-        L7c:
-            r10 = 1
-        L7d:
-            java.lang.StringBuilder r0 = new java.lang.StringBuilder
-            r0.<init>()
-            int r1 = r2.length
-            if (r1 == r6) goto L9a
-            if (r10 == 0) goto L8b
-            int r10 = r2.length
-            int r10 = r10 - r6
-            int r10 = r10 - r3
-            goto L8d
-        L8b:
-            int r10 = r2.length
-            int r10 = r10 - r6
-        L8d:
-            if (r5 >= r10) goto L9a
-            java.lang.String r1 = ".."
-            r0.append(r1)
-            r0.append(r11)
-            int r5 = r5 + 1
-            goto L8d
-        L9a:
-            int r10 = r4.length()
-            java.lang.String r9 = r9.substring(r10)
-            r0.append(r9)
-            java.lang.String r9 = r0.toString()
-            return r9
-        Laa:
-            com.daaw.cr1$b r10 = new com.daaw.cr1$b
-            java.lang.StringBuilder r11 = new java.lang.StringBuilder
-            r11.<init>()
-            java.lang.String r2 = "No common path element found for '"
-            r11.append(r2)
-            r11.append(r9)
-            java.lang.String r9 = "' and '"
-            r11.append(r9)
-            r11.append(r0)
-            r11.append(r1)
-            java.lang.String r9 = r11.toString()
-            r10.<init>(r9)
-            throw r10
-        Lcc:
-            java.lang.IllegalArgumentException r9 = new java.lang.IllegalArgumentException
-            java.lang.StringBuilder r10 = new java.lang.StringBuilder
-            r10.<init>()
-            java.lang.String r0 = "Unrecognised dir separator '"
-            r10.append(r0)
-            r10.append(r11)
-            r10.append(r1)
-            java.lang.String r10 = r10.toString()
-            r9.<init>(r10)
-            goto Le7
-        Le6:
-            throw r9
-        Le7:
-            goto Le6
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.cr1.o(java.lang.String, java.lang.String, java.lang.String):java.lang.String");
+    public static String m25065o(String str, String str2, String str3) {
+        String m25060t;
+        String m25060t2;
+        if (str3.equals("/")) {
+            m25060t = m25061s(str);
+            m25060t2 = m25061s(str2);
+        } else if (!str3.equals("\\")) {
+            throw new IllegalArgumentException("Unrecognised dir separator '" + str3 + "'");
+        } else {
+            m25060t = m25060t(str);
+            m25060t2 = m25060t(str2);
+        }
+        String[] split = m25060t2.split(Pattern.quote(str3));
+        String[] split2 = m25060t.split(Pattern.quote(str3));
+        StringBuffer stringBuffer = new StringBuffer();
+        int i = 0;
+        int i2 = 0;
+        while (i2 < split2.length && i2 < split.length && split2[i2].equals(split[i2])) {
+            stringBuffer.append(split2[i2] + str3);
+            i2++;
+        }
+        throw new C0992b("No common path element found for '" + m25060t + "' and '" + m25060t2 + "'");
     }
 
-    public static String p(InputStream inputStream) {
+    /* renamed from: p */
+    public static String m25064p(InputStream inputStream) {
         try {
             char[] cArr = new char[NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV];
             StringBuilder sb = new StringBuilder(100000);
@@ -351,7 +276,8 @@ public class cr1 {
         }
     }
 
-    public static String q(Resources resources, int i) {
+    /* renamed from: q */
+    public static String m25063q(Resources resources, int i) {
         StringBuilder sb = new StringBuilder(128);
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(resources.openRawResource(i)));
@@ -374,15 +300,18 @@ public class cr1 {
         }
     }
 
-    public static void r(Context context, String str) {
-        MediaScannerConnection.scanFile(context, new String[]{str}, null, new a());
+    /* renamed from: r */
+    public static void m25062r(Context context, String str) {
+        MediaScannerConnection.scanFile(context, new String[]{str}, null, new C0991a());
     }
 
-    public static String s(String str) {
+    /* renamed from: s */
+    public static String m25061s(String str) {
         return (str == null || str.indexOf(92) == -1) ? str : str.replace('\\', '/');
     }
 
-    public static String t(String str) {
+    /* renamed from: t */
+    public static String m25060t(String str) {
         return (str == null || str.indexOf(47) == -1) ? str : str.replace('/', '\\');
     }
 }

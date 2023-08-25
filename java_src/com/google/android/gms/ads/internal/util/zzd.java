@@ -9,10 +9,10 @@ import com.daaw.k04;
 /* loaded from: classes.dex */
 public final class zzd {
     public static void zza(Context context) {
-        if (j04.k(context) && !j04.m()) {
+        if (j04.m19189k(context) && !j04.m19187m()) {
             f77 zzb = new as3(context).zzb();
             k04.zzi("Updating ad debug logging enablement.");
-            c14.a(zzb, "AdDebugLogUpdater.updateEnablement");
+            c14.m25685a(zzb, "AdDebugLogUpdater.updateEnablement");
         }
     }
 }

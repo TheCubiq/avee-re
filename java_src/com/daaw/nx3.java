@@ -3,28 +3,48 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class nx3 {
-    public static final th8 j = new th8() { // from class: com.daaw.nw3
-    };
-    public final Object a;
-    public final int b;
-    public final f53 c;
-    public final Object d;
-    public final int e;
-    public final long f;
-    public final long g;
-    public final int h;
-    public final int i;
 
-    public nx3(Object obj, int i, f53 f53Var, Object obj2, int i2, long j2, long j3, int i3, int i4) {
-        this.a = obj;
-        this.b = i;
-        this.c = f53Var;
-        this.d = obj2;
-        this.e = i2;
-        this.f = j2;
-        this.g = j3;
-        this.h = i3;
-        this.i = i4;
+    /* renamed from: j */
+    public static final th8 f20823j = new th8() { // from class: com.daaw.nw3
+    };
+
+    /* renamed from: a */
+    public final Object f20824a;
+
+    /* renamed from: b */
+    public final int f20825b;
+
+    /* renamed from: c */
+    public final f53 f20826c;
+
+    /* renamed from: d */
+    public final Object f20827d;
+
+    /* renamed from: e */
+    public final int f20828e;
+
+    /* renamed from: f */
+    public final long f20829f;
+
+    /* renamed from: g */
+    public final long f20830g;
+
+    /* renamed from: h */
+    public final int f20831h;
+
+    /* renamed from: i */
+    public final int f20832i;
+
+    public nx3(Object obj, int i, f53 f53Var, Object obj2, int i2, long j, long j2, int i3, int i4) {
+        this.f20824a = obj;
+        this.f20825b = i;
+        this.f20826c = f53Var;
+        this.f20827d = obj2;
+        this.f20828e = i2;
+        this.f20829f = j;
+        this.f20830g = j2;
+        this.f20831h = i3;
+        this.f20832i = i4;
     }
 
     public final boolean equals(Object obj) {
@@ -33,7 +53,7 @@ public final class nx3 {
         }
         if (obj != null && nx3.class == obj.getClass()) {
             nx3 nx3Var = (nx3) obj;
-            if (this.b == nx3Var.b && this.e == nx3Var.e && this.f == nx3Var.f && this.g == nx3Var.g && this.h == nx3Var.h && this.i == nx3Var.i && ky6.a(this.a, nx3Var.a) && ky6.a(this.d, nx3Var.d) && ky6.a(this.c, nx3Var.c)) {
+            if (this.f20825b == nx3Var.f20825b && this.f20828e == nx3Var.f20828e && this.f20829f == nx3Var.f20829f && this.f20830g == nx3Var.f20830g && this.f20831h == nx3Var.f20831h && this.f20832i == nx3Var.f20832i && ky6.m17316a(this.f20824a, nx3Var.f20824a) && ky6.m17316a(this.f20827d, nx3Var.f20827d) && ky6.m17316a(this.f20826c, nx3Var.f20826c)) {
                 return true;
             }
         }
@@ -41,6 +61,6 @@ public final class nx3 {
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new Object[]{this.a, Integer.valueOf(this.b), this.c, this.d, Integer.valueOf(this.e), Long.valueOf(this.f), Long.valueOf(this.g), Integer.valueOf(this.h), Integer.valueOf(this.i)});
+        return Arrays.hashCode(new Object[]{this.f20824a, Integer.valueOf(this.f20825b), this.f20826c, this.f20827d, Integer.valueOf(this.f20828e), Long.valueOf(this.f20829f), Long.valueOf(this.f20830g), Integer.valueOf(this.f20831h), Integer.valueOf(this.f20832i)});
     }
 }

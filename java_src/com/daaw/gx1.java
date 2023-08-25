@@ -7,71 +7,82 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class gx1 implements th1 {
-    public final List<bx1> p;
-    public final int q;
-    public final long[] r;
-    public final long[] s;
+
+    /* renamed from: p */
+    public final List<bx1> f11827p;
+
+    /* renamed from: q */
+    public final int f11828q;
+
+    /* renamed from: r */
+    public final long[] f11829r;
+
+    /* renamed from: s */
+    public final long[] f11830s;
 
     public gx1(List<bx1> list) {
-        this.p = list;
+        this.f11827p = list;
         int size = list.size();
-        this.q = size;
-        this.r = new long[size * 2];
-        for (int i = 0; i < this.q; i++) {
+        this.f11828q = size;
+        this.f11829r = new long[size * 2];
+        for (int i = 0; i < this.f11828q; i++) {
             bx1 bx1Var = list.get(i);
             int i2 = i * 2;
-            long[] jArr = this.r;
-            jArr[i2] = bx1Var.D;
-            jArr[i2 + 1] = bx1Var.E;
+            long[] jArr = this.f11829r;
+            jArr[i2] = bx1Var.f5241D;
+            jArr[i2 + 1] = bx1Var.f5242E;
         }
-        long[] jArr2 = this.r;
+        long[] jArr2 = this.f11829r;
         long[] copyOf = Arrays.copyOf(jArr2, jArr2.length);
-        this.s = copyOf;
+        this.f11830s = copyOf;
         Arrays.sort(copyOf);
     }
 
     @Override // com.daaw.th1
-    public int a(long j) {
-        int c = sq1.c(this.s, j, false, false);
-        if (c < this.s.length) {
-            return c;
+    /* renamed from: a */
+    public int mo3753a(long j) {
+        int m10014c = sq1.m10014c(this.f11830s, j, false, false);
+        if (m10014c < this.f11830s.length) {
+            return m10014c;
         }
         return -1;
     }
 
     @Override // com.daaw.th1
-    public long b(int i) {
-        s6.a(i >= 0);
-        s6.a(i < this.s.length);
-        return this.s[i];
+    /* renamed from: b */
+    public long mo3752b(int i) {
+        C2914s6.m10690a(i >= 0);
+        C2914s6.m10690a(i < this.f11830s.length);
+        return this.f11830s[i];
     }
 
     @Override // com.daaw.th1
-    public List<ln> c(long j) {
+    /* renamed from: c */
+    public List<C2099ln> mo3751c(long j) {
         SpannableStringBuilder append;
         SpannableStringBuilder spannableStringBuilder = null;
         bx1 bx1Var = null;
         ArrayList arrayList = null;
-        for (int i = 0; i < this.q; i++) {
-            long[] jArr = this.r;
+        for (int i = 0; i < this.f11828q; i++) {
+            long[] jArr = this.f11829r;
             int i2 = i * 2;
             if (jArr[i2] <= j && j < jArr[i2 + 1]) {
                 if (arrayList == null) {
                     arrayList = new ArrayList();
                 }
-                bx1 bx1Var2 = this.p.get(i);
-                if (!bx1Var2.a()) {
+                bx1 bx1Var2 = this.f11827p.get(i);
+                if (!bx1Var2.m25778a()) {
                     arrayList.add(bx1Var2);
                 } else if (bx1Var == null) {
                     bx1Var = bx1Var2;
                 } else {
                     if (spannableStringBuilder == null) {
                         spannableStringBuilder = new SpannableStringBuilder();
-                        append = spannableStringBuilder.append(bx1Var.p).append((CharSequence) "\n");
+                        append = spannableStringBuilder.append(bx1Var.f17547p).append((CharSequence) "\n");
                     } else {
                         append = spannableStringBuilder.append((CharSequence) "\n");
                     }
-                    append.append(bx1Var2.p);
+                    append.append(bx1Var2.f17547p);
                 }
             }
         }
@@ -84,7 +95,8 @@ public final class gx1 implements th1 {
     }
 
     @Override // com.daaw.th1
-    public int d() {
-        return this.s.length;
+    /* renamed from: d */
+    public int mo3750d() {
+        return this.f11830s.length;
     }
 }

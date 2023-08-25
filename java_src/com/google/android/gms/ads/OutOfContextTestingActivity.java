@@ -22,8 +22,8 @@ public final class OutOfContextTestingActivity extends Activity {
             finish();
             return;
         }
-        setContentView(R.layout.admob_empty_layout);
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layout);
+        setContentView(C3982R.layout.admob_empty_layout);
+        LinearLayout linearLayout = (LinearLayout) findViewById(C3982R.C3983id.layout);
         Intent intent = getIntent();
         if (intent == null) {
             finish();
@@ -35,7 +35,7 @@ public final class OutOfContextTestingActivity extends Activity {
             return;
         }
         try {
-            zzf.zze(stringExtra, nt0.g3(this), nt0.g3(linearLayout));
+            zzf.zze(stringExtra, nt0.m14830g3(this), nt0.m14830g3(linearLayout));
         } catch (RemoteException unused) {
             finish();
         }

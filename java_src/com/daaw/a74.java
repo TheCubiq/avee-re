@@ -15,58 +15,81 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public interface a74 extends zza, vy4, r64, uj3, a84, e84, kk3, q03, i84, zzl, l84, m84, y24, n84 {
-    void B(com.google.android.gms.ads.internal.overlay.zzl zzlVar);
+    /* renamed from: B */
+    void mo6463B(com.google.android.gms.ads.internal.overlay.zzl zzlVar);
 
-    void C();
+    /* renamed from: C */
+    void mo6462C();
 
-    void D(boolean z);
+    /* renamed from: D */
+    void mo6460D(boolean z);
 
-    void I(ec3 ec3Var);
+    /* renamed from: I */
+    void mo6454I(ec3 ec3Var);
 
-    void K(int i);
+    /* renamed from: K */
+    void mo6451K(int i);
 
-    boolean L();
+    /* renamed from: L */
+    boolean mo6449L();
 
-    void N();
+    /* renamed from: N */
+    void mo6446N();
 
-    String O();
+    /* renamed from: O */
+    String mo6444O();
 
-    void P(th6 th6Var, wh6 wh6Var);
+    /* renamed from: P */
+    void mo6442P(th6 th6Var, wh6 wh6Var);
 
-    void Q(v84 v84Var);
+    /* renamed from: Q */
+    void mo6440Q(v84 v84Var);
 
-    void R(yd0 yd0Var);
+    /* renamed from: R */
+    void mo6438R(yd0 yd0Var);
 
-    void U(boolean z);
+    /* renamed from: U */
+    void mo6432U(boolean z);
 
-    boolean V();
+    /* renamed from: V */
+    boolean mo6430V();
 
-    void X(boolean z);
+    /* renamed from: X */
+    void mo6427X(boolean z);
 
-    void Y();
+    /* renamed from: Y */
+    void mo6426Y();
 
     @Override // com.daaw.l84
-    sl2 a();
+    /* renamed from: a */
+    sl2 mo6425a();
 
-    void a0(com.google.android.gms.ads.internal.overlay.zzl zzlVar);
+    /* renamed from: a0 */
+    void mo6424a0(com.google.android.gms.ads.internal.overlay.zzl zzlVar);
 
-    void b0(String str, String str2, String str3);
+    /* renamed from: b0 */
+    void mo6423b0(String str, String str2, String str3);
 
-    void c0(String str, uy0 uy0Var);
+    /* renamed from: c0 */
+    void mo6422c0(String str, uy0 uy0Var);
 
     boolean canGoBack();
 
     @Override // com.daaw.r64
-    th6 d();
+    /* renamed from: d */
+    th6 mo6421d();
 
     void destroy();
 
-    void f0();
+    /* renamed from: f0 */
+    void mo6419f0();
 
     @Override // com.daaw.n84
-    View g();
+    /* renamed from: g */
+    View mo6418g();
 
-    void g0(boolean z);
+    /* renamed from: g0 */
+    void mo6417g0(boolean z);
 
     @Override // com.daaw.e84, com.daaw.y24
     Context getContext();
@@ -87,13 +110,17 @@ public interface a74 extends zza, vy4, r64, uj3, a84, e84, kk3, q03, i84, zzl, l
 
     void goBack();
 
-    WebView h();
+    /* renamed from: h */
+    WebView mo6416h();
 
-    boolean i();
+    /* renamed from: i */
+    boolean mo6414i();
 
-    Context j();
+    /* renamed from: j */
+    Context mo6412j();
 
-    yd0 j0();
+    /* renamed from: j0 */
+    yd0 mo6411j0();
 
     void loadData(String str, String str2, String str3);
 
@@ -103,30 +130,40 @@ public interface a74 extends zza, vy4, r64, uj3, a84, e84, kk3, q03, i84, zzl, l
 
     void measure(int i, int i2);
 
-    WebViewClient n();
+    /* renamed from: n */
+    WebViewClient mo6410n();
 
     @Override // com.daaw.k84
-    v84 o();
+    /* renamed from: o */
+    v84 mo6408o();
 
-    boolean o0();
+    /* renamed from: o0 */
+    boolean mo6407o0();
 
     void onPause();
 
     void onResume();
 
-    j23 p();
+    /* renamed from: p */
+    j23 mo6406p();
 
-    void p0(int i);
+    /* renamed from: p0 */
+    void mo6405p0(int i);
 
-    boolean q();
+    /* renamed from: q */
+    boolean mo6404q();
 
-    void q0(cc3 cc3Var);
+    /* renamed from: q0 */
+    void mo6403q0(cc3 cc3Var);
 
-    boolean r();
+    /* renamed from: r */
+    boolean mo6402r();
 
-    f77 r0();
+    /* renamed from: r0 */
+    f77 mo6401r0();
 
-    void s0(Context context);
+    /* renamed from: s0 */
+    void mo6400s0(Context context);
 
     @Override // com.daaw.y24
     void setBackgroundColor(int i);
@@ -140,29 +177,40 @@ public interface a74 extends zza, vy4, r64, uj3, a84, e84, kk3, q03, i84, zzl, l
     void setWebViewClient(WebViewClient webViewClient);
 
     @Override // com.daaw.y24
-    void t(String str, j54 j54Var);
+    /* renamed from: t */
+    void mo4236t(String str, j54 j54Var);
 
     @Override // com.daaw.y24
-    void u(z74 z74Var);
+    /* renamed from: u */
+    void mo4235u(z74 z74Var);
 
-    void u0(j23 j23Var);
+    /* renamed from: u0 */
+    void mo6399u0(j23 j23Var);
 
     @Override // com.daaw.a84
-    wh6 v();
+    /* renamed from: v */
+    wh6 mo6398v();
 
-    void v0();
+    /* renamed from: v0 */
+    void mo6397v0();
 
-    void w(boolean z);
+    /* renamed from: w */
+    void mo6396w(boolean z);
 
-    void w0(boolean z);
+    /* renamed from: w0 */
+    void mo6395w0(boolean z);
 
-    void x(String str, zg3 zg3Var);
+    /* renamed from: x */
+    void mo6394x(String str, zg3 zg3Var);
 
-    boolean x0(boolean z, int i);
+    /* renamed from: x0 */
+    boolean mo6393x0(boolean z, int i);
 
-    void y(String str, zg3 zg3Var);
+    /* renamed from: y */
+    void mo6392y(String str, zg3 zg3Var);
 
-    void z();
+    /* renamed from: z */
+    void mo6391z();
 
     ec3 zzM();
 

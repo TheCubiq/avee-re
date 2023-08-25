@@ -8,19 +8,25 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 /* loaded from: classes.dex */
 public class ft1 {
-    public static final ThreadLocal<Matrix> a = new ThreadLocal<>();
-    public static final ThreadLocal<RectF> b = new ThreadLocal<>();
 
-    public static void a(ViewGroup viewGroup, View view, Rect rect) {
+    /* renamed from: a */
+    public static final ThreadLocal<Matrix> f9885a = new ThreadLocal<>();
+
+    /* renamed from: b */
+    public static final ThreadLocal<RectF> f9886b = new ThreadLocal<>();
+
+    /* renamed from: a */
+    public static void m22304a(ViewGroup viewGroup, View view, Rect rect) {
         rect.set(0, 0, view.getWidth(), view.getHeight());
-        c(viewGroup, view, rect);
+        m22302c(viewGroup, view, rect);
     }
 
-    public static void b(ViewParent viewParent, View view, Matrix matrix) {
+    /* renamed from: b */
+    public static void m22303b(ViewParent viewParent, View view, Matrix matrix) {
         ViewParent parent = view.getParent();
         if ((parent instanceof View) && parent != viewParent) {
             View view2 = (View) parent;
-            b(viewParent, view2, matrix);
+            m22303b(viewParent, view2, matrix);
             matrix.preTranslate(-view2.getScrollX(), -view2.getScrollY());
         }
         matrix.preTranslate(view.getLeft(), view.getTop());
@@ -30,8 +36,9 @@ public class ft1 {
         matrix.preConcat(view.getMatrix());
     }
 
-    public static void c(ViewGroup viewGroup, View view, Rect rect) {
-        ThreadLocal<Matrix> threadLocal = a;
+    /* renamed from: c */
+    public static void m22302c(ViewGroup viewGroup, View view, Rect rect) {
+        ThreadLocal<Matrix> threadLocal = f9885a;
         Matrix matrix = threadLocal.get();
         if (matrix == null) {
             matrix = new Matrix();
@@ -39,8 +46,8 @@ public class ft1 {
         } else {
             matrix.reset();
         }
-        b(viewGroup, view, matrix);
-        ThreadLocal<RectF> threadLocal2 = b;
+        m22303b(viewGroup, view, matrix);
+        ThreadLocal<RectF> threadLocal2 = f9886b;
         RectF rectF = threadLocal2.get();
         if (rectF == null) {
             rectF = new RectF();

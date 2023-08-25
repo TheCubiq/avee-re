@@ -3,49 +3,59 @@ package com.daaw;
 import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public final class bs2 extends wr2 {
-    public final zr2 b = new zr2();
-    public ByteBuffer c;
-    public long d;
+
+    /* renamed from: b */
+    public final zr2 f5092b = new zr2();
+
+    /* renamed from: c */
+    public ByteBuffer f5093c;
+
+    /* renamed from: d */
+    public long f5094d;
 
     public bs2(int i) {
     }
 
     @Override // com.daaw.wr2
-    public final void b() {
-        super.b();
-        ByteBuffer byteBuffer = this.c;
+    /* renamed from: b */
+    public final void mo5837b() {
+        super.mo5837b();
+        ByteBuffer byteBuffer = this.f5093c;
         if (byteBuffer != null) {
             byteBuffer.clear();
         }
     }
 
-    public final void h(int i) {
-        ByteBuffer byteBuffer = this.c;
+    /* renamed from: h */
+    public final void m25843h(int i) {
+        ByteBuffer byteBuffer = this.f5093c;
         if (byteBuffer == null) {
-            this.c = j(i);
+            this.f5093c = m25841j(i);
             return;
         }
         int capacity = byteBuffer.capacity();
-        int position = this.c.position();
+        int position = this.f5093c.position();
         int i2 = i + position;
         if (capacity >= i2) {
             return;
         }
-        ByteBuffer j = j(i2);
+        ByteBuffer m25841j = m25841j(i2);
         if (position > 0) {
-            this.c.position(0);
-            this.c.limit(position);
-            j.put(this.c);
+            this.f5093c.position(0);
+            this.f5093c.limit(position);
+            m25841j.put(this.f5093c);
         }
-        this.c = j;
+        this.f5093c = m25841j;
     }
 
-    public final boolean i() {
-        return d(1073741824);
+    /* renamed from: i */
+    public final boolean m25842i() {
+        return m5835d(1073741824);
     }
 
-    public final ByteBuffer j(int i) {
-        ByteBuffer byteBuffer = this.c;
+    /* renamed from: j */
+    public final ByteBuffer m25841j(int i) {
+        ByteBuffer byteBuffer = this.f5093c;
         int capacity = byteBuffer == null ? 0 : byteBuffer.capacity();
         throw new IllegalStateException("Buffer too small (" + capacity + " < " + i + ")");
     }

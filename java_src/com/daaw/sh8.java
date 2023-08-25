@@ -3,7 +3,9 @@ package com.daaw;
 import android.database.Cursor;
 /* loaded from: classes.dex */
 public final class sh8 {
-    public Cursor a;
+
+    /* renamed from: a */
+    public Cursor f26256a;
 
     public sh8() {
     }

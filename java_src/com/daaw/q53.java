@@ -11,11 +11,12 @@ public final class q53 extends ls7 implements yt7 {
     static {
         q53 q53Var = new q53();
         zzb = q53Var;
-        ls7.C(q53.class, q53Var);
+        ls7.m16597C(q53.class, q53Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -30,7 +31,7 @@ public final class q53 extends ls7 implements yt7 {
                 }
                 return new q53();
             }
-            return ls7.z(zzb, "\u0001\u0004\u0000\u0001\u0005\b\u0004\u0000\u0000\u0000\u0005ဌ\u0000\u0006ဉ\u0001\u0007ဈ\u0002\bဈ\u0003", new Object[]{"zzd", "zze", p53.a, "zzf", "zzg", "zzh"});
+            return ls7.m16573z(zzb, "\u0001\u0004\u0000\u0001\u0005\b\u0004\u0000\u0000\u0000\u0005ဌ\u0000\u0006ဉ\u0001\u0007ဈ\u0002\bဈ\u0003", new Object[]{"zzd", "zze", p53.f22621a, "zzf", "zzg", "zzh"});
         }
         return (byte) 1;
     }

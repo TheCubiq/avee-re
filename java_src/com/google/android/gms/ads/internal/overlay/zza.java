@@ -10,7 +10,8 @@ import com.daaw.k04;
 import com.google.android.gms.ads.internal.client.zzba;
 /* loaded from: classes.dex */
 public final class zza {
-    public static final boolean a(Context context, Uri uri, zzz zzzVar, zzx zzxVar) {
+    /* renamed from: a */
+    public static final boolean m1388a(Context context, Uri uri, zzz zzzVar, zzx zzxVar) {
         int i;
         try {
             i = com.google.android.gms.ads.internal.zzt.zzp().zzk(context, uri);
@@ -29,7 +30,7 @@ public final class zza {
 
     public static final boolean zza(Context context, Intent intent, zzz zzzVar, zzx zzxVar, boolean z) {
         if (z) {
-            return a(context, intent.getData(), zzzVar, zzxVar);
+            return m1388a(context, intent.getData(), zzzVar, zzxVar);
         }
         try {
             String uri = intent.toURI();
@@ -56,7 +57,7 @@ public final class zza {
         String concat;
         int i = 0;
         if (zzcVar != null) {
-            g93.c(context);
+            g93.m21879c(context);
             Intent intent = zzcVar.zzh;
             if (intent == null) {
                 intent = new Intent();
@@ -89,11 +90,11 @@ public final class zza {
                         }
                         intent.addFlags(i);
                     }
-                    if (((Boolean) zzba.zzc().b(g93.Y3)).booleanValue()) {
+                    if (((Boolean) zzba.zzc().m23658b(g93.f10605Y3)).booleanValue()) {
                         intent.addFlags(268435456);
                         intent.putExtra("android.support.customtabs.extra.user_opt_out", true);
                     } else {
-                        if (((Boolean) zzba.zzc().b(g93.X3)).booleanValue()) {
+                        if (((Boolean) zzba.zzc().m23658b(g93.f10595X3)).booleanValue()) {
                             com.google.android.gms.ads.internal.zzt.zzp();
                             com.google.android.gms.ads.internal.util.zzs.zzm(context, intent);
                         }

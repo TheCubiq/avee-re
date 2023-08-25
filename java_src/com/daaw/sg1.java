@@ -6,15 +6,18 @@ import java.io.InputStream;
 /* loaded from: classes.dex */
 public class sg1 extends f51<InputStream> {
 
+    /* renamed from: com.daaw.sg1$a */
     /* loaded from: classes.dex */
-    public static class a implements nq0<Integer, InputStream> {
+    public static class C2938a implements nq0<Integer, InputStream> {
         @Override // com.daaw.nq0
-        public mq0<Integer, InputStream> a(Context context, d60 d60Var) {
-            return new sg1(context, d60Var.a(Uri.class, InputStream.class));
+        /* renamed from: a */
+        public mq0<Integer, InputStream> mo3945a(Context context, d60 d60Var) {
+            return new sg1(context, d60Var.m24637a(Uri.class, InputStream.class));
         }
 
         @Override // com.daaw.nq0
-        public void b() {
+        /* renamed from: b */
+        public void mo3944b() {
         }
     }
 

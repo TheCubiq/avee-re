@@ -3,54 +3,66 @@ package com.daaw;
 import android.graphics.Bitmap;
 /* loaded from: classes.dex */
 public class df0 {
-    public Bitmap a;
-    public h0 b;
+
+    /* renamed from: a */
+    public Bitmap f7026a;
+
+    /* renamed from: b */
+    public InterfaceC1492h0 f7027b;
 
     public df0(Bitmap bitmap) {
-        this.a = bitmap;
-        this.b = null;
+        this.f7026a = bitmap;
+        this.f7027b = null;
     }
 
-    public df0(Bitmap bitmap, h0 h0Var) {
-        this.a = bitmap;
-        this.b = h0Var;
+    public df0(Bitmap bitmap, InterfaceC1492h0 interfaceC1492h0) {
+        this.f7026a = bitmap;
+        this.f7027b = interfaceC1492h0;
     }
 
-    public static void c(df0 df0Var) {
+    /* renamed from: c */
+    public static void m24433c(df0 df0Var) {
         if (df0Var != null) {
-            df0Var.b();
+            df0Var.m24434b();
         }
     }
 
-    public static Bitmap g(df0 df0Var) {
+    /* renamed from: g */
+    public static Bitmap m24431g(df0 df0Var) {
         if (df0Var != null) {
-            return df0Var.f();
+            return df0Var.m24432f();
         }
         return null;
     }
 
-    public void a() {
+    /* renamed from: a */
+    public void mo23531a() {
     }
 
-    public void b() {
-        h0 h0Var = this.b;
-        if (h0Var != null) {
-            h0Var.a();
+    /* renamed from: b */
+    public void m24434b() {
+        InterfaceC1492h0 interfaceC1492h0 = this.f7027b;
+        if (interfaceC1492h0 != null) {
+            interfaceC1492h0.mo3002a();
         }
     }
 
-    public int d() {
+    /* renamed from: d */
+    public int mo23530d() {
         return 1;
     }
 
-    public jr1<Bitmap> e() {
+    /* renamed from: e */
+    public jr1<Bitmap> mo23529e() {
         return null;
     }
 
-    public final Bitmap f() {
-        return this.a;
+    /* renamed from: f */
+    public final Bitmap m24432f() {
+        return this.f7026a;
     }
 
-    public void h() {
+    /* renamed from: h */
+    public void mo23528h() {
     }
 }

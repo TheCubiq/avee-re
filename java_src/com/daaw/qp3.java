@@ -5,16 +5,18 @@ import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.mediation.rtb.SignalCallbacks;
 /* loaded from: classes.dex */
 public final class qp3 implements SignalCallbacks {
-    public final /* synthetic */ gp3 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ gp3 f24232a;
 
     public qp3(sp3 sp3Var, gp3 gp3Var) {
-        this.a = gp3Var;
+        this.f24232a = gp3Var;
     }
 
     @Override // com.google.android.gms.ads.mediation.rtb.SignalCallbacks
     public final void onFailure(AdError adError) {
         try {
-            this.a.Z(adError.zza());
+            this.f24232a.mo5731Z(adError.zza());
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -23,7 +25,7 @@ public final class qp3 implements SignalCallbacks {
     @Override // com.google.android.gms.ads.mediation.rtb.SignalCallbacks
     public final void onFailure(String str) {
         try {
-            this.a.f(str);
+            this.f24232a.mo5729f(str);
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -32,7 +34,7 @@ public final class qp3 implements SignalCallbacks {
     @Override // com.google.android.gms.ads.mediation.rtb.SignalCallbacks
     public final void onSuccess(String str) {
         try {
-            this.a.a(str);
+            this.f24232a.mo5730a(str);
         } catch (RemoteException e) {
             k04.zzh("", e);
         }

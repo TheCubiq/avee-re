@@ -7,73 +7,87 @@ import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.util.zzg;
 /* loaded from: classes.dex */
 public final class ex3 implements SharedPreferences.OnSharedPreferenceChangeListener {
-    public final Context a;
-    public final SharedPreferences b;
-    public final zzg c;
-    public final ky3 d;
-    public String e = "-1";
-    public int f = -1;
+
+    /* renamed from: a */
+    public final Context f8917a;
+
+    /* renamed from: b */
+    public final SharedPreferences f8918b;
+
+    /* renamed from: c */
+    public final zzg f8919c;
+
+    /* renamed from: d */
+    public final ky3 f8920d;
+
+    /* renamed from: e */
+    public String f8921e = "-1";
+
+    /* renamed from: f */
+    public int f8922f = -1;
 
     public ex3(Context context, zzg zzgVar, ky3 ky3Var) {
-        this.b = PreferenceManager.getDefaultSharedPreferences(context);
-        this.c = zzgVar;
-        this.a = context;
-        this.d = ky3Var;
+        this.f8918b = PreferenceManager.getDefaultSharedPreferences(context);
+        this.f8919c = zzgVar;
+        this.f8917a = context;
+        this.f8920d = ky3Var;
     }
 
-    public final void a() {
+    /* renamed from: a */
+    public final void m23053a() {
         SharedPreferences sharedPreferences;
         String str;
-        this.b.registerOnSharedPreferenceChangeListener(this);
-        onSharedPreferenceChanged(this.b, "gad_has_consent_for_cookies");
-        if (((Boolean) zzba.zzc().b(g93.v0)).booleanValue()) {
-            onSharedPreferenceChanged(this.b, "IABTCF_gdprApplies");
-            sharedPreferences = this.b;
+        this.f8918b.registerOnSharedPreferenceChangeListener(this);
+        onSharedPreferenceChanged(this.f8918b, "gad_has_consent_for_cookies");
+        if (((Boolean) zzba.zzc().m23658b(g93.f10853v0)).booleanValue()) {
+            onSharedPreferenceChanged(this.f8918b, "IABTCF_gdprApplies");
+            sharedPreferences = this.f8918b;
             str = "IABTCF_TCString";
         } else {
-            sharedPreferences = this.b;
+            sharedPreferences = this.f8918b;
             str = "IABTCF_PurposeConsents";
         }
         onSharedPreferenceChanged(sharedPreferences, str);
     }
 
-    public final void b(String str, int i) {
+    /* renamed from: b */
+    public final void m23052b(String str, int i) {
         Context context;
         boolean z = false;
-        if (!((Boolean) zzba.zzc().b(g93.t0)).booleanValue() ? str.isEmpty() || str.charAt(0) != '1' : i == 0 || str.isEmpty() || (str.charAt(0) != '1' && !str.equals("-1"))) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10831t0)).booleanValue() ? str.isEmpty() || str.charAt(0) != '1' : i == 0 || str.isEmpty() || (str.charAt(0) != '1' && !str.equals("-1"))) {
             z = true;
         }
-        if (((Boolean) zzba.zzc().b(g93.r0)).booleanValue()) {
-            this.c.zzH(z);
-            if (((Boolean) zzba.zzc().b(g93.E5)).booleanValue() && z && (context = this.a) != null) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10809r0)).booleanValue()) {
+            this.f8919c.zzH(z);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10407E5)).booleanValue() && z && (context = this.f8917a) != null) {
                 context.deleteDatabase("OfflineUpload.db");
             }
         }
-        if (((Boolean) zzba.zzc().b(g93.m0)).booleanValue()) {
-            this.d.y();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10754m0)).booleanValue()) {
+            this.f8920d.m17318y();
         }
     }
 
     @Override // android.content.SharedPreferences.OnSharedPreferenceChangeListener
     public final void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String str) {
         char c;
-        if (((Boolean) zzba.zzc().b(g93.v0)).booleanValue()) {
-            if (dx3.a(str, "gad_has_consent_for_cookies")) {
-                if (((Boolean) zzba.zzc().b(g93.t0)).booleanValue()) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10853v0)).booleanValue()) {
+            if (dx3.m23828a(str, "gad_has_consent_for_cookies")) {
+                if (((Boolean) zzba.zzc().m23658b(g93.f10831t0)).booleanValue()) {
                     int i = sharedPreferences.getInt("gad_has_consent_for_cookies", -1);
-                    if (i != this.c.zzb()) {
-                        this.c.zzH(true);
+                    if (i != this.f8919c.zzb()) {
+                        this.f8919c.zzH(true);
                     }
-                    this.c.zzE(i);
+                    this.f8919c.zzE(i);
                     return;
                 }
                 return;
-            } else if (dx3.a(str, "IABTCF_gdprApplies") || dx3.a(str, "IABTCF_TCString") || dx3.a(str, "IABTCF_PurposeConsents")) {
+            } else if (dx3.m23828a(str, "IABTCF_gdprApplies") || dx3.m23828a(str, "IABTCF_TCString") || dx3.m23828a(str, "IABTCF_PurposeConsents")) {
                 String string = sharedPreferences.getString(str, "-1");
-                if (string != null && !string.equals(this.c.zzn(str))) {
-                    this.c.zzH(true);
+                if (string != null && !string.equals(this.f8919c.zzn(str))) {
+                    this.f8919c.zzH(true);
                 }
-                this.c.zzF(str, string);
+                this.f8919c.zzF(str, string);
                 return;
             } else {
                 return;
@@ -95,18 +109,18 @@ public final class ex3 implements SharedPreferences.OnSharedPreferenceChangeList
             c = 65535;
         }
         if (c == 0) {
-            if (string2.equals("-1") || this.e.equals(string2)) {
+            if (string2.equals("-1") || this.f8921e.equals(string2)) {
                 return;
             }
-            this.e = string2;
-            b(string2, i2);
+            this.f8921e = string2;
+            m23052b(string2, i2);
         } else if (c != 1) {
         } else {
-            if (!((Boolean) zzba.zzc().b(g93.t0)).booleanValue() || i2 == -1 || this.f == i2) {
+            if (!((Boolean) zzba.zzc().m23658b(g93.f10831t0)).booleanValue() || i2 == -1 || this.f8922f == i2) {
                 return;
             }
-            this.f = i2;
-            b(string2, i2);
+            this.f8922f = i2;
+            m23052b(string2, i2);
         }
     }
 }

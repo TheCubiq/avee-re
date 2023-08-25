@@ -8,72 +8,105 @@ import java.util.List;
 /* loaded from: classes.dex */
 public interface wc0 {
 
+    /* renamed from: com.daaw.wc0$a */
     /* loaded from: classes.dex */
-    public interface a {
-        void a(String str);
+    public interface InterfaceC3420a {
+        /* renamed from: a */
+        void mo6190a(String str);
 
-        void b(int i, int i2, boolean z, boolean z2);
+        /* renamed from: b */
+        void mo6189b(int i, int i2, boolean z, boolean z2);
     }
 
+    /* renamed from: com.daaw.wc0$b */
     /* loaded from: classes.dex */
-    public interface b {
-        void a(String str, String str2);
+    public interface InterfaceC3421b {
+        /* renamed from: a */
+        void mo6188a(String str, String str2);
 
-        void b(qw1.a<Integer> aVar, List<Object> list);
+        /* renamed from: b */
+        void mo6187b(qw1.InterfaceC2788a<Integer> interfaceC2788a, List<Object> list);
 
-        int c();
+        /* renamed from: c */
+        int mo6186c();
 
-        int d();
+        /* renamed from: d */
+        int mo6185d();
 
-        void e(qw1.a<Boolean> aVar, List<Object> list);
+        /* renamed from: e */
+        void mo6184e(qw1.InterfaceC2788a<Boolean> interfaceC2788a, List<Object> list);
 
-        String f(String str, String str2);
+        /* renamed from: f */
+        String mo6183f(String str, String str2);
 
-        void g(qw1.a<Boolean> aVar, List<Object> list);
+        /* renamed from: g */
+        void mo6182g(qw1.InterfaceC2788a<Boolean> interfaceC2788a, List<Object> list);
     }
 
+    /* renamed from: com.daaw.wc0$c */
     /* loaded from: classes.dex */
-    public interface c {
-        void a(View view);
+    public interface InterfaceC3422c {
+        /* renamed from: a */
+        void mo6181a(View view);
     }
 
-    int a();
+    /* renamed from: a */
+    int mo2250a();
 
-    boolean b();
+    /* renamed from: b */
+    boolean mo3672b();
 
-    void c(boolean z);
+    /* renamed from: c */
+    void mo3671c(boolean z);
 
-    ts1 d(Context context, String str);
+    /* renamed from: d */
+    ts1 mo2246d(Context context, String str);
 
-    String e();
+    /* renamed from: e */
+    String mo3670e();
 
-    void g(al alVar, int i);
+    /* renamed from: g */
+    void mo2241g(C0645al c0645al, int i);
 
-    boolean h(boolean z);
+    /* renamed from: h */
+    boolean mo3669h(boolean z);
 
-    int i();
+    /* renamed from: i */
+    int mo3668i();
 
-    me0<String> l();
+    /* renamed from: l */
+    me0<String> mo3667l();
 
-    boolean m(int i, Context context);
+    /* renamed from: m */
+    boolean mo3666m(int i, Context context);
 
-    void n(WeakReference<a> weakReference);
+    /* renamed from: n */
+    void mo3665n(WeakReference<InterfaceC3420a> weakReference);
 
-    void o(Context context, String str);
+    /* renamed from: o */
+    void mo2234o(Context context, String str);
 
-    String p(String str);
+    /* renamed from: p */
+    String mo3664p(String str);
 
-    void q(WeakReference<b> weakReference);
+    /* renamed from: q */
+    void mo3663q(WeakReference<InterfaceC3421b> weakReference);
 
-    lo1<Integer, Boolean> s();
+    /* renamed from: s */
+    lo1<Integer, Boolean> mo3662s();
 
-    c u();
+    /* renamed from: u */
+    InterfaceC3422c mo3661u();
 
-    b w();
+    /* renamed from: w */
+    InterfaceC3421b mo3660w();
 
-    void x(Context context, String[] strArr, sd0[] sd0VarArr);
+    /* renamed from: x */
+    void mo2230x(Context context, String[] strArr, sd0[] sd0VarArr);
 
-    boolean y(sd0 sd0Var);
+    /* renamed from: y */
+    boolean mo3659y(sd0 sd0Var);
 
-    boolean z();
+    /* renamed from: z */
+    boolean mo3658z();
 }

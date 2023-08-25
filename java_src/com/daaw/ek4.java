@@ -1,5 +1,7 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ek4 {
-    public static final fk4 a = new fk4();
+
+    /* renamed from: a */
+    public static final fk4 f8537a = new fk4();
 }

@@ -7,16 +7,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class la6 implements h76 {
-    public final List a;
+
+    /* renamed from: a */
+    public final List f17179a;
 
     public la6(List list) {
-        this.a = list;
+        this.f17179a = list;
     }
 
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
         try {
-            ((JSONObject) obj).put("eid", TextUtils.join(",", this.a));
+            ((JSONObject) obj).put("eid", TextUtils.join(",", this.f17179a));
         } catch (JSONException unused) {
             zze.zza("Failed putting experiment ids.");
         }

@@ -8,15 +8,19 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public abstract class y70 {
     @GuardedBy("sAllClients")
-    public static final Set<y70> a = Collections.newSetFromMap(new WeakHashMap());
+
+    /* renamed from: a */
+    public static final Set<y70> f33403a = Collections.newSetFromMap(new WeakHashMap());
 
     @Deprecated
+    /* renamed from: com.daaw.y70$a */
     /* loaded from: classes.dex */
-    public interface a extends ej {
+    public interface InterfaceC3675a extends InterfaceC1192ej {
     }
 
     @Deprecated
+    /* renamed from: com.daaw.y70$b */
     /* loaded from: classes.dex */
-    public interface b extends du0 {
+    public interface InterfaceC3676b extends du0 {
     }
 }

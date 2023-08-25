@@ -7,25 +7,36 @@ import com.google.android.gms.internal.ads.zzxk;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class tx8 extends HandlerThread implements Handler.Callback {
-    public mv4 p;
-    public Handler q;
-    public Error r;
-    public RuntimeException s;
-    public zzxk t;
+
+    /* renamed from: p */
+    public mv4 f28240p;
+
+    /* renamed from: q */
+    public Handler f28241q;
+
+    /* renamed from: r */
+    public Error f28242r;
+
+    /* renamed from: s */
+    public RuntimeException f28243s;
+
+    /* renamed from: t */
+    public zzxk f28244t;
 
     public tx8() {
         super("ExoPlayer:PlaceholderSurface");
     }
 
-    public final zzxk a(int i) {
+    /* renamed from: a */
+    public final zzxk m8706a(int i) {
         boolean z;
         start();
-        this.q = new Handler(getLooper(), this);
-        this.p = new mv4(this.q, null);
+        this.f28241q = new Handler(getLooper(), this);
+        this.f28240p = new mv4(this.f28241q, null);
         synchronized (this) {
             z = false;
-            this.q.obtainMessage(1, i, 0).sendToTarget();
-            while (this.t == null && this.s == null && this.r == null) {
+            this.f28241q.obtainMessage(1, i, 0).sendToTarget();
+            while (this.f28244t == null && this.f28243s == null && this.f28242r == null) {
                 try {
                     wait();
                 } catch (InterruptedException unused) {
@@ -36,11 +47,11 @@ public final class tx8 extends HandlerThread implements Handler.Callback {
         if (z) {
             Thread.currentThread().interrupt();
         }
-        RuntimeException runtimeException = this.s;
+        RuntimeException runtimeException = this.f28243s;
         if (runtimeException == null) {
-            Error error = this.r;
+            Error error = this.f28242r;
             if (error == null) {
-                zzxk zzxkVar = this.t;
+                zzxk zzxkVar = this.f28244t;
                 Objects.requireNonNull(zzxkVar);
                 return zzxkVar;
             }
@@ -49,8 +60,9 @@ public final class tx8 extends HandlerThread implements Handler.Callback {
         throw runtimeException;
     }
 
-    public final void b() {
-        Handler handler = this.q;
+    /* renamed from: b */
+    public final void m8705b() {
+        Handler handler = this.f28241q;
         Objects.requireNonNull(handler);
         handler.sendEmptyMessage(2);
     }
@@ -64,9 +76,9 @@ public final class tx8 extends HandlerThread implements Handler.Callback {
                     return true;
                 }
                 try {
-                    mv4 mv4Var = this.p;
+                    mv4 mv4Var = this.f28240p;
                     Objects.requireNonNull(mv4Var);
-                    mv4Var.c();
+                    mv4Var.m15753c();
                 } finally {
                     try {
                         return true;
@@ -77,28 +89,28 @@ public final class tx8 extends HandlerThread implements Handler.Callback {
             }
             try {
                 int i2 = message.arg1;
-                mv4 mv4Var2 = this.p;
+                mv4 mv4Var2 = this.f28240p;
                 Objects.requireNonNull(mv4Var2);
-                mv4Var2.b(i2);
-                this.t = new zzxk(this, this.p.a(), i2 != 0, null);
+                mv4Var2.m15754b(i2);
+                this.f28244t = new zzxk(this, this.f28240p.m15755a(), i2 != 0, null);
                 synchronized (this) {
                     notify();
                 }
             } catch (ow4 e) {
-                s95.c("PlaceholderSurface", "Failed to initialize placeholder surface", e);
-                this.s = new IllegalStateException(e);
+                s95.m10495c("PlaceholderSurface", "Failed to initialize placeholder surface", e);
+                this.f28243s = new IllegalStateException(e);
                 synchronized (this) {
                     notify();
                 }
             } catch (Error e2) {
-                s95.c("PlaceholderSurface", "Failed to initialize placeholder surface", e2);
-                this.r = e2;
+                s95.m10495c("PlaceholderSurface", "Failed to initialize placeholder surface", e2);
+                this.f28242r = e2;
                 synchronized (this) {
                     notify();
                 }
             } catch (RuntimeException e3) {
-                s95.c("PlaceholderSurface", "Failed to initialize placeholder surface", e3);
-                this.s = e3;
+                s95.m10495c("PlaceholderSurface", "Failed to initialize placeholder surface", e3);
+                this.f28243s = e3;
                 synchronized (this) {
                     notify();
                 }

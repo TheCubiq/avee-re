@@ -4,14 +4,16 @@ import android.content.Context;
 import com.daaw.b61;
 /* loaded from: classes.dex */
 public class a61 {
-    public static <T extends b61> b61.a<T> a(Context context, Class<T> cls, String str) {
+    /* renamed from: a */
+    public static <T extends b61> b61.C0817a<T> m27599a(Context context, Class<T> cls, String str) {
         if (str == null || str.trim().length() == 0) {
             throw new IllegalArgumentException("Cannot build a database with null or empty name. If you are trying to create an in memory database, use Room.inMemoryDatabaseBuilder");
         }
-        return new b61.a<>(context, cls, str);
+        return new b61.C0817a<>(context, cls, str);
     }
 
-    public static <T, C> T b(Class<C> cls, String str) {
+    /* renamed from: b */
+    public static <T, C> T m27598b(Class<C> cls, String str) {
         String str2;
         String name = cls.getPackage().getName();
         String canonicalName = cls.getCanonicalName();
@@ -35,7 +37,8 @@ public class a61 {
         }
     }
 
-    public static <T extends b61> b61.a<T> c(Context context, Class<T> cls) {
-        return new b61.a<>(context, cls, null);
+    /* renamed from: c */
+    public static <T extends b61> b61.C0817a<T> m27597c(Context context, Class<T> cls) {
+        return new b61.C0817a<>(context, cls, null);
     }
 }

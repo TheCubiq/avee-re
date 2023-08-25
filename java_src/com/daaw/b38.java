@@ -5,32 +5,34 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class b38 {
-    public static gl2 a(gs7 gs7Var) {
+    /* renamed from: a */
+    public static gl2 m26496a(gs7 gs7Var) {
         if (gs7Var == null) {
-            return gl2.g;
+            return gl2.f11420g;
         }
-        int M = gs7Var.M() - 1;
-        if (M == 1) {
-            return gs7Var.L() ? new wp2(gs7Var.G()) : gl2.n;
-        } else if (M == 2) {
-            return gs7Var.K() ? new tb2(Double.valueOf(gs7Var.D())) : new tb2(null);
-        } else if (M == 3) {
-            return gs7Var.J() ? new g92(Boolean.valueOf(gs7Var.I())) : new g92(null);
-        } else if (M == 4) {
-            List<gs7> H = gs7Var.H();
+        int m21243M = gs7Var.m21243M() - 1;
+        if (m21243M == 1) {
+            return gs7Var.m21244L() ? new wp2(gs7Var.m21249G()) : gl2.f11427n;
+        } else if (m21243M == 2) {
+            return gs7Var.m21245K() ? new tb2(Double.valueOf(gs7Var.m21252D())) : new tb2(null);
+        } else if (m21243M == 3) {
+            return gs7Var.m21246J() ? new g92(Boolean.valueOf(gs7Var.m21247I())) : new g92(null);
+        } else if (m21243M == 4) {
+            List<gs7> m21248H = gs7Var.m21248H();
             ArrayList arrayList = new ArrayList();
-            for (gs7 gs7Var2 : H) {
-                arrayList.add(a(gs7Var2));
+            for (gs7 gs7Var2 : m21248H) {
+                arrayList.add(m26496a(gs7Var2));
             }
-            return new km2(gs7Var.F(), arrayList);
+            return new km2(gs7Var.m21250F(), arrayList);
         } else {
             throw new IllegalArgumentException("Unknown type found. Cannot convert entity");
         }
     }
 
-    public static gl2 b(Object obj) {
+    /* renamed from: b */
+    public static gl2 m26495b(Object obj) {
         if (obj == null) {
-            return gl2.h;
+            return gl2.f11421h;
         }
         if (obj instanceof String) {
             return new wp2((String) obj);
@@ -51,7 +53,7 @@ public final class b38 {
             if (obj instanceof List) {
                 z72 z72Var = new z72();
                 for (Object obj2 : (List) obj) {
-                    z72Var.s(z72Var.j(), b(obj2));
+                    z72Var.m2696s(z72Var.m2704j(), m26495b(obj2));
                 }
                 return z72Var;
             }
@@ -60,12 +62,12 @@ public final class b38 {
         th2 th2Var = new th2();
         Map map = (Map) obj;
         for (Object obj3 : map.keySet()) {
-            gl2 b = b(map.get(obj3));
+            gl2 m26495b = m26495b(map.get(obj3));
             if (obj3 != null) {
                 if (!(obj3 instanceof String)) {
                     obj3 = obj3.toString();
                 }
-                th2Var.h((String) obj3, b);
+                th2Var.mo2705h((String) obj3, m26495b);
             }
         }
         return th2Var;

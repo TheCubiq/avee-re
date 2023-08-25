@@ -27,113 +27,177 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class zzj implements zzg {
-    public boolean b;
-    public f77 d;
-    @GuardedBy("lock")
-    public SharedPreferences f;
-    @GuardedBy("lock")
-    public SharedPreferences.Editor g;
-    @GuardedBy("lock")
-    public String i;
-    @GuardedBy("lock")
-    public String j;
-    public final Object a = new Object();
-    public final List c = new ArrayList();
-    @GuardedBy("lock")
-    public s13 e = null;
-    @GuardedBy("lock")
-    public boolean h = true;
-    @GuardedBy("lock")
-    public boolean k = true;
-    @GuardedBy("lock")
-    public String l = "-1";
-    @GuardedBy("lock")
-    public String m = "-1";
-    @GuardedBy("lock")
-    public String n = "-1";
-    @GuardedBy("lock")
-    public int o = -1;
-    @GuardedBy("lock")
-    public kz3 p = new kz3("", 0);
-    @GuardedBy("lock")
-    public long q = 0;
-    @GuardedBy("lock")
-    public long r = 0;
-    @GuardedBy("lock")
-    public int s = -1;
-    @GuardedBy("lock")
-    public int t = 0;
-    @GuardedBy("lock")
-    public Set u = Collections.emptySet();
-    @GuardedBy("lock")
-    public JSONObject v = new JSONObject();
-    @GuardedBy("lock")
-    public boolean w = true;
-    @GuardedBy("lock")
-    public boolean x = true;
-    @GuardedBy("lock")
-    public String y = null;
-    @GuardedBy("lock")
-    public String z = "";
-    @GuardedBy("lock")
-    public boolean A = false;
-    @GuardedBy("lock")
-    public String B = "";
-    @GuardedBy("lock")
-    public int C = -1;
-    @GuardedBy("lock")
-    public int D = -1;
-    @GuardedBy("lock")
-    public long E = 0;
 
-    public final /* synthetic */ void a(Context context, String str) {
+    /* renamed from: b */
+    public boolean f36312b;
+
+    /* renamed from: d */
+    public f77 f36314d;
+    @GuardedBy("lock")
+
+    /* renamed from: f */
+    public SharedPreferences f36316f;
+    @GuardedBy("lock")
+
+    /* renamed from: g */
+    public SharedPreferences.Editor f36317g;
+    @GuardedBy("lock")
+
+    /* renamed from: i */
+    public String f36319i;
+    @GuardedBy("lock")
+
+    /* renamed from: j */
+    public String f36320j;
+
+    /* renamed from: a */
+    public final Object f36311a = new Object();
+
+    /* renamed from: c */
+    public final List f36313c = new ArrayList();
+    @GuardedBy("lock")
+
+    /* renamed from: e */
+    public s13 f36315e = null;
+    @GuardedBy("lock")
+
+    /* renamed from: h */
+    public boolean f36318h = true;
+    @GuardedBy("lock")
+
+    /* renamed from: k */
+    public boolean f36321k = true;
+    @GuardedBy("lock")
+
+    /* renamed from: l */
+    public String f36322l = "-1";
+    @GuardedBy("lock")
+
+    /* renamed from: m */
+    public String f36323m = "-1";
+    @GuardedBy("lock")
+
+    /* renamed from: n */
+    public String f36324n = "-1";
+    @GuardedBy("lock")
+
+    /* renamed from: o */
+    public int f36325o = -1;
+    @GuardedBy("lock")
+
+    /* renamed from: p */
+    public kz3 f36326p = new kz3("", 0);
+    @GuardedBy("lock")
+
+    /* renamed from: q */
+    public long f36327q = 0;
+    @GuardedBy("lock")
+
+    /* renamed from: r */
+    public long f36328r = 0;
+    @GuardedBy("lock")
+
+    /* renamed from: s */
+    public int f36329s = -1;
+    @GuardedBy("lock")
+
+    /* renamed from: t */
+    public int f36330t = 0;
+    @GuardedBy("lock")
+
+    /* renamed from: u */
+    public Set f36331u = Collections.emptySet();
+    @GuardedBy("lock")
+
+    /* renamed from: v */
+    public JSONObject f36332v = new JSONObject();
+    @GuardedBy("lock")
+
+    /* renamed from: w */
+    public boolean f36333w = true;
+    @GuardedBy("lock")
+
+    /* renamed from: x */
+    public boolean f36334x = true;
+    @GuardedBy("lock")
+
+    /* renamed from: y */
+    public String f36335y = null;
+    @GuardedBy("lock")
+
+    /* renamed from: z */
+    public String f36336z = "";
+    @GuardedBy("lock")
+
+    /* renamed from: A */
+    public boolean f36306A = false;
+    @GuardedBy("lock")
+
+    /* renamed from: B */
+    public String f36307B = "";
+    @GuardedBy("lock")
+
+    /* renamed from: C */
+    public int f36308C = -1;
+    @GuardedBy("lock")
+
+    /* renamed from: D */
+    public int f36309D = -1;
+    @GuardedBy("lock")
+
+    /* renamed from: E */
+    public long f36310E = 0;
+
+    /* renamed from: a */
+    public final /* synthetic */ void m1334a(Context context, String str) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("admob", 0);
         SharedPreferences.Editor edit = sharedPreferences.edit();
-        synchronized (this.a) {
-            this.f = sharedPreferences;
-            this.g = edit;
-            if (vw0.g()) {
+        synchronized (this.f36311a) {
+            this.f36316f = sharedPreferences;
+            this.f36317g = edit;
+            if (vw0.m6698g()) {
                 NetworkSecurityPolicy.getInstance().isCleartextTrafficPermitted();
             }
-            this.h = this.f.getBoolean("use_https", this.h);
-            this.w = this.f.getBoolean("content_url_opted_out", this.w);
-            this.i = this.f.getString("content_url_hashes", this.i);
-            this.k = this.f.getBoolean("gad_idless", this.k);
-            this.x = this.f.getBoolean("content_vertical_opted_out", this.x);
-            this.j = this.f.getString("content_vertical_hashes", this.j);
-            this.t = this.f.getInt("version_code", this.t);
-            this.p = new kz3(this.f.getString("app_settings_json", this.p.c()), this.f.getLong("app_settings_last_update_ms", this.p.a()));
-            this.q = this.f.getLong("app_last_background_time_ms", this.q);
-            this.s = this.f.getInt("request_in_session_count", this.s);
-            this.r = this.f.getLong("first_ad_req_time_ms", this.r);
-            this.u = this.f.getStringSet("never_pool_slots", this.u);
-            this.y = this.f.getString("display_cutout", this.y);
-            this.C = this.f.getInt("app_measurement_npa", this.C);
-            this.D = this.f.getInt("sd_app_measure_npa", this.D);
-            this.E = this.f.getLong("sd_app_measure_npa_ts", this.E);
-            this.z = this.f.getString("inspector_info", this.z);
-            this.A = this.f.getBoolean("linked_device", this.A);
-            this.B = this.f.getString("linked_ad_unit", this.B);
-            this.l = this.f.getString("IABTCF_gdprApplies", this.l);
-            this.n = this.f.getString("IABTCF_PurposeConsents", this.n);
-            this.m = this.f.getString("IABTCF_TCString", this.m);
-            this.o = this.f.getInt("gad_has_consent_for_cookies", this.o);
+            this.f36318h = this.f36316f.getBoolean("use_https", this.f36318h);
+            this.f36333w = this.f36316f.getBoolean("content_url_opted_out", this.f36333w);
+            this.f36319i = this.f36316f.getString("content_url_hashes", this.f36319i);
+            this.f36321k = this.f36316f.getBoolean("gad_idless", this.f36321k);
+            this.f36334x = this.f36316f.getBoolean("content_vertical_opted_out", this.f36334x);
+            this.f36320j = this.f36316f.getString("content_vertical_hashes", this.f36320j);
+            this.f36330t = this.f36316f.getInt("version_code", this.f36330t);
+            this.f36326p = new kz3(this.f36316f.getString("app_settings_json", this.f36326p.m17294c()), this.f36316f.getLong("app_settings_last_update_ms", this.f36326p.m17296a()));
+            this.f36327q = this.f36316f.getLong("app_last_background_time_ms", this.f36327q);
+            this.f36329s = this.f36316f.getInt("request_in_session_count", this.f36329s);
+            this.f36328r = this.f36316f.getLong("first_ad_req_time_ms", this.f36328r);
+            this.f36331u = this.f36316f.getStringSet("never_pool_slots", this.f36331u);
+            this.f36335y = this.f36316f.getString("display_cutout", this.f36335y);
+            this.f36308C = this.f36316f.getInt("app_measurement_npa", this.f36308C);
+            this.f36309D = this.f36316f.getInt("sd_app_measure_npa", this.f36309D);
+            this.f36310E = this.f36316f.getLong("sd_app_measure_npa_ts", this.f36310E);
+            this.f36336z = this.f36316f.getString("inspector_info", this.f36336z);
+            this.f36306A = this.f36316f.getBoolean("linked_device", this.f36306A);
+            this.f36307B = this.f36316f.getString("linked_ad_unit", this.f36307B);
+            this.f36322l = this.f36316f.getString("IABTCF_gdprApplies", this.f36322l);
+            this.f36324n = this.f36316f.getString("IABTCF_PurposeConsents", this.f36324n);
+            this.f36323m = this.f36316f.getString("IABTCF_TCString", this.f36323m);
+            this.f36325o = this.f36316f.getInt("gad_has_consent_for_cookies", this.f36325o);
             try {
-                this.v = new JSONObject(this.f.getString("native_advanced_settings", "{}"));
+                this.f36332v = new JSONObject(this.f36316f.getString("native_advanced_settings", "{}"));
             } catch (JSONException e) {
                 k04.zzk("Could not convert native advanced settings to json object", e);
             }
-            c();
+            m1332c();
         }
     }
 
-    public final void b() {
-        f77 f77Var = this.d;
+    /* renamed from: b */
+    public final void m1333b() {
+        f77 f77Var = this.f36314d;
         if (f77Var == null || f77Var.isDone()) {
             return;
         }
         try {
-            this.d.get(1L, TimeUnit.SECONDS);
+            this.f36314d.get(1L, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             k04.zzk("Interrupted while waiting for preferences loaded.", e);
@@ -149,8 +213,9 @@ public final class zzj implements zzg {
         }
     }
 
-    public final void c() {
-        z04.a.execute(new Runnable() { // from class: com.google.android.gms.ads.internal.util.zzi
+    /* renamed from: c */
+    public final void m1332c() {
+        z04.f34305a.execute(new Runnable() { // from class: com.google.android.gms.ads.internal.util.zzi
             @Override // java.lang.Runnable
             public final void run() {
                 zzj.this.zzg();
@@ -160,99 +225,99 @@ public final class zzj implements zzg {
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzA(String str) {
-        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.m8)).booleanValue()) {
-            b();
-            synchronized (this.a) {
-                if (this.B.equals(str)) {
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+            m1333b();
+            synchronized (this.f36311a) {
+                if (this.f36307B.equals(str)) {
                     return;
                 }
-                this.B = str;
-                SharedPreferences.Editor editor = this.g;
+                this.f36307B = str;
+                SharedPreferences.Editor editor = this.f36317g;
                 if (editor != null) {
                     editor.putString("linked_ad_unit", str);
-                    this.g.apply();
+                    this.f36317g.apply();
                 }
-                c();
+                m1332c();
             }
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzB(boolean z) {
-        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.m8)).booleanValue()) {
-            b();
-            synchronized (this.a) {
-                if (this.A == z) {
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+            m1333b();
+            synchronized (this.f36311a) {
+                if (this.f36306A == z) {
                     return;
                 }
-                this.A = z;
-                SharedPreferences.Editor editor = this.g;
+                this.f36306A = z;
+                SharedPreferences.Editor editor = this.f36317g;
                 if (editor != null) {
                     editor.putBoolean("linked_device", z);
-                    this.g.apply();
+                    this.f36317g.apply();
                 }
-                c();
+                m1332c();
             }
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzC(String str) {
-        b();
-        synchronized (this.a) {
-            if (TextUtils.equals(this.y, str)) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (TextUtils.equals(this.f36335y, str)) {
                 return;
             }
-            this.y = str;
-            SharedPreferences.Editor editor = this.g;
+            this.f36335y = str;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putString("display_cutout", str);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzD(long j) {
-        b();
-        synchronized (this.a) {
-            if (this.r == j) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36328r == j) {
                 return;
             }
-            this.r = j;
-            SharedPreferences.Editor editor = this.g;
+            this.f36328r = j;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putLong("first_ad_req_time_ms", j);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzE(int i) {
-        b();
-        synchronized (this.a) {
-            this.o = i;
-            SharedPreferences.Editor editor = this.g;
+        m1333b();
+        synchronized (this.f36311a) {
+            this.f36325o = i;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 if (i == -1) {
                     editor.remove("gad_has_consent_for_cookies");
                 } else {
                     editor.putInt("gad_has_consent_for_cookies", i);
                 }
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzF(String str, String str2) {
         char c;
-        b();
-        synchronized (this.a) {
+        m1333b();
+        synchronized (this.f36311a) {
             int hashCode = str.hashCode();
             if (hashCode == -2004976699) {
                 if (str.equals("IABTCF_PurposeConsents")) {
@@ -271,67 +336,67 @@ public final class zzj implements zzg {
                 c = 65535;
             }
             if (c == 0) {
-                this.l = str2;
+                this.f36322l = str2;
             } else if (c == 1) {
-                this.m = str2;
+                this.f36323m = str2;
             } else if (c != 2) {
                 return;
             } else {
-                this.n = str2;
+                this.f36324n = str2;
             }
-            if (this.g != null) {
+            if (this.f36317g != null) {
                 if (str2.equals("-1")) {
-                    this.g.remove(str);
+                    this.f36317g.remove(str);
                 } else {
-                    this.g.putString(str, str2);
+                    this.f36317g.putString(str, str2);
                 }
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzG(String str) {
-        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.X7)).booleanValue()) {
-            b();
-            synchronized (this.a) {
-                if (this.z.equals(str)) {
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10599X7)).booleanValue()) {
+            m1333b();
+            synchronized (this.f36311a) {
+                if (this.f36336z.equals(str)) {
                     return;
                 }
-                this.z = str;
-                SharedPreferences.Editor editor = this.g;
+                this.f36336z = str;
+                SharedPreferences.Editor editor = this.f36317g;
                 if (editor != null) {
                     editor.putString("inspector_info", str);
-                    this.g.apply();
+                    this.f36317g.apply();
                 }
-                c();
+                m1332c();
             }
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzH(boolean z) {
-        b();
-        synchronized (this.a) {
-            if (z == this.k) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (z == this.f36321k) {
                 return;
             }
-            this.k = z;
-            SharedPreferences.Editor editor = this.g;
+            this.f36321k = z;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putBoolean("gad_idless", z);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzI(String str, String str2, boolean z) {
-        b();
-        synchronized (this.a) {
-            JSONArray optJSONArray = this.v.optJSONArray(str);
+        m1333b();
+        synchronized (this.f36311a) {
+            JSONArray optJSONArray = this.f36332v.optJSONArray(str);
             if (optJSONArray == null) {
                 optJSONArray = new JSONArray();
             }
@@ -352,78 +417,78 @@ public final class zzj implements zzg {
                 JSONObject jSONObject = new JSONObject();
                 jSONObject.put("template_id", str2);
                 jSONObject.put("uses_media_view", z);
-                jSONObject.put("timestamp_ms", com.google.android.gms.ads.internal.zzt.zzB().a());
+                jSONObject.put("timestamp_ms", com.google.android.gms.ads.internal.zzt.zzB().mo15860a());
                 optJSONArray.put(length, jSONObject);
-                this.v.put(str, optJSONArray);
+                this.f36332v.put(str, optJSONArray);
             } catch (JSONException e) {
                 k04.zzk("Could not update native advanced settings", e);
             }
-            SharedPreferences.Editor editor = this.g;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
-                editor.putString("native_advanced_settings", this.v.toString());
-                this.g.apply();
+                editor.putString("native_advanced_settings", this.f36332v.toString());
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzJ(int i) {
-        b();
-        synchronized (this.a) {
-            if (this.s == i) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36329s == i) {
                 return;
             }
-            this.s = i;
-            SharedPreferences.Editor editor = this.g;
+            this.f36329s = i;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putInt("request_in_session_count", i);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzK(int i) {
-        b();
-        synchronized (this.a) {
-            if (this.D == i) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36309D == i) {
                 return;
             }
-            this.D = i;
-            SharedPreferences.Editor editor = this.g;
+            this.f36309D = i;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putInt("sd_app_measure_npa", i);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzL(long j) {
-        b();
-        synchronized (this.a) {
-            if (this.E == j) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36310E == j) {
                 return;
             }
-            this.E = j;
-            SharedPreferences.Editor editor = this.g;
+            this.f36310E = j;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putLong("sd_app_measure_npa_ts", j);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final boolean zzM() {
         boolean z;
-        b();
-        synchronized (this.a) {
-            z = this.w;
+        m1333b();
+        synchronized (this.f36311a) {
+            z = this.f36333w;
         }
         return z;
     }
@@ -431,9 +496,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final boolean zzN() {
         boolean z;
-        b();
-        synchronized (this.a) {
-            z = this.x;
+        m1333b();
+        synchronized (this.f36311a) {
+            z = this.f36334x;
         }
         return z;
     }
@@ -441,9 +506,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final boolean zzO() {
         boolean z;
-        b();
-        synchronized (this.a) {
-            z = this.A;
+        m1333b();
+        synchronized (this.f36311a) {
+            z = this.f36306A;
         }
         return z;
     }
@@ -451,10 +516,10 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final boolean zzP() {
         boolean z;
-        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.r0)).booleanValue()) {
-            b();
-            synchronized (this.a) {
-                z = this.k;
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10809r0)).booleanValue()) {
+            m1333b();
+            synchronized (this.f36311a) {
+                z = this.f36321k;
             }
             return z;
         }
@@ -464,9 +529,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final int zza() {
         int i;
-        b();
-        synchronized (this.a) {
-            i = this.t;
+        m1333b();
+        synchronized (this.f36311a) {
+            i = this.f36330t;
         }
         return i;
     }
@@ -474,9 +539,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final int zzb() {
         int i;
-        b();
-        synchronized (this.a) {
-            i = this.o;
+        m1333b();
+        synchronized (this.f36311a) {
+            i = this.f36325o;
         }
         return i;
     }
@@ -484,9 +549,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final int zzc() {
         int i;
-        b();
-        synchronized (this.a) {
-            i = this.s;
+        m1333b();
+        synchronized (this.f36311a) {
+            i = this.f36329s;
         }
         return i;
     }
@@ -494,9 +559,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final long zzd() {
         long j;
-        b();
-        synchronized (this.a) {
-            j = this.q;
+        m1333b();
+        synchronized (this.f36311a) {
+            j = this.f36327q;
         }
         return j;
     }
@@ -504,9 +569,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final long zze() {
         long j;
-        b();
-        synchronized (this.a) {
-            j = this.r;
+        m1333b();
+        synchronized (this.f36311a) {
+            j = this.f36328r;
         }
         return j;
     }
@@ -514,27 +579,27 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final long zzf() {
         long j;
-        b();
-        synchronized (this.a) {
-            j = this.E;
+        m1333b();
+        synchronized (this.f36311a) {
+            j = this.f36310E;
         }
         return j;
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final s13 zzg() {
-        if (this.b) {
-            if (!(zzM() && zzN()) && ((Boolean) sa3.b.e()).booleanValue()) {
-                synchronized (this.a) {
+        if (this.f36312b) {
+            if (!(zzM() && zzN()) && ((Boolean) sa3.f26045b.m16137e()).booleanValue()) {
+                synchronized (this.f36311a) {
                     if (Looper.getMainLooper() == null) {
                         return null;
                     }
-                    if (this.e == null) {
-                        this.e = new s13();
+                    if (this.f36315e == null) {
+                        this.f36315e = new s13();
                     }
-                    this.e.e();
+                    this.f36315e.m10759e();
                     k04.zzi("start fetching content...");
-                    return this.e;
+                    return this.f36315e;
                 }
             }
             return null;
@@ -545,9 +610,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final kz3 zzh() {
         kz3 kz3Var;
-        b();
-        synchronized (this.a) {
-            kz3Var = this.p;
+        m1333b();
+        synchronized (this.f36311a) {
+            kz3Var = this.f36326p;
         }
         return kz3Var;
     }
@@ -555,8 +620,8 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final kz3 zzi() {
         kz3 kz3Var;
-        synchronized (this.a) {
-            kz3Var = this.p;
+        synchronized (this.f36311a) {
+            kz3Var = this.f36326p;
         }
         return kz3Var;
     }
@@ -564,9 +629,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final String zzj() {
         String str;
-        b();
-        synchronized (this.a) {
-            str = this.i;
+        m1333b();
+        synchronized (this.f36311a) {
+            str = this.f36319i;
         }
         return str;
     }
@@ -574,9 +639,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final String zzk() {
         String str;
-        b();
-        synchronized (this.a) {
-            str = this.j;
+        m1333b();
+        synchronized (this.f36311a) {
+            str = this.f36320j;
         }
         return str;
     }
@@ -584,9 +649,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final String zzl() {
         String str;
-        b();
-        synchronized (this.a) {
-            str = this.B;
+        m1333b();
+        synchronized (this.f36311a) {
+            str = this.f36307B;
         }
         return str;
     }
@@ -594,9 +659,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final String zzm() {
         String str;
-        b();
-        synchronized (this.a) {
-            str = this.y;
+        m1333b();
+        synchronized (this.f36311a) {
+            str = this.f36335y;
         }
         return str;
     }
@@ -604,8 +669,8 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final String zzn(String str) {
         char c;
-        b();
-        synchronized (this.a) {
+        m1333b();
+        synchronized (this.f36311a) {
             int hashCode = str.hashCode();
             if (hashCode == -2004976699) {
                 if (str.equals("IABTCF_PurposeConsents")) {
@@ -624,13 +689,13 @@ public final class zzj implements zzg {
                 c = 65535;
             }
             if (c == 0) {
-                return this.l;
+                return this.f36322l;
             } else if (c == 1) {
-                return this.m;
+                return this.f36323m;
             } else if (c != 2) {
                 return null;
             } else {
-                return this.n;
+                return this.f36324n;
             }
         }
     }
@@ -638,9 +703,9 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final String zzo() {
         String str;
-        b();
-        synchronized (this.a) {
-            str = this.z;
+        m1333b();
+        synchronized (this.f36311a) {
+            str = this.f36336z;
         }
         return str;
     }
@@ -648,173 +713,173 @@ public final class zzj implements zzg {
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final JSONObject zzp() {
         JSONObject jSONObject;
-        b();
-        synchronized (this.a) {
-            jSONObject = this.v;
+        m1333b();
+        synchronized (this.f36311a) {
+            jSONObject = this.f36332v;
         }
         return jSONObject;
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzq(Runnable runnable) {
-        this.c.add(runnable);
+        this.f36313c.add(runnable);
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzr(final Context context) {
-        synchronized (this.a) {
-            if (this.f != null) {
+        synchronized (this.f36311a) {
+            if (this.f36316f != null) {
                 return;
             }
-            this.d = z04.a.P(new Runnable(context, "admob") { // from class: com.google.android.gms.ads.internal.util.zzh
+            this.f36314d = z04.f34305a.mo20111P(new Runnable(context, "admob") { // from class: com.google.android.gms.ads.internal.util.zzh
                 public final /* synthetic */ Context zzb;
                 public final /* synthetic */ String zzc = "admob";
 
                 @Override // java.lang.Runnable
                 public final void run() {
-                    zzj.this.a(this.zzb, this.zzc);
+                    zzj.this.m1334a(this.zzb, this.zzc);
                 }
             });
-            this.b = true;
+            this.f36312b = true;
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzs() {
-        b();
-        synchronized (this.a) {
-            this.v = new JSONObject();
-            SharedPreferences.Editor editor = this.g;
+        m1333b();
+        synchronized (this.f36311a) {
+            this.f36332v = new JSONObject();
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.remove("native_advanced_settings");
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzt(long j) {
-        b();
-        synchronized (this.a) {
-            if (this.q == j) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36327q == j) {
                 return;
             }
-            this.q = j;
-            SharedPreferences.Editor editor = this.g;
+            this.f36327q = j;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putLong("app_last_background_time_ms", j);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzu(String str) {
-        b();
-        synchronized (this.a) {
-            long a = com.google.android.gms.ads.internal.zzt.zzB().a();
-            if (str != null && !str.equals(this.p.c())) {
-                this.p = new kz3(str, a);
-                SharedPreferences.Editor editor = this.g;
+        m1333b();
+        synchronized (this.f36311a) {
+            long mo15860a = com.google.android.gms.ads.internal.zzt.zzB().mo15860a();
+            if (str != null && !str.equals(this.f36326p.m17294c())) {
+                this.f36326p = new kz3(str, mo15860a);
+                SharedPreferences.Editor editor = this.f36317g;
                 if (editor != null) {
                     editor.putString("app_settings_json", str);
-                    this.g.putLong("app_settings_last_update_ms", a);
-                    this.g.apply();
+                    this.f36317g.putLong("app_settings_last_update_ms", mo15860a);
+                    this.f36317g.apply();
                 }
-                c();
-                for (Runnable runnable : this.c) {
+                m1332c();
+                for (Runnable runnable : this.f36313c) {
                     runnable.run();
                 }
                 return;
             }
-            this.p.g(a);
+            this.f36326p.m17290g(mo15860a);
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzv(int i) {
-        b();
-        synchronized (this.a) {
-            if (this.t == i) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36330t == i) {
                 return;
             }
-            this.t = i;
-            SharedPreferences.Editor editor = this.g;
+            this.f36330t = i;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putInt("version_code", i);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzw(String str) {
-        b();
-        synchronized (this.a) {
-            if (str.equals(this.i)) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (str.equals(this.f36319i)) {
                 return;
             }
-            this.i = str;
-            SharedPreferences.Editor editor = this.g;
+            this.f36319i = str;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putString("content_url_hashes", str);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzx(boolean z) {
-        b();
-        synchronized (this.a) {
-            if (this.w == z) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36333w == z) {
                 return;
             }
-            this.w = z;
-            SharedPreferences.Editor editor = this.g;
+            this.f36333w = z;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putBoolean("content_url_opted_out", z);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzy(String str) {
-        b();
-        synchronized (this.a) {
-            if (str.equals(this.j)) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (str.equals(this.f36320j)) {
                 return;
             }
-            this.j = str;
-            SharedPreferences.Editor editor = this.g;
+            this.f36320j = str;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putString("content_vertical_hashes", str);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzg
     public final void zzz(boolean z) {
-        b();
-        synchronized (this.a) {
-            if (this.x == z) {
+        m1333b();
+        synchronized (this.f36311a) {
+            if (this.f36334x == z) {
                 return;
             }
-            this.x = z;
-            SharedPreferences.Editor editor = this.g;
+            this.f36334x = z;
+            SharedPreferences.Editor editor = this.f36317g;
             if (editor != null) {
                 editor.putBoolean("content_vertical_opted_out", z);
-                this.g.apply();
+                this.f36317g.apply();
             }
-            c();
+            m1332c();
         }
     }
 }

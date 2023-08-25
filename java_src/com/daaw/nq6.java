@@ -3,30 +3,42 @@ package com.daaw;
 import android.view.View;
 /* loaded from: classes.dex */
 public final class nq6 {
-    public final wr6 a;
-    public final String b;
-    public final zp6 c;
-    public final String d = "Ad overlay";
+
+    /* renamed from: a */
+    public final wr6 f20576a;
+
+    /* renamed from: b */
+    public final String f20577b;
+
+    /* renamed from: c */
+    public final zp6 f20578c;
+
+    /* renamed from: d */
+    public final String f20579d = "Ad overlay";
 
     public nq6(View view, zp6 zp6Var, String str) {
-        this.a = new wr6(view);
-        this.b = view.getClass().getCanonicalName();
-        this.c = zp6Var;
+        this.f20576a = new wr6(view);
+        this.f20577b = view.getClass().getCanonicalName();
+        this.f20578c = zp6Var;
     }
 
-    public final zp6 a() {
-        return this.c;
+    /* renamed from: a */
+    public final zp6 m14875a() {
+        return this.f20578c;
     }
 
-    public final wr6 b() {
-        return this.a;
+    /* renamed from: b */
+    public final wr6 m14874b() {
+        return this.f20576a;
     }
 
-    public final String c() {
-        return this.d;
+    /* renamed from: c */
+    public final String m14873c() {
+        return this.f20579d;
     }
 
-    public final String d() {
-        return this.b;
+    /* renamed from: d */
+    public final String m14872d() {
+        return this.f20577b;
     }
 }

@@ -9,32 +9,48 @@ import java.util.List;
 import java.util.NoSuchElementException;
 /* loaded from: classes.dex */
 public class hz7 implements Iterator, Closeable, jh2 {
-    public static final ih2 v = new dz7("eof ");
-    public static final oz7 w = oz7.b(hz7.class);
-    public fh2 p;
-    public iz7 q;
-    public ih2 r = null;
-    public long s = 0;
-    public long t = 0;
-    public final List u = new ArrayList();
+
+    /* renamed from: v */
+    public static final ih2 f13078v = new dz7("eof ");
+
+    /* renamed from: w */
+    public static final oz7 f13079w = oz7.m13793b(hz7.class);
+
+    /* renamed from: p */
+    public fh2 f13080p;
+
+    /* renamed from: q */
+    public iz7 f13081q;
+
+    /* renamed from: r */
+    public ih2 f13082r = null;
+
+    /* renamed from: s */
+    public long f13083s = 0;
+
+    /* renamed from: t */
+    public long f13084t = 0;
+
+    /* renamed from: u */
+    public final List f13085u = new ArrayList();
 
     public void close() {
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        ih2 ih2Var = this.r;
-        if (ih2Var == v) {
+        ih2 ih2Var = this.f13082r;
+        if (ih2Var == f13078v) {
             return false;
         }
         if (ih2Var != null) {
             return true;
         }
         try {
-            this.r = next();
+            this.f13082r = next();
             return true;
         } catch (NoSuchElementException unused) {
-            this.r = v;
+            this.f13082r = f13078v;
             return false;
         }
     }
@@ -42,24 +58,24 @@ public class hz7 implements Iterator, Closeable, jh2 {
     @Override // java.util.Iterator
     /* renamed from: q */
     public final ih2 next() {
-        ih2 a;
-        ih2 ih2Var = this.r;
-        if (ih2Var != null && ih2Var != v) {
-            this.r = null;
+        ih2 mo22637a;
+        ih2 ih2Var = this.f13082r;
+        if (ih2Var != null && ih2Var != f13078v) {
+            this.f13082r = null;
             return ih2Var;
         }
-        iz7 iz7Var = this.q;
-        if (iz7Var == null || this.s >= this.t) {
-            this.r = v;
+        iz7 iz7Var = this.f13081q;
+        if (iz7Var == null || this.f13083s >= this.f13084t) {
+            this.f13082r = f13078v;
             throw new NoSuchElementException();
         }
         try {
             synchronized (iz7Var) {
-                this.q.b(this.s);
-                a = this.p.a(this.q, this);
-                this.s = this.q.zzb();
+                this.f13081q.mo12773b(this.f13083s);
+                mo22637a = this.f13080p.mo22637a(this.f13081q, this);
+                this.f13083s = this.f13081q.zzb();
             }
-            return a;
+            return mo22637a;
         } catch (EOFException unused) {
             throw new NoSuchElementException();
         } catch (IOException unused2) {
@@ -76,25 +92,27 @@ public class hz7 implements Iterator, Closeable, jh2 {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName());
         sb.append("[");
-        for (int i = 0; i < this.u.size(); i++) {
+        for (int i = 0; i < this.f13085u.size(); i++) {
             if (i > 0) {
                 sb.append(";");
             }
-            sb.append(((ih2) this.u.get(i)).toString());
+            sb.append(((ih2) this.f13085u.get(i)).toString());
         }
         sb.append("]");
         return sb.toString();
     }
 
-    public final List u() {
-        return (this.q == null || this.r == v) ? this.u : new nz7(this.u, this);
+    /* renamed from: u */
+    public final List m20313u() {
+        return (this.f13081q == null || this.f13082r == f13078v) ? this.f13085u : new nz7(this.f13085u, this);
     }
 
-    public final void w(iz7 iz7Var, long j, fh2 fh2Var) {
-        this.q = iz7Var;
-        this.s = iz7Var.zzb();
-        iz7Var.b(iz7Var.zzb() + j);
-        this.t = iz7Var.zzb();
-        this.p = fh2Var;
+    /* renamed from: w */
+    public final void m20312w(iz7 iz7Var, long j, fh2 fh2Var) {
+        this.f13081q = iz7Var;
+        this.f13083s = iz7Var.zzb();
+        iz7Var.mo12773b(iz7Var.zzb() + j);
+        this.f13084t = iz7Var.zzb();
+        this.f13080p = fh2Var;
     }
 }

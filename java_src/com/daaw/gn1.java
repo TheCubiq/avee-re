@@ -9,7 +9,8 @@ import android.graphics.RectF;
 import android.util.Log;
 /* loaded from: classes.dex */
 public final class gn1 {
-    public static Bitmap a(Bitmap bitmap, Bitmap bitmap2, int i, int i2) {
+    /* renamed from: a */
+    public static Bitmap m21447a(Bitmap bitmap, Bitmap bitmap2, int i, int i2) {
         float width;
         float height;
         if (bitmap2 == null) {
@@ -31,14 +32,15 @@ public final class gn1 {
         matrix.setScale(width, width);
         matrix.postTranslate((int) (f + 0.5f), (int) (height + 0.5f));
         if (bitmap == null) {
-            bitmap = Bitmap.createBitmap(i, i2, d(bitmap2));
+            bitmap = Bitmap.createBitmap(i, i2, m21444d(bitmap2));
         }
-        g(bitmap2, bitmap);
+        m21441g(bitmap2, bitmap);
         new Canvas(bitmap).drawBitmap(bitmap2, matrix, new Paint(6));
         return bitmap;
     }
 
-    public static Bitmap b(Bitmap bitmap, bc bcVar, int i, int i2) {
+    /* renamed from: b */
+    public static Bitmap m21446b(Bitmap bitmap, InterfaceC0832bc interfaceC0832bc, int i, int i2) {
         if (bitmap.getWidth() == i && bitmap.getHeight() == i2) {
             return bitmap;
         }
@@ -48,12 +50,12 @@ public final class gn1 {
         if (bitmap.getWidth() == width && bitmap.getHeight() == height) {
             return bitmap;
         }
-        Bitmap.Config d = d(bitmap);
-        Bitmap b = bcVar.b(width, height, d);
-        if (b == null) {
-            b = Bitmap.createBitmap(width, height, d);
+        Bitmap.Config m21444d = m21444d(bitmap);
+        Bitmap mo8070b = interfaceC0832bc.mo8070b(width, height, m21444d);
+        if (mo8070b == null) {
+            mo8070b = Bitmap.createBitmap(width, height, m21444d);
         }
-        g(bitmap, b);
+        m21441g(bitmap, mo8070b);
         if (Log.isLoggable("TransformationUtils", 2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("request: ");
@@ -67,21 +69,22 @@ public final class gn1 {
             sb2.append(bitmap.getHeight());
             StringBuilder sb3 = new StringBuilder();
             sb3.append("toReuse: ");
-            sb3.append(b.getWidth());
+            sb3.append(mo8070b.getWidth());
             sb3.append("x");
-            sb3.append(b.getHeight());
+            sb3.append(mo8070b.getHeight());
             StringBuilder sb4 = new StringBuilder();
             sb4.append("minPct:   ");
             sb4.append(min);
         }
-        Canvas canvas = new Canvas(b);
+        Canvas canvas = new Canvas(mo8070b);
         Matrix matrix = new Matrix();
         matrix.setScale(min, min);
         canvas.drawBitmap(bitmap, matrix, new Paint(6));
-        return b;
+        return mo8070b;
     }
 
-    public static int c(int i) {
+    /* renamed from: c */
+    public static int m21445c(int i) {
         switch (i) {
             case 3:
             case 4:
@@ -97,11 +100,13 @@ public final class gn1 {
         }
     }
 
-    public static Bitmap.Config d(Bitmap bitmap) {
+    /* renamed from: d */
+    public static Bitmap.Config m21444d(Bitmap bitmap) {
         return bitmap.getConfig() != null ? bitmap.getConfig() : Bitmap.Config.ARGB_8888;
     }
 
-    public static void e(int i, Matrix matrix) {
+    /* renamed from: e */
+    public static void m21443e(int i, Matrix matrix) {
         switch (i) {
             case 2:
                 matrix.setScale(-1.0f, 1.0f);
@@ -130,9 +135,10 @@ public final class gn1 {
         matrix.postScale(-1.0f, 1.0f);
     }
 
-    public static Bitmap f(Bitmap bitmap, bc bcVar, int i) {
+    /* renamed from: f */
+    public static Bitmap m21442f(Bitmap bitmap, InterfaceC0832bc interfaceC0832bc, int i) {
         Matrix matrix = new Matrix();
-        e(i, matrix);
+        m21443e(i, matrix);
         if (matrix.isIdentity()) {
             return bitmap;
         }
@@ -140,18 +146,19 @@ public final class gn1 {
         matrix.mapRect(rectF);
         int round = Math.round(rectF.width());
         int round2 = Math.round(rectF.height());
-        Bitmap.Config d = d(bitmap);
-        Bitmap b = bcVar.b(round, round2, d);
-        if (b == null) {
-            b = Bitmap.createBitmap(round, round2, d);
+        Bitmap.Config m21444d = m21444d(bitmap);
+        Bitmap mo8070b = interfaceC0832bc.mo8070b(round, round2, m21444d);
+        if (mo8070b == null) {
+            mo8070b = Bitmap.createBitmap(round, round2, m21444d);
         }
         matrix.postTranslate(-rectF.left, -rectF.top);
-        new Canvas(b).drawBitmap(bitmap, matrix, new Paint(6));
-        return b;
+        new Canvas(mo8070b).drawBitmap(bitmap, matrix, new Paint(6));
+        return mo8070b;
     }
 
     @TargetApi(12)
-    public static void g(Bitmap bitmap, Bitmap bitmap2) {
+    /* renamed from: g */
+    public static void m21441g(Bitmap bitmap, Bitmap bitmap2) {
         if (bitmap2 != null) {
             bitmap2.setHasAlpha(bitmap.hasAlpha());
         }

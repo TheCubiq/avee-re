@@ -6,10 +6,11 @@ public final class in2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        String str = (String) this.f.invoke(null, new Object[0]);
-        synchronized (this.e) {
-            this.e.e0(str);
+    /* renamed from: a */
+    public final void mo2099a() {
+        String str = (String) this.f20529f.invoke(null, new Object[0]);
+        synchronized (this.f20528e) {
+            this.f20528e.m20761e0(str);
         }
     }
 }

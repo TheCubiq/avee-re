@@ -13,49 +13,57 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @Deprecated
 /* loaded from: classes.dex */
 public final class v93 {
-    public final List a = new LinkedList();
-    public final Map b;
-    public final Object c;
+
+    /* renamed from: a */
+    public final List f30053a = new LinkedList();
+
+    /* renamed from: b */
+    public final Map f30054b;
+
+    /* renamed from: c */
+    public final Object f30055c;
 
     public v93(boolean z, String str, String str2) {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        this.b = linkedHashMap;
-        this.c = new Object();
+        this.f30054b = linkedHashMap;
+        this.f30055c = new Object();
         linkedHashMap.put("action", "make_wv");
         linkedHashMap.put("ad_format", str2);
     }
 
-    public static final s93 f() {
-        return new s93(zzt.zzB().b(), null, null);
+    /* renamed from: f */
+    public static final s93 m7312f() {
+        return new s93(zzt.zzB().mo15859b(), null, null);
     }
 
-    public final u93 a() {
+    /* renamed from: a */
+    public final u93 m7317a() {
         u93 u93Var;
-        boolean booleanValue = ((Boolean) zzba.zzc().b(g93.F1)).booleanValue();
+        boolean booleanValue = ((Boolean) zzba.zzc().m23658b(g93.f10413F1)).booleanValue();
         StringBuilder sb = new StringBuilder();
         HashMap hashMap = new HashMap();
-        synchronized (this.c) {
-            for (s93 s93Var : this.a) {
-                long a = s93Var.a();
-                String c = s93Var.c();
-                s93 b = s93Var.b();
-                if (b != null && a > 0) {
-                    sb.append(c);
+        synchronized (this.f30055c) {
+            for (s93 s93Var : this.f30053a) {
+                long m10500a = s93Var.m10500a();
+                String m10498c = s93Var.m10498c();
+                s93 m10499b = s93Var.m10499b();
+                if (m10499b != null && m10500a > 0) {
+                    sb.append(m10498c);
                     sb.append('.');
-                    sb.append(a - b.a());
+                    sb.append(m10500a - m10499b.m10500a());
                     sb.append(',');
                     if (booleanValue) {
-                        if (hashMap.containsKey(Long.valueOf(b.a()))) {
-                            StringBuilder sb2 = (StringBuilder) hashMap.get(Long.valueOf(b.a()));
+                        if (hashMap.containsKey(Long.valueOf(m10499b.m10500a()))) {
+                            StringBuilder sb2 = (StringBuilder) hashMap.get(Long.valueOf(m10499b.m10500a()));
                             sb2.append('+');
-                            sb2.append(c);
+                            sb2.append(m10498c);
                         } else {
-                            hashMap.put(Long.valueOf(b.a()), new StringBuilder(c));
+                            hashMap.put(Long.valueOf(m10499b.m10500a()), new StringBuilder(m10498c));
                         }
                     }
                 }
             }
-            this.a.clear();
+            this.f30053a.clear();
             String str = null;
             if (!TextUtils.isEmpty(null)) {
                 sb.append((String) null);
@@ -67,7 +75,7 @@ public final class v93 {
                 for (Map.Entry entry : hashMap.entrySet()) {
                     sb3.append((CharSequence) entry.getValue());
                     sb3.append('.');
-                    sb3.append(zzt.zzB().a() + (((Long) entry.getKey()).longValue() - zzt.zzB().b()));
+                    sb3.append(zzt.zzB().mo15860a() + (((Long) entry.getKey()).longValue() - zzt.zzB().mo15859b()));
                     sb3.append(',');
                 }
                 if (sb3.length() > 0) {
@@ -80,36 +88,40 @@ public final class v93 {
         return u93Var;
     }
 
-    public final Map b() {
+    /* renamed from: b */
+    public final Map m7316b() {
         Map map;
-        synchronized (this.c) {
-            zzt.zzo().f();
-            map = this.b;
+        synchronized (this.f30055c) {
+            zzt.zzo().m11917f();
+            map = this.f30054b;
         }
         return map;
     }
 
-    public final void c(v93 v93Var) {
-        synchronized (this.c) {
+    /* renamed from: c */
+    public final void m7315c(v93 v93Var) {
+        synchronized (this.f30055c) {
         }
     }
 
-    public final void d(String str, String str2) {
-        l93 f;
-        if (TextUtils.isEmpty(str2) || (f = zzt.zzo().f()) == null) {
+    /* renamed from: d */
+    public final void m7314d(String str, String str2) {
+        l93 m11917f;
+        if (TextUtils.isEmpty(str2) || (m11917f = zzt.zzo().m11917f()) == null) {
             return;
         }
-        synchronized (this.c) {
-            r93 a = f.a(str);
-            Map map = this.b;
-            map.put(str, a.a((String) map.get(str), str2));
+        synchronized (this.f30055c) {
+            r93 m17086a = m11917f.m17086a(str);
+            Map map = this.f30054b;
+            map.put(str, m17086a.mo11550a((String) map.get(str), str2));
         }
     }
 
-    public final boolean e(s93 s93Var, long j, String... strArr) {
-        synchronized (this.c) {
+    /* renamed from: e */
+    public final boolean m7313e(s93 s93Var, long j, String... strArr) {
+        synchronized (this.f30055c) {
             for (int i = 0; i <= 0; i++) {
-                this.a.add(new s93(j, strArr[i], s93Var));
+                this.f30053a.add(new s93(j, strArr[i], s93Var));
             }
         }
         return true;

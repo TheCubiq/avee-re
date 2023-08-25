@@ -3,14 +3,20 @@ package androidx.constraintlayout.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import com.daaw.ja;
+import com.daaw.C1815ja;
+import com.daaw.C2716qj;
 import com.daaw.p21;
-import com.daaw.qj;
 /* loaded from: classes.dex */
-public class Barrier extends b {
-    public int x;
-    public int y;
-    public ja z;
+public class Barrier extends AbstractC0181b {
+
+    /* renamed from: x */
+    public int f863x;
+
+    /* renamed from: y */
+    public int f864y;
+
+    /* renamed from: z */
+    public C1815ja f865z;
 
     public Barrier(Context context) {
         super(context);
@@ -22,43 +28,46 @@ public class Barrier extends b {
         super.setVisibility(8);
     }
 
-    @Override // androidx.constraintlayout.widget.b
-    public void g(AttributeSet attributeSet) {
-        super.g(attributeSet);
-        this.z = new ja();
+    @Override // androidx.constraintlayout.widget.AbstractC0181b
+    /* renamed from: g */
+    public void mo12220g(AttributeSet attributeSet) {
+        super.mo12220g(attributeSet);
+        this.f865z = new C1815ja();
         if (attributeSet != null) {
-            TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, p21.a1);
+            TypedArray obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, p21.f22371a1);
             int indexCount = obtainStyledAttributes.getIndexCount();
             for (int i = 0; i < indexCount; i++) {
                 int index = obtainStyledAttributes.getIndex(i);
-                if (index == p21.j1) {
+                if (index == p21.f22434j1) {
                     setType(obtainStyledAttributes.getInt(index, 0));
-                } else if (index == p21.i1) {
-                    this.z.L0(obtainStyledAttributes.getBoolean(index, true));
-                } else if (index == p21.k1) {
-                    this.z.N0(obtainStyledAttributes.getDimensionPixelSize(index, 0));
+                } else if (index == p21.f22427i1) {
+                    this.f865z.m18695L0(obtainStyledAttributes.getBoolean(index, true));
+                } else if (index == p21.f22440k1) {
+                    this.f865z.m18693N0(obtainStyledAttributes.getDimensionPixelSize(index, 0));
                 }
             }
         }
-        this.s = this.z;
-        m();
+        this.f985s = this.f865z;
+        m29861m();
     }
 
     public int getMargin() {
-        return this.z.J0();
+        return this.f865z.m18697J0();
     }
 
     public int getType() {
-        return this.x;
+        return this.f863x;
     }
 
-    @Override // androidx.constraintlayout.widget.b
-    public void h(qj qjVar, boolean z) {
-        o(qjVar, this.x, z);
+    @Override // androidx.constraintlayout.widget.AbstractC0181b
+    /* renamed from: h */
+    public void mo29866h(C2716qj c2716qj, boolean z) {
+        m29897o(c2716qj, this.f863x, z);
     }
 
-    public boolean n() {
-        return this.z.H0();
+    /* renamed from: n */
+    public boolean m29898n() {
+        return this.f865z.m18699H0();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:12:0x0019, code lost:
@@ -67,62 +76,42 @@ public class Barrier extends b {
     /* JADX WARN: Code restructure failed: missing block: B:7:0x000f, code lost:
         if (r6 == 6) goto L13;
      */
+    /* renamed from: o */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void o(com.daaw.qj r4, int r5, boolean r6) {
-        /*
-            r3 = this;
-            r3.y = r5
-            r5 = 1
-            r0 = 0
-            r1 = 6
-            r2 = 5
-            if (r6 == 0) goto L12
-            int r6 = r3.x
-            if (r6 != r2) goto Lf
-        Lc:
-            r3.y = r5
-            goto L1c
-        Lf:
-            if (r6 != r1) goto L1c
-            goto L16
-        L12:
-            int r6 = r3.x
-            if (r6 != r2) goto L19
-        L16:
-            r3.y = r0
-            goto L1c
-        L19:
-            if (r6 != r1) goto L1c
-            goto Lc
-        L1c:
-            boolean r5 = r4 instanceof com.daaw.ja
-            if (r5 == 0) goto L27
-            com.daaw.ja r4 = (com.daaw.ja) r4
-            int r5 = r3.y
-            r4.M0(r5)
-        L27:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.constraintlayout.widget.Barrier.o(com.daaw.qj, int, boolean):void");
+    public final void m29897o(C2716qj c2716qj, int i, boolean z) {
+        this.f864y = i;
+        if (z) {
+            int i2 = this.f863x;
+            if (i2 != 5) {
+            }
+            this.f864y = 1;
+        } else {
+            int i3 = this.f863x;
+            if (i3 != 5) {
+            }
+            this.f864y = 0;
+        }
+        if (c2716qj instanceof C1815ja) {
+            ((C1815ja) c2716qj).m18694M0(this.f864y);
+        }
     }
 
     public void setAllowsGoneWidget(boolean z) {
-        this.z.L0(z);
+        this.f865z.m18695L0(z);
     }
 
     public void setDpMargin(int i) {
-        ja jaVar = this.z;
-        jaVar.N0((int) ((i * getResources().getDisplayMetrics().density) + 0.5f));
+        C1815ja c1815ja = this.f865z;
+        c1815ja.m18693N0((int) ((i * getResources().getDisplayMetrics().density) + 0.5f));
     }
 
     public void setMargin(int i) {
-        this.z.N0(i);
+        this.f865z.m18693N0(i);
     }
 
     public void setType(int i) {
-        this.x = i;
+        this.f863x = i;
     }
 }

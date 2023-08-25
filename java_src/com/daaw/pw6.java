@@ -8,53 +8,65 @@ import android.content.Intent;
 @TargetApi(18)
 /* loaded from: classes.dex */
 public final class pw6 {
-    public static final cx6 c = new cx6("OverlayDisplayService");
-    public static final Intent d = new Intent("com.google.android.play.core.lmd.BIND_OVERLAY_DISPLAY_SERVICE").setPackage("com.android.vending");
-    public final qx6 a;
-    public final String b;
+
+    /* renamed from: c */
+    public static final cx6 f23464c = new cx6("OverlayDisplayService");
+
+    /* renamed from: d */
+    public static final Intent f23465d = new Intent("com.google.android.play.core.lmd.BIND_OVERLAY_DISPLAY_SERVICE").setPackage("com.android.vending");
+
+    /* renamed from: a */
+    public final qx6 f23466a;
+
+    /* renamed from: b */
+    public final String f23467b;
 
     public pw6(Context context) {
-        this.a = tx6.a(context) ? new qx6(context.getApplicationContext(), c, "OverlayDisplayService", d, kw6.a, null, null) : null;
-        this.b = context.getPackageName();
+        this.f23466a = tx6.m8708a(context) ? new qx6(context.getApplicationContext(), f23464c, "OverlayDisplayService", f23465d, kw6.f16792a, null, null) : null;
+        this.f23467b = context.getPackageName();
     }
 
-    public final void c() {
-        if (this.a == null) {
+    /* renamed from: c */
+    public final void m12968c() {
+        if (this.f23466a == null) {
             return;
         }
-        c.d("unbind LMD display overlay service", new Object[0]);
-        this.a.r();
+        f23464c.m24909d("unbind LMD display overlay service", new Object[0]);
+        this.f23466a.m11953r();
     }
 
-    public final void d(dw6 dw6Var, uw6 uw6Var) {
-        if (this.a == null) {
-            c.b("error: %s", "Play Store not found.");
+    /* renamed from: d */
+    public final void m12967d(dw6 dw6Var, uw6 uw6Var) {
+        if (this.f23466a == null) {
+            f23464c.m24911b("error: %s", "Play Store not found.");
             return;
         }
         tj1 tj1Var = new tj1();
-        this.a.p(new mw6(this, tj1Var, dw6Var, uw6Var, tj1Var), tj1Var);
+        this.f23466a.m11955p(new mw6(this, tj1Var, dw6Var, uw6Var, tj1Var), tj1Var);
     }
 
-    public final void e(rw6 rw6Var, uw6 uw6Var) {
-        if (this.a == null) {
-            c.b("error: %s", "Play Store not found.");
-        } else if (rw6Var.g() != null) {
+    /* renamed from: e */
+    public final void m12966e(rw6 rw6Var, uw6 uw6Var) {
+        if (this.f23466a == null) {
+            f23464c.m24911b("error: %s", "Play Store not found.");
+        } else if (rw6Var.mo6730g() != null) {
             tj1 tj1Var = new tj1();
-            this.a.p(new lw6(this, tj1Var, rw6Var, uw6Var, tj1Var), tj1Var);
+            this.f23466a.m11955p(new lw6(this, tj1Var, rw6Var, uw6Var, tj1Var), tj1Var);
         } else {
-            c.b("Failed to convert OverlayDisplayShowRequest when to create a new session: appId cannot be null.", new Object[0]);
-            sw6 c2 = tw6.c();
-            c2.b(8160);
-            uw6Var.a(c2.c());
+            f23464c.m24911b("Failed to convert OverlayDisplayShowRequest when to create a new session: appId cannot be null.", new Object[0]);
+            sw6 m8753c = tw6.m8753c();
+            m8753c.mo5761b(8160);
+            uw6Var.mo1864a(m8753c.mo5760c());
         }
     }
 
-    public final void f(ww6 ww6Var, uw6 uw6Var, int i) {
-        if (this.a == null) {
-            c.b("error: %s", "Play Store not found.");
+    /* renamed from: f */
+    public final void m12965f(ww6 ww6Var, uw6 uw6Var, int i) {
+        if (this.f23466a == null) {
+            f23464c.m24911b("error: %s", "Play Store not found.");
             return;
         }
         tj1 tj1Var = new tj1();
-        this.a.p(new nw6(this, tj1Var, ww6Var, i, uw6Var, tj1Var), tj1Var);
+        this.f23466a.m11955p(new nw6(this, tj1Var, ww6Var, i, uw6Var, tj1Var), tj1Var);
     }
 }

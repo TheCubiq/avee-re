@@ -10,15 +10,24 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.os.Build;
 /* loaded from: classes.dex */
-public class ps0 extends pj<os0> {
-    public static final String j = ll0.f("NetworkStateTracker");
-    public final ConnectivityManager g;
-    public b h;
-    public a i;
+public class ps0 extends AbstractC2554pj<os0> {
 
+    /* renamed from: j */
+    public static final String f23225j = ll0.m16883f("NetworkStateTracker");
+
+    /* renamed from: g */
+    public final ConnectivityManager f23226g;
+
+    /* renamed from: h */
+    public C2584b f23227h;
+
+    /* renamed from: i */
+    public C2583a f23228i;
+
+    /* renamed from: com.daaw.ps0$a */
     /* loaded from: classes.dex */
-    public class a extends BroadcastReceiver {
-        public a() {
+    public class C2583a extends BroadcastReceiver {
+        public C2583a() {
         }
 
         @Override // android.content.BroadcastReceiver
@@ -26,100 +35,106 @@ public class ps0 extends pj<os0> {
             if (intent == null || intent.getAction() == null || !intent.getAction().equals("android.net.conn.CONNECTIVITY_CHANGE")) {
                 return;
             }
-            ll0.c().a(ps0.j, "Network broadcast received", new Throwable[0]);
+            ll0.m16885c().mo16882a(ps0.f23225j, "Network broadcast received", new Throwable[0]);
             ps0 ps0Var = ps0.this;
-            ps0Var.d(ps0Var.g());
+            ps0Var.m13334d(ps0Var.m13182g());
         }
     }
 
+    /* renamed from: com.daaw.ps0$b */
     /* loaded from: classes.dex */
-    public class b extends ConnectivityManager.NetworkCallback {
-        public b() {
+    public class C2584b extends ConnectivityManager.NetworkCallback {
+        public C2584b() {
         }
 
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onCapabilitiesChanged(Network network, NetworkCapabilities networkCapabilities) {
-            ll0.c().a(ps0.j, String.format("Network capabilities changed: %s", networkCapabilities), new Throwable[0]);
+            ll0.m16885c().mo16882a(ps0.f23225j, String.format("Network capabilities changed: %s", networkCapabilities), new Throwable[0]);
             ps0 ps0Var = ps0.this;
-            ps0Var.d(ps0Var.g());
+            ps0Var.m13334d(ps0Var.m13182g());
         }
 
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onLost(Network network) {
-            ll0.c().a(ps0.j, "Network connection lost", new Throwable[0]);
+            ll0.m16885c().mo16882a(ps0.f23225j, "Network connection lost", new Throwable[0]);
             ps0 ps0Var = ps0.this;
-            ps0Var.d(ps0Var.g());
+            ps0Var.m13334d(ps0Var.m13182g());
         }
     }
 
     public ps0(Context context, wj1 wj1Var) {
         super(context, wj1Var);
-        this.g = (ConnectivityManager) this.b.getSystemService("connectivity");
-        if (j()) {
-            this.h = new b();
+        this.f23226g = (ConnectivityManager) this.f22982b.getSystemService("connectivity");
+        if (m13179j()) {
+            this.f23227h = new C2584b();
         } else {
-            this.i = new a();
+            this.f23228i = new C2583a();
         }
     }
 
-    public static boolean j() {
+    /* renamed from: j */
+    public static boolean m13179j() {
         return Build.VERSION.SDK_INT >= 24;
     }
 
-    @Override // com.daaw.pj
-    public void e() {
-        if (!j()) {
-            ll0.c().a(j, "Registering broadcast receiver", new Throwable[0]);
-            this.b.registerReceiver(this.i, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+    @Override // com.daaw.AbstractC2554pj
+    /* renamed from: e */
+    public void mo12628e() {
+        if (!m13179j()) {
+            ll0.m16885c().mo16882a(f23225j, "Registering broadcast receiver", new Throwable[0]);
+            this.f22982b.registerReceiver(this.f23228i, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
             return;
         }
         try {
-            ll0.c().a(j, "Registering network callback", new Throwable[0]);
-            this.g.registerDefaultNetworkCallback(this.h);
+            ll0.m16885c().mo16882a(f23225j, "Registering network callback", new Throwable[0]);
+            this.f23226g.registerDefaultNetworkCallback(this.f23227h);
         } catch (IllegalArgumentException | SecurityException e) {
-            ll0.c().b(j, "Received exception while registering network callback", e);
+            ll0.m16885c().mo16881b(f23225j, "Received exception while registering network callback", e);
         }
     }
 
-    @Override // com.daaw.pj
-    public void f() {
-        if (!j()) {
-            ll0.c().a(j, "Unregistering broadcast receiver", new Throwable[0]);
-            this.b.unregisterReceiver(this.i);
+    @Override // com.daaw.AbstractC2554pj
+    /* renamed from: f */
+    public void mo12627f() {
+        if (!m13179j()) {
+            ll0.m16885c().mo16882a(f23225j, "Unregistering broadcast receiver", new Throwable[0]);
+            this.f22982b.unregisterReceiver(this.f23228i);
             return;
         }
         try {
-            ll0.c().a(j, "Unregistering network callback", new Throwable[0]);
-            this.g.unregisterNetworkCallback(this.h);
+            ll0.m16885c().mo16882a(f23225j, "Unregistering network callback", new Throwable[0]);
+            this.f23226g.unregisterNetworkCallback(this.f23227h);
         } catch (IllegalArgumentException | SecurityException e) {
-            ll0.c().b(j, "Received exception while unregistering network callback", e);
+            ll0.m16885c().mo16881b(f23225j, "Received exception while unregistering network callback", e);
         }
     }
 
-    public os0 g() {
-        NetworkInfo activeNetworkInfo = this.g.getActiveNetworkInfo();
+    /* renamed from: g */
+    public os0 m13182g() {
+        NetworkInfo activeNetworkInfo = this.f23226g.getActiveNetworkInfo();
         boolean z = true;
-        return new os0(activeNetworkInfo != null && activeNetworkInfo.isConnected(), i(), gj.a(this.g), (activeNetworkInfo == null || activeNetworkInfo.isRoaming()) ? false : false);
+        return new os0(activeNetworkInfo != null && activeNetworkInfo.isConnected(), m13180i(), C1424gj.m21568a(this.f23226g), (activeNetworkInfo == null || activeNetworkInfo.isRoaming()) ? false : false);
     }
 
-    @Override // com.daaw.pj
+    @Override // com.daaw.AbstractC2554pj
     /* renamed from: h */
-    public os0 b() {
-        return g();
+    public os0 mo13183b() {
+        return m13182g();
     }
 
-    public boolean i() {
+    /* renamed from: i */
+    public boolean m13180i() {
         if (Build.VERSION.SDK_INT < 23) {
             return false;
         }
         try {
-            NetworkCapabilities networkCapabilities = this.g.getNetworkCapabilities(this.g.getActiveNetwork());
+            NetworkCapabilities networkCapabilities = this.f23226g.getNetworkCapabilities(this.f23226g.getActiveNetwork());
             if (networkCapabilities != null) {
                 return networkCapabilities.hasCapability(16);
             }
             return false;
         } catch (SecurityException e) {
-            ll0.c().b(j, "Unable to validate active network", e);
+            ll0.m16885c().mo16881b(f23225j, "Unable to validate active network", e);
             return false;
         }
     }

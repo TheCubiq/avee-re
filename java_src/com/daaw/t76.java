@@ -9,25 +9,30 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class t76 implements i76 {
-    public final g77 a;
-    public final Context b;
+
+    /* renamed from: a */
+    public final g77 f27103a;
+
+    /* renamed from: b */
+    public final Context f27104b;
 
     public t76(g77 g77Var, Context context) {
-        this.a = g77Var;
-        this.b = context;
+        this.f27103a = g77Var;
+        this.f27104b = context;
     }
 
-    public final /* synthetic */ r76 a() {
+    /* renamed from: a */
+    public final /* synthetic */ r76 m9465a() {
         int i;
         boolean z;
         int i2;
-        TelephonyManager telephonyManager = (TelephonyManager) this.b.getSystemService("phone");
+        TelephonyManager telephonyManager = (TelephonyManager) this.f27104b.getSystemService("phone");
         String networkOperator = telephonyManager.getNetworkOperator();
         int phoneType = telephonyManager.getPhoneType();
         zzt.zzp();
         int i3 = -1;
-        if (zzs.zzx(this.b, "android.permission.ACCESS_NETWORK_STATE")) {
-            ConnectivityManager connectivityManager = (ConnectivityManager) this.b.getSystemService("connectivity");
+        if (zzs.zzx(this.f27104b, "android.permission.ACCESS_NETWORK_STATE")) {
+            ConnectivityManager connectivityManager = (ConnectivityManager) this.f27104b.getSystemService("connectivity");
             NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
             if (activeNetworkInfo != null) {
                 int type = activeNetworkInfo.getType();
@@ -44,7 +49,7 @@ public final class t76 implements i76 {
             z = false;
             i2 = -1;
         }
-        return new r76(networkOperator, i, zzt.zzq().zzm(this.b), phoneType, z, i2);
+        return new r76(networkOperator, i, zzt.zzq().zzm(this.f27104b), phoneType, z, i2);
     }
 
     @Override // com.daaw.i76
@@ -54,10 +59,10 @@ public final class t76 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return this.a.M(new Callable() { // from class: com.daaw.s76
+        return this.f27103a.mo20112M(new Callable() { // from class: com.daaw.s76
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return t76.this.a();
+                return t76.this.m9465a();
             }
         });
     }

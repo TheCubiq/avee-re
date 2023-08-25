@@ -3,215 +3,239 @@ package com.daaw;
 import java.io.OutputStream;
 /* loaded from: classes.dex */
 public final class or7 extends lr7 {
-    public final OutputStream h;
+
+    /* renamed from: h */
+    public final OutputStream f21908h;
 
     public or7(OutputStream outputStream, int i) {
         super(i);
-        this.h = outputStream;
+        this.f21908h = outputStream;
     }
 
     @Override // com.daaw.qr7
-    public final void A(int i, int i2) {
-        O(20);
-        L(i << 3);
-        L(i2);
+    /* renamed from: A */
+    public final void mo12269A(int i, int i2) {
+        m14024O(20);
+        m16621L(i << 3);
+        m16621L(i2);
     }
 
     @Override // com.daaw.qr7
-    public final void B(int i) {
-        O(5);
-        L(i);
+    /* renamed from: B */
+    public final void mo12268B(int i) {
+        m14024O(5);
+        m16621L(i);
     }
 
     @Override // com.daaw.qr7
-    public final void C(int i, long j) {
-        O(20);
-        L(i << 3);
-        M(j);
+    /* renamed from: C */
+    public final void mo12267C(int i, long j) {
+        m14024O(20);
+        m16621L(i << 3);
+        m16620M(j);
     }
 
     @Override // com.daaw.qr7
-    public final void D(long j) {
-        O(10);
-        M(j);
+    /* renamed from: D */
+    public final void mo12266D(long j) {
+        m14024O(10);
+        m16620M(j);
     }
 
-    public final void N() {
-        this.h.write(this.d, 0, this.f);
-        this.f = 0;
+    /* renamed from: N */
+    public final void m14025N() {
+        this.f21908h.write(this.f17666d, 0, this.f17668f);
+        this.f17668f = 0;
     }
 
-    public final void O(int i) {
-        if (this.e - this.f < i) {
-            N();
+    /* renamed from: O */
+    public final void m14024O(int i) {
+        if (this.f17667e - this.f17668f < i) {
+            m14025N();
         }
     }
 
-    public final void P(byte[] bArr, int i, int i2) {
-        int i3 = this.e;
-        int i4 = this.f;
+    /* renamed from: P */
+    public final void m14023P(byte[] bArr, int i, int i2) {
+        int i3 = this.f17667e;
+        int i4 = this.f17668f;
         int i5 = i3 - i4;
         if (i5 >= i2) {
-            System.arraycopy(bArr, i, this.d, i4, i2);
-            this.f += i2;
+            System.arraycopy(bArr, i, this.f17666d, i4, i2);
+            this.f17668f += i2;
         } else {
-            System.arraycopy(bArr, i, this.d, i4, i5);
+            System.arraycopy(bArr, i, this.f17666d, i4, i5);
             int i6 = i + i5;
             i2 -= i5;
-            this.f = this.e;
-            this.g += i5;
-            N();
-            if (i2 <= this.e) {
-                System.arraycopy(bArr, i6, this.d, 0, i2);
-                this.f = i2;
+            this.f17668f = this.f17667e;
+            this.f17669g += i5;
+            m14025N();
+            if (i2 <= this.f17667e) {
+                System.arraycopy(bArr, i6, this.f17666d, 0, i2);
+                this.f17668f = i2;
             } else {
-                this.h.write(bArr, i6, i2);
+                this.f21908h.write(bArr, i6, i2);
             }
         }
-        this.g += i2;
+        this.f17669g += i2;
     }
 
-    public final void Q(String str) {
-        int e;
+    /* renamed from: Q */
+    public final void m14022Q(String str) {
+        int m16416e;
         try {
             int length = str.length() * 3;
-            int f = qr7.f(length);
-            int i = f + length;
-            int i2 = this.e;
+            int m12256f = qr7.m12256f(length);
+            int i = m12256f + length;
+            int i2 = this.f17667e;
             if (i > i2) {
                 byte[] bArr = new byte[length];
-                int d = lw7.d(str, bArr, 0, length);
-                B(d);
-                P(bArr, 0, d);
+                int m16417d = lw7.m16417d(str, bArr, 0, length);
+                mo12268B(m16417d);
+                m14023P(bArr, 0, m16417d);
                 return;
             }
-            if (i > i2 - this.f) {
-                N();
+            if (i > i2 - this.f17668f) {
+                m14025N();
             }
-            int f2 = qr7.f(str.length());
-            int i3 = this.f;
+            int m12256f2 = qr7.m12256f(str.length());
+            int i3 = this.f17668f;
             try {
-                if (f2 == f) {
-                    int i4 = i3 + f2;
-                    this.f = i4;
-                    int d2 = lw7.d(str, this.d, i4, this.e - i4);
-                    this.f = i3;
-                    e = (d2 - i3) - f2;
-                    L(e);
-                    this.f = d2;
+                if (m12256f2 == m12256f) {
+                    int i4 = i3 + m12256f2;
+                    this.f17668f = i4;
+                    int m16417d2 = lw7.m16417d(str, this.f17666d, i4, this.f17667e - i4);
+                    this.f17668f = i3;
+                    m16416e = (m16417d2 - i3) - m12256f2;
+                    m16621L(m16416e);
+                    this.f17668f = m16417d2;
                 } else {
-                    e = lw7.e(str);
-                    L(e);
-                    this.f = lw7.d(str, this.d, this.f, e);
+                    m16416e = lw7.m16416e(str);
+                    m16621L(m16416e);
+                    this.f17668f = lw7.m16417d(str, this.f17666d, this.f17668f, m16416e);
                 }
-                this.g += e;
-            } catch (kw7 e2) {
-                this.g -= this.f - i3;
-                this.f = i3;
-                throw e2;
-            } catch (ArrayIndexOutOfBoundsException e3) {
-                throw new nr7(e3);
+                this.f17669g += m16416e;
+            } catch (kw7 e) {
+                this.f17669g -= this.f17668f - i3;
+                this.f17668f = i3;
+                throw e;
+            } catch (ArrayIndexOutOfBoundsException e2) {
+                throw new nr7(e2);
             }
-        } catch (kw7 e4) {
-            k(str, e4);
+        } catch (kw7 e3) {
+            m12251k(str, e3);
         }
     }
 
     @Override // com.daaw.qr7, com.daaw.nq7
-    public final void a(byte[] bArr, int i, int i2) {
-        P(bArr, i, i2);
+    /* renamed from: a */
+    public final void mo12261a(byte[] bArr, int i, int i2) {
+        m14023P(bArr, i, i2);
     }
 
     @Override // com.daaw.qr7
-    public final void m() {
-        if (this.f > 0) {
-            N();
+    /* renamed from: m */
+    public final void mo12249m() {
+        if (this.f17668f > 0) {
+            m14025N();
         }
     }
 
     @Override // com.daaw.qr7
-    public final void n(byte b) {
-        if (this.f == this.e) {
-            N();
+    /* renamed from: n */
+    public final void mo12248n(byte b) {
+        if (this.f17668f == this.f17667e) {
+            m14025N();
         }
-        I(b);
+        m16624I(b);
     }
 
     @Override // com.daaw.qr7
-    public final void o(int i, boolean z) {
-        O(11);
-        L(i << 3);
-        I(z ? (byte) 1 : (byte) 0);
+    /* renamed from: o */
+    public final void mo12247o(int i, boolean z) {
+        m14024O(11);
+        m16621L(i << 3);
+        m16624I(z ? (byte) 1 : (byte) 0);
     }
 
     @Override // com.daaw.qr7
-    public final void p(int i, yq7 yq7Var) {
-        B((i << 3) | 2);
-        B(yq7Var.o());
-        yq7Var.y(this);
+    /* renamed from: p */
+    public final void mo12246p(int i, yq7 yq7Var) {
+        mo12268B((i << 3) | 2);
+        mo12268B(yq7Var.mo3411o());
+        yq7Var.mo3401y(this);
     }
 
     @Override // com.daaw.qr7
-    public final void r(int i, int i2) {
-        O(14);
-        L((i << 3) | 5);
-        J(i2);
+    /* renamed from: r */
+    public final void mo12244r(int i, int i2) {
+        m14024O(14);
+        m16621L((i << 3) | 5);
+        m16623J(i2);
     }
 
     @Override // com.daaw.qr7
-    public final void s(int i) {
-        O(4);
-        J(i);
+    /* renamed from: s */
+    public final void mo12243s(int i) {
+        m14024O(4);
+        m16623J(i);
     }
 
     @Override // com.daaw.qr7
-    public final void t(int i, long j) {
-        O(18);
-        L((i << 3) | 1);
-        K(j);
+    /* renamed from: t */
+    public final void mo12242t(int i, long j) {
+        m14024O(18);
+        m16621L((i << 3) | 1);
+        m16622K(j);
     }
 
     @Override // com.daaw.qr7
-    public final void u(long j) {
-        O(8);
-        K(j);
+    /* renamed from: u */
+    public final void mo12241u(long j) {
+        m14024O(8);
+        m16622K(j);
     }
 
     @Override // com.daaw.qr7
-    public final void v(int i, int i2) {
-        O(20);
-        L(i << 3);
+    /* renamed from: v */
+    public final void mo12240v(int i, int i2) {
+        m14024O(20);
+        m16621L(i << 3);
         if (i2 >= 0) {
-            L(i2);
+            m16621L(i2);
         } else {
-            M(i2);
+            m16620M(i2);
         }
     }
 
     @Override // com.daaw.qr7
-    public final void w(int i) {
+    /* renamed from: w */
+    public final void mo12239w(int i) {
         if (i >= 0) {
-            B(i);
+            mo12268B(i);
         } else {
-            D(i);
+            mo12266D(i);
         }
     }
 
     @Override // com.daaw.qr7
-    public final void x(int i, xt7 xt7Var, cv7 cv7Var) {
-        B((i << 3) | 2);
-        B(((hq7) xt7Var).f(cv7Var));
-        cv7Var.f(xt7Var, this.a);
+    /* renamed from: x */
+    public final void mo12238x(int i, xt7 xt7Var, cv7 cv7Var) {
+        mo12268B((i << 3) | 2);
+        mo12268B(((hq7) xt7Var).mo16589f(cv7Var));
+        cv7Var.mo24956f(xt7Var, this.f24292a);
     }
 
     @Override // com.daaw.qr7
-    public final void y(int i, String str) {
-        B((i << 3) | 2);
-        Q(str);
+    /* renamed from: y */
+    public final void mo12237y(int i, String str) {
+        mo12268B((i << 3) | 2);
+        m14022Q(str);
     }
 
     @Override // com.daaw.qr7
-    public final void z(int i, int i2) {
-        B((i << 3) | i2);
+    /* renamed from: z */
+    public final void mo12236z(int i, int i2) {
+        mo12268B((i << 3) | i2);
     }
 }

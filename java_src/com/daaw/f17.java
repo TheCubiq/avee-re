@@ -6,44 +6,46 @@ import java.util.Map;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class f17 extends AbstractSet {
-    public final /* synthetic */ i17 p;
+
+    /* renamed from: p */
+    public final /* synthetic */ i17 f9010p;
 
     public f17(i17 i17Var) {
-        this.p = i17Var;
+        this.f9010p = i17Var;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final void clear() {
-        this.p.clear();
+        this.f9010p.clear();
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final boolean contains(@CheckForNull Object obj) {
-        return this.p.containsKey(obj);
+        return this.f9010p.containsKey(obj);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
     public final Iterator iterator() {
-        i17 i17Var = this.p;
-        Map n = i17Var.n();
-        return n != null ? n.keySet().iterator() : new n07(i17Var);
+        i17 i17Var = this.f9010p;
+        Map m20185n = i17Var.m20185n();
+        return m20185n != null ? m20185n.keySet().iterator() : new n07(i17Var);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final boolean remove(@CheckForNull Object obj) {
-        Object z;
+        Object m20173z;
         Object obj2;
-        Map n = this.p.n();
-        if (n != null) {
-            return n.keySet().remove(obj);
+        Map m20185n = this.f9010p.m20185n();
+        if (m20185n != null) {
+            return m20185n.keySet().remove(obj);
         }
-        z = this.p.z(obj);
-        obj2 = i17.y;
-        return z != obj2;
+        m20173z = this.f9010p.m20173z(obj);
+        obj2 = i17.f13180y;
+        return m20173z != obj2;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final int size() {
-        return this.p.size();
+        return this.f9010p.size();
     }
 }

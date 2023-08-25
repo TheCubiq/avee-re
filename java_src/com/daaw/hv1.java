@@ -5,21 +5,24 @@ import android.widget.ImageButton;
 @SuppressLint({"AppCompatCustomView"})
 /* loaded from: classes2.dex */
 public class hv1 extends ImageButton {
-    public int p;
 
-    public final void b(int i, boolean z) {
+    /* renamed from: p */
+    public int f13015p;
+
+    /* renamed from: b */
+    public final void m20389b(int i, boolean z) {
         super.setVisibility(i);
         if (z) {
-            this.p = i;
+            this.f13015p = i;
         }
     }
 
     public final int getUserSetVisibility() {
-        return this.p;
+        return this.f13015p;
     }
 
     @Override // android.widget.ImageView, android.view.View
     public void setVisibility(int i) {
-        b(i, true);
+        m20389b(i, true);
     }
 }

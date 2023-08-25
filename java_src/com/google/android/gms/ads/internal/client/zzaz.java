@@ -4,13 +4,17 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
 /* loaded from: classes.dex */
 public class zzaz extends AdListener {
-    public final Object a = new Object();
-    public AdListener b;
+
+    /* renamed from: a */
+    public final Object f36100a = new Object();
+
+    /* renamed from: b */
+    public AdListener f36101b;
 
     @Override // com.google.android.gms.ads.AdListener, com.google.android.gms.ads.internal.client.zza
     public final void onAdClicked() {
-        synchronized (this.a) {
-            AdListener adListener = this.b;
+        synchronized (this.f36100a) {
+            AdListener adListener = this.f36101b;
             if (adListener != null) {
                 adListener.onAdClicked();
             }
@@ -19,8 +23,8 @@ public class zzaz extends AdListener {
 
     @Override // com.google.android.gms.ads.AdListener
     public final void onAdClosed() {
-        synchronized (this.a) {
-            AdListener adListener = this.b;
+        synchronized (this.f36100a) {
+            AdListener adListener = this.f36101b;
             if (adListener != null) {
                 adListener.onAdClosed();
             }
@@ -29,8 +33,8 @@ public class zzaz extends AdListener {
 
     @Override // com.google.android.gms.ads.AdListener
     public void onAdFailedToLoad(LoadAdError loadAdError) {
-        synchronized (this.a) {
-            AdListener adListener = this.b;
+        synchronized (this.f36100a) {
+            AdListener adListener = this.f36101b;
             if (adListener != null) {
                 adListener.onAdFailedToLoad(loadAdError);
             }
@@ -39,8 +43,8 @@ public class zzaz extends AdListener {
 
     @Override // com.google.android.gms.ads.AdListener
     public final void onAdImpression() {
-        synchronized (this.a) {
-            AdListener adListener = this.b;
+        synchronized (this.f36100a) {
+            AdListener adListener = this.f36101b;
             if (adListener != null) {
                 adListener.onAdImpression();
             }
@@ -49,8 +53,8 @@ public class zzaz extends AdListener {
 
     @Override // com.google.android.gms.ads.AdListener
     public void onAdLoaded() {
-        synchronized (this.a) {
-            AdListener adListener = this.b;
+        synchronized (this.f36100a) {
+            AdListener adListener = this.f36101b;
             if (adListener != null) {
                 adListener.onAdLoaded();
             }
@@ -59,8 +63,8 @@ public class zzaz extends AdListener {
 
     @Override // com.google.android.gms.ads.AdListener
     public final void onAdOpened() {
-        synchronized (this.a) {
-            AdListener adListener = this.b;
+        synchronized (this.f36100a) {
+            AdListener adListener = this.f36101b;
             if (adListener != null) {
                 adListener.onAdOpened();
             }
@@ -68,8 +72,8 @@ public class zzaz extends AdListener {
     }
 
     public final void zza(AdListener adListener) {
-        synchronized (this.a) {
-            this.b = adListener;
+        synchronized (this.f36100a) {
+            this.f36101b = adListener;
         }
     }
 }

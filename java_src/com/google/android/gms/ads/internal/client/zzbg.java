@@ -10,14 +10,15 @@ public abstract class zzbg extends cp2 implements zzbh {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         switch (i) {
             case 1:
                 zzd();
                 break;
             case 2:
                 int readInt = parcel.readInt();
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 zze(readInt);
                 break;
             case 3:
@@ -35,8 +36,8 @@ public abstract class zzbg extends cp2 implements zzbh {
                 zzg();
                 break;
             case 8:
-                dp2.c(parcel);
-                zzf((zze) dp2.a(parcel, zze.CREATOR));
+                dp2.m24105c(parcel);
+                zzf((zze) dp2.m24107a(parcel, zze.CREATOR));
                 break;
             case 9:
                 zzk();

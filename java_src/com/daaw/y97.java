@@ -4,45 +4,49 @@ import java.nio.charset.Charset;
 import java.security.GeneralSecurityException;
 /* loaded from: classes.dex */
 public final class y97 {
-    public static final Charset a = Charset.forName("UTF-8");
 
-    public static in7 a(dn7 dn7Var) {
-        fn7 L = in7.L();
-        L.t(dn7Var.M());
-        for (cn7 cn7Var : dn7Var.R()) {
-            gn7 L2 = hn7.L();
-            L2.u(cn7Var.M().Q());
-            L2.v(cn7Var.U());
-            L2.t(cn7Var.P());
-            L2.s(cn7Var.L());
-            L.s((hn7) L2.n());
+    /* renamed from: a */
+    public static final Charset f33440a = Charset.forName("UTF-8");
+
+    /* renamed from: a */
+    public static in7 m3982a(dn7 dn7Var) {
+        fn7 m19591L = in7.m19591L();
+        m19591L.m22475t(dn7Var.m24206M());
+        for (cn7 cn7Var : dn7Var.m24201R()) {
+            gn7 m20612L = hn7.m20612L();
+            m20612L.m21430u(cn7Var.m25204M().m15029Q());
+            m20612L.m21429v(cn7Var.m25196U());
+            m20612L.m21431t(cn7Var.m25201P());
+            m20612L.m21432s(cn7Var.m25205L());
+            m19591L.m22476s((hn7) m20612L.m22315n());
         }
-        return (in7) L.n();
+        return (in7) m19591L.m22315n();
     }
 
-    public static void b(dn7 dn7Var) {
-        int M = dn7Var.M();
+    /* renamed from: b */
+    public static void m3981b(dn7 dn7Var) {
+        int m24206M = dn7Var.m24206M();
         int i = 0;
         boolean z = false;
         boolean z2 = true;
-        for (cn7 cn7Var : dn7Var.R()) {
-            if (cn7Var.U() == 3) {
-                if (!cn7Var.T()) {
-                    throw new GeneralSecurityException(String.format("key %d has no key data", Integer.valueOf(cn7Var.L())));
+        for (cn7 cn7Var : dn7Var.m24201R()) {
+            if (cn7Var.m25196U() == 3) {
+                if (!cn7Var.m25197T()) {
+                    throw new GeneralSecurityException(String.format("key %d has no key data", Integer.valueOf(cn7Var.m25205L())));
                 }
-                if (cn7Var.P() == zn7.UNKNOWN_PREFIX) {
-                    throw new GeneralSecurityException(String.format("key %d has unknown prefix", Integer.valueOf(cn7Var.L())));
+                if (cn7Var.m25201P() == zn7.UNKNOWN_PREFIX) {
+                    throw new GeneralSecurityException(String.format("key %d has unknown prefix", Integer.valueOf(cn7Var.m25205L())));
                 }
-                if (cn7Var.U() == 2) {
-                    throw new GeneralSecurityException(String.format("key %d has unknown status", Integer.valueOf(cn7Var.L())));
+                if (cn7Var.m25196U() == 2) {
+                    throw new GeneralSecurityException(String.format("key %d has unknown status", Integer.valueOf(cn7Var.m25205L())));
                 }
-                if (cn7Var.L() == M) {
+                if (cn7Var.m25205L() == m24206M) {
                     if (z) {
                         throw new GeneralSecurityException("keyset contains multiple primary keys");
                     }
                     z = true;
                 }
-                z2 &= cn7Var.M().M() == mm7.ASYMMETRIC_PUBLIC;
+                z2 &= cn7Var.m25204M().m15033M() == mm7.ASYMMETRIC_PUBLIC;
                 i++;
             }
         }

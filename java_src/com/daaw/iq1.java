@@ -4,7 +4,8 @@ import android.net.Uri;
 import android.text.TextUtils;
 /* loaded from: classes.dex */
 public final class iq1 {
-    public static int[] a(String str) {
+    /* renamed from: a */
+    public static int[] m19494a(String str) {
         int i;
         int[] iArr = new int[4];
         if (TextUtils.isEmpty(str)) {
@@ -44,7 +45,8 @@ public final class iq1 {
         return iArr;
     }
 
-    public static String b(StringBuilder sb, int i, int i2) {
+    /* renamed from: b */
+    public static String m19493b(StringBuilder sb, int i, int i2) {
         int i3;
         int i4;
         if (i >= i2) {
@@ -83,7 +85,8 @@ public final class iq1 {
         return sb.toString();
     }
 
-    public static String c(String str, String str2) {
+    /* renamed from: c */
+    public static String m19492c(String str, String str2) {
         StringBuilder sb = new StringBuilder();
         if (str == null) {
             str = "";
@@ -91,45 +94,46 @@ public final class iq1 {
         if (str2 == null) {
             str2 = "";
         }
-        int[] a = a(str2);
-        if (a[0] != -1) {
+        int[] m19494a = m19494a(str2);
+        if (m19494a[0] != -1) {
             sb.append(str2);
-            b(sb, a[1], a[2]);
+            m19493b(sb, m19494a[1], m19494a[2]);
             return sb.toString();
         }
-        int[] a2 = a(str);
-        if (a[3] == 0) {
-            sb.append((CharSequence) str, 0, a2[3]);
+        int[] m19494a2 = m19494a(str);
+        if (m19494a[3] == 0) {
+            sb.append((CharSequence) str, 0, m19494a2[3]);
             sb.append(str2);
             return sb.toString();
-        } else if (a[2] == 0) {
-            sb.append((CharSequence) str, 0, a2[2]);
+        } else if (m19494a[2] == 0) {
+            sb.append((CharSequence) str, 0, m19494a2[2]);
             sb.append(str2);
             return sb.toString();
-        } else if (a[1] != 0) {
-            int i = a2[0] + 1;
+        } else if (m19494a[1] != 0) {
+            int i = m19494a2[0] + 1;
             sb.append((CharSequence) str, 0, i);
             sb.append(str2);
-            return b(sb, a[1] + i, i + a[2]);
-        } else if (str2.charAt(a[1]) == '/') {
-            sb.append((CharSequence) str, 0, a2[1]);
+            return m19493b(sb, m19494a[1] + i, i + m19494a[2]);
+        } else if (str2.charAt(m19494a[1]) == '/') {
+            sb.append((CharSequence) str, 0, m19494a2[1]);
             sb.append(str2);
-            return b(sb, a2[1], a2[1] + a[2]);
-        } else if (a2[0] + 2 < a2[1] && a2[1] == a2[2]) {
-            sb.append((CharSequence) str, 0, a2[1]);
+            return m19493b(sb, m19494a2[1], m19494a2[1] + m19494a[2]);
+        } else if (m19494a2[0] + 2 < m19494a2[1] && m19494a2[1] == m19494a2[2]) {
+            sb.append((CharSequence) str, 0, m19494a2[1]);
             sb.append('/');
             sb.append(str2);
-            return b(sb, a2[1], a2[1] + a[2] + 1);
+            return m19493b(sb, m19494a2[1], m19494a2[1] + m19494a[2] + 1);
         } else {
-            int lastIndexOf = str.lastIndexOf(47, a2[2] - 1);
-            int i2 = lastIndexOf == -1 ? a2[1] : lastIndexOf + 1;
+            int lastIndexOf = str.lastIndexOf(47, m19494a2[2] - 1);
+            int i2 = lastIndexOf == -1 ? m19494a2[1] : lastIndexOf + 1;
             sb.append((CharSequence) str, 0, i2);
             sb.append(str2);
-            return b(sb, a2[1], i2 + a[2]);
+            return m19493b(sb, m19494a2[1], i2 + m19494a[2]);
         }
     }
 
-    public static Uri d(String str, String str2) {
-        return Uri.parse(c(str, str2));
+    /* renamed from: d */
+    public static Uri m19491d(String str, String str2) {
+        return Uri.parse(m19492c(str, str2));
     }
 }

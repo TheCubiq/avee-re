@@ -3,19 +3,22 @@ package com.daaw;
 import java.io.OutputStream;
 /* loaded from: classes.dex */
 public class jt0<T> implements e51<T> {
-    public static final jt0<?> a = new jt0<>();
 
-    public static <T> jt0<T> c() {
-        return (jt0<T>) a;
+    /* renamed from: a */
+    public static final jt0<?> f15379a = new jt0<>();
+
+    /* renamed from: c */
+    public static <T> jt0<T> m18256c() {
+        return (jt0<T>) f15379a;
     }
 
-    @Override // com.daaw.zw
+    @Override // com.daaw.InterfaceC3911zw
     /* renamed from: b */
-    public boolean a(z41<T> z41Var, OutputStream outputStream) {
+    public boolean mo1827a(z41<T> z41Var, OutputStream outputStream) {
         return false;
     }
 
-    @Override // com.daaw.zw
+    @Override // com.daaw.InterfaceC3911zw
     public String getId() {
         return "";
     }

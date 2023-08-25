@@ -12,76 +12,105 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 /* loaded from: classes.dex */
 public class h61 extends Drawable {
-    public float a;
-    public final Paint b;
-    public final RectF c;
-    public final Rect d;
-    public float e;
-    public boolean f;
-    public boolean g;
-    public ColorStateList h;
-    public PorterDuffColorFilter i;
-    public ColorStateList j;
-    public PorterDuff.Mode k;
 
-    public final PorterDuffColorFilter a(ColorStateList colorStateList, PorterDuff.Mode mode) {
+    /* renamed from: a */
+    public float f12082a;
+
+    /* renamed from: b */
+    public final Paint f12083b;
+
+    /* renamed from: c */
+    public final RectF f12084c;
+
+    /* renamed from: d */
+    public final Rect f12085d;
+
+    /* renamed from: e */
+    public float f12086e;
+
+    /* renamed from: f */
+    public boolean f12087f;
+
+    /* renamed from: g */
+    public boolean f12088g;
+
+    /* renamed from: h */
+    public ColorStateList f12089h;
+
+    /* renamed from: i */
+    public PorterDuffColorFilter f12090i;
+
+    /* renamed from: j */
+    public ColorStateList f12091j;
+
+    /* renamed from: k */
+    public PorterDuff.Mode f12092k;
+
+    /* renamed from: a */
+    public final PorterDuffColorFilter m20996a(ColorStateList colorStateList, PorterDuff.Mode mode) {
         if (colorStateList == null || mode == null) {
             return null;
         }
         return new PorterDuffColorFilter(colorStateList.getColorForState(getState(), 0), mode);
     }
 
-    public ColorStateList b() {
-        return this.h;
+    /* renamed from: b */
+    public ColorStateList m20995b() {
+        return this.f12089h;
     }
 
-    public float c() {
-        return this.e;
+    /* renamed from: c */
+    public float m20994c() {
+        return this.f12086e;
     }
 
-    public float d() {
-        return this.a;
+    /* renamed from: d */
+    public float m20993d() {
+        return this.f12082a;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
         boolean z;
-        Paint paint = this.b;
-        if (this.i == null || paint.getColorFilter() != null) {
+        Paint paint = this.f12083b;
+        if (this.f12090i == null || paint.getColorFilter() != null) {
             z = false;
         } else {
-            paint.setColorFilter(this.i);
+            paint.setColorFilter(this.f12090i);
             z = true;
         }
-        RectF rectF = this.c;
-        float f = this.a;
+        RectF rectF = this.f12084c;
+        float f = this.f12082a;
         canvas.drawRoundRect(rectF, f, f, paint);
         if (z) {
             paint.setColorFilter(null);
         }
     }
 
-    public final void e(ColorStateList colorStateList) {
+    /* renamed from: e */
+    public final void m20992e(ColorStateList colorStateList) {
         if (colorStateList == null) {
             colorStateList = ColorStateList.valueOf(0);
         }
-        this.h = colorStateList;
-        this.b.setColor(colorStateList.getColorForState(getState(), this.h.getDefaultColor()));
+        this.f12089h = colorStateList;
+        this.f12083b.setColor(colorStateList.getColorForState(getState(), this.f12089h.getDefaultColor()));
     }
 
-    public void f(ColorStateList colorStateList) {
-        e(colorStateList);
+    /* renamed from: f */
+    public void m20991f(ColorStateList colorStateList) {
+        m20992e(colorStateList);
         invalidateSelf();
     }
 
-    public void g(float f, boolean z, boolean z2) {
-        if (f == this.e && this.f == z && this.g == z2) {
+    /* renamed from: g */
+    public void m20990g(float f, boolean z, boolean z2) {
+        if (f == this.f12086e && this.f12087f == z && this.f12088g == z2) {
             return;
         }
-        this.e = f;
-        this.f = z;
-        this.g = z2;
-        i(null);
+        this.f12086e = f;
+        this.f12087f = z;
+        this.f12088g = z2;
+        m20988i(null);
         invalidateSelf();
     }
 
@@ -92,82 +121,84 @@ public class h61 extends Drawable {
 
     @Override // android.graphics.drawable.Drawable
     public void getOutline(Outline outline) {
-        outline.setRoundRect(this.d, this.a);
+        outline.setRoundRect(this.f12085d, this.f12082a);
     }
 
-    public void h(float f) {
-        if (f == this.a) {
+    /* renamed from: h */
+    public void m20989h(float f) {
+        if (f == this.f12082a) {
             return;
         }
-        this.a = f;
-        i(null);
+        this.f12082a = f;
+        m20988i(null);
         invalidateSelf();
     }
 
-    public final void i(Rect rect) {
+    /* renamed from: i */
+    public final void m20988i(Rect rect) {
         if (rect == null) {
             rect = getBounds();
         }
-        this.c.set(rect.left, rect.top, rect.right, rect.bottom);
-        this.d.set(rect);
-        if (this.f) {
-            float d = i61.d(this.e, this.a, this.g);
-            this.d.inset((int) Math.ceil(i61.c(this.e, this.a, this.g)), (int) Math.ceil(d));
-            this.c.set(this.d);
+        this.f12084c.set(rect.left, rect.top, rect.right, rect.bottom);
+        this.f12085d.set(rect);
+        if (this.f12087f) {
+            float m20066d = i61.m20066d(this.f12086e, this.f12082a, this.f12088g);
+            this.f12085d.inset((int) Math.ceil(i61.m20067c(this.f12086e, this.f12082a, this.f12088g)), (int) Math.ceil(m20066d));
+            this.f12084c.set(this.f12085d);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean isStateful() {
         ColorStateList colorStateList;
-        ColorStateList colorStateList2 = this.j;
-        return (colorStateList2 != null && colorStateList2.isStateful()) || ((colorStateList = this.h) != null && colorStateList.isStateful()) || super.isStateful();
+        ColorStateList colorStateList2 = this.f12091j;
+        return (colorStateList2 != null && colorStateList2.isStateful()) || ((colorStateList = this.f12089h) != null && colorStateList.isStateful()) || super.isStateful();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void onBoundsChange(Rect rect) {
         super.onBoundsChange(rect);
-        i(rect);
+        m20988i(rect);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean onStateChange(int[] iArr) {
         PorterDuff.Mode mode;
-        ColorStateList colorStateList = this.h;
+        ColorStateList colorStateList = this.f12089h;
         int colorForState = colorStateList.getColorForState(iArr, colorStateList.getDefaultColor());
-        boolean z = colorForState != this.b.getColor();
+        boolean z = colorForState != this.f12083b.getColor();
         if (z) {
-            this.b.setColor(colorForState);
+            this.f12083b.setColor(colorForState);
         }
-        ColorStateList colorStateList2 = this.j;
-        if (colorStateList2 == null || (mode = this.k) == null) {
+        ColorStateList colorStateList2 = this.f12091j;
+        if (colorStateList2 == null || (mode = this.f12092k) == null) {
             return z;
         }
-        this.i = a(colorStateList2, mode);
+        this.f12090i = m20996a(colorStateList2, mode);
         return true;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setAlpha(int i) {
-        this.b.setAlpha(i);
+        this.f12083b.setAlpha(i);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setColorFilter(ColorFilter colorFilter) {
-        this.b.setColorFilter(colorFilter);
+        this.f12083b.setColorFilter(colorFilter);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setTintList(ColorStateList colorStateList) {
-        this.j = colorStateList;
-        this.i = a(colorStateList, this.k);
+        this.f12091j = colorStateList;
+        this.f12090i = m20996a(colorStateList, this.f12092k);
         invalidateSelf();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setTintMode(PorterDuff.Mode mode) {
-        this.k = mode;
-        this.i = a(this.j, mode);
+        this.f12092k = mode;
+        this.f12090i = m20996a(this.f12091j, mode);
         invalidateSelf();
     }
 }

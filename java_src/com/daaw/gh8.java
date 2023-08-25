@@ -4,59 +4,77 @@ import java.lang.reflect.Field;
 import sun.misc.Unsafe;
 /* loaded from: classes2.dex */
 public abstract class gh8 {
-    public final Unsafe a;
+
+    /* renamed from: a */
+    public final Unsafe f11285a;
 
     public gh8(Unsafe unsafe) {
-        this.a = unsafe;
+        this.f11285a = unsafe;
     }
 
-    public abstract double a(Object obj, long j);
+    /* renamed from: a */
+    public abstract double mo21605a(Object obj, long j);
 
-    public abstract float b(Object obj, long j);
+    /* renamed from: b */
+    public abstract float mo21604b(Object obj, long j);
 
-    public abstract void c(Object obj, long j, boolean z);
+    /* renamed from: c */
+    public abstract void mo21603c(Object obj, long j, boolean z);
 
-    public abstract void d(Object obj, long j, byte b);
+    /* renamed from: d */
+    public abstract void mo21602d(Object obj, long j, byte b);
 
-    public abstract void e(Object obj, long j, double d);
+    /* renamed from: e */
+    public abstract void mo21601e(Object obj, long j, double d);
 
-    public abstract void f(Object obj, long j, float f);
+    /* renamed from: f */
+    public abstract void mo21600f(Object obj, long j, float f);
 
-    public abstract boolean g(Object obj, long j);
+    /* renamed from: g */
+    public abstract boolean mo21599g(Object obj, long j);
 
-    public final int h(Class cls) {
-        return this.a.arrayBaseOffset(cls);
+    /* renamed from: h */
+    public final int m21598h(Class cls) {
+        return this.f11285a.arrayBaseOffset(cls);
     }
 
-    public final int i(Class cls) {
-        return this.a.arrayIndexScale(cls);
+    /* renamed from: i */
+    public final int m21597i(Class cls) {
+        return this.f11285a.arrayIndexScale(cls);
     }
 
-    public final int j(Object obj, long j) {
-        return this.a.getInt(obj, j);
+    /* renamed from: j */
+    public final int m21596j(Object obj, long j) {
+        return this.f11285a.getInt(obj, j);
     }
 
-    public final long k(Object obj, long j) {
-        return this.a.getLong(obj, j);
+    /* renamed from: k */
+    public final long m21595k(Object obj, long j) {
+        return this.f11285a.getLong(obj, j);
     }
 
-    public final long l(Field field) {
-        return this.a.objectFieldOffset(field);
+    /* renamed from: l */
+    public final long m21594l(Field field) {
+        return this.f11285a.objectFieldOffset(field);
     }
 
-    public final Object m(Object obj, long j) {
-        return this.a.getObject(obj, j);
+    /* renamed from: m */
+    public final Object m21593m(Object obj, long j) {
+        return this.f11285a.getObject(obj, j);
     }
 
-    public final void n(Object obj, long j, int i) {
-        this.a.putInt(obj, j, i);
+    /* renamed from: n */
+    public final void m21592n(Object obj, long j, int i) {
+        this.f11285a.putInt(obj, j, i);
     }
 
-    public final void o(Object obj, long j, long j2) {
-        this.a.putLong(obj, j, j2);
+    /* renamed from: o */
+    public final void m21591o(Object obj, long j, long j2) {
+        this.f11285a.putLong(obj, j, j2);
     }
 
-    public final void p(Object obj, long j, Object obj2) {
-        this.a.putObject(obj, j, obj2);
+    /* renamed from: p */
+    public final void m21590p(Object obj, long j, Object obj2) {
+        this.f11285a.putObject(obj, j, obj2);
     }
 }

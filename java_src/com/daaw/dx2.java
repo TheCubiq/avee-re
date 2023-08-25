@@ -3,19 +3,25 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class dx2 {
-    public int a;
-    public final vw2[] b;
+
+    /* renamed from: a */
+    public int f7963a;
+
+    /* renamed from: b */
+    public final vw2[] f7964b;
 
     public dx2(vw2[] vw2VarArr, byte... bArr) {
-        this.b = vw2VarArr;
+        this.f7964b = vw2VarArr;
     }
 
-    public final vw2 a(int i) {
-        return this.b[i];
+    /* renamed from: a */
+    public final vw2 m23830a(int i) {
+        return this.f7964b[i];
     }
 
-    public final vw2[] b() {
-        return (vw2[]) this.b.clone();
+    /* renamed from: b */
+    public final vw2[] m23829b() {
+        return (vw2[]) this.f7964b.clone();
     }
 
     public final boolean equals(Object obj) {
@@ -25,14 +31,14 @@ public final class dx2 {
         if (obj == null || dx2.class != obj.getClass()) {
             return false;
         }
-        return Arrays.equals(this.b, ((dx2) obj).b);
+        return Arrays.equals(this.f7964b, ((dx2) obj).f7964b);
     }
 
     public final int hashCode() {
-        int i = this.a;
+        int i = this.f7963a;
         if (i == 0) {
-            int hashCode = Arrays.hashCode(this.b) + 527;
-            this.a = hashCode;
+            int hashCode = Arrays.hashCode(this.f7964b) + 527;
+            this.f7963a = hashCode;
             return hashCode;
         }
         return i;

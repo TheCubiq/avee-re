@@ -6,29 +6,45 @@ import android.view.MotionEvent;
 import androidx.viewpager.widget.ViewPager;
 /* loaded from: classes.dex */
 public class CustomViewPager extends ViewPager {
-    public float A0;
-    public a B0;
-    public boolean C0;
-    public float D0;
-    public float E0;
-    public float F0;
 
+    /* renamed from: A0 */
+    public float f3696A0;
+
+    /* renamed from: B0 */
+    public InterfaceC0678a f3697B0;
+
+    /* renamed from: C0 */
+    public boolean f3698C0;
+
+    /* renamed from: D0 */
+    public float f3699D0;
+
+    /* renamed from: E0 */
+    public float f3700E0;
+
+    /* renamed from: F0 */
+    public float f3701F0;
+
+    /* renamed from: com.daaw.avee.CustomViewPager$a */
     /* loaded from: classes.dex */
-    public interface a {
-        void a(float f);
+    public interface InterfaceC0678a {
+        /* renamed from: a */
+        void mo26894a(float f);
 
-        void b();
+        /* renamed from: b */
+        void mo26893b();
 
-        void c();
+        /* renamed from: c */
+        void mo26892c();
     }
 
     public CustomViewPager(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.C0 = false;
-        this.D0 = 0.0f;
-        this.E0 = 0.0f;
-        this.F0 = 0.0f;
-        this.D0 = context.getResources().getDimension(R.dimen.out_of_bound_swipe_dist);
+        this.f3698C0 = false;
+        this.f3699D0 = 0.0f;
+        this.f3700E0 = 0.0f;
+        this.f3701F0 = 0.0f;
+        this.f3699D0 = context.getResources().getDimension(R.dimen.out_of_bound_swipe_dist);
     }
 
     @Override // androidx.viewpager.widget.ViewPager, android.view.ViewGroup
@@ -36,116 +52,73 @@ public class CustomViewPager extends ViewPager {
         int action = motionEvent.getAction();
         float x = motionEvent.getX();
         if ((action & 255) == 0) {
-            this.A0 = x;
-            this.C0 = false;
+            this.f3696A0 = x;
+            this.f3698C0 = false;
         }
         return super.onInterceptTouchEvent(motionEvent);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:32:0x0090, code lost:
-        if (r5.C0 != false) goto L28;
+        if (r5.f3698C0 != false) goto L28;
      */
     @Override // androidx.viewpager.widget.ViewPager, android.view.View
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public boolean onTouchEvent(android.view.MotionEvent r6) {
-        /*
-            r5 = this;
-            int r0 = r6.getAction()
-            float r1 = r6.getX()
-            r0 = r0 & 255(0xff, float:3.57E-43)
-            r2 = 0
-            if (r0 == 0) goto L93
-            r3 = 1
-            if (r0 == r3) goto L8e
-            r4 = 2
-            if (r0 == r4) goto L15
-            goto La1
-        L15:
-            boolean r0 = r5.C0
-            if (r0 == 0) goto L1b
-            goto La1
-        L1b:
-            int r0 = r5.getCurrentItem()
-            if (r0 != 0) goto L29
-            float r0 = r5.A0
-            float r0 = r1 - r0
-        L25:
-            float r4 = r5.D0
-            float r0 = r0 / r4
-            goto L3d
-        L29:
-            int r0 = r5.getCurrentItem()
-            com.daaw.kv0 r4 = r5.getAdapter()
-            int r4 = r4.c()
-            int r4 = r4 - r3
-            if (r0 != r4) goto L3c
-            float r0 = r5.A0
-            float r0 = r0 - r1
-            goto L25
-        L3c:
-            r0 = 0
-        L3d:
-            float r4 = r5.F0
-            float r0 = java.lang.Math.max(r4, r0)
-            r5.F0 = r0
-            com.daaw.avee.CustomViewPager$a r4 = r5.B0
-            r4.a(r0)
-            float r0 = r5.A0
-            float r0 = r1 - r0
-            float r4 = r5.D0
-            int r0 = (r0 > r4 ? 1 : (r0 == r4 ? 0 : -1))
-            if (r0 <= 0) goto L69
-            int r0 = r5.getCurrentItem()
-            if (r0 != 0) goto L69
-            r5.F0 = r2
-            com.daaw.avee.CustomViewPager$a r0 = r5.B0
-            r0.a(r2)
-            com.daaw.avee.CustomViewPager$a r0 = r5.B0
-            r0.b()
-        L66:
-            r5.C0 = r3
-            goto La1
-        L69:
-            float r0 = r5.A0
-            float r0 = r0 - r1
-            float r1 = r5.D0
-            int r0 = (r0 > r1 ? 1 : (r0 == r1 ? 0 : -1))
-            if (r0 <= 0) goto La1
-            int r0 = r5.getCurrentItem()
-            com.daaw.kv0 r1 = r5.getAdapter()
-            int r1 = r1.c()
-            int r1 = r1 - r3
-            if (r0 != r1) goto La1
-            r5.F0 = r2
-            com.daaw.avee.CustomViewPager$a r0 = r5.B0
-            r0.a(r2)
-            com.daaw.avee.CustomViewPager$a r0 = r5.B0
-            r0.c()
-            goto L66
-        L8e:
-            boolean r0 = r5.C0
-            if (r0 == 0) goto L9a
-            goto La1
-        L93:
-            r5.A0 = r1
-            r0 = 0
-            r5.C0 = r0
-            r5.E0 = r2
-        L9a:
-            r5.F0 = r2
-            com.daaw.avee.CustomViewPager$a r0 = r5.B0
-            r0.a(r2)
-        La1:
-            boolean r6 = super.onTouchEvent(r6)
-            return r6
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.avee.CustomViewPager.onTouchEvent(android.view.MotionEvent):boolean");
+    public boolean onTouchEvent(MotionEvent motionEvent) {
+        float f;
+        float f2;
+        int action = motionEvent.getAction();
+        float x = motionEvent.getX();
+        int i = action & 255;
+        if (i != 0) {
+            if (i != 1) {
+                if (i == 2 && !this.f3698C0) {
+                    if (getCurrentItem() == 0) {
+                        f2 = x - this.f3696A0;
+                    } else if (getCurrentItem() == getAdapter().mo17418c() - 1) {
+                        f2 = this.f3696A0 - x;
+                    } else {
+                        f = 0.0f;
+                        float max = Math.max(this.f3701F0, f);
+                        this.f3701F0 = max;
+                        this.f3697B0.mo26894a(max);
+                        if (x - this.f3696A0 <= this.f3699D0 && getCurrentItem() == 0) {
+                            this.f3701F0 = 0.0f;
+                            this.f3697B0.mo26894a(0.0f);
+                            this.f3697B0.mo26893b();
+                        } else if (this.f3696A0 - x > this.f3699D0 && getCurrentItem() == getAdapter().mo17418c() - 1) {
+                            this.f3701F0 = 0.0f;
+                            this.f3697B0.mo26894a(0.0f);
+                            this.f3697B0.mo26892c();
+                        }
+                        this.f3698C0 = true;
+                    }
+                    f = f2 / this.f3699D0;
+                    float max2 = Math.max(this.f3701F0, f);
+                    this.f3701F0 = max2;
+                    this.f3697B0.mo26894a(max2);
+                    if (x - this.f3696A0 <= this.f3699D0) {
+                    }
+                    if (this.f3696A0 - x > this.f3699D0) {
+                        this.f3701F0 = 0.0f;
+                        this.f3697B0.mo26894a(0.0f);
+                        this.f3697B0.mo26892c();
+                        this.f3698C0 = true;
+                    }
+                }
+            }
+            return super.onTouchEvent(motionEvent);
+        }
+        this.f3696A0 = x;
+        this.f3698C0 = false;
+        this.f3700E0 = 0.0f;
+        this.f3701F0 = 0.0f;
+        this.f3697B0.mo26894a(0.0f);
+        return super.onTouchEvent(motionEvent);
     }
 
-    public void setOnSwipeOutListener(a aVar) {
-        this.B0 = aVar;
+    public void setOnSwipeOutListener(InterfaceC0678a interfaceC0678a) {
+        this.f3697B0 = interfaceC0678a;
     }
 }

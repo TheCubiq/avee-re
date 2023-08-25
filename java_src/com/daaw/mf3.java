@@ -5,5 +5,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public interface mf3 {
-    void k(String str, Bundle bundle);
+    /* renamed from: k */
+    void mo5430k(String str, Bundle bundle);
 }

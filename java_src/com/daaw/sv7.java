@@ -5,7 +5,8 @@ public final class sv7 extends RuntimeException {
         super("Message was missing required fields.  (Lite runtime could not determine which fields were missing).");
     }
 
-    public final xs7 a() {
+    /* renamed from: a */
+    public final xs7 m9798a() {
         return new xs7(getMessage());
     }
 }

@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 /* loaded from: classes.dex */
 public final class av3 extends ContextWrapper {
-    public static Context a(Context context) {
+    /* renamed from: a */
+    public static Context m26956a(Context context) {
         if (context instanceof av3) {
             return ((av3) context).getBaseContext();
         }

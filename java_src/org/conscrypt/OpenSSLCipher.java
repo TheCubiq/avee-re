@@ -29,7 +29,9 @@ public abstract class OpenSSLCipher extends CipherSpi {
     private int blockSize;
     public byte[] encodedKey;
     private boolean encrypting;
-    public byte[] iv;
+
+    /* renamed from: iv */
+    public byte[] f38020iv;
     public Mode mode;
     private Padding padding;
 
@@ -152,7 +154,7 @@ public abstract class OpenSSLCipher extends CipherSpi {
 
     @Override // javax.crypto.CipherSpi
     public byte[] engineGetIV() {
-        return this.iv;
+        return this.f38020iv;
     }
 
     @Override // javax.crypto.CipherSpi
@@ -175,11 +177,11 @@ public abstract class OpenSSLCipher extends CipherSpi {
 
     @Override // javax.crypto.CipherSpi
     public AlgorithmParameters engineGetParameters() {
-        byte[] bArr = this.iv;
+        byte[] bArr = this.f38020iv;
         if (bArr != null && bArr.length > 0) {
             try {
                 AlgorithmParameters algorithmParameters = AlgorithmParameters.getInstance(getBaseCipherName());
-                algorithmParameters.init(new IvParameterSpec(this.iv));
+                algorithmParameters.init(new IvParameterSpec(this.f38020iv));
                 return algorithmParameters;
             } catch (NoSuchAlgorithmException | InvalidParameterSpecException unused) {
             }

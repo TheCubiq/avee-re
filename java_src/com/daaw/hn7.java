@@ -10,20 +10,23 @@ public final class hn7 extends ls7 implements yt7 {
     static {
         hn7 hn7Var = new hn7();
         zzb = hn7Var;
-        ls7.C(hn7.class, hn7Var);
+        ls7.m16597C(hn7.class, hn7Var);
     }
 
-    public static gn7 L() {
-        return (gn7) zzb.H();
+    /* renamed from: L */
+    public static gn7 m20612L() {
+        return (gn7) zzb.m16592H();
     }
 
-    public static /* synthetic */ void N(hn7 hn7Var, String str) {
+    /* renamed from: N */
+    public static /* synthetic */ void m20610N(hn7 hn7Var, String str) {
         str.getClass();
         hn7Var.zzd = str;
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -38,7 +41,7 @@ public final class hn7 extends ls7 implements yt7 {
                 }
                 return new hn7();
             }
-            return ls7.z(zzb, "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001Ȉ\u0002\f\u0003\u000b\u0004\f", new Object[]{"zzd", "zze", "zzf", "zzg"});
+            return ls7.m16573z(zzb, "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001Ȉ\u0002\f\u0003\u000b\u0004\f", new Object[]{"zzd", "zze", "zzf", "zzg"});
         }
         return (byte) 1;
     }

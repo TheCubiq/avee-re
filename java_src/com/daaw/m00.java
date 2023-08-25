@@ -5,37 +5,43 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public class m00<K, V> extends v71<K, V> {
-    public HashMap<K, v71.c<K, V>> t = new HashMap<>();
+
+    /* renamed from: t */
+    public HashMap<K, v71.C3310c<K, V>> f17954t = new HashMap<>();
 
     public boolean contains(K k) {
-        return this.t.containsKey(k);
+        return this.f17954t.containsKey(k);
     }
 
     @Override // com.daaw.v71
-    public v71.c<K, V> e(K k) {
-        return this.t.get(k);
+    /* renamed from: e */
+    public v71.C3310c<K, V> mo7374e(K k) {
+        return this.f17954t.get(k);
     }
 
     @Override // com.daaw.v71
-    public V k(K k, V v) {
-        v71.c<K, V> e = e(k);
-        if (e != null) {
-            return e.q;
+    /* renamed from: k */
+    public V mo7370k(K k, V v) {
+        v71.C3310c<K, V> mo7374e = mo7374e(k);
+        if (mo7374e != null) {
+            return mo7374e.f29981q;
         }
-        this.t.put(k, j(k, v));
+        this.f17954t.put(k, m7371j(k, v));
         return null;
     }
 
     @Override // com.daaw.v71
-    public V m(K k) {
-        V v = (V) super.m(k);
-        this.t.remove(k);
+    /* renamed from: m */
+    public V mo7369m(K k) {
+        V v = (V) super.mo7369m(k);
+        this.f17954t.remove(k);
         return v;
     }
 
-    public Map.Entry<K, V> n(K k) {
+    /* renamed from: n */
+    public Map.Entry<K, V> m16339n(K k) {
         if (contains(k)) {
-            return this.t.get(k).s;
+            return this.f17954t.get(k).f29983s;
         }
         return null;
     }

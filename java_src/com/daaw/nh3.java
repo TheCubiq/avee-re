@@ -13,12 +13,17 @@ import org.json.JSONObject;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class nh3 implements zg3 {
-    public final Object a = new Object();
+
+    /* renamed from: a */
+    public final Object f20120a = new Object();
     @GuardedBy("lock")
-    public final Map b = new HashMap();
+
+    /* renamed from: b */
+    public final Map f20121b = new HashMap();
 
     @Override // com.daaw.zg3
-    public final void a(Object obj, Map map) {
+    /* renamed from: a */
+    public final void mo2341a(Object obj, Map map) {
         String str = (String) map.get("id");
         String str2 = (String) map.get("fail");
         String str3 = (String) map.get("fail_reason");
@@ -28,14 +33,14 @@ public final class nh3 implements zg3 {
             str3 = "Unknown Fail Reason.";
         }
         String concat = TextUtils.isEmpty(str4) ? "" : "\n".concat(String.valueOf(str4));
-        synchronized (this.a) {
-            mh3 mh3Var = (mh3) this.b.remove(str);
+        synchronized (this.f20120a) {
+            mh3 mh3Var = (mh3) this.f20121b.remove(str);
             if (mh3Var == null) {
                 k04.zzj("Received result for unexpected method invocation: " + str);
             } else if (!TextUtils.isEmpty(str2)) {
                 mh3Var.zza(str3 + concat);
             } else if (str5 == null) {
-                mh3Var.a(null);
+                mh3Var.mo16027a(null);
             } else {
                 try {
                     JSONObject jSONObject = new JSONObject(str5);
@@ -43,7 +48,7 @@ public final class nh3 implements zg3 {
                         String jSONObject2 = jSONObject.toString(2);
                         zze.zza("Result GMSG: " + jSONObject2);
                     }
-                    mh3Var.a(jSONObject);
+                    mh3Var.mo16027a(jSONObject);
                 } catch (JSONException e) {
                     mh3Var.zza(e.getMessage());
                 }
@@ -51,25 +56,27 @@ public final class nh3 implements zg3 {
         }
     }
 
-    public final f77 b(kk3 kk3Var, String str, JSONObject jSONObject) {
+    /* renamed from: b */
+    public final f77 m15176b(kk3 kk3Var, String str, JSONObject jSONObject) {
         e14 e14Var = new e14();
         zzt.zzp();
         String uuid = UUID.randomUUID().toString();
-        c(uuid, new lh3(this, e14Var));
+        m15175c(uuid, new lh3(this, e14Var));
         try {
             JSONObject jSONObject2 = new JSONObject();
             jSONObject2.put("id", uuid);
             jSONObject2.put("args", jSONObject);
-            kk3Var.C0(str, jSONObject2);
+            kk3Var.mo6461C0(str, jSONObject2);
         } catch (Exception e) {
-            e14Var.c(e);
+            e14Var.m23796c(e);
         }
         return e14Var;
     }
 
-    public final void c(String str, mh3 mh3Var) {
-        synchronized (this.a) {
-            this.b.put(str, mh3Var);
+    /* renamed from: c */
+    public final void m15175c(String str, mh3 mh3Var) {
+        synchronized (this.f20120a) {
+            this.f20121b.put(str, mh3Var);
         }
     }
 }

@@ -6,21 +6,32 @@ import java.util.Map;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class vq8 {
-    public final q09 a;
-    public final Map b = new HashMap();
-    public final Set c = new HashSet();
-    public final Map d = new HashMap();
-    public m36 e;
+
+    /* renamed from: a */
+    public final q09 f30483a;
+
+    /* renamed from: b */
+    public final Map f30484b = new HashMap();
+
+    /* renamed from: c */
+    public final Set f30485c = new HashSet();
+
+    /* renamed from: d */
+    public final Map f30486d = new HashMap();
+
+    /* renamed from: e */
+    public m36 f30487e;
 
     public vq8(q09 q09Var) {
-        this.a = q09Var;
+        this.f30483a = q09Var;
     }
 
-    public final void a(m36 m36Var) {
-        if (m36Var != this.e) {
-            this.e = m36Var;
-            this.b.clear();
-            this.d.clear();
+    /* renamed from: a */
+    public final void m6903a(m36 m36Var) {
+        if (m36Var != this.f30487e) {
+            this.f30487e = m36Var;
+            this.f30484b.clear();
+            this.f30486d.clear();
         }
     }
 }

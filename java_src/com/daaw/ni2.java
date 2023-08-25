@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ni2 {
-    public static final os7 a = new li2();
 
-    public static int a(int i) {
+    /* renamed from: a */
+    public static final os7 f20134a = new li2();
+
+    /* renamed from: a */
+    public static int m15164a(int i) {
         switch (i) {
             case 0:
                 return 1;

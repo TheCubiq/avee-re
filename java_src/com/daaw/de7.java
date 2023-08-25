@@ -4,23 +4,30 @@ import java.util.Collections;
 import java.util.Map;
 /* loaded from: classes.dex */
 public abstract class de7 {
-    public final Class a;
+
+    /* renamed from: a */
+    public final Class f7023a;
 
     public de7(Class cls) {
-        this.a = cls;
+        this.f7023a = cls;
     }
 
-    public abstract xt7 a(xt7 xt7Var);
+    /* renamed from: a */
+    public abstract xt7 mo2561a(xt7 xt7Var);
 
-    public abstract xt7 b(yq7 yq7Var);
+    /* renamed from: b */
+    public abstract xt7 mo2560b(yq7 yq7Var);
 
-    public Map c() {
+    /* renamed from: c */
+    public Map mo6263c() {
         return Collections.emptyMap();
     }
 
-    public abstract void d(xt7 xt7Var);
+    /* renamed from: d */
+    public abstract void mo2559d(xt7 xt7Var);
 
-    public final Class e() {
-        return this.a;
+    /* renamed from: e */
+    public final Class m24441e() {
+        return this.f7023a;
     }
 }

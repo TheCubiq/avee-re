@@ -5,18 +5,25 @@ import java.util.Arrays;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class hu8 extends ju8 {
-    public final mw8 f;
-    public final y17 g;
-    public final xp4 h;
+
+    /* renamed from: f */
+    public final mw8 f12955f;
+
+    /* renamed from: g */
+    public final y17 f12956g;
+
+    /* renamed from: h */
+    public final xp4 f12957h;
 
     public hu8(r84 r84Var, int[] iArr, int i, mw8 mw8Var, long j, long j2, long j3, int i2, int i3, float f, float f2, List list, xp4 xp4Var) {
         super(r84Var, iArr, 0);
-        this.f = mw8Var;
-        this.g = y17.s(list);
-        this.h = xp4Var;
+        this.f12955f = mw8Var;
+        this.f12956g = y17.m4262s(list);
+        this.f12957h = xp4Var;
     }
 
-    public static /* bridge */ /* synthetic */ y17 c(sv8[] sv8VarArr) {
+    /* renamed from: c */
+    public static /* bridge */ /* synthetic */ y17 m20412c(sv8[] sv8VarArr) {
         int i;
         int i2;
         ArrayList arrayList = new ArrayList();
@@ -29,12 +36,12 @@ public final class hu8 extends ju8 {
                 break;
             }
             sv8 sv8Var = sv8VarArr[i3];
-            if (sv8Var == null || sv8Var.b.length <= 1) {
+            if (sv8Var == null || sv8Var.f26707b.length <= 1) {
                 arrayList.add(null);
             } else {
-                v17 o = y17.o();
-                o.f(new fu8(0L, 0L));
-                arrayList.add(o);
+                v17 m4266o = y17.m4266o();
+                m4266o.m7548f(new fu8(0L, 0L));
+                arrayList.add(m4266o);
             }
             i3++;
         }
@@ -44,14 +51,14 @@ public final class hu8 extends ju8 {
             if (sv8Var2 == null) {
                 jArr[i4] = new long[0];
             } else {
-                jArr[i4] = new long[sv8Var2.b.length];
+                jArr[i4] = new long[sv8Var2.f26707b.length];
                 int i5 = 0;
                 while (true) {
-                    int[] iArr = sv8Var2.b;
+                    int[] iArr = sv8Var2.f26707b;
                     if (i5 >= iArr.length) {
                         break;
                     }
-                    long j = sv8Var2.a.b(iArr[i5]).h;
+                    long j = sv8Var2.f26706a.m11590b(iArr[i5]).f9271h;
                     long[] jArr2 = jArr[i4];
                     if (j == -1) {
                         j = 0;
@@ -68,8 +75,8 @@ public final class hu8 extends ju8 {
             long[] jArr4 = jArr[i6];
             jArr3[i6] = jArr4.length == 0 ? 0L : jArr4[0];
         }
-        d(arrayList, jArr3);
-        m27 c2 = d37.b(l37.c()).b(2).c();
+        m20411d(arrayList, jArr3);
+        m27 mo26497c = d37.m24715b(l37.m17166c()).m25643b(2).mo26497c();
         int i7 = 0;
         while (i7 < i) {
             int length = jArr[i7].length;
@@ -94,7 +101,7 @@ public final class hu8 extends ju8 {
                 int i10 = 0;
                 while (i10 < i9) {
                     int i11 = i10 + 1;
-                    c2.a(Double.valueOf(d2 == 0.0d ? 1.0d : (((dArr[i10] + dArr[i11]) * 0.5d) - dArr[c]) / d2), Integer.valueOf(i7));
+                    mo26497c.mo6568a(Double.valueOf(d2 == 0.0d ? 1.0d : (((dArr[i10] + dArr[i11]) * 0.5d) - dArr[c]) / d2), Integer.valueOf(i7));
                     i10 = i11;
                     c = 0;
                 }
@@ -104,13 +111,13 @@ public final class hu8 extends ju8 {
             i = 2;
             i2 = 1;
         }
-        y17 s = y17.s(c2.zzt());
-        for (int i12 = 0; i12 < s.size(); i12++) {
-            int intValue = ((Integer) s.get(i12)).intValue();
+        y17 m4262s = y17.m4262s(mo26497c.zzt());
+        for (int i12 = 0; i12 < m4262s.size(); i12++) {
+            int intValue = ((Integer) m4262s.get(i12)).intValue();
             int i13 = iArr2[intValue] + 1;
             iArr2[intValue] = i13;
             jArr3[intValue] = jArr[intValue][i13];
-            d(arrayList, jArr3);
+            m20411d(arrayList, jArr3);
         }
         for (int i14 = 0; i14 < 2; i14++) {
             if (arrayList.get(i14) != null) {
@@ -118,16 +125,17 @@ public final class hu8 extends ju8 {
                 jArr3[i14] = j3 + j3;
             }
         }
-        d(arrayList, jArr3);
-        v17 o2 = y17.o();
+        m20411d(arrayList, jArr3);
+        v17 m4266o2 = y17.m4266o();
         for (int i15 = 0; i15 < arrayList.size(); i15++) {
             v17 v17Var = (v17) arrayList.get(i15);
-            o2.f(v17Var == null ? y17.u() : v17Var.h());
+            m4266o2.m7548f(v17Var == null ? y17.m4260u() : v17Var.m7546h());
         }
-        return o2.h();
+        return m4266o2.m7546h();
     }
 
-    public static void d(List list, long[] jArr) {
+    /* renamed from: d */
+    public static void m20411d(List list, long[] jArr) {
         long j = 0;
         for (int i = 0; i < 2; i++) {
             j += jArr[i];
@@ -135,7 +143,7 @@ public final class hu8 extends ju8 {
         for (int i2 = 0; i2 < list.size(); i2++) {
             v17 v17Var = (v17) list.get(i2);
             if (v17Var != null) {
-                v17Var.f(new fu8(j, jArr[i2]));
+                v17Var.m7548f(new fu8(j, jArr[i2]));
             }
         }
     }

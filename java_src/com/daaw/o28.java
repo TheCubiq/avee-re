@@ -9,7 +9,8 @@ public final class o28 extends j38 {
 
     @Override // com.daaw.j38
     @Nullable
-    public final /* bridge */ /* synthetic */ Object a(Object obj) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo14601a(Object obj) {
         return obj;
     }
 }

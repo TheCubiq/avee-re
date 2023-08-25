@@ -3,9 +3,10 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class w86 implements wz7 {
-    public static List a(t86 t86Var) {
-        List f = t86Var.f();
-        e08.b(f);
-        return f;
+    /* renamed from: a */
+    public static List m6343a(t86 t86Var) {
+        List m9440f = t86Var.m9440f();
+        e08.m23801b(m9440f);
+        return m9440f;
     }
 }

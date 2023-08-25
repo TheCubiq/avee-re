@@ -6,44 +6,58 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class mo2 {
-    public final wm2 a;
-    public final String b;
-    public final String c;
-    public final Class[] e;
-    public volatile Method d = null;
-    public final CountDownLatch f = new CountDownLatch(1);
+
+    /* renamed from: a */
+    public final wm2 f19025a;
+
+    /* renamed from: b */
+    public final String f19026b;
+
+    /* renamed from: c */
+    public final String f19027c;
+
+    /* renamed from: e */
+    public final Class[] f19029e;
+
+    /* renamed from: d */
+    public volatile Method f19028d = null;
+
+    /* renamed from: f */
+    public final CountDownLatch f19030f = new CountDownLatch(1);
 
     public mo2(wm2 wm2Var, String str, String str2, Class... clsArr) {
-        this.a = wm2Var;
-        this.b = str;
-        this.c = str2;
-        this.e = clsArr;
-        wm2Var.k().submit(new lo2(this));
+        this.f19025a = wm2Var;
+        this.f19026b = str;
+        this.f19027c = str2;
+        this.f19029e = clsArr;
+        wm2Var.m5995k().submit(new lo2(this));
     }
 
-    public static /* bridge */ /* synthetic */ void b(mo2 mo2Var) {
+    /* renamed from: b */
+    public static /* bridge */ /* synthetic */ void m15886b(mo2 mo2Var) {
         try {
-            wm2 wm2Var = mo2Var.a;
-            Class loadClass = wm2Var.i().loadClass(mo2Var.c(wm2Var.u(), mo2Var.b));
+            wm2 wm2Var = mo2Var.f19025a;
+            Class loadClass = wm2Var.m5997i().loadClass(mo2Var.m15885c(wm2Var.m5985u(), mo2Var.f19026b));
             if (loadClass != null) {
-                mo2Var.d = loadClass.getMethod(mo2Var.c(mo2Var.a.u(), mo2Var.c), mo2Var.e);
-                Method method = mo2Var.d;
+                mo2Var.f19028d = loadClass.getMethod(mo2Var.m15885c(mo2Var.f19025a.m5985u(), mo2Var.f19027c), mo2Var.f19029e);
+                Method method = mo2Var.f19028d;
             }
         } catch (xl2 | UnsupportedEncodingException | ClassNotFoundException | NoSuchMethodException | NullPointerException unused) {
         } catch (Throwable th) {
-            mo2Var.f.countDown();
+            mo2Var.f19030f.countDown();
             throw th;
         }
-        mo2Var.f.countDown();
+        mo2Var.f19030f.countDown();
     }
 
-    public final Method a() {
-        if (this.d != null) {
-            return this.d;
+    /* renamed from: a */
+    public final Method m15887a() {
+        if (this.f19028d != null) {
+            return this.f19028d;
         }
         try {
-            if (this.f.await(2L, TimeUnit.SECONDS)) {
-                return this.d;
+            if (this.f19030f.await(2L, TimeUnit.SECONDS)) {
+                return this.f19028d;
             }
             return null;
         } catch (InterruptedException unused) {
@@ -51,7 +65,8 @@ public final class mo2 {
         }
     }
 
-    public final String c(byte[] bArr, String str) {
-        return new String(this.a.e().b(bArr, str), "UTF-8");
+    /* renamed from: c */
+    public final String m15885c(byte[] bArr, String str) {
+        return new String(this.f19025a.m6001e().m3582b(bArr, str), "UTF-8");
     }
 }

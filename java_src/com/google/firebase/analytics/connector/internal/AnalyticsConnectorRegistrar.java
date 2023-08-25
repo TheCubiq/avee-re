@@ -3,13 +3,13 @@ package com.google.firebase.analytics.connector.internal;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.annotation.Keep;
-import com.daaw.gi;
+import com.daaw.C3330vh;
+import com.daaw.C3740ys;
+import com.daaw.InterfaceC1421gi;
+import com.daaw.InterfaceC2505p2;
 import com.daaw.kj0;
-import com.daaw.p2;
 import com.daaw.s10;
 import com.daaw.sh1;
-import com.daaw.vh;
-import com.daaw.ys;
 import com.google.firebase.components.ComponentRegistrar;
 import java.util.Arrays;
 import java.util.List;
@@ -19,14 +19,15 @@ public class AnalyticsConnectorRegistrar implements ComponentRegistrar {
     @Override // com.google.firebase.components.ComponentRegistrar
     @Keep
     @SuppressLint({"MissingPermission"})
-    public List<vh<?>> getComponents() {
-        return Arrays.asList(vh.e(p2.class).b(ys.j(s10.class)).b(ys.j(Context.class)).b(ys.j(sh1.class)).e(new gi() { // from class: com.daaw.dy2
-            @Override // com.daaw.gi
-            public final Object a(bi biVar) {
-                p2 c;
-                c = q2.c((s10) biVar.a(s10.class), (Context) biVar.a(Context.class), (sh1) biVar.a(sh1.class));
-                return c;
+    public List<C3330vh<?>> getComponents() {
+        return Arrays.asList(C3330vh.m7173e(InterfaceC2505p2.class).m7156b(C3740ys.m3349j(s10.class)).m7156b(C3740ys.m3349j(Context.class)).m7156b(C3740ys.m3349j(sh1.class)).m7153e(new InterfaceC1421gi() { // from class: com.daaw.dy2
+            @Override // com.daaw.InterfaceC1421gi
+            /* renamed from: a */
+            public final Object mo3451a(InterfaceC0842bi interfaceC0842bi) {
+                InterfaceC2505p2 m12799c;
+                m12799c = C2680q2.m12799c((s10) interfaceC0842bi.mo12506a(s10.class), (Context) interfaceC0842bi.mo12506a(Context.class), (sh1) interfaceC0842bi.mo12506a(sh1.class));
+                return m12799c;
             }
-        }).d().c(), kj0.b("fire-analytics", "21.2.0"));
+        }).m7154d().m7155c(), kj0.m17708b("fire-analytics", "21.2.0"));
     }
 }

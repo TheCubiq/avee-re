@@ -5,19 +5,23 @@ import android.view.View;
 import android.view.ViewOverlay;
 /* loaded from: classes.dex */
 public class qt1 implements rt1 {
-    public final ViewOverlay a;
+
+    /* renamed from: a */
+    public final ViewOverlay f24315a;
 
     public qt1(View view) {
-        this.a = view.getOverlay();
+        this.f24315a = view.getOverlay();
     }
 
     @Override // com.daaw.rt1
-    public void a(Drawable drawable) {
-        this.a.add(drawable);
+    /* renamed from: a */
+    public void mo10959a(Drawable drawable) {
+        this.f24315a.add(drawable);
     }
 
     @Override // com.daaw.rt1
-    public void b(Drawable drawable) {
-        this.a.remove(drawable);
+    /* renamed from: b */
+    public void mo10958b(Drawable drawable) {
+        this.f24315a.remove(drawable);
     }
 }

@@ -3,16 +3,24 @@ package com.daaw;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class r37 extends b27 {
-    public static final b27 v = new r37(null, new Object[0], 0);
+
+    /* renamed from: v */
+    public static final b27 f24812v = new r37(null, new Object[0], 0);
     @CheckForNull
-    public final transient Object s;
-    public final transient Object[] t;
-    public final transient int u;
+
+    /* renamed from: s */
+    public final transient Object f24813s;
+
+    /* renamed from: t */
+    public final transient Object[] f24814t;
+
+    /* renamed from: u */
+    public final transient int f24815u;
 
     public r37(@CheckForNull Object obj, Object[] objArr, int i) {
-        this.s = obj;
-        this.t = objArr;
-        this.u = i;
+        this.f24813s = obj;
+        this.f24814t = objArr;
+        this.f24815u = i;
     }
 
     /*  JADX ERROR: Type inference failed with exception
@@ -25,146 +33,116 @@ public final class r37 extends b27 {
         	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.tryInsertAdditionalMove(TypeInferenceVisitor.java:742)
         	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:109)
         */
-    public static com.daaw.r37 i(int r17, java.lang.Object[] r18, com.daaw.a27 r19) {
+    /* renamed from: i */
+    public static com.daaw.r37 m11785i(int r17, java.lang.Object[] r18, com.daaw.a27 r19) {
         /*
             Method dump skipped, instructions count: 431
             To view this dump add '--comments-level debug' option
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.r37.i(int, java.lang.Object[], com.daaw.a27):com.daaw.r37");
+        throw new UnsupportedOperationException("Method not decompiled: com.daaw.r37.m11785i(int, java.lang.Object[], com.daaw.a27):com.daaw.r37");
     }
 
     @Override // com.daaw.b27
-    public final t17 a() {
-        return new q37(this.t, 1, this.u);
+    /* renamed from: a */
+    public final t17 mo11788a() {
+        return new q37(this.f24814t, 1, this.f24815u);
     }
 
     @Override // com.daaw.b27
-    public final d27 e() {
-        return new o37(this, this.t, 0, this.u);
+    /* renamed from: e */
+    public final d27 mo11787e() {
+        return new o37(this, this.f24814t, 0, this.f24815u);
     }
 
     @Override // com.daaw.b27
-    public final d27 f() {
-        return new p37(this, new q37(this.t, 0, this.u));
+    /* renamed from: f */
+    public final d27 mo11786f() {
+        return new p37(this, new q37(this.f24814t, 0, this.f24815u));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:40:0x009e A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:41:0x009f A[RETURN] */
     @Override // com.daaw.b27, java.util.Map
-    @javax.annotation.CheckForNull
+    @CheckForNull
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final java.lang.Object get(@javax.annotation.CheckForNull java.lang.Object r10) {
-        /*
-            r9 = this;
-            java.lang.Object r0 = r9.s
-            java.lang.Object[] r1 = r9.t
-            int r2 = r9.u
-            r3 = 0
-            if (r10 != 0) goto Lc
-        L9:
-            r10 = r3
-            goto L9c
-        Lc:
-            r4 = 1
-            if (r2 != r4) goto L22
-            r0 = 0
-            r0 = r1[r0]
-            r0.getClass()
-            boolean r10 = r0.equals(r10)
-            if (r10 == 0) goto L9
-            r10 = r1[r4]
-            r10.getClass()
-            goto L9c
-        L22:
-            if (r0 != 0) goto L25
-            goto L9
-        L25:
-            boolean r2 = r0 instanceof byte[]
-            r5 = -1
-            if (r2 == 0) goto L51
-            r2 = r0
-            byte[] r2 = (byte[]) r2
-            int r0 = r2.length
-            int r6 = r0 + (-1)
-            int r0 = r10.hashCode()
-            int r0 = com.daaw.q17.a(r0)
-        L38:
-            r0 = r0 & r6
-            r5 = r2[r0]
-            r7 = 255(0xff, float:3.57E-43)
-            r5 = r5 & r7
-            if (r5 != r7) goto L41
-            goto L9
-        L41:
-            r7 = r1[r5]
-            boolean r7 = r10.equals(r7)
-            if (r7 == 0) goto L4e
-            r10 = r5 ^ 1
-            r10 = r1[r10]
-            goto L9c
-        L4e:
-            int r0 = r0 + 1
-            goto L38
-        L51:
-            boolean r2 = r0 instanceof short[]
-            if (r2 == 0) goto L7d
-            r2 = r0
-            short[] r2 = (short[]) r2
-            int r0 = r2.length
-            int r6 = r0 + (-1)
-            int r0 = r10.hashCode()
-            int r0 = com.daaw.q17.a(r0)
-        L63:
-            r0 = r0 & r6
-            short r5 = r2[r0]
-            char r5 = (char) r5
-            r7 = 65535(0xffff, float:9.1834E-41)
-            if (r5 != r7) goto L6d
-            goto L9
-        L6d:
-            r7 = r1[r5]
-            boolean r7 = r10.equals(r7)
-            if (r7 == 0) goto L7a
-            r10 = r5 ^ 1
-            r10 = r1[r10]
-            goto L9c
-        L7a:
-            int r0 = r0 + 1
-            goto L63
-        L7d:
-            int[] r0 = (int[]) r0
-            int r2 = r0.length
-            int r2 = r2 + r5
-            int r6 = r10.hashCode()
-            int r6 = com.daaw.q17.a(r6)
-        L89:
-            r6 = r6 & r2
-            r7 = r0[r6]
-            if (r7 != r5) goto L90
-            goto L9
-        L90:
-            r8 = r1[r7]
-            boolean r8 = r10.equals(r8)
-            if (r8 == 0) goto La0
-            r10 = r7 ^ 1
-            r10 = r1[r10]
-        L9c:
-            if (r10 != 0) goto L9f
-            return r3
-        L9f:
-            return r10
-        La0:
-            int r6 = r6 + 1
-            goto L89
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.r37.get(java.lang.Object):java.lang.Object");
+    public final Object get(@CheckForNull Object obj) {
+        Object obj2;
+        Object obj3 = this.f24813s;
+        Object[] objArr = this.f24814t;
+        int i = this.f24815u;
+        if (obj != null) {
+            if (i == 1) {
+                Object obj4 = objArr[0];
+                obj4.getClass();
+                if (obj4.equals(obj)) {
+                    obj2 = objArr[1];
+                    obj2.getClass();
+                }
+            } else if (obj3 != null) {
+                if (obj3 instanceof byte[]) {
+                    byte[] bArr = (byte[]) obj3;
+                    int length = bArr.length - 1;
+                    int m12804a = q17.m12804a(obj.hashCode());
+                    while (true) {
+                        int i2 = m12804a & length;
+                        int i3 = bArr[i2] & 255;
+                        if (i3 == 255) {
+                            break;
+                        } else if (obj.equals(objArr[i3])) {
+                            obj2 = objArr[i3 ^ 1];
+                            break;
+                        } else {
+                            m12804a = i2 + 1;
+                        }
+                    }
+                } else if (obj3 instanceof short[]) {
+                    short[] sArr = (short[]) obj3;
+                    int length2 = sArr.length - 1;
+                    int m12804a2 = q17.m12804a(obj.hashCode());
+                    while (true) {
+                        int i4 = m12804a2 & length2;
+                        char c = (char) sArr[i4];
+                        if (c == 65535) {
+                            break;
+                        } else if (obj.equals(objArr[c])) {
+                            obj2 = objArr[c ^ 1];
+                            break;
+                        } else {
+                            m12804a2 = i4 + 1;
+                        }
+                    }
+                } else {
+                    int[] iArr = (int[]) obj3;
+                    int length3 = iArr.length - 1;
+                    int m12804a3 = q17.m12804a(obj.hashCode());
+                    while (true) {
+                        int i5 = m12804a3 & length3;
+                        int i6 = iArr[i5];
+                        if (i6 == -1) {
+                            break;
+                        } else if (obj.equals(objArr[i6])) {
+                            obj2 = objArr[i6 ^ 1];
+                            break;
+                        } else {
+                            m12804a3 = i5 + 1;
+                        }
+                    }
+                }
+            }
+            if (obj2 != null) {
+                return null;
+            }
+            return obj2;
+        }
+        obj2 = null;
+        if (obj2 != null) {
+        }
     }
 
     @Override // java.util.Map
     public final int size() {
-        return this.u;
+        return this.f24815u;
     }
 }

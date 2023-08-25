@@ -3,11 +3,13 @@ package com.daaw;
 import android.net.Uri;
 /* loaded from: classes.dex */
 public final class om3 extends p04 {
-    public final nm3 b;
+
+    /* renamed from: b */
+    public final nm3 f21657b;
 
     public om3(nm3 nm3Var, String str) {
         super(str);
-        this.b = nm3Var;
+        this.f21657b = nm3Var;
     }
 
     @Override // com.daaw.p04, com.daaw.c04

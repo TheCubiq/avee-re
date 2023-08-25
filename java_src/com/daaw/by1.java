@@ -4,43 +4,55 @@ import com.daaw.ri1;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public class by1 {
-    public final Executor a;
-    public final ly b;
-    public final py1 c;
-    public final ri1 d;
 
-    public by1(Executor executor, ly lyVar, py1 py1Var, ri1 ri1Var) {
-        this.a = executor;
-        this.b = lyVar;
-        this.c = py1Var;
-        this.d = ri1Var;
+    /* renamed from: a */
+    public final Executor f5270a;
+
+    /* renamed from: b */
+    public final InterfaceC2134ly f5271b;
+
+    /* renamed from: c */
+    public final py1 f5272c;
+
+    /* renamed from: d */
+    public final ri1 f5273d;
+
+    public by1(Executor executor, InterfaceC2134ly interfaceC2134ly, py1 py1Var, ri1 ri1Var) {
+        this.f5270a = executor;
+        this.f5271b = interfaceC2134ly;
+        this.f5272c = py1Var;
+        this.f5273d = ri1Var;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Object d() {
-        for (sn1 sn1Var : this.b.o()) {
-            this.c.a(sn1Var, 1);
+    /* renamed from: d */
+    public /* synthetic */ Object m25736d() {
+        for (sn1 sn1Var : this.f5271b.mo11621o()) {
+            this.f5272c.mo7556a(sn1Var, 1);
         }
         return null;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void e() {
-        this.d.q(new ri1.a() { // from class: com.daaw.zx1
-            @Override // com.daaw.ri1.a
-            public final Object a() {
-                Object d;
-                d = by1.this.d();
-                return d;
+    /* renamed from: e */
+    public /* synthetic */ void m25735e() {
+        this.f5273d.mo11287q(new ri1.InterfaceC2864a() { // from class: com.daaw.zx1
+            @Override // com.daaw.ri1.InterfaceC2864a
+            /* renamed from: a */
+            public final Object mo1807a() {
+                Object m25736d;
+                m25736d = by1.this.m25736d();
+                return m25736d;
             }
         });
     }
 
-    public void c() {
-        this.a.execute(new Runnable() { // from class: com.daaw.ay1
+    /* renamed from: c */
+    public void m25737c() {
+        this.f5270a.execute(new Runnable() { // from class: com.daaw.ay1
             @Override // java.lang.Runnable
             public final void run() {
-                by1.this.e();
+                by1.this.m25735e();
             }
         });
     }

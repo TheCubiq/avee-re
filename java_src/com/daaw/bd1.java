@@ -1,266 +1,316 @@
 package com.daaw;
 
-import com.daaw.m7;
+import com.daaw.InterfaceC2154m7;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 /* loaded from: classes.dex */
-public final class bd1 implements m7 {
-    public int b;
-    public int c;
-    public int d;
-    public boolean e;
-    public ByteBuffer f;
-    public ByteBuffer g;
-    public boolean h;
-    public byte[] i;
-    public byte[] j;
-    public int k;
-    public int l;
-    public int m;
-    public boolean n;
-    public long o;
+public final class bd1 implements InterfaceC2154m7 {
+
+    /* renamed from: b */
+    public int f4711b;
+
+    /* renamed from: c */
+    public int f4712c;
+
+    /* renamed from: d */
+    public int f4713d;
+
+    /* renamed from: e */
+    public boolean f4714e;
+
+    /* renamed from: f */
+    public ByteBuffer f4715f;
+
+    /* renamed from: g */
+    public ByteBuffer f4716g;
+
+    /* renamed from: h */
+    public boolean f4717h;
+
+    /* renamed from: i */
+    public byte[] f4718i;
+
+    /* renamed from: j */
+    public byte[] f4719j;
+
+    /* renamed from: k */
+    public int f4720k;
+
+    /* renamed from: l */
+    public int f4721l;
+
+    /* renamed from: m */
+    public int f4722m;
+
+    /* renamed from: n */
+    public boolean f4723n;
+
+    /* renamed from: o */
+    public long f4724o;
 
     public bd1() {
-        ByteBuffer byteBuffer = m7.a;
-        this.f = byteBuffer;
-        this.g = byteBuffer;
-        this.b = -1;
-        this.c = -1;
-        this.i = new byte[0];
-        this.j = new byte[0];
+        ByteBuffer byteBuffer = InterfaceC2154m7.f18485a;
+        this.f4715f = byteBuffer;
+        this.f4716g = byteBuffer;
+        this.f4711b = -1;
+        this.f4712c = -1;
+        this.f4718i = new byte[0];
+        this.f4719j = new byte[0];
     }
 
-    public final int a(long j) {
-        return (int) ((j * this.c) / 1000000);
+    /* renamed from: a */
+    public final int m26223a(long j) {
+        return (int) ((j * this.f4712c) / 1000000);
     }
 
-    public final int b(ByteBuffer byteBuffer) {
+    /* renamed from: b */
+    public final int m26222b(ByteBuffer byteBuffer) {
         for (int limit = byteBuffer.limit() - 1; limit >= byteBuffer.position(); limit -= 2) {
             if (Math.abs((int) byteBuffer.get(limit)) > 4) {
-                int i = this.d;
+                int i = this.f4713d;
                 return ((limit / i) * i) + i;
             }
         }
         return byteBuffer.position();
     }
 
-    @Override // com.daaw.m7
-    public boolean c() {
-        return this.h && this.g == m7.a;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: c */
+    public boolean mo6543c() {
+        return this.f4717h && this.f4716g == InterfaceC2154m7.f18485a;
     }
 
-    @Override // com.daaw.m7
-    public boolean d() {
-        return this.c != -1 && this.e;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: d */
+    public boolean mo6542d() {
+        return this.f4712c != -1 && this.f4714e;
     }
 
-    @Override // com.daaw.m7
-    public void e() {
-        this.e = false;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: e */
+    public void mo6541e() {
+        this.f4714e = false;
         flush();
-        this.f = m7.a;
-        this.b = -1;
-        this.c = -1;
-        this.m = 0;
-        this.i = new byte[0];
-        this.j = new byte[0];
+        this.f4715f = InterfaceC2154m7.f18485a;
+        this.f4711b = -1;
+        this.f4712c = -1;
+        this.f4722m = 0;
+        this.f4718i = new byte[0];
+        this.f4719j = new byte[0];
     }
 
-    @Override // com.daaw.m7
-    public ByteBuffer f() {
-        ByteBuffer byteBuffer = this.g;
-        this.g = m7.a;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: f */
+    public ByteBuffer mo6540f() {
+        ByteBuffer byteBuffer = this.f4716g;
+        this.f4716g = InterfaceC2154m7.f18485a;
         return byteBuffer;
     }
 
-    @Override // com.daaw.m7
+    @Override // com.daaw.InterfaceC2154m7
     public void flush() {
-        if (d()) {
-            int a = a(100000L) * this.d;
-            if (this.i.length != a) {
-                this.i = new byte[a];
+        if (mo6542d()) {
+            int m26223a = m26223a(100000L) * this.f4713d;
+            if (this.f4718i.length != m26223a) {
+                this.f4718i = new byte[m26223a];
             }
-            int a2 = a(10000L) * this.d;
-            this.m = a2;
-            if (this.j.length != a2) {
-                this.j = new byte[a2];
+            int m26223a2 = m26223a(10000L) * this.f4713d;
+            this.f4722m = m26223a2;
+            if (this.f4719j.length != m26223a2) {
+                this.f4719j = new byte[m26223a2];
             }
         }
-        this.k = 0;
-        this.g = m7.a;
-        this.h = false;
-        this.o = 0L;
-        this.l = 0;
-        this.n = false;
+        this.f4720k = 0;
+        this.f4716g = InterfaceC2154m7.f18485a;
+        this.f4717h = false;
+        this.f4724o = 0L;
+        this.f4721l = 0;
+        this.f4723n = false;
     }
 
-    @Override // com.daaw.m7
-    public void g(ByteBuffer byteBuffer) {
-        while (byteBuffer.hasRemaining() && !this.g.hasRemaining()) {
-            int i = this.k;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: g */
+    public void mo6539g(ByteBuffer byteBuffer) {
+        while (byteBuffer.hasRemaining() && !this.f4716g.hasRemaining()) {
+            int i = this.f4720k;
             if (i == 0) {
-                s(byteBuffer);
+                m26215s(byteBuffer);
             } else if (i == 1) {
-                r(byteBuffer);
+                m26216r(byteBuffer);
             } else if (i != 2) {
                 throw new IllegalStateException();
             } else {
-                t(byteBuffer);
+                m26214t(byteBuffer);
             }
         }
     }
 
-    @Override // com.daaw.m7
-    public int h() {
-        return this.b;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: h */
+    public int mo6538h() {
+        return this.f4711b;
     }
 
-    @Override // com.daaw.m7
-    public int i() {
-        return this.c;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: i */
+    public int mo6537i() {
+        return this.f4712c;
     }
 
-    @Override // com.daaw.m7
-    public int j() {
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: j */
+    public int mo6536j() {
         return 2;
     }
 
-    @Override // com.daaw.m7
-    public void k() {
-        this.h = true;
-        int i = this.l;
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: k */
+    public void mo6535k() {
+        this.f4717h = true;
+        int i = this.f4721l;
         if (i > 0) {
-            p(this.i, i);
+            m26218p(this.f4718i, i);
         }
-        if (this.n) {
+        if (this.f4723n) {
             return;
         }
-        this.o += this.m / this.d;
+        this.f4724o += this.f4722m / this.f4713d;
     }
 
-    @Override // com.daaw.m7
-    public boolean l(int i, int i2, int i3) {
+    @Override // com.daaw.InterfaceC2154m7
+    /* renamed from: l */
+    public boolean mo6534l(int i, int i2, int i3) {
         if (i3 == 2) {
-            if (this.c == i && this.b == i2) {
+            if (this.f4712c == i && this.f4711b == i2) {
                 return false;
             }
-            this.c = i;
-            this.b = i2;
-            this.d = i2 * 2;
+            this.f4712c = i;
+            this.f4711b = i2;
+            this.f4713d = i2 * 2;
             return true;
         }
-        throw new m7.a(i, i2, i3);
+        throw new InterfaceC2154m7.C2155a(i, i2, i3);
     }
 
-    public final int m(ByteBuffer byteBuffer) {
+    /* renamed from: m */
+    public final int m26221m(ByteBuffer byteBuffer) {
         for (int position = byteBuffer.position() + 1; position < byteBuffer.limit(); position += 2) {
             if (Math.abs((int) byteBuffer.get(position)) > 4) {
-                int i = this.d;
+                int i = this.f4713d;
                 return i * (position / i);
             }
         }
         return byteBuffer.limit();
     }
 
-    public long n() {
-        return this.o;
+    /* renamed from: n */
+    public long m26220n() {
+        return this.f4724o;
     }
 
-    public final void o(ByteBuffer byteBuffer) {
-        q(byteBuffer.remaining());
-        this.f.put(byteBuffer);
-        this.f.flip();
-        this.g = this.f;
+    /* renamed from: o */
+    public final void m26219o(ByteBuffer byteBuffer) {
+        m26217q(byteBuffer.remaining());
+        this.f4715f.put(byteBuffer);
+        this.f4715f.flip();
+        this.f4716g = this.f4715f;
     }
 
-    public final void p(byte[] bArr, int i) {
-        q(i);
-        this.f.put(bArr, 0, i);
-        this.f.flip();
-        this.g = this.f;
+    /* renamed from: p */
+    public final void m26218p(byte[] bArr, int i) {
+        m26217q(i);
+        this.f4715f.put(bArr, 0, i);
+        this.f4715f.flip();
+        this.f4716g = this.f4715f;
     }
 
-    public final void q(int i) {
-        if (this.f.capacity() < i) {
-            this.f = ByteBuffer.allocateDirect(i).order(ByteOrder.nativeOrder());
+    /* renamed from: q */
+    public final void m26217q(int i) {
+        if (this.f4715f.capacity() < i) {
+            this.f4715f = ByteBuffer.allocateDirect(i).order(ByteOrder.nativeOrder());
         } else {
-            this.f.clear();
+            this.f4715f.clear();
         }
         if (i > 0) {
-            this.n = true;
+            this.f4723n = true;
         }
     }
 
-    public final void r(ByteBuffer byteBuffer) {
+    /* renamed from: r */
+    public final void m26216r(ByteBuffer byteBuffer) {
         int limit = byteBuffer.limit();
-        int m = m(byteBuffer);
-        int position = m - byteBuffer.position();
-        byte[] bArr = this.i;
+        int m26221m = m26221m(byteBuffer);
+        int position = m26221m - byteBuffer.position();
+        byte[] bArr = this.f4718i;
         int length = bArr.length;
-        int i = this.l;
+        int i = this.f4721l;
         int i2 = length - i;
-        if (m < limit && position < i2) {
-            p(bArr, i);
-            this.l = 0;
-            this.k = 0;
+        if (m26221m < limit && position < i2) {
+            m26218p(bArr, i);
+            this.f4721l = 0;
+            this.f4720k = 0;
             return;
         }
         int min = Math.min(position, i2);
         byteBuffer.limit(byteBuffer.position() + min);
-        byteBuffer.get(this.i, this.l, min);
-        int i3 = this.l + min;
-        this.l = i3;
-        byte[] bArr2 = this.i;
+        byteBuffer.get(this.f4718i, this.f4721l, min);
+        int i3 = this.f4721l + min;
+        this.f4721l = i3;
+        byte[] bArr2 = this.f4718i;
         if (i3 == bArr2.length) {
-            if (this.n) {
-                p(bArr2, this.m);
-                this.o += (this.l - (this.m * 2)) / this.d;
+            if (this.f4723n) {
+                m26218p(bArr2, this.f4722m);
+                this.f4724o += (this.f4721l - (this.f4722m * 2)) / this.f4713d;
             } else {
-                this.o += (i3 - this.m) / this.d;
+                this.f4724o += (i3 - this.f4722m) / this.f4713d;
             }
-            v(byteBuffer, this.i, this.l);
-            this.l = 0;
-            this.k = 2;
+            m26212v(byteBuffer, this.f4718i, this.f4721l);
+            this.f4721l = 0;
+            this.f4720k = 2;
         }
         byteBuffer.limit(limit);
     }
 
-    public final void s(ByteBuffer byteBuffer) {
+    /* renamed from: s */
+    public final void m26215s(ByteBuffer byteBuffer) {
         int limit = byteBuffer.limit();
-        byteBuffer.limit(Math.min(limit, byteBuffer.position() + this.i.length));
-        int b = b(byteBuffer);
-        if (b == byteBuffer.position()) {
-            this.k = 1;
+        byteBuffer.limit(Math.min(limit, byteBuffer.position() + this.f4718i.length));
+        int m26222b = m26222b(byteBuffer);
+        if (m26222b == byteBuffer.position()) {
+            this.f4720k = 1;
         } else {
-            byteBuffer.limit(b);
-            o(byteBuffer);
+            byteBuffer.limit(m26222b);
+            m26219o(byteBuffer);
         }
         byteBuffer.limit(limit);
     }
 
-    public final void t(ByteBuffer byteBuffer) {
+    /* renamed from: t */
+    public final void m26214t(ByteBuffer byteBuffer) {
         int limit = byteBuffer.limit();
-        int m = m(byteBuffer);
-        byteBuffer.limit(m);
-        this.o += byteBuffer.remaining() / this.d;
-        v(byteBuffer, this.j, this.m);
-        if (m < limit) {
-            p(this.j, this.m);
-            this.k = 0;
+        int m26221m = m26221m(byteBuffer);
+        byteBuffer.limit(m26221m);
+        this.f4724o += byteBuffer.remaining() / this.f4713d;
+        m26212v(byteBuffer, this.f4719j, this.f4722m);
+        if (m26221m < limit) {
+            m26218p(this.f4719j, this.f4722m);
+            this.f4720k = 0;
             byteBuffer.limit(limit);
         }
     }
 
-    public void u(boolean z) {
-        this.e = z;
+    /* renamed from: u */
+    public void m26213u(boolean z) {
+        this.f4714e = z;
         flush();
     }
 
-    public final void v(ByteBuffer byteBuffer, byte[] bArr, int i) {
-        int min = Math.min(byteBuffer.remaining(), this.m);
-        int i2 = this.m - min;
-        System.arraycopy(bArr, i - i2, this.j, 0, i2);
+    /* renamed from: v */
+    public final void m26212v(ByteBuffer byteBuffer, byte[] bArr, int i) {
+        int min = Math.min(byteBuffer.remaining(), this.f4722m);
+        int i2 = this.f4722m - min;
+        System.arraycopy(bArr, i - i2, this.f4719j, 0, i2);
         byteBuffer.position(byteBuffer.limit() - min);
-        byteBuffer.get(this.j, i2, min);
+        byteBuffer.get(this.f4719j, i2, min);
     }
 }

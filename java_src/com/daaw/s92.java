@@ -1,15 +1,23 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class s92 {
-    public final int a;
-    public final int b;
-    public final int c;
-    public final int d;
+
+    /* renamed from: a */
+    public final int f26019a;
+
+    /* renamed from: b */
+    public final int f26020b;
+
+    /* renamed from: c */
+    public final int f26021c;
+
+    /* renamed from: d */
+    public final int f26022d;
 
     public s92(int i, int i2, int i3, int i4) {
-        this.a = i;
-        this.b = i2;
-        this.c = i3;
-        this.d = i4;
+        this.f26019a = i;
+        this.f26020b = i2;
+        this.f26021c = i3;
+        this.f26022d = i4;
     }
 }

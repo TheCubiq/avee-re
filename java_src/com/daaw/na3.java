@@ -5,7 +5,8 @@ public final class na3 extends ma3 {
         super(str, obj, i);
     }
 
-    public static ma3 f(String str, boolean z) {
+    /* renamed from: f */
+    public static ma3 m15358f(String str, boolean z) {
         return new na3(str, Boolean.TRUE, 1);
     }
 }

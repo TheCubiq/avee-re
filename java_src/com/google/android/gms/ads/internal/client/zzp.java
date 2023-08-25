@@ -41,7 +41,7 @@ public final class zzp {
         AdInfo zzi = zzdxVar.zzi();
         if (zzi != null) {
             QueryInfo queryInfo = zzi.getQueryInfo();
-            zzcVar = new zzc(zzdxVar.zzi().getAdString(), queryInfo != null ? queryInfo.zza().a() : "");
+            zzcVar = new zzc(zzdxVar.zzi().getAdString(), queryInfo != null ? queryInfo.zza().m1395a() : "");
         } else {
             zzcVar = null;
         }
@@ -52,7 +52,7 @@ public final class zzp {
         if (applicationContext != null) {
             String packageName = applicationContext.getPackageName();
             zzay.zzb();
-            str = d04.w(Thread.currentThread().getStackTrace(), packageName);
+            str = d04.m24809w(Thread.currentThread().getStackTrace(), packageName);
         } else {
             str = null;
         }

@@ -5,43 +5,54 @@ import android.text.TextUtils;
 import com.google.android.gms.ads.internal.zzt;
 /* loaded from: classes.dex */
 public final class sx3 implements q03 {
-    public final Context p;
-    public final Object q;
-    public final String r;
-    public boolean s;
+
+    /* renamed from: p */
+    public final Context f26741p;
+
+    /* renamed from: q */
+    public final Object f26742q;
+
+    /* renamed from: r */
+    public final String f26743r;
+
+    /* renamed from: s */
+    public boolean f26744s;
 
     public sx3(Context context, String str) {
-        this.p = context.getApplicationContext() != null ? context.getApplicationContext() : context;
-        this.r = str;
-        this.s = false;
-        this.q = new Object();
+        this.f26741p = context.getApplicationContext() != null ? context.getApplicationContext() : context;
+        this.f26743r = str;
+        this.f26744s = false;
+        this.f26742q = new Object();
     }
 
-    public final String b() {
-        return this.r;
+    /* renamed from: b */
+    public final String m9784b() {
+        return this.f26743r;
     }
 
-    public final void c(boolean z) {
-        if (zzt.zzn().z(this.p)) {
-            synchronized (this.q) {
-                if (this.s == z) {
+    /* renamed from: c */
+    public final void m9783c(boolean z) {
+        if (zzt.zzn().m17317z(this.f26741p)) {
+            synchronized (this.f26742q) {
+                if (this.f26744s == z) {
                     return;
                 }
-                this.s = z;
-                if (TextUtils.isEmpty(this.r)) {
+                this.f26744s = z;
+                if (TextUtils.isEmpty(this.f26743r)) {
                     return;
                 }
-                if (this.s) {
-                    zzt.zzn().m(this.p, this.r);
+                if (this.f26744s) {
+                    zzt.zzn().m17330m(this.f26741p, this.f26743r);
                 } else {
-                    zzt.zzn().n(this.p, this.r);
+                    zzt.zzn().m17329n(this.f26741p, this.f26743r);
                 }
             }
         }
     }
 
     @Override // com.daaw.q03
-    public final void e0(p03 p03Var) {
-        c(p03Var.j);
+    /* renamed from: e0 */
+    public final void mo6420e0(p03 p03Var) {
+        m9783c(p03Var.f22185j);
     }
 }

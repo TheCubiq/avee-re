@@ -1,47 +1,58 @@
 package com.daaw;
 
 import android.util.Base64;
-import com.daaw.w9;
+import com.daaw.C3408w9;
 import com.google.auto.value.AutoValue;
 @AutoValue
 /* loaded from: classes.dex */
 public abstract class sn1 {
 
     @AutoValue.Builder
+    /* renamed from: com.daaw.sn1$a */
     /* loaded from: classes.dex */
-    public static abstract class a {
-        public abstract sn1 a();
+    public static abstract class AbstractC2958a {
+        /* renamed from: a */
+        public abstract sn1 mo6333a();
 
-        public abstract a b(String str);
+        /* renamed from: b */
+        public abstract AbstractC2958a mo6332b(String str);
 
-        public abstract a c(byte[] bArr);
+        /* renamed from: c */
+        public abstract AbstractC2958a mo6331c(byte[] bArr);
 
-        public abstract a d(cz0 cz0Var);
+        /* renamed from: d */
+        public abstract AbstractC2958a mo6330d(cz0 cz0Var);
     }
 
-    public static a a() {
-        return new w9.b().d(cz0.DEFAULT);
+    /* renamed from: a */
+    public static AbstractC2958a m10151a() {
+        return new C3408w9.C3410b().mo6330d(cz0.DEFAULT);
     }
 
-    public abstract String b();
+    /* renamed from: b */
+    public abstract String mo6336b();
 
-    public abstract byte[] c();
+    /* renamed from: c */
+    public abstract byte[] mo6335c();
 
-    public abstract cz0 d();
+    /* renamed from: d */
+    public abstract cz0 mo6334d();
 
-    public boolean e() {
-        return c() != null;
+    /* renamed from: e */
+    public boolean m10150e() {
+        return mo6335c() != null;
     }
 
-    public sn1 f(cz0 cz0Var) {
-        return a().b(b()).d(cz0Var).c(c()).a();
+    /* renamed from: f */
+    public sn1 m10149f(cz0 cz0Var) {
+        return m10151a().mo6332b(mo6336b()).mo6330d(cz0Var).mo6331c(mo6335c()).mo6333a();
     }
 
     public final String toString() {
         Object[] objArr = new Object[3];
-        objArr[0] = b();
-        objArr[1] = d();
-        objArr[2] = c() == null ? "" : Base64.encodeToString(c(), 2);
+        objArr[0] = mo6336b();
+        objArr[1] = mo6334d();
+        objArr[2] = mo6335c() == null ? "" : Base64.encodeToString(mo6335c(), 2);
         return String.format("TransportContext(%s, %s, %s)", objArr);
     }
 }

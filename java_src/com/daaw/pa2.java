@@ -4,7 +4,8 @@ import java.util.Iterator;
 import java.util.Set;
 /* loaded from: classes2.dex */
 public final class pa2 {
-    public static int a(Set set) {
+    /* renamed from: a */
+    public static int m13536a(Set set) {
         Iterator it = set.iterator();
         int i = 0;
         while (it.hasNext()) {

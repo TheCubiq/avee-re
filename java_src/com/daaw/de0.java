@@ -2,38 +2,55 @@ package com.daaw;
 /* loaded from: classes.dex */
 public interface de0 {
 
+    /* renamed from: com.daaw.de0$a */
     /* loaded from: classes.dex */
-    public interface a {
-        aq0 a();
+    public interface InterfaceC1077a {
+        /* renamed from: a */
+        aq0 mo4185a();
 
-        sg0 b();
+        /* renamed from: b */
+        sg0 mo4184b();
 
-        z6 c();
+        /* renamed from: c */
+        C3812z6 mo4183c();
 
-        z6 d();
+        /* renamed from: d */
+        C3812z6 mo4182d();
 
-        z6 e();
+        /* renamed from: e */
+        C3812z6 mo4181e();
 
-        z6 f();
+        /* renamed from: f */
+        C3812z6 mo4180f();
     }
 
-    int a();
+    /* renamed from: a */
+    int mo2890a();
 
-    a b();
+    /* renamed from: b */
+    InterfaceC1077a mo2889b();
 
-    boolean c();
+    /* renamed from: c */
+    boolean mo2888c();
 
-    float d();
+    /* renamed from: d */
+    float mo2887d();
 
-    void e(int i);
+    /* renamed from: e */
+    void mo2886e(int i);
 
-    int f();
+    /* renamed from: f */
+    int mo2885f();
 
-    float g();
+    /* renamed from: g */
+    float mo2884g();
 
-    boolean h();
+    /* renamed from: h */
+    boolean mo2883h();
 
-    void i(e40 e40Var);
+    /* renamed from: i */
+    void mo2882i(e40 e40Var);
 
-    sc0 j();
+    /* renamed from: j */
+    sc0 mo2881j();
 }

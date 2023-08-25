@@ -4,91 +4,83 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 /* loaded from: classes.dex */
 public final class jg2 {
-    public long a;
-    public final String b;
-    public final String c;
-    public final long d;
-    public final long e;
-    public final long f;
-    public final long g;
-    public final List h;
+
+    /* renamed from: a */
+    public long f15083a;
+
+    /* renamed from: b */
+    public final String f15084b;
+
+    /* renamed from: c */
+    public final String f15085c;
+
+    /* renamed from: d */
+    public final long f15086d;
+
+    /* renamed from: e */
+    public final long f15087e;
+
+    /* renamed from: f */
+    public final long f15088f;
+
+    /* renamed from: g */
+    public final long f15089g;
+
+    /* renamed from: h */
+    public final List f15090h;
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public jg2(java.lang.String r14, com.daaw.ve2 r15) {
-        /*
-            r13 = this;
-            java.lang.String r2 = r15.b
-            long r3 = r15.c
-            long r5 = r15.d
-            long r7 = r15.e
-            long r9 = r15.f
-            java.util.List r0 = r15.h
-            if (r0 == 0) goto L10
-        Le:
-            r11 = r0
-            goto L44
-        L10:
-            java.util.Map r15 = r15.g
-            java.util.ArrayList r0 = new java.util.ArrayList
-            int r1 = r15.size()
-            r0.<init>(r1)
-            java.util.Set r15 = r15.entrySet()
-            java.util.Iterator r15 = r15.iterator()
-        L23:
-            boolean r1 = r15.hasNext()
-            if (r1 == 0) goto Le
-            java.lang.Object r1 = r15.next()
-            java.util.Map$Entry r1 = (java.util.Map.Entry) r1
-            com.daaw.ef2 r11 = new com.daaw.ef2
-            java.lang.Object r12 = r1.getKey()
-            java.lang.String r12 = (java.lang.String) r12
-            java.lang.Object r1 = r1.getValue()
-            java.lang.String r1 = (java.lang.String) r1
-            r11.<init>(r12, r1)
-            r0.add(r11)
-            goto L23
-        L44:
-            r0 = r13
-            r1 = r14
-            r0.<init>(r1, r2, r3, r5, r7, r9, r11)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.jg2.<init>(java.lang.String, com.daaw.ve2):void");
+    public jg2(String str, ve2 ve2Var) {
+        this(str, r2, r3, r5, r7, r9, r0);
+        String str2 = ve2Var.f30177b;
+        long j = ve2Var.f30178c;
+        long j2 = ve2Var.f30179d;
+        long j3 = ve2Var.f30180e;
+        long j4 = ve2Var.f30181f;
+        List list = ve2Var.f30183h;
+        if (list == null) {
+            Map map = ve2Var.f30182g;
+            list = new ArrayList(map.size());
+            for (Map.Entry entry : map.entrySet()) {
+                list.add(new ef2((String) entry.getKey(), (String) entry.getValue()));
+            }
+        }
     }
 
     public jg2(String str, String str2, long j, long j2, long j3, long j4, List list) {
-        this.b = str;
-        this.c = true == "".equals(str2) ? null : str2;
-        this.d = j;
-        this.e = j2;
-        this.f = j3;
-        this.g = j4;
-        this.h = list;
+        this.f15084b = str;
+        this.f15085c = true == "".equals(str2) ? null : str2;
+        this.f15086d = j;
+        this.f15087e = j2;
+        this.f15088f = j3;
+        this.f15089g = j4;
+        this.f15090h = list;
     }
 
-    public static jg2 a(kg2 kg2Var) {
-        if (rg2.c(kg2Var) == 538247942) {
-            String f = rg2.f(kg2Var);
-            String f2 = rg2.f(kg2Var);
-            long d = rg2.d(kg2Var);
-            long d2 = rg2.d(kg2Var);
-            long d3 = rg2.d(kg2Var);
-            long d4 = rg2.d(kg2Var);
-            int c = rg2.c(kg2Var);
-            if (c < 0) {
-                throw new IOException("readHeaderList size=" + c);
+    /* renamed from: a */
+    public static jg2 m18527a(kg2 kg2Var) {
+        if (rg2.m11341c(kg2Var) == 538247942) {
+            String m11338f = rg2.m11338f(kg2Var);
+            String m11338f2 = rg2.m11338f(kg2Var);
+            long m11340d = rg2.m11340d(kg2Var);
+            long m11340d2 = rg2.m11340d(kg2Var);
+            long m11340d3 = rg2.m11340d(kg2Var);
+            long m11340d4 = rg2.m11340d(kg2Var);
+            int m11341c = rg2.m11341c(kg2Var);
+            if (m11341c < 0) {
+                throw new IOException("readHeaderList size=" + m11341c);
             }
-            List emptyList = c == 0 ? Collections.emptyList() : new ArrayList();
-            for (int i = 0; i < c; i++) {
-                emptyList.add(new ef2(rg2.f(kg2Var).intern(), rg2.f(kg2Var).intern()));
+            List emptyList = m11341c == 0 ? Collections.emptyList() : new ArrayList();
+            for (int i = 0; i < m11341c; i++) {
+                emptyList.add(new ef2(rg2.m11338f(kg2Var).intern(), rg2.m11338f(kg2Var).intern()));
             }
-            return new jg2(f, f2, d, d2, d3, d4, emptyList);
+            return new jg2(m11338f, m11338f2, m11340d, m11340d2, m11340d3, m11340d4, emptyList);
         }
         throw new IOException();
     }

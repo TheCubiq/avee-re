@@ -14,136 +14,165 @@ import android.view.View;
 import android.view.Window;
 import androidx.activity.ComponentActivity;
 import androidx.activity.OnBackPressedDispatcher;
+import androidx.activity.result.AbstractC0051a;
+import androidx.fragment.app.AbstractC0305e;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.c;
+import androidx.lifecycle.AbstractC0344c;
+import androidx.lifecycle.C0349e;
+import com.daaw.C2670q0;
 import com.daaw.k81;
-import com.daaw.q0;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 /* loaded from: classes.dex */
-public class p30 extends ComponentActivity implements q0.d, q0.f {
-    public boolean H;
-    public boolean I;
-    public final t30 F = t30.b(new c());
-    public final androidx.lifecycle.e G = new androidx.lifecycle.e(this);
-    public boolean J = true;
+public class p30 extends ComponentActivity implements C2670q0.InterfaceC2674d, C2670q0.InterfaceC2676f {
 
+    /* renamed from: H */
+    public boolean f22564H;
+
+    /* renamed from: I */
+    public boolean f22565I;
+
+    /* renamed from: F */
+    public final t30 f22562F = t30.m9637b(new C2513c());
+
+    /* renamed from: G */
+    public final C0349e f22563G = new C0349e(this);
+
+    /* renamed from: J */
+    public boolean f22566J = true;
+
+    /* renamed from: com.daaw.p30$a */
     /* loaded from: classes.dex */
-    public class a implements k81.c {
-        public a() {
+    public class C2511a implements k81.InterfaceC1922c {
+        public C2511a() {
         }
 
-        @Override // com.daaw.k81.c
-        public Bundle a() {
+        @Override // com.daaw.k81.InterfaceC1922c
+        /* renamed from: a */
+        public Bundle mo5117a() {
             Bundle bundle = new Bundle();
-            p30.this.z();
-            p30.this.G.h(c.b.ON_STOP);
-            Parcelable x = p30.this.F.x();
-            if (x != null) {
-                bundle.putParcelable("android:support:fragments", x);
+            p30.this.m13653z();
+            p30.this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_STOP);
+            Parcelable m9615x = p30.this.f22562F.m9615x();
+            if (m9615x != null) {
+                bundle.putParcelable("android:support:fragments", m9615x);
             }
             return bundle;
         }
     }
 
+    /* renamed from: com.daaw.p30$b */
     /* loaded from: classes.dex */
-    public class b implements eu0 {
-        public b() {
+    public class C2512b implements eu0 {
+        public C2512b() {
         }
 
         @Override // com.daaw.eu0
-        public void a(Context context) {
-            p30.this.F.a(null);
-            Bundle b = p30.this.i().b("android:support:fragments");
-            if (b != null) {
-                p30.this.F.w(b.getParcelable("android:support:fragments"));
+        /* renamed from: a */
+        public void mo6068a(Context context) {
+            p30.this.f22562F.m9638a(null);
+            Bundle m17972b = p30.this.mo16178i().m17972b("android:support:fragments");
+            if (m17972b != null) {
+                p30.this.f22562F.m9616w(m17972b.getParcelable("android:support:fragments"));
             }
         }
     }
 
+    /* renamed from: com.daaw.p30$c */
     /* loaded from: classes.dex */
-    public class c extends androidx.fragment.app.e<p30> implements nt1, yt0, z0, w30 {
-        public c() {
+    public class C2513c extends AbstractC0305e<p30> implements nt1, yt0, InterfaceC3790z0, w30 {
+        public C2513c() {
             super(p30.this);
         }
 
         @Override // com.daaw.sj0
-        public androidx.lifecycle.c a() {
-            return p30.this.G;
+        /* renamed from: a */
+        public AbstractC0344c mo2327a() {
+            return p30.this.f22563G;
         }
 
         @Override // com.daaw.w30
-        public void b(FragmentManager fragmentManager, Fragment fragment) {
-            p30.this.B(fragment);
+        /* renamed from: b */
+        public void mo6558b(FragmentManager fragmentManager, Fragment fragment) {
+            p30.this.m13660B(fragment);
         }
 
         @Override // com.daaw.yt0
-        public OnBackPressedDispatcher c() {
-            return p30.this.c();
+        /* renamed from: c */
+        public OnBackPressedDispatcher mo3233c() {
+            return p30.this.mo3233c();
         }
 
-        @Override // com.daaw.z0
-        public androidx.activity.result.a e() {
-            return p30.this.e();
+        @Override // com.daaw.InterfaceC3790z0
+        /* renamed from: e */
+        public AbstractC0051a mo3011e() {
+            return p30.this.mo3011e();
         }
 
-        @Override // androidx.fragment.app.e, com.daaw.r30
-        public View f(int i) {
+        @Override // androidx.fragment.app.AbstractC0305e, com.daaw.r30
+        /* renamed from: f */
+        public View mo11810f(int i) {
             return p30.this.findViewById(i);
         }
 
         @Override // com.daaw.nt1
-        public mt1 g() {
-            return p30.this.g();
+        /* renamed from: g */
+        public mt1 mo13652g() {
+            return p30.this.mo13652g();
         }
 
-        @Override // androidx.fragment.app.e, com.daaw.r30
-        public boolean h() {
+        @Override // androidx.fragment.app.AbstractC0305e, com.daaw.r30
+        /* renamed from: h */
+        public boolean mo11809h() {
             Window window = p30.this.getWindow();
             return (window == null || window.peekDecorView() == null) ? false : true;
         }
 
-        @Override // androidx.fragment.app.e
-        public LayoutInflater n() {
+        @Override // androidx.fragment.app.AbstractC0305e
+        /* renamed from: n */
+        public LayoutInflater mo13650n() {
             return p30.this.getLayoutInflater().cloneInContext(p30.this);
         }
 
-        @Override // androidx.fragment.app.e
-        public boolean o(Fragment fragment) {
+        @Override // androidx.fragment.app.AbstractC0305e
+        /* renamed from: o */
+        public boolean mo13649o(Fragment fragment) {
             return !p30.this.isFinishing();
         }
 
-        @Override // androidx.fragment.app.e
-        public void q() {
-            p30.this.E();
+        @Override // androidx.fragment.app.AbstractC0305e
+        /* renamed from: q */
+        public void mo13648q() {
+            p30.this.mo13657E();
         }
 
-        @Override // androidx.fragment.app.e
+        @Override // androidx.fragment.app.AbstractC0305e
         /* renamed from: r */
-        public p30 m() {
+        public p30 mo13651m() {
             return p30.this;
         }
     }
 
     public p30() {
-        y();
+        m13654y();
     }
 
-    public static boolean A(FragmentManager fragmentManager, c.EnumC0020c enumC0020c) {
+    /* renamed from: A */
+    public static boolean m13661A(FragmentManager fragmentManager, AbstractC0344c.EnumC0347c enumC0347c) {
         boolean z = false;
-        for (Fragment fragment : fragmentManager.r0()) {
+        for (Fragment fragment : fragmentManager.m29290r0()) {
             if (fragment != null) {
-                if (fragment.C() != null) {
-                    z |= A(fragment.t(), enumC0020c);
+                if (fragment.m29495C() != null) {
+                    z |= m13661A(fragment.m29408t(), enumC0347c);
                 }
-                c40 c40Var = fragment.i0;
-                if (c40Var != null && c40Var.a().b().a(c.EnumC0020c.STARTED)) {
-                    fragment.i0.k(enumC0020c);
+                c40 c40Var = fragment.f1388i0;
+                if (c40Var != null && c40Var.mo2327a().mo29047b().m29049a(AbstractC0344c.EnumC0347c.STARTED)) {
+                    fragment.f1388i0.m25633k(enumC0347c);
                     z = true;
                 }
-                if (fragment.h0.b().a(c.EnumC0020c.STARTED)) {
-                    fragment.h0.o(enumC0020c);
+                if (fragment.f1387h0.mo29047b().m29049a(AbstractC0344c.EnumC0347c.STARTED)) {
+                    fragment.f1387h0.m29034o(enumC0347c);
                     z = true;
                 }
             }
@@ -152,27 +181,32 @@ public class p30 extends ComponentActivity implements q0.d, q0.f {
     }
 
     @Deprecated
-    public void B(Fragment fragment) {
+    /* renamed from: B */
+    public void m13660B(Fragment fragment) {
     }
 
     @Deprecated
-    public boolean C(View view, Menu menu) {
+    /* renamed from: C */
+    public boolean m13659C(View view, Menu menu) {
         return super.onPreparePanel(0, view, menu);
     }
 
-    public void D() {
-        this.G.h(c.b.ON_RESUME);
-        this.F.p();
+    /* renamed from: D */
+    public void m13658D() {
+        this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_RESUME);
+        this.f22562F.m9623p();
     }
 
     @Deprecated
-    public void E() {
+    /* renamed from: E */
+    public void mo13657E() {
         invalidateOptionsMenu();
     }
 
-    @Override // com.daaw.q0.f
+    @Override // com.daaw.C2670q0.InterfaceC2676f
     @Deprecated
-    public final void b(int i) {
+    /* renamed from: b */
+    public final void mo12817b(int i) {
     }
 
     @Override // android.app.Activity
@@ -185,65 +219,65 @@ public class p30 extends ComponentActivity implements q0.d, q0.f {
         String str2 = str + "  ";
         printWriter.print(str2);
         printWriter.print("mCreated=");
-        printWriter.print(this.H);
+        printWriter.print(this.f22564H);
         printWriter.print(" mResumed=");
-        printWriter.print(this.I);
+        printWriter.print(this.f22565I);
         printWriter.print(" mStopped=");
-        printWriter.print(this.J);
+        printWriter.print(this.f22566J);
         if (getApplication() != null) {
-            mk0.b(this).a(str2, fileDescriptor, printWriter, strArr);
+            mk0.m15994b(this).mo15138a(str2, fileDescriptor, printWriter, strArr);
         }
-        this.F.t().W(str, fileDescriptor, printWriter, strArr);
+        this.f22562F.m9619t().m29346W(str, fileDescriptor, printWriter, strArr);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity
     public void onActivityResult(int i, int i2, Intent intent) {
-        this.F.u();
+        this.f22562F.m9618u();
         super.onActivityResult(i, i2, intent);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity, android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
-        this.F.u();
+        this.f22562F.m9618u();
         super.onConfigurationChanged(configuration);
-        this.F.d(configuration);
+        this.f22562F.m9635d(configuration);
     }
 
-    @Override // androidx.activity.ComponentActivity, com.daaw.zh, android.app.Activity
+    @Override // androidx.activity.ComponentActivity, com.daaw.ActivityC3839zh, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.G.h(c.b.ON_CREATE);
-        this.F.f();
+        this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_CREATE);
+        this.f22562F.m9633f();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
     public boolean onCreatePanelMenu(int i, Menu menu) {
-        return i == 0 ? super.onCreatePanelMenu(i, menu) | this.F.g(menu, getMenuInflater()) : super.onCreatePanelMenu(i, menu);
+        return i == 0 ? super.onCreatePanelMenu(i, menu) | this.f22562F.m9632g(menu, getMenuInflater()) : super.onCreatePanelMenu(i, menu);
     }
 
     @Override // android.app.Activity, android.view.LayoutInflater.Factory2
     public View onCreateView(View view, String str, Context context, AttributeSet attributeSet) {
-        View w = w(view, str, context, attributeSet);
-        return w == null ? super.onCreateView(view, str, context, attributeSet) : w;
+        View m13656w = m13656w(view, str, context, attributeSet);
+        return m13656w == null ? super.onCreateView(view, str, context, attributeSet) : m13656w;
     }
 
     @Override // android.app.Activity, android.view.LayoutInflater.Factory
     public View onCreateView(String str, Context context, AttributeSet attributeSet) {
-        View w = w(null, str, context, attributeSet);
-        return w == null ? super.onCreateView(str, context, attributeSet) : w;
+        View m13656w = m13656w(null, str, context, attributeSet);
+        return m13656w == null ? super.onCreateView(str, context, attributeSet) : m13656w;
     }
 
     @Override // android.app.Activity
     public void onDestroy() {
         super.onDestroy();
-        this.F.h();
-        this.G.h(c.b.ON_DESTROY);
+        this.f22562F.m9631h();
+        this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_DESTROY);
     }
 
     @Override // android.app.Activity, android.content.ComponentCallbacks
     public void onLowMemory() {
         super.onLowMemory();
-        this.F.i();
+        this.f22562F.m9630i();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
@@ -255,26 +289,26 @@ public class p30 extends ComponentActivity implements q0.d, q0.f {
             if (i != 6) {
                 return false;
             }
-            return this.F.e(menuItem);
+            return this.f22562F.m9634e(menuItem);
         }
-        return this.F.k(menuItem);
+        return this.f22562F.m9628k(menuItem);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity
     public void onMultiWindowModeChanged(boolean z) {
-        this.F.j(z);
+        this.f22562F.m9629j(z);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity
     public void onNewIntent(@SuppressLint({"UnknownNullness"}) Intent intent) {
-        this.F.u();
+        this.f22562F.m9618u();
         super.onNewIntent(intent);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity, android.view.Window.Callback
     public void onPanelClosed(int i, Menu menu) {
         if (i == 0) {
-            this.F.l(menu);
+            this.f22562F.m9627l(menu);
         }
         super.onPanelClosed(i, menu);
     }
@@ -282,84 +316,88 @@ public class p30 extends ComponentActivity implements q0.d, q0.f {
     @Override // android.app.Activity
     public void onPause() {
         super.onPause();
-        this.I = false;
-        this.F.m();
-        this.G.h(c.b.ON_PAUSE);
+        this.f22565I = false;
+        this.f22562F.m9626m();
+        this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_PAUSE);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity
     public void onPictureInPictureModeChanged(boolean z) {
-        this.F.n(z);
+        this.f22562F.m9625n(z);
     }
 
     @Override // android.app.Activity
     public void onPostResume() {
         super.onPostResume();
-        D();
+        m13658D();
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
     public boolean onPreparePanel(int i, View view, Menu menu) {
-        return i == 0 ? C(view, menu) | this.F.o(menu) : super.onPreparePanel(i, view, menu);
+        return i == 0 ? m13659C(view, menu) | this.f22562F.m9624o(menu) : super.onPreparePanel(i, view, menu);
     }
 
     @Override // androidx.activity.ComponentActivity, android.app.Activity
     public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
-        this.F.u();
+        this.f22562F.m9618u();
         super.onRequestPermissionsResult(i, strArr, iArr);
     }
 
     @Override // android.app.Activity
     public void onResume() {
-        this.F.u();
+        this.f22562F.m9618u();
         super.onResume();
-        this.I = true;
-        this.F.s();
+        this.f22565I = true;
+        this.f22562F.m9620s();
     }
 
     @Override // android.app.Activity
     public void onStart() {
-        this.F.u();
+        this.f22562F.m9618u();
         super.onStart();
-        this.J = false;
-        if (!this.H) {
-            this.H = true;
-            this.F.c();
+        this.f22566J = false;
+        if (!this.f22564H) {
+            this.f22564H = true;
+            this.f22562F.m9636c();
         }
-        this.F.s();
-        this.G.h(c.b.ON_START);
-        this.F.q();
+        this.f22562F.m9620s();
+        this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_START);
+        this.f22562F.m9622q();
     }
 
     @Override // android.app.Activity
     public void onStateNotSaved() {
-        this.F.u();
+        this.f22562F.m9618u();
     }
 
     @Override // android.app.Activity
     public void onStop() {
         super.onStop();
-        this.J = true;
-        z();
-        this.F.r();
-        this.G.h(c.b.ON_STOP);
+        this.f22566J = true;
+        m13653z();
+        this.f22562F.m9621r();
+        this.f22563G.m29041h(AbstractC0344c.EnumC0346b.ON_STOP);
     }
 
-    public final View w(View view, String str, Context context, AttributeSet attributeSet) {
-        return this.F.v(view, str, context, attributeSet);
+    /* renamed from: w */
+    public final View m13656w(View view, String str, Context context, AttributeSet attributeSet) {
+        return this.f22562F.m9617v(view, str, context, attributeSet);
     }
 
-    public FragmentManager x() {
-        return this.F.t();
+    /* renamed from: x */
+    public FragmentManager m13655x() {
+        return this.f22562F.m9619t();
     }
 
-    public final void y() {
-        i().h("android:support:fragments", new a());
-        p(new b());
+    /* renamed from: y */
+    public final void m13654y() {
+        mo16178i().m17966h("android:support:fragments", new C2511a());
+        m30383p(new C2512b());
     }
 
-    public void z() {
+    /* renamed from: z */
+    public void m13653z() {
         do {
-        } while (A(x(), c.EnumC0020c.CREATED));
+        } while (m13661A(m13655x(), AbstractC0344c.EnumC0347c.CREATED));
     }
 }

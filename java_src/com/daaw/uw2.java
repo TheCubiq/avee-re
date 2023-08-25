@@ -9,6 +9,6 @@ public final class uw2 implements Comparator {
 
     @Override // java.util.Comparator
     public final /* synthetic */ int compare(Object obj, Object obj2) {
-        return ((zzatd) obj2).q - ((zzatd) obj).q;
+        return ((zzatd) obj2).f36790q - ((zzatd) obj).f36790q;
     }
 }

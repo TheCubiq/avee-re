@@ -4,255 +4,261 @@ import android.content.Context;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public class xn0 {
-    public String a;
-    public bs1 b = new bs1(0.0f, 0.0f);
-    public bs1 c = new bs1(0.0f, 0.0f);
+
+    /* renamed from: a */
+    public String f32822a;
+
+    /* renamed from: b */
+    public bs1 f32823b = new bs1(0.0f, 0.0f);
+
+    /* renamed from: c */
+    public bs1 f32824c = new bs1(0.0f, 0.0f);
 
     public xn0(xn0 xn0Var) {
-        this.a = xn0Var.a;
-        bs1 bs1Var = this.b;
-        bs1 bs1Var2 = xn0Var.b;
-        bs1Var.a = bs1Var2.a;
-        bs1Var.b = bs1Var2.b;
-        c();
+        this.f32822a = xn0Var.f32822a;
+        bs1 bs1Var = this.f32823b;
+        bs1 bs1Var2 = xn0Var.f32823b;
+        bs1Var.f5090a = bs1Var2.f5090a;
+        bs1Var.f5091b = bs1Var2.f5091b;
+        m4970c();
     }
 
     public xn0(String str, float f) {
-        this.a = str;
-        bs1 bs1Var = this.b;
-        bs1Var.a = f;
-        bs1Var.b = f;
-        c();
+        this.f32822a = str;
+        bs1 bs1Var = this.f32823b;
+        bs1Var.f5090a = f;
+        bs1Var.f5091b = f;
+        m4970c();
     }
 
     public xn0(String str, float f, float f2) {
-        this.a = str;
-        bs1 bs1Var = this.b;
-        bs1Var.a = f;
-        bs1Var.b = f2;
-        c();
+        this.f32822a = str;
+        bs1 bs1Var = this.f32823b;
+        bs1Var.f5090a = f;
+        bs1Var.f5091b = f2;
+        m4970c();
     }
 
     public xn0(String str, bs1 bs1Var) {
-        this.a = str;
-        bs1 bs1Var2 = this.b;
-        bs1Var2.a = bs1Var.a;
-        bs1Var2.b = bs1Var.b;
-        c();
+        this.f32822a = str;
+        bs1 bs1Var2 = this.f32823b;
+        bs1Var2.f5090a = bs1Var.f5090a;
+        bs1Var2.f5091b = bs1Var.f5091b;
+        m4970c();
     }
 
-    public static final xn0 a() {
+    /* renamed from: a */
+    public static final xn0 m4972a() {
         return new xn0("Nothing", 0.5f, 0.5f);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:15:0x003e, code lost:
-        return r6.d();
+        return r6.m4969d();
      */
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static com.daaw.xn0 b(java.lang.String r5, com.daaw.xn0 r6) {
-        /*
-            java.lang.String r0 = " "
-            r1 = 0
-            if (r5 != 0) goto Lc
-            if (r6 == 0) goto Lb
-            com.daaw.xn0 r1 = r6.clone()
-        Lb:
-            return r1
-        Lc:
-            int r2 = r5.indexOf(r0)     // Catch: java.lang.NumberFormatException -> L3f
-            int r3 = r2 + 1
-            int r0 = r5.indexOf(r0, r3)     // Catch: java.lang.NumberFormatException -> L3f
-            if (r2 < 0) goto L38
-            if (r0 >= 0) goto L1b
-            goto L38
-        L1b:
-            r4 = 0
-            java.lang.String r2 = r5.substring(r4, r2)     // Catch: java.lang.NumberFormatException -> L3f
-            java.lang.String r3 = r5.substring(r3, r0)     // Catch: java.lang.NumberFormatException -> L3f
-            int r0 = r0 + 1
-            java.lang.String r5 = r5.substring(r0)     // Catch: java.lang.NumberFormatException -> L3f
-            com.daaw.xn0 r0 = new com.daaw.xn0     // Catch: java.lang.NumberFormatException -> L3f
-            float r3 = java.lang.Float.parseFloat(r3)     // Catch: java.lang.NumberFormatException -> L3f
-            float r5 = java.lang.Float.parseFloat(r5)     // Catch: java.lang.NumberFormatException -> L3f
-            r0.<init>(r2, r3, r5)     // Catch: java.lang.NumberFormatException -> L3f
-            return r0
-        L38:
-            if (r6 == 0) goto L3e
-            com.daaw.xn0 r1 = r6.clone()     // Catch: java.lang.NumberFormatException -> L3f
-        L3e:
-            return r1
-        L3f:
-            if (r6 == 0) goto L46
-            com.daaw.xn0 r1 = r6.clone()
-        L46:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.xn0.b(java.lang.String, com.daaw.xn0):com.daaw.xn0");
+    public static xn0 m4971b(String str, xn0 xn0Var) {
+        if (str == null) {
+            if (xn0Var != null) {
+                return xn0Var.clone();
+            }
+            return null;
+        }
+        try {
+            int indexOf = str.indexOf(" ");
+            int i = indexOf + 1;
+            int indexOf2 = str.indexOf(" ", i);
+            if (indexOf >= 0 && indexOf2 >= 0) {
+                return new xn0(str.substring(0, indexOf), Float.parseFloat(str.substring(i, indexOf2)), Float.parseFloat(str.substring(indexOf2 + 1)));
+            }
+            return null;
+        } catch (NumberFormatException unused) {
+            if (xn0Var != null) {
+                return xn0Var.clone();
+            }
+            return null;
+        }
     }
 
-    public final void c() {
-        String str = this.a;
+    /* renamed from: c */
+    public final void m4970c() {
+        String str = this.f32822a;
         if (str == null || str.length() < 1) {
-            this.a = "";
+            this.f32822a = "";
         }
     }
 
     /* renamed from: d */
     public xn0 clone() {
-        String str = this.a;
-        bs1 bs1Var = this.b;
-        return new xn0(str, bs1Var.a, bs1Var.b);
+        String str = this.f32822a;
+        bs1 bs1Var = this.f32823b;
+        return new xn0(str, bs1Var.f5090a, bs1Var.f5091b);
     }
 
-    public String e() {
-        return this.a;
+    /* renamed from: e */
+    public String m4968e() {
+        return this.f32822a;
     }
 
-    public float f() {
-        return this.b.a;
+    /* renamed from: f */
+    public float m4967f() {
+        return this.f32823b.f5090a;
     }
 
-    public bs1 g() {
-        return this.b;
+    /* renamed from: g */
+    public bs1 m4966g() {
+        return this.f32823b;
     }
 
-    public String h(Context context) {
-        int a = wn0.a(this.a);
-        return (a <= 0 || context == null) ? this.a : context.getString(a);
+    /* renamed from: h */
+    public String m4965h(Context context) {
+        int m5945a = wn0.m5945a(this.f32822a);
+        return (m5945a <= 0 || context == null) ? this.f32822a : context.getString(m5945a);
     }
 
-    public float i(aq0 aq0Var) {
-        bs1 n = aq0Var.n(this.a, this.b, this.c);
-        this.c = n;
-        return n.a;
+    /* renamed from: i */
+    public float m4964i(aq0 aq0Var) {
+        bs1 m27211n = aq0Var.m27211n(this.f32822a, this.f32823b, this.f32824c);
+        this.f32824c = m27211n;
+        return m27211n.f5090a;
     }
 
-    public float j(aq0 aq0Var, float f) {
-        bs1 bs1Var = this.c;
-        bs1Var.a = f;
-        bs1Var.b = f;
-        bs1 n = aq0Var.n(this.a, this.b, bs1Var);
-        this.c = n;
-        return n.a;
+    /* renamed from: j */
+    public float m4963j(aq0 aq0Var, float f) {
+        bs1 bs1Var = this.f32824c;
+        bs1Var.f5090a = f;
+        bs1Var.f5091b = f;
+        bs1 m27211n = aq0Var.m27211n(this.f32822a, this.f32823b, bs1Var);
+        this.f32824c = m27211n;
+        return m27211n.f5090a;
     }
 
-    public String k(aq0 aq0Var) {
-        return aq0Var.m(this.a);
+    /* renamed from: k */
+    public String m4962k(aq0 aq0Var) {
+        return aq0Var.m27212m(this.f32822a);
     }
 
-    public bs1 l(aq0 aq0Var) {
-        bs1 n = aq0Var.n(this.a, this.b, this.c);
-        this.c = n;
-        return n;
+    /* renamed from: l */
+    public bs1 m4961l(aq0 aq0Var) {
+        bs1 m27211n = aq0Var.m27211n(this.f32822a, this.f32823b, this.f32824c);
+        this.f32824c = m27211n;
+        return m27211n;
     }
 
-    public void m(un unVar, String str, float f) {
-        n(unVar, str, f, f);
+    /* renamed from: m */
+    public void m4960m(C3239un c3239un, String str, float f) {
+        m4959n(c3239un, str, f, f);
     }
 
-    public void n(un unVar, String str, float f, float f2) {
-        if (unVar == null) {
+    /* renamed from: n */
+    public void m4959n(C3239un c3239un, String str, float f, float f2) {
+        if (c3239un == null) {
             return;
         }
-        this.a = unVar.h("measureWhat").C(str);
-        this.b.a = unVar.o("A", f);
-        this.b.b = unVar.o("B", f2);
-        c();
+        this.f32822a = c3239un.m7967h("measureWhat").m8002C(str);
+        this.f32823b.f5090a = c3239un.m7953o("A", f);
+        this.f32823b.f5091b = c3239un.m7953o("B", f2);
+        m4970c();
     }
 
-    public void o(un unVar) {
-        unVar.F("measureWhat", this.a, "misc", wn0.c);
-        if (this.a.equals("Nothing")) {
+    /* renamed from: o */
+    public void m4958o(C3239un c3239un) {
+        c3239un.m7999F("measureWhat", this.f32822a, "misc", wn0.f31384c);
+        if (this.f32822a.equals("Nothing")) {
             return;
         }
-        unVar.P("A", this.b.a, "misc", 0.0f, 1.0f, wn0.b(this.a));
-        unVar.P("B", this.b.b, "misc", 0.0f, 1.0f, wn0.c(this.a));
+        c3239un.m7989P("A", this.f32823b.f5090a, "misc", 0.0f, 1.0f, wn0.m5944b(this.f32822a));
+        c3239un.m7989P("B", this.f32823b.f5091b, "misc", 0.0f, 1.0f, wn0.m5943c(this.f32822a));
     }
 
-    public void p(un unVar) {
-        unVar.F("measureWhat", this.a, "misc", new String[]{"Nothing", "BeatCamShakeMore", "BeatCamShakeLess", "BeatRandomShake", "ConstantShakeMore", "ConstantShake", "TrackPosition"});
-        if (this.a.equals("Nothing")) {
+    /* renamed from: p */
+    public void m4957p(C3239un c3239un) {
+        c3239un.m7999F("measureWhat", this.f32822a, "misc", new String[]{"Nothing", "BeatCamShakeMore", "BeatCamShakeLess", "BeatRandomShake", "ConstantShakeMore", "ConstantShake", "TrackPosition"});
+        if (this.f32822a.equals("Nothing")) {
             return;
         }
-        unVar.P("A", this.b.a, "misc", 0.0f, 2.0f, wn0.b(this.a));
-        unVar.P("B", this.b.b, "misc", 0.0f, 2.0f, wn0.c(this.a));
+        c3239un.m7989P("A", this.f32823b.f5090a, "misc", 0.0f, 2.0f, wn0.m5944b(this.f32822a));
+        c3239un.m7989P("B", this.f32823b.f5091b, "misc", 0.0f, 2.0f, wn0.m5943c(this.f32822a));
     }
 
-    public void q(un unVar) {
-        unVar.F("measureWhat", this.a, "misc", wn0.c);
-        if (this.a.equals("Nothing")) {
+    /* renamed from: q */
+    public void m4956q(C3239un c3239un) {
+        c3239un.m7999F("measureWhat", this.f32822a, "misc", wn0.f31384c);
+        if (this.f32822a.equals("Nothing")) {
             return;
         }
-        unVar.P("A", this.b.a, "misc", -1.0f, 1.0f, wn0.b(this.a));
-        unVar.P("B", this.b.b, "misc", -1.0f, 1.0f, wn0.c(this.a));
+        c3239un.m7989P("A", this.f32823b.f5090a, "misc", -1.0f, 1.0f, wn0.m5944b(this.f32822a));
+        c3239un.m7989P("B", this.f32823b.f5091b, "misc", -1.0f, 1.0f, wn0.m5943c(this.f32822a));
     }
 
-    public void r(un unVar) {
-        unVar.F("measureWhat", this.a, "misc", wn0.c);
-        if (this.a.equals("Nothing")) {
+    /* renamed from: r */
+    public void m4955r(C3239un c3239un) {
+        c3239un.m7999F("measureWhat", this.f32822a, "misc", wn0.f31384c);
+        if (this.f32822a.equals("Nothing")) {
             return;
         }
-        unVar.P("A", this.b.a, "misc", 0.0f, 2.0f, wn0.b(this.a));
-        unVar.P("B", this.b.b, "misc", 0.0f, 2.0f, wn0.c(this.a));
+        c3239un.m7989P("A", this.f32823b.f5090a, "misc", 0.0f, 2.0f, wn0.m5944b(this.f32822a));
+        c3239un.m7989P("B", this.f32823b.f5091b, "misc", 0.0f, 2.0f, wn0.m5943c(this.f32822a));
     }
 
-    public void s(StringBuilder sb, boolean z, Context context) {
+    /* renamed from: s */
+    public void m4954s(StringBuilder sb, boolean z, Context context) {
         String format;
-        if (!"Constant".equals(this.a) && !"Nothing".equals(this.a)) {
-            sb.append(h(context));
+        if (!"Constant".equals(this.f32822a) && !"Nothing".equals(this.f32822a)) {
+            sb.append(m4965h(context));
             sb.append("(");
             Locale locale = Locale.US;
-            sb.append(String.format(locale, "%.3f", Float.valueOf(this.b.a)));
+            sb.append(String.format(locale, "%.3f", Float.valueOf(this.f32823b.f5090a)));
             sb.append(" ");
-            format = String.format(locale, "%.3f", Float.valueOf(this.b.b));
+            format = String.format(locale, "%.3f", Float.valueOf(this.f32823b.f5091b));
         } else if (z) {
             Locale locale2 = Locale.US;
-            sb.append(String.format(locale2, "%.3f", Float.valueOf(this.b.a)));
+            sb.append(String.format(locale2, "%.3f", Float.valueOf(this.f32823b.f5090a)));
             sb.append(" ");
-            sb.append(String.format(locale2, "%.3f", Float.valueOf(this.b.b)));
+            sb.append(String.format(locale2, "%.3f", Float.valueOf(this.f32823b.f5091b)));
             return;
         } else {
             sb.append("(");
             Locale locale3 = Locale.US;
-            sb.append(String.format(locale3, "%.3f", Float.valueOf(this.b.a)));
+            sb.append(String.format(locale3, "%.3f", Float.valueOf(this.f32823b.f5090a)));
             sb.append(" ");
-            format = String.format(locale3, "%.3f", Float.valueOf(this.b.b));
+            format = String.format(locale3, "%.3f", Float.valueOf(this.f32823b.f5091b));
         }
         sb.append(format);
         sb.append(")");
     }
 
-    public void t(StringBuilder sb, boolean z, Context context) {
+    /* renamed from: t */
+    public void m4953t(StringBuilder sb, boolean z, Context context) {
         String format;
-        boolean d = wn0.d(this.a);
-        if (!"Constant".equals(this.a) && !"Nothing".equals(this.a)) {
-            sb.append(h(context));
+        boolean m5942d = wn0.m5942d(this.f32822a);
+        if (!"Constant".equals(this.f32822a) && !"Nothing".equals(this.f32822a)) {
+            sb.append(m4965h(context));
             sb.append("(");
             Locale locale = Locale.US;
-            sb.append(String.format(locale, "%.3f", Float.valueOf(this.b.a)));
-            if (d) {
+            sb.append(String.format(locale, "%.3f", Float.valueOf(this.f32823b.f5090a)));
+            if (m5942d) {
                 sb.append(" ");
-                format = String.format(locale, "%.3f", Float.valueOf(this.b.b));
+                format = String.format(locale, "%.3f", Float.valueOf(this.f32823b.f5091b));
                 sb.append(format);
             }
             sb.append(")");
         } else if (z) {
             Locale locale2 = Locale.US;
-            sb.append(String.format(locale2, "%.3f", Float.valueOf(this.b.a)));
-            if (d) {
+            sb.append(String.format(locale2, "%.3f", Float.valueOf(this.f32823b.f5090a)));
+            if (m5942d) {
                 sb.append(" ");
-                sb.append(String.format(locale2, "%.3f", Float.valueOf(this.b.b)));
+                sb.append(String.format(locale2, "%.3f", Float.valueOf(this.f32823b.f5091b)));
             }
         } else {
             sb.append("(");
             Locale locale3 = Locale.US;
-            sb.append(String.format(locale3, "%.3f", Float.valueOf(this.b.a)));
-            if (d) {
+            sb.append(String.format(locale3, "%.3f", Float.valueOf(this.f32823b.f5090a)));
+            if (m5942d) {
                 sb.append(" ");
-                format = String.format(locale3, "%.3f", Float.valueOf(this.b.b));
+                format = String.format(locale3, "%.3f", Float.valueOf(this.f32823b.f5091b));
                 sb.append(format);
             }
             sb.append(")");
@@ -260,14 +266,15 @@ public class xn0 {
     }
 
     public String toString() {
-        return String.format(Locale.US, "%s %f %f", this.a, Float.valueOf(this.b.a), Float.valueOf(this.b.b));
+        return String.format(Locale.US, "%s %f %f", this.f32822a, Float.valueOf(this.f32823b.f5090a), Float.valueOf(this.f32823b.f5091b));
     }
 
-    public void u(StringBuilder sb) {
-        sb.append(this.a);
+    /* renamed from: u */
+    public void m4952u(StringBuilder sb) {
+        sb.append(this.f32822a);
         sb.append(" ");
-        sb.append(this.b.a);
+        sb.append(this.f32823b.f5090a);
         sb.append(" ");
-        sb.append(this.b.b);
+        sb.append(this.f32823b.f5091b);
     }
 }

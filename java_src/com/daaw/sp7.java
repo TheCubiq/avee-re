@@ -8,22 +8,30 @@ import java.util.Arrays;
 import javax.crypto.Mac;
 /* loaded from: classes.dex */
 public final class sp7 implements wh7 {
-    public final ThreadLocal a;
-    public final String b;
-    public final Key c;
-    public final int d;
+
+    /* renamed from: a */
+    public final ThreadLocal f26510a;
+
+    /* renamed from: b */
+    public final String f26511b;
+
+    /* renamed from: c */
+    public final Key f26512c;
+
+    /* renamed from: d */
+    public final int f26513d;
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     public sp7(String str, Key key) {
         char c;
         int i;
         rp7 rp7Var = new rp7(this);
-        this.a = rp7Var;
-        if (!xb7.a(2)) {
+        this.f26510a = rp7Var;
+        if (!xb7.m5296a(2)) {
             throw new GeneralSecurityException("Can not use HMAC in FIPS-mode, as BoringCrypto module is not available.");
         }
-        this.b = str;
-        this.c = key;
+        this.f26511b = str;
+        this.f26512c = key;
         if (key.getEncoded().length < 16) {
             throw new InvalidAlgorithmParameterException("key size too small, need at least 16 bytes");
         }
@@ -80,15 +88,16 @@ public final class sp7 implements wh7 {
         } else {
             i = 64;
         }
-        this.d = i;
+        this.f26513d = i;
         rp7Var.get();
     }
 
     @Override // com.daaw.wh7
-    public final byte[] a(byte[] bArr, int i) {
-        if (i <= this.d) {
-            ((Mac) this.a.get()).update(bArr);
-            return Arrays.copyOf(((Mac) this.a.get()).doFinal(), i);
+    /* renamed from: a */
+    public final byte[] mo6062a(byte[] bArr, int i) {
+        if (i <= this.f26513d) {
+            ((Mac) this.f26510a.get()).update(bArr);
+            return Arrays.copyOf(((Mac) this.f26510a.get()).doFinal(), i);
         }
         throw new InvalidAlgorithmParameterException("tag size too big");
     }

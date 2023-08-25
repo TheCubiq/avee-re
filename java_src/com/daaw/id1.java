@@ -1,26 +1,31 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class id1 implements mi1 {
-    public final String p;
-    public final Object[] q;
+
+    /* renamed from: p */
+    public final String f13513p;
+
+    /* renamed from: q */
+    public final Object[] f13514q;
 
     public id1(String str) {
         this(str, null);
     }
 
     public id1(String str, Object[] objArr) {
-        this.p = str;
-        this.q = objArr;
+        this.f13513p = str;
+        this.f13514q = objArr;
     }
 
-    public static void a(li1 li1Var, int i, Object obj) {
+    /* renamed from: a */
+    public static void m19917a(li1 li1Var, int i, Object obj) {
         long j;
         int byteValue;
         double doubleValue;
         if (obj == null) {
-            li1Var.F(i);
+            li1Var.mo16232F(i);
         } else if (obj instanceof byte[]) {
-            li1Var.x(i, (byte[]) obj);
+            li1Var.mo16228x(i, (byte[]) obj);
         } else {
             if (obj instanceof Float) {
                 doubleValue = ((Float) obj).floatValue();
@@ -35,7 +40,7 @@ public final class id1 implements mi1 {
                     } else if (obj instanceof Byte) {
                         byteValue = ((Byte) obj).byteValue();
                     } else if (obj instanceof String) {
-                        li1Var.i(i, (String) obj);
+                        li1Var.mo16231i(i, (String) obj);
                         return;
                     } else if (!(obj instanceof Boolean)) {
                         throw new IllegalArgumentException("Cannot bind " + obj + " at index " + i + " Supported types: null, byte[], float, double, long, int, short, byte, string");
@@ -44,16 +49,17 @@ public final class id1 implements mi1 {
                     }
                     j = byteValue;
                 }
-                li1Var.r(i, j);
+                li1Var.mo16229r(i, j);
                 return;
             } else {
                 doubleValue = ((Double) obj).doubleValue();
             }
-            li1Var.m(i, doubleValue);
+            li1Var.mo16230m(i, doubleValue);
         }
     }
 
-    public static void b(li1 li1Var, Object[] objArr) {
+    /* renamed from: b */
+    public static void m19916b(li1 li1Var, Object[] objArr) {
         if (objArr == null) {
             return;
         }
@@ -62,17 +68,19 @@ public final class id1 implements mi1 {
         while (i < length) {
             Object obj = objArr[i];
             i++;
-            a(li1Var, i, obj);
+            m19917a(li1Var, i, obj);
         }
     }
 
     @Override // com.daaw.mi1
-    public void d(li1 li1Var) {
-        b(li1Var, this.q);
+    /* renamed from: d */
+    public void mo16024d(li1 li1Var) {
+        m19916b(li1Var, this.f13514q);
     }
 
     @Override // com.daaw.mi1
-    public String n() {
-        return this.p;
+    /* renamed from: n */
+    public String mo16023n() {
+        return this.f13513p;
     }
 }

@@ -9,7 +9,8 @@ public final class wg2 extends eg2 {
     public wg2(vg2 vg2Var, SSLSocketFactory sSLSocketFactory) {
     }
 
-    public static List a(Map map) {
+    /* renamed from: a */
+    public static List m6075a(Map map) {
         ArrayList arrayList = new ArrayList(map.size());
         for (Map.Entry entry : map.entrySet()) {
             if (entry.getKey() != null) {

@@ -6,21 +6,26 @@ import java.util.Map;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class if4 {
-    public final Map a;
-    public final Map b;
+
+    /* renamed from: a */
+    public final Map f13618a;
+
+    /* renamed from: b */
+    public final Map f13619b;
 
     public if4(Map map, Map map2) {
-        this.a = map;
-        this.b = map2;
+        this.f13618a = map;
+        this.f13619b = map2;
     }
 
-    public final void a(fi6 fi6Var) {
-        for (di6 di6Var : fi6Var.b.c) {
-            if (this.a.containsKey(di6Var.a)) {
-                ((lf4) this.a.get(di6Var.a)).b(di6Var.b);
-            } else if (this.b.containsKey(di6Var.a)) {
-                kf4 kf4Var = (kf4) this.b.get(di6Var.a);
-                JSONObject jSONObject = di6Var.b;
+    /* renamed from: a */
+    public final void m19850a(fi6 fi6Var) {
+        for (di6 di6Var : fi6Var.f9624b.f8509c) {
+            if (this.f13618a.containsKey(di6Var.f7130a)) {
+                ((lf4) this.f13618a.get(di6Var.f7130a)).mo3778b(di6Var.f7131b);
+            } else if (this.f13619b.containsKey(di6Var.f7130a)) {
+                kf4 kf4Var = (kf4) this.f13619b.get(di6Var.f7130a);
+                JSONObject jSONObject = di6Var.f7131b;
                 HashMap hashMap = new HashMap();
                 Iterator<String> keys = jSONObject.keys();
                 while (keys.hasNext()) {
@@ -30,7 +35,7 @@ public final class if4 {
                         hashMap.put(next, optString);
                     }
                 }
-                kf4Var.a(hashMap);
+                kf4Var.mo6086a(hashMap);
             }
         }
     }

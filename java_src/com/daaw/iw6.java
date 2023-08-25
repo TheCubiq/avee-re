@@ -5,7 +5,8 @@ import android.content.Context;
 /* loaded from: classes.dex */
 public final class iw6 {
     @SuppressLint({"RestrictedApi"})
-    public static ew6 a(Context context) {
+    /* renamed from: a */
+    public static ew6 m19305a(Context context) {
         Context applicationContext = context.getApplicationContext();
         if (applicationContext != null) {
             context = applicationContext;

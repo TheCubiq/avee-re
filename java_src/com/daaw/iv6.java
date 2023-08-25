@@ -5,36 +5,52 @@ import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public class iv6 {
-    public static final String g = new UUID(0, 0).toString();
-    public final String a;
-    public final String b;
-    public final String c;
-    public final String d;
-    public final String e;
-    public final jv6 f;
+
+    /* renamed from: g */
+    public static final String f14054g = new UUID(0, 0).toString();
+
+    /* renamed from: a */
+    public final String f14055a;
+
+    /* renamed from: b */
+    public final String f14056b;
+
+    /* renamed from: c */
+    public final String f14057c;
+
+    /* renamed from: d */
+    public final String f14058d;
+
+    /* renamed from: e */
+    public final String f14059e;
+
+    /* renamed from: f */
+    public final jv6 f14060f;
 
     public iv6(Context context, String str, String str2, String str3) {
-        this.f = jv6.b(context);
-        this.a = str;
-        this.b = str.concat("_3p");
-        this.c = str2;
-        this.d = str2.concat("_3p");
-        this.e = str3;
+        this.f14060f = jv6.m18218b(context);
+        this.f14055a = str;
+        this.f14056b = str.concat("_3p");
+        this.f14057c = str2;
+        this.f14058d = str2.concat("_3p");
+        this.f14059e = str3;
     }
 
-    public final long a(boolean z) {
-        return this.f.a(z ? this.d : this.c, -1L);
+    /* renamed from: a */
+    public final long m19325a(boolean z) {
+        return this.f14060f.m18219a(z ? this.f14058d : this.f14057c, -1L);
     }
 
-    public final hv6 b(String str, String str2, long j, boolean z) {
+    /* renamed from: b */
+    public final hv6 m19324b(String str, String str2, long j, boolean z) {
         if (str != null) {
             try {
                 UUID.fromString(str);
-                if (!str.equals(g)) {
-                    String e = e(true);
-                    String c = this.f.c("paid_3p_hash_key", null);
-                    if (e != null && c != null && !e.equals(h(str, str2, c))) {
-                        return c(str, str2);
+                if (!str.equals(f14054g)) {
+                    String m19321e = m19321e(true);
+                    String m18217c = this.f14060f.m18217c("paid_3p_hash_key", null);
+                    if (m19321e != null && m18217c != null && !m19321e.equals(m19318h(str, str2, m18217c))) {
+                        return m19323c(str, str2);
                     }
                 }
             } catch (IllegalArgumentException unused) {
@@ -44,63 +60,69 @@ public class iv6 {
         boolean z2 = str != null;
         long currentTimeMillis = System.currentTimeMillis();
         if (currentTimeMillis >= 0) {
-            long a = a(z2);
-            if (a != -1) {
-                if (currentTimeMillis < a) {
-                    this.f.d(z2 ? this.d : this.c, Long.valueOf(currentTimeMillis));
-                } else if (currentTimeMillis >= a + j) {
-                    return c(str, str2);
+            long m19325a = m19325a(z2);
+            if (m19325a != -1) {
+                if (currentTimeMillis < m19325a) {
+                    this.f14060f.m18216d(z2 ? this.f14058d : this.f14057c, Long.valueOf(currentTimeMillis));
+                } else if (currentTimeMillis >= m19325a + j) {
+                    return m19323c(str, str2);
                 }
             }
-            String e2 = e(z2);
-            return (e2 != null || z) ? new hv6(e2, a(z2)) : c(str, str2);
+            String m19321e2 = m19321e(z2);
+            return (m19321e2 != null || z) ? new hv6(m19321e2, m19325a(z2)) : m19323c(str, str2);
         }
-        throw new IllegalStateException(this.e.concat(": Invalid negative current timestamp. Updating PAID failed"));
+        throw new IllegalStateException(this.f14059e.concat(": Invalid negative current timestamp. Updating PAID failed"));
     }
 
-    public final hv6 c(String str, String str2) {
-        String h;
+    /* renamed from: c */
+    public final hv6 m19323c(String str, String str2) {
+        String m19318h;
         boolean z;
         if (str == null) {
-            h = UUID.randomUUID().toString();
+            m19318h = UUID.randomUUID().toString();
             z = false;
         } else {
             String uuid = UUID.randomUUID().toString();
-            this.f.d("paid_3p_hash_key", uuid);
-            h = h(str, str2, uuid);
+            this.f14060f.m18216d("paid_3p_hash_key", uuid);
+            m19318h = m19318h(str, str2, uuid);
             z = true;
         }
-        return d(h, z);
+        return m19322d(m19318h, z);
     }
 
-    public final hv6 d(String str, boolean z) {
+    /* renamed from: d */
+    public final hv6 m19322d(String str, boolean z) {
         long currentTimeMillis = System.currentTimeMillis();
         if (currentTimeMillis >= 0) {
-            this.f.d(z ? this.d : this.c, Long.valueOf(currentTimeMillis));
-            this.f.d(z ? this.b : this.a, str);
+            this.f14060f.m18216d(z ? this.f14058d : this.f14057c, Long.valueOf(currentTimeMillis));
+            this.f14060f.m18216d(z ? this.f14056b : this.f14055a, str);
             return new hv6(str, currentTimeMillis);
         }
-        throw new IllegalStateException(this.e.concat(": Invalid negative current timestamp. Updating PAID failed"));
+        throw new IllegalStateException(this.f14059e.concat(": Invalid negative current timestamp. Updating PAID failed"));
     }
 
-    public final String e(boolean z) {
-        return this.f.c(z ? this.b : this.a, null);
+    /* renamed from: e */
+    public final String m19321e(boolean z) {
+        return this.f14060f.m18217c(z ? this.f14056b : this.f14055a, null);
     }
 
-    public final void f(boolean z) {
-        this.f.e(z ? this.d : this.c);
-        this.f.e(z ? this.b : this.a);
+    /* renamed from: f */
+    public final void m19320f(boolean z) {
+        this.f14060f.m18215e(z ? this.f14058d : this.f14057c);
+        this.f14060f.m18215e(z ? this.f14056b : this.f14055a);
     }
 
-    public final boolean g(boolean z) {
-        return this.f.g(this.a);
+    /* renamed from: g */
+    public final boolean m19319g(boolean z) {
+        return this.f14060f.m18213g(this.f14055a);
     }
 
-    public final String h(String str, String str2, String str3) {
+    /* renamed from: h */
+    public final String m19318h(String str, String str2, String str3) {
         if (str2 != null && str3 != null) {
             return UUID.nameUUIDFromBytes((str + str2 + str3).getBytes(StandardCharsets.UTF_8)).toString();
         }
-        String str4 = this.e;
+        String str4 = this.f14059e;
         String str5 = str2 == null ? "null" : "not null";
         String str6 = str3 != null ? "not null" : "null";
         throw new IllegalArgumentException(str4 + ": Invalid argument to generate PAIDv1 on 3p traffic, Ad ID is not null, package name is " + str5 + ", hashKey is " + str6);

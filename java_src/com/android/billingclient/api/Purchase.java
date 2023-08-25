@@ -7,35 +7,46 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public class Purchase {
-    public final String a;
-    public final String b;
-    public final JSONObject c;
+
+    /* renamed from: a */
+    public final String f2585a;
+
+    /* renamed from: b */
+    public final String f2586b;
+
+    /* renamed from: c */
+    public final JSONObject f2587c;
 
     public Purchase(String str, String str2) {
-        this.a = str;
-        this.b = str2;
-        this.c = new JSONObject(str);
+        this.f2585a = str;
+        this.f2586b = str2;
+        this.f2587c = new JSONObject(str);
     }
 
-    public String a() {
-        return this.a;
+    /* renamed from: a */
+    public String m27866a() {
+        return this.f2585a;
     }
 
-    public List<String> b() {
-        return h();
+    /* renamed from: b */
+    public List<String> m27865b() {
+        return m27859h();
     }
 
-    public int c() {
-        return this.c.optInt("purchaseState", 1) != 4 ? 1 : 2;
+    /* renamed from: c */
+    public int m27864c() {
+        return this.f2587c.optInt("purchaseState", 1) != 4 ? 1 : 2;
     }
 
-    public String d() {
-        JSONObject jSONObject = this.c;
+    /* renamed from: d */
+    public String m27863d() {
+        JSONObject jSONObject = this.f2587c;
         return jSONObject.optString("token", jSONObject.optString("purchaseToken"));
     }
 
-    public String e() {
-        return this.b;
+    /* renamed from: e */
+    public String m27862e() {
+        return this.f2586b;
     }
 
     public boolean equals(Object obj) {
@@ -44,40 +55,43 @@ public class Purchase {
         }
         if (obj instanceof Purchase) {
             Purchase purchase = (Purchase) obj;
-            return TextUtils.equals(this.a, purchase.a()) && TextUtils.equals(this.b, purchase.e());
+            return TextUtils.equals(this.f2585a, purchase.m27866a()) && TextUtils.equals(this.f2586b, purchase.m27862e());
         }
         return false;
     }
 
-    public boolean f() {
-        return this.c.optBoolean("acknowledged", true);
+    /* renamed from: f */
+    public boolean m27861f() {
+        return this.f2587c.optBoolean("acknowledged", true);
     }
 
-    public boolean g() {
-        this.c.optBoolean("autoRenewing");
+    /* renamed from: g */
+    public boolean m27860g() {
+        this.f2587c.optBoolean("autoRenewing");
         return true;
     }
 
-    public final ArrayList h() {
+    /* renamed from: h */
+    public final ArrayList m27859h() {
         ArrayList arrayList = new ArrayList();
-        if (this.c.has("productIds")) {
-            JSONArray optJSONArray = this.c.optJSONArray("productIds");
+        if (this.f2587c.has("productIds")) {
+            JSONArray optJSONArray = this.f2587c.optJSONArray("productIds");
             if (optJSONArray != null) {
                 for (int i = 0; i < optJSONArray.length(); i++) {
                     arrayList.add(optJSONArray.optString(i));
                 }
             }
-        } else if (this.c.has("productId")) {
-            arrayList.add(this.c.optString("productId"));
+        } else if (this.f2587c.has("productId")) {
+            arrayList.add(this.f2587c.optString("productId"));
         }
         return arrayList;
     }
 
     public int hashCode() {
-        return this.a.hashCode();
+        return this.f2585a.hashCode();
     }
 
     public String toString() {
-        return "Purchase. Json: ".concat(String.valueOf(this.a));
+        return "Purchase. Json: ".concat(String.valueOf(this.f2585a));
     }
 }

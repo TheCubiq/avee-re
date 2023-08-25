@@ -8,9 +8,12 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 /* loaded from: classes.dex */
 public class ui0 {
-    public final Deque<WeakReference<XmlPullParser>> a = new ArrayDeque();
 
-    public static boolean b(XmlPullParser xmlPullParser) {
+    /* renamed from: a */
+    public final Deque<WeakReference<XmlPullParser>> f29098a = new ArrayDeque();
+
+    /* renamed from: b */
+    public static boolean m8120b(XmlPullParser xmlPullParser) {
         if (xmlPullParser != null) {
             try {
                 if (xmlPullParser.getEventType() != 3) {
@@ -24,10 +27,11 @@ public class ui0 {
         return true;
     }
 
-    public static XmlPullParser c(Deque<WeakReference<XmlPullParser>> deque) {
+    /* renamed from: c */
+    public static XmlPullParser m8119c(Deque<WeakReference<XmlPullParser>> deque) {
         while (!deque.isEmpty()) {
             XmlPullParser xmlPullParser = deque.peek().get();
-            if (!b(xmlPullParser)) {
+            if (!m8120b(xmlPullParser)) {
                 return xmlPullParser;
             }
             deque.pop();
@@ -35,7 +39,8 @@ public class ui0 {
         return null;
     }
 
-    public static boolean d(XmlPullParser xmlPullParser, XmlPullParser xmlPullParser2) {
+    /* renamed from: d */
+    public static boolean m8118d(XmlPullParser xmlPullParser, XmlPullParser xmlPullParser2) {
         if (xmlPullParser2 == null || xmlPullParser == xmlPullParser2) {
             return false;
         }
@@ -49,13 +54,14 @@ public class ui0 {
         }
     }
 
-    public boolean a(AttributeSet attributeSet) {
+    /* renamed from: a */
+    public boolean m8121a(AttributeSet attributeSet) {
         if (attributeSet instanceof XmlPullParser) {
             XmlPullParser xmlPullParser = (XmlPullParser) attributeSet;
             if (xmlPullParser.getDepth() == 1) {
-                XmlPullParser c = c(this.a);
-                this.a.push(new WeakReference<>(xmlPullParser));
-                return d(xmlPullParser, c);
+                XmlPullParser m8119c = m8119c(this.f29098a);
+                this.f29098a.push(new WeakReference<>(xmlPullParser));
+                return m8118d(xmlPullParser, m8119c);
             }
             return false;
         }

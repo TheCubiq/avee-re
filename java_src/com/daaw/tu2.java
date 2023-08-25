@@ -3,12 +3,16 @@ package com.daaw;
 import android.text.TextUtils;
 /* loaded from: classes.dex */
 public final class tu2 {
-    public final String a;
-    public final boolean b;
+
+    /* renamed from: a */
+    public final String f28070a;
+
+    /* renamed from: b */
+    public final boolean f28071b;
 
     public tu2(String str, boolean z) {
-        this.a = str;
-        this.b = z;
+        this.f28070a = str;
+        this.f28071b = z;
     }
 
     public final boolean equals(Object obj) {
@@ -17,7 +21,7 @@ public final class tu2 {
         }
         if (obj != null && obj.getClass() == tu2.class) {
             tu2 tu2Var = (tu2) obj;
-            if (TextUtils.equals(this.a, tu2Var.a) && this.b == tu2Var.b) {
+            if (TextUtils.equals(this.f28070a, tu2Var.f28070a) && this.f28071b == tu2Var.f28071b) {
                 return true;
             }
         }
@@ -25,7 +29,7 @@ public final class tu2 {
     }
 
     public final int hashCode() {
-        String str = this.a;
-        return (((str == null ? 0 : str.hashCode()) + 31) * 31) + (true != this.b ? 1237 : 1231);
+        String str = this.f28070a;
+        return (((str == null ? 0 : str.hashCode()) + 31) * 31) + (true != this.f28071b ? 1237 : 1231);
     }
 }

@@ -10,8 +10,9 @@ import java.util.List;
 public abstract class w48<MessageType extends w48<MessageType, BuilderType>, BuilderType extends t48<MessageType, BuilderType>> implements zd8 {
     public int zzb = 0;
 
-    public static void f(Iterable iterable, List list) {
-        gb8.e(iterable);
+    /* renamed from: f */
+    public static void m6532f(Iterable iterable, List list) {
+        gb8.m21816e(iterable);
         if (iterable instanceof ac8) {
             List zzh = ((ac8) iterable).zzh();
             ac8 ac8Var = (ac8) list;
@@ -30,7 +31,7 @@ public abstract class w48<MessageType extends w48<MessageType, BuilderType>, Bui
                     }
                     throw new NullPointerException(str);
                 } else if (obj instanceof y68) {
-                    ac8Var.g((y68) obj);
+                    ac8Var.mo3754g((y68) obj);
                 } else {
                     ac8Var.add((String) obj);
                 }
@@ -61,16 +62,18 @@ public abstract class w48<MessageType extends w48<MessageType, BuilderType>, Bui
         }
     }
 
-    public int e(ve8 ve8Var) {
+    /* renamed from: e */
+    public int mo6533e(ve8 ve8Var) {
         throw null;
     }
 
-    public final byte[] i() {
+    /* renamed from: i */
+    public final byte[] m6531i() {
         try {
-            byte[] bArr = new byte[c()];
-            w78 c = w78.c(bArr);
-            b(c);
-            c.d();
+            byte[] bArr = new byte[mo2461c()];
+            w78 m6382c = w78.m6382c(bArr);
+            mo2462b(m6382c);
+            m6382c.m6381d();
             return bArr;
         } catch (IOException e) {
             String name = getClass().getName();
@@ -81,12 +84,12 @@ public abstract class w48<MessageType extends w48<MessageType, BuilderType>, Bui
     @Override // com.daaw.zd8
     public final y68 zzbs() {
         try {
-            int c = c();
-            y68 y68Var = y68.q;
-            byte[] bArr = new byte[c];
-            w78 c2 = w78.c(bArr);
-            b(c2);
-            c2.d();
+            int mo2461c = mo2461c();
+            y68 y68Var = y68.f33399q;
+            byte[] bArr = new byte[mo2461c];
+            w78 m6382c = w78.m6382c(bArr);
+            mo2462b(m6382c);
+            m6382c.m6381d();
             return new p68(bArr);
         } catch (IOException e) {
             String name = getClass().getName();

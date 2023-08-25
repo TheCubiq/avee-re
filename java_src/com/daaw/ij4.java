@@ -3,22 +3,25 @@ package com.daaw;
 import android.view.View;
 /* loaded from: classes.dex */
 public final class ij4 implements wz7 {
-    public final gj4 a;
+
+    /* renamed from: a */
+    public final gj4 f13684a;
 
     public ij4(gj4 gj4Var) {
-        this.a = gj4Var;
+        this.f13684a = gj4Var;
     }
 
-    public final View a() {
-        View a = this.a.a();
-        e08.b(a);
-        return a;
+    /* renamed from: a */
+    public final View m19748a() {
+        View m21565a = this.f13684a.m21565a();
+        e08.m23801b(m21565a);
+        return m21565a;
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        View a = this.a.a();
-        e08.b(a);
-        return a;
+        View m21565a = this.f13684a.m21565a();
+        e08.m23801b(m21565a);
+        return m21565a;
     }
 }

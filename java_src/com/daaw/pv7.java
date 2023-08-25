@@ -11,80 +11,95 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 /* loaded from: classes.dex */
 public class pv7 extends AbstractMap {
-    public final int p;
-    public boolean s;
-    public volatile nv7 t;
-    public List q = Collections.emptyList();
-    public Map r = Collections.emptyMap();
-    public Map u = Collections.emptyMap();
 
-    public void a() {
-        if (this.s) {
+    /* renamed from: p */
+    public final int f23418p;
+
+    /* renamed from: s */
+    public boolean f23421s;
+
+    /* renamed from: t */
+    public volatile nv7 f23422t;
+
+    /* renamed from: q */
+    public List f23419q = Collections.emptyList();
+
+    /* renamed from: r */
+    public Map f23420r = Collections.emptyMap();
+
+    /* renamed from: u */
+    public Map f23423u = Collections.emptyMap();
+
+    /* renamed from: a */
+    public void mo13015a() {
+        if (this.f23421s) {
             return;
         }
-        this.r = this.r.isEmpty() ? Collections.emptyMap() : Collections.unmodifiableMap(this.r);
-        this.u = this.u.isEmpty() ? Collections.emptyMap() : Collections.unmodifiableMap(this.u);
-        this.s = true;
+        this.f23420r = this.f23420r.isEmpty() ? Collections.emptyMap() : Collections.unmodifiableMap(this.f23420r);
+        this.f23423u = this.f23423u.isEmpty() ? Collections.emptyMap() : Collections.unmodifiableMap(this.f23423u);
+        this.f23421s = true;
     }
 
-    public final int b() {
-        return this.q.size();
+    /* renamed from: b */
+    public final int m13014b() {
+        return this.f23419q.size();
     }
 
-    public final Iterable c() {
-        return this.r.isEmpty() ? iv7.a() : this.r.entrySet();
+    /* renamed from: c */
+    public final Iterable m13013c() {
+        return this.f23420r.isEmpty() ? iv7.m19317a() : this.f23420r.entrySet();
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final void clear() {
-        n();
-        if (!this.q.isEmpty()) {
-            this.q.clear();
+        m13002n();
+        if (!this.f23419q.isEmpty()) {
+            this.f23419q.clear();
         }
-        if (this.r.isEmpty()) {
+        if (this.f23420r.isEmpty()) {
             return;
         }
-        this.r.clear();
+        this.f23420r.clear();
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final boolean containsKey(Object obj) {
         Comparable comparable = (Comparable) obj;
-        return k(comparable) >= 0 || this.r.containsKey(comparable);
+        return m13005k(comparable) >= 0 || this.f23420r.containsKey(comparable);
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     /* renamed from: e */
     public final Object put(Comparable comparable, Object obj) {
-        n();
-        int k = k(comparable);
-        if (k >= 0) {
-            return ((jv7) this.q.get(k)).setValue(obj);
+        m13002n();
+        int m13005k = m13005k(comparable);
+        if (m13005k >= 0) {
+            return ((jv7) this.f23419q.get(m13005k)).setValue(obj);
         }
-        n();
-        if (this.q.isEmpty() && !(this.q instanceof ArrayList)) {
-            this.q = new ArrayList(this.p);
+        m13002n();
+        if (this.f23419q.isEmpty() && !(this.f23419q instanceof ArrayList)) {
+            this.f23419q = new ArrayList(this.f23418p);
         }
-        int i = -(k + 1);
-        if (i >= this.p) {
-            return m().put(comparable, obj);
+        int i = -(m13005k + 1);
+        if (i >= this.f23418p) {
+            return m13003m().put(comparable, obj);
         }
-        int size = this.q.size();
-        int i2 = this.p;
+        int size = this.f23419q.size();
+        int i2 = this.f23418p;
         if (size == i2) {
-            jv7 jv7Var = (jv7) this.q.remove(i2 - 1);
-            m().put(jv7Var.a(), jv7Var.getValue());
+            jv7 jv7Var = (jv7) this.f23419q.remove(i2 - 1);
+            m13003m().put(jv7Var.m18212a(), jv7Var.getValue());
         }
-        this.q.add(i, new jv7(this, comparable, obj));
+        this.f23419q.add(i, new jv7(this, comparable, obj));
         return null;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final Set entrySet() {
-        if (this.t == null) {
-            this.t = new nv7(this, null);
+        if (this.f23422t == null) {
+            this.f23422t = new nv7(this, null);
         }
-        return this.t;
+        return this.f23422t;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -100,18 +115,18 @@ public class pv7 extends AbstractMap {
             if (size != pv7Var.size()) {
                 return false;
             }
-            int b = b();
-            if (b == pv7Var.b()) {
-                for (int i = 0; i < b; i++) {
-                    if (!g(i).equals(pv7Var.g(i))) {
+            int m13014b = m13014b();
+            if (m13014b == pv7Var.m13014b()) {
+                for (int i = 0; i < m13014b; i++) {
+                    if (!m13009g(i).equals(pv7Var.m13009g(i))) {
                         return false;
                     }
                 }
-                if (b == size) {
+                if (m13014b == size) {
                     return true;
                 }
-                entrySet = this.r;
-                entrySet2 = pv7Var.r;
+                entrySet = this.f23420r;
+                entrySet2 = pv7Var.f23420r;
             } else {
                 entrySet = entrySet();
                 entrySet2 = pv7Var.entrySet();
@@ -121,36 +136,39 @@ public class pv7 extends AbstractMap {
         return super.equals(obj);
     }
 
-    public final Map.Entry g(int i) {
-        return (Map.Entry) this.q.get(i);
+    /* renamed from: g */
+    public final Map.Entry m13009g(int i) {
+        return (Map.Entry) this.f23419q.get(i);
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final Object get(Object obj) {
         Comparable comparable = (Comparable) obj;
-        int k = k(comparable);
-        return k >= 0 ? ((jv7) this.q.get(k)).getValue() : this.r.get(comparable);
+        int m13005k = m13005k(comparable);
+        return m13005k >= 0 ? ((jv7) this.f23419q.get(m13005k)).getValue() : this.f23420r.get(comparable);
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final int hashCode() {
-        int b = b();
+        int m13014b = m13014b();
         int i = 0;
-        for (int i2 = 0; i2 < b; i2++) {
-            i += ((jv7) this.q.get(i2)).hashCode();
+        for (int i2 = 0; i2 < m13014b; i2++) {
+            i += ((jv7) this.f23419q.get(i2)).hashCode();
         }
-        return this.r.size() > 0 ? i + this.r.hashCode() : i;
+        return this.f23420r.size() > 0 ? i + this.f23420r.hashCode() : i;
     }
 
-    public final boolean j() {
-        return this.s;
+    /* renamed from: j */
+    public final boolean m13006j() {
+        return this.f23421s;
     }
 
-    public final int k(Comparable comparable) {
-        int size = this.q.size() - 1;
+    /* renamed from: k */
+    public final int m13005k(Comparable comparable) {
+        int size = this.f23419q.size() - 1;
         int i = 0;
         if (size >= 0) {
-            int compareTo = comparable.compareTo(((jv7) this.q.get(size)).a());
+            int compareTo = comparable.compareTo(((jv7) this.f23419q.get(size)).m18212a());
             if (compareTo > 0) {
                 return -(size + 2);
             }
@@ -160,7 +178,7 @@ public class pv7 extends AbstractMap {
         }
         while (i <= size) {
             int i2 = (i + size) / 2;
-            int compareTo2 = comparable.compareTo(((jv7) this.q.get(i2)).a());
+            int compareTo2 = comparable.compareTo(((jv7) this.f23419q.get(i2)).m18212a());
             if (compareTo2 < 0) {
                 size = i2 - 1;
             } else if (compareTo2 <= 0) {
@@ -172,12 +190,13 @@ public class pv7 extends AbstractMap {
         return -(i + 1);
     }
 
-    public final Object l(int i) {
-        n();
-        Object value = ((jv7) this.q.remove(i)).getValue();
-        if (!this.r.isEmpty()) {
-            Iterator it = m().entrySet().iterator();
-            List list = this.q;
+    /* renamed from: l */
+    public final Object m13004l(int i) {
+        m13002n();
+        Object value = ((jv7) this.f23419q.remove(i)).getValue();
+        if (!this.f23420r.isEmpty()) {
+            Iterator it = m13003m().entrySet().iterator();
+            List list = this.f23419q;
             Map.Entry entry = (Map.Entry) it.next();
             list.add(new jv7(this, (Comparable) entry.getKey(), entry.getValue()));
             it.remove();
@@ -185,38 +204,40 @@ public class pv7 extends AbstractMap {
         return value;
     }
 
-    public final SortedMap m() {
-        n();
-        if (this.r.isEmpty() && !(this.r instanceof TreeMap)) {
+    /* renamed from: m */
+    public final SortedMap m13003m() {
+        m13002n();
+        if (this.f23420r.isEmpty() && !(this.f23420r instanceof TreeMap)) {
             TreeMap treeMap = new TreeMap();
-            this.r = treeMap;
-            this.u = treeMap.descendingMap();
+            this.f23420r = treeMap;
+            this.f23423u = treeMap.descendingMap();
         }
-        return (SortedMap) this.r;
+        return (SortedMap) this.f23420r;
     }
 
-    public final void n() {
-        if (this.s) {
+    /* renamed from: n */
+    public final void m13002n() {
+        if (this.f23421s) {
             throw new UnsupportedOperationException();
         }
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final Object remove(Object obj) {
-        n();
+        m13002n();
         Comparable comparable = (Comparable) obj;
-        int k = k(comparable);
-        if (k >= 0) {
-            return l(k);
+        int m13005k = m13005k(comparable);
+        if (m13005k >= 0) {
+            return m13004l(m13005k);
         }
-        if (this.r.isEmpty()) {
+        if (this.f23420r.isEmpty()) {
             return null;
         }
-        return this.r.remove(comparable);
+        return this.f23420r.remove(comparable);
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final int size() {
-        return this.q.size() + this.r.size();
+        return this.f23419q.size() + this.f23420r.size();
     }
 }

@@ -4,44 +4,51 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 /* loaded from: classes.dex */
 public final class vp0 extends kj1 {
-    public static vp0 h(ByteBuffer byteBuffer) {
-        return i(byteBuffer, new vp0());
+    /* renamed from: h */
+    public static vp0 m6956h(ByteBuffer byteBuffer) {
+        return m6955i(byteBuffer, new vp0());
     }
 
-    public static vp0 i(ByteBuffer byteBuffer, vp0 vp0Var) {
+    /* renamed from: i */
+    public static vp0 m6955i(ByteBuffer byteBuffer, vp0 vp0Var) {
         byteBuffer.order(ByteOrder.LITTLE_ENDIAN);
-        return vp0Var.f(byteBuffer.getInt(byteBuffer.position()) + byteBuffer.position(), byteBuffer);
+        return vp0Var.m6958f(byteBuffer.getInt(byteBuffer.position()) + byteBuffer.position(), byteBuffer);
     }
 
-    public vp0 f(int i, ByteBuffer byteBuffer) {
-        g(i, byteBuffer);
+    /* renamed from: f */
+    public vp0 m6958f(int i, ByteBuffer byteBuffer) {
+        m6957g(i, byteBuffer);
         return this;
     }
 
-    public void g(int i, ByteBuffer byteBuffer) {
-        c(i, byteBuffer);
+    /* renamed from: g */
+    public void m6957g(int i, ByteBuffer byteBuffer) {
+        m17703c(i, byteBuffer);
     }
 
-    public up0 j(up0 up0Var, int i) {
-        int b = b(6);
-        if (b != 0) {
-            return up0Var.f(a(d(b) + (i * 4)), this.b);
+    /* renamed from: j */
+    public up0 m6954j(up0 up0Var, int i) {
+        int m17704b = m17704b(6);
+        if (m17704b != 0) {
+            return up0Var.m7852f(m17705a(m17702d(m17704b) + (i * 4)), this.f16409b);
         }
         return null;
     }
 
-    public int k() {
-        int b = b(6);
-        if (b != 0) {
-            return e(b);
+    /* renamed from: k */
+    public int m6953k() {
+        int m17704b = m17704b(6);
+        if (m17704b != 0) {
+            return m17701e(m17704b);
         }
         return 0;
     }
 
-    public int l() {
-        int b = b(4);
-        if (b != 0) {
-            return this.b.getInt(b + this.a);
+    /* renamed from: l */
+    public int m6952l() {
+        int m17704b = m17704b(4);
+        if (m17704b != 0) {
+            return this.f16409b.getInt(m17704b + this.f16408a);
         }
         return 0;
     }

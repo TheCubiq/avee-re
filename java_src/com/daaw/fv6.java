@@ -1,16 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class fv6 {
-    public static final zu6 a;
-    public static volatile zu6 b;
+
+    /* renamed from: a */
+    public static final zu6 f9994a;
+
+    /* renamed from: b */
+    public static volatile zu6 f9995b;
 
     static {
         bv6 bv6Var = new bv6(null);
-        a = bv6Var;
-        b = bv6Var;
+        f9994a = bv6Var;
+        f9995b = bv6Var;
     }
 
-    public static zu6 a() {
-        return b;
+    /* renamed from: a */
+    public static zu6 m22241a() {
+        return f9995b;
     }
 }

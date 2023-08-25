@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -23,12 +24,14 @@ public final class ec8 extends pa8 {
         super(yb8Var);
     }
 
-    public static xd8 C(xd8 xd8Var, byte[] bArr) {
-        l88 a = l88.a();
-        return a != null ? xd8Var.g(bArr, a) : xd8Var.h(bArr);
+    /* renamed from: C */
+    public static xd8 m23601C(xd8 xd8Var, byte[] bArr) {
+        l88 m17099a = l88.m17099a();
+        return m17099a != null ? xd8Var.mo5199g(bArr, m17099a) : xd8Var.mo5198h(bArr);
     }
 
-    public static List H(BitSet bitSet) {
+    /* renamed from: H */
+    public static List m23596H(BitSet bitSet) {
         int length = (bitSet.length() + 63) / 64;
         ArrayList arrayList = new ArrayList(length);
         for (int i = 0; i < length; i++) {
@@ -47,82 +50,88 @@ public final class ec8 extends pa8 {
         return arrayList;
     }
 
-    public static boolean L(List list, int i) {
+    /* renamed from: L */
+    public static boolean m23592L(List list, int i) {
         if (i < list.size() * 64) {
             return ((1 << (i % 64)) & ((Long) list.get(i / 64)).longValue()) != 0;
         }
         return false;
     }
 
-    public static boolean N(String str) {
+    /* renamed from: N */
+    public static boolean m23590N(String str) {
         return str != null && str.matches("([+-])?([0-9]+\\.?[0-9]*|[0-9]*\\.?[0-9]+)") && str.length() <= 310;
     }
 
-    public static final void P(fs6 fs6Var, String str, Object obj) {
-        List H = fs6Var.H();
+    /* renamed from: P */
+    public static final void m23588P(fs6 fs6Var, String str, Object obj) {
+        List m22329H = fs6Var.m22329H();
         int i = 0;
         while (true) {
-            if (i >= H.size()) {
+            if (i >= m22329H.size()) {
                 i = -1;
                 break;
-            } else if (str.equals(((ix6) H.get(i)).J())) {
+            } else if (str.equals(((ix6) m22329H.get(i)).m19286J())) {
                 break;
             } else {
                 i++;
             }
         }
-        fw6 H2 = ix6.H();
-        H2.B(str);
+        fw6 m19288H = ix6.m19288H();
+        m19288H.m22210B(str);
         if (obj instanceof Long) {
-            H2.A(((Long) obj).longValue());
+            m19288H.m22211A(((Long) obj).longValue());
         }
         if (i >= 0) {
-            fs6Var.B(i, H2);
+            fs6Var.m22335B(i, m19288H);
         } else {
-            fs6Var.w(H2);
+            fs6Var.m22323w(m19288H);
         }
     }
 
-    public static final boolean l(zzaw zzawVar, zzq zzqVar) {
-        ry0.j(zzawVar);
-        ry0.j(zzqVar);
-        return (TextUtils.isEmpty(zzqVar.q) && TextUtils.isEmpty(zzqVar.F)) ? false : true;
+    /* renamed from: l */
+    public static final boolean m23587l(zzaw zzawVar, zzq zzqVar) {
+        ry0.m10830j(zzawVar);
+        ry0.m10830j(zzqVar);
+        return (TextUtils.isEmpty(zzqVar.f37093q) && TextUtils.isEmpty(zzqVar.f37084F)) ? false : true;
     }
 
-    public static final ix6 m(it6 it6Var, String str) {
-        for (ix6 ix6Var : it6Var.L()) {
-            if (ix6Var.J().equals(str)) {
+    /* renamed from: m */
+    public static final ix6 m23586m(it6 it6Var, String str) {
+        for (ix6 ix6Var : it6Var.m19361L()) {
+            if (ix6Var.m19286J().equals(str)) {
                 return ix6Var;
             }
         }
         return null;
     }
 
-    public static final Object n(it6 it6Var, String str) {
-        ix6 m = m(it6Var, str);
-        if (m != null) {
-            if (m.a0()) {
-                return m.K();
+    /* renamed from: n */
+    public static final Object m23585n(it6 it6Var, String str) {
+        ix6 m23586m = m23586m(it6Var, str);
+        if (m23586m != null) {
+            if (m23586m.m19269a0()) {
+                return m23586m.m19285K();
             }
-            if (m.Y()) {
-                return Long.valueOf(m.G());
+            if (m23586m.m19271Y()) {
+                return Long.valueOf(m23586m.m19289G());
             }
-            if (m.W()) {
-                return Double.valueOf(m.D());
+            if (m23586m.m19273W()) {
+                return Double.valueOf(m23586m.m19292D());
             }
-            if (m.F() > 0) {
-                List<ix6> L = m.L();
+            if (m23586m.m19290F() > 0) {
+                List<ix6> m19284L = m23586m.m19284L();
                 ArrayList arrayList = new ArrayList();
-                for (ix6 ix6Var : L) {
+                for (ix6 ix6Var : m19284L) {
                     if (ix6Var != null) {
                         Bundle bundle = new Bundle();
-                        for (ix6 ix6Var2 : ix6Var.L()) {
-                            if (ix6Var2.a0()) {
-                                bundle.putString(ix6Var2.J(), ix6Var2.K());
-                            } else if (ix6Var2.Y()) {
-                                bundle.putLong(ix6Var2.J(), ix6Var2.G());
-                            } else if (ix6Var2.W()) {
-                                bundle.putDouble(ix6Var2.J(), ix6Var2.D());
+                        for (ix6 ix6Var2 : ix6Var.m19284L()) {
+                            if (ix6Var2.m19269a0()) {
+                                bundle.putString(ix6Var2.m19286J(), ix6Var2.m19285K());
+                            } else if (ix6Var2.m19271Y()) {
+                                bundle.putLong(ix6Var2.m19286J(), ix6Var2.m19289G());
+                            } else if (ix6Var2.m19273W()) {
+                                bundle.putDouble(ix6Var2.m19286J(), ix6Var2.m19292D());
                             }
                         }
                         if (!bundle.isEmpty()) {
@@ -137,13 +146,15 @@ public final class ec8 extends pa8 {
         return null;
     }
 
-    public static final void q(StringBuilder sb, int i) {
+    /* renamed from: q */
+    public static final void m23582q(StringBuilder sb, int i) {
         for (int i2 = 0; i2 < i; i2++) {
             sb.append("  ");
         }
     }
 
-    public static final String s(boolean z, boolean z2, boolean z3) {
+    /* renamed from: s */
+    public static final String m23581s(boolean z, boolean z2, boolean z3) {
         StringBuilder sb = new StringBuilder();
         if (z) {
             sb.append("Dynamic ");
@@ -157,18 +168,19 @@ public final class ec8 extends pa8 {
         return sb.toString();
     }
 
-    public static final void t(StringBuilder sb, int i, String str, ka7 ka7Var) {
+    /* renamed from: t */
+    public static final void m23580t(StringBuilder sb, int i, String str, ka7 ka7Var) {
         if (ka7Var == null) {
             return;
         }
-        q(sb, 3);
+        m23582q(sb, 3);
         sb.append(str);
         sb.append(" {\n");
-        if (ka7Var.E() != 0) {
-            q(sb, 4);
+        if (ka7Var.m17875E() != 0) {
+            m23582q(sb, 4);
             sb.append("results: ");
             int i2 = 0;
-            for (Long l : ka7Var.N()) {
+            for (Long l : ka7Var.m17866N()) {
                 int i3 = i2 + 1;
                 if (i2 != 0) {
                     sb.append(", ");
@@ -178,11 +190,11 @@ public final class ec8 extends pa8 {
             }
             sb.append('\n');
         }
-        if (ka7Var.G() != 0) {
-            q(sb, 4);
+        if (ka7Var.m17873G() != 0) {
+            m23582q(sb, 4);
             sb.append("status: ");
             int i4 = 0;
-            for (Long l2 : ka7Var.P()) {
+            for (Long l2 : ka7Var.m17864P()) {
                 int i5 = i4 + 1;
                 if (i4 != 0) {
                     sb.append(", ");
@@ -192,35 +204,35 @@ public final class ec8 extends pa8 {
             }
             sb.append('\n');
         }
-        if (ka7Var.D() != 0) {
-            q(sb, 4);
+        if (ka7Var.m17876D() != 0) {
+            m23582q(sb, 4);
             sb.append("dynamic_filter_timestamps: {");
             int i6 = 0;
-            for (er6 er6Var : ka7Var.M()) {
+            for (er6 er6Var : ka7Var.m17867M()) {
                 int i7 = i6 + 1;
                 if (i6 != 0) {
                     sb.append(", ");
                 }
-                sb.append(er6Var.K() ? Integer.valueOf(er6Var.D()) : null);
+                sb.append(er6Var.m23235K() ? Integer.valueOf(er6Var.m23242D()) : null);
                 sb.append(":");
-                sb.append(er6Var.J() ? Long.valueOf(er6Var.E()) : null);
+                sb.append(er6Var.m23236J() ? Long.valueOf(er6Var.m23241E()) : null);
                 i6 = i7;
             }
             sb.append("}\n");
         }
-        if (ka7Var.F() != 0) {
-            q(sb, 4);
+        if (ka7Var.m17874F() != 0) {
+            m23582q(sb, 4);
             sb.append("sequence_filter_timestamps: {");
             int i8 = 0;
-            for (qc7 qc7Var : ka7Var.O()) {
+            for (qc7 qc7Var : ka7Var.m17865O()) {
                 int i9 = i8 + 1;
                 if (i8 != 0) {
                     sb.append(", ");
                 }
-                sb.append(qc7Var.L() ? Integer.valueOf(qc7Var.E()) : null);
+                sb.append(qc7Var.m12614L() ? Integer.valueOf(qc7Var.m12621E()) : null);
                 sb.append(": [");
                 int i10 = 0;
-                for (Long l3 : qc7Var.I()) {
+                for (Long l3 : qc7Var.m12617I()) {
                     long longValue = l3.longValue();
                     int i11 = i10 + 1;
                     if (i10 != 0) {
@@ -234,228 +246,234 @@ public final class ec8 extends pa8 {
             }
             sb.append("}\n");
         }
-        q(sb, 3);
+        m23582q(sb, 3);
         sb.append("}\n");
     }
 
-    public static final void u(StringBuilder sb, int i, String str, Object obj) {
+    /* renamed from: u */
+    public static final void m23579u(StringBuilder sb, int i, String str, Object obj) {
         if (obj == null) {
             return;
         }
-        q(sb, i + 1);
+        m23582q(sb, i + 1);
         sb.append(str);
         sb.append(": ");
         sb.append(obj);
         sb.append('\n');
     }
 
-    public static final void v(StringBuilder sb, int i, String str, tx5 tx5Var) {
+    /* renamed from: v */
+    public static final void m23578v(StringBuilder sb, int i, String str, tx5 tx5Var) {
         if (tx5Var == null) {
             return;
         }
-        q(sb, i);
+        m23582q(sb, i);
         sb.append(str);
         sb.append(" {\n");
-        if (tx5Var.J()) {
-            int O = tx5Var.O();
-            u(sb, i, "comparison_type", O != 1 ? O != 2 ? O != 3 ? O != 4 ? "BETWEEN" : "EQUAL" : "GREATER_THAN" : "LESS_THAN" : "UNKNOWN_COMPARISON_TYPE");
+        if (tx5Var.m8714J()) {
+            int m8709O = tx5Var.m8709O();
+            m23579u(sb, i, "comparison_type", m8709O != 1 ? m8709O != 2 ? m8709O != 3 ? m8709O != 4 ? "BETWEEN" : "EQUAL" : "GREATER_THAN" : "LESS_THAN" : "UNKNOWN_COMPARISON_TYPE");
         }
-        if (tx5Var.L()) {
-            u(sb, i, "match_as_float", Boolean.valueOf(tx5Var.I()));
+        if (tx5Var.m8712L()) {
+            m23579u(sb, i, "match_as_float", Boolean.valueOf(tx5Var.m8715I()));
         }
-        if (tx5Var.K()) {
-            u(sb, i, "comparison_value", tx5Var.F());
+        if (tx5Var.m8713K()) {
+            m23579u(sb, i, "comparison_value", tx5Var.m8718F());
         }
-        if (tx5Var.N()) {
-            u(sb, i, "min_comparison_value", tx5Var.H());
+        if (tx5Var.m8710N()) {
+            m23579u(sb, i, "min_comparison_value", tx5Var.m8716H());
         }
-        if (tx5Var.M()) {
-            u(sb, i, "max_comparison_value", tx5Var.G());
+        if (tx5Var.m8711M()) {
+            m23579u(sb, i, "max_comparison_value", tx5Var.m8717G());
         }
-        q(sb, i);
+        m23582q(sb, i);
         sb.append("}\n");
     }
 
-    public static int w(g37 g37Var, String str) {
-        for (int i = 0; i < g37Var.n0(); i++) {
-            if (str.equals(g37Var.h0(i).I())) {
+    /* renamed from: w */
+    public static int m23577w(g37 g37Var, String str) {
+        for (int i = 0; i < g37Var.m21998n0(); i++) {
+            if (str.equals(g37Var.m22004h0(i).m6123I())) {
                 return i;
             }
         }
         return -1;
     }
 
-    public final zzaw A(s32 s32Var) {
+    /* renamed from: A */
+    public final zzaw m23603A(s32 s32Var) {
         Object obj;
-        Bundle y = y(s32Var.e(), true);
-        String obj2 = (!y.containsKey("_o") || (obj = y.get("_o")) == null) ? "app" : obj.toString();
-        String b = dh7.b(s32Var.d());
-        if (b == null) {
-            b = s32Var.d();
+        Bundle m23575y = m23575y(s32Var.m10737e(), true);
+        String obj2 = (!m23575y.containsKey("_o") || (obj = m23575y.get("_o")) == null) ? "app" : obj.toString();
+        String m24377b = dh7.m24377b(s32Var.m10738d());
+        if (m24377b == null) {
+            m24377b = s32Var.m10738d();
         }
-        return new zzaw(b, new zzau(y), obj2, s32Var.a());
+        return new zzaw(m24377b, new zzau(m23575y), obj2, s32Var.m10741a());
     }
 
-    public final it6 B(on2 on2Var) {
-        fs6 H = it6.H();
-        H.D(on2Var.e);
-        xp2 xp2Var = new xp2(on2Var.f);
+    /* renamed from: B */
+    public final it6 m23602B(on2 on2Var) {
+        fs6 m19365H = it6.m19365H();
+        m19365H.m22333D(on2Var.f21682e);
+        xp2 xp2Var = new xp2(on2Var.f21683f);
         while (xp2Var.hasNext()) {
             String next = xp2Var.next();
-            fw6 H2 = ix6.H();
-            H2.B(next);
-            Object u = on2Var.f.u(next);
-            ry0.j(u);
-            J(H2, u);
-            H.w(H2);
+            fw6 m19288H = ix6.m19288H();
+            m19288H.m22210B(next);
+            Object m1075u = on2Var.f21683f.m1075u(next);
+            ry0.m10830j(m1075u);
+            m23594J(m19288H, m1075u);
+            m19365H.m22323w(m19288H);
         }
-        return (it6) H.m();
+        return (it6) m19365H.m3975m();
     }
 
-    public final String D(e27 e27Var) {
+    /* renamed from: D */
+    public final String m23600D(e27 e27Var) {
         if (e27Var == null) {
             return "";
         }
         StringBuilder sb = new StringBuilder();
         sb.append("\nbatch {\n");
-        for (j47 j47Var : e27Var.G()) {
+        for (j47 j47Var : e27Var.m23786G()) {
             if (j47Var != null) {
-                q(sb, 1);
+                m23582q(sb, 1);
                 sb.append("bundle {\n");
-                if (j47Var.q1()) {
-                    u(sb, 1, "protocol_version", Integer.valueOf(j47Var.z1()));
+                if (j47Var.m18981q1()) {
+                    m23579u(sb, 1, "protocol_version", Integer.valueOf(j47Var.m18963z1()));
                 }
-                zm8.b();
-                if (this.a.z().B(null, m75.n0) && this.a.z().B(j47Var.S1(), m75.p0) && j47Var.t1()) {
-                    u(sb, 1, "session_stitching_token", j47Var.N());
+                zm8.m2111b();
+                if (this.f25143a.m24020z().m12677B(null, m75.f18546n0) && this.f25143a.m24020z().m12677B(j47Var.m19031S1(), m75.f18550p0) && j47Var.m18975t1()) {
+                    m23579u(sb, 1, "session_stitching_token", j47Var.m19048N());
                 }
-                u(sb, 1, "platform", j47Var.L());
-                if (j47Var.m1()) {
-                    u(sb, 1, "gmp_version", Long.valueOf(j47Var.H1()));
+                m23579u(sb, 1, "platform", j47Var.m19054L());
+                if (j47Var.m18989m1()) {
+                    m23579u(sb, 1, "gmp_version", Long.valueOf(j47Var.m19064H1()));
                 }
-                if (j47Var.x1()) {
-                    u(sb, 1, "uploading_gmp_version", Long.valueOf(j47Var.M1()));
+                if (j47Var.m18967x1()) {
+                    m23579u(sb, 1, "uploading_gmp_version", Long.valueOf(j47Var.m19049M1()));
                 }
-                if (j47Var.k1()) {
-                    u(sb, 1, "dynamite_version", Long.valueOf(j47Var.F1()));
+                if (j47Var.m18993k1()) {
+                    m23579u(sb, 1, "dynamite_version", Long.valueOf(j47Var.m19070F1()));
                 }
-                if (j47Var.h1()) {
-                    u(sb, 1, "config_version", Long.valueOf(j47Var.D1()));
+                if (j47Var.m18999h1()) {
+                    m23579u(sb, 1, "config_version", Long.valueOf(j47Var.m19076D1()));
                 }
-                u(sb, 1, "gmp_app_id", j47Var.I());
-                u(sb, 1, "admob_app_id", j47Var.R1());
-                u(sb, 1, "app_id", j47Var.S1());
-                u(sb, 1, "app_version", j47Var.D());
-                if (j47Var.C0()) {
-                    u(sb, 1, "app_version_major", Integer.valueOf(j47Var.d0()));
+                m23579u(sb, 1, "gmp_app_id", j47Var.m19063I());
+                m23579u(sb, 1, "admob_app_id", j47Var.m19034R1());
+                m23579u(sb, 1, "app_id", j47Var.m19031S1());
+                m23579u(sb, 1, "app_version", j47Var.m19078D());
+                if (j47Var.m19080C0()) {
+                    m23579u(sb, 1, "app_version_major", Integer.valueOf(j47Var.m19008d0()));
                 }
-                u(sb, 1, "firebase_instance_id", j47Var.H());
-                if (j47Var.j1()) {
-                    u(sb, 1, "dev_cert_hash", Long.valueOf(j47Var.E1()));
+                m23579u(sb, 1, "firebase_instance_id", j47Var.m19066H());
+                if (j47Var.m18995j1()) {
+                    m23579u(sb, 1, "dev_cert_hash", Long.valueOf(j47Var.m19073E1()));
                 }
-                u(sb, 1, "app_store", j47Var.U1());
-                if (j47Var.w1()) {
-                    u(sb, 1, "upload_timestamp_millis", Long.valueOf(j47Var.L1()));
+                m23579u(sb, 1, "app_store", j47Var.m19025U1());
+                if (j47Var.m18969w1()) {
+                    m23579u(sb, 1, "upload_timestamp_millis", Long.valueOf(j47Var.m19052L1()));
                 }
-                if (j47Var.u1()) {
-                    u(sb, 1, "start_timestamp_millis", Long.valueOf(j47Var.K1()));
+                if (j47Var.m18973u1()) {
+                    m23579u(sb, 1, "start_timestamp_millis", Long.valueOf(j47Var.m19055K1()));
                 }
-                if (j47Var.l1()) {
-                    u(sb, 1, "end_timestamp_millis", Long.valueOf(j47Var.G1()));
+                if (j47Var.m18991l1()) {
+                    m23579u(sb, 1, "end_timestamp_millis", Long.valueOf(j47Var.m19067G1()));
                 }
-                if (j47Var.p1()) {
-                    u(sb, 1, "previous_bundle_start_timestamp_millis", Long.valueOf(j47Var.J1()));
+                if (j47Var.m18983p1()) {
+                    m23579u(sb, 1, "previous_bundle_start_timestamp_millis", Long.valueOf(j47Var.m19058J1()));
                 }
-                if (j47Var.o1()) {
-                    u(sb, 1, "previous_bundle_end_timestamp_millis", Long.valueOf(j47Var.I1()));
+                if (j47Var.m18985o1()) {
+                    m23579u(sb, 1, "previous_bundle_end_timestamp_millis", Long.valueOf(j47Var.m19061I1()));
                 }
-                u(sb, 1, "app_instance_id", j47Var.T1());
-                u(sb, 1, "resettable_device_id", j47Var.M());
-                u(sb, 1, "ds_id", j47Var.G());
-                if (j47Var.n1()) {
-                    u(sb, 1, "limited_ad_tracking", Boolean.valueOf(j47Var.A0()));
+                m23579u(sb, 1, "app_instance_id", j47Var.m19028T1());
+                m23579u(sb, 1, "resettable_device_id", j47Var.m19051M());
+                m23579u(sb, 1, "ds_id", j47Var.m19069G());
+                if (j47Var.m18987n1()) {
+                    m23579u(sb, 1, "limited_ad_tracking", Boolean.valueOf(j47Var.m19084A0()));
                 }
-                u(sb, 1, "os_version", j47Var.K());
-                u(sb, 1, "device_model", j47Var.F());
-                u(sb, 1, "user_default_language", j47Var.O());
-                if (j47Var.v1()) {
-                    u(sb, 1, "time_zone_offset_minutes", Integer.valueOf(j47Var.B1()));
+                m23579u(sb, 1, "os_version", j47Var.m19057K());
+                m23579u(sb, 1, "device_model", j47Var.m19072F());
+                m23579u(sb, 1, "user_default_language", j47Var.m19045O());
+                if (j47Var.m18971v1()) {
+                    m23579u(sb, 1, "time_zone_offset_minutes", Integer.valueOf(j47Var.m19081B1()));
                 }
-                if (j47Var.D0()) {
-                    u(sb, 1, "bundle_sequential_index", Integer.valueOf(j47Var.e1()));
+                if (j47Var.m19077D0()) {
+                    m23579u(sb, 1, "bundle_sequential_index", Integer.valueOf(j47Var.m19005e1()));
                 }
-                if (j47Var.s1()) {
-                    u(sb, 1, "service_upload", Boolean.valueOf(j47Var.B0()));
+                if (j47Var.m18977s1()) {
+                    m23579u(sb, 1, "service_upload", Boolean.valueOf(j47Var.m19082B0()));
                 }
-                u(sb, 1, "health_monitor", j47Var.J());
-                if (j47Var.r1()) {
-                    u(sb, 1, "retry_counter", Integer.valueOf(j47Var.A1()));
+                m23579u(sb, 1, "health_monitor", j47Var.m19060J());
+                if (j47Var.m18979r1()) {
+                    m23579u(sb, 1, "retry_counter", Integer.valueOf(j47Var.m19083A1()));
                 }
-                if (j47Var.i1()) {
-                    u(sb, 1, "consent_signals", j47Var.E());
+                if (j47Var.m18997i1()) {
+                    m23579u(sb, 1, "consent_signals", j47Var.m19075E());
                 }
-                List<we7> R = j47Var.R();
-                if (R != null) {
-                    for (we7 we7Var : R) {
+                List<we7> m19036R = j47Var.m19036R();
+                if (m19036R != null) {
+                    for (we7 we7Var : m19036R) {
                         if (we7Var != null) {
-                            q(sb, 2);
+                            m23582q(sb, 2);
                             sb.append("user_property {\n");
-                            u(sb, 2, "set_timestamp_millis", we7Var.U() ? Long.valueOf(we7Var.F()) : null);
-                            u(sb, 2, "name", this.a.D().f(we7Var.I()));
-                            u(sb, 2, "string_value", we7Var.J());
-                            u(sb, 2, "int_value", we7Var.T() ? Long.valueOf(we7Var.E()) : null);
-                            u(sb, 2, "double_value", we7Var.S() ? Double.valueOf(we7Var.D()) : null);
-                            q(sb, 2);
+                            m23579u(sb, 2, "set_timestamp_millis", we7Var.m6111U() ? Long.valueOf(we7Var.m6126F()) : null);
+                            m23579u(sb, 2, "name", this.f25143a.m24055D().m5131f(we7Var.m6123I()));
+                            m23579u(sb, 2, "string_value", we7Var.m6122J());
+                            m23579u(sb, 2, "int_value", we7Var.m6112T() ? Long.valueOf(we7Var.m6127E()) : null);
+                            m23579u(sb, 2, "double_value", we7Var.m6113S() ? Double.valueOf(we7Var.m6128D()) : null);
+                            m23582q(sb, 2);
                             sb.append("}\n");
                         }
                     }
                 }
-                List<xo6> P = j47Var.P();
-                if (P != null) {
-                    for (xo6 xo6Var : P) {
+                List<xo6> m19042P = j47Var.m19042P();
+                if (m19042P != null) {
+                    for (xo6 xo6Var : m19042P) {
                         if (xo6Var != null) {
-                            q(sb, 2);
+                            m23582q(sb, 2);
                             sb.append("audience_membership {\n");
-                            if (xo6Var.N()) {
-                                u(sb, 2, "audience_id", Integer.valueOf(xo6Var.D()));
+                            if (xo6Var.m4864N()) {
+                                m23579u(sb, 2, "audience_id", Integer.valueOf(xo6Var.m4874D()));
                             }
-                            if (xo6Var.O()) {
-                                u(sb, 2, "new_audience", Boolean.valueOf(xo6Var.M()));
+                            if (xo6Var.m4863O()) {
+                                m23579u(sb, 2, "new_audience", Boolean.valueOf(xo6Var.m4865M()));
                             }
-                            t(sb, 2, "current_data", xo6Var.G());
-                            if (xo6Var.P()) {
-                                t(sb, 2, "previous_data", xo6Var.H());
+                            m23580t(sb, 2, "current_data", xo6Var.m4871G());
+                            if (xo6Var.m4862P()) {
+                                m23580t(sb, 2, "previous_data", xo6Var.m4870H());
                             }
-                            q(sb, 2);
+                            m23582q(sb, 2);
                             sb.append("}\n");
                         }
                     }
                 }
-                List<it6> Q = j47Var.Q();
-                if (Q != null) {
-                    for (it6 it6Var : Q) {
+                List<it6> m19039Q = j47Var.m19039Q();
+                if (m19039Q != null) {
+                    for (it6 it6Var : m19039Q) {
                         if (it6Var != null) {
-                            q(sb, 2);
+                            m23582q(sb, 2);
                             sb.append("event {\n");
-                            u(sb, 2, "name", this.a.D().d(it6Var.K()));
-                            if (it6Var.W()) {
-                                u(sb, 2, "timestamp_millis", Long.valueOf(it6Var.G()));
+                            m23579u(sb, 2, "name", this.f25143a.m24055D().m5133d(it6Var.m19362K()));
+                            if (it6Var.m19350W()) {
+                                m23579u(sb, 2, "timestamp_millis", Long.valueOf(it6Var.m19366G()));
                             }
-                            if (it6Var.V()) {
-                                u(sb, 2, "previous_timestamp_millis", Long.valueOf(it6Var.F()));
+                            if (it6Var.m19351V()) {
+                                m23579u(sb, 2, "previous_timestamp_millis", Long.valueOf(it6Var.m19367F()));
                             }
-                            if (it6Var.U()) {
-                                u(sb, 2, "count", Integer.valueOf(it6Var.D()));
+                            if (it6Var.m19352U()) {
+                                m23579u(sb, 2, "count", Integer.valueOf(it6Var.m19369D()));
                             }
-                            if (it6Var.E() != 0) {
-                                o(sb, 2, it6Var.L());
+                            if (it6Var.m19368E() != 0) {
+                                m23584o(sb, 2, it6Var.m19361L());
                             }
-                            q(sb, 2);
+                            m23582q(sb, 2);
                             sb.append("}\n");
                         }
                     }
                 }
-                q(sb, 1);
+                m23582q(sb, 1);
                 sb.append("}\n");
             }
         }
@@ -463,65 +481,68 @@ public final class ec8 extends pa8 {
         return sb.toString();
     }
 
-    public final String E(xp5 xp5Var) {
+    /* renamed from: E */
+    public final String m23599E(xp5 xp5Var) {
         if (xp5Var == null) {
             return "null";
         }
         StringBuilder sb = new StringBuilder();
         sb.append("\nevent_filter {\n");
-        if (xp5Var.R()) {
-            u(sb, 0, "filter_id", Integer.valueOf(xp5Var.E()));
+        if (xp5Var.m4838R()) {
+            m23579u(sb, 0, "filter_id", Integer.valueOf(xp5Var.m4851E()));
         }
-        u(sb, 0, "event_name", this.a.D().d(xp5Var.J()));
-        String s = s(xp5Var.N(), xp5Var.O(), xp5Var.P());
-        if (!s.isEmpty()) {
-            u(sb, 0, "filter_type", s);
+        m23579u(sb, 0, "event_name", this.f25143a.m24055D().m5133d(xp5Var.m4846J()));
+        String m23581s = m23581s(xp5Var.m4842N(), xp5Var.m4841O(), xp5Var.m4840P());
+        if (!m23581s.isEmpty()) {
+            m23579u(sb, 0, "filter_type", m23581s);
         }
-        if (xp5Var.Q()) {
-            v(sb, 1, "event_count_filter", xp5Var.I());
+        if (xp5Var.m4839Q()) {
+            m23578v(sb, 1, "event_count_filter", xp5Var.m4847I());
         }
-        if (xp5Var.D() > 0) {
+        if (xp5Var.m4852D() > 0) {
             sb.append("  filters {\n");
-            for (ds5 ds5Var : xp5Var.K()) {
-                p(sb, 2, ds5Var);
+            for (ds5 ds5Var : xp5Var.m4845K()) {
+                m23583p(sb, 2, ds5Var);
             }
         }
-        q(sb, 1);
+        m23582q(sb, 1);
         sb.append("}\n}\n");
         return sb.toString();
     }
 
-    public final String F(a06 a06Var) {
+    /* renamed from: F */
+    public final String m23598F(a06 a06Var) {
         if (a06Var == null) {
             return "null";
         }
         StringBuilder sb = new StringBuilder();
         sb.append("\nproperty_filter {\n");
-        if (a06Var.M()) {
-            u(sb, 0, "filter_id", Integer.valueOf(a06Var.D()));
+        if (a06Var.m27756M()) {
+            m23579u(sb, 0, "filter_id", Integer.valueOf(a06Var.m27765D()));
         }
-        u(sb, 0, "property_name", this.a.D().f(a06Var.H()));
-        String s = s(a06Var.J(), a06Var.K(), a06Var.L());
-        if (!s.isEmpty()) {
-            u(sb, 0, "filter_type", s);
+        m23579u(sb, 0, "property_name", this.f25143a.m24055D().m5131f(a06Var.m27761H()));
+        String m23581s = m23581s(a06Var.m27759J(), a06Var.m27758K(), a06Var.m27757L());
+        if (!m23581s.isEmpty()) {
+            m23579u(sb, 0, "filter_type", m23581s);
         }
-        p(sb, 1, a06Var.E());
+        m23583p(sb, 1, a06Var.m27764E());
         sb.append("}\n");
         return sb.toString();
     }
 
-    public final List G(List list, List list2) {
+    /* renamed from: G */
+    public final List m23597G(List list, List list2) {
         int i;
         ArrayList arrayList = new ArrayList(list);
         Iterator it = list2.iterator();
         while (it.hasNext()) {
             Integer num = (Integer) it.next();
             if (num.intValue() < 0) {
-                this.a.i().w().b("Ignoring negative bit index to be cleared", num);
+                this.f25143a.mo3895i().m14155w().m20652b("Ignoring negative bit index to be cleared", num);
             } else {
                 int intValue = num.intValue() / 64;
                 if (intValue >= arrayList.size()) {
-                    this.a.i().w().c("Ignoring bit index greater than bitSet size", num, Integer.valueOf(arrayList.size()));
+                    this.f25143a.mo3895i().m14155w().m20651c("Ignoring bit index greater than bitSet size", num, Integer.valueOf(arrayList.size()));
                 } else {
                     arrayList.set(intValue, Long.valueOf(((Long) arrayList.get(intValue)).longValue() & ((1 << (num.intValue() % 64)) ^ (-1))));
                 }
@@ -562,7 +583,7 @@ public final class ec8 extends pa8 {
         if ((r8 instanceof android.os.Bundle) == false) goto L22;
      */
     /* JADX WARN: Code restructure failed: missing block: B:21:0x0046, code lost:
-        r5.add(I((android.os.Bundle) r8, false));
+        r5.add(m23595I((android.os.Bundle) r8, false));
      */
     /* JADX WARN: Code restructure failed: missing block: B:22:0x004f, code lost:
         r7 = r7 + 1;
@@ -585,7 +606,7 @@ public final class ec8 extends pa8 {
         if ((r8 instanceof android.os.Bundle) == false) goto L36;
      */
     /* JADX WARN: Code restructure failed: missing block: B:29:0x0067, code lost:
-        r5.add(I((android.os.Bundle) r8, false));
+        r5.add(m23595I((android.os.Bundle) r8, false));
      */
     /* JADX WARN: Code restructure failed: missing block: B:30:0x0070, code lost:
         r7 = r7 + 1;
@@ -594,154 +615,98 @@ public final class ec8 extends pa8 {
         if ((r3 instanceof android.os.Bundle) == false) goto L24;
      */
     /* JADX WARN: Code restructure failed: missing block: B:33:0x0077, code lost:
-        r5.add(I((android.os.Bundle) r3, false));
+        r5.add(m23595I((android.os.Bundle) r3, false));
      */
     /* JADX WARN: Code restructure failed: missing block: B:34:0x0080, code lost:
         r0.put(r2, r5);
      */
+    /* renamed from: I */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final java.util.Map I(android.os.Bundle r11, boolean r12) {
-        /*
-            r10 = this;
-            java.util.HashMap r0 = new java.util.HashMap
-            r0.<init>()
-            java.util.Set r1 = r11.keySet()
-            java.util.Iterator r1 = r1.iterator()
-        Ld:
-            boolean r2 = r1.hasNext()
-            if (r2 == 0) goto L84
-            java.lang.Object r2 = r1.next()
-            java.lang.String r2 = (java.lang.String) r2
-            java.lang.Object r3 = r11.get(r2)
-            boolean r4 = r3 instanceof android.os.Parcelable[]
-            if (r4 != 0) goto L30
-            boolean r5 = r3 instanceof java.util.ArrayList
-            if (r5 != 0) goto L30
-            boolean r5 = r3 instanceof android.os.Bundle
-            if (r5 == 0) goto L2a
-            goto L30
-        L2a:
-            if (r3 == 0) goto Ld
-            r0.put(r2, r3)
-            goto Ld
-        L30:
-            if (r12 == 0) goto Ld
-            java.util.ArrayList r5 = new java.util.ArrayList
-            r5.<init>()
-            r6 = 0
-            if (r4 == 0) goto L52
-            android.os.Parcelable[] r3 = (android.os.Parcelable[]) r3
-            int r4 = r3.length
-            r7 = 0
-        L3e:
-            if (r7 >= r4) goto L80
-            r8 = r3[r7]
-            boolean r9 = r8 instanceof android.os.Bundle
-            if (r9 == 0) goto L4f
-            android.os.Bundle r8 = (android.os.Bundle) r8
-            java.util.Map r8 = r10.I(r8, r6)
-            r5.add(r8)
-        L4f:
-            int r7 = r7 + 1
-            goto L3e
-        L52:
-            boolean r4 = r3 instanceof java.util.ArrayList
-            if (r4 == 0) goto L73
-            java.util.ArrayList r3 = (java.util.ArrayList) r3
-            int r4 = r3.size()
-            r7 = 0
-        L5d:
-            if (r7 >= r4) goto L80
-            java.lang.Object r8 = r3.get(r7)
-            boolean r9 = r8 instanceof android.os.Bundle
-            if (r9 == 0) goto L70
-            android.os.Bundle r8 = (android.os.Bundle) r8
-            java.util.Map r8 = r10.I(r8, r6)
-            r5.add(r8)
-        L70:
-            int r7 = r7 + 1
-            goto L5d
-        L73:
-            boolean r4 = r3 instanceof android.os.Bundle
-            if (r4 == 0) goto L80
-            android.os.Bundle r3 = (android.os.Bundle) r3
-            java.util.Map r3 = r10.I(r3, r6)
-            r5.add(r3)
-        L80:
-            r0.put(r2, r5)
-            goto Ld
-        L84:
-            return r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.ec8.I(android.os.Bundle, boolean):java.util.Map");
+    public final Map m23595I(Bundle bundle, boolean z) {
+        HashMap hashMap = new HashMap();
+        Iterator<String> it = bundle.keySet().iterator();
+        while (it.hasNext()) {
+            String next = it.next();
+            Object obj = bundle.get(next);
+            boolean z2 = obj instanceof Parcelable[];
+            if (!z2 && !(obj instanceof ArrayList) && !(obj instanceof Bundle)) {
+                if (obj != null) {
+                    hashMap.put(next, obj);
+                }
+            }
+        }
+        return hashMap;
     }
 
-    public final void J(fw6 fw6Var, Object obj) {
+    /* renamed from: J */
+    public final void m23594J(fw6 fw6Var, Object obj) {
         Bundle[] bundleArr;
-        ry0.j(obj);
-        fw6Var.y();
-        fw6Var.w();
-        fw6Var.v();
-        fw6Var.x();
+        ry0.m10830j(obj);
+        fw6Var.m22202y();
+        fw6Var.m22204w();
+        fw6Var.m22205v();
+        fw6Var.m22203x();
         if (obj instanceof String) {
-            fw6Var.C((String) obj);
+            fw6Var.m22209C((String) obj);
         } else if (obj instanceof Long) {
-            fw6Var.A(((Long) obj).longValue());
+            fw6Var.m22211A(((Long) obj).longValue());
         } else if (obj instanceof Double) {
-            fw6Var.z(((Double) obj).doubleValue());
+            fw6Var.m22201z(((Double) obj).doubleValue());
         } else if (!(obj instanceof Bundle[])) {
-            this.a.i().q().b("Ignoring invalid (type) event param value", obj);
+            this.f25143a.mo3895i().m14160q().m20652b("Ignoring invalid (type) event param value", obj);
         } else {
             ArrayList arrayList = new ArrayList();
             for (Bundle bundle : (Bundle[]) obj) {
                 if (bundle != null) {
-                    fw6 H = ix6.H();
+                    fw6 m19288H = ix6.m19288H();
                     for (String str : bundle.keySet()) {
-                        fw6 H2 = ix6.H();
-                        H2.B(str);
+                        fw6 m19288H2 = ix6.m19288H();
+                        m19288H2.m22210B(str);
                         Object obj2 = bundle.get(str);
                         if (obj2 instanceof Long) {
-                            H2.A(((Long) obj2).longValue());
+                            m19288H2.m22211A(((Long) obj2).longValue());
                         } else if (obj2 instanceof String) {
-                            H2.C((String) obj2);
+                            m19288H2.m22209C((String) obj2);
                         } else if (obj2 instanceof Double) {
-                            H2.z(((Double) obj2).doubleValue());
+                            m19288H2.m22201z(((Double) obj2).doubleValue());
                         }
-                        H.u(H2);
+                        m19288H.m22206u(m19288H2);
                     }
-                    if (H.s() > 0) {
-                        arrayList.add((ix6) H.m());
+                    if (m19288H.m22208s() > 0) {
+                        arrayList.add((ix6) m19288H.m3975m());
                     }
                 }
             }
-            fw6Var.t(arrayList);
+            fw6Var.m22207t(arrayList);
         }
     }
 
-    public final void K(td7 td7Var, Object obj) {
-        ry0.j(obj);
-        td7Var.u();
-        td7Var.t();
-        td7Var.s();
+    /* renamed from: K */
+    public final void m23593K(td7 td7Var, Object obj) {
+        ry0.m10830j(obj);
+        td7Var.m9268u();
+        td7Var.m9269t();
+        td7Var.m9270s();
         if (obj instanceof String) {
-            td7Var.z((String) obj);
+            td7Var.m9263z((String) obj);
         } else if (obj instanceof Long) {
-            td7Var.w(((Long) obj).longValue());
+            td7Var.m9266w(((Long) obj).longValue());
         } else if (obj instanceof Double) {
-            td7Var.v(((Double) obj).doubleValue());
+            td7Var.m9267v(((Double) obj).doubleValue());
         } else {
-            this.a.i().q().b("Ignoring invalid (type) user attribute value", obj);
+            this.f25143a.mo3895i().m14160q().m20652b("Ignoring invalid (type) user attribute value", obj);
         }
     }
 
-    public final boolean M(long j, long j2) {
-        return j == 0 || j2 <= 0 || Math.abs(this.a.b().a() - j) > j2;
+    /* renamed from: M */
+    public final boolean m23591M(long j, long j2) {
+        return j == 0 || j2 <= 0 || Math.abs(this.f25143a.mo3909b().mo15860a() - j) > j2;
     }
 
-    public final byte[] O(byte[] bArr) {
+    /* renamed from: O */
+    public final byte[] m23589O(byte[] bArr) {
         try {
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             GZIPOutputStream gZIPOutputStream = new GZIPOutputStream(byteArrayOutputStream);
@@ -750,17 +715,19 @@ public final class ec8 extends pa8 {
             byteArrayOutputStream.close();
             return byteArrayOutputStream.toByteArray();
         } catch (IOException e) {
-            this.a.i().q().b("Failed to gzip content", e);
+            this.f25143a.mo3895i().m14160q().m20652b("Failed to gzip content", e);
             throw e;
         }
     }
 
     @Override // com.daaw.pa8
-    public final boolean k() {
+    /* renamed from: k */
+    public final boolean mo8149k() {
         return false;
     }
 
-    public final void o(StringBuilder sb, int i, List list) {
+    /* renamed from: o */
+    public final void m23584o(StringBuilder sb, int i, List list) {
         if (list == null) {
             return;
         }
@@ -769,42 +736,43 @@ public final class ec8 extends pa8 {
         while (it.hasNext()) {
             ix6 ix6Var = (ix6) it.next();
             if (ix6Var != null) {
-                q(sb, i2);
+                m23582q(sb, i2);
                 sb.append("param {\n");
-                u(sb, i2, "name", ix6Var.Z() ? this.a.D().e(ix6Var.J()) : null);
-                u(sb, i2, "string_value", ix6Var.a0() ? ix6Var.K() : null);
-                u(sb, i2, "int_value", ix6Var.Y() ? Long.valueOf(ix6Var.G()) : null);
-                u(sb, i2, "double_value", ix6Var.W() ? Double.valueOf(ix6Var.D()) : null);
-                if (ix6Var.F() > 0) {
-                    o(sb, i2, ix6Var.L());
+                m23579u(sb, i2, "name", ix6Var.m19270Z() ? this.f25143a.m24055D().m5132e(ix6Var.m19286J()) : null);
+                m23579u(sb, i2, "string_value", ix6Var.m19269a0() ? ix6Var.m19285K() : null);
+                m23579u(sb, i2, "int_value", ix6Var.m19271Y() ? Long.valueOf(ix6Var.m19289G()) : null);
+                m23579u(sb, i2, "double_value", ix6Var.m19273W() ? Double.valueOf(ix6Var.m19292D()) : null);
+                if (ix6Var.m19290F() > 0) {
+                    m23584o(sb, i2, ix6Var.m19284L());
                 }
-                q(sb, i2);
+                m23582q(sb, i2);
                 sb.append("}\n");
             }
         }
     }
 
-    public final void p(StringBuilder sb, int i, ds5 ds5Var) {
+    /* renamed from: p */
+    public final void m23583p(StringBuilder sb, int i, ds5 ds5Var) {
         String str;
         if (ds5Var == null) {
             return;
         }
-        q(sb, i);
+        m23582q(sb, i);
         sb.append("filter {\n");
-        if (ds5Var.K()) {
-            u(sb, i, "complement", Boolean.valueOf(ds5Var.J()));
+        if (ds5Var.m23998K()) {
+            m23579u(sb, i, "complement", Boolean.valueOf(ds5Var.m23999J()));
         }
-        if (ds5Var.M()) {
-            u(sb, i, "param_name", this.a.D().e(ds5Var.H()));
+        if (ds5Var.m23996M()) {
+            m23579u(sb, i, "param_name", this.f25143a.m24055D().m5132e(ds5Var.m24001H()));
         }
-        if (ds5Var.N()) {
+        if (ds5Var.m23995N()) {
             int i2 = i + 1;
-            q56 G = ds5Var.G();
-            if (G != null) {
-                q(sb, i2);
+            q56 m24002G = ds5Var.m24002G();
+            if (m24002G != null) {
+                m23582q(sb, i2);
                 sb.append("string_filter {\n");
-                if (G.L()) {
-                    switch (G.M()) {
+                if (m24002G.m12759L()) {
+                    switch (m24002G.m12758M()) {
                         case 1:
                             str = "UNKNOWN_MATCH_TYPE";
                             break;
@@ -827,47 +795,49 @@ public final class ec8 extends pa8 {
                             str = "IN_LIST";
                             break;
                     }
-                    u(sb, i2, "match_type", str);
+                    m23579u(sb, i2, "match_type", str);
                 }
-                if (G.K()) {
-                    u(sb, i2, "expression", G.G());
+                if (m24002G.m12760K()) {
+                    m23579u(sb, i2, "expression", m24002G.m12764G());
                 }
-                if (G.J()) {
-                    u(sb, i2, "case_sensitive", Boolean.valueOf(G.I()));
+                if (m24002G.m12761J()) {
+                    m23579u(sb, i2, "case_sensitive", Boolean.valueOf(m24002G.m12762I()));
                 }
-                if (G.D() > 0) {
-                    q(sb, i2 + 1);
+                if (m24002G.m12767D() > 0) {
+                    m23582q(sb, i2 + 1);
                     sb.append("expression_list {\n");
-                    for (String str2 : G.H()) {
-                        q(sb, i2 + 2);
+                    for (String str2 : m24002G.m12763H()) {
+                        m23582q(sb, i2 + 2);
                         sb.append(str2);
                         sb.append("\n");
                     }
                     sb.append("}\n");
                 }
-                q(sb, i2);
+                m23582q(sb, i2);
                 sb.append("}\n");
             }
         }
-        if (ds5Var.L()) {
-            v(sb, i + 1, "number_filter", ds5Var.F());
+        if (ds5Var.m23997L()) {
+            m23578v(sb, i + 1, "number_filter", ds5Var.m24003F());
         }
-        q(sb, i);
+        m23582q(sb, i);
         sb.append("}\n");
     }
 
-    public final long x(byte[] bArr) {
-        ry0.j(bArr);
-        this.a.N().f();
-        MessageDigest t = dd8.t();
-        if (t == null) {
-            this.a.i().q().a("Failed to get MD5");
+    /* renamed from: x */
+    public final long m23576x(byte[] bArr) {
+        ry0.m10830j(bArr);
+        this.f25143a.m24045N().mo6991f();
+        MessageDigest m24464t = dd8.m24464t();
+        if (m24464t == null) {
+            this.f25143a.mo3895i().m14160q().m20653a("Failed to get MD5");
             return 0L;
         }
-        return dd8.q0(t.digest(bArr));
+        return dd8.m24468q0(m24464t.digest(bArr));
     }
 
-    public final Bundle y(Map map, boolean z) {
+    /* renamed from: y */
+    public final Bundle m23575y(Map map, boolean z) {
         String str;
         Bundle bundle = new Bundle();
         for (String str2 : map.keySet()) {
@@ -885,7 +855,7 @@ public final class ec8 extends pa8 {
                 ArrayList arrayList2 = new ArrayList();
                 int size = arrayList.size();
                 for (int i = 0; i < size; i++) {
-                    arrayList2.add(y((Map) arrayList.get(i), false));
+                    arrayList2.add(m23575y((Map) arrayList.get(i), false));
                 }
                 bundle.putParcelableArray(str2, (Parcelable[]) arrayList2.toArray(new Parcelable[0]));
             }
@@ -894,7 +864,8 @@ public final class ec8 extends pa8 {
         return bundle;
     }
 
-    public final Parcelable z(byte[] bArr, Parcelable.Creator creator) {
+    /* renamed from: z */
+    public final Parcelable m23574z(byte[] bArr, Parcelable.Creator creator) {
         if (bArr == null) {
             return null;
         }
@@ -903,8 +874,8 @@ public final class ec8 extends pa8 {
             obtain.unmarshall(bArr, 0, bArr.length);
             obtain.setDataPosition(0);
             return (Parcelable) creator.createFromParcel(obtain);
-        } catch (y71.a unused) {
-            this.a.i().q().a("Failed to load parcelable from buffer");
+        } catch (y71.C3677a unused) {
+            this.f25143a.mo3895i().m14160q().m20653a("Failed to load parcelable from buffer");
             return null;
         } finally {
             obtain.recycle();

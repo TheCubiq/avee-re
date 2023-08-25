@@ -1,16 +1,20 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class js6 {
-    public static is6 a() {
+    /* renamed from: a */
+    public static is6 m18259a() {
         ls6 ls6Var = new ls6();
-        ls6Var.c(false);
-        ls6Var.b(true);
+        ls6Var.mo16601c(false);
+        ls6Var.mo16602b(true);
         return ls6Var;
     }
 
-    public abstract String b();
+    /* renamed from: b */
+    public abstract String mo14843b();
 
-    public abstract boolean c();
+    /* renamed from: c */
+    public abstract boolean mo14842c();
 
-    public abstract boolean d();
+    /* renamed from: d */
+    public abstract boolean mo14841d();
 }

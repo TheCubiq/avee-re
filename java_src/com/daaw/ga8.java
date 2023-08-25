@@ -4,182 +4,200 @@ import android.view.Surface;
 @Deprecated
 /* loaded from: classes.dex */
 public final class ga8 extends gf8 {
-    public final j58 b;
-    public final ds4 c;
+
+    /* renamed from: b */
+    public final j58 f10981b;
+
+    /* renamed from: c */
+    public final ds4 f10982c;
 
     public ga8(d18 d18Var) {
-        ds4 ds4Var = new ds4(xp4.a);
-        this.c = ds4Var;
+        ds4 ds4Var = new ds4(xp4.f32865a);
+        this.f10982c = ds4Var;
         try {
-            this.b = new j58(d18Var, this);
-            ds4Var.e();
+            this.f10981b = new j58(d18Var, this);
+            ds4Var.m24006e();
         } catch (Throwable th) {
-            this.c.e();
+            this.f10982c.m24006e();
             throw th;
         }
     }
 
     @Override // com.daaw.ty3
-    public final void a(int i, long j) {
-        this.c.b();
-        this.b.a(i, j);
+    /* renamed from: a */
+    public final void mo8696a(int i, long j) {
+        this.f10982c.m24009b();
+        this.f10981b.mo8696a(i, j);
     }
 
-    public final void b(ob8 ob8Var) {
-        this.c.b();
-        this.b.z(ob8Var);
+    /* renamed from: b */
+    public final void m21847b(ob8 ob8Var) {
+        this.f10982c.m24009b();
+        this.f10981b.m18795z(ob8Var);
     }
 
-    public final void c(rr8 rr8Var) {
-        this.c.b();
-        this.b.A(rr8Var);
+    /* renamed from: c */
+    public final void m21846c(rr8 rr8Var) {
+        this.f10982c.m24009b();
+        this.f10981b.m18851A(rr8Var);
     }
 
-    public final void d(boolean z) {
-        this.c.b();
-        this.b.B(z);
+    /* renamed from: d */
+    public final void m21845d(boolean z) {
+        this.f10982c.m24009b();
+        this.f10981b.m18850B(z);
     }
 
-    public final void e(Surface surface) {
-        this.c.b();
-        this.b.C(surface);
+    /* renamed from: e */
+    public final void m21844e(Surface surface) {
+        this.f10982c.m24009b();
+        this.f10981b.m18849C(surface);
     }
 
-    public final void f(float f) {
-        this.c.b();
-        this.b.D(f);
+    /* renamed from: f */
+    public final void m21843f(float f) {
+        this.f10982c.m24009b();
+        this.f10981b.m18848D(f);
     }
 
-    public final void g() {
-        this.c.b();
-        this.b.E();
+    /* renamed from: g */
+    public final void m21842g() {
+        this.f10982c.m24009b();
+        this.f10981b.m18847E();
     }
 
-    public final int h() {
-        this.c.b();
-        this.b.a0();
+    /* renamed from: h */
+    public final int m21841h() {
+        this.f10982c.m24009b();
+        this.f10981b.m18825a0();
         return 2;
     }
 
-    public final long i() {
-        this.c.b();
-        return this.b.b0();
+    /* renamed from: i */
+    public final long m21840i() {
+        this.f10982c.m24009b();
+        return this.f10981b.m18823b0();
     }
 
-    public final long j() {
-        this.c.b();
-        return this.b.c0();
+    /* renamed from: j */
+    public final long m21839j() {
+        this.f10982c.m24009b();
+        return this.f10981b.m18821c0();
     }
 
-    public final vu7 k() {
-        this.c.b();
-        return this.b.b();
+    /* renamed from: k */
+    public final vu7 m21838k() {
+        this.f10982c.m24009b();
+        return this.f10981b.m18824b();
     }
 
-    public final void l(ob8 ob8Var) {
-        this.c.b();
-        this.b.s(ob8Var);
+    /* renamed from: l */
+    public final void m21837l(ob8 ob8Var) {
+        this.f10982c.m24009b();
+        this.f10981b.m18802s(ob8Var);
     }
 
-    public final void m() {
-        this.c.b();
-        this.b.x();
+    /* renamed from: m */
+    public final void m21836m() {
+        this.f10982c.m24009b();
+        this.f10981b.m18797x();
     }
 
-    public final void n() {
-        this.c.b();
-        this.b.y();
+    /* renamed from: n */
+    public final void m21835n() {
+        this.f10982c.m24009b();
+        this.f10981b.m18796y();
     }
 
     @Override // com.daaw.ty3
     public final int zzd() {
-        this.c.b();
-        return this.b.zzd();
+        this.f10982c.m24009b();
+        return this.f10981b.zzd();
     }
 
     @Override // com.daaw.ty3
     public final int zze() {
-        this.c.b();
-        return this.b.zze();
+        this.f10982c.m24009b();
+        return this.f10981b.zze();
     }
 
     @Override // com.daaw.ty3
     public final int zzf() {
-        this.c.b();
-        return this.b.zzf();
+        this.f10982c.m24009b();
+        return this.f10981b.zzf();
     }
 
     @Override // com.daaw.ty3
     public final int zzg() {
-        this.c.b();
-        return this.b.zzg();
+        this.f10982c.m24009b();
+        return this.f10981b.zzg();
     }
 
     @Override // com.daaw.ty3
     public final int zzh() {
-        this.c.b();
-        return this.b.zzh();
+        this.f10982c.m24009b();
+        return this.f10981b.zzh();
     }
 
     @Override // com.daaw.ty3
     public final int zzi() {
-        this.c.b();
-        return this.b.zzi();
+        this.f10982c.m24009b();
+        return this.f10981b.zzi();
     }
 
     @Override // com.daaw.ty3
     public final int zzj() {
-        this.c.b();
-        this.b.zzj();
+        this.f10982c.m24009b();
+        this.f10981b.zzj();
         return 0;
     }
 
     @Override // com.daaw.ty3
     public final long zzk() {
-        this.c.b();
-        return this.b.zzk();
+        this.f10982c.m24009b();
+        return this.f10981b.zzk();
     }
 
     @Override // com.daaw.ty3
     public final long zzl() {
-        this.c.b();
-        return this.b.zzl();
+        this.f10982c.m24009b();
+        return this.f10981b.zzl();
     }
 
     @Override // com.daaw.ty3
     public final long zzm() {
-        this.c.b();
-        return this.b.zzm();
+        this.f10982c.m24009b();
+        return this.f10981b.zzm();
     }
 
     @Override // com.daaw.ty3
     public final l64 zzn() {
-        this.c.b();
-        return this.b.zzn();
+        this.f10982c.m24009b();
+        return this.f10981b.zzn();
     }
 
     @Override // com.daaw.ty3
     public final ni4 zzo() {
-        this.c.b();
-        return this.b.zzo();
+        this.f10982c.m24009b();
+        return this.f10981b.zzo();
     }
 
     @Override // com.daaw.ty3
     public final boolean zzq() {
-        this.c.b();
-        return this.b.zzq();
+        this.f10982c.m24009b();
+        return this.f10981b.zzq();
     }
 
     @Override // com.daaw.ty3
     public final boolean zzr() {
-        this.c.b();
-        this.b.zzr();
+        this.f10982c.m24009b();
+        this.f10981b.zzr();
         return false;
     }
 
     @Override // com.daaw.ty3
     public final boolean zzs() {
-        this.c.b();
-        return this.b.zzs();
+        this.f10982c.m24009b();
+        return this.f10981b.zzs();
     }
 }

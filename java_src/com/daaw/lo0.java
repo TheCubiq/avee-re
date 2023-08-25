@@ -3,15 +3,20 @@ package com.daaw;
 import android.net.Uri;
 /* loaded from: classes.dex */
 public class lo0 implements wd0 {
-    public final Uri a;
-    public final int b;
+
+    /* renamed from: a */
+    public final Uri f17574a;
+
+    /* renamed from: b */
+    public final int f17575b;
 
     public lo0(Uri uri) {
-        this.a = uri;
-        this.b = c(uri);
+        this.f17574a = uri;
+        this.f17575b = m16704c(uri);
     }
 
-    public static int c(Uri uri) {
+    /* renamed from: c */
+    public static int m16704c(Uri uri) {
         String str;
         String path = uri.getPath();
         if (path != null) {
@@ -35,12 +40,14 @@ public class lo0 implements wd0 {
     }
 
     @Override // com.daaw.wd0
-    public Uri a() {
-        return this.a;
+    /* renamed from: a */
+    public Uri mo6166a() {
+        return this.f17574a;
     }
 
     @Override // com.daaw.wd0
-    public int b() {
-        return this.b;
+    /* renamed from: b */
+    public int mo6165b() {
+        return this.f17575b;
     }
 }

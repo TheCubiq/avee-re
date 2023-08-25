@@ -9,6 +9,6 @@ public final class yq6 extends xq6 {
         if (!webView.getSettings().getJavaScriptEnabled()) {
             webView.getSettings().setJavaScriptEnabled(true);
         }
-        i(webView);
+        m4803i(webView);
     }
 }

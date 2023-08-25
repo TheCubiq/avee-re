@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class d56 implements wz7 {
-    public static b56 a() {
+    /* renamed from: a */
+    public static b56 m24640a() {
         return new b56();
     }
 }

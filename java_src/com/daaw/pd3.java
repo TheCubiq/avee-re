@@ -6,9 +6,11 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface pd3 extends IInterface {
-    void E0(Bundle bundle);
+    /* renamed from: E0 */
+    void mo6390E0(Bundle bundle);
 
-    void o(Bundle bundle);
+    /* renamed from: o */
+    void mo6389o(Bundle bundle);
 
     Bundle zzb();
 

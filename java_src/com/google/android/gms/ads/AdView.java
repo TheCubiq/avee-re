@@ -7,7 +7,7 @@ import com.daaw.ry0;
 public final class AdView extends BaseAdView {
     public AdView(Context context) {
         super(context, 0);
-        ry0.k(context, "Context cannot be null");
+        ry0.m10829k(context, "Context cannot be null");
     }
 
     public AdView(Context context, AttributeSet attributeSet) {
@@ -19,6 +19,6 @@ public final class AdView extends BaseAdView {
     }
 
     public final VideoController zza() {
-        return this.p.zzf();
+        return this.f36023p.zzf();
     }
 }

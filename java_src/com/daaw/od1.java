@@ -3,27 +3,47 @@ package com.daaw;
 import com.daaw.nl1;
 /* loaded from: classes.dex */
 public final class od1 extends nl1 {
-    public static final Object k = new Object();
-    public final long b;
-    public final long c;
-    public final long d;
-    public final long e;
-    public final long f;
-    public final long g;
-    public final boolean h;
-    public final boolean i;
-    public final Object j;
+
+    /* renamed from: k */
+    public static final Object f21279k = new Object();
+
+    /* renamed from: b */
+    public final long f21280b;
+
+    /* renamed from: c */
+    public final long f21281c;
+
+    /* renamed from: d */
+    public final long f21282d;
+
+    /* renamed from: e */
+    public final long f21283e;
+
+    /* renamed from: f */
+    public final long f21284f;
+
+    /* renamed from: g */
+    public final long f21285g;
+
+    /* renamed from: h */
+    public final boolean f21286h;
+
+    /* renamed from: i */
+    public final boolean f21287i;
+
+    /* renamed from: j */
+    public final Object f21288j;
 
     public od1(long j, long j2, long j3, long j4, long j5, long j6, boolean z, boolean z2, Object obj) {
-        this.b = j;
-        this.c = j2;
-        this.d = j3;
-        this.e = j4;
-        this.f = j5;
-        this.g = j6;
-        this.h = z;
-        this.i = z2;
-        this.j = obj;
+        this.f21280b = j;
+        this.f21281c = j2;
+        this.f21282d = j3;
+        this.f21283e = j4;
+        this.f21284f = j5;
+        this.f21285g = j6;
+        this.f21286h = z;
+        this.f21287i = z2;
+        this.f21288j = obj;
     }
 
     public od1(long j, long j2, long j3, long j4, boolean z, boolean z2, Object obj) {
@@ -35,18 +55,21 @@ public final class od1 extends nl1 {
     }
 
     @Override // com.daaw.nl1
-    public int b(Object obj) {
-        return k.equals(obj) ? 0 : -1;
+    /* renamed from: b */
+    public int mo14379b(Object obj) {
+        return f21279k.equals(obj) ? 0 : -1;
     }
 
     @Override // com.daaw.nl1
-    public nl1.b g(int i, nl1.b bVar, boolean z) {
-        s6.c(i, 0, 1);
-        return bVar.o(null, z ? k : null, 0, this.d, -this.f);
+    /* renamed from: g */
+    public nl1.C2314b mo14378g(int i, nl1.C2314b c2314b, boolean z) {
+        C2914s6.m10688c(i, 0, 1);
+        return c2314b.m15057o(null, z ? f21279k : null, 0, this.f21282d, -this.f21284f);
     }
 
     @Override // com.daaw.nl1
-    public int h() {
+    /* renamed from: h */
+    public int mo14377h() {
         return 1;
     }
 
@@ -54,63 +77,31 @@ public final class od1 extends nl1 {
         if (r1 > r6) goto L10;
      */
     @Override // com.daaw.nl1
+    /* renamed from: m */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public com.daaw.nl1.c m(int r19, com.daaw.nl1.c r20, boolean r21, long r22) {
-        /*
-            r18 = this;
-            r0 = r18
-            r1 = 0
-            r2 = 1
-            r3 = r19
-            com.daaw.s6.c(r3, r1, r2)
-            if (r21 == 0) goto Le
-            java.lang.Object r1 = r0.j
-            goto Lf
-        Le:
-            r1 = 0
-        Lf:
-            r3 = r1
-            long r1 = r0.g
-            boolean r9 = r0.i
-            r4 = -9223372036854775807(0x8000000000000001, double:-4.9E-324)
-            if (r9 == 0) goto L30
-            r6 = 0
-            int r8 = (r22 > r6 ? 1 : (r22 == r6 ? 0 : -1))
-            if (r8 == 0) goto L30
-            long r6 = r0.e
-            int r8 = (r6 > r4 ? 1 : (r6 == r4 ? 0 : -1))
-            if (r8 != 0) goto L29
-        L27:
-            r10 = r4
-            goto L31
-        L29:
-            long r1 = r1 + r22
-            int r8 = (r1 > r6 ? 1 : (r1 == r6 ? 0 : -1))
-            if (r8 <= 0) goto L30
-            goto L27
-        L30:
-            r10 = r1
-        L31:
-            long r4 = r0.b
-            long r6 = r0.c
-            boolean r8 = r0.h
-            long r12 = r0.e
-            r14 = 0
-            r15 = 0
-            long r1 = r0.f
-            r16 = r1
-            r2 = r20
-            com.daaw.nl1$c r1 = r2.e(r3, r4, r6, r8, r9, r10, r12, r14, r15, r16)
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.od1.m(int, com.daaw.nl1$c, boolean, long):com.daaw.nl1$c");
+    public nl1.C2315c mo14376m(int i, nl1.C2315c c2315c, boolean z, long j) {
+        long j2;
+        C2914s6.m10688c(i, 0, 1);
+        Object obj = z ? this.f21288j : null;
+        long j3 = this.f21285g;
+        boolean z2 = this.f21287i;
+        if (z2 && j != 0) {
+            long j4 = this.f21283e;
+            if (j4 != -9223372036854775807L) {
+                j3 += j;
+            }
+            j2 = -9223372036854775807L;
+            return c2315c.m15051e(obj, this.f21280b, this.f21281c, this.f21286h, z2, j2, this.f21283e, 0, 0, this.f21284f);
+        }
+        j2 = j3;
+        return c2315c.m15051e(obj, this.f21280b, this.f21281c, this.f21286h, z2, j2, this.f21283e, 0, 0, this.f21284f);
     }
 
     @Override // com.daaw.nl1
-    public int n() {
+    /* renamed from: n */
+    public int mo14375n() {
         return 1;
     }
 }

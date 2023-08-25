@@ -7,80 +7,94 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class jt4 extends kw4 {
-    public final ScheduledExecutorService q;
-    public final ag r;
-    @GuardedBy("this")
-    public long s;
-    @GuardedBy("this")
-    public long t;
-    @GuardedBy("this")
-    public boolean u;
-    @GuardedBy("this")
-    public ScheduledFuture v;
 
-    public jt4(ScheduledExecutorService scheduledExecutorService, ag agVar) {
+    /* renamed from: q */
+    public final ScheduledExecutorService f15391q;
+
+    /* renamed from: r */
+    public final InterfaceC0623ag f15392r;
+    @GuardedBy("this")
+
+    /* renamed from: s */
+    public long f15393s;
+    @GuardedBy("this")
+
+    /* renamed from: t */
+    public long f15394t;
+    @GuardedBy("this")
+
+    /* renamed from: u */
+    public boolean f15395u;
+    @GuardedBy("this")
+
+    /* renamed from: v */
+    public ScheduledFuture f15396v;
+
+    public jt4(ScheduledExecutorService scheduledExecutorService, InterfaceC0623ag interfaceC0623ag) {
         super(Collections.emptySet());
-        this.s = -1L;
-        this.t = -1L;
-        this.u = false;
-        this.q = scheduledExecutorService;
-        this.r = agVar;
+        this.f15393s = -1L;
+        this.f15394t = -1L;
+        this.f15395u = false;
+        this.f15391q = scheduledExecutorService;
+        this.f15392r = interfaceC0623ag;
     }
 
-    public final synchronized void C0(int i) {
+    /* renamed from: C0 */
+    public final synchronized void m18252C0(int i) {
         if (i <= 0) {
             return;
         }
         long millis = TimeUnit.SECONDS.toMillis(i);
-        if (this.u) {
-            long j = this.t;
+        if (this.f15395u) {
+            long j = this.f15394t;
             if (j <= 0 || millis >= j) {
                 millis = j;
             }
-            this.t = millis;
+            this.f15394t = millis;
             return;
         }
-        long b = this.r.b();
-        long j2 = this.s;
-        if (b > j2 || j2 - this.r.b() > millis) {
-            D0(millis);
+        long mo15859b = this.f15392r.mo15859b();
+        long j2 = this.f15393s;
+        if (mo15859b > j2 || j2 - this.f15392r.mo15859b() > millis) {
+            m18251D0(millis);
         }
     }
 
-    public final synchronized void D0(long j) {
-        ScheduledFuture scheduledFuture = this.v;
+    /* renamed from: D0 */
+    public final synchronized void m18251D0(long j) {
+        ScheduledFuture scheduledFuture = this.f15396v;
         if (scheduledFuture != null && !scheduledFuture.isDone()) {
-            this.v.cancel(true);
+            this.f15396v.cancel(true);
         }
-        this.s = this.r.b() + j;
-        this.v = this.q.schedule(new it4(this, null), j, TimeUnit.MILLISECONDS);
+        this.f15393s = this.f15392r.mo15859b() + j;
+        this.f15396v = this.f15391q.schedule(new it4(this, null), j, TimeUnit.MILLISECONDS);
     }
 
     public final synchronized void zza() {
-        this.u = false;
-        D0(0L);
+        this.f15395u = false;
+        m18251D0(0L);
     }
 
     public final synchronized void zzb() {
-        if (this.u) {
+        if (this.f15395u) {
             return;
         }
-        ScheduledFuture scheduledFuture = this.v;
+        ScheduledFuture scheduledFuture = this.f15396v;
         if (scheduledFuture == null || scheduledFuture.isCancelled()) {
-            this.t = -1L;
+            this.f15394t = -1L;
         } else {
-            this.v.cancel(true);
-            this.t = this.s - this.r.b();
+            this.f15396v.cancel(true);
+            this.f15394t = this.f15393s - this.f15392r.mo15859b();
         }
-        this.u = true;
+        this.f15395u = true;
     }
 
     public final synchronized void zzc() {
-        if (this.u) {
-            if (this.t > 0 && this.v.isCancelled()) {
-                D0(this.t);
+        if (this.f15395u) {
+            if (this.f15394t > 0 && this.f15396v.isCancelled()) {
+                m18251D0(this.f15394t);
             }
-            this.u = false;
+            this.f15395u = false;
         }
     }
 }

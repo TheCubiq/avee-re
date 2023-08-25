@@ -9,19 +9,23 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes.dex */
 public final class zzbsj extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbsj> CREATOR = new jj3();
-    public final String p;
-    public final Bundle q;
+
+    /* renamed from: p */
+    public final String f36870p;
+
+    /* renamed from: q */
+    public final Bundle f36871q;
 
     public zzbsj(String str, Bundle bundle) {
-        this.p = str;
-        this.q = bundle;
+        this.f36870p = str;
+        this.f36871q = bundle;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.q(parcel, 1, this.p, false);
-        z71.e(parcel, 2, this.q, false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2717q(parcel, 1, this.f36870p, false);
+        z71.m2729e(parcel, 2, this.f36871q, false);
+        z71.m2732b(parcel, m2733a);
     }
 }

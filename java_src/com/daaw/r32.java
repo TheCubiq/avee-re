@@ -3,19 +3,24 @@ package com.daaw;
 import android.util.SparseBooleanArray;
 /* loaded from: classes.dex */
 public final class r32 {
-    public final SparseBooleanArray a;
 
-    public final int a(int i) {
-        uo4.a(i, 0, this.a.size());
-        return this.a.keyAt(i);
+    /* renamed from: a */
+    public final SparseBooleanArray f24806a;
+
+    /* renamed from: a */
+    public final int m11807a(int i) {
+        uo4.m7877a(i, 0, this.f24806a.size());
+        return this.f24806a.keyAt(i);
     }
 
-    public final int b() {
-        return this.a.size();
+    /* renamed from: b */
+    public final int m11806b() {
+        return this.f24806a.size();
     }
 
-    public final boolean c(int i) {
-        return this.a.get(i);
+    /* renamed from: c */
+    public final boolean m11805c(int i) {
+        return this.f24806a.get(i);
     }
 
     public final boolean equals(Object obj) {
@@ -24,10 +29,10 @@ public final class r32 {
         }
         if (obj instanceof r32) {
             r32 r32Var = (r32) obj;
-            if (it5.a < 24) {
-                if (this.a.size() == r32Var.a.size()) {
-                    for (int i = 0; i < this.a.size(); i++) {
-                        if (a(i) != r32Var.a(i)) {
+            if (it5.f13991a < 24) {
+                if (this.f24806a.size() == r32Var.f24806a.size()) {
+                    for (int i = 0; i < this.f24806a.size(); i++) {
+                        if (m11807a(i) != r32Var.m11807a(i)) {
                             return false;
                         }
                     }
@@ -35,19 +40,19 @@ public final class r32 {
                 }
                 return false;
             }
-            return this.a.equals(r32Var.a);
+            return this.f24806a.equals(r32Var.f24806a);
         }
         return false;
     }
 
     public final int hashCode() {
-        if (it5.a < 24) {
-            int size = this.a.size();
-            for (int i = 0; i < this.a.size(); i++) {
-                size = (size * 31) + a(i);
+        if (it5.f13991a < 24) {
+            int size = this.f24806a.size();
+            for (int i = 0; i < this.f24806a.size(); i++) {
+                size = (size * 31) + m11807a(i);
             }
             return size;
         }
-        return this.a.hashCode();
+        return this.f24806a.hashCode();
     }
 }

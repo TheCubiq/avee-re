@@ -1,20 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class g03 implements Runnable {
-    public final /* synthetic */ int p;
-    public final /* synthetic */ long q;
-    public final /* synthetic */ k03 r;
+
+    /* renamed from: p */
+    public final /* synthetic */ int f10120p;
+
+    /* renamed from: q */
+    public final /* synthetic */ long f10121q;
+
+    /* renamed from: r */
+    public final /* synthetic */ k03 f10122r;
 
     public g03(k03 k03Var, int i, long j) {
-        this.r = k03Var;
-        this.p = i;
-        this.q = j;
+        this.f10122r = k03Var;
+        this.f10120p = i;
+        this.f10121q = j;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         l03 l03Var;
-        l03Var = this.r.b;
-        l03Var.A(this.p, this.q);
+        l03Var = this.f10122r.f15576b;
+        l03Var.mo17156A(this.f10120p, this.f10121q);
     }
 }

@@ -17,14 +17,25 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /* loaded from: classes.dex */
 public class c80 {
     @Deprecated
-    public static final int a = 12451000;
-    public static boolean c;
-    public static boolean d;
-    public static final AtomicBoolean b = new AtomicBoolean();
-    public static final AtomicBoolean e = new AtomicBoolean();
+
+    /* renamed from: a */
+    public static final int f5613a = 12451000;
+
+    /* renamed from: c */
+    public static boolean f5615c;
+
+    /* renamed from: d */
+    public static boolean f5616d;
+
+    /* renamed from: b */
+    public static final AtomicBoolean f5614b = new AtomicBoolean();
+
+    /* renamed from: e */
+    public static final AtomicBoolean f5617e = new AtomicBoolean();
 
     @Deprecated
-    public static int a(Context context) {
+    /* renamed from: a */
+    public static int m25527a(Context context) {
         try {
             return context.getPackageManager().getPackageInfo("com.google.android.gms", 0).versionCode;
         } catch (PackageManager.NameNotFoundException unused) {
@@ -33,11 +44,13 @@ public class c80 {
     }
 
     @Deprecated
-    public static String b(int i) {
-        return ConnectionResult.v(i);
+    /* renamed from: b */
+    public static String m25526b(int i) {
+        return ConnectionResult.m1204v(i);
     }
 
-    public static Context c(Context context) {
+    /* renamed from: c */
+    public static Context m25525c(Context context) {
         try {
             return context.createPackageContext("com.google.android.gms", 3);
         } catch (PackageManager.NameNotFoundException unused) {
@@ -45,7 +58,8 @@ public class c80 {
         }
     }
 
-    public static Resources d(Context context) {
+    /* renamed from: d */
+    public static Resources m25524d(Context context) {
         try {
             return context.getPackageManager().getResourcesForApplication("com.google.android.gms");
         } catch (PackageManager.NameNotFoundException unused) {
@@ -53,28 +67,30 @@ public class c80 {
         }
     }
 
-    public static boolean e(Context context) {
-        if (!d) {
+    /* renamed from: e */
+    public static boolean m25523e(Context context) {
+        if (!f5616d) {
             try {
-                PackageInfo f = ez1.a(context).f("com.google.android.gms", 64);
-                d80.a(context);
-                if (f == null || d80.e(f, false) || !d80.e(f, true)) {
-                    c = false;
+                PackageInfo m19341f = ez1.m22979a(context).m19341f("com.google.android.gms", 64);
+                d80.m24607a(context);
+                if (m19341f == null || d80.m24603e(m19341f, false) || !d80.m24603e(m19341f, true)) {
+                    f5615c = false;
                 } else {
-                    c = true;
+                    f5615c = true;
                 }
             } catch (PackageManager.NameNotFoundException unused) {
             } catch (Throwable th) {
-                d = true;
+                f5616d = true;
                 throw th;
             }
-            d = true;
+            f5616d = true;
         }
-        return c || !nt.e();
+        return f5615c || !C2365nt.m14836e();
     }
 
     @Deprecated
-    public static int f(Context context, int i) {
+    /* renamed from: f */
+    public static int m25522f(Context context, int i) {
         String valueOf;
         String str;
         PackageInfo packageInfo;
@@ -82,17 +98,17 @@ public class c80 {
             context.getResources().getString(g21.common_google_play_services_unknown_issue);
         } catch (Throwable unused) {
         }
-        if (!"com.google.android.gms".equals(context.getPackageName()) && !e.get()) {
-            int a2 = ma2.a(context);
-            if (a2 == 0) {
+        if (!"com.google.android.gms".equals(context.getPackageName()) && !f5617e.get()) {
+            int m16143a = ma2.m16143a(context);
+            if (m16143a == 0) {
                 throw new GooglePlayServicesMissingManifestValueException();
             }
-            if (a2 != a) {
-                throw new GooglePlayServicesIncorrectManifestValueException(a2);
+            if (m16143a != f5613a) {
+                throw new GooglePlayServicesIncorrectManifestValueException(m16143a);
             }
         }
-        boolean z = (nt.g(context) || nt.i(context)) ? false : true;
-        ry0.a(i >= 0);
+        boolean z = (C2365nt.m14834g(context) || C2365nt.m14832i(context)) ? false : true;
+        ry0.m10839a(i >= 0);
         String packageName = context.getPackageName();
         PackageManager packageManager = context.getPackageManager();
         if (z) {
@@ -107,23 +123,23 @@ public class c80 {
         }
         try {
             PackageInfo packageInfo2 = packageManager.getPackageInfo("com.google.android.gms", 64);
-            d80.a(context);
-            if (d80.e(packageInfo2, true)) {
+            d80.m24607a(context);
+            if (d80.m24603e(packageInfo2, true)) {
                 if (z) {
-                    ry0.j(packageInfo);
-                    if (!d80.e(packageInfo, true)) {
+                    ry0.m10830j(packageInfo);
+                    if (!d80.m24603e(packageInfo, true)) {
                         valueOf = String.valueOf(packageName);
                         str = " requires Google Play Store, but its signature is invalid.";
                     }
                 }
                 if (!z || packageInfo == null || packageInfo.signatures[0].equals(packageInfo2.signatures[0])) {
-                    if (n32.a(packageInfo2.versionCode) >= n32.a(i)) {
+                    if (n32.m15543a(packageInfo2.versionCode) >= n32.m15543a(i)) {
                         ApplicationInfo applicationInfo = packageInfo2.applicationInfo;
                         if (applicationInfo == null) {
                             try {
                                 applicationInfo = packageManager.getApplicationInfo("com.google.android.gms", 0);
-                            } catch (PackageManager.NameNotFoundException e2) {
-                                Log.wtf("GooglePlayServicesUtil", String.valueOf(packageName).concat(" requires Google Play services, but they're missing when getting application info."), e2);
+                            } catch (PackageManager.NameNotFoundException e) {
+                                Log.wtf("GooglePlayServicesUtil", String.valueOf(packageName).concat(" requires Google Play services, but they're missing when getting application info."), e);
                                 return 1;
                             }
                         }
@@ -154,21 +170,23 @@ public class c80 {
     }
 
     @Deprecated
-    public static boolean g(Context context, int i) {
+    /* renamed from: g */
+    public static boolean m25521g(Context context, int i) {
         if (i == 18) {
             return true;
         }
         if (i == 1) {
-            return k(context, "com.google.android.gms");
+            return m25517k(context, "com.google.android.gms");
         }
         return false;
     }
 
     @TargetApi(18)
-    public static boolean h(Context context) {
-        if (vw0.c()) {
+    /* renamed from: h */
+    public static boolean m25520h(Context context) {
+        if (vw0.m6702c()) {
             Object systemService = context.getSystemService("user");
-            ry0.j(systemService);
+            ry0.m10830j(systemService);
             Bundle applicationRestrictions = ((UserManager) systemService).getApplicationRestrictions(context.getPackageName());
             return applicationRestrictions != null && "true".equals(applicationRestrictions.getString("restricted_profile"));
         }
@@ -176,21 +194,24 @@ public class c80 {
     }
 
     @Deprecated
-    public static boolean i(int i) {
+    /* renamed from: i */
+    public static boolean m25519i(int i) {
         return i == 1 || i == 2 || i == 3 || i == 9;
     }
 
     @TargetApi(19)
     @Deprecated
-    public static boolean j(Context context, int i, String str) {
-        return fp1.b(context, i, str);
+    /* renamed from: j */
+    public static boolean m25518j(Context context, int i, String str) {
+        return fp1.m22424b(context, i, str);
     }
 
     @TargetApi(21)
-    public static boolean k(Context context, String str) {
+    /* renamed from: k */
+    public static boolean m25517k(Context context, String str) {
         ApplicationInfo applicationInfo;
         boolean equals = str.equals("com.google.android.gms");
-        if (vw0.f()) {
+        if (vw0.m6699f()) {
             try {
                 for (PackageInstaller.SessionInfo sessionInfo : context.getPackageManager().getPackageInstaller().getAllSessions()) {
                     if (str.equals(sessionInfo.getAppPackageName())) {
@@ -205,6 +226,6 @@ public class c80 {
             applicationInfo = context.getPackageManager().getApplicationInfo(str, 8192);
         } catch (PackageManager.NameNotFoundException unused2) {
         }
-        return equals ? applicationInfo.enabled : applicationInfo.enabled && !h(context);
+        return equals ? applicationInfo.enabled : applicationInfo.enabled && !m25520h(context);
     }
 }

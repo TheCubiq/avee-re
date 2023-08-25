@@ -10,74 +10,210 @@ import java.util.List;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class th6 {
-    public final String A;
-    public final zzcem B;
-    public final String C;
-    public final JSONObject D;
-    public final JSONObject E;
-    public final String F;
-    public final String G;
-    public final String H;
-    public final String I;
-    public final String J;
-    public final boolean K;
-    public final boolean L;
-    public final boolean M;
-    public final boolean N;
-    public final boolean O;
-    public final boolean P;
-    public final boolean Q;
-    public final int R;
-    public final int S;
-    public final boolean T;
-    public final boolean U;
-    public final String V;
-    public final ui6 W;
-    public final boolean X;
-    public final boolean Y;
-    public final int Z;
-    public final List a;
-    public final String a0;
-    public final int b;
-    public final int b0;
-    public final List c;
-    public final String c0;
-    public final List d;
-    public final boolean d0;
-    public final List e;
-    public final nr3 e0;
-    public final int f;
-    public final boolean f0;
-    public final List g;
-    public final zzs g0;
-    public final List h;
-    public final String h0;
-    public final List i;
-    public final boolean i0;
-    public final List j;
-    public final JSONObject j0;
-    public final String k;
-    public final boolean k0;
-    public final String l;
-    public final JSONObject l0;
-    public final zzcdd m;
-    public final boolean m0;
-    public final List n;
-    public final String n0;
-    public final List o;
-    public final boolean o0;
-    public final List p;
-    public final String p0;
-    public final List q;
-    public final int r;
-    public final List s;
-    public final yh6 t;
-    public final List u;
-    public final List v;
-    public final JSONObject w;
-    public final String x;
-    public final String y;
-    public final String z;
+
+    /* renamed from: A */
+    public final String f27654A;
+
+    /* renamed from: B */
+    public final zzcem f27655B;
+
+    /* renamed from: C */
+    public final String f27656C;
+
+    /* renamed from: D */
+    public final JSONObject f27657D;
+
+    /* renamed from: E */
+    public final JSONObject f27658E;
+
+    /* renamed from: F */
+    public final String f27659F;
+
+    /* renamed from: G */
+    public final String f27660G;
+
+    /* renamed from: H */
+    public final String f27661H;
+
+    /* renamed from: I */
+    public final String f27662I;
+
+    /* renamed from: J */
+    public final String f27663J;
+
+    /* renamed from: K */
+    public final boolean f27664K;
+
+    /* renamed from: L */
+    public final boolean f27665L;
+
+    /* renamed from: M */
+    public final boolean f27666M;
+
+    /* renamed from: N */
+    public final boolean f27667N;
+
+    /* renamed from: O */
+    public final boolean f27668O;
+
+    /* renamed from: P */
+    public final boolean f27669P;
+
+    /* renamed from: Q */
+    public final boolean f27670Q;
+
+    /* renamed from: R */
+    public final int f27671R;
+
+    /* renamed from: S */
+    public final int f27672S;
+
+    /* renamed from: T */
+    public final boolean f27673T;
+
+    /* renamed from: U */
+    public final boolean f27674U;
+
+    /* renamed from: V */
+    public final String f27675V;
+
+    /* renamed from: W */
+    public final ui6 f27676W;
+
+    /* renamed from: X */
+    public final boolean f27677X;
+
+    /* renamed from: Y */
+    public final boolean f27678Y;
+
+    /* renamed from: Z */
+    public final int f27679Z;
+
+    /* renamed from: a */
+    public final List f27680a;
+
+    /* renamed from: a0 */
+    public final String f27681a0;
+
+    /* renamed from: b */
+    public final int f27682b;
+
+    /* renamed from: b0 */
+    public final int f27683b0;
+
+    /* renamed from: c */
+    public final List f27684c;
+
+    /* renamed from: c0 */
+    public final String f27685c0;
+
+    /* renamed from: d */
+    public final List f27686d;
+
+    /* renamed from: d0 */
+    public final boolean f27687d0;
+
+    /* renamed from: e */
+    public final List f27688e;
+
+    /* renamed from: e0 */
+    public final nr3 f27689e0;
+
+    /* renamed from: f */
+    public final int f27690f;
+
+    /* renamed from: f0 */
+    public final boolean f27691f0;
+
+    /* renamed from: g */
+    public final List f27692g;
+
+    /* renamed from: g0 */
+    public final zzs f27693g0;
+
+    /* renamed from: h */
+    public final List f27694h;
+
+    /* renamed from: h0 */
+    public final String f27695h0;
+
+    /* renamed from: i */
+    public final List f27696i;
+
+    /* renamed from: i0 */
+    public final boolean f27697i0;
+
+    /* renamed from: j */
+    public final List f27698j;
+
+    /* renamed from: j0 */
+    public final JSONObject f27699j0;
+
+    /* renamed from: k */
+    public final String f27700k;
+
+    /* renamed from: k0 */
+    public final boolean f27701k0;
+
+    /* renamed from: l */
+    public final String f27702l;
+
+    /* renamed from: l0 */
+    public final JSONObject f27703l0;
+
+    /* renamed from: m */
+    public final zzcdd f27704m;
+
+    /* renamed from: m0 */
+    public final boolean f27705m0;
+
+    /* renamed from: n */
+    public final List f27706n;
+
+    /* renamed from: n0 */
+    public final String f27707n0;
+
+    /* renamed from: o */
+    public final List f27708o;
+
+    /* renamed from: o0 */
+    public final boolean f27709o0;
+
+    /* renamed from: p */
+    public final List f27710p;
+
+    /* renamed from: p0 */
+    public final String f27711p0;
+
+    /* renamed from: q */
+    public final List f27712q;
+
+    /* renamed from: r */
+    public final int f27713r;
+
+    /* renamed from: s */
+    public final List f27714s;
+
+    /* renamed from: t */
+    public final yh6 f27715t;
+
+    /* renamed from: u */
+    public final List f27716u;
+
+    /* renamed from: v */
+    public final List f27717v;
+
+    /* renamed from: w */
+    public final JSONObject f27718w;
+
+    /* renamed from: x */
+    public final String f27719x;
+
+    /* renamed from: y */
+    public final String f27720y;
+
+    /* renamed from: z */
+    public final String f27721z;
 
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r9v249, types: [java.util.List] */
@@ -105,14 +241,14 @@ public final class th6 {
         JSONObject jSONObject4 = new JSONObject();
         JSONObject jSONObject5 = new JSONObject();
         JSONObject jSONObject6 = new JSONObject();
-        y17 u = y17.u();
+        y17 m4260u = y17.m4260u();
         jsonReader.beginObject();
         JSONObject jSONObject7 = jSONObject2;
         JSONObject jSONObject8 = jSONObject3;
         JSONObject jSONObject9 = jSONObject4;
         JSONObject jSONObject10 = jSONObject5;
         JSONObject jSONObject11 = jSONObject6;
-        y17 y17Var = u;
+        y17 y17Var = m4260u;
         yh6 yh6Var = null;
         zzcem zzcemVar = null;
         nr3 nr3Var = null;
@@ -792,7 +928,7 @@ public final class th6 {
                     emptyList = zzbu.zzd(jsonReader);
                     break;
                 case 1:
-                    i6 = b(jsonReader.nextString());
+                    i6 = m9111b(jsonReader.nextString());
                     break;
                 case 2:
                     emptyList2 = zzbu.zzd(jsonReader);
@@ -804,7 +940,7 @@ public final class th6 {
                     emptyList4 = zzbu.zzd(jsonReader);
                     break;
                 case 5:
-                    i7 = c(jsonReader.nextInt());
+                    i7 = m9110c(jsonReader.nextInt());
                     break;
                 case 6:
                     emptyList5 = zzbu.zzd(jsonReader);
@@ -822,7 +958,7 @@ public final class th6 {
                     str17 = jsonReader.nextString();
                     break;
                 case 11:
-                    zzcddVar = zzcdd.h(zzbu.zze(jsonReader));
+                    zzcddVar = zzcdd.m1095h(zzbu.zze(jsonReader));
                     break;
                 case '\f':
                     emptyList8 = zzbu.zzd(jsonReader);
@@ -841,13 +977,13 @@ public final class th6 {
                     i = jsonReader.nextInt();
                     break;
                 case 17:
-                    list4 = uh6.a(jsonReader);
+                    list4 = uh6.m8134a(jsonReader);
                     break;
                 case 18:
                     yh6Var = new yh6(jsonReader);
                     break;
                 case 19:
-                    list6 = uh6.a(jsonReader);
+                    list6 = uh6.m8134a(jsonReader);
                     break;
                 case 20:
                     list5 = zzbu.zzd(jsonReader);
@@ -868,7 +1004,7 @@ public final class th6 {
                     str5 = zzbu.zzh(jsonReader).toString();
                     break;
                 case 26:
-                    zzcemVar = zzcem.h(zzbu.zzh(jsonReader));
+                    zzcemVar = zzcem.m1094h(zzbu.zzh(jsonReader));
                     break;
                 case 27:
                     str6 = jsonReader.nextString();
@@ -901,7 +1037,7 @@ public final class th6 {
                     z7 = jsonReader.nextBoolean();
                     break;
                 case '%':
-                    i2 = d(jsonReader.nextString());
+                    i2 = m9109d(jsonReader.nextString());
                     break;
                 case '&':
                     i3 = jsonReader.nextInt();
@@ -937,7 +1073,7 @@ public final class th6 {
                     z11 = jsonReader.nextBoolean();
                     break;
                 case '1':
-                    nr3Var = nr3.a(zzbu.zzh(jsonReader));
+                    nr3Var = nr3.m14854a(zzbu.zzh(jsonReader));
                     break;
                 case '2':
                     z12 = jsonReader.nextBoolean();
@@ -958,25 +1094,25 @@ public final class th6 {
                     str11 = jsonReader.nextString();
                     break;
                 case '8':
-                    if (((Boolean) g93.j6.l()).booleanValue()) {
+                    if (((Boolean) g93.f10727j6.m4004l()).booleanValue()) {
                         str12 = jsonReader.nextString();
                         break;
                     }
                     jsonReader.skipValue();
                 case '9':
-                    if (((Boolean) g93.j6.l()).booleanValue()) {
+                    if (((Boolean) g93.f10727j6.m4004l()).booleanValue()) {
                         str13 = jsonReader.nextString();
                         break;
                     }
                     jsonReader.skipValue();
                 case ':':
-                    if (((Boolean) g93.j6.l()).booleanValue()) {
+                    if (((Boolean) g93.f10727j6.m4004l()).booleanValue()) {
                         str14 = jsonReader.nextString();
                         break;
                     }
                     jsonReader.skipValue();
                 case ';':
-                    if (((Boolean) g93.j6.l()).booleanValue()) {
+                    if (((Boolean) g93.f10727j6.m4004l()).booleanValue()) {
                         str15 = jsonReader.nextString();
                         break;
                     }
@@ -1013,77 +1149,78 @@ public final class th6 {
             emptyList10 = list2;
         }
         jsonReader.endObject();
-        this.a = emptyList;
-        this.b = i6;
-        this.c = emptyList2;
-        this.d = emptyList3;
-        this.g = emptyList4;
-        this.f = i7;
-        this.h = emptyList5;
-        this.i = emptyList6;
-        this.j = emptyList7;
-        this.k = str18;
-        this.l = str17;
-        this.m = zzcddVar;
-        this.n = emptyList8;
-        this.o = emptyList9;
-        this.p = emptyList10;
-        this.q = list3;
-        this.r = i;
-        this.s = list4;
-        this.t = yh6Var;
-        this.u = list5;
-        this.v = list6;
-        this.x = str2;
-        this.w = jSONObject12;
-        this.y = str3;
-        this.z = str4;
-        this.A = str5;
-        this.B = zzcemVar;
-        this.C = str6;
-        this.D = jSONObject7;
-        this.E = jSONObject8;
-        this.K = z;
-        this.L = z2;
-        this.M = z3;
-        this.N = z4;
-        this.O = z5;
-        this.P = z6;
-        this.Q = z7;
-        this.R = i2;
-        this.S = i3;
-        this.U = z8;
-        this.V = str7;
-        this.W = new ui6(jSONObject9);
-        this.X = z9;
-        this.Y = z10;
-        this.Z = i4;
-        this.a0 = str8;
-        this.b0 = i5;
-        this.c0 = str9;
-        this.d0 = z11;
-        this.e0 = nr3Var;
-        this.f0 = z12;
-        this.g0 = zzsVar;
-        this.h0 = str10;
-        this.i0 = z13;
-        this.j0 = jSONObject10;
-        this.F = str11;
-        this.G = str12;
-        this.H = str13;
-        this.I = str14;
-        this.J = str15;
-        this.k0 = z14;
-        this.l0 = jSONObject11;
-        this.m0 = z15;
-        this.n0 = str;
-        this.o0 = z16;
-        this.e = y17Var;
-        this.T = z17;
-        this.p0 = str16;
+        this.f27680a = emptyList;
+        this.f27682b = i6;
+        this.f27684c = emptyList2;
+        this.f27686d = emptyList3;
+        this.f27692g = emptyList4;
+        this.f27690f = i7;
+        this.f27694h = emptyList5;
+        this.f27696i = emptyList6;
+        this.f27698j = emptyList7;
+        this.f27700k = str18;
+        this.f27702l = str17;
+        this.f27704m = zzcddVar;
+        this.f27706n = emptyList8;
+        this.f27708o = emptyList9;
+        this.f27710p = emptyList10;
+        this.f27712q = list3;
+        this.f27713r = i;
+        this.f27714s = list4;
+        this.f27715t = yh6Var;
+        this.f27716u = list5;
+        this.f27717v = list6;
+        this.f27719x = str2;
+        this.f27718w = jSONObject12;
+        this.f27720y = str3;
+        this.f27721z = str4;
+        this.f27654A = str5;
+        this.f27655B = zzcemVar;
+        this.f27656C = str6;
+        this.f27657D = jSONObject7;
+        this.f27658E = jSONObject8;
+        this.f27664K = z;
+        this.f27665L = z2;
+        this.f27666M = z3;
+        this.f27667N = z4;
+        this.f27668O = z5;
+        this.f27669P = z6;
+        this.f27670Q = z7;
+        this.f27671R = i2;
+        this.f27672S = i3;
+        this.f27674U = z8;
+        this.f27675V = str7;
+        this.f27676W = new ui6(jSONObject9);
+        this.f27677X = z9;
+        this.f27678Y = z10;
+        this.f27679Z = i4;
+        this.f27681a0 = str8;
+        this.f27683b0 = i5;
+        this.f27685c0 = str9;
+        this.f27687d0 = z11;
+        this.f27689e0 = nr3Var;
+        this.f27691f0 = z12;
+        this.f27693g0 = zzsVar;
+        this.f27695h0 = str10;
+        this.f27697i0 = z13;
+        this.f27699j0 = jSONObject10;
+        this.f27659F = str11;
+        this.f27660G = str12;
+        this.f27661H = str13;
+        this.f27662I = str14;
+        this.f27663J = str15;
+        this.f27701k0 = z14;
+        this.f27703l0 = jSONObject11;
+        this.f27705m0 = z15;
+        this.f27707n0 = str;
+        this.f27709o0 = z16;
+        this.f27688e = y17Var;
+        this.f27673T = z17;
+        this.f27711p0 = str16;
     }
 
-    public static String a(int i) {
+    /* renamed from: a */
+    public static String m9112a(int i) {
         switch (i) {
             case 1:
                 return "BANNER";
@@ -1104,7 +1241,8 @@ public final class th6 {
         }
     }
 
-    public static int b(String str) {
+    /* renamed from: b */
+    public static int m9111b(String str) {
         if ("banner".equals(str)) {
             return 1;
         }
@@ -1126,14 +1264,16 @@ public final class th6 {
         return "rewarded_interstitial".equals(str) ? 7 : 0;
     }
 
-    public static int c(int i) {
+    /* renamed from: c */
+    public static int m9110c(int i) {
         if (i == 0 || i == 1) {
             return i;
         }
         return 0;
     }
 
-    public static final int d(String str) {
+    /* renamed from: d */
+    public static final int m9109d(String str) {
         if ("landscape".equalsIgnoreCase(str)) {
             return 6;
         }

@@ -1,48 +1,69 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface mv3 {
-    void A(ni4 ni4Var);
+    /* renamed from: A */
+    void mo9169A(ni4 ni4Var);
 
-    void B(f53 f53Var, int i);
+    /* renamed from: B */
+    void mo9168B(f53 f53Var, int i);
 
-    void C(boolean z, int i);
+    /* renamed from: C */
+    void mo9167C(boolean z, int i);
 
-    void D(nx3 nx3Var, nx3 nx3Var2, int i);
+    /* renamed from: D */
+    void mo9166D(nx3 nx3Var, nx3 nx3Var2, int i);
 
-    void E(jn3 jn3Var);
+    /* renamed from: E */
+    void mo9165E(jn3 jn3Var);
 
-    void F(int i);
+    /* renamed from: F */
+    void mo9164F(int i);
 
-    void G(lu3 lu3Var);
+    /* renamed from: G */
+    void mo9163G(lu3 lu3Var);
 
-    void H(jn3 jn3Var);
+    /* renamed from: H */
+    void mo9162H(jn3 jn3Var);
 
     @Deprecated
-    void I(boolean z, int i);
+    /* renamed from: I */
+    void mo9161I(boolean z, int i);
 
-    void L(is8 is8Var);
+    /* renamed from: L */
+    void mo9159L(is8 is8Var);
 
-    void M(l64 l64Var, int i);
+    /* renamed from: M */
+    void mo9158M(l64 l64Var, int i);
 
-    void Q(int i, boolean z);
+    /* renamed from: Q */
+    void mo9155Q(int i, boolean z);
 
-    void a(ll4 ll4Var);
+    /* renamed from: a */
+    void mo9147a(ll4 ll4Var);
 
-    void k(boolean z);
+    /* renamed from: k */
+    void mo9131k(boolean z);
 
-    void t(boolean z);
+    /* renamed from: t */
+    void mo9122t(boolean z);
 
-    void u(int i);
+    /* renamed from: u */
+    void mo9121u(int i);
 
-    void v(int i, int i2);
+    /* renamed from: v */
+    void mo9120v(int i, int i2);
 
-    void w(pp3 pp3Var);
+    /* renamed from: w */
+    void mo9119w(pp3 pp3Var);
 
-    void x(boolean z);
+    /* renamed from: x */
+    void mo9118x(boolean z);
 
-    void y(float f);
+    /* renamed from: y */
+    void mo9117y(float f);
 
-    void z(gc3 gc3Var);
+    /* renamed from: z */
+    void mo9116z(gc3 gc3Var);
 
     @Deprecated
     void zzp();

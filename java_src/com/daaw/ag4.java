@@ -11,15 +11,18 @@ import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class ag4 implements kf4 {
-    public final CookieManager a;
+
+    /* renamed from: a */
+    public final CookieManager f3178a;
 
     public ag4(Context context) {
-        this.a = zzt.zzq().zzb(context);
+        this.f3178a = zzt.zzq().zzb(context);
     }
 
     @Override // com.daaw.kf4
-    public final void a(Map map) {
-        if (this.a == null) {
+    /* renamed from: a */
+    public final void mo6086a(Map map) {
+        if (this.f3178a == null) {
             return;
         }
         if (((String) map.get("clear")) == null) {
@@ -27,23 +30,23 @@ public final class ag4 implements kf4 {
             if (TextUtils.isEmpty(str)) {
                 return;
             }
-            this.a.setCookie((String) zzba.zzc().b(g93.H0), str);
+            this.f3178a.setCookie((String) zzba.zzc().m23658b(g93.f10432H0), str);
             return;
         }
-        String str2 = (String) zzba.zzc().b(g93.H0);
-        String cookie = this.a.getCookie(str2);
+        String str2 = (String) zzba.zzc().m23658b(g93.f10432H0);
+        String cookie = this.f3178a.getCookie(str2);
         if (cookie == null) {
             return;
         }
-        List f = fz6.c(by6.b(';')).f(cookie);
-        for (int i = 0; i < f.size(); i++) {
-            CookieManager cookieManager = this.a;
-            Iterator it = fz6.c(by6.b('=')).d((String) f.get(i)).iterator();
+        List m22119f = fz6.m22122c(by6.m25734b(';')).m22119f(cookie);
+        for (int i = 0; i < m22119f.size(); i++) {
+            CookieManager cookieManager = this.f3178a;
+            Iterator it = fz6.m22122c(by6.m25734b('=')).m22121d((String) m22119f.get(i)).iterator();
             Objects.requireNonNull(it);
             if (!it.hasNext()) {
                 throw new IndexOutOfBoundsException("position (0) must be less than the number of elements that remained (0)");
             }
-            cookieManager.setCookie(str2, String.valueOf((String) it.next()).concat(String.valueOf((String) zzba.zzc().b(g93.u0))));
+            cookieManager.setCookie(str2, String.valueOf((String) it.next()).concat(String.valueOf((String) zzba.zzc().m23658b(g93.f10842u0))));
         }
     }
 }

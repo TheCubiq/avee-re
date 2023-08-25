@@ -1,12 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class wy0 {
-    public String a;
-    public Long b;
+
+    /* renamed from: a */
+    public String f31651a;
+
+    /* renamed from: b */
+    public Long f31652b;
 
     public wy0(String str, long j) {
-        this.a = str;
-        this.b = Long.valueOf(j);
+        this.f31651a = str;
+        this.f31652b = Long.valueOf(j);
     }
 
     public wy0(String str, boolean z) {
@@ -19,9 +23,9 @@ public class wy0 {
         }
         if (obj instanceof wy0) {
             wy0 wy0Var = (wy0) obj;
-            if (this.a.equals(wy0Var.a)) {
-                Long l = this.b;
-                Long l2 = wy0Var.b;
+            if (this.f31651a.equals(wy0Var.f31651a)) {
+                Long l = this.f31652b;
+                Long l2 = wy0Var.f31652b;
                 return l != null ? l.equals(l2) : l2 == null;
             }
             return false;
@@ -30,8 +34,8 @@ public class wy0 {
     }
 
     public int hashCode() {
-        int hashCode = this.a.hashCode() * 31;
-        Long l = this.b;
+        int hashCode = this.f31651a.hashCode() * 31;
+        Long l = this.f31652b;
         return hashCode + (l != null ? l.hashCode() : 0);
     }
 }

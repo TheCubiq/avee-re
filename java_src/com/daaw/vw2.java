@@ -5,40 +5,52 @@ import java.util.Arrays;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public class vw2 {
-    public final mw2 a;
-    public final int[] b;
-    public final zzatd[] c;
-    public int d;
+
+    /* renamed from: a */
+    public final mw2 f30672a;
+
+    /* renamed from: b */
+    public final int[] f30673b;
+
+    /* renamed from: c */
+    public final zzatd[] f30674c;
+
+    /* renamed from: d */
+    public int f30675d;
 
     public vw2(mw2 mw2Var, int... iArr) {
         Objects.requireNonNull(mw2Var);
-        this.a = mw2Var;
-        this.c = new zzatd[1];
+        this.f30672a = mw2Var;
+        this.f30674c = new zzatd[1];
         for (int i = 0; i <= 0; i++) {
-            this.c[i] = mw2Var.b(iArr[i]);
+            this.f30674c[i] = mw2Var.m15741b(iArr[i]);
         }
-        Arrays.sort(this.c, new uw2(null));
-        this.b = new int[1];
+        Arrays.sort(this.f30674c, new uw2(null));
+        this.f30673b = new int[1];
         for (int i2 = 0; i2 <= 0; i2++) {
-            this.b[i2] = mw2Var.a(this.c[i2]);
+            this.f30673b[i2] = mw2Var.m15742a(this.f30674c[i2]);
         }
     }
 
-    public final int a(int i) {
-        return this.b[0];
+    /* renamed from: a */
+    public final int m6690a(int i) {
+        return this.f30673b[0];
     }
 
-    public final int b() {
-        int length = this.b.length;
+    /* renamed from: b */
+    public final int m6689b() {
+        int length = this.f30673b.length;
         return 1;
     }
 
-    public final zzatd c(int i) {
-        return this.c[i];
+    /* renamed from: c */
+    public final zzatd m6688c(int i) {
+        return this.f30674c[i];
     }
 
-    public final mw2 d() {
-        return this.a;
+    /* renamed from: d */
+    public final mw2 m6687d() {
+        return this.f30672a;
     }
 
     public final boolean equals(Object obj) {
@@ -47,7 +59,7 @@ public class vw2 {
         }
         if (obj != null && getClass() == obj.getClass()) {
             vw2 vw2Var = (vw2) obj;
-            if (this.a == vw2Var.a && Arrays.equals(this.b, vw2Var.b)) {
+            if (this.f30672a == vw2Var.f30672a && Arrays.equals(this.f30673b, vw2Var.f30673b)) {
                 return true;
             }
         }
@@ -55,10 +67,10 @@ public class vw2 {
     }
 
     public final int hashCode() {
-        int i = this.d;
+        int i = this.f30675d;
         if (i == 0) {
-            int identityHashCode = (System.identityHashCode(this.a) * 31) + Arrays.hashCode(this.b);
-            this.d = identityHashCode;
+            int identityHashCode = (System.identityHashCode(this.f30672a) * 31) + Arrays.hashCode(this.f30673b);
+            this.f30675d = identityHashCode;
             return identityHashCode;
         }
         return i;

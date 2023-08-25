@@ -15,13 +15,13 @@ public final class w37 extends v37 implements SortedSet {
     @Override // java.util.SortedSet
     @CheckForNull
     public final Comparator comparator() {
-        return ((SortedSet) this.p).comparator();
+        return ((SortedSet) this.f16939p).comparator();
     }
 
     @Override // java.util.SortedSet
     public final Object first() {
-        Iterator it = this.p.iterator();
-        ty6 ty6Var = this.q;
+        Iterator it = this.f16939p.iterator();
+        ty6 ty6Var = this.f16940q;
         Objects.requireNonNull(it);
         Objects.requireNonNull(ty6Var);
         while (it.hasNext()) {
@@ -35,15 +35,15 @@ public final class w37 extends v37 implements SortedSet {
 
     @Override // java.util.SortedSet
     public final SortedSet headSet(Object obj) {
-        return new w37(((SortedSet) this.p).headSet(obj), this.q);
+        return new w37(((SortedSet) this.f16939p).headSet(obj), this.f16940q);
     }
 
     @Override // java.util.SortedSet
     public final Object last() {
-        SortedSet sortedSet = (SortedSet) this.p;
+        SortedSet sortedSet = (SortedSet) this.f16939p;
         while (true) {
             Object last = sortedSet.last();
-            if (this.q.zza(last)) {
+            if (this.f16940q.zza(last)) {
                 return last;
             }
             sortedSet = sortedSet.headSet(last);
@@ -52,11 +52,11 @@ public final class w37 extends v37 implements SortedSet {
 
     @Override // java.util.SortedSet
     public final SortedSet subSet(Object obj, Object obj2) {
-        return new w37(((SortedSet) this.p).subSet(obj, obj2), this.q);
+        return new w37(((SortedSet) this.f16939p).subSet(obj, obj2), this.f16940q);
     }
 
     @Override // java.util.SortedSet
     public final SortedSet tailSet(Object obj) {
-        return new w37(((SortedSet) this.p).tailSet(obj), this.q);
+        return new w37(((SortedSet) this.f16939p).tailSet(obj), this.f16940q);
     }
 }

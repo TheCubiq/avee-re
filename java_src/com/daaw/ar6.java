@@ -9,47 +9,56 @@ import java.util.concurrent.TimeUnit;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class ar6 extends xq6 {
-    public WebView d;
-    public Long e = null;
-    public final Map f;
+
+    /* renamed from: d */
+    public WebView f3500d;
+
+    /* renamed from: e */
+    public Long f3501e = null;
+
+    /* renamed from: f */
+    public final Map f3502f;
 
     public ar6(Map map, String str) {
-        this.f = map;
+        this.f3502f = map;
     }
 
     @Override // com.daaw.xq6
-    public final void c() {
-        super.c();
-        new Handler().postDelayed(new zq6(this), Math.max(4000 - (this.e == null ? 4000L : TimeUnit.MILLISECONDS.convert(System.nanoTime() - this.e.longValue(), TimeUnit.NANOSECONDS)), 2000L));
-        this.d = null;
+    /* renamed from: c */
+    public final void mo4809c() {
+        super.mo4809c();
+        new Handler().postDelayed(new zq6(this), Math.max(4000 - (this.f3501e == null ? 4000L : TimeUnit.MILLISECONDS.convert(System.nanoTime() - this.f3501e.longValue(), TimeUnit.NANOSECONDS)), 2000L));
+        this.f3500d = null;
     }
 
     @Override // com.daaw.xq6
-    public final void f(xp6 xp6Var, vp6 vp6Var) {
+    /* renamed from: f */
+    public final void mo4806f(xp6 xp6Var, vp6 vp6Var) {
         JSONObject jSONObject = new JSONObject();
-        Map i = vp6Var.i();
-        for (String str : i.keySet()) {
-            br6.h(jSONObject, str, (gq6) i.get(str));
+        Map m6943i = vp6Var.m6943i();
+        for (String str : m6943i.keySet()) {
+            br6.m25875h(jSONObject, str, (gq6) m6943i.get(str));
         }
-        g(xp6Var, vp6Var, jSONObject);
+        m4805g(xp6Var, vp6Var, jSONObject);
     }
 
     @Override // com.daaw.xq6
-    public final void j() {
-        WebView webView = new WebView(oq6.b().a());
-        this.d = webView;
+    /* renamed from: j */
+    public final void mo4802j() {
+        WebView webView = new WebView(oq6.m14068b().m14069a());
+        this.f3500d = webView;
         webView.getSettings().setJavaScriptEnabled(true);
-        i(this.d);
-        WebView webView2 = this.d;
+        m4803i(this.f3500d);
+        WebView webView2 = this.f3500d;
         if (webView2 != null && !TextUtils.isEmpty(null)) {
             webView2.loadUrl("javascript: null");
         }
-        Iterator it = this.f.keySet().iterator();
+        Iterator it = this.f3502f.keySet().iterator();
         if (!it.hasNext()) {
-            this.e = Long.valueOf(System.nanoTime());
+            this.f3501e = Long.valueOf(System.nanoTime());
             return;
         }
-        gq6 gq6Var = (gq6) this.f.get((String) it.next());
+        gq6 gq6Var = (gq6) this.f3502f.get((String) it.next());
         throw null;
     }
 }

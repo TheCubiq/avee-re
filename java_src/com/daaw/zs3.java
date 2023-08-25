@@ -15,93 +15,104 @@ import javax.annotation.Nonnull;
 /* loaded from: classes.dex */
 public final class zs3 {
     @Nonnull
-    public final View a;
-    public final Map b;
-    public final zy3 c;
+
+    /* renamed from: a */
+    public final View f35456a;
+
+    /* renamed from: b */
+    public final Map f35457b;
+
+    /* renamed from: c */
+    public final zy3 f35458c;
 
     public zs3(ys3 ys3Var) {
         View view;
         Map map;
         View view2;
-        view = ys3Var.a;
-        this.a = view;
-        map = ys3Var.b;
-        this.b = map;
-        view2 = ys3Var.a;
-        zy3 a = ts3.a(view2.getContext());
-        this.c = a;
-        if (a == null || map.isEmpty()) {
+        view = ys3Var.f34000a;
+        this.f35456a = view;
+        map = ys3Var.f34001b;
+        this.f35457b = map;
+        view2 = ys3Var.f34000a;
+        zy3 m8842a = ts3.m8842a(view2.getContext());
+        this.f35458c = m8842a;
+        if (m8842a == null || map.isEmpty()) {
             return;
         }
         try {
-            a.zzf(new zzcao(nt0.g3(view).asBinder(), nt0.g3(map).asBinder()));
+            m8842a.zzf(new zzcao(nt0.m14830g3(view).asBinder(), nt0.m14830g3(map).asBinder()));
         } catch (RemoteException unused) {
             k04.zzg("Failed to call remote method.");
         }
     }
 
-    public final void a(List list) {
+    /* renamed from: a */
+    public final void m1940a(List list) {
         if (list == null || list.isEmpty()) {
             k04.zzj("No click urls were passed to recordClick");
             return;
         }
-        if (this.c == null) {
+        if (this.f35458c == null) {
             k04.zzj("Failed to get internal reporting info generator in recordClick.");
         }
         try {
-            this.c.zzg(list, nt0.g3(this.a), new xs3(this, list));
+            this.f35458c.zzg(list, nt0.m14830g3(this.f35456a), new xs3(this, list));
         } catch (RemoteException e) {
             k04.zzg("RemoteException recording click: ".concat(e.toString()));
         }
     }
 
-    public final void b(List list) {
+    /* renamed from: b */
+    public final void m1939b(List list) {
         if (list == null || list.isEmpty()) {
             k04.zzj("No impression urls were passed to recordImpression");
             return;
         }
-        zy3 zy3Var = this.c;
+        zy3 zy3Var = this.f35458c;
         if (zy3Var == null) {
             k04.zzj("Failed to get internal reporting info generator from recordImpression.");
             return;
         }
         try {
-            zy3Var.zzh(list, nt0.g3(this.a), new ws3(this, list));
+            zy3Var.zzh(list, nt0.m14830g3(this.f35456a), new ws3(this, list));
         } catch (RemoteException e) {
             k04.zzg("RemoteException recording impression urls: ".concat(e.toString()));
         }
     }
 
-    public final void c(MotionEvent motionEvent) {
-        zy3 zy3Var = this.c;
+    /* renamed from: c */
+    public final void m1938c(MotionEvent motionEvent) {
+        zy3 zy3Var = this.f35458c;
         if (zy3Var == null) {
             k04.zze("Failed to get internal reporting info generator.");
             return;
         }
         try {
-            zy3Var.zzj(nt0.g3(motionEvent));
+            zy3Var.zzj(nt0.m14830g3(motionEvent));
         } catch (RemoteException unused) {
             k04.zzg("Failed to call remote method.");
         }
     }
 
-    public final void d(Uri uri, UpdateClickUrlCallback updateClickUrlCallback) {
-        if (this.c == null) {
+    /* renamed from: d */
+    public final void m1937d(Uri uri, UpdateClickUrlCallback updateClickUrlCallback) {
+        if (this.f35458c == null) {
             updateClickUrlCallback.onFailure("Failed to get internal reporting info generator.");
         }
         try {
-            this.c.zzk(new ArrayList(Arrays.asList(uri)), nt0.g3(this.a), new vs3(this, updateClickUrlCallback));
+            this.f35458c.zzk(new ArrayList(Arrays.asList(uri)), nt0.m14830g3(this.f35456a), new vs3(this, updateClickUrlCallback));
         } catch (RemoteException e) {
             updateClickUrlCallback.onFailure("Internal error: ".concat(e.toString()));
         }
     }
 
-    public final void e(List list, UpdateImpressionUrlsCallback updateImpressionUrlsCallback) {
-        if (this.c == null) {
+    /* renamed from: e */
+    public final void m1936e(List list, UpdateImpressionUrlsCallback updateImpressionUrlsCallback) {
+        if (this.f35458c == null) {
             updateImpressionUrlsCallback.onFailure("Failed to get internal reporting info generator.");
         }
         try {
-            this.c.zzl(list, nt0.g3(this.a), new us3(this, updateImpressionUrlsCallback));
+            this.f35458c.zzl(list, nt0.m14830g3(this.f35456a), new us3(this, updateImpressionUrlsCallback));
         } catch (RemoteException e) {
             updateImpressionUrlsCallback.onFailure("Internal error: ".concat(e.toString()));
         }

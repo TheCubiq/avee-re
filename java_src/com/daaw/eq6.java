@@ -5,14 +5,16 @@ public enum eq6 {
     JAVASCRIPT("javascript"),
     NONE("none");
     
-    public final String p;
+
+    /* renamed from: p */
+    public final String f8705p;
 
     eq6(String str) {
-        this.p = str;
+        this.f8705p = str;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return this.p;
+        return this.f8705p;
     }
 }

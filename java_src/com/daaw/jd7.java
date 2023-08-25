@@ -6,7 +6,8 @@ public final class jd7 extends cf7 {
     }
 
     @Override // com.daaw.cf7
-    public final /* synthetic */ Object a(xt7 xt7Var) {
-        return bd7.b((im7) xt7Var);
+    /* renamed from: a */
+    public final /* synthetic */ Object mo2495a(xt7 xt7Var) {
+        return bd7.m26199b((im7) xt7Var);
     }
 }

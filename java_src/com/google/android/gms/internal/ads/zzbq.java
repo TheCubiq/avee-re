@@ -9,21 +9,25 @@ import java.util.List;
 /* loaded from: classes.dex */
 public final class zzbq implements Parcelable {
     public static final Parcelable.Creator<zzbq> CREATOR = new pe3();
-    public final zzbp[] p;
-    public final long q;
+
+    /* renamed from: p */
+    public final zzbp[] f36853p;
+
+    /* renamed from: q */
+    public final long f36854q;
 
     public zzbq(long j, zzbp... zzbpVarArr) {
-        this.q = j;
-        this.p = zzbpVarArr;
+        this.f36854q = j;
+        this.f36853p = zzbpVarArr;
     }
 
     public zzbq(Parcel parcel) {
-        this.p = new zzbp[parcel.readInt()];
+        this.f36853p = new zzbp[parcel.readInt()];
         int i = 0;
         while (true) {
-            zzbp[] zzbpVarArr = this.p;
+            zzbp[] zzbpVarArr = this.f36853p;
             if (i >= zzbpVarArr.length) {
-                this.q = parcel.readLong();
+                this.f36854q = parcel.readLong();
                 return;
             } else {
                 zzbpVarArr[i] = (zzbp) parcel.readParcelable(zzbp.class.getClassLoader());
@@ -36,16 +40,19 @@ public final class zzbq implements Parcelable {
         this(-9223372036854775807L, (zzbp[]) list.toArray(new zzbp[0]));
     }
 
-    public final int a() {
-        return this.p.length;
+    /* renamed from: a */
+    public final int m1103a() {
+        return this.f36853p.length;
     }
 
-    public final zzbp b(int i) {
-        return this.p[i];
+    /* renamed from: b */
+    public final zzbp m1102b(int i) {
+        return this.f36853p[i];
     }
 
-    public final zzbq c(zzbp... zzbpVarArr) {
-        return zzbpVarArr.length == 0 ? this : new zzbq(this.q, (zzbp[]) it5.E(this.p, zzbpVarArr));
+    /* renamed from: c */
+    public final zzbq m1101c(zzbp... zzbpVarArr) {
+        return zzbpVarArr.length == 0 ? this : new zzbq(this.f36854q, (zzbp[]) it5.m19427E(this.f36853p, zzbpVarArr));
     }
 
     @Override // android.os.Parcelable
@@ -59,27 +66,28 @@ public final class zzbq implements Parcelable {
         }
         if (obj != null && zzbq.class == obj.getClass()) {
             zzbq zzbqVar = (zzbq) obj;
-            if (Arrays.equals(this.p, zzbqVar.p) && this.q == zzbqVar.q) {
+            if (Arrays.equals(this.f36853p, zzbqVar.f36853p) && this.f36854q == zzbqVar.f36854q) {
                 return true;
             }
         }
         return false;
     }
 
-    public final zzbq g(zzbq zzbqVar) {
-        return zzbqVar == null ? this : c(zzbqVar.p);
+    /* renamed from: g */
+    public final zzbq m1100g(zzbq zzbqVar) {
+        return zzbqVar == null ? this : m1101c(zzbqVar.f36853p);
     }
 
     public final int hashCode() {
-        int hashCode = Arrays.hashCode(this.p);
-        long j = this.q;
+        int hashCode = Arrays.hashCode(this.f36853p);
+        long j = this.f36854q;
         return (hashCode * 31) + ((int) (j ^ (j >>> 32)));
     }
 
     public final String toString() {
         String str;
-        String arrays = Arrays.toString(this.p);
-        long j = this.q;
+        String arrays = Arrays.toString(this.f36853p);
+        long j = this.f36854q;
         if (j == -9223372036854775807L) {
             str = "";
         } else {
@@ -90,10 +98,10 @@ public final class zzbq implements Parcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.p.length);
-        for (zzbp zzbpVar : this.p) {
+        parcel.writeInt(this.f36853p.length);
+        for (zzbp zzbpVar : this.f36853p) {
             parcel.writeParcelable(zzbpVar, 0);
         }
-        parcel.writeLong(this.q);
+        parcel.writeLong(this.f36854q);
     }
 }

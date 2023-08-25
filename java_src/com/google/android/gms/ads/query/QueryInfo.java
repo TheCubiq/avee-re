@@ -12,44 +12,46 @@ import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.client.zzem;
 /* loaded from: classes.dex */
 public class QueryInfo {
-    public final zzem a;
+
+    /* renamed from: a */
+    public final zzem f36539a;
 
     public QueryInfo(zzem zzemVar) {
-        this.a = zzemVar;
+        this.f36539a = zzemVar;
     }
 
     public static void generate(final Context context, final AdFormat adFormat, final AdRequest adRequest, final QueryInfoGenerationCallback queryInfoGenerationCallback) {
-        g93.c(context);
-        if (((Boolean) ya3.k.e()).booleanValue()) {
-            if (((Boolean) zzba.zzc().b(g93.n9)).booleanValue()) {
-                zz3.b.execute(new Runnable() { // from class: com.google.android.gms.ads.query.zza
+        g93.m21879c(context);
+        if (((Boolean) ya3.f33459k.m16137e()).booleanValue()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10774n9)).booleanValue()) {
+                zz3.f35693b.execute(new Runnable() { // from class: com.google.android.gms.ads.query.zza
                     @Override // java.lang.Runnable
                     public final void run() {
                         Context context2 = context;
                         AdFormat adFormat2 = adFormat;
                         AdRequest adRequest2 = adRequest;
-                        new ts3(context2, adFormat2, adRequest2 == null ? null : adRequest2.zza()).b(queryInfoGenerationCallback);
+                        new ts3(context2, adFormat2, adRequest2 == null ? null : adRequest2.zza()).m8841b(queryInfoGenerationCallback);
                     }
                 });
                 return;
             }
         }
-        new ts3(context, adFormat, adRequest == null ? null : adRequest.zza()).b(queryInfoGenerationCallback);
+        new ts3(context, adFormat, adRequest == null ? null : adRequest.zza()).m8841b(queryInfoGenerationCallback);
     }
 
     public String getQuery() {
-        return this.a.zzb();
+        return this.f36539a.zzb();
     }
 
     public Bundle getQueryBundle() {
-        return this.a.zza();
+        return this.f36539a.zza();
     }
 
     public String getRequestId() {
-        return this.a.zzd();
+        return this.f36539a.zzd();
     }
 
     public final zzem zza() {
-        return this.a;
+        return this.f36539a;
     }
 }

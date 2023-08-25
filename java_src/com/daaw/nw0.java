@@ -8,212 +8,249 @@ import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 /* loaded from: classes.dex */
 public final class nw0 extends jd1 {
-    public final rv0 o;
-    public final a p;
-    public Inflater q;
-    public byte[] r;
-    public int s;
 
+    /* renamed from: o */
+    public final rv0 f20766o;
+
+    /* renamed from: p */
+    public final C2372a f20767p;
+
+    /* renamed from: q */
+    public Inflater f20768q;
+
+    /* renamed from: r */
+    public byte[] f20769r;
+
+    /* renamed from: s */
+    public int f20770s;
+
+    /* renamed from: com.daaw.nw0$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final rv0 a = new rv0();
-        public final int[] b = new int[256];
-        public boolean c;
-        public int d;
-        public int e;
-        public int f;
-        public int g;
-        public int h;
-        public int i;
+    public static final class C2372a {
 
-        public ln d() {
+        /* renamed from: a */
+        public final rv0 f20771a = new rv0();
+
+        /* renamed from: b */
+        public final int[] f20772b = new int[256];
+
+        /* renamed from: c */
+        public boolean f20773c;
+
+        /* renamed from: d */
+        public int f20774d;
+
+        /* renamed from: e */
+        public int f20775e;
+
+        /* renamed from: f */
+        public int f20776f;
+
+        /* renamed from: g */
+        public int f20777g;
+
+        /* renamed from: h */
+        public int f20778h;
+
+        /* renamed from: i */
+        public int f20779i;
+
+        /* renamed from: d */
+        public C2099ln m14766d() {
             int i;
-            if (this.d == 0 || this.e == 0 || this.h == 0 || this.i == 0 || this.a.d() == 0 || this.a.c() != this.a.d() || !this.c) {
+            if (this.f20774d == 0 || this.f20775e == 0 || this.f20778h == 0 || this.f20779i == 0 || this.f20771a.m10916d() == 0 || this.f20771a.m10917c() != this.f20771a.m10916d() || !this.f20773c) {
                 return null;
             }
-            this.a.J(0);
-            int i2 = this.h * this.i;
+            this.f20771a.m10921J(0);
+            int i2 = this.f20778h * this.f20779i;
             int[] iArr = new int[i2];
             int i3 = 0;
             while (i3 < i2) {
-                int x = this.a.x();
-                if (x != 0) {
+                int m10896x = this.f20771a.m10896x();
+                if (m10896x != 0) {
                     i = i3 + 1;
-                    iArr[i3] = this.b[x];
+                    iArr[i3] = this.f20772b[m10896x];
                 } else {
-                    int x2 = this.a.x();
-                    if (x2 != 0) {
-                        i = ((x2 & 64) == 0 ? x2 & 63 : ((x2 & 63) << 8) | this.a.x()) + i3;
-                        Arrays.fill(iArr, i3, i, (x2 & 128) == 0 ? 0 : this.b[this.a.x()]);
+                    int m10896x2 = this.f20771a.m10896x();
+                    if (m10896x2 != 0) {
+                        i = ((m10896x2 & 64) == 0 ? m10896x2 & 63 : ((m10896x2 & 63) << 8) | this.f20771a.m10896x()) + i3;
+                        Arrays.fill(iArr, i3, i, (m10896x2 & 128) == 0 ? 0 : this.f20772b[this.f20771a.m10896x()]);
                     }
                 }
                 i3 = i;
             }
-            Bitmap createBitmap = Bitmap.createBitmap(iArr, this.h, this.i, Bitmap.Config.ARGB_8888);
-            int i4 = this.d;
-            float f = this.f / i4;
-            int i5 = this.e;
-            return new ln(createBitmap, f, 0, this.g / i5, 0, this.h / i4, this.i / i5);
+            Bitmap createBitmap = Bitmap.createBitmap(iArr, this.f20778h, this.f20779i, Bitmap.Config.ARGB_8888);
+            int i4 = this.f20774d;
+            float f = this.f20776f / i4;
+            int i5 = this.f20775e;
+            return new C2099ln(createBitmap, f, 0, this.f20777g / i5, 0, this.f20778h / i4, this.f20779i / i5);
         }
 
-        public final void e(rv0 rv0Var, int i) {
-            int A;
+        /* renamed from: e */
+        public final void m14765e(rv0 rv0Var, int i) {
+            int m10930A;
             if (i < 4) {
                 return;
             }
-            rv0Var.K(3);
+            rv0Var.m10920K(3);
             int i2 = i - 4;
-            if ((rv0Var.x() & 128) != 0) {
-                if (i2 < 7 || (A = rv0Var.A()) < 4) {
+            if ((rv0Var.m10896x() & 128) != 0) {
+                if (i2 < 7 || (m10930A = rv0Var.m10930A()) < 4) {
                     return;
                 }
-                this.h = rv0Var.D();
-                this.i = rv0Var.D();
-                this.a.G(A - 4);
+                this.f20778h = rv0Var.m10927D();
+                this.f20779i = rv0Var.m10927D();
+                this.f20771a.m10924G(m10930A - 4);
                 i2 -= 7;
             }
-            int c = this.a.c();
-            int d = this.a.d();
-            if (c >= d || i2 <= 0) {
+            int m10917c = this.f20771a.m10917c();
+            int m10916d = this.f20771a.m10916d();
+            if (m10917c >= m10916d || i2 <= 0) {
                 return;
             }
-            int min = Math.min(i2, d - c);
-            rv0Var.g(this.a.a, c, min);
-            this.a.J(c + min);
+            int min = Math.min(i2, m10916d - m10917c);
+            rv0Var.m10913g(this.f20771a.f25637a, m10917c, min);
+            this.f20771a.m10921J(m10917c + min);
         }
 
-        public final void f(rv0 rv0Var, int i) {
+        /* renamed from: f */
+        public final void m14764f(rv0 rv0Var, int i) {
             if (i < 19) {
                 return;
             }
-            this.d = rv0Var.D();
-            this.e = rv0Var.D();
-            rv0Var.K(11);
-            this.f = rv0Var.D();
-            this.g = rv0Var.D();
+            this.f20774d = rv0Var.m10927D();
+            this.f20775e = rv0Var.m10927D();
+            rv0Var.m10920K(11);
+            this.f20776f = rv0Var.m10927D();
+            this.f20777g = rv0Var.m10927D();
         }
 
-        public final void g(rv0 rv0Var, int i) {
+        /* renamed from: g */
+        public final void m14763g(rv0 rv0Var, int i) {
             if (i % 5 != 2) {
                 return;
             }
-            rv0Var.K(2);
-            Arrays.fill(this.b, 0);
+            rv0Var.m10920K(2);
+            Arrays.fill(this.f20772b, 0);
             int i2 = i / 5;
             int i3 = 0;
             while (i3 < i2) {
-                int x = rv0Var.x();
-                int x2 = rv0Var.x();
-                int x3 = rv0Var.x();
-                int x4 = rv0Var.x();
-                int x5 = rv0Var.x();
-                double d = x2;
-                double d2 = x3 - 128;
+                int m10896x = rv0Var.m10896x();
+                int m10896x2 = rv0Var.m10896x();
+                int m10896x3 = rv0Var.m10896x();
+                int m10896x4 = rv0Var.m10896x();
+                int m10896x5 = rv0Var.m10896x();
+                double d = m10896x2;
+                double d2 = m10896x3 - 128;
                 Double.isNaN(d2);
                 Double.isNaN(d);
                 int i4 = i3;
-                double d3 = x4 - 128;
+                double d3 = m10896x4 - 128;
                 Double.isNaN(d3);
                 Double.isNaN(d);
                 Double.isNaN(d2);
                 Double.isNaN(d3);
                 Double.isNaN(d);
-                this.b[x] = sq1.l((int) (d + (d3 * 1.772d)), 0, 255) | (sq1.l((int) ((d - (0.34414d * d3)) - (d2 * 0.71414d)), 0, 255) << 8) | (x5 << 24) | (sq1.l((int) ((1.402d * d2) + d), 0, 255) << 16);
+                this.f20772b[m10896x] = sq1.m10004l((int) (d + (d3 * 1.772d)), 0, 255) | (sq1.m10004l((int) ((d - (0.34414d * d3)) - (d2 * 0.71414d)), 0, 255) << 8) | (m10896x5 << 24) | (sq1.m10004l((int) ((1.402d * d2) + d), 0, 255) << 16);
                 i3 = i4 + 1;
             }
-            this.c = true;
+            this.f20773c = true;
         }
 
-        public void h() {
-            this.d = 0;
-            this.e = 0;
-            this.f = 0;
-            this.g = 0;
-            this.h = 0;
-            this.i = 0;
-            this.a.G(0);
-            this.c = false;
+        /* renamed from: h */
+        public void m14762h() {
+            this.f20774d = 0;
+            this.f20775e = 0;
+            this.f20776f = 0;
+            this.f20777g = 0;
+            this.f20778h = 0;
+            this.f20779i = 0;
+            this.f20771a.m10924G(0);
+            this.f20773c = false;
         }
     }
 
     public nw0() {
         super("PgsDecoder");
-        this.o = new rv0();
-        this.p = new a();
+        this.f20766o = new rv0();
+        this.f20767p = new C2372a();
     }
 
-    public static ln D(rv0 rv0Var, a aVar) {
-        int d = rv0Var.d();
-        int x = rv0Var.x();
-        int D = rv0Var.D();
-        int c = rv0Var.c() + D;
-        ln lnVar = null;
-        if (c > d) {
-            rv0Var.J(d);
+    /* renamed from: D */
+    public static C2099ln m14770D(rv0 rv0Var, C2372a c2372a) {
+        int m10916d = rv0Var.m10916d();
+        int m10896x = rv0Var.m10896x();
+        int m10927D = rv0Var.m10927D();
+        int m10917c = rv0Var.m10917c() + m10927D;
+        C2099ln c2099ln = null;
+        if (m10917c > m10916d) {
+            rv0Var.m10921J(m10916d);
             return null;
         }
-        if (x != 128) {
-            switch (x) {
+        if (m10896x != 128) {
+            switch (m10896x) {
                 case 20:
-                    aVar.g(rv0Var, D);
+                    c2372a.m14763g(rv0Var, m10927D);
                     break;
                 case 21:
-                    aVar.e(rv0Var, D);
+                    c2372a.m14765e(rv0Var, m10927D);
                     break;
                 case 22:
-                    aVar.f(rv0Var, D);
+                    c2372a.m14764f(rv0Var, m10927D);
                     break;
             }
         } else {
-            lnVar = aVar.d();
-            aVar.h();
+            c2099ln = c2372a.m14766d();
+            c2372a.m14762h();
         }
-        rv0Var.J(c);
-        return lnVar;
+        rv0Var.m10921J(m10917c);
+        return c2099ln;
     }
 
-    public final boolean C(byte[] bArr, int i) {
+    /* renamed from: C */
+    public final boolean m14771C(byte[] bArr, int i) {
         if (i != 0 && bArr[0] == 120) {
-            if (this.q == null) {
-                this.q = new Inflater();
-                this.r = new byte[i];
+            if (this.f20768q == null) {
+                this.f20768q = new Inflater();
+                this.f20769r = new byte[i];
             }
-            this.s = 0;
-            this.q.setInput(bArr, 0, i);
-            while (!this.q.finished() && !this.q.needsDictionary() && !this.q.needsInput()) {
+            this.f20770s = 0;
+            this.f20768q.setInput(bArr, 0, i);
+            while (!this.f20768q.finished() && !this.f20768q.needsDictionary() && !this.f20768q.needsInput()) {
                 try {
-                    int i2 = this.s;
-                    byte[] bArr2 = this.r;
+                    int i2 = this.f20770s;
+                    byte[] bArr2 = this.f20769r;
                     if (i2 == bArr2.length) {
-                        this.r = Arrays.copyOf(bArr2, bArr2.length * 2);
+                        this.f20769r = Arrays.copyOf(bArr2, bArr2.length * 2);
                     }
-                    int i3 = this.s;
-                    Inflater inflater = this.q;
-                    byte[] bArr3 = this.r;
-                    this.s = i3 + inflater.inflate(bArr3, i3, bArr3.length - i3);
+                    int i3 = this.f20770s;
+                    Inflater inflater = this.f20768q;
+                    byte[] bArr3 = this.f20769r;
+                    this.f20770s = i3 + inflater.inflate(bArr3, i3, bArr3.length - i3);
                 } catch (DataFormatException unused) {
                 } finally {
-                    this.q.reset();
+                    this.f20768q.reset();
                 }
             }
-            return this.q.finished();
+            return this.f20768q.finished();
         }
         return false;
     }
 
     @Override // com.daaw.jd1
-    public th1 z(byte[] bArr, int i, boolean z) {
-        if (C(bArr, i)) {
-            this.o.H(this.r, this.s);
+    /* renamed from: z */
+    public th1 mo5845z(byte[] bArr, int i, boolean z) {
+        if (m14771C(bArr, i)) {
+            this.f20766o.m10923H(this.f20769r, this.f20770s);
         } else {
-            this.o.H(bArr, i);
+            this.f20766o.m10923H(bArr, i);
         }
-        this.p.h();
+        this.f20767p.m14762h();
         ArrayList arrayList = new ArrayList();
-        while (this.o.a() >= 3) {
-            ln D = D(this.o, this.p);
-            if (D != null) {
-                arrayList.add(D);
+        while (this.f20766o.m10919a() >= 3) {
+            C2099ln m14770D = m14770D(this.f20766o, this.f20767p);
+            if (m14770D != null) {
+                arrayList.add(m14770D);
             }
         }
         return new ow0(Collections.unmodifiableList(arrayList));

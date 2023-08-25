@@ -8,6 +8,6 @@ public class MultiDexApplication extends Application {
     @Override // android.content.ContextWrapper
     public void attachBaseContext(Context context) {
         super.attachBaseContext(context);
-        cr0.l(this);
+        cr0.m25085l(this);
     }
 }

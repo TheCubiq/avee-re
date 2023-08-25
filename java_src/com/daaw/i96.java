@@ -7,17 +7,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class i96 implements h76 {
-    public final JSONObject a;
+
+    /* renamed from: a */
+    public final JSONObject f13382a;
 
     public i96(JSONObject jSONObject) {
-        this.a = jSONObject;
+        this.f13382a = jSONObject;
     }
 
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
         try {
             JSONObject zzf = zzbu.zzf((JSONObject) obj, "content_info");
-            JSONObject jSONObject = this.a;
+            JSONObject jSONObject = this.f13382a;
             Iterator<String> keys = jSONObject.keys();
             while (keys.hasNext()) {
                 String next = keys.next();

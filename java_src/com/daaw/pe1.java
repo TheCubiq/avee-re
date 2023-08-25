@@ -3,11 +3,14 @@ package com.daaw;
 import java.io.InputStream;
 /* loaded from: classes.dex */
 public interface pe1 {
-    oe1 a(InputStream inputStream, String str, bl0 bl0Var);
+    /* renamed from: a */
+    oe1 mo13427a(InputStream inputStream, String str, bl0 bl0Var);
 
-    wk[] b();
+    /* renamed from: b */
+    C3445wk[] mo13426b();
 
-    oe1 c(ix0 ix0Var);
+    /* renamed from: c */
+    oe1 mo13425c(ix0 ix0Var);
 
     String getId();
 }

@@ -10,50 +10,61 @@ import com.google.android.gms.ads.internal.client.zzce;
 import com.google.android.gms.ads.internal.client.zzez;
 /* loaded from: classes.dex */
 public final class uo2 extends ku2 {
-    public final /* synthetic */ FrameLayout b;
-    public final /* synthetic */ FrameLayout c;
-    public final /* synthetic */ Context d;
-    public final /* synthetic */ zzaw e;
+
+    /* renamed from: b */
+    public final /* synthetic */ FrameLayout f29379b;
+
+    /* renamed from: c */
+    public final /* synthetic */ FrameLayout f29380c;
+
+    /* renamed from: d */
+    public final /* synthetic */ Context f29381d;
+
+    /* renamed from: e */
+    public final /* synthetic */ zzaw f29382e;
 
     public uo2(zzaw zzawVar, FrameLayout frameLayout, FrameLayout frameLayout2, Context context) {
-        this.e = zzawVar;
-        this.b = frameLayout;
-        this.c = frameLayout2;
-        this.d = context;
+        this.f29382e = zzawVar;
+        this.f29379b = frameLayout;
+        this.f29380c = frameLayout2;
+        this.f29381d = context;
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object a() {
-        zzaw.i(this.d, "native_ad_view_delegate");
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo3435a() {
+        zzaw.m1429i(this.f29381d, "native_ad_view_delegate");
         return new zzez();
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object b(zzce zzceVar) {
-        return zzceVar.zzi(nt0.g3(this.b), nt0.g3(this.c));
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ Object mo3434b(zzce zzceVar) {
+        return zzceVar.zzi(nt0.m14830g3(this.f29379b), nt0.m14830g3(this.f29380c));
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object c() {
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo3433c() {
         gt3 gt3Var;
         af3 af3Var;
-        g93.c(this.d);
-        if (!((Boolean) zzba.zzc().b(g93.S8)).booleanValue()) {
-            af3Var = this.e.d;
-            return af3Var.c(this.d, this.b, this.c);
+        g93.m21879c(this.f29381d);
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10550S8)).booleanValue()) {
+            af3Var = this.f29382e.f36089d;
+            return af3Var.m27492c(this.f29381d, this.f29379b, this.f29380c);
         }
         try {
-            return yc3.zzbD(((cd3) o04.b(this.d, "com.google.android.gms.ads.ChimeraNativeAdViewDelegateCreatorImpl", new m04() { // from class: com.google.android.gms.ads.internal.client.zzar
+            return yc3.zzbD(((cd3) o04.m14656b(this.f29381d, "com.google.android.gms.ads.ChimeraNativeAdViewDelegateCreatorImpl", new m04() { // from class: com.google.android.gms.ads.internal.client.zzar
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // com.daaw.m04
                 public final Object zza(Object obj) {
-                    return bd3.g3(obj);
+                    return bd3.m26211g3(obj);
                 }
-            })).g1(nt0.g3(this.d), nt0.g3(this.b), nt0.g3(this.c), 224400000));
+            })).mo25417g1(nt0.m14830g3(this.f29381d), nt0.m14830g3(this.f29379b), nt0.m14830g3(this.f29380c), 224400000));
         } catch (RemoteException | n04 | NullPointerException e) {
-            this.e.h = et3.c(this.d);
-            gt3Var = this.e.h;
-            gt3Var.a(e, "ClientApiBroker.createNativeAdViewDelegate");
+            this.f29382e.f36093h = et3.m23193c(this.f29381d);
+            gt3Var = this.f29382e.f36093h;
+            gt3Var.mo21236a(e, "ClientApiBroker.createNativeAdViewDelegate");
             return null;
         }
     }

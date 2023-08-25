@@ -15,7 +15,7 @@ public final class ml5 extends zzcz {
     @Override // com.google.android.gms.ads.internal.client.zzda
     public final void zze(@Nullable zze zzeVar) {
         OnAdInspectorClosedListener onAdInspectorClosedListener;
-        onAdInspectorClosedListener = zzej.zzf().g;
+        onAdInspectorClosedListener = zzej.zzf().f36169g;
         if (onAdInspectorClosedListener != null) {
             onAdInspectorClosedListener.onAdInspectorClosed(zzeVar == null ? null : new AdInspectorError(zzeVar.zza, zzeVar.zzb, zzeVar.zzc));
         }

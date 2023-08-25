@@ -10,20 +10,22 @@ import com.daaw.xm3;
 import com.google.android.gms.ads.internal.client.zzay;
 /* loaded from: classes.dex */
 public class OfflinePingSender extends Worker {
-    public final ar3 v;
+
+    /* renamed from: v */
+    public final ar3 f36207v;
 
     public OfflinePingSender(Context context, WorkerParameters workerParameters) {
         super(context, workerParameters);
-        this.v = zzay.zza().zzm(context, new xm3());
+        this.f36207v = zzay.zza().zzm(context, new xm3());
     }
 
     @Override // androidx.work.Worker
-    public final ListenableWorker.a doWork() {
+    public final ListenableWorker.AbstractC0501a doWork() {
         try {
-            this.v.zzf();
-            return ListenableWorker.a.c();
+            this.f36207v.zzf();
+            return ListenableWorker.AbstractC0501a.m28004c();
         } catch (RemoteException unused) {
-            return ListenableWorker.a.a();
+            return ListenableWorker.AbstractC0501a.m28006a();
         }
     }
 }

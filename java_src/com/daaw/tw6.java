@@ -1,13 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class tw6 {
-    public static sw6 c() {
+    /* renamed from: c */
+    public static sw6 m8753c() {
         wv6 wv6Var = new wv6();
-        wv6Var.b(8150);
+        wv6Var.mo5761b(8150);
         return wv6Var;
     }
 
-    public abstract int a();
+    /* renamed from: a */
+    public abstract int mo3164a();
 
-    public abstract String b();
+    /* renamed from: b */
+    public abstract String mo3163b();
 }

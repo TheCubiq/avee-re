@@ -11,58 +11,87 @@ import java.util.Objects;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public class x60 {
-    public final c a;
-    public final r60 b;
-    public final Handler c;
-    public boolean d;
-    public boolean e;
-    public f60<r60, r60, Bitmap, Bitmap> f;
-    public b g;
-    public boolean h;
 
+    /* renamed from: a */
+    public final InterfaceC3508c f32129a;
+
+    /* renamed from: b */
+    public final r60 f32130b;
+
+    /* renamed from: c */
+    public final Handler f32131c;
+
+    /* renamed from: d */
+    public boolean f32132d;
+
+    /* renamed from: e */
+    public boolean f32133e;
+
+    /* renamed from: f */
+    public f60<r60, r60, Bitmap, Bitmap> f32134f;
+
+    /* renamed from: g */
+    public C3507b f32135g;
+
+    /* renamed from: h */
+    public boolean f32136h;
+
+    /* renamed from: com.daaw.x60$b */
     /* loaded from: classes.dex */
-    public static class b extends ld1<Bitmap> {
-        public final Handler s;
-        public final int t;
-        public final long u;
-        public Bitmap v;
+    public static class C3507b extends ld1<Bitmap> {
 
-        public b(Handler handler, int i, long j) {
-            this.s = handler;
-            this.t = i;
-            this.u = j;
+        /* renamed from: s */
+        public final Handler f32137s;
+
+        /* renamed from: t */
+        public final int f32138t;
+
+        /* renamed from: u */
+        public final long f32139u;
+
+        /* renamed from: v */
+        public Bitmap f32140v;
+
+        public C3507b(Handler handler, int i, long j) {
+            this.f32137s = handler;
+            this.f32138t = i;
+            this.f32139u = j;
         }
 
-        public Bitmap m() {
-            return this.v;
+        /* renamed from: m */
+        public Bitmap m5504m() {
+            return this.f32140v;
         }
 
         @Override // com.daaw.pj1
         /* renamed from: n */
-        public void c(Bitmap bitmap, f70<? super Bitmap> f70Var) {
-            this.v = bitmap;
-            this.s.sendMessageAtTime(this.s.obtainMessage(1, this), this.u);
+        public void mo5506c(Bitmap bitmap, f70<? super Bitmap> f70Var) {
+            this.f32140v = bitmap;
+            this.f32137s.sendMessageAtTime(this.f32137s.obtainMessage(1, this), this.f32139u);
         }
     }
 
+    /* renamed from: com.daaw.x60$c */
     /* loaded from: classes.dex */
-    public interface c {
-        void a(int i);
+    public interface InterfaceC3508c {
+        /* renamed from: a */
+        void mo5502a(int i);
     }
 
+    /* renamed from: com.daaw.x60$d */
     /* loaded from: classes.dex */
-    public class d implements Handler.Callback {
-        public d() {
+    public class C3509d implements Handler.Callback {
+        public C3509d() {
         }
 
         @Override // android.os.Handler.Callback
         public boolean handleMessage(Message message) {
             int i = message.what;
             if (i == 1) {
-                x60.this.e((b) message.obj);
+                x60.this.m5510e((C3507b) message.obj);
                 return true;
             } else if (i == 2) {
-                e70.h((b) message.obj);
+                e70.m23687h((C3507b) message.obj);
                 return false;
             } else {
                 return false;
@@ -70,115 +99,127 @@ public class x60 {
         }
     }
 
+    /* renamed from: com.daaw.x60$e */
     /* loaded from: classes.dex */
-    public static class e implements hi0 {
-        public final UUID a;
+    public static class C3510e implements hi0 {
 
-        public e() {
+        /* renamed from: a */
+        public final UUID f32142a;
+
+        public C3510e() {
             this(UUID.randomUUID());
         }
 
-        public e(UUID uuid) {
-            this.a = uuid;
+        public C3510e(UUID uuid) {
+            this.f32142a = uuid;
         }
 
         @Override // com.daaw.hi0
-        public void a(MessageDigest messageDigest) {
+        /* renamed from: a */
+        public void mo3222a(MessageDigest messageDigest) {
             throw new UnsupportedOperationException("Not implemented");
         }
 
         @Override // com.daaw.hi0
         public boolean equals(Object obj) {
-            if (obj instanceof e) {
-                return ((e) obj).a.equals(this.a);
+            if (obj instanceof C3510e) {
+                return ((C3510e) obj).f32142a.equals(this.f32142a);
             }
             return false;
         }
 
         @Override // com.daaw.hi0
         public int hashCode() {
-            return this.a.hashCode();
+            return this.f32142a.hashCode();
         }
     }
 
-    public x60(Context context, c cVar, r60 r60Var, int i, int i2) {
-        this(cVar, r60Var, null, c(context, r60Var, i, i2, e70.j(context).k()));
+    public x60(Context context, InterfaceC3508c interfaceC3508c, r60 r60Var, int i, int i2) {
+        this(interfaceC3508c, r60Var, null, m5512c(context, r60Var, i, i2, e70.m23685j(context).m23684k()));
     }
 
-    public x60(c cVar, r60 r60Var, Handler handler, f60<r60, r60, Bitmap, Bitmap> f60Var) {
-        this.d = false;
-        this.e = false;
-        handler = handler == null ? new Handler(Looper.getMainLooper(), new d()) : handler;
-        this.a = cVar;
-        this.b = r60Var;
-        this.c = handler;
-        this.f = f60Var;
+    public x60(InterfaceC3508c interfaceC3508c, r60 r60Var, Handler handler, f60<r60, r60, Bitmap, Bitmap> f60Var) {
+        this.f32132d = false;
+        this.f32133e = false;
+        handler = handler == null ? new Handler(Looper.getMainLooper(), new C3509d()) : handler;
+        this.f32129a = interfaceC3508c;
+        this.f32130b = r60Var;
+        this.f32131c = handler;
+        this.f32134f = f60Var;
     }
 
-    public static f60<r60, r60, Bitmap, Bitmap> c(Context context, r60 r60Var, int i, int i2, bc bcVar) {
-        z60 z60Var = new z60(bcVar);
+    /* renamed from: c */
+    public static f60<r60, r60, Bitmap, Bitmap> m5512c(Context context, r60 r60Var, int i, int i2, InterfaceC0832bc interfaceC0832bc) {
+        z60 z60Var = new z60(interfaceC0832bc);
         y60 y60Var = new y60();
-        return e70.t(context).A(y60Var, r60.class).c(r60Var).a(Bitmap.class).z(it0.b()).i(z60Var).y(true).j(wt.NONE).v(i, i2);
+        return e70.m23675t(context).m11782A(y60Var, r60.class).m11761c(r60Var).m11760a(Bitmap.class).m22901z(it0.m19435b()).mo9858i(z60Var).mo9853y(true).mo9857j(EnumC3465wt.NONE).mo9855v(i, i2);
     }
 
-    public void a() {
-        h();
-        b bVar = this.g;
-        if (bVar != null) {
-            e70.h(bVar);
-            this.g = null;
+    /* renamed from: a */
+    public void m5514a() {
+        m5507h();
+        C3507b c3507b = this.f32135g;
+        if (c3507b != null) {
+            e70.m23687h(c3507b);
+            this.f32135g = null;
         }
-        this.h = true;
+        this.f32136h = true;
     }
 
-    public Bitmap b() {
-        b bVar = this.g;
-        if (bVar != null) {
-            return bVar.m();
+    /* renamed from: b */
+    public Bitmap m5513b() {
+        C3507b c3507b = this.f32135g;
+        if (c3507b != null) {
+            return c3507b.m5504m();
         }
         return null;
     }
 
-    public final void d() {
-        if (!this.d || this.e) {
+    /* renamed from: d */
+    public final void m5511d() {
+        if (!this.f32132d || this.f32133e) {
             return;
         }
-        this.e = true;
-        long uptimeMillis = SystemClock.uptimeMillis() + this.b.h();
-        this.b.a();
-        this.f.x(new e()).r(new b(this.c, this.b.d(), uptimeMillis));
+        this.f32133e = true;
+        long uptimeMillis = SystemClock.uptimeMillis() + this.f32130b.m11721h();
+        this.f32130b.m11728a();
+        this.f32134f.mo9854x(new C3510e()).m22906r(new C3507b(this.f32131c, this.f32130b.m11725d(), uptimeMillis));
     }
 
-    public void e(b bVar) {
-        if (this.h) {
-            this.c.obtainMessage(2, bVar).sendToTarget();
+    /* renamed from: e */
+    public void m5510e(C3507b c3507b) {
+        if (this.f32136h) {
+            this.f32131c.obtainMessage(2, c3507b).sendToTarget();
             return;
         }
-        b bVar2 = this.g;
-        this.g = bVar;
-        this.a.a(bVar.t);
-        if (bVar2 != null) {
-            this.c.obtainMessage(2, bVar2).sendToTarget();
+        C3507b c3507b2 = this.f32135g;
+        this.f32135g = c3507b;
+        this.f32129a.mo5502a(c3507b.f32138t);
+        if (c3507b2 != null) {
+            this.f32131c.obtainMessage(2, c3507b2).sendToTarget();
         }
-        this.e = false;
-        d();
+        this.f32133e = false;
+        m5511d();
     }
 
-    public void f(cn1<Bitmap> cn1Var) {
+    /* renamed from: f */
+    public void m5509f(cn1<Bitmap> cn1Var) {
         Objects.requireNonNull(cn1Var, "Transformation must not be null");
-        this.f = this.f.A(cn1Var);
+        this.f32134f = this.f32134f.mo9879A(cn1Var);
     }
 
-    public void g() {
-        if (this.d) {
+    /* renamed from: g */
+    public void m5508g() {
+        if (this.f32132d) {
             return;
         }
-        this.d = true;
-        this.h = false;
-        d();
+        this.f32132d = true;
+        this.f32136h = false;
+        m5511d();
     }
 
-    public void h() {
-        this.d = false;
+    /* renamed from: h */
+    public void m5507h() {
+        this.f32132d = false;
     }
 }

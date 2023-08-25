@@ -3,33 +3,38 @@ package com.daaw;
 import android.content.Context;
 /* loaded from: classes.dex */
 public class lg0 {
-    public static Context a;
-    public static Boolean b;
 
-    public static synchronized boolean a(Context context) {
+    /* renamed from: a */
+    public static Context f17377a;
+
+    /* renamed from: b */
+    public static Boolean f17378b;
+
+    /* renamed from: a */
+    public static synchronized boolean m16965a(Context context) {
         Boolean bool;
         Boolean bool2;
         synchronized (lg0.class) {
             Context applicationContext = context.getApplicationContext();
-            Context context2 = a;
-            if (context2 != null && (bool2 = b) != null && context2 == applicationContext) {
+            Context context2 = f17377a;
+            if (context2 != null && (bool2 = f17378b) != null && context2 == applicationContext) {
                 return bool2.booleanValue();
             }
-            b = null;
-            if (!vw0.i()) {
+            f17378b = null;
+            if (!vw0.m6696i()) {
                 try {
                     context.getClassLoader().loadClass("com.google.android.instantapps.supervisor.InstantAppsRuntime");
-                    b = Boolean.TRUE;
+                    f17378b = Boolean.TRUE;
                 } catch (ClassNotFoundException unused) {
                     bool = Boolean.FALSE;
                 }
-                a = applicationContext;
-                return b.booleanValue();
+                f17377a = applicationContext;
+                return f17378b.booleanValue();
             }
             bool = Boolean.valueOf(applicationContext.getPackageManager().isInstantApp());
-            b = bool;
-            a = applicationContext;
-            return b.booleanValue();
+            f17378b = bool;
+            f17377a = applicationContext;
+            return f17378b.booleanValue();
         }
     }
 }

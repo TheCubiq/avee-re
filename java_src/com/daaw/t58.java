@@ -15,6 +15,6 @@ public final class t58 implements Comparator {
                 return compareTo;
             }
         }
-        return Integer.valueOf(y68Var.f()).compareTo(Integer.valueOf(y68Var2.f()));
+        return Integer.valueOf(y68Var.mo2805f()).compareTo(Integer.valueOf(y68Var2.mo2805f()));
     }
 }

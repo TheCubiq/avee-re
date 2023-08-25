@@ -1,11 +1,14 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface lq4 {
-    void T();
+    /* renamed from: T */
+    void mo5177T();
 
-    void c();
+    /* renamed from: c */
+    void mo5175c();
 
-    void m(cv3 cv3Var, String str, String str2);
+    /* renamed from: m */
+    void mo5170m(cv3 cv3Var, String str, String str2);
 
     void zzj();
 

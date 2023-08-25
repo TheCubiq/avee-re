@@ -18,66 +18,104 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class ri6 {
-    public final zzfl a;
-    public final zzbsl b;
-    public final az5 c;
-    public final zzl d;
-    public final zzq e;
-    public final String f;
-    public final ArrayList g;
-    public final ArrayList h;
-    public final zzblz i;
-    public final zzw j;
-    public final int k;
-    public final AdManagerAdViewOptions l;
-    public final PublisherAdViewOptions m;
-    public final zzcb n;
-    public final bi6 o;
-    public final boolean p;
-    public final boolean q;
-    public final zzcf r;
+
+    /* renamed from: a */
+    public final zzfl f25341a;
+
+    /* renamed from: b */
+    public final zzbsl f25342b;
+
+    /* renamed from: c */
+    public final az5 f25343c;
+
+    /* renamed from: d */
+    public final zzl f25344d;
+
+    /* renamed from: e */
+    public final zzq f25345e;
+
+    /* renamed from: f */
+    public final String f25346f;
+
+    /* renamed from: g */
+    public final ArrayList f25347g;
+
+    /* renamed from: h */
+    public final ArrayList f25348h;
+
+    /* renamed from: i */
+    public final zzblz f25349i;
+
+    /* renamed from: j */
+    public final zzw f25350j;
+
+    /* renamed from: k */
+    public final int f25351k;
+
+    /* renamed from: l */
+    public final AdManagerAdViewOptions f25352l;
+
+    /* renamed from: m */
+    public final PublisherAdViewOptions f25353m;
+
+    /* renamed from: n */
+    public final zzcb f25354n;
+
+    /* renamed from: o */
+    public final bi6 f25355o;
+
+    /* renamed from: p */
+    public final boolean f25356p;
+
+    /* renamed from: q */
+    public final boolean f25357q;
+
+    /* renamed from: r */
+    public final zzcf f25358r;
 
     public /* synthetic */ ri6(pi6 pi6Var, qi6 qi6Var) {
-        this.e = pi6.w(pi6Var);
-        this.f = pi6.h(pi6Var);
-        this.r = pi6.p(pi6Var);
-        int i = pi6.u(pi6Var).zza;
-        long j = pi6.u(pi6Var).zzb;
-        Bundle bundle = pi6.u(pi6Var).zzc;
-        int i2 = pi6.u(pi6Var).zzd;
-        List list = pi6.u(pi6Var).zze;
-        boolean z = pi6.u(pi6Var).zzf;
-        int i3 = pi6.u(pi6Var).zzg;
+        this.f25345e = pi6.m13340w(pi6Var);
+        this.f25346f = pi6.m13355h(pi6Var);
+        this.f25358r = pi6.m13347p(pi6Var);
+        int i = pi6.m13342u(pi6Var).zza;
+        long j = pi6.m13342u(pi6Var).zzb;
+        Bundle bundle = pi6.m13342u(pi6Var).zzc;
+        int i2 = pi6.m13342u(pi6Var).zzd;
+        List list = pi6.m13342u(pi6Var).zze;
+        boolean z = pi6.m13342u(pi6Var).zzf;
+        int i3 = pi6.m13342u(pi6Var).zzg;
         boolean z2 = true;
-        if (!pi6.u(pi6Var).zzh && !pi6.n(pi6Var)) {
+        if (!pi6.m13342u(pi6Var).zzh && !pi6.m13349n(pi6Var)) {
             z2 = false;
         }
-        this.d = new zzl(i, j, bundle, i2, list, z, i3, z2, pi6.u(pi6Var).zzi, pi6.u(pi6Var).zzj, pi6.u(pi6Var).zzk, pi6.u(pi6Var).zzl, pi6.u(pi6Var).zzm, pi6.u(pi6Var).zzn, pi6.u(pi6Var).zzo, pi6.u(pi6Var).zzp, pi6.u(pi6Var).zzq, pi6.u(pi6Var).zzr, pi6.u(pi6Var).zzs, pi6.u(pi6Var).zzt, pi6.u(pi6Var).zzu, pi6.u(pi6Var).zzv, zzs.zza(pi6.u(pi6Var).zzw), pi6.u(pi6Var).zzx);
-        this.a = pi6.A(pi6Var) != null ? pi6.A(pi6Var) : pi6.B(pi6Var) != null ? pi6.B(pi6Var).u : null;
-        this.g = pi6.j(pi6Var);
-        this.h = pi6.k(pi6Var);
-        this.i = pi6.j(pi6Var) == null ? null : pi6.B(pi6Var) == null ? new zzblz(new NativeAdOptions.Builder().build()) : pi6.B(pi6Var);
-        this.j = pi6.y(pi6Var);
-        this.k = pi6.r(pi6Var);
-        this.l = pi6.s(pi6Var);
-        this.m = pi6.t(pi6Var);
-        this.n = pi6.z(pi6Var);
-        this.b = pi6.C(pi6Var);
-        this.o = new bi6(pi6.E(pi6Var), null);
-        this.p = pi6.l(pi6Var);
-        this.c = pi6.D(pi6Var);
-        this.q = pi6.m(pi6Var);
+        this.f25344d = new zzl(i, j, bundle, i2, list, z, i3, z2, pi6.m13342u(pi6Var).zzi, pi6.m13342u(pi6Var).zzj, pi6.m13342u(pi6Var).zzk, pi6.m13342u(pi6Var).zzl, pi6.m13342u(pi6Var).zzm, pi6.m13342u(pi6Var).zzn, pi6.m13342u(pi6Var).zzo, pi6.m13342u(pi6Var).zzp, pi6.m13342u(pi6Var).zzq, pi6.m13342u(pi6Var).zzr, pi6.m13342u(pi6Var).zzs, pi6.m13342u(pi6Var).zzt, pi6.m13342u(pi6Var).zzu, pi6.m13342u(pi6Var).zzv, zzs.zza(pi6.m13342u(pi6Var).zzw), pi6.m13342u(pi6Var).zzx);
+        this.f25341a = pi6.m13379A(pi6Var) != null ? pi6.m13379A(pi6Var) : pi6.m13378B(pi6Var) != null ? pi6.m13378B(pi6Var).f36848u : null;
+        this.f25347g = pi6.m13353j(pi6Var);
+        this.f25348h = pi6.m13352k(pi6Var);
+        this.f25349i = pi6.m13353j(pi6Var) == null ? null : pi6.m13378B(pi6Var) == null ? new zzblz(new NativeAdOptions.Builder().build()) : pi6.m13378B(pi6Var);
+        this.f25350j = pi6.m13338y(pi6Var);
+        this.f25351k = pi6.m13345r(pi6Var);
+        this.f25352l = pi6.m13344s(pi6Var);
+        this.f25353m = pi6.m13343t(pi6Var);
+        this.f25354n = pi6.m13337z(pi6Var);
+        this.f25342b = pi6.m13377C(pi6Var);
+        this.f25355o = new bi6(pi6.m13375E(pi6Var), null);
+        this.f25356p = pi6.m13351l(pi6Var);
+        this.f25343c = pi6.m13376D(pi6Var);
+        this.f25357q = pi6.m13350m(pi6Var);
     }
 
-    public final se3 a() {
-        PublisherAdViewOptions publisherAdViewOptions = this.m;
-        if (publisherAdViewOptions == null && this.l == null) {
+    /* renamed from: a */
+    public final se3 m11286a() {
+        PublisherAdViewOptions publisherAdViewOptions = this.f25353m;
+        if (publisherAdViewOptions == null && this.f25352l == null) {
             return null;
         }
-        return publisherAdViewOptions != null ? publisherAdViewOptions.zzb() : this.l.zza();
+        return publisherAdViewOptions != null ? publisherAdViewOptions.zzb() : this.f25352l.zza();
     }
 
-    public final boolean b() {
-        return this.f.matches((String) zzba.zzc().b(g93.H2));
+    /* renamed from: b */
+    public final boolean m11285b() {
+        return this.f25346f.matches((String) zzba.zzc().m23658b(g93.f10434H2));
     }
 }

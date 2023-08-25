@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 /* loaded from: classes.dex */
 public final class pm2 extends BroadcastReceiver {
-    public boolean a = true;
+
+    /* renamed from: a */
+    public boolean f23056a = true;
 
     public pm2(Context context) {
         IntentFilter intentFilter = new IntentFilter();
@@ -15,8 +17,9 @@ public final class pm2 extends BroadcastReceiver {
         context.registerReceiver(this, intentFilter);
     }
 
-    public final boolean a() {
-        return this.a;
+    /* renamed from: a */
+    public final boolean m13288a() {
+        return this.f23056a;
     }
 
     @Override // android.content.BroadcastReceiver
@@ -29,6 +32,6 @@ public final class pm2 extends BroadcastReceiver {
         } else {
             z = false;
         }
-        this.a = z;
+        this.f23056a = z;
     }
 }

@@ -9,69 +9,84 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes2.dex */
 public final class zzkw extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzkw> CREATOR = new jc8();
-    public final int p;
-    public final String q;
-    public final long r;
-    public final Long s;
-    public final String t;
-    public final String u;
-    public final Double v;
+
+    /* renamed from: p */
+    public final int f37072p;
+
+    /* renamed from: q */
+    public final String f37073q;
+
+    /* renamed from: r */
+    public final long f37074r;
+
+    /* renamed from: s */
+    public final Long f37075s;
+
+    /* renamed from: t */
+    public final String f37076t;
+
+    /* renamed from: u */
+    public final String f37077u;
+
+    /* renamed from: v */
+    public final Double f37078v;
 
     public zzkw(int i, String str, long j, Long l, Float f, String str2, String str3, Double d) {
-        this.p = i;
-        this.q = str;
-        this.r = j;
-        this.s = l;
+        this.f37072p = i;
+        this.f37073q = str;
+        this.f37074r = j;
+        this.f37075s = l;
         if (i == 1) {
-            this.v = f != null ? Double.valueOf(f.doubleValue()) : null;
+            this.f37078v = f != null ? Double.valueOf(f.doubleValue()) : null;
         } else {
-            this.v = d;
+            this.f37078v = d;
         }
-        this.t = str2;
-        this.u = str3;
+        this.f37076t = str2;
+        this.f37077u = str3;
     }
 
     public zzkw(mc8 mc8Var) {
-        this(mc8Var.c, mc8Var.d, mc8Var.e, mc8Var.b);
+        this(mc8Var.f18796c, mc8Var.f18797d, mc8Var.f18798e, mc8Var.f18795b);
     }
 
     public zzkw(String str, long j, Object obj, String str2) {
-        ry0.f(str);
-        this.p = 2;
-        this.q = str;
-        this.r = j;
-        this.u = str2;
+        ry0.m10834f(str);
+        this.f37072p = 2;
+        this.f37073q = str;
+        this.f37074r = j;
+        this.f37077u = str2;
         if (obj == null) {
-            this.s = null;
-            this.v = null;
-            this.t = null;
+            this.f37075s = null;
+            this.f37078v = null;
+            this.f37076t = null;
         } else if (obj instanceof Long) {
-            this.s = (Long) obj;
-            this.v = null;
-            this.t = null;
+            this.f37075s = (Long) obj;
+            this.f37078v = null;
+            this.f37076t = null;
         } else if (obj instanceof String) {
-            this.s = null;
-            this.v = null;
-            this.t = (String) obj;
+            this.f37075s = null;
+            this.f37078v = null;
+            this.f37076t = (String) obj;
         } else if (!(obj instanceof Double)) {
             throw new IllegalArgumentException("User attribute given of un-supported type");
         } else {
-            this.s = null;
-            this.v = (Double) obj;
-            this.t = null;
+            this.f37075s = null;
+            this.f37078v = (Double) obj;
+            this.f37076t = null;
         }
     }
 
-    public final Object h() {
-        Long l = this.s;
+    /* renamed from: h */
+    public final Object m1073h() {
+        Long l = this.f37075s;
         if (l != null) {
             return l;
         }
-        Double d = this.v;
+        Double d = this.f37078v;
         if (d != null) {
             return d;
         }
-        String str = this.t;
+        String str = this.f37076t;
         if (str != null) {
             return str;
         }
@@ -80,6 +95,6 @@ public final class zzkw extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        jc8.a(this, parcel, i);
+        jc8.m18604a(this, parcel, i);
     }
 }

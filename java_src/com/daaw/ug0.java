@@ -3,67 +3,78 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes2.dex */
 public class ug0 {
-    public static boolean a(Object obj, Object obj2) {
+    /* renamed from: a */
+    public static boolean m8273a(Object obj, Object obj2) {
         return obj == null ? obj2 == null : obj.equals(obj2);
     }
 
-    public static void b(Object obj, String str) {
+    /* renamed from: b */
+    public static void m8272b(Object obj, String str) {
         if (obj != null) {
             return;
         }
-        throw ((IllegalStateException) j(new IllegalStateException(str + " must not be null")));
+        throw ((IllegalStateException) m8264j(new IllegalStateException(str + " must not be null")));
     }
 
-    public static void c(Object obj) {
+    /* renamed from: c */
+    public static void m8271c(Object obj) {
         if (obj == null) {
-            m();
+            m8261m();
         }
     }
 
-    public static void d(Object obj, String str) {
+    /* renamed from: d */
+    public static void m8270d(Object obj, String str) {
         if (obj == null) {
-            n(str);
+            m8260n(str);
         }
     }
 
-    public static void e(Object obj, String str) {
+    /* renamed from: e */
+    public static void m8269e(Object obj, String str) {
         if (obj != null) {
             return;
         }
-        throw ((NullPointerException) j(new NullPointerException(str + " must not be null")));
+        throw ((NullPointerException) m8264j(new NullPointerException(str + " must not be null")));
     }
 
-    public static void f(Object obj, String str) {
+    /* renamed from: f */
+    public static void m8268f(Object obj, String str) {
         if (obj == null) {
-            q(str);
+            m8257q(str);
         }
     }
 
-    public static void g(Object obj, String str) {
+    /* renamed from: g */
+    public static void m8267g(Object obj, String str) {
         if (obj == null) {
-            p(str);
+            m8258p(str);
         }
     }
 
-    public static int h(int i, int i2) {
+    /* renamed from: h */
+    public static int m8266h(int i, int i2) {
         if (i < i2) {
             return -1;
         }
         return i == i2 ? 0 : 1;
     }
 
-    public static String i(String str) {
+    /* renamed from: i */
+    public static String m8265i(String str) {
         StackTraceElement stackTraceElement = Thread.currentThread().getStackTrace()[4];
         String className = stackTraceElement.getClassName();
         String methodName = stackTraceElement.getMethodName();
         return "Parameter specified as non-null is null: method " + className + "." + methodName + ", parameter " + str;
     }
 
-    public static <T extends Throwable> T j(T t) {
-        return (T) k(t, ug0.class.getName());
+    /* renamed from: j */
+    public static <T extends Throwable> T m8264j(T t) {
+        return (T) m8263k(t, ug0.class.getName());
     }
 
-    public static <T extends Throwable> T k(T t, String str) {
+    /* renamed from: k */
+    public static <T extends Throwable> T m8263k(T t, String str) {
         StackTraceElement[] stackTrace = t.getStackTrace();
         int length = stackTrace.length;
         int i = -1;
@@ -76,35 +87,43 @@ public class ug0 {
         return t;
     }
 
-    public static String l(String str, Object obj) {
+    /* renamed from: l */
+    public static String m8262l(String str, Object obj) {
         return str + obj;
     }
 
-    public static void m() {
-        throw ((NullPointerException) j(new NullPointerException()));
+    /* renamed from: m */
+    public static void m8261m() {
+        throw ((NullPointerException) m8264j(new NullPointerException()));
     }
 
-    public static void n(String str) {
-        throw ((NullPointerException) j(new NullPointerException(str)));
+    /* renamed from: n */
+    public static void m8260n(String str) {
+        throw ((NullPointerException) m8264j(new NullPointerException(str)));
     }
 
-    public static void o() {
-        throw ((ni0) j(new ni0()));
+    /* renamed from: o */
+    public static void m8259o() {
+        throw ((ni0) m8264j(new ni0()));
     }
 
-    public static void p(String str) {
-        throw ((IllegalArgumentException) j(new IllegalArgumentException(i(str))));
+    /* renamed from: p */
+    public static void m8258p(String str) {
+        throw ((IllegalArgumentException) m8264j(new IllegalArgumentException(m8265i(str))));
     }
 
-    public static void q(String str) {
-        throw ((NullPointerException) j(new NullPointerException(i(str))));
+    /* renamed from: q */
+    public static void m8257q(String str) {
+        throw ((NullPointerException) m8264j(new NullPointerException(m8265i(str))));
     }
 
-    public static void r(String str) {
-        throw ((kp1) j(new kp1(str)));
+    /* renamed from: r */
+    public static void m8256r(String str) {
+        throw ((kp1) m8264j(new kp1(str)));
     }
 
-    public static void s(String str) {
-        r("lateinit property " + str + " has not been initialized");
+    /* renamed from: s */
+    public static void m8255s(String str) {
+        m8256r("lateinit property " + str + " has not been initialized");
     }
 }

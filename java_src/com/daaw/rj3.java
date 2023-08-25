@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class rj3 extends cp2 implements sj3 {
-    public static sj3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static sj3 m11230g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

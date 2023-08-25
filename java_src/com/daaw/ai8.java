@@ -2,7 +2,8 @@ package com.daaw;
 /* loaded from: classes2.dex */
 public final class ai8 extends yh8 {
     @Override // com.daaw.yh8
-    public final int a(int i, byte[] bArr, int i2, int i3) {
+    /* renamed from: a */
+    public final int mo3736a(int i, byte[] bArr, int i2, int i3) {
         while (i2 < i3 && bArr[i2] >= 0) {
             i2++;
         }
@@ -25,7 +26,7 @@ public final class ai8 extends yh8 {
                     return b;
                 } else if (b >= -16) {
                     if (i4 >= i3 - 2) {
-                        return ei8.a(bArr, i4, i3);
+                        return ei8.m23451a(bArr, i4, i3);
                     }
                     int i5 = i4 + 1;
                     byte b2 = bArr[i4];
@@ -39,7 +40,7 @@ public final class ai8 extends yh8 {
                     }
                     return -1;
                 } else if (i4 >= i3 - 1) {
-                    return ei8.a(bArr, i4, i3);
+                    return ei8.m23451a(bArr, i4, i3);
                 } else {
                     int i7 = i4 + 1;
                     byte b3 = bArr[i4];

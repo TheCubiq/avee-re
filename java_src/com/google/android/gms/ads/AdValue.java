@@ -4,9 +4,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 /* loaded from: classes.dex */
 public final class AdValue {
-    public final int a;
-    public final String b;
-    public final long c;
+
+    /* renamed from: a */
+    public final int f36018a;
+
+    /* renamed from: b */
+    public final String f36019b;
+
+    /* renamed from: c */
+    public final long f36020c;
 
     @Retention(RetentionPolicy.SOURCE)
     /* loaded from: classes.dex */
@@ -18,9 +24,9 @@ public final class AdValue {
     }
 
     public AdValue(int i, String str, long j) {
-        this.a = i;
-        this.b = str;
-        this.c = j;
+        this.f36018a = i;
+        this.f36019b = str;
+        this.f36020c = j;
     }
 
     public static AdValue zza(int i, String str, long j) {
@@ -28,14 +34,14 @@ public final class AdValue {
     }
 
     public String getCurrencyCode() {
-        return this.b;
+        return this.f36019b;
     }
 
     public int getPrecisionType() {
-        return this.a;
+        return this.f36018a;
     }
 
     public long getValueMicros() {
-        return this.c;
+        return this.f36020c;
     }
 }

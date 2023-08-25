@@ -3,25 +3,34 @@ package com.daaw;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class up6 {
-    public final eq6 a;
-    public final eq6 b;
-    public final yp6 c;
-    public final dq6 d;
+
+    /* renamed from: a */
+    public final eq6 f29419a;
+
+    /* renamed from: b */
+    public final eq6 f29420b;
+
+    /* renamed from: c */
+    public final yp6 f29421c;
+
+    /* renamed from: d */
+    public final dq6 f29422d;
 
     public up6(yp6 yp6Var, dq6 dq6Var, eq6 eq6Var, eq6 eq6Var2, boolean z) {
-        this.c = yp6Var;
-        this.d = dq6Var;
-        this.a = eq6Var;
+        this.f29421c = yp6Var;
+        this.f29422d = dq6Var;
+        this.f29419a = eq6Var;
         if (eq6Var2 == null) {
-            this.b = eq6.NONE;
+            this.f29420b = eq6.NONE;
         } else {
-            this.b = eq6Var2;
+            this.f29420b = eq6Var2;
         }
     }
 
-    public static up6 a(yp6 yp6Var, dq6 dq6Var, eq6 eq6Var, eq6 eq6Var2, boolean z) {
-        fr6.b(dq6Var, "ImpressionType is null");
-        fr6.b(eq6Var, "Impression owner is null");
+    /* renamed from: a */
+    public static up6 m7838a(yp6 yp6Var, dq6 dq6Var, eq6 eq6Var, eq6 eq6Var2, boolean z) {
+        fr6.m22358b(dq6Var, "ImpressionType is null");
+        fr6.m22358b(eq6Var, "Impression owner is null");
         if (eq6Var != eq6.NONE) {
             if (yp6Var == yp6.DEFINED_BY_JAVASCRIPT && eq6Var == eq6.NATIVE) {
                 throw new IllegalArgumentException("ImpressionType/CreativeType can only be defined as DEFINED_BY_JAVASCRIPT if Impression Owner is JavaScript");
@@ -34,13 +43,14 @@ public final class up6 {
         throw new IllegalArgumentException("Impression owner is none");
     }
 
-    public final JSONObject b() {
+    /* renamed from: b */
+    public final JSONObject m7837b() {
         JSONObject jSONObject = new JSONObject();
-        br6.h(jSONObject, "impressionOwner", this.a);
-        br6.h(jSONObject, "mediaEventsOwner", this.b);
-        br6.h(jSONObject, "creativeType", this.c);
-        br6.h(jSONObject, "impressionType", this.d);
-        br6.h(jSONObject, "isolateVerificationScripts", Boolean.TRUE);
+        br6.m25875h(jSONObject, "impressionOwner", this.f29419a);
+        br6.m25875h(jSONObject, "mediaEventsOwner", this.f29420b);
+        br6.m25875h(jSONObject, "creativeType", this.f29421c);
+        br6.m25875h(jSONObject, "impressionType", this.f29422d);
+        br6.m25875h(jSONObject, "isolateVerificationScripts", Boolean.TRUE);
         return jSONObject;
     }
 }

@@ -6,20 +6,27 @@ import com.google.android.gms.ads.internal.client.zzl;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class lz5 {
-    public final qz5 a;
-    public final String b;
+
+    /* renamed from: a */
+    public final qz5 f17924a;
+
+    /* renamed from: b */
+    public final String f17925b;
     @GuardedBy("this")
-    public zzdn c;
+
+    /* renamed from: c */
+    public zzdn f17926c;
 
     public lz5(qz5 qz5Var, String str) {
-        this.a = qz5Var;
-        this.b = str;
+        this.f17924a = qz5Var;
+        this.f17925b = str;
     }
 
-    public final synchronized String a() {
+    /* renamed from: a */
+    public final synchronized String m16358a() {
         zzdn zzdnVar;
         try {
-            zzdnVar = this.c;
+            zzdnVar = this.f17926c;
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
             return null;
@@ -27,10 +34,11 @@ public final class lz5 {
         return zzdnVar != null ? zzdnVar.zzg() : null;
     }
 
-    public final synchronized String b() {
+    /* renamed from: b */
+    public final synchronized String m16357b() {
         zzdn zzdnVar;
         try {
-            zzdnVar = this.c;
+            zzdnVar = this.f17926c;
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
             return null;
@@ -38,12 +46,14 @@ public final class lz5 {
         return zzdnVar != null ? zzdnVar.zzg() : null;
     }
 
-    public final synchronized void d(zzl zzlVar, int i) {
-        this.c = null;
-        this.a.a(zzlVar, this.b, new rz5(i), new kz5(this));
+    /* renamed from: d */
+    public final synchronized void m16355d(zzl zzlVar, int i) {
+        this.f17926c = null;
+        this.f17924a.mo4385a(zzlVar, this.f17925b, new rz5(i), new kz5(this));
     }
 
-    public final synchronized boolean e() {
-        return this.a.zza();
+    /* renamed from: e */
+    public final synchronized boolean m16354e() {
+        return this.f17924a.zza();
     }
 }

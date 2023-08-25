@@ -6,7 +6,8 @@ public final class qb7 extends rb7 {
     }
 
     @Override // com.daaw.rb7
-    public final mb7 a(byte[] bArr, int i) {
+    /* renamed from: a */
+    public final mb7 mo9366a(byte[] bArr, int i) {
         return new lb7(bArr, i);
     }
 }

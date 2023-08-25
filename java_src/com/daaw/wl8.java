@@ -4,11 +4,13 @@ public final class wl8 implements sk8 {
     public wl8(ul8 ul8Var) {
     }
 
-    public static int a(int i, int i2, int i3) {
-        return i47.a(((i * i2) * i3) / 1000000);
+    /* renamed from: a */
+    public static int m6010a(int i, int i2, int i3) {
+        return i47.m20126a(((i * i2) * i3) / 1000000);
     }
 
-    public static int b(int i) {
+    /* renamed from: b */
+    public static int m6009b(int i) {
         switch (i) {
             case 5:
                 return 80000;

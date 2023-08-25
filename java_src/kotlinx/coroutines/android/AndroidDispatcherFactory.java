@@ -12,7 +12,7 @@ public final class AndroidDispatcherFactory implements sm0 {
     public rm0 createDispatcher(List<? extends sm0> list) {
         Looper mainLooper = Looper.getMainLooper();
         if (mainLooper != null) {
-            return new r80(t80.a(mainLooper, true), null, 2, null);
+            return new r80(t80.m9457a(mainLooper, true), null, 2, null);
         }
         throw new IllegalStateException("The main looper is not available");
     }

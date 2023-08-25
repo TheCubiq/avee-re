@@ -1,49 +1,59 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class xq8 extends l64 {
-    public final l64 c;
+
+    /* renamed from: c */
+    public final l64 f32892c;
 
     public xq8(l64 l64Var) {
-        this.c = l64Var;
+        this.f32892c = l64Var;
     }
 
     @Override // com.daaw.l64
-    public int a(Object obj) {
-        return this.c.a(obj);
+    /* renamed from: a */
+    public int mo4511a(Object obj) {
+        return this.f32892c.mo4511a(obj);
     }
 
     @Override // com.daaw.l64
-    public final int b() {
-        return this.c.b();
+    /* renamed from: b */
+    public final int mo4510b() {
+        return this.f32892c.mo4510b();
     }
 
     @Override // com.daaw.l64
-    public final int c() {
-        return this.c.c();
+    /* renamed from: c */
+    public final int mo4509c() {
+        return this.f32892c.mo4509c();
     }
 
     @Override // com.daaw.l64
-    public Object f(int i) {
-        return this.c.f(i);
+    /* renamed from: f */
+    public Object mo4508f(int i) {
+        return this.f32892c.mo4508f(i);
     }
 
     @Override // com.daaw.l64
-    public final int g(boolean z) {
-        return this.c.g(z);
+    /* renamed from: g */
+    public final int mo4800g(boolean z) {
+        return this.f32892c.mo4800g(z);
     }
 
     @Override // com.daaw.l64
-    public final int h(boolean z) {
-        return this.c.h(z);
+    /* renamed from: h */
+    public final int mo4799h(boolean z) {
+        return this.f32892c.mo4799h(z);
     }
 
     @Override // com.daaw.l64
-    public final int j(int i, int i2, boolean z) {
-        return this.c.j(i, i2, z);
+    /* renamed from: j */
+    public final int mo4798j(int i, int i2, boolean z) {
+        return this.f32892c.mo4798j(i, i2, z);
     }
 
     @Override // com.daaw.l64
-    public final int k(int i, int i2, boolean z) {
-        return this.c.k(i, 0, false);
+    /* renamed from: k */
+    public final int mo4797k(int i, int i2, boolean z) {
+        return this.f32892c.mo4797k(i, 0, false);
     }
 }

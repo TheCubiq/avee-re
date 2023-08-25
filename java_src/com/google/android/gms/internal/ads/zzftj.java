@@ -11,49 +11,56 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes.dex */
 public final class zzftj extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzftj> CREATOR = new st6();
-    public final int p;
-    public fj2 q = null;
-    public byte[] r;
+
+    /* renamed from: p */
+    public final int f37016p;
+
+    /* renamed from: q */
+    public fj2 f37017q = null;
+
+    /* renamed from: r */
+    public byte[] f37018r;
 
     public zzftj(int i, byte[] bArr) {
-        this.p = i;
-        this.r = bArr;
+        this.f37016p = i;
+        this.f37018r = bArr;
         zzb();
     }
 
-    public final fj2 h() {
-        if (this.q == null) {
+    /* renamed from: h */
+    public final fj2 m1091h() {
+        if (this.f37017q == null) {
             try {
-                this.q = fj2.G0(this.r, vr7.a());
-                this.r = null;
+                this.f37017q = fj2.m22596G0(this.f37018r, vr7.m6834a());
+                this.f37018r = null;
             } catch (xs7 | NullPointerException e) {
                 throw new IllegalStateException(e);
             }
         }
         zzb();
-        return this.q;
+        return this.f37017q;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.p);
-        byte[] bArr = this.r;
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f37016p);
+        byte[] bArr = this.f37018r;
         if (bArr == null) {
-            bArr = this.q.a();
+            bArr = this.f37017q.mo4516a();
         }
-        z71.f(parcel, 2, bArr, false);
-        z71.b(parcel, a);
+        z71.m2728f(parcel, 2, bArr, false);
+        z71.m2732b(parcel, m2733a);
     }
 
     public final void zzb() {
-        fj2 fj2Var = this.q;
-        if (fj2Var != null || this.r == null) {
-            if (fj2Var == null || this.r != null) {
-                if (fj2Var != null && this.r != null) {
+        fj2 fj2Var = this.f37017q;
+        if (fj2Var != null || this.f37018r == null) {
+            if (fj2Var == null || this.f37018r != null) {
+                if (fj2Var != null && this.f37018r != null) {
                     throw new IllegalStateException("Invalid internal representation - full");
                 }
-                if (fj2Var != null || this.r != null) {
+                if (fj2Var != null || this.f37018r != null) {
                     throw new IllegalStateException("Impossible");
                 }
                 throw new IllegalStateException("Invalid internal representation - empty");

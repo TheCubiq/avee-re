@@ -1,36 +1,44 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class q01 implements vd0 {
-    public int a;
-    public int b;
+
+    /* renamed from: a */
+    public int f23587a;
+
+    /* renamed from: b */
+    public int f23588b;
 
     public q01() {
-        this.a = -1;
-        this.b = 0;
+        this.f23587a = -1;
+        this.f23588b = 0;
     }
 
     public q01(int i) {
-        this.a = -1;
-        this.b = i;
+        this.f23587a = -1;
+        this.f23588b = i;
     }
 
     @Override // com.daaw.vd0
-    public int a() {
-        return this.a;
+    /* renamed from: a */
+    public int mo7247a() {
+        return this.f23587a;
     }
 
     @Override // com.daaw.vd0
-    public void b(int i) {
-        this.b = i;
+    /* renamed from: b */
+    public void mo7246b(int i) {
+        this.f23588b = i;
     }
 
     @Override // com.daaw.vd0
-    public int c() {
-        return this.b;
+    /* renamed from: c */
+    public int mo7245c() {
+        return this.f23588b;
     }
 
-    public void d(int i) {
-        this.a = i;
+    /* renamed from: d */
+    public void m12810d(int i) {
+        this.f23587a = i;
     }
 
     public boolean equals(Object obj) {

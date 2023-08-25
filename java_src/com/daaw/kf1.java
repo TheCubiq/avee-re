@@ -7,89 +7,108 @@ import android.util.StateSet;
 import java.util.ArrayList;
 /* loaded from: classes2.dex */
 public final class kf1 {
-    public final ArrayList<b> a = new ArrayList<>();
-    public b b = null;
-    public ValueAnimator c = null;
-    public final Animator.AnimatorListener d = new a();
 
+    /* renamed from: a */
+    public final ArrayList<C1945b> f16334a = new ArrayList<>();
+
+    /* renamed from: b */
+    public C1945b f16335b = null;
+
+    /* renamed from: c */
+    public ValueAnimator f16336c = null;
+
+    /* renamed from: d */
+    public final Animator.AnimatorListener f16337d = new C1944a();
+
+    /* renamed from: com.daaw.kf1$a */
     /* loaded from: classes2.dex */
-    public class a extends AnimatorListenerAdapter {
-        public a() {
+    public class C1944a extends AnimatorListenerAdapter {
+        public C1944a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
             kf1 kf1Var = kf1.this;
-            if (kf1Var.c == animator) {
-                kf1Var.c = null;
+            if (kf1Var.f16336c == animator) {
+                kf1Var.f16336c = null;
             }
         }
     }
 
+    /* renamed from: com.daaw.kf1$b */
     /* loaded from: classes2.dex */
-    public static class b {
-        public final int[] a;
-        public final ValueAnimator b;
+    public static class C1945b {
 
-        public b(int[] iArr, ValueAnimator valueAnimator) {
-            this.a = iArr;
-            this.b = valueAnimator;
+        /* renamed from: a */
+        public final int[] f16339a;
+
+        /* renamed from: b */
+        public final ValueAnimator f16340b;
+
+        public C1945b(int[] iArr, ValueAnimator valueAnimator) {
+            this.f16339a = iArr;
+            this.f16340b = valueAnimator;
         }
     }
 
-    public void a(int[] iArr, ValueAnimator valueAnimator) {
-        b bVar = new b(iArr, valueAnimator);
-        valueAnimator.addListener(this.d);
-        this.a.add(bVar);
+    /* renamed from: a */
+    public void m17767a(int[] iArr, ValueAnimator valueAnimator) {
+        C1945b c1945b = new C1945b(iArr, valueAnimator);
+        valueAnimator.addListener(this.f16337d);
+        this.f16334a.add(c1945b);
     }
 
-    public final void b() {
-        ValueAnimator valueAnimator = this.c;
+    /* renamed from: b */
+    public final void m17766b() {
+        ValueAnimator valueAnimator = this.f16336c;
         if (valueAnimator != null) {
             valueAnimator.cancel();
-            this.c = null;
+            this.f16336c = null;
         }
     }
 
-    public void c() {
-        ValueAnimator valueAnimator = this.c;
+    /* renamed from: c */
+    public void m17765c() {
+        ValueAnimator valueAnimator = this.f16336c;
         if (valueAnimator != null) {
             valueAnimator.end();
-            this.c = null;
+            this.f16336c = null;
         }
     }
 
-    public void d(int[] iArr) {
-        b bVar;
-        int size = this.a.size();
+    /* renamed from: d */
+    public void m17764d(int[] iArr) {
+        C1945b c1945b;
+        int size = this.f16334a.size();
         int i = 0;
         while (true) {
             if (i >= size) {
-                bVar = null;
+                c1945b = null;
                 break;
             }
-            bVar = this.a.get(i);
-            if (StateSet.stateSetMatches(bVar.a, iArr)) {
+            c1945b = this.f16334a.get(i);
+            if (StateSet.stateSetMatches(c1945b.f16339a, iArr)) {
                 break;
             }
             i++;
         }
-        b bVar2 = this.b;
-        if (bVar == bVar2) {
+        C1945b c1945b2 = this.f16335b;
+        if (c1945b == c1945b2) {
             return;
         }
-        if (bVar2 != null) {
-            b();
+        if (c1945b2 != null) {
+            m17766b();
         }
-        this.b = bVar;
-        if (bVar != null) {
-            e(bVar);
+        this.f16335b = c1945b;
+        if (c1945b != null) {
+            m17763e(c1945b);
         }
     }
 
-    public final void e(b bVar) {
-        ValueAnimator valueAnimator = bVar.b;
-        this.c = valueAnimator;
+    /* renamed from: e */
+    public final void m17763e(C1945b c1945b) {
+        ValueAnimator valueAnimator = c1945b.f16340b;
+        this.f16336c = valueAnimator;
         valueAnimator.start();
     }
 }

@@ -26,59 +26,71 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 import org.conscrypt.NativeConstants;
 /* loaded from: classes.dex */
-public class rv1 extends kt {
-    public WeakReference<List<Integer>> b = new WeakReference<>(null);
-    public final String c = ".txt";
-    public final String d = ".zip";
-    public final String e = ".viz";
-    public final long f = 100000000;
+public class rv1 extends C1983kt {
 
+    /* renamed from: b */
+    public WeakReference<List<Integer>> f25640b = new WeakReference<>(null);
+
+    /* renamed from: c */
+    public final String f25641c = ".txt";
+
+    /* renamed from: d */
+    public final String f25642d = ".zip";
+
+    /* renamed from: e */
+    public final String f25643e = ".viz";
+
+    /* renamed from: f */
+    public final long f25644f = 100000000;
+
+    /* renamed from: com.daaw.rv1$a */
     /* loaded from: classes.dex */
-    public class a implements rw1.a<iv1, sv1> {
-        public a() {
+    public class C2890a implements rw1.InterfaceC2894a<iv1, sv1> {
+        public C2890a() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(iv1 iv1Var, sv1 sv1Var) {
+        public void mo2813c(iv1 iv1Var, sv1 sv1Var) {
             if (sv1Var == null || iv1Var == null) {
                 return;
             }
             Activity activity = iv1Var.getActivity();
-            vn O = pv1.O(sv1Var.a, null);
-            if (O == null) {
+            C3355vn m13102O = pv1.m13102O(sv1Var.f26665a, null);
+            if (m13102O == null) {
                 return;
             }
-            String p = O.p();
+            String m7004p = m13102O.m7004p();
             String str = Environment.DIRECTORY_DOWNLOADS;
-            String str2 = "visualizer_" + sv1Var.a;
-            File a = j5.a(sv1Var.a);
-            String d = rv1.this.d(iv1Var.getActivity(), str, str2, ".viz", p, Arrays.asList(a != null ? a.listFiles() : new File[0]));
-            cr1.r(activity, d);
+            String str2 = "visualizer_" + sv1Var.f26665a;
+            File m18936a = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18936a(sv1Var.f26665a);
+            String m10890d = rv1.this.m10890d(iv1Var.getActivity(), str, str2, ".viz", m7004p, Arrays.asList(m18936a != null ? m18936a.listFiles() : new File[0]));
+            cr1.m25062r(activity, m10890d);
             String string = activity.getString(R.string.saved_viz_in);
-            qv1.g0(2, activity, string, Uri.parse(d), cr1.g(d), "text/plain");
+            qv1.m12077g0(2, activity, string, Uri.parse(m10890d), cr1.m25073g(m10890d), "text/plain");
             Intent intent = new Intent("android.intent.action.VIEW");
-            intent.setDataAndType(Uri.parse(d), "text/plain");
+            intent.setDataAndType(Uri.parse(m10890d), "text/plain");
             PendingIntent activity2 = PendingIntent.getActivity(activity, 0, intent, 67108864);
-            dt0.d dVar = new dt0.d(activity);
-            dVar.i(cr1.g(d)).h(string).n(R.drawable.ic_save5).g(activity2).l(true).e(true);
-            ((NotificationManager) activity.getSystemService("notification")).notify(2, dVar.b());
-            vy.a.a(string);
+            dt0.C1136d c1136d = new dt0.C1136d(activity);
+            c1136d.m23969i(cr1.m25073g(m10890d)).m23970h(string).m23964n(R.drawable.ic_save5).m23971g(activity2).m23966l(true).m23973e(true);
+            ((NotificationManager) activity.getSystemService("notification")).notify(2, c1136d.m23976b());
+            C3385vy.f30703a.m12018a(string);
         }
     }
 
+    /* renamed from: com.daaw.rv1$b */
     /* loaded from: classes.dex */
-    public class b implements rw1.a<iv1, List<Integer>> {
-        public b() {
+    public class C2891b implements rw1.InterfaceC2894a<iv1, List<Integer>> {
+        public C2891b() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(iv1 iv1Var, List<Integer> list) {
+        public void mo2813c(iv1 iv1Var, List<Integer> list) {
             if (iv1Var == null) {
                 return;
             }
-            rv1.this.b = new WeakReference<>(list);
+            rv1.this.f25640b = new WeakReference<>(list);
             Intent intent = new Intent("android.intent.action.GET_CONTENT");
             intent.addCategory("android.intent.category.OPENABLE");
             intent.setType("*/*");
@@ -86,40 +98,43 @@ public class rv1 extends kt {
         }
     }
 
+    /* renamed from: com.daaw.rv1$c */
     /* loaded from: classes.dex */
-    public class c implements sw1.a<iv1, Integer, Intent> {
-        public c() {
+    public class C2892c implements sw1.InterfaceC2987a<iv1, Integer, Intent> {
+        public C2892c() {
         }
 
-        @Override // com.daaw.sw1.a
+        @Override // com.daaw.sw1.InterfaceC2987a
         /* renamed from: b */
-        public void a(iv1 iv1Var, Integer num, Intent intent) {
-            List<Integer> list = rv1.this.b.get();
+        public void mo3118a(iv1 iv1Var, Integer num, Intent intent) {
+            List<Integer> list = rv1.this.f25640b.get();
             if (list == null) {
                 return;
             }
             Activity activity = iv1Var.getActivity();
             if (num.intValue() == 64) {
                 if (intent == null) {
-                    lz1.c("PICK_IMAGE_PROPERTY_REQUEST_CODE invalid data");
+                    lz1.m16363c("PICK_IMAGE_PROPERTY_REQUEST_CODE invalid data");
                     return;
                 }
-                rv1.this.j(activity, intent.getData(), list);
+                rv1.this.m10884j(activity, intent.getData(), list);
             }
         }
     }
 
     public rv1() {
-        iv1.D.b(new a(), this.a);
-        iv1.E.b(new b(), this.a);
-        iv1.x.b(new c(), this.a);
+        iv1.f14027D.m10861b(new C2890a(), this.f16736a);
+        iv1.f14028E.m10861b(new C2891b(), this.f16736a);
+        iv1.f14031x.m9794b(new C2892c(), this.f16736a);
     }
 
-    public static int a(Context context, Uri uri) {
-        return k(context, uri, j5.e().o());
+    /* renamed from: a */
+    public static int m10893a(Context context, Uri uri) {
+        return m10883k(context, uri, SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18911o());
     }
 
-    public static boolean b(ContentResolver contentResolver, Uri uri) {
+    /* renamed from: b */
+    public static boolean m10892b(ContentResolver contentResolver, Uri uri) {
         int read;
         byte[] bArr = new byte[2];
         try {
@@ -133,15 +148,16 @@ public class rv1 extends kt {
         return read == 2 && bArr[0] == 80 && bArr[1] == 75;
     }
 
-    public static void c(int i) {
-        File a2;
+    /* renamed from: c */
+    public static void m10891c(int i) {
+        File m18936a;
         File[] listFiles;
-        if (i >= 0 && (a2 = j5.a(i)) != null) {
+        if (i >= 0 && (m18936a = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18936a(i)) != null) {
             String str = null;
             File file = null;
             File file2 = null;
-            for (File file3 : a2.listFiles()) {
-                if (".json".equals(cr1.k(file3.getName()))) {
+            for (File file3 : m18936a.listFiles()) {
+                if (".json".equals(cr1.m25069k(file3.getName()))) {
                     file2 = file3;
                 }
                 if ("scene.json".equals(file3.getName())) {
@@ -154,7 +170,7 @@ public class rv1 extends kt {
             if (file != null) {
                 try {
                     FileInputStream fileInputStream = new FileInputStream(file);
-                    str = cr1.p(fileInputStream);
+                    str = cr1.m25064p(fileInputStream);
                     fileInputStream.close();
                 } catch (FileNotFoundException | IOException unused) {
                 }
@@ -166,11 +182,12 @@ public class rv1 extends kt {
             if (str == null) {
                 return;
             }
-            j5.e().W(i, vn.g(str), false);
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18940W(i, C3355vn.m7013g(str), false);
         }
     }
 
-    public static void g(File file, ZipOutputStream zipOutputStream) {
+    /* renamed from: g */
+    public static void m10887g(File file, ZipOutputStream zipOutputStream) {
         FileInputStream fileInputStream = new FileInputStream(file);
         zipOutputStream.putNextEntry(new ZipEntry(file.getName()));
         byte[] bArr = new byte[NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV];
@@ -185,13 +202,15 @@ public class rv1 extends kt {
         }
     }
 
-    public static void h(String str, String str2, ZipOutputStream zipOutputStream) {
+    /* renamed from: h */
+    public static void m10886h(String str, String str2, ZipOutputStream zipOutputStream) {
         zipOutputStream.putNextEntry(new ZipEntry(str2));
         zipOutputStream.write(str.getBytes());
         zipOutputStream.closeEntry();
     }
 
-    public static int k(Context context, Uri uri, List<Integer> list) {
+    /* renamed from: k */
+    public static int m10883k(Context context, Uri uri, List<Integer> list) {
         int i;
         InputStream openInputStream;
         ZipInputStream zipInputStream;
@@ -203,20 +222,20 @@ public class rv1 extends kt {
         try {
             openInputStream = context.getContentResolver().openInputStream(uri);
             zipInputStream = new ZipInputStream(openInputStream);
-            i = pv1.J(vn.g(""), list, -1);
+            i = pv1.m13107J(C3355vn.m7013g(""), list, -1);
         } catch (FileNotFoundException | IOException unused) {
         }
         if (i < 0) {
             return -1;
         }
         try {
-            File a2 = j5.a(i);
+            File m18936a = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18936a(i);
             while (true) {
                 ZipEntry nextEntry = zipInputStream.getNextEntry();
                 if (nextEntry == null) {
                     break;
                 }
-                FileOutputStream fileOutputStream = new FileOutputStream(new File(a2, nextEntry.getName()));
+                FileOutputStream fileOutputStream = new FileOutputStream(new File(m18936a, nextEntry.getName()));
                 while (true) {
                     int read = zipInputStream.read(bArr);
                     if (read > 0) {
@@ -230,14 +249,15 @@ public class rv1 extends kt {
         } catch (FileNotFoundException | IOException unused2) {
             i2 = i;
             i = i2;
-            c(i);
+            m10891c(i);
             return i;
         }
-        c(i);
+        m10891c(i);
         return i;
     }
 
-    public final String d(Context context, String str, String str2, String str3, String str4, List<File> list) {
+    /* renamed from: d */
+    public final String m10890d(Context context, String str, String str2, String str3, String str4, List<File> list) {
         StringBuilder sb;
         File file = null;
         int i = 0;
@@ -253,7 +273,7 @@ public class rv1 extends kt {
                 sb.append(")");
             }
             sb.append(str3);
-            file = i(context, str, sb.toString());
+            file = m10885i(context, str, sb.toString());
             if (file != null && !file.exists()) {
                 break;
             }
@@ -263,10 +283,10 @@ public class rv1 extends kt {
             try {
                 FileOutputStream fileOutputStream = new FileOutputStream(file);
                 ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
-                h(str4, "scene.json", zipOutputStream);
+                m10886h(str4, "scene.json", zipOutputStream);
                 for (File file2 : list) {
                     if (!"scene.json".equals(file2.getName())) {
-                        g(file2, zipOutputStream);
+                        m10887g(file2, zipOutputStream);
                     }
                 }
                 zipOutputStream.close();
@@ -280,9 +300,10 @@ public class rv1 extends kt {
         return null;
     }
 
-    public final File i(Context context, String str, String str2) {
+    /* renamed from: i */
+    public final File m10885i(Context context, String str, String str2) {
         try {
-            File file = new File(Environment.getExternalStoragePublicDirectory(str), cr1.n(str2));
+            File file = new File(Environment.getExternalStoragePublicDirectory(str), cr1.m25066n(str2));
             File parentFile = file.getParentFile();
             if (parentFile != null && !parentFile.isDirectory()) {
                 parentFile.mkdirs();
@@ -294,7 +315,8 @@ public class rv1 extends kt {
         }
     }
 
-    public final void j(Context context, Uri uri, List<Integer> list) {
+    /* renamed from: j */
+    public final void m10884j(Context context, Uri uri, List<Integer> list) {
         String path = uri.getPath();
         int lastIndexOf = path.lastIndexOf(".txt");
         int lastIndexOf2 = path.lastIndexOf(".json");
@@ -304,23 +326,24 @@ public class rv1 extends kt {
             z = true;
         }
         if (z) {
-            l(context, uri, list);
+            m10882l(context, uri, list);
         } else {
-            k(context, uri, list);
+            m10883k(context, uri, list);
         }
     }
 
-    public final void l(Context context, Uri uri, List<Integer> list) {
+    /* renamed from: l */
+    public final void m10882l(Context context, Uri uri, List<Integer> list) {
         if (uri == null) {
             return;
         }
         try {
             InputStream openInputStream = context.getContentResolver().openInputStream(uri);
-            String p = cr1.p(openInputStream);
-            if (p == null) {
+            String m25064p = cr1.m25064p(openInputStream);
+            if (m25064p == null) {
                 return;
             }
-            pv1.J(vn.g(p), list, -1);
+            pv1.m13107J(C3355vn.m7013g(m25064p), list, -1);
             openInputStream.close();
         } catch (FileNotFoundException | IOException unused) {
         }

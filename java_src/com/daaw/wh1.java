@@ -3,19 +3,24 @@ package com.daaw;
 import com.google.android.exoplayer2.Format;
 /* loaded from: classes.dex */
 public interface wh1 {
-    public static final wh1 a = new a();
 
+    /* renamed from: a */
+    public static final wh1 f31244a = new C3440a();
+
+    /* renamed from: com.daaw.wh1$a */
     /* loaded from: classes.dex */
-    public static class a implements wh1 {
+    public static class C3440a implements wh1 {
         @Override // com.daaw.wh1
-        public boolean a(Format format) {
-            String str = format.u;
+        /* renamed from: a */
+        public boolean mo6067a(Format format) {
+            String str = format.f35721u;
             return "text/vtt".equals(str) || "text/x-ssa".equals(str) || "application/ttml+xml".equals(str) || "application/x-mp4-vtt".equals(str) || "application/x-subrip".equals(str) || "application/x-quicktime-tx3g".equals(str) || "application/cea-608".equals(str) || "application/x-mp4-cea-608".equals(str) || "application/cea-708".equals(str) || "application/dvbsubs".equals(str) || "application/pgs".equals(str);
         }
 
         @Override // com.daaw.wh1
-        public uh1 b(Format format) {
-            String str = format.u;
+        /* renamed from: b */
+        public uh1 mo6066b(Format format) {
+            String str = format.f35721u;
             str.hashCode();
             char c = 65535;
             switch (str.hashCode()) {
@@ -88,7 +93,7 @@ public interface wh1 {
             }
             switch (c) {
                 case 0:
-                    return new gv(format.w);
+                    return new C1473gv(format.f35723w);
                 case 1:
                     return new nw0();
                 case 2:
@@ -96,14 +101,14 @@ public interface wh1 {
                 case 3:
                     return new dx1();
                 case 4:
-                    return new qo1(format.w);
+                    return new qo1(format.f35723w);
                 case 5:
-                    return new cf1(format.w);
+                    return new cf1(format.f35723w);
                 case 6:
                 case 7:
-                    return new je(format.u, format.O);
+                    return new C1821je(format.f35721u, format.f35714O);
                 case '\b':
-                    return new le(format.O);
+                    return new C2030le(format.f35714O);
                 case '\t':
                     return new qh1();
                 case '\n':
@@ -114,7 +119,9 @@ public interface wh1 {
         }
     }
 
-    boolean a(Format format);
+    /* renamed from: a */
+    boolean mo6067a(Format format);
 
-    uh1 b(Format format);
+    /* renamed from: b */
+    uh1 mo6066b(Format format);
 }

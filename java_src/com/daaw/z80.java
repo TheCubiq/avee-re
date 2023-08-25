@@ -10,255 +10,249 @@ import android.widget.OverScroller;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 /* loaded from: classes2.dex */
 public abstract class z80<V extends View> extends ot1<V> {
-    public Runnable d;
-    public OverScroller e;
-    public boolean f;
-    public int g;
-    public int h;
-    public int i;
-    public VelocityTracker j;
 
+    /* renamed from: d */
+    public Runnable f34574d;
+
+    /* renamed from: e */
+    public OverScroller f34575e;
+
+    /* renamed from: f */
+    public boolean f34576f;
+
+    /* renamed from: g */
+    public int f34577g;
+
+    /* renamed from: h */
+    public int f34578h;
+
+    /* renamed from: i */
+    public int f34579i;
+
+    /* renamed from: j */
+    public VelocityTracker f34580j;
+
+    /* renamed from: com.daaw.z80$a */
     /* loaded from: classes2.dex */
-    public class a implements Runnable {
-        public final CoordinatorLayout p;
-        public final V q;
+    public class RunnableC3821a implements Runnable {
 
-        public a(CoordinatorLayout coordinatorLayout, V v) {
-            this.p = coordinatorLayout;
-            this.q = v;
+        /* renamed from: p */
+        public final CoordinatorLayout f34581p;
+
+        /* renamed from: q */
+        public final V f34582q;
+
+        public RunnableC3821a(CoordinatorLayout coordinatorLayout, V v) {
+            this.f34581p = coordinatorLayout;
+            this.f34582q = v;
         }
 
         @Override // java.lang.Runnable
         public void run() {
             OverScroller overScroller;
-            if (this.q == null || (overScroller = z80.this.e) == null) {
+            if (this.f34582q == null || (overScroller = z80.this.f34575e) == null) {
                 return;
             }
             if (!overScroller.computeScrollOffset()) {
-                z80.this.N(this.p, this.q);
+                z80.this.mo1045N(this.f34581p, this.f34582q);
                 return;
             }
             z80 z80Var = z80.this;
-            z80Var.P(this.p, this.q, z80Var.e.getCurrY());
-            xs1.j0(this.q, this);
+            z80Var.m2636P(this.f34581p, this.f34582q, z80Var.f34575e.getCurrY());
+            xs1.m4718j0(this.f34582q, this);
         }
     }
 
     public z80() {
-        this.g = -1;
-        this.i = -1;
+        this.f34577g = -1;
+        this.f34579i = -1;
     }
 
     public z80(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.g = -1;
-        this.i = -1;
+        this.f34577g = -1;
+        this.f34579i = -1;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:27:0x007b  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x0085  */
     /* JADX WARN: Removed duplicated region for block: B:33:0x008c A[ADDED_TO_REGION] */
     /* JADX WARN: Removed duplicated region for block: B:37:? A[ADDED_TO_REGION, RETURN, SYNTHETIC] */
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: D */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public boolean D(androidx.coordinatorlayout.widget.CoordinatorLayout r12, V r13, android.view.MotionEvent r14) {
-        /*
-            r11 = this;
-            int r0 = r14.getActionMasked()
-            r1 = -1
-            r2 = 1
-            r3 = 0
-            if (r0 == r2) goto L4e
-            r4 = 2
-            if (r0 == r4) goto L2d
-            r12 = 3
-            if (r0 == r12) goto L72
-            r12 = 6
-            if (r0 == r12) goto L13
-            goto L4c
-        L13:
-            int r12 = r14.getActionIndex()
-            if (r12 != 0) goto L1b
-            r12 = 1
-            goto L1c
-        L1b:
-            r12 = 0
-        L1c:
-            int r13 = r14.getPointerId(r12)
-            r11.g = r13
-            float r12 = r14.getY(r12)
-            r13 = 1056964608(0x3f000000, float:0.5)
-            float r12 = r12 + r13
-            int r12 = (int) r12
-            r11.h = r12
-            goto L4c
-        L2d:
-            int r0 = r11.g
-            int r0 = r14.findPointerIndex(r0)
-            if (r0 != r1) goto L36
-            return r3
-        L36:
-            float r0 = r14.getY(r0)
-            int r0 = (int) r0
-            int r1 = r11.h
-            int r7 = r1 - r0
-            r11.h = r0
-            int r8 = r11.K(r13)
-            r9 = 0
-            r4 = r11
-            r5 = r12
-            r6 = r13
-            r4.O(r5, r6, r7, r8, r9)
-        L4c:
-            r12 = 0
-            goto L81
-        L4e:
-            android.view.VelocityTracker r0 = r11.j
-            if (r0 == 0) goto L72
-            r0.addMovement(r14)
-            android.view.VelocityTracker r0 = r11.j
-            r4 = 1000(0x3e8, float:1.401E-42)
-            r0.computeCurrentVelocity(r4)
-            android.view.VelocityTracker r0 = r11.j
-            int r4 = r11.g
-            float r10 = r0.getYVelocity(r4)
-            int r0 = r11.L(r13)
-            int r8 = -r0
-            r9 = 0
-            r5 = r11
-            r6 = r12
-            r7 = r13
-            r5.J(r6, r7, r8, r9, r10)
-            r12 = 1
-            goto L73
-        L72:
-            r12 = 0
-        L73:
-            r11.f = r3
-            r11.g = r1
-            android.view.VelocityTracker r13 = r11.j
-            if (r13 == 0) goto L81
-            r13.recycle()
-            r13 = 0
-            r11.j = r13
-        L81:
-            android.view.VelocityTracker r13 = r11.j
-            if (r13 == 0) goto L88
-            r13.addMovement(r14)
-        L88:
-            boolean r13 = r11.f
-            if (r13 != 0) goto L90
-            if (r12 == 0) goto L8f
-            goto L90
-        L8f:
-            r2 = 0
-        L90:
-            return r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.z80.D(androidx.coordinatorlayout.widget.CoordinatorLayout, android.view.View, android.view.MotionEvent):boolean");
+    public boolean mo102D(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
+        boolean z;
+        VelocityTracker velocityTracker;
+        VelocityTracker velocityTracker2;
+        int actionMasked = motionEvent.getActionMasked();
+        if (actionMasked != 1) {
+            if (actionMasked == 2) {
+                int findPointerIndex = motionEvent.findPointerIndex(this.f34577g);
+                if (findPointerIndex == -1) {
+                    return false;
+                }
+                int y = (int) motionEvent.getY(findPointerIndex);
+                this.f34578h = y;
+                m2637O(coordinatorLayout, v, this.f34578h - y, mo1048K(v), 0);
+            } else if (actionMasked != 3) {
+                if (actionMasked == 6) {
+                    int i = motionEvent.getActionIndex() == 0 ? 1 : 0;
+                    this.f34577g = motionEvent.getPointerId(i);
+                    this.f34578h = (int) (motionEvent.getY(i) + 0.5f);
+                }
+            }
+            z = false;
+            velocityTracker2 = this.f34580j;
+            if (velocityTracker2 != null) {
+                velocityTracker2.addMovement(motionEvent);
+            }
+            return !this.f34576f || z;
+        }
+        VelocityTracker velocityTracker3 = this.f34580j;
+        if (velocityTracker3 != null) {
+            velocityTracker3.addMovement(motionEvent);
+            this.f34580j.computeCurrentVelocity(1000);
+            m2638J(coordinatorLayout, v, -mo1047L(v), 0, this.f34580j.getYVelocity(this.f34577g));
+            z = true;
+            this.f34576f = false;
+            this.f34577g = -1;
+            velocityTracker = this.f34580j;
+            if (velocityTracker != null) {
+                velocityTracker.recycle();
+                this.f34580j = null;
+            }
+            velocityTracker2 = this.f34580j;
+            if (velocityTracker2 != null) {
+            }
+            if (this.f34576f) {
+                return true;
+            }
+        }
+        z = false;
+        this.f34576f = false;
+        this.f34577g = -1;
+        velocityTracker = this.f34580j;
+        if (velocityTracker != null) {
+        }
+        velocityTracker2 = this.f34580j;
+        if (velocityTracker2 != null) {
+        }
+        if (this.f34576f) {
+        }
     }
 
-    public boolean H(V v) {
+    /* renamed from: H */
+    public boolean mo1049H(V v) {
         return false;
     }
 
-    public final void I() {
-        if (this.j == null) {
-            this.j = VelocityTracker.obtain();
+    /* renamed from: I */
+    public final void m2639I() {
+        if (this.f34580j == null) {
+            this.f34580j = VelocityTracker.obtain();
         }
     }
 
-    public final boolean J(CoordinatorLayout coordinatorLayout, V v, int i, int i2, float f) {
-        Runnable runnable = this.d;
+    /* renamed from: J */
+    public final boolean m2638J(CoordinatorLayout coordinatorLayout, V v, int i, int i2, float f) {
+        Runnable runnable = this.f34574d;
         if (runnable != null) {
             v.removeCallbacks(runnable);
-            this.d = null;
+            this.f34574d = null;
         }
-        if (this.e == null) {
-            this.e = new OverScroller(v.getContext());
+        if (this.f34575e == null) {
+            this.f34575e = new OverScroller(v.getContext());
         }
-        this.e.fling(0, E(), 0, Math.round(f), 0, 0, i, i2);
-        if (!this.e.computeScrollOffset()) {
-            N(coordinatorLayout, v);
+        this.f34575e.fling(0, mo1020E(), 0, Math.round(f), 0, 0, i, i2);
+        if (!this.f34575e.computeScrollOffset()) {
+            mo1045N(coordinatorLayout, v);
             return false;
         }
-        a aVar = new a(coordinatorLayout, v);
-        this.d = aVar;
-        xs1.j0(v, aVar);
+        RunnableC3821a runnableC3821a = new RunnableC3821a(coordinatorLayout, v);
+        this.f34574d = runnableC3821a;
+        xs1.m4718j0(v, runnableC3821a);
         return true;
     }
 
-    public int K(V v) {
+    /* renamed from: K */
+    public int mo1048K(V v) {
         return -v.getHeight();
     }
 
-    public int L(V v) {
+    /* renamed from: L */
+    public int mo1047L(V v) {
         return v.getHeight();
     }
 
-    public int M() {
-        return E();
+    /* renamed from: M */
+    public int mo1046M() {
+        return mo1020E();
     }
 
-    public void N(CoordinatorLayout coordinatorLayout, V v) {
+    /* renamed from: N */
+    public void mo1045N(CoordinatorLayout coordinatorLayout, V v) {
     }
 
-    public final int O(CoordinatorLayout coordinatorLayout, V v, int i, int i2, int i3) {
-        return Q(coordinatorLayout, v, M() - i, i2, i3);
+    /* renamed from: O */
+    public final int m2637O(CoordinatorLayout coordinatorLayout, V v, int i, int i2, int i3) {
+        return mo1044Q(coordinatorLayout, v, mo1046M() - i, i2, i3);
     }
 
-    public int P(CoordinatorLayout coordinatorLayout, V v, int i) {
-        return Q(coordinatorLayout, v, i, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    /* renamed from: P */
+    public int m2636P(CoordinatorLayout coordinatorLayout, V v, int i) {
+        return mo1044Q(coordinatorLayout, v, i, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    public int Q(CoordinatorLayout coordinatorLayout, V v, int i, int i2, int i3) {
-        int b;
-        int E = E();
-        if (i2 == 0 || E < i2 || E > i3 || E == (b = sn0.b(i, i2, i3))) {
+    /* renamed from: Q */
+    public int mo1044Q(CoordinatorLayout coordinatorLayout, V v, int i, int i2, int i3) {
+        int m10152b;
+        int mo1020E = mo1020E();
+        if (i2 == 0 || mo1020E < i2 || mo1020E > i3 || mo1020E == (m10152b = sn0.m10152b(i, i2, i3))) {
             return 0;
         }
-        G(b);
-        return E - b;
+        mo1019G(m10152b);
+        return mo1020E - m10152b;
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean k(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: k */
+    public boolean mo326k(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
         int findPointerIndex;
-        if (this.i < 0) {
-            this.i = ViewConfiguration.get(coordinatorLayout.getContext()).getScaledTouchSlop();
+        if (this.f34579i < 0) {
+            this.f34579i = ViewConfiguration.get(coordinatorLayout.getContext()).getScaledTouchSlop();
         }
-        if (motionEvent.getActionMasked() == 2 && this.f) {
-            int i = this.g;
+        if (motionEvent.getActionMasked() == 2 && this.f34576f) {
+            int i = this.f34577g;
             if (i == -1 || (findPointerIndex = motionEvent.findPointerIndex(i)) == -1) {
                 return false;
             }
             int y = (int) motionEvent.getY(findPointerIndex);
-            if (Math.abs(y - this.h) > this.i) {
-                this.h = y;
+            if (Math.abs(y - this.f34578h) > this.f34579i) {
+                this.f34578h = y;
                 return true;
             }
         }
         if (motionEvent.getActionMasked() == 0) {
-            this.g = -1;
+            this.f34577g = -1;
             int x = (int) motionEvent.getX();
             int y2 = (int) motionEvent.getY();
-            boolean z = H(v) && coordinatorLayout.B(v, x, y2);
-            this.f = z;
+            boolean z = mo1049H(v) && coordinatorLayout.m29823B(v, x, y2);
+            this.f34576f = z;
             if (z) {
-                this.h = y2;
-                this.g = motionEvent.getPointerId(0);
-                I();
-                OverScroller overScroller = this.e;
+                this.f34578h = y2;
+                this.f34577g = motionEvent.getPointerId(0);
+                m2639I();
+                OverScroller overScroller = this.f34575e;
                 if (overScroller != null && !overScroller.isFinished()) {
-                    this.e.abortAnimation();
+                    this.f34575e.abortAnimation();
                     return true;
                 }
             }
         }
-        VelocityTracker velocityTracker = this.j;
+        VelocityTracker velocityTracker = this.f34580j;
         if (velocityTracker != null) {
             velocityTracker.addMovement(motionEvent);
         }

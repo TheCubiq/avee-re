@@ -8,64 +8,79 @@ import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */
 public class kn1 {
-    public static in1 a = new y7();
-    public static ThreadLocal<WeakReference<g6<ViewGroup, ArrayList<in1>>>> b = new ThreadLocal<>();
-    public static ArrayList<ViewGroup> c = new ArrayList<>();
 
+    /* renamed from: a */
+    public static in1 f16464a = new C3674y7();
+
+    /* renamed from: b */
+    public static ThreadLocal<WeakReference<C1370g6<ViewGroup, ArrayList<in1>>>> f16465b = new ThreadLocal<>();
+
+    /* renamed from: c */
+    public static ArrayList<ViewGroup> f16466c = new ArrayList<>();
+
+    /* renamed from: com.daaw.kn1$a */
     /* loaded from: classes.dex */
-    public static class a implements ViewTreeObserver.OnPreDrawListener, View.OnAttachStateChangeListener {
-        public in1 p;
-        public ViewGroup q;
+    public static class ViewTreeObserver$OnPreDrawListenerC1960a implements ViewTreeObserver.OnPreDrawListener, View.OnAttachStateChangeListener {
 
-        /* renamed from: com.daaw.kn1$a$a  reason: collision with other inner class name */
+        /* renamed from: p */
+        public in1 f16467p;
+
+        /* renamed from: q */
+        public ViewGroup f16468q;
+
+        /* renamed from: com.daaw.kn1$a$a */
         /* loaded from: classes.dex */
-        public class C0060a extends jn1 {
-            public final /* synthetic */ g6 a;
+        public class C1961a extends jn1 {
 
-            public C0060a(g6 g6Var) {
-                this.a = g6Var;
+            /* renamed from: a */
+            public final /* synthetic */ C1370g6 f16469a;
+
+            public C1961a(C1370g6 c1370g6) {
+                this.f16469a = c1370g6;
             }
 
-            @Override // com.daaw.in1.f
-            public void a(in1 in1Var) {
-                ((ArrayList) this.a.get(a.this.q)).remove(in1Var);
-                in1Var.T(this);
+            @Override // com.daaw.in1.InterfaceC1729f
+            /* renamed from: a */
+            public void mo9244a(in1 in1Var) {
+                ((ArrayList) this.f16469a.get(ViewTreeObserver$OnPreDrawListenerC1960a.this.f16468q)).remove(in1Var);
+                in1Var.mo15921T(this);
             }
         }
 
-        public a(in1 in1Var, ViewGroup viewGroup) {
-            this.p = in1Var;
-            this.q = viewGroup;
+        public ViewTreeObserver$OnPreDrawListenerC1960a(in1 in1Var, ViewGroup viewGroup) {
+            this.f16467p = in1Var;
+            this.f16468q = viewGroup;
         }
 
-        public final void a() {
-            this.q.getViewTreeObserver().removeOnPreDrawListener(this);
-            this.q.removeOnAttachStateChangeListener(this);
+        /* renamed from: a */
+        public final void m17642a() {
+            this.f16468q.getViewTreeObserver().removeOnPreDrawListener(this);
+            this.f16468q.removeOnAttachStateChangeListener(this);
         }
 
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
         public boolean onPreDraw() {
-            a();
-            if (kn1.c.remove(this.q)) {
-                g6<ViewGroup, ArrayList<in1>> b = kn1.b();
-                ArrayList<in1> arrayList = b.get(this.q);
+            m17642a();
+            if (kn1.f16466c.remove(this.f16468q)) {
+                C1370g6<ViewGroup, ArrayList<in1>> m17645b = kn1.m17645b();
+                ArrayList<in1> arrayList = m17645b.get(this.f16468q);
                 ArrayList arrayList2 = null;
                 if (arrayList == null) {
                     arrayList = new ArrayList<>();
-                    b.put(this.q, arrayList);
+                    m17645b.put(this.f16468q, arrayList);
                 } else if (arrayList.size() > 0) {
                     arrayList2 = new ArrayList(arrayList);
                 }
-                arrayList.add(this.p);
-                this.p.a(new C0060a(b));
-                this.p.n(this.q, false);
+                arrayList.add(this.f16467p);
+                this.f16467p.mo15915a(new C1961a(m17645b));
+                this.f16467p.m19601n(this.f16468q, false);
                 if (arrayList2 != null) {
                     Iterator it = arrayList2.iterator();
                     while (it.hasNext()) {
-                        ((in1) it.next()).V(this.q);
+                        ((in1) it.next()).mo15919V(this.f16468q);
                     }
                 }
-                this.p.S(this.q);
+                this.f16467p.m19609S(this.f16468q);
                 return true;
             }
             return true;
@@ -77,67 +92,71 @@ public class kn1 {
 
         @Override // android.view.View.OnAttachStateChangeListener
         public void onViewDetachedFromWindow(View view) {
-            a();
-            kn1.c.remove(this.q);
-            ArrayList<in1> arrayList = kn1.b().get(this.q);
+            m17642a();
+            kn1.f16466c.remove(this.f16468q);
+            ArrayList<in1> arrayList = kn1.m17645b().get(this.f16468q);
             if (arrayList != null && arrayList.size() > 0) {
                 Iterator<in1> it = arrayList.iterator();
                 while (it.hasNext()) {
-                    it.next().V(this.q);
+                    it.next().mo15919V(this.f16468q);
                 }
             }
-            this.p.o(true);
+            this.f16467p.m19600o(true);
         }
     }
 
-    public static void a(ViewGroup viewGroup, in1 in1Var) {
-        if (c.contains(viewGroup) || !xs1.V(viewGroup)) {
+    /* renamed from: a */
+    public static void m17646a(ViewGroup viewGroup, in1 in1Var) {
+        if (f16466c.contains(viewGroup) || !xs1.m4742V(viewGroup)) {
             return;
         }
-        c.add(viewGroup);
+        f16466c.add(viewGroup);
         if (in1Var == null) {
-            in1Var = a;
+            in1Var = f16464a;
         }
         in1 clone = in1Var.clone();
-        d(viewGroup, clone);
-        p81.c(viewGroup, null);
-        c(viewGroup, clone);
+        m17643d(viewGroup, clone);
+        p81.m13593c(viewGroup, null);
+        m17644c(viewGroup, clone);
     }
 
-    public static g6<ViewGroup, ArrayList<in1>> b() {
-        g6<ViewGroup, ArrayList<in1>> g6Var;
-        WeakReference<g6<ViewGroup, ArrayList<in1>>> weakReference = b.get();
-        if (weakReference == null || (g6Var = weakReference.get()) == null) {
-            g6<ViewGroup, ArrayList<in1>> g6Var2 = new g6<>();
-            b.set(new WeakReference<>(g6Var2));
-            return g6Var2;
+    /* renamed from: b */
+    public static C1370g6<ViewGroup, ArrayList<in1>> m17645b() {
+        C1370g6<ViewGroup, ArrayList<in1>> c1370g6;
+        WeakReference<C1370g6<ViewGroup, ArrayList<in1>>> weakReference = f16465b.get();
+        if (weakReference == null || (c1370g6 = weakReference.get()) == null) {
+            C1370g6<ViewGroup, ArrayList<in1>> c1370g62 = new C1370g6<>();
+            f16465b.set(new WeakReference<>(c1370g62));
+            return c1370g62;
         }
-        return g6Var;
+        return c1370g6;
     }
 
-    public static void c(ViewGroup viewGroup, in1 in1Var) {
+    /* renamed from: c */
+    public static void m17644c(ViewGroup viewGroup, in1 in1Var) {
         if (in1Var == null || viewGroup == null) {
             return;
         }
-        a aVar = new a(in1Var, viewGroup);
-        viewGroup.addOnAttachStateChangeListener(aVar);
-        viewGroup.getViewTreeObserver().addOnPreDrawListener(aVar);
+        ViewTreeObserver$OnPreDrawListenerC1960a viewTreeObserver$OnPreDrawListenerC1960a = new ViewTreeObserver$OnPreDrawListenerC1960a(in1Var, viewGroup);
+        viewGroup.addOnAttachStateChangeListener(viewTreeObserver$OnPreDrawListenerC1960a);
+        viewGroup.getViewTreeObserver().addOnPreDrawListener(viewTreeObserver$OnPreDrawListenerC1960a);
     }
 
-    public static void d(ViewGroup viewGroup, in1 in1Var) {
-        ArrayList<in1> arrayList = b().get(viewGroup);
+    /* renamed from: d */
+    public static void m17643d(ViewGroup viewGroup, in1 in1Var) {
+        ArrayList<in1> arrayList = m17645b().get(viewGroup);
         if (arrayList != null && arrayList.size() > 0) {
             Iterator<in1> it = arrayList.iterator();
             while (it.hasNext()) {
-                it.next().R(viewGroup);
+                it.next().mo15922R(viewGroup);
             }
         }
         if (in1Var != null) {
-            in1Var.n(viewGroup, true);
+            in1Var.m19601n(viewGroup, true);
         }
-        p81 b2 = p81.b(viewGroup);
-        if (b2 != null) {
-            b2.a();
+        p81 m13594b = p81.m13594b(viewGroup);
+        if (m13594b != null) {
+            m13594b.m13595a();
         }
     }
 }

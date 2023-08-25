@@ -9,7 +9,8 @@ public abstract class zzbd extends cp2 implements zzbe {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             zzb();
             parcel2.writeNoException();

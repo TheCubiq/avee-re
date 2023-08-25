@@ -5,67 +5,93 @@ import android.util.Log;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNull;
 /* loaded from: classes.dex */
 public final class om5 extends ud7 {
-    public char c;
-    public long d;
-    public String e;
-    public final hk5 f;
-    public final hk5 g;
-    public final hk5 h;
-    public final hk5 i;
-    public final hk5 j;
-    public final hk5 k;
-    public final hk5 l;
-    public final hk5 m;
-    public final hk5 n;
+
+    /* renamed from: c */
+    public char f21659c;
+
+    /* renamed from: d */
+    public long f21660d;
+
+    /* renamed from: e */
+    public String f21661e;
+
+    /* renamed from: f */
+    public final hk5 f21662f;
+
+    /* renamed from: g */
+    public final hk5 f21663g;
+
+    /* renamed from: h */
+    public final hk5 f21664h;
+
+    /* renamed from: i */
+    public final hk5 f21665i;
+
+    /* renamed from: j */
+    public final hk5 f21666j;
+
+    /* renamed from: k */
+    public final hk5 f21667k;
+
+    /* renamed from: l */
+    public final hk5 f21668l;
+
+    /* renamed from: m */
+    public final hk5 f21669m;
+
+    /* renamed from: n */
+    public final hk5 f21670n;
 
     public om5(dr6 dr6Var) {
         super(dr6Var);
-        this.c = (char) 0;
-        this.d = -1L;
-        this.f = new hk5(this, 6, false, false);
-        this.g = new hk5(this, 6, true, false);
-        this.h = new hk5(this, 6, false, true);
-        this.i = new hk5(this, 5, false, false);
-        this.j = new hk5(this, 5, true, false);
-        this.k = new hk5(this, 5, false, true);
-        this.l = new hk5(this, 4, false, false);
-        this.m = new hk5(this, 3, false, false);
-        this.n = new hk5(this, 2, false, false);
+        this.f21659c = (char) 0;
+        this.f21660d = -1L;
+        this.f21662f = new hk5(this, 6, false, false);
+        this.f21663g = new hk5(this, 6, true, false);
+        this.f21664h = new hk5(this, 6, false, true);
+        this.f21665i = new hk5(this, 5, false, false);
+        this.f21666j = new hk5(this, 5, true, false);
+        this.f21667k = new hk5(this, 5, false, true);
+        this.f21668l = new hk5(this, 4, false, false);
+        this.f21669m = new hk5(this, 3, false, false);
+        this.f21670n = new hk5(this, 2, false, false);
     }
 
-    public static String A(boolean z, String str, Object obj, Object obj2, Object obj3) {
+    /* renamed from: A */
+    public static String m14170A(boolean z, String str, Object obj, Object obj2, Object obj3) {
         String str2 = "";
         if (str == null) {
             str = "";
         }
-        String B = B(z, obj);
-        String B2 = B(z, obj2);
-        String B3 = B(z, obj3);
+        String m14169B = m14169B(z, obj);
+        String m14169B2 = m14169B(z, obj2);
+        String m14169B3 = m14169B(z, obj3);
         StringBuilder sb = new StringBuilder();
         if (!TextUtils.isEmpty(str)) {
             sb.append(str);
             str2 = ": ";
         }
         String str3 = ", ";
-        if (!TextUtils.isEmpty(B)) {
+        if (!TextUtils.isEmpty(m14169B)) {
             sb.append(str2);
-            sb.append(B);
+            sb.append(m14169B);
             str2 = ", ";
         }
-        if (TextUtils.isEmpty(B2)) {
+        if (TextUtils.isEmpty(m14169B2)) {
             str3 = str2;
         } else {
             sb.append(str2);
-            sb.append(B2);
+            sb.append(m14169B2);
         }
-        if (!TextUtils.isEmpty(B3)) {
+        if (!TextUtils.isEmpty(m14169B3)) {
             sb.append(str3);
-            sb.append(B3);
+            sb.append(m14169B3);
         }
         return sb.toString();
     }
 
-    public static String B(boolean z, Object obj) {
+    /* renamed from: B */
+    public static String m14169B(boolean z, Object obj) {
         String str;
         String className;
         if (obj == null) {
@@ -95,12 +121,12 @@ public final class om5 extends ud7 {
                 if (!(obj instanceof ll5)) {
                     return z ? "-" : obj.toString();
                 }
-                str = ((ll5) obj).a;
+                str = ((ll5) obj).f17526a;
                 return str;
             }
             Throwable th = (Throwable) obj;
             StringBuilder sb = new StringBuilder(z ? th.getClass().getName() : th.toString());
-            String G = G(dr6.class.getCanonicalName());
+            String m14164G = m14164G(dr6.class.getCanonicalName());
             StackTraceElement[] stackTrace = th.getStackTrace();
             int length = stackTrace.length;
             while (true) {
@@ -108,7 +134,7 @@ public final class om5 extends ud7 {
                     break;
                 }
                 StackTraceElement stackTraceElement = stackTrace[i];
-                if (!stackTraceElement.isNativeMethod() && (className = stackTraceElement.getClassName()) != null && G(className).equals(G)) {
+                if (!stackTraceElement.isNativeMethod() && (className = stackTraceElement.getClassName()) != null && m14164G(className).equals(m14164G)) {
                     sb.append(": ");
                     sb.append(stackTraceElement);
                     break;
@@ -119,7 +145,8 @@ public final class om5 extends ud7 {
         }
     }
 
-    public static String G(String str) {
+    /* renamed from: G */
+    public static String m14164G(String str) {
         if (TextUtils.isEmpty(str)) {
             return "";
         }
@@ -127,7 +154,8 @@ public final class om5 extends ud7 {
         return lastIndexOf == -1 ? str : str.substring(0, lastIndexOf);
     }
 
-    public static Object z(String str) {
+    /* renamed from: z */
+    public static Object m14152z(String str) {
         if (str == null) {
             return null;
         }
@@ -135,74 +163,86 @@ public final class om5 extends ud7 {
     }
 
     @EnsuresNonNull({"logTagDoNotUseDirectly"})
-    public final String C() {
+    /* renamed from: C */
+    public final String m14168C() {
         String str;
         synchronized (this) {
-            if (this.e == null) {
-                this.e = this.a.Q() != null ? this.a.Q() : this.a.z().w();
+            if (this.f21661e == null) {
+                this.f21661e = this.f25143a.m24042Q() != null ? this.f25143a.m24042Q() : this.f25143a.m24020z().m12655w();
             }
-            ry0.j(this.e);
-            str = this.e;
+            ry0.m10830j(this.f21661e);
+            str = this.f21661e;
         }
         return str;
     }
 
-    public final void F(int i, boolean z, boolean z2, String str, Object obj, Object obj2, Object obj3) {
-        if (!z && Log.isLoggable(C(), i)) {
-            Log.println(i, C(), A(false, str, obj, obj2, obj3));
+    /* renamed from: F */
+    public final void m14165F(int i, boolean z, boolean z2, String str, Object obj, Object obj2, Object obj3) {
+        if (!z && Log.isLoggable(m14168C(), i)) {
+            Log.println(i, m14168C(), m14170A(false, str, obj, obj2, obj3));
         }
         if (z2 || i < 5) {
             return;
         }
-        ry0.j(str);
-        vn6 G = this.a.G();
-        if (G == null) {
-            Log.println(6, C(), "Scheduler not set. Not logging error/warn");
-        } else if (G.m()) {
-            G.z(new ej5(this, i >= 9 ? 8 : i, str, obj, obj2, obj3));
+        ry0.m10830j(str);
+        vn6 m24052G = this.f25143a.m24052G();
+        if (m24052G == null) {
+            Log.println(6, m14168C(), "Scheduler not set. Not logging error/warn");
+        } else if (m24052G.m8307m()) {
+            m24052G.m6978z(new ej5(this, i >= 9 ? 8 : i, str, obj, obj2, obj3));
         } else {
-            Log.println(6, C(), "Scheduler not initialized. Not logging error/warn");
+            Log.println(6, m14168C(), "Scheduler not initialized. Not logging error/warn");
         }
     }
 
     @Override // com.daaw.ud7
-    public final boolean h() {
+    /* renamed from: h */
+    public final boolean mo6990h() {
         return false;
     }
 
-    public final hk5 p() {
-        return this.m;
+    /* renamed from: p */
+    public final hk5 m14161p() {
+        return this.f21669m;
     }
 
-    public final hk5 q() {
-        return this.f;
+    /* renamed from: q */
+    public final hk5 m14160q() {
+        return this.f21662f;
     }
 
-    public final hk5 s() {
-        return this.h;
+    /* renamed from: s */
+    public final hk5 m14159s() {
+        return this.f21664h;
     }
 
-    public final hk5 t() {
-        return this.g;
+    /* renamed from: t */
+    public final hk5 m14158t() {
+        return this.f21663g;
     }
 
-    public final hk5 u() {
-        return this.l;
+    /* renamed from: u */
+    public final hk5 m14157u() {
+        return this.f21668l;
     }
 
-    public final hk5 v() {
-        return this.n;
+    /* renamed from: v */
+    public final hk5 m14156v() {
+        return this.f21670n;
     }
 
-    public final hk5 w() {
-        return this.i;
+    /* renamed from: w */
+    public final hk5 m14155w() {
+        return this.f21665i;
     }
 
-    public final hk5 x() {
-        return this.k;
+    /* renamed from: x */
+    public final hk5 m14154x() {
+        return this.f21667k;
     }
 
-    public final hk5 y() {
-        return this.j;
+    /* renamed from: y */
+    public final hk5 m14153y() {
+        return this.f21666j;
     }
 }

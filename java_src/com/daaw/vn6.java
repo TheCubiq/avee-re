@@ -11,142 +11,174 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes2.dex */
 public final class vn6 extends ud7 {
-    public static final AtomicLong l = new AtomicLong(Long.MIN_VALUE);
-    public tm6 c;
-    public tm6 d;
-    public final PriorityBlockingQueue e;
-    public final BlockingQueue f;
-    public final Thread.UncaughtExceptionHandler g;
-    public final Thread.UncaughtExceptionHandler h;
-    public final Object i;
-    public final Semaphore j;
-    public volatile boolean k;
+
+    /* renamed from: l */
+    public static final AtomicLong f30360l = new AtomicLong(Long.MIN_VALUE);
+
+    /* renamed from: c */
+    public tm6 f30361c;
+
+    /* renamed from: d */
+    public tm6 f30362d;
+
+    /* renamed from: e */
+    public final PriorityBlockingQueue f30363e;
+
+    /* renamed from: f */
+    public final BlockingQueue f30364f;
+
+    /* renamed from: g */
+    public final Thread.UncaughtExceptionHandler f30365g;
+
+    /* renamed from: h */
+    public final Thread.UncaughtExceptionHandler f30366h;
+
+    /* renamed from: i */
+    public final Object f30367i;
+
+    /* renamed from: j */
+    public final Semaphore f30368j;
+
+    /* renamed from: k */
+    public volatile boolean f30369k;
 
     public vn6(dr6 dr6Var) {
         super(dr6Var);
-        this.i = new Object();
-        this.j = new Semaphore(2);
-        this.e = new PriorityBlockingQueue();
-        this.f = new LinkedBlockingQueue();
-        this.g = new nk6(this, "Thread death: Uncaught exception on worker thread");
-        this.h = new nk6(this, "Thread death: Uncaught exception on network thread");
+        this.f30367i = new Object();
+        this.f30368j = new Semaphore(2);
+        this.f30363e = new PriorityBlockingQueue();
+        this.f30364f = new LinkedBlockingQueue();
+        this.f30365g = new nk6(this, "Thread death: Uncaught exception on worker thread");
+        this.f30366h = new nk6(this, "Thread death: Uncaught exception on network thread");
     }
 
-    public static /* bridge */ /* synthetic */ boolean B(vn6 vn6Var) {
-        boolean z = vn6Var.k;
+    /* renamed from: B */
+    public static /* bridge */ /* synthetic */ boolean m6995B(vn6 vn6Var) {
+        boolean z = vn6Var.f30369k;
         return false;
     }
 
-    public final void A(Runnable runnable) {
-        j();
-        ry0.j(runnable);
-        D(new ql6(this, runnable, true, "Task exception on worker thread"));
+    /* renamed from: A */
+    public final void m6996A(Runnable runnable) {
+        m8310j();
+        ry0.m10830j(runnable);
+        m6993D(new ql6(this, runnable, true, "Task exception on worker thread"));
     }
 
-    public final boolean C() {
-        return Thread.currentThread() == this.c;
+    /* renamed from: C */
+    public final boolean m6994C() {
+        return Thread.currentThread() == this.f30361c;
     }
 
-    public final void D(ql6 ql6Var) {
-        synchronized (this.i) {
-            this.e.add(ql6Var);
-            tm6 tm6Var = this.c;
+    /* renamed from: D */
+    public final void m6993D(ql6 ql6Var) {
+        synchronized (this.f30367i) {
+            this.f30363e.add(ql6Var);
+            tm6 tm6Var = this.f30361c;
             if (tm6Var == null) {
-                tm6 tm6Var2 = new tm6(this, "Measurement Worker", this.e);
-                this.c = tm6Var2;
-                tm6Var2.setUncaughtExceptionHandler(this.g);
-                this.c.start();
+                tm6 tm6Var2 = new tm6(this, "Measurement Worker", this.f30363e);
+                this.f30361c = tm6Var2;
+                tm6Var2.setUncaughtExceptionHandler(this.f30365g);
+                this.f30361c.start();
             } else {
-                tm6Var.a();
+                tm6Var.m8963a();
             }
         }
     }
 
     @Override // com.daaw.rc7
-    public final void e() {
-        if (Thread.currentThread() != this.d) {
+    /* renamed from: e */
+    public final void mo6992e() {
+        if (Thread.currentThread() != this.f30362d) {
             throw new IllegalStateException("Call expected from network thread");
         }
     }
 
     @Override // com.daaw.rc7
-    public final void f() {
-        if (Thread.currentThread() != this.c) {
+    /* renamed from: f */
+    public final void mo6991f() {
+        if (Thread.currentThread() != this.f30361c) {
             throw new IllegalStateException("Call expected from worker thread");
         }
     }
 
     @Override // com.daaw.ud7
-    public final boolean h() {
+    /* renamed from: h */
+    public final boolean mo6990h() {
         return false;
     }
 
-    public final Object q(AtomicReference atomicReference, long j, String str, Runnable runnable) {
+    /* renamed from: q */
+    public final Object m6986q(AtomicReference atomicReference, long j, String str, Runnable runnable) {
         synchronized (atomicReference) {
-            this.a.r().z(runnable);
+            this.f25143a.mo3882r().m6978z(runnable);
             try {
                 atomicReference.wait(j);
             } catch (InterruptedException unused) {
-                hk5 w = this.a.i().w();
-                w.a("Interrupted waiting for " + str);
+                hk5 m14155w = this.f25143a.mo3895i().m14155w();
+                m14155w.m20653a("Interrupted waiting for " + str);
                 return null;
             }
         }
         Object obj = atomicReference.get();
         if (obj == null) {
-            this.a.i().w().a("Timed out waiting for ".concat(str));
+            this.f25143a.mo3895i().m14155w().m20653a("Timed out waiting for ".concat(str));
         }
         return obj;
     }
 
-    public final Future s(Callable callable) {
-        j();
-        ry0.j(callable);
+    /* renamed from: s */
+    public final Future m6985s(Callable callable) {
+        m8310j();
+        ry0.m10830j(callable);
         ql6 ql6Var = new ql6(this, callable, false, "Task exception on worker thread");
-        if (Thread.currentThread() == this.c) {
-            if (!this.e.isEmpty()) {
-                this.a.i().w().a("Callable skipped the worker queue.");
+        if (Thread.currentThread() == this.f30361c) {
+            if (!this.f30363e.isEmpty()) {
+                this.f25143a.mo3895i().m14155w().m20653a("Callable skipped the worker queue.");
             }
             ql6Var.run();
         } else {
-            D(ql6Var);
+            m6993D(ql6Var);
         }
         return ql6Var;
     }
 
-    public final Future t(Callable callable) {
-        j();
-        ry0.j(callable);
+    /* renamed from: t */
+    public final Future m6984t(Callable callable) {
+        m8310j();
+        ry0.m10830j(callable);
         ql6 ql6Var = new ql6(this, callable, true, "Task exception on worker thread");
-        if (Thread.currentThread() == this.c) {
+        if (Thread.currentThread() == this.f30361c) {
             ql6Var.run();
         } else {
-            D(ql6Var);
+            m6993D(ql6Var);
         }
         return ql6Var;
     }
 
-    public final void y(Runnable runnable) {
-        j();
-        ry0.j(runnable);
+    /* renamed from: y */
+    public final void m6979y(Runnable runnable) {
+        m8310j();
+        ry0.m10830j(runnable);
         ql6 ql6Var = new ql6(this, runnable, false, "Task exception on network thread");
-        synchronized (this.i) {
-            this.f.add(ql6Var);
-            tm6 tm6Var = this.d;
+        synchronized (this.f30367i) {
+            this.f30364f.add(ql6Var);
+            tm6 tm6Var = this.f30362d;
             if (tm6Var == null) {
-                tm6 tm6Var2 = new tm6(this, "Measurement Network", this.f);
-                this.d = tm6Var2;
-                tm6Var2.setUncaughtExceptionHandler(this.h);
-                this.d.start();
+                tm6 tm6Var2 = new tm6(this, "Measurement Network", this.f30364f);
+                this.f30362d = tm6Var2;
+                tm6Var2.setUncaughtExceptionHandler(this.f30366h);
+                this.f30362d.start();
             } else {
-                tm6Var.a();
+                tm6Var.m8963a();
             }
         }
     }
 
-    public final void z(Runnable runnable) {
-        j();
-        ry0.j(runnable);
-        D(new ql6(this, runnable, false, "Task exception on worker thread"));
+    /* renamed from: z */
+    public final void m6978z(Runnable runnable) {
+        m8310j();
+        ry0.m10830j(runnable);
+        m6993D(new ql6(this, runnable, false, "Task exception on worker thread"));
     }
 }

@@ -5,24 +5,30 @@ import android.os.IInterface;
 import android.os.Parcel;
 /* loaded from: classes2.dex */
 public class pu7 implements IInterface {
-    public final IBinder p;
-    public final String q = "com.android.vending.billing.IInAppBillingService";
+
+    /* renamed from: p */
+    public final IBinder f23309p;
+
+    /* renamed from: q */
+    public final String f23310q = "com.android.vending.billing.IInAppBillingService";
 
     public pu7(IBinder iBinder, String str) {
-        this.p = iBinder;
+        this.f23309p = iBinder;
     }
 
-    public final Parcel D() {
+    /* renamed from: D */
+    public final Parcel m13119D() {
         Parcel obtain = Parcel.obtain();
-        obtain.writeInterfaceToken(this.q);
+        obtain.writeInterfaceToken(this.f23310q);
         return obtain;
     }
 
-    public final Parcel I(int i, Parcel parcel) {
+    /* renamed from: I */
+    public final Parcel m13118I(int i, Parcel parcel) {
         Parcel obtain = Parcel.obtain();
         try {
             try {
-                this.p.transact(i, parcel, obtain, 0);
+                this.f23309p.transact(i, parcel, obtain, 0);
                 obtain.readException();
                 return obtain;
             } catch (RuntimeException e) {
@@ -36,6 +42,6 @@ public class pu7 implements IInterface {
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.p;
+        return this.f23309p;
     }
 }

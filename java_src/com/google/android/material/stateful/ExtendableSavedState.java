@@ -7,11 +7,14 @@ import androidx.customview.view.AbsSavedState;
 import com.daaw.cd1;
 /* loaded from: classes2.dex */
 public class ExtendableSavedState extends AbsSavedState {
-    public static final Parcelable.Creator<ExtendableSavedState> CREATOR = new a();
-    public final cd1<String, Bundle> r;
+    public static final Parcelable.Creator<ExtendableSavedState> CREATOR = new C4116a();
 
+    /* renamed from: r */
+    public final cd1<String, Bundle> f37661r;
+
+    /* renamed from: com.google.android.material.stateful.ExtendableSavedState$a */
     /* loaded from: classes2.dex */
-    public static class a implements Parcelable.ClassLoaderCreator<ExtendableSavedState> {
+    public static class C4116a implements Parcelable.ClassLoaderCreator<ExtendableSavedState> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public ExtendableSavedState createFromParcel(Parcel parcel) {
@@ -38,35 +41,35 @@ public class ExtendableSavedState extends AbsSavedState {
         parcel.readStringArray(strArr);
         Bundle[] bundleArr = new Bundle[readInt];
         parcel.readTypedArray(bundleArr, Bundle.CREATOR);
-        this.r = new cd1<>(readInt);
+        this.f37661r = new cd1<>(readInt);
         for (int i = 0; i < readInt; i++) {
-            this.r.put(strArr[i], bundleArr[i]);
+            this.f37661r.put(strArr[i], bundleArr[i]);
         }
     }
 
-    public /* synthetic */ ExtendableSavedState(Parcel parcel, ClassLoader classLoader, a aVar) {
+    public /* synthetic */ ExtendableSavedState(Parcel parcel, ClassLoader classLoader, C4116a c4116a) {
         this(parcel, classLoader);
     }
 
     public ExtendableSavedState(Parcelable parcelable) {
         super(parcelable);
-        this.r = new cd1<>();
+        this.f37661r = new cd1<>();
     }
 
     public String toString() {
-        return "ExtendableSavedState{" + Integer.toHexString(System.identityHashCode(this)) + " states=" + this.r + "}";
+        return "ExtendableSavedState{" + Integer.toHexString(System.identityHashCode(this)) + " states=" + this.f37661r + "}";
     }
 
     @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
         super.writeToParcel(parcel, i);
-        int size = this.r.size();
+        int size = this.f37661r.size();
         parcel.writeInt(size);
         String[] strArr = new String[size];
         Bundle[] bundleArr = new Bundle[size];
         for (int i2 = 0; i2 < size; i2++) {
-            strArr[i2] = this.r.i(i2);
-            bundleArr[i2] = this.r.m(i2);
+            strArr[i2] = this.f37661r.m25436i(i2);
+            bundleArr[i2] = this.f37661r.m25432m(i2);
         }
         parcel.writeStringArray(strArr);
         parcel.writeTypedArray(bundleArr, 0);

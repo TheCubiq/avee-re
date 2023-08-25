@@ -3,18 +3,25 @@ package com.daaw;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes2.dex */
 public final class fu0 {
-    public final AtomicInteger a = new AtomicInteger();
-    public final AtomicInteger b = new AtomicInteger();
 
-    public void a() {
-        this.b.getAndIncrement();
+    /* renamed from: a */
+    public final AtomicInteger f9957a = new AtomicInteger();
+
+    /* renamed from: b */
+    public final AtomicInteger f9958b = new AtomicInteger();
+
+    /* renamed from: a */
+    public void m22265a() {
+        this.f9958b.getAndIncrement();
     }
 
-    public void b() {
-        this.a.getAndIncrement();
+    /* renamed from: b */
+    public void m22264b() {
+        this.f9957a.getAndIncrement();
     }
 
-    public void c() {
-        this.b.set(0);
+    /* renamed from: c */
+    public void m22263c() {
+        this.f9958b.set(0);
     }
 }

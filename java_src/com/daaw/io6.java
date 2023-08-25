@@ -3,19 +3,26 @@ package com.daaw;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public interface io6 {
-    io6 a(String str);
+    /* renamed from: a */
+    io6 mo17594a(String str);
 
-    io6 b(zze zzeVar);
+    /* renamed from: b */
+    io6 mo17593b(zze zzeVar);
 
-    io6 c(int i);
+    /* renamed from: c */
+    io6 mo17592c(int i);
 
-    io6 d(ei6 ei6Var);
+    /* renamed from: d */
+    io6 mo17591d(ei6 ei6Var);
 
-    io6 e(Throwable th);
+    /* renamed from: e */
+    io6 mo17590e(Throwable th);
 
-    io6 l(String str);
+    /* renamed from: l */
+    io6 mo17583l(String str);
 
-    io6 m(String str);
+    /* renamed from: m */
+    io6 mo17582m(String str);
 
     io6 zzf(boolean z);
 

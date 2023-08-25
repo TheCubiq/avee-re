@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface rc0 {
-    void a();
+    /* renamed from: a */
+    void mo11434a();
 
-    void b();
+    /* renamed from: b */
+    void mo11433b();
 
-    void c(int i, int i2, int i3);
+    /* renamed from: c */
+    void mo11432c(int i, int i2, int i3);
 }

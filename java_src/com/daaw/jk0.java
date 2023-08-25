@@ -9,130 +9,165 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 /* loaded from: classes.dex */
 public final class jk0 implements lk0 {
-    public final ExecutorService a;
-    public b<? extends c> b;
-    public IOException c;
 
+    /* renamed from: a */
+    public final ExecutorService f15145a;
+
+    /* renamed from: b */
+    public HandlerC1835b<? extends InterfaceC1836c> f15146b;
+
+    /* renamed from: c */
+    public IOException f15147c;
+
+    /* renamed from: com.daaw.jk0$a */
     /* loaded from: classes.dex */
-    public interface a<T extends c> {
-        void k(T t, long j, long j2, boolean z);
+    public interface InterfaceC1834a<T extends InterfaceC1836c> {
+        /* renamed from: k */
+        void mo11472k(T t, long j, long j2, boolean z);
 
-        void o(T t, long j, long j2);
+        /* renamed from: o */
+        void mo11469o(T t, long j, long j2);
 
-        int r(T t, long j, long j2, IOException iOException);
+        /* renamed from: r */
+        int mo11468r(T t, long j, long j2, IOException iOException);
     }
 
     @SuppressLint({"HandlerLeak"})
+    /* renamed from: com.daaw.jk0$b */
     /* loaded from: classes.dex */
-    public final class b<T extends c> extends Handler implements Runnable {
-        public final int p;
-        public final T q;
-        public final long r;
-        public a<T> s;
-        public IOException t;
-        public int u;
-        public volatile Thread v;
-        public volatile boolean w;
-        public volatile boolean x;
+    public final class HandlerC1835b<T extends InterfaceC1836c> extends Handler implements Runnable {
 
-        public b(Looper looper, T t, a<T> aVar, int i, long j) {
+        /* renamed from: p */
+        public final int f15148p;
+
+        /* renamed from: q */
+        public final T f15149q;
+
+        /* renamed from: r */
+        public final long f15150r;
+
+        /* renamed from: s */
+        public InterfaceC1834a<T> f15151s;
+
+        /* renamed from: t */
+        public IOException f15152t;
+
+        /* renamed from: u */
+        public int f15153u;
+
+        /* renamed from: v */
+        public volatile Thread f15154v;
+
+        /* renamed from: w */
+        public volatile boolean f15155w;
+
+        /* renamed from: x */
+        public volatile boolean f15156x;
+
+        public HandlerC1835b(Looper looper, T t, InterfaceC1834a<T> interfaceC1834a, int i, long j) {
             super(looper);
-            this.q = t;
-            this.s = aVar;
-            this.p = i;
-            this.r = j;
+            this.f15149q = t;
+            this.f15151s = interfaceC1834a;
+            this.f15148p = i;
+            this.f15150r = j;
         }
 
-        public void a(boolean z) {
-            this.x = z;
-            this.t = null;
+        /* renamed from: a */
+        public void m18460a(boolean z) {
+            this.f15156x = z;
+            this.f15152t = null;
             if (hasMessages(0)) {
                 removeMessages(0);
                 if (!z) {
                     sendEmptyMessage(1);
                 }
             } else {
-                this.w = true;
-                this.q.b();
-                if (this.v != null) {
-                    this.v.interrupt();
+                this.f15155w = true;
+                this.f15149q.mo6739b();
+                if (this.f15154v != null) {
+                    this.f15154v.interrupt();
                 }
             }
             if (z) {
-                c();
+                m18458c();
                 long elapsedRealtime = SystemClock.elapsedRealtime();
-                this.s.k(this.q, elapsedRealtime, elapsedRealtime - this.r, true);
-                this.s = null;
+                this.f15151s.mo11472k(this.f15149q, elapsedRealtime, elapsedRealtime - this.f15150r, true);
+                this.f15151s = null;
             }
         }
 
-        public final void b() {
-            this.t = null;
-            jk0.this.a.execute(jk0.this.b);
+        /* renamed from: b */
+        public final void m18459b() {
+            this.f15152t = null;
+            jk0.this.f15145a.execute(jk0.this.f15146b);
         }
 
-        public final void c() {
-            jk0.this.b = null;
+        /* renamed from: c */
+        public final void m18458c() {
+            jk0.this.f15146b = null;
         }
 
-        public final long d() {
-            return Math.min((this.u - 1) * 1000, 5000);
+        /* renamed from: d */
+        public final long m18457d() {
+            return Math.min((this.f15153u - 1) * 1000, 5000);
         }
 
-        public void e(int i) {
-            IOException iOException = this.t;
-            if (iOException != null && this.u > i) {
+        /* renamed from: e */
+        public void m18456e(int i) {
+            IOException iOException = this.f15152t;
+            if (iOException != null && this.f15153u > i) {
                 throw iOException;
             }
         }
 
-        public void f(long j) {
-            s6.f(jk0.this.b == null);
-            jk0.this.b = this;
+        /* renamed from: f */
+        public void m18455f(long j) {
+            C2914s6.m10685f(jk0.this.f15146b == null);
+            jk0.this.f15146b = this;
             if (j > 0) {
                 sendEmptyMessageDelayed(0, j);
             } else {
-                b();
+                m18459b();
             }
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
-            if (this.x) {
+            if (this.f15156x) {
                 return;
             }
             int i = message.what;
             if (i == 0) {
-                b();
+                m18459b();
             } else if (i == 4) {
                 throw ((Error) message.obj);
             } else {
-                c();
+                m18458c();
                 long elapsedRealtime = SystemClock.elapsedRealtime();
-                long j = elapsedRealtime - this.r;
-                if (this.w) {
-                    this.s.k(this.q, elapsedRealtime, j, false);
+                long j = elapsedRealtime - this.f15150r;
+                if (this.f15155w) {
+                    this.f15151s.mo11472k(this.f15149q, elapsedRealtime, j, false);
                     return;
                 }
                 int i2 = message.what;
                 if (i2 == 1) {
-                    this.s.k(this.q, elapsedRealtime, j, false);
+                    this.f15151s.mo11472k(this.f15149q, elapsedRealtime, j, false);
                 } else if (i2 == 2) {
                     try {
-                        this.s.o(this.q, elapsedRealtime, j);
+                        this.f15151s.mo11469o(this.f15149q, elapsedRealtime, j);
                     } catch (RuntimeException e) {
-                        jk0.this.c = new f(e);
+                        jk0.this.f15147c = new C1839f(e);
                     }
                 } else if (i2 != 3) {
                 } else {
                     IOException iOException = (IOException) message.obj;
-                    this.t = iOException;
-                    int r = this.s.r(this.q, elapsedRealtime, j, iOException);
-                    if (r == 3) {
-                        jk0.this.c = this.t;
-                    } else if (r != 2) {
-                        this.u = r != 1 ? 1 + this.u : 1;
-                        f(d());
+                    this.f15152t = iOException;
+                    int mo11468r = this.f15151s.mo11468r(this.f15149q, elapsedRealtime, j, iOException);
+                    if (mo11468r == 3) {
+                        jk0.this.f15147c = this.f15152t;
+                    } else if (mo11468r != 2) {
+                        this.f15153u = mo11468r != 1 ? 1 + this.f15153u : 1;
+                        m18455f(m18457d());
                     }
                 }
             }
@@ -140,52 +175,52 @@ public final class jk0 implements lk0 {
 
         @Override // java.lang.Runnable
         public void run() {
-            f fVar;
+            C1839f c1839f;
             Message obtainMessage;
             try {
-                this.v = Thread.currentThread();
-                if (!this.w) {
-                    mm1.a("load:" + this.q.getClass().getSimpleName());
+                this.f15154v = Thread.currentThread();
+                if (!this.f15155w) {
+                    mm1.m15937a("load:" + this.f15149q.getClass().getSimpleName());
                     try {
-                        this.q.a();
-                        mm1.c();
+                        this.f15149q.mo6740a();
+                        mm1.m15935c();
                     } catch (Throwable th) {
-                        mm1.c();
+                        mm1.m15935c();
                         throw th;
                     }
                 }
-                if (this.x) {
+                if (this.f15156x) {
                     return;
                 }
                 sendEmptyMessage(2);
             } catch (IOException e) {
-                if (this.x) {
+                if (this.f15156x) {
                     return;
                 }
                 obtainMessage = obtainMessage(3, e);
                 obtainMessage.sendToTarget();
             } catch (InterruptedException unused) {
-                s6.f(this.w);
-                if (this.x) {
+                C2914s6.m10685f(this.f15155w);
+                if (this.f15156x) {
                     return;
                 }
                 sendEmptyMessage(2);
             } catch (Exception e2) {
-                if (this.x) {
+                if (this.f15156x) {
                     return;
                 }
-                fVar = new f(e2);
-                obtainMessage = obtainMessage(3, fVar);
+                c1839f = new C1839f(e2);
+                obtainMessage = obtainMessage(3, c1839f);
                 obtainMessage.sendToTarget();
             } catch (OutOfMemoryError e3) {
-                if (this.x) {
+                if (this.f15156x) {
                     return;
                 }
-                fVar = new f(e3);
-                obtainMessage = obtainMessage(3, fVar);
+                c1839f = new C1839f(e3);
+                obtainMessage = obtainMessage(3, c1839f);
                 obtainMessage.sendToTarget();
             } catch (Error e4) {
-                if (!this.x) {
+                if (!this.f15156x) {
                     obtainMessage(4, e4).sendToTarget();
                 }
                 throw e4;
@@ -193,91 +228,107 @@ public final class jk0 implements lk0 {
         }
     }
 
+    /* renamed from: com.daaw.jk0$c */
     /* loaded from: classes.dex */
-    public interface c {
-        void a();
+    public interface InterfaceC1836c {
+        /* renamed from: a */
+        void mo6740a();
 
-        void b();
+        /* renamed from: b */
+        void mo6739b();
     }
 
+    /* renamed from: com.daaw.jk0$d */
     /* loaded from: classes.dex */
-    public interface d {
-        void h();
+    public interface InterfaceC1837d {
+        /* renamed from: h */
+        void mo11474h();
     }
 
+    /* renamed from: com.daaw.jk0$e */
     /* loaded from: classes.dex */
-    public static final class e implements Runnable {
-        public final d p;
+    public static final class RunnableC1838e implements Runnable {
 
-        public e(d dVar) {
-            this.p = dVar;
+        /* renamed from: p */
+        public final InterfaceC1837d f15158p;
+
+        public RunnableC1838e(InterfaceC1837d interfaceC1837d) {
+            this.f15158p = interfaceC1837d;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            this.p.h();
+            this.f15158p.mo11474h();
         }
     }
 
+    /* renamed from: com.daaw.jk0$f */
     /* loaded from: classes.dex */
-    public static final class f extends IOException {
-        public f(Throwable th) {
+    public static final class C1839f extends IOException {
+        public C1839f(Throwable th) {
             super("Unexpected " + th.getClass().getSimpleName() + ": " + th.getMessage(), th);
         }
     }
 
     public jk0(String str) {
-        this.a = sq1.L(str);
+        this.f15145a = sq1.m10033L(str);
     }
 
     @Override // com.daaw.lk0
-    public void a() {
-        h(Integer.MIN_VALUE);
+    /* renamed from: a */
+    public void mo16893a() {
+        m18464h(Integer.MIN_VALUE);
     }
 
-    public void f() {
-        this.b.a(false);
+    /* renamed from: f */
+    public void m18466f() {
+        this.f15146b.m18460a(false);
     }
 
-    public boolean g() {
-        return this.b != null;
+    /* renamed from: g */
+    public boolean m18465g() {
+        return this.f15146b != null;
     }
 
-    public void h(int i) {
-        IOException iOException = this.c;
+    /* renamed from: h */
+    public void m18464h(int i) {
+        IOException iOException = this.f15147c;
         if (iOException != null) {
             throw iOException;
         }
-        b<? extends c> bVar = this.b;
-        if (bVar != null) {
+        HandlerC1835b<? extends InterfaceC1836c> handlerC1835b = this.f15146b;
+        if (handlerC1835b != null) {
             if (i == Integer.MIN_VALUE) {
-                i = bVar.p;
+                i = handlerC1835b.f15148p;
             }
-            bVar.e(i);
+            handlerC1835b.m18456e(i);
         }
     }
 
-    public void i() {
-        j(null);
+    /* renamed from: i */
+    public void m18463i() {
+        m18462j(null);
     }
 
-    public void j(d dVar) {
-        b<? extends c> bVar = this.b;
-        if (bVar != null) {
-            bVar.a(true);
+    /* renamed from: j */
+    public void m18462j(InterfaceC1837d interfaceC1837d) {
+        HandlerC1835b<? extends InterfaceC1836c> handlerC1835b = this.f15146b;
+        if (handlerC1835b != null) {
+            handlerC1835b.m18460a(true);
         }
-        if (dVar != null) {
-            this.a.execute(new e(dVar));
+        if (interfaceC1837d != null) {
+            this.f15145a.execute(new RunnableC1838e(interfaceC1837d));
         }
-        this.a.shutdown();
+        this.f15145a.shutdown();
     }
 
-    public <T extends c> long k(T t, a<T> aVar, int i) {
+    /* renamed from: k */
+    public <T extends InterfaceC1836c> long m18461k(T t, InterfaceC1834a<T> interfaceC1834a, int i) {
         Looper myLooper = Looper.myLooper();
-        s6.f(myLooper != null);
-        this.c = null;
+        C2914s6.m10685f(myLooper != null);
+        this.f15147c = null;
         long elapsedRealtime = SystemClock.elapsedRealtime();
-        new b(myLooper, t, aVar, i, elapsedRealtime).f(0L);
+        new HandlerC1835b(myLooper, t, interfaceC1834a, i, elapsedRealtime).m18455f(0L);
         return elapsedRealtime;
     }
 }

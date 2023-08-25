@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.daaw.C2116lu;
 import com.daaw.avee.R;
-import com.daaw.lu;
 import com.daaw.tx0;
 import com.daaw.wc0;
 import java.lang.ref.WeakReference;
@@ -18,67 +18,83 @@ import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */
 public class n30 extends dj0 {
-    public qk p0;
-    public RecyclerView q0;
-    public ArrayDeque<vd0> r0 = new ArrayDeque<>();
 
+    /* renamed from: p0 */
+    public C2719qk f19435p0;
+
+    /* renamed from: q0 */
+    public RecyclerView f19436q0;
+
+    /* renamed from: r0 */
+    public ArrayDeque<vd0> f19437r0 = new ArrayDeque<>();
+
+    /* renamed from: com.daaw.n30$a */
     /* loaded from: classes.dex */
-    public class a implements r40<yj, er0<tx0, vd0>> {
-        public a() {
+    public class C2238a implements r40<AbstractC3711yj, er0<tx0, vd0>> {
+        public C2238a() {
         }
 
         @Override // com.daaw.r40
         /* renamed from: b */
-        public er0<tx0, vd0> a(yj yjVar) {
-            return dj0.v.a(new er0<>());
+        public er0<tx0, vd0> mo5050a(AbstractC3711yj abstractC3711yj) {
+            return dj0.f7184v.m6692a(new er0<>());
         }
     }
 
+    /* renamed from: com.daaw.n30$b */
     /* loaded from: classes.dex */
-    public class b implements lu.c {
-        public b() {
+    public class C2239b implements C2116lu.InterfaceC2119c {
+        public C2239b() {
         }
 
-        @Override // com.daaw.lu.c
-        public void a(int i, int i2) {
+        @Override // com.daaw.C2116lu.InterfaceC2119c
+        /* renamed from: a */
+        public void mo15549a(int i, int i2) {
             ArrayList arrayList = new ArrayList();
             arrayList.add(0);
-            ((ts1) n30.this.q0.getAdapter()).A(i, i2, arrayList);
+            ((ts1) n30.this.f19436q0.getAdapter()).m8847A(i, i2, arrayList);
         }
     }
 
+    /* renamed from: com.daaw.n30$c */
     /* loaded from: classes.dex */
-    public class c implements wc0.c {
-        public final /* synthetic */ lu a;
+    public class C2240c implements wc0.InterfaceC3422c {
 
-        public c(lu luVar) {
-            this.a = luVar;
+        /* renamed from: a */
+        public final /* synthetic */ C2116lu f19440a;
+
+        public C2240c(C2116lu c2116lu) {
+            this.f19440a = c2116lu;
         }
 
-        @Override // com.daaw.wc0.c
-        public void a(View view) {
-            this.a.j(view);
+        @Override // com.daaw.wc0.InterfaceC3422c
+        /* renamed from: a */
+        public void mo6181a(View view) {
+            this.f19440a.m16519j(view);
         }
     }
 
-    public static n30 o() {
+    /* renamed from: o */
+    public static n30 m15558o() {
         n30 n30Var = new n30();
         n30Var.setArguments(new Bundle());
         return n30Var;
     }
 
-    public m91 m() {
+    /* renamed from: m */
+    public m91 m15560m() {
         RecyclerView recyclerView;
         ts1 ts1Var;
         Activity activity = getActivity();
-        if (activity != null && (recyclerView = this.q0) != null && (ts1Var = (ts1) recyclerView.getAdapter()) != null) {
-            return dj0.h(activity, ts1Var);
+        if (activity != null && (recyclerView = this.f19436q0) != null && (ts1Var = (ts1) recyclerView.getAdapter()) != null) {
+            return dj0.m24360h(activity, ts1Var);
         }
-        return m91.d;
+        return m91.f18679d;
     }
 
-    public boolean n() {
-        return this.q0 != null;
+    /* renamed from: n */
+    public boolean m15559n() {
+        return this.f19436q0 != null;
     }
 
     @Override // android.app.Fragment
@@ -89,112 +105,119 @@ public class n30 extends dj0 {
     @Override // android.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(R.layout.fragment_1, viewGroup, false);
-        gr1.u(inflate.findViewById(R.id.viewStatusBarBg));
-        dj0.t.a(1, inflate.findViewById(R.id.viewActionBarBgSkin));
-        this.q0 = (RecyclerView) inflate.findViewById(R.id.recyclerViewItems);
-        this.q0.setLayoutManager(new LinearLayoutManager(getActivity()));
-        qk qkVar = new qk(getActivity(), new a(), "nowplaying", "Playlist", true, 1);
-        this.p0 = qkVar;
-        qkVar.q(new WeakReference<>(this));
-        this.q0.setAdapter(this.p0.G(getActivity(), 1));
-        RecyclerView recyclerView = this.q0;
-        recyclerView.h(new ke1(1, gr1.n(recyclerView, R.attr.containerBackgroundDark)));
-        lu luVar = new lu();
-        luVar.x(R.id.btnItemMore);
-        luVar.t(0.4f);
-        luVar.u(getActivity().getResources().getColor(R.color.black_alpha_2));
-        luVar.r(0.3f);
-        luVar.s(0.1f);
-        luVar.w(new b());
-        this.q0.h(luVar);
-        this.q0.j(luVar);
-        this.q0.k(luVar.q());
-        this.p0.M(new c(luVar));
-        v(dj0.v.a(new er0<>()));
-        u(ww0.e, ww0.b, ww0.d, ww0.c);
-        s();
+        gr1.m21314u(inflate.findViewById(R.id.viewStatusBarBg));
+        dj0.f7182t.m10862a(1, inflate.findViewById(R.id.viewActionBarBgSkin));
+        this.f19436q0 = (RecyclerView) inflate.findViewById(R.id.recyclerViewItems);
+        this.f19436q0.setLayoutManager(new LinearLayoutManager(getActivity()));
+        C2719qk c2719qk = new C2719qk(getActivity(), new C2238a(), "nowplaying", "Playlist", true, 1);
+        this.f19435p0 = c2719qk;
+        c2719qk.mo3663q(new WeakReference<>(this));
+        this.f19436q0.setAdapter(this.f19435p0.m3680G(getActivity(), 1));
+        RecyclerView recyclerView = this.f19436q0;
+        recyclerView.m28824h(new ke1(1, gr1.m21321n(recyclerView, R.attr.containerBackgroundDark)));
+        C2116lu c2116lu = new C2116lu();
+        c2116lu.m16505x(R.id.btnItemMore);
+        c2116lu.m16509t(0.4f);
+        c2116lu.m16508u(getActivity().getResources().getColor(R.color.black_alpha_2));
+        c2116lu.m16511r(0.3f);
+        c2116lu.m16510s(0.1f);
+        c2116lu.m16506w(new C2239b());
+        this.f19436q0.m28824h(c2116lu);
+        this.f19436q0.m28818j(c2116lu);
+        this.f19436q0.m28815k(c2116lu.m16512q());
+        this.f19435p0.m3675M(new C2240c(c2116lu));
+        m15551v(dj0.f7184v.m6692a(new er0<>()));
+        m15552u(ww0.f31598e, ww0.f31595b, ww0.f31597d, ww0.f31596c);
+        m15554s();
         return inflate;
     }
 
     @Override // android.app.Fragment
     public void onDestroy() {
-        p(false);
+        m15557p(false);
         super.onDestroy();
     }
 
-    public void p(boolean z) {
+    /* renamed from: p */
+    public void m15557p(boolean z) {
     }
 
-    public void q(sd0 sd0Var) {
-        ts1 ts1Var = (ts1) this.q0.getAdapter();
-        if (ts1Var == null || !ts1Var.z().y(sd0Var)) {
+    /* renamed from: q */
+    public void m15556q(sd0 sd0Var) {
+        ts1 ts1Var = (ts1) this.f19436q0.getAdapter();
+        if (ts1Var == null || !ts1Var.m8843z().mo3659y(sd0Var)) {
             return;
         }
-        ts1Var.i();
+        ts1Var.m28714i();
     }
 
-    public void r() {
+    /* renamed from: r */
+    public void m15555r() {
         ts1 ts1Var;
-        if (n() && (ts1Var = (ts1) this.q0.getAdapter()) != null) {
-            ts1Var.i();
+        if (m15559n() && (ts1Var = (ts1) this.f19436q0.getAdapter()) != null) {
+            ts1Var.m28714i();
         }
     }
 
-    public void s() {
-        q6.f(getActivity());
-        m91 m = m();
-        dj0.r.a(1, Boolean.valueOf(m.a), m.b, m.c);
+    /* renamed from: s */
+    public void m15554s() {
+        C2691q6.m12752f(getActivity());
+        m91 m15560m = m15560m();
+        dj0.f7180r.m8756a(1, Boolean.valueOf(m15560m.f18680a), m15560m.f18681b, m15560m.f18682c);
     }
 
-    public void t(Context context, String str) {
-        if (this.q0 != null) {
-            this.p0.o(context, str);
+    /* renamed from: t */
+    public void m15553t(Context context, String str) {
+        if (this.f19436q0 != null) {
+            this.f19435p0.mo2234o(context, str);
         }
     }
 
-    public void u(int i, tx0 tx0Var, tx0.b bVar, vd0 vd0Var) {
+    /* renamed from: u */
+    public void m15552u(int i, tx0 tx0Var, tx0.C3143b c3143b, vd0 vd0Var) {
         RecyclerView recyclerView;
         ts1 ts1Var;
         RecyclerView recyclerView2;
-        if (getActivity() == null || (recyclerView = this.q0) == null || (ts1Var = (ts1) recyclerView.getAdapter()) == null) {
+        if (getActivity() == null || (recyclerView = this.f19436q0) == null || (ts1Var = (ts1) recyclerView.getAdapter()) == null) {
             return;
         }
-        if (this.p0 != null) {
-            if (this.r0.size() > 1) {
-                this.r0.removeFirst();
+        if (this.f19435p0 != null) {
+            if (this.f19437r0.size() > 1) {
+                this.f19437r0.removeFirst();
             }
-            if (vd0Var != null && (this.r0.peekLast() == null || !this.r0.peekLast().equals(vd0Var))) {
-                this.r0.add(vd0Var);
+            if (vd0Var != null && (this.f19437r0.peekLast() == null || !this.f19437r0.peekLast().equals(vd0Var))) {
+                this.f19437r0.add(vd0Var);
             }
-            Iterator<vd0> it = this.r0.iterator();
+            Iterator<vd0> it = this.f19437r0.iterator();
             while (it.hasNext()) {
-                int e0 = this.p0.e0(it.next());
-                if (e0 >= 0) {
-                    RecyclerView.c0 X = this.q0.X(ts1Var.x(e0));
-                    if (X instanceof uk) {
-                        ((uk) X).R();
+                int m12377e0 = this.f19435p0.m12377e0(it.next());
+                if (m12377e0 >= 0) {
+                    RecyclerView.AbstractC0376c0 m28850X = this.f19436q0.m28850X(ts1Var.m8845x(m12377e0));
+                    if (m28850X instanceof C3223uk) {
+                        ((C3223uk) m28850X).m8096R();
                     }
                 }
             }
         } else {
-            ts1Var.i();
+            ts1Var.m28714i();
         }
-        if (dj0.T.a(Boolean.FALSE).booleanValue()) {
+        if (dj0.f7156T.m6692a(Boolean.FALSE).booleanValue()) {
             int integer = getResources().getInteger(R.integer.player_controls_height_in_items);
-            if (i >= Math.max(((LinearLayoutManager) this.q0.getLayoutManager()).c2() - (integer + 1), 0)) {
-                recyclerView2 = this.q0;
+            if (i >= Math.max(((LinearLayoutManager) this.f19436q0.getLayoutManager()).m28936c2() - (integer + 1), 0)) {
+                recyclerView2 = this.f19436q0;
                 i += integer;
             } else {
-                recyclerView2 = this.q0;
+                recyclerView2 = this.f19436q0;
             }
-            recyclerView2.j1(ts1Var.x(i));
+            recyclerView2.m28816j1(ts1Var.m8845x(i));
         }
     }
 
-    public void v(er0<tx0, vd0> er0Var) {
-        qk qkVar = this.p0;
-        if (qkVar != null) {
-            qkVar.h(true);
+    /* renamed from: v */
+    public void m15551v(er0<tx0, vd0> er0Var) {
+        C2719qk c2719qk = this.f19435p0;
+        if (c2719qk != null) {
+            c2719qk.mo3669h(true);
         }
     }
 }

@@ -6,9 +6,11 @@ import java.util.Map;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public interface k55 extends View.OnClickListener, View.OnTouchListener {
-    void D(String str, View view, boolean z);
+    /* renamed from: D */
+    void mo18043D(String str, View view, boolean z);
 
-    View s(String str);
+    /* renamed from: s */
+    View mo18042s(String str);
 
     View zzf();
 

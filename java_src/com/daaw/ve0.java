@@ -12,23 +12,30 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes2.dex */
 public class ve0 {
-    public static final String[] c = {"*", "FCM", "GCM", ""};
-    public final SharedPreferences a;
-    public final String b;
+
+    /* renamed from: c */
+    public static final String[] f30168c = {"*", "FCM", "GCM", ""};
+
+    /* renamed from: a */
+    public final SharedPreferences f30169a;
+
+    /* renamed from: b */
+    public final String f30170b;
 
     public ve0(s10 s10Var) {
-        this.a = s10Var.j().getSharedPreferences("com.google.android.gms.appid", 0);
-        this.b = b(s10Var);
+        this.f30169a = s10Var.m10786j().getSharedPreferences("com.google.android.gms.appid", 0);
+        this.f30170b = m7223b(s10Var);
     }
 
-    public static String b(s10 s10Var) {
-        String d = s10Var.m().d();
-        if (d != null) {
-            return d;
+    /* renamed from: b */
+    public static String m7223b(s10 s10Var) {
+        String m21085d = s10Var.m10783m().m21085d();
+        if (m21085d != null) {
+            return m21085d;
         }
-        String c2 = s10Var.m().c();
-        if (c2.startsWith("1:") || c2.startsWith("2:")) {
-            String[] split = c2.split(":");
+        String m21086c = s10Var.m10783m().m21086c();
+        if (m21086c.startsWith("1:") || m21086c.startsWith("2:")) {
+            String[] split = m21086c.split(":");
             if (split.length != 4) {
                 return null;
             }
@@ -38,10 +45,11 @@ public class ve0 {
             }
             return str;
         }
-        return c2;
+        return m21086c;
     }
 
-    public static String c(PublicKey publicKey) {
+    /* renamed from: c */
+    public static String m7222c(PublicKey publicKey) {
         try {
             byte[] digest = MessageDigest.getInstance("SHA1").digest(publicKey.getEncoded());
             digest[0] = (byte) (((digest[0] & 15) + 112) & 255);
@@ -51,11 +59,13 @@ public class ve0 {
         }
     }
 
-    public final String a(String str, String str2) {
+    /* renamed from: a */
+    public final String m7224a(String str, String str2) {
         return "|T|" + str + "|" + str2;
     }
 
-    public final String d(String str) {
+    /* renamed from: d */
+    public final String m7221d(String str) {
         try {
             return new JSONObject(str).getString("token");
         } catch (JSONException unused) {
@@ -63,7 +73,8 @@ public class ve0 {
         }
     }
 
-    public final PublicKey e(String str) {
+    /* renamed from: e */
+    public final PublicKey m7220e(String str) {
         try {
             return KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(Base64.decode(str, 8)));
         } catch (IllegalArgumentException | NoSuchAlgorithmException | InvalidKeySpecException e) {
@@ -74,45 +85,49 @@ public class ve0 {
         }
     }
 
-    public String f() {
-        synchronized (this.a) {
-            String g = g();
-            if (g != null) {
-                return g;
+    /* renamed from: f */
+    public String m7219f() {
+        synchronized (this.f30169a) {
+            String m7218g = m7218g();
+            if (m7218g != null) {
+                return m7218g;
             }
-            return h();
+            return m7217h();
         }
     }
 
-    public final String g() {
+    /* renamed from: g */
+    public final String m7218g() {
         String string;
-        synchronized (this.a) {
-            string = this.a.getString("|S|id", null);
+        synchronized (this.f30169a) {
+            string = this.f30169a.getString("|S|id", null);
         }
         return string;
     }
 
-    public final String h() {
-        synchronized (this.a) {
-            String string = this.a.getString("|S||P|", null);
+    /* renamed from: h */
+    public final String m7217h() {
+        synchronized (this.f30169a) {
+            String string = this.f30169a.getString("|S||P|", null);
             if (string == null) {
                 return null;
             }
-            PublicKey e = e(string);
-            if (e == null) {
+            PublicKey m7220e = m7220e(string);
+            if (m7220e == null) {
                 return null;
             }
-            return c(e);
+            return m7222c(m7220e);
         }
     }
 
-    public String i() {
-        synchronized (this.a) {
-            for (String str : c) {
-                String string = this.a.getString(a(this.b, str), null);
+    /* renamed from: i */
+    public String m7216i() {
+        synchronized (this.f30169a) {
+            for (String str : f30168c) {
+                String string = this.f30169a.getString(m7224a(this.f30170b, str), null);
                 if (string != null && !string.isEmpty()) {
                     if (string.startsWith("{")) {
-                        string = d(string);
+                        string = m7221d(string);
                     }
                     return string;
                 }

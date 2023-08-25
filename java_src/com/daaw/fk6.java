@@ -5,14 +5,18 @@ import com.google.android.gms.ads.internal.client.zzw;
 import com.google.android.gms.internal.ads.zzfkz;
 /* loaded from: classes.dex */
 public interface fk6 {
-    boolean a(rk6 rk6Var);
+    /* renamed from: a */
+    boolean mo21509a(rk6 rk6Var);
 
-    qk6 b(rk6 rk6Var);
+    /* renamed from: b */
+    qk6 mo21508b(rk6 rk6Var);
 
     @Deprecated
-    rk6 c(zzl zzlVar, String str, zzw zzwVar);
+    /* renamed from: c */
+    rk6 mo21507c(zzl zzlVar, String str, zzw zzwVar);
 
-    boolean d(rk6 rk6Var, qk6 qk6Var);
+    /* renamed from: d */
+    boolean mo21506d(rk6 rk6Var, qk6 qk6Var);
 
     zzfkz zza();
 }

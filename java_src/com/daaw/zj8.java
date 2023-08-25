@@ -12,70 +12,89 @@ import java.util.Map;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public final class zj8 implements ServiceConnection, cr8 {
-    public final Map a = new HashMap();
-    public int b = 2;
-    public boolean c;
-    public IBinder d;
-    public final rh8 e;
-    public ComponentName f;
-    public final /* synthetic */ vp8 g;
+
+    /* renamed from: a */
+    public final Map f35172a = new HashMap();
+
+    /* renamed from: b */
+    public int f35173b = 2;
+
+    /* renamed from: c */
+    public boolean f35174c;
+
+    /* renamed from: d */
+    public IBinder f35175d;
+
+    /* renamed from: e */
+    public final rh8 f35176e;
+
+    /* renamed from: f */
+    public ComponentName f35177f;
+
+    /* renamed from: g */
+    public final /* synthetic */ vp8 f35178g;
 
     public zj8(vp8 vp8Var, rh8 rh8Var) {
-        this.g = vp8Var;
-        this.e = rh8Var;
+        this.f35178g = vp8Var;
+        this.f35176e = rh8Var;
     }
 
-    public final int a() {
-        return this.b;
+    /* renamed from: a */
+    public final int m2192a() {
+        return this.f35173b;
     }
 
-    public final ComponentName b() {
-        return this.f;
+    /* renamed from: b */
+    public final ComponentName m2191b() {
+        return this.f35177f;
     }
 
-    public final IBinder c() {
-        return this.d;
+    /* renamed from: c */
+    public final IBinder m2190c() {
+        return this.f35175d;
     }
 
-    public final void d(ServiceConnection serviceConnection, ServiceConnection serviceConnection2, String str) {
-        this.a.put(serviceConnection, serviceConnection2);
+    /* renamed from: d */
+    public final void m2189d(ServiceConnection serviceConnection, ServiceConnection serviceConnection2, String str) {
+        this.f35172a.put(serviceConnection, serviceConnection2);
     }
 
-    public final void e(String str, Executor executor) {
-        fj fjVar;
+    /* renamed from: e */
+    public final void m2188e(String str, Executor executor) {
+        C1291fj c1291fj;
         Context context;
         Context context2;
-        fj fjVar2;
+        C1291fj c1291fj2;
         Context context3;
         Handler handler;
         Handler handler2;
         long j;
-        this.b = 3;
+        this.f35173b = 3;
         StrictMode.VmPolicy vmPolicy = StrictMode.getVmPolicy();
-        if (vw0.l()) {
+        if (vw0.m6693l()) {
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder(vmPolicy).permitUnsafeIntentLaunch().build());
         }
         try {
-            vp8 vp8Var = this.g;
-            fjVar = vp8Var.j;
-            context = vp8Var.g;
-            rh8 rh8Var = this.e;
-            context2 = vp8Var.g;
-            boolean d = fjVar.d(context, str, rh8Var.c(context2), this, this.e.a(), executor);
-            this.c = d;
-            if (d) {
-                handler = this.g.h;
-                Message obtainMessage = handler.obtainMessage(1, this.e);
-                handler2 = this.g.h;
-                j = this.g.l;
+            vp8 vp8Var = this.f35178g;
+            c1291fj = vp8Var.f30432j;
+            context = vp8Var.f30429g;
+            rh8 rh8Var = this.f35176e;
+            context2 = vp8Var.f30429g;
+            boolean m22612d = c1291fj.m22612d(context, str, rh8Var.m11298c(context2), this, this.f35176e.m11300a(), executor);
+            this.f35174c = m22612d;
+            if (m22612d) {
+                handler = this.f35178g.f30430h;
+                Message obtainMessage = handler.obtainMessage(1, this.f35176e);
+                handler2 = this.f35178g.f30430h;
+                j = this.f35178g.f30434l;
                 handler2.sendMessageDelayed(obtainMessage, j);
             } else {
-                this.b = 2;
+                this.f35173b = 2;
                 try {
-                    vp8 vp8Var2 = this.g;
-                    fjVar2 = vp8Var2.j;
-                    context3 = vp8Var2.g;
-                    fjVar2.c(context3, this);
+                    vp8 vp8Var2 = this.f35178g;
+                    c1291fj2 = vp8Var2.f30432j;
+                    context3 = vp8Var2.f30429g;
+                    c1291fj2.m22613c(context3, this);
                 } catch (IllegalArgumentException unused) {
                 }
             }
@@ -84,50 +103,55 @@ public final class zj8 implements ServiceConnection, cr8 {
         }
     }
 
-    public final void f(ServiceConnection serviceConnection, String str) {
-        this.a.remove(serviceConnection);
+    /* renamed from: f */
+    public final void m2187f(ServiceConnection serviceConnection, String str) {
+        this.f35172a.remove(serviceConnection);
     }
 
-    public final void g(String str) {
+    /* renamed from: g */
+    public final void m2186g(String str) {
         Handler handler;
-        fj fjVar;
+        C1291fj c1291fj;
         Context context;
-        handler = this.g.h;
-        handler.removeMessages(1, this.e);
-        vp8 vp8Var = this.g;
-        fjVar = vp8Var.j;
-        context = vp8Var.g;
-        fjVar.c(context, this);
-        this.c = false;
-        this.b = 2;
+        handler = this.f35178g.f30430h;
+        handler.removeMessages(1, this.f35176e);
+        vp8 vp8Var = this.f35178g;
+        c1291fj = vp8Var.f30432j;
+        context = vp8Var.f30429g;
+        c1291fj.m22613c(context, this);
+        this.f35174c = false;
+        this.f35173b = 2;
     }
 
-    public final boolean h(ServiceConnection serviceConnection) {
-        return this.a.containsKey(serviceConnection);
+    /* renamed from: h */
+    public final boolean m2185h(ServiceConnection serviceConnection) {
+        return this.f35172a.containsKey(serviceConnection);
     }
 
-    public final boolean i() {
-        return this.a.isEmpty();
+    /* renamed from: i */
+    public final boolean m2184i() {
+        return this.f35172a.isEmpty();
     }
 
-    public final boolean j() {
-        return this.c;
+    /* renamed from: j */
+    public final boolean m2183j() {
+        return this.f35174c;
     }
 
     @Override // android.content.ServiceConnection
     public final void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         HashMap hashMap;
         Handler handler;
-        hashMap = this.g.f;
+        hashMap = this.f35178g.f30428f;
         synchronized (hashMap) {
-            handler = this.g.h;
-            handler.removeMessages(1, this.e);
-            this.d = iBinder;
-            this.f = componentName;
-            for (ServiceConnection serviceConnection : this.a.values()) {
+            handler = this.f35178g.f30430h;
+            handler.removeMessages(1, this.f35176e);
+            this.f35175d = iBinder;
+            this.f35177f = componentName;
+            for (ServiceConnection serviceConnection : this.f35172a.values()) {
                 serviceConnection.onServiceConnected(componentName, iBinder);
             }
-            this.b = 1;
+            this.f35173b = 1;
         }
     }
 
@@ -135,16 +159,16 @@ public final class zj8 implements ServiceConnection, cr8 {
     public final void onServiceDisconnected(ComponentName componentName) {
         HashMap hashMap;
         Handler handler;
-        hashMap = this.g.f;
+        hashMap = this.f35178g.f30428f;
         synchronized (hashMap) {
-            handler = this.g.h;
-            handler.removeMessages(1, this.e);
-            this.d = null;
-            this.f = componentName;
-            for (ServiceConnection serviceConnection : this.a.values()) {
+            handler = this.f35178g.f30430h;
+            handler.removeMessages(1, this.f35176e);
+            this.f35175d = null;
+            this.f35177f = componentName;
+            for (ServiceConnection serviceConnection : this.f35172a.values()) {
                 serviceConnection.onServiceDisconnected(componentName);
             }
-            this.b = 2;
+            this.f35173b = 2;
         }
     }
 }

@@ -8,67 +8,105 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class ua1 implements ge0 {
-    public float g;
-    public String[] i;
-    public boolean j;
-    public float a = 1.0f;
-    public xn0 b = new xn0("{ArtistOrTitle}", 1.0f, 1.0f);
-    public RectF c = new RectF();
-    public bs1 d = new bs1(0.0f, 0.0f);
-    public ve e = ve.d();
-    public a[] f = new a[0];
-    public int h = 0;
 
+    /* renamed from: g */
+    public float f28826g;
+
+    /* renamed from: i */
+    public String[] f28828i;
+
+    /* renamed from: j */
+    public boolean f28829j;
+
+    /* renamed from: a */
+    public float f28820a = 1.0f;
+
+    /* renamed from: b */
+    public xn0 f28821b = new xn0("{ArtistOrTitle}", 1.0f, 1.0f);
+
+    /* renamed from: c */
+    public RectF f28822c = new RectF();
+
+    /* renamed from: d */
+    public bs1 f28823d = new bs1(0.0f, 0.0f);
+
+    /* renamed from: e */
+    public C3325ve f28824e = C3325ve.m7235d();
+
+    /* renamed from: f */
+    public C3192a[] f28825f = new C3192a[0];
+
+    /* renamed from: h */
+    public int f28827h = 0;
+
+    /* renamed from: com.daaw.ua1$a */
     /* loaded from: classes.dex */
-    public class a {
-        public bs1[] c;
-        public bs1[] d;
-        public float g;
-        public List<Integer> a = new ArrayList();
-        public List<Integer> b = new ArrayList();
-        public bs1 e = new bs1(10000.0f, 10000.0f);
-        public bs1 f = new bs1(-10000.0f, -10000.0f);
+    public class C3192a {
 
-        public a(int i) {
-            this.c = new bs1[i];
-            this.d = new bs1[i];
+        /* renamed from: c */
+        public bs1[] f28832c;
+
+        /* renamed from: d */
+        public bs1[] f28833d;
+
+        /* renamed from: g */
+        public float f28836g;
+
+        /* renamed from: a */
+        public List<Integer> f28830a = new ArrayList();
+
+        /* renamed from: b */
+        public List<Integer> f28831b = new ArrayList();
+
+        /* renamed from: e */
+        public bs1 f28834e = new bs1(10000.0f, 10000.0f);
+
+        /* renamed from: f */
+        public bs1 f28835f = new bs1(-10000.0f, -10000.0f);
+
+        public C3192a(int i) {
+            this.f28832c = new bs1[i];
+            this.f28833d = new bs1[i];
         }
 
-        public void a() {
-            this.b = new ArrayList(this.a.size());
-            for (int i = 0; i < this.a.size(); i++) {
-                this.b.add(Integer.valueOf(c(this.a.get(i).intValue())));
+        /* renamed from: a */
+        public void m8387a() {
+            this.f28831b = new ArrayList(this.f28830a.size());
+            for (int i = 0; i < this.f28830a.size(); i++) {
+                this.f28831b.add(Integer.valueOf(m8385c(this.f28830a.get(i).intValue())));
             }
-            bs1[] bs1VarArr = this.d;
+            bs1[] bs1VarArr = this.f28833d;
             if (bs1VarArr.length > 0) {
-                if (Float.isNaN(bs1VarArr[0].a) || this.d[0].k() < 1.0E-5f) {
-                    int b = b(0);
-                    bs1[] bs1VarArr2 = this.d;
-                    bs1VarArr2[0].a = bs1VarArr2[b].a;
-                    bs1VarArr2[0].b = bs1VarArr2[b].b;
+                if (Float.isNaN(bs1VarArr[0].f5090a) || this.f28833d[0].m25852k() < 1.0E-5f) {
+                    int m8386b = m8386b(0);
+                    bs1[] bs1VarArr2 = this.f28833d;
+                    bs1VarArr2[0].f5090a = bs1VarArr2[m8386b].f5090a;
+                    bs1VarArr2[0].f5091b = bs1VarArr2[m8386b].f5091b;
                 }
             }
         }
 
-        public int b(int i) {
-            for (int i2 = 0; i2 < this.a.size(); i2++) {
-                if (this.a.get(i2).intValue() == i) {
-                    return this.b.get(i2).intValue();
+        /* renamed from: b */
+        public int m8386b(int i) {
+            for (int i2 = 0; i2 < this.f28830a.size(); i2++) {
+                if (this.f28830a.get(i2).intValue() == i) {
+                    return this.f28831b.get(i2).intValue();
                 }
             }
-            bs1[] bs1VarArr = this.c;
+            bs1[] bs1VarArr = this.f28832c;
             return ((i + bs1VarArr.length) - 1) % bs1VarArr.length;
         }
 
-        public int c(int i) {
+        /* renamed from: c */
+        public int m8385c(int i) {
             int length;
             int i2 = 0;
             while (true) {
-                if (i2 >= this.a.size() - 1) {
-                    length = this.c.length;
+                if (i2 >= this.f28830a.size() - 1) {
+                    length = this.f28832c.length;
                     break;
-                } else if (this.a.get(i2).intValue() == i) {
-                    length = this.a.get(i2 + 1).intValue();
+                } else if (this.f28830a.get(i2).intValue() == i) {
+                    length = this.f28830a.get(i2 + 1).intValue();
                     break;
                 } else {
                     i2++;
@@ -77,78 +115,83 @@ public class ua1 implements ge0 {
             return length - 1;
         }
 
-        public float d() {
-            return this.g;
+        /* renamed from: d */
+        public float m8384d() {
+            return this.f28836g;
         }
     }
 
     public ua1(String[] strArr, boolean z) {
-        this.i = strArr;
-        this.j = z;
+        this.f28828i = strArr;
+        this.f28829j = z;
     }
 
     @Override // com.daaw.zc0
-    public void a(un unVar) {
-        this.a = unVar.o("radius", this.a);
+    /* renamed from: a */
+    public void mo2493a(C3239un c3239un) {
+        this.f28820a = c3239un.m7953o("radius", this.f28820a);
     }
 
-    public final void c(ve veVar, String[] strArr, int i) {
-        if (this.j) {
-            j(veVar, strArr, i);
+    /* renamed from: c */
+    public final void m8394c(C3325ve c3325ve, String[] strArr, int i) {
+        if (this.f28829j) {
+            m8390j(c3325ve, strArr, i);
         } else {
-            q(veVar, strArr, i);
+            m8388q(c3325ve, strArr, i);
         }
     }
 
     @Override // com.daaw.ge0
-    public void d(de0 de0Var) {
-        String k = this.b.k(de0Var.b().a());
-        this.h = this.e.n((k == null || k.length() < 1) ? 'X' : k.charAt(0));
+    /* renamed from: d */
+    public void mo8393d(de0 de0Var) {
+        String m4962k = this.f28821b.m4962k(de0Var.mo2889b().mo4185a());
+        this.f28827h = this.f28824e.m7225n((m4962k == null || m4962k.length() < 1) ? 'X' : m4962k.charAt(0));
     }
 
     @Override // com.daaw.ge0
-    public int e(boolean z, int i, int i2, RectF rectF, float f, PointF pointF, PointF pointF2) {
+    /* renamed from: e */
+    public int mo8392e(boolean z, int i, int i2, RectF rectF, float f, PointF pointF, PointF pointF2) {
         float centerY;
         float height;
-        a[] aVarArr = this.f;
-        if (aVarArr.length == 0 || aVarArr[0].c.length != i2) {
-            c(this.e, this.i, i2);
+        C3192a[] c3192aArr = this.f28825f;
+        if (c3192aArr.length == 0 || c3192aArr[0].f28832c.length != i2) {
+            m8394c(this.f28824e, this.f28828i, i2);
         }
-        int i3 = this.h;
-        a[] aVarArr2 = this.f;
-        a aVar = i3 < aVarArr2.length ? aVarArr2[i3] : aVarArr2[0];
-        if (aVar != null) {
-            bs1[] bs1VarArr = aVar.c;
+        int i3 = this.f28827h;
+        C3192a[] c3192aArr2 = this.f28825f;
+        C3192a c3192a = i3 < c3192aArr2.length ? c3192aArr2[i3] : c3192aArr2[0];
+        if (c3192a != null) {
+            bs1[] bs1VarArr = c3192a.f28832c;
             if (bs1VarArr.length != 0) {
                 bs1 bs1Var = bs1VarArr[i];
-                bs1 bs1Var2 = aVar.d[i];
-                RectF rectF2 = this.c;
-                bs1 bs1Var3 = aVar.e;
-                rectF2.left = bs1Var3.a;
-                rectF2.top = bs1Var3.b;
-                bs1 bs1Var4 = aVar.f;
-                rectF2.right = bs1Var4.a;
-                rectF2.bottom = bs1Var4.b;
-                bs1 bs1Var5 = this.d;
-                bs1Var5.a = bs1Var2.b;
-                bs1Var5.b = -bs1Var2.a;
-                if (rectF2.width() > this.c.height()) {
-                    pointF.x = (bs1Var.a - this.c.centerX()) / this.c.width();
-                    centerY = bs1Var.b - this.c.centerY();
-                    height = this.c.width();
+                bs1 bs1Var2 = c3192a.f28833d[i];
+                RectF rectF2 = this.f28822c;
+                bs1 bs1Var3 = c3192a.f28834e;
+                rectF2.left = bs1Var3.f5090a;
+                rectF2.top = bs1Var3.f5091b;
+                bs1 bs1Var4 = c3192a.f28835f;
+                rectF2.right = bs1Var4.f5090a;
+                rectF2.bottom = bs1Var4.f5091b;
+                bs1 bs1Var5 = this.f28823d;
+                bs1Var5.f5090a = bs1Var2.f5091b;
+                bs1Var5.f5091b = -bs1Var2.f5090a;
+                if (rectF2.width() > this.f28822c.height()) {
+                    pointF.x = (bs1Var.f5090a - this.f28822c.centerX()) / this.f28822c.width();
+                    centerY = bs1Var.f5091b - this.f28822c.centerY();
+                    height = this.f28822c.width();
                 } else {
-                    pointF.x = (bs1Var.a - this.c.centerX()) / this.c.height();
-                    centerY = bs1Var.b - this.c.centerY();
-                    height = this.c.height();
+                    pointF.x = (bs1Var.f5090a - this.f28822c.centerX()) / this.f28822c.height();
+                    centerY = bs1Var.f5091b - this.f28822c.centerY();
+                    height = this.f28822c.height();
                 }
                 pointF.y = centerY / height;
-                float width = (rectF.width() < rectF.height() ? rectF.width() : rectF.height()) * 0.5f * this.a;
+                float width = (rectF.width() < rectF.height() ? rectF.width() : rectF.height()) * 0.5f * this.f28820a;
                 pointF.x = rectF.centerX() + (pointF.x * width);
                 pointF.y = rectF.centerY() + (pointF.y * width);
-                bs1 bs1Var6 = this.d;
-                pointF2.x = -bs1Var6.a;
-                pointF2.y = -bs1Var6.b;
-                return aVar.b(i);
+                bs1 bs1Var6 = this.f28823d;
+                pointF2.x = -bs1Var6.f5090a;
+                pointF2.y = -bs1Var6.f5091b;
+                return c3192a.m8386b(i);
             }
         }
         pointF2.x = 1.0f;
@@ -159,44 +202,46 @@ public class ua1 implements ge0 {
     }
 
     @Override // com.daaw.ge0
-    public int i(RectF rectF) {
+    /* renamed from: i */
+    public int mo8391i(RectF rectF) {
         return 2;
     }
 
-    public final void j(ve veVar, String[] strArr, int i) {
+    /* renamed from: j */
+    public final void m8390j(C3325ve c3325ve, String[] strArr, int i) {
         String[] strArr2 = strArr;
-        if (veVar.a() != strArr2.length) {
-            lz1.c("charSet count don't match");
+        if (c3325ve.m7238a() != strArr2.length) {
+            lz1.m16363c("charSet count don't match");
         }
-        this.f = new a[Math.min(veVar.a(), strArr2.length)];
+        this.f28825f = new C3192a[Math.min(c3325ve.m7238a(), strArr2.length)];
         ArrayList arrayList = new ArrayList();
         float[] fArr = {0.0f, 0.0f};
         float[] fArr2 = {0.0f, 0.0f};
         int i2 = 0;
         int i3 = 0;
-        while (i3 < this.f.length) {
+        while (i3 < this.f28825f.length) {
             float f = 0.0f;
-            this.g = 0.0f;
+            this.f28826g = 0.0f;
             arrayList.clear();
-            List<la1> c = t71.c(strArr2[i3]);
-            if (c.size() <= 0) {
-                a aVar = new a(i2);
-                aVar.a();
-                this.f[i3] = aVar;
+            List<la1> m9473c = t71.m9473c(strArr2[i3]);
+            if (m9473c.size() <= 0) {
+                C3192a c3192a = new C3192a(i2);
+                c3192a.m8387a();
+                this.f28825f[i3] = c3192a;
             } else {
                 int i4 = 0;
                 while (true) {
-                    float a2 = c.get(i4).a();
-                    arrayList.add(Float.valueOf(a2));
-                    this.g += a2;
+                    float m17074a = m9473c.get(i4).m17074a();
+                    arrayList.add(Float.valueOf(m17074a));
+                    this.f28826g += m17074a;
                     i4++;
-                    if (i4 >= c.size()) {
+                    if (i4 >= m9473c.size()) {
                         break;
                     }
                 }
-                a aVar2 = new a(i);
-                float f2 = this.g / i;
-                aVar2.a.add(Integer.valueOf(i2));
+                C3192a c3192a2 = new C3192a(i);
+                float f2 = this.f28826g / i;
+                c3192a2.f28830a.add(Integer.valueOf(i2));
                 int i5 = 0;
                 int i6 = 0;
                 while (true) {
@@ -204,44 +249,44 @@ public class ua1 implements ge0 {
                         break;
                     }
                     float f3 = i5 * f2;
-                    float a3 = f + c.get(i6).a();
-                    if (f3 > a3) {
+                    float m17074a2 = f + m9473c.get(i6).m17074a();
+                    if (f3 > m17074a2) {
                         i6++;
-                        if (i6 >= c.size()) {
-                            lz1.c("could get all points on path");
+                        if (i6 >= m9473c.size()) {
+                            lz1.m16363c("could get all points on path");
                             break;
                         } else {
-                            aVar2.a.add(Integer.valueOf(i5));
-                            f = a3;
+                            c3192a2.f28830a.add(Integer.valueOf(i5));
+                            f = m17074a2;
                         }
                     } else {
-                        c.get(i6).b(f3 - f, fArr, fArr2);
-                        aVar2.g = this.g;
-                        aVar2.c[i5] = new bs1(fArr[i2], fArr[1]);
-                        aVar2.d[i5] = new bs1(fArr2[0], fArr2[1]);
-                        aVar2.d[i5].o();
-                        bs1 bs1Var = aVar2.e;
-                        float f4 = bs1Var.a;
-                        bs1[] bs1VarArr = aVar2.c;
-                        if (f4 > bs1VarArr[i5].a) {
-                            bs1Var.a = bs1VarArr[i5].a;
+                        m9473c.get(i6).m17073b(f3 - f, fArr, fArr2);
+                        c3192a2.f28836g = this.f28826g;
+                        c3192a2.f28832c[i5] = new bs1(fArr[i2], fArr[1]);
+                        c3192a2.f28833d[i5] = new bs1(fArr2[0], fArr2[1]);
+                        c3192a2.f28833d[i5].m25848o();
+                        bs1 bs1Var = c3192a2.f28834e;
+                        float f4 = bs1Var.f5090a;
+                        bs1[] bs1VarArr = c3192a2.f28832c;
+                        if (f4 > bs1VarArr[i5].f5090a) {
+                            bs1Var.f5090a = bs1VarArr[i5].f5090a;
                         }
-                        if (bs1Var.b > bs1VarArr[i5].b) {
-                            bs1Var.b = bs1VarArr[i5].b;
+                        if (bs1Var.f5091b > bs1VarArr[i5].f5091b) {
+                            bs1Var.f5091b = bs1VarArr[i5].f5091b;
                         }
-                        bs1 bs1Var2 = aVar2.f;
-                        if (bs1Var2.a < bs1VarArr[i5].a) {
-                            bs1Var2.a = bs1VarArr[i5].a;
+                        bs1 bs1Var2 = c3192a2.f28835f;
+                        if (bs1Var2.f5090a < bs1VarArr[i5].f5090a) {
+                            bs1Var2.f5090a = bs1VarArr[i5].f5090a;
                         }
-                        if (bs1Var2.b < bs1VarArr[i5].b) {
-                            bs1Var2.b = bs1VarArr[i5].b;
+                        if (bs1Var2.f5091b < bs1VarArr[i5].f5091b) {
+                            bs1Var2.f5091b = bs1VarArr[i5].f5091b;
                         }
                         i5++;
                         i2 = 0;
                     }
                 }
-                aVar2.a();
-                this.f[i3] = aVar2;
+                c3192a2.m8387a();
+                this.f28825f[i3] = c3192a2;
             }
             i3++;
             strArr2 = strArr;
@@ -250,30 +295,32 @@ public class ua1 implements ge0 {
     }
 
     @Override // com.daaw.ge0
-    public float k(RectF rectF, int i) {
-        a[] aVarArr = this.f;
-        if (aVarArr.length == 0 || aVarArr[0].c.length != i) {
-            c(this.e, this.i, i);
+    /* renamed from: k */
+    public float mo8389k(RectF rectF, int i) {
+        C3192a[] c3192aArr = this.f28825f;
+        if (c3192aArr.length == 0 || c3192aArr[0].f28832c.length != i) {
+            m8394c(this.f28824e, this.f28828i, i);
         }
-        int i2 = this.h;
-        a[] aVarArr2 = this.f;
-        a aVar = i2 < aVarArr2.length ? aVarArr2[i2] : null;
-        if (aVar == null) {
+        int i2 = this.f28827h;
+        C3192a[] c3192aArr2 = this.f28825f;
+        C3192a c3192a = i2 < c3192aArr2.length ? c3192aArr2[i2] : null;
+        if (c3192a == null) {
             return 1.0f;
         }
-        RectF rectF2 = this.c;
-        bs1 bs1Var = aVar.e;
-        rectF2.left = bs1Var.a;
-        rectF2.top = bs1Var.b;
-        bs1 bs1Var2 = aVar.f;
-        rectF2.right = bs1Var2.a;
-        rectF2.bottom = bs1Var2.b;
-        return (aVar.d() / (this.c.width() > this.c.height() ? this.c.width() : this.c.height())) * (rectF.width() < rectF.height() ? rectF.width() : rectF.height()) * 0.5f * this.a;
+        RectF rectF2 = this.f28822c;
+        bs1 bs1Var = c3192a.f28834e;
+        rectF2.left = bs1Var.f5090a;
+        rectF2.top = bs1Var.f5091b;
+        bs1 bs1Var2 = c3192a.f28835f;
+        rectF2.right = bs1Var2.f5090a;
+        rectF2.bottom = bs1Var2.f5091b;
+        return (c3192a.m8384d() / (this.f28822c.width() > this.f28822c.height() ? this.f28822c.width() : this.f28822c.height())) * (rectF.width() < rectF.height() ? rectF.width() : rectF.height()) * 0.5f * this.f28820a;
     }
 
     @Override // com.daaw.zc0
-    public void o(un unVar) {
-        unVar.O("radius", this.a, "misc", 0.1f, 3.0f);
+    /* renamed from: o */
+    public void mo2492o(C3239un c3239un) {
+        c3239un.m7990O("radius", this.f28820a, "misc", 0.1f, 3.0f);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -285,32 +332,33 @@ public class ua1 implements ge0 {
     /* JADX WARN: Type inference failed for: r7v2 */
     /* JADX WARN: Type inference failed for: r7v4 */
     /* JADX WARN: Type inference failed for: r7v5 */
-    public final void q(ve veVar, String[] strArr, int i) {
-        if (veVar.a() != strArr.length) {
-            lz1.c("charSet count don't match");
+    /* renamed from: q */
+    public final void m8388q(C3325ve c3325ve, String[] strArr, int i) {
+        if (c3325ve.m7238a() != strArr.length) {
+            lz1.m16363c("charSet count don't match");
         }
-        this.f = new a[Math.min(veVar.a(), strArr.length)];
+        this.f28825f = new C3192a[Math.min(c3325ve.m7238a(), strArr.length)];
         ?? pathMeasure = new PathMeasure();
         ArrayList arrayList = new ArrayList();
         float[] fArr = {0.0f, 0.0f};
         float[] fArr2 = {0.0f, 0.0f};
         ?? r7 = 0;
         int i2 = 0;
-        while (i2 < this.f.length) {
+        while (i2 < this.f28825f.length) {
             float f = 0.0f;
-            this.g = 0.0f;
+            this.f28826g = 0.0f;
             arrayList.clear();
-            Path d = u71.d(strArr[i2]);
-            pathMeasure.setPath(d, r7);
+            Path m8455d = u71.m8455d(strArr[i2]);
+            pathMeasure.setPath(m8455d, r7);
             do {
                 float length = pathMeasure.getLength();
                 arrayList.add(Float.valueOf(length));
-                this.g += length;
+                this.f28826g += length;
             } while (pathMeasure.nextContour());
-            a aVar = new a(i);
-            pathMeasure.setPath(d, r7);
-            float f2 = this.g / i;
-            aVar.a.add(Integer.valueOf((int) r7));
+            C3192a c3192a = new C3192a(i);
+            pathMeasure.setPath(m8455d, r7);
+            float f2 = this.f28826g / i;
+            c3192a.f28830a.add(Integer.valueOf((int) r7));
             int i3 = 0;
             while (true) {
                 if (i3 < i) {
@@ -318,39 +366,39 @@ public class ua1 implements ge0 {
                     float length2 = pathMeasure.getLength() + f;
                     if (f3 <= length2) {
                         pathMeasure.getPosTan(f3 - f, fArr, fArr2);
-                        aVar.g = this.g;
-                        aVar.c[i3] = new bs1(fArr[r7 == true ? 1 : 0], fArr[1]);
-                        aVar.d[i3] = new bs1(fArr2[0], fArr2[1]);
-                        aVar.d[i3].o();
-                        bs1 bs1Var = aVar.e;
-                        float f4 = bs1Var.a;
-                        bs1[] bs1VarArr = aVar.c;
-                        if (f4 > bs1VarArr[i3].a) {
-                            bs1Var.a = bs1VarArr[i3].a;
+                        c3192a.f28836g = this.f28826g;
+                        c3192a.f28832c[i3] = new bs1(fArr[r7 == true ? 1 : 0], fArr[1]);
+                        c3192a.f28833d[i3] = new bs1(fArr2[0], fArr2[1]);
+                        c3192a.f28833d[i3].m25848o();
+                        bs1 bs1Var = c3192a.f28834e;
+                        float f4 = bs1Var.f5090a;
+                        bs1[] bs1VarArr = c3192a.f28832c;
+                        if (f4 > bs1VarArr[i3].f5090a) {
+                            bs1Var.f5090a = bs1VarArr[i3].f5090a;
                         }
-                        if (bs1Var.b > bs1VarArr[i3].b) {
-                            bs1Var.b = bs1VarArr[i3].b;
+                        if (bs1Var.f5091b > bs1VarArr[i3].f5091b) {
+                            bs1Var.f5091b = bs1VarArr[i3].f5091b;
                         }
-                        bs1 bs1Var2 = aVar.f;
-                        if (bs1Var2.a < bs1VarArr[i3].a) {
-                            bs1Var2.a = bs1VarArr[i3].a;
+                        bs1 bs1Var2 = c3192a.f28835f;
+                        if (bs1Var2.f5090a < bs1VarArr[i3].f5090a) {
+                            bs1Var2.f5090a = bs1VarArr[i3].f5090a;
                         }
-                        if (bs1Var2.b < bs1VarArr[i3].b) {
-                            bs1Var2.b = bs1VarArr[i3].b;
+                        if (bs1Var2.f5091b < bs1VarArr[i3].f5091b) {
+                            bs1Var2.f5091b = bs1VarArr[i3].f5091b;
                         }
                         i3++;
                         r7 = 0;
                     } else if (!pathMeasure.nextContour()) {
-                        lz1.c("could get all points on path");
+                        lz1.m16363c("could get all points on path");
                         break;
                     } else {
-                        aVar.a.add(Integer.valueOf(i3));
+                        c3192a.f28830a.add(Integer.valueOf(i3));
                         f = length2;
                     }
                 }
             }
-            aVar.a();
-            this.f[i2] = aVar;
+            c3192a.m8387a();
+            this.f28825f[i2] = c3192a;
             i2++;
             r7 = 0;
         }

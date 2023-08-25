@@ -12,38 +12,46 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 /* loaded from: classes.dex */
 public class hz1 implements oe1 {
-    public transient pe1 a = null;
-    public final List<ox> b = new ArrayList();
-    public final tf0 c = new tf0();
+
+    /* renamed from: a */
+    public transient pe1 f13069a = null;
+
+    /* renamed from: b */
+    public final List<C2486ox> f13070b = new ArrayList();
+
+    /* renamed from: c */
+    public final tf0 f13071c = new tf0();
 
     @Override // com.daaw.oe1
-    public pe1 a() {
-        return this.a;
+    /* renamed from: a */
+    public pe1 mo2137a() {
+        return this.f13069a;
     }
 
     @Override // com.daaw.oe1
-    public void b(OutputStream outputStream, String str) {
+    /* renamed from: b */
+    public void mo2136b(OutputStream outputStream, String str) {
         Document newDocument = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
         int i = 0;
         newDocument.setStrictErrorChecking(false);
         Element createElement = newDocument.createElement("xml");
         newDocument.appendChild(createElement);
-        for (ox oxVar : this.b) {
-            if (oxVar.a() != null) {
+        for (C2486ox c2486ox : this.f13070b) {
+            if (c2486ox.m13901a() != null) {
                 Element createElement2 = newDocument.createElement(Integer.toString(i));
-                createElement2.setAttribute("filename", oxVar.a());
+                createElement2.setAttribute("filename", c2486ox.m13901a());
                 createElement.appendChild(createElement2);
-                oxVar.b();
+                c2486ox.m13900b();
                 i++;
             }
         }
         Element createElement3 = newDocument.createElement("info");
-        createElement3.setAttribute("creation_day", this.c.b());
-        createElement3.setAttribute("modified_day", this.c.d());
-        createElement3.setAttribute("author", this.c.a());
-        createElement3.setAttribute("player", this.c.e());
-        createElement3.setAttribute("player_version", this.c.f());
-        createElement3.setAttribute("kpl_version", this.c.c());
+        createElement3.setAttribute("creation_day", this.f13071c.m9211b());
+        createElement3.setAttribute("modified_day", this.f13071c.m9209d());
+        createElement3.setAttribute("author", this.f13071c.m9212a());
+        createElement3.setAttribute("player", this.f13071c.m9208e());
+        createElement3.setAttribute("player_version", this.f13071c.m9207f());
+        createElement3.setAttribute("kpl_version", this.f13071c.m9210c());
         createElement.appendChild(createElement3);
         DOMSource dOMSource = new DOMSource(newDocument);
         StreamResult streamResult = new StreamResult(outputStream);
@@ -57,7 +65,8 @@ public class hz1 implements oe1 {
         outputStream.flush();
     }
 
-    public List<ox> c() {
-        return this.b;
+    /* renamed from: c */
+    public List<C2486ox> m20321c() {
+        return this.f13070b;
     }
 }

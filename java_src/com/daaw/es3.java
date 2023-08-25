@@ -3,24 +3,33 @@ package com.daaw;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public abstract class es3 {
-    public Object a;
-    public boolean b = false;
-    public final /* synthetic */ pa c;
 
-    public es3(pa paVar, Object obj) {
-        this.c = paVar;
-        this.a = obj;
+    /* renamed from: a */
+    public Object f8729a;
+
+    /* renamed from: b */
+    public boolean f8730b = false;
+
+    /* renamed from: c */
+    public final /* synthetic */ AbstractC2527pa f8731c;
+
+    public es3(AbstractC2527pa abstractC2527pa, Object obj) {
+        this.f8731c = abstractC2527pa;
+        this.f8729a = obj;
     }
 
-    public abstract void a(Object obj);
+    /* renamed from: a */
+    public abstract void mo16239a(Object obj);
 
-    public abstract void b();
+    /* renamed from: b */
+    public abstract void mo16238b();
 
-    public final void c() {
+    /* renamed from: c */
+    public final void m23234c() {
         Object obj;
         synchronized (this) {
-            obj = this.a;
-            if (this.b) {
+            obj = this.f8729a;
+            if (this.f8730b) {
                 String obj2 = toString();
                 StringBuilder sb = new StringBuilder();
                 sb.append("Callback proxy ");
@@ -30,30 +39,32 @@ public abstract class es3 {
         }
         if (obj != null) {
             try {
-                a(obj);
+                mo16239a(obj);
             } catch (RuntimeException e) {
                 throw e;
             }
         }
         synchronized (this) {
-            this.b = true;
+            this.f8730b = true;
         }
-        e();
+        m23232e();
     }
 
-    public final void d() {
+    /* renamed from: d */
+    public final void m23233d() {
         synchronized (this) {
-            this.a = null;
+            this.f8729a = null;
         }
     }
 
-    public final void e() {
+    /* renamed from: e */
+    public final void m23232e() {
         ArrayList arrayList;
         ArrayList arrayList2;
-        d();
-        arrayList = this.c.r;
+        m23233d();
+        arrayList = this.f8731c.f22753r;
         synchronized (arrayList) {
-            arrayList2 = this.c.r;
+            arrayList2 = this.f8731c.f22753r;
             arrayList2.remove(this);
         }
     }

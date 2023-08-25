@@ -4,74 +4,95 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 /* loaded from: classes.dex */
-public class ts1 extends RecyclerView.g implements oc0 {
-    public a c;
-    public wc0 d;
+public class ts1 extends RecyclerView.AbstractC0380g implements oc0 {
 
+    /* renamed from: c */
+    public InterfaceC3115a f28015c;
+
+    /* renamed from: d */
+    public wc0 f28016d;
+
+    /* renamed from: com.daaw.ts1$a */
     /* loaded from: classes.dex */
-    public interface a {
-        int a();
+    public interface InterfaceC3115a {
+        /* renamed from: a */
+        int mo2250a();
 
-        void f(oc0 oc0Var);
+        /* renamed from: f */
+        void mo2243f(oc0 oc0Var);
 
         int getItemViewType(int i);
 
-        void j(int i, int i2, List<Integer> list);
+        /* renamed from: j */
+        void mo2237j(int i, int i2, List<Integer> list);
 
-        void k();
+        /* renamed from: k */
+        void mo2235k();
 
-        RecyclerView.c0 r(ViewGroup viewGroup, int i);
+        /* renamed from: r */
+        RecyclerView.AbstractC0376c0 mo2233r(ViewGroup viewGroup, int i);
 
-        int t(int i);
+        /* renamed from: t */
+        int mo2232t(int i);
 
-        void v(RecyclerView.c0 c0Var, int i);
+        /* renamed from: v */
+        void mo2231v(RecyclerView.AbstractC0376c0 abstractC0376c0, int i);
     }
 
-    public ts1(a aVar, wc0 wc0Var) {
-        this.d = wc0Var;
-        v(false);
-        this.c = aVar;
-        aVar.f(this);
+    public ts1(InterfaceC3115a interfaceC3115a, wc0 wc0Var) {
+        this.f28016d = wc0Var;
+        m28704v(false);
+        this.f28015c = interfaceC3115a;
+        interfaceC3115a.mo2243f(this);
     }
 
-    public void A(int i, int i2, List<Integer> list) {
-        this.c.j(i, i2, list);
+    /* renamed from: A */
+    public void m8847A(int i, int i2, List<Integer> list) {
+        this.f28015c.mo2237j(i, i2, list);
     }
 
     @Override // com.daaw.oc0
-    public void a() {
-        i();
+    /* renamed from: a */
+    public void mo8846a() {
+        m28714i();
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.g
-    public int d() {
-        return this.c.a();
+    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+    /* renamed from: d */
+    public int mo497d() {
+        return this.f28015c.mo2250a();
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.g
-    public int f(int i) {
-        return this.c.getItemViewType(i);
+    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+    /* renamed from: f */
+    public int mo4978f(int i) {
+        return this.f28015c.getItemViewType(i);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.g
-    public void m(RecyclerView.c0 c0Var, int i) {
-        this.c.v(c0Var, i);
+    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+    /* renamed from: m */
+    public void mo496m(RecyclerView.AbstractC0376c0 abstractC0376c0, int i) {
+        this.f28015c.mo2231v(abstractC0376c0, i);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.g
-    public RecyclerView.c0 o(ViewGroup viewGroup, int i) {
-        return this.c.r(viewGroup, i);
+    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+    /* renamed from: o */
+    public RecyclerView.AbstractC0376c0 mo495o(ViewGroup viewGroup, int i) {
+        return this.f28015c.mo2233r(viewGroup, i);
     }
 
-    public int x(int i) {
-        return this.c.t(i);
+    /* renamed from: x */
+    public int m8845x(int i) {
+        return this.f28015c.mo2232t(i);
     }
 
-    public void y() {
-        this.c.k();
+    /* renamed from: y */
+    public void m8844y() {
+        this.f28015c.mo2235k();
     }
 
-    public wc0 z() {
-        return this.d;
+    /* renamed from: z */
+    public wc0 m8843z() {
+        return this.f28016d;
     }
 }

@@ -19,133 +19,173 @@ import org.conscrypt.NativeConstants;
 @TargetApi(16)
 /* loaded from: classes.dex */
 public final class fo0 {
-    public static final SparseIntArray d;
-    public static final SparseIntArray e;
-    public static final Map<String, Integer> f;
-    public static final co0 a = co0.r("OMX.google.raw.decoder");
-    public static final Pattern b = Pattern.compile("^\\D?(\\d+)$");
-    public static final HashMap<b, List<co0>> c = new HashMap<>();
-    public static int g = -1;
 
+    /* renamed from: d */
+    public static final SparseIntArray f9717d;
+
+    /* renamed from: e */
+    public static final SparseIntArray f9718e;
+
+    /* renamed from: f */
+    public static final Map<String, Integer> f9719f;
+
+    /* renamed from: a */
+    public static final co0 f9714a = co0.m25173r("OMX.google.raw.decoder");
+
+    /* renamed from: b */
+    public static final Pattern f9715b = Pattern.compile("^\\D?(\\d+)$");
+
+    /* renamed from: c */
+    public static final HashMap<C1311b, List<co0>> f9716c = new HashMap<>();
+
+    /* renamed from: g */
+    public static int f9720g = -1;
+
+    /* renamed from: com.daaw.fo0$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final String a;
-        public final boolean b;
+    public static final class C1311b {
 
-        public b(String str, boolean z) {
-            this.a = str;
-            this.b = z;
+        /* renamed from: a */
+        public final String f9721a;
+
+        /* renamed from: b */
+        public final boolean f9722b;
+
+        public C1311b(String str, boolean z) {
+            this.f9721a = str;
+            this.f9722b = z;
         }
 
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (obj == null || obj.getClass() != b.class) {
+            if (obj == null || obj.getClass() != C1311b.class) {
                 return false;
             }
-            b bVar = (b) obj;
-            return TextUtils.equals(this.a, bVar.a) && this.b == bVar.b;
+            C1311b c1311b = (C1311b) obj;
+            return TextUtils.equals(this.f9721a, c1311b.f9721a) && this.f9722b == c1311b.f9722b;
         }
 
         public int hashCode() {
-            String str = this.a;
-            return (((str == null ? 0 : str.hashCode()) + 31) * 31) + (this.b ? 1231 : 1237);
+            String str = this.f9721a;
+            return (((str == null ? 0 : str.hashCode()) + 31) * 31) + (this.f9722b ? 1231 : 1237);
         }
     }
 
+    /* renamed from: com.daaw.fo0$c */
     /* loaded from: classes.dex */
-    public static class c extends Exception {
-        public c(Throwable th) {
+    public static class C1312c extends Exception {
+        public C1312c(Throwable th) {
             super("Failed to query underlying media codecs", th);
         }
     }
 
+    /* renamed from: com.daaw.fo0$d */
     /* loaded from: classes.dex */
-    public interface d {
-        MediaCodecInfo a(int i);
+    public interface InterfaceC1313d {
+        /* renamed from: a */
+        MediaCodecInfo mo22462a(int i);
 
-        boolean b(String str, MediaCodecInfo.CodecCapabilities codecCapabilities);
+        /* renamed from: b */
+        boolean mo22461b(String str, MediaCodecInfo.CodecCapabilities codecCapabilities);
 
-        int c();
+        /* renamed from: c */
+        int mo22460c();
 
-        boolean d();
+        /* renamed from: d */
+        boolean mo22459d();
     }
 
+    /* renamed from: com.daaw.fo0$e */
     /* loaded from: classes.dex */
-    public static final class e implements d {
-        public e() {
+    public static final class C1314e implements InterfaceC1313d {
+        public C1314e() {
         }
 
-        @Override // com.daaw.fo0.d
-        public MediaCodecInfo a(int i) {
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: a */
+        public MediaCodecInfo mo22462a(int i) {
             return MediaCodecList.getCodecInfoAt(i);
         }
 
-        @Override // com.daaw.fo0.d
-        public boolean b(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: b */
+        public boolean mo22461b(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
             return "video/avc".equals(str);
         }
 
-        @Override // com.daaw.fo0.d
-        public int c() {
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: c */
+        public int mo22460c() {
             return MediaCodecList.getCodecCount();
         }
 
-        @Override // com.daaw.fo0.d
-        public boolean d() {
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: d */
+        public boolean mo22459d() {
             return false;
         }
     }
 
     @TargetApi(21)
+    /* renamed from: com.daaw.fo0$f */
     /* loaded from: classes.dex */
-    public static final class f implements d {
-        public final int a;
-        public MediaCodecInfo[] b;
+    public static final class C1315f implements InterfaceC1313d {
 
-        public f(boolean z) {
-            this.a = z ? 1 : 0;
+        /* renamed from: a */
+        public final int f9723a;
+
+        /* renamed from: b */
+        public MediaCodecInfo[] f9724b;
+
+        public C1315f(boolean z) {
+            this.f9723a = z ? 1 : 0;
         }
 
-        @Override // com.daaw.fo0.d
-        public MediaCodecInfo a(int i) {
-            e();
-            return this.b[i];
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: a */
+        public MediaCodecInfo mo22462a(int i) {
+            m22458e();
+            return this.f9724b[i];
         }
 
-        @Override // com.daaw.fo0.d
-        public boolean b(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: b */
+        public boolean mo22461b(String str, MediaCodecInfo.CodecCapabilities codecCapabilities) {
             return codecCapabilities.isFeatureSupported("secure-playback");
         }
 
-        @Override // com.daaw.fo0.d
-        public int c() {
-            e();
-            return this.b.length;
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: c */
+        public int mo22460c() {
+            m22458e();
+            return this.f9724b.length;
         }
 
-        @Override // com.daaw.fo0.d
-        public boolean d() {
+        @Override // com.daaw.fo0.InterfaceC1313d
+        /* renamed from: d */
+        public boolean mo22459d() {
             return true;
         }
 
-        public final void e() {
-            if (this.b == null) {
-                this.b = new MediaCodecList(this.a).getCodecInfos();
+        /* renamed from: e */
+        public final void m22458e() {
+            if (this.f9724b == null) {
+                this.f9724b = new MediaCodecList(this.f9723a).getCodecInfos();
             }
         }
     }
 
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
-        d = sparseIntArray;
+        f9717d = sparseIntArray;
         sparseIntArray.put(66, 1);
         sparseIntArray.put(77, 2);
         sparseIntArray.put(88, 4);
         sparseIntArray.put(100, 8);
         SparseIntArray sparseIntArray2 = new SparseIntArray();
-        e = sparseIntArray2;
+        f9718e = sparseIntArray2;
         sparseIntArray2.put(10, 1);
         sparseIntArray2.put(11, 4);
         sparseIntArray2.put(12, 8);
@@ -163,7 +203,7 @@ public final class fo0 {
         sparseIntArray2.put(51, 32768);
         sparseIntArray2.put(52, 65536);
         HashMap hashMap = new HashMap();
-        f = hashMap;
+        f9719f = hashMap;
         hashMap.put("L30", 1);
         hashMap.put("L60", 4);
         hashMap.put("L63", 16);
@@ -192,14 +232,15 @@ public final class fo0 {
         hashMap.put("H186", 33554432);
     }
 
-    public static void a(List<co0> list) {
-        if (sq1.a < 26) {
-            if (list.size() <= 1 || !"OMX.MTK.AUDIO.DECODER.RAW".equals(list.get(0).a)) {
+    /* renamed from: a */
+    public static void m22474a(List<co0> list) {
+        if (sq1.f26525a < 26) {
+            if (list.size() <= 1 || !"OMX.MTK.AUDIO.DECODER.RAW".equals(list.get(0).f5990a)) {
                 return;
             }
             for (int i = 1; i < list.size(); i++) {
                 co0 co0Var = list.get(i);
-                if ("OMX.google.raw.decoder".equals(co0Var.a)) {
+                if ("OMX.google.raw.decoder".equals(co0Var.f5990a)) {
                     list.remove(i);
                     list.add(0, co0Var);
                     return;
@@ -208,7 +249,8 @@ public final class fo0 {
         }
     }
 
-    public static int b(int i) {
+    /* renamed from: b */
+    public static int m22473b(int i) {
         if (i == 1 || i == 2) {
             return 25344;
         }
@@ -241,9 +283,10 @@ public final class fo0 {
         }
     }
 
-    public static boolean c(String str) {
-        if (sq1.a <= 22) {
-            String str2 = sq1.d;
+    /* renamed from: c */
+    public static boolean m22472c(String str) {
+        if (sq1.f26525a <= 22) {
+            String str2 = sq1.f26528d;
             if (("ODROID-XU3".equals(str2) || "Nexus 10".equals(str2)) && ("OMX.Exynos.AVC.Decoder".equals(str) || "OMX.Exynos.AVC.Decoder.secure".equals(str))) {
                 return true;
             }
@@ -251,7 +294,8 @@ public final class fo0 {
         return false;
     }
 
-    public static Pair<Integer, Integer> d(String str, String[] strArr) {
+    /* renamed from: d */
+    public static Pair<Integer, Integer> m22471d(String str, String[] strArr) {
         Integer valueOf;
         Integer num;
         if (strArr.length < 2) {
@@ -274,14 +318,14 @@ public final class fo0 {
                 valueOf = Integer.valueOf(Integer.parseInt(strArr[2]));
                 num = valueOf2;
             }
-            int i = d.get(num.intValue(), -1);
+            int i = f9717d.get(num.intValue(), -1);
             if (i == -1) {
                 StringBuilder sb3 = new StringBuilder();
                 sb3.append("Unknown AVC profile: ");
                 sb3.append(num);
                 return null;
             }
-            int i2 = e.get(valueOf.intValue(), -1);
+            int i2 = f9718e.get(valueOf.intValue(), -1);
             if (i2 == -1) {
                 StringBuilder sb4 = new StringBuilder();
                 sb4.append("Unknown AVC level: ");
@@ -301,154 +345,133 @@ public final class fo0 {
     /* JADX WARN: Code restructure failed: missing block: B:21:0x0041, code lost:
         if (r3.equals("avc1") == false) goto L7;
      */
+    /* renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static android.util.Pair<java.lang.Integer, java.lang.Integer> e(java.lang.String r6) {
-        /*
-            r0 = 0
-            if (r6 != 0) goto L4
-            return r0
-        L4:
-            java.lang.String r1 = "\\."
-            java.lang.String[] r1 = r6.split(r1)
-            r2 = 0
-            r3 = r1[r2]
-            r3.hashCode()
-            r4 = -1
-            int r5 = r3.hashCode()
-            switch(r5) {
-                case 3006243: goto L3b;
-                case 3006244: goto L30;
-                case 3199032: goto L25;
-                case 3214780: goto L1a;
-                default: goto L18;
-            }
-        L18:
-            r2 = -1
-            goto L44
-        L1a:
-            java.lang.String r2 = "hvc1"
-            boolean r2 = r3.equals(r2)
-            if (r2 != 0) goto L23
-            goto L18
-        L23:
-            r2 = 3
-            goto L44
-        L25:
-            java.lang.String r2 = "hev1"
-            boolean r2 = r3.equals(r2)
-            if (r2 != 0) goto L2e
-            goto L18
-        L2e:
-            r2 = 2
-            goto L44
-        L30:
-            java.lang.String r2 = "avc2"
-            boolean r2 = r3.equals(r2)
-            if (r2 != 0) goto L39
-            goto L18
-        L39:
-            r2 = 1
-            goto L44
-        L3b:
-            java.lang.String r5 = "avc1"
-            boolean r3 = r3.equals(r5)
-            if (r3 != 0) goto L44
-            goto L18
-        L44:
-            switch(r2) {
-                case 0: goto L4d;
-                case 1: goto L4d;
-                case 2: goto L48;
-                case 3: goto L48;
-                default: goto L47;
-            }
-        L47:
-            return r0
-        L48:
-            android.util.Pair r6 = i(r6, r1)
-            return r6
-        L4d:
-            android.util.Pair r6 = d(r6, r1)
-            return r6
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.fo0.e(java.lang.String):android.util.Pair");
-    }
-
-    public static co0 f(String str, boolean z) {
-        List<co0> g2 = g(str, z);
-        if (g2.isEmpty()) {
+    public static Pair<Integer, Integer> m22470e(String str) {
+        if (str == null) {
             return null;
         }
-        return g2.get(0);
+        String[] split = str.split("\\.");
+        char c = 0;
+        String str2 = split[0];
+        str2.hashCode();
+        switch (str2.hashCode()) {
+            case 3006243:
+                break;
+            case 3006244:
+                if (str2.equals("avc2")) {
+                    c = 1;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 3199032:
+                if (str2.equals("hev1")) {
+                    c = 2;
+                    break;
+                }
+                c = 65535;
+                break;
+            case 3214780:
+                if (str2.equals("hvc1")) {
+                    c = 3;
+                    break;
+                }
+                c = 65535;
+                break;
+            default:
+                c = 65535;
+                break;
+        }
+        switch (c) {
+            case 0:
+            case 1:
+                return m22471d(str, split);
+            case 2:
+            case 3:
+                return m22466i(str, split);
+            default:
+                return null;
+        }
     }
 
-    public static synchronized List<co0> g(String str, boolean z) {
+    /* renamed from: f */
+    public static co0 m22469f(String str, boolean z) {
+        List<co0> m22468g = m22468g(str, z);
+        if (m22468g.isEmpty()) {
+            return null;
+        }
+        return m22468g.get(0);
+    }
+
+    /* renamed from: g */
+    public static synchronized List<co0> m22468g(String str, boolean z) {
         synchronized (fo0.class) {
-            b bVar = new b(str, z);
-            HashMap<b, List<co0>> hashMap = c;
-            List<co0> list = hashMap.get(bVar);
+            C1311b c1311b = new C1311b(str, z);
+            HashMap<C1311b, List<co0>> hashMap = f9716c;
+            List<co0> list = hashMap.get(c1311b);
             if (list != null) {
                 return list;
             }
-            int i = sq1.a;
-            d fVar = i >= 21 ? new f(z) : new e();
-            ArrayList<co0> h = h(bVar, fVar, str);
-            if (z && h.isEmpty() && 21 <= i && i <= 23) {
-                fVar = new e();
-                h = h(bVar, fVar, str);
-                if (!h.isEmpty()) {
+            int i = sq1.f26525a;
+            InterfaceC1313d c1315f = i >= 21 ? new C1315f(z) : new C1314e();
+            ArrayList<co0> m22467h = m22467h(c1311b, c1315f, str);
+            if (z && m22467h.isEmpty() && 21 <= i && i <= 23) {
+                c1315f = new C1314e();
+                m22467h = m22467h(c1311b, c1315f, str);
+                if (!m22467h.isEmpty()) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("MediaCodecList API didn't list secure decoder for: ");
                     sb.append(str);
                     sb.append(". Assuming: ");
-                    sb.append(h.get(0).a);
+                    sb.append(m22467h.get(0).f5990a);
                 }
             }
             if ("audio/eac3-joc".equals(str)) {
-                h.addAll(h(new b("audio/eac3", bVar.b), fVar, str));
+                m22467h.addAll(m22467h(new C1311b("audio/eac3", c1311b.f9722b), c1315f, str));
             }
-            a(h);
-            List<co0> unmodifiableList = Collections.unmodifiableList(h);
-            hashMap.put(bVar, unmodifiableList);
+            m22474a(m22467h);
+            List<co0> unmodifiableList = Collections.unmodifiableList(m22467h);
+            hashMap.put(c1311b, unmodifiableList);
             return unmodifiableList;
         }
     }
 
-    public static ArrayList<co0> h(b bVar, d dVar, String str) {
+    /* renamed from: h */
+    public static ArrayList<co0> m22467h(C1311b c1311b, InterfaceC1313d interfaceC1313d, String str) {
         int i;
-        d dVar2 = dVar;
+        InterfaceC1313d interfaceC1313d2 = interfaceC1313d;
         try {
             ArrayList<co0> arrayList = new ArrayList<>();
-            String str2 = bVar.a;
-            int c2 = dVar.c();
-            boolean d2 = dVar.d();
+            String str2 = c1311b.f9721a;
+            int mo22460c = interfaceC1313d.mo22460c();
+            boolean mo22459d = interfaceC1313d.mo22459d();
             int i2 = 0;
-            while (i2 < c2) {
-                MediaCodecInfo a2 = dVar2.a(i2);
-                String name = a2.getName();
-                if (k(a2, name, d2, str)) {
-                    String[] supportedTypes = a2.getSupportedTypes();
+            while (i2 < mo22460c) {
+                MediaCodecInfo mo22462a = interfaceC1313d2.mo22462a(i2);
+                String name = mo22462a.getName();
+                if (m22464k(mo22462a, name, mo22459d, str)) {
+                    String[] supportedTypes = mo22462a.getSupportedTypes();
                     int length = supportedTypes.length;
                     int i3 = 0;
                     while (i3 < length) {
                         String str3 = supportedTypes[i3];
                         if (str3.equalsIgnoreCase(str2)) {
                             try {
-                                MediaCodecInfo.CodecCapabilities capabilitiesForType = a2.getCapabilitiesForType(str3);
-                                boolean b2 = dVar2.b(str2, capabilitiesForType);
-                                boolean c3 = c(name);
-                                if (d2) {
-                                    i = c2;
+                                MediaCodecInfo.CodecCapabilities capabilitiesForType = mo22462a.getCapabilitiesForType(str3);
+                                boolean mo22461b = interfaceC1313d2.mo22461b(str2, capabilitiesForType);
+                                boolean m22472c = m22472c(name);
+                                if (mo22459d) {
+                                    i = mo22460c;
                                     try {
-                                        if (bVar.b != b2) {
+                                        if (c1311b.f9722b != mo22461b) {
                                         }
-                                        arrayList.add(co0.q(name, str2, capabilitiesForType, c3, false));
-                                    } catch (Exception e2) {
-                                        e = e2;
-                                        if (sq1.a > 23 || arrayList.isEmpty()) {
+                                        arrayList.add(co0.m25174q(name, str2, capabilitiesForType, m22472c, false));
+                                    } catch (Exception e) {
+                                        e = e;
+                                        if (sq1.f26525a > 23 || arrayList.isEmpty()) {
                                             StringBuilder sb = new StringBuilder();
                                             sb.append("Failed to query codec ");
                                             sb.append(name);
@@ -462,42 +485,43 @@ public final class fo0 {
                                         sb2.append(name);
                                         sb2.append(" (failed to query capabilities)");
                                         i3++;
-                                        dVar2 = dVar;
-                                        c2 = i;
+                                        interfaceC1313d2 = interfaceC1313d;
+                                        mo22460c = i;
                                     }
                                 } else {
-                                    i = c2;
+                                    i = mo22460c;
                                 }
-                                if (!d2 && !bVar.b) {
-                                    arrayList.add(co0.q(name, str2, capabilitiesForType, c3, false));
-                                } else if (!d2 && b2) {
-                                    arrayList.add(co0.q(name + ".secure", str2, capabilitiesForType, c3, true));
+                                if (!mo22459d && !c1311b.f9722b) {
+                                    arrayList.add(co0.m25174q(name, str2, capabilitiesForType, m22472c, false));
+                                } else if (!mo22459d && mo22461b) {
+                                    arrayList.add(co0.m25174q(name + ".secure", str2, capabilitiesForType, m22472c, true));
                                     return arrayList;
                                 }
-                            } catch (Exception e3) {
-                                e = e3;
-                                i = c2;
+                            } catch (Exception e2) {
+                                e = e2;
+                                i = mo22460c;
                             }
                         } else {
-                            i = c2;
+                            i = mo22460c;
                         }
                         i3++;
-                        dVar2 = dVar;
-                        c2 = i;
+                        interfaceC1313d2 = interfaceC1313d;
+                        mo22460c = i;
                     }
                     continue;
                 }
                 i2++;
-                dVar2 = dVar;
-                c2 = c2;
+                interfaceC1313d2 = interfaceC1313d;
+                mo22460c = mo22460c;
             }
             return arrayList;
-        } catch (Exception e4) {
-            throw new c(e4);
+        } catch (Exception e3) {
+            throw new C1312c(e3);
         }
     }
 
-    public static Pair<Integer, Integer> i(String str, String[] strArr) {
+    /* renamed from: i */
+    public static Pair<Integer, Integer> m22466i(String str, String[] strArr) {
         int i;
         if (strArr.length < 4) {
             StringBuilder sb = new StringBuilder();
@@ -505,7 +529,7 @@ public final class fo0 {
             sb.append(str);
             return null;
         }
-        Matcher matcher = b.matcher(strArr[1]);
+        Matcher matcher = f9715b.matcher(strArr[1]);
         if (!matcher.matches()) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("Ignoring malformed HEVC codec string: ");
@@ -523,7 +547,7 @@ public final class fo0 {
         } else {
             i = 2;
         }
-        Integer num = f.get(strArr[3]);
+        Integer num = f9719f.get(strArr[3]);
         if (num == null) {
             StringBuilder sb4 = new StringBuilder();
             sb4.append("Unknown HEVC level string: ");
@@ -533,48 +557,50 @@ public final class fo0 {
         return new Pair<>(Integer.valueOf(i), num);
     }
 
-    public static co0 j() {
-        return a;
+    /* renamed from: j */
+    public static co0 m22465j() {
+        return f9714a;
     }
 
-    public static boolean k(MediaCodecInfo mediaCodecInfo, String str, boolean z, String str2) {
+    /* renamed from: k */
+    public static boolean m22464k(MediaCodecInfo mediaCodecInfo, String str, boolean z, String str2) {
         if (mediaCodecInfo.isEncoder() || (!z && str.endsWith(".secure"))) {
             return false;
         }
-        int i = sq1.a;
+        int i = sq1.f26525a;
         if (i >= 21 || !("CIPAACDecoder".equals(str) || "CIPMP3Decoder".equals(str) || "CIPVorbisDecoder".equals(str) || "CIPAMRNBDecoder".equals(str) || "AACDecoder".equals(str) || "MP3Decoder".equals(str))) {
             if (i >= 18 || !"OMX.SEC.MP3.Decoder".equals(str)) {
                 if (i < 18 && "OMX.MTK.AUDIO.DECODER.AAC".equals(str)) {
-                    String str3 = sq1.b;
-                    if ("a70".equals(str3) || ("Xiaomi".equals(sq1.c) && str3.startsWith("HM"))) {
+                    String str3 = sq1.f26526b;
+                    if ("a70".equals(str3) || ("Xiaomi".equals(sq1.f26527c) && str3.startsWith("HM"))) {
                         return false;
                     }
                 }
                 if (i == 16 && "OMX.qcom.audio.decoder.mp3".equals(str)) {
-                    String str4 = sq1.b;
+                    String str4 = sq1.f26526b;
                     if ("dlxu".equals(str4) || "protou".equals(str4) || "ville".equals(str4) || "villeplus".equals(str4) || "villec2".equals(str4) || str4.startsWith("gee") || "C6602".equals(str4) || "C6603".equals(str4) || "C6606".equals(str4) || "C6616".equals(str4) || "L36h".equals(str4) || "SO-02E".equals(str4)) {
                         return false;
                     }
                 }
                 if (i == 16 && "OMX.qcom.audio.decoder.aac".equals(str)) {
-                    String str5 = sq1.b;
+                    String str5 = sq1.f26526b;
                     if ("C1504".equals(str5) || "C1505".equals(str5) || "C1604".equals(str5) || "C1605".equals(str5)) {
                         return false;
                     }
                 }
-                if (i < 24 && (("OMX.SEC.aac.dec".equals(str) || "OMX.Exynos.AAC.Decoder".equals(str)) && "samsung".equals(sq1.c))) {
-                    String str6 = sq1.b;
+                if (i < 24 && (("OMX.SEC.aac.dec".equals(str) || "OMX.Exynos.AAC.Decoder".equals(str)) && "samsung".equals(sq1.f26527c))) {
+                    String str6 = sq1.f26526b;
                     if (str6.startsWith("zeroflte") || str6.startsWith("zerolte") || str6.startsWith("zenlte") || "SC-05G".equals(str6) || "marinelteatt".equals(str6) || "404SC".equals(str6) || "SC-04G".equals(str6) || "SCV31".equals(str6)) {
                         return false;
                     }
                 }
-                if (i <= 19 && "OMX.SEC.vp8.dec".equals(str) && "samsung".equals(sq1.c)) {
-                    String str7 = sq1.b;
+                if (i <= 19 && "OMX.SEC.vp8.dec".equals(str) && "samsung".equals(sq1.f26527c)) {
+                    String str7 = sq1.f26526b;
                     if (str7.startsWith("d2") || str7.startsWith("serrano") || str7.startsWith("jflte") || str7.startsWith("santos") || str7.startsWith("t0")) {
                         return false;
                     }
                 }
-                if (i <= 19 && sq1.b.startsWith("jflte") && "OMX.qcom.video.decoder.vp8".equals(str)) {
+                if (i <= 19 && sq1.f26526b.startsWith("jflte") && "OMX.qcom.video.decoder.vp8".equals(str)) {
                     return false;
                 }
                 return ("audio/eac3-joc".equals(str2) && "OMX.MTK.AUDIO.DECODER.DSPAC3".equals(str)) ? false : true;
@@ -584,22 +610,23 @@ public final class fo0 {
         return false;
     }
 
-    public static int l() {
-        if (g == -1) {
+    /* renamed from: l */
+    public static int m22463l() {
+        if (f9720g == -1) {
             int i = 0;
-            co0 f2 = f("video/avc", false);
-            if (f2 != null) {
-                MediaCodecInfo.CodecProfileLevel[] d2 = f2.d();
-                int length = d2.length;
+            co0 m22469f = m22469f("video/avc", false);
+            if (m22469f != null) {
+                MediaCodecInfo.CodecProfileLevel[] m25187d = m22469f.m25187d();
+                int length = m25187d.length;
                 int i2 = 0;
                 while (i < length) {
-                    i2 = Math.max(b(d2[i].level), i2);
+                    i2 = Math.max(m22473b(m25187d[i].level), i2);
                     i++;
                 }
-                i = Math.max(i2, sq1.a >= 21 ? 345600 : 172800);
+                i = Math.max(i2, sq1.f26525a >= 21 ? 345600 : 172800);
             }
-            g = i;
+            f9720g = i;
         }
-        return g;
+        return f9720g;
     }
 }

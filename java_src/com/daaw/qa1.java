@@ -4,22 +4,35 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 /* loaded from: classes.dex */
 public class qa1 implements ge0 {
-    public float a = 1.0f;
-    public int b = 3;
-    public float c = 0.0f;
-    public PointF d = new PointF();
-    public PointF e = new PointF();
+
+    /* renamed from: a */
+    public float f23802a = 1.0f;
+
+    /* renamed from: b */
+    public int f23803b = 3;
+
+    /* renamed from: c */
+    public float f23804c = 0.0f;
+
+    /* renamed from: d */
+    public PointF f23805d = new PointF();
+
+    /* renamed from: e */
+    public PointF f23806e = new PointF();
 
     @Override // com.daaw.zc0
-    public void a(un unVar) {
+    /* renamed from: a */
+    public void mo2493a(C3239un c3239un) {
     }
 
     @Override // com.daaw.ge0
-    public void d(de0 de0Var) {
+    /* renamed from: d */
+    public void mo8393d(de0 de0Var) {
     }
 
     @Override // com.daaw.ge0
-    public int e(boolean z, int i, int i2, RectF rectF, float f, PointF pointF, PointF pointF2) {
+    /* renamed from: e */
+    public int mo8392e(boolean z, int i, int i2, RectF rectF, float f, PointF pointF, PointF pointF2) {
         switch (i) {
             case 0:
                 pointF.x = rectF.left;
@@ -75,16 +88,19 @@ public class qa1 implements ge0 {
     }
 
     @Override // com.daaw.ge0
-    public int i(RectF rectF) {
+    /* renamed from: i */
+    public int mo8391i(RectF rectF) {
         return 4;
     }
 
     @Override // com.daaw.ge0
-    public float k(RectF rectF, int i) {
+    /* renamed from: k */
+    public float mo8389k(RectF rectF, int i) {
         return (rectF.width() + rectF.height()) * 2.0f;
     }
 
     @Override // com.daaw.zc0
-    public void o(un unVar) {
+    /* renamed from: o */
+    public void mo2492o(C3239un c3239un) {
     }
 }

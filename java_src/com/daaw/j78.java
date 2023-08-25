@@ -1,53 +1,85 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class j78 {
-    public final nr8 a;
-    public final Object b;
-    public final mt8[] c;
-    public boolean d;
-    public boolean e;
-    public m78 f;
-    public boolean g;
-    public final boolean[] h;
-    public final l98[] i;
-    public final zv8 j;
-    public final n88 k;
-    public j78 l;
-    public au8 m;
-    public fw8 n;
-    public long o;
+
+    /* renamed from: a */
+    public final nr8 f14502a;
+
+    /* renamed from: b */
+    public final Object f14503b;
+
+    /* renamed from: c */
+    public final mt8[] f14504c;
+
+    /* renamed from: d */
+    public boolean f14505d;
+
+    /* renamed from: e */
+    public boolean f14506e;
+
+    /* renamed from: f */
+    public m78 f14507f;
+
+    /* renamed from: g */
+    public boolean f14508g;
+
+    /* renamed from: h */
+    public final boolean[] f14509h;
+
+    /* renamed from: i */
+    public final l98[] f14510i;
+
+    /* renamed from: j */
+    public final zv8 f14511j;
+
+    /* renamed from: k */
+    public final n88 f14512k;
+
+    /* renamed from: l */
+    public j78 f14513l;
+
+    /* renamed from: m */
+    public au8 f14514m;
+
+    /* renamed from: n */
+    public fw8 f14515n;
+
+    /* renamed from: o */
+    public long f14516o;
 
     public j78(l98[] l98VarArr, long j, zv8 zv8Var, nw8 nw8Var, n88 n88Var, m78 m78Var, fw8 fw8Var, byte[] bArr) {
-        this.i = l98VarArr;
-        this.o = j;
-        this.j = zv8Var;
-        this.k = n88Var;
-        pr8 pr8Var = m78Var.a;
-        this.b = pr8Var.a;
-        this.f = m78Var;
-        this.m = au8.d;
-        this.n = fw8Var;
-        this.c = new mt8[2];
-        this.h = new boolean[2];
-        long j2 = m78Var.b;
-        long j3 = m78Var.d;
-        nr8 o = n88Var.o(pr8Var, nw8Var, j2);
-        this.a = j3 != -9223372036854775807L ? new oq8(o, true, 0L, j3) : o;
+        this.f14510i = l98VarArr;
+        this.f14516o = j;
+        this.f14511j = zv8Var;
+        this.f14512k = n88Var;
+        pr8 pr8Var = m78Var.f18573a;
+        this.f14503b = pr8Var.f18805a;
+        this.f14507f = m78Var;
+        this.f14514m = au8.f3666d;
+        this.f14515n = fw8Var;
+        this.f14504c = new mt8[2];
+        this.f14509h = new boolean[2];
+        long j2 = m78Var.f18574b;
+        long j3 = m78Var.f18576d;
+        nr8 m15398o = n88Var.m15398o(pr8Var, nw8Var, j2);
+        this.f14502a = j3 != -9223372036854775807L ? new oq8(m15398o, true, 0L, j3) : m15398o;
     }
 
-    public final long a(fw8 fw8Var, long j, boolean z) {
-        return b(fw8Var, j, false, new boolean[2]);
+    /* renamed from: a */
+    public final long m18759a(fw8 fw8Var, long j, boolean z) {
+        return m18758b(fw8Var, j, false, new boolean[2]);
     }
 
-    public final long b(fw8 fw8Var, long j, boolean z, boolean[] zArr) {
+    /* renamed from: b */
+    public final long m18758b(fw8 fw8Var, long j, boolean z, boolean[] zArr) {
         int i = 0;
         while (true) {
             boolean z2 = true;
-            if (i >= fw8Var.a) {
+            if (i >= fw8Var.f10040a) {
                 break;
             }
-            boolean[] zArr2 = this.h;
-            if (z || !fw8Var.a(this.n, i)) {
+            boolean[] zArr2 = this.f14509h;
+            if (z || !fw8Var.m22182a(this.f14515n, i)) {
                 z2 = false;
             }
             zArr2[i] = z2;
@@ -55,192 +87,211 @@ public final class j78 {
         }
         int i2 = 0;
         while (true) {
-            l98[] l98VarArr = this.i;
+            l98[] l98VarArr = this.f14510i;
             if (i2 >= 2) {
                 break;
             }
             l98VarArr[i2].zzb();
             i2++;
         }
-        s();
-        this.n = fw8Var;
-        t();
-        long k = this.a.k(fw8Var.c, this.h, this.c, zArr, j);
+        m18741s();
+        this.f14515n = fw8Var;
+        m18740t();
+        long mo3295k = this.f14502a.mo3295k(fw8Var.f10042c, this.f14509h, this.f14504c, zArr, j);
         int i3 = 0;
         while (true) {
-            l98[] l98VarArr2 = this.i;
+            l98[] l98VarArr2 = this.f14510i;
             if (i3 >= 2) {
                 break;
             }
             l98VarArr2[i3].zzb();
             i3++;
         }
-        this.e = false;
+        this.f14506e = false;
         int i4 = 0;
         while (true) {
-            mt8[] mt8VarArr = this.c;
+            mt8[] mt8VarArr = this.f14504c;
             if (i4 >= 2) {
-                return k;
+                return mo3295k;
             }
             if (mt8VarArr[i4] != null) {
-                uo4.f(fw8Var.b(i4));
-                this.i[i4].zzb();
-                this.e = true;
+                uo4.m7872f(fw8Var.m22181b(i4));
+                this.f14510i[i4].zzb();
+                this.f14506e = true;
             } else {
-                uo4.f(fw8Var.c[i4] == null);
+                uo4.m7872f(fw8Var.f10042c[i4] == null);
             }
             i4++;
         }
     }
 
-    public final long c() {
-        if (this.d) {
-            long zzb = this.e ? this.a.zzb() : Long.MIN_VALUE;
-            return zzb == Long.MIN_VALUE ? this.f.e : zzb;
+    /* renamed from: c */
+    public final long m18757c() {
+        if (this.f14505d) {
+            long zzb = this.f14506e ? this.f14502a.zzb() : Long.MIN_VALUE;
+            return zzb == Long.MIN_VALUE ? this.f14507f.f18577e : zzb;
         }
-        return this.f.b;
+        return this.f14507f.f18574b;
     }
 
-    public final long d() {
-        if (this.d) {
-            return this.a.zzc();
+    /* renamed from: d */
+    public final long m18756d() {
+        if (this.f14505d) {
+            return this.f14502a.zzc();
         }
         return 0L;
     }
 
-    public final long e() {
-        return this.o;
+    /* renamed from: e */
+    public final long m18755e() {
+        return this.f14516o;
     }
 
-    public final long f() {
-        return this.f.b + this.o;
+    /* renamed from: f */
+    public final long m18754f() {
+        return this.f14507f.f18574b + this.f14516o;
     }
 
-    public final j78 g() {
-        return this.l;
+    /* renamed from: g */
+    public final j78 m18753g() {
+        return this.f14513l;
     }
 
-    public final au8 h() {
-        return this.m;
+    /* renamed from: h */
+    public final au8 m18752h() {
+        return this.f14514m;
     }
 
-    public final fw8 i() {
-        return this.n;
+    /* renamed from: i */
+    public final fw8 m18751i() {
+        return this.f14515n;
     }
 
-    public final fw8 j(float f, l64 l64Var) {
+    /* renamed from: j */
+    public final fw8 m18750j(float f, l64 l64Var) {
         tv8[] tv8VarArr;
-        fw8 d = this.j.d(this.i, this.m, this.f.a, l64Var);
-        for (tv8 tv8Var : d.c) {
+        fw8 mo1832d = this.f14511j.mo1832d(this.f14510i, this.f14514m, this.f14507f.f18573a, l64Var);
+        for (tv8 tv8Var : mo1832d.f10042c) {
         }
-        return d;
+        return mo1832d;
     }
 
-    public final void k(long j) {
-        uo4.f(u());
-        this.a.c(j - this.o);
+    /* renamed from: k */
+    public final void m18749k(long j) {
+        uo4.m7872f(m18739u());
+        this.f14502a.mo3303c(j - this.f14516o);
     }
 
-    public final void l(float f, l64 l64Var) {
-        this.d = true;
-        this.m = this.a.zzh();
-        fw8 j = j(f, l64Var);
-        m78 m78Var = this.f;
-        long j2 = m78Var.b;
-        long j3 = m78Var.e;
-        if (j3 != -9223372036854775807L && j2 >= j3) {
-            j2 = Math.max(0L, j3 - 1);
+    /* renamed from: l */
+    public final void m18748l(float f, l64 l64Var) {
+        this.f14505d = true;
+        this.f14514m = this.f14502a.zzh();
+        fw8 m18750j = m18750j(f, l64Var);
+        m78 m78Var = this.f14507f;
+        long j = m78Var.f18574b;
+        long j2 = m78Var.f18577e;
+        if (j2 != -9223372036854775807L && j >= j2) {
+            j = Math.max(0L, j2 - 1);
         }
-        long a = a(j, j2, false);
-        long j4 = this.o;
-        m78 m78Var2 = this.f;
-        this.o = j4 + (m78Var2.b - a);
-        this.f = m78Var2.b(a);
+        long m18759a = m18759a(m18750j, j, false);
+        long j3 = this.f14516o;
+        m78 m78Var2 = this.f14507f;
+        this.f14516o = j3 + (m78Var2.f18574b - m18759a);
+        this.f14507f = m78Var2.m16184b(m18759a);
     }
 
-    public final void m(long j) {
-        uo4.f(u());
-        if (this.d) {
-            this.a.j(j - this.o);
+    /* renamed from: m */
+    public final void m18747m(long j) {
+        uo4.m7872f(m18739u());
+        if (this.f14505d) {
+            this.f14502a.mo3296j(j - this.f14516o);
         }
     }
 
-    public final void n() {
-        s();
-        n88 n88Var = this.k;
-        nr8 nr8Var = this.a;
+    /* renamed from: n */
+    public final void m18746n() {
+        m18741s();
+        n88 n88Var = this.f14512k;
+        nr8 nr8Var = this.f14502a;
         try {
             if (nr8Var instanceof oq8) {
-                n88Var.h(((oq8) nr8Var).p);
+                n88Var.m15405h(((oq8) nr8Var).f21840p);
             } else {
-                n88Var.h(nr8Var);
+                n88Var.m15405h(nr8Var);
             }
         } catch (RuntimeException e) {
-            s95.c("MediaPeriodHolder", "Period release failed.", e);
+            s95.m10495c("MediaPeriodHolder", "Period release failed.", e);
         }
     }
 
-    public final void o(j78 j78Var) {
-        if (j78Var == this.l) {
+    /* renamed from: o */
+    public final void m18745o(j78 j78Var) {
+        if (j78Var == this.f14513l) {
             return;
         }
-        s();
-        this.l = j78Var;
-        t();
+        m18741s();
+        this.f14513l = j78Var;
+        m18740t();
     }
 
-    public final void p(long j) {
-        this.o = 1000000000000L;
+    /* renamed from: p */
+    public final void m18744p(long j) {
+        this.f14516o = 1000000000000L;
     }
 
-    public final void q() {
-        nr8 nr8Var = this.a;
+    /* renamed from: q */
+    public final void m18743q() {
+        nr8 nr8Var = this.f14502a;
         if (nr8Var instanceof oq8) {
-            long j = this.f.d;
+            long j = this.f14507f.f18576d;
             if (j == -9223372036854775807L) {
                 j = Long.MIN_VALUE;
             }
-            ((oq8) nr8Var).f(0L, j);
+            ((oq8) nr8Var).m14066f(0L, j);
         }
     }
 
-    public final boolean r() {
-        return this.d && (!this.e || this.a.zzb() == Long.MIN_VALUE);
+    /* renamed from: r */
+    public final boolean m18742r() {
+        return this.f14505d && (!this.f14506e || this.f14502a.zzb() == Long.MIN_VALUE);
     }
 
-    public final void s() {
-        if (!u()) {
+    /* renamed from: s */
+    public final void m18741s() {
+        if (!m18739u()) {
             return;
         }
         int i = 0;
         while (true) {
-            fw8 fw8Var = this.n;
-            if (i >= fw8Var.a) {
+            fw8 fw8Var = this.f14515n;
+            if (i >= fw8Var.f10040a) {
                 return;
             }
-            fw8Var.b(i);
-            tv8 tv8Var = this.n.c[i];
+            fw8Var.m22181b(i);
+            tv8 tv8Var = this.f14515n.f10042c[i];
             i++;
         }
     }
 
-    public final void t() {
-        if (!u()) {
+    /* renamed from: t */
+    public final void m18740t() {
+        if (!m18739u()) {
             return;
         }
         int i = 0;
         while (true) {
-            fw8 fw8Var = this.n;
-            if (i >= fw8Var.a) {
+            fw8 fw8Var = this.f14515n;
+            if (i >= fw8Var.f10040a) {
                 return;
             }
-            fw8Var.b(i);
-            tv8 tv8Var = this.n.c[i];
+            fw8Var.m22181b(i);
+            tv8 tv8Var = this.f14515n.f10042c[i];
             i++;
         }
     }
 
-    public final boolean u() {
-        return this.l == null;
+    /* renamed from: u */
+    public final boolean m18739u() {
+        return this.f14513l == null;
     }
 }

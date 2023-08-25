@@ -5,7 +5,8 @@ import java.util.List;
 /* loaded from: classes2.dex */
 public final class xi2 implements gl2 {
     @Override // com.daaw.gl2
-    public final gl2 d(String str, w07 w07Var, List list) {
+    /* renamed from: d */
+    public final gl2 mo2708d(String str, w07 w07Var, List list) {
         throw new IllegalStateException(String.format("null has no function %s", str));
     }
 
@@ -22,7 +23,7 @@ public final class xi2 implements gl2 {
 
     @Override // com.daaw.gl2
     public final gl2 zzd() {
-        return gl2.h;
+        return gl2.f11421h;
     }
 
     @Override // com.daaw.gl2

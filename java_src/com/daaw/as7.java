@@ -5,128 +5,114 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class as7 {
-    public static final as7 d = new as7(true);
-    public final pv7 a = new fv7(16);
-    public boolean b;
-    public boolean c;
+
+    /* renamed from: d */
+    public static final as7 f3534d = new as7(true);
+
+    /* renamed from: a */
+    public final pv7 f3535a = new fv7(16);
+
+    /* renamed from: b */
+    public boolean f3536b;
+
+    /* renamed from: c */
+    public boolean f3537c;
 
     public as7() {
     }
 
     public as7(boolean z) {
-        b();
-        b();
+        m27096b();
+        m27096b();
     }
 
-    public static as7 a() {
+    /* renamed from: a */
+    public static as7 m27097a() {
         throw null;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:29:? A[RETURN, SYNTHETIC] */
+    /* renamed from: d */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static final void d(com.daaw.zr7 r4, java.lang.Object r5) {
-        /*
-            com.daaw.mw7 r0 = r4.zzb()
-            com.daaw.vs7.e(r5)
-            com.daaw.mw7 r1 = com.daaw.mw7.q
-            com.daaw.nw7 r1 = com.daaw.nw7.INT
-            com.daaw.nw7 r0 = r0.a()
-            int r0 = r0.ordinal()
-            switch(r0) {
-                case 0: goto L3d;
-                case 1: goto L3a;
-                case 2: goto L37;
-                case 3: goto L34;
-                case 4: goto L31;
-                case 5: goto L2e;
-                case 6: goto L25;
-                case 7: goto L1c;
-                case 8: goto L17;
-                default: goto L16;
-            }
-        L16:
-            goto L42
-        L17:
-            boolean r0 = r5 instanceof com.daaw.xt7
-            if (r0 == 0) goto L42
-            goto L41
-        L1c:
-            boolean r0 = r5 instanceof java.lang.Integer
-            if (r0 != 0) goto L41
-            boolean r0 = r5 instanceof com.daaw.ns7
-            if (r0 == 0) goto L42
-            goto L41
-        L25:
-            boolean r0 = r5 instanceof com.daaw.yq7
-            if (r0 != 0) goto L41
-            boolean r0 = r5 instanceof byte[]
-            if (r0 == 0) goto L42
-            goto L41
-        L2e:
-            boolean r0 = r5 instanceof java.lang.String
-            goto L3f
-        L31:
-            boolean r0 = r5 instanceof java.lang.Boolean
-            goto L3f
-        L34:
-            boolean r0 = r5 instanceof java.lang.Double
-            goto L3f
-        L37:
-            boolean r0 = r5 instanceof java.lang.Float
-            goto L3f
-        L3a:
-            boolean r0 = r5 instanceof java.lang.Long
-            goto L3f
-        L3d:
-            boolean r0 = r5 instanceof java.lang.Integer
-        L3f:
-            if (r0 == 0) goto L42
-        L41:
-            return
-        L42:
-            java.lang.IllegalArgumentException r0 = new java.lang.IllegalArgumentException
-            r1 = 3
-            java.lang.Object[] r1 = new java.lang.Object[r1]
-            r2 = 0
-            int r3 = r4.zza()
-            java.lang.Integer r3 = java.lang.Integer.valueOf(r3)
-            r1[r2] = r3
-            r2 = 1
-            com.daaw.mw7 r4 = r4.zzb()
-            com.daaw.nw7 r4 = r4.a()
-            r1[r2] = r4
-            r4 = 2
-            java.lang.Class r5 = r5.getClass()
-            java.lang.String r5 = r5.getName()
-            r1[r4] = r5
-            java.lang.String r4 = "Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n"
-            java.lang.String r4 = java.lang.String.format(r4, r1)
-            r0.<init>(r4)
-            throw r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.as7.d(com.daaw.zr7, java.lang.Object):void");
+    public static final void m27094d(zr7 zr7Var, Object obj) {
+        boolean z;
+        mw7 zzb = zr7Var.zzb();
+        vs7.m6816e(obj);
+        mw7 mw7Var = mw7.f19207q;
+        nw7 nw7Var = nw7.INT;
+        switch (zzb.m15739a().ordinal()) {
+            case 0:
+                z = obj instanceof Integer;
+                if (z) {
+                    return;
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 1:
+                z = obj instanceof Long;
+                if (z) {
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 2:
+                z = obj instanceof Float;
+                if (z) {
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 3:
+                z = obj instanceof Double;
+                if (z) {
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 4:
+                z = obj instanceof Boolean;
+                if (z) {
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 5:
+                z = obj instanceof String;
+                if (z) {
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 6:
+                if ((obj instanceof yq7) || (obj instanceof byte[])) {
+                    return;
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 7:
+                if ((obj instanceof Integer) || (obj instanceof ns7)) {
+                    return;
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            case 8:
+                if (obj instanceof xt7) {
+                    return;
+                }
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+            default:
+                throw new IllegalArgumentException(String.format("Wrong object type used with protocol message reflection.\nField number: %d, field java type: %s, value type: %s\n", Integer.valueOf(zr7Var.zza()), zr7Var.zzb().m15739a(), obj.getClass().getName()));
+        }
     }
 
-    public final void b() {
-        if (this.b) {
+    /* renamed from: b */
+    public final void m27096b() {
+        if (this.f3536b) {
             return;
         }
-        for (int i = 0; i < this.a.b(); i++) {
-            Map.Entry g = this.a.g(i);
-            if (g.getValue() instanceof ls7) {
-                ((ls7) g.getValue()).A();
+        for (int i = 0; i < this.f3535a.m13014b(); i++) {
+            Map.Entry m13009g = this.f3535a.m13009g(i);
+            if (m13009g.getValue() instanceof ls7) {
+                ((ls7) m13009g.getValue()).m16599A();
             }
         }
-        this.a.a();
-        this.b = true;
+        this.f3535a.mo13015a();
+        this.f3536b = true;
     }
 
-    public final void c(zr7 zr7Var, Object obj) {
+    /* renamed from: c */
+    public final void m27095c(zr7 zr7Var, Object obj) {
         if (!zr7Var.zzc()) {
-            d(zr7Var, obj);
+            m27094d(zr7Var, obj);
         } else if (!(obj instanceof List)) {
             throw new IllegalArgumentException("Wrong object type used with protocol message reflection.");
         } else {
@@ -134,23 +120,23 @@ public final class as7 {
             arrayList.addAll((List) obj);
             int size = arrayList.size();
             for (int i = 0; i < size; i++) {
-                d(zr7Var, arrayList.get(i));
+                m27094d(zr7Var, arrayList.get(i));
             }
             obj = arrayList;
         }
-        this.a.put(zr7Var, obj);
+        this.f3535a.put(zr7Var, obj);
     }
 
     public final /* bridge */ /* synthetic */ Object clone() {
         as7 as7Var = new as7();
-        for (int i = 0; i < this.a.b(); i++) {
-            Map.Entry g = this.a.g(i);
-            as7Var.c((zr7) g.getKey(), g.getValue());
+        for (int i = 0; i < this.f3535a.m13014b(); i++) {
+            Map.Entry m13009g = this.f3535a.m13009g(i);
+            as7Var.m27095c((zr7) m13009g.getKey(), m13009g.getValue());
         }
-        for (Map.Entry entry : this.a.c()) {
-            as7Var.c((zr7) entry.getKey(), entry.getValue());
+        for (Map.Entry entry : this.f3535a.m13013c()) {
+            as7Var.m27095c((zr7) entry.getKey(), entry.getValue());
         }
-        as7Var.c = this.c;
+        as7Var.f3537c = this.f3537c;
         return as7Var;
     }
 
@@ -159,12 +145,12 @@ public final class as7 {
             return true;
         }
         if (obj instanceof as7) {
-            return this.a.equals(((as7) obj).a);
+            return this.f3535a.equals(((as7) obj).f3535a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return this.a.hashCode();
+        return this.f3535a.hashCode();
     }
 }

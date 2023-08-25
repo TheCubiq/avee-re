@@ -7,43 +7,59 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public class i80<K extends ay0, V> {
-    public final a<K, V> a = new a<>();
-    public final Map<K, a<K, V>> b = new HashMap();
 
+    /* renamed from: a */
+    public final C1666a<K, V> f13346a = new C1666a<>();
+
+    /* renamed from: b */
+    public final Map<K, C1666a<K, V>> f13347b = new HashMap();
+
+    /* renamed from: com.daaw.i80$a */
     /* loaded from: classes.dex */
-    public static class a<K, V> {
-        public final K a;
-        public List<V> b;
-        public a<K, V> c;
-        public a<K, V> d;
+    public static class C1666a<K, V> {
 
-        public a() {
+        /* renamed from: a */
+        public final K f13348a;
+
+        /* renamed from: b */
+        public List<V> f13349b;
+
+        /* renamed from: c */
+        public C1666a<K, V> f13350c;
+
+        /* renamed from: d */
+        public C1666a<K, V> f13351d;
+
+        public C1666a() {
             this(null);
         }
 
-        public a(K k) {
-            this.d = this;
-            this.c = this;
-            this.a = k;
+        public C1666a(K k) {
+            this.f13351d = this;
+            this.f13350c = this;
+            this.f13348a = k;
         }
 
-        public void b(V v) {
-            if (this.b == null) {
-                this.b = new ArrayList();
+        /* renamed from: b */
+        public void m20035b(V v) {
+            if (this.f13349b == null) {
+                this.f13349b = new ArrayList();
             }
-            this.b.add(v);
+            this.f13349b.add(v);
         }
 
-        public V c() {
-            int d = d();
-            if (d > 0) {
-                return this.b.remove(d - 1);
+        /* renamed from: c */
+        public V m20034c() {
+            int m20033d = m20033d();
+            if (m20033d > 0) {
+                return this.f13349b.remove(m20033d - 1);
             }
             return null;
         }
 
-        public int d() {
-            List<V> list = this.b;
+        /* renamed from: d */
+        public int m20033d() {
+            List<V> list = this.f13349b;
             if (list != null) {
                 return list.size();
             }
@@ -51,83 +67,90 @@ public class i80<K extends ay0, V> {
         }
     }
 
-    public static <K, V> void e(a<K, V> aVar) {
-        a<K, V> aVar2 = aVar.d;
-        aVar2.c = aVar.c;
-        aVar.c.d = aVar2;
+    /* renamed from: e */
+    public static <K, V> void m20039e(C1666a<K, V> c1666a) {
+        C1666a<K, V> c1666a2 = c1666a.f13351d;
+        c1666a2.f13350c = c1666a.f13350c;
+        c1666a.f13350c.f13351d = c1666a2;
     }
 
-    public static <K, V> void g(a<K, V> aVar) {
-        aVar.c.d = aVar;
-        aVar.d.c = aVar;
+    /* renamed from: g */
+    public static <K, V> void m20037g(C1666a<K, V> c1666a) {
+        c1666a.f13350c.f13351d = c1666a;
+        c1666a.f13351d.f13350c = c1666a;
     }
 
-    public V a(K k) {
-        a<K, V> aVar = this.b.get(k);
-        if (aVar == null) {
-            aVar = new a<>(k);
-            this.b.put(k, aVar);
+    /* renamed from: a */
+    public V m20043a(K k) {
+        C1666a<K, V> c1666a = this.f13347b.get(k);
+        if (c1666a == null) {
+            c1666a = new C1666a<>(k);
+            this.f13347b.put(k, c1666a);
         } else {
-            k.a();
+            k.mo11401a();
         }
-        b(aVar);
-        return aVar.c();
+        m20042b(c1666a);
+        return c1666a.m20034c();
     }
 
-    public final void b(a<K, V> aVar) {
-        e(aVar);
-        a<K, V> aVar2 = this.a;
-        aVar.d = aVar2;
-        aVar.c = aVar2.c;
-        g(aVar);
+    /* renamed from: b */
+    public final void m20042b(C1666a<K, V> c1666a) {
+        m20039e(c1666a);
+        C1666a<K, V> c1666a2 = this.f13346a;
+        c1666a.f13351d = c1666a2;
+        c1666a.f13350c = c1666a2.f13350c;
+        m20037g(c1666a);
     }
 
-    public final void c(a<K, V> aVar) {
-        e(aVar);
-        a<K, V> aVar2 = this.a;
-        aVar.d = aVar2.d;
-        aVar.c = aVar2;
-        g(aVar);
+    /* renamed from: c */
+    public final void m20041c(C1666a<K, V> c1666a) {
+        m20039e(c1666a);
+        C1666a<K, V> c1666a2 = this.f13346a;
+        c1666a.f13351d = c1666a2.f13351d;
+        c1666a.f13350c = c1666a2;
+        m20037g(c1666a);
     }
 
-    public void d(K k, V v) {
-        a<K, V> aVar = this.b.get(k);
-        if (aVar == null) {
-            aVar = new a<>(k);
-            c(aVar);
-            this.b.put(k, aVar);
+    /* renamed from: d */
+    public void m20040d(K k, V v) {
+        C1666a<K, V> c1666a = this.f13347b.get(k);
+        if (c1666a == null) {
+            c1666a = new C1666a<>(k);
+            m20041c(c1666a);
+            this.f13347b.put(k, c1666a);
         } else {
-            k.a();
+            k.mo11401a();
         }
-        aVar.b(v);
+        c1666a.m20035b(v);
     }
 
-    public V f() {
-        a aVar = this.a;
+    /* renamed from: f */
+    public V m20038f() {
+        C1666a c1666a = this.f13346a;
         while (true) {
-            aVar = aVar.d;
-            if (aVar.equals(this.a)) {
+            c1666a = c1666a.f13351d;
+            if (c1666a.equals(this.f13346a)) {
                 return null;
             }
-            V v = (V) aVar.c();
+            V v = (V) c1666a.m20034c();
             if (v != null) {
                 return v;
             }
-            e(aVar);
-            this.b.remove(aVar.a);
-            ((ay0) aVar.a).a();
+            m20039e(c1666a);
+            this.f13347b.remove(c1666a.f13348a);
+            ((ay0) c1666a.f13348a).mo11401a();
         }
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder("GroupedLinkedMap( ");
         boolean z = false;
-        for (a aVar = this.a.c; !aVar.equals(this.a); aVar = aVar.c) {
+        for (C1666a c1666a = this.f13346a.f13350c; !c1666a.equals(this.f13346a); c1666a = c1666a.f13350c) {
             z = true;
             sb.append('{');
-            sb.append(aVar.a);
+            sb.append(c1666a.f13348a);
             sb.append(':');
-            sb.append(aVar.d());
+            sb.append(c1666a.m20033d());
             sb.append("}, ");
         }
         if (z) {

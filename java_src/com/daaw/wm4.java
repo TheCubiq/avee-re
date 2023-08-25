@@ -4,34 +4,42 @@ import com.google.android.gms.ads.internal.overlay.zzo;
 import java.util.concurrent.atomic.AtomicBoolean;
 /* loaded from: classes.dex */
 public final class wm4 implements zzo {
-    public final vr4 p;
-    public final AtomicBoolean q = new AtomicBoolean(false);
-    public final AtomicBoolean r = new AtomicBoolean(false);
+
+    /* renamed from: p */
+    public final vr4 f31341p;
+
+    /* renamed from: q */
+    public final AtomicBoolean f31342q = new AtomicBoolean(false);
+
+    /* renamed from: r */
+    public final AtomicBoolean f31343r = new AtomicBoolean(false);
 
     public wm4(vr4 vr4Var) {
-        this.p = vr4Var;
+        this.f31341p = vr4Var;
     }
 
-    public final boolean a() {
-        return this.q.get();
+    /* renamed from: a */
+    public final boolean m5978a() {
+        return this.f31342q.get();
     }
 
-    public final void b() {
-        if (this.r.get()) {
+    /* renamed from: b */
+    public final void m5977b() {
+        if (this.f31343r.get()) {
             return;
         }
-        this.r.set(true);
-        this.p.zza();
+        this.f31343r.set(true);
+        this.f31341p.zza();
     }
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
     public final void zzb() {
-        this.p.zzc();
+        this.f31341p.zzc();
     }
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
     public final void zzbE() {
-        b();
+        m5977b();
     }
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
@@ -48,7 +56,7 @@ public final class wm4 implements zzo {
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
     public final void zzf(int i) {
-        this.q.set(true);
-        b();
+        this.f31342q.set(true);
+        m5977b();
     }
 }

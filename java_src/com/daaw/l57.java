@@ -6,38 +6,47 @@ import java.util.concurrent.ExecutionException;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class l57 extends i67 implements Runnable {
-    public static final /* synthetic */ int y = 0;
+
+    /* renamed from: y */
+    public static final /* synthetic */ int f17074y = 0;
     @CheckForNull
-    public f77 w;
+
+    /* renamed from: w */
+    public f77 f17075w;
     @CheckForNull
-    public Object x;
+
+    /* renamed from: x */
+    public Object f17076x;
 
     public l57(f77 f77Var, Object obj) {
         Objects.requireNonNull(f77Var);
-        this.w = f77Var;
+        this.f17075w = f77Var;
         Objects.requireNonNull(obj);
-        this.x = obj;
+        this.f17076x = obj;
     }
 
-    public abstract Object E(Object obj, Object obj2);
+    /* renamed from: E */
+    public abstract Object mo17133E(Object obj, Object obj2);
 
-    public abstract void F(Object obj);
+    /* renamed from: F */
+    public abstract void mo17132F(Object obj);
 
     @Override // com.daaw.c57
     @CheckForNull
-    public final String e() {
+    /* renamed from: e */
+    public final String mo7361e() {
         String str;
-        f77 f77Var = this.w;
-        Object obj = this.x;
-        String e = super.e();
+        f77 f77Var = this.f17075w;
+        Object obj = this.f17076x;
+        String mo7361e = super.mo7361e();
         if (f77Var != null) {
             str = "inputFuture=[" + f77Var.toString() + "], ";
         } else {
             str = "";
         }
         if (obj == null) {
-            if (e != null) {
-                return str.concat(e);
+            if (mo7361e != null) {
+                return str.concat(mo7361e);
             }
             return null;
         }
@@ -45,45 +54,46 @@ public abstract class l57 extends i67 implements Runnable {
     }
 
     @Override // com.daaw.c57
-    public final void g() {
-        v(this.w);
-        this.w = null;
-        this.x = null;
+    /* renamed from: g */
+    public final void mo7360g() {
+        m25601v(this.f17075w);
+        this.f17075w = null;
+        this.f17076x = null;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        f77 f77Var = this.w;
-        Object obj = this.x;
+        f77 f77Var = this.f17075w;
+        Object obj = this.f17076x;
         if ((isCancelled() | (f77Var == null)) || (obj == null)) {
             return;
         }
-        this.w = null;
+        this.f17075w = null;
         if (f77Var.isCancelled()) {
-            w(f77Var);
+            m25600w(f77Var);
             return;
         }
         try {
             try {
-                Object E = E(obj, s67.p(f77Var));
-                this.x = null;
-                F(E);
+                Object mo17133E = mo17133E(obj, s67.m10627p(f77Var));
+                this.f17076x = null;
+                mo17132F(mo17133E);
             } catch (Throwable th) {
                 try {
-                    n77.a(th);
-                    i(th);
+                    n77.m15480a(th);
+                    mo14485i(th);
                 } finally {
-                    this.x = null;
+                    this.f17076x = null;
                 }
             }
         } catch (Error e) {
-            i(e);
+            mo14485i(e);
         } catch (CancellationException unused) {
             cancel(false);
         } catch (RuntimeException e2) {
-            i(e2);
+            mo14485i(e2);
         } catch (ExecutionException e3) {
-            i(e3.getCause());
+            mo14485i(e3.getCause());
         }
     }
 }

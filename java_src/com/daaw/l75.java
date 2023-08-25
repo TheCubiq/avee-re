@@ -1,36 +1,46 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public abstract class l75 implements Runnable {
-    public final long p;
-    public final long q;
-    public final boolean r;
-    public final /* synthetic */ gk5 s;
+
+    /* renamed from: p */
+    public final long f17103p;
+
+    /* renamed from: q */
+    public final long f17104q;
+
+    /* renamed from: r */
+    public final boolean f17105r;
+
+    /* renamed from: s */
+    public final /* synthetic */ gk5 f17106s;
 
     public l75(gk5 gk5Var, boolean z) {
-        this.s = gk5Var;
-        this.p = gk5Var.b.a();
-        this.q = gk5Var.b.b();
-        this.r = z;
+        this.f17106s = gk5Var;
+        this.f17103p = gk5Var.f11390b.mo15860a();
+        this.f17104q = gk5Var.f11390b.mo15859b();
+        this.f17105r = z;
     }
 
-    public abstract void a();
+    /* renamed from: a */
+    public abstract void mo2297a();
 
-    public void b() {
+    /* renamed from: b */
+    public void mo3430b() {
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         boolean z;
-        z = this.s.g;
+        z = this.f17106s.f11395g;
         if (z) {
-            b();
+            mo3430b();
             return;
         }
         try {
-            a();
+            mo2297a();
         } catch (Exception e) {
-            this.s.k(e, false, this.r);
-            b();
+            this.f17106s.m21525k(e, false, this.f17105r);
+            mo3430b();
         }
     }
 }

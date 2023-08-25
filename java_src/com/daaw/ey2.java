@@ -6,34 +6,43 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class ey2 extends Thread {
-    public final WeakReference<AdvertisingIdClient> p;
-    public final long q;
-    public final CountDownLatch r = new CountDownLatch(1);
-    public boolean s = false;
+
+    /* renamed from: p */
+    public final WeakReference<AdvertisingIdClient> f8948p;
+
+    /* renamed from: q */
+    public final long f8949q;
+
+    /* renamed from: r */
+    public final CountDownLatch f8950r = new CountDownLatch(1);
+
+    /* renamed from: s */
+    public boolean f8951s = false;
 
     public ey2(AdvertisingIdClient advertisingIdClient, long j) {
-        this.p = new WeakReference<>(advertisingIdClient);
-        this.q = j;
+        this.f8948p = new WeakReference<>(advertisingIdClient);
+        this.f8949q = j;
         start();
     }
 
-    public final void a() {
-        AdvertisingIdClient advertisingIdClient = this.p.get();
+    /* renamed from: a */
+    public final void m22990a() {
+        AdvertisingIdClient advertisingIdClient = this.f8948p.get();
         if (advertisingIdClient != null) {
             advertisingIdClient.zza();
-            this.s = true;
+            this.f8951s = true;
         }
     }
 
     @Override // java.lang.Thread, java.lang.Runnable
     public final void run() {
         try {
-            if (this.r.await(this.q, TimeUnit.MILLISECONDS)) {
+            if (this.f8950r.await(this.f8949q, TimeUnit.MILLISECONDS)) {
                 return;
             }
-            a();
+            m22990a();
         } catch (InterruptedException unused) {
-            a();
+            m22990a();
         }
     }
 }

@@ -8,30 +8,35 @@ public final class hb7 extends ee7 {
     }
 
     @Override // com.daaw.ee7
-    public final de7 a() {
+    /* renamed from: a */
+    public final de7 mo5331a() {
         return new gb7(this, io7.class);
     }
 
     @Override // com.daaw.ee7
-    public final mm7 b() {
+    /* renamed from: b */
+    public final mm7 mo5330b() {
         return mm7.SYMMETRIC;
     }
 
     @Override // com.daaw.ee7
-    public final /* synthetic */ xt7 c(yq7 yq7Var) {
-        return fo7.O(yq7Var, vr7.a());
+    /* renamed from: c */
+    public final /* synthetic */ xt7 mo5329c(yq7 yq7Var) {
+        return fo7.m22440O(yq7Var, vr7.m6834a());
     }
 
     @Override // com.daaw.ee7
-    public final String d() {
+    /* renamed from: d */
+    public final String mo5328d() {
         return "type.googleapis.com/google.crypto.tink.XChaCha20Poly1305Key";
     }
 
     @Override // com.daaw.ee7
-    public final /* bridge */ /* synthetic */ void e(xt7 xt7Var) {
+    /* renamed from: e */
+    public final /* bridge */ /* synthetic */ void mo5327e(xt7 xt7Var) {
         fo7 fo7Var = (fo7) xt7Var;
-        xp7.b(fo7Var.L(), 0);
-        if (fo7Var.P().o() != 32) {
+        xp7.m4825b(fo7Var.m22443L(), 0);
+        if (fo7Var.m22439P().mo3411o() != 32) {
             throw new GeneralSecurityException("invalid XChaCha20Poly1305Key: incorrect key length");
         }
     }

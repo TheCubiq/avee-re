@@ -5,7 +5,9 @@ import com.google.android.gms.ads.internal.client.zzeu;
 import com.google.android.gms.ads.internal.client.zzl;
 /* loaded from: classes.dex */
 public final class c06 extends zzbm {
-    public final /* synthetic */ zzeu p;
+
+    /* renamed from: p */
+    public final /* synthetic */ zzeu f5356p;
 
     @Override // com.google.android.gms.ads.internal.client.zzbn
     public final String zze() {
@@ -25,7 +27,7 @@ public final class c06 extends zzbm {
     @Override // com.google.android.gms.ads.internal.client.zzbn
     public final void zzh(zzl zzlVar, int i) {
         k04.zzg("This app is using a lightweight version of the Google Mobile Ads SDK that requires the latest Google Play services to be installed, but Google Play services is either missing or out of date.");
-        d04.b.post(new vx5(this));
+        d04.f6340b.post(new vx5(this));
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbn

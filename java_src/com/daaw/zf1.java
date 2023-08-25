@@ -1,46 +1,63 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class zf1 {
-    public static final zf1 c = new a().a();
-    public final long a;
-    public final long b;
 
+    /* renamed from: c */
+    public static final zf1 f35015c = new C3837a().m2356a();
+
+    /* renamed from: a */
+    public final long f35016a;
+
+    /* renamed from: b */
+    public final long f35017b;
+
+    /* renamed from: com.daaw.zf1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public long a = 0;
-        public long b = 0;
+    public static final class C3837a {
 
-        public zf1 a() {
-            return new zf1(this.a, this.b);
+        /* renamed from: a */
+        public long f35018a = 0;
+
+        /* renamed from: b */
+        public long f35019b = 0;
+
+        /* renamed from: a */
+        public zf1 m2356a() {
+            return new zf1(this.f35018a, this.f35019b);
         }
 
-        public a b(long j) {
-            this.a = j;
+        /* renamed from: b */
+        public C3837a m2355b(long j) {
+            this.f35018a = j;
             return this;
         }
 
-        public a c(long j) {
-            this.b = j;
+        /* renamed from: c */
+        public C3837a m2354c(long j) {
+            this.f35019b = j;
             return this;
         }
     }
 
     public zf1(long j, long j2) {
-        this.a = j;
-        this.b = j2;
+        this.f35016a = j;
+        this.f35017b = j2;
     }
 
-    public static a c() {
-        return new a();
+    /* renamed from: c */
+    public static C3837a m2357c() {
+        return new C3837a();
     }
 
     @uz0(tag = 1)
-    public long a() {
-        return this.a;
+    /* renamed from: a */
+    public long m2359a() {
+        return this.f35016a;
     }
 
     @uz0(tag = 2)
-    public long b() {
-        return this.b;
+    /* renamed from: b */
+    public long m2358b() {
+        return this.f35017b;
     }
 }

@@ -5,63 +5,75 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.internal.LifecycleCallback;
 /* loaded from: classes.dex */
 public final class uz1 extends p22 {
-    public final j6<o3<?>> u;
-    public final z70 v;
+
+    /* renamed from: u */
+    public final C1798j6<C2396o3<?>> f29665u;
+
+    /* renamed from: v */
+    public final z70 f29666v;
 
     public uz1(pj0 pj0Var, z70 z70Var, w70 w70Var) {
         super(pj0Var, w70Var);
-        this.u = new j6<>();
-        this.v = z70Var;
-        this.p.b("ConnectionlessLifecycleHelper", this);
+        this.f29665u = new C1798j6<>();
+        this.f29666v = z70Var;
+        this.f36613p.mo13333b("ConnectionlessLifecycleHelper", this);
     }
 
-    public static void u(Activity activity, z70 z70Var, o3<?> o3Var) {
-        pj0 c = LifecycleCallback.c(activity);
-        uz1 uz1Var = (uz1) c.e("ConnectionlessLifecycleHelper", uz1.class);
+    /* renamed from: u */
+    public static void m7568u(Activity activity, z70 z70Var, C2396o3<?> c2396o3) {
+        pj0 m1181c = LifecycleCallback.m1181c(activity);
+        uz1 uz1Var = (uz1) m1181c.mo13332e("ConnectionlessLifecycleHelper", uz1.class);
         if (uz1Var == null) {
-            uz1Var = new uz1(c, z70Var, w70.m());
+            uz1Var = new uz1(m1181c, z70Var, w70.m6477m());
         }
-        ry0.k(o3Var, "ApiKey cannot be null");
-        uz1Var.u.add(o3Var);
-        z70Var.c(uz1Var);
+        ry0.m10829k(c2396o3, "ApiKey cannot be null");
+        uz1Var.f29665u.add(c2396o3);
+        z70Var.m2757c(uz1Var);
     }
 
     @Override // com.google.android.gms.common.api.internal.LifecycleCallback
-    public final void h() {
-        super.h();
-        v();
+    /* renamed from: h */
+    public final void mo1176h() {
+        super.mo1176h();
+        m7567v();
     }
 
     @Override // com.daaw.p22, com.google.android.gms.common.api.internal.LifecycleCallback
-    public final void j() {
-        super.j();
-        v();
+    /* renamed from: j */
+    public final void mo1174j() {
+        super.mo1174j();
+        m7567v();
     }
 
     @Override // com.daaw.p22, com.google.android.gms.common.api.internal.LifecycleCallback
-    public final void k() {
-        super.k();
-        this.v.d(this);
+    /* renamed from: k */
+    public final void mo1173k() {
+        super.mo1173k();
+        this.f29666v.m2756d(this);
     }
 
     @Override // com.daaw.p22
-    public final void m(ConnectionResult connectionResult, int i) {
-        this.v.F(connectionResult, i);
+    /* renamed from: m */
+    public final void mo7571m(ConnectionResult connectionResult, int i) {
+        this.f29666v.m2760F(connectionResult, i);
     }
 
     @Override // com.daaw.p22
-    public final void n() {
-        this.v.a();
+    /* renamed from: n */
+    public final void mo7570n() {
+        this.f29666v.m2759a();
     }
 
-    public final j6<o3<?>> t() {
-        return this.u;
+    /* renamed from: t */
+    public final C1798j6<C2396o3<?>> m7569t() {
+        return this.f29665u;
     }
 
-    public final void v() {
-        if (this.u.isEmpty()) {
+    /* renamed from: v */
+    public final void m7567v() {
+        if (this.f29665u.isEmpty()) {
             return;
         }
-        this.v.c(this);
+        this.f29666v.m2757c(this);
     }
 }

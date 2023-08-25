@@ -1,22 +1,25 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class o15 implements wz7 {
-    public final l15 a;
+
+    /* renamed from: a */
+    public final l15 f20919a;
 
     public o15(l15 l15Var) {
-        this.a = l15Var;
+        this.f20919a = l15Var;
     }
 
-    public final u35 a() {
-        u35 b = this.a.b();
-        e08.b(b);
-        return b;
+    /* renamed from: a */
+    public final u35 m14651a() {
+        u35 m17204b = this.f20919a.m17204b();
+        e08.m23801b(m17204b);
+        return m17204b;
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        u35 b = this.a.b();
-        e08.b(b);
-        return b;
+        u35 m17204b = this.f20919a.m17204b();
+        e08.m23801b(m17204b);
+        return m17204b;
     }
 }

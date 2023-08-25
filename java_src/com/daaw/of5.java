@@ -3,79 +3,84 @@ package com.daaw;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public final class of5 extends yv3 {
-    public final /* synthetic */ pf5 p;
+
+    /* renamed from: p */
+    public final /* synthetic */ pf5 f21536p;
 
     public of5(pf5 pf5Var) {
-        this.p = pf5Var;
+        this.f21536p = pf5Var;
     }
 
     @Override // com.daaw.zv3
-    public final void H0(tv3 tv3Var) {
+    /* renamed from: H0 */
+    public final void mo1841H0(tv3 tv3Var) {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.l(j, tv3Var);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23511l(j, tv3Var);
     }
 
     @Override // com.daaw.zv3
-    public final void i(int i) {
+    /* renamed from: i */
+    public final void mo1840i(int i) {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.n(j, i);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23509n(j, i);
     }
 
     @Override // com.daaw.zv3
-    public final void z2(zze zzeVar) {
+    /* renamed from: z2 */
+    public final void mo1839z2(zze zzeVar) {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.n(j, zzeVar.zza);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23509n(j, zzeVar.zza);
     }
 
     @Override // com.daaw.zv3
     public final void zze() {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.j(j);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23513j(j);
     }
 
     @Override // com.daaw.zv3
     public final void zzf() {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.o(j);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23508o(j);
     }
 
     @Override // com.daaw.zv3
     public final void zzg() {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.k(j);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23512k(j);
     }
 
     @Override // com.daaw.zv3
     public final void zzj() {
         ef5 ef5Var;
         long j;
-        pf5 pf5Var = this.p;
-        ef5Var = pf5Var.b;
-        j = pf5Var.a;
-        ef5Var.r(j);
+        pf5 pf5Var = this.f21536p;
+        ef5Var = pf5Var.f22895b;
+        j = pf5Var.f22894a;
+        ef5Var.m23505r(j);
     }
 }

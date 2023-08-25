@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface zy2 {
-    void i(Object obj, int i);
+    /* renamed from: i */
+    void mo1772i(Object obj, int i);
 
-    void w(Object obj, mx2 mx2Var);
+    /* renamed from: w */
+    void mo1771w(Object obj, mx2 mx2Var);
 }

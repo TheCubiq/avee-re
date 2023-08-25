@@ -13,235 +13,279 @@ import java.util.Objects;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class n88 {
-    public final lh8 a;
-    public final k88 e;
-    public final yr8 f;
-    public final jn8 g;
-    public final HashMap h;
-    public final Set i;
-    public boolean j;
-    public qz6 k;
-    public wt8 l = new wt8(0);
-    public final IdentityHashMap c = new IdentityHashMap();
-    public final Map d = new HashMap();
-    public final List b = new ArrayList();
+
+    /* renamed from: a */
+    public final lh8 f19715a;
+
+    /* renamed from: e */
+    public final k88 f19719e;
+
+    /* renamed from: f */
+    public final yr8 f19720f;
+
+    /* renamed from: g */
+    public final jn8 f19721g;
+
+    /* renamed from: h */
+    public final HashMap f19722h;
+
+    /* renamed from: i */
+    public final Set f19723i;
+
+    /* renamed from: j */
+    public boolean f19724j;
+
+    /* renamed from: k */
+    public qz6 f19725k;
+
+    /* renamed from: l */
+    public wt8 f19726l = new wt8(0);
+
+    /* renamed from: c */
+    public final IdentityHashMap f19717c = new IdentityHashMap();
+
+    /* renamed from: d */
+    public final Map f19718d = new HashMap();
+
+    /* renamed from: b */
+    public final List f19716b = new ArrayList();
 
     public n88(k88 k88Var, fb8 fb8Var, Handler handler, lh8 lh8Var) {
-        this.a = lh8Var;
-        this.e = k88Var;
+        this.f19715a = lh8Var;
+        this.f19719e = k88Var;
         yr8 yr8Var = new yr8();
-        this.f = yr8Var;
+        this.f19720f = yr8Var;
         jn8 jn8Var = new jn8();
-        this.g = jn8Var;
-        this.h = new HashMap();
-        this.i = new HashSet();
-        yr8Var.b(handler, fb8Var);
-        jn8Var.b(handler, fb8Var);
+        this.f19721g = jn8Var;
+        this.f19722h = new HashMap();
+        this.f19723i = new HashSet();
+        yr8Var.m3371b(handler, fb8Var);
+        jn8Var.m18378b(handler, fb8Var);
     }
 
-    public final int a() {
-        return this.b.size();
+    /* renamed from: a */
+    public final int m15412a() {
+        return this.f19716b.size();
     }
 
-    public final l64 b() {
-        if (this.b.isEmpty()) {
-            return l64.a;
+    /* renamed from: b */
+    public final l64 m15411b() {
+        if (this.f19716b.isEmpty()) {
+            return l64.f17090a;
         }
         int i = 0;
-        for (int i2 = 0; i2 < this.b.size(); i2++) {
-            h88 h88Var = (h88) this.b.get(i2);
-            h88Var.d = i;
-            i += h88Var.a.I().c();
+        for (int i2 = 0; i2 < this.f19716b.size(); i2++) {
+            h88 h88Var = (h88) this.f19716b.get(i2);
+            h88Var.f12187d = i;
+            i += h88Var.f12184a.m17448I().mo4509c();
         }
-        return new c98(this.b, this.l, null);
+        return new c98(this.f19716b, this.f19726l, null);
     }
 
-    public final /* synthetic */ void e(rr8 rr8Var, l64 l64Var) {
-        this.e.zzh();
+    /* renamed from: e */
+    public final /* synthetic */ void m15408e(rr8 rr8Var, l64 l64Var) {
+        this.f19719e.zzh();
     }
 
-    public final void f(qz6 qz6Var) {
-        uo4.f(!this.j);
-        this.k = qz6Var;
-        for (int i = 0; i < this.b.size(); i++) {
-            h88 h88Var = (h88) this.b.get(i);
-            t(h88Var);
-            this.i.add(h88Var);
+    /* renamed from: f */
+    public final void m15407f(qz6 qz6Var) {
+        uo4.m7872f(!this.f19724j);
+        this.f19725k = qz6Var;
+        for (int i = 0; i < this.f19716b.size(); i++) {
+            h88 h88Var = (h88) this.f19716b.get(i);
+            m15393t(h88Var);
+            this.f19723i.add(h88Var);
         }
-        this.j = true;
+        this.f19724j = true;
     }
 
-    public final void g() {
-        for (e88 e88Var : this.h.values()) {
+    /* renamed from: g */
+    public final void m15406g() {
+        for (e88 e88Var : this.f19722h.values()) {
             try {
-                e88Var.a.n(e88Var.b);
+                e88Var.f8257a.mo10997n(e88Var.f8258b);
             } catch (RuntimeException e) {
-                s95.c("MediaSourceList", "Failed to release child source.", e);
+                s95.m10495c("MediaSourceList", "Failed to release child source.", e);
             }
-            e88Var.a.g(e88Var.c);
-            e88Var.a.i(e88Var.c);
+            e88Var.f8257a.mo11004g(e88Var.f8259c);
+            e88Var.f8257a.mo11002i(e88Var.f8259c);
         }
-        this.h.clear();
-        this.i.clear();
-        this.j = false;
+        this.f19722h.clear();
+        this.f19723i.clear();
+        this.f19724j = false;
     }
 
-    public final void h(nr8 nr8Var) {
-        h88 h88Var = (h88) this.c.remove(nr8Var);
+    /* renamed from: h */
+    public final void m15405h(nr8 nr8Var) {
+        h88 h88Var = (h88) this.f19717c.remove(nr8Var);
         Objects.requireNonNull(h88Var);
-        h88Var.a.l(nr8Var);
-        h88Var.c.remove(((br8) nr8Var).p);
-        if (!this.c.isEmpty()) {
-            r();
+        h88Var.f12184a.mo10999l(nr8Var);
+        h88Var.f12186c.remove(((br8) nr8Var).f5081p);
+        if (!this.f19717c.isEmpty()) {
+            m15395r();
         }
-        s(h88Var);
+        m15394s(h88Var);
     }
 
-    public final boolean i() {
-        return this.j;
+    /* renamed from: i */
+    public final boolean m15404i() {
+        return this.f19724j;
     }
 
-    public final l64 j(int i, List list, wt8 wt8Var) {
+    /* renamed from: j */
+    public final l64 m15403j(int i, List list, wt8 wt8Var) {
         int i2;
         if (!list.isEmpty()) {
-            this.l = wt8Var;
+            this.f19726l = wt8Var;
             for (int i3 = i; i3 < list.size() + i; i3++) {
                 h88 h88Var = (h88) list.get(i3 - i);
                 if (i3 > 0) {
-                    h88 h88Var2 = (h88) this.b.get(i3 - 1);
-                    i2 = h88Var2.d + h88Var2.a.I().c();
+                    h88 h88Var2 = (h88) this.f19716b.get(i3 - 1);
+                    i2 = h88Var2.f12187d + h88Var2.f12184a.m17448I().mo4509c();
                 } else {
                     i2 = 0;
                 }
-                h88Var.a(i2);
-                p(i3, h88Var.a.I().c());
-                this.b.add(i3, h88Var);
-                this.d.put(h88Var.b, h88Var);
-                if (this.j) {
-                    t(h88Var);
-                    if (this.c.isEmpty()) {
-                        this.i.add(h88Var);
+                h88Var.m20943a(i2);
+                m15397p(i3, h88Var.f12184a.m17448I().mo4509c());
+                this.f19716b.add(i3, h88Var);
+                this.f19718d.put(h88Var.f12185b, h88Var);
+                if (this.f19724j) {
+                    m15393t(h88Var);
+                    if (this.f19717c.isEmpty()) {
+                        this.f19723i.add(h88Var);
                     } else {
-                        q(h88Var);
+                        m15396q(h88Var);
                     }
                 }
             }
         }
-        return b();
+        return m15411b();
     }
 
-    public final l64 k(int i, int i2, int i3, wt8 wt8Var) {
-        uo4.d(a() >= 0);
-        this.l = null;
-        return b();
+    /* renamed from: k */
+    public final l64 m15402k(int i, int i2, int i3, wt8 wt8Var) {
+        uo4.m7874d(m15412a() >= 0);
+        this.f19726l = null;
+        return m15411b();
     }
 
-    public final l64 l(int i, int i2, wt8 wt8Var) {
+    /* renamed from: l */
+    public final l64 m15401l(int i, int i2, wt8 wt8Var) {
         boolean z = false;
-        if (i >= 0 && i <= i2 && i2 <= a()) {
+        if (i >= 0 && i <= i2 && i2 <= m15412a()) {
             z = true;
         }
-        uo4.d(z);
-        this.l = wt8Var;
-        u(i, i2);
-        return b();
+        uo4.m7874d(z);
+        this.f19726l = wt8Var;
+        m15392u(i, i2);
+        return m15411b();
     }
 
-    public final l64 m(List list, wt8 wt8Var) {
-        u(0, this.b.size());
-        return j(this.b.size(), list, wt8Var);
+    /* renamed from: m */
+    public final l64 m15400m(List list, wt8 wt8Var) {
+        m15392u(0, this.f19716b.size());
+        return m15403j(this.f19716b.size(), list, wt8Var);
     }
 
-    public final l64 n(wt8 wt8Var) {
-        int a = a();
-        if (wt8Var.c() != a) {
-            wt8Var = wt8Var.f().g(0, a);
+    /* renamed from: n */
+    public final l64 m15399n(wt8 wt8Var) {
+        int m15412a = m15412a();
+        if (wt8Var.m5800c() != m15412a) {
+            wt8Var = wt8Var.m5797f().m5796g(0, m15412a);
         }
-        this.l = wt8Var;
-        return b();
+        this.f19726l = wt8Var;
+        return m15411b();
     }
 
-    public final nr8 o(pr8 pr8Var, nw8 nw8Var, long j) {
-        Object obj = pr8Var.a;
+    /* renamed from: o */
+    public final nr8 m15398o(pr8 pr8Var, nw8 nw8Var, long j) {
+        Object obj = pr8Var.f18805a;
         Object obj2 = ((Pair) obj).first;
-        pr8 c = pr8Var.c(((Pair) obj).second);
-        h88 h88Var = (h88) this.d.get(obj2);
+        pr8 m13184c = pr8Var.m13184c(((Pair) obj).second);
+        h88 h88Var = (h88) this.f19718d.get(obj2);
         Objects.requireNonNull(h88Var);
-        this.i.add(h88Var);
-        e88 e88Var = (e88) this.h.get(h88Var);
+        this.f19723i.add(h88Var);
+        e88 e88Var = (e88) this.f19722h.get(h88Var);
         if (e88Var != null) {
-            e88Var.a.j(e88Var.b);
+            e88Var.f8257a.mo11001j(e88Var.f8258b);
         }
-        h88Var.c.add(c);
-        br8 k = h88Var.a.k(c, nw8Var, j);
-        this.c.put(k, h88Var);
-        r();
-        return k;
+        h88Var.f12186c.add(m13184c);
+        br8 mo11000k = h88Var.f12184a.mo11000k(m13184c, nw8Var, j);
+        this.f19717c.put(mo11000k, h88Var);
+        m15395r();
+        return mo11000k;
     }
 
-    public final void p(int i, int i2) {
-        while (i < this.b.size()) {
-            ((h88) this.b.get(i)).d += i2;
+    /* renamed from: p */
+    public final void m15397p(int i, int i2) {
+        while (i < this.f19716b.size()) {
+            ((h88) this.f19716b.get(i)).f12187d += i2;
             i++;
         }
     }
 
-    public final void q(h88 h88Var) {
-        e88 e88Var = (e88) this.h.get(h88Var);
+    /* renamed from: q */
+    public final void m15396q(h88 h88Var) {
+        e88 e88Var = (e88) this.f19722h.get(h88Var);
         if (e88Var != null) {
-            e88Var.a.a(e88Var.b);
+            e88Var.f8257a.mo11008a(e88Var.f8258b);
         }
     }
 
-    public final void r() {
-        Iterator it = this.i.iterator();
+    /* renamed from: r */
+    public final void m15395r() {
+        Iterator it = this.f19723i.iterator();
         while (it.hasNext()) {
             h88 h88Var = (h88) it.next();
-            if (h88Var.c.isEmpty()) {
-                q(h88Var);
+            if (h88Var.f12186c.isEmpty()) {
+                m15396q(h88Var);
                 it.remove();
             }
         }
     }
 
-    public final void s(h88 h88Var) {
-        if (h88Var.e && h88Var.c.isEmpty()) {
-            e88 e88Var = (e88) this.h.remove(h88Var);
+    /* renamed from: s */
+    public final void m15394s(h88 h88Var) {
+        if (h88Var.f12188e && h88Var.f12186c.isEmpty()) {
+            e88 e88Var = (e88) this.f19722h.remove(h88Var);
             Objects.requireNonNull(e88Var);
-            e88Var.a.n(e88Var.b);
-            e88Var.a.g(e88Var.c);
-            e88Var.a.i(e88Var.c);
-            this.i.remove(h88Var);
+            e88Var.f8257a.mo10997n(e88Var.f8258b);
+            e88Var.f8257a.mo11004g(e88Var.f8259c);
+            e88Var.f8257a.mo11002i(e88Var.f8259c);
+            this.f19723i.remove(h88Var);
         }
     }
 
-    public final void t(h88 h88Var) {
-        kr8 kr8Var = h88Var.a;
+    /* renamed from: t */
+    public final void m15393t(h88 h88Var) {
+        kr8 kr8Var = h88Var.f12184a;
         qr8 qr8Var = new qr8() { // from class: com.daaw.y78
             @Override // com.daaw.qr8
-            public final void a(rr8 rr8Var, l64 l64Var) {
-                n88.this.e(rr8Var, l64Var);
+            /* renamed from: a */
+            public final void mo4028a(rr8 rr8Var, l64 l64Var) {
+                n88.this.m15408e(rr8Var, l64Var);
             }
         };
         b88 b88Var = new b88(this, h88Var);
-        this.h.put(h88Var, new e88(kr8Var, qr8Var, b88Var));
-        kr8Var.f(new Handler(it5.e(), null), b88Var);
-        kr8Var.d(new Handler(it5.e(), null), b88Var);
-        kr8Var.m(qr8Var, this.k, this.a);
+        this.f19722h.put(h88Var, new e88(kr8Var, qr8Var, b88Var));
+        kr8Var.mo11005f(new Handler(it5.m19397e(), null), b88Var);
+        kr8Var.mo11006d(new Handler(it5.m19397e(), null), b88Var);
+        kr8Var.mo10998m(qr8Var, this.f19725k, this.f19715a);
     }
 
-    public final void u(int i, int i2) {
+    /* renamed from: u */
+    public final void m15392u(int i, int i2) {
         while (true) {
             i2--;
             if (i2 < i) {
                 return;
             }
-            h88 h88Var = (h88) this.b.remove(i2);
-            this.d.remove(h88Var.b);
-            p(i2, -h88Var.a.I().c());
-            h88Var.e = true;
-            if (this.j) {
-                s(h88Var);
+            h88 h88Var = (h88) this.f19716b.remove(i2);
+            this.f19718d.remove(h88Var.f12185b);
+            m15397p(i2, -h88Var.f12184a.m17448I().mo4509c());
+            h88Var.f12188e = true;
+            if (this.f19724j) {
+                m15394s(h88Var);
             }
         }
     }

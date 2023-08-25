@@ -5,33 +5,42 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class lv7 implements Iterator {
-    public int p = -1;
-    public boolean q;
-    public Iterator r;
-    public final /* synthetic */ pv7 s;
+
+    /* renamed from: p */
+    public int f17824p = -1;
+
+    /* renamed from: q */
+    public boolean f17825q;
+
+    /* renamed from: r */
+    public Iterator f17826r;
+
+    /* renamed from: s */
+    public final /* synthetic */ pv7 f17827s;
 
     public /* synthetic */ lv7(pv7 pv7Var, kv7 kv7Var) {
-        this.s = pv7Var;
+        this.f17827s = pv7Var;
     }
 
-    public final Iterator a() {
+    /* renamed from: a */
+    public final Iterator m16474a() {
         Map map;
-        if (this.r == null) {
-            map = this.s.r;
-            this.r = map.entrySet().iterator();
+        if (this.f17826r == null) {
+            map = this.f17827s.f23420r;
+            this.f17826r = map.entrySet().iterator();
         }
-        return this.r;
+        return this.f17826r;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
         List list;
         Map map;
-        int i = this.p + 1;
-        list = this.s.q;
+        int i = this.f17824p + 1;
+        list = this.f17827s.f23419q;
         if (i >= list.size()) {
-            map = this.s.r;
-            return !map.isEmpty() && a().hasNext();
+            map = this.f17827s.f23420r;
+            return !map.isEmpty() && m16474a().hasNext();
         }
         return true;
     }
@@ -41,15 +50,15 @@ public final class lv7 implements Iterator {
         List list;
         Object next;
         List list2;
-        this.q = true;
-        int i = this.p + 1;
-        this.p = i;
-        list = this.s.q;
+        this.f17825q = true;
+        int i = this.f17824p + 1;
+        this.f17824p = i;
+        list = this.f17827s.f23419q;
         if (i < list.size()) {
-            list2 = this.s.q;
-            next = list2.get(this.p);
+            list2 = this.f17827s.f23419q;
+            next = list2.get(this.f17824p);
         } else {
-            next = a().next();
+            next = m16474a().next();
         }
         return (Map.Entry) next;
     }
@@ -57,20 +66,20 @@ public final class lv7 implements Iterator {
     @Override // java.util.Iterator
     public final void remove() {
         List list;
-        if (!this.q) {
+        if (!this.f17825q) {
             throw new IllegalStateException("remove() was called before next()");
         }
-        this.q = false;
-        this.s.n();
-        int i = this.p;
-        list = this.s.q;
+        this.f17825q = false;
+        this.f17827s.m13002n();
+        int i = this.f17824p;
+        list = this.f17827s.f23419q;
         if (i >= list.size()) {
-            a().remove();
+            m16474a().remove();
             return;
         }
-        pv7 pv7Var = this.s;
-        int i2 = this.p;
-        this.p = i2 - 1;
-        pv7Var.l(i2);
+        pv7 pv7Var = this.f17827s;
+        int i2 = this.f17824p;
+        this.f17824p = i2 - 1;
+        pv7Var.m13004l(i2);
     }
 }

@@ -5,46 +5,59 @@ import java.util.Collection;
 import java.util.Collections;
 /* loaded from: classes.dex */
 public final class lq6 {
-    public static final lq6 c = new lq6();
-    public final ArrayList a = new ArrayList();
-    public final ArrayList b = new ArrayList();
 
-    public static lq6 a() {
-        return c;
+    /* renamed from: c */
+    public static final lq6 f17641c = new lq6();
+
+    /* renamed from: a */
+    public final ArrayList f17642a = new ArrayList();
+
+    /* renamed from: b */
+    public final ArrayList f17643b = new ArrayList();
+
+    /* renamed from: a */
+    public static lq6 m16667a() {
+        return f17641c;
     }
 
-    public final Collection b() {
-        return Collections.unmodifiableCollection(this.b);
+    /* renamed from: b */
+    public final Collection m16666b() {
+        return Collections.unmodifiableCollection(this.f17643b);
     }
 
-    public final Collection c() {
-        return Collections.unmodifiableCollection(this.a);
+    /* renamed from: c */
+    public final Collection m16665c() {
+        return Collections.unmodifiableCollection(this.f17642a);
     }
 
-    public final void d(xp6 xp6Var) {
-        this.a.add(xp6Var);
+    /* renamed from: d */
+    public final void m16664d(xp6 xp6Var) {
+        this.f17642a.add(xp6Var);
     }
 
-    public final void e(xp6 xp6Var) {
-        boolean g = g();
-        this.a.remove(xp6Var);
-        this.b.remove(xp6Var);
-        if (!g || g()) {
+    /* renamed from: e */
+    public final void m16663e(xp6 xp6Var) {
+        boolean m16661g = m16661g();
+        this.f17642a.remove(xp6Var);
+        this.f17643b.remove(xp6Var);
+        if (!m16661g || m16661g()) {
             return;
         }
-        rq6.b().f();
+        rq6.m11060b().m11056f();
     }
 
-    public final void f(xp6 xp6Var) {
-        boolean g = g();
-        this.b.add(xp6Var);
-        if (g) {
+    /* renamed from: f */
+    public final void m16662f(xp6 xp6Var) {
+        boolean m16661g = m16661g();
+        this.f17643b.add(xp6Var);
+        if (m16661g) {
             return;
         }
-        rq6.b().e();
+        rq6.m11060b().m11057e();
     }
 
-    public final boolean g() {
-        return this.b.size() > 0;
+    /* renamed from: g */
+    public final boolean m16661g() {
+        return this.f17643b.size() > 0;
     }
 }

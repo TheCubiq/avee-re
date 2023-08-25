@@ -26,9 +26,9 @@ public class OpenSSLSignature extends SignatureSpi {
     private boolean signing;
     private final byte[] singleByte;
 
-    /* renamed from: org.conscrypt.OpenSSLSignature$1  reason: invalid class name */
+    /* renamed from: org.conscrypt.OpenSSLSignature$1 */
     /* loaded from: classes2.dex */
-    public static /* synthetic */ class AnonymousClass1 {
+    public static /* synthetic */ class C42111 {
         public static final /* synthetic */ int[] $SwitchMap$org$conscrypt$OpenSSLSignature$EngineType;
 
         static {
@@ -266,13 +266,13 @@ public class OpenSSLSignature extends SignatureSpi {
         this.evpMdRef = j;
     }
 
-    public /* synthetic */ OpenSSLSignature(long j, EngineType engineType, AnonymousClass1 anonymousClass1) {
+    public /* synthetic */ OpenSSLSignature(long j, EngineType engineType, C42111 c42111) {
         this(j, engineType);
     }
 
     private void checkEngineType(OpenSSLKey openSSLKey) {
         int EVP_PKEY_type = NativeCrypto.EVP_PKEY_type(openSSLKey.getNativeRef());
-        int i = AnonymousClass1.$SwitchMap$org$conscrypt$OpenSSLSignature$EngineType[this.engineType.ordinal()];
+        int i = C42111.$SwitchMap$org$conscrypt$OpenSSLSignature$EngineType[this.engineType.ordinal()];
         if (i == 1) {
             if (EVP_PKEY_type == 6) {
                 return;

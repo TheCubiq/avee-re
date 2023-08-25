@@ -1,34 +1,42 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class l91 extends m91 implements ee0 {
-    public final int e;
-    public String f = "";
+
+    /* renamed from: e */
+    public final int f17149e;
+
+    /* renamed from: f */
+    public String f17150f = "";
 
     public l91(int i) {
-        this.e = i;
+        this.f17149e = i;
     }
 
     @Override // com.daaw.ee0
-    public String a() {
-        return this.b;
+    /* renamed from: a */
+    public String mo17094a() {
+        return this.f18681b;
     }
 
     @Override // com.daaw.ee0
-    public int b() {
-        return this.e;
+    /* renamed from: b */
+    public int mo17093b() {
+        return this.f17149e;
     }
 
     @Override // com.daaw.ee0
-    public String c() {
-        return this.f;
+    /* renamed from: c */
+    public String mo17092c() {
+        return this.f17150f;
     }
 
-    public sd0 d() {
-        return this.c;
+    /* renamed from: d */
+    public sd0 m17091d() {
+        return this.f18682c;
     }
 
     @Override // com.daaw.ee0
     public boolean isEnabled() {
-        return this.a;
+        return this.f18680a;
     }
 }

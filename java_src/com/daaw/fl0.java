@@ -3,78 +3,97 @@ package com.daaw;
 import java.io.File;
 /* loaded from: classes2.dex */
 public class fl0 {
-    public static final b c = new b();
-    public final h10 a;
-    public e10 b;
 
+    /* renamed from: c */
+    public static final C1305b f9655c = new C1305b();
+
+    /* renamed from: a */
+    public final h10 f9656a;
+
+    /* renamed from: b */
+    public e10 f9657b;
+
+    /* renamed from: com.daaw.fl0$b */
     /* loaded from: classes2.dex */
-    public static final class b implements e10 {
-        public b() {
+    public static final class C1305b implements e10 {
+        public C1305b() {
         }
 
         @Override // com.daaw.e10
-        public void a() {
+        /* renamed from: a */
+        public void mo15621a() {
         }
 
         @Override // com.daaw.e10
-        public String b() {
+        /* renamed from: b */
+        public String mo15620b() {
             return null;
         }
 
         @Override // com.daaw.e10
-        public byte[] c() {
+        /* renamed from: c */
+        public byte[] mo15619c() {
             return null;
         }
 
         @Override // com.daaw.e10
-        public void d() {
+        /* renamed from: d */
+        public void mo15618d() {
         }
 
         @Override // com.daaw.e10
-        public void e(long j, String str) {
+        /* renamed from: e */
+        public void mo15617e(long j, String str) {
         }
     }
 
     public fl0(h10 h10Var) {
-        this.a = h10Var;
-        this.b = c;
+        this.f9656a = h10Var;
+        this.f9657b = f9655c;
     }
 
     public fl0(h10 h10Var, String str) {
         this(h10Var);
-        e(str);
+        m22510e(str);
     }
 
-    public void a() {
-        this.b.d();
+    /* renamed from: a */
+    public void m22514a() {
+        this.f9657b.mo15618d();
     }
 
-    public byte[] b() {
-        return this.b.c();
+    /* renamed from: b */
+    public byte[] m22513b() {
+        return this.f9657b.mo15619c();
     }
 
-    public String c() {
-        return this.b.b();
+    /* renamed from: c */
+    public String m22512c() {
+        return this.f9657b.mo15620b();
     }
 
-    public final File d(String str) {
-        return this.a.o(str, "userlog");
+    /* renamed from: d */
+    public final File m22511d(String str) {
+        return this.f9656a.m21097o(str, "userlog");
     }
 
-    public final void e(String str) {
-        this.b.a();
-        this.b = c;
+    /* renamed from: e */
+    public final void m22510e(String str) {
+        this.f9657b.mo15621a();
+        this.f9657b = f9655c;
         if (str == null) {
             return;
         }
-        f(d(str), 65536);
+        m22509f(m22511d(str), 65536);
     }
 
-    public void f(File file, int i) {
-        this.b = new n01(file, i);
+    /* renamed from: f */
+    public void m22509f(File file, int i) {
+        this.f9657b = new n01(file, i);
     }
 
-    public void g(long j, String str) {
-        this.b.e(j, str);
+    /* renamed from: g */
+    public void m22508g(long j, String str) {
+        this.f9657b.mo15617e(j, str);
     }
 }

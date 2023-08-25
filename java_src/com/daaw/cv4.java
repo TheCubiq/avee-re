@@ -1,29 +1,35 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class cv4 {
-    public final ev4 a;
+
+    /* renamed from: a */
+    public final ev4 f6208a;
 
     public /* synthetic */ cv4(ev4 ev4Var, bv4 bv4Var) {
-        this.a = ev4Var;
+        this.f6208a = ev4Var;
     }
 
-    public final cv4 a(az5 az5Var) {
-        ev4.s(this.a, az5Var);
+    /* renamed from: a */
+    public final cv4 m24969a(az5 az5Var) {
+        ev4.m23169s(this.f6208a, az5Var);
         return this;
     }
 
-    public final cv4 b(dd6 dd6Var) {
-        ev4.F(this.a, dd6Var);
+    /* renamed from: b */
+    public final cv4 m24968b(dd6 dd6Var) {
+        ev4.m23174F(this.f6208a, dd6Var);
         return this;
     }
 
-    public final cv4 c(ez5 ez5Var) {
-        ev4.M(this.a, ez5Var);
+    /* renamed from: c */
+    public final cv4 m24967c(ez5 ez5Var) {
+        ev4.m23173M(this.f6208a, ez5Var);
         return this;
     }
 
-    public final cv4 d(tg6 tg6Var) {
-        ev4.S(this.a, tg6Var);
+    /* renamed from: d */
+    public final cv4 m24966d(tg6 tg6Var) {
+        ev4.m23172S(this.f6208a, tg6Var);
         return this;
     }
 }

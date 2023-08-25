@@ -6,14 +6,15 @@ public final class jo2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        this.e.Y(3);
-        boolean booleanValue = ((Boolean) this.f.invoke(null, this.b.b())).booleanValue();
-        synchronized (this.e) {
+    /* renamed from: a */
+    public final void mo2099a() {
+        this.f20528e.m20767Y(3);
+        boolean booleanValue = ((Boolean) this.f20529f.invoke(null, this.f20525b.m6004b())).booleanValue();
+        synchronized (this.f20528e) {
             if (booleanValue) {
-                this.e.Y(2);
+                this.f20528e.m20767Y(2);
             } else {
-                this.e.Y(1);
+                this.f20528e.m20767Y(1);
             }
         }
     }

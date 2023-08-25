@@ -10,10 +10,11 @@ public final class fd6 extends kc6 {
     }
 
     @Override // com.daaw.kc6
-    public final /* bridge */ /* synthetic */ qp4 b(wi4 wi4Var, up4 up4Var, pw4 pw4Var) {
-        ii4 i = this.c.i();
-        i.a(up4Var);
-        i.b(pw4Var);
-        return i;
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ qp4 mo8348b(wi4 wi4Var, up4 up4Var, pw4 pw4Var) {
+        ii4 mo26267i = this.f16178c.mo26267i();
+        mo26267i.mo19769a(up4Var);
+        mo26267i.mo19768b(pw4Var);
+        return mo26267i;
     }
 }

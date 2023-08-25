@@ -3,21 +3,30 @@ package com.daaw;
 import android.os.IBinder;
 /* loaded from: classes.dex */
 public abstract class qw6 {
-    public abstract qw6 a(String str);
+    /* renamed from: a */
+    public abstract qw6 mo8769a(String str);
 
-    public abstract qw6 b(String str);
+    /* renamed from: b */
+    public abstract qw6 mo8768b(String str);
 
-    public abstract qw6 c(int i);
+    /* renamed from: c */
+    public abstract qw6 mo8767c(int i);
 
-    public abstract qw6 d(int i);
+    /* renamed from: d */
+    public abstract qw6 mo8766d(int i);
 
-    public abstract qw6 e(float f);
+    /* renamed from: e */
+    public abstract qw6 mo8765e(float f);
 
-    public abstract qw6 f(boolean z);
+    /* renamed from: f */
+    public abstract qw6 mo8764f(boolean z);
 
-    public abstract qw6 g(IBinder iBinder);
+    /* renamed from: g */
+    public abstract qw6 mo8763g(IBinder iBinder);
 
-    public abstract qw6 h(int i);
+    /* renamed from: h */
+    public abstract qw6 mo8762h(int i);
 
-    public abstract rw6 i();
+    /* renamed from: i */
+    public abstract rw6 mo8761i();
 }

@@ -3,9 +3,11 @@ package com.daaw;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public interface iv3 extends IInterface {
-    void G1(cv3 cv3Var);
+    /* renamed from: G1 */
+    void mo19328G1(cv3 cv3Var);
 
-    void c(int i);
+    /* renamed from: c */
+    void mo19327c(int i);
 
     void zzf();
 

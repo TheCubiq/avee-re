@@ -9,99 +9,123 @@ import java.util.concurrent.atomic.AtomicReference;
 import org.json.JSONObject;
 /* loaded from: classes2.dex */
 public class wb1 implements zb1 {
-    public final Context a;
-    public final ac1 b;
-    public final xb1 c;
-    public final mn d;
-    public final hd e;
-    public final bc1 f;
-    public final ep g;
-    public final AtomicReference<tb1> h;
-    public final AtomicReference<tj1<tb1>> i;
 
+    /* renamed from: a */
+    public final Context f31135a;
+
+    /* renamed from: b */
+    public final ac1 f31136b;
+
+    /* renamed from: c */
+    public final xb1 f31137c;
+
+    /* renamed from: d */
+    public final InterfaceC2196mn f31138d;
+
+    /* renamed from: e */
+    public final C1530hd f31139e;
+
+    /* renamed from: f */
+    public final bc1 f31140f;
+
+    /* renamed from: g */
+    public final C1209ep f31141g;
+
+    /* renamed from: h */
+    public final AtomicReference<tb1> f31142h;
+
+    /* renamed from: i */
+    public final AtomicReference<tj1<tb1>> f31143i;
+
+    /* renamed from: com.daaw.wb1$a */
     /* loaded from: classes2.dex */
-    public class a implements ai1<Void, Void> {
-        public a() {
+    public class C3418a implements ai1<Void, Void> {
+        public C3418a() {
         }
 
         @Override // com.daaw.ai1
         /* renamed from: b */
-        public rj1<Void> a(Void r5) {
-            JSONObject a = wb1.this.f.a(wb1.this.b, true);
-            if (a != null) {
-                tb1 b = wb1.this.c.b(a);
-                wb1.this.e.c(b.c, a);
-                wb1.this.q(a, "Loaded settings: ");
+        public rj1<Void> mo6209a(Void r5) {
+            JSONObject mo4796a = wb1.this.f31140f.mo4796a(wb1.this.f31136b, true);
+            if (mo4796a != null) {
+                tb1 m5312b = wb1.this.f31137c.m5312b(mo4796a);
+                wb1.this.f31139e.m20839c(m5312b.f27201c, mo4796a);
+                wb1.this.m6211q(mo4796a, "Loaded settings: ");
                 wb1 wb1Var = wb1.this;
-                wb1Var.r(wb1Var.b.f);
-                wb1.this.h.set(b);
-                ((tj1) wb1.this.i.get()).e(b);
+                wb1Var.m6210r(wb1Var.f31136b.f3060f);
+                wb1.this.f31142h.set(m5312b);
+                ((tj1) wb1.this.f31143i.get()).m9078e(m5312b);
             }
-            return dk1.e(null);
+            return dk1.m24304e(null);
         }
     }
 
-    public wb1(Context context, ac1 ac1Var, mn mnVar, xb1 xb1Var, hd hdVar, bc1 bc1Var, ep epVar) {
+    public wb1(Context context, ac1 ac1Var, InterfaceC2196mn interfaceC2196mn, xb1 xb1Var, C1530hd c1530hd, bc1 bc1Var, C1209ep c1209ep) {
         AtomicReference<tb1> atomicReference = new AtomicReference<>();
-        this.h = atomicReference;
-        this.i = new AtomicReference<>(new tj1());
-        this.a = context;
-        this.b = ac1Var;
-        this.d = mnVar;
-        this.c = xb1Var;
-        this.e = hdVar;
-        this.f = bc1Var;
-        this.g = epVar;
-        atomicReference.set(wr.b(mnVar));
+        this.f31142h = atomicReference;
+        this.f31143i = new AtomicReference<>(new tj1());
+        this.f31135a = context;
+        this.f31136b = ac1Var;
+        this.f31138d = interfaceC2196mn;
+        this.f31137c = xb1Var;
+        this.f31139e = c1530hd;
+        this.f31140f = bc1Var;
+        this.f31141g = c1209ep;
+        atomicReference.set(C3463wr.m5842b(interfaceC2196mn));
     }
 
-    public static wb1 l(Context context, String str, ue0 ue0Var, vb0 vb0Var, String str2, String str3, h10 h10Var, ep epVar) {
-        String g = ue0Var.g();
+    /* renamed from: l */
+    public static wb1 m6216l(Context context, String str, ue0 ue0Var, vb0 vb0Var, String str2, String str3, h10 h10Var, C1209ep c1209ep) {
+        String m8298g = ue0Var.m8298g();
         wi1 wi1Var = new wi1();
-        return new wb1(context, new ac1(str, ue0Var.h(), ue0Var.i(), ue0Var.j(), ue0Var, fh.h(fh.n(context), str, str3, str2), str3, str2, ws.a(g).b()), wi1Var, new xb1(wi1Var), new hd(h10Var), new xr(String.format(Locale.US, "https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/%s/settings", str), vb0Var), epVar);
+        return new wb1(context, new ac1(str, ue0Var.m8297h(), ue0Var.m8296i(), ue0Var.m8295j(), ue0Var, C1279fh.m22659h(C1279fh.m22653n(context), str, str3, str2), str3, str2, EnumC3464ws.m5831a(m8298g).m5830b()), wi1Var, new xb1(wi1Var), new C1530hd(h10Var), new C3565xr(String.format(Locale.US, "https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/%s/settings", str), vb0Var), c1209ep);
     }
 
     @Override // com.daaw.zb1
-    public rj1<tb1> a() {
-        return this.i.get().a();
+    /* renamed from: a */
+    public rj1<tb1> mo2555a() {
+        return this.f31143i.get().m9082a();
     }
 
     @Override // com.daaw.zb1
-    public tb1 b() {
-        return this.h.get();
+    /* renamed from: b */
+    public tb1 mo2554b() {
+        return this.f31142h.get();
     }
 
-    public boolean k() {
-        return !n().equals(this.b.f);
+    /* renamed from: k */
+    public boolean m6217k() {
+        return !m6214n().equals(this.f31136b.f3060f);
     }
 
-    public final tb1 m(vb1 vb1Var) {
+    /* renamed from: m */
+    public final tb1 m6215m(vb1 vb1Var) {
         tb1 tb1Var = null;
         try {
             if (!vb1.SKIP_CACHE_LOOKUP.equals(vb1Var)) {
-                JSONObject b = this.e.b();
-                if (b != null) {
-                    tb1 b2 = this.c.b(b);
-                    if (b2 != null) {
-                        q(b, "Loaded cached settings: ");
-                        long a2 = this.d.a();
-                        if (!vb1.IGNORE_CACHE_EXPIRATION.equals(vb1Var) && b2.a(a2)) {
-                            ml0.f().i("Cached settings have expired.");
+                JSONObject m20840b = this.f31139e.m20840b();
+                if (m20840b != null) {
+                    tb1 m5312b = this.f31137c.m5312b(m20840b);
+                    if (m5312b != null) {
+                        m6211q(m20840b, "Loaded cached settings: ");
+                        long mo6059a = this.f31138d.mo6059a();
+                        if (!vb1.IGNORE_CACHE_EXPIRATION.equals(vb1Var) && m5312b.m9372a(mo6059a)) {
+                            ml0.m15976f().m15973i("Cached settings have expired.");
                         }
                         try {
-                            ml0.f().i("Returning cached settings.");
-                            tb1Var = b2;
+                            ml0.m15976f().m15973i("Returning cached settings.");
+                            tb1Var = m5312b;
                         } catch (Exception e) {
                             e = e;
-                            tb1Var = b2;
-                            ml0.f().e("Failed to get cached settings", e);
+                            tb1Var = m5312b;
+                            ml0.m15976f().m15977e("Failed to get cached settings", e);
                             return tb1Var;
                         }
                     } else {
-                        ml0.f().e("Failed to parse cached settings data.", null);
+                        ml0.m15976f().m15977e("Failed to parse cached settings data.", null);
                     }
                 } else {
-                    ml0.f().b("No cached settings data found.");
+                    ml0.m15976f().m15980b("No cached settings data found.");
                 }
             }
         } catch (Exception e2) {
@@ -110,37 +134,42 @@ public class wb1 implements zb1 {
         return tb1Var;
     }
 
-    public final String n() {
-        return fh.r(this.a).getString("existing_instance_identifier", "");
+    /* renamed from: n */
+    public final String m6214n() {
+        return C1279fh.m22649r(this.f31135a).getString("existing_instance_identifier", "");
     }
 
-    public rj1<Void> o(vb1 vb1Var, Executor executor) {
-        tb1 m;
-        if (!k() && (m = m(vb1Var)) != null) {
-            this.h.set(m);
-            this.i.get().e(m);
-            return dk1.e(null);
+    /* renamed from: o */
+    public rj1<Void> m6213o(vb1 vb1Var, Executor executor) {
+        tb1 m6215m;
+        if (!m6217k() && (m6215m = m6215m(vb1Var)) != null) {
+            this.f31142h.set(m6215m);
+            this.f31143i.get().m9078e(m6215m);
+            return dk1.m24304e(null);
         }
-        tb1 m2 = m(vb1.IGNORE_CACHE_EXPIRATION);
-        if (m2 != null) {
-            this.h.set(m2);
-            this.i.get().e(m2);
+        tb1 m6215m2 = m6215m(vb1.IGNORE_CACHE_EXPIRATION);
+        if (m6215m2 != null) {
+            this.f31142h.set(m6215m2);
+            this.f31143i.get().m9078e(m6215m2);
         }
-        return this.g.h(executor).p(executor, new a());
+        return this.f31141g.m23318h(executor).mo11234p(executor, new C3418a());
     }
 
-    public rj1<Void> p(Executor executor) {
-        return o(vb1.USE_CACHE, executor);
+    /* renamed from: p */
+    public rj1<Void> m6212p(Executor executor) {
+        return m6213o(vb1.USE_CACHE, executor);
     }
 
-    public final void q(JSONObject jSONObject, String str) {
-        ml0 f = ml0.f();
-        f.b(str + jSONObject.toString());
+    /* renamed from: q */
+    public final void m6211q(JSONObject jSONObject, String str) {
+        ml0 m15976f = ml0.m15976f();
+        m15976f.m15980b(str + jSONObject.toString());
     }
 
     @SuppressLint({"CommitPrefEdits"})
-    public final boolean r(String str) {
-        SharedPreferences.Editor edit = fh.r(this.a).edit();
+    /* renamed from: r */
+    public final boolean m6210r(String str) {
+        SharedPreferences.Editor edit = C1279fh.m22649r(this.f31135a).edit();
         edit.putString("existing_instance_identifier", str);
         edit.apply();
         return true;

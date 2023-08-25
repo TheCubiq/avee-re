@@ -12,16 +12,18 @@ import com.google.android.gms.ads.internal.client.zzba;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class zzf {
-    public static void a(pd5 pd5Var, fd5 fd5Var, String str, Pair... pairArr) {
-        Map c = fd5Var == null ? pd5Var.c() : fd5Var.a();
-        b(c, "action", str);
+    /* renamed from: a */
+    public static void m1232a(pd5 pd5Var, fd5 fd5Var, String str, Pair... pairArr) {
+        Map m11392c = fd5Var == null ? pd5Var.m11392c() : fd5Var.m22773a();
+        m1231b(m11392c, "action", str);
         for (Pair pair : pairArr) {
-            b(c, (String) pair.first, (String) pair.second);
+            m1231b(m11392c, (String) pair.first, (String) pair.second);
         }
-        pd5Var.e(c);
+        pd5Var.m11390e(m11392c);
     }
 
-    public static void b(Map map, String str, String str2) {
+    /* renamed from: b */
+    public static void m1231b(Map map, String str, String str2) {
         if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
             return;
         }
@@ -132,21 +134,21 @@ public final class zzf {
     }
 
     public static void zzc(final pd5 pd5Var, final fd5 fd5Var, final String str, final Pair... pairArr) {
-        if (((Boolean) zzba.zzc().b(g93.v6)).booleanValue()) {
-            z04.a.execute(new Runnable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zze
+        if (((Boolean) zzba.zzc().m23658b(g93.f10859v6)).booleanValue()) {
+            z04.f34305a.execute(new Runnable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zze
                 @Override // java.lang.Runnable
                 public final void run() {
-                    zzf.a(pd5.this, fd5Var, str, pairArr);
+                    zzf.m1232a(pd5.this, fd5Var, str, pairArr);
                 }
             });
         }
     }
 
     public static int zze(ri6 ri6Var) {
-        if (ri6Var.q) {
+        if (ri6Var.f25357q) {
             return 2;
         }
-        com.google.android.gms.ads.internal.client.zzl zzlVar = ri6Var.d;
+        com.google.android.gms.ads.internal.client.zzl zzlVar = ri6Var.f25344d;
         com.google.android.gms.ads.internal.client.zzc zzcVar = zzlVar.zzs;
         if (zzcVar == null && zzlVar.zzx == null) {
             return 1;

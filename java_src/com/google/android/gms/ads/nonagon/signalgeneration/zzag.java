@@ -6,18 +6,20 @@ import java.util.Locale;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class zzag {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f36516a;
 
     public /* synthetic */ zzag(zzae zzaeVar, zzaf zzafVar) {
         String str;
-        str = zzaeVar.a;
-        this.a = str;
+        str = zzaeVar.f36515a;
+        this.f36516a = str;
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     public final k43 zza() {
         char c;
-        String str = this.a;
+        String str = this.f36516a;
         switch (str.hashCode()) {
             case -1999289321:
                 if (str.equals("NATIVE")) {
@@ -55,12 +57,12 @@ public final class zzag {
     }
 
     public final String zzb() {
-        return this.a.toLowerCase(Locale.ROOT);
+        return this.f36516a.toLowerCase(Locale.ROOT);
     }
 
     public final Set zzc() {
         HashSet hashSet = new HashSet();
-        hashSet.add(this.a.toLowerCase(Locale.ROOT));
+        hashSet.add(this.f36516a.toLowerCase(Locale.ROOT));
         return hashSet;
     }
 }

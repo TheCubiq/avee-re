@@ -3,17 +3,21 @@ package com.daaw;
 import android.content.Context;
 /* loaded from: classes2.dex */
 public class jg0 {
-    public String a;
 
-    public static String b(Context context) {
+    /* renamed from: a */
+    public String f15078a;
+
+    /* renamed from: b */
+    public static String m18528b(Context context) {
         String installerPackageName = context.getPackageManager().getInstallerPackageName(context.getPackageName());
         return installerPackageName == null ? "" : installerPackageName;
     }
 
-    public synchronized String a(Context context) {
-        if (this.a == null) {
-            this.a = b(context);
+    /* renamed from: a */
+    public synchronized String m18529a(Context context) {
+        if (this.f15078a == null) {
+            this.f15078a = m18528b(context);
         }
-        return "".equals(this.a) ? null : this.a;
+        return "".equals(this.f15078a) ? null : this.f15078a;
     }
 }

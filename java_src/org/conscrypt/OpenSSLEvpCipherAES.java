@@ -9,9 +9,9 @@ import org.conscrypt.OpenSSLCipher;
 public abstract class OpenSSLEvpCipherAES extends OpenSSLEvpCipher {
     private static final int AES_BLOCK_SIZE = 16;
 
-    /* renamed from: org.conscrypt.OpenSSLEvpCipherAES$1  reason: invalid class name */
+    /* renamed from: org.conscrypt.OpenSSLEvpCipherAES$1 */
     /* loaded from: classes2.dex */
-    public static /* synthetic */ class AnonymousClass1 {
+    public static /* synthetic */ class C42071 {
         public static final /* synthetic */ int[] $SwitchMap$org$conscrypt$OpenSSLCipher$Mode;
         public static final /* synthetic */ int[] $SwitchMap$org$conscrypt$OpenSSLCipher$Padding;
 
@@ -250,7 +250,7 @@ public abstract class OpenSSLEvpCipherAES extends OpenSSLEvpCipher {
 
     @Override // org.conscrypt.OpenSSLCipher
     public void checkSupportedMode(OpenSSLCipher.Mode mode) {
-        int i = AnonymousClass1.$SwitchMap$org$conscrypt$OpenSSLCipher$Mode[mode.ordinal()];
+        int i = C42071.$SwitchMap$org$conscrypt$OpenSSLCipher$Mode[mode.ordinal()];
         if (i == 1 || i == 2 || i == 3) {
             return;
         }
@@ -259,7 +259,7 @@ public abstract class OpenSSLEvpCipherAES extends OpenSSLEvpCipher {
 
     @Override // org.conscrypt.OpenSSLCipher
     public void checkSupportedPadding(OpenSSLCipher.Padding padding) {
-        int i = AnonymousClass1.$SwitchMap$org$conscrypt$OpenSSLCipher$Padding[padding.ordinal()];
+        int i = C42071.$SwitchMap$org$conscrypt$OpenSSLCipher$Padding[padding.ordinal()];
         if (i == 1 || i == 2) {
             return;
         }

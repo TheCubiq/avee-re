@@ -4,24 +4,29 @@ import java.util.Iterator;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class i27 extends lz6 {
-    public final /* synthetic */ Iterator r;
-    public final /* synthetic */ ty6 s;
+
+    /* renamed from: r */
+    public final /* synthetic */ Iterator f13208r;
+
+    /* renamed from: s */
+    public final /* synthetic */ ty6 f13209s;
 
     public i27(Iterator it, ty6 ty6Var) {
-        this.r = it;
-        this.s = ty6Var;
+        this.f13208r = it;
+        this.f13209s = ty6Var;
     }
 
     @Override // com.daaw.lz6
     @CheckForNull
-    public final Object a() {
-        while (this.r.hasNext()) {
-            Object next = this.r.next();
-            if (this.s.zza(next)) {
+    /* renamed from: a */
+    public final Object mo16353a() {
+        while (this.f13208r.hasNext()) {
+            Object next = this.f13208r.next();
+            if (this.f13209s.zza(next)) {
                 return next;
             }
         }
-        b();
+        m16352b();
         return null;
     }
 }

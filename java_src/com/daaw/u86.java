@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class u86 implements wz7 {
-    public static String a(t86 t86Var) {
-        String c = t86Var.c();
-        e08.b(c);
-        return c;
+    /* renamed from: a */
+    public static String m8422a(t86 t86Var) {
+        String m9443c = t86Var.m9443c();
+        e08.m23801b(m9443c);
+        return m9443c;
     }
 }

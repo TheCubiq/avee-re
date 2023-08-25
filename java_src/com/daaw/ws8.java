@@ -1,12 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ws8 {
-    public final int a;
-    public final boolean b;
+
+    /* renamed from: a */
+    public final int f31492a;
+
+    /* renamed from: b */
+    public final boolean f31493b;
 
     public ws8(int i, boolean z) {
-        this.a = i;
-        this.b = z;
+        this.f31492a = i;
+        this.f31493b = z;
     }
 
     public final boolean equals(Object obj) {
@@ -15,7 +19,7 @@ public final class ws8 {
         }
         if (obj != null && ws8.class == obj.getClass()) {
             ws8 ws8Var = (ws8) obj;
-            if (this.a == ws8Var.a && this.b == ws8Var.b) {
+            if (this.f31492a == ws8Var.f31492a && this.f31493b == ws8Var.f31493b) {
                 return true;
             }
         }
@@ -23,6 +27,6 @@ public final class ws8 {
     }
 
     public final int hashCode() {
-        return (this.a * 31) + (this.b ? 1 : 0);
+        return (this.f31492a * 31) + (this.f31493b ? 1 : 0);
     }
 }

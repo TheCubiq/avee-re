@@ -19,7 +19,8 @@ public abstract class zzcv extends cp2 implements zzcw {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         String zze;
         if (i == 1) {
             zze = zze();

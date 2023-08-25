@@ -4,10 +4,14 @@ public enum vb2 {
     AD_STORAGE("ad_storage"),
     ANALYTICS_STORAGE("analytics_storage");
     
-    public static final vb2[] s = {AD_STORAGE, ANALYTICS_STORAGE};
-    public final String p;
+
+    /* renamed from: s */
+    public static final vb2[] f30095s = {AD_STORAGE, ANALYTICS_STORAGE};
+
+    /* renamed from: p */
+    public final String f30097p;
 
     vb2(String str) {
-        this.p = str;
+        this.f30097p = str;
     }
 }

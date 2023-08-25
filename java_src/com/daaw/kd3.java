@@ -10,7 +10,8 @@ public class kd3 extends Binder implements IInterface {
         attachInterface(this, str);
     }
 
-    public boolean D(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: D */
+    public boolean mo8662D(int i, Parcel parcel, Parcel parcel2, int i2) {
         throw null;
     }
 
@@ -26,6 +27,6 @@ public class kd3 extends Binder implements IInterface {
         } else if (super.onTransact(i, parcel, parcel2, i2)) {
             return true;
         }
-        return D(i, parcel, parcel2, i2);
+        return mo8662D(i, parcel, parcel2, i2);
     }
 }

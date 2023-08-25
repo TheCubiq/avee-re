@@ -4,22 +4,27 @@ import android.content.Context;
 import android.os.Looper;
 /* loaded from: classes.dex */
 public final class ss6 {
-    public final Context a;
-    public final Looper b;
+
+    /* renamed from: a */
+    public final Context f26607a;
+
+    /* renamed from: b */
+    public final Looper f26608b;
 
     public ss6(Context context, Looper looper) {
-        this.a = context;
-        this.b = looper;
+        this.f26607a = context;
+        this.f26608b = looper;
     }
 
-    public final void a(String str) {
-        gt6 L = lt6.L();
-        L.s(this.a.getPackageName());
-        L.u(2);
-        dt6 L2 = et6.L();
-        L2.s(str);
-        L2.t(2);
-        L.t(L2);
-        new ts6(this.a, this.b, (lt6) L.n()).a();
+    /* renamed from: a */
+    public final void m9920a(String str) {
+        gt6 m16566L = lt6.m16566L();
+        m16566L.m21234s(this.f26607a.getPackageName());
+        m16566L.m21232u(2);
+        dt6 m23188L = et6.m23188L();
+        m23188L.m23951s(str);
+        m23188L.m23950t(2);
+        m16566L.m21233t(m23188L);
+        new ts6(this.f26607a, this.f26608b, (lt6) m16566L.m22315n()).m8840a();
     }
 }

@@ -6,168 +6,183 @@ import java.util.Arrays;
 /* loaded from: classes2.dex */
 public class dl1<T extends el1 & Comparable<? super T>> {
     private volatile /* synthetic */ int _size = 0;
-    public T[] a;
 
-    public final void a(T t) {
-        t.f(this);
-        T[] f = f();
-        int c = c();
-        j(c + 1);
-        f[c] = t;
-        t.e(c);
-        l(c);
+    /* renamed from: a */
+    public T[] f7236a;
+
+    /* renamed from: a */
+    public final void m24280a(T t) {
+        t.mo23019f(this);
+        T[] m24275f = m24275f();
+        int m24278c = m24278c();
+        m24271j(m24278c + 1);
+        m24275f[m24278c] = t;
+        t.mo23020e(m24278c);
+        m24269l(m24278c);
     }
 
-    public final T b() {
-        T[] tArr = this.a;
+    /* renamed from: b */
+    public final T m24279b() {
+        T[] tArr = this.f7236a;
         if (tArr == null) {
             return null;
         }
         return tArr[0];
     }
 
-    public final int c() {
+    /* renamed from: c */
+    public final int m24278c() {
         return this._size;
     }
 
-    public final boolean d() {
-        return c() == 0;
+    /* renamed from: d */
+    public final boolean m24277d() {
+        return m24278c() == 0;
     }
 
-    public final T e() {
-        T b;
+    /* renamed from: e */
+    public final T m24276e() {
+        T m24279b;
         synchronized (this) {
-            b = b();
+            m24279b = m24279b();
         }
-        return b;
+        return m24279b;
     }
 
-    public final T[] f() {
-        T[] tArr = this.a;
+    /* renamed from: f */
+    public final T[] m24275f() {
+        T[] tArr = this.f7236a;
         if (tArr == null) {
             T[] tArr2 = (T[]) new el1[4];
-            this.a = tArr2;
+            this.f7236a = tArr2;
             return tArr2;
-        } else if (c() >= tArr.length) {
-            Object[] copyOf = Arrays.copyOf(tArr, c() * 2);
-            ug0.e(copyOf, "copyOf(this, newSize)");
+        } else if (m24278c() >= tArr.length) {
+            Object[] copyOf = Arrays.copyOf(tArr, m24278c() * 2);
+            ug0.m8269e(copyOf, "copyOf(this, newSize)");
             T[] tArr3 = (T[]) ((el1[]) copyOf);
-            this.a = tArr3;
+            this.f7236a = tArr3;
             return tArr3;
         } else {
             return tArr;
         }
     }
 
-    public final boolean g(T t) {
+    /* renamed from: g */
+    public final boolean m24274g(T t) {
         boolean z;
         synchronized (this) {
-            if (t.d() == null) {
+            if (t.mo23021d() == null) {
                 z = false;
             } else {
-                h(t.b());
+                m24273h(t.mo23022b());
                 z = true;
             }
         }
         return z;
     }
 
-    public final T h(int i) {
-        T[] tArr = this.a;
-        ug0.c(tArr);
-        j(c() - 1);
-        if (i < c()) {
-            m(i, c());
+    /* renamed from: h */
+    public final T m24273h(int i) {
+        T[] tArr = this.f7236a;
+        ug0.m8271c(tArr);
+        m24271j(m24278c() - 1);
+        if (i < m24278c()) {
+            m24268m(i, m24278c());
             int i2 = (i - 1) / 2;
             if (i > 0) {
                 T t = tArr[i];
-                ug0.c(t);
+                ug0.m8271c(t);
                 T t2 = tArr[i2];
-                ug0.c(t2);
+                ug0.m8271c(t2);
                 if (((Comparable) t).compareTo(t2) < 0) {
-                    m(i, i2);
-                    l(i2);
+                    m24268m(i, i2);
+                    m24269l(i2);
                 }
             }
-            k(i);
+            m24270k(i);
         }
-        T t3 = tArr[c()];
-        ug0.c(t3);
-        t3.f(null);
-        t3.e(-1);
-        tArr[c()] = null;
+        T t3 = tArr[m24278c()];
+        ug0.m8271c(t3);
+        t3.mo23019f(null);
+        t3.mo23020e(-1);
+        tArr[m24278c()] = null;
         return t3;
     }
 
-    public final T i() {
-        T h;
+    /* renamed from: i */
+    public final T m24272i() {
+        T m24273h;
         synchronized (this) {
-            h = c() > 0 ? h(0) : null;
+            m24273h = m24278c() > 0 ? m24273h(0) : null;
         }
-        return h;
+        return m24273h;
     }
 
-    public final void j(int i) {
+    /* renamed from: j */
+    public final void m24271j(int i) {
         this._size = i;
     }
 
-    public final void k(int i) {
+    /* renamed from: k */
+    public final void m24270k(int i) {
         while (true) {
             int i2 = (i * 2) + 1;
-            if (i2 >= c()) {
+            if (i2 >= m24278c()) {
                 return;
             }
-            T[] tArr = this.a;
-            ug0.c(tArr);
+            T[] tArr = this.f7236a;
+            ug0.m8271c(tArr);
             int i3 = i2 + 1;
-            if (i3 < c()) {
+            if (i3 < m24278c()) {
                 T t = tArr[i3];
-                ug0.c(t);
+                ug0.m8271c(t);
                 T t2 = tArr[i2];
-                ug0.c(t2);
+                ug0.m8271c(t2);
                 if (((Comparable) t).compareTo(t2) < 0) {
                     i2 = i3;
                 }
             }
             T t3 = tArr[i];
-            ug0.c(t3);
+            ug0.m8271c(t3);
             T t4 = tArr[i2];
-            ug0.c(t4);
+            ug0.m8271c(t4);
             if (((Comparable) t3).compareTo(t4) <= 0) {
                 return;
             }
-            m(i, i2);
+            m24268m(i, i2);
             i = i2;
         }
     }
 
-    public final void l(int i) {
+    /* renamed from: l */
+    public final void m24269l(int i) {
         while (i > 0) {
-            T[] tArr = this.a;
-            ug0.c(tArr);
+            T[] tArr = this.f7236a;
+            ug0.m8271c(tArr);
             int i2 = (i - 1) / 2;
             T t = tArr[i2];
-            ug0.c(t);
+            ug0.m8271c(t);
             T t2 = tArr[i];
-            ug0.c(t2);
+            ug0.m8271c(t2);
             if (((Comparable) t).compareTo(t2) <= 0) {
                 return;
             }
-            m(i, i2);
+            m24268m(i, i2);
             i = i2;
         }
     }
 
-    public final void m(int i, int i2) {
-        T[] tArr = this.a;
-        ug0.c(tArr);
+    /* renamed from: m */
+    public final void m24268m(int i, int i2) {
+        T[] tArr = this.f7236a;
+        ug0.m8271c(tArr);
         T t = tArr[i2];
-        ug0.c(t);
+        ug0.m8271c(t);
         T t2 = tArr[i];
-        ug0.c(t2);
+        ug0.m8271c(t2);
         tArr[i] = t;
         tArr[i2] = t2;
-        t.e(i);
-        t2.e(i2);
+        t.mo23020e(i);
+        t2.mo23020e(i2);
     }
 }

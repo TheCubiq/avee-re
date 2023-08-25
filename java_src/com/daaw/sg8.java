@@ -2,62 +2,71 @@ package com.daaw;
 /* loaded from: classes2.dex */
 public final class sg8 extends og8 {
     @Override // com.daaw.og8
-    public final /* synthetic */ int a(Object obj) {
-        return ((qg8) obj).a();
+    /* renamed from: a */
+    public final /* synthetic */ int mo10364a(Object obj) {
+        return ((qg8) obj).m12546a();
     }
 
     @Override // com.daaw.og8
-    public final /* synthetic */ int b(Object obj) {
-        return ((qg8) obj).b();
+    /* renamed from: b */
+    public final /* synthetic */ int mo10363b(Object obj) {
+        return ((qg8) obj).m12545b();
     }
 
     @Override // com.daaw.og8
-    public final /* bridge */ /* synthetic */ Object c(Object obj) {
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo10362c(Object obj) {
         ja8 ja8Var = (ja8) obj;
         qg8 qg8Var = ja8Var.zzc;
-        if (qg8Var == qg8.c()) {
-            qg8 f = qg8.f();
-            ja8Var.zzc = f;
-            return f;
+        if (qg8Var == qg8.m12544c()) {
+            qg8 m12541f = qg8.m12541f();
+            ja8Var.zzc = m12541f;
+            return m12541f;
         }
         return qg8Var;
     }
 
     @Override // com.daaw.og8
-    public final /* synthetic */ Object d(Object obj) {
+    /* renamed from: d */
+    public final /* synthetic */ Object mo10361d(Object obj) {
         return ((ja8) obj).zzc;
     }
 
     @Override // com.daaw.og8
-    public final /* bridge */ /* synthetic */ Object e(Object obj, Object obj2) {
-        if (qg8.c().equals(obj2)) {
+    /* renamed from: e */
+    public final /* bridge */ /* synthetic */ Object mo10360e(Object obj, Object obj2) {
+        if (qg8.m12544c().equals(obj2)) {
             return obj;
         }
         qg8 qg8Var = (qg8) obj2;
-        if (qg8.c().equals(obj)) {
-            return qg8.e((qg8) obj, qg8Var);
+        if (qg8.m12544c().equals(obj)) {
+            return qg8.m12542e((qg8) obj, qg8Var);
         }
-        ((qg8) obj).d(qg8Var);
+        ((qg8) obj).m12543d(qg8Var);
         return obj;
     }
 
     @Override // com.daaw.og8
-    public final /* bridge */ /* synthetic */ void f(Object obj, int i, long j) {
-        ((qg8) obj).j(i << 3, Long.valueOf(j));
+    /* renamed from: f */
+    public final /* bridge */ /* synthetic */ void mo10359f(Object obj, int i, long j) {
+        ((qg8) obj).m12537j(i << 3, Long.valueOf(j));
     }
 
     @Override // com.daaw.og8
-    public final void g(Object obj) {
-        ((ja8) obj).zzc.h();
+    /* renamed from: g */
+    public final void mo10358g(Object obj) {
+        ((ja8) obj).zzc.m12539h();
     }
 
     @Override // com.daaw.og8
-    public final /* synthetic */ void h(Object obj, Object obj2) {
+    /* renamed from: h */
+    public final /* synthetic */ void mo10357h(Object obj, Object obj2) {
         ((ja8) obj).zzc = (qg8) obj2;
     }
 
     @Override // com.daaw.og8
-    public final /* synthetic */ void i(Object obj, ki8 ki8Var) {
-        ((qg8) obj).k(ki8Var);
+    /* renamed from: i */
+    public final /* synthetic */ void mo10356i(Object obj, ki8 ki8Var) {
+        ((qg8) obj).m12536k(ki8Var);
     }
 }

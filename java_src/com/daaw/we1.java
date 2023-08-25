@@ -1,11 +1,16 @@
 package com.daaw;
-/* loaded from: classes.dex */
-public interface we1 extends jf {
 
+import com.google.android.exoplayer2.trackselection.InterfaceC3970c;
+/* loaded from: classes.dex */
+public interface we1 extends InterfaceC1826jf {
+
+    /* renamed from: com.daaw.we1$a */
     /* loaded from: classes.dex */
-    public interface a {
-        we1 a(lk0 lk0Var, xe1 xe1Var, int i, com.google.android.exoplayer2.trackselection.c cVar, pm1[] pm1VarArr);
+    public interface InterfaceC3434a {
+        /* renamed from: a */
+        we1 mo3389a(lk0 lk0Var, xe1 xe1Var, int i, InterfaceC3970c interfaceC3970c, pm1[] pm1VarArr);
     }
 
-    void b(xe1 xe1Var);
+    /* renamed from: b */
+    void mo3397b(xe1 xe1Var);
 }

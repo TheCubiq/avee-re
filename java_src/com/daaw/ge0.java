@@ -4,11 +4,15 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 /* loaded from: classes.dex */
 public interface ge0 extends zc0 {
-    void d(de0 de0Var);
+    /* renamed from: d */
+    void mo8393d(de0 de0Var);
 
-    int e(boolean z, int i, int i2, RectF rectF, float f, PointF pointF, PointF pointF2);
+    /* renamed from: e */
+    int mo8392e(boolean z, int i, int i2, RectF rectF, float f, PointF pointF, PointF pointF2);
 
-    int i(RectF rectF);
+    /* renamed from: i */
+    int mo8391i(RectF rectF);
 
-    float k(RectF rectF, int i);
+    /* renamed from: k */
+    float mo8389k(RectF rectF, int i);
 }

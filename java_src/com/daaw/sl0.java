@@ -1,84 +1,97 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class sl0<E> implements Cloneable {
-    public static final Object t = new Object();
-    public boolean p;
-    public long[] q;
-    public Object[] r;
-    public int s;
+
+    /* renamed from: t */
+    public static final Object f26344t = new Object();
+
+    /* renamed from: p */
+    public boolean f26345p;
+
+    /* renamed from: q */
+    public long[] f26346q;
+
+    /* renamed from: r */
+    public Object[] f26347r;
+
+    /* renamed from: s */
+    public int f26348s;
 
     public sl0() {
         this(10);
     }
 
     public sl0(int i) {
-        this.p = false;
+        this.f26345p = false;
         if (i == 0) {
-            this.q = ck.b;
-            this.r = ck.c;
+            this.f26346q = C0957ck.f5885b;
+            this.f26347r = C0957ck.f5886c;
             return;
         }
-        int f = ck.f(i);
-        this.q = new long[f];
-        this.r = new Object[f];
+        int m25295f = C0957ck.m25295f(i);
+        this.f26346q = new long[m25295f];
+        this.f26347r = new Object[m25295f];
     }
 
-    public void a(long j, E e) {
-        int i = this.s;
-        if (i != 0 && j <= this.q[i - 1]) {
-            k(j, e);
+    /* renamed from: a */
+    public void m10218a(long j, E e) {
+        int i = this.f26348s;
+        if (i != 0 && j <= this.f26346q[i - 1]) {
+            m10210k(j, e);
             return;
         }
-        if (this.p && i >= this.q.length) {
-            d();
+        if (this.f26345p && i >= this.f26346q.length) {
+            m10215d();
         }
-        int i2 = this.s;
-        if (i2 >= this.q.length) {
-            int f = ck.f(i2 + 1);
-            long[] jArr = new long[f];
-            Object[] objArr = new Object[f];
-            long[] jArr2 = this.q;
+        int i2 = this.f26348s;
+        if (i2 >= this.f26346q.length) {
+            int m25295f = C0957ck.m25295f(i2 + 1);
+            long[] jArr = new long[m25295f];
+            Object[] objArr = new Object[m25295f];
+            long[] jArr2 = this.f26346q;
             System.arraycopy(jArr2, 0, jArr, 0, jArr2.length);
-            Object[] objArr2 = this.r;
+            Object[] objArr2 = this.f26347r;
             System.arraycopy(objArr2, 0, objArr, 0, objArr2.length);
-            this.q = jArr;
-            this.r = objArr;
+            this.f26346q = jArr;
+            this.f26347r = objArr;
         }
-        this.q[i2] = j;
-        this.r[i2] = e;
-        this.s = i2 + 1;
+        this.f26346q[i2] = j;
+        this.f26347r[i2] = e;
+        this.f26348s = i2 + 1;
     }
 
-    public void b() {
-        int i = this.s;
-        Object[] objArr = this.r;
+    /* renamed from: b */
+    public void m10217b() {
+        int i = this.f26348s;
+        Object[] objArr = this.f26347r;
         for (int i2 = 0; i2 < i; i2++) {
             objArr[i2] = null;
         }
-        this.s = 0;
-        this.p = false;
+        this.f26348s = 0;
+        this.f26345p = false;
     }
 
     /* renamed from: c */
     public sl0<E> clone() {
         try {
             sl0<E> sl0Var = (sl0) super.clone();
-            sl0Var.q = (long[]) this.q.clone();
-            sl0Var.r = (Object[]) this.r.clone();
+            sl0Var.f26346q = (long[]) this.f26346q.clone();
+            sl0Var.f26347r = (Object[]) this.f26347r.clone();
             return sl0Var;
         } catch (CloneNotSupportedException e) {
             throw new AssertionError(e);
         }
     }
 
-    public final void d() {
-        int i = this.s;
-        long[] jArr = this.q;
-        Object[] objArr = this.r;
+    /* renamed from: d */
+    public final void m10215d() {
+        int i = this.f26348s;
+        long[] jArr = this.f26346q;
+        Object[] objArr = this.f26347r;
         int i2 = 0;
         for (int i3 = 0; i3 < i; i3++) {
             Object obj = objArr[i3];
-            if (obj != t) {
+            if (obj != f26344t) {
                 if (i3 != i2) {
                     jArr[i2] = jArr[i3];
                     objArr[i2] = obj;
@@ -87,136 +100,145 @@ public class sl0<E> implements Cloneable {
                 i2++;
             }
         }
-        this.p = false;
-        this.s = i2;
+        this.f26345p = false;
+        this.f26348s = i2;
     }
 
-    public E e(long j) {
-        return f(j, null);
+    /* renamed from: e */
+    public E m10214e(long j) {
+        return m10213f(j, null);
     }
 
-    public E f(long j, E e) {
-        int b = ck.b(this.q, this.s, j);
-        if (b >= 0) {
-            Object[] objArr = this.r;
-            if (objArr[b] != t) {
-                return (E) objArr[b];
+    /* renamed from: f */
+    public E m10213f(long j, E e) {
+        int m25299b = C0957ck.m25299b(this.f26346q, this.f26348s, j);
+        if (m25299b >= 0) {
+            Object[] objArr = this.f26347r;
+            if (objArr[m25299b] != f26344t) {
+                return (E) objArr[m25299b];
             }
         }
         return e;
     }
 
-    public int i(long j) {
-        if (this.p) {
-            d();
+    /* renamed from: i */
+    public int m10212i(long j) {
+        if (this.f26345p) {
+            m10215d();
         }
-        return ck.b(this.q, this.s, j);
+        return C0957ck.m25299b(this.f26346q, this.f26348s, j);
     }
 
-    public long j(int i) {
-        if (this.p) {
-            d();
+    /* renamed from: j */
+    public long m10211j(int i) {
+        if (this.f26345p) {
+            m10215d();
         }
-        return this.q[i];
+        return this.f26346q[i];
     }
 
-    public void k(long j, E e) {
-        int b = ck.b(this.q, this.s, j);
-        if (b >= 0) {
-            this.r[b] = e;
+    /* renamed from: k */
+    public void m10210k(long j, E e) {
+        int m25299b = C0957ck.m25299b(this.f26346q, this.f26348s, j);
+        if (m25299b >= 0) {
+            this.f26347r[m25299b] = e;
             return;
         }
-        int i = b ^ (-1);
-        int i2 = this.s;
+        int i = m25299b ^ (-1);
+        int i2 = this.f26348s;
         if (i < i2) {
-            Object[] objArr = this.r;
-            if (objArr[i] == t) {
-                this.q[i] = j;
+            Object[] objArr = this.f26347r;
+            if (objArr[i] == f26344t) {
+                this.f26346q[i] = j;
                 objArr[i] = e;
                 return;
             }
         }
-        if (this.p && i2 >= this.q.length) {
-            d();
-            i = ck.b(this.q, this.s, j) ^ (-1);
+        if (this.f26345p && i2 >= this.f26346q.length) {
+            m10215d();
+            i = C0957ck.m25299b(this.f26346q, this.f26348s, j) ^ (-1);
         }
-        int i3 = this.s;
-        if (i3 >= this.q.length) {
-            int f = ck.f(i3 + 1);
-            long[] jArr = new long[f];
-            Object[] objArr2 = new Object[f];
-            long[] jArr2 = this.q;
+        int i3 = this.f26348s;
+        if (i3 >= this.f26346q.length) {
+            int m25295f = C0957ck.m25295f(i3 + 1);
+            long[] jArr = new long[m25295f];
+            Object[] objArr2 = new Object[m25295f];
+            long[] jArr2 = this.f26346q;
             System.arraycopy(jArr2, 0, jArr, 0, jArr2.length);
-            Object[] objArr3 = this.r;
+            Object[] objArr3 = this.f26347r;
             System.arraycopy(objArr3, 0, objArr2, 0, objArr3.length);
-            this.q = jArr;
-            this.r = objArr2;
+            this.f26346q = jArr;
+            this.f26347r = objArr2;
         }
-        int i4 = this.s;
+        int i4 = this.f26348s;
         if (i4 - i != 0) {
-            long[] jArr3 = this.q;
+            long[] jArr3 = this.f26346q;
             int i5 = i + 1;
             System.arraycopy(jArr3, i, jArr3, i5, i4 - i);
-            Object[] objArr4 = this.r;
-            System.arraycopy(objArr4, i, objArr4, i5, this.s - i);
+            Object[] objArr4 = this.f26347r;
+            System.arraycopy(objArr4, i, objArr4, i5, this.f26348s - i);
         }
-        this.q[i] = j;
-        this.r[i] = e;
-        this.s++;
+        this.f26346q[i] = j;
+        this.f26347r[i] = e;
+        this.f26348s++;
     }
 
-    public void m(long j) {
-        int b = ck.b(this.q, this.s, j);
-        if (b >= 0) {
-            Object[] objArr = this.r;
-            Object obj = objArr[b];
-            Object obj2 = t;
+    /* renamed from: m */
+    public void m10209m(long j) {
+        int m25299b = C0957ck.m25299b(this.f26346q, this.f26348s, j);
+        if (m25299b >= 0) {
+            Object[] objArr = this.f26347r;
+            Object obj = objArr[m25299b];
+            Object obj2 = f26344t;
             if (obj != obj2) {
-                objArr[b] = obj2;
-                this.p = true;
+                objArr[m25299b] = obj2;
+                this.f26345p = true;
             }
         }
     }
 
-    public void n(int i) {
-        Object[] objArr = this.r;
+    /* renamed from: n */
+    public void m10208n(int i) {
+        Object[] objArr = this.f26347r;
         Object obj = objArr[i];
-        Object obj2 = t;
+        Object obj2 = f26344t;
         if (obj != obj2) {
             objArr[i] = obj2;
-            this.p = true;
+            this.f26345p = true;
         }
     }
 
-    public int o() {
-        if (this.p) {
-            d();
+    /* renamed from: o */
+    public int m10207o() {
+        if (this.f26345p) {
+            m10215d();
         }
-        return this.s;
+        return this.f26348s;
     }
 
-    public E p(int i) {
-        if (this.p) {
-            d();
+    /* renamed from: p */
+    public E m10206p(int i) {
+        if (this.f26345p) {
+            m10215d();
         }
-        return (E) this.r[i];
+        return (E) this.f26347r[i];
     }
 
     public String toString() {
-        if (o() <= 0) {
+        if (m10207o() <= 0) {
             return "{}";
         }
-        StringBuilder sb = new StringBuilder(this.s * 28);
+        StringBuilder sb = new StringBuilder(this.f26348s * 28);
         sb.append('{');
-        for (int i = 0; i < this.s; i++) {
+        for (int i = 0; i < this.f26348s; i++) {
             if (i > 0) {
                 sb.append(", ");
             }
-            sb.append(j(i));
+            sb.append(m10211j(i));
             sb.append('=');
-            E p = p(i);
-            if (p != this) {
-                sb.append(p);
+            E m10206p = m10206p(i);
+            if (m10206p != this) {
+                sb.append(m10206p);
             } else {
                 sb.append("(this Map)");
             }

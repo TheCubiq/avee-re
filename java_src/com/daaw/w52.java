@@ -7,29 +7,37 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class w52 extends y52 {
-    public long b;
-    public long[] c;
-    public long[] d;
+
+    /* renamed from: b */
+    public long f30895b;
+
+    /* renamed from: c */
+    public long[] f30896c;
+
+    /* renamed from: d */
+    public long[] f30897d;
 
     public w52() {
         super(new i09());
-        this.b = -9223372036854775807L;
-        this.c = new long[0];
-        this.d = new long[0];
+        this.f30895b = -9223372036854775807L;
+        this.f30896c = new long[0];
+        this.f30897d = new long[0];
     }
 
-    public static Double g(ik5 ik5Var) {
-        return Double.valueOf(Double.longBitsToDouble(ik5Var.z()));
+    /* renamed from: g */
+    public static Double m6522g(ik5 ik5Var) {
+        return Double.valueOf(Double.longBitsToDouble(ik5Var.m19696z()));
     }
 
-    public static Object h(ik5 ik5Var, int i) {
+    /* renamed from: h */
+    public static Object m6521h(ik5 ik5Var, int i) {
         if (i == 0) {
-            return g(ik5Var);
+            return m6522g(ik5Var);
         }
         if (i == 1) {
-            return Boolean.valueOf(ik5Var.s() == 1);
+            return Boolean.valueOf(ik5Var.m19703s() == 1);
         } else if (i == 2) {
-            return i(ik5Var);
+            return m6520i(ik5Var);
         } else {
             if (i != 3) {
                 if (i != 8) {
@@ -37,74 +45,78 @@ public final class w52 extends y52 {
                         if (i != 11) {
                             return null;
                         }
-                        Date date = new Date((long) g(ik5Var).doubleValue());
-                        ik5Var.g(2);
+                        Date date = new Date((long) m6522g(ik5Var).doubleValue());
+                        ik5Var.m19715g(2);
                         return date;
                     }
-                    int v = ik5Var.v();
-                    ArrayList arrayList = new ArrayList(v);
-                    for (int i2 = 0; i2 < v; i2++) {
-                        Object h = h(ik5Var, ik5Var.s());
-                        if (h != null) {
-                            arrayList.add(h);
+                    int m19700v = ik5Var.m19700v();
+                    ArrayList arrayList = new ArrayList(m19700v);
+                    for (int i2 = 0; i2 < m19700v; i2++) {
+                        Object m6521h = m6521h(ik5Var, ik5Var.m19703s());
+                        if (m6521h != null) {
+                            arrayList.add(m6521h);
                         }
                     }
                     return arrayList;
                 }
-                return j(ik5Var);
+                return m6519j(ik5Var);
             }
             HashMap hashMap = new HashMap();
             while (true) {
-                String i3 = i(ik5Var);
-                int s = ik5Var.s();
-                if (s == 9) {
+                String m6520i = m6520i(ik5Var);
+                int m19703s = ik5Var.m19703s();
+                if (m19703s == 9) {
                     return hashMap;
                 }
-                Object h2 = h(ik5Var, s);
-                if (h2 != null) {
-                    hashMap.put(i3, h2);
+                Object m6521h2 = m6521h(ik5Var, m19703s);
+                if (m6521h2 != null) {
+                    hashMap.put(m6520i, m6521h2);
                 }
             }
         }
     }
 
-    public static String i(ik5 ik5Var) {
-        int w = ik5Var.w();
-        int k = ik5Var.k();
-        ik5Var.g(w);
-        return new String(ik5Var.h(), k, w);
+    /* renamed from: i */
+    public static String m6520i(ik5 ik5Var) {
+        int m19699w = ik5Var.m19699w();
+        int m19711k = ik5Var.m19711k();
+        ik5Var.m19715g(m19699w);
+        return new String(ik5Var.m19714h(), m19711k, m19699w);
     }
 
-    public static HashMap j(ik5 ik5Var) {
-        int v = ik5Var.v();
-        HashMap hashMap = new HashMap(v);
-        for (int i = 0; i < v; i++) {
-            String i2 = i(ik5Var);
-            Object h = h(ik5Var, ik5Var.s());
-            if (h != null) {
-                hashMap.put(i2, h);
+    /* renamed from: j */
+    public static HashMap m6519j(ik5 ik5Var) {
+        int m19700v = ik5Var.m19700v();
+        HashMap hashMap = new HashMap(m19700v);
+        for (int i = 0; i < m19700v; i++) {
+            String m6520i = m6520i(ik5Var);
+            Object m6521h = m6521h(ik5Var, ik5Var.m19703s());
+            if (m6521h != null) {
+                hashMap.put(m6520i, m6521h);
             }
         }
         return hashMap;
     }
 
     @Override // com.daaw.y52
-    public final boolean a(ik5 ik5Var) {
+    /* renamed from: a */
+    public final boolean mo2810a(ik5 ik5Var) {
         return true;
     }
 
     @Override // com.daaw.y52
-    public final boolean b(ik5 ik5Var, long j) {
-        if (ik5Var.s() == 2 && "onMetaData".equals(i(ik5Var)) && ik5Var.i() != 0 && ik5Var.s() == 8) {
-            HashMap j2 = j(ik5Var);
-            Object obj = j2.get("duration");
+    /* renamed from: b */
+    public final boolean mo2809b(ik5 ik5Var, long j) {
+        if (ik5Var.m19703s() == 2 && "onMetaData".equals(m6520i(ik5Var)) && ik5Var.m19713i() != 0 && ik5Var.m19703s() == 8) {
+            HashMap m6519j = m6519j(ik5Var);
+            Object obj = m6519j.get("duration");
             if (obj instanceof Double) {
                 double doubleValue = ((Double) obj).doubleValue();
                 if (doubleValue > 0.0d) {
-                    this.b = (long) (doubleValue * 1000000.0d);
+                    this.f30895b = (long) (doubleValue * 1000000.0d);
                 }
             }
-            Object obj2 = j2.get("keyframes");
+            Object obj2 = m6519j.get("keyframes");
             if (obj2 instanceof Map) {
                 Map map = (Map) obj2;
                 Object obj3 = map.get("filepositions");
@@ -113,18 +125,18 @@ public final class w52 extends y52 {
                     List list = (List) obj3;
                     List list2 = (List) obj4;
                     int size = list2.size();
-                    this.c = new long[size];
-                    this.d = new long[size];
+                    this.f30896c = new long[size];
+                    this.f30897d = new long[size];
                     for (int i = 0; i < size; i++) {
                         Object obj5 = list.get(i);
                         Object obj6 = list2.get(i);
                         if (!(obj6 instanceof Double) || !(obj5 instanceof Double)) {
-                            this.c = new long[0];
-                            this.d = new long[0];
+                            this.f30896c = new long[0];
+                            this.f30897d = new long[0];
                             break;
                         }
-                        this.c[i] = (long) (((Double) obj6).doubleValue() * 1000000.0d);
-                        this.d[i] = ((Double) obj5).longValue();
+                        this.f30896c[i] = (long) (((Double) obj6).doubleValue() * 1000000.0d);
+                        this.f30897d[i] = ((Double) obj5).longValue();
                     }
                 }
             }
@@ -133,15 +145,18 @@ public final class w52 extends y52 {
         return false;
     }
 
-    public final long d() {
-        return this.b;
+    /* renamed from: d */
+    public final long m6525d() {
+        return this.f30895b;
     }
 
-    public final long[] e() {
-        return this.d;
+    /* renamed from: e */
+    public final long[] m6524e() {
+        return this.f30897d;
     }
 
-    public final long[] f() {
-        return this.c;
+    /* renamed from: f */
+    public final long[] m6523f() {
+        return this.f30896c;
     }
 }

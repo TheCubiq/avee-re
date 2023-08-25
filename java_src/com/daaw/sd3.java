@@ -5,13 +5,17 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface sd3 extends IInterface {
-    String F2(String str);
+    /* renamed from: F2 */
+    String mo2685F2(String str);
 
-    void f0(yd0 yd0Var);
+    /* renamed from: f0 */
+    void mo2684f0(yd0 yd0Var);
 
-    boolean q(yd0 yd0Var);
+    /* renamed from: q */
+    boolean mo2682q(yd0 yd0Var);
 
-    vc3 s(String str);
+    /* renamed from: s */
+    vc3 mo2681s(String str);
 
     zzdq zze();
 

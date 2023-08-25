@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface t97 {
-    Object a(s97 s97Var);
+    /* renamed from: a */
+    Object mo9420a(s97 s97Var);
 
     Class zza();
 

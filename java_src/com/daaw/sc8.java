@@ -1,8 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class sc8 {
-    public final int a = 0;
-    public final float b = 0.0f;
+
+    /* renamed from: a */
+    public final int f26079a = 0;
+
+    /* renamed from: b */
+    public final float f26080b = 0.0f;
 
     public sc8(int i, float f) {
     }

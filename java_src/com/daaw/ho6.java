@@ -4,9 +4,10 @@ import android.content.Context;
 import com.google.android.gms.ads.internal.client.zzl;
 /* loaded from: classes.dex */
 public final /* synthetic */ class ho6 {
-    public static io6 a(Context context, int i) {
+    /* renamed from: a */
+    public static io6 m20568a(Context context, int i) {
         ma3 ma3Var;
-        if (vo6.a()) {
+        if (vo6.m6970a()) {
             int i2 = i - 2;
             if (i2 != 20 && i2 != 21) {
                 switch (i2) {
@@ -15,7 +16,7 @@ public final /* synthetic */ class ho6 {
                     case 6:
                     case 7:
                     case 8:
-                        ma3Var = ta3.c;
+                        ma3Var = ta3.f27158c;
                         break;
                     case 4:
                     case 9:
@@ -23,32 +24,33 @@ public final /* synthetic */ class ho6 {
                     case 11:
                     case 12:
                     case 13:
-                        ma3Var = ta3.d;
+                        ma3Var = ta3.f27159d;
                         break;
                     case 5:
-                        ma3Var = ta3.b;
+                        ma3Var = ta3.f27157b;
                         break;
                 }
             } else {
-                ma3Var = ta3.e;
+                ma3Var = ta3.f27160e;
             }
-            if (((Boolean) ma3Var.e()).booleanValue()) {
+            if (((Boolean) ma3Var.m16137e()).booleanValue()) {
                 return new ko6(context, i);
             }
         }
         return new hp6();
     }
 
-    public static io6 b(Context context, int i, int i2, zzl zzlVar) {
-        io6 a = a(context, i);
-        if (a instanceof ko6) {
-            a.zzh();
-            a.c(i2);
-            if (so6.e(zzlVar.zzp)) {
-                a.a(zzlVar.zzp);
+    /* renamed from: b */
+    public static io6 m20567b(Context context, int i, int i2, zzl zzlVar) {
+        io6 m20568a = m20568a(context, i);
+        if (m20568a instanceof ko6) {
+            m20568a.zzh();
+            m20568a.mo17592c(i2);
+            if (so6.m10110e(zzlVar.zzp)) {
+                m20568a.mo17594a(zzlVar.zzp);
             }
-            return a;
+            return m20568a;
         }
-        return a;
+        return m20568a;
     }
 }

@@ -3,16 +3,20 @@ package com.daaw;
 import android.content.res.Configuration;
 /* loaded from: classes.dex */
 public final class rw0 {
-    public final boolean a;
-    public final Configuration b;
+
+    /* renamed from: a */
+    public final boolean f25662a;
+
+    /* renamed from: b */
+    public final Configuration f25663b;
 
     public rw0(boolean z) {
-        this.a = z;
-        this.b = null;
+        this.f25662a = z;
+        this.f25663b = null;
     }
 
     public rw0(boolean z, Configuration configuration) {
-        this.a = z;
-        this.b = configuration;
+        this.f25662a = z;
+        this.f25663b = configuration;
     }
 }

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.daaw.co;
+import com.daaw.C0972co;
 import com.daaw.ia3;
 import com.daaw.k04;
 import com.daaw.vp3;
@@ -19,9 +19,15 @@ import com.google.android.gms.ads.mediation.MediationInterstitialAdapter;
 import com.google.android.gms.ads.mediation.MediationInterstitialListener;
 /* loaded from: classes.dex */
 public final class zzbyi implements MediationInterstitialAdapter {
-    public Activity a;
-    public MediationInterstitialListener b;
-    public Uri c;
+
+    /* renamed from: a */
+    public Activity f36879a;
+
+    /* renamed from: b */
+    public MediationInterstitialListener f36880b;
+
+    /* renamed from: c */
+    public Uri f36881c;
 
     @Override // com.google.android.gms.ads.mediation.MediationAdapter
     public final void onDestroy() {
@@ -40,33 +46,33 @@ public final class zzbyi implements MediationInterstitialAdapter {
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialAdapter
     public final void requestInterstitialAd(Context context, MediationInterstitialListener mediationInterstitialListener, Bundle bundle, MediationAdRequest mediationAdRequest, Bundle bundle2) {
-        this.b = mediationInterstitialListener;
+        this.f36880b = mediationInterstitialListener;
         if (mediationInterstitialListener == null) {
             k04.zzj("Listener not set for mediation. Returning.");
         } else if (!(context instanceof Activity)) {
             k04.zzj("AdMobCustomTabs can only work with Activity context. Bailing out.");
-            this.b.onAdFailedToLoad(this, 0);
-        } else if (!ia3.g(context)) {
+            this.f36880b.onAdFailedToLoad(this, 0);
+        } else if (!ia3.m20002g(context)) {
             k04.zzj("Default browser does not support custom tabs. Bailing out.");
-            this.b.onAdFailedToLoad(this, 0);
+            this.f36880b.onAdFailedToLoad(this, 0);
         } else {
             String string = bundle.getString("tab_url");
             if (TextUtils.isEmpty(string)) {
                 k04.zzj("The tab_url retrieved from mediation metadata is empty. Bailing out.");
-                this.b.onAdFailedToLoad(this, 0);
+                this.f36880b.onAdFailedToLoad(this, 0);
                 return;
             }
-            this.a = (Activity) context;
-            this.c = Uri.parse(string);
-            this.b.onAdLoaded(this);
+            this.f36879a = (Activity) context;
+            this.f36881c = Uri.parse(string);
+            this.f36880b.onAdLoaded(this);
         }
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialAdapter
     public final void showInterstitial() {
-        co a = new co.a().a();
-        a.a.setData(this.c);
-        zzs.zza.post(new wp3(this, new AdOverlayInfoParcel(new zzc(a.a, null), null, new vp3(this), null, new zzchu(0, 0, false, false, false), null, null)));
-        zzt.zzo().p();
+        C0972co m25193a = new C0972co.C0973a().m25193a();
+        m25193a.f5979a.setData(this.f36881c);
+        zzs.zza.post(new wp3(this, new AdOverlayInfoParcel(new zzc(m25193a.f5979a, null), null, new vp3(this), null, new zzchu(0, 0, false, false, false), null, null)));
+        zzt.zzo().m11907p();
     }
 }

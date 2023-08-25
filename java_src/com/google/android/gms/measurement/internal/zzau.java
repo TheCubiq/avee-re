@@ -11,10 +11,12 @@ import java.util.Iterator;
 /* loaded from: classes2.dex */
 public final class zzau extends AbstractSafeParcelable implements Iterable<String> {
     public static final Parcelable.Creator<zzau> CREATOR = new hs2();
-    public final Bundle p;
+
+    /* renamed from: p */
+    public final Bundle f37067p;
 
     public zzau(Bundle bundle) {
-        this.p = bundle;
+        this.f37067p = bundle;
     }
 
     @Override // java.lang.Iterable
@@ -22,38 +24,43 @@ public final class zzau extends AbstractSafeParcelable implements Iterable<Strin
         return new xp2(this);
     }
 
-    public final Bundle q() {
-        return new Bundle(this.p);
+    /* renamed from: q */
+    public final Bundle m1078q() {
+        return new Bundle(this.f37067p);
     }
 
-    public final Double s(String str) {
-        return Double.valueOf(this.p.getDouble("value"));
+    /* renamed from: s */
+    public final Double m1077s(String str) {
+        return Double.valueOf(this.f37067p.getDouble("value"));
     }
 
-    public final Long t(String str) {
-        return Long.valueOf(this.p.getLong("value"));
+    /* renamed from: t */
+    public final Long m1076t(String str) {
+        return Long.valueOf(this.f37067p.getLong("value"));
     }
 
     public final String toString() {
-        return this.p.toString();
+        return this.f37067p.toString();
     }
 
-    public final Object u(String str) {
-        return this.p.get(str);
+    /* renamed from: u */
+    public final Object m1075u(String str) {
+        return this.f37067p.get(str);
     }
 
-    public final String v(String str) {
-        return this.p.getString(str);
+    /* renamed from: v */
+    public final String m1074v(String str) {
+        return this.f37067p.getString(str);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.e(parcel, 2, q(), false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2729e(parcel, 2, m1078q(), false);
+        z71.m2732b(parcel, m2733a);
     }
 
     public final int zza() {
-        return this.p.size();
+        return this.f37067p.size();
     }
 }

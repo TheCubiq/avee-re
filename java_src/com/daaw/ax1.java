@@ -6,28 +6,61 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class ax1 {
-    public String a;
-    public String b;
-    public List<String> c;
-    public String d;
-    public String e;
-    public int f;
-    public boolean g;
-    public int h;
-    public boolean i;
-    public int j;
-    public int k;
-    public int l;
-    public int m;
-    public int n;
-    public float o;
-    public Layout.Alignment p;
+
+    /* renamed from: a */
+    public String f4072a;
+
+    /* renamed from: b */
+    public String f4073b;
+
+    /* renamed from: c */
+    public List<String> f4074c;
+
+    /* renamed from: d */
+    public String f4075d;
+
+    /* renamed from: e */
+    public String f4076e;
+
+    /* renamed from: f */
+    public int f4077f;
+
+    /* renamed from: g */
+    public boolean f4078g;
+
+    /* renamed from: h */
+    public int f4079h;
+
+    /* renamed from: i */
+    public boolean f4080i;
+
+    /* renamed from: j */
+    public int f4081j;
+
+    /* renamed from: k */
+    public int f4082k;
+
+    /* renamed from: l */
+    public int f4083l;
+
+    /* renamed from: m */
+    public int f4084m;
+
+    /* renamed from: n */
+    public int f4085n;
+
+    /* renamed from: o */
+    public float f4086o;
+
+    /* renamed from: p */
+    public Layout.Alignment f4087p;
 
     public ax1() {
-        m();
+        m26613m();
     }
 
-    public static int x(int i, String str, String str2, int i2) {
+    /* renamed from: x */
+    public static int m26602x(int i, String str, String str2, int i2) {
         if (str.isEmpty() || i == -1) {
             return i;
         }
@@ -37,132 +70,155 @@ public final class ax1 {
         return -1;
     }
 
-    public int a() {
-        if (this.i) {
-            return this.h;
+    /* renamed from: a */
+    public int m26625a() {
+        if (this.f4080i) {
+            return this.f4079h;
         }
         throw new IllegalStateException("Background color not defined.");
     }
 
-    public int b() {
-        if (this.g) {
-            return this.f;
+    /* renamed from: b */
+    public int m26624b() {
+        if (this.f4078g) {
+            return this.f4077f;
         }
         throw new IllegalStateException("Font color not defined");
     }
 
-    public String c() {
-        return this.e;
+    /* renamed from: c */
+    public String m26623c() {
+        return this.f4076e;
     }
 
-    public float d() {
-        return this.o;
+    /* renamed from: d */
+    public float m26622d() {
+        return this.f4086o;
     }
 
-    public int e() {
-        return this.n;
+    /* renamed from: e */
+    public int m26621e() {
+        return this.f4085n;
     }
 
-    public int f(String str, String str2, String[] strArr, String str3) {
-        if (this.a.isEmpty() && this.b.isEmpty() && this.c.isEmpty() && this.d.isEmpty()) {
+    /* renamed from: f */
+    public int m26620f(String str, String str2, String[] strArr, String str3) {
+        if (this.f4072a.isEmpty() && this.f4073b.isEmpty() && this.f4074c.isEmpty() && this.f4075d.isEmpty()) {
             return str2.isEmpty() ? 1 : 0;
         }
-        int x = x(x(x(0, this.a, str, 1073741824), this.b, str2, 2), this.d, str3, 4);
-        if (x == -1 || !Arrays.asList(strArr).containsAll(this.c)) {
+        int m26602x = m26602x(m26602x(m26602x(0, this.f4072a, str, 1073741824), this.f4073b, str2, 2), this.f4075d, str3, 4);
+        if (m26602x == -1 || !Arrays.asList(strArr).containsAll(this.f4074c)) {
             return 0;
         }
-        return x + (this.c.size() * 4);
+        return m26602x + (this.f4074c.size() * 4);
     }
 
-    public int g() {
-        int i = this.l;
-        if (i == -1 && this.m == -1) {
+    /* renamed from: g */
+    public int m26619g() {
+        int i = this.f4083l;
+        if (i == -1 && this.f4084m == -1) {
             return -1;
         }
-        return (i == 1 ? 1 : 0) | (this.m == 1 ? 2 : 0);
+        return (i == 1 ? 1 : 0) | (this.f4084m == 1 ? 2 : 0);
     }
 
-    public Layout.Alignment h() {
-        return this.p;
+    /* renamed from: h */
+    public Layout.Alignment m26618h() {
+        return this.f4087p;
     }
 
-    public boolean i() {
-        return this.i;
+    /* renamed from: i */
+    public boolean m26617i() {
+        return this.f4080i;
     }
 
-    public boolean j() {
-        return this.g;
+    /* renamed from: j */
+    public boolean m26616j() {
+        return this.f4078g;
     }
 
-    public boolean k() {
-        return this.j == 1;
+    /* renamed from: k */
+    public boolean m26615k() {
+        return this.f4081j == 1;
     }
 
-    public boolean l() {
-        return this.k == 1;
+    /* renamed from: l */
+    public boolean m26614l() {
+        return this.f4082k == 1;
     }
 
-    public void m() {
-        this.a = "";
-        this.b = "";
-        this.c = Collections.emptyList();
-        this.d = "";
-        this.e = null;
-        this.g = false;
-        this.i = false;
-        this.j = -1;
-        this.k = -1;
-        this.l = -1;
-        this.m = -1;
-        this.n = -1;
-        this.p = null;
+    /* renamed from: m */
+    public void m26613m() {
+        this.f4072a = "";
+        this.f4073b = "";
+        this.f4074c = Collections.emptyList();
+        this.f4075d = "";
+        this.f4076e = null;
+        this.f4078g = false;
+        this.f4080i = false;
+        this.f4081j = -1;
+        this.f4082k = -1;
+        this.f4083l = -1;
+        this.f4084m = -1;
+        this.f4085n = -1;
+        this.f4087p = null;
     }
 
-    public ax1 n(int i) {
-        this.h = i;
-        this.i = true;
+    /* renamed from: n */
+    public ax1 m26612n(int i) {
+        this.f4079h = i;
+        this.f4080i = true;
         return this;
     }
 
-    public ax1 o(boolean z) {
-        this.l = z ? 1 : 0;
+    /* renamed from: o */
+    public ax1 m26611o(boolean z) {
+        this.f4083l = z ? 1 : 0;
         return this;
     }
 
-    public ax1 p(int i) {
-        this.f = i;
-        this.g = true;
+    /* renamed from: p */
+    public ax1 m26610p(int i) {
+        this.f4077f = i;
+        this.f4078g = true;
         return this;
     }
 
-    public ax1 q(String str) {
-        this.e = sq1.a0(str);
+    /* renamed from: q */
+    public ax1 m26609q(String str) {
+        this.f4076e = sq1.m10017a0(str);
         return this;
     }
 
-    public ax1 r(boolean z) {
-        this.m = z ? 1 : 0;
+    /* renamed from: r */
+    public ax1 m26608r(boolean z) {
+        this.f4084m = z ? 1 : 0;
         return this;
     }
 
-    public void s(String[] strArr) {
-        this.c = Arrays.asList(strArr);
+    /* renamed from: s */
+    public void m26607s(String[] strArr) {
+        this.f4074c = Arrays.asList(strArr);
     }
 
-    public void t(String str) {
-        this.a = str;
+    /* renamed from: t */
+    public void m26606t(String str) {
+        this.f4072a = str;
     }
 
-    public void u(String str) {
-        this.b = str;
+    /* renamed from: u */
+    public void m26605u(String str) {
+        this.f4073b = str;
     }
 
-    public void v(String str) {
-        this.d = str;
+    /* renamed from: v */
+    public void m26604v(String str) {
+        this.f4075d = str;
     }
 
-    public ax1 w(boolean z) {
-        this.k = z ? 1 : 0;
+    /* renamed from: w */
+    public ax1 m26603w(boolean z) {
+        this.f4082k = z ? 1 : 0;
         return this;
     }
 }

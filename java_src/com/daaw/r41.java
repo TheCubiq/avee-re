@@ -4,187 +4,239 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
-import com.daaw.hj;
+import com.daaw.InterfaceC1539hj;
 /* loaded from: classes.dex */
 public class r41 implements qj0 {
-    public final Context p;
-    public final mj0 q;
-    public final u41 r;
-    public final v41 s;
-    public final e70 t;
-    public final d u;
-    public b v;
 
+    /* renamed from: p */
+    public final Context f24817p;
+
+    /* renamed from: q */
+    public final mj0 f24818q;
+
+    /* renamed from: r */
+    public final u41 f24819r;
+
+    /* renamed from: s */
+    public final v41 f24820s;
+
+    /* renamed from: t */
+    public final e70 f24821t;
+
+    /* renamed from: u */
+    public final C2823d f24822u;
+
+    /* renamed from: v */
+    public InterfaceC2820b f24823v;
+
+    /* renamed from: com.daaw.r41$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public final /* synthetic */ mj0 p;
+    public class RunnableC2819a implements Runnable {
 
-        public a(mj0 mj0Var) {
-            this.p = mj0Var;
+        /* renamed from: p */
+        public final /* synthetic */ mj0 f24824p;
+
+        public RunnableC2819a(mj0 mj0Var) {
+            this.f24824p = mj0Var;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            this.p.a(r41.this);
+            this.f24824p.mo11891a(r41.this);
         }
     }
 
+    /* renamed from: com.daaw.r41$b */
     /* loaded from: classes.dex */
-    public interface b {
-        <T> void a(f60<T, ?, ?, ?> f60Var);
+    public interface InterfaceC2820b {
+        /* renamed from: a */
+        <T> void m11764a(f60<T, ?, ?, ?> f60Var);
     }
 
+    /* renamed from: com.daaw.r41$c */
     /* loaded from: classes.dex */
-    public final class c<A, T> {
-        public final mq0<A, T> a;
-        public final Class<T> b;
+    public final class C2821c<A, T> {
 
+        /* renamed from: a */
+        public final mq0<A, T> f24826a;
+
+        /* renamed from: b */
+        public final Class<T> f24827b;
+
+        /* renamed from: com.daaw.r41$c$a */
         /* loaded from: classes.dex */
-        public final class a {
-            public final A a;
-            public final Class<A> b;
-            public final boolean c = true;
+        public final class C2822a {
 
-            public a(A a) {
-                this.a = a;
-                this.b = r41.s(a);
+            /* renamed from: a */
+            public final A f24829a;
+
+            /* renamed from: b */
+            public final Class<A> f24830b;
+
+            /* renamed from: c */
+            public final boolean f24831c = true;
+
+            public C2822a(A a) {
+                this.f24829a = a;
+                this.f24830b = r41.m11772s(a);
             }
 
-            public <Z> g60<A, T, Z> a(Class<Z> cls) {
-                g60<A, T, Z> g60Var = (g60) r41.this.u.a(new g60(r41.this.p, r41.this.t, this.b, c.this.a, c.this.b, cls, r41.this.s, r41.this.q, r41.this.u));
-                if (this.c) {
-                    g60Var.t(this.a);
+            /* renamed from: a */
+            public <Z> g60<A, T, Z> m11760a(Class<Z> cls) {
+                g60<A, T, Z> g60Var = (g60) r41.this.f24822u.m11759a(new g60(r41.this.f24817p, r41.this.f24821t, this.f24830b, C2821c.this.f24826a, C2821c.this.f24827b, cls, r41.this.f24820s, r41.this.f24818q, r41.this.f24822u));
+                if (this.f24831c) {
+                    g60Var.m22904t(this.f24829a);
                 }
                 return g60Var;
             }
         }
 
-        public c(mq0<A, T> mq0Var, Class<T> cls) {
-            this.a = mq0Var;
-            this.b = cls;
+        public C2821c(mq0<A, T> mq0Var, Class<T> cls) {
+            this.f24826a = mq0Var;
+            this.f24827b = cls;
         }
 
-        public c<A, T>.a c(A a2) {
-            return new a(a2);
+        /* renamed from: c */
+        public C2821c<A, T>.C2822a m11761c(A a) {
+            return new C2822a(a);
         }
     }
 
+    /* renamed from: com.daaw.r41$d */
     /* loaded from: classes.dex */
-    public class d {
-        public d() {
+    public class C2823d {
+        public C2823d() {
         }
 
-        public <A, X extends f60<A, ?, ?, ?>> X a(X x) {
-            if (r41.this.v != null) {
-                r41.this.v.a(x);
+        /* renamed from: a */
+        public <A, X extends f60<A, ?, ?, ?>> X m11759a(X x) {
+            if (r41.this.f24823v != null) {
+                r41.this.f24823v.m11764a(x);
             }
             return x;
         }
     }
 
+    /* renamed from: com.daaw.r41$e */
     /* loaded from: classes.dex */
-    public static class e implements hj.a {
-        public final v41 a;
+    public static class C2824e implements InterfaceC1539hj.InterfaceC1540a {
 
-        public e(v41 v41Var) {
-            this.a = v41Var;
+        /* renamed from: a */
+        public final v41 f24834a;
+
+        public C2824e(v41 v41Var) {
+            this.f24834a = v41Var;
         }
 
-        @Override // com.daaw.hj.a
-        public void a(boolean z) {
+        @Override // com.daaw.InterfaceC1539hj.InterfaceC1540a
+        /* renamed from: a */
+        public void mo11758a(boolean z) {
             if (z) {
-                this.a.d();
+                this.f24834a.m7461d();
             }
         }
     }
 
     public r41(Context context, mj0 mj0Var, u41 u41Var) {
-        this(context, mj0Var, u41Var, new v41(), new ij());
+        this(context, mj0Var, u41Var, new v41(), new C1712ij());
     }
 
-    public r41(Context context, mj0 mj0Var, u41 u41Var, v41 v41Var, ij ijVar) {
-        this.p = context.getApplicationContext();
-        this.q = mj0Var;
-        this.r = u41Var;
-        this.s = v41Var;
-        this.t = e70.j(context);
-        this.u = new d();
-        hj a2 = ijVar.a(context, new e(v41Var));
-        if (tq1.i()) {
-            new Handler(Looper.getMainLooper()).post(new a(mj0Var));
+    public r41(Context context, mj0 mj0Var, u41 u41Var, v41 v41Var, C1712ij c1712ij) {
+        this.f24817p = context.getApplicationContext();
+        this.f24818q = mj0Var;
+        this.f24819r = u41Var;
+        this.f24820s = v41Var;
+        this.f24821t = e70.m23685j(context);
+        this.f24822u = new C2823d();
+        InterfaceC1539hj m19759a = c1712ij.m19759a(context, new C2824e(v41Var));
+        if (tq1.m8862i()) {
+            new Handler(Looper.getMainLooper()).post(new RunnableC2819a(mj0Var));
         } else {
-            mj0Var.a(this);
+            mj0Var.mo11891a(this);
         }
-        mj0Var.a(a2);
+        mj0Var.mo11891a(m19759a);
     }
 
-    public static <T> Class<T> s(T t) {
+    /* renamed from: s */
+    public static <T> Class<T> m11772s(T t) {
         if (t != null) {
             return (Class<T>) t.getClass();
         }
         return null;
     }
 
-    public <A, T> c<A, T> A(mq0<A, T> mq0Var, Class<T> cls) {
-        return new c<>(mq0Var, cls);
+    /* renamed from: A */
+    public <A, T> C2821c<A, T> m11782A(mq0<A, T> mq0Var, Class<T> cls) {
+        return new C2821c<>(mq0Var, cls);
     }
 
     @Override // com.daaw.qj0
-    public void a() {
-        z();
+    /* renamed from: a */
+    public void mo3969a() {
+        m11765z();
     }
 
     @Override // com.daaw.qj0
-    public void h() {
-        y();
+    /* renamed from: h */
+    public void mo3966h() {
+        m11766y();
     }
 
     @Override // com.daaw.qj0
     public void onDestroy() {
-        this.s.a();
+        this.f24820s.m7464a();
     }
 
-    public uu<Integer> q() {
-        return (uu) v(Integer.class).x(q5.a(this.p));
+    /* renamed from: q */
+    public C3260uu<Integer> m11774q() {
+        return (C3260uu) m11769v(Integer.class).mo9854x(C2690q5.m12770a(this.f24817p));
     }
 
-    public uu<Uri> r() {
-        return v(Uri.class);
+    /* renamed from: r */
+    public C3260uu<Uri> m11773r() {
+        return m11769v(Uri.class);
     }
 
-    public uu<Uri> t(Uri uri) {
-        return (uu) r().L(uri);
+    /* renamed from: t */
+    public C3260uu<Uri> m11771t(Uri uri) {
+        return (C3260uu) m11773r().m9868L(uri);
     }
 
-    public uu<Integer> u(Integer num) {
-        return (uu) q().L(num);
+    /* renamed from: u */
+    public C3260uu<Integer> m11770u(Integer num) {
+        return (C3260uu) m11774q().m9868L(num);
     }
 
-    public final <T> uu<T> v(Class<T> cls) {
-        mq0 e2 = e70.e(cls, this.p);
-        mq0 b2 = e70.b(cls, this.p);
-        if (cls == null || e2 != null || b2 != null) {
-            d dVar = this.u;
-            return (uu) dVar.a(new uu(cls, e2, b2, this.p, this.t, this.s, this.q, dVar));
+    /* renamed from: v */
+    public final <T> C3260uu<T> m11769v(Class<T> cls) {
+        mq0 m23690e = e70.m23690e(cls, this.f24817p);
+        mq0 m23693b = e70.m23693b(cls, this.f24817p);
+        if (cls == null || m23690e != null || m23693b != null) {
+            C2823d c2823d = this.f24822u;
+            return (C3260uu) c2823d.m11759a(new C3260uu(cls, m23690e, m23693b, this.f24817p, this.f24821t, this.f24820s, this.f24818q, c2823d));
         }
         throw new IllegalArgumentException("Unknown type " + cls + ". You must provide a Model of a type for which there is a registered ModelLoader, if you are using a custom model, you must first call Glide#register with a ModelLoaderFactory for your custom model class");
     }
 
-    public void w() {
-        this.t.i();
+    /* renamed from: w */
+    public void m11768w() {
+        this.f24821t.m23686i();
     }
 
-    public void x(int i) {
-        this.t.s(i);
+    /* renamed from: x */
+    public void m11767x(int i) {
+        this.f24821t.m23676s(i);
     }
 
-    public void y() {
-        tq1.b();
-        this.s.b();
+    /* renamed from: y */
+    public void m11766y() {
+        tq1.m8869b();
+        this.f24820s.m7463b();
     }
 
-    public void z() {
-        tq1.b();
-        this.s.e();
+    /* renamed from: z */
+    public void m11765z() {
+        tq1.m8869b();
+        this.f24820s.m7460e();
     }
 }

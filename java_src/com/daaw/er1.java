@@ -6,15 +6,18 @@ import java.util.Arrays;
 import java.util.List;
 /* loaded from: classes.dex */
 public class er1 {
-    public static String[] a(String str, String str2) {
+    /* renamed from: a */
+    public static String[] m23252a(String str, String str2) {
         return str2 == null ? new String[0] : TextUtils.split(str2, str);
     }
 
-    public static List<String> b(String str, String str2) {
+    /* renamed from: b */
+    public static List<String> m23251b(String str, String str2) {
         return str2 == null ? new ArrayList() : Arrays.asList(TextUtils.split(str2, str));
     }
 
-    public static String c(char c, char c2, String str) {
+    /* renamed from: c */
+    public static String m23250c(char c, char c2, String str) {
         boolean z;
         int i = 0;
         while (true) {
@@ -42,15 +45,18 @@ public class er1 {
         return str;
     }
 
-    public static String d(CharSequence charSequence, Object[] objArr) {
+    /* renamed from: d */
+    public static String m23249d(CharSequence charSequence, Object[] objArr) {
         return TextUtils.join(charSequence, objArr);
     }
 
-    public static String e(CharSequence charSequence, Iterable iterable) {
+    /* renamed from: e */
+    public static String m23248e(CharSequence charSequence, Iterable iterable) {
         return TextUtils.join(charSequence, iterable);
     }
 
-    public static String f(CharSequence charSequence, Iterable iterable) {
+    /* renamed from: f */
+    public static String m23247f(CharSequence charSequence, Iterable iterable) {
         StringBuilder sb = new StringBuilder();
         boolean z = true;
         for (Object obj : iterable) {
@@ -67,7 +73,8 @@ public class er1 {
         return sb.toString();
     }
 
-    public static String g(CharSequence charSequence, Iterable iterable, Iterable iterable2, boolean z) {
+    /* renamed from: g */
+    public static String m23246g(CharSequence charSequence, Iterable iterable, Iterable iterable2, boolean z) {
         StringBuilder sb = new StringBuilder();
         boolean z2 = true;
         for (Object obj : iterable) {
@@ -101,13 +108,15 @@ public class er1 {
         return sb.toString();
     }
 
-    public static String h(CharSequence charSequence, Iterable iterable, Object obj, boolean z) {
+    /* renamed from: h */
+    public static String m23245h(CharSequence charSequence, Iterable iterable, Object obj, boolean z) {
         ArrayList arrayList = new ArrayList(1);
         arrayList.add(obj);
-        return g(charSequence, iterable, arrayList, z);
+        return m23246g(charSequence, iterable, arrayList, z);
     }
 
-    public static String i(CharSequence charSequence, Iterable iterable, Object obj, boolean z) {
+    /* renamed from: i */
+    public static String m23244i(CharSequence charSequence, Iterable iterable, Object obj, boolean z) {
         StringBuilder sb = new StringBuilder();
         boolean z2 = true;
         for (Object obj2 : iterable) {

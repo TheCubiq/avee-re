@@ -10,68 +10,80 @@ import android.graphics.Shader;
 /* loaded from: classes.dex */
 public class lv0 {
 
+    /* renamed from: com.daaw.lv0$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public Paint a;
+    public static class C2123b {
 
-        public b() {
-            this.a = new Paint(1);
+        /* renamed from: a */
+        public Paint f17812a;
+
+        public C2123b() {
+            this.f17812a = new Paint(1);
         }
 
-        public Paint a() {
-            return this.a;
+        /* renamed from: a */
+        public Paint m16489a() {
+            return this.f17812a;
         }
 
-        public b b(int i) {
-            this.a.setColor(i);
+        /* renamed from: b */
+        public C2123b m16488b(int i) {
+            this.f17812a.setColor(i);
             return this;
         }
 
-        public b c(Shader shader) {
-            this.a.setShader(shader);
+        /* renamed from: c */
+        public C2123b m16487c(Shader shader) {
+            this.f17812a.setShader(shader);
             return this;
         }
 
-        public b d(float f) {
-            this.a.setStrokeWidth(f);
+        /* renamed from: d */
+        public C2123b m16486d(float f) {
+            this.f17812a.setStrokeWidth(f);
             return this;
         }
 
-        public b e(Paint.Style style) {
-            this.a.setStyle(style);
+        /* renamed from: e */
+        public C2123b m16485e(Paint.Style style) {
+            this.f17812a.setStyle(style);
             return this;
         }
 
-        public b f(PorterDuff.Mode mode) {
-            this.a.setXfermode(new PorterDuffXfermode(mode));
+        /* renamed from: f */
+        public C2123b m16484f(PorterDuff.Mode mode) {
+            this.f17812a.setXfermode(new PorterDuffXfermode(mode));
             return this;
         }
     }
 
-    public static Bitmap a(int i) {
-        Paint a2 = c().a();
+    /* renamed from: a */
+    public static Bitmap m16492a(int i) {
+        Paint m16489a = m16490c().m16489a();
         Bitmap createBitmap = Bitmap.createBitmap(i, i, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(createBitmap);
         int round = Math.round(i / 2.0f);
         for (int i2 = 0; i2 < 2; i2++) {
             int i3 = 0;
             while (i3 < 2) {
-                a2.setColor((i2 + i3) % 2 == 0 ? -1 : -3092272);
+                m16489a.setColor((i2 + i3) % 2 == 0 ? -1 : -3092272);
                 int i4 = i3 + 1;
-                canvas.drawRect(i2 * round, i3 * round, (i2 + 1) * round, i4 * round, a2);
+                canvas.drawRect(i2 * round, i3 * round, (i2 + 1) * round, i4 * round, m16489a);
                 i3 = i4;
             }
         }
         return createBitmap;
     }
 
-    public static Shader b(int i) {
-        Bitmap a2 = a(Math.max(8, (i / 2) * 2));
+    /* renamed from: b */
+    public static Shader m16491b(int i) {
+        Bitmap m16492a = m16492a(Math.max(8, (i / 2) * 2));
         Shader.TileMode tileMode = Shader.TileMode.REPEAT;
-        return new BitmapShader(a2, tileMode, tileMode);
+        return new BitmapShader(m16492a, tileMode, tileMode);
     }
 
-    public static b c() {
-        return new b();
+    /* renamed from: c */
+    public static C2123b m16490c() {
+        return new C2123b();
     }
 }

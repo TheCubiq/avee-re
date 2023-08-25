@@ -50,53 +50,74 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class zzs extends zzbt {
-    public final zzchu p;
-    public final zzq q;
-    public final Future r = z04.a.M(new yj8(this));
-    public final Context s;
-    public final cq8 t;
-    public WebView u;
-    public zzbh v;
-    public sl2 w;
-    public AsyncTask x;
+
+    /* renamed from: p */
+    public final zzchu f36366p;
+
+    /* renamed from: q */
+    public final zzq f36367q;
+
+    /* renamed from: r */
+    public final Future f36368r = z04.f34305a.mo20112M(new yj8(this));
+
+    /* renamed from: s */
+    public final Context f36369s;
+
+    /* renamed from: t */
+    public final cq8 f36370t;
+
+    /* renamed from: u */
+    public WebView f36371u;
+
+    /* renamed from: v */
+    public zzbh f36372v;
+
+    /* renamed from: w */
+    public sl2 f36373w;
+
+    /* renamed from: x */
+    public AsyncTask f36374x;
 
     public zzs(Context context, zzq zzqVar, String str, zzchu zzchuVar) {
-        this.s = context;
-        this.p = zzchuVar;
-        this.q = zzqVar;
-        this.u = new WebView(context);
-        this.t = new cq8(context, str);
-        g3(0);
-        this.u.setVerticalScrollBarEnabled(false);
-        this.u.getSettings().setJavaScriptEnabled(true);
-        this.u.setWebViewClient(new cf8(this));
-        this.u.setOnTouchListener(new oh8(this));
+        this.f36369s = context;
+        this.f36366p = zzchuVar;
+        this.f36367q = zzqVar;
+        this.f36371u = new WebView(context);
+        this.f36370t = new cq8(context, str);
+        m1310g3(0);
+        this.f36371u.setVerticalScrollBarEnabled(false);
+        this.f36371u.getSettings().setJavaScriptEnabled(true);
+        this.f36371u.setWebViewClient(new cf8(this));
+        this.f36371u.setOnTouchListener(new oh8(this));
     }
 
-    public static /* bridge */ /* synthetic */ String m3(zzs zzsVar, String str) {
-        if (zzsVar.w == null) {
+    /* renamed from: m3 */
+    public static /* bridge */ /* synthetic */ String m1304m3(zzs zzsVar, String str) {
+        if (zzsVar.f36373w == null) {
             return str;
         }
         Uri parse = Uri.parse(str);
         try {
-            parse = zzsVar.w.a(parse, zzsVar.s, null, null);
+            parse = zzsVar.f36373w.m10204a(parse, zzsVar.f36369s, null, null);
         } catch (tl2 e) {
             k04.zzk("Unable to process ad data", e);
         }
         return parse.toString();
     }
 
-    public static /* bridge */ /* synthetic */ void p3(zzs zzsVar, String str) {
+    /* renamed from: p3 */
+    public static /* bridge */ /* synthetic */ void m1301p3(zzs zzsVar, String str) {
         Intent intent = new Intent("android.intent.action.VIEW");
         intent.setData(Uri.parse(str));
-        zzsVar.s.startActivity(intent);
+        zzsVar.f36369s.startActivity(intent);
     }
 
-    public final void g3(int i) {
-        if (this.u == null) {
+    /* renamed from: g3 */
+    public final void m1310g3(int i) {
+        if (this.f36371u == null) {
             return;
         }
-        this.u.setLayoutParams(new ViewGroup.LayoutParams(-1, i));
+        this.f36371u.setLayoutParams(new ViewGroup.LayoutParams(-1, i));
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -106,7 +127,7 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzB() {
-        ry0.e("resume must be called on the main UI thread.");
+        ry0.m10835e("resume must be called on the main UI thread.");
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -116,7 +137,7 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzD(zzbh zzbhVar) {
-        this.v = zzbhVar;
+        this.f36372v = zzbhVar;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -222,9 +243,9 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final boolean zzaa(com.google.android.gms.ads.internal.client.zzl zzlVar) {
-        ry0.k(this.u, "This Search Ad has already been torn down");
-        this.t.f(zzlVar, this.p);
-        this.x = new ro8(this, null).execute(new Void[0]);
+        ry0.m10829k(this.f36371u, "This Search Ad has already been torn down");
+        this.f36370t.m25107f(zzlVar, this.f36366p);
+        this.f36374x = new ro8(this, null).execute(new Void[0]);
         return true;
     }
 
@@ -240,7 +261,7 @@ public final class zzs extends zzbt {
         }
         try {
             zzay.zzb();
-            return d04.D(this.s, Integer.parseInt(queryParameter));
+            return d04.m24833D(this.f36369s, Integer.parseInt(queryParameter));
         } catch (NumberFormatException unused) {
             return 0;
         }
@@ -253,7 +274,7 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final zzq zzg() {
-        return this.q;
+        return this.f36367q;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -278,27 +299,27 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final yd0 zzn() {
-        ry0.e("getAdFrame must be called on the main UI thread.");
-        return nt0.g3(this.u);
+        ry0.m10835e("getAdFrame must be called on the main UI thread.");
+        return nt0.m14830g3(this.f36371u);
     }
 
     public final String zzp() {
         Uri.Builder builder = new Uri.Builder();
-        builder.scheme("https://").appendEncodedPath((String) oa3.d.e());
-        builder.appendQueryParameter("query", this.t.d());
-        builder.appendQueryParameter("pubId", this.t.c());
-        builder.appendQueryParameter("mappver", this.t.a());
-        Map e = this.t.e();
-        for (String str : e.keySet()) {
-            builder.appendQueryParameter(str, (String) e.get(str));
+        builder.scheme("https://").appendEncodedPath((String) oa3.f21197d.m16137e());
+        builder.appendQueryParameter("query", this.f36370t.m25109d());
+        builder.appendQueryParameter("pubId", this.f36370t.m25110c());
+        builder.appendQueryParameter("mappver", this.f36370t.m25112a());
+        Map m25108e = this.f36370t.m25108e();
+        for (String str : m25108e.keySet()) {
+            builder.appendQueryParameter(str, (String) m25108e.get(str));
         }
         Uri build = builder.build();
-        sl2 sl2Var = this.w;
+        sl2 sl2Var = this.f36373w;
         if (sl2Var != null) {
             try {
-                build = sl2Var.b(build, this.s);
-            } catch (tl2 e2) {
-                k04.zzk("Unable to process ad data", e2);
+                build = sl2Var.m10203b(build, this.f36369s);
+            } catch (tl2 e) {
+                k04.zzk("Unable to process ad data", e);
             }
         }
         String zzq = zzq();
@@ -307,11 +328,11 @@ public final class zzs extends zzbt {
     }
 
     public final String zzq() {
-        String b = this.t.b();
-        if (true == TextUtils.isEmpty(b)) {
-            b = "www.google.com";
+        String m25111b = this.f36370t.m25111b();
+        if (true == TextUtils.isEmpty(m25111b)) {
+            m25111b = "www.google.com";
         }
-        return "https://" + b + ((String) oa3.d.e());
+        return "https://" + m25111b + ((String) oa3.f21197d.m16137e());
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -331,11 +352,11 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzx() {
-        ry0.e("destroy must be called on the main UI thread.");
-        this.x.cancel(true);
-        this.r.cancel(true);
-        this.u.destroy();
-        this.u = null;
+        ry0.m10835e("destroy must be called on the main UI thread.");
+        this.f36374x.cancel(true);
+        this.f36368r.cancel(true);
+        this.f36371u.destroy();
+        this.f36371u = null;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -344,6 +365,6 @@ public final class zzs extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzz() {
-        ry0.e("pause must be called on the main UI thread.");
+        ry0.m10835e("pause must be called on the main UI thread.");
     }
 }

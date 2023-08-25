@@ -14,7 +14,8 @@ public final class zzeq extends r31 {
     }
 
     @Override // com.daaw.r31
-    public final /* synthetic */ Object a(IBinder iBinder) {
+    /* renamed from: a */
+    public final /* synthetic */ Object mo1391a(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -24,13 +25,13 @@ public final class zzeq extends r31 {
 
     public final zzco zza(Context context) {
         try {
-            IBinder zze = ((zzcp) b(context)).zze(nt0.g3(context), 224400000);
+            IBinder zze = ((zzcp) m11808b(context)).zze(nt0.m14830g3(context), 224400000);
             if (zze == null) {
                 return null;
             }
             IInterface queryLocalInterface = zze.queryLocalInterface("com.google.android.gms.ads.internal.client.IMobileAdsSettingManager");
             return queryLocalInterface instanceof zzco ? (zzco) queryLocalInterface : new zzcm(zze);
-        } catch (RemoteException | r31.a e) {
+        } catch (RemoteException | r31.C2817a e) {
             k04.zzk("Could not get remote MobileAdsSettingManager.", e);
             return null;
         }

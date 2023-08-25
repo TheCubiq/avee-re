@@ -1,79 +1,94 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class mc2 implements ac2 {
-    public m42 b;
-    public boolean c;
-    public int e;
-    public int f;
-    public final ik5 a = new ik5(10);
-    public long d = -9223372036854775807L;
+
+    /* renamed from: b */
+    public m42 f18784b;
+
+    /* renamed from: c */
+    public boolean f18785c;
+
+    /* renamed from: e */
+    public int f18787e;
+
+    /* renamed from: f */
+    public int f18788f;
+
+    /* renamed from: a */
+    public final ik5 f18783a = new ik5(10);
+
+    /* renamed from: d */
+    public long f18786d = -9223372036854775807L;
 
     @Override // com.daaw.ac2
-    public final void a(ik5 ik5Var) {
-        uo4.b(this.b);
-        if (this.c) {
-            int i = ik5Var.i();
-            int i2 = this.f;
-            if (i2 < 10) {
-                int min = Math.min(i, 10 - i2);
-                System.arraycopy(ik5Var.h(), ik5Var.k(), this.a.h(), this.f, min);
-                if (this.f + min == 10) {
-                    this.a.f(0);
-                    if (this.a.s() != 73 || this.a.s() != 68 || this.a.s() != 51) {
-                        s95.e("Id3Reader", "Discarding invalid ID3 tag");
-                        this.c = false;
+    /* renamed from: a */
+    public final void mo2553a(ik5 ik5Var) {
+        uo4.m7876b(this.f18784b);
+        if (this.f18785c) {
+            int m19713i = ik5Var.m19713i();
+            int i = this.f18788f;
+            if (i < 10) {
+                int min = Math.min(m19713i, 10 - i);
+                System.arraycopy(ik5Var.m19714h(), ik5Var.m19711k(), this.f18783a.m19714h(), this.f18788f, min);
+                if (this.f18788f + min == 10) {
+                    this.f18783a.m19716f(0);
+                    if (this.f18783a.m19703s() != 73 || this.f18783a.m19703s() != 68 || this.f18783a.m19703s() != 51) {
+                        s95.m10493e("Id3Reader", "Discarding invalid ID3 tag");
+                        this.f18785c = false;
                         return;
                     }
-                    this.a.g(3);
-                    this.e = this.a.r() + 10;
+                    this.f18783a.m19715g(3);
+                    this.f18787e = this.f18783a.m19704r() + 10;
                 }
             }
-            int min2 = Math.min(i, this.e - this.f);
-            this.b.c(ik5Var, min2);
-            this.f += min2;
+            int min2 = Math.min(m19713i, this.f18787e - this.f18788f);
+            this.f18784b.mo16221c(ik5Var, min2);
+            this.f18788f += min2;
         }
     }
 
     @Override // com.daaw.ac2
-    public final void b(m09 m09Var, td2 td2Var) {
-        td2Var.c();
-        m42 n = m09Var.n(td2Var.a(), 5);
-        this.b = n;
+    /* renamed from: b */
+    public final void mo2552b(m09 m09Var, td2 td2Var) {
+        td2Var.m9282c();
+        m42 mo3292n = m09Var.mo3292n(td2Var.m9284a(), 5);
+        this.f18784b = mo3292n;
         b72 b72Var = new b72();
-        b72Var.h(td2Var.b());
-        b72Var.s("application/id3");
-        n.f(b72Var.y());
+        b72Var.m26384h(td2Var.m9283b());
+        b72Var.m26372s("application/id3");
+        mo3292n.mo16218f(b72Var.m26366y());
     }
 
     @Override // com.daaw.ac2
-    public final void c(long j, int i) {
+    /* renamed from: c */
+    public final void mo2551c(long j, int i) {
         if ((i & 4) == 0) {
             return;
         }
-        this.c = true;
+        this.f18785c = true;
         if (j != -9223372036854775807L) {
-            this.d = j;
+            this.f18786d = j;
         }
-        this.e = 0;
-        this.f = 0;
+        this.f18787e = 0;
+        this.f18788f = 0;
     }
 
     @Override // com.daaw.ac2
     public final void zzc() {
         int i;
-        uo4.b(this.b);
-        if (this.c && (i = this.e) != 0 && this.f == i) {
-            long j = this.d;
+        uo4.m7876b(this.f18784b);
+        if (this.f18785c && (i = this.f18787e) != 0 && this.f18788f == i) {
+            long j = this.f18786d;
             if (j != -9223372036854775807L) {
-                this.b.b(j, 1, i, 0, null);
+                this.f18784b.mo16222b(j, 1, i, 0, null);
             }
-            this.c = false;
+            this.f18785c = false;
         }
     }
 
     @Override // com.daaw.ac2
     public final void zze() {
-        this.c = false;
-        this.d = -9223372036854775807L;
+        this.f18785c = false;
+        this.f18786d = -9223372036854775807L;
     }
 }

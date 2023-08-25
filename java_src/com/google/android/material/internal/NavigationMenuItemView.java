@@ -14,9 +14,12 @@ import android.view.ViewStub;
 import android.widget.CheckedTextView;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import androidx.appcompat.view.menu.g;
-import androidx.appcompat.view.menu.j;
-import androidx.appcompat.widget.b;
+import androidx.appcompat.view.menu.C0086g;
+import androidx.appcompat.view.menu.InterfaceC0093j;
+import androidx.appcompat.widget.C0164b;
+import com.daaw.C2366nu;
+import com.daaw.C3388w;
+import com.daaw.C3654y;
 import com.daaw.a21;
 import com.daaw.em1;
 import com.daaw.f11;
@@ -24,35 +27,56 @@ import com.daaw.h30;
 import com.daaw.j11;
 import com.daaw.j51;
 import com.daaw.m11;
-import com.daaw.nu;
 import com.daaw.sk1;
-import com.daaw.w;
 import com.daaw.x01;
 import com.daaw.xs1;
-import com.daaw.y;
 /* loaded from: classes2.dex */
-public class NavigationMenuItemView extends h30 implements j.a {
-    public static final int[] U = {16842912};
-    public int K;
-    public boolean L;
-    public boolean M;
-    public final CheckedTextView N;
-    public FrameLayout O;
-    public g P;
-    public ColorStateList Q;
-    public boolean R;
-    public Drawable S;
-    public final w T;
+public class NavigationMenuItemView extends h30 implements InterfaceC0093j.InterfaceC0094a {
 
+    /* renamed from: U */
+    public static final int[] f37631U = {16842912};
+
+    /* renamed from: K */
+    public int f37632K;
+
+    /* renamed from: L */
+    public boolean f37633L;
+
+    /* renamed from: M */
+    public boolean f37634M;
+
+    /* renamed from: N */
+    public final CheckedTextView f37635N;
+
+    /* renamed from: O */
+    public FrameLayout f37636O;
+
+    /* renamed from: P */
+    public C0086g f37637P;
+
+    /* renamed from: Q */
+    public ColorStateList f37638Q;
+
+    /* renamed from: R */
+    public boolean f37639R;
+
+    /* renamed from: S */
+    public Drawable f37640S;
+
+    /* renamed from: T */
+    public final C3388w f37641T;
+
+    /* renamed from: com.google.android.material.internal.NavigationMenuItemView$a */
     /* loaded from: classes2.dex */
-    public class a extends w {
-        public a() {
+    public class C4110a extends C3388w {
+        public C4110a() {
         }
 
-        @Override // com.daaw.w
-        public void g(View view, y yVar) {
-            super.g(view, yVar);
-            yVar.Z(NavigationMenuItemView.this.M);
+        @Override // com.daaw.C3388w
+        /* renamed from: g */
+        public void mo161g(View view, C3654y c3654y) {
+            super.mo161g(view, c3654y);
+            c3654y.m4339Z(NavigationMenuItemView.this.f37634M);
         }
     }
 
@@ -62,126 +86,132 @@ public class NavigationMenuItemView extends h30 implements j.a {
 
     public NavigationMenuItemView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        a aVar = new a();
-        this.T = aVar;
+        C4110a c4110a = new C4110a();
+        this.f37641T = c4110a;
         setOrientation(0);
         LayoutInflater.from(context).inflate(a21.design_navigation_menu_item, (ViewGroup) this, true);
         setIconSize(context.getResources().getDimensionPixelSize(f11.design_navigation_icon_size));
         CheckedTextView checkedTextView = (CheckedTextView) findViewById(m11.design_menu_item_text);
-        this.N = checkedTextView;
+        this.f37635N = checkedTextView;
         checkedTextView.setDuplicateParentStateEnabled(true);
-        xs1.r0(checkedTextView, aVar);
+        xs1.m4702r0(checkedTextView, c4110a);
     }
 
     private void setActionView(View view) {
         if (view != null) {
-            if (this.O == null) {
-                this.O = (FrameLayout) ((ViewStub) findViewById(m11.design_menu_item_action_area_stub)).inflate();
+            if (this.f37636O == null) {
+                this.f37636O = (FrameLayout) ((ViewStub) findViewById(m11.design_menu_item_action_area_stub)).inflate();
             }
-            this.O.removeAllViews();
-            this.O.addView(view);
+            this.f37636O.removeAllViews();
+            this.f37636O.addView(view);
         }
     }
 
-    public final void B() {
-        b.a aVar;
+    /* renamed from: B */
+    public final void m353B() {
+        C0164b.C0165a c0165a;
         int i;
-        if (E()) {
-            this.N.setVisibility(8);
-            FrameLayout frameLayout = this.O;
+        if (m350E()) {
+            this.f37635N.setVisibility(8);
+            FrameLayout frameLayout = this.f37636O;
             if (frameLayout == null) {
                 return;
             }
-            aVar = (b.a) frameLayout.getLayoutParams();
+            c0165a = (C0164b.C0165a) frameLayout.getLayoutParams();
             i = -1;
         } else {
-            this.N.setVisibility(0);
-            FrameLayout frameLayout2 = this.O;
+            this.f37635N.setVisibility(0);
+            FrameLayout frameLayout2 = this.f37636O;
             if (frameLayout2 == null) {
                 return;
             }
-            aVar = (b.a) frameLayout2.getLayoutParams();
+            c0165a = (C0164b.C0165a) frameLayout2.getLayoutParams();
             i = -2;
         }
-        ((LinearLayout.LayoutParams) aVar).width = i;
-        this.O.setLayoutParams(aVar);
+        ((LinearLayout.LayoutParams) c0165a).width = i;
+        this.f37636O.setLayoutParams(c0165a);
     }
 
-    public final StateListDrawable C() {
+    /* renamed from: C */
+    public final StateListDrawable m352C() {
         TypedValue typedValue = new TypedValue();
-        if (getContext().getTheme().resolveAttribute(x01.w, typedValue, true)) {
+        if (getContext().getTheme().resolveAttribute(x01.f31709w, typedValue, true)) {
             StateListDrawable stateListDrawable = new StateListDrawable();
-            stateListDrawable.addState(U, new ColorDrawable(typedValue.data));
+            stateListDrawable.addState(f37631U, new ColorDrawable(typedValue.data));
             stateListDrawable.addState(ViewGroup.EMPTY_STATE_SET, new ColorDrawable(0));
             return stateListDrawable;
         }
         return null;
     }
 
-    public void D() {
-        FrameLayout frameLayout = this.O;
+    /* renamed from: D */
+    public void m351D() {
+        FrameLayout frameLayout = this.f37636O;
         if (frameLayout != null) {
             frameLayout.removeAllViews();
         }
-        this.N.setCompoundDrawables(null, null, null, null);
+        this.f37635N.setCompoundDrawables(null, null, null, null);
     }
 
-    public final boolean E() {
-        return this.P.getTitle() == null && this.P.getIcon() == null && this.P.getActionView() != null;
+    /* renamed from: E */
+    public final boolean m350E() {
+        return this.f37637P.getTitle() == null && this.f37637P.getIcon() == null && this.f37637P.getActionView() != null;
     }
 
-    @Override // androidx.appcompat.view.menu.j.a
-    public boolean d() {
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j.InterfaceC0094a
+    /* renamed from: d */
+    public boolean mo349d() {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.j.a
-    public void e(g gVar, int i) {
-        this.P = gVar;
-        if (gVar.getItemId() > 0) {
-            setId(gVar.getItemId());
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j.InterfaceC0094a
+    /* renamed from: e */
+    public void mo348e(C0086g c0086g, int i) {
+        this.f37637P = c0086g;
+        if (c0086g.getItemId() > 0) {
+            setId(c0086g.getItemId());
         }
-        setVisibility(gVar.isVisible() ? 0 : 8);
+        setVisibility(c0086g.isVisible() ? 0 : 8);
         if (getBackground() == null) {
-            xs1.v0(this, C());
+            xs1.m4694v0(this, m352C());
         }
-        setCheckable(gVar.isCheckable());
-        setChecked(gVar.isChecked());
-        setEnabled(gVar.isEnabled());
-        setTitle(gVar.getTitle());
-        setIcon(gVar.getIcon());
-        setActionView(gVar.getActionView());
-        setContentDescription(gVar.getContentDescription());
-        em1.a(this, gVar.getTooltipText());
-        B();
+        setCheckable(c0086g.isCheckable());
+        setChecked(c0086g.isChecked());
+        setEnabled(c0086g.isEnabled());
+        setTitle(c0086g.getTitle());
+        setIcon(c0086g.getIcon());
+        setActionView(c0086g.getActionView());
+        setContentDescription(c0086g.getContentDescription());
+        em1.m23375a(this, c0086g.getTooltipText());
+        m353B();
     }
 
-    @Override // androidx.appcompat.view.menu.j.a
-    public g getItemData() {
-        return this.P;
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j.InterfaceC0094a
+    public C0086g getItemData() {
+        return this.f37637P;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public int[] onCreateDrawableState(int i) {
         int[] onCreateDrawableState = super.onCreateDrawableState(i + 1);
-        g gVar = this.P;
-        if (gVar != null && gVar.isCheckable() && this.P.isChecked()) {
-            ViewGroup.mergeDrawableStates(onCreateDrawableState, U);
+        C0086g c0086g = this.f37637P;
+        if (c0086g != null && c0086g.isCheckable() && this.f37637P.isChecked()) {
+            ViewGroup.mergeDrawableStates(onCreateDrawableState, f37631U);
         }
         return onCreateDrawableState;
     }
 
     public void setCheckable(boolean z) {
         refreshDrawableState();
-        if (this.M != z) {
-            this.M = z;
-            this.T.l(this.N, 2048);
+        if (this.f37634M != z) {
+            this.f37634M = z;
+            this.f37641T.mo6627l(this.f37635N, 2048);
         }
     }
 
     public void setChecked(boolean z) {
         refreshDrawableState();
-        this.N.setChecked(z);
+        this.f37635N.setChecked(z);
     }
 
     public void setHorizontalPadding(int i) {
@@ -190,64 +220,64 @@ public class NavigationMenuItemView extends h30 implements j.a {
 
     public void setIcon(Drawable drawable) {
         if (drawable != null) {
-            if (this.R) {
+            if (this.f37639R) {
                 Drawable.ConstantState constantState = drawable.getConstantState();
                 if (constantState != null) {
                     drawable = constantState.newDrawable();
                 }
-                drawable = nu.r(drawable).mutate();
-                nu.o(drawable, this.Q);
+                drawable = C2366nu.m14809r(drawable).mutate();
+                C2366nu.m14812o(drawable, this.f37638Q);
             }
-            int i = this.K;
+            int i = this.f37632K;
             drawable.setBounds(0, 0, i, i);
-        } else if (this.L) {
-            if (this.S == null) {
-                Drawable d = j51.d(getResources(), j11.navigation_empty_icon, getContext().getTheme());
-                this.S = d;
-                if (d != null) {
-                    int i2 = this.K;
-                    d.setBounds(0, 0, i2, i2);
+        } else if (this.f37633L) {
+            if (this.f37640S == null) {
+                Drawable m18896d = j51.m18896d(getResources(), j11.navigation_empty_icon, getContext().getTheme());
+                this.f37640S = m18896d;
+                if (m18896d != null) {
+                    int i2 = this.f37632K;
+                    m18896d.setBounds(0, 0, i2, i2);
                 }
             }
-            drawable = this.S;
+            drawable = this.f37640S;
         }
-        sk1.i(this.N, drawable, null, null, null);
+        sk1.m10265i(this.f37635N, drawable, null, null, null);
     }
 
     public void setIconPadding(int i) {
-        this.N.setCompoundDrawablePadding(i);
+        this.f37635N.setCompoundDrawablePadding(i);
     }
 
     public void setIconSize(int i) {
-        this.K = i;
+        this.f37632K = i;
     }
 
     public void setIconTintList(ColorStateList colorStateList) {
-        this.Q = colorStateList;
-        this.R = colorStateList != null;
-        g gVar = this.P;
-        if (gVar != null) {
-            setIcon(gVar.getIcon());
+        this.f37638Q = colorStateList;
+        this.f37639R = colorStateList != null;
+        C0086g c0086g = this.f37637P;
+        if (c0086g != null) {
+            setIcon(c0086g.getIcon());
         }
     }
 
     public void setMaxLines(int i) {
-        this.N.setMaxLines(i);
+        this.f37635N.setMaxLines(i);
     }
 
     public void setNeedsEmptyIcon(boolean z) {
-        this.L = z;
+        this.f37633L = z;
     }
 
     public void setTextAppearance(int i) {
-        sk1.n(this.N, i);
+        sk1.m10260n(this.f37635N, i);
     }
 
     public void setTextColor(ColorStateList colorStateList) {
-        this.N.setTextColor(colorStateList);
+        this.f37635N.setTextColor(colorStateList);
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.N.setText(charSequence);
+        this.f37635N.setText(charSequence);
     }
 }

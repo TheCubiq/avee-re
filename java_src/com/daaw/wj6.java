@@ -5,28 +5,36 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class wj6 {
     @GuardedBy("lock")
-    public static rj1 a;
-    @GuardedBy("lock")
-    public static l5 b;
-    public static final Object c = new Object();
 
-    public static rj1 a(Context context) {
+    /* renamed from: a */
+    public static rj1 f31276a;
+    @GuardedBy("lock")
+
+    /* renamed from: b */
+    public static InterfaceC2013l5 f31277b;
+
+    /* renamed from: c */
+    public static final Object f31278c = new Object();
+
+    /* renamed from: a */
+    public static rj1 m6045a(Context context) {
         rj1 rj1Var;
-        b(context, false);
-        synchronized (c) {
-            rj1Var = a;
+        m6044b(context, false);
+        synchronized (f31278c) {
+            rj1Var = f31276a;
         }
         return rj1Var;
     }
 
-    public static void b(Context context, boolean z) {
-        synchronized (c) {
-            if (b == null) {
-                b = k5.a(context);
+    /* renamed from: b */
+    public static void m6044b(Context context, boolean z) {
+        synchronized (f31278c) {
+            if (f31277b == null) {
+                f31277b = C1912k5.m18047a(context);
             }
-            rj1 rj1Var = a;
-            if (rj1Var == null || ((rj1Var.m() && !a.n()) || (z && a.m()))) {
-                a = ((l5) ry0.k(b, "the appSetIdClient shouldn't be null")).a();
+            rj1 rj1Var = f31276a;
+            if (rj1Var == null || ((rj1Var.mo11237m() && !f31276a.mo11236n()) || (z && f31276a.mo11237m()))) {
+                f31276a = ((InterfaceC2013l5) ry0.m10829k(f31277b, "the appSetIdClient shouldn't be null")).mo3453a();
             }
         }
     }

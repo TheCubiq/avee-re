@@ -5,41 +5,44 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class h93 {
-    public static List a() {
+    /* renamed from: a */
+    public static List m20926a() {
         ArrayList arrayList = new ArrayList();
-        c(arrayList, ma3.c("gad:dynamite_module:experiment_id", ""));
-        c(arrayList, xa3.a);
-        c(arrayList, xa3.b);
-        c(arrayList, xa3.c);
-        c(arrayList, xa3.d);
-        c(arrayList, xa3.e);
-        c(arrayList, xa3.u);
-        c(arrayList, xa3.f);
-        c(arrayList, xa3.m);
-        c(arrayList, xa3.n);
-        c(arrayList, xa3.o);
-        c(arrayList, xa3.p);
-        c(arrayList, xa3.q);
-        c(arrayList, xa3.r);
-        c(arrayList, xa3.s);
-        c(arrayList, xa3.t);
-        c(arrayList, xa3.g);
-        c(arrayList, xa3.h);
-        c(arrayList, xa3.i);
-        c(arrayList, xa3.j);
-        c(arrayList, xa3.k);
-        c(arrayList, xa3.l);
+        m20924c(arrayList, ma3.m16139c("gad:dynamite_module:experiment_id", ""));
+        m20924c(arrayList, xa3.f32277a);
+        m20924c(arrayList, xa3.f32278b);
+        m20924c(arrayList, xa3.f32279c);
+        m20924c(arrayList, xa3.f32280d);
+        m20924c(arrayList, xa3.f32281e);
+        m20924c(arrayList, xa3.f32297u);
+        m20924c(arrayList, xa3.f32282f);
+        m20924c(arrayList, xa3.f32289m);
+        m20924c(arrayList, xa3.f32290n);
+        m20924c(arrayList, xa3.f32291o);
+        m20924c(arrayList, xa3.f32292p);
+        m20924c(arrayList, xa3.f32293q);
+        m20924c(arrayList, xa3.f32294r);
+        m20924c(arrayList, xa3.f32295s);
+        m20924c(arrayList, xa3.f32296t);
+        m20924c(arrayList, xa3.f32283g);
+        m20924c(arrayList, xa3.f32284h);
+        m20924c(arrayList, xa3.f32285i);
+        m20924c(arrayList, xa3.f32286j);
+        m20924c(arrayList, xa3.f32287k);
+        m20924c(arrayList, xa3.f32288l);
         return arrayList;
     }
 
-    public static List b() {
+    /* renamed from: b */
+    public static List m20925b() {
         ArrayList arrayList = new ArrayList();
-        c(arrayList, pb3.a);
+        m20924c(arrayList, pb3.f22804a);
         return arrayList;
     }
 
-    public static void c(List list, ma3 ma3Var) {
-        String str = (String) ma3Var.e();
+    /* renamed from: c */
+    public static void m20924c(List list, ma3 ma3Var) {
+        String str = (String) ma3Var.m16137e();
         if (TextUtils.isEmpty(str)) {
             return;
         }

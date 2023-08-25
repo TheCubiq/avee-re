@@ -10,9 +10,10 @@ public final class ej3 extends bp2 implements gj3 {
     }
 
     @Override // com.daaw.gj3
-    public final void k2(List list) {
-        Parcel D = D();
-        D.writeTypedList(list);
-        M(1, D);
+    /* renamed from: k2 */
+    public final void mo8956k2(List list) {
+        Parcel m25952D = m25952D();
+        m25952D.writeTypedList(list);
+        m25950M(1, m25952D);
     }
 }

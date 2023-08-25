@@ -4,39 +4,52 @@ import android.content.Context;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class up4 {
-    public final Context a;
-    public final ri6 b;
-    public final Bundle c;
-    public final gi6 d;
+
+    /* renamed from: a */
+    public final Context f29413a;
+
+    /* renamed from: b */
+    public final ri6 f29414b;
+
+    /* renamed from: c */
+    public final Bundle f29415c;
+
+    /* renamed from: d */
+    public final gi6 f29416d;
 
     public /* synthetic */ up4(sp4 sp4Var, tp4 tp4Var) {
-        this.a = sp4.a(sp4Var);
-        this.b = sp4.i(sp4Var);
-        this.c = sp4.b(sp4Var);
-        this.d = sp4.h(sp4Var);
+        this.f29413a = sp4.m10068a(sp4Var);
+        this.f29414b = sp4.m10060i(sp4Var);
+        this.f29415c = sp4.m10067b(sp4Var);
+        this.f29416d = sp4.m10061h(sp4Var);
     }
 
-    public final Context a(Context context) {
-        return this.a;
+    /* renamed from: a */
+    public final Context m7843a(Context context) {
+        return this.f29413a;
     }
 
-    public final Bundle b() {
-        return this.c;
+    /* renamed from: b */
+    public final Bundle m7842b() {
+        return this.f29415c;
     }
 
-    public final sp4 c() {
+    /* renamed from: c */
+    public final sp4 m7841c() {
         sp4 sp4Var = new sp4();
-        sp4Var.c(this.a);
-        sp4Var.f(this.b);
-        sp4Var.d(this.c);
+        sp4Var.m10066c(this.f29413a);
+        sp4Var.m10063f(this.f29414b);
+        sp4Var.m10065d(this.f29415c);
         return sp4Var;
     }
 
-    public final gi6 d() {
-        return this.d;
+    /* renamed from: d */
+    public final gi6 m7840d() {
+        return this.f29416d;
     }
 
-    public final ri6 e() {
-        return this.b;
+    /* renamed from: e */
+    public final ri6 m7839e() {
+        return this.f29414b;
     }
 }

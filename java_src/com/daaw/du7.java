@@ -1,8 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class du7 {
-    public static final cu7 a;
-    public static final cu7 b;
+
+    /* renamed from: a */
+    public static final cu7 f7830a;
+
+    /* renamed from: b */
+    public static final cu7 f7831b;
 
     static {
         cu7 cu7Var;
@@ -11,15 +15,17 @@ public final class du7 {
         } catch (Exception unused) {
             cu7Var = null;
         }
-        a = cu7Var;
-        b = new cu7();
+        f7830a = cu7Var;
+        f7831b = new cu7();
     }
 
-    public static cu7 a() {
-        return a;
+    /* renamed from: a */
+    public static cu7 m23940a() {
+        return f7830a;
     }
 
-    public static cu7 b() {
-        return b;
+    /* renamed from: b */
+    public static cu7 m23939b() {
+        return f7831b;
     }
 }

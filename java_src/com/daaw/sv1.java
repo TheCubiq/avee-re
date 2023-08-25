@@ -1,24 +1,30 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class sv1 {
-    public final int a;
-    public final boolean b;
+
+    /* renamed from: a */
+    public final int f26665a;
+
+    /* renamed from: b */
+    public final boolean f26666b;
 
     public sv1(int i) {
-        this.a = i;
-        this.b = true;
+        this.f26665a = i;
+        this.f26666b = true;
     }
 
     public sv1(int i, boolean z) {
-        this.a = i;
-        this.b = z;
+        this.f26665a = i;
+        this.f26666b = z;
     }
 
-    public static boolean a(tv tvVar, String str, String str2) {
-        return tvVar.h().equals(str) && b(tvVar.i(), str2);
+    /* renamed from: a */
+    public static boolean m9824a(AbstractC3118tv abstractC3118tv, String str, String str2) {
+        return abstractC3118tv.mo2456h().equals(str) && m9823b(abstractC3118tv.m8791i(), str2);
     }
 
-    public static boolean b(String str, String str2) {
+    /* renamed from: b */
+    public static boolean m9823b(String str, String str2) {
         if (str.length() == 0 && str2.equals("10")) {
             return true;
         }

@@ -1,240 +1,281 @@
 package com.daaw;
 
+import com.daaw.C1454gq;
 import com.daaw.av0;
-import com.daaw.gq;
 import java.lang.Exception;
 import java.util.ArrayDeque;
 /* loaded from: classes.dex */
-public abstract class ed1<I extends gq, O extends av0, E extends Exception> implements eq<I, O, E> {
-    public final Thread a;
-    public final Object b = new Object();
-    public final ArrayDeque<I> c = new ArrayDeque<>();
-    public final ArrayDeque<O> d = new ArrayDeque<>();
-    public final I[] e;
-    public final O[] f;
-    public int g;
-    public int h;
-    public I i;
-    public E j;
-    public boolean k;
-    public boolean l;
-    public int m;
+public abstract class ed1<I extends C1454gq, O extends av0, E extends Exception> implements InterfaceC1211eq<I, O, E> {
 
+    /* renamed from: a */
+    public final Thread f8358a;
+
+    /* renamed from: b */
+    public final Object f8359b = new Object();
+
+    /* renamed from: c */
+    public final ArrayDeque<I> f8360c = new ArrayDeque<>();
+
+    /* renamed from: d */
+    public final ArrayDeque<O> f8361d = new ArrayDeque<>();
+
+    /* renamed from: e */
+    public final I[] f8362e;
+
+    /* renamed from: f */
+    public final O[] f8363f;
+
+    /* renamed from: g */
+    public int f8364g;
+
+    /* renamed from: h */
+    public int f8365h;
+
+    /* renamed from: i */
+    public I f8366i;
+
+    /* renamed from: j */
+    public E f8367j;
+
+    /* renamed from: k */
+    public boolean f8368k;
+
+    /* renamed from: l */
+    public boolean f8369l;
+
+    /* renamed from: m */
+    public int f8370m;
+
+    /* renamed from: com.daaw.ed1$a */
     /* loaded from: classes.dex */
-    public class a extends Thread {
-        public a() {
+    public class C1178a extends Thread {
+        public C1178a() {
         }
 
         @Override // java.lang.Thread, java.lang.Runnable
         public void run() {
-            ed1.this.u();
+            ed1.this.m23558u();
         }
     }
 
     public ed1(I[] iArr, O[] oArr) {
-        this.e = iArr;
-        this.g = iArr.length;
-        for (int i = 0; i < this.g; i++) {
-            this.e[i] = h();
+        this.f8362e = iArr;
+        this.f8364g = iArr.length;
+        for (int i = 0; i < this.f8364g; i++) {
+            this.f8362e[i] = mo18598h();
         }
-        this.f = oArr;
-        this.h = oArr.length;
-        for (int i2 = 0; i2 < this.h; i2++) {
-            this.f[i2] = i();
+        this.f8363f = oArr;
+        this.f8365h = oArr.length;
+        for (int i2 = 0; i2 < this.f8365h; i2++) {
+            this.f8363f[i2] = mo18597i();
         }
-        a aVar = new a();
-        this.a = aVar;
-        aVar.start();
+        C1178a c1178a = new C1178a();
+        this.f8358a = c1178a;
+        c1178a.start();
     }
 
-    @Override // com.daaw.eq
-    public void a() {
-        synchronized (this.b) {
-            this.l = true;
-            this.b.notify();
+    @Override // com.daaw.InterfaceC1211eq
+    /* renamed from: a */
+    public void mo16074a() {
+        synchronized (this.f8359b) {
+            this.f8369l = true;
+            this.f8359b.notify();
         }
         try {
-            this.a.join();
+            this.f8358a.join();
         } catch (InterruptedException unused) {
             Thread.currentThread().interrupt();
         }
     }
 
-    @Override // com.daaw.eq
+    @Override // com.daaw.InterfaceC1211eq
     public final void flush() {
-        synchronized (this.b) {
-            this.k = true;
-            this.m = 0;
-            I i = this.i;
+        synchronized (this.f8359b) {
+            this.f8368k = true;
+            this.f8370m = 0;
+            I i = this.f8366i;
             if (i != null) {
-                r(i);
-                this.i = null;
+                m23561r(i);
+                this.f8366i = null;
             }
-            while (!this.c.isEmpty()) {
-                r(this.c.removeFirst());
+            while (!this.f8360c.isEmpty()) {
+                m23561r(this.f8360c.removeFirst());
             }
-            while (!this.d.isEmpty()) {
-                t(this.d.removeFirst());
+            while (!this.f8361d.isEmpty()) {
+                m23559t(this.f8361d.removeFirst());
             }
         }
     }
 
-    public final boolean g() {
-        return !this.c.isEmpty() && this.h > 0;
+    /* renamed from: g */
+    public final boolean m23568g() {
+        return !this.f8360c.isEmpty() && this.f8365h > 0;
     }
 
-    public abstract I h();
+    /* renamed from: h */
+    public abstract I mo18598h();
 
-    public abstract O i();
+    /* renamed from: i */
+    public abstract O mo18597i();
 
-    public abstract E j(Throwable th);
+    /* renamed from: j */
+    public abstract E mo18596j(Throwable th);
 
-    public abstract E k(I i, O o, boolean z);
+    /* renamed from: k */
+    public abstract E mo18595k(I i, O o, boolean z);
 
-    public final boolean l() {
-        synchronized (this.b) {
-            while (!this.l && !g()) {
-                this.b.wait();
+    /* renamed from: l */
+    public final boolean m23567l() {
+        synchronized (this.f8359b) {
+            while (!this.f8369l && !m23568g()) {
+                this.f8359b.wait();
             }
-            if (this.l) {
+            if (this.f8369l) {
                 return false;
             }
-            I removeFirst = this.c.removeFirst();
-            O[] oArr = this.f;
-            int i = this.h - 1;
-            this.h = i;
+            I removeFirst = this.f8360c.removeFirst();
+            O[] oArr = this.f8363f;
+            int i = this.f8365h - 1;
+            this.f8365h = i;
             O o = oArr[i];
-            boolean z = this.k;
-            this.k = false;
-            if (removeFirst.j()) {
-                o.e(4);
+            boolean z = this.f8368k;
+            this.f8368k = false;
+            if (removeFirst.m11437j()) {
+                o.m11441e(4);
             } else {
-                if (removeFirst.i()) {
-                    o.e(Integer.MIN_VALUE);
+                if (removeFirst.m11438i()) {
+                    o.m11441e(Integer.MIN_VALUE);
                 }
                 try {
-                    this.j = k(removeFirst, o, z);
+                    this.f8367j = mo18595k(removeFirst, o, z);
                 } catch (OutOfMemoryError | RuntimeException e) {
-                    this.j = j(e);
+                    this.f8367j = mo18596j(e);
                 }
-                if (this.j != null) {
-                    synchronized (this.b) {
+                if (this.f8367j != null) {
+                    synchronized (this.f8359b) {
                     }
                     return false;
                 }
             }
-            synchronized (this.b) {
-                if (!this.k) {
-                    if (o.i()) {
-                        this.m++;
+            synchronized (this.f8359b) {
+                if (!this.f8368k) {
+                    if (o.m11438i()) {
+                        this.f8370m++;
                     } else {
-                        o.r = this.m;
-                        this.m = 0;
-                        this.d.addLast(o);
-                        r(removeFirst);
+                        o.f3672r = this.f8370m;
+                        this.f8370m = 0;
+                        this.f8361d.addLast(o);
+                        m23561r(removeFirst);
                     }
                 }
-                t(o);
-                r(removeFirst);
+                m23559t(o);
+                m23561r(removeFirst);
             }
             return true;
         }
     }
 
-    @Override // com.daaw.eq
+    @Override // com.daaw.InterfaceC1211eq
     /* renamed from: m */
-    public final I d() {
+    public final I mo16072d() {
         I i;
-        synchronized (this.b) {
-            p();
-            s6.f(this.i == null);
-            int i2 = this.g;
+        synchronized (this.f8359b) {
+            m23563p();
+            C2914s6.m10685f(this.f8366i == null);
+            int i2 = this.f8364g;
             if (i2 == 0) {
                 i = null;
             } else {
-                I[] iArr = this.e;
+                I[] iArr = this.f8362e;
                 int i3 = i2 - 1;
-                this.g = i3;
+                this.f8364g = i3;
                 i = iArr[i3];
             }
-            this.i = i;
+            this.f8366i = i;
         }
         return i;
     }
 
-    @Override // com.daaw.eq
+    @Override // com.daaw.InterfaceC1211eq
     /* renamed from: n */
-    public final O c() {
-        synchronized (this.b) {
-            p();
-            if (this.d.isEmpty()) {
+    public final O mo16073c() {
+        synchronized (this.f8359b) {
+            m23563p();
+            if (this.f8361d.isEmpty()) {
                 return null;
             }
-            return this.d.removeFirst();
+            return this.f8361d.removeFirst();
         }
     }
 
-    public final void o() {
-        if (g()) {
-            this.b.notify();
+    /* renamed from: o */
+    public final void m23564o() {
+        if (m23568g()) {
+            this.f8359b.notify();
         }
     }
 
-    public final void p() {
-        E e = this.j;
+    /* renamed from: p */
+    public final void m23563p() {
+        E e = this.f8367j;
         if (e != null) {
             throw e;
         }
     }
 
-    @Override // com.daaw.eq
+    @Override // com.daaw.InterfaceC1211eq
     /* renamed from: q */
-    public final void e(I i) {
-        synchronized (this.b) {
-            p();
-            s6.a(i == this.i);
-            this.c.addLast(i);
-            o();
-            this.i = null;
+    public final void mo16071e(I i) {
+        synchronized (this.f8359b) {
+            m23563p();
+            C2914s6.m10690a(i == this.f8366i);
+            this.f8360c.addLast(i);
+            m23564o();
+            this.f8366i = null;
         }
     }
 
-    public final void r(I i) {
-        i.f();
-        I[] iArr = this.e;
-        int i2 = this.g;
-        this.g = i2 + 1;
+    /* renamed from: r */
+    public final void m23561r(I i) {
+        i.mo3749f();
+        I[] iArr = this.f8362e;
+        int i2 = this.f8364g;
+        this.f8364g = i2 + 1;
         iArr[i2] = i;
     }
 
-    public void s(O o) {
-        synchronized (this.b) {
-            t(o);
-            o();
+    /* renamed from: s */
+    public void m23560s(O o) {
+        synchronized (this.f8359b) {
+            m23559t(o);
+            m23564o();
         }
     }
 
-    public final void t(O o) {
-        o.f();
-        O[] oArr = this.f;
-        int i = this.h;
-        this.h = i + 1;
+    /* renamed from: t */
+    public final void m23559t(O o) {
+        o.mo3749f();
+        O[] oArr = this.f8363f;
+        int i = this.f8365h;
+        this.f8365h = i + 1;
         oArr[i] = o;
     }
 
-    public final void u() {
+    /* renamed from: u */
+    public final void m23558u() {
         do {
             try {
             } catch (InterruptedException e) {
                 throw new IllegalStateException(e);
             }
-        } while (l());
+        } while (m23567l());
     }
 
-    public final void v(int i) {
-        s6.f(this.g == this.e.length);
-        for (I i2 : this.e) {
-            i2.n(i);
+    /* renamed from: v */
+    public final void m23557v(int i) {
+        C2914s6.m10685f(this.f8364g == this.f8362e.length);
+        for (I i2 : this.f8362e) {
+            i2.m21351n(i);
         }
     }
 }

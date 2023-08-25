@@ -5,24 +5,30 @@ import java.util.Objects;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class h48 implements Serializable, e48 {
-    public final e48 p;
-    public volatile transient boolean q;
+
+    /* renamed from: p */
+    public final e48 f12059p;
+
+    /* renamed from: q */
+    public volatile transient boolean f12060q;
     @CheckForNull
-    public transient Object r;
+
+    /* renamed from: r */
+    public transient Object f12061r;
 
     public h48(e48 e48Var) {
         Objects.requireNonNull(e48Var);
-        this.p = e48Var;
+        this.f12059p = e48Var;
     }
 
     public final String toString() {
         Object obj;
         StringBuilder sb = new StringBuilder();
         sb.append("Suppliers.memoize(");
-        if (this.q) {
-            obj = "<supplier that returned " + this.r + ">";
+        if (this.f12060q) {
+            obj = "<supplier that returned " + this.f12061r + ">";
         } else {
-            obj = this.p;
+            obj = this.f12059p;
         }
         sb.append(obj);
         sb.append(")");
@@ -31,16 +37,16 @@ public final class h48 implements Serializable, e48 {
 
     @Override // com.daaw.e48
     public final Object zza() {
-        if (!this.q) {
+        if (!this.f12060q) {
             synchronized (this) {
-                if (!this.q) {
-                    Object zza = this.p.zza();
-                    this.r = zza;
-                    this.q = true;
+                if (!this.f12060q) {
+                    Object zza = this.f12059p.zza();
+                    this.f12061r = zza;
+                    this.f12060q = true;
                     return zza;
                 }
             }
         }
-        return this.r;
+        return this.f12061r;
     }
 }

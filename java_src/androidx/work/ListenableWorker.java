@@ -16,62 +16,77 @@ import java.util.UUID;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public abstract class ListenableWorker {
-    public Context p;
-    public WorkerParameters q;
-    public volatile boolean r;
-    public boolean s;
-    public boolean t;
 
+    /* renamed from: p */
+    public Context f2416p;
+
+    /* renamed from: q */
+    public WorkerParameters f2417q;
+
+    /* renamed from: r */
+    public volatile boolean f2418r;
+
+    /* renamed from: s */
+    public boolean f2419s;
+
+    /* renamed from: t */
+    public boolean f2420t;
+
+    /* renamed from: androidx.work.ListenableWorker$a */
     /* loaded from: classes.dex */
-    public static abstract class a {
+    public static abstract class AbstractC0501a {
 
-        /* renamed from: androidx.work.ListenableWorker$a$a  reason: collision with other inner class name */
+        /* renamed from: androidx.work.ListenableWorker$a$a */
         /* loaded from: classes.dex */
-        public static final class C0031a extends a {
-            public final androidx.work.b a;
+        public static final class C0502a extends AbstractC0501a {
 
-            public C0031a() {
-                this(androidx.work.b.c);
+            /* renamed from: a */
+            public final C0511b f2421a;
+
+            public C0502a() {
+                this(C0511b.f2466c);
             }
 
-            public C0031a(androidx.work.b bVar) {
-                this.a = bVar;
+            public C0502a(C0511b c0511b) {
+                this.f2421a = c0511b;
             }
 
-            public androidx.work.b e() {
-                return this.a;
+            /* renamed from: e */
+            public C0511b m28002e() {
+                return this.f2421a;
             }
 
             public boolean equals(Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                if (obj == null || C0031a.class != obj.getClass()) {
+                if (obj == null || C0502a.class != obj.getClass()) {
                     return false;
                 }
-                return this.a.equals(((C0031a) obj).a);
+                return this.f2421a.equals(((C0502a) obj).f2421a);
             }
 
             public int hashCode() {
-                return (C0031a.class.getName().hashCode() * 31) + this.a.hashCode();
+                return (C0502a.class.getName().hashCode() * 31) + this.f2421a.hashCode();
             }
 
             public String toString() {
-                return "Failure {mOutputData=" + this.a + '}';
+                return "Failure {mOutputData=" + this.f2421a + '}';
             }
         }
 
+        /* renamed from: androidx.work.ListenableWorker$a$b */
         /* loaded from: classes.dex */
-        public static final class b extends a {
+        public static final class C0503b extends AbstractC0501a {
             public boolean equals(Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                return obj != null && b.class == obj.getClass();
+                return obj != null && C0503b.class == obj.getClass();
             }
 
             public int hashCode() {
-                return b.class.getName().hashCode();
+                return C0503b.class.getName().hashCode();
             }
 
             public String toString() {
@@ -79,55 +94,63 @@ public abstract class ListenableWorker {
             }
         }
 
+        /* renamed from: androidx.work.ListenableWorker$a$c */
         /* loaded from: classes.dex */
-        public static final class c extends a {
-            public final androidx.work.b a;
+        public static final class C0504c extends AbstractC0501a {
 
-            public c() {
-                this(androidx.work.b.c);
+            /* renamed from: a */
+            public final C0511b f2422a;
+
+            public C0504c() {
+                this(C0511b.f2466c);
             }
 
-            public c(androidx.work.b bVar) {
-                this.a = bVar;
+            public C0504c(C0511b c0511b) {
+                this.f2422a = c0511b;
             }
 
-            public androidx.work.b e() {
-                return this.a;
+            /* renamed from: e */
+            public C0511b m28001e() {
+                return this.f2422a;
             }
 
             public boolean equals(Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                if (obj == null || c.class != obj.getClass()) {
+                if (obj == null || C0504c.class != obj.getClass()) {
                     return false;
                 }
-                return this.a.equals(((c) obj).a);
+                return this.f2422a.equals(((C0504c) obj).f2422a);
             }
 
             public int hashCode() {
-                return (c.class.getName().hashCode() * 31) + this.a.hashCode();
+                return (C0504c.class.getName().hashCode() * 31) + this.f2422a.hashCode();
             }
 
             public String toString() {
-                return "Success {mOutputData=" + this.a + '}';
+                return "Success {mOutputData=" + this.f2422a + '}';
             }
         }
 
-        public static a a() {
-            return new C0031a();
+        /* renamed from: a */
+        public static AbstractC0501a m28006a() {
+            return new C0502a();
         }
 
-        public static a b() {
-            return new b();
+        /* renamed from: b */
+        public static AbstractC0501a m28005b() {
+            return new C0503b();
         }
 
-        public static a c() {
-            return new c();
+        /* renamed from: c */
+        public static AbstractC0501a m28004c() {
+            return new C0504c();
         }
 
-        public static a d(androidx.work.b bVar) {
-            return new c(bVar);
+        /* renamed from: d */
+        public static AbstractC0501a m28003d(C0511b c0511b) {
+            return new C0504c(c0511b);
         }
     }
 
@@ -140,96 +163,96 @@ public abstract class ListenableWorker {
         if (workerParameters == null) {
             throw new IllegalArgumentException("WorkerParameters is null");
         }
-        this.p = context;
-        this.q = workerParameters;
+        this.f2416p = context;
+        this.f2417q = workerParameters;
     }
 
     public final Context getApplicationContext() {
-        return this.p;
+        return this.f2416p;
     }
 
     public Executor getBackgroundExecutor() {
-        return this.q.a();
+        return this.f2417q.m27999a();
     }
 
     public fk0<g30> getForegroundInfoAsync() {
-        sb1 u = sb1.u();
-        u.r(new IllegalStateException("Expedited WorkRequests require a ListenableWorker to provide an implementation for `getForegroundInfoAsync()`"));
-        return u;
+        sb1 m10470u = sb1.m10470u();
+        m10470u.mo10472r(new IllegalStateException("Expedited WorkRequests require a ListenableWorker to provide an implementation for `getForegroundInfoAsync()`"));
+        return m10470u;
     }
 
     public final UUID getId() {
-        return this.q.c();
+        return this.f2417q.m27997c();
     }
 
-    public final b getInputData() {
-        return this.q.d();
+    public final C0511b getInputData() {
+        return this.f2417q.m27996d();
     }
 
     public final Network getNetwork() {
-        return this.q.e();
+        return this.f2417q.m27995e();
     }
 
     public final int getRunAttemptCount() {
-        return this.q.g();
+        return this.f2417q.m27993g();
     }
 
     public final Set<String> getTags() {
-        return this.q.h();
+        return this.f2417q.m27992h();
     }
 
     public wj1 getTaskExecutor() {
-        return this.q.i();
+        return this.f2417q.m27991i();
     }
 
     public final List<String> getTriggeredContentAuthorities() {
-        return this.q.j();
+        return this.f2417q.m27990j();
     }
 
     public final List<Uri> getTriggeredContentUris() {
-        return this.q.k();
+        return this.f2417q.m27989k();
     }
 
     public yy1 getWorkerFactory() {
-        return this.q.l();
+        return this.f2417q.m27988l();
     }
 
     public boolean isRunInForeground() {
-        return this.t;
+        return this.f2420t;
     }
 
     public final boolean isStopped() {
-        return this.r;
+        return this.f2418r;
     }
 
     public final boolean isUsed() {
-        return this.s;
+        return this.f2419s;
     }
 
     public void onStopped() {
     }
 
     public final fk0<Void> setForegroundAsync(g30 g30Var) {
-        this.t = true;
-        return this.q.b().a(getApplicationContext(), getId(), g30Var);
+        this.f2420t = true;
+        return this.f2417q.m27998b().mo4415a(getApplicationContext(), getId(), g30Var);
     }
 
-    public fk0<Void> setProgressAsync(b bVar) {
-        return this.q.f().a(getApplicationContext(), getId(), bVar);
+    public fk0<Void> setProgressAsync(C0511b c0511b) {
+        return this.f2417q.m27994f().mo15655a(getApplicationContext(), getId(), c0511b);
     }
 
     public void setRunInForeground(boolean z) {
-        this.t = z;
+        this.f2420t = z;
     }
 
     public final void setUsed() {
-        this.s = true;
+        this.f2419s = true;
     }
 
-    public abstract fk0<a> startWork();
+    public abstract fk0<AbstractC0501a> startWork();
 
     public final void stop() {
-        this.r = true;
+        this.f2418r = true;
         onStopped();
     }
 }

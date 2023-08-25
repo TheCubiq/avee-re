@@ -6,66 +6,87 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class n35 extends o35 {
-    public final JSONObject b;
-    public final boolean c;
-    public final boolean d;
-    public final boolean e;
-    public final boolean f;
-    public final String g;
-    public final JSONObject h;
+
+    /* renamed from: b */
+    public final JSONObject f19444b;
+
+    /* renamed from: c */
+    public final boolean f19445c;
+
+    /* renamed from: d */
+    public final boolean f19446d;
+
+    /* renamed from: e */
+    public final boolean f19447e;
+
+    /* renamed from: f */
+    public final boolean f19448f;
+
+    /* renamed from: g */
+    public final String f19449g;
+
+    /* renamed from: h */
+    public final JSONObject f19450h;
 
     public n35(th6 th6Var, JSONObject jSONObject) {
         super(th6Var);
-        this.b = zzbu.zzg(jSONObject, "tracking_urls_and_actions", "active_view");
-        this.c = zzbu.zzk(false, jSONObject, "allow_pub_owned_ad_view");
-        this.d = zzbu.zzk(false, jSONObject, "attribution", "allow_pub_rendering");
-        this.e = zzbu.zzk(false, jSONObject, "enable_omid");
-        this.g = zzbu.zzb("", jSONObject, "watermark_overlay_png_base64");
-        this.f = jSONObject.optJSONObject("overlay") != null;
-        this.h = ((Boolean) zzba.zzc().b(g93.C4)).booleanValue() ? jSONObject.optJSONObject("omid_settings") : null;
+        this.f19444b = zzbu.zzg(jSONObject, "tracking_urls_and_actions", "active_view");
+        this.f19445c = zzbu.zzk(false, jSONObject, "allow_pub_owned_ad_view");
+        this.f19446d = zzbu.zzk(false, jSONObject, "attribution", "allow_pub_rendering");
+        this.f19447e = zzbu.zzk(false, jSONObject, "enable_omid");
+        this.f19449g = zzbu.zzb("", jSONObject, "watermark_overlay_png_base64");
+        this.f19448f = jSONObject.optJSONObject("overlay") != null;
+        this.f19450h = ((Boolean) zzba.zzc().m23658b(g93.f10386C4)).booleanValue() ? jSONObject.optJSONObject("omid_settings") : null;
     }
 
     @Override // com.daaw.o35
-    public final ui6 a() {
-        JSONObject jSONObject = this.h;
-        return jSONObject != null ? new ui6(jSONObject) : this.a.W;
+    /* renamed from: a */
+    public final ui6 mo14582a() {
+        JSONObject jSONObject = this.f19450h;
+        return jSONObject != null ? new ui6(jSONObject) : this.f21011a.f27676W;
     }
 
     @Override // com.daaw.o35
-    public final String b() {
-        return this.g;
+    /* renamed from: b */
+    public final String mo14581b() {
+        return this.f19449g;
     }
 
     @Override // com.daaw.o35
-    public final JSONObject c() {
-        JSONObject jSONObject = this.b;
+    /* renamed from: c */
+    public final JSONObject mo14580c() {
+        JSONObject jSONObject = this.f19444b;
         if (jSONObject != null) {
             return jSONObject;
         }
         try {
-            return new JSONObject(this.a.A);
+            return new JSONObject(this.f21011a.f27654A);
         } catch (JSONException unused) {
             return null;
         }
     }
 
     @Override // com.daaw.o35
-    public final boolean d() {
-        return this.e;
+    /* renamed from: d */
+    public final boolean mo14579d() {
+        return this.f19447e;
     }
 
     @Override // com.daaw.o35
-    public final boolean e() {
-        return this.c;
+    /* renamed from: e */
+    public final boolean mo14578e() {
+        return this.f19445c;
     }
 
     @Override // com.daaw.o35
-    public final boolean f() {
-        return this.d;
+    /* renamed from: f */
+    public final boolean mo14577f() {
+        return this.f19446d;
     }
 
     @Override // com.daaw.o35
-    public final boolean g() {
-        return this.f;
+    /* renamed from: g */
+    public final boolean mo14576g() {
+        return this.f19448f;
     }
 }

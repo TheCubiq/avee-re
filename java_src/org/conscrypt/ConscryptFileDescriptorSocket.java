@@ -35,8 +35,12 @@ public class ConscryptFileDescriptorSocket extends OpenSSLSocketImpl implements 
     private final SSLSession externalSession;
     private final Object guard;
     private int handshakeTimeoutMilliseconds;
-    private SSLInputStream is;
-    private SSLOutputStream os;
+
+    /* renamed from: is */
+    private SSLInputStream f38016is;
+
+    /* renamed from: os */
+    private SSLOutputStream f38017os;
     private final NativeSsl ssl;
     private final SSLParametersImpl sslParameters;
     private int state;
@@ -291,56 +295,31 @@ public class ConscryptFileDescriptorSocket extends OpenSSLSocketImpl implements 
     /* JADX WARN: Removed duplicated region for block: B:27:0x0031  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public org.conscrypt.ConscryptSession provideSession() {
-        /*
-            r4 = this;
-            org.conscrypt.NativeSsl r0 = r4.ssl
-            monitor-enter(r0)
-            int r1 = r4.state     // Catch: java.lang.Throwable -> L34
-            r2 = 8
-            if (r1 != r2) goto L14
-            org.conscrypt.SessionSnapshot r1 = r4.closedSession     // Catch: java.lang.Throwable -> L34
-            if (r1 == 0) goto Le
-            goto L12
-        Le:
-            org.conscrypt.ConscryptSession r1 = org.conscrypt.SSLNullSession.getNullSession()     // Catch: java.lang.Throwable -> L34
-        L12:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L34
-            return r1
-        L14:
-            r2 = 5
-            r3 = 1
-            if (r1 < r2) goto L1a
-            r1 = 1
-            goto L1b
-        L1a:
-            r1 = 0
-        L1b:
-            if (r1 != 0) goto L27
-            boolean r2 = r4.isConnected()     // Catch: java.io.IOException -> L29 java.lang.Throwable -> L34
-            if (r2 == 0) goto L27
-            r4.waitForHandshake()     // Catch: java.io.IOException -> L29 java.lang.Throwable -> L34
-            goto L28
-        L27:
-            r3 = r1
-        L28:
-            r1 = r3
-        L29:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L34
-            if (r1 != 0) goto L31
-            org.conscrypt.ConscryptSession r0 = org.conscrypt.SSLNullSession.getNullSession()
-            return r0
-        L31:
-            org.conscrypt.ActiveSession r0 = r4.activeSession
-            return r0
-        L34:
-            r1 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L34
-            throw r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.ConscryptFileDescriptorSocket.provideSession():org.conscrypt.ConscryptSession");
+    public ConscryptSession provideSession() {
+        synchronized (this.ssl) {
+            int i = this.state;
+            if (i == 8) {
+                ConscryptSession conscryptSession = this.closedSession;
+                if (conscryptSession == null) {
+                    conscryptSession = SSLNullSession.getNullSession();
+                }
+                return conscryptSession;
+            }
+            boolean z = true;
+            boolean z2 = i >= 5;
+            if (!z2) {
+                if (isConnected()) {
+                    waitForHandshake();
+                    z2 = z;
+                    return z2 ? SSLNullSession.getNullSession() : this.activeSession;
+                }
+            }
+            z = z2;
+            z2 = z;
+            if (z2) {
+            }
+        }
     }
 
     private AbstractSessionContext sessionContext() {
@@ -439,8 +418,8 @@ public class ConscryptFileDescriptorSocket extends OpenSSLSocketImpl implements 
                 this.ssl.notifyAll();
             } else {
                 this.ssl.notifyAll();
-                SSLInputStream sSLInputStream = this.is;
-                SSLOutputStream sSLOutputStream = this.os;
+                SSLInputStream sSLInputStream = this.f38016is;
+                SSLOutputStream sSLOutputStream = this.f38017os;
                 if (sSLInputStream != null || sSLOutputStream != null) {
                     this.ssl.interrupt();
                 }
@@ -560,10 +539,10 @@ public class ConscryptFileDescriptorSocket extends OpenSSLSocketImpl implements 
             if (this.state == 8) {
                 throw new SocketException("Socket is closed.");
             }
-            if (this.is == null) {
-                this.is = new SSLInputStream();
+            if (this.f38016is == null) {
+                this.f38016is = new SSLInputStream();
             }
-            sSLInputStream = this.is;
+            sSLInputStream = this.f38016is;
         }
         waitForHandshake();
         return sSLInputStream;
@@ -582,10 +561,10 @@ public class ConscryptFileDescriptorSocket extends OpenSSLSocketImpl implements 
             if (this.state == 8) {
                 throw new SocketException("Socket is closed.");
             }
-            if (this.os == null) {
-                this.os = new SSLOutputStream();
+            if (this.f38017os == null) {
+                this.f38017os = new SSLOutputStream();
             }
-            sSLOutputStream = this.os;
+            sSLOutputStream = this.f38017os;
         }
         waitForHandshake();
         return sSLOutputStream;

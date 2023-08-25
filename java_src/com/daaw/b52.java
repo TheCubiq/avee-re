@@ -7,7 +7,8 @@ public final class b52 {
     public b52(Context context) {
     }
 
-    public static final boolean a() {
+    /* renamed from: a */
+    public static final boolean m26486a() {
         return Looper.myLooper() == Looper.getMainLooper();
     }
 }

@@ -3,5 +3,6 @@ package com.daaw;
 import android.app.Notification;
 /* loaded from: classes.dex */
 public interface ct0 {
-    Notification.Builder a();
+    /* renamed from: a */
+    Notification.Builder mo23208a();
 }

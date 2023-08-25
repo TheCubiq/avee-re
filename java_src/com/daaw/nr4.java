@@ -8,29 +8,32 @@ public final class nr4 extends kw4 {
         super(set);
     }
 
-    public final void C0(final Context context) {
-        B0(new jw4() { // from class: com.daaw.lr4
+    /* renamed from: C0 */
+    public final void m14853C0(final Context context) {
+        m17378B0(new jw4() { // from class: com.daaw.lr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((jr4) obj).f(context);
+                ((jr4) obj).mo5173f(context);
             }
         });
     }
 
-    public final void D0(final Context context) {
-        B0(new jw4() { // from class: com.daaw.mr4
+    /* renamed from: D0 */
+    public final void m14852D0(final Context context) {
+        m17378B0(new jw4() { // from class: com.daaw.mr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((jr4) obj).s(context);
+                ((jr4) obj).mo5169s(context);
             }
         });
     }
 
-    public final void E0(final Context context) {
-        B0(new jw4() { // from class: com.daaw.kr4
+    /* renamed from: E0 */
+    public final void m14851E0(final Context context) {
+        m17378B0(new jw4() { // from class: com.daaw.kr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((jr4) obj).l(context);
+                ((jr4) obj).mo5171l(context);
             }
         });
     }

@@ -6,7 +6,8 @@ import android.webkit.WebView;
 import com.google.android.gms.ads.internal.client.zzba;
 /* loaded from: classes.dex */
 public final class mq5 implements nq5 {
-    public static yp6 e(String str) {
+    /* renamed from: e */
+    public static yp6 m15846e(String str) {
         char c;
         int hashCode = str.hashCode();
         if (hashCode == -382745961) {
@@ -37,7 +38,8 @@ public final class mq5 implements nq5 {
         return yp6.HTML_DISPLAY;
     }
 
-    public static dq6 f(String str) {
+    /* renamed from: f */
+    public static dq6 m15845f(String str) {
         char c;
         int hashCode = str.hashCode();
         if (hashCode == -1104128070) {
@@ -59,29 +61,31 @@ public final class mq5 implements nq5 {
         return c != 0 ? c != 1 ? c != 2 ? dq6.UNSPECIFIED : dq6.ONE_PIXEL : dq6.DEFINED_BY_JAVASCRIPT : dq6.BEGIN_TO_RENDER;
     }
 
-    public static eq6 g(String str) {
+    /* renamed from: g */
+    public static eq6 m15844g(String str) {
         return "native".equals(str) ? eq6.NATIVE : "javascript".equals(str) ? eq6.JAVASCRIPT : eq6.NONE;
     }
 
     @Override // com.daaw.nq5
-    public final yd0 a(String str, WebView webView, String str2, String str3, String str4, String str5, pq5 pq5Var, oq5 oq5Var, String str6) {
+    /* renamed from: a */
+    public final yd0 mo14879a(String str, WebView webView, String str2, String str3, String str4, String str5, pq5 pq5Var, oq5 oq5Var, String str6) {
         String valueOf;
         String str7;
         String concat;
-        if (((Boolean) zzba.zzc().b(g93.y4)).booleanValue() && rp6.b()) {
-            fq6 a = fq6.a(str5, str);
-            eq6 g = g("javascript");
-            eq6 g2 = g(str4);
-            yp6 e = e(oq5Var.toString());
+        if (((Boolean) zzba.zzc().m23658b(g93.f10890y4)).booleanValue() && rp6.m11081b()) {
+            fq6 m22402a = fq6.m22402a(str5, str);
+            eq6 m15844g = m15844g("javascript");
+            eq6 m15844g2 = m15844g(str4);
+            yp6 m15846e = m15846e(oq5Var.toString());
             eq6 eq6Var = eq6.NONE;
-            if (g == eq6Var) {
+            if (m15844g == eq6Var) {
                 concat = "Omid js session error; Unable to parse impression owner: javascript";
             } else {
-                if (e == null) {
+                if (m15846e == null) {
                     valueOf = String.valueOf(oq5Var);
                     str7 = "Omid js session error; Unable to parse creative type: ";
-                } else if (e != yp6.VIDEO || g2 != eq6Var) {
-                    return nt0.g3(tp6.a(up6.a(e, f(pq5Var.toString()), g, g2, true), vp6.c(a, webView, str6, "")));
+                } else if (m15846e != yp6.VIDEO || m15844g2 != eq6Var) {
+                    return nt0.m14830g3(tp6.m8889a(up6.m7838a(m15846e, m15845f(pq5Var.toString()), m15844g, m15844g2, true), vp6.m6949c(m22402a, webView, str6, "")));
                 } else {
                     valueOf = String.valueOf(str4);
                     str7 = "Omid js session error; Video events owner unknown for video creative: ";
@@ -95,35 +99,37 @@ public final class mq5 implements nq5 {
     }
 
     @Override // com.daaw.nq5
-    public final void b(yd0 yd0Var, View view) {
-        if (((Boolean) zzba.zzc().b(g93.y4)).booleanValue() && rp6.b()) {
-            Object M = nt0.M(yd0Var);
-            if (M instanceof tp6) {
-                ((tp6) M).d(view);
+    /* renamed from: b */
+    public final void mo14878b(yd0 yd0Var, View view) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10890y4)).booleanValue() && rp6.m11081b()) {
+            Object m14831M = nt0.m14831M(yd0Var);
+            if (m14831M instanceof tp6) {
+                ((tp6) m14831M).mo4834d(view);
             }
         }
     }
 
     @Override // com.daaw.nq5
-    public final yd0 c(String str, WebView webView, String str2, String str3, String str4, pq5 pq5Var, oq5 oq5Var, String str5) {
+    /* renamed from: c */
+    public final yd0 mo14877c(String str, WebView webView, String str2, String str3, String str4, pq5 pq5Var, oq5 oq5Var, String str5) {
         String valueOf;
         String str6;
         String concat;
-        if (((Boolean) zzba.zzc().b(g93.y4)).booleanValue() && rp6.b()) {
-            fq6 a = fq6.a("Google", str);
-            eq6 g = g("javascript");
-            yp6 e = e(oq5Var.toString());
+        if (((Boolean) zzba.zzc().m23658b(g93.f10890y4)).booleanValue() && rp6.m11081b()) {
+            fq6 m22402a = fq6.m22402a("Google", str);
+            eq6 m15844g = m15844g("javascript");
+            yp6 m15846e = m15846e(oq5Var.toString());
             eq6 eq6Var = eq6.NONE;
-            if (g == eq6Var) {
+            if (m15844g == eq6Var) {
                 concat = "Omid html session error; Unable to parse impression owner: javascript";
             } else {
-                if (e == null) {
+                if (m15846e == null) {
                     valueOf = String.valueOf(oq5Var);
                     str6 = "Omid html session error; Unable to parse creative type: ";
                 } else {
-                    eq6 g2 = g(str4);
-                    if (e != yp6.VIDEO || g2 != eq6Var) {
-                        return nt0.g3(tp6.a(up6.a(e, f(pq5Var.toString()), g, g2, true), vp6.b(a, webView, str5, "")));
+                    eq6 m15844g2 = m15844g(str4);
+                    if (m15846e != yp6.VIDEO || m15844g2 != eq6Var) {
+                        return nt0.m14830g3(tp6.m8889a(up6.m7838a(m15846e, m15845f(pq5Var.toString()), m15844g, m15844g2, true), vp6.m6950b(m22402a, webView, str5, "")));
                     }
                     valueOf = String.valueOf(str4);
                     str6 = "Omid html session error; Video events owner unknown for video creative: ";
@@ -137,24 +143,25 @@ public final class mq5 implements nq5 {
     }
 
     @Override // com.daaw.nq5
-    public final boolean d(Context context) {
-        if (!((Boolean) zzba.zzc().b(g93.y4)).booleanValue()) {
+    /* renamed from: d */
+    public final boolean mo14876d(Context context) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10890y4)).booleanValue()) {
             k04.zzj("Omid flag is disabled");
             return false;
-        } else if (rp6.b()) {
+        } else if (rp6.m11081b()) {
             return true;
         } else {
-            rp6.a(context);
-            return rp6.b();
+            rp6.m11082a(context);
+            return rp6.m11081b();
         }
     }
 
     @Override // com.daaw.nq5
     public final void zzd(yd0 yd0Var) {
-        if (((Boolean) zzba.zzc().b(g93.y4)).booleanValue() && rp6.b()) {
-            Object M = nt0.M(yd0Var);
-            if (M instanceof tp6) {
-                ((tp6) M).e();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10890y4)).booleanValue() && rp6.m11081b()) {
+            Object m14831M = nt0.m14831M(yd0Var);
+            if (m14831M instanceof tp6) {
+                ((tp6) m14831M).mo4833e();
             }
         }
     }

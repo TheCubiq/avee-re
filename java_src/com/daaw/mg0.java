@@ -3,11 +3,12 @@ package com.daaw;
 import java.util.Iterator;
 /* loaded from: classes2.dex */
 public abstract class mg0 implements Iterator<Integer> {
-    public abstract int a();
+    /* renamed from: a */
+    public abstract int mo14310a();
 
     @Override // java.util.Iterator
     public /* bridge */ /* synthetic */ Integer next() {
-        return Integer.valueOf(a());
+        return Integer.valueOf(mo14310a());
     }
 
     @Override // java.util.Iterator

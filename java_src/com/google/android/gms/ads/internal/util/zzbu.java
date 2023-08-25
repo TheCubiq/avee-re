@@ -21,7 +21,8 @@ import org.json.JSONObject;
 public final class zzbu {
     public static final zzbt zza = new zi3();
 
-    public static JSONObject a(JSONObject jSONObject, String[] strArr) {
+    /* renamed from: a */
+    public static JSONObject m1345a(JSONObject jSONObject, String[] strArr) {
         for (int i = 0; i < strArr.length - 1; i++) {
             if (jSONObject == null) {
                 return null;
@@ -31,7 +32,8 @@ public final class zzbu {
         return jSONObject;
     }
 
-    public static void b(JsonWriter jsonWriter, Object obj) {
+    /* renamed from: b */
+    public static void m1344b(JsonWriter jsonWriter, Object obj) {
         if (obj == null) {
             jsonWriter.nullValue();
         } else if (obj instanceof Number) {
@@ -41,7 +43,7 @@ public final class zzbu {
         } else if (obj instanceof String) {
             jsonWriter.value((String) obj);
         } else if (obj instanceof yh6) {
-            zzj(jsonWriter, ((yh6) obj).d);
+            zzj(jsonWriter, ((yh6) obj).f33684d);
         } else if (!(obj instanceof Map)) {
             if (!(obj instanceof List)) {
                 jsonWriter.nullValue();
@@ -49,7 +51,7 @@ public final class zzbu {
             }
             jsonWriter.beginArray();
             for (Object obj2 : (List) obj) {
-                b(jsonWriter, obj2);
+                m1344b(jsonWriter, obj2);
             }
             jsonWriter.endArray();
         } else {
@@ -57,7 +59,7 @@ public final class zzbu {
             for (Map.Entry entry : ((Map) obj).entrySet()) {
                 Object key = entry.getKey();
                 if (key instanceof String) {
-                    b(jsonWriter.name((String) key), entry.getValue());
+                    m1344b(jsonWriter.name((String) key), entry.getValue());
                 }
             }
             jsonWriter.endObject();
@@ -148,8 +150,8 @@ public final class zzbu {
     }
 
     public static String zzb(String str, JSONObject jSONObject, String... strArr) {
-        JSONObject a = a(jSONObject, strArr);
-        return a == null ? "" : a.optString(strArr[0], "");
+        JSONObject m1345a = m1345a(jSONObject, strArr);
+        return m1345a == null ? "" : m1345a.optString(strArr[0], "");
     }
 
     public static List zzc(JSONArray jSONArray, List list) {
@@ -210,11 +212,11 @@ public final class zzbu {
     }
 
     public static JSONObject zzg(JSONObject jSONObject, String... strArr) {
-        JSONObject a = a(jSONObject, strArr);
-        if (a == null) {
+        JSONObject m1345a = m1345a(jSONObject, strArr);
+        if (m1345a == null) {
             return null;
         }
-        return a.optJSONObject(strArr[1]);
+        return m1345a.optJSONObject(strArr[1]);
     }
 
     public static JSONObject zzh(JsonReader jsonReader) {
@@ -298,11 +300,11 @@ public final class zzbu {
     }
 
     public static boolean zzk(boolean z, JSONObject jSONObject, String... strArr) {
-        JSONObject a = a(jSONObject, strArr);
-        if (a == null) {
+        JSONObject m1345a = m1345a(jSONObject, strArr);
+        if (m1345a == null) {
             return false;
         }
-        return a.optBoolean(strArr[strArr.length - 1], false);
+        return m1345a.optBoolean(strArr[strArr.length - 1], false);
     }
 
     public static String zzl(yh6 yh6Var) {
@@ -312,7 +314,7 @@ public final class zzbu {
         StringWriter stringWriter = new StringWriter();
         try {
             JsonWriter jsonWriter = new JsonWriter(stringWriter);
-            b(jsonWriter, yh6Var);
+            m1344b(jsonWriter, yh6Var);
             jsonWriter.close();
             return stringWriter.toString();
         } catch (IOException e) {

@@ -7,66 +7,72 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /* loaded from: classes.dex */
 public abstract class eh2 implements fh2 {
-    public static final Logger b = Logger.getLogger(eh2.class.getName());
-    public final ThreadLocal a = new dh2(this);
+
+    /* renamed from: b */
+    public static final Logger f8478b = Logger.getLogger(eh2.class.getName());
+
+    /* renamed from: a */
+    public final ThreadLocal f8479a = new dh2(this);
 
     @Override // com.daaw.fh2
-    public final ih2 a(iz7 iz7Var, jh2 jh2Var) {
-        int N;
+    /* renamed from: a */
+    public final ih2 mo22637a(iz7 iz7Var, jh2 jh2Var) {
+        int mo12775N;
         long zzc;
         long zzb = iz7Var.zzb();
-        ((ByteBuffer) this.a.get()).rewind().limit(8);
+        ((ByteBuffer) this.f8479a.get()).rewind().limit(8);
         do {
-            N = iz7Var.N((ByteBuffer) this.a.get());
-            if (N == 8) {
-                ((ByteBuffer) this.a.get()).rewind();
-                long e = hh2.e((ByteBuffer) this.a.get());
+            mo12775N = iz7Var.mo12775N((ByteBuffer) this.f8479a.get());
+            if (mo12775N == 8) {
+                ((ByteBuffer) this.f8479a.get()).rewind();
+                long m20793e = hh2.m20793e((ByteBuffer) this.f8479a.get());
                 byte[] bArr = null;
-                if (e < 8 && e > 1) {
-                    Logger logger = b;
+                if (m20793e < 8 && m20793e > 1) {
+                    Logger logger = f8478b;
                     Level level = Level.SEVERE;
                     StringBuilder sb = new StringBuilder(80);
                     sb.append("Plausibility check failed: size < 8 (size = ");
-                    sb.append(e);
+                    sb.append(m20793e);
                     sb.append("). Stop parsing!");
                     logger.logp(level, "com.coremedia.iso.AbstractBoxParser", "parseBox", sb.toString());
                     return null;
                 }
                 byte[] bArr2 = new byte[4];
-                ((ByteBuffer) this.a.get()).get(bArr2);
+                ((ByteBuffer) this.f8479a.get()).get(bArr2);
                 try {
                     String str = new String(bArr2, "ISO-8859-1");
-                    if (e == 1) {
-                        ((ByteBuffer) this.a.get()).limit(16);
-                        iz7Var.N((ByteBuffer) this.a.get());
-                        ((ByteBuffer) this.a.get()).position(8);
-                        zzc = hh2.f((ByteBuffer) this.a.get()) - 16;
+                    if (m20793e == 1) {
+                        ((ByteBuffer) this.f8479a.get()).limit(16);
+                        iz7Var.mo12775N((ByteBuffer) this.f8479a.get());
+                        ((ByteBuffer) this.f8479a.get()).position(8);
+                        zzc = hh2.m20792f((ByteBuffer) this.f8479a.get()) - 16;
                     } else {
-                        zzc = e == 0 ? iz7Var.zzc() - iz7Var.zzb() : e - 8;
+                        zzc = m20793e == 0 ? iz7Var.zzc() - iz7Var.zzb() : m20793e - 8;
                     }
                     if ("uuid".equals(str)) {
-                        ((ByteBuffer) this.a.get()).limit(((ByteBuffer) this.a.get()).limit() + 16);
-                        iz7Var.N((ByteBuffer) this.a.get());
+                        ((ByteBuffer) this.f8479a.get()).limit(((ByteBuffer) this.f8479a.get()).limit() + 16);
+                        iz7Var.mo12775N((ByteBuffer) this.f8479a.get());
                         bArr = new byte[16];
-                        for (int position = ((ByteBuffer) this.a.get()).position() - 16; position < ((ByteBuffer) this.a.get()).position(); position++) {
-                            bArr[position - (((ByteBuffer) this.a.get()).position() - 16)] = ((ByteBuffer) this.a.get()).get(position);
+                        for (int position = ((ByteBuffer) this.f8479a.get()).position() - 16; position < ((ByteBuffer) this.f8479a.get()).position(); position++) {
+                            bArr[position - (((ByteBuffer) this.f8479a.get()).position() - 16)] = ((ByteBuffer) this.f8479a.get()).get(position);
                         }
                         zzc -= 16;
                     }
                     long j = zzc;
-                    ih2 b2 = b(str, bArr, jh2Var instanceof ih2 ? ((ih2) jh2Var).zza() : "");
-                    b2.n(jh2Var);
-                    ((ByteBuffer) this.a.get()).rewind();
-                    b2.d(iz7Var, (ByteBuffer) this.a.get(), j, this);
-                    return b2;
-                } catch (UnsupportedEncodingException e2) {
-                    throw new RuntimeException(e2);
+                    ih2 mo9527b = mo9527b(str, bArr, jh2Var instanceof ih2 ? ((ih2) jh2Var).zza() : "");
+                    mo9527b.mo19822n(jh2Var);
+                    ((ByteBuffer) this.f8479a.get()).rewind();
+                    mo9527b.mo19823d(iz7Var, (ByteBuffer) this.f8479a.get(), j, this);
+                    return mo9527b;
+                } catch (UnsupportedEncodingException e) {
+                    throw new RuntimeException(e);
                 }
             }
-        } while (N >= 0);
-        iz7Var.b(zzb);
+        } while (mo12775N >= 0);
+        iz7Var.mo12773b(zzb);
         throw new EOFException();
     }
 
-    public abstract ih2 b(String str, byte[] bArr, String str2);
+    /* renamed from: b */
+    public abstract ih2 mo9527b(String str, byte[] bArr, String str2);
 }

@@ -9,26 +9,30 @@ public final class cv6 extends ja8 implements be8 {
     static {
         cv6 cv6Var = new cv6();
         zza = cv6Var;
-        ja8.v(cv6.class, cv6Var);
+        ja8.m18661v(cv6.class, cv6Var);
     }
 
-    public static gu6 D() {
-        return (gu6) zza.z();
+    /* renamed from: D */
+    public static gu6 m24965D() {
+        return (gu6) zza.m18657z();
     }
 
-    public static /* synthetic */ void F(cv6 cv6Var, String str) {
+    /* renamed from: F */
+    public static /* synthetic */ void m24963F(cv6 cv6Var, String str) {
         str.getClass();
         cv6Var.zzd |= 1;
         cv6Var.zze = str;
     }
 
-    public static /* synthetic */ void G(cv6 cv6Var, long j) {
+    /* renamed from: G */
+    public static /* synthetic */ void m24962G(cv6 cv6Var, long j) {
         cv6Var.zzd |= 2;
         cv6Var.zzf = j;
     }
 
     @Override // com.daaw.ja8
-    public final Object C(int i, Object obj, Object obj2) {
+    /* renamed from: C */
+    public final Object mo4853C(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -43,7 +47,7 @@ public final class cv6 extends ja8 implements be8 {
                 }
                 return new cv6();
             }
-            return ja8.s(zza, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဈ\u0000\u0002ဂ\u0001", new Object[]{"zzd", "zze", "zzf"});
+            return ja8.m18664s(zza, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဈ\u0000\u0002ဂ\u0001", new Object[]{"zzd", "zze", "zzf"});
         }
         return (byte) 1;
     }

@@ -8,27 +8,34 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 /* loaded from: classes2.dex */
 public class y51 extends Drawable implements jc1, ql1 {
-    public b p;
 
+    /* renamed from: p */
+    public C3671b f33368p;
+
+    /* renamed from: com.daaw.y51$b */
     /* loaded from: classes2.dex */
-    public static final class b extends Drawable.ConstantState {
-        public nn0 a;
-        public boolean b;
+    public static final class C3671b extends Drawable.ConstantState {
 
-        public b(nn0 nn0Var) {
-            this.a = nn0Var;
-            this.b = false;
+        /* renamed from: a */
+        public nn0 f33369a;
+
+        /* renamed from: b */
+        public boolean f33370b;
+
+        public C3671b(nn0 nn0Var) {
+            this.f33369a = nn0Var;
+            this.f33370b = false;
         }
 
-        public b(b bVar) {
-            this.a = (nn0) bVar.a.getConstantState().newDrawable();
-            this.b = bVar.b;
+        public C3671b(C3671b c3671b) {
+            this.f33369a = (nn0) c3671b.f33369a.getConstantState().newDrawable();
+            this.f33370b = c3671b.f33370b;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         /* renamed from: a */
         public y51 newDrawable() {
-            return new y51(new b(this));
+            return new y51(new C3671b(this));
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
@@ -38,36 +45,36 @@ public class y51 extends Drawable implements jc1, ql1 {
     }
 
     public y51(gc1 gc1Var) {
-        this(new b(new nn0(gc1Var)));
+        this(new C3671b(new nn0(gc1Var)));
     }
 
-    public y51(b bVar) {
-        this.p = bVar;
+    public y51(C3671b c3671b) {
+        this.f33368p = c3671b;
     }
 
     @Override // android.graphics.drawable.Drawable
     /* renamed from: a */
     public y51 mutate() {
-        this.p = new b(this.p);
+        this.f33368p = new C3671b(this.f33368p);
         return this;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
-        b bVar = this.p;
-        if (bVar.b) {
-            bVar.a.draw(canvas);
+        C3671b c3671b = this.f33368p;
+        if (c3671b.f33370b) {
+            c3671b.f33369a.draw(canvas);
         }
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable.ConstantState getConstantState() {
-        return this.p;
+        return this.f33368p;
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getOpacity() {
-        return this.p.a.getOpacity();
+        return this.f33368p.f33369a.getOpacity();
     }
 
     @Override // android.graphics.drawable.Drawable
@@ -78,19 +85,19 @@ public class y51 extends Drawable implements jc1, ql1 {
     @Override // android.graphics.drawable.Drawable
     public void onBoundsChange(Rect rect) {
         super.onBoundsChange(rect);
-        this.p.a.setBounds(rect);
+        this.f33368p.f33369a.setBounds(rect);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean onStateChange(int[] iArr) {
         boolean onStateChange = super.onStateChange(iArr);
-        if (this.p.a.setState(iArr)) {
+        if (this.f33368p.f33369a.setState(iArr)) {
             onStateChange = true;
         }
-        boolean b2 = z51.b(iArr);
-        b bVar = this.p;
-        if (bVar.b != b2) {
-            bVar.b = b2;
+        boolean m2811b = z51.m2811b(iArr);
+        C3671b c3671b = this.f33368p;
+        if (c3671b.f33370b != m2811b) {
+            c3671b.f33370b = m2811b;
             return true;
         }
         return onStateChange;
@@ -98,31 +105,31 @@ public class y51 extends Drawable implements jc1, ql1 {
 
     @Override // android.graphics.drawable.Drawable
     public void setAlpha(int i) {
-        this.p.a.setAlpha(i);
+        this.f33368p.f33369a.setAlpha(i);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setColorFilter(ColorFilter colorFilter) {
-        this.p.a.setColorFilter(colorFilter);
+        this.f33368p.f33369a.setColorFilter(colorFilter);
     }
 
     @Override // com.daaw.jc1
     public void setShapeAppearanceModel(gc1 gc1Var) {
-        this.p.a.setShapeAppearanceModel(gc1Var);
+        this.f33368p.f33369a.setShapeAppearanceModel(gc1Var);
     }
 
     @Override // android.graphics.drawable.Drawable, com.daaw.ql1
     public void setTint(int i) {
-        this.p.a.setTint(i);
+        this.f33368p.f33369a.setTint(i);
     }
 
     @Override // android.graphics.drawable.Drawable, com.daaw.ql1
     public void setTintList(ColorStateList colorStateList) {
-        this.p.a.setTintList(colorStateList);
+        this.f33368p.f33369a.setTintList(colorStateList);
     }
 
     @Override // android.graphics.drawable.Drawable, com.daaw.ql1
     public void setTintMode(PorterDuff.Mode mode) {
-        this.p.a.setTintMode(mode);
+        this.f33368p.f33369a.setTintMode(mode);
     }
 }

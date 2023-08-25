@@ -8,28 +8,38 @@ import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class zzadi extends zzade {
     public static final Parcelable.Creator<zzadi> CREATOR = new m72();
-    public final int q;
-    public final int r;
-    public final int s;
-    public final int[] t;
-    public final int[] u;
+
+    /* renamed from: q */
+    public final int f36751q;
+
+    /* renamed from: r */
+    public final int f36752r;
+
+    /* renamed from: s */
+    public final int f36753s;
+
+    /* renamed from: t */
+    public final int[] f36754t;
+
+    /* renamed from: u */
+    public final int[] f36755u;
 
     public zzadi(int i, int i2, int i3, int[] iArr, int[] iArr2) {
         super("MLLT");
-        this.q = i;
-        this.r = i2;
-        this.s = i3;
-        this.t = iArr;
-        this.u = iArr2;
+        this.f36751q = i;
+        this.f36752r = i2;
+        this.f36753s = i3;
+        this.f36754t = iArr;
+        this.f36755u = iArr2;
     }
 
     public zzadi(Parcel parcel) {
         super("MLLT");
-        this.q = parcel.readInt();
-        this.r = parcel.readInt();
-        this.s = parcel.readInt();
-        this.t = (int[]) it5.h(parcel.createIntArray());
-        this.u = (int[]) it5.h(parcel.createIntArray());
+        this.f36751q = parcel.readInt();
+        this.f36752r = parcel.readInt();
+        this.f36753s = parcel.readInt();
+        this.f36754t = (int[]) it5.m19391h(parcel.createIntArray());
+        this.f36755u = (int[]) it5.m19391h(parcel.createIntArray());
     }
 
     @Override // com.google.android.gms.internal.ads.zzade, android.os.Parcelable
@@ -43,7 +53,7 @@ public final class zzadi extends zzade {
         }
         if (obj != null && zzadi.class == obj.getClass()) {
             zzadi zzadiVar = (zzadi) obj;
-            if (this.q == zzadiVar.q && this.r == zzadiVar.r && this.s == zzadiVar.s && Arrays.equals(this.t, zzadiVar.t) && Arrays.equals(this.u, zzadiVar.u)) {
+            if (this.f36751q == zzadiVar.f36751q && this.f36752r == zzadiVar.f36752r && this.f36753s == zzadiVar.f36753s && Arrays.equals(this.f36754t, zzadiVar.f36754t) && Arrays.equals(this.f36755u, zzadiVar.f36755u)) {
                 return true;
             }
         }
@@ -51,15 +61,15 @@ public final class zzadi extends zzade {
     }
 
     public final int hashCode() {
-        return ((((((((this.q + 527) * 31) + this.r) * 31) + this.s) * 31) + Arrays.hashCode(this.t)) * 31) + Arrays.hashCode(this.u);
+        return ((((((((this.f36751q + 527) * 31) + this.f36752r) * 31) + this.f36753s) * 31) + Arrays.hashCode(this.f36754t)) * 31) + Arrays.hashCode(this.f36755u);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.q);
-        parcel.writeInt(this.r);
-        parcel.writeInt(this.s);
-        parcel.writeIntArray(this.t);
-        parcel.writeIntArray(this.u);
+        parcel.writeInt(this.f36751q);
+        parcel.writeInt(this.f36752r);
+        parcel.writeInt(this.f36753s);
+        parcel.writeIntArray(this.f36754t);
+        parcel.writeIntArray(this.f36755u);
     }
 }

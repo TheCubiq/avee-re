@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class vd4 {
-    public final ga4 a;
+
+    /* renamed from: a */
+    public final ga4 f30160a;
 
     public vd4(ga4 ga4Var, byte[] bArr) {
-        this.a = ga4Var;
+        this.f30160a = ga4Var;
     }
 }

@@ -1,13 +1,18 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class q15 {
-    public abstract jn4 a();
+    /* renamed from: a */
+    public abstract jn4 mo12809a();
 
-    public abstract nq4 b();
+    /* renamed from: b */
+    public abstract nq4 mo12808b();
 
-    public abstract k35 c(rm4 rm4Var, v35 v35Var, h25 h25Var);
+    /* renamed from: c */
+    public abstract k35 mo12807c(rm4 rm4Var, v35 v35Var, h25 h25Var);
 
-    public abstract l35 d(rm4 rm4Var, v35 v35Var, p55 p55Var);
+    /* renamed from: d */
+    public abstract l35 mo12806d(rm4 rm4Var, v35 v35Var, p55 p55Var);
 
-    public abstract to6 e();
+    /* renamed from: e */
+    public abstract to6 mo12805e();
 }

@@ -8,15 +8,20 @@ public enum x63 implements ns7 {
     DISCONNECTED(4),
     SUSPENDED(5);
     
-    public static final os7 w = new os7() { // from class: com.daaw.v63
+
+    /* renamed from: w */
+    public static final os7 f32150w = new os7() { // from class: com.daaw.v63
     };
-    public final int p;
+
+    /* renamed from: p */
+    public final int f32152p;
 
     x63(int i) {
-        this.p = i;
+        this.f32152p = i;
     }
 
-    public static x63 a(int i) {
+    /* renamed from: a */
+    public static x63 m5501a(int i) {
         if (i != 0) {
             if (i != 1) {
                 if (i != 2) {
@@ -38,16 +43,17 @@ public enum x63 implements ns7 {
         return UNSPECIFIED;
     }
 
-    public static ps7 b() {
-        return w63.a;
+    /* renamed from: b */
+    public static ps7 m5500b() {
+        return w63.f30921a;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.p);
+        return Integer.toString(this.f32152p);
     }
 
     public final int zza() {
-        return this.p;
+        return this.f32152p;
     }
 }

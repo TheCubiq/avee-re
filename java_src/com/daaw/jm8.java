@@ -6,31 +6,34 @@ import android.widget.ImageButton;
 import com.google.android.gms.ads.internal.overlay.zzr;
 /* loaded from: classes.dex */
 public final class jm8 extends AnimatorListenerAdapter {
-    public final /* synthetic */ zzr a;
+
+    /* renamed from: a */
+    public final /* synthetic */ zzr f15216a;
 
     public jm8(zzr zzrVar) {
-        this.a = zzrVar;
+        this.f15216a = zzrVar;
     }
 
-    public final void a(boolean z) {
+    /* renamed from: a */
+    public final void m18405a(boolean z) {
         ImageButton imageButton;
-        this.a.setEnabled(z);
-        imageButton = this.a.p;
+        this.f15216a.setEnabled(z);
+        imageButton = this.f15216a.f36229p;
         imageButton.setEnabled(z);
     }
 
     @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
     public final void onAnimationCancel(Animator animator) {
-        a(true);
+        m18405a(true);
     }
 
     @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
     public final void onAnimationEnd(Animator animator) {
-        a(true);
+        m18405a(true);
     }
 
     @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
     public final void onAnimationStart(Animator animator) {
-        a(false);
+        m18405a(false);
     }
 }

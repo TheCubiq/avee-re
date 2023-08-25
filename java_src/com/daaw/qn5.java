@@ -5,8 +5,12 @@ import android.os.Message;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class qn5 implements sy4 {
-    public Message a;
-    public wo5 b;
+
+    /* renamed from: a */
+    public Message f24204a;
+
+    /* renamed from: b */
+    public wo5 f24205b;
 
     public qn5() {
     }
@@ -14,31 +18,34 @@ public final class qn5 implements sy4 {
     public /* synthetic */ qn5(pm5 pm5Var) {
     }
 
-    public final qn5 a(Message message, wo5 wo5Var) {
-        this.a = message;
-        this.b = wo5Var;
+    /* renamed from: a */
+    public final qn5 m12323a(Message message, wo5 wo5Var) {
+        this.f24204a = message;
+        this.f24205b = wo5Var;
         return this;
     }
 
-    public final boolean b(Handler handler) {
-        Message message = this.a;
+    /* renamed from: b */
+    public final boolean m12322b(Handler handler) {
+        Message message = this.f24204a;
         Objects.requireNonNull(message);
         boolean sendMessageAtFrontOfQueue = handler.sendMessageAtFrontOfQueue(message);
-        c();
+        m12321c();
         return sendMessageAtFrontOfQueue;
     }
 
-    public final void c() {
-        this.a = null;
-        this.b = null;
-        wo5.h(this);
+    /* renamed from: c */
+    public final void m12321c() {
+        this.f24204a = null;
+        this.f24205b = null;
+        wo5.m5887h(this);
     }
 
     @Override // com.daaw.sy4
     public final void zza() {
-        Message message = this.a;
+        Message message = this.f24204a;
         Objects.requireNonNull(message);
         message.sendToTarget();
-        c();
+        m12321c();
     }
 }

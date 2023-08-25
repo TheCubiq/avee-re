@@ -9,16 +9,21 @@ import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public class hz0 {
     @Nullable
-    public static String a;
-    public static int b;
 
-    public static String a() {
+    /* renamed from: a */
+    public static String f13067a;
+
+    /* renamed from: b */
+    public static int f13068b;
+
+    /* renamed from: a */
+    public static String m20322a() {
         BufferedReader bufferedReader;
-        if (a == null) {
-            int i = b;
+        if (f13067a == null) {
+            int i = f13068b;
             if (i == 0) {
                 i = Process.myPid();
-                b = i;
+                f13068b = i;
             }
             String str = null;
             str = null;
@@ -32,13 +37,13 @@ public class hz0 {
                         bufferedReader = new BufferedReader(new FileReader(str2));
                         try {
                             String readLine = bufferedReader.readLine();
-                            ry0.j(readLine);
+                            ry0.m10830j(readLine);
                             str = readLine.trim();
                         } catch (IOException unused) {
                         } catch (Throwable th) {
                             th = th;
                             bufferedReader2 = bufferedReader;
-                            xd0.a(bufferedReader2);
+                            xd0.m5227a(bufferedReader2);
                             throw th;
                         }
                     } finally {
@@ -49,10 +54,10 @@ public class hz0 {
                 } catch (Throwable th2) {
                     th = th2;
                 }
-                xd0.a(bufferedReader);
+                xd0.m5227a(bufferedReader);
             }
-            a = str;
+            f13067a = str;
         }
-        return a;
+        return f13067a;
     }
 }

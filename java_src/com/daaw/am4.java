@@ -1,17 +1,24 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class am4 {
-    public abstract jq4 a();
+    /* renamed from: a */
+    public abstract jq4 mo9319a();
 
-    public abstract gr4 b();
+    /* renamed from: b */
+    public abstract gr4 mo9318b();
 
-    public abstract nr4 c();
+    /* renamed from: c */
+    public abstract nr4 mo8315c();
 
-    public abstract vr4 d();
+    /* renamed from: d */
+    public abstract vr4 mo17784d();
 
-    public abstract xy4 e();
+    /* renamed from: e */
+    public abstract xy4 mo9317e();
 
-    public abstract hw5 f();
+    /* renamed from: f */
+    public abstract hw5 mo8314f();
 
-    public abstract nw5 g();
+    /* renamed from: g */
+    public abstract nw5 mo8313g();
 }

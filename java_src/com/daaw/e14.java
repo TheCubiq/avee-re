@@ -7,54 +7,60 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public class e14 implements f77 {
-    public final o77 p = o77.D();
 
-    public static final boolean a(boolean z) {
+    /* renamed from: p */
+    public final o77 f8027p = o77.m14487D();
+
+    /* renamed from: a */
+    public static final boolean m23798a(boolean z) {
         if (!z) {
-            zzt.zzo().t(new IllegalStateException("Provided SettableFuture with multiple values."), "SettableFuture");
+            zzt.zzo().m11903t(new IllegalStateException("Provided SettableFuture with multiple values."), "SettableFuture");
         }
         return z;
     }
 
-    public final boolean b(Object obj) {
-        boolean h = this.p.h(obj);
-        a(h);
-        return h;
+    /* renamed from: b */
+    public final boolean m23797b(Object obj) {
+        boolean mo14486h = this.f8027p.mo14486h(obj);
+        m23798a(mo14486h);
+        return mo14486h;
     }
 
-    public final boolean c(Throwable th) {
-        boolean i = this.p.i(th);
-        a(i);
-        return i;
+    /* renamed from: c */
+    public final boolean m23796c(Throwable th) {
+        boolean mo14485i = this.f8027p.mo14485i(th);
+        m23798a(mo14485i);
+        return mo14485i;
     }
 
     @Override // java.util.concurrent.Future
     public boolean cancel(boolean z) {
-        return this.p.cancel(z);
+        return this.f8027p.cancel(z);
     }
 
     @Override // com.daaw.f77
-    public final void f(Runnable runnable, Executor executor) {
-        this.p.f(runnable, executor);
+    /* renamed from: f */
+    public final void mo6515f(Runnable runnable, Executor executor) {
+        this.f8027p.mo6515f(runnable, executor);
     }
 
     @Override // java.util.concurrent.Future
     public final Object get() {
-        return this.p.get();
+        return this.f8027p.get();
     }
 
     @Override // java.util.concurrent.Future
     public final Object get(long j, TimeUnit timeUnit) {
-        return this.p.get(j, timeUnit);
+        return this.f8027p.get(j, timeUnit);
     }
 
     @Override // java.util.concurrent.Future
     public final boolean isCancelled() {
-        return this.p.isCancelled();
+        return this.f8027p.isCancelled();
     }
 
     @Override // java.util.concurrent.Future
     public final boolean isDone() {
-        return this.p.isDone();
+        return this.f8027p.isDone();
     }
 }

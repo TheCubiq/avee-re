@@ -4,12 +4,13 @@ import android.content.Context;
 import android.os.Process;
 /* loaded from: classes.dex */
 public final class hw0 {
-    public static int a(Context context, String str, int i, int i2, String str2) {
+    /* renamed from: a */
+    public static int m20365a(Context context, String str, int i, int i2, String str2) {
         if (context.checkPermission(str, i, i2) == -1) {
             return -1;
         }
-        String c = h5.c(str);
-        if (c == null) {
+        String m21030c = C1502h5.m21030c(str);
+        if (m21030c == null) {
             return 0;
         }
         if (str2 == null) {
@@ -19,10 +20,11 @@ public final class hw0 {
             }
             str2 = packagesForUid[0];
         }
-        return (Process.myUid() == i2 && pt0.a(context.getPackageName(), str2) ? h5.a(context, i2, c, str2) : h5.b(context, c, str2)) == 0 ? 0 : -2;
+        return (Process.myUid() == i2 && pt0.m13160a(context.getPackageName(), str2) ? C1502h5.m21032a(context, i2, m21030c, str2) : C1502h5.m21031b(context, m21030c, str2)) == 0 ? 0 : -2;
     }
 
-    public static int b(Context context, String str) {
-        return a(context, str, Process.myPid(), Process.myUid(), context.getPackageName());
+    /* renamed from: b */
+    public static int m20364b(Context context, String str) {
+        return m20365a(context, str, Process.myPid(), Process.myUid(), context.getPackageName());
     }
 }

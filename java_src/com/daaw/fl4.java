@@ -3,20 +3,33 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class fl4 {
-    public static final fl4 d = new fl4(null, new gs3[0], 0, -9223372036854775807L, 0);
-    public static final gs3 e = new gs3(0).b(0);
-    public static final th8 f = new th8() { // from class: com.daaw.w22
+
+    /* renamed from: d */
+    public static final fl4 f9664d = new fl4(null, new gs3[0], 0, -9223372036854775807L, 0);
+
+    /* renamed from: e */
+    public static final gs3 f9665e = new gs3(0).m21253b(0);
+
+    /* renamed from: f */
+    public static final th8 f9666f = new th8() { // from class: com.daaw.w22
     };
-    public final gs3[] c;
-    public final long b = 0;
-    public final int a = 0;
+
+    /* renamed from: c */
+    public final gs3[] f9669c;
+
+    /* renamed from: b */
+    public final long f9668b = 0;
+
+    /* renamed from: a */
+    public final int f9667a = 0;
 
     public fl4(Object obj, gs3[] gs3VarArr, long j, long j2, int i) {
-        this.c = gs3VarArr;
+        this.f9669c = gs3VarArr;
     }
 
-    public final gs3 a(int i) {
-        return i < 0 ? e : this.c[i];
+    /* renamed from: a */
+    public final gs3 m22505a(int i) {
+        return i < 0 ? f9665e : this.f9669c[i];
     }
 
     public final boolean equals(Object obj) {
@@ -25,7 +38,7 @@ public final class fl4 {
         }
         if (obj != null && fl4.class == obj.getClass()) {
             fl4 fl4Var = (fl4) obj;
-            if (it5.t(null, null) && Arrays.equals(this.c, fl4Var.c)) {
+            if (it5.m19376t(null, null) && Arrays.equals(this.f9669c, fl4Var.f9669c)) {
                 return true;
             }
         }
@@ -33,7 +46,7 @@ public final class fl4 {
     }
 
     public final int hashCode() {
-        return (((int) (-9223372036854775807L)) * 961) + Arrays.hashCode(this.c);
+        return (((int) (-9223372036854775807L)) * 961) + Arrays.hashCode(this.f9669c);
     }
 
     public final String toString() {

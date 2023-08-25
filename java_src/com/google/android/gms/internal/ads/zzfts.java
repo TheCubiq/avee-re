@@ -9,14 +9,20 @@ import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class zzfts extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzfts> CREATOR = new zt6();
-    public final int p;
-    public final byte[] q;
-    public final int r;
+
+    /* renamed from: p */
+    public final int f37024p;
+
+    /* renamed from: q */
+    public final byte[] f37025q;
+
+    /* renamed from: r */
+    public final int f37026r;
 
     public zzfts(int i, byte[] bArr, int i2) {
-        this.p = i;
-        this.q = bArr == null ? null : Arrays.copyOf(bArr, bArr.length);
-        this.r = i2;
+        this.f37024p = i;
+        this.f37025q = bArr == null ? null : Arrays.copyOf(bArr, bArr.length);
+        this.f37026r = i2;
     }
 
     public zzfts(byte[] bArr, int i) {
@@ -25,10 +31,10 @@ public final class zzfts extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.p);
-        z71.f(parcel, 2, this.q, false);
-        z71.k(parcel, 3, this.r);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f37024p);
+        z71.m2728f(parcel, 2, this.f37025q, false);
+        z71.m2723k(parcel, 3, this.f37026r);
+        z71.m2732b(parcel, m2733a);
     }
 }

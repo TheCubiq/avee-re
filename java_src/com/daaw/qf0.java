@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface qf0 {
-    boolean d();
+    /* renamed from: d */
+    boolean mo3346d();
 
-    ys0 e();
+    /* renamed from: e */
+    ys0 mo3345e();
 }

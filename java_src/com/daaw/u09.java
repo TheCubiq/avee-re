@@ -1,37 +1,43 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class u09 implements i42 {
-    public final w09 a;
-    public final long b;
+
+    /* renamed from: a */
+    public final w09 f28312a;
+
+    /* renamed from: b */
+    public final long f28313b;
 
     public u09(w09 w09Var, long j) {
-        this.a = w09Var;
-        this.b = j;
+        this.f28312a = w09Var;
+        this.f28313b = j;
     }
 
-    public final j42 a(long j, long j2) {
-        return new j42((j * 1000000) / this.a.e, this.b + j2);
+    /* renamed from: a */
+    public final j42 m8643a(long j, long j2) {
+        return new j42((j * 1000000) / this.f28312a.f30776e, this.f28313b + j2);
     }
 
     @Override // com.daaw.i42
-    public final g42 b(long j) {
-        uo4.b(this.a.k);
-        w09 w09Var = this.a;
-        v09 v09Var = w09Var.k;
-        long[] jArr = v09Var.a;
-        long[] jArr2 = v09Var.b;
-        int N = it5.N(jArr, w09Var.b(j), true, false);
-        j42 a = a(N == -1 ? 0L : jArr[N], N != -1 ? jArr2[N] : 0L);
-        if (a.a == j || N == jArr.length - 1) {
-            return new g42(a, a);
+    /* renamed from: b */
+    public final g42 mo2631b(long j) {
+        uo4.m7876b(this.f28312a.f30782k);
+        w09 w09Var = this.f28312a;
+        v09 v09Var = w09Var.f30782k;
+        long[] jArr = v09Var.f29708a;
+        long[] jArr2 = v09Var.f29709b;
+        int m19418N = it5.m19418N(jArr, w09Var.m6600b(j), true, false);
+        j42 m8643a = m8643a(m19418N == -1 ? 0L : jArr[m19418N], m19418N != -1 ? jArr2[m19418N] : 0L);
+        if (m8643a.f14256a == j || m19418N == jArr.length - 1) {
+            return new g42(m8643a, m8643a);
         }
-        int i = N + 1;
-        return new g42(a, a(jArr[i], jArr2[i]));
+        int i = m19418N + 1;
+        return new g42(m8643a, m8643a(jArr[i], jArr2[i]));
     }
 
     @Override // com.daaw.i42
     public final long zze() {
-        return this.a.a();
+        return this.f28312a.m6601a();
     }
 
     @Override // com.daaw.i42

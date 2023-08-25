@@ -4,21 +4,26 @@ import java.lang.reflect.Constructor;
 import java.util.concurrent.atomic.AtomicBoolean;
 /* loaded from: classes.dex */
 public final class d09 {
-    public final c09 a;
-    public final AtomicBoolean b = new AtomicBoolean(false);
+
+    /* renamed from: a */
+    public final c09 f6356a;
+
+    /* renamed from: b */
+    public final AtomicBoolean f6357b = new AtomicBoolean(false);
 
     public d09(c09 c09Var) {
-        this.a = c09Var;
+        this.f6356a = c09Var;
     }
 
-    public final j09 a(Object... objArr) {
+    /* renamed from: a */
+    public final j09 m24801a(Object... objArr) {
         Constructor zza;
-        synchronized (this.b) {
-            if (!this.b.get()) {
+        synchronized (this.f6357b) {
+            if (!this.f6357b.get()) {
                 try {
-                    zza = this.a.zza();
+                    zza = this.f6356a.zza();
                 } catch (ClassNotFoundException unused) {
-                    this.b.set(true);
+                    this.f6357b.set(true);
                 } catch (Exception e) {
                     throw new RuntimeException("Error instantiating extension", e);
                 }

@@ -10,103 +10,147 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.TimeoutException;
 /* loaded from: classes.dex */
 public final class rp2 implements op2 {
-    public final gq2[] a;
-    public final fx2 b;
-    public final dx2 c;
-    public final Handler d;
-    public final aq2 e;
-    public final CopyOnWriteArraySet f;
-    public final lq2 g;
-    public final kq2 h;
-    public boolean i;
-    public boolean j;
-    public int k;
-    public int l;
-    public int m;
-    public boolean n;
-    public mq2 o;
-    public Object p;
-    public rw2 q;
-    public dx2 r;
-    public fq2 s;
-    public tp2 t;
-    public long u;
+
+    /* renamed from: a */
+    public final gq2[] f25466a;
+
+    /* renamed from: b */
+    public final fx2 f25467b;
+
+    /* renamed from: c */
+    public final dx2 f25468c;
+
+    /* renamed from: d */
+    public final Handler f25469d;
+
+    /* renamed from: e */
+    public final aq2 f25470e;
+
+    /* renamed from: f */
+    public final CopyOnWriteArraySet f25471f;
+
+    /* renamed from: g */
+    public final lq2 f25472g;
+
+    /* renamed from: h */
+    public final kq2 f25473h;
+
+    /* renamed from: i */
+    public boolean f25474i;
+
+    /* renamed from: j */
+    public boolean f25475j;
+
+    /* renamed from: k */
+    public int f25476k;
+
+    /* renamed from: l */
+    public int f25477l;
+
+    /* renamed from: m */
+    public int f25478m;
+
+    /* renamed from: n */
+    public boolean f25479n;
+
+    /* renamed from: o */
+    public mq2 f25480o;
+
+    /* renamed from: p */
+    public Object f25481p;
+
+    /* renamed from: q */
+    public rw2 f25482q;
+
+    /* renamed from: r */
+    public dx2 f25483r;
+
+    /* renamed from: s */
+    public fq2 f25484s;
+
+    /* renamed from: t */
+    public tp2 f25485t;
+
+    /* renamed from: u */
+    public long f25486u;
 
     @SuppressLint({"HandlerLeak"})
     public rp2(gq2[] gq2VarArr, fx2 fx2Var, y34 y34Var, byte[] bArr) {
-        String str = pz2.e;
+        String str = pz2.f23551e;
         StringBuilder sb = new StringBuilder();
         sb.append("Init ExoPlayerLib/2.4.2 [");
         sb.append(str);
         sb.append("]");
-        this.a = gq2VarArr;
+        this.f25466a = gq2VarArr;
         Objects.requireNonNull(fx2Var);
-        this.b = fx2Var;
-        this.j = false;
-        this.k = 1;
-        this.f = new CopyOnWriteArraySet();
+        this.f25467b = fx2Var;
+        this.f25475j = false;
+        this.f25476k = 1;
+        this.f25471f = new CopyOnWriteArraySet();
         dx2 dx2Var = new dx2(new vw2[2], null);
-        this.c = dx2Var;
-        this.o = mq2.a;
-        this.g = new lq2();
-        this.h = new kq2();
-        this.q = rw2.d;
-        this.r = dx2Var;
-        this.s = fq2.d;
+        this.f25468c = dx2Var;
+        this.f25480o = mq2.f19069a;
+        this.f25472g = new lq2();
+        this.f25473h = new kq2();
+        this.f25482q = rw2.f25665d;
+        this.f25483r = dx2Var;
+        this.f25484s = fq2.f9781d;
         qp2 qp2Var = new qp2(this, Looper.myLooper() != null ? Looper.myLooper() : Looper.getMainLooper());
-        this.d = qp2Var;
+        this.f25469d = qp2Var;
         tp2 tp2Var = new tp2(0, 0L);
-        this.t = tp2Var;
-        this.e = new aq2(gq2VarArr, fx2Var, y34Var, this.j, 0, qp2Var, tp2Var, this, null);
+        this.f25485t = tp2Var;
+        this.f25470e = new aq2(gq2VarArr, fx2Var, y34Var, this.f25475j, 0, qp2Var, tp2Var, this, null);
     }
 
-    public final int a() {
-        if (!this.o.h() && this.l <= 0) {
-            this.o.d(this.t.a, this.h, false);
+    /* renamed from: a */
+    public final int m11097a() {
+        if (!this.f25480o.m15847h() && this.f25477l <= 0) {
+            this.f25480o.mo15851d(this.f25485t.f27941a, this.f25473h, false);
         }
         return 0;
     }
 
-    public final void b(Message message) {
+    /* renamed from: b */
+    public final void m11096b(Message message) {
         switch (message.what) {
             case 0:
-                this.m--;
+                this.f25478m--;
                 return;
             case 1:
-                this.k = message.arg1;
-                Iterator it = this.f.iterator();
+                this.f25476k = message.arg1;
+                Iterator it = this.f25471f.iterator();
                 while (it.hasNext()) {
-                    ((lp2) it.next()).B(this.j, this.k);
+                    ((lp2) it.next()).mo16685B(this.f25475j, this.f25476k);
                 }
                 return;
             case 2:
-                this.n = message.arg1 != 0;
-                Iterator it2 = this.f.iterator();
+                this.f25479n = message.arg1 != 0;
+                Iterator it2 = this.f25471f.iterator();
                 while (it2.hasNext()) {
-                    ((lp2) it2.next()).zza(this.n);
+                    ((lp2) it2.next()).zza(this.f25479n);
                 }
                 return;
             case 3:
-                if (this.m == 0) {
+                if (this.f25478m == 0) {
                     gx2 gx2Var = (gx2) message.obj;
-                    this.i = true;
-                    this.q = gx2Var.a;
-                    this.r = gx2Var.b;
-                    this.b.b(gx2Var.c);
-                    Iterator it3 = this.f.iterator();
+                    this.f25474i = true;
+                    this.f25482q = gx2Var.f11831a;
+                    this.f25483r = gx2Var.f11832b;
+                    this.f25467b.mo22149b(gx2Var.f11833c);
+                    Iterator it3 = this.f25471f.iterator();
                     while (it3.hasNext()) {
-                        ((lp2) it3.next()).h(this.q, this.r);
+                        ((lp2) it3.next()).mo16684h(this.f25482q, this.f25483r);
                     }
                     return;
                 }
                 return;
             case 4:
-                int i = this.l - 1;
-                this.l = i;
+                int i = this.f25477l - 1;
+                this.f25477l = i;
                 if (i == 0) {
-                    this.t = (tp2) message.obj;
+                    this.f25485t = (tp2) message.obj;
                     if (message.arg1 != 0) {
-                        Iterator it4 = this.f.iterator();
+                        Iterator it4 = this.f25471f.iterator();
                         while (it4.hasNext()) {
                             ((lp2) it4.next()).zze();
                         }
@@ -116,9 +160,9 @@ public final class rp2 implements op2 {
                 }
                 return;
             case 5:
-                if (this.l == 0) {
-                    this.t = (tp2) message.obj;
-                    Iterator it5 = this.f.iterator();
+                if (this.f25477l == 0) {
+                    this.f25485t = (tp2) message.obj;
+                    Iterator it5 = this.f25471f.iterator();
                     while (it5.hasNext()) {
                         ((lp2) it5.next()).zze();
                     }
@@ -127,34 +171,34 @@ public final class rp2 implements op2 {
                 return;
             case 6:
                 zp2 zp2Var = (zp2) message.obj;
-                this.l -= zp2Var.d;
-                if (this.m == 0) {
-                    this.o = zp2Var.a;
-                    this.p = zp2Var.b;
-                    this.t = zp2Var.c;
-                    Iterator it6 = this.f.iterator();
+                this.f25477l -= zp2Var.f35371d;
+                if (this.f25478m == 0) {
+                    this.f25480o = zp2Var.f35368a;
+                    this.f25481p = zp2Var.f35369b;
+                    this.f25485t = zp2Var.f35370c;
+                    Iterator it6 = this.f25471f.iterator();
                     while (it6.hasNext()) {
-                        ((lp2) it6.next()).z(this.o, this.p);
+                        ((lp2) it6.next()).mo16681z(this.f25480o, this.f25481p);
                     }
                     return;
                 }
                 return;
             case 7:
                 fq2 fq2Var = (fq2) message.obj;
-                if (this.s.equals(fq2Var)) {
+                if (this.f25484s.equals(fq2Var)) {
                     return;
                 }
-                this.s = fq2Var;
-                Iterator it7 = this.f.iterator();
+                this.f25484s = fq2Var;
+                Iterator it7 = this.f25471f.iterator();
                 while (it7.hasNext()) {
-                    ((lp2) it7.next()).v(fq2Var);
+                    ((lp2) it7.next()).mo16682v(fq2Var);
                 }
                 return;
             case 8:
                 kp2 kp2Var = (kp2) message.obj;
-                Iterator it8 = this.f.iterator();
+                Iterator it8 = this.f25471f.iterator();
                 while (it8.hasNext()) {
-                    ((lp2) it8.next()).m(kp2Var);
+                    ((lp2) it8.next()).mo16683m(kp2Var);
                 }
                 return;
             default:
@@ -163,165 +207,175 @@ public final class rp2 implements op2 {
     }
 
     @Override // com.daaw.op2
-    public final void i(int i) {
-        this.e.x(i);
+    /* renamed from: i */
+    public final void mo11095i(int i) {
+        this.f25470e.m27170x(i);
     }
 
     @Override // com.daaw.op2
-    public final void j(long j) {
-        a();
-        if (!this.o.h() && this.o.c() <= 0) {
-            throw new dq2(this.o, 0, j);
+    /* renamed from: j */
+    public final void mo11094j(long j) {
+        m11097a();
+        if (!this.f25480o.m15847h() && this.f25480o.mo15852c() <= 0) {
+            throw new dq2(this.f25480o, 0, j);
         }
-        this.l++;
-        if (!this.o.h()) {
-            this.o.g(0, this.g, false);
-            long a = jp2.a(j);
-            long j2 = this.o.d(0, this.h, false).c;
+        this.f25477l++;
+        if (!this.f25480o.m15847h()) {
+            this.f25480o.m15848g(0, this.f25472g, false);
+            long m18345a = jp2.m18345a(j);
+            long j2 = this.f25480o.mo15851d(0, this.f25473h, false).f16696c;
             if (j2 != -9223372036854775807L) {
-                int i = (a > j2 ? 1 : (a == j2 ? 0 : -1));
+                int i = (m18345a > j2 ? 1 : (m18345a == j2 ? 0 : -1));
             }
         }
-        this.u = j;
-        this.e.B(this.o, 0, jp2.a(j));
-        Iterator it = this.f.iterator();
+        this.f25486u = j;
+        this.f25470e.m27206B(this.f25480o, 0, jp2.m18345a(j));
+        Iterator it = this.f25471f.iterator();
         while (it.hasNext()) {
             ((lp2) it.next()).zze();
         }
     }
 
     @Override // com.daaw.op2
-    public final void k(boolean z) {
-        if (this.j != z) {
-            this.j = z;
-            this.e.F(z);
-            Iterator it = this.f.iterator();
+    /* renamed from: k */
+    public final void mo11093k(boolean z) {
+        if (this.f25475j != z) {
+            this.f25475j = z;
+            this.f25470e.m27202F(z);
+            Iterator it = this.f25471f.iterator();
             while (it.hasNext()) {
-                ((lp2) it.next()).B(z, this.k);
+                ((lp2) it.next()).mo16685B(z, this.f25476k);
             }
         }
     }
 
     @Override // com.daaw.op2
-    public final void l(lp2 lp2Var) {
-        this.f.remove(lp2Var);
+    /* renamed from: l */
+    public final void mo11092l(lp2 lp2Var) {
+        this.f25471f.remove(lp2Var);
     }
 
     @Override // com.daaw.op2
-    public final void m(yv2 yv2Var) {
-        if (!this.o.h() || this.p != null) {
-            this.o = mq2.a;
-            this.p = null;
-            Iterator it = this.f.iterator();
+    /* renamed from: m */
+    public final void mo11091m(yv2 yv2Var) {
+        if (!this.f25480o.m15847h() || this.f25481p != null) {
+            this.f25480o = mq2.f19069a;
+            this.f25481p = null;
+            Iterator it = this.f25471f.iterator();
             while (it.hasNext()) {
-                ((lp2) it.next()).z(this.o, this.p);
+                ((lp2) it.next()).mo16681z(this.f25480o, this.f25481p);
             }
         }
-        if (this.i) {
-            this.i = false;
-            this.q = rw2.d;
-            this.r = this.c;
-            this.b.b(null);
-            Iterator it2 = this.f.iterator();
+        if (this.f25474i) {
+            this.f25474i = false;
+            this.f25482q = rw2.f25665d;
+            this.f25483r = this.f25468c;
+            this.f25467b.mo22149b(null);
+            Iterator it2 = this.f25471f.iterator();
             while (it2.hasNext()) {
-                ((lp2) it2.next()).h(this.q, this.r);
+                ((lp2) it2.next()).mo16684h(this.f25482q, this.f25483r);
             }
         }
-        this.m++;
-        this.e.z(yv2Var, true);
+        this.f25478m++;
+        this.f25470e.m27168z(yv2Var, true);
     }
 
     @Override // com.daaw.op2
-    public final void n(np2... np2VarArr) {
-        if (!this.e.I()) {
-            this.e.v(np2VarArr);
-        } else if (this.e.H(np2VarArr)) {
+    /* renamed from: n */
+    public final void mo11090n(np2... np2VarArr) {
+        if (!this.f25470e.m27199I()) {
+            this.f25470e.m27172v(np2VarArr);
+        } else if (this.f25470e.m27200H(np2VarArr)) {
         } else {
-            Iterator it = this.f.iterator();
+            Iterator it = this.f25471f.iterator();
             while (it.hasNext()) {
-                ((lp2) it.next()).m(kp2.c(new RuntimeException(new TimeoutException("ExoPlayer3 blockingSendMessages timeout"))));
+                ((lp2) it.next()).mo16683m(kp2.m17546c(new RuntimeException(new TimeoutException("ExoPlayer3 blockingSendMessages timeout"))));
             }
         }
     }
 
     @Override // com.daaw.op2
-    public final void o(np2... np2VarArr) {
-        this.e.C(np2VarArr);
+    /* renamed from: o */
+    public final void mo11089o(np2... np2VarArr) {
+        this.f25470e.m27205C(np2VarArr);
     }
 
     @Override // com.daaw.op2
-    public final void p(int i) {
-        this.e.D(i);
+    /* renamed from: p */
+    public final void mo11088p(int i) {
+        this.f25470e.m27204D(i);
     }
 
     @Override // com.daaw.op2
-    public final void q(int i) {
-        this.e.E(i);
+    /* renamed from: q */
+    public final void mo11087q(int i) {
+        this.f25470e.m27203E(i);
     }
 
     @Override // com.daaw.op2
-    public final void r(lp2 lp2Var) {
-        this.f.add(lp2Var);
+    /* renamed from: r */
+    public final void mo11086r(lp2 lp2Var) {
+        this.f25471f.add(lp2Var);
     }
 
     @Override // com.daaw.op2
     public final int zza() {
-        return this.k;
+        return this.f25476k;
     }
 
     @Override // com.daaw.op2
     public final long zzb() {
-        if (this.o.h() || this.l > 0) {
-            return this.u;
+        if (this.f25480o.m15847h() || this.f25477l > 0) {
+            return this.f25486u;
         }
-        this.o.d(this.t.a, this.h, false);
-        return jp2.b(0L) + jp2.b(this.t.d);
+        this.f25480o.mo15851d(this.f25485t.f27941a, this.f25473h, false);
+        return jp2.m18344b(0L) + jp2.m18344b(this.f25485t.f27944d);
     }
 
     @Override // com.daaw.op2
     public final long zzc() {
-        if (this.o.h() || this.l > 0) {
-            return this.u;
+        if (this.f25480o.m15847h() || this.f25477l > 0) {
+            return this.f25486u;
         }
-        this.o.d(this.t.a, this.h, false);
-        return jp2.b(0L) + jp2.b(this.t.c);
+        this.f25480o.mo15851d(this.f25485t.f27941a, this.f25473h, false);
+        return jp2.m18344b(0L) + jp2.m18344b(this.f25485t.f27943c);
     }
 
     @Override // com.daaw.op2
     public final long zzd() {
-        if (this.o.h()) {
+        if (this.f25480o.m15847h()) {
             return -9223372036854775807L;
         }
-        mq2 mq2Var = this.o;
-        a();
-        return jp2.b(mq2Var.g(0, this.g, false).a);
+        mq2 mq2Var = this.f25480o;
+        m11097a();
+        return jp2.m18344b(mq2Var.m15848g(0, this.f25472g, false).f17631a);
     }
 
     @Override // com.daaw.op2
     public final void zzg() {
-        this.e.w();
+        this.f25470e.m27171w();
     }
 
     @Override // com.daaw.op2
     public final void zzi() {
-        this.e.y();
+        this.f25470e.m27169y();
     }
 
     @Override // com.daaw.op2
     public final void zzk() {
-        if (!this.e.I()) {
-            this.e.A();
-        } else if (!this.e.J()) {
-            Iterator it = this.f.iterator();
+        if (!this.f25470e.m27199I()) {
+            this.f25470e.m27207A();
+        } else if (!this.f25470e.m27198J()) {
+            Iterator it = this.f25471f.iterator();
             while (it.hasNext()) {
-                ((lp2) it.next()).m(kp2.c(new RuntimeException(new TimeoutException("ExoPlayer3 release timeout"))));
+                ((lp2) it.next()).mo16683m(kp2.m17546c(new RuntimeException(new TimeoutException("ExoPlayer3 release timeout"))));
             }
         }
-        this.d.removeCallbacksAndMessages(null);
+        this.f25469d.removeCallbacksAndMessages(null);
     }
 
     @Override // com.daaw.op2
     public final void zzr() {
-        this.e.G();
+        this.f25470e.m27201G();
     }
 }

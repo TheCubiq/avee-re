@@ -7,59 +7,63 @@ import com.google.android.gms.ads.mediation.customevent.CustomEventAdapter;
 import com.google.android.gms.ads.mediation.customevent.CustomEventNativeListener;
 /* loaded from: classes.dex */
 public final class bs3 implements CustomEventNativeListener {
-    public final CustomEventAdapter a;
-    public final MediationNativeListener b;
+
+    /* renamed from: a */
+    public final CustomEventAdapter f5095a;
+
+    /* renamed from: b */
+    public final MediationNativeListener f5096b;
 
     public bs3(CustomEventAdapter customEventAdapter, MediationNativeListener mediationNativeListener) {
-        this.a = customEventAdapter;
-        this.b = mediationNativeListener;
+        this.f5095a = customEventAdapter;
+        this.f5096b = mediationNativeListener;
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventListener
     public final void onAdClicked() {
         k04.zze("Custom event adapter called onAdClicked.");
-        this.b.onAdClicked(this.a);
+        this.f5096b.onAdClicked(this.f5095a);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventListener
     public final void onAdClosed() {
         k04.zze("Custom event adapter called onAdClosed.");
-        this.b.onAdClosed(this.a);
+        this.f5096b.onAdClosed(this.f5095a);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventListener
     public final void onAdFailedToLoad(int i) {
         k04.zze("Custom event adapter called onAdFailedToLoad.");
-        this.b.onAdFailedToLoad(this.a, i);
+        this.f5096b.onAdFailedToLoad(this.f5095a, i);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventListener
     public final void onAdFailedToLoad(AdError adError) {
         k04.zze("Custom event adapter called onAdFailedToLoad.");
-        this.b.onAdFailedToLoad(this.a, adError);
+        this.f5096b.onAdFailedToLoad(this.f5095a, adError);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventNativeListener
     public final void onAdImpression() {
         k04.zze("Custom event adapter called onAdImpression.");
-        this.b.onAdImpression(this.a);
+        this.f5096b.onAdImpression(this.f5095a);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventListener
     public final void onAdLeftApplication() {
         k04.zze("Custom event adapter called onAdLeftApplication.");
-        this.b.onAdLeftApplication(this.a);
+        this.f5096b.onAdLeftApplication(this.f5095a);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventNativeListener
     public final void onAdLoaded(UnifiedNativeAdMapper unifiedNativeAdMapper) {
         k04.zze("Custom event adapter called onAdLoaded.");
-        this.b.onAdLoaded(this.a, unifiedNativeAdMapper);
+        this.f5096b.onAdLoaded(this.f5095a, unifiedNativeAdMapper);
     }
 
     @Override // com.google.android.gms.ads.mediation.customevent.CustomEventListener
     public final void onAdOpened() {
         k04.zze("Custom event adapter called onAdOpened.");
-        this.b.onAdOpened(this.a);
+        this.f5096b.onAdOpened(this.f5095a);
     }
 }

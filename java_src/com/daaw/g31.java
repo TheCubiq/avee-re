@@ -4,13 +4,20 @@ import android.os.Handler;
 import android.os.Message;
 /* loaded from: classes.dex */
 public class g31 {
-    public long b;
-    public h0 c = null;
-    public Handler a = new Handler(new a());
 
+    /* renamed from: b */
+    public long f10227b;
+
+    /* renamed from: c */
+    public InterfaceC1492h0 f10228c = null;
+
+    /* renamed from: a */
+    public Handler f10226a = new Handler(new C1359a());
+
+    /* renamed from: com.daaw.g31$a */
     /* loaded from: classes.dex */
-    public class a implements Handler.Callback {
-        public a() {
+    public class C1359a implements Handler.Callback {
+        public C1359a() {
         }
 
         @Override // android.os.Handler.Callback
@@ -19,10 +26,10 @@ public class g31 {
                 return false;
             }
             g31 g31Var = g31.this;
-            h0 h0Var = g31Var.c;
-            g31Var.c = null;
-            if (h0Var != null) {
-                h0Var.a();
+            InterfaceC1492h0 interfaceC1492h0 = g31Var.f10228c;
+            g31Var.f10228c = null;
+            if (interfaceC1492h0 != null) {
+                interfaceC1492h0.mo3002a();
                 return false;
             }
             return false;
@@ -30,15 +37,16 @@ public class g31 {
     }
 
     public g31(long j) {
-        this.b = j;
+        this.f10227b = j;
     }
 
-    public void a(h0 h0Var) {
-        gr1.c();
-        this.c = h0Var;
-        if (this.a.hasMessages(2)) {
+    /* renamed from: a */
+    public void m22052a(InterfaceC1492h0 interfaceC1492h0) {
+        gr1.m21332c();
+        this.f10228c = interfaceC1492h0;
+        if (this.f10226a.hasMessages(2)) {
             return;
         }
-        this.a.sendMessageDelayed(this.a.obtainMessage(2, h0Var), this.b);
+        this.f10226a.sendMessageDelayed(this.f10226a.obtainMessage(2, interfaceC1492h0), this.f10227b);
     }
 }

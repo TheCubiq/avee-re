@@ -8,17 +8,18 @@ import java.util.List;
 public final class x57 extends c67 {
     public x57(t17 t17Var, boolean z) {
         super(t17Var, true);
-        S();
+        m14544S();
     }
 
     @Override // com.daaw.c67
-    public final /* bridge */ /* synthetic */ Object W(List list) {
-        ArrayList a = p27.a(list.size());
+    /* renamed from: W */
+    public final /* bridge */ /* synthetic */ Object mo5515W(List list) {
+        ArrayList m13723a = p27.m13723a(list.size());
         Iterator it = list.iterator();
         while (it.hasNext()) {
             b67 b67Var = (b67) it.next();
-            a.add(b67Var != null ? b67Var.a : null);
+            m13723a.add(b67Var != null ? b67Var.f4376a : null);
         }
-        return Collections.unmodifiableList(a);
+        return Collections.unmodifiableList(m13723a);
     }
 }

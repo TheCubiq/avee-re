@@ -8,33 +8,42 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class b27 implements Map, Serializable {
     @CheckForNull
-    public transient d27 p;
-    @CheckForNull
-    public transient d27 q;
-    @CheckForNull
-    public transient t17 r;
 
-    public static b27 c(Map map) {
+    /* renamed from: p */
+    public transient d27 f4233p;
+    @CheckForNull
+
+    /* renamed from: q */
+    public transient d27 f4234q;
+    @CheckForNull
+
+    /* renamed from: r */
+    public transient t17 f4235r;
+
+    /* renamed from: c */
+    public static b27 m26519c(Map map) {
         Set entrySet = map.entrySet();
         a27 a27Var = new a27(entrySet instanceof Collection ? entrySet.size() : 4);
-        a27Var.b(entrySet);
-        return a27Var.c();
+        a27Var.m27747b(entrySet);
+        return a27Var.m27746c();
     }
 
-    public static b27 d() {
-        return r37.v;
+    /* renamed from: d */
+    public static b27 m26518d() {
+        return r37.f24812v;
     }
 
-    public abstract t17 a();
+    /* renamed from: a */
+    public abstract t17 mo11788a();
 
     @Override // java.util.Map
     /* renamed from: b */
     public final t17 values() {
-        t17 t17Var = this.r;
+        t17 t17Var = this.f4235r;
         if (t17Var == null) {
-            t17 a = a();
-            this.r = a;
-            return a;
+            t17 mo11788a = mo11788a();
+            this.f4235r = mo11788a;
+            return mo11788a;
         }
         return t17Var;
     }
@@ -55,23 +64,25 @@ public abstract class b27 implements Map, Serializable {
         return values().contains(obj);
     }
 
-    public abstract d27 e();
+    /* renamed from: e */
+    public abstract d27 mo11787e();
 
     @Override // java.util.Map
     public final boolean equals(@CheckForNull Object obj) {
-        return v27.b(this, obj);
+        return v27.m7539b(this, obj);
     }
 
-    public abstract d27 f();
+    /* renamed from: f */
+    public abstract d27 mo11786f();
 
     @Override // java.util.Map
     /* renamed from: g */
     public final d27 entrySet() {
-        d27 d27Var = this.p;
+        d27 d27Var = this.f4233p;
         if (d27Var == null) {
-            d27 e = e();
-            this.p = e;
-            return e;
+            d27 mo11787e = mo11787e();
+            this.f4233p = mo11787e;
+            return mo11787e;
         }
         return d27Var;
     }
@@ -90,18 +101,18 @@ public abstract class b27 implements Map, Serializable {
     @Override // java.util.Map
     /* renamed from: h */
     public final d27 keySet() {
-        d27 d27Var = this.q;
+        d27 d27Var = this.f4234q;
         if (d27Var == null) {
-            d27 f = f();
-            this.q = f;
-            return f;
+            d27 mo11786f = mo11786f();
+            this.f4234q = mo11786f;
+            return mo11786f;
         }
         return d27Var;
     }
 
     @Override // java.util.Map
     public final int hashCode() {
-        return y37.a(entrySet());
+        return y37.m4144a(entrySet());
     }
 
     @Override // java.util.Map
@@ -131,7 +142,7 @@ public abstract class b27 implements Map, Serializable {
 
     public final String toString() {
         int size = size();
-        k07.a(size, "size");
+        k07.m18089a(size, "size");
         StringBuilder sb = new StringBuilder((int) Math.min(size * 8, 1073741824L));
         sb.append('{');
         boolean z = true;

@@ -3,19 +3,24 @@ package com.daaw;
 import android.content.Intent;
 /* loaded from: classes.dex */
 public final class t12 extends u12 {
-    public final /* synthetic */ Intent p;
-    public final /* synthetic */ pj0 q;
+
+    /* renamed from: p */
+    public final /* synthetic */ Intent f26891p;
+
+    /* renamed from: q */
+    public final /* synthetic */ pj0 f26892q;
 
     public t12(Intent intent, pj0 pj0Var, int i) {
-        this.p = intent;
-        this.q = pj0Var;
+        this.f26891p = intent;
+        this.f26892q = pj0Var;
     }
 
     @Override // com.daaw.u12
-    public final void a() {
-        Intent intent = this.p;
+    /* renamed from: a */
+    public final void mo8639a() {
+        Intent intent = this.f26891p;
         if (intent != null) {
-            this.q.startActivityForResult(intent, 2);
+            this.f26892q.startActivityForResult(intent, 2);
         }
     }
 }

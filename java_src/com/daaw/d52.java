@@ -1,32 +1,37 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class d52 implements i42 {
-    public final long a;
-    public final /* synthetic */ g52 b;
+
+    /* renamed from: a */
+    public final long f6529a;
+
+    /* renamed from: b */
+    public final /* synthetic */ g52 f6530b;
 
     public d52(g52 g52Var, long j) {
-        this.b = g52Var;
-        this.a = j;
+        this.f6530b = g52Var;
+        this.f6529a = j;
     }
 
     @Override // com.daaw.i42
-    public final g42 b(long j) {
+    /* renamed from: b */
+    public final g42 mo2631b(long j) {
         j52[] j52VarArr;
         j52[] j52VarArr2;
         j52[] j52VarArr3;
-        j52VarArr = this.b.g;
-        g42 a = j52VarArr[0].a(j);
+        j52VarArr = this.f6530b.f10281g;
+        g42 m18871a = j52VarArr[0].m18871a(j);
         int i = 1;
         while (true) {
-            g52 g52Var = this.b;
-            j52VarArr2 = g52Var.g;
+            g52 g52Var = this.f6530b;
+            j52VarArr2 = g52Var.f10281g;
             if (i >= j52VarArr2.length) {
-                return a;
+                return m18871a;
             }
-            j52VarArr3 = g52Var.g;
-            g42 a2 = j52VarArr3[i].a(j);
-            if (a2.a.b < a.a.b) {
-                a = a2;
+            j52VarArr3 = g52Var.f10281g;
+            g42 m18871a2 = j52VarArr3[i].m18871a(j);
+            if (m18871a2.f10252a.f14257b < m18871a.f10252a.f14257b) {
+                m18871a = m18871a2;
             }
             i++;
         }
@@ -34,7 +39,7 @@ public final class d52 implements i42 {
 
     @Override // com.daaw.i42
     public final long zze() {
-        return this.a;
+        return this.f6529a;
     }
 
     @Override // com.daaw.i42

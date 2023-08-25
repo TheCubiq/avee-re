@@ -12,12 +12,13 @@ public class gv6 extends Handler {
         super(looper);
     }
 
-    public void a(Message message) {
+    /* renamed from: a */
+    public void mo1335a(Message message) {
         super.dispatchMessage(message);
     }
 
     @Override // android.os.Handler
     public final void dispatchMessage(Message message) {
-        a(message);
+        mo1335a(message);
     }
 }

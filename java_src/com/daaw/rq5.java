@@ -1,21 +1,27 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class rq5 implements qq5 {
-    public final qq5 a;
-    public final ey6 b;
+
+    /* renamed from: a */
+    public final qq5 f25515a;
+
+    /* renamed from: b */
+    public final ey6 f25516b;
 
     public rq5(qq5 qq5Var, ey6 ey6Var) {
-        this.a = qq5Var;
-        this.b = ey6Var;
+        this.f25515a = qq5Var;
+        this.f25516b = ey6Var;
     }
 
     @Override // com.daaw.qq5
-    public final boolean a(fi6 fi6Var, th6 th6Var) {
-        return this.a.a(fi6Var, th6Var);
+    /* renamed from: a */
+    public final boolean mo1905a(fi6 fi6Var, th6 th6Var) {
+        return this.f25515a.mo1905a(fi6Var, th6Var);
     }
 
     @Override // com.daaw.qq5
-    public final f77 b(fi6 fi6Var, th6 th6Var) {
-        return s67.m(this.a.b(fi6Var, th6Var), this.b, z04.a);
+    /* renamed from: b */
+    public final f77 mo1904b(fi6 fi6Var, th6 th6Var) {
+        return s67.m10630m(this.f25515a.mo1904b(fi6Var, th6Var), this.f25516b, z04.f34305a);
     }
 }

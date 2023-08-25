@@ -5,54 +5,79 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class w09 {
-    public final int a;
-    public final int b;
-    public final int c;
-    public final int d;
-    public final int e;
-    public final int f;
-    public final int g;
-    public final int h;
-    public final int i;
-    public final long j;
-    public final v09 k;
-    public final zzbq l;
+
+    /* renamed from: a */
+    public final int f30772a;
+
+    /* renamed from: b */
+    public final int f30773b;
+
+    /* renamed from: c */
+    public final int f30774c;
+
+    /* renamed from: d */
+    public final int f30775d;
+
+    /* renamed from: e */
+    public final int f30776e;
+
+    /* renamed from: f */
+    public final int f30777f;
+
+    /* renamed from: g */
+    public final int f30778g;
+
+    /* renamed from: h */
+    public final int f30779h;
+
+    /* renamed from: i */
+    public final int f30780i;
+
+    /* renamed from: j */
+    public final long f30781j;
+
+    /* renamed from: k */
+    public final v09 f30782k;
+
+    /* renamed from: l */
+    public final zzbq f30783l;
 
     public w09(int i, int i2, int i3, int i4, int i5, int i6, int i7, long j, v09 v09Var, zzbq zzbqVar) {
-        this.a = i;
-        this.b = i2;
-        this.c = i3;
-        this.d = i4;
-        this.e = i5;
-        this.f = i(i5);
-        this.g = i6;
-        this.h = i7;
-        this.i = h(i7);
-        this.j = j;
-        this.k = v09Var;
-        this.l = zzbqVar;
+        this.f30772a = i;
+        this.f30773b = i2;
+        this.f30774c = i3;
+        this.f30775d = i4;
+        this.f30776e = i5;
+        this.f30777f = m6593i(i5);
+        this.f30778g = i6;
+        this.f30779h = i7;
+        this.f30780i = m6594h(i7);
+        this.f30781j = j;
+        this.f30782k = v09Var;
+        this.f30783l = zzbqVar;
     }
 
     public w09(byte[] bArr, int i) {
         cj5 cj5Var = new cj5(bArr, bArr.length);
-        cj5Var.h(i * 8);
-        this.a = cj5Var.c(16);
-        this.b = cj5Var.c(16);
-        this.c = cj5Var.c(24);
-        this.d = cj5Var.c(24);
-        int c = cj5Var.c(20);
-        this.e = c;
-        this.f = i(c);
-        this.g = cj5Var.c(3) + 1;
-        int c2 = cj5Var.c(5) + 1;
-        this.h = c2;
-        this.i = h(c2);
-        this.j = it5.i0(cj5Var.c(4), cj5Var.c(32));
-        this.k = null;
-        this.l = null;
+        cj5Var.m25324h(i * 8);
+        this.f30772a = cj5Var.m25329c(16);
+        this.f30773b = cj5Var.m25329c(16);
+        this.f30774c = cj5Var.m25329c(24);
+        this.f30775d = cj5Var.m25329c(24);
+        int m25329c = cj5Var.m25329c(20);
+        this.f30776e = m25329c;
+        this.f30777f = m6593i(m25329c);
+        this.f30778g = cj5Var.m25329c(3) + 1;
+        int m25329c2 = cj5Var.m25329c(5) + 1;
+        this.f30779h = m25329c2;
+        this.f30780i = m6594h(m25329c2);
+        this.f30781j = it5.m19388i0(cj5Var.m25329c(4), cj5Var.m25329c(32));
+        this.f30782k = null;
+        this.f30783l = null;
     }
 
-    public static int h(int i) {
+    /* renamed from: h */
+    public static int m6594h(int i) {
         if (i != 8) {
             if (i != 12) {
                 if (i != 16) {
@@ -68,7 +93,8 @@ public final class w09 {
         return 1;
     }
 
-    public static int i(int i) {
+    /* renamed from: i */
+    public static int m6593i(int i) {
         switch (i) {
             case 8000:
                 return 4;
@@ -97,49 +123,56 @@ public final class w09 {
         }
     }
 
-    public final long a() {
-        long j = this.j;
+    /* renamed from: a */
+    public final long m6601a() {
+        long j = this.f30781j;
         if (j == 0) {
             return -9223372036854775807L;
         }
-        return (j * 1000000) / this.e;
+        return (j * 1000000) / this.f30776e;
     }
 
-    public final long b(long j) {
-        return it5.b0((j * this.e) / 1000000, 0L, this.j - 1);
+    /* renamed from: b */
+    public final long m6600b(long j) {
+        return it5.m19402b0((j * this.f30776e) / 1000000, 0L, this.f30781j - 1);
     }
 
-    public final f92 c(byte[] bArr, zzbq zzbqVar) {
+    /* renamed from: c */
+    public final f92 m6599c(byte[] bArr, zzbq zzbqVar) {
         bArr[4] = Byte.MIN_VALUE;
-        int i = this.d;
+        int i = this.f30775d;
         if (i <= 0) {
             i = -1;
         }
-        zzbq d = d(zzbqVar);
+        zzbq m6598d = m6598d(zzbqVar);
         b72 b72Var = new b72();
-        b72Var.s("audio/flac");
-        b72Var.l(i);
-        b72Var.e0(this.g);
-        b72Var.t(this.e);
-        b72Var.i(Collections.singletonList(bArr));
-        b72Var.m(d);
-        return b72Var.y();
+        b72Var.m26372s("audio/flac");
+        b72Var.m26379l(i);
+        b72Var.m26389e0(this.f30778g);
+        b72Var.m26371t(this.f30776e);
+        b72Var.m26382i(Collections.singletonList(bArr));
+        b72Var.m26378m(m6598d);
+        return b72Var.m26366y();
     }
 
-    public final zzbq d(zzbq zzbqVar) {
-        zzbq zzbqVar2 = this.l;
-        return zzbqVar2 == null ? zzbqVar : zzbqVar2.g(zzbqVar);
+    /* renamed from: d */
+    public final zzbq m6598d(zzbq zzbqVar) {
+        zzbq zzbqVar2 = this.f30783l;
+        return zzbqVar2 == null ? zzbqVar : zzbqVar2.m1100g(zzbqVar);
     }
 
-    public final w09 e(List list) {
-        return new w09(this.a, this.b, this.c, this.d, this.e, this.g, this.h, this.j, this.k, d(new zzbq(list)));
+    /* renamed from: e */
+    public final w09 m6597e(List list) {
+        return new w09(this.f30772a, this.f30773b, this.f30774c, this.f30775d, this.f30776e, this.f30778g, this.f30779h, this.f30781j, this.f30782k, m6598d(new zzbq(list)));
     }
 
-    public final w09 f(v09 v09Var) {
-        return new w09(this.a, this.b, this.c, this.d, this.e, this.g, this.h, this.j, v09Var, this.l);
+    /* renamed from: f */
+    public final w09 m6596f(v09 v09Var) {
+        return new w09(this.f30772a, this.f30773b, this.f30774c, this.f30775d, this.f30776e, this.f30778g, this.f30779h, this.f30781j, v09Var, this.f30783l);
     }
 
-    public final w09 g(List list) {
-        return new w09(this.a, this.b, this.c, this.d, this.e, this.g, this.h, this.j, this.k, d(s42.b(list)));
+    /* renamed from: g */
+    public final w09 m6595g(List list) {
+        return new w09(this.f30772a, this.f30773b, this.f30774c, this.f30775d, this.f30776e, this.f30778g, this.f30779h, this.f30781j, this.f30782k, m6598d(s42.m10718b(list)));
     }
 }

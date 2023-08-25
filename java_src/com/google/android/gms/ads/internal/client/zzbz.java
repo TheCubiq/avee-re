@@ -11,9 +11,9 @@ public final class zzbz extends bp2 implements zzcb {
 
     @Override // com.google.android.gms.ads.internal.client.zzcb
     public final void zzc(String str, String str2) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        M(1, D);
+        Parcel m25952D = m25952D();
+        m25952D.writeString(str);
+        m25952D.writeString(str2);
+        m25950M(1, m25952D);
     }
 }

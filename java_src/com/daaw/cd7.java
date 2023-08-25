@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface cd7 {
-    dd7 a(byte[] bArr);
+    /* renamed from: a */
+    dd7 mo14328a(byte[] bArr);
 
     byte[] zzb();
 }

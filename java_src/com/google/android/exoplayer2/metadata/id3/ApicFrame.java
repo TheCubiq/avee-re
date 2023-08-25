@@ -6,14 +6,23 @@ import com.daaw.sq1;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class ApicFrame extends Id3Frame {
-    public static final Parcelable.Creator<ApicFrame> CREATOR = new a();
-    public final String q;
-    public final String r;
-    public final int s;
-    public final byte[] t;
+    public static final Parcelable.Creator<ApicFrame> CREATOR = new C3943a();
 
+    /* renamed from: q */
+    public final String f35779q;
+
+    /* renamed from: r */
+    public final String f35780r;
+
+    /* renamed from: s */
+    public final int f35781s;
+
+    /* renamed from: t */
+    public final byte[] f35782t;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.id3.ApicFrame$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<ApicFrame> {
+    public static class C3943a implements Parcelable.Creator<ApicFrame> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public ApicFrame createFromParcel(Parcel parcel) {
@@ -29,18 +38,18 @@ public final class ApicFrame extends Id3Frame {
 
     public ApicFrame(Parcel parcel) {
         super("APIC");
-        this.q = parcel.readString();
-        this.r = parcel.readString();
-        this.s = parcel.readInt();
-        this.t = parcel.createByteArray();
+        this.f35779q = parcel.readString();
+        this.f35780r = parcel.readString();
+        this.f35781s = parcel.readInt();
+        this.f35782t = parcel.createByteArray();
     }
 
     public ApicFrame(String str, String str2, int i, byte[] bArr) {
         super("APIC");
-        this.q = str;
-        this.r = str2;
-        this.s = i;
-        this.t = bArr;
+        this.f35779q = str;
+        this.f35780r = str2;
+        this.f35781s = i;
+        this.f35782t = bArr;
     }
 
     public boolean equals(Object obj) {
@@ -51,27 +60,27 @@ public final class ApicFrame extends Id3Frame {
             return false;
         }
         ApicFrame apicFrame = (ApicFrame) obj;
-        return this.s == apicFrame.s && sq1.b(this.q, apicFrame.q) && sq1.b(this.r, apicFrame.r) && Arrays.equals(this.t, apicFrame.t);
+        return this.f35781s == apicFrame.f35781s && sq1.m10016b(this.f35779q, apicFrame.f35779q) && sq1.m10016b(this.f35780r, apicFrame.f35780r) && Arrays.equals(this.f35782t, apicFrame.f35782t);
     }
 
     public int hashCode() {
-        int i = (527 + this.s) * 31;
-        String str = this.q;
+        int i = (527 + this.f35781s) * 31;
+        String str = this.f35779q;
         int hashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
-        return ((hashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + Arrays.hashCode(this.t);
+        String str2 = this.f35780r;
+        return ((hashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + Arrays.hashCode(this.f35782t);
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame
     public String toString() {
-        return this.p + ": mimeType=" + this.q + ", description=" + this.r;
+        return this.f35802p + ": mimeType=" + this.f35779q + ", description=" + this.f35780r;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
-        parcel.writeInt(this.s);
-        parcel.writeByteArray(this.t);
+        parcel.writeString(this.f35779q);
+        parcel.writeString(this.f35780r);
+        parcel.writeInt(this.f35781s);
+        parcel.writeByteArray(this.f35782t);
     }
 }

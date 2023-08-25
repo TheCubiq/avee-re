@@ -17,39 +17,55 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public class ConstraintTrackingWorker extends ListenableWorker implements rx1 {
-    public static final String z = ll0.f("ConstraintTrkngWrkr");
-    public WorkerParameters u;
-    public final Object v;
-    public volatile boolean w;
-    public sb1<ListenableWorker.a> x;
-    public ListenableWorker y;
 
+    /* renamed from: z */
+    public static final String f2572z = ll0.m16883f("ConstraintTrkngWrkr");
+
+    /* renamed from: u */
+    public WorkerParameters f2573u;
+
+    /* renamed from: v */
+    public final Object f2574v;
+
+    /* renamed from: w */
+    public volatile boolean f2575w;
+
+    /* renamed from: x */
+    public sb1<ListenableWorker.AbstractC0501a> f2576x;
+
+    /* renamed from: y */
+    public ListenableWorker f2577y;
+
+    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public a() {
+    public class RunnableC0541a implements Runnable {
+        public RunnableC0541a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            ConstraintTrackingWorker.this.e();
+            ConstraintTrackingWorker.this.m27872e();
         }
     }
 
+    /* renamed from: androidx.work.impl.workers.ConstraintTrackingWorker$b */
     /* loaded from: classes.dex */
-    public class b implements Runnable {
-        public final /* synthetic */ fk0 p;
+    public class RunnableC0542b implements Runnable {
 
-        public b(fk0 fk0Var) {
-            this.p = fk0Var;
+        /* renamed from: p */
+        public final /* synthetic */ fk0 f2579p;
+
+        public RunnableC0542b(fk0 fk0Var) {
+            this.f2579p = fk0Var;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            synchronized (ConstraintTrackingWorker.this.v) {
-                if (ConstraintTrackingWorker.this.w) {
-                    ConstraintTrackingWorker.this.d();
+            synchronized (ConstraintTrackingWorker.this.f2574v) {
+                if (ConstraintTrackingWorker.this.f2575w) {
+                    ConstraintTrackingWorker.this.m27873d();
                 } else {
-                    ConstraintTrackingWorker.this.x.s(this.p);
+                    ConstraintTrackingWorker.this.f2576x.mo10471s(this.f2579p);
                 }
             }
         }
@@ -57,105 +73,111 @@ public class ConstraintTrackingWorker extends ListenableWorker implements rx1 {
 
     public ConstraintTrackingWorker(Context context, WorkerParameters workerParameters) {
         super(context, workerParameters);
-        this.u = workerParameters;
-        this.v = new Object();
-        this.w = false;
-        this.x = sb1.u();
+        this.f2573u = workerParameters;
+        this.f2574v = new Object();
+        this.f2575w = false;
+        this.f2576x = sb1.m10470u();
     }
 
-    public WorkDatabase a() {
-        return ey1.k(getApplicationContext()).o();
+    /* renamed from: a */
+    public WorkDatabase m27875a() {
+        return ey1.m23004k(getApplicationContext()).m23000o();
     }
 
     @Override // com.daaw.rx1
-    public void b(List<String> list) {
-        ll0.c().a(z, String.format("Constraints changed for %s", list), new Throwable[0]);
-        synchronized (this.v) {
-            this.w = true;
+    /* renamed from: b */
+    public void mo10849b(List<String> list) {
+        ll0.m16885c().mo16882a(f2572z, String.format("Constraints changed for %s", list), new Throwable[0]);
+        synchronized (this.f2574v) {
+            this.f2575w = true;
         }
     }
 
-    public void c() {
-        this.x.q(ListenableWorker.a.a());
+    /* renamed from: c */
+    public void m27874c() {
+        this.f2576x.mo10473q(ListenableWorker.AbstractC0501a.m28006a());
     }
 
-    public void d() {
-        this.x.q(ListenableWorker.a.b());
+    /* renamed from: d */
+    public void m27873d() {
+        this.f2576x.mo10473q(ListenableWorker.AbstractC0501a.m28005b());
     }
 
-    public void e() {
-        String i = getInputData().i("androidx.work.impl.workers.ConstraintTrackingWorker.ARGUMENT_CLASS_NAME");
-        if (TextUtils.isEmpty(i)) {
-            ll0.c().b(z, "No worker to delegate to.", new Throwable[0]);
+    /* renamed from: e */
+    public void m27872e() {
+        String m27964i = getInputData().m27964i("androidx.work.impl.workers.ConstraintTrackingWorker.ARGUMENT_CLASS_NAME");
+        if (TextUtils.isEmpty(m27964i)) {
+            ll0.m16885c().mo16881b(f2572z, "No worker to delegate to.", new Throwable[0]);
         } else {
-            ListenableWorker b2 = getWorkerFactory().b(getApplicationContext(), i, this.u);
-            this.y = b2;
-            if (b2 != null) {
-                qy1 m = a().B().m(getId().toString());
-                if (m == null) {
-                    c();
+            ListenableWorker m3079b = getWorkerFactory().m3079b(getApplicationContext(), m27964i, this.f2573u);
+            this.f2577y = m3079b;
+            if (m3079b != null) {
+                qy1 mo9719m = m27875a().mo27951B().mo9719m(getId().toString());
+                if (mo9719m == null) {
+                    m27874c();
                     return;
                 }
                 sx1 sx1Var = new sx1(getApplicationContext(), getTaskExecutor(), this);
-                sx1Var.d(Collections.singletonList(m));
-                if (!sx1Var.c(getId().toString())) {
-                    ll0.c().a(z, String.format("Constraints not met for delegate %s. Requesting retry.", i), new Throwable[0]);
-                    d();
+                sx1Var.m9789d(Collections.singletonList(mo9719m));
+                if (!sx1Var.m9790c(getId().toString())) {
+                    ll0.m16885c().mo16882a(f2572z, String.format("Constraints not met for delegate %s. Requesting retry.", m27964i), new Throwable[0]);
+                    m27873d();
                     return;
                 }
-                ll0.c().a(z, String.format("Constraints met for delegate %s", i), new Throwable[0]);
+                ll0.m16885c().mo16882a(f2572z, String.format("Constraints met for delegate %s", m27964i), new Throwable[0]);
                 try {
-                    fk0<ListenableWorker.a> startWork = this.y.startWork();
-                    startWork.d(new b(startWork), getBackgroundExecutor());
+                    fk0<ListenableWorker.AbstractC0501a> startWork = this.f2577y.startWork();
+                    startWork.mo14694d(new RunnableC0542b(startWork), getBackgroundExecutor());
                     return;
                 } catch (Throwable th) {
-                    ll0 c = ll0.c();
-                    String str = z;
-                    c.a(str, String.format("Delegated worker %s threw exception in startWork.", i), th);
-                    synchronized (this.v) {
-                        if (this.w) {
-                            ll0.c().a(str, "Constraints were unmet, Retrying.", new Throwable[0]);
-                            d();
+                    ll0 m16885c = ll0.m16885c();
+                    String str = f2572z;
+                    m16885c.mo16882a(str, String.format("Delegated worker %s threw exception in startWork.", m27964i), th);
+                    synchronized (this.f2574v) {
+                        if (this.f2575w) {
+                            ll0.m16885c().mo16882a(str, "Constraints were unmet, Retrying.", new Throwable[0]);
+                            m27873d();
                         } else {
-                            c();
+                            m27874c();
                         }
                         return;
                     }
                 }
             }
-            ll0.c().a(z, "No worker to delegate to.", new Throwable[0]);
+            ll0.m16885c().mo16882a(f2572z, "No worker to delegate to.", new Throwable[0]);
         }
-        c();
+        m27874c();
     }
 
     @Override // com.daaw.rx1
-    public void f(List<String> list) {
+    /* renamed from: f */
+    public void mo10848f(List<String> list) {
     }
 
     @Override // androidx.work.ListenableWorker
     public wj1 getTaskExecutor() {
-        return ey1.k(getApplicationContext()).p();
+        return ey1.m23004k(getApplicationContext()).m22999p();
     }
 
     @Override // androidx.work.ListenableWorker
     public boolean isRunInForeground() {
-        ListenableWorker listenableWorker = this.y;
+        ListenableWorker listenableWorker = this.f2577y;
         return listenableWorker != null && listenableWorker.isRunInForeground();
     }
 
     @Override // androidx.work.ListenableWorker
     public void onStopped() {
         super.onStopped();
-        ListenableWorker listenableWorker = this.y;
+        ListenableWorker listenableWorker = this.f2577y;
         if (listenableWorker == null || listenableWorker.isStopped()) {
             return;
         }
-        this.y.stop();
+        this.f2577y.stop();
     }
 
     @Override // androidx.work.ListenableWorker
-    public fk0<ListenableWorker.a> startWork() {
-        getBackgroundExecutor().execute(new a());
-        return this.x;
+    public fk0<ListenableWorker.AbstractC0501a> startWork() {
+        getBackgroundExecutor().execute(new RunnableC0541a());
+        return this.f2576x;
     }
 }

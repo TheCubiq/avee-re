@@ -5,55 +5,75 @@ import java.nio.ByteBuffer;
 import java.util.Iterator;
 /* loaded from: classes.dex */
 public final class ys7 extends InputStream {
-    public Iterator p;
-    public ByteBuffer q;
-    public int r = 0;
-    public int s;
-    public int t;
-    public boolean u;
-    public byte[] v;
-    public int w;
-    public long x;
+
+    /* renamed from: p */
+    public Iterator f34006p;
+
+    /* renamed from: q */
+    public ByteBuffer f34007q;
+
+    /* renamed from: r */
+    public int f34008r = 0;
+
+    /* renamed from: s */
+    public int f34009s;
+
+    /* renamed from: t */
+    public int f34010t;
+
+    /* renamed from: u */
+    public boolean f34011u;
+
+    /* renamed from: v */
+    public byte[] f34012v;
+
+    /* renamed from: w */
+    public int f34013w;
+
+    /* renamed from: x */
+    public long f34014x;
 
     public ys7(Iterable iterable) {
-        this.p = iterable.iterator();
+        this.f34006p = iterable.iterator();
         Iterator it = iterable.iterator();
         while (it.hasNext()) {
             ByteBuffer byteBuffer = (ByteBuffer) it.next();
-            this.r++;
+            this.f34008r++;
         }
-        this.s = -1;
-        if (n()) {
+        this.f34009s = -1;
+        if (m3323n()) {
             return;
         }
-        this.q = vs7.e;
-        this.s = 0;
-        this.t = 0;
-        this.x = 0L;
+        this.f34007q = vs7.f30561e;
+        this.f34009s = 0;
+        this.f34010t = 0;
+        this.f34014x = 0L;
     }
 
-    public final void d(int i) {
-        int i2 = this.t + i;
-        this.t = i2;
-        if (i2 == this.q.limit()) {
-            n();
+    /* renamed from: d */
+    public final void m3324d(int i) {
+        int i2 = this.f34010t + i;
+        this.f34010t = i2;
+        if (i2 == this.f34007q.limit()) {
+            m3323n();
         }
     }
 
-    public final boolean n() {
-        this.s++;
-        if (this.p.hasNext()) {
-            ByteBuffer byteBuffer = (ByteBuffer) this.p.next();
-            this.q = byteBuffer;
-            this.t = byteBuffer.position();
-            if (this.q.hasArray()) {
-                this.u = true;
-                this.v = this.q.array();
-                this.w = this.q.arrayOffset();
+    /* renamed from: n */
+    public final boolean m3323n() {
+        this.f34009s++;
+        if (this.f34006p.hasNext()) {
+            ByteBuffer byteBuffer = (ByteBuffer) this.f34006p.next();
+            this.f34007q = byteBuffer;
+            this.f34010t = byteBuffer.position();
+            if (this.f34007q.hasArray()) {
+                this.f34011u = true;
+                this.f34012v = this.f34007q.array();
+                this.f34013w = this.f34007q.arrayOffset();
             } else {
-                this.u = false;
-                this.x = gw7.m(this.q);
-                this.v = null;
+                this.f34011u = false;
+                this.f34014x = gw7.m21173m(this.f34007q);
+                this.f34012v = null;
             }
             return true;
         }
@@ -62,39 +82,39 @@ public final class ys7 extends InputStream {
 
     @Override // java.io.InputStream
     public final int read() {
-        byte i;
-        if (this.s == this.r) {
+        byte m21177i;
+        if (this.f34009s == this.f34008r) {
             return -1;
         }
-        if (this.u) {
-            i = this.v[this.t + this.w];
+        if (this.f34011u) {
+            m21177i = this.f34012v[this.f34010t + this.f34013w];
         } else {
-            i = gw7.i(this.t + this.x);
+            m21177i = gw7.m21177i(this.f34010t + this.f34014x);
         }
-        d(1);
-        return i & 255;
+        m3324d(1);
+        return m21177i & 255;
     }
 
     @Override // java.io.InputStream
     public final int read(byte[] bArr, int i, int i2) {
-        if (this.s == this.r) {
+        if (this.f34009s == this.f34008r) {
             return -1;
         }
-        int limit = this.q.limit();
-        int i3 = this.t;
+        int limit = this.f34007q.limit();
+        int i3 = this.f34010t;
         int i4 = limit - i3;
         if (i2 > i4) {
             i2 = i4;
         }
-        if (this.u) {
-            System.arraycopy(this.v, i3 + this.w, bArr, i, i2);
+        if (this.f34011u) {
+            System.arraycopy(this.f34012v, i3 + this.f34013w, bArr, i, i2);
         } else {
-            int position = this.q.position();
-            ByteBuffer byteBuffer = (ByteBuffer) this.q.position(this.t);
-            this.q.get(bArr, i, i2);
-            ByteBuffer byteBuffer2 = (ByteBuffer) this.q.position(position);
+            int position = this.f34007q.position();
+            ByteBuffer byteBuffer = (ByteBuffer) this.f34007q.position(this.f34010t);
+            this.f34007q.get(bArr, i, i2);
+            ByteBuffer byteBuffer2 = (ByteBuffer) this.f34007q.position(position);
         }
-        d(i2);
+        m3324d(i2);
         return i2;
     }
 }

@@ -19,19 +19,20 @@ public abstract class ed3 extends cp2 implements fd3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
-            yd0 I = yd0.a.I(parcel.readStrongBinder());
-            dp2.c(parcel);
-            zzc(I);
+            yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
+            dp2.m24105c(parcel);
+            zzc(m3857I);
         } else if (i == 2) {
             zzd();
         } else if (i != 3) {
             return false;
         } else {
-            yd0 I2 = yd0.a.I(parcel.readStrongBinder());
-            dp2.c(parcel);
-            zzb(I2);
+            yd0 m3857I2 = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
+            dp2.m24105c(parcel);
+            zzb(m3857I2);
         }
         parcel2.writeNoException();
         return true;

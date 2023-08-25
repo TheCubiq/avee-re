@@ -6,314 +6,358 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes.dex */
 public final class hw2 implements ws2 {
-    public fw2 e;
-    public fw2 f;
-    public zzatd g;
-    public zzatd h;
-    public long i;
-    public gw2 k;
-    public final nx2 l;
-    public final ew2 a = new ew2();
-    public final dw2 b = new dw2();
-    public final iz2 c = new iz2(32);
-    public final AtomicInteger d = new AtomicInteger();
-    public int j = 65536;
+
+    /* renamed from: e */
+    public fw2 f13033e;
+
+    /* renamed from: f */
+    public fw2 f13034f;
+
+    /* renamed from: g */
+    public zzatd f13035g;
+
+    /* renamed from: h */
+    public zzatd f13036h;
+
+    /* renamed from: i */
+    public long f13037i;
+
+    /* renamed from: k */
+    public gw2 f13039k;
+
+    /* renamed from: l */
+    public final nx2 f13040l;
+
+    /* renamed from: a */
+    public final ew2 f13029a = new ew2();
+
+    /* renamed from: b */
+    public final dw2 f13030b = new dw2();
+
+    /* renamed from: c */
+    public final iz2 f13031c = new iz2(32);
+
+    /* renamed from: d */
+    public final AtomicInteger f13032d = new AtomicInteger();
+
+    /* renamed from: j */
+    public int f13038j = 65536;
 
     public hw2(nx2 nx2Var, byte[] bArr) {
-        this.l = nx2Var;
+        this.f13040l = nx2Var;
         fw2 fw2Var = new fw2(0L, 65536);
-        this.e = fw2Var;
-        this.f = fw2Var;
+        this.f13033e = fw2Var;
+        this.f13034f = fw2Var;
     }
 
     @Override // com.daaw.ws2
-    public final void a(zzatd zzatdVar) {
+    /* renamed from: a */
+    public final void mo5828a(zzatd zzatdVar) {
         zzatd zzatdVar2 = zzatdVar == null ? null : zzatdVar;
-        boolean k = this.a.k(zzatdVar2);
-        this.h = zzatdVar;
-        gw2 gw2Var = this.k;
-        if (gw2Var == null || !k) {
+        boolean m23090k = this.f13029a.m23090k(zzatdVar2);
+        this.f13036h = zzatdVar;
+        gw2 gw2Var = this.f13039k;
+        if (gw2Var == null || !m23090k) {
             return;
         }
-        gw2Var.d(zzatdVar2);
+        gw2Var.mo9818d(zzatdVar2);
     }
 
     @Override // com.daaw.ws2
-    public final int b(ms2 ms2Var, int i, boolean z) {
-        if (!t()) {
-            int b = ms2Var.b(i);
-            if (b != -1) {
-                return b;
+    /* renamed from: b */
+    public final int mo5827b(ms2 ms2Var, int i, boolean z) {
+        if (!m20345t()) {
+            int m15803b = ms2Var.m15803b(i);
+            if (m15803b != -1) {
+                return m15803b;
             }
             throw new EOFException();
         }
         try {
-            int a = ms2Var.a(this.f.d.a, this.j, o(i));
-            if (a != -1) {
-                this.j += a;
-                this.i += a;
-                return a;
+            int m15804a = ms2Var.m15804a(this.f13034f.f10029d.f13046a, this.f13038j, m20350o(i));
+            if (m15804a != -1) {
+                this.f13038j += m15804a;
+                this.f13037i += m15804a;
+                return m15804a;
             }
             throw new EOFException();
         } finally {
-            r();
+            m20347r();
         }
     }
 
     @Override // com.daaw.ws2
-    public final void c(iz2 iz2Var, int i) {
-        if (!t()) {
-            iz2Var.w(i);
+    /* renamed from: c */
+    public final void mo5826c(iz2 iz2Var, int i) {
+        if (!m20345t()) {
+            iz2Var.m19224w(i);
             return;
         }
         while (i > 0) {
-            int o = o(i);
-            iz2Var.q(this.f.d.a, this.j, o);
-            this.j += o;
-            this.i += o;
-            i -= o;
+            int m20350o = m20350o(i);
+            iz2Var.m19230q(this.f13034f.f10029d.f13046a, this.f13038j, m20350o);
+            this.f13038j += m20350o;
+            this.f13037i += m20350o;
+            i -= m20350o;
         }
-        r();
+        m20347r();
     }
 
     @Override // com.daaw.ws2
-    public final void d(long j, int i, int i2, int i3, vs2 vs2Var) {
-        if (!t()) {
-            this.a.i(j);
+    /* renamed from: d */
+    public final void mo5825d(long j, int i, int i2, int i3, vs2 vs2Var) {
+        if (!m20345t()) {
+            this.f13029a.m23092i(j);
             return;
         }
         try {
-            this.a.h(j, i, this.i - i2, i2, vs2Var);
+            this.f13029a.m23093h(j, i, this.f13037i - i2, i2, vs2Var);
         } finally {
-            r();
+            m20347r();
         }
     }
 
-    public final int e() {
-        return this.a.a();
+    /* renamed from: e */
+    public final int m20360e() {
+        return this.f13029a.m23100a();
     }
 
-    public final int f(cq2 cq2Var, bs2 bs2Var, boolean z, boolean z2, long j) {
+    /* renamed from: f */
+    public final int m20359f(cq2 cq2Var, bs2 bs2Var, boolean z, boolean z2, long j) {
         int i;
-        int b = this.a.b(cq2Var, bs2Var, z, z2, this.g, this.b);
-        if (b == -5) {
-            this.g = cq2Var.a;
+        int m23099b = this.f13029a.m23099b(cq2Var, bs2Var, z, z2, this.f13035g, this.f13030b);
+        if (m23099b == -5) {
+            this.f13035g = cq2Var.f6080a;
             return -5;
-        } else if (b != -4) {
+        } else if (m23099b != -4) {
             return -3;
         } else {
-            if (!bs2Var.f()) {
-                if (bs2Var.d < j) {
-                    bs2Var.a(Integer.MIN_VALUE);
+            if (!bs2Var.m5833f()) {
+                if (bs2Var.f5094d < j) {
+                    bs2Var.m5838a(Integer.MIN_VALUE);
                 }
-                if (bs2Var.i()) {
-                    dw2 dw2Var = this.b;
-                    long j2 = dw2Var.b;
-                    this.c.s(1);
-                    s(j2, this.c.a, 1);
+                if (bs2Var.m25842i()) {
+                    dw2 dw2Var = this.f13030b;
+                    long j2 = dw2Var.f7936b;
+                    this.f13031c.m19228s(1);
+                    m20346s(j2, this.f13031c.f14125a, 1);
                     long j3 = j2 + 1;
-                    byte b2 = this.c.a[0];
-                    boolean z3 = (b2 & 128) != 0;
-                    int i2 = b2 & Byte.MAX_VALUE;
-                    zr2 zr2Var = bs2Var.b;
-                    if (zr2Var.a == null) {
-                        zr2Var.a = new byte[16];
+                    byte b = this.f13031c.f14125a[0];
+                    boolean z3 = (b & 128) != 0;
+                    int i2 = b & Byte.MAX_VALUE;
+                    zr2 zr2Var = bs2Var.f5092b;
+                    if (zr2Var.f35431a == null) {
+                        zr2Var.f35431a = new byte[16];
                     }
-                    s(j3, zr2Var.a, i2);
+                    m20346s(j3, zr2Var.f35431a, i2);
                     long j4 = j3 + i2;
                     if (z3) {
-                        this.c.s(2);
-                        s(j4, this.c.a, 2);
+                        this.f13031c.m19228s(2);
+                        m20346s(j4, this.f13031c.f14125a, 2);
                         j4 += 2;
-                        i = this.c.j();
+                        i = this.f13031c.m19237j();
                     } else {
                         i = 1;
                     }
-                    zr2 zr2Var2 = bs2Var.b;
-                    int[] iArr = zr2Var2.d;
+                    zr2 zr2Var2 = bs2Var.f5092b;
+                    int[] iArr = zr2Var2.f35434d;
                     if (iArr == null || iArr.length < i) {
                         iArr = new int[i];
                     }
                     int[] iArr2 = iArr;
-                    int[] iArr3 = zr2Var2.e;
+                    int[] iArr3 = zr2Var2.f35435e;
                     if (iArr3 == null || iArr3.length < i) {
                         iArr3 = new int[i];
                     }
                     int[] iArr4 = iArr3;
                     if (z3) {
                         int i3 = i * 6;
-                        this.c.s(i3);
-                        s(j4, this.c.a, i3);
+                        this.f13031c.m19228s(i3);
+                        m20346s(j4, this.f13031c.f14125a, i3);
                         j4 += i3;
-                        this.c.v(0);
+                        this.f13031c.m19225v(0);
                         for (int i4 = 0; i4 < i; i4++) {
-                            iArr2[i4] = this.c.j();
-                            iArr4[i4] = this.c.i();
+                            iArr2[i4] = this.f13031c.m19237j();
+                            iArr4[i4] = this.f13031c.m19238i();
                         }
                     } else {
                         iArr2[0] = 0;
-                        iArr4[0] = dw2Var.a - ((int) (j4 - dw2Var.b));
+                        iArr4[0] = dw2Var.f7935a - ((int) (j4 - dw2Var.f7936b));
                     }
-                    vs2 vs2Var = dw2Var.d;
-                    zr2 zr2Var3 = bs2Var.b;
-                    zr2Var3.b(i, iArr2, iArr4, vs2Var.b, zr2Var3.a, 1);
-                    long j5 = dw2Var.b;
+                    vs2 vs2Var = dw2Var.f7938d;
+                    zr2 zr2Var3 = bs2Var.f5092b;
+                    zr2Var3.m1963b(i, iArr2, iArr4, vs2Var.f30552b, zr2Var3.f35431a, 1);
+                    long j5 = dw2Var.f7936b;
                     int i5 = (int) (j4 - j5);
-                    dw2Var.b = j5 + i5;
-                    dw2Var.a -= i5;
+                    dw2Var.f7936b = j5 + i5;
+                    dw2Var.f7935a -= i5;
                 }
-                bs2Var.h(this.b.a);
-                dw2 dw2Var2 = this.b;
-                long j6 = dw2Var2.b;
-                ByteBuffer byteBuffer = bs2Var.c;
-                int i6 = dw2Var2.a;
-                q(j6);
+                bs2Var.m25843h(this.f13030b.f7935a);
+                dw2 dw2Var2 = this.f13030b;
+                long j6 = dw2Var2.f7936b;
+                ByteBuffer byteBuffer = bs2Var.f5093c;
+                int i6 = dw2Var2.f7935a;
+                m20348q(j6);
                 while (i6 > 0) {
-                    int i7 = (int) (j6 - this.e.a);
+                    int i7 = (int) (j6 - this.f13033e.f10026a);
                     int min = Math.min(i6, 65536 - i7);
-                    hx2 hx2Var = this.e.d;
-                    byteBuffer.put(hx2Var.a, i7, min);
+                    hx2 hx2Var = this.f13033e.f10029d;
+                    byteBuffer.put(hx2Var.f13046a, i7, min);
                     j6 += min;
                     i6 -= min;
-                    if (j6 == this.e.b) {
-                        this.l.c(hx2Var);
-                        fw2 fw2Var = this.e;
-                        fw2Var.d = null;
-                        this.e = fw2Var.e;
+                    if (j6 == this.f13033e.f10027b) {
+                        this.f13040l.m14749c(hx2Var);
+                        fw2 fw2Var = this.f13033e;
+                        fw2Var.f10029d = null;
+                        this.f13033e = fw2Var.f10030e;
                     }
                 }
-                q(this.b.c);
+                m20348q(this.f13030b.f7937c);
             }
             return -4;
         }
     }
 
-    public final long g() {
-        return this.a.c();
+    /* renamed from: g */
+    public final long m20358g() {
+        return this.f13029a.m23098c();
     }
 
-    public final zzatd h() {
-        return this.a.f();
+    /* renamed from: h */
+    public final zzatd m20357h() {
+        return this.f13029a.m23095f();
     }
 
-    public final void i() {
-        if (this.d.getAndSet(2) == 0) {
-            p();
+    /* renamed from: i */
+    public final void m20356i() {
+        if (this.f13032d.getAndSet(2) == 0) {
+            m20349p();
         }
     }
 
-    public final void j(boolean z) {
-        int andSet = this.d.getAndSet(true != z ? 2 : 0);
-        p();
-        this.a.j();
+    /* renamed from: j */
+    public final void m20355j(boolean z) {
+        int andSet = this.f13032d.getAndSet(true != z ? 2 : 0);
+        m20349p();
+        this.f13029a.m23091j();
         if (andSet == 2) {
-            this.g = null;
+            this.f13035g = null;
         }
     }
 
-    public final void k(gw2 gw2Var) {
-        this.k = gw2Var;
+    /* renamed from: k */
+    public final void m20354k(gw2 gw2Var) {
+        this.f13039k = gw2Var;
     }
 
-    public final void l() {
-        long d = this.a.d();
-        if (d != -1) {
-            q(d);
+    /* renamed from: l */
+    public final void m20353l() {
+        long m23097d = this.f13029a.m23097d();
+        if (m23097d != -1) {
+            m20348q(m23097d);
         }
     }
 
-    public final boolean m() {
-        return this.a.l();
+    /* renamed from: m */
+    public final boolean m20352m() {
+        return this.f13029a.m23089l();
     }
 
-    public final boolean n(long j, boolean z) {
-        long e = this.a.e(j, z);
-        if (e == -1) {
+    /* renamed from: n */
+    public final boolean m20351n(long j, boolean z) {
+        long m23096e = this.f13029a.m23096e(j, z);
+        if (m23096e == -1) {
             return false;
         }
-        q(e);
+        m20348q(m23096e);
         return true;
     }
 
-    public final int o(int i) {
-        if (this.j == 65536) {
-            this.j = 0;
-            fw2 fw2Var = this.f;
-            if (fw2Var.c) {
-                this.f = fw2Var.e;
+    /* renamed from: o */
+    public final int m20350o(int i) {
+        if (this.f13038j == 65536) {
+            this.f13038j = 0;
+            fw2 fw2Var = this.f13034f;
+            if (fw2Var.f10028c) {
+                this.f13034f = fw2Var.f10030e;
             }
-            fw2 fw2Var2 = this.f;
-            hx2 b = this.l.b();
-            fw2 fw2Var3 = new fw2(this.f.b, 65536);
-            fw2Var2.d = b;
-            fw2Var2.e = fw2Var3;
-            fw2Var2.c = true;
+            fw2 fw2Var2 = this.f13034f;
+            hx2 m14750b = this.f13040l.m14750b();
+            fw2 fw2Var3 = new fw2(this.f13034f.f10027b, 65536);
+            fw2Var2.f10029d = m14750b;
+            fw2Var2.f10030e = fw2Var3;
+            fw2Var2.f10028c = true;
         }
-        return Math.min(i, 65536 - this.j);
+        return Math.min(i, 65536 - this.f13038j);
     }
 
-    public final void p() {
-        this.a.g();
-        fw2 fw2Var = this.e;
-        if (fw2Var.c) {
-            fw2 fw2Var2 = this.f;
-            int i = (fw2Var2.c ? 1 : 0) + (((int) (fw2Var2.a - fw2Var.a)) / 65536);
+    /* renamed from: p */
+    public final void m20349p() {
+        this.f13029a.m23094g();
+        fw2 fw2Var = this.f13033e;
+        if (fw2Var.f10028c) {
+            fw2 fw2Var2 = this.f13034f;
+            int i = (fw2Var2.f10028c ? 1 : 0) + (((int) (fw2Var2.f10026a - fw2Var.f10026a)) / 65536);
             hx2[] hx2VarArr = new hx2[i];
             for (int i2 = 0; i2 < i; i2++) {
-                hx2VarArr[i2] = fw2Var.d;
-                fw2Var.d = null;
-                fw2Var = fw2Var.e;
+                hx2VarArr[i2] = fw2Var.f10029d;
+                fw2Var.f10029d = null;
+                fw2Var = fw2Var.f10030e;
             }
-            this.l.d(hx2VarArr);
+            this.f13040l.m14748d(hx2VarArr);
         }
         fw2 fw2Var3 = new fw2(0L, 65536);
-        this.e = fw2Var3;
-        this.f = fw2Var3;
-        this.i = 0L;
-        this.j = 65536;
-        this.l.g();
+        this.f13033e = fw2Var3;
+        this.f13034f = fw2Var3;
+        this.f13037i = 0L;
+        this.f13038j = 65536;
+        this.f13040l.m14745g();
     }
 
-    public final void q(long j) {
+    /* renamed from: q */
+    public final void m20348q(long j) {
         while (true) {
-            fw2 fw2Var = this.e;
-            if (j < fw2Var.b) {
+            fw2 fw2Var = this.f13033e;
+            if (j < fw2Var.f10027b) {
                 return;
             }
-            this.l.c(fw2Var.d);
-            fw2 fw2Var2 = this.e;
-            fw2Var2.d = null;
-            this.e = fw2Var2.e;
+            this.f13040l.m14749c(fw2Var.f10029d);
+            fw2 fw2Var2 = this.f13033e;
+            fw2Var2.f10029d = null;
+            this.f13033e = fw2Var2.f10030e;
         }
     }
 
-    public final void r() {
-        if (this.d.compareAndSet(1, 0)) {
+    /* renamed from: r */
+    public final void m20347r() {
+        if (this.f13032d.compareAndSet(1, 0)) {
             return;
         }
-        p();
+        m20349p();
     }
 
-    public final void s(long j, byte[] bArr, int i) {
-        q(j);
+    /* renamed from: s */
+    public final void m20346s(long j, byte[] bArr, int i) {
+        m20348q(j);
         int i2 = 0;
         while (i2 < i) {
-            int i3 = (int) (j - this.e.a);
+            int i3 = (int) (j - this.f13033e.f10026a);
             int min = Math.min(i - i2, 65536 - i3);
-            hx2 hx2Var = this.e.d;
-            System.arraycopy(hx2Var.a, i3, bArr, i2, min);
+            hx2 hx2Var = this.f13033e.f10029d;
+            System.arraycopy(hx2Var.f13046a, i3, bArr, i2, min);
             j += min;
             i2 += min;
-            if (j == this.e.b) {
-                this.l.c(hx2Var);
-                fw2 fw2Var = this.e;
-                fw2Var.d = null;
-                this.e = fw2Var.e;
+            if (j == this.f13033e.f10027b) {
+                this.f13040l.m14749c(hx2Var);
+                fw2 fw2Var = this.f13033e;
+                fw2Var.f10029d = null;
+                this.f13033e = fw2Var.f10030e;
             }
         }
     }
 
-    public final boolean t() {
-        return this.d.compareAndSet(0, 1);
+    /* renamed from: t */
+    public final boolean m20345t() {
+        return this.f13032d.compareAndSet(0, 1);
     }
 }

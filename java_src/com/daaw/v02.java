@@ -7,14 +7,18 @@ import android.os.Message;
 @SuppressLint({"HandlerLeak"})
 /* loaded from: classes.dex */
 public final class v02 extends q22 {
-    public final Context a;
-    public final /* synthetic */ w70 b;
+
+    /* renamed from: a */
+    public final Context f29705a;
+
+    /* renamed from: b */
+    public final /* synthetic */ w70 f29706b;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public v02(w70 w70Var, Context context) {
         super(Looper.myLooper() == null ? Looper.getMainLooper() : Looper.myLooper());
-        this.b = w70Var;
-        this.a = context.getApplicationContext();
+        this.f29706b = w70Var;
+        this.f29705a = context.getApplicationContext();
     }
 
     @Override // android.os.Handler
@@ -26,9 +30,9 @@ public final class v02 extends q22 {
             sb.append(i);
             return;
         }
-        int g = this.b.g(this.a);
-        if (this.b.j(g)) {
-            this.b.o(this.a, g);
+        int mo5491g = this.f29706b.mo5491g(this.f29705a);
+        if (this.f29706b.mo5488j(mo5491g)) {
+            this.f29706b.m6475o(this.f29705a, mo5491g);
         }
     }
 }

@@ -5,17 +5,29 @@ import java.util.HashSet;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public final class sk0 implements tk0 {
-    public static final Locale[] c = new Locale[0];
-    public static final Locale d = new Locale("en", "XA");
-    public static final Locale e = new Locale("ar", "XB");
-    public static final Locale f = rk0.b("en-Latn");
-    public final Locale[] a;
-    public final String b;
+
+    /* renamed from: c */
+    public static final Locale[] f26325c = new Locale[0];
+
+    /* renamed from: d */
+    public static final Locale f26326d = new Locale("en", "XA");
+
+    /* renamed from: e */
+    public static final Locale f26327e = new Locale("ar", "XB");
+
+    /* renamed from: f */
+    public static final Locale f26328f = rk0.m11226b("en-Latn");
+
+    /* renamed from: a */
+    public final Locale[] f26329a;
+
+    /* renamed from: b */
+    public final String f26330b;
 
     public sk0(Locale... localeArr) {
         String sb;
         if (localeArr.length == 0) {
-            this.a = c;
+            this.f26329a = f26325c;
             sb = "";
         } else {
             ArrayList arrayList = new ArrayList();
@@ -29,20 +41,21 @@ public final class sk0 implements tk0 {
                 if (!hashSet.contains(locale)) {
                     Locale locale2 = (Locale) locale.clone();
                     arrayList.add(locale2);
-                    c(sb2, locale2);
+                    m10274c(sb2, locale2);
                     if (i < localeArr.length - 1) {
                         sb2.append(',');
                     }
                     hashSet.add(locale2);
                 }
             }
-            this.a = (Locale[]) arrayList.toArray(new Locale[0]);
+            this.f26329a = (Locale[]) arrayList.toArray(new Locale[0]);
             sb = sb2.toString();
         }
-        this.b = sb;
+        this.f26330b = sb;
     }
 
-    public static void c(StringBuilder sb, Locale locale) {
+    /* renamed from: c */
+    public static void m10274c(StringBuilder sb, Locale locale) {
         sb.append(locale.getLanguage());
         String country = locale.getCountry();
         if (country == null || country.isEmpty()) {
@@ -53,12 +66,14 @@ public final class sk0 implements tk0 {
     }
 
     @Override // com.daaw.tk0
-    public String a() {
-        return this.b;
+    /* renamed from: a */
+    public String mo8083a() {
+        return this.f26330b;
     }
 
     @Override // com.daaw.tk0
-    public Object b() {
+    /* renamed from: b */
+    public Object mo8082b() {
         return null;
     }
 
@@ -69,13 +84,13 @@ public final class sk0 implements tk0 {
         if (!(obj instanceof sk0)) {
             return false;
         }
-        Locale[] localeArr = ((sk0) obj).a;
-        if (this.a.length != localeArr.length) {
+        Locale[] localeArr = ((sk0) obj).f26329a;
+        if (this.f26329a.length != localeArr.length) {
             return false;
         }
         int i = 0;
         while (true) {
-            Locale[] localeArr2 = this.a;
+            Locale[] localeArr2 = this.f26329a;
             if (i >= localeArr2.length) {
                 return true;
             }
@@ -89,7 +104,7 @@ public final class sk0 implements tk0 {
     @Override // com.daaw.tk0
     public Locale get(int i) {
         if (i >= 0) {
-            Locale[] localeArr = this.a;
+            Locale[] localeArr = this.f26329a;
             if (i < localeArr.length) {
                 return localeArr[i];
             }
@@ -99,7 +114,7 @@ public final class sk0 implements tk0 {
 
     public int hashCode() {
         int i = 1;
-        for (Locale locale : this.a) {
+        for (Locale locale : this.f26329a) {
             i = (i * 31) + locale.hashCode();
         }
         return i;
@@ -107,12 +122,12 @@ public final class sk0 implements tk0 {
 
     @Override // com.daaw.tk0
     public boolean isEmpty() {
-        return this.a.length == 0;
+        return this.f26329a.length == 0;
     }
 
     @Override // com.daaw.tk0
     public int size() {
-        return this.a.length;
+        return this.f26329a.length;
     }
 
     public String toString() {
@@ -120,13 +135,13 @@ public final class sk0 implements tk0 {
         sb.append("[");
         int i = 0;
         while (true) {
-            Locale[] localeArr = this.a;
+            Locale[] localeArr = this.f26329a;
             if (i >= localeArr.length) {
                 sb.append("]");
                 return sb.toString();
             }
             sb.append(localeArr[i]);
-            if (i < this.a.length - 1) {
+            if (i < this.f26329a.length - 1) {
                 sb.append(',');
             }
             i++;

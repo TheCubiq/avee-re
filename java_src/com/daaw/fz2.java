@@ -1,15 +1,18 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class fz2 {
-    public static boolean a(String str) {
-        return "audio".equals(c(str));
+    /* renamed from: a */
+    public static boolean m22128a(String str) {
+        return "audio".equals(m22126c(str));
     }
 
-    public static boolean b(String str) {
-        return "video".equals(c(str));
+    /* renamed from: b */
+    public static boolean m22127b(String str) {
+        return "video".equals(m22126c(str));
     }
 
-    public static String c(String str) {
+    /* renamed from: c */
+    public static String m22126c(String str) {
         if (str == null) {
             return null;
         }

@@ -10,10 +10,11 @@ public final class he3 extends bp2 implements je3 {
     }
 
     @Override // com.daaw.je3
-    public final void U0(zzbu zzbuVar, yd0 yd0Var) {
-        Parcel D = D();
-        dp2.g(D, zzbuVar);
-        dp2.g(D, yd0Var);
-        M(1, D);
+    /* renamed from: U0 */
+    public final void mo18543U0(zzbu zzbuVar, yd0 yd0Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, zzbuVar);
+        dp2.m24101g(m25952D, yd0Var);
+        m25950M(1, m25952D);
     }
 }

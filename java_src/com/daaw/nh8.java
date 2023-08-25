@@ -5,25 +5,32 @@ import javax.annotation.Nullable;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class nh8 implements qo8 {
-    public final Executor a;
-    public final Object b = new Object();
+
+    /* renamed from: a */
+    public final Executor f20130a;
+
+    /* renamed from: b */
+    public final Object f20131b = new Object();
     @GuardedBy("mLock")
     @Nullable
-    public ku0 c;
+
+    /* renamed from: c */
+    public ku0 f20132c;
 
     public nh8(Executor executor, ku0 ku0Var) {
-        this.a = executor;
-        this.c = ku0Var;
+        this.f20130a = executor;
+        this.f20132c = ku0Var;
     }
 
     @Override // com.daaw.qo8
-    public final void a(rj1 rj1Var) {
-        if (rj1Var.n()) {
-            synchronized (this.b) {
-                if (this.c == null) {
+    /* renamed from: a */
+    public final void mo5231a(rj1 rj1Var) {
+        if (rj1Var.mo11236n()) {
+            synchronized (this.f20131b) {
+                if (this.f20132c == null) {
                     return;
                 }
-                this.a.execute(new bf8(this, rj1Var));
+                this.f20130a.execute(new bf8(this, rj1Var));
             }
         }
     }

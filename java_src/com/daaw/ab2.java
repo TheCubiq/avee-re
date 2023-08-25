@@ -1,45 +1,61 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ab2 {
-    public int a;
-    public long b;
-    public int c;
-    public int d;
-    public int e;
-    public final int[] f = new int[255];
-    public final ik5 g = new ik5(255);
 
-    public final void a() {
-        this.a = 0;
-        this.b = 0L;
-        this.c = 0;
-        this.d = 0;
-        this.e = 0;
+    /* renamed from: a */
+    public int f3040a;
+
+    /* renamed from: b */
+    public long f3041b;
+
+    /* renamed from: c */
+    public int f3042c;
+
+    /* renamed from: d */
+    public int f3043d;
+
+    /* renamed from: e */
+    public int f3044e;
+
+    /* renamed from: f */
+    public final int[] f3045f = new int[255];
+
+    /* renamed from: g */
+    public final ik5 f3046g = new ik5(255);
+
+    /* renamed from: a */
+    public final void m27540a() {
+        this.f3040a = 0;
+        this.f3041b = 0L;
+        this.f3042c = 0;
+        this.f3043d = 0;
+        this.f3044e = 0;
     }
 
-    public final boolean b(k09 k09Var, boolean z) {
-        a();
-        this.g.c(27);
-        if (n09.c(k09Var, this.g.h(), 0, 27, z) && this.g.A() == 1332176723) {
-            if (this.g.s() != 0) {
+    /* renamed from: b */
+    public final boolean m27539b(k09 k09Var, boolean z) {
+        m27540a();
+        this.f3046g.m19719c(27);
+        if (n09.m15608c(k09Var, this.f3046g.m19714h(), 0, 27, z) && this.f3046g.m19729A() == 1332176723) {
+            if (this.f3046g.m19703s() != 0) {
                 if (z) {
                     return false;
                 }
-                throw dl3.c("unsupported bit stream revision");
+                throw dl3.m24265c("unsupported bit stream revision");
             }
-            this.a = this.g.s();
-            this.b = this.g.x();
-            this.g.y();
-            this.g.y();
-            this.g.y();
-            int s = this.g.s();
-            this.c = s;
-            this.d = s + 27;
-            this.g.c(s);
-            if (n09.c(k09Var, this.g.h(), 0, this.c, z)) {
-                for (int i = 0; i < this.c; i++) {
-                    this.f[i] = this.g.s();
-                    this.e += this.f[i];
+            this.f3040a = this.f3046g.m19703s();
+            this.f3041b = this.f3046g.m19698x();
+            this.f3046g.m19697y();
+            this.f3046g.m19697y();
+            this.f3046g.m19697y();
+            int m19703s = this.f3046g.m19703s();
+            this.f3042c = m19703s;
+            this.f3043d = m19703s + 27;
+            this.f3046g.m19719c(m19703s);
+            if (n09.m15608c(k09Var, this.f3046g.m19714h(), 0, this.f3042c, z)) {
+                for (int i = 0; i < this.f3042c; i++) {
+                    this.f3045f[i] = this.f3046g.m19703s();
+                    this.f3044e += this.f3045f[i];
                 }
                 return true;
             }
@@ -47,24 +63,25 @@ public final class ab2 {
         return false;
     }
 
-    public final boolean c(k09 k09Var, long j) {
-        uo4.d(k09Var.zzf() == k09Var.zze());
-        this.g.c(4);
+    /* renamed from: c */
+    public final boolean m27538c(k09 k09Var, long j) {
+        uo4.m7874d(k09Var.zzf() == k09Var.zze());
+        this.f3046g.m19719c(4);
         while (true) {
-            if ((j == -1 || k09Var.zzf() + 4 < j) && n09.c(k09Var, this.g.h(), 0, 4, true)) {
-                this.g.f(0);
-                if (this.g.A() == 1332176723) {
+            if ((j == -1 || k09Var.zzf() + 4 < j) && n09.m15608c(k09Var, this.f3046g.m19714h(), 0, 4, true)) {
+                this.f3046g.m19716f(0);
+                if (this.f3046g.m19729A() == 1332176723) {
                     k09Var.zzj();
                     return true;
                 }
-                ((rz8) k09Var).l(1, false);
+                ((rz8) k09Var).m10811l(1, false);
             }
         }
         do {
             if (j != -1 && k09Var.zzf() >= j) {
                 break;
             }
-        } while (k09Var.b(1) != -1);
+        } while (k09Var.mo5665b(1) != -1);
         return false;
     }
 }

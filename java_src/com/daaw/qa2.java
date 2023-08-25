@@ -2,308 +2,323 @@ package com.daaw;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.List;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNull;
 /* loaded from: classes.dex */
 public final class qa2 extends rc7 {
-    public Boolean b;
-    public i92 c;
-    public Boolean d;
+
+    /* renamed from: b */
+    public Boolean f23807b;
+
+    /* renamed from: c */
+    public i92 f23808c;
+
+    /* renamed from: d */
+    public Boolean f23809d;
 
     public qa2(dr6 dr6Var) {
         super(dr6Var);
-        this.c = new i92() { // from class: com.daaw.b82
+        this.f23808c = new i92() { // from class: com.daaw.b82
             @Override // com.daaw.i92
-            public final String c(String str, String str2) {
+            /* renamed from: c */
+            public final String mo20012c(String str, String str2) {
                 return null;
             }
         };
     }
 
-    public static final long I() {
-        return ((Long) m75.e.a(null)).longValue();
+    /* renamed from: I */
+    public static final long m12670I() {
+        return ((Long) m75.f18527e.m18786a(null)).longValue();
     }
 
-    public static final long g() {
-        return ((Long) m75.E.a(null)).longValue();
+    /* renamed from: g */
+    public static final long m12669g() {
+        return ((Long) m75.f18497E.m18786a(null)).longValue();
     }
 
-    public final boolean A() {
-        Boolean t = t("google_analytics_adid_collection_enabled");
-        return t == null || t.booleanValue();
+    /* renamed from: A */
+    public final boolean m12678A() {
+        Boolean m12658t = m12658t("google_analytics_adid_collection_enabled");
+        return m12658t == null || m12658t.booleanValue();
     }
 
-    public final boolean B(String str, j65 j65Var) {
-        Object a;
+    /* renamed from: B */
+    public final boolean m12677B(String str, j65 j65Var) {
+        Object m18786a;
         if (str != null) {
-            String c = this.c.c(str, j65Var.b());
-            if (!TextUtils.isEmpty(c)) {
-                a = j65Var.a(Boolean.valueOf("1".equals(c)));
-                return ((Boolean) a).booleanValue();
+            String mo20012c = this.f23808c.mo20012c(str, j65Var.m18785b());
+            if (!TextUtils.isEmpty(mo20012c)) {
+                m18786a = j65Var.m18786a(Boolean.valueOf("1".equals(mo20012c)));
+                return ((Boolean) m18786a).booleanValue();
             }
         }
-        a = j65Var.a(null);
-        return ((Boolean) a).booleanValue();
+        m18786a = j65Var.m18786a(null);
+        return ((Boolean) m18786a).booleanValue();
     }
 
-    public final boolean C(String str) {
-        return "1".equals(this.c.c(str, "gaia_collection_enabled"));
+    /* renamed from: C */
+    public final boolean m12676C(String str) {
+        return "1".equals(this.f23808c.mo20012c(str, "gaia_collection_enabled"));
     }
 
-    public final boolean D() {
-        Boolean t = t("google_analytics_automatic_screen_reporting_enabled");
-        return t == null || t.booleanValue();
+    /* renamed from: D */
+    public final boolean m12675D() {
+        Boolean m12658t = m12658t("google_analytics_automatic_screen_reporting_enabled");
+        return m12658t == null || m12658t.booleanValue();
     }
 
-    public final boolean E() {
-        this.a.a();
-        Boolean t = t("firebase_analytics_collection_deactivated");
-        return t != null && t.booleanValue();
+    /* renamed from: E */
+    public final boolean m12674E() {
+        this.f25143a.mo3911a();
+        Boolean m12658t = m12658t("firebase_analytics_collection_deactivated");
+        return m12658t != null && m12658t.booleanValue();
     }
 
-    public final boolean F(String str) {
-        return "1".equals(this.c.c(str, "measurement.event_sampling_enabled"));
+    /* renamed from: F */
+    public final boolean m12673F(String str) {
+        return "1".equals(this.f23808c.mo20012c(str, "measurement.event_sampling_enabled"));
     }
 
-    public final boolean G() {
-        if (this.b == null) {
-            Boolean t = t("app_measurement_lite");
-            this.b = t;
-            if (t == null) {
-                this.b = Boolean.FALSE;
+    /* renamed from: G */
+    public final boolean m12672G() {
+        if (this.f23807b == null) {
+            Boolean m12658t = m12658t("app_measurement_lite");
+            this.f23807b = m12658t;
+            if (m12658t == null) {
+                this.f23807b = Boolean.FALSE;
             }
         }
-        return this.b.booleanValue() || !this.a.s();
+        return this.f23807b.booleanValue() || !this.f25143a.m24027s();
     }
 
     @EnsuresNonNull({"this.isMainProcess"})
-    public final boolean H() {
-        if (this.d == null) {
+    /* renamed from: H */
+    public final boolean m12671H() {
+        if (this.f23809d == null) {
             synchronized (this) {
-                if (this.d == null) {
-                    ApplicationInfo applicationInfo = this.a.d().getApplicationInfo();
-                    String a = hz0.a();
+                if (this.f23809d == null) {
+                    ApplicationInfo applicationInfo = this.f25143a.mo3905d().getApplicationInfo();
+                    String m20322a = hz0.m20322a();
                     if (applicationInfo != null) {
                         String str = applicationInfo.processName;
                         boolean z = false;
-                        if (str != null && str.equals(a)) {
+                        if (str != null && str.equals(m20322a)) {
                             z = true;
                         }
-                        this.d = Boolean.valueOf(z);
+                        this.f23809d = Boolean.valueOf(z);
                     }
-                    if (this.d == null) {
-                        this.d = Boolean.TRUE;
-                        this.a.i().q().a("My process not in the list of running processes");
+                    if (this.f23809d == null) {
+                        this.f23809d = Boolean.TRUE;
+                        this.f25143a.mo3895i().m14160q().m20653a("My process not in the list of running processes");
                     }
                 }
             }
         }
-        return this.d.booleanValue();
+        return this.f23809d.booleanValue();
     }
 
-    public final String h(String str, String str2) {
-        hk5 q;
+    /* renamed from: h */
+    public final String m12668h(String str, String str2) {
+        hk5 m14160q;
         String str3;
         try {
             String str4 = (String) Class.forName("android.os.SystemProperties").getMethod("get", String.class, String.class).invoke(null, str, "");
-            ry0.j(str4);
+            ry0.m10830j(str4);
             return str4;
         } catch (ClassNotFoundException e) {
             e = e;
-            q = this.a.i().q();
+            m14160q = this.f25143a.mo3895i().m14160q();
             str3 = "Could not find SystemProperties class";
-            q.b(str3, e);
+            m14160q.m20652b(str3, e);
             return "";
         } catch (IllegalAccessException e2) {
             e = e2;
-            q = this.a.i().q();
+            m14160q = this.f25143a.mo3895i().m14160q();
             str3 = "Could not access SystemProperties.get()";
-            q.b(str3, e);
+            m14160q.m20652b(str3, e);
             return "";
         } catch (NoSuchMethodException e3) {
             e = e3;
-            q = this.a.i().q();
+            m14160q = this.f25143a.mo3895i().m14160q();
             str3 = "Could not find SystemProperties.get() method";
-            q.b(str3, e);
+            m14160q.m20652b(str3, e);
             return "";
         } catch (InvocationTargetException e4) {
             e = e4;
-            q = this.a.i().q();
+            m14160q = this.f25143a.mo3895i().m14160q();
             str3 = "SystemProperties.get() threw an exception";
-            q.b(str3, e);
+            m14160q.m20652b(str3, e);
             return "";
         }
     }
 
-    public final double j(String str, j65 j65Var) {
+    /* renamed from: j */
+    public final double m12667j(String str, j65 j65Var) {
         if (str != null) {
-            String c = this.c.c(str, j65Var.b());
-            if (!TextUtils.isEmpty(c)) {
+            String mo20012c = this.f23808c.mo20012c(str, j65Var.m18785b());
+            if (!TextUtils.isEmpty(mo20012c)) {
                 try {
-                    return ((Double) j65Var.a(Double.valueOf(Double.parseDouble(c)))).doubleValue();
+                    return ((Double) j65Var.m18786a(Double.valueOf(Double.parseDouble(mo20012c)))).doubleValue();
                 } catch (NumberFormatException unused) {
                 }
             }
         }
-        return ((Double) j65Var.a(null)).doubleValue();
+        return ((Double) j65Var.m18786a(null)).doubleValue();
     }
 
-    public final int k(String str) {
-        return o(str, m75.I, 500, 2000);
+    /* renamed from: k */
+    public final int m12666k(String str) {
+        return m12662o(str, m75.f18501I, 500, 2000);
     }
 
-    public final int l() {
-        dd8 N = this.a.N();
-        Boolean J = N.a.L().J();
-        if (N.o0() < 201500) {
-            return (J == null || J.booleanValue()) ? 25 : 100;
+    /* renamed from: l */
+    public final int m12665l() {
+        dd8 m24045N = this.f25143a.m24045N();
+        Boolean m5474J = m24045N.f25143a.m24047L().m5474J();
+        if (m24045N.m24472o0() < 201500) {
+            return (m5474J == null || m5474J.booleanValue()) ? 25 : 100;
         }
         return 100;
     }
 
-    public final int m(String str) {
-        return o(str, m75.J, 25, 100);
+    /* renamed from: m */
+    public final int m12664m(String str) {
+        return m12662o(str, m75.f18502J, 25, 100);
     }
 
-    public final int n(String str, j65 j65Var) {
+    /* renamed from: n */
+    public final int m12663n(String str, j65 j65Var) {
         if (str != null) {
-            String c = this.c.c(str, j65Var.b());
-            if (!TextUtils.isEmpty(c)) {
+            String mo20012c = this.f23808c.mo20012c(str, j65Var.m18785b());
+            if (!TextUtils.isEmpty(mo20012c)) {
                 try {
-                    return ((Integer) j65Var.a(Integer.valueOf(Integer.parseInt(c)))).intValue();
+                    return ((Integer) j65Var.m18786a(Integer.valueOf(Integer.parseInt(mo20012c)))).intValue();
                 } catch (NumberFormatException unused) {
                 }
             }
         }
-        return ((Integer) j65Var.a(null)).intValue();
+        return ((Integer) j65Var.m18786a(null)).intValue();
     }
 
-    public final int o(String str, j65 j65Var, int i, int i2) {
-        return Math.max(Math.min(n(str, j65Var), i2), i);
+    /* renamed from: o */
+    public final int m12662o(String str, j65 j65Var, int i, int i2) {
+        return Math.max(Math.min(m12663n(str, j65Var), i2), i);
     }
 
-    public final long p() {
-        this.a.a();
+    /* renamed from: p */
+    public final long m12661p() {
+        this.f25143a.mo3911a();
         return 74029L;
     }
 
-    public final long q(String str, j65 j65Var) {
+    /* renamed from: q */
+    public final long m12660q(String str, j65 j65Var) {
         if (str != null) {
-            String c = this.c.c(str, j65Var.b());
-            if (!TextUtils.isEmpty(c)) {
+            String mo20012c = this.f23808c.mo20012c(str, j65Var.m18785b());
+            if (!TextUtils.isEmpty(mo20012c)) {
                 try {
-                    return ((Long) j65Var.a(Long.valueOf(Long.parseLong(c)))).longValue();
+                    return ((Long) j65Var.m18786a(Long.valueOf(Long.parseLong(mo20012c)))).longValue();
                 } catch (NumberFormatException unused) {
                 }
             }
         }
-        return ((Long) j65Var.a(null)).longValue();
+        return ((Long) j65Var.m18786a(null)).longValue();
     }
 
-    public final Bundle s() {
+    /* renamed from: s */
+    public final Bundle m12659s() {
         try {
-            if (this.a.d().getPackageManager() == null) {
-                this.a.i().q().a("Failed to load metadata: PackageManager is null");
+            if (this.f25143a.mo3905d().getPackageManager() == null) {
+                this.f25143a.mo3895i().m14160q().m20653a("Failed to load metadata: PackageManager is null");
                 return null;
             }
-            ApplicationInfo c = ez1.a(this.a.d()).c(this.a.d().getPackageName(), 128);
-            if (c == null) {
-                this.a.i().q().a("Failed to load metadata: ApplicationInfo is null");
+            ApplicationInfo m19344c = ez1.m22979a(this.f25143a.mo3905d()).m19344c(this.f25143a.mo3905d().getPackageName(), 128);
+            if (m19344c == null) {
+                this.f25143a.mo3895i().m14160q().m20653a("Failed to load metadata: ApplicationInfo is null");
                 return null;
             }
-            return c.metaData;
+            return m19344c.metaData;
         } catch (PackageManager.NameNotFoundException e) {
-            this.a.i().q().b("Failed to load metadata: Package name not found", e);
+            this.f25143a.mo3895i().m14160q().m20652b("Failed to load metadata: Package name not found", e);
             return null;
         }
     }
 
-    public final Boolean t(String str) {
-        ry0.f(str);
-        Bundle s = s();
-        if (s == null) {
-            this.a.i().q().a("Failed to load metadata: Metadata bundle is null");
+    /* renamed from: t */
+    public final Boolean m12658t(String str) {
+        ry0.m10834f(str);
+        Bundle m12659s = m12659s();
+        if (m12659s == null) {
+            this.f25143a.mo3895i().m14160q().m20653a("Failed to load metadata: Metadata bundle is null");
             return null;
-        } else if (s.containsKey(str)) {
-            return Boolean.valueOf(s.getBoolean(str));
+        } else if (m12659s.containsKey(str)) {
+            return Boolean.valueOf(m12659s.getBoolean(str));
         } else {
             return null;
         }
     }
 
-    public final String u() {
-        return h("debug.firebase.analytics.app", "");
+    /* renamed from: u */
+    public final String m12657u() {
+        return m12668h("debug.firebase.analytics.app", "");
     }
 
-    public final String v() {
-        return h("debug.deferred.deeplink", "");
+    /* renamed from: v */
+    public final String m12656v() {
+        return m12668h("debug.deferred.deeplink", "");
     }
 
-    public final String w() {
-        this.a.a();
+    /* renamed from: w */
+    public final String m12655w() {
+        this.f25143a.mo3911a();
         return "FA";
     }
 
-    public final String x(String str, j65 j65Var) {
-        return (String) j65Var.a(str == null ? null : this.c.c(str, j65Var.b()));
+    /* renamed from: x */
+    public final String m12654x(String str, j65 j65Var) {
+        return (String) j65Var.m18786a(str == null ? null : this.f23808c.mo20012c(str, j65Var.m18785b()));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x002e A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* renamed from: y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final java.util.List y(java.lang.String r4) {
-        /*
-            r3 = this;
-            java.lang.String r4 = "analytics.safelisted_events"
-            com.daaw.ry0.f(r4)
-            android.os.Bundle r0 = r3.s()
-            r1 = 0
-            if (r0 != 0) goto L1d
-            com.daaw.dr6 r4 = r3.a
-            com.daaw.om5 r4 = r4.i()
-            com.daaw.hk5 r4 = r4.q()
-            java.lang.String r0 = "Failed to load metadata: Metadata bundle is null"
-            r4.a(r0)
-        L1b:
-            r4 = r1
-            goto L2c
-        L1d:
-            boolean r2 = r0.containsKey(r4)
-            if (r2 != 0) goto L24
-            goto L1b
-        L24:
-            int r4 = r0.getInt(r4)
-            java.lang.Integer r4 = java.lang.Integer.valueOf(r4)
-        L2c:
-            if (r4 == 0) goto L58
-            com.daaw.dr6 r0 = r3.a     // Catch: android.content.res.Resources.NotFoundException -> L48
-            android.content.Context r0 = r0.d()     // Catch: android.content.res.Resources.NotFoundException -> L48
-            android.content.res.Resources r0 = r0.getResources()     // Catch: android.content.res.Resources.NotFoundException -> L48
-            int r4 = r4.intValue()     // Catch: android.content.res.Resources.NotFoundException -> L48
-            java.lang.String[] r4 = r0.getStringArray(r4)     // Catch: android.content.res.Resources.NotFoundException -> L48
-            if (r4 != 0) goto L43
-            return r1
-        L43:
-            java.util.List r4 = java.util.Arrays.asList(r4)     // Catch: android.content.res.Resources.NotFoundException -> L48
-            return r4
-        L48:
-            r4 = move-exception
-            com.daaw.dr6 r0 = r3.a
-            com.daaw.om5 r0 = r0.i()
-            com.daaw.hk5 r0 = r0.q()
-            java.lang.String r2 = "Failed to load string array from metadata: resource not found"
-            r0.b(r2, r4)
-        L58:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.qa2.y(java.lang.String):java.util.List");
+    public final List m12653y(String str) {
+        Integer valueOf;
+        ry0.m10834f("analytics.safelisted_events");
+        Bundle m12659s = m12659s();
+        if (m12659s == null) {
+            this.f25143a.mo3895i().m14160q().m20653a("Failed to load metadata: Metadata bundle is null");
+        } else if (m12659s.containsKey("analytics.safelisted_events")) {
+            valueOf = Integer.valueOf(m12659s.getInt("analytics.safelisted_events"));
+            if (valueOf != null) {
+                try {
+                    String[] stringArray = this.f25143a.mo3905d().getResources().getStringArray(valueOf.intValue());
+                    if (stringArray == null) {
+                        return null;
+                    }
+                    return Arrays.asList(stringArray);
+                } catch (Resources.NotFoundException e) {
+                    this.f25143a.mo3895i().m14160q().m20652b("Failed to load string array from metadata: resource not found", e);
+                }
+            }
+            return null;
+        }
+        valueOf = null;
+        if (valueOf != null) {
+        }
+        return null;
     }
 
-    public final void z(i92 i92Var) {
-        this.c = i92Var;
+    /* renamed from: z */
+    public final void m12652z(i92 i92Var) {
+        this.f23808c = i92Var;
     }
 }

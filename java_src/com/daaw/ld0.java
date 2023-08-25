@@ -7,25 +7,26 @@ public class ld0 extends md0 {
         super(z, bArr);
     }
 
-    @Override // com.daaw.md0, com.daaw.k
-    public void b(byte[] bArr) {
+    @Override // com.daaw.md0, com.daaw.AbstractC1892k
+    /* renamed from: b */
+    public void mo16087b(byte[] bArr) {
         String str;
         int i = 1;
         try {
-            str = wc.a(bArr, 1, 3);
+            str = C3419wc.m6203a(bArr, 1, 3);
         } catch (UnsupportedEncodingException unused) {
             str = "unknown";
         }
-        this.b = "image/" + str.toLowerCase();
-        this.c = bArr[4];
-        int g = wc.g(bArr, 5, bArr[0]);
-        if (g >= 0) {
-            xw xwVar = new xw(bArr[0], wc.e(bArr, 5, g - 5));
-            this.d = xwVar;
-            i = g + xwVar.e().length;
+        this.f18799b = "image/" + str.toLowerCase();
+        this.f18800c = bArr[4];
+        int m6197g = C3419wc.m6197g(bArr, 5, bArr[0]);
+        if (m6197g >= 0) {
+            C3596xw c3596xw = new C3596xw(bArr[0], C3419wc.m6199e(bArr, 5, m6197g - 5));
+            this.f18801d = c3596xw;
+            i = m6197g + c3596xw.m4477e().length;
         } else {
-            this.d = new xw(bArr[0], "");
+            this.f18801d = new C3596xw(bArr[0], "");
         }
-        this.e = wc.e(bArr, i, bArr.length - i);
+        this.f18802e = C3419wc.m6199e(bArr, i, bArr.length - i);
     }
 }

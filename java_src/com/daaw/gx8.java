@@ -11,17 +11,17 @@ public final class gx8 extends z22 implements tz8 {
 
     @Override // com.daaw.tz8
     public final int zzc() {
-        Parcel D = D(2, I());
-        int readInt = D.readInt();
-        D.recycle();
+        Parcel m2966D = m2966D(2, m2965I());
+        int readInt = m2966D.readInt();
+        m2966D.recycle();
         return readInt;
     }
 
     @Override // com.daaw.tz8
     public final yd0 zzd() {
-        Parcel D = D(1, I());
-        yd0 I = yd0.a.I(D.readStrongBinder());
-        D.recycle();
-        return I;
+        Parcel m2966D = m2966D(1, m2965I());
+        yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(m2966D.readStrongBinder());
+        m2966D.recycle();
+        return m3857I;
     }
 }

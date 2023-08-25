@@ -6,18 +6,22 @@ import com.google.android.gms.ads.mediation.MediationAdLoadCallback;
 import com.google.android.gms.ads.mediation.MediationBannerAd;
 /* loaded from: classes.dex */
 public final class ip3 implements MediationAdLoadCallback {
-    public final /* synthetic */ ro3 a;
-    public final /* synthetic */ gn3 b;
+
+    /* renamed from: a */
+    public final /* synthetic */ ro3 f13900a;
+
+    /* renamed from: b */
+    public final /* synthetic */ gn3 f13901b;
 
     public ip3(sp3 sp3Var, ro3 ro3Var, gn3 gn3Var) {
-        this.a = ro3Var;
-        this.b = gn3Var;
+        this.f13900a = ro3Var;
+        this.f13901b = gn3Var;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdLoadCallback
     public final void onFailure(AdError adError) {
         try {
-            this.a.zzf(adError.zza());
+            this.f13900a.zzf(adError.zza());
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -33,15 +37,15 @@ public final class ip3 implements MediationAdLoadCallback {
         MediationBannerAd mediationBannerAd = (MediationBannerAd) obj;
         if (mediationBannerAd != null) {
             try {
-                this.a.P2(nt0.g3(mediationBannerAd.getView()));
+                this.f13900a.mo11107P2(nt0.m14830g3(mediationBannerAd.getView()));
             } catch (RemoteException e) {
                 k04.zzh("", e);
             }
-            return new tp3(this.b);
+            return new tp3(this.f13901b);
         }
         k04.zzj("Adapter incorrectly returned a null ad. The onFailure() callback should be called if an adapter fails to load an ad.");
         try {
-            this.a.a("Adapter returned null.");
+            this.f13900a.mo11105a("Adapter returned null.");
             return null;
         } catch (RemoteException e2) {
             k04.zzh("", e2);

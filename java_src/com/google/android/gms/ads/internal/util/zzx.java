@@ -17,12 +17,13 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @TargetApi(28)
 /* loaded from: classes.dex */
 public class zzx extends zzv {
-    public static final /* synthetic */ WindowInsets b(Activity activity, View view, WindowInsets windowInsets) {
-        if (com.google.android.gms.ads.internal.zzt.zzo().h().zzm() == null) {
+    /* renamed from: b */
+    public static final /* synthetic */ WindowInsets m1322b(Activity activity, View view, WindowInsets windowInsets) {
+        if (com.google.android.gms.ads.internal.zzt.zzo().m11915h().zzm() == null) {
             DisplayCutout displayCutout = windowInsets.getDisplayCutout();
             String str = "";
             if (displayCutout != null) {
-                zzg h = com.google.android.gms.ads.internal.zzt.zzo().h();
+                zzg m11915h = com.google.android.gms.ads.internal.zzt.zzo().m11915h();
                 for (Rect rect : displayCutout.getBoundingRects()) {
                     String format = String.format(Locale.US, "%d,%d,%d,%d", Integer.valueOf(rect.left), Integer.valueOf(rect.top), Integer.valueOf(rect.right), Integer.valueOf(rect.bottom));
                     if (!TextUtils.isEmpty(str)) {
@@ -30,16 +31,17 @@ public class zzx extends zzv {
                     }
                     str = str.concat(String.valueOf(format));
                 }
-                h.zzC(str);
+                m11915h.zzC(str);
             } else {
-                com.google.android.gms.ads.internal.zzt.zzo().h().zzC("");
+                com.google.android.gms.ads.internal.zzt.zzo().m11915h().zzC("");
             }
         }
-        c(false, activity);
+        m1321c(false, activity);
         return view.onApplyWindowInsets(windowInsets);
     }
 
-    public static final void c(boolean z, Activity activity) {
+    /* renamed from: c */
+    public static final void m1321c(boolean z, Activity activity) {
         Window window = activity.getWindow();
         WindowManager.LayoutParams attributes = window.getAttributes();
         int i = attributes.layoutInDisplayCutoutMode;
@@ -57,12 +59,12 @@ public class zzx extends zzv {
 
     @Override // com.google.android.gms.ads.internal.util.zzaa
     public final void zzk(final Activity activity) {
-        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.Z0)).booleanValue() && com.google.android.gms.ads.internal.zzt.zzo().h().zzm() == null && !activity.isInMultiWindowMode()) {
-            c(true, activity);
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10612Z0)).booleanValue() && com.google.android.gms.ads.internal.zzt.zzo().m11915h().zzm() == null && !activity.isInMultiWindowMode()) {
+            m1321c(true, activity);
             activity.getWindow().getDecorView().setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() { // from class: com.google.android.gms.ads.internal.util.zzw
                 @Override // android.view.View.OnApplyWindowInsetsListener
                 public final WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
-                    return zzx.b(activity, view, windowInsets);
+                    return zzx.m1322b(activity, view, windowInsets);
                 }
             });
         }

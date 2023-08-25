@@ -7,14 +7,16 @@ public enum yp6 {
     VIDEO("video"),
     AUDIO("audio");
     
-    public final String p;
+
+    /* renamed from: p */
+    public final String f33934p;
 
     yp6(String str) {
-        this.p = str;
+        this.f33934p = str;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return this.p;
+        return this.f33934p;
     }
 }

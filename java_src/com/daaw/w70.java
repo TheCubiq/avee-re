@@ -20,67 +20,87 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiActivity;
 /* loaded from: classes.dex */
 public class w70 extends x70 {
-    public String c;
-    public static final Object e = new Object();
-    public static final w70 f = new w70();
-    public static final int d = x70.a;
 
-    public static w70 m() {
-        return f;
+    /* renamed from: c */
+    public String f30969c;
+
+    /* renamed from: e */
+    public static final Object f30967e = new Object();
+
+    /* renamed from: f */
+    public static final w70 f30968f = new w70();
+
+    /* renamed from: d */
+    public static final int f30966d = x70.f32161a;
+
+    /* renamed from: m */
+    public static w70 m6477m() {
+        return f30968f;
     }
 
     @Override // com.daaw.x70
-    public Intent b(Context context, int i, String str) {
-        return super.b(context, i, str);
+    /* renamed from: b */
+    public Intent mo5496b(Context context, int i, String str) {
+        return super.mo5496b(context, i, str);
     }
 
     @Override // com.daaw.x70
-    public PendingIntent c(Context context, int i, int i2) {
-        return super.c(context, i, i2);
+    /* renamed from: c */
+    public PendingIntent mo5495c(Context context, int i, int i2) {
+        return super.mo5495c(context, i, i2);
     }
 
     @Override // com.daaw.x70
-    public final String e(int i) {
-        return super.e(i);
+    /* renamed from: e */
+    public final String mo5493e(int i) {
+        return super.mo5493e(i);
     }
 
     @Override // com.daaw.x70
-    public int g(Context context) {
-        return super.g(context);
+    /* renamed from: g */
+    public int mo5491g(Context context) {
+        return super.mo5491g(context);
     }
 
     @Override // com.daaw.x70
-    public int h(Context context, int i) {
-        return super.h(context, i);
+    /* renamed from: h */
+    public int mo5490h(Context context, int i) {
+        return super.mo5490h(context, i);
     }
 
     @Override // com.daaw.x70
-    public final boolean j(int i) {
-        return super.j(i);
+    /* renamed from: j */
+    public final boolean mo5488j(int i) {
+        return super.mo5488j(i);
     }
 
-    public Dialog k(Activity activity, int i, int i2, DialogInterface.OnCancelListener onCancelListener) {
-        return p(activity, i, u12.b(activity, b(activity, i, "d"), i2), onCancelListener);
+    /* renamed from: k */
+    public Dialog m6479k(Activity activity, int i, int i2, DialogInterface.OnCancelListener onCancelListener) {
+        return m6474p(activity, i, u12.m8638b(activity, mo5496b(activity, i, "d"), i2), onCancelListener);
     }
 
-    public PendingIntent l(Context context, ConnectionResult connectionResult) {
-        return connectionResult.t() ? connectionResult.s() : c(context, connectionResult.h(), 0);
+    /* renamed from: l */
+    public PendingIntent m6478l(Context context, ConnectionResult connectionResult) {
+        return connectionResult.m1206t() ? connectionResult.m1207s() : mo5495c(context, connectionResult.m1209h(), 0);
     }
 
-    public boolean n(Activity activity, int i, int i2, DialogInterface.OnCancelListener onCancelListener) {
-        Dialog k = k(activity, i, i2, onCancelListener);
-        if (k == null) {
+    /* renamed from: n */
+    public boolean m6476n(Activity activity, int i, int i2, DialogInterface.OnCancelListener onCancelListener) {
+        Dialog m6479k = m6479k(activity, i, i2, onCancelListener);
+        if (m6479k == null) {
             return false;
         }
-        s(activity, k, "GooglePlayServicesErrorDialog", onCancelListener);
+        m6471s(activity, m6479k, "GooglePlayServicesErrorDialog", onCancelListener);
         return true;
     }
 
-    public void o(Context context, int i) {
-        t(context, i, null, d(context, i, 0, "n"));
+    /* renamed from: o */
+    public void m6475o(Context context, int i) {
+        m6470t(context, i, null, m5494d(context, i, 0, "n"));
     }
 
-    public final Dialog p(Context context, int i, u12 u12Var, DialogInterface.OnCancelListener onCancelListener) {
+    /* renamed from: p */
+    public final Dialog m6474p(Context context, int i, u12 u12Var, DialogInterface.OnCancelListener onCancelListener) {
         if (i == 0) {
             return null;
         }
@@ -90,135 +110,142 @@ public class w70 extends x70 {
         if (builder == null) {
             builder = new AlertDialog.Builder(context);
         }
-        builder.setMessage(r02.d(context, i));
+        builder.setMessage(r02.m11882d(context, i));
         if (onCancelListener != null) {
             builder.setOnCancelListener(onCancelListener);
         }
-        String c = r02.c(context, i);
-        if (c != null) {
-            builder.setPositiveButton(c, u12Var);
+        String m11883c = r02.m11883c(context, i);
+        if (m11883c != null) {
+            builder.setPositiveButton(m11883c, u12Var);
         }
-        String g = r02.g(context, i);
-        if (g != null) {
-            builder.setTitle(g);
+        String m11879g = r02.m11879g(context, i);
+        if (m11879g != null) {
+            builder.setTitle(m11879g);
         }
         String.format("Creating dialog for Google Play services availability issue. ConnectionResult=%s", Integer.valueOf(i));
         new IllegalArgumentException();
         return builder.create();
     }
 
-    public final Dialog q(Activity activity, DialogInterface.OnCancelListener onCancelListener) {
+    /* renamed from: q */
+    public final Dialog m6473q(Activity activity, DialogInterface.OnCancelListener onCancelListener) {
         ProgressBar progressBar = new ProgressBar(activity, null, 16842874);
         progressBar.setIndeterminate(true);
         progressBar.setVisibility(0);
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setView(progressBar);
-        builder.setMessage(r02.d(activity, 18));
+        builder.setMessage(r02.m11882d(activity, 18));
         builder.setPositiveButton("", (DialogInterface.OnClickListener) null);
         AlertDialog create = builder.create();
-        s(activity, create, "GooglePlayServicesUpdatingDialog", onCancelListener);
+        m6471s(activity, create, "GooglePlayServicesUpdatingDialog", onCancelListener);
         return create;
     }
 
-    public final p02 r(Context context, o02 o02Var) {
+    /* renamed from: r */
+    public final p02 m6472r(Context context, o02 o02Var) {
         IntentFilter intentFilter = new IntentFilter("android.intent.action.PACKAGE_ADDED");
         intentFilter.addDataScheme("package");
         p02 p02Var = new p02(o02Var);
         context.registerReceiver(p02Var, intentFilter);
-        p02Var.a(context);
-        if (i(context, "com.google.android.gms")) {
+        p02Var.m13774a(context);
+        if (m5489i(context, "com.google.android.gms")) {
             return p02Var;
         }
-        o02Var.a();
-        p02Var.b();
+        o02Var.mo14658a();
+        p02Var.m13773b();
         return null;
     }
 
-    public final void s(Activity activity, Dialog dialog, String str, DialogInterface.OnCancelListener onCancelListener) {
+    /* renamed from: s */
+    public final void m6471s(Activity activity, Dialog dialog, String str, DialogInterface.OnCancelListener onCancelListener) {
         try {
             if (activity instanceof p30) {
-                ei1.V1(dialog, onCancelListener).U1(((p30) activity).x(), str);
+                ei1.m23466V1(dialog, onCancelListener).mo13989U1(((p30) activity).m13655x(), str);
                 return;
             }
         } catch (NoClassDefFoundError unused) {
         }
-        tx.a(dialog, onCancelListener).show(activity.getFragmentManager(), str);
+        DialogFragmentC3141tx.m8752a(dialog, onCancelListener).show(activity.getFragmentManager(), str);
     }
 
     @TargetApi(20)
-    public final void t(Context context, int i, String str, PendingIntent pendingIntent) {
+    /* renamed from: t */
+    public final void m6470t(Context context, int i, String str, PendingIntent pendingIntent) {
         int i2;
         String str2;
         String.format("GMS core API Availability. ConnectionResult=%s, tag=%s", Integer.valueOf(i), null);
         new IllegalArgumentException();
         if (i == 18) {
-            u(context);
+            m6469u(context);
         } else if (pendingIntent == null) {
         } else {
-            String f2 = r02.f(context, i);
-            String e2 = r02.e(context, i);
+            String m11880f = r02.m11880f(context, i);
+            String m11881e = r02.m11881e(context, i);
             Resources resources = context.getResources();
-            NotificationManager notificationManager = (NotificationManager) ry0.j(context.getSystemService("notification"));
-            dt0.d o = new dt0.d(context).l(true).e(true).i(f2).o(new dt0.b().h(e2));
-            if (nt.f(context)) {
-                ry0.m(vw0.e());
-                o.n(context.getApplicationInfo().icon).m(2);
-                if (nt.g(context)) {
-                    o.a(i11.common_full_open_on_phone, resources.getString(f21.common_open_on_phone), pendingIntent);
+            NotificationManager notificationManager = (NotificationManager) ry0.m10830j(context.getSystemService("notification"));
+            dt0.C1136d m23963o = new dt0.C1136d(context).m23966l(true).m23973e(true).m23969i(m11880f).m23963o(new dt0.C1134b().m23979h(m11881e));
+            if (C2365nt.m14835f(context)) {
+                ry0.m10827m(vw0.m6700e());
+                m23963o.m23964n(context.getApplicationInfo().icon).m23965m(2);
+                if (C2365nt.m14834g(context)) {
+                    m23963o.m23977a(i11.common_full_open_on_phone, resources.getString(f21.common_open_on_phone), pendingIntent);
                 } else {
-                    o.g(pendingIntent);
+                    m23963o.m23971g(pendingIntent);
                 }
             } else {
-                o.n(17301642).p(resources.getString(f21.common_google_play_services_notification_ticker)).q(System.currentTimeMillis()).g(pendingIntent).h(e2);
+                m23963o.m23964n(17301642).m23962p(resources.getString(f21.common_google_play_services_notification_ticker)).m23961q(System.currentTimeMillis()).m23971g(pendingIntent).m23970h(m11881e);
             }
-            if (vw0.i()) {
-                ry0.m(vw0.i());
-                synchronized (e) {
-                    str2 = this.c;
+            if (vw0.m6696i()) {
+                ry0.m10827m(vw0.m6696i());
+                synchronized (f30967e) {
+                    str2 = this.f30969c;
                 }
                 if (str2 == null) {
                     str2 = "com.google.android.gms.availability";
                     NotificationChannel notificationChannel = notificationManager.getNotificationChannel("com.google.android.gms.availability");
-                    String b = r02.b(context);
+                    String m11884b = r02.m11884b(context);
                     if (notificationChannel == null) {
-                        notificationChannel = new NotificationChannel("com.google.android.gms.availability", b, 4);
-                    } else if (!b.contentEquals(notificationChannel.getName())) {
-                        notificationChannel.setName(b);
+                        notificationChannel = new NotificationChannel("com.google.android.gms.availability", m11884b, 4);
+                    } else if (!m11884b.contentEquals(notificationChannel.getName())) {
+                        notificationChannel.setName(m11884b);
                     }
                     notificationManager.createNotificationChannel(notificationChannel);
                 }
-                o.f(str2);
+                m23963o.m23972f(str2);
             }
-            Notification b2 = o.b();
+            Notification m23976b = m23963o.m23976b();
             if (i == 1 || i == 2 || i == 3) {
-                c80.b.set(false);
+                c80.f5614b.set(false);
                 i2 = 10436;
             } else {
                 i2 = 39789;
             }
-            notificationManager.notify(i2, b2);
+            notificationManager.notify(i2, m23976b);
         }
     }
 
-    public final void u(Context context) {
+    /* renamed from: u */
+    public final void m6469u(Context context) {
         new v02(this, context).sendEmptyMessageDelayed(1, 120000L);
     }
 
-    public final boolean v(Activity activity, pj0 pj0Var, int i, int i2, DialogInterface.OnCancelListener onCancelListener) {
-        Dialog p = p(activity, i, u12.c(pj0Var, b(activity, i, "d"), 2), onCancelListener);
-        if (p == null) {
+    /* renamed from: v */
+    public final boolean m6468v(Activity activity, pj0 pj0Var, int i, int i2, DialogInterface.OnCancelListener onCancelListener) {
+        Dialog m6474p = m6474p(activity, i, u12.m8637c(pj0Var, mo5496b(activity, i, "d"), 2), onCancelListener);
+        if (m6474p == null) {
             return false;
         }
-        s(activity, p, "GooglePlayServicesErrorDialog", onCancelListener);
+        m6471s(activity, m6474p, "GooglePlayServicesErrorDialog", onCancelListener);
         return true;
     }
 
-    public final boolean w(Context context, ConnectionResult connectionResult, int i) {
-        PendingIntent l;
-        if (lg0.a(context) || (l = l(context, connectionResult)) == null) {
+    /* renamed from: w */
+    public final boolean m6467w(Context context, ConnectionResult connectionResult, int i) {
+        PendingIntent m6478l;
+        if (lg0.m16965a(context) || (m6478l = m6478l(context, connectionResult)) == null) {
             return false;
         }
-        t(context, connectionResult.h(), null, e22.a(context, 0, GoogleApiActivity.a(context, l, i, true), e22.a | 134217728));
+        m6470t(context, connectionResult.m1209h(), null, e22.m23790a(context, 0, GoogleApiActivity.m1201a(context, m6478l, i, true), e22.f8048a | 134217728));
         return true;
     }
 }

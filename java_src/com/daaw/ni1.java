@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ni1 extends li1 {
-    long S();
+    /* renamed from: S */
+    long mo15166S();
 
-    int j();
+    /* renamed from: j */
+    int mo15165j();
 }

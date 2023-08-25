@@ -3,26 +3,36 @@ package com.daaw;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public final class kq1 {
-    public final String[] a;
-    public final int[] b;
-    public final String[] c;
-    public final int d;
+
+    /* renamed from: a */
+    public final String[] f16690a;
+
+    /* renamed from: b */
+    public final int[] f16691b;
+
+    /* renamed from: c */
+    public final String[] f16692c;
+
+    /* renamed from: d */
+    public final int f16693d;
 
     public kq1(String[] strArr, int[] iArr, String[] strArr2, int i) {
-        this.a = strArr;
-        this.b = iArr;
-        this.c = strArr2;
-        this.d = i;
+        this.f16690a = strArr;
+        this.f16691b = iArr;
+        this.f16692c = strArr2;
+        this.f16693d = i;
     }
 
-    public static kq1 b(String str) {
+    /* renamed from: b */
+    public static kq1 m17487b(String str) {
         String[] strArr = new String[5];
         int[] iArr = new int[4];
         String[] strArr2 = new String[4];
-        return new kq1(strArr, iArr, strArr2, c(str, strArr, iArr, strArr2));
+        return new kq1(strArr, iArr, strArr2, m17486c(str, strArr, iArr, strArr2));
     }
 
-    public static int c(String str, String[] strArr, int[] iArr, String[] strArr2) {
+    /* renamed from: c */
+    public static int m17486c(String str, String[] strArr, int[] iArr, String[] strArr2) {
         String str2;
         strArr[0] = "";
         int i = 0;
@@ -100,27 +110,28 @@ public final class kq1 {
         return i2;
     }
 
-    public String a(String str, long j, int i, long j2) {
+    /* renamed from: a */
+    public String m17488a(String str, long j, int i, long j2) {
         String format;
         StringBuilder sb = new StringBuilder();
         int i2 = 0;
         while (true) {
-            int i3 = this.d;
+            int i3 = this.f16693d;
             if (i2 >= i3) {
-                sb.append(this.a[i3]);
+                sb.append(this.f16690a[i3]);
                 return sb.toString();
             }
-            sb.append(this.a[i2]);
-            int[] iArr = this.b;
+            sb.append(this.f16690a[i2]);
+            int[] iArr = this.f16691b;
             if (iArr[i2] == 1) {
                 sb.append(str);
             } else {
                 if (iArr[i2] == 2) {
-                    format = String.format(Locale.US, this.c[i2], Long.valueOf(j));
+                    format = String.format(Locale.US, this.f16692c[i2], Long.valueOf(j));
                 } else if (iArr[i2] == 3) {
-                    format = String.format(Locale.US, this.c[i2], Integer.valueOf(i));
+                    format = String.format(Locale.US, this.f16692c[i2], Integer.valueOf(i));
                 } else if (iArr[i2] == 4) {
-                    format = String.format(Locale.US, this.c[i2], Long.valueOf(j2));
+                    format = String.format(Locale.US, this.f16692c[i2], Long.valueOf(j2));
                 }
                 sb.append(format);
             }

@@ -15,7 +15,8 @@ public class yz1 extends Binder implements IInterface {
         return this;
     }
 
-    public boolean g3(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: g3 */
+    public boolean mo3020g3(int i, Parcel parcel, Parcel parcel2, int i2) {
         throw null;
     }
 
@@ -26,6 +27,6 @@ public class yz1 extends Binder implements IInterface {
         } else if (super.onTransact(i, parcel, parcel2, i2)) {
             return true;
         }
-        return g3(i, parcel, parcel2, i2);
+        return mo3020g3(i, parcel, parcel2, i2);
     }
 }

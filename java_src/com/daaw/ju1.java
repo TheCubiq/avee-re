@@ -5,29 +5,35 @@ import android.graphics.Matrix;
 import android.view.View;
 /* loaded from: classes.dex */
 public class ju1 extends iu1 {
-    public static boolean f = true;
-    public static boolean g = true;
+
+    /* renamed from: f */
+    public static boolean f15413f = true;
+
+    /* renamed from: g */
+    public static boolean f15414g = true;
 
     @Override // com.daaw.nu1
     @SuppressLint({"NewApi"})
-    public void h(View view, Matrix matrix) {
-        if (f) {
+    /* renamed from: h */
+    public void mo14783h(View view, Matrix matrix) {
+        if (f15413f) {
             try {
                 view.transformMatrixToGlobal(matrix);
             } catch (NoSuchMethodError unused) {
-                f = false;
+                f15413f = false;
             }
         }
     }
 
     @Override // com.daaw.nu1
     @SuppressLint({"NewApi"})
-    public void i(View view, Matrix matrix) {
-        if (g) {
+    /* renamed from: i */
+    public void mo14782i(View view, Matrix matrix) {
+        if (f15414g) {
             try {
                 view.transformMatrixToLocal(matrix);
             } catch (NoSuchMethodError unused) {
-                g = false;
+                f15414g = false;
             }
         }
     }

@@ -4,10 +4,12 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class u36 implements i76 {
-    public final g77 a;
+
+    /* renamed from: a */
+    public final g77 f28519a;
 
     public u36(g77 g77Var) {
-        this.a = g77Var;
+        this.f28519a = g77Var;
     }
 
     @Override // com.daaw.i76
@@ -17,7 +19,7 @@ public final class u36 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return this.a.M(new Callable() { // from class: com.daaw.t36
+        return this.f28519a.mo20112M(new Callable() { // from class: com.daaw.t36
             @Override // java.util.concurrent.Callable
             public final Object call() {
                 return new v36(zzt.zzs().zzb(), zzt.zzs().zzm());

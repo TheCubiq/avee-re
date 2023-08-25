@@ -12,11 +12,21 @@ import java.nio.ByteBuffer;
 @TargetApi(18)
 /* loaded from: classes.dex */
 public class os1 {
-    public Surface a;
-    public po0 b;
-    public MediaCodec c;
-    public MediaCodec.BufferInfo d = new MediaCodec.BufferInfo();
-    public int e;
+
+    /* renamed from: a */
+    public Surface f21916a;
+
+    /* renamed from: b */
+    public po0 f21917b;
+
+    /* renamed from: c */
+    public MediaCodec f21918c;
+
+    /* renamed from: d */
+    public MediaCodec.BufferInfo f21919d = new MediaCodec.BufferInfo();
+
+    /* renamed from: e */
+    public int f21920e;
 
     public os1(po0 po0Var, int i, int i2, int i3, int i4, int i5, String str, String str2, int i6) {
         String name;
@@ -29,11 +39,11 @@ public class os1 {
         int i10 = Build.VERSION.SDK_INT;
         if (i10 <= 21 || !z) {
             str3 = str3 == null ? "" : str3;
-            MediaCodecInfo f = z ? null : f(str3);
-            if (f == null && (f = e(str4)) == null) {
-                f = e("video/avc");
+            MediaCodecInfo m14012f = z ? null : m14012f(str3);
+            if (m14012f == null && (m14012f = m14013e(str4)) == null) {
+                m14012f = m14013e("video/avc");
             }
-            name = f != null ? f.getName() : null;
+            name = m14012f != null ? m14012f.getName() : null;
             i7 = i;
             i8 = i2;
         } else {
@@ -66,22 +76,23 @@ public class os1 {
         sb.append("format: ");
         sb.append(createVideoFormat);
         if (name == null) {
-            MediaCodecInfo e = e("video/avc");
-            name = e != null ? e.getName() : null;
+            MediaCodecInfo m14013e = m14013e("video/avc");
+            name = m14013e != null ? m14013e.getName() : null;
             if (name == null) {
                 throw new Exception("MediaCodec not available for " + str3);
             }
         }
         MediaCodec createByCodecName = MediaCodec.createByCodecName(name);
-        this.c = createByCodecName;
+        this.f21918c = createByCodecName;
         createByCodecName.configure(createVideoFormat, (Surface) null, (MediaCrypto) null, 1);
-        this.a = this.c.createInputSurface();
-        this.c.start();
-        this.b = po0Var;
-        this.e = -1;
+        this.f21916a = this.f21918c.createInputSurface();
+        this.f21918c.start();
+        this.f21917b = po0Var;
+        this.f21920e = -1;
     }
 
-    public static void c() {
+    /* renamed from: c */
+    public static void m14015c() {
         int codecCount = MediaCodecList.getCodecCount();
         for (int i = 0; i < codecCount; i++) {
             MediaCodecInfo codecInfoAt = MediaCodecList.getCodecInfoAt(i);
@@ -98,8 +109,9 @@ public class os1 {
         }
     }
 
-    public static MediaCodecInfo e(String str) {
-        c();
+    /* renamed from: e */
+    public static MediaCodecInfo m14013e(String str) {
+        m14015c();
         int codecCount = MediaCodecList.getCodecCount();
         for (int i = 0; i < codecCount; i++) {
             MediaCodecInfo codecInfoAt = MediaCodecList.getCodecInfoAt(i);
@@ -118,8 +130,9 @@ public class os1 {
         return null;
     }
 
-    public static MediaCodecInfo f(String str) {
-        c();
+    /* renamed from: f */
+    public static MediaCodecInfo m14012f(String str) {
+        m14015c();
         int codecCount = MediaCodecList.getCodecCount();
         for (int i = 0; i < codecCount; i++) {
             MediaCodecInfo codecInfoAt = MediaCodecList.getCodecInfoAt(i);
@@ -133,14 +146,15 @@ public class os1 {
         return null;
     }
 
-    public void a(boolean z) {
+    /* renamed from: a */
+    public void m14017a(boolean z) {
         if (z) {
-            this.c.signalEndOfInputStream();
+            this.f21918c.signalEndOfInputStream();
         }
         while (true) {
-            ByteBuffer[] outputBuffers = this.c.getOutputBuffers();
+            ByteBuffer[] outputBuffers = this.f21918c.getOutputBuffers();
             while (true) {
-                int dequeueOutputBuffer = this.c.dequeueOutputBuffer(this.d, 10000L);
+                int dequeueOutputBuffer = this.f21918c.dequeueOutputBuffer(this.f21919d, 10000L);
                 if (dequeueOutputBuffer == -1) {
                     if (!z) {
                         return;
@@ -148,11 +162,11 @@ public class os1 {
                 } else if (dequeueOutputBuffer == -3) {
                     break;
                 } else if (dequeueOutputBuffer == -2) {
-                    MediaFormat outputFormat = this.c.getOutputFormat();
+                    MediaFormat outputFormat = this.f21918c.getOutputFormat();
                     StringBuilder sb = new StringBuilder();
                     sb.append("encoder output format changed: ");
                     sb.append(outputFormat);
-                    this.e = this.b.a(outputFormat, "video");
+                    this.f21920e = this.f21917b.m13262a(outputFormat, "video");
                 } else if (dequeueOutputBuffer < 0) {
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("unexpected result from encoder.dequeueOutputBuffer: ");
@@ -162,7 +176,7 @@ public class os1 {
                     if (byteBuffer == null) {
                         throw new RuntimeException("encoderOutputBuffer " + dequeueOutputBuffer + " was null");
                     }
-                    MediaCodec.BufferInfo bufferInfo = this.d;
+                    MediaCodec.BufferInfo bufferInfo = this.f21919d;
                     if ((bufferInfo.flags & 2) != 0) {
                         bufferInfo.size = 0;
                     }
@@ -171,19 +185,19 @@ public class os1 {
                         if (i < 0 || bufferInfo.offset < 0 || bufferInfo.presentationTimeUs < 0) {
                             StringBuilder sb3 = new StringBuilder();
                             sb3.append("Invalid bufferInfo, size:  ");
-                            sb3.append(this.d.size);
+                            sb3.append(this.f21919d.size);
                             sb3.append(" offset: ");
-                            sb3.append(this.d.offset);
+                            sb3.append(this.f21919d.offset);
                             sb3.append(" presentationTimeUs: ");
-                            sb3.append(this.d.presentationTimeUs);
+                            sb3.append(this.f21919d.presentationTimeUs);
                         }
-                        byteBuffer.position(this.d.offset);
-                        MediaCodec.BufferInfo bufferInfo2 = this.d;
+                        byteBuffer.position(this.f21919d.offset);
+                        MediaCodec.BufferInfo bufferInfo2 = this.f21919d;
                         byteBuffer.limit(bufferInfo2.offset + bufferInfo2.size);
-                        this.b.d(this.e, byteBuffer, this.d);
+                        this.f21917b.m13259d(this.f21920e, byteBuffer, this.f21919d);
                     }
-                    this.c.releaseOutputBuffer(dequeueOutputBuffer, false);
-                    if ((this.d.flags & 4) != 0) {
+                    this.f21918c.releaseOutputBuffer(dequeueOutputBuffer, false);
+                    if ((this.f21919d.flags & 4) != 0) {
                         return;
                     }
                 }
@@ -191,16 +205,18 @@ public class os1 {
         }
     }
 
-    public Surface b() {
-        return this.a;
+    /* renamed from: b */
+    public Surface m14016b() {
+        return this.f21916a;
     }
 
-    public void d() {
-        MediaCodec mediaCodec = this.c;
+    /* renamed from: d */
+    public void m14014d() {
+        MediaCodec mediaCodec = this.f21918c;
         if (mediaCodec != null) {
             mediaCodec.stop();
-            this.c.release();
-            this.c = null;
+            this.f21918c.release();
+            this.f21918c = null;
         }
     }
 }

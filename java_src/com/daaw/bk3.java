@@ -1,11 +1,14 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface bk3 extends kl3 {
-    void f(String str);
+    /* renamed from: f */
+    void mo18448f(String str);
 
-    void m(pk3 pk3Var);
+    /* renamed from: m */
+    void mo18447m(pk3 pk3Var);
 
-    void s(String str);
+    /* renamed from: s */
+    void mo18446s(String str);
 
     void zzc();
 

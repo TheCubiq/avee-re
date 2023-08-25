@@ -1,14 +1,17 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class wi3 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f31270a;
 
     public wi3(int i, int i2) {
-        this.a = i2;
+        this.f31270a = i2;
     }
 
-    public final int a() {
-        int i = this.a;
+    /* renamed from: a */
+    public final int m6058a() {
+        int i = this.f31270a;
         if (i != 2) {
             if (i != 5) {
                 if (i != 29) {

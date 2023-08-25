@@ -5,5 +5,6 @@ public abstract class a37 extends d37 {
         super(null);
     }
 
-    public abstract m27 c();
+    /* renamed from: c */
+    public abstract m27 mo26497c();
 }

@@ -26,29 +26,44 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class oj1 {
-    public final Context a;
-    public final WebView b;
-    public final sl2 c;
-    public final int d;
-    public final pd5 e;
-    public final boolean f;
-    public final g77 g = z04.e;
+
+    /* renamed from: a */
+    public final Context f21578a;
+
+    /* renamed from: b */
+    public final WebView f21579b;
+
+    /* renamed from: c */
+    public final sl2 f21580c;
+
+    /* renamed from: d */
+    public final int f21581d;
+
+    /* renamed from: e */
+    public final pd5 f21582e;
+
+    /* renamed from: f */
+    public final boolean f21583f;
+
+    /* renamed from: g */
+    public final g77 f21584g = z04.f34309e;
 
     public oj1(WebView webView, sl2 sl2Var, pd5 pd5Var) {
-        this.b = webView;
+        this.f21579b = webView;
         Context context = webView.getContext();
-        this.a = context;
-        this.c = sl2Var;
-        this.e = pd5Var;
-        g93.c(context);
-        this.d = ((Integer) zzba.zzc().b(g93.y8)).intValue();
-        this.f = ((Boolean) zzba.zzc().b(g93.z8)).booleanValue();
+        this.f21578a = context;
+        this.f21580c = sl2Var;
+        this.f21582e = pd5Var;
+        g93.m21879c(context);
+        this.f21581d = ((Integer) zzba.zzc().m23658b(g93.f10894y8)).intValue();
+        this.f21583f = ((Boolean) zzba.zzc().m23658b(g93.f10905z8)).booleanValue();
     }
 
-    public final /* synthetic */ void b(Bundle bundle, QueryInfoGenerationCallback queryInfoGenerationCallback) {
-        CookieManager zzb = zzt.zzq().zzb(this.a);
-        bundle.putBoolean("accept_3p_cookie", zzb != null ? zzb.acceptThirdPartyCookies(this.b) : false);
-        Context context = this.a;
+    /* renamed from: b */
+    public final /* synthetic */ void m14255b(Bundle bundle, QueryInfoGenerationCallback queryInfoGenerationCallback) {
+        CookieManager zzb = zzt.zzq().zzb(this.f21578a);
+        bundle.putBoolean("accept_3p_cookie", zzb != null ? zzb.acceptThirdPartyCookies(this.f21579b) : false);
+        Context context = this.f21578a;
         AdFormat adFormat = AdFormat.BANNER;
         AdRequest.Builder builder = new AdRequest.Builder();
         builder.addNetworkExtrasBundle(AdMobAdapter.class, bundle);
@@ -59,15 +74,15 @@ public final class oj1 {
     @TargetApi(21)
     public String getClickSignals(String str) {
         try {
-            long a = zzt.zzB().a();
-            String zze = this.c.c().zze(this.a, str, this.b);
-            if (this.f) {
-                zzf.zzc(this.e, null, "csg", new Pair("clat", String.valueOf(zzt.zzB().a() - a)));
+            long mo15860a = zzt.zzB().mo15860a();
+            String zze = this.f21580c.m10202c().zze(this.f21578a, str, this.f21579b);
+            if (this.f21583f) {
+                zzf.zzc(this.f21582e, null, "csg", new Pair("clat", String.valueOf(zzt.zzB().mo15860a() - mo15860a)));
             }
             return zze;
         } catch (RuntimeException e) {
             k04.zzh("Exception getting click signals. ", e);
-            zzt.zzo().u(e, "TaggingLibraryJsInterface.getClickSignals");
+            zzt.zzo().m11902u(e, "TaggingLibraryJsInterface.getClickSignals");
             return "";
         }
     }
@@ -80,15 +95,15 @@ public final class oj1 {
             return "";
         }
         try {
-            return (String) z04.a.M(new Callable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzar
+            return (String) z04.f34305a.mo20112M(new Callable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzar
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
                     return oj1.this.getClickSignals(str);
                 }
-            }).get(Math.min(i, this.d), TimeUnit.MILLISECONDS);
+            }).get(Math.min(i, this.f21581d), TimeUnit.MILLISECONDS);
         } catch (InterruptedException | ExecutionException | TimeoutException e) {
             k04.zzh("Exception getting click signals with timeout. ", e);
-            zzt.zzo().u(e, "TaggingLibraryJsInterface.getClickSignalsWithTimeout");
+            zzt.zzo().m11902u(e, "TaggingLibraryJsInterface.getClickSignalsWithTimeout");
             return e instanceof TimeoutException ? "17" : "";
         }
     }
@@ -101,15 +116,15 @@ public final class oj1 {
         final Bundle bundle = new Bundle();
         bundle.putString("query_info_type", "requester_type_6");
         final qo2 qo2Var = new qo2(this, uuid);
-        if (((Boolean) zzba.zzc().b(g93.B8)).booleanValue()) {
-            this.g.execute(new Runnable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzap
+        if (((Boolean) zzba.zzc().m23658b(g93.f10379B8)).booleanValue()) {
+            this.f21584g.execute(new Runnable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzap
                 @Override // java.lang.Runnable
                 public final void run() {
-                    oj1.this.b(bundle, qo2Var);
+                    oj1.this.m14255b(bundle, qo2Var);
                 }
             });
         } else {
-            Context context = this.a;
+            Context context = this.f21578a;
             AdFormat adFormat = AdFormat.BANNER;
             AdRequest.Builder builder = new AdRequest.Builder();
             builder.addNetworkExtrasBundle(AdMobAdapter.class, bundle);
@@ -122,15 +137,15 @@ public final class oj1 {
     @TargetApi(21)
     public String getViewSignals() {
         try {
-            long a = zzt.zzB().a();
-            String zzh = this.c.c().zzh(this.a, this.b, null);
-            if (this.f) {
-                zzf.zzc(this.e, null, "vsg", new Pair("vlat", String.valueOf(zzt.zzB().a() - a)));
+            long mo15860a = zzt.zzB().mo15860a();
+            String zzh = this.f21580c.m10202c().zzh(this.f21578a, this.f21579b, null);
+            if (this.f21583f) {
+                zzf.zzc(this.f21582e, null, "vsg", new Pair("vlat", String.valueOf(zzt.zzB().mo15860a() - mo15860a)));
             }
             return zzh;
         } catch (RuntimeException e) {
             k04.zzh("Exception getting view signals. ", e);
-            zzt.zzo().u(e, "TaggingLibraryJsInterface.getViewSignals");
+            zzt.zzo().m11902u(e, "TaggingLibraryJsInterface.getViewSignals");
             return "";
         }
     }
@@ -143,15 +158,15 @@ public final class oj1 {
             return "";
         }
         try {
-            return (String) z04.a.M(new Callable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzaq
+            return (String) z04.f34305a.mo20112M(new Callable() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzaq
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
                     return oj1.this.getViewSignals();
                 }
-            }).get(Math.min(i, this.d), TimeUnit.MILLISECONDS);
+            }).get(Math.min(i, this.f21581d), TimeUnit.MILLISECONDS);
         } catch (InterruptedException | ExecutionException | TimeoutException e) {
             k04.zzh("Exception getting view signals with timeout. ", e);
-            zzt.zzo().u(e, "TaggingLibraryJsInterface.getViewSignalsWithTimeout");
+            zzt.zzo().m11902u(e, "TaggingLibraryJsInterface.getViewSignalsWithTimeout");
             return e instanceof TimeoutException ? "17" : "";
         }
     }
@@ -167,15 +182,15 @@ public final class oj1 {
             float f = (float) jSONObject.getDouble("force");
             int i4 = jSONObject.getInt("type");
             try {
-                this.c.d(MotionEvent.obtain(0L, i3, i4 != 0 ? i4 != 1 ? i4 != 2 ? i4 != 3 ? -1 : 3 : 2 : 1 : 0, i, i2, f, 1.0f, 0, 1.0f, 1.0f, 0, 0));
+                this.f21580c.m10201d(MotionEvent.obtain(0L, i3, i4 != 0 ? i4 != 1 ? i4 != 2 ? i4 != 3 ? -1 : 3 : 2 : 1 : 0, i, i2, f, 1.0f, 0, 1.0f, 1.0f, 0, 0));
             } catch (RuntimeException e) {
                 e = e;
                 k04.zzh("Failed to parse the touch string. ", e);
-                zzt.zzo().u(e, "TaggingLibraryJsInterface.reportTouchEvent");
+                zzt.zzo().m11902u(e, "TaggingLibraryJsInterface.reportTouchEvent");
             } catch (JSONException e2) {
                 e = e2;
                 k04.zzh("Failed to parse the touch string. ", e);
-                zzt.zzo().u(e, "TaggingLibraryJsInterface.reportTouchEvent");
+                zzt.zzo().m11902u(e, "TaggingLibraryJsInterface.reportTouchEvent");
             }
         } catch (RuntimeException | JSONException e3) {
             e = e3;

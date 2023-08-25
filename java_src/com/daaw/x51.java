@@ -9,7 +9,8 @@ import android.provider.MediaStore;
 import com.daaw.avee.R;
 /* loaded from: classes.dex */
 public class x51 {
-    public static boolean a(Context context, String str, String str2, String str3, String str4) {
+    /* renamed from: a */
+    public static boolean m5525a(Context context, String str, String str2, String str3, String str4) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("_data", str);
         contentValues.put("title", str3);
@@ -25,10 +26,10 @@ public class x51 {
         contentResolver.delete(contentUriForPath, "_data=\"" + str + "\"", null);
         try {
             RingtoneManager.setActualDefaultRingtoneUri(context, 1, context.getContentResolver().insert(contentUriForPath, contentValues));
-            vy.a.a(context.getResources().getString(R.string.ringtone_set));
+            C3385vy.f30703a.m12018a(context.getResources().getString(R.string.ringtone_set));
             return true;
         } catch (Exception unused) {
-            vy.a.a(context.getResources().getString(R.string.ringtone_failed_set));
+            C3385vy.f30703a.m12018a(context.getResources().getString(R.string.ringtone_failed_set));
             return false;
         }
     }

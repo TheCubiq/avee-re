@@ -2,19 +2,19 @@ package kotlinx.coroutines.android;
 
 import android.os.Build;
 import androidx.annotation.Keep;
-import com.daaw.g;
-import com.daaw.nl;
-import com.daaw.ql;
+import com.daaw.AbstractC1347g;
+import com.daaw.InterfaceC2307nl;
+import com.daaw.InterfaceC2739ql;
 import java.lang.Thread;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 @Keep
 /* loaded from: classes2.dex */
-public final class AndroidExceptionPreHandler extends g implements ql {
+public final class AndroidExceptionPreHandler extends AbstractC1347g implements InterfaceC2739ql {
     private volatile Object _preHandler;
 
     public AndroidExceptionPreHandler() {
-        super(ql.c);
+        super(InterfaceC2739ql.f24127c);
         this._preHandler = this;
     }
 
@@ -41,8 +41,8 @@ public final class AndroidExceptionPreHandler extends g implements ql {
         return method;
     }
 
-    @Override // com.daaw.ql
-    public void handleException(nl nlVar, Throwable th) {
+    @Override // com.daaw.InterfaceC2739ql
+    public void handleException(InterfaceC2307nl interfaceC2307nl, Throwable th) {
         int i = Build.VERSION.SDK_INT;
         if (26 <= i && i < 28) {
             Method preHandler = preHandler();

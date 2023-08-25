@@ -8,10 +8,12 @@ import com.google.android.gms.ads.mediation.UnifiedNativeAdMapper;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class g32 extends UnifiedNativeAdMapper {
-    public final UnifiedNativeAd s;
+
+    /* renamed from: s */
+    public final UnifiedNativeAd f10230s;
 
     public g32(UnifiedNativeAd unifiedNativeAd) {
-        this.s = unifiedNativeAd;
+        this.f10230s = unifiedNativeAd;
         setHeadline(unifiedNativeAd.getHeadline());
         setImages(unifiedNativeAd.getImages());
         setBody(unifiedNativeAd.getBody());

@@ -10,27 +10,37 @@ import java.util.UUID;
 /* loaded from: classes.dex */
 public final class zzw implements Parcelable {
     public static final Parcelable.Creator<zzw> CREATOR = new vu8();
-    public int p;
-    public final UUID q;
-    public final String r;
-    public final String s;
-    public final byte[] t;
+
+    /* renamed from: p */
+    public int f37027p;
+
+    /* renamed from: q */
+    public final UUID f37028q;
+
+    /* renamed from: r */
+    public final String f37029r;
+
+    /* renamed from: s */
+    public final String f37030s;
+
+    /* renamed from: t */
+    public final byte[] f37031t;
 
     public zzw(Parcel parcel) {
-        this.q = new UUID(parcel.readLong(), parcel.readLong());
-        this.r = parcel.readString();
+        this.f37028q = new UUID(parcel.readLong(), parcel.readLong());
+        this.f37029r = parcel.readString();
         String readString = parcel.readString();
-        int i = it5.a;
-        this.s = readString;
-        this.t = parcel.createByteArray();
+        int i = it5.f13991a;
+        this.f37030s = readString;
+        this.f37031t = parcel.createByteArray();
     }
 
     public zzw(UUID uuid, String str, String str2, byte[] bArr) {
         Objects.requireNonNull(uuid);
-        this.q = uuid;
-        this.r = null;
-        this.s = str2;
-        this.t = bArr;
+        this.f37028q = uuid;
+        this.f37029r = null;
+        this.f37030s = str2;
+        this.f37031t = bArr;
     }
 
     @Override // android.os.Parcelable
@@ -44,18 +54,18 @@ public final class zzw implements Parcelable {
                 return true;
             }
             zzw zzwVar = (zzw) obj;
-            return it5.t(this.r, zzwVar.r) && it5.t(this.s, zzwVar.s) && it5.t(this.q, zzwVar.q) && Arrays.equals(this.t, zzwVar.t);
+            return it5.m19376t(this.f37029r, zzwVar.f37029r) && it5.m19376t(this.f37030s, zzwVar.f37030s) && it5.m19376t(this.f37028q, zzwVar.f37028q) && Arrays.equals(this.f37031t, zzwVar.f37031t);
         }
         return false;
     }
 
     public final int hashCode() {
-        int i = this.p;
+        int i = this.f37027p;
         if (i == 0) {
-            int hashCode = this.q.hashCode() * 31;
-            String str = this.r;
-            int hashCode2 = ((((hashCode + (str == null ? 0 : str.hashCode())) * 31) + this.s.hashCode()) * 31) + Arrays.hashCode(this.t);
-            this.p = hashCode2;
+            int hashCode = this.f37028q.hashCode() * 31;
+            String str = this.f37029r;
+            int hashCode2 = ((((hashCode + (str == null ? 0 : str.hashCode())) * 31) + this.f37030s.hashCode()) * 31) + Arrays.hashCode(this.f37031t);
+            this.f37027p = hashCode2;
             return hashCode2;
         }
         return i;
@@ -63,10 +73,10 @@ public final class zzw implements Parcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeLong(this.q.getMostSignificantBits());
-        parcel.writeLong(this.q.getLeastSignificantBits());
-        parcel.writeString(this.r);
-        parcel.writeString(this.s);
-        parcel.writeByteArray(this.t);
+        parcel.writeLong(this.f37028q.getMostSignificantBits());
+        parcel.writeLong(this.f37028q.getLeastSignificantBits());
+        parcel.writeString(this.f37029r);
+        parcel.writeString(this.f37030s);
+        parcel.writeByteArray(this.f37031t);
     }
 }

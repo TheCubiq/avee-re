@@ -3,45 +3,62 @@ package com.daaw;
 import android.os.IBinder;
 /* loaded from: classes.dex */
 public final class vv6 extends rw6 {
-    public final IBinder a;
-    public final String b;
-    public final int c;
-    public final float d;
-    public final int e;
-    public final String f;
+
+    /* renamed from: a */
+    public final IBinder f30659a;
+
+    /* renamed from: b */
+    public final String f30660b;
+
+    /* renamed from: c */
+    public final int f30661c;
+
+    /* renamed from: d */
+    public final float f30662d;
+
+    /* renamed from: e */
+    public final int f30663e;
+
+    /* renamed from: f */
+    public final String f30664f;
 
     public /* synthetic */ vv6(IBinder iBinder, boolean z, String str, int i, float f, int i2, String str2, int i3, String str3, uv6 uv6Var) {
-        this.a = iBinder;
-        this.b = str;
-        this.c = i;
-        this.d = f;
-        this.e = i3;
-        this.f = str3;
+        this.f30659a = iBinder;
+        this.f30660b = str;
+        this.f30661c = i;
+        this.f30662d = f;
+        this.f30663e = i3;
+        this.f30664f = str3;
     }
 
     @Override // com.daaw.rw6
-    public final float a() {
-        return this.d;
+    /* renamed from: a */
+    public final float mo6736a() {
+        return this.f30662d;
     }
 
     @Override // com.daaw.rw6
-    public final int b() {
+    /* renamed from: b */
+    public final int mo6735b() {
         return 0;
     }
 
     @Override // com.daaw.rw6
-    public final int c() {
-        return this.c;
+    /* renamed from: c */
+    public final int mo6734c() {
+        return this.f30661c;
     }
 
     @Override // com.daaw.rw6
-    public final int d() {
-        return this.e;
+    /* renamed from: d */
+    public final int mo6733d() {
+        return this.f30663e;
     }
 
     @Override // com.daaw.rw6
-    public final IBinder e() {
-        return this.a;
+    /* renamed from: e */
+    public final IBinder mo6732e() {
+        return this.f30659a;
     }
 
     public final boolean equals(Object obj) {
@@ -50,17 +67,17 @@ public final class vv6 extends rw6 {
         }
         if (obj instanceof rw6) {
             rw6 rw6Var = (rw6) obj;
-            if (this.a.equals(rw6Var.e())) {
-                rw6Var.i();
-                String str = this.b;
-                if (str != null ? str.equals(rw6Var.g()) : rw6Var.g() == null) {
-                    if (this.c == rw6Var.c() && Float.floatToIntBits(this.d) == Float.floatToIntBits(rw6Var.a())) {
-                        rw6Var.b();
-                        rw6Var.h();
-                        if (this.e == rw6Var.d()) {
-                            String str2 = this.f;
-                            String f = rw6Var.f();
-                            if (str2 != null ? str2.equals(f) : f == null) {
+            if (this.f30659a.equals(rw6Var.mo6732e())) {
+                rw6Var.mo6728i();
+                String str = this.f30660b;
+                if (str != null ? str.equals(rw6Var.mo6730g()) : rw6Var.mo6730g() == null) {
+                    if (this.f30661c == rw6Var.mo6734c() && Float.floatToIntBits(this.f30662d) == Float.floatToIntBits(rw6Var.mo6736a())) {
+                        rw6Var.mo6735b();
+                        rw6Var.mo6729h();
+                        if (this.f30663e == rw6Var.mo6733d()) {
+                            String str2 = this.f30664f;
+                            String mo6731f = rw6Var.mo6731f();
+                            if (str2 != null ? str2.equals(mo6731f) : mo6731f == null) {
                                 return true;
                             }
                         }
@@ -72,40 +89,44 @@ public final class vv6 extends rw6 {
     }
 
     @Override // com.daaw.rw6
-    public final String f() {
-        return this.f;
+    /* renamed from: f */
+    public final String mo6731f() {
+        return this.f30664f;
     }
 
     @Override // com.daaw.rw6
-    public final String g() {
-        return this.b;
+    /* renamed from: g */
+    public final String mo6730g() {
+        return this.f30660b;
     }
 
     @Override // com.daaw.rw6
-    public final String h() {
+    /* renamed from: h */
+    public final String mo6729h() {
         return null;
     }
 
     public final int hashCode() {
-        int hashCode = (((this.a.hashCode() ^ 1000003) * 1000003) ^ 1237) * 1000003;
-        String str = this.b;
-        int hashCode2 = (((((((hashCode ^ (str == null ? 0 : str.hashCode())) * 1000003) ^ this.c) * 1000003) ^ Float.floatToIntBits(this.d)) * 583896283) ^ this.e) * 1000003;
-        String str2 = this.f;
+        int hashCode = (((this.f30659a.hashCode() ^ 1000003) * 1000003) ^ 1237) * 1000003;
+        String str = this.f30660b;
+        int hashCode2 = (((((((hashCode ^ (str == null ? 0 : str.hashCode())) * 1000003) ^ this.f30661c) * 1000003) ^ Float.floatToIntBits(this.f30662d)) * 583896283) ^ this.f30663e) * 1000003;
+        String str2 = this.f30664f;
         return hashCode2 ^ (str2 != null ? str2.hashCode() : 0);
     }
 
     @Override // com.daaw.rw6
-    public final boolean i() {
+    /* renamed from: i */
+    public final boolean mo6728i() {
         return false;
     }
 
     public final String toString() {
-        String obj = this.a.toString();
-        String str = this.b;
-        int i = this.c;
-        float f = this.d;
-        int i2 = this.e;
-        String str2 = this.f;
+        String obj = this.f30659a.toString();
+        String str = this.f30660b;
+        int i = this.f30661c;
+        float f = this.f30662d;
+        int i2 = this.f30663e;
+        String str2 = this.f30664f;
         return "OverlayDisplayShowRequest{windowToken=" + obj + ", stableSessionToken=false, appId=" + str + ", layoutGravity=" + i + ", layoutVerticalMargin=" + f + ", displayMode=0, sessionToken=null, windowWidthPx=" + i2 + ", adFieldEnifd=" + str2 + "}";
     }
 }

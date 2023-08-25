@@ -9,13 +9,15 @@ public final class ht5 extends pa8 {
     }
 
     @Override // com.daaw.pa8
-    public final boolean k() {
+    /* renamed from: k */
+    public final boolean mo8149k() {
         return false;
     }
 
-    public final boolean l() {
-        g();
-        ConnectivityManager connectivityManager = (ConnectivityManager) this.a.d().getSystemService("connectivity");
+    /* renamed from: l */
+    public final boolean m20430l() {
+        m13533g();
+        ConnectivityManager connectivityManager = (ConnectivityManager) this.f25143a.mo3905d().getSystemService("connectivity");
         NetworkInfo networkInfo = null;
         if (connectivityManager != null) {
             try {

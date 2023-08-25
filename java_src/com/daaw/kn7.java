@@ -4,42 +4,34 @@ public final class kn7 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public kn7() {
-        /*
-            r1 = this;
-            com.daaw.ln7 r0 = com.daaw.ln7.N()
-            r1.<init>(r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.kn7.<init>():void");
+        super(r0);
+        ln7 ln7Var;
+        ln7Var = ln7.zzb;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ kn7(com.daaw.jn7 r1) {
-        /*
-            r0 = this;
-            com.daaw.ln7 r1 = com.daaw.ln7.N()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.kn7.<init>(com.daaw.jn7):void");
+    public /* synthetic */ kn7(jn7 jn7Var) {
+        super(r1);
+        ln7 ln7Var;
+        ln7Var = ln7.zzb;
     }
 
-    public final kn7 s(on7 on7Var) {
-        p();
-        ln7.R((ln7) this.q, on7Var);
+    /* renamed from: s */
+    public final kn7 m17641s(on7 on7Var) {
+        m22313p();
+        ln7.m16706R((ln7) this.f9851q, on7Var);
         return this;
     }
 
-    public final kn7 t(int i) {
-        p();
-        ((ln7) this.q).zzd = 0;
+    /* renamed from: t */
+    public final kn7 m17640t(int i) {
+        m22313p();
+        ((ln7) this.f9851q).zzd = 0;
         return this;
     }
 }

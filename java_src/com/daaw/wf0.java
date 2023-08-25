@@ -4,7 +4,9 @@ import android.content.Context;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface wf0<T> {
-    List<Class<? extends wf0<?>>> a();
+    /* renamed from: a */
+    List<Class<? extends wf0<?>>> mo6098a();
 
-    T b(Context context);
+    /* renamed from: b */
+    T mo6097b(Context context);
 }

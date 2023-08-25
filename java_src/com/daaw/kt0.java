@@ -8,7 +8,8 @@ import android.os.Build;
 import android.util.Property;
 /* loaded from: classes.dex */
 public class kt0 {
-    public static <T> ObjectAnimator a(T t, Property<T, PointF> property, Path path) {
+    /* renamed from: a */
+    public static <T> ObjectAnimator m17443a(T t, Property<T, PointF> property, Path path) {
         return Build.VERSION.SDK_INT >= 21 ? ObjectAnimator.ofObject(t, property, (TypeConverter) null, path) : ObjectAnimator.ofFloat(t, new cw0(property, path), 0.0f, 1.0f);
     }
 }

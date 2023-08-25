@@ -9,9 +9,10 @@ import android.os.Parcel;
 /* loaded from: classes.dex */
 public interface xc0 extends IInterface {
 
+    /* renamed from: com.daaw.xc0$a */
     /* loaded from: classes.dex */
-    public static abstract class a extends Binder implements xc0 {
-        public a() {
+    public static abstract class AbstractBinderC3524a extends Binder implements xc0 {
+        public AbstractBinderC3524a() {
             attachInterface(this, "android.support.customtabs.ICustomTabsCallback");
         }
 
@@ -29,31 +30,31 @@ public interface xc0 extends IInterface {
             switch (i) {
                 case 2:
                     parcel.enforceInterface("android.support.customtabs.ICustomTabsCallback");
-                    m2(parcel.readInt(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
+                    mo5285m2(parcel.readInt(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
                     break;
                 case 3:
                     parcel.enforceInterface("android.support.customtabs.ICustomTabsCallback");
-                    Q1(parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
+                    mo5288Q1(parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
                     break;
                 case 4:
                     parcel.enforceInterface("android.support.customtabs.ICustomTabsCallback");
-                    R2(parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
+                    mo5287R2(parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
                     break;
                 case 5:
                     parcel.enforceInterface("android.support.customtabs.ICustomTabsCallback");
-                    J2(parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
+                    mo5290J2(parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
                     break;
                 case 6:
                     parcel.enforceInterface("android.support.customtabs.ICustomTabsCallback");
-                    T2(parcel.readInt(), parcel.readInt() != 0 ? (Uri) Uri.CREATOR.createFromParcel(parcel) : null, parcel.readInt() != 0, parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
+                    mo5286T2(parcel.readInt(), parcel.readInt() != 0 ? (Uri) Uri.CREATOR.createFromParcel(parcel) : null, parcel.readInt() != 0, parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
                     break;
                 case 7:
                     parcel.enforceInterface("android.support.customtabs.ICustomTabsCallback");
-                    Bundle P0 = P0(parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
+                    Bundle mo5289P0 = mo5289P0(parcel.readString(), parcel.readInt() != 0 ? (Bundle) Bundle.CREATOR.createFromParcel(parcel) : null);
                     parcel2.writeNoException();
-                    if (P0 != null) {
+                    if (mo5289P0 != null) {
                         parcel2.writeInt(1);
-                        P0.writeToParcel(parcel2, 1);
+                        mo5289P0.writeToParcel(parcel2, 1);
                     } else {
                         parcel2.writeInt(0);
                     }
@@ -66,15 +67,21 @@ public interface xc0 extends IInterface {
         }
     }
 
-    void J2(String str, Bundle bundle);
+    /* renamed from: J2 */
+    void mo5290J2(String str, Bundle bundle);
 
-    Bundle P0(String str, Bundle bundle);
+    /* renamed from: P0 */
+    Bundle mo5289P0(String str, Bundle bundle);
 
-    void Q1(String str, Bundle bundle);
+    /* renamed from: Q1 */
+    void mo5288Q1(String str, Bundle bundle);
 
-    void R2(Bundle bundle);
+    /* renamed from: R2 */
+    void mo5287R2(Bundle bundle);
 
-    void T2(int i, Uri uri, boolean z, Bundle bundle);
+    /* renamed from: T2 */
+    void mo5286T2(int i, Uri uri, boolean z, Bundle bundle);
 
-    void m2(int i, Bundle bundle);
+    /* renamed from: m2 */
+    void mo5285m2(int i, Bundle bundle);
 }

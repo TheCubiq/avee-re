@@ -10,25 +10,34 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class c46 implements i76 {
-    public final g77 a;
-    public final ViewGroup b;
-    public final Context c;
-    public final Set d;
+
+    /* renamed from: a */
+    public final g77 f5471a;
+
+    /* renamed from: b */
+    public final ViewGroup f5472b;
+
+    /* renamed from: c */
+    public final Context f5473c;
+
+    /* renamed from: d */
+    public final Set f5474d;
 
     public c46(g77 g77Var, ViewGroup viewGroup, Context context, Set set) {
-        this.a = g77Var;
-        this.d = set;
-        this.b = viewGroup;
-        this.c = context;
+        this.f5471a = g77Var;
+        this.f5474d = set;
+        this.f5472b = viewGroup;
+        this.f5473c = context;
     }
 
-    public final /* synthetic */ d46 a() {
-        if (((Boolean) zzba.zzc().b(g93.p5)).booleanValue() && this.b != null && this.d.contains("banner")) {
-            return new d46(Boolean.valueOf(this.b.isHardwareAccelerated()));
+    /* renamed from: a */
+    public final /* synthetic */ d46 m25626a() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10792p5)).booleanValue() && this.f5472b != null && this.f5474d.contains("banner")) {
+            return new d46(Boolean.valueOf(this.f5472b.isHardwareAccelerated()));
         }
         Boolean bool = null;
-        if (((Boolean) zzba.zzc().b(g93.q5)).booleanValue() && this.d.contains("native")) {
-            Context context = this.c;
+        if (((Boolean) zzba.zzc().m23658b(g93.f10803q5)).booleanValue() && this.f5474d.contains("native")) {
+            Context context = this.f5473c;
             if (context instanceof Activity) {
                 Activity activity = (Activity) context;
                 Window window = activity.getWindow();
@@ -53,10 +62,10 @@ public final class c46 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return this.a.M(new Callable() { // from class: com.daaw.b46
+        return this.f5471a.mo20112M(new Callable() { // from class: com.daaw.b46
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return c46.this.a();
+                return c46.this.m25626a();
             }
         });
     }

@@ -12,238 +12,238 @@ public final class js3 extends hc3 implements ju3 {
 
     @Override // com.daaw.ju3
     public final void beginAdUnitExposure(String str, long j) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeLong(j);
-        M(23, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeLong(j);
+        m20845M(23, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void clearConditionalUserProperty(String str, String str2, Bundle bundle) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        ne3.e(D, bundle);
-        M(9, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeString(str2);
+        ne3.m15205e(m20847D, bundle);
+        m20845M(9, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void endAdUnitExposure(String str, long j) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeLong(j);
-        M(24, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeLong(j);
+        m20845M(24, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void generateEventId(ox3 ox3Var) {
-        Parcel D = D();
-        ne3.f(D, ox3Var);
-        M(22, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(22, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getCachedAppInstanceId(ox3 ox3Var) {
-        Parcel D = D();
-        ne3.f(D, ox3Var);
-        M(19, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(19, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getConditionalUserProperties(String str, String str2, ox3 ox3Var) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        ne3.f(D, ox3Var);
-        M(10, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeString(str2);
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(10, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getCurrentScreenClass(ox3 ox3Var) {
-        Parcel D = D();
-        ne3.f(D, ox3Var);
-        M(17, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(17, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getCurrentScreenName(ox3 ox3Var) {
-        Parcel D = D();
-        ne3.f(D, ox3Var);
-        M(16, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(16, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getGmpAppId(ox3 ox3Var) {
-        Parcel D = D();
-        ne3.f(D, ox3Var);
-        M(21, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(21, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getMaxUserProperties(String str, ox3 ox3Var) {
-        Parcel D = D();
-        D.writeString(str);
-        ne3.f(D, ox3Var);
-        M(6, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(6, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void getUserProperties(String str, String str2, boolean z, ox3 ox3Var) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        ne3.d(D, z);
-        ne3.f(D, ox3Var);
-        M(5, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeString(str2);
+        ne3.m15206d(m20847D, z);
+        ne3.m15204f(m20847D, ox3Var);
+        m20845M(5, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void initialize(yd0 yd0Var, zzcl zzclVar, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        ne3.e(D, zzclVar);
-        D.writeLong(j);
-        M(1, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        ne3.m15205e(m20847D, zzclVar);
+        m20847D.writeLong(j);
+        m20845M(1, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void logEvent(String str, String str2, Bundle bundle, boolean z, boolean z2, long j) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        ne3.e(D, bundle);
-        ne3.d(D, z);
-        ne3.d(D, z2);
-        D.writeLong(j);
-        M(2, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeString(str2);
+        ne3.m15205e(m20847D, bundle);
+        ne3.m15206d(m20847D, z);
+        ne3.m15206d(m20847D, z2);
+        m20847D.writeLong(j);
+        m20845M(2, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void logHealthData(int i, String str, yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3) {
-        Parcel D = D();
-        D.writeInt(5);
-        D.writeString(str);
-        ne3.f(D, yd0Var);
-        ne3.f(D, yd0Var2);
-        ne3.f(D, yd0Var3);
-        M(33, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeInt(5);
+        m20847D.writeString(str);
+        ne3.m15204f(m20847D, yd0Var);
+        ne3.m15204f(m20847D, yd0Var2);
+        ne3.m15204f(m20847D, yd0Var3);
+        m20845M(33, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivityCreated(yd0 yd0Var, Bundle bundle, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        ne3.e(D, bundle);
-        D.writeLong(j);
-        M(27, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        ne3.m15205e(m20847D, bundle);
+        m20847D.writeLong(j);
+        m20845M(27, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivityDestroyed(yd0 yd0Var, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        D.writeLong(j);
-        M(28, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        m20847D.writeLong(j);
+        m20845M(28, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivityPaused(yd0 yd0Var, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        D.writeLong(j);
-        M(29, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        m20847D.writeLong(j);
+        m20845M(29, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivityResumed(yd0 yd0Var, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        D.writeLong(j);
-        M(30, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        m20847D.writeLong(j);
+        m20845M(30, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivitySaveInstanceState(yd0 yd0Var, ox3 ox3Var, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        ne3.f(D, ox3Var);
-        D.writeLong(j);
-        M(31, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        ne3.m15204f(m20847D, ox3Var);
+        m20847D.writeLong(j);
+        m20845M(31, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivityStarted(yd0 yd0Var, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        D.writeLong(j);
-        M(25, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        m20847D.writeLong(j);
+        m20845M(25, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void onActivityStopped(yd0 yd0Var, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        D.writeLong(j);
-        M(26, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        m20847D.writeLong(j);
+        m20845M(26, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void performAction(Bundle bundle, ox3 ox3Var, long j) {
-        Parcel D = D();
-        ne3.e(D, bundle);
-        ne3.f(D, ox3Var);
-        D.writeLong(j);
-        M(32, D);
+        Parcel m20847D = m20847D();
+        ne3.m15205e(m20847D, bundle);
+        ne3.m15204f(m20847D, ox3Var);
+        m20847D.writeLong(j);
+        m20845M(32, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void registerOnMeasurementEventListener(v04 v04Var) {
-        Parcel D = D();
-        ne3.f(D, v04Var);
-        M(35, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, v04Var);
+        m20845M(35, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void setConditionalUserProperty(Bundle bundle, long j) {
-        Parcel D = D();
-        ne3.e(D, bundle);
-        D.writeLong(j);
-        M(8, D);
+        Parcel m20847D = m20847D();
+        ne3.m15205e(m20847D, bundle);
+        m20847D.writeLong(j);
+        m20845M(8, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void setConsent(Bundle bundle, long j) {
-        Parcel D = D();
-        ne3.e(D, bundle);
-        D.writeLong(j);
-        M(44, D);
+        Parcel m20847D = m20847D();
+        ne3.m15205e(m20847D, bundle);
+        m20847D.writeLong(j);
+        m20845M(44, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void setCurrentScreen(yd0 yd0Var, String str, String str2, long j) {
-        Parcel D = D();
-        ne3.f(D, yd0Var);
-        D.writeString(str);
-        D.writeString(str2);
-        D.writeLong(j);
-        M(15, D);
+        Parcel m20847D = m20847D();
+        ne3.m15204f(m20847D, yd0Var);
+        m20847D.writeString(str);
+        m20847D.writeString(str2);
+        m20847D.writeLong(j);
+        m20845M(15, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void setDataCollectionEnabled(boolean z) {
-        Parcel D = D();
-        ne3.d(D, z);
-        M(39, D);
+        Parcel m20847D = m20847D();
+        ne3.m15206d(m20847D, z);
+        m20845M(39, m20847D);
     }
 
     @Override // com.daaw.ju3
     public final void setUserProperty(String str, String str2, yd0 yd0Var, boolean z, long j) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        ne3.f(D, yd0Var);
-        ne3.d(D, z);
-        D.writeLong(j);
-        M(4, D);
+        Parcel m20847D = m20847D();
+        m20847D.writeString(str);
+        m20847D.writeString(str2);
+        ne3.m15204f(m20847D, yd0Var);
+        ne3.m15206d(m20847D, z);
+        m20847D.writeLong(j);
+        m20845M(4, m20847D);
     }
 }

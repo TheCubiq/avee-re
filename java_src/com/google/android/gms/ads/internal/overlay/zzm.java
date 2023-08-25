@@ -13,12 +13,12 @@ public final class zzm {
         if (adOverlayInfoParcel.zzk != 4 || adOverlayInfoParcel.zzc != null) {
             Intent intent = new Intent();
             intent.setClassName(context, AdActivity.CLASS_NAME);
-            intent.putExtra("com.google.android.gms.ads.internal.overlay.useClientJar", adOverlayInfoParcel.zzm.s);
+            intent.putExtra("com.google.android.gms.ads.internal.overlay.useClientJar", adOverlayInfoParcel.zzm.f36996s);
             intent.putExtra("shouldCallOnOverlayOpened", z);
             Bundle bundle = new Bundle(1);
             bundle.putParcelable("com.google.android.gms.ads.inernal.overlay.AdOverlayInfo", adOverlayInfoParcel);
             intent.putExtra("com.google.android.gms.ads.inernal.overlay.AdOverlayInfo", bundle);
-            if (!vw0.f()) {
+            if (!vw0.m6699f()) {
                 intent.addFlags(524288);
             }
             if (!(context instanceof Activity)) {

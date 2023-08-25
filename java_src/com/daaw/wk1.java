@@ -8,32 +8,45 @@ import java.lang.ref.WeakReference;
 @TargetApi(18)
 /* loaded from: classes.dex */
 public class wk1 implements Runnable {
-    public os1 p;
-    public volatile a q;
-    public Object r = new Object();
-    public boolean s;
-    public boolean t;
 
+    /* renamed from: p */
+    public os1 f31285p;
+
+    /* renamed from: q */
+    public volatile HandlerC3446a f31286q;
+
+    /* renamed from: r */
+    public Object f31287r = new Object();
+
+    /* renamed from: s */
+    public boolean f31288s;
+
+    /* renamed from: t */
+    public boolean f31289t;
+
+    /* renamed from: com.daaw.wk1$a */
     /* loaded from: classes.dex */
-    public static class a extends Handler {
-        public WeakReference<wk1> a;
+    public static class HandlerC3446a extends Handler {
 
-        public a(wk1 wk1Var) {
-            this.a = new WeakReference<>(wk1Var);
+        /* renamed from: a */
+        public WeakReference<wk1> f31290a;
+
+        public HandlerC3446a(wk1 wk1Var) {
+            this.f31290a = new WeakReference<>(wk1Var);
         }
 
         @Override // android.os.Handler
         public void handleMessage(Message message) {
             int i = message.what;
-            wk1 wk1Var = this.a.get();
+            wk1 wk1Var = this.f31290a.get();
             if (wk1Var == null) {
                 return;
             }
             if (i == 1) {
-                wk1Var.e();
+                wk1Var.m6033e();
                 Looper.myLooper().quit();
             } else if (i == 2) {
-                wk1Var.d();
+                wk1Var.m6034d();
             } else {
                 throw new RuntimeException("Unhandled msg what=" + i);
             }
@@ -41,33 +54,35 @@ public class wk1 implements Runnable {
     }
 
     public wk1(os1 os1Var) {
-        this.p = os1Var;
-        synchronized (this.r) {
-            if (this.t) {
+        this.f31285p = os1Var;
+        synchronized (this.f31287r) {
+            if (this.f31289t) {
                 return;
             }
-            this.t = true;
+            this.f31289t = true;
             new Thread(this, "TextureMovieEncoder").start();
-            while (!this.s) {
+            while (!this.f31288s) {
                 try {
-                    this.r.wait();
+                    this.f31287r.wait();
                 } catch (InterruptedException unused) {
                 }
             }
         }
     }
 
-    public void c() {
-        synchronized (this.r) {
-            if (this.s) {
-                this.q.sendMessage(this.q.obtainMessage(2));
+    /* renamed from: c */
+    public void m6035c() {
+        synchronized (this.f31287r) {
+            if (this.f31288s) {
+                this.f31286q.sendMessage(this.f31286q.obtainMessage(2));
             }
         }
     }
 
-    public final void d() {
+    /* renamed from: d */
+    public final void m6034d() {
         try {
-            this.p.a(false);
+            this.f31285p.m14017a(false);
         } catch (Exception e) {
             StringBuilder sb = new StringBuilder();
             sb.append("handleFrameAvailable exception: ");
@@ -75,10 +90,11 @@ public class wk1 implements Runnable {
         }
     }
 
-    public final void e() {
+    /* renamed from: e */
+    public final void m6033e() {
         try {
-            this.p.a(true);
-            this.p.d();
+            this.f31285p.m14017a(true);
+            this.f31285p.m14014d();
         } catch (Exception e) {
             StringBuilder sb = new StringBuilder();
             sb.append("exception: ");
@@ -86,31 +102,33 @@ public class wk1 implements Runnable {
         }
     }
 
-    public boolean f() {
+    /* renamed from: f */
+    public boolean m6032f() {
         boolean z;
-        synchronized (this.r) {
-            z = this.t;
+        synchronized (this.f31287r) {
+            z = this.f31289t;
         }
         return z;
     }
 
-    public void g() {
-        this.q.sendMessage(this.q.obtainMessage(1));
+    /* renamed from: g */
+    public void m6031g() {
+        this.f31286q.sendMessage(this.f31286q.obtainMessage(1));
     }
 
     @Override // java.lang.Runnable
     public void run() {
         Looper.prepare();
-        synchronized (this.r) {
-            this.q = new a(this);
-            this.s = true;
-            this.r.notify();
+        synchronized (this.f31287r) {
+            this.f31286q = new HandlerC3446a(this);
+            this.f31288s = true;
+            this.f31287r.notify();
         }
         Looper.loop();
-        synchronized (this.r) {
-            this.t = false;
-            this.s = false;
-            this.q = null;
+        synchronized (this.f31287r) {
+            this.f31289t = false;
+            this.f31288s = false;
+            this.f31286q = null;
         }
     }
 }

@@ -12,27 +12,35 @@ import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public class d80 {
     @Nullable
-    public static d80 c;
-    public final Context a;
-    public volatile String b;
+
+    /* renamed from: c */
+    public static d80 f6601c;
+
+    /* renamed from: a */
+    public final Context f6602a;
+
+    /* renamed from: b */
+    public volatile String f6603b;
 
     public d80(Context context) {
-        this.a = context.getApplicationContext();
+        this.f6602a = context.getApplicationContext();
     }
 
-    public static d80 a(Context context) {
-        ry0.j(context);
+    /* renamed from: a */
+    public static d80 m24607a(Context context) {
+        ry0.m10830j(context);
         synchronized (d80.class) {
-            if (c == null) {
-                qh8.d(context);
-                c = new d80(context);
+            if (f6601c == null) {
+                qh8.m12511d(context);
+                f6601c = new d80(context);
             }
         }
-        return c;
+        return f6601c;
     }
 
     @Nullable
-    public static final l68 d(PackageInfo packageInfo, l68... l68VarArr) {
+    /* renamed from: d */
+    public static final l68 m24604d(PackageInfo packageInfo, l68... l68VarArr) {
         Signature[] signatureArr = packageInfo.signatures;
         if (signatureArr != null && signatureArr.length == 1) {
             m98 m98Var = new m98(packageInfo.signatures[0].toByteArray());
@@ -46,71 +54,75 @@ public class d80 {
         return null;
     }
 
-    public static final boolean e(PackageInfo packageInfo, boolean z) {
+    /* renamed from: e */
+    public static final boolean m24603e(PackageInfo packageInfo, boolean z) {
         if (z && packageInfo != null && ("com.android.vending".equals(packageInfo.packageName) || "com.google.android.gms".equals(packageInfo.packageName))) {
             ApplicationInfo applicationInfo = packageInfo.applicationInfo;
             z = (applicationInfo == null || (applicationInfo.flags & 129) == 0) ? false : true;
         }
         if (packageInfo != null && packageInfo.signatures != null) {
-            if ((z ? d(packageInfo, df8.a) : d(packageInfo, df8.a[0])) != null) {
+            if ((z ? m24604d(packageInfo, df8.f7041a) : m24604d(packageInfo, df8.f7041a[0])) != null) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean b(PackageInfo packageInfo) {
+    /* renamed from: b */
+    public boolean m24606b(PackageInfo packageInfo) {
         if (packageInfo == null) {
             return false;
         }
-        if (e(packageInfo, false)) {
+        if (m24603e(packageInfo, false)) {
             return true;
         }
-        return e(packageInfo, true) && c80.e(this.a);
+        return m24603e(packageInfo, true) && c80.m25523e(this.f6602a);
     }
 
-    public boolean c(int i) {
-        fx8 c2;
+    /* renamed from: c */
+    public boolean m24605c(int i) {
+        fx8 m22143c;
         int length;
-        String[] packagesForUid = this.a.getPackageManager().getPackagesForUid(i);
+        String[] packagesForUid = this.f6602a.getPackageManager().getPackagesForUid(i);
         if (packagesForUid != null && (length = packagesForUid.length) != 0) {
-            c2 = null;
+            m22143c = null;
             int i2 = 0;
             while (true) {
                 if (i2 >= length) {
-                    ry0.j(c2);
+                    ry0.m10830j(m22143c);
                     break;
                 }
-                c2 = f(packagesForUid[i2], false, false);
-                if (c2.a) {
+                m22143c = m24602f(packagesForUid[i2], false, false);
+                if (m22143c.f10086a) {
                     break;
                 }
                 i2++;
             }
         } else {
-            c2 = fx8.c("no pkgs");
+            m22143c = fx8.m22143c("no pkgs");
         }
-        c2.e();
-        return c2.a;
+        m22143c.m22141e();
+        return m22143c.f10086a;
     }
 
     @SuppressLint({"PackageManagerGetSignatures"})
-    public final fx8 f(String str, boolean z, boolean z2) {
+    /* renamed from: f */
+    public final fx8 m24602f(String str, boolean z, boolean z2) {
         fx8 fx8Var;
         ApplicationInfo applicationInfo;
         String str2 = "null pkg";
         if (str == null) {
-            return fx8.c("null pkg");
+            return fx8.m22143c("null pkg");
         }
-        if (str.equals(this.b)) {
-            return fx8.b();
+        if (str.equals(this.f6603b)) {
+            return fx8.m22144b();
         }
-        if (qh8.e()) {
-            fx8Var = qh8.b(str, c80.e(this.a), false, false);
+        if (qh8.m12510e()) {
+            fx8Var = qh8.m12513b(str, c80.m25523e(this.f6602a), false, false);
         } else {
             try {
-                PackageInfo packageInfo = this.a.getPackageManager().getPackageInfo(str, 64);
-                boolean e = c80.e(this.a);
+                PackageInfo packageInfo = this.f6602a.getPackageManager().getPackageInfo(str, 64);
+                boolean m25523e = c80.m25523e(this.f6602a);
                 if (packageInfo != null) {
                     Signature[] signatureArr = packageInfo.signatures;
                     if (signatureArr == null || signatureArr.length != 1) {
@@ -118,21 +130,21 @@ public class d80 {
                     } else {
                         m98 m98Var = new m98(packageInfo.signatures[0].toByteArray());
                         String str3 = packageInfo.packageName;
-                        fx8 a = qh8.a(str3, m98Var, e, false);
-                        if (!a.a || (applicationInfo = packageInfo.applicationInfo) == null || (applicationInfo.flags & 2) == 0 || !qh8.a(str3, m98Var, false, true).a) {
-                            fx8Var = a;
+                        fx8 m12514a = qh8.m12514a(str3, m98Var, m25523e, false);
+                        if (!m12514a.f10086a || (applicationInfo = packageInfo.applicationInfo) == null || (applicationInfo.flags & 2) == 0 || !qh8.m12514a(str3, m98Var, false, true).f10086a) {
+                            fx8Var = m12514a;
                         } else {
                             str2 = "debuggable release cert app rejected";
                         }
                     }
                 }
-                fx8Var = fx8.c(str2);
-            } catch (PackageManager.NameNotFoundException e2) {
-                return fx8.d("no pkg ".concat(str), e2);
+                fx8Var = fx8.m22143c(str2);
+            } catch (PackageManager.NameNotFoundException e) {
+                return fx8.m22142d("no pkg ".concat(str), e);
             }
         }
-        if (fx8Var.a) {
-            this.b = str;
+        if (fx8Var.f10086a) {
+            this.f6603b = str;
         }
         return fx8Var;
     }

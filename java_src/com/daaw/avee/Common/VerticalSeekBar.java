@@ -5,20 +5,23 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.SeekBar;
-import com.daaw.s4;
+import com.daaw.C2910s4;
 /* loaded from: classes.dex */
-public class VerticalSeekBar extends s4 {
-    public SeekBar.OnSeekBarChangeListener q;
+public class VerticalSeekBar extends C2910s4 {
+
+    /* renamed from: q */
+    public SeekBar.OnSeekBarChangeListener f3695q;
 
     public VerticalSeekBar(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
     }
 
-    public void a() {
+    /* renamed from: a */
+    public void m26952a() {
         onSizeChanged(getWidth(), getHeight(), 0, 0);
     }
 
-    @Override // com.daaw.s4, android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
+    @Override // com.daaw.C2910s4, android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
     public void onDraw(Canvas canvas) {
         canvas.rotate(-90.0f);
         canvas.translate(-getHeight(), 0.0f);
@@ -44,7 +47,7 @@ public class VerticalSeekBar extends s4 {
                 int max = getMax() - ((int) ((getMax() * motionEvent.getY()) / getHeight()));
                 setProgress(max);
                 onSizeChanged(getWidth(), getHeight(), 0, 0);
-                SeekBar.OnSeekBarChangeListener onSeekBarChangeListener = this.q;
+                SeekBar.OnSeekBarChangeListener onSeekBarChangeListener = this.f3695q;
                 if (onSeekBarChangeListener != null) {
                     onSeekBarChangeListener.onProgressChanged(this, max, true);
                 }
@@ -55,6 +58,6 @@ public class VerticalSeekBar extends s4 {
     }
 
     public void setOnSeekBarChangeFromUserListener(SeekBar.OnSeekBarChangeListener onSeekBarChangeListener) {
-        this.q = onSeekBarChangeListener;
+        this.f3695q = onSeekBarChangeListener;
     }
 }

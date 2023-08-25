@@ -4,9 +4,11 @@ import android.content.Context;
 import android.os.PowerManager;
 /* loaded from: classes.dex */
 public final class za8 {
-    public final PowerManager a;
+
+    /* renamed from: a */
+    public final PowerManager f34697a;
 
     public za8(Context context) {
-        this.a = (PowerManager) context.getApplicationContext().getSystemService("power");
+        this.f34697a = (PowerManager) context.getApplicationContext().getSystemService("power");
     }
 }

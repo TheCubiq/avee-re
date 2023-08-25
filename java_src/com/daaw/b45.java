@@ -1,10 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class b45 implements wz7 {
-    public final v35 a;
+
+    /* renamed from: a */
+    public final v35 f4292a;
 
     public b45(v35 v35Var) {
-        this.a = v35Var;
+        this.f4292a = v35Var;
     }
 
     @Override // com.daaw.m08

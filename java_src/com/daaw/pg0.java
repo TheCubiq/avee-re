@@ -1,20 +1,26 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class pg0 extends ng0 {
-    public static final a t = new a(null);
-    public static final pg0 u = new pg0(1, 0);
 
+    /* renamed from: t */
+    public static final C2551a f22904t = new C2551a(null);
+
+    /* renamed from: u */
+    public static final pg0 f22905u = new pg0(1, 0);
+
+    /* renamed from: com.daaw.pg0$a */
     /* loaded from: classes2.dex */
-    public static final class a {
-        public a() {
+    public static final class C2551a {
+        public C2551a() {
         }
 
-        public /* synthetic */ a(pq pqVar) {
+        public /* synthetic */ C2551a(C2575pq c2575pq) {
             this();
         }
 
-        public final pg0 a() {
-            return pg0.u;
+        /* renamed from: a */
+        public final pg0 m13401a() {
+            return pg0.f22905u;
         }
     }
 
@@ -27,7 +33,7 @@ public final class pg0 extends ng0 {
         if (obj instanceof pg0) {
             if (!isEmpty() || !((pg0) obj).isEmpty()) {
                 pg0 pg0Var = (pg0) obj;
-                if (d() != pg0Var.d() || e() != pg0Var.e()) {
+                if (m15187d() != pg0Var.m15187d() || m15186e() != pg0Var.m15186e()) {
                 }
             }
             return true;
@@ -40,20 +46,21 @@ public final class pg0 extends ng0 {
         if (isEmpty()) {
             return -1;
         }
-        return (d() * 31) + e();
+        return (m15187d() * 31) + m15186e();
     }
 
     @Override // com.daaw.ng0
     public boolean isEmpty() {
-        return d() > e();
+        return m15187d() > m15186e();
     }
 
-    public boolean k(int i) {
-        return d() <= i && i <= e();
+    /* renamed from: k */
+    public boolean m13402k(int i) {
+        return m15187d() <= i && i <= m15186e();
     }
 
     @Override // com.daaw.ng0
     public String toString() {
-        return d() + ".." + e();
+        return m15187d() + ".." + m15186e();
     }
 }

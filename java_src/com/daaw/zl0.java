@@ -7,48 +7,59 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class zl0 implements oe1 {
-    public transient pe1 a = null;
-    public final List<a51> b = new ArrayList();
-    public boolean c = false;
+
+    /* renamed from: a */
+    public transient pe1 f35197a = null;
+
+    /* renamed from: b */
+    public final List<a51> f35198b = new ArrayList();
+
+    /* renamed from: c */
+    public boolean f35199c = false;
 
     @Override // com.daaw.oe1
-    public pe1 a() {
-        return this.a;
+    /* renamed from: a */
+    public pe1 mo2137a() {
+        return this.f35197a;
     }
 
     @Override // com.daaw.oe1
-    public void b(OutputStream outputStream, String str) {
+    /* renamed from: b */
+    public void mo2136b(OutputStream outputStream, String str) {
         if (str == null) {
             str = "UTF-8";
         }
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, str));
-        if (this.c) {
+        if (this.f35199c) {
             bufferedWriter.write("#EXTM3U");
             bufferedWriter.newLine();
         }
-        for (a51 a51Var : this.b) {
-            if (this.c) {
+        for (a51 a51Var : this.f35198b) {
+            if (this.f35199c) {
                 bufferedWriter.write("#EXTINF:");
-                bufferedWriter.write(Long.toString(a51Var.a()));
+                bufferedWriter.write(Long.toString(a51Var.m27609a()));
                 bufferedWriter.write(",");
-                bufferedWriter.write(a51Var.c() == null ? a51Var.b() : a51Var.c());
+                bufferedWriter.write(a51Var.m27607c() == null ? a51Var.m27608b() : a51Var.m27607c());
                 bufferedWriter.newLine();
             }
-            bufferedWriter.write(a51Var.b());
+            bufferedWriter.write(a51Var.m27608b());
             bufferedWriter.newLine();
         }
         bufferedWriter.flush();
     }
 
-    public List<a51> c() {
-        return this.b;
+    /* renamed from: c */
+    public List<a51> m2135c() {
+        return this.f35198b;
     }
 
-    public void d(boolean z) {
-        this.c = z;
+    /* renamed from: d */
+    public void m2134d(boolean z) {
+        this.f35199c = z;
     }
 
-    public void e(pe1 pe1Var) {
-        this.a = pe1Var;
+    /* renamed from: e */
+    public void m2133e(pe1 pe1Var) {
+        this.f35197a = pe1Var;
     }
 }

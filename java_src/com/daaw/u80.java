@@ -4,17 +4,24 @@ import android.os.Looper;
 import android.os.Message;
 /* loaded from: classes.dex */
 public interface u80 {
-    Message a(int i, int i2, int i3);
+    /* renamed from: a */
+    Message mo5069a(int i, int i2, int i3);
 
-    boolean b(int i);
+    /* renamed from: b */
+    boolean mo5068b(int i);
 
-    Message c(int i, int i2, int i3, Object obj);
+    /* renamed from: c */
+    Message mo5067c(int i, int i2, int i3, Object obj);
 
-    boolean d(int i, long j);
+    /* renamed from: d */
+    boolean mo5066d(int i, long j);
 
-    void e(int i);
+    /* renamed from: e */
+    void mo5065e(int i);
 
-    Message f(int i, Object obj);
+    /* renamed from: f */
+    Message mo5064f(int i, Object obj);
 
-    Looper g();
+    /* renamed from: g */
+    Looper mo5063g();
 }

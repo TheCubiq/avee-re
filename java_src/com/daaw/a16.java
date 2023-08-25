@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class a16 implements i76 {
-    public final Set a;
+
+    /* renamed from: a */
+    public final Set f2700a;
 
     public a16(Set set) {
-        this.a = set;
+        this.f2700a = set;
     }
 
     @Override // com.daaw.i76
@@ -19,12 +21,13 @@ public final class a16 implements i76 {
     @Override // com.daaw.i76
     public final f77 zzb() {
         final ArrayList arrayList = new ArrayList();
-        for (String str : this.a) {
+        for (String str : this.f2700a) {
             arrayList.add(str);
         }
-        return s67.i(new h76() { // from class: com.daaw.z06
+        return s67.m10634i(new h76() { // from class: com.daaw.z06
             @Override // com.daaw.h76
-            public final void b(Object obj) {
+            /* renamed from: b */
+            public final void mo2851b(Object obj) {
                 ((Bundle) obj).putStringArrayList("ad_types", arrayList);
             }
         });

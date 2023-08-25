@@ -10,7 +10,8 @@ public class wx2 extends Binder implements IInterface {
         attachInterface(this, str);
     }
 
-    public boolean D(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: D */
+    public boolean mo5540D(int i, Parcel parcel, Parcel parcel2, int i2) {
         return false;
     }
 
@@ -26,6 +27,6 @@ public class wx2 extends Binder implements IInterface {
         } else if (super.onTransact(i, parcel, parcel2, i2)) {
             return true;
         }
-        return D(i, parcel, parcel2, i2);
+        return mo5540D(i, parcel, parcel2, i2);
     }
 }

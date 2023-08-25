@@ -5,14 +5,18 @@ import android.view.View;
 /* loaded from: classes.dex */
 public interface f70<R> {
 
+    /* renamed from: com.daaw.f70$a */
     /* loaded from: classes.dex */
-    public interface a {
-        void d(Drawable drawable);
+    public interface InterfaceC1258a {
+        /* renamed from: d */
+        void mo16045d(Drawable drawable);
 
-        Drawable f();
+        /* renamed from: f */
+        Drawable mo16044f();
 
         View getView();
     }
 
-    boolean a(R r, a aVar);
+    /* renamed from: a */
+    boolean mo6825a(R r, InterfaceC1258a interfaceC1258a);
 }

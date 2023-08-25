@@ -4,11 +4,14 @@ import java.io.Serializable;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class j37 extends l37 implements Serializable {
-    public static final j37 p = new j37();
+
+    /* renamed from: p */
+    public static final j37 f14219p = new j37();
 
     @Override // com.daaw.l37
-    public final l37 a() {
-        return t37.p;
+    /* renamed from: a */
+    public final l37 mo8593a() {
+        return t37.f26978p;
     }
 
     @Override // com.daaw.l37, java.util.Comparator

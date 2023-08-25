@@ -14,27 +14,34 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class cq5 extends SQLiteOpenHelper {
-    public final Context p;
-    public final g77 q;
+
+    /* renamed from: p */
+    public final Context f6085p;
+
+    /* renamed from: q */
+    public final g77 f6086q;
 
     public cq5(Context context, g77 g77Var) {
-        super(context, "AdMobOfflineBufferedPings.db", (SQLiteDatabase.CursorFactory) null, ((Integer) zzba.zzc().b(g93.B7)).intValue());
-        this.p = context;
-        this.q = g77Var;
+        super(context, "AdMobOfflineBufferedPings.db", (SQLiteDatabase.CursorFactory) null, ((Integer) zzba.zzc().m23658b(g93.f10378B7)).intValue());
+        this.f6085p = context;
+        this.f6086q = g77Var;
     }
 
-    public static /* synthetic */ void D(SQLiteDatabase sQLiteDatabase, String str, p04 p04Var) {
+    /* renamed from: D */
+    public static /* synthetic */ void m25126D(SQLiteDatabase sQLiteDatabase, String str, p04 p04Var) {
         ContentValues contentValues = new ContentValues();
         contentValues.put("event_state", (Integer) 1);
         sQLiteDatabase.update("offline_buffered_pings", contentValues, "gws_query_id = ?", new String[]{str});
-        M(sQLiteDatabase, p04Var);
+        m25122M(sQLiteDatabase, p04Var);
     }
 
-    public static final void L(SQLiteDatabase sQLiteDatabase, String str) {
+    /* renamed from: L */
+    public static final void m25123L(SQLiteDatabase sQLiteDatabase, String str) {
         sQLiteDatabase.delete("offline_buffered_pings", "gws_query_id = ? AND event_state = ?", new String[]{str, Integer.toString(0)});
     }
 
-    public static void M(SQLiteDatabase sQLiteDatabase, p04 p04Var) {
+    /* renamed from: M */
+    public static void m25122M(SQLiteDatabase sQLiteDatabase, p04 p04Var) {
         sQLiteDatabase.beginTransaction();
         try {
             Cursor query = sQLiteDatabase.query("offline_buffered_pings", new String[]{"url"}, "event_state = 1", null, null, null, "timestamp ASC", null);
@@ -59,42 +66,46 @@ public final class cq5 extends SQLiteOpenHelper {
         }
     }
 
-    public static /* synthetic */ Void n(p04 p04Var, SQLiteDatabase sQLiteDatabase) {
-        M(sQLiteDatabase, p04Var);
+    /* renamed from: n */
+    public static /* synthetic */ Void m25120n(p04 p04Var, SQLiteDatabase sQLiteDatabase) {
+        m25122M(sQLiteDatabase, p04Var);
         return null;
     }
 
-    public final void E(final SQLiteDatabase sQLiteDatabase, final p04 p04Var, final String str) {
-        this.q.execute(new Runnable() { // from class: com.daaw.tp5
+    /* renamed from: E */
+    public final void m25125E(final SQLiteDatabase sQLiteDatabase, final p04 p04Var, final String str) {
+        this.f6086q.execute(new Runnable() { // from class: com.daaw.tp5
             @Override // java.lang.Runnable
             public final void run() {
-                cq5.D(sQLiteDatabase, str, p04Var);
+                cq5.m25126D(sQLiteDatabase, str, p04Var);
             }
         });
     }
 
-    public final void K(final p04 p04Var, final String str) {
-        w(new em6() { // from class: com.daaw.aq5
+    /* renamed from: K */
+    public final void m25124K(final p04 p04Var, final String str) {
+        m25117w(new em6() { // from class: com.daaw.aq5
             @Override // com.daaw.em6
             public final Object zza(Object obj) {
-                cq5.this.E((SQLiteDatabase) obj, p04Var, str);
+                cq5.this.m25125E((SQLiteDatabase) obj, p04Var, str);
                 return null;
             }
         });
     }
 
-    public final /* synthetic */ Void d(eq5 eq5Var, SQLiteDatabase sQLiteDatabase) {
+    /* renamed from: d */
+    public final /* synthetic */ Void m25121d(eq5 eq5Var, SQLiteDatabase sQLiteDatabase) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put("timestamp", Long.valueOf(eq5Var.a));
-        contentValues.put("gws_query_id", eq5Var.b);
-        contentValues.put("url", eq5Var.c);
-        contentValues.put("event_state", Integer.valueOf(eq5Var.d - 1));
+        contentValues.put("timestamp", Long.valueOf(eq5Var.f8697a));
+        contentValues.put("gws_query_id", eq5Var.f8698b);
+        contentValues.put("url", eq5Var.f8699c);
+        contentValues.put("event_state", Integer.valueOf(eq5Var.f8700d - 1));
         sQLiteDatabase.insert("offline_buffered_pings", null, contentValues);
         zzt.zzp();
-        zzbr zzw = zzs.zzw(this.p);
+        zzbr zzw = zzs.zzw(this.f6085p);
         if (zzw != null) {
             try {
-                zzw.zze(nt0.g3(this.p));
+                zzw.zze(nt0.m14830g3(this.f6085p));
             } catch (RemoteException e) {
                 zze.zzb("Failed to schedule offline ping sender.", e);
             }
@@ -117,32 +128,35 @@ public final class cq5 extends SQLiteOpenHelper {
         sQLiteDatabase.execSQL("DROP TABLE IF EXISTS offline_buffered_pings");
     }
 
-    public final void q(final String str) {
-        w(new em6() { // from class: com.daaw.wp5
+    /* renamed from: q */
+    public final void m25119q(final String str) {
+        m25117w(new em6() { // from class: com.daaw.wp5
             @Override // com.daaw.em6
             public final Object zza(Object obj) {
-                cq5.L((SQLiteDatabase) obj, str);
+                cq5.m25123L((SQLiteDatabase) obj, str);
                 return null;
             }
         });
     }
 
-    public final void u(final eq5 eq5Var) {
-        w(new em6() { // from class: com.daaw.up5
+    /* renamed from: u */
+    public final void m25118u(final eq5 eq5Var) {
+        m25117w(new em6() { // from class: com.daaw.up5
             @Override // com.daaw.em6
             public final Object zza(Object obj) {
-                cq5.this.d(eq5Var, (SQLiteDatabase) obj);
+                cq5.this.m25121d(eq5Var, (SQLiteDatabase) obj);
                 return null;
             }
         });
     }
 
-    public final void w(em6 em6Var) {
-        s67.r(this.q.M(new Callable() { // from class: com.daaw.sp5
+    /* renamed from: w */
+    public final void m25117w(em6 em6Var) {
+        s67.m10625r(this.f6086q.mo20112M(new Callable() { // from class: com.daaw.sp5
             @Override // java.util.concurrent.Callable
             public final Object call() {
                 return cq5.this.getWritableDatabase();
             }
-        }), new bq5(this, em6Var), this.q);
+        }), new bq5(this, em6Var), this.f6086q);
     }
 }

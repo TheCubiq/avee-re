@@ -6,20 +6,23 @@ import java.io.StringWriter;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class vd5 {
-    public final ag a;
 
-    public vd5(ag agVar) {
-        this.a = agVar;
+    /* renamed from: a */
+    public final InterfaceC0623ag f30161a;
+
+    public vd5(InterfaceC0623ag interfaceC0623ag) {
+        this.f30161a = interfaceC0623ag;
     }
 
-    public final void a(List list, String str, String str2, Object... objArr) {
-        if (((Boolean) ib3.a.e()).booleanValue()) {
-            long a = this.a.a();
+    /* renamed from: a */
+    public final void m7241a(List list, String str, String str2, Object... objArr) {
+        if (((Boolean) ib3.f13436a.m16137e()).booleanValue()) {
+            long mo15860a = this.f30161a.mo15860a();
             StringWriter stringWriter = new StringWriter();
             JsonWriter jsonWriter = new JsonWriter(stringWriter);
             try {
                 jsonWriter.beginObject();
-                jsonWriter.name("timestamp").value(a);
+                jsonWriter.name("timestamp").value(mo15860a);
                 jsonWriter.name("source").value(str);
                 jsonWriter.name("event").value(str2);
                 jsonWriter.name("components").beginArray();

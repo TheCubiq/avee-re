@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class zh6 {
-    public int a = 2;
 
-    public final zh6 a(int i) {
-        this.a = i;
+    /* renamed from: a */
+    public int f35105a = 2;
+
+    /* renamed from: a */
+    public final zh6 m2296a(int i) {
+        this.f35105a = i;
         return this;
     }
 }

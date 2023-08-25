@@ -7,48 +7,67 @@ import android.view.View;
 import android.view.ViewGroup;
 /* loaded from: classes.dex */
 public abstract class kv0 {
-    public final DataSetObservable a = new DataSetObservable();
-    public DataSetObserver b;
 
-    public abstract void a(ViewGroup viewGroup, int i, Object obj);
+    /* renamed from: a */
+    public final DataSetObservable f16763a = new DataSetObservable();
 
-    public abstract void b(ViewGroup viewGroup);
+    /* renamed from: b */
+    public DataSetObserver f16764b;
 
-    public abstract int c();
+    /* renamed from: a */
+    public abstract void mo5602a(ViewGroup viewGroup, int i, Object obj);
 
-    public int d(Object obj) {
+    /* renamed from: b */
+    public abstract void mo5601b(ViewGroup viewGroup);
+
+    /* renamed from: c */
+    public abstract int mo17418c();
+
+    /* renamed from: d */
+    public int m17417d(Object obj) {
         return -1;
     }
 
-    public abstract CharSequence e(int i);
+    /* renamed from: e */
+    public abstract CharSequence mo17416e(int i);
 
-    public float f(int i) {
+    /* renamed from: f */
+    public float m17415f(int i) {
         return 1.0f;
     }
 
-    public abstract Object g(ViewGroup viewGroup, int i);
+    /* renamed from: g */
+    public abstract Object mo5600g(ViewGroup viewGroup, int i);
 
-    public abstract boolean h(View view, Object obj);
+    /* renamed from: h */
+    public abstract boolean mo5599h(View view, Object obj);
 
-    public void i(DataSetObserver dataSetObserver) {
-        this.a.registerObserver(dataSetObserver);
+    /* renamed from: i */
+    public void m17414i(DataSetObserver dataSetObserver) {
+        this.f16763a.registerObserver(dataSetObserver);
     }
 
-    public abstract void j(Parcelable parcelable, ClassLoader classLoader);
+    /* renamed from: j */
+    public abstract void mo5598j(Parcelable parcelable, ClassLoader classLoader);
 
-    public abstract Parcelable k();
+    /* renamed from: k */
+    public abstract Parcelable mo5597k();
 
-    public abstract void l(ViewGroup viewGroup, int i, Object obj);
+    /* renamed from: l */
+    public abstract void mo5596l(ViewGroup viewGroup, int i, Object obj);
 
-    public void m(DataSetObserver dataSetObserver) {
+    /* renamed from: m */
+    public void m17413m(DataSetObserver dataSetObserver) {
         synchronized (this) {
-            this.b = dataSetObserver;
+            this.f16764b = dataSetObserver;
         }
     }
 
-    public abstract void n(ViewGroup viewGroup);
+    /* renamed from: n */
+    public abstract void mo5595n(ViewGroup viewGroup);
 
-    public void o(DataSetObserver dataSetObserver) {
-        this.a.unregisterObserver(dataSetObserver);
+    /* renamed from: o */
+    public void m17412o(DataSetObserver dataSetObserver) {
+        this.f16763a.unregisterObserver(dataSetObserver);
     }
 }

@@ -22,29 +22,46 @@ import com.google.android.gms.ads.internal.client.zzp;
 import com.google.android.gms.ads.internal.client.zzq;
 /* loaded from: classes.dex */
 public final class tj3 extends AdManagerInterstitialAd {
-    public final Context a;
-    public final zzp b;
-    public final zzbu c;
-    public final String d;
-    public final xm3 e;
-    public AppEventListener f;
-    public FullScreenContentCallback g;
-    public OnPaidEventListener h;
+
+    /* renamed from: a */
+    public final Context f27776a;
+
+    /* renamed from: b */
+    public final zzp f27777b;
+
+    /* renamed from: c */
+    public final zzbu f27778c;
+
+    /* renamed from: d */
+    public final String f27779d;
+
+    /* renamed from: e */
+    public final xm3 f27780e;
+
+    /* renamed from: f */
+    public AppEventListener f27781f;
+
+    /* renamed from: g */
+    public FullScreenContentCallback f27782g;
+
+    /* renamed from: h */
+    public OnPaidEventListener f27783h;
 
     public tj3(Context context, String str) {
         xm3 xm3Var = new xm3();
-        this.e = xm3Var;
-        this.a = context;
-        this.d = str;
-        this.b = zzp.zza;
-        this.c = zzay.zza().zze(context, new zzq(), str, xm3Var);
+        this.f27780e = xm3Var;
+        this.f27776a = context;
+        this.f27779d = str;
+        this.f27777b = zzp.zza;
+        this.f27778c = zzay.zza().zze(context, new zzq(), str, xm3Var);
     }
 
-    public final void a(zzdx zzdxVar, AdLoadCallback adLoadCallback) {
+    /* renamed from: a */
+    public final void m9076a(zzdx zzdxVar, AdLoadCallback adLoadCallback) {
         try {
-            zzbu zzbuVar = this.c;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
-                zzbuVar.zzy(this.b.zza(this.a, zzdxVar), new zzh(adLoadCallback, this));
+                zzbuVar.zzy(this.f27777b.zza(this.f27776a, zzdxVar), new zzh(adLoadCallback, this));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
@@ -54,29 +71,29 @@ public final class tj3 extends AdManagerInterstitialAd {
 
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final String getAdUnitId() {
-        return this.d;
+        return this.f27779d;
     }
 
     @Override // com.google.android.gms.ads.admanager.AdManagerInterstitialAd
     public final AppEventListener getAppEventListener() {
-        return this.f;
+        return this.f27781f;
     }
 
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final FullScreenContentCallback getFullScreenContentCallback() {
-        return this.g;
+        return this.f27782g;
     }
 
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final OnPaidEventListener getOnPaidEventListener() {
-        return this.h;
+        return this.f27783h;
     }
 
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final ResponseInfo getResponseInfo() {
         zzdn zzdnVar = null;
         try {
-            zzbu zzbuVar = this.c;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
                 zzdnVar = zzbuVar.zzk();
             }
@@ -89,8 +106,8 @@ public final class tj3 extends AdManagerInterstitialAd {
     @Override // com.google.android.gms.ads.admanager.AdManagerInterstitialAd
     public final void setAppEventListener(AppEventListener appEventListener) {
         try {
-            this.f = appEventListener;
-            zzbu zzbuVar = this.c;
+            this.f27781f = appEventListener;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
                 zzbuVar.zzG(appEventListener != null ? new h13(appEventListener) : null);
             }
@@ -102,8 +119,8 @@ public final class tj3 extends AdManagerInterstitialAd {
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final void setFullScreenContentCallback(FullScreenContentCallback fullScreenContentCallback) {
         try {
-            this.g = fullScreenContentCallback;
-            zzbu zzbuVar = this.c;
+            this.f27782g = fullScreenContentCallback;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
                 zzbuVar.zzJ(new zzbb(fullScreenContentCallback));
             }
@@ -115,7 +132,7 @@ public final class tj3 extends AdManagerInterstitialAd {
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final void setImmersiveMode(boolean z) {
         try {
-            zzbu zzbuVar = this.c;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
                 zzbuVar.zzL(z);
             }
@@ -127,8 +144,8 @@ public final class tj3 extends AdManagerInterstitialAd {
     @Override // com.google.android.gms.ads.interstitial.InterstitialAd
     public final void setOnPaidEventListener(OnPaidEventListener onPaidEventListener) {
         try {
-            this.h = onPaidEventListener;
-            zzbu zzbuVar = this.c;
+            this.f27783h = onPaidEventListener;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
                 zzbuVar.zzP(new zzfe(onPaidEventListener));
             }
@@ -143,9 +160,9 @@ public final class tj3 extends AdManagerInterstitialAd {
             k04.zzj("The activity for show is null, will proceed with show using the context provided when loading the ad.");
         }
         try {
-            zzbu zzbuVar = this.c;
+            zzbu zzbuVar = this.f27778c;
             if (zzbuVar != null) {
-                zzbuVar.zzW(nt0.g3(activity));
+                zzbuVar.zzW(nt0.m14830g3(activity));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);

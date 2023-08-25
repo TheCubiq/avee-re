@@ -5,12 +5,14 @@ public final class c08 extends rz7 {
         super(1);
     }
 
-    public final c08 b(Object obj, m08 m08Var) {
-        super.a("Network", m08Var);
+    /* renamed from: b */
+    public final c08 m25692b(Object obj, m08 m08Var) {
+        super.m10813a("Network", m08Var);
         return this;
     }
 
-    public final d08 c() {
-        return new d08(this.a, null);
+    /* renamed from: c */
+    public final d08 m25691c() {
+        return new d08(this.f25733a, null);
     }
 }

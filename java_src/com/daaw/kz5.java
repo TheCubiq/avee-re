@@ -1,23 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class kz5 implements pz5 {
-    public final /* synthetic */ lz5 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ lz5 f16906a;
 
     public kz5(lz5 lz5Var) {
-        this.a = lz5Var;
+        this.f16906a = lz5Var;
     }
 
     @Override // com.daaw.pz5
-    public final /* bridge */ /* synthetic */ void a(Object obj) {
-        synchronized (this.a) {
-            this.a.c = ((zl4) obj).c();
-            ((zl4) obj).b();
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ void mo2496a(Object obj) {
+        synchronized (this.f16906a) {
+            this.f16906a.f17926c = ((zl4) obj).m2130c();
+            ((zl4) obj).mo2131b();
         }
     }
 
     @Override // com.daaw.pz5
     public final void zza() {
-        synchronized (this.a) {
+        synchronized (this.f16906a) {
         }
     }
 }

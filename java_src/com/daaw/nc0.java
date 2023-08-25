@@ -3,6 +3,7 @@ package com.daaw;
 import android.app.Activity;
 import android.content.Context;
 import com.android.billingclient.api.Purchase;
+import com.daaw.C3412wb;
 import com.daaw.avee.MainActivity;
 import com.daaw.avee.R;
 import com.daaw.avee.comp.Common.PrControls.PrButton;
@@ -13,7 +14,6 @@ import com.daaw.j01;
 import com.daaw.qw1;
 import com.daaw.rw1;
 import com.daaw.vw1;
-import com.daaw.wb;
 import com.daaw.ww1;
 import com.daaw.xw1;
 import java.util.ArrayList;
@@ -22,163 +22,211 @@ import java.util.LinkedList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class nc0 {
-    public static vw1<Boolean> g = new vw1<>();
-    public static ww1<al, Boolean> h = new ww1<>();
-    public static ww1<Boolean, Boolean> i = new ww1<>();
-    public static xw1<Object, Integer[], Boolean> j = new xw1<>();
-    public static final Long k = 1682294400000L;
-    public static boolean l = false;
-    public static boolean m = false;
-    public static ww1<Boolean, Boolean> n = new ww1<>();
-    public static ww1<String, Boolean> o = new ww1<>();
-    public static vw1<Boolean> p = new vw1<>();
-    public static ww1<Boolean, Boolean> q = new ww1<>();
-    public static vw1<List<kz0>> r = new vw1<>();
-    public final List<Object> a;
-    public i b;
-    public wb c;
-    public List<String> d;
-    public List<Purchase> e;
-    public List<kz0> f;
 
+    /* renamed from: g */
+    public static vw1<Boolean> f19989g = new vw1<>();
+
+    /* renamed from: h */
+    public static ww1<C0645al, Boolean> f19990h = new ww1<>();
+
+    /* renamed from: i */
+    public static ww1<Boolean, Boolean> f19991i = new ww1<>();
+
+    /* renamed from: j */
+    public static xw1<Object, Integer[], Boolean> f19992j = new xw1<>();
+
+    /* renamed from: k */
+    public static final Long f19993k = 1682294400000L;
+
+    /* renamed from: l */
+    public static boolean f19994l = false;
+
+    /* renamed from: m */
+    public static boolean f19995m = false;
+
+    /* renamed from: n */
+    public static ww1<Boolean, Boolean> f19996n = new ww1<>();
+
+    /* renamed from: o */
+    public static ww1<String, Boolean> f19997o = new ww1<>();
+
+    /* renamed from: p */
+    public static vw1<Boolean> f19998p = new vw1<>();
+
+    /* renamed from: q */
+    public static ww1<Boolean, Boolean> f19999q = new ww1<>();
+
+    /* renamed from: r */
+    public static vw1<List<kz0>> f20000r = new vw1<>();
+
+    /* renamed from: a */
+    public final List<Object> f20001a;
+
+    /* renamed from: b */
+    public C2282i f20002b;
+
+    /* renamed from: c */
+    public C3412wb f20003c;
+
+    /* renamed from: d */
+    public List<String> f20004d;
+
+    /* renamed from: e */
+    public List<Purchase> f20005e;
+
+    /* renamed from: f */
+    public List<kz0> f20006f;
+
+    /* renamed from: com.daaw.nc0$a */
     /* loaded from: classes.dex */
-    public class a implements qw1.a<Activity> {
-        public a() {
+    public class C2274a implements qw1.InterfaceC2788a<Activity> {
+        public C2274a() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Activity activity) {
-            nc0.this.x(activity);
+        public void mo3122b(Activity activity) {
+            nc0.this.m15257x(activity);
         }
     }
 
+    /* renamed from: com.daaw.nc0$b */
     /* loaded from: classes.dex */
-    public class b implements xw1.a<al, PrCheckBox, Boolean> {
-        public b() {
+    public class C2275b implements xw1.InterfaceC3648a<C0645al, PrCheckBox, Boolean> {
+        public C2275b() {
         }
 
-        @Override // com.daaw.xw1.a
+        @Override // com.daaw.xw1.InterfaceC3648a
         /* renamed from: a */
-        public Boolean c(al alVar, PrCheckBox prCheckBox) {
-            if (nc0.this.A().booleanValue()) {
+        public Boolean mo4423c(C0645al c0645al, PrCheckBox prCheckBox) {
+            if (nc0.this.m15301A().booleanValue()) {
                 return Boolean.FALSE;
             }
-            nc0.this.T(alVar);
+            nc0.this.m15282T(c0645al);
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.nc0$c */
     /* loaded from: classes.dex */
-    public class c implements xw1.a<al, PrEditText, Boolean> {
-        public c() {
+    public class C2276c implements xw1.InterfaceC3648a<C0645al, PrEditText, Boolean> {
+        public C2276c() {
         }
 
-        @Override // com.daaw.xw1.a
+        @Override // com.daaw.xw1.InterfaceC3648a
         /* renamed from: a */
-        public Boolean c(al alVar, PrEditText prEditText) {
-            if (nc0.this.A().booleanValue()) {
+        public Boolean mo4423c(C0645al c0645al, PrEditText prEditText) {
+            if (nc0.this.m15301A().booleanValue()) {
                 return Boolean.FALSE;
             }
-            nc0.this.T(alVar);
+            nc0.this.m15282T(c0645al);
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.nc0$d */
     /* loaded from: classes.dex */
-    public class d implements xw1.a<al, PrButton, Boolean> {
-        public d() {
+    public class C2277d implements xw1.InterfaceC3648a<C0645al, PrButton, Boolean> {
+        public C2277d() {
         }
 
-        @Override // com.daaw.xw1.a
+        @Override // com.daaw.xw1.InterfaceC3648a
         /* renamed from: a */
-        public Boolean c(al alVar, PrButton prButton) {
-            if (nc0.this.A().booleanValue()) {
+        public Boolean mo4423c(C0645al c0645al, PrButton prButton) {
+            if (nc0.this.m15301A().booleanValue()) {
                 return Boolean.FALSE;
             }
-            nc0.this.T(alVar);
+            nc0.this.m15282T(c0645al);
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.nc0$e */
     /* loaded from: classes.dex */
-    public class e implements qw1.a<Activity> {
-        public e() {
+    public class C2278e implements qw1.InterfaceC2788a<Activity> {
+        public C2278e() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Activity activity) {
-            nc0.this.x(activity);
-            nc0.this.U(activity, false);
+        public void mo3122b(Activity activity) {
+            nc0.this.m15257x(activity);
+            nc0.this.m15281U(activity, false);
         }
     }
 
+    /* renamed from: com.daaw.nc0$f */
     /* loaded from: classes.dex */
-    public class f implements qw1.a<al> {
-        public f() {
+    public class C2279f implements qw1.InterfaceC2788a<C0645al> {
+        public C2279f() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(al alVar) {
-            nc0.this.B();
+        public void mo3122b(C0645al c0645al) {
+            nc0.this.m15300B();
         }
     }
 
+    /* renamed from: com.daaw.nc0$g */
     /* loaded from: classes.dex */
-    public class g implements rw1.a<Integer, al> {
-        public g() {
+    public class C2280g implements rw1.InterfaceC2894a<Integer, C0645al> {
+        public C2280g() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(Integer num, al alVar) {
+        public void mo2813c(Integer num, C0645al c0645al) {
             if (num.intValue() == 4) {
-                nc0.this.T(alVar);
+                nc0.this.m15282T(c0645al);
             }
         }
     }
 
+    /* renamed from: com.daaw.nc0$h */
     /* loaded from: classes.dex */
-    public class h implements vw1.a<lo1<Boolean, Boolean>> {
-        public h() {
+    public class C2281h implements vw1.InterfaceC3381a<lo1<Boolean, Boolean>> {
+        public C2281h() {
         }
 
-        @Override // com.daaw.vw1.a
+        @Override // com.daaw.vw1.InterfaceC3381a
         /* renamed from: b */
-        public lo1<Boolean, Boolean> a() {
-            return new lo1<>(nc0.this.A(), Boolean.TRUE);
+        public lo1<Boolean, Boolean> mo3126a() {
+            return new lo1<>(nc0.this.m15301A(), Boolean.TRUE);
         }
     }
 
+    /* renamed from: com.daaw.nc0$i */
     /* loaded from: classes.dex */
-    public class i implements wb.e {
-        public i() {
+    public class C2282i implements C3412wb.InterfaceC3417e {
+        public C2282i() {
         }
 
-        public /* synthetic */ i(nc0 nc0Var, a aVar) {
+        public /* synthetic */ C2282i(nc0 nc0Var, C2274a c2274a) {
             this();
         }
 
-        @Override // com.daaw.wb.e
-        public void a() {
-            nc0.m = true;
-            boolean unused = nc0.l = false;
+        @Override // com.daaw.C3412wb.InterfaceC3417e
+        /* renamed from: a */
+        public void mo6230a() {
+            nc0.f19995m = true;
+            boolean unused = nc0.f19994l = false;
         }
 
-        @Override // com.daaw.wb.e
-        public void b() {
-            if (nc0.this.c != null) {
-                nc0.this.O();
+        @Override // com.daaw.C3412wb.InterfaceC3417e
+        /* renamed from: b */
+        public void mo6229b() {
+            if (nc0.this.f20003c != null) {
+                nc0.this.m15287O();
                 return;
             }
-            x10.a().c("no billing manager from it's listener");
-            a();
+            x10.m5653a().m5651c("no billing manager from it's listener");
+            mo6230a();
         }
 
-        @Override // com.daaw.wb.e
-        public void c(List<Purchase> list, boolean z) {
+        @Override // com.daaw.C3412wb.InterfaceC3417e
+        /* renamed from: c */
+        public void mo6228c(List<Purchase> list, boolean z) {
             ArrayList<Purchase> arrayList = new ArrayList();
             Iterator<Purchase> it = list.iterator();
             while (true) {
@@ -187,11 +235,11 @@ public class nc0 {
                     break;
                 }
                 Purchase next = it.next();
-                Iterator<String> it2 = next.b().iterator();
+                Iterator<String> it2 = next.m27865b().iterator();
                 while (true) {
                     if (it2.hasNext()) {
                         if ("premium".equals(it2.next())) {
-                            boolean unused = nc0.l = true;
+                            boolean unused = nc0.f19994l = true;
                             break;
                         }
                     } else {
@@ -205,297 +253,333 @@ public class nc0 {
             }
             ArrayList arrayList2 = new ArrayList();
             for (Purchase purchase : arrayList) {
-                arrayList2.addAll(purchase.b());
+                arrayList2.addAll(purchase.m27865b());
             }
-            if (nc0.this.e == null || z) {
-                nc0.this.d = arrayList2;
-                nc0.this.e = arrayList;
+            if (nc0.this.f20005e == null || z) {
+                nc0.this.f20004d = arrayList2;
+                nc0.this.f20005e = arrayList;
             }
-            ww1<Boolean, Boolean> ww1Var = nc0.n;
+            ww1<Boolean, Boolean> ww1Var = nc0.f19996n;
             Boolean bool = Boolean.TRUE;
-            ww1Var.a(bool, bool);
-            nc0.m = true;
-            nc0.this.Q();
+            ww1Var.m5753a(bool, bool);
+            nc0.f19995m = true;
+            nc0.this.m15285Q();
         }
     }
 
     public nc0() {
         LinkedList linkedList = new LinkedList();
-        this.a = linkedList;
-        this.d = null;
-        this.e = null;
-        this.f = null;
-        this.b = new i(this, null);
-        MainActivity.h0.b(new a(), linkedList);
-        PrCheckBox.u.b(new b(), linkedList);
-        PrEditText.y.b(new c(), linkedList);
-        PrButton.s.b(new d(), linkedList);
-        MainActivity.j0.b(new e(), linkedList);
-        MainActivity.n0.b(new f(), linkedList);
-        hg1.A.b(new qw1.a() { // from class: com.daaw.ec0
-            @Override // com.daaw.qw1.a
-            public final void b(Object obj) {
-                nc0.this.y((String) obj);
+        this.f20001a = linkedList;
+        this.f20004d = null;
+        this.f20005e = null;
+        this.f20006f = null;
+        this.f20002b = new C2282i(this, null);
+        MainActivity.f3715h0.m12017b(new C2274a(), linkedList);
+        PrCheckBox.f3798u.m4424b(new C2275b(), linkedList);
+        PrEditText.f3800y.m4424b(new C2276c(), linkedList);
+        PrButton.f3794s.m4424b(new C2277d(), linkedList);
+        MainActivity.f3717j0.m12017b(new C2278e(), linkedList);
+        MainActivity.f3721n0.m12017b(new C2279f(), linkedList);
+        hg1.f12513A.m12017b(new qw1.InterfaceC2788a() { // from class: com.daaw.ec0
+            @Override // com.daaw.qw1.InterfaceC2788a
+            /* renamed from: b */
+            public final void mo3122b(Object obj) {
+                nc0.this.m15256y((String) obj);
             }
         }, linkedList);
-        MainActivity.r0.b(new g(), linkedList);
-        PrImageButton.q.b(new xw1.a() { // from class: com.daaw.dc0
-            @Override // com.daaw.xw1.a
-            public final Object c(Object obj, Object obj2) {
-                Boolean C;
-                C = nc0.this.C((al) obj, (PrImageButton) obj2);
-                return C;
+        MainActivity.f3725r0.m10861b(new C2280g(), linkedList);
+        PrImageButton.f3808q.m4424b(new xw1.InterfaceC3648a() { // from class: com.daaw.dc0
+            @Override // com.daaw.xw1.InterfaceC3648a
+            /* renamed from: c */
+            public final Object mo4423c(Object obj, Object obj2) {
+                Boolean m15299C;
+                m15299C = nc0.this.m15299C((C0645al) obj, (PrImageButton) obj2);
+                return m15299C;
             }
         }, linkedList);
-        h.b(new ww1.a() { // from class: com.daaw.kc0
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                Boolean D;
-                D = nc0.this.D((al) obj);
-                return D;
+        f19990h.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.kc0
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                Boolean m15298D;
+                m15298D = nc0.this.m15298D((C0645al) obj);
+                return m15298D;
             }
         }, linkedList);
-        oy0.a.b(new fc0(this), linkedList);
-        PrCheckBox.t.b(new fc0(this), linkedList);
-        PrEditText.x.b(new vw1.a() { // from class: com.daaw.hc0
-            @Override // com.daaw.vw1.a
-            public final Object a() {
-                Boolean J;
-                J = nc0.this.J();
-                return J;
+        oy0.f22097a.m6691b(new fc0(this), linkedList);
+        PrCheckBox.f3797t.m6691b(new fc0(this), linkedList);
+        PrEditText.f3799x.m6691b(new vw1.InterfaceC3381a() { // from class: com.daaw.hc0
+            @Override // com.daaw.vw1.InterfaceC3381a
+            /* renamed from: a */
+            public final Object mo3126a() {
+                Boolean m15292J;
+                m15292J = nc0.this.m15292J();
+                return m15292J;
             }
         }, linkedList);
-        PrButton.r.b(new ww1.a() { // from class: com.daaw.mc0
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                Boolean K;
-                K = nc0.this.K((Integer[]) obj);
-                return K;
+        PrButton.f3793r.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.mc0
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                Boolean m15291K;
+                m15291K = nc0.this.m15291K((Integer[]) obj);
+                return m15291K;
             }
         }, linkedList);
-        PrImageButton.p.b(new vw1.a() { // from class: com.daaw.gc0
-            @Override // com.daaw.vw1.a
-            public final Object a() {
-                Boolean L;
-                L = nc0.this.L();
-                return L;
+        PrImageButton.f3807p.m6691b(new vw1.InterfaceC3381a() { // from class: com.daaw.gc0
+            @Override // com.daaw.vw1.InterfaceC3381a
+            /* renamed from: a */
+            public final Object mo3126a() {
+                Boolean m15290L;
+                m15290L = nc0.this.m15290L();
+                return m15290L;
             }
         }, linkedList);
-        yn.z.b(new fc0(this), linkedList);
-        pl0.X.b(new ww1.a() { // from class: com.daaw.bc0
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                Boolean M;
-                M = nc0.this.M(obj);
-                return M;
+        C3723yn.f33867z.m6691b(new fc0(this), linkedList);
+        pl0.f23009X.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.bc0
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                Boolean m15289M;
+                m15289M = nc0.this.m15289M(obj);
+                return m15289M;
             }
         }, linkedList);
-        xi.S.b(new ww1.a() { // from class: com.daaw.cc0
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                Boolean E;
-                E = nc0.this.E(obj);
-                return E;
+        C3543xi.f32730S.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.cc0
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                Boolean m15297E;
+                m15297E = nc0.this.m15297E(obj);
+                return m15297E;
             }
         }, linkedList);
-        qv1.P.b(new ww1.a() { // from class: com.daaw.ac0
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                Boolean F;
-                F = nc0.this.F((Integer[]) obj);
-                return F;
+        qv1.f24436P.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.ac0
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                Boolean m15296F;
+                m15296F = nc0.this.m15296F((Integer[]) obj);
+                return m15296F;
             }
         }, linkedList);
-        MainActivity.H0.b(new h(), linkedList);
-        hg1.B.b(new fc0(this), linkedList);
-        g.b(new fc0(this), linkedList);
-        o.b(new ww1.a() { // from class: com.daaw.lc0
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                Boolean G;
-                G = nc0.this.G((String) obj);
-                return G;
+        MainActivity.f3709H0.m6691b(new C2281h(), linkedList);
+        hg1.f12514B.m6691b(new fc0(this), linkedList);
+        f19989g.m6691b(new fc0(this), linkedList);
+        f19997o.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.lc0
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                Boolean m15295G;
+                m15295G = nc0.this.m15295G((String) obj);
+                return m15295G;
             }
         }, linkedList);
-        r.b(new vw1.a() { // from class: com.daaw.jc0
-            @Override // com.daaw.vw1.a
-            public final Object a() {
-                List H;
-                H = nc0.this.H();
-                return H;
+        f20000r.m6691b(new vw1.InterfaceC3381a() { // from class: com.daaw.jc0
+            @Override // com.daaw.vw1.InterfaceC3381a
+            /* renamed from: a */
+            public final Object mo3126a() {
+                List m15294H;
+                m15294H = nc0.this.m15294H();
+                return m15294H;
             }
         }, linkedList);
-        p.b(new vw1.a() { // from class: com.daaw.ic0
-            @Override // com.daaw.vw1.a
-            public final Object a() {
-                Boolean I;
-                I = nc0.this.I();
-                return I;
+        f19998p.m6691b(new vw1.InterfaceC3381a() { // from class: com.daaw.ic0
+            @Override // com.daaw.vw1.InterfaceC3381a
+            /* renamed from: a */
+            public final Object mo3126a() {
+                Boolean m15293I;
+                m15293I = nc0.this.m15293I();
+                return m15293I;
             }
         }, linkedList);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean C(al alVar, PrImageButton prImageButton) {
-        if (A().booleanValue()) {
+    /* renamed from: C */
+    public /* synthetic */ Boolean m15299C(C0645al c0645al, PrImageButton prImageButton) {
+        if (m15301A().booleanValue()) {
             return Boolean.FALSE;
         }
-        T(alVar);
+        m15282T(c0645al);
         return Boolean.TRUE;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean D(al alVar) {
-        T(alVar);
+    /* renamed from: D */
+    public /* synthetic */ Boolean m15298D(C0645al c0645al) {
+        m15282T(c0645al);
         return Boolean.TRUE;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean E(Object obj) {
-        return A();
+    /* renamed from: E */
+    public /* synthetic */ Boolean m15297E(Object obj) {
+        return m15301A();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean F(Integer[] numArr) {
-        return Boolean.valueOf(A().booleanValue() && j.a(this, numArr, Boolean.FALSE).booleanValue());
+    /* renamed from: F */
+    public /* synthetic */ Boolean m15296F(Integer[] numArr) {
+        return Boolean.valueOf(m15301A().booleanValue() && f19992j.m4425a(this, numArr, Boolean.FALSE).booleanValue());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean G(String str) {
-        List<String> list = this.d;
+    /* renamed from: G */
+    public /* synthetic */ Boolean m15295G(String str) {
+        List<String> list = this.f20004d;
         return Boolean.valueOf(list != null && list.contains(str));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ List H() {
-        return this.f;
+    /* renamed from: H */
+    public /* synthetic */ List m15294H() {
+        return this.f20006f;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean I() {
-        List<Purchase> list = this.e;
+    /* renamed from: I */
+    public /* synthetic */ Boolean m15293I() {
+        List<Purchase> list = this.f20005e;
         return Boolean.valueOf((list == null || list.isEmpty()) ? false : true);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean J() {
+    /* renamed from: J */
+    public /* synthetic */ Boolean m15292J() {
         boolean z = true;
         Integer[] numArr = {1, 7, 5, 3};
-        return Boolean.valueOf((A().booleanValue() && j.a(this, numArr, Boolean.FALSE).booleanValue() && numArr[2].equals(numArr[3])) ? false : false);
+        return Boolean.valueOf((m15301A().booleanValue() && f19992j.m4425a(this, numArr, Boolean.FALSE).booleanValue() && numArr[2].equals(numArr[3])) ? false : false);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean K(Integer[] numArr) {
-        return Boolean.valueOf(A().booleanValue() && j.a(this, numArr, Boolean.FALSE).booleanValue());
+    /* renamed from: K */
+    public /* synthetic */ Boolean m15291K(Integer[] numArr) {
+        return Boolean.valueOf(m15301A().booleanValue() && f19992j.m4425a(this, numArr, Boolean.FALSE).booleanValue());
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean L() {
+    /* renamed from: L */
+    public /* synthetic */ Boolean m15290L() {
         boolean z = false;
         Integer[] numArr = {4, 4, 6, 4};
-        if (A().booleanValue() && j.a(this, numArr, Boolean.FALSE).booleanValue() && numArr[2].equals(numArr[3])) {
+        if (m15301A().booleanValue() && f19992j.m4425a(this, numArr, Boolean.FALSE).booleanValue() && numArr[2].equals(numArr[3])) {
             z = true;
         }
         return Boolean.valueOf(z);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean M(Object obj) {
-        return A();
+    /* renamed from: M */
+    public /* synthetic */ Boolean m15289M(Object obj) {
+        return m15301A();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void N(xb xbVar, List list) {
-        if (xbVar.b() == 0) {
-            this.f = list;
-            q.a(Boolean.TRUE, Boolean.FALSE);
+    /* renamed from: N */
+    public /* synthetic */ void m15288N(C3518xb c3518xb, List list) {
+        if (c3518xb.m5324b() == 0) {
+            this.f20006f = list;
+            f19999q.m5753a(Boolean.TRUE, Boolean.FALSE);
             return;
         }
-        ww1<Boolean, Boolean> ww1Var = q;
+        ww1<Boolean, Boolean> ww1Var = f19999q;
         Boolean bool = Boolean.FALSE;
-        ww1Var.a(bool, bool);
+        ww1Var.m5753a(bool, bool);
     }
 
-    public Boolean A() {
+    /* renamed from: A */
+    public Boolean m15301A() {
         List<String> list;
-        return Boolean.valueOf(((!l || System.currentTimeMillis() >= k.longValue()) && ((list = this.d) == null || list.isEmpty())) ? true : true);
+        return Boolean.valueOf(((!f19994l || System.currentTimeMillis() >= f19993k.longValue()) && ((list = this.f20004d) == null || list.isEmpty())) ? true : true);
     }
 
-    public final void B() {
-        lz1.a("killHelper");
-        P();
+    /* renamed from: B */
+    public final void m15300B() {
+        lz1.m16365a("killHelper");
+        m15286P();
     }
 
-    public void O() {
-        S();
+    /* renamed from: O */
+    public void m15287O() {
+        m15283S();
     }
 
-    public void P() {
-        lz1.a("Destroying helper.");
-        wb wbVar = this.c;
-        if (wbVar != null) {
-            wbVar.k();
+    /* renamed from: P */
+    public void m15286P() {
+        lz1.m16365a("Destroying helper.");
+        C3412wb c3412wb = this.f20003c;
+        if (c3412wb != null) {
+            c3412wb.m6243k();
         }
-        this.c = null;
+        this.f20003c = null;
     }
 
-    public final void Q() {
-        MainActivity r0 = MainActivity.r0();
-        if (r0 != null) {
-            r0.S0();
+    /* renamed from: Q */
+    public final void m15285Q() {
+        MainActivity m26903r0 = MainActivity.m26903r0();
+        if (m26903r0 != null) {
+            m26903r0.m26933S0();
         }
     }
 
-    public final void R() {
-        wb wbVar = this.c;
-        if (wbVar == null || wbVar.n() != 0) {
+    /* renamed from: R */
+    public final void m15284R() {
+        C3412wb c3412wb = this.f20003c;
+        if (c3412wb == null || c3412wb.m6240n() != 0) {
             return;
         }
-        this.c.r();
+        this.f20003c.m6236r();
     }
 
-    public void S() {
-        this.c.s(z(), new lz0() { // from class: com.daaw.zb0
+    /* renamed from: S */
+    public void m15283S() {
+        this.f20003c.m6235s(m15255z(), new lz0() { // from class: com.daaw.zb0
             @Override // com.daaw.lz0
-            public final void a(xb xbVar, List list) {
-                nc0.this.N(xbVar, list);
+            /* renamed from: a */
+            public final void mo2556a(C3518xb c3518xb, List list) {
+                nc0.this.m15288N(c3518xb, list);
             }
         });
     }
 
-    public final void T(al alVar) {
-        hg1.f(alVar);
+    /* renamed from: T */
+    public final void m15282T(C0645al c0645al) {
+        hg1.m20813f(c0645al);
     }
 
-    public final boolean U(Activity activity, boolean z) {
-        R();
+    /* renamed from: U */
+    public final boolean m15281U(Activity activity, boolean z) {
+        m15284R();
         return false;
     }
 
-    public final void x(Activity activity) {
-        if (this.c == null) {
-            this.c = new wb(activity, this.b);
+    /* renamed from: x */
+    public final void m15257x(Activity activity) {
+        if (this.f20003c == null) {
+            this.f20003c = new C3412wb(activity, this.f20002b);
         }
     }
 
-    public final void y(String str) {
+    /* renamed from: y */
+    public final void m15256y(String str) {
         Purchase purchase;
         kz0 kz0Var;
-        Context e2;
-        wb wbVar = this.c;
-        if (wbVar == null || wbVar.n() <= -1) {
-            if (dx0.e() != null) {
-                vy.a.a("Billing manager not initialized");
+        Context m23837e;
+        C3412wb c3412wb = this.f20003c;
+        if (c3412wb == null || c3412wb.m6240n() <= -1) {
+            if (dx0.m23837e() != null) {
+                C3385vy.f30703a.m12018a("Billing manager not initialized");
                 return;
             }
             return;
         }
-        if (3 == this.c.n() && (e2 = dx0.e()) != null) {
-            vy.a.a("" + ((Object) e2.getText(R.string.error_billing_unavailable)));
+        if (3 == this.f20003c.m6240n() && (m23837e = dx0.m23837e()) != null) {
+            C3385vy.f30703a.m12018a("" + ((Object) m23837e.getText(R.string.error_billing_unavailable)));
         }
-        O();
+        m15287O();
         try {
-            Iterator<kz0> it = this.f.iterator();
+            Iterator<kz0> it = this.f20006f.iterator();
             while (true) {
                 purchase = null;
                 if (!it.hasNext()) {
@@ -503,36 +587,37 @@ public class nc0 {
                     break;
                 }
                 kz0Var = it.next();
-                if (kz0Var.b().equals(str)) {
+                if (kz0Var.m17311b().equals(str)) {
                     break;
                 }
             }
-        } catch (Exception e3) {
-            lz1.c("launchPurchaseFlow exception: " + e3.getMessage());
+        } catch (Exception e) {
+            lz1.m16363c("launchPurchaseFlow exception: " + e.getMessage());
         }
         if (kz0Var == null) {
             return;
         }
-        List<Purchase> list = this.e;
+        List<Purchase> list = this.f20005e;
         if (list != null && !list.isEmpty()) {
-            for (Purchase purchase2 : this.e) {
-                if (purchase2.g()) {
+            for (Purchase purchase2 : this.f20005e) {
+                if (purchase2.m27860g()) {
                     purchase = purchase2;
                 }
             }
             if (purchase == null) {
-                purchase = this.e.get(0);
+                purchase = this.f20005e.get(0);
             }
         }
-        this.c.p(kz0Var, purchase);
-        Q();
+        this.f20003c.m6238p(kz0Var, purchase);
+        m15285Q();
     }
 
-    public final List<j01.b> z() {
+    /* renamed from: z */
+    public final List<j01.C1777b> m15255z() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(j01.b.a().b("premium_1month").c("subs").a());
-        arrayList.add(j01.b.a().b("premium_3month").c("subs").a());
-        arrayList.add(j01.b.a().b("premium_12month").c("subs").a());
+        arrayList.add(j01.C1777b.m19207a().m19203b("premium_1month").m19202c("subs").m19204a());
+        arrayList.add(j01.C1777b.m19207a().m19203b("premium_3month").m19202c("subs").m19204a());
+        arrayList.add(j01.C1777b.m19207a().m19203b("premium_12month").m19202c("subs").m19204a());
         return arrayList;
     }
 }

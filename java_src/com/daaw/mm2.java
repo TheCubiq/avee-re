@@ -14,36 +14,43 @@ import com.google.android.gms.ads.internal.client.zzeq;
 import com.google.android.gms.ads.internal.client.zzey;
 /* loaded from: classes.dex */
 public final class mm2 extends ku2 {
-    public final /* synthetic */ Context b;
-    public final /* synthetic */ zzaw c;
+
+    /* renamed from: b */
+    public final /* synthetic */ Context f18976b;
+
+    /* renamed from: c */
+    public final /* synthetic */ zzaw f18977c;
 
     public mm2(zzaw zzawVar, Context context) {
-        this.c = zzawVar;
-        this.b = context;
+        this.f18977c = zzawVar;
+        this.f18976b = context;
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object a() {
-        zzaw.i(this.b, "mobile_ads_settings");
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo3435a() {
+        zzaw.m1429i(this.f18976b, "mobile_ads_settings");
         return new zzey();
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object b(zzce zzceVar) {
-        return zzceVar.zzg(nt0.g3(this.b), 224400000);
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ Object mo3434b(zzce zzceVar) {
+        return zzceVar.zzg(nt0.m14830g3(this.f18976b), 224400000);
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object c() {
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo3433c() {
         gt3 gt3Var;
         zzeq zzeqVar;
-        g93.c(this.b);
-        if (!((Boolean) zzba.zzc().b(g93.S8)).booleanValue()) {
-            zzeqVar = this.c.c;
-            return zzeqVar.zza(this.b);
+        g93.m21879c(this.f18976b);
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10550S8)).booleanValue()) {
+            zzeqVar = this.f18977c.f36088c;
+            return zzeqVar.zza(this.f18976b);
         }
         try {
-            IBinder zze = ((zzcp) o04.b(this.b, "com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl", new m04() { // from class: com.google.android.gms.ads.internal.client.zzap
+            IBinder zze = ((zzcp) o04.m14656b(this.f18976b, "com.google.android.gms.ads.ChimeraMobileAdsSettingManagerCreatorImpl", new m04() { // from class: com.google.android.gms.ads.internal.client.zzap
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // com.daaw.m04
                 public final Object zza(Object obj) {
@@ -53,16 +60,16 @@ public final class mm2 extends ku2 {
                     IInterface queryLocalInterface = obj.queryLocalInterface("com.google.android.gms.ads.internal.client.IMobileAdsSettingManagerCreator");
                     return queryLocalInterface instanceof zzcp ? (zzcp) queryLocalInterface : new zzcp(obj);
                 }
-            })).zze(nt0.g3(this.b), 224400000);
+            })).zze(nt0.m14830g3(this.f18976b), 224400000);
             if (zze == null) {
                 return null;
             }
             IInterface queryLocalInterface = zze.queryLocalInterface("com.google.android.gms.ads.internal.client.IMobileAdsSettingManager");
             return queryLocalInterface instanceof zzco ? (zzco) queryLocalInterface : new zzcm(zze);
         } catch (RemoteException | n04 | NullPointerException e) {
-            this.c.h = et3.c(this.b);
-            gt3Var = this.c.h;
-            gt3Var.a(e, "ClientApiBroker.getMobileAdsSettingsManager");
+            this.f18977c.f36093h = et3.m23193c(this.f18976b);
+            gt3Var = this.f18977c.f36093h;
+            gt3Var.mo21236a(e, "ClientApiBroker.getMobileAdsSettingsManager");
             return null;
         }
     }

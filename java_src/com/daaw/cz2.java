@@ -1,26 +1,31 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class cz2 {
-    public boolean a;
 
-    public final synchronized void a() {
-        while (!this.a) {
+    /* renamed from: a */
+    public boolean f6310a;
+
+    /* renamed from: a */
+    public final synchronized void m24860a() {
+        while (!this.f6310a) {
             wait();
         }
     }
 
-    public final synchronized boolean b() {
+    /* renamed from: b */
+    public final synchronized boolean m24859b() {
         boolean z;
-        z = this.a;
-        this.a = false;
+        z = this.f6310a;
+        this.f6310a = false;
         return z;
     }
 
-    public final synchronized boolean c() {
-        if (this.a) {
+    /* renamed from: c */
+    public final synchronized boolean m24858c() {
+        if (this.f6310a) {
             return false;
         }
-        this.a = true;
+        this.f6310a = true;
         notifyAll();
         return true;
     }

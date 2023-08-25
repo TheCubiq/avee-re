@@ -2,22 +2,24 @@ package com.daaw;
 /* loaded from: classes.dex */
 public final class ni7 extends fs7 implements yt7 {
     public ni7() {
-        super(oi7.M());
+        super(oi7.m14264M());
     }
 
     public /* synthetic */ ni7(mi7 mi7Var) {
-        super(oi7.M());
+        super(oi7.m14264M());
     }
 
-    public final ni7 s(ui7 ui7Var) {
-        p();
-        oi7.Q((oi7) this.q, ui7Var);
+    /* renamed from: s */
+    public final ni7 m15160s(ui7 ui7Var) {
+        m22313p();
+        oi7.m14260Q((oi7) this.f9851q, ui7Var);
         return this;
     }
 
-    public final ni7 t(rl7 rl7Var) {
-        p();
-        oi7.R((oi7) this.q, rl7Var);
+    /* renamed from: t */
+    public final ni7 m15159t(rl7 rl7Var) {
+        m22313p();
+        oi7.m14259R((oi7) this.f9851q, rl7Var);
         return this;
     }
 }

@@ -8,28 +8,37 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class zj6 implements oq4 {
     @GuardedBy("this")
-    public final HashSet p = new HashSet();
-    public final Context q;
-    public final xz3 r;
+
+    /* renamed from: p */
+    public final HashSet f35169p = new HashSet();
+
+    /* renamed from: q */
+    public final Context f35170q;
+
+    /* renamed from: r */
+    public final xz3 f35171r;
 
     public zj6(Context context, xz3 xz3Var) {
-        this.q = context;
-        this.r = xz3Var;
+        this.f35170q = context;
+        this.f35171r = xz3Var;
     }
 
-    public final Bundle a() {
-        return this.r.j(this.q, this);
+    /* renamed from: a */
+    public final Bundle m2195a() {
+        return this.f35171r.m4386j(this.f35170q, this);
     }
 
     @Override // com.daaw.oq4
-    public final synchronized void b(zze zzeVar) {
+    /* renamed from: b */
+    public final synchronized void mo2194b(zze zzeVar) {
         if (zzeVar.zza != 3) {
-            this.r.h(this.p);
+            this.f35171r.m4388h(this.f35169p);
         }
     }
 
-    public final synchronized void c(HashSet hashSet) {
-        this.p.clear();
-        this.p.addAll(hashSet);
+    /* renamed from: c */
+    public final synchronized void m2193c(HashSet hashSet) {
+        this.f35169p.clear();
+        this.f35169p.addAll(hashSet);
     }
 }

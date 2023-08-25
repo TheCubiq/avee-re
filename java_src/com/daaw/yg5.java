@@ -9,10 +9,12 @@ import android.telephony.TelephonyManager;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class yg5 extends BroadcastReceiver {
-    public final /* synthetic */ bi5 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ bi5 f33672a;
 
     public /* synthetic */ yg5(bi5 bi5Var, vf5 vf5Var) {
-        this.a = bi5Var;
+        this.f33672a = bi5Var;
     }
 
     @Override // android.content.BroadcastReceiver
@@ -65,7 +67,7 @@ public final class yg5 extends BroadcastReceiver {
                         case 18:
                             break;
                         case 20:
-                            if (it5.a >= 29) {
+                            if (it5.f13991a >= 29) {
                                 i = 9;
                                 break;
                             }
@@ -76,10 +78,10 @@ public final class yg5 extends BroadcastReceiver {
                 }
             } catch (SecurityException unused) {
             }
-            if (it5.a >= 31 || i != 5) {
-                bi5.c(this.a, i);
+            if (it5.f13991a >= 31 || i != 5) {
+                bi5.m26142c(this.f33672a, i);
             }
-            bi5 bi5Var = this.a;
+            bi5 bi5Var = this.f33672a;
             try {
                 TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService("phone");
                 Objects.requireNonNull(telephonyManager);
@@ -88,13 +90,13 @@ public final class yg5 extends BroadcastReceiver {
                 telephonyManager.unregisterTelephonyCallback(se5Var);
                 return;
             } catch (RuntimeException unused2) {
-                bi5.c(bi5Var, 5);
+                bi5.m26142c(bi5Var, 5);
                 return;
             }
         }
         i = 0;
-        if (it5.a >= 31) {
+        if (it5.f13991a >= 31) {
         }
-        bi5.c(this.a, i);
+        bi5.m26142c(this.f33672a, i);
     }
 }

@@ -7,16 +7,22 @@ import java.util.zip.ZipException;
 /* loaded from: classes.dex */
 public final class kz1 {
 
+    /* renamed from: com.daaw.kz1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public long a;
-        public long b;
+    public static class C2002a {
+
+        /* renamed from: a */
+        public long f16893a;
+
+        /* renamed from: b */
+        public long f16894b;
     }
 
-    public static long a(RandomAccessFile randomAccessFile, a aVar) {
+    /* renamed from: a */
+    public static long m17299a(RandomAccessFile randomAccessFile, C2002a c2002a) {
         CRC32 crc32 = new CRC32();
-        long j = aVar.b;
-        randomAccessFile.seek(aVar.a);
+        long j = c2002a.f16894b;
+        randomAccessFile.seek(c2002a.f16893a);
         int min = (int) Math.min(16384L, j);
         byte[] bArr = new byte[16384];
         while (true) {
@@ -34,7 +40,8 @@ public final class kz1 {
         return crc32.getValue();
     }
 
-    public static a b(RandomAccessFile randomAccessFile) {
+    /* renamed from: b */
+    public static C2002a m17298b(RandomAccessFile randomAccessFile) {
         long length = randomAccessFile.length() - 22;
         if (length < 0) {
             throw new ZipException("File too short to be a zip file: " + randomAccessFile.length());
@@ -49,20 +56,21 @@ public final class kz1 {
                 randomAccessFile.skipBytes(2);
                 randomAccessFile.skipBytes(2);
                 randomAccessFile.skipBytes(2);
-                a aVar = new a();
-                aVar.b = Integer.reverseBytes(randomAccessFile.readInt()) & 4294967295L;
-                aVar.a = Integer.reverseBytes(randomAccessFile.readInt()) & 4294967295L;
-                return aVar;
+                C2002a c2002a = new C2002a();
+                c2002a.f16894b = Integer.reverseBytes(randomAccessFile.readInt()) & 4294967295L;
+                c2002a.f16893a = Integer.reverseBytes(randomAccessFile.readInt()) & 4294967295L;
+                return c2002a;
             }
             length--;
         } while (length >= j2);
         throw new ZipException("End Of Central Directory signature not found");
     }
 
-    public static long c(File file) {
+    /* renamed from: c */
+    public static long m17297c(File file) {
         RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
         try {
-            return a(randomAccessFile, b(randomAccessFile));
+            return m17299a(randomAccessFile, m17298b(randomAccessFile));
         } finally {
             randomAccessFile.close();
         }

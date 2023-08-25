@@ -6,13 +6,16 @@ import java.util.Map;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class yn5 {
-    public final xu3 a;
+
+    /* renamed from: a */
+    public final xu3 f33892a;
 
     public yn5(xu3 xu3Var) {
-        this.a = xu3Var;
+        this.f33892a = xu3Var;
     }
 
-    public static void a(Map map, JSONObject jSONObject) {
+    /* renamed from: a */
+    public static void m3481a(Map map, JSONObject jSONObject) {
         if (jSONObject == null) {
             return;
         }
@@ -30,7 +33,8 @@ public final class yn5 {
         map.put("x-afma-drt-v2-cookie", optJSONObject.optString("doritos_v2", ""));
     }
 
-    public final void b() {
-        c14.a(this.a.a(), "persistFlags");
+    /* renamed from: b */
+    public final void m3480b() {
+        c14.m25685a(this.f33892a.mo4502a(), "persistFlags");
     }
 }

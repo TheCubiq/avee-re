@@ -5,7 +5,9 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class py8 extends aq8 implements Set {
     @CheckForNull
-    public transient rt8 q;
+
+    /* renamed from: q */
+    public transient rt8 f23538q;
 
     @Override // java.util.Collection, java.util.Set
     public final boolean equals(@CheckForNull Object obj) {
@@ -27,22 +29,24 @@ public abstract class py8 extends aq8 implements Set {
     }
 
     @Override // com.daaw.aq8
-    public rt8 h() {
-        rt8 rt8Var = this.q;
+    /* renamed from: h */
+    public rt8 mo10948h() {
+        rt8 rt8Var = this.f23538q;
         if (rt8Var == null) {
-            rt8 n = n();
-            this.q = n;
-            return n;
+            rt8 mo12850n = mo12850n();
+            this.f23538q = mo12850n;
+            return mo12850n;
         }
         return rt8Var;
     }
 
     @Override // java.util.Collection, java.util.Set
     public final int hashCode() {
-        return pa2.a(this);
+        return pa2.m13536a(this);
     }
 
-    public rt8 n() {
-        return rt8.o(toArray());
+    /* renamed from: n */
+    public rt8 mo12850n() {
+        return rt8.m10945o(toArray());
     }
 }

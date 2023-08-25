@@ -22,13 +22,16 @@ import com.google.android.gms.ads.internal.zzb;
 import com.google.android.gms.ads.internal.zzt;
 /* loaded from: classes.dex */
 public final class z64 extends WebChromeClient {
-    public final a74 a;
+
+    /* renamed from: a */
+    public final a74 f34494a;
 
     public z64(a74 a74Var) {
-        this.a = a74Var;
+        this.f34494a = a74Var;
     }
 
-    public static final Context b(WebView webView) {
+    /* renamed from: b */
+    public static final Context m2791b(WebView webView) {
         if (webView instanceof a74) {
             a74 a74Var = (a74) webView;
             Activity zzk = a74Var.zzk();
@@ -37,16 +40,17 @@ public final class z64 extends WebChromeClient {
         return webView.getContext();
     }
 
-    public final boolean a(Context context, String str, String str2, String str3, String str4, JsResult jsResult, JsPromptResult jsPromptResult, boolean z) {
+    /* renamed from: a */
+    public final boolean m2792a(Context context, String str, String str2, String str3, String str4, JsResult jsResult, JsPromptResult jsPromptResult, boolean z) {
         a74 a74Var;
         AlertDialog create;
         zzb zzd;
         try {
-            a74Var = this.a;
+            a74Var = this.f34494a;
         } catch (WindowManager.BadTokenException e) {
             k04.zzk("Fail to display Dialog.", e);
         }
-        if (a74Var != null && a74Var.zzP() != null && this.a.zzP().zzd() != null && (zzd = this.a.zzP().zzd()) != null && !zzd.zzc()) {
+        if (a74Var != null && a74Var.zzP() != null && this.f34494a.zzP().zzd() != null && (zzd = this.f34494a.zzP().zzd()) != null && !zzd.zzc()) {
             zzd.zzb("window." + str + "('" + str3 + "')");
             return false;
         }
@@ -92,7 +96,7 @@ public final class z64 extends WebChromeClient {
         if (str.contains("Application Cache")) {
             return super.onConsoleMessage(consoleMessage);
         }
-        int i = y64.a[consoleMessage.messageLevel().ordinal()];
+        int i = y64.f33388a[consoleMessage.messageLevel().ordinal()];
         if (i == 1) {
             k04.zzg(str);
         } else if (i == 2) {
@@ -109,8 +113,8 @@ public final class z64 extends WebChromeClient {
     public final boolean onCreateWindow(WebView webView, boolean z, boolean z2, Message message) {
         WebView.WebViewTransport webViewTransport = (WebView.WebViewTransport) message.obj;
         WebView webView2 = new WebView(webView.getContext());
-        if (this.a.n() != null) {
-            webView2.setWebViewClient(this.a.n());
+        if (this.f34494a.mo6410n() != null) {
+            webView2.setWebViewClient(this.f34494a.mo6410n());
         }
         webViewTransport.setWebView(webView2);
         message.sendToTarget();
@@ -144,9 +148,9 @@ public final class z64 extends WebChromeClient {
         boolean z;
         if (callback != null) {
             zzt.zzp();
-            if (!zzs.zzx(this.a.getContext(), "android.permission.ACCESS_FINE_LOCATION")) {
+            if (!zzs.zzx(this.f34494a.getContext(), "android.permission.ACCESS_FINE_LOCATION")) {
                 zzt.zzp();
-                if (!zzs.zzx(this.a.getContext(), "android.permission.ACCESS_COARSE_LOCATION")) {
+                if (!zzs.zzx(this.f34494a.getContext(), "android.permission.ACCESS_COARSE_LOCATION")) {
                     z = false;
                     callback.invoke(str, z, true);
                 }
@@ -158,7 +162,7 @@ public final class z64 extends WebChromeClient {
 
     @Override // android.webkit.WebChromeClient
     public final void onHideCustomView() {
-        zzl zzN = this.a.zzN();
+        zzl zzN = this.f34494a.zzN();
         if (zzN == null) {
             k04.zzj("Could not get ad overlay when hiding custom view.");
         } else {
@@ -168,28 +172,28 @@ public final class z64 extends WebChromeClient {
 
     @Override // android.webkit.WebChromeClient
     public final boolean onJsAlert(WebView webView, String str, String str2, JsResult jsResult) {
-        return a(b(webView), "alert", str, str2, null, jsResult, null, false);
+        return m2792a(m2791b(webView), "alert", str, str2, null, jsResult, null, false);
     }
 
     @Override // android.webkit.WebChromeClient
     public final boolean onJsBeforeUnload(WebView webView, String str, String str2, JsResult jsResult) {
-        return a(b(webView), "onBeforeUnload", str, str2, null, jsResult, null, false);
+        return m2792a(m2791b(webView), "onBeforeUnload", str, str2, null, jsResult, null, false);
     }
 
     @Override // android.webkit.WebChromeClient
     public final boolean onJsConfirm(WebView webView, String str, String str2, JsResult jsResult) {
-        return a(b(webView), "confirm", str, str2, null, jsResult, null, false);
+        return m2792a(m2791b(webView), "confirm", str, str2, null, jsResult, null, false);
     }
 
     @Override // android.webkit.WebChromeClient
     public final boolean onJsPrompt(WebView webView, String str, String str2, String str3, JsPromptResult jsPromptResult) {
-        return a(b(webView), "prompt", str, str2, str3, null, jsPromptResult, true);
+        return m2792a(m2791b(webView), "prompt", str, str2, str3, null, jsPromptResult, true);
     }
 
     @Override // android.webkit.WebChromeClient
     @Deprecated
     public final void onShowCustomView(View view, int i, WebChromeClient.CustomViewCallback customViewCallback) {
-        zzl zzN = this.a.zzN();
+        zzl zzN = this.f34494a.zzN();
         if (zzN == null) {
             k04.zzj("Could not get ad overlay when showing custom view.");
             customViewCallback.onCustomViewHidden();

@@ -16,31 +16,53 @@ import java.util.Map;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class ho3 implements NativeMediationAdRequest {
-    public final Date a;
-    public final int b;
-    public final Set c;
-    public final boolean d;
-    public final Location e;
-    public final int f;
-    public final zzblz g;
-    public final boolean i;
-    public final String k;
-    public final List h = new ArrayList();
-    public final Map j = new HashMap();
+
+    /* renamed from: a */
+    public final Date f12756a;
+
+    /* renamed from: b */
+    public final int f12757b;
+
+    /* renamed from: c */
+    public final Set f12758c;
+
+    /* renamed from: d */
+    public final boolean f12759d;
+
+    /* renamed from: e */
+    public final Location f12760e;
+
+    /* renamed from: f */
+    public final int f12761f;
+
+    /* renamed from: g */
+    public final zzblz f12762g;
+
+    /* renamed from: i */
+    public final boolean f12764i;
+
+    /* renamed from: k */
+    public final String f12766k;
+
+    /* renamed from: h */
+    public final List f12763h = new ArrayList();
+
+    /* renamed from: j */
+    public final Map f12765j = new HashMap();
 
     public ho3(Date date, int i, Set set, Location location, boolean z, int i2, zzblz zzblzVar, List list, boolean z2, int i3, String str) {
         Map map;
         String str2;
         Boolean bool;
-        this.a = date;
-        this.b = i;
-        this.c = set;
-        this.e = location;
-        this.d = z;
-        this.f = i2;
-        this.g = zzblzVar;
-        this.i = z2;
-        this.k = str;
+        this.f12756a = date;
+        this.f12757b = i;
+        this.f12758c = set;
+        this.f12760e = location;
+        this.f12759d = z;
+        this.f12761f = i2;
+        this.f12762g = zzblzVar;
+        this.f12764i = z2;
+        this.f12766k = str;
         if (list != null) {
             Iterator it = list.iterator();
             while (it.hasNext()) {
@@ -49,18 +71,18 @@ public final class ho3 implements NativeMediationAdRequest {
                     String[] split = str3.split(":", 3);
                     if (split.length == 3) {
                         if ("true".equals(split[2])) {
-                            map = this.j;
+                            map = this.f12765j;
                             str2 = split[1];
                             bool = Boolean.TRUE;
                         } else if ("false".equals(split[2])) {
-                            map = this.j;
+                            map = this.f12765j;
                             str2 = split[1];
                             bool = Boolean.FALSE;
                         }
                         map.put(str2, bool);
                     }
                 } else {
-                    this.h.add(str3);
+                    this.f12763h.add(str3);
                 }
             }
         }
@@ -74,57 +96,57 @@ public final class ho3 implements NativeMediationAdRequest {
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     @Deprecated
     public final Date getBirthday() {
-        return this.a;
+        return this.f12756a;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     @Deprecated
     public final int getGender() {
-        return this.b;
+        return this.f12757b;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     public final Set<String> getKeywords() {
-        return this.c;
+        return this.f12758c;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     public final Location getLocation() {
-        return this.e;
+        return this.f12760e;
     }
 
     @Override // com.google.android.gms.ads.mediation.NativeMediationAdRequest
     public final NativeAdOptions getNativeAdOptions() {
-        zzblz zzblzVar = this.g;
+        zzblz zzblzVar = this.f12762g;
         NativeAdOptions.Builder builder = new NativeAdOptions.Builder();
         if (zzblzVar != null) {
-            int i = zzblzVar.p;
+            int i = zzblzVar.f36843p;
             if (i != 2) {
                 if (i != 3) {
                     if (i == 4) {
-                        builder.setRequestCustomMuteThisAd(zzblzVar.v);
-                        builder.setMediaAspectRatio(zzblzVar.w);
+                        builder.setRequestCustomMuteThisAd(zzblzVar.f36849v);
+                        builder.setMediaAspectRatio(zzblzVar.f36850w);
                     }
-                    builder.setReturnUrlsForImageAssets(zzblzVar.q);
-                    builder.setImageOrientation(zzblzVar.r);
-                    builder.setRequestMultipleImages(zzblzVar.s);
+                    builder.setReturnUrlsForImageAssets(zzblzVar.f36844q);
+                    builder.setImageOrientation(zzblzVar.f36845r);
+                    builder.setRequestMultipleImages(zzblzVar.f36846s);
                 }
-                zzfl zzflVar = zzblzVar.u;
+                zzfl zzflVar = zzblzVar.f36848u;
                 if (zzflVar != null) {
                     builder.setVideoOptions(new VideoOptions(zzflVar));
                 }
             }
-            builder.setAdChoicesPlacement(zzblzVar.t);
-            builder.setReturnUrlsForImageAssets(zzblzVar.q);
-            builder.setImageOrientation(zzblzVar.r);
-            builder.setRequestMultipleImages(zzblzVar.s);
+            builder.setAdChoicesPlacement(zzblzVar.f36847t);
+            builder.setReturnUrlsForImageAssets(zzblzVar.f36844q);
+            builder.setImageOrientation(zzblzVar.f36845r);
+            builder.setRequestMultipleImages(zzblzVar.f36846s);
         }
         return builder.build();
     }
 
     @Override // com.google.android.gms.ads.mediation.NativeMediationAdRequest
     public final com.google.android.gms.ads.nativead.NativeAdOptions getNativeAdRequestOptions() {
-        return zzblz.h(this.g);
+        return zzblz.m1105h(this.f12762g);
     }
 
     @Override // com.google.android.gms.ads.mediation.NativeMediationAdRequest
@@ -135,31 +157,31 @@ public final class ho3 implements NativeMediationAdRequest {
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     @Deprecated
     public final boolean isDesignedForFamilies() {
-        return this.i;
+        return this.f12764i;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     public final boolean isTesting() {
-        return this.d;
+        return this.f12759d;
     }
 
     @Override // com.google.android.gms.ads.mediation.NativeMediationAdRequest
     public final boolean isUnifiedNativeAdRequested() {
-        return this.h.contains("6");
+        return this.f12763h.contains("6");
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdRequest
     public final int taggedForChildDirectedTreatment() {
-        return this.f;
+        return this.f12761f;
     }
 
     @Override // com.google.android.gms.ads.mediation.NativeMediationAdRequest
     public final Map zza() {
-        return this.j;
+        return this.f12765j;
     }
 
     @Override // com.google.android.gms.ads.mediation.NativeMediationAdRequest
     public final boolean zzb() {
-        return this.h.contains("3");
+        return this.f12763h.contains("3");
     }
 }

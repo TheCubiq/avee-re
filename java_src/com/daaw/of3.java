@@ -4,5 +4,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public interface of3 {
-    void W(String str, String str2);
+    /* renamed from: W */
+    void mo2586W(String str, String str2);
 }

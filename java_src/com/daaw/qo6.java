@@ -1,37 +1,45 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class qo6 implements o67 {
-    public final /* synthetic */ to6 a;
-    public final /* synthetic */ io6 b;
-    public final /* synthetic */ boolean c;
+
+    /* renamed from: a */
+    public final /* synthetic */ to6 f24224a;
+
+    /* renamed from: b */
+    public final /* synthetic */ io6 f24225b;
+
+    /* renamed from: c */
+    public final /* synthetic */ boolean f24226c;
 
     public qo6(to6 to6Var, io6 io6Var, boolean z) {
-        this.a = to6Var;
-        this.b = io6Var;
-        this.c = z;
+        this.f24224a = to6Var;
+        this.f24225b = io6Var;
+        this.f24226c = z;
     }
 
     @Override // com.daaw.o67
-    public final void a(Object obj) {
-        to6 to6Var = this.a;
-        io6 io6Var = this.b;
+    /* renamed from: a */
+    public final void mo2151a(Object obj) {
+        to6 to6Var = this.f24224a;
+        io6 io6Var = this.f24225b;
         io6Var.zzf(true);
-        to6Var.a(io6Var);
-        if (this.c) {
-            this.a.g();
+        to6Var.m8902a(io6Var);
+        if (this.f24226c) {
+            this.f24224a.m8896g();
         }
     }
 
     @Override // com.daaw.o67
-    public final void b(Throwable th) {
-        io6 io6Var = this.b;
+    /* renamed from: b */
+    public final void mo2150b(Throwable th) {
+        io6 io6Var = this.f24225b;
         if (io6Var.zzj()) {
-            to6 to6Var = this.a;
-            io6Var.e(th);
+            to6 to6Var = this.f24224a;
+            io6Var.mo17590e(th);
             io6Var.zzf(false);
-            to6Var.a(io6Var);
-            if (this.c) {
-                this.a.g();
+            to6Var.m8902a(io6Var);
+            if (this.f24226c) {
+                this.f24224a.m8896g();
             }
         }
     }

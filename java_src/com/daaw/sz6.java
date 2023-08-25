@@ -6,34 +6,40 @@ import java.util.Map;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class sz6 implements Iterator {
-    public final Iterator p;
+
+    /* renamed from: p */
+    public final Iterator f26821p;
     @CheckForNull
-    public Collection q;
-    public final /* synthetic */ tz6 r;
+
+    /* renamed from: q */
+    public Collection f26822q;
+
+    /* renamed from: r */
+    public final /* synthetic */ tz6 f26823r;
 
     public sz6(tz6 tz6Var) {
-        this.r = tz6Var;
-        this.p = tz6Var.r.entrySet().iterator();
+        this.f26823r = tz6Var;
+        this.f26821p = tz6Var.f28293r.entrySet().iterator();
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        return this.p.hasNext();
+        return this.f26821p.hasNext();
     }
 
     @Override // java.util.Iterator
     public final /* bridge */ /* synthetic */ Object next() {
-        Map.Entry entry = (Map.Entry) this.p.next();
-        this.q = (Collection) entry.getValue();
-        return this.r.b(entry);
+        Map.Entry entry = (Map.Entry) this.f26821p.next();
+        this.f26822q = (Collection) entry.getValue();
+        return this.f26823r.m8661b(entry);
     }
 
     @Override // java.util.Iterator
     public final void remove() {
-        sy6.i(this.q != null, "no calls to next() since the last call to remove()");
-        this.p.remove();
-        g07.n(this.r.s, this.q.size());
-        this.q.clear();
-        this.q = null;
+        sy6.m9700i(this.f26822q != null, "no calls to next() since the last call to remove()");
+        this.f26821p.remove();
+        g07.m22111n(this.f26823r.f28294s, this.f26822q.size());
+        this.f26822q.clear();
+        this.f26822q = null;
     }
 }

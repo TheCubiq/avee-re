@@ -8,43 +8,56 @@ import android.view.View;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class sl2 {
-    public static final String[] d = {"/aclk", "/pcs/click", "/dbm/clk"};
-    public final String a = "ad.doubleclick.net";
-    public final String[] b = {".doubleclick.net", ".googleadservices.com", ".googlesyndication.com"};
-    public final ol2 c;
+
+    /* renamed from: d */
+    public static final String[] f26353d = {"/aclk", "/pcs/click", "/dbm/clk"};
+
+    /* renamed from: a */
+    public final String f26354a = "ad.doubleclick.net";
+
+    /* renamed from: b */
+    public final String[] f26355b = {".doubleclick.net", ".googleadservices.com", ".googlesyndication.com"};
+
+    /* renamed from: c */
+    public final ol2 f26356c;
 
     @Deprecated
     public sl2(ol2 ol2Var) {
-        this.c = ol2Var;
+        this.f26356c = ol2Var;
     }
 
     @Deprecated
-    public final Uri a(Uri uri, Context context, View view, Activity activity) {
+    /* renamed from: a */
+    public final Uri m10204a(Uri uri, Context context, View view, Activity activity) {
         try {
-            return g(uri, this.c.zzf(context, uri.getQueryParameter("ai"), view, activity));
+            return m10198g(uri, this.f26356c.zzf(context, uri.getQueryParameter("ai"), view, activity));
         } catch (UnsupportedOperationException unused) {
             throw new tl2("Provided Uri is not in a valid state");
         }
     }
 
     @Deprecated
-    public final Uri b(Uri uri, Context context) {
-        return g(uri, this.c.zzg(context));
+    /* renamed from: b */
+    public final Uri m10203b(Uri uri, Context context) {
+        return m10198g(uri, this.f26356c.zzg(context));
     }
 
     @Deprecated
-    public final ol2 c() {
-        return this.c;
+    /* renamed from: c */
+    public final ol2 m10202c() {
+        return this.f26356c;
     }
 
     @Deprecated
-    public final void d(MotionEvent motionEvent) {
-        this.c.zzk(motionEvent);
+    /* renamed from: d */
+    public final void m10201d(MotionEvent motionEvent) {
+        this.f26356c.zzk(motionEvent);
     }
 
-    public final boolean e(Uri uri) {
-        if (f(uri)) {
-            String[] strArr = d;
+    /* renamed from: e */
+    public final boolean m10200e(Uri uri) {
+        if (m10199f(uri)) {
+            String[] strArr = f26353d;
             for (int i = 0; i < 3; i++) {
                 if (uri.getPath().endsWith(strArr[i])) {
                     return true;
@@ -54,11 +67,12 @@ public final class sl2 {
         return false;
     }
 
-    public final boolean f(Uri uri) {
+    /* renamed from: f */
+    public final boolean m10199f(Uri uri) {
         Objects.requireNonNull(uri);
         try {
             String host = uri.getHost();
-            String[] strArr = this.b;
+            String[] strArr = this.f26355b;
             for (int i = 0; i < 3; i++) {
                 if (host.endsWith(strArr[i])) {
                     return true;
@@ -69,13 +83,14 @@ public final class sl2 {
         return false;
     }
 
-    public final Uri g(Uri uri, String str) {
+    /* renamed from: g */
+    public final Uri m10198g(Uri uri, String str) {
         String encodedPath;
         String str2;
         Objects.requireNonNull(uri);
         try {
             try {
-                if (uri.getHost().equals(this.a)) {
+                if (uri.getHost().equals(this.f26354a)) {
                     if (uri.toString().contains("dc_ms=")) {
                         throw new tl2("Parameter already exists: dc_ms");
                     }

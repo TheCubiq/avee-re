@@ -1,106 +1,83 @@
 package com.daaw;
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import com.google.android.gms.ads.internal.client.zzq;
+import com.google.android.gms.ads.internal.overlay.zzr;
+import com.google.android.gms.ads.internal.util.zzs;
+import com.google.android.gms.ads.internal.zzt;
+import com.google.android.gms.internal.ads.zzchu;
+import java.util.Collections;
 /* loaded from: classes.dex */
 public final class zb6 implements pz5 {
-    public final /* synthetic */ ac6 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ ac6 f34934a;
 
     public zb6(ac6 ac6Var) {
-        this.a = ac6Var;
+        this.f34934a = ac6Var;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:8:0x0048, code lost:
-        if (r0.r < ((java.lang.Integer) com.google.android.gms.ads.internal.client.zzba.zzc().b(com.daaw.g93.H4)).intValue()) goto L11;
+        if (r0.f36995r < ((java.lang.Integer) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(com.daaw.g93.f10436H4)).intValue()) goto L11;
      */
     @Override // com.daaw.pz5
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final /* bridge */ /* synthetic */ void a(java.lang.Object r6) {
-        /*
-            r5 = this;
-            com.daaw.ei4 r6 = (com.daaw.ei4) r6
-            com.daaw.ac6 r0 = r5.a
-            com.daaw.ei4 r0 = r0.z
-            if (r0 == 0) goto Lb
-            r0.a()
-        Lb:
-            com.daaw.ac6 r0 = r5.a
-            r0.z = r6
-            android.view.ViewGroup r0 = com.daaw.ac6.g3(r0)
-            r0.removeAllViews()
-            com.daaw.ac6 r0 = r5.a
-            android.view.ViewGroup r0 = com.daaw.ac6.g3(r0)
-            android.view.View r1 = r6.i()
-            com.google.android.gms.ads.internal.zzt.zzp()
-            android.view.ViewGroup$LayoutParams r2 = com.google.android.gms.ads.internal.util.zzs.zzn()
-            r0.addView(r1, r2)
-            boolean r0 = r6.l()
-            if (r0 != 0) goto L4a
-            com.daaw.ac6 r0 = r5.a
-            com.google.android.gms.internal.ads.zzchu r0 = com.daaw.ac6.j3(r0)
-            int r0 = r0.r
-            com.daaw.y83 r1 = com.daaw.g93.H4
-            com.daaw.e93 r2 = com.google.android.gms.ads.internal.client.zzba.zzc()
-            java.lang.Object r1 = r2.b(r1)
-            java.lang.Integer r1 = (java.lang.Integer) r1
-            int r1 = r1.intValue()
-            if (r0 >= r1) goto L85
-        L4a:
-            com.daaw.ac6 r0 = r5.a
-            com.google.android.gms.ads.internal.overlay.zzr r0 = com.daaw.ac6.i3(r0, r6)
-            android.widget.RelativeLayout$LayoutParams r1 = new android.widget.RelativeLayout$LayoutParams
-            r2 = -2
-            r1.<init>(r2, r2)
-            r2 = 10
-            r1.addRule(r2)
-            boolean r2 = r6.o()
-            r3 = 1
-            if (r3 == r2) goto L65
-            r2 = 9
-            goto L67
-        L65:
-            r2 = 11
-        L67:
-            r1.addRule(r2)
-            boolean r2 = r6.n()
-            r4 = 0
-            if (r2 == 0) goto L78
-            boolean r2 = r6.m()
-            if (r2 != 0) goto L78
-            goto L79
-        L78:
-            r3 = 0
-        L79:
-            r0.zzb(r3)
-            com.daaw.ac6 r2 = r5.a
-            android.view.ViewGroup r2 = com.daaw.ac6.g3(r2)
-            r2.addView(r0, r1)
-        L85:
-            com.daaw.ac6 r0 = r5.a
-            r6.k(r0)
-            com.daaw.ac6 r0 = r5.a
-            android.view.ViewGroup r1 = com.daaw.ac6.g3(r0)
-            com.google.android.gms.ads.internal.client.zzq r0 = com.daaw.ac6.h3(r0)
-            int r0 = r0.zzc
-            r1.setMinimumHeight(r0)
-            com.daaw.ac6 r0 = r5.a
-            android.view.ViewGroup r1 = com.daaw.ac6.g3(r0)
-            com.google.android.gms.ads.internal.client.zzq r0 = com.daaw.ac6.h3(r0)
-            int r0 = r0.zzf
-            r1.setMinimumWidth(r0)
-            com.daaw.ac6 r0 = r5.a
-            com.daaw.dd6 r1 = com.daaw.ac6.k3(r0)
-            com.daaw.vi4 r2 = new com.daaw.vi4
-            r2.<init>(r6, r0)
-            r1.k(r2)
-            r6.b()
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.zb6.a(java.lang.Object):void");
+    public final /* bridge */ /* synthetic */ void mo2496a(Object obj) {
+        ViewGroup viewGroup;
+        ViewGroup viewGroup2;
+        ViewGroup viewGroup3;
+        ViewGroup viewGroup4;
+        zzq m7131a;
+        ViewGroup viewGroup5;
+        zzq m7131a2;
+        dd6 dd6Var;
+        zzchu zzchuVar;
+        ei4 ei4Var = (ei4) obj;
+        ei4 ei4Var2 = this.f34934a.f3087z;
+        if (ei4Var2 != null) {
+            ei4Var2.mo2132a();
+        }
+        ac6 ac6Var = this.f34934a;
+        ac6Var.f3087z = ei4Var;
+        viewGroup = ac6Var.f3079r;
+        viewGroup.removeAllViews();
+        viewGroup2 = this.f34934a.f3079r;
+        View m23463i = ei4Var.m23463i();
+        zzt.zzp();
+        viewGroup2.addView(m23463i, zzs.zzn());
+        if (!ei4Var.m23460l()) {
+            zzchuVar = this.f34934a.f3084w;
+        }
+        zzr m27531i3 = ac6.m27531i3(this.f34934a, ei4Var);
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-2, -2);
+        layoutParams.addRule(10);
+        boolean z = true;
+        layoutParams.addRule(true != ei4Var.m23457o() ? 9 : 11);
+        m27531i3.zzb((!ei4Var.m23458n() || ei4Var.m23459m()) ? false : false);
+        viewGroup3 = this.f34934a.f3079r;
+        viewGroup3.addView(m27531i3, layoutParams);
+        ei4Var.m23461k(this.f34934a);
+        ac6 ac6Var2 = this.f34934a;
+        viewGroup4 = ac6Var2.f3079r;
+        m7131a = vi6.m7131a(ac6Var2.f3078q, Collections.singletonList(ac6Var2.f3087z.m23462j()));
+        viewGroup4.setMinimumHeight(m7131a.zzc);
+        ac6 ac6Var3 = this.f34934a;
+        viewGroup5 = ac6Var3.f3079r;
+        m7131a2 = vi6.m7131a(ac6Var3.f3078q, Collections.singletonList(ac6Var3.f3087z.m23462j()));
+        viewGroup5.setMinimumWidth(m7131a2.zzf);
+        ac6 ac6Var4 = this.f34934a;
+        dd6Var = ac6Var4.f3083v;
+        dd6Var.m24520k(new vi4(ei4Var, ac6Var4));
+        ei4Var.mo2131b();
     }
 
     @Override // com.daaw.pz5
     public final void zza() {
-        this.a.z = null;
+        this.f34934a.f3087z = null;
     }
 }

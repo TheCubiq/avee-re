@@ -6,16 +6,18 @@ public final class zs8 extends xq8 {
     }
 
     @Override // com.daaw.l64
-    public final d34 d(int i, d34 d34Var, boolean z) {
-        this.c.d(i, d34Var, z);
-        d34Var.f = true;
+    /* renamed from: d */
+    public final d34 mo1924d(int i, d34 d34Var, boolean z) {
+        this.f32892c.mo1924d(i, d34Var, z);
+        d34Var.f6453f = true;
         return d34Var;
     }
 
     @Override // com.daaw.l64
-    public final i54 e(int i, i54 i54Var, long j) {
-        this.c.e(i, i54Var, j);
-        i54Var.j = true;
+    /* renamed from: e */
+    public final i54 mo1923e(int i, i54 i54Var, long j) {
+        this.f32892c.mo1923e(i, i54Var, j);
+        i54Var.f13276j = true;
         return i54Var;
     }
 }

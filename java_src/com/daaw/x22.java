@@ -5,24 +5,30 @@ import android.os.IInterface;
 import android.os.Parcel;
 /* loaded from: classes2.dex */
 public class x22 implements IInterface {
-    public final IBinder p;
-    public final String q = "com.google.android.gms.ads.identifier.internal.IAdvertisingIdService";
+
+    /* renamed from: p */
+    public final IBinder f32012p;
+
+    /* renamed from: q */
+    public final String f32013q = "com.google.android.gms.ads.identifier.internal.IAdvertisingIdService";
 
     public x22(IBinder iBinder, String str) {
-        this.p = iBinder;
+        this.f32012p = iBinder;
     }
 
-    public final Parcel D() {
+    /* renamed from: D */
+    public final Parcel m5608D() {
         Parcel obtain = Parcel.obtain();
-        obtain.writeInterfaceToken(this.q);
+        obtain.writeInterfaceToken(this.f32013q);
         return obtain;
     }
 
-    public final Parcel I(int i, Parcel parcel) {
+    /* renamed from: I */
+    public final Parcel m5607I(int i, Parcel parcel) {
         Parcel obtain = Parcel.obtain();
         try {
             try {
-                this.p.transact(i, parcel, obtain, 0);
+                this.f32012p.transact(i, parcel, obtain, 0);
                 obtain.readException();
                 return obtain;
             } catch (RuntimeException e) {
@@ -36,6 +42,6 @@ public class x22 implements IInterface {
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.p;
+        return this.f32012p;
     }
 }

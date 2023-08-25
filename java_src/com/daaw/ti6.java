@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ti6 implements wz7 {
-    public static ti6 a() {
+    /* renamed from: a */
+    public static ti6 m9085a() {
         ti6 ti6Var;
-        ti6Var = si6.a;
+        ti6Var = si6.f26280a;
         return ti6Var;
     }
 

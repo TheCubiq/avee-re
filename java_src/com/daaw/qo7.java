@@ -4,7 +4,8 @@ import java.nio.ByteBuffer;
 import java.security.GeneralSecurityException;
 /* loaded from: classes.dex */
 public final class qo7 {
-    public static final void a(ByteBuffer byteBuffer, ByteBuffer byteBuffer2, ByteBuffer byteBuffer3, int i) {
+    /* renamed from: a */
+    public static final void m12308a(ByteBuffer byteBuffer, ByteBuffer byteBuffer2, ByteBuffer byteBuffer3, int i) {
         if (i < 0 || byteBuffer2.remaining() < i || byteBuffer3.remaining() < i || byteBuffer.remaining() < i) {
             throw new IllegalArgumentException("That combination of buffers, offsets and length to xor result in out-of-bond accesses.");
         }
@@ -13,7 +14,8 @@ public final class qo7 {
         }
     }
 
-    public static byte[] b(byte[]... bArr) {
+    /* renamed from: b */
+    public static byte[] m12307b(byte[]... bArr) {
         int i = 0;
         for (byte[] bArr2 : bArr) {
             int length = bArr2.length;
@@ -32,15 +34,17 @@ public final class qo7 {
         return bArr3;
     }
 
-    public static final byte[] c(byte[] bArr, byte[] bArr2) {
+    /* renamed from: c */
+    public static final byte[] m12306c(byte[] bArr, byte[] bArr2) {
         int length = bArr.length;
         if (length == bArr2.length) {
-            return d(bArr, 0, bArr2, 0, length);
+            return m12305d(bArr, 0, bArr2, 0, length);
         }
         throw new IllegalArgumentException("The lengths of x and y should match.");
     }
 
-    public static final byte[] d(byte[] bArr, int i, byte[] bArr2, int i2, int i3) {
+    /* renamed from: d */
+    public static final byte[] m12305d(byte[] bArr, int i, byte[] bArr2, int i2, int i3) {
         if (bArr.length - i3 < i || bArr2.length - i3 < i2) {
             throw new IllegalArgumentException("That combination of buffers, offsets and length to xor result in out-of-bond accesses.");
         }

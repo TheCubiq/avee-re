@@ -13,12 +13,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class ResponseInfo {
-    public final zzdn a;
-    public final List b = new ArrayList();
-    public AdapterResponseInfo c;
+
+    /* renamed from: a */
+    public final zzdn f36034a;
+
+    /* renamed from: b */
+    public final List f36035b = new ArrayList();
+
+    /* renamed from: c */
+    public AdapterResponseInfo f36036c;
 
     public ResponseInfo(zzdn zzdnVar) {
-        this.a = zzdnVar;
+        this.f36034a = zzdnVar;
         if (zzdnVar != null) {
             try {
                 List<zzu> zzj = zzdnVar.zzj();
@@ -26,7 +32,7 @@ public final class ResponseInfo {
                     for (zzu zzuVar : zzj) {
                         AdapterResponseInfo zza = AdapterResponseInfo.zza(zzuVar);
                         if (zza != null) {
-                            this.b.add(zza);
+                            this.f36035b.add(zza);
                         }
                     }
                 }
@@ -34,14 +40,14 @@ public final class ResponseInfo {
                 k04.zzh("Could not forward getAdapterResponseInfo to ResponseInfo.", e);
             }
         }
-        zzdn zzdnVar2 = this.a;
+        zzdn zzdnVar2 = this.f36034a;
         if (zzdnVar2 == null) {
             return;
         }
         try {
             zzu zzf = zzdnVar2.zzf();
             if (zzf != null) {
-                this.c = AdapterResponseInfo.zza(zzf);
+                this.f36036c = AdapterResponseInfo.zza(zzf);
             }
         } catch (RemoteException e2) {
             k04.zzh("Could not forward getLoadedAdapterResponse to ResponseInfo.", e2);
@@ -60,16 +66,16 @@ public final class ResponseInfo {
     }
 
     public List<AdapterResponseInfo> getAdapterResponses() {
-        return this.b;
+        return this.f36035b;
     }
 
     public AdapterResponseInfo getLoadedAdapterResponseInfo() {
-        return this.c;
+        return this.f36036c;
     }
 
     public String getMediationAdapterClassName() {
         try {
-            zzdn zzdnVar = this.a;
+            zzdn zzdnVar = this.f36034a;
             if (zzdnVar != null) {
                 return zzdnVar.zzg();
             }
@@ -82,7 +88,7 @@ public final class ResponseInfo {
 
     public Bundle getResponseExtras() {
         try {
-            zzdn zzdnVar = this.a;
+            zzdn zzdnVar = this.f36034a;
             if (zzdnVar != null) {
                 return zzdnVar.zze();
             }
@@ -94,7 +100,7 @@ public final class ResponseInfo {
 
     public String getResponseId() {
         try {
-            zzdn zzdnVar = this.a;
+            zzdn zzdnVar = this.f36034a;
             if (zzdnVar != null) {
                 return zzdnVar.zzi();
             }
@@ -114,7 +120,7 @@ public final class ResponseInfo {
     }
 
     public final zzdn zzc() {
-        return this.a;
+        return this.f36034a;
     }
 
     public final JSONObject zzd() {
@@ -132,17 +138,17 @@ public final class ResponseInfo {
             jSONObject.put("Mediation Adapter Class Name", mediationAdapterClassName);
         }
         JSONArray jSONArray = new JSONArray();
-        for (AdapterResponseInfo adapterResponseInfo : this.b) {
+        for (AdapterResponseInfo adapterResponseInfo : this.f36035b) {
             jSONArray.put(adapterResponseInfo.zzb());
         }
         jSONObject.put("Adapter Responses", jSONArray);
-        AdapterResponseInfo adapterResponseInfo2 = this.c;
+        AdapterResponseInfo adapterResponseInfo2 = this.f36036c;
         if (adapterResponseInfo2 != null) {
             jSONObject.put("Loaded Adapter Response", adapterResponseInfo2.zzb());
         }
         Bundle responseExtras = getResponseExtras();
         if (responseExtras != null) {
-            jSONObject.put("Response Extras", zzay.zzb().n(responseExtras));
+            jSONObject.put("Response Extras", zzay.zzb().m24818n(responseExtras));
         }
         return jSONObject;
     }

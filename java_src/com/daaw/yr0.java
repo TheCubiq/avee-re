@@ -3,15 +3,21 @@ package com.daaw;
 import java.io.File;
 /* loaded from: classes2.dex */
 public interface yr0 {
-    File a();
+    /* renamed from: a */
+    File mo3388a();
 
-    File b();
+    /* renamed from: b */
+    File mo3387b();
 
-    File c();
+    /* renamed from: c */
+    File mo3386c();
 
-    File d();
+    /* renamed from: d */
+    File mo3385d();
 
-    File e();
+    /* renamed from: e */
+    File mo3384e();
 
-    File f();
+    /* renamed from: f */
+    File mo3383f();
 }

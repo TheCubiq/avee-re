@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class hr0 {
-    public static int a(byte[] bArr, int i, int i2, int i3) {
+    /* renamed from: a */
+    public static int m20470a(byte[] bArr, int i, int i2, int i3) {
         int i4 = (i2 & (-4)) + i;
         while (i < i4) {
             int i5 = ((bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16) | (bArr[i + 3] << 24)) * (-862048943);

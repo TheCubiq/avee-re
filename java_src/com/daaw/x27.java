@@ -7,7 +7,8 @@ public final class x27 extends c37 {
     }
 
     @Override // com.daaw.c37
-    public final Map a() {
+    /* renamed from: a */
+    public final Map mo4233a() {
         return new i17(8);
     }
 }

@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class ma1 {
-    public static final String[] a = {"Waveform", "Spectrum", "Spectrum2"};
 
-    public static fe0 a(String str, fe0 fe0Var) {
-        if (b(fe0Var, "None").equals(str)) {
+    /* renamed from: a */
+    public static final String[] f18688a = {"Waveform", "Spectrum", "Spectrum2"};
+
+    /* renamed from: a */
+    public static fe0 m16145a(String str, fe0 fe0Var) {
+        if (m16144b(fe0Var, "None").equals(str)) {
             return fe0Var;
         }
         str.hashCode();
@@ -45,12 +48,13 @@ public class ma1 {
             case 3:
                 return new ja1();
             default:
-                lz1.c("unknown typeName: " + str);
+                lz1.m16363c("unknown typeName: " + str);
                 return fe0Var == null ? new ha1() : fe0Var;
         }
     }
 
-    public static String b(fe0 fe0Var, String str) {
+    /* renamed from: b */
+    public static String m16144b(fe0 fe0Var, String str) {
         if (fe0Var == null) {
             return str;
         }
@@ -63,7 +67,7 @@ public class ma1 {
         if (fe0Var instanceof ha1) {
             return "Spectrum2";
         }
-        lz1.c("unknown instance type");
+        lz1.m16363c("unknown instance type");
         return str;
     }
 }

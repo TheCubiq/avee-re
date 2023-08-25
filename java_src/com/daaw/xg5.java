@@ -7,21 +7,30 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes2.dex */
 public final class xg5 {
-    public static final AtomicReference b = new AtomicReference();
-    public static final AtomicReference c = new AtomicReference();
-    public static final AtomicReference d = new AtomicReference();
-    public final uf5 a;
+
+    /* renamed from: b */
+    public static final AtomicReference f32702b = new AtomicReference();
+
+    /* renamed from: c */
+    public static final AtomicReference f32703c = new AtomicReference();
+
+    /* renamed from: d */
+    public static final AtomicReference f32704d = new AtomicReference();
+
+    /* renamed from: a */
+    public final uf5 f32705a;
 
     public xg5(uf5 uf5Var) {
-        this.a = uf5Var;
+        this.f32705a = uf5Var;
     }
 
-    public static final String g(String str, String[] strArr, String[] strArr2, AtomicReference atomicReference) {
+    /* renamed from: g */
+    public static final String m5130g(String str, String[] strArr, String[] strArr2, AtomicReference atomicReference) {
         String str2;
-        ry0.j(strArr);
-        ry0.j(strArr2);
-        ry0.j(atomicReference);
-        ry0.a(strArr.length == strArr2.length);
+        ry0.m10830j(strArr);
+        ry0.m10830j(strArr2);
+        ry0.m10830j(atomicReference);
+        ry0.m10839a(strArr.length == strArr2.length);
         for (int i = 0; i < strArr.length; i++) {
             String str3 = strArr[i];
             if (str == str3 || str.equals(str3)) {
@@ -43,40 +52,42 @@ public final class xg5 {
         return str;
     }
 
-    public final String a(Object[] objArr) {
+    /* renamed from: a */
+    public final String m5136a(Object[] objArr) {
         if (objArr == null) {
             return "[]";
         }
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         for (Object obj : objArr) {
-            String b2 = obj instanceof Bundle ? b((Bundle) obj) : String.valueOf(obj);
-            if (b2 != null) {
+            String m5135b = obj instanceof Bundle ? m5135b((Bundle) obj) : String.valueOf(obj);
+            if (m5135b != null) {
                 if (sb.length() != 1) {
                     sb.append(", ");
                 }
-                sb.append(b2);
+                sb.append(m5135b);
             }
         }
         sb.append("]");
         return sb.toString();
     }
 
-    public final String b(Bundle bundle) {
+    /* renamed from: b */
+    public final String m5135b(Bundle bundle) {
         if (bundle == null) {
             return null;
         }
-        if (this.a.zza()) {
+        if (this.f32705a.zza()) {
             StringBuilder sb = new StringBuilder();
             sb.append("Bundle[{");
             for (String str : bundle.keySet()) {
                 if (sb.length() != 8) {
                     sb.append(", ");
                 }
-                sb.append(e(str));
+                sb.append(m5132e(str));
                 sb.append("=");
                 Object obj = bundle.get(str);
-                sb.append(obj instanceof Bundle ? a(new Object[]{obj}) : obj instanceof Object[] ? a((Object[]) obj) : obj instanceof ArrayList ? a(((ArrayList) obj).toArray()) : String.valueOf(obj));
+                sb.append(obj instanceof Bundle ? m5136a(new Object[]{obj}) : obj instanceof Object[] ? m5136a((Object[]) obj) : obj instanceof ArrayList ? m5136a(((ArrayList) obj).toArray()) : String.valueOf(obj));
             }
             sb.append("}]");
             return sb.toString();
@@ -84,44 +95,48 @@ public final class xg5 {
         return bundle.toString();
     }
 
-    public final String c(zzaw zzawVar) {
-        if (this.a.zza()) {
+    /* renamed from: c */
+    public final String m5134c(zzaw zzawVar) {
+        if (this.f32705a.zza()) {
             StringBuilder sb = new StringBuilder();
             sb.append("origin=");
-            sb.append(zzawVar.r);
+            sb.append(zzawVar.f37070r);
             sb.append(",name=");
-            sb.append(d(zzawVar.p));
+            sb.append(m5133d(zzawVar.f37068p));
             sb.append(",params=");
-            zzau zzauVar = zzawVar.q;
-            sb.append(zzauVar == null ? null : !this.a.zza() ? zzauVar.toString() : b(zzauVar.q()));
+            zzau zzauVar = zzawVar.f37069q;
+            sb.append(zzauVar == null ? null : !this.f32705a.zza() ? zzauVar.toString() : m5135b(zzauVar.m1078q()));
             return sb.toString();
         }
         return zzawVar.toString();
     }
 
-    public final String d(String str) {
+    /* renamed from: d */
+    public final String m5133d(String str) {
         if (str == null) {
             return null;
         }
-        return !this.a.zza() ? str : g(str, dh7.c, dh7.a, b);
+        return !this.f32705a.zza() ? str : m5130g(str, dh7.f7093c, dh7.f7091a, f32702b);
     }
 
-    public final String e(String str) {
+    /* renamed from: e */
+    public final String m5132e(String str) {
         if (str == null) {
             return null;
         }
-        return !this.a.zza() ? str : g(str, gi7.b, gi7.a, c);
+        return !this.f32705a.zza() ? str : m5130g(str, gi7.f11334b, gi7.f11333a, f32703c);
     }
 
-    public final String f(String str) {
+    /* renamed from: f */
+    public final String m5131f(String str) {
         if (str == null) {
             return null;
         }
-        if (this.a.zza()) {
+        if (this.f32705a.zza()) {
             if (str.startsWith("_exp_")) {
                 return "experiment_id(" + str + ")";
             }
-            return g(str, jj7.b, jj7.a, d);
+            return m5130g(str, jj7.f15138b, jj7.f15137a, f32704d);
         }
         return str;
     }

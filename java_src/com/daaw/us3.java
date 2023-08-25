@@ -4,19 +4,23 @@ import com.google.android.gms.ads.query.UpdateImpressionUrlsCallback;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class us3 extends qs3 {
-    public final /* synthetic */ UpdateImpressionUrlsCallback p;
+
+    /* renamed from: p */
+    public final /* synthetic */ UpdateImpressionUrlsCallback f29505p;
 
     public us3(zs3 zs3Var, UpdateImpressionUrlsCallback updateImpressionUrlsCallback) {
-        this.p = updateImpressionUrlsCallback;
+        this.f29505p = updateImpressionUrlsCallback;
     }
 
     @Override // com.daaw.rs3
-    public final void a(String str) {
-        this.p.onFailure(str);
+    /* renamed from: a */
+    public final void mo4546a(String str) {
+        this.f29505p.onFailure(str);
     }
 
     @Override // com.daaw.rs3
-    public final void x0(List list) {
-        this.p.onSuccess(list);
+    /* renamed from: x0 */
+    public final void mo4545x0(List list) {
+        this.f29505p.onSuccess(list);
     }
 }

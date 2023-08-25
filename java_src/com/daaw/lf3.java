@@ -7,15 +7,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class lf3 implements zg3 {
-    public final mf3 a;
+
+    /* renamed from: a */
+    public final mf3 f17371a;
 
     public lf3(mf3 mf3Var) {
-        this.a = mf3Var;
+        this.f17371a = mf3Var;
     }
 
     @Override // com.daaw.zg3
-    public final void a(Object obj, Map map) {
-        if (this.a == null) {
+    /* renamed from: a */
+    public final void mo2341a(Object obj, Map map) {
+        if (this.f17371a == null) {
             return;
         }
         String str = (String) map.get("name");
@@ -34,7 +37,7 @@ public final class lf3 implements zg3 {
         if (bundle == null) {
             k04.zzg("Failed to convert ad metadata to Bundle.");
         } else {
-            this.a.k(str, bundle);
+            this.f17371a.mo5430k(str, bundle);
         }
     }
 }

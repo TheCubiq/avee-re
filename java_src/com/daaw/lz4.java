@@ -6,14 +6,16 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class lz4 extends kw4 {
     @GuardedBy("this")
-    public boolean q;
+
+    /* renamed from: q */
+    public boolean f17923q;
 
     public lz4(Set set) {
         super(set);
     }
 
     public final void zza() {
-        B0(new jw4() { // from class: com.daaw.hz4
+        m17378B0(new jw4() { // from class: com.daaw.hz4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((VideoController.VideoLifecycleCallbacks) obj).onVideoEnd();
@@ -22,7 +24,7 @@ public final class lz4 extends kw4 {
     }
 
     public final void zzb() {
-        B0(new jw4() { // from class: com.daaw.jz4
+        m17378B0(new jw4() { // from class: com.daaw.jz4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((VideoController.VideoLifecycleCallbacks) obj).onVideoPause();
@@ -31,11 +33,11 @@ public final class lz4 extends kw4 {
     }
 
     public final synchronized void zzc() {
-        if (!this.q) {
-            B0(iz4.a);
-            this.q = true;
+        if (!this.f17923q) {
+            m17378B0(iz4.f14131a);
+            this.f17923q = true;
         }
-        B0(new jw4() { // from class: com.daaw.kz4
+        m17378B0(new jw4() { // from class: com.daaw.kz4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((VideoController.VideoLifecycleCallbacks) obj).onVideoPlay();
@@ -44,7 +46,7 @@ public final class lz4 extends kw4 {
     }
 
     public final synchronized void zzd() {
-        B0(iz4.a);
-        this.q = true;
+        m17378B0(iz4.f14131a);
+        this.f17923q = true;
     }
 }

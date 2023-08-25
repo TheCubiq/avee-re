@@ -11,21 +11,33 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
-public class pp0 implements ba {
-    public final a a;
-    public final fn b;
-    public final Map<String, rn1> c;
+public class pp0 implements InterfaceC0828ba {
 
+    /* renamed from: a */
+    public final C2571a f23122a;
+
+    /* renamed from: b */
+    public final C1307fn f23123b;
+
+    /* renamed from: c */
+    public final Map<String, rn1> f23124c;
+
+    /* renamed from: com.daaw.pp0$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public final Context a;
-        public Map<String, String> b = null;
+    public static class C2571a {
 
-        public a(Context context) {
-            this.a = context;
+        /* renamed from: a */
+        public final Context f23125a;
+
+        /* renamed from: b */
+        public Map<String, String> f23126b = null;
+
+        public C2571a(Context context) {
+            this.f23125a = context;
         }
 
-        public static Bundle d(Context context) {
+        /* renamed from: d */
+        public static Bundle m13242d(Context context) {
             ServiceInfo serviceInfo;
             try {
                 PackageManager packageManager = context.getPackageManager();
@@ -38,14 +50,15 @@ public class pp0 implements ba {
             }
         }
 
-        public final Map<String, String> a(Context context) {
-            Bundle d = d(context);
-            if (d == null) {
+        /* renamed from: a */
+        public final Map<String, String> m13245a(Context context) {
+            Bundle m13242d = m13242d(context);
+            if (m13242d == null) {
                 return Collections.emptyMap();
             }
             HashMap hashMap = new HashMap();
-            for (String str : d.keySet()) {
-                Object obj = d.get(str);
+            for (String str : m13242d.keySet()) {
+                Object obj = m13242d.get(str);
                 if ((obj instanceof String) && str.startsWith("backend:")) {
                     for (String str2 : ((String) obj).split(",", -1)) {
                         String trim = str2.trim();
@@ -58,13 +71,14 @@ public class pp0 implements ba {
             return hashMap;
         }
 
-        public aa b(String str) {
-            String str2 = c().get(str);
+        /* renamed from: b */
+        public InterfaceC0612aa m13244b(String str) {
+            String str2 = m13243c().get(str);
             if (str2 == null) {
                 return null;
             }
             try {
-                return (aa) Class.forName(str2).asSubclass(aa.class).getDeclaredConstructor(new Class[0]).newInstance(new Object[0]);
+                return (InterfaceC0612aa) Class.forName(str2).asSubclass(InterfaceC0612aa.class).getDeclaredConstructor(new Class[0]).newInstance(new Object[0]);
             } catch (ClassNotFoundException unused) {
                 String.format("Class %s is not found.", str2);
                 return null;
@@ -83,35 +97,37 @@ public class pp0 implements ba {
             }
         }
 
-        public final Map<String, String> c() {
-            if (this.b == null) {
-                this.b = a(this.a);
+        /* renamed from: c */
+        public final Map<String, String> m13243c() {
+            if (this.f23126b == null) {
+                this.f23126b = m13245a(this.f23125a);
             }
-            return this.b;
+            return this.f23126b;
         }
     }
 
-    public pp0(Context context, fn fnVar) {
-        this(new a(context), fnVar);
+    public pp0(Context context, C1307fn c1307fn) {
+        this(new C2571a(context), c1307fn);
     }
 
-    public pp0(a aVar, fn fnVar) {
-        this.c = new HashMap();
-        this.a = aVar;
-        this.b = fnVar;
+    public pp0(C2571a c2571a, C1307fn c1307fn) {
+        this.f23124c = new HashMap();
+        this.f23122a = c2571a;
+        this.f23123b = c1307fn;
     }
 
-    @Override // com.daaw.ba
-    public synchronized rn1 a(String str) {
-        if (this.c.containsKey(str)) {
-            return this.c.get(str);
+    @Override // com.daaw.InterfaceC0828ba
+    /* renamed from: a */
+    public synchronized rn1 mo13246a(String str) {
+        if (this.f23124c.containsKey(str)) {
+            return this.f23124c.get(str);
         }
-        aa b = this.a.b(str);
-        if (b == null) {
+        InterfaceC0612aa m13244b = this.f23122a.m13244b(str);
+        if (m13244b == null) {
             return null;
         }
-        rn1 create = b.create(this.b.a(str));
-        this.c.put(str, create);
+        rn1 create = m13244b.create(this.f23123b.m22483a(str));
+        this.f23124c.put(str, create);
         return create;
     }
 }

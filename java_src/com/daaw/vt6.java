@@ -1,81 +1,95 @@
 package com.daaw;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class vt6 {
-    public final ap2 a;
-    public final File b;
-    public final File c;
-    public final File d;
-    public byte[] e;
+
+    /* renamed from: a */
+    public final ap2 f30581a;
+
+    /* renamed from: b */
+    public final File f30582b;
+
+    /* renamed from: c */
+    public final File f30583c;
+
+    /* renamed from: d */
+    public final File f30584d;
+
+    /* renamed from: e */
+    public byte[] f30585e;
 
     public vt6(ap2 ap2Var, File file, File file2, File file3) {
-        this.a = ap2Var;
-        this.b = file;
-        this.c = file3;
-        this.d = file2;
+        this.f30581a = ap2Var;
+        this.f30582b = file;
+        this.f30583c = file3;
+        this.f30584d = file2;
     }
 
-    public final ap2 a() {
-        return this.a;
+    /* renamed from: a */
+    public final ap2 m6796a() {
+        return this.f30581a;
     }
 
-    public final File b() {
-        return this.c;
+    /* renamed from: b */
+    public final File m6795b() {
+        return this.f30583c;
     }
 
-    public final File c() {
-        return this.b;
+    /* renamed from: c */
+    public final File m6794c() {
+        return this.f30582b;
     }
 
-    public final boolean d(long j) {
-        return this.a.M() - (System.currentTimeMillis() / 1000) < 3600;
+    /* renamed from: d */
+    public final boolean m6793d(long j) {
+        return this.f30581a.m27264M() - (System.currentTimeMillis() / 1000) < 3600;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x002b A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:19:0x002c  */
+    /* renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final byte[] e() {
-        /*
-            r3 = this;
-            byte[] r0 = r3.e
-            r1 = 0
-            if (r0 != 0) goto L27
-            java.io.File r0 = r3.d
-            java.io.FileInputStream r2 = new java.io.FileInputStream     // Catch: java.lang.Throwable -> L1b java.io.IOException -> L20
-            r2.<init>(r0)     // Catch: java.lang.Throwable -> L1b java.io.IOException -> L20
-            com.daaw.yq7 r0 = com.daaw.yq7.I(r2)     // Catch: java.lang.Throwable -> L18 java.io.IOException -> L21
-            byte[] r0 = r0.j()     // Catch: java.lang.Throwable -> L18 java.io.IOException -> L21
-            com.daaw.xd0.a(r2)
-            goto L25
-        L18:
-            r0 = move-exception
-            r1 = r2
-            goto L1c
-        L1b:
-            r0 = move-exception
-        L1c:
-            com.daaw.xd0.a(r1)
-            throw r0
-        L20:
-            r2 = r1
-        L21:
-            com.daaw.xd0.a(r2)
-            r0 = r1
-        L25:
-            r3.e = r0
-        L27:
-            byte[] r0 = r3.e
-            if (r0 != 0) goto L2c
-            return r1
-        L2c:
-            int r1 = r0.length
-            byte[] r0 = java.util.Arrays.copyOf(r0, r1)
-            return r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.vt6.e():byte[]");
+    public final byte[] m6792e() {
+        byte[] bArr;
+        FileInputStream fileInputStream;
+        byte[] bArr2;
+        FileInputStream fileInputStream2 = null;
+        if (this.f30585e == null) {
+            try {
+                fileInputStream = new FileInputStream(this.f30584d);
+                try {
+                    bArr2 = yq7.m3421I(fileInputStream).m3415j();
+                    xd0.m5227a(fileInputStream);
+                } catch (IOException unused) {
+                    xd0.m5227a(fileInputStream);
+                    bArr2 = null;
+                    this.f30585e = bArr2;
+                    bArr = this.f30585e;
+                    if (bArr != null) {
+                    }
+                } catch (Throwable th) {
+                    th = th;
+                    fileInputStream2 = fileInputStream;
+                    xd0.m5227a(fileInputStream2);
+                    throw th;
+                }
+            } catch (IOException unused2) {
+                fileInputStream = null;
+            } catch (Throwable th2) {
+                th = th2;
+            }
+            this.f30585e = bArr2;
+        }
+        bArr = this.f30585e;
+        if (bArr != null) {
+            return null;
+        }
+        return Arrays.copyOf(bArr, bArr.length);
     }
 }

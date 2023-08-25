@@ -7,19 +7,23 @@ import java.util.LinkedHashMap;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class tz7 {
-    public static HashSet a(int i) {
-        return new HashSet(d(i));
+    /* renamed from: a */
+    public static HashSet m8660a(int i) {
+        return new HashSet(m8657d(i));
     }
 
-    public static LinkedHashMap b(int i) {
-        return new LinkedHashMap(d(i));
+    /* renamed from: b */
+    public static LinkedHashMap m8659b(int i) {
+        return new LinkedHashMap(m8657d(i));
     }
 
-    public static List c(int i) {
+    /* renamed from: c */
+    public static List m8658c(int i) {
         return i == 0 ? Collections.emptyList() : new ArrayList(i);
     }
 
-    public static int d(int i) {
+    /* renamed from: d */
+    public static int m8657d(int i) {
         if (i < 3) {
             return i + 1;
         }

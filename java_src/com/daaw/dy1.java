@@ -2,24 +2,30 @@ package com.daaw;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import androidx.work.C0507a;
 import java.util.Collections;
 import java.util.List;
 @SuppressLint({"AddedAbstractMethod"})
 /* loaded from: classes.dex */
 public abstract class dy1 {
-    public static dy1 d(Context context) {
-        return ey1.k(context);
+    /* renamed from: d */
+    public static dy1 m23814d(Context context) {
+        return ey1.m23004k(context);
     }
 
-    public static void e(Context context, androidx.work.a aVar) {
-        ey1.e(context, aVar);
+    /* renamed from: e */
+    public static void m23813e(Context context, C0507a c0507a) {
+        ey1.m23010e(context, c0507a);
     }
 
-    public abstract qu0 a(String str);
+    /* renamed from: a */
+    public abstract qu0 mo23012a(String str);
 
-    public final qu0 b(oy1 oy1Var) {
-        return c(Collections.singletonList(oy1Var));
+    /* renamed from: b */
+    public final qu0 m23815b(oy1 oy1Var) {
+        return mo23011c(Collections.singletonList(oy1Var));
     }
 
-    public abstract qu0 c(List<? extends oy1> list);
+    /* renamed from: c */
+    public abstract qu0 mo23011c(List<? extends oy1> list);
 }

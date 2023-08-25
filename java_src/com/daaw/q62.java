@@ -6,34 +6,40 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 /* loaded from: classes.dex */
 public final class q62 {
-    public final ByteArrayOutputStream a;
-    public final DataOutputStream b;
+
+    /* renamed from: a */
+    public final ByteArrayOutputStream f23686a;
+
+    /* renamed from: b */
+    public final DataOutputStream f23687b;
 
     public q62() {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(512);
-        this.a = byteArrayOutputStream;
-        this.b = new DataOutputStream(byteArrayOutputStream);
+        this.f23686a = byteArrayOutputStream;
+        this.f23687b = new DataOutputStream(byteArrayOutputStream);
     }
 
-    public static void b(DataOutputStream dataOutputStream, String str) {
+    /* renamed from: b */
+    public static void m12743b(DataOutputStream dataOutputStream, String str) {
         dataOutputStream.writeBytes(str);
         dataOutputStream.writeByte(0);
     }
 
-    public final byte[] a(zzacg zzacgVar) {
-        this.a.reset();
+    /* renamed from: a */
+    public final byte[] m12744a(zzacg zzacgVar) {
+        this.f23686a.reset();
         try {
-            b(this.b, zzacgVar.p);
-            String str = zzacgVar.q;
+            m12743b(this.f23687b, zzacgVar.f36702p);
+            String str = zzacgVar.f36703q;
             if (str == null) {
                 str = "";
             }
-            b(this.b, str);
-            this.b.writeLong(zzacgVar.r);
-            this.b.writeLong(zzacgVar.s);
-            this.b.write(zzacgVar.t);
-            this.b.flush();
-            return this.a.toByteArray();
+            m12743b(this.f23687b, str);
+            this.f23687b.writeLong(zzacgVar.f36704r);
+            this.f23687b.writeLong(zzacgVar.f36705s);
+            this.f23687b.write(zzacgVar.f36706t);
+            this.f23687b.flush();
+            return this.f23686a.toByteArray();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

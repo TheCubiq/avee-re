@@ -12,32 +12,35 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public abstract class ly3 {
-    public static ly3 a;
 
-    public static synchronized ly3 d(Context context) {
+    /* renamed from: a */
+    public static ly3 f17909a;
+
+    /* renamed from: d */
+    public static synchronized ly3 m16372d(Context context) {
         synchronized (ly3.class) {
-            ly3 ly3Var = a;
+            ly3 ly3Var = f17909a;
             if (ly3Var != null) {
                 return ly3Var;
             }
             Context applicationContext = context.getApplicationContext();
-            g93.c(applicationContext);
-            zzg h = zzt.zzo().h();
-            h.zzr(applicationContext);
+            g93.m21879c(applicationContext);
+            zzg m11915h = zzt.zzo().m11915h();
+            m11915h.zzr(applicationContext);
             lx3 lx3Var = new lx3(null);
-            lx3Var.b(applicationContext);
-            lx3Var.c(zzt.zzB());
-            lx3Var.a(h);
-            lx3Var.d(zzt.zzn());
-            ly3 e = lx3Var.e();
-            a = e;
-            e.a().a();
-            a.b().c();
-            py3 c = a.c();
-            if (((Boolean) zzba.zzc().b(g93.o0)).booleanValue()) {
+            lx3Var.m16385b(applicationContext);
+            lx3Var.m16384c(zzt.zzB());
+            lx3Var.m16386a(m11915h);
+            lx3Var.m16383d(zzt.zzn());
+            ly3 m16382e = lx3Var.m16382e();
+            f17909a = m16382e;
+            m16382e.mo10847a().m23053a();
+            f17909a.mo10846b().m19296c();
+            py3 mo10845c = f17909a.mo10845c();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10776o0)).booleanValue()) {
                 HashMap hashMap = new HashMap();
                 try {
-                    JSONObject jSONObject = new JSONObject((String) zzba.zzc().b(g93.q0));
+                    JSONObject jSONObject = new JSONObject((String) zzba.zzc().m23658b(g93.f10798q0));
                     Iterator<String> keys = jSONObject.keys();
                     while (keys.hasNext()) {
                         String next = keys.next();
@@ -54,20 +57,23 @@ public abstract class ly3 {
                         }
                     }
                     for (String str : hashMap.keySet()) {
-                        c.c(str);
+                        mo10845c.m12868c(str);
                     }
-                    c.d(new ny3(c, hashMap));
-                } catch (JSONException e2) {
-                    k04.zzf("Failed to parse listening list", e2);
+                    mo10845c.m12867d(new ny3(mo10845c, hashMap));
+                } catch (JSONException e) {
+                    k04.zzf("Failed to parse listening list", e);
                 }
             }
-            return a;
+            return f17909a;
         }
     }
 
-    public abstract ex3 a();
+    /* renamed from: a */
+    public abstract ex3 mo10847a();
 
-    public abstract ix3 b();
+    /* renamed from: b */
+    public abstract ix3 mo10846b();
 
-    public abstract py3 c();
+    /* renamed from: c */
+    public abstract py3 mo10845c();
 }

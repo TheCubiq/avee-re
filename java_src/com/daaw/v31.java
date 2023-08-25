@@ -11,42 +11,52 @@ import android.widget.EditText;
 import com.daaw.avee.R;
 /* loaded from: classes.dex */
 public class v31 extends DialogFragment {
-    public static sw1<Context, Long, String> p = new sw1<>();
 
+    /* renamed from: p */
+    public static sw1<Context, Long, String> f29805p = new sw1<>();
+
+    /* renamed from: com.daaw.v31$a */
     /* loaded from: classes.dex */
-    public class a implements DialogInterface.OnClickListener {
-        public final /* synthetic */ EditText p;
-        public final /* synthetic */ long q;
+    public class DialogInterface$OnClickListenerC3280a implements DialogInterface.OnClickListener {
 
-        public a(EditText editText, long j) {
-            this.p = editText;
-            this.q = j;
+        /* renamed from: p */
+        public final /* synthetic */ EditText f29806p;
+
+        /* renamed from: q */
+        public final /* synthetic */ long f29807q;
+
+        public DialogInterface$OnClickListenerC3280a(EditText editText, long j) {
+            this.f29806p = editText;
+            this.f29807q = j;
         }
 
         @Override // android.content.DialogInterface.OnClickListener
         public void onClick(DialogInterface dialogInterface, int i) {
-            v31.p.a(this.p.getContext(), Long.valueOf(this.q), this.p.getText().toString());
+            v31.f29805p.m9795a(this.f29806p.getContext(), Long.valueOf(this.f29807q), this.f29806p.getText().toString());
         }
     }
 
+    /* renamed from: com.daaw.v31$b */
     /* loaded from: classes.dex */
-    public class b implements DialogInterface.OnClickListener {
-        public b() {
+    public class DialogInterface$OnClickListenerC3281b implements DialogInterface.OnClickListener {
+        public DialogInterface$OnClickListenerC3281b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
         public void onClick(DialogInterface dialogInterface, int i) {
-            gr1.g(v31.this.getDialog());
+            gr1.m21328g(v31.this.getDialog());
         }
     }
 
-    public static v31 a(al alVar, Long l, String str) {
-        v31 b2 = b(l.longValue(), str);
-        gr1.x(b2, "RenamePlaylistDialog", alVar);
-        return b2;
+    /* renamed from: a */
+    public static v31 m7519a(C0645al c0645al, Long l, String str) {
+        v31 m7518b = m7518b(l.longValue(), str);
+        gr1.m21311x(m7518b, "RenamePlaylistDialog", c0645al);
+        return m7518b;
     }
 
-    public static v31 b(long j, String str) {
+    /* renamed from: b */
+    public static v31 m7518b(long j, String str) {
         v31 v31Var = new v31();
         Bundle bundle = new Bundle();
         bundle.putLong("arg1", j);
@@ -70,8 +80,8 @@ public class v31 extends DialogFragment {
             editText.setText(string);
         }
         builder.setTitle(R.string.dialog_rename_playlist_title);
-        builder.setPositiveButton(R.string.dialog_rename, new a(editText, j));
-        builder.setNegativeButton(R.string.dialog_cancel, new b());
+        builder.setPositiveButton(R.string.dialog_rename, new DialogInterface$OnClickListenerC3280a(editText, j));
+        builder.setNegativeButton(R.string.dialog_cancel, new DialogInterface$OnClickListenerC3281b());
         return builder.create();
     }
 }

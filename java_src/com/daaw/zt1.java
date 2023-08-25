@@ -15,98 +15,120 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class zt1 extends PopupWindow {
-    public static yw1<Integer, sd0, String, c> c = new yw1<>();
-    public static sw1<Integer, sd0, c> d = new sw1<>();
-    public List<RadioButton> a;
-    public List<CheckBox> b;
 
+    /* renamed from: c */
+    public static yw1<Integer, sd0, String, C3898c> f35479c = new yw1<>();
+
+    /* renamed from: d */
+    public static sw1<Integer, sd0, C3898c> f35480d = new sw1<>();
+
+    /* renamed from: a */
+    public List<RadioButton> f35481a;
+
+    /* renamed from: b */
+    public List<CheckBox> f35482b;
+
+    /* renamed from: com.daaw.zt1$a */
     /* loaded from: classes.dex */
-    public class a implements CompoundButton.OnCheckedChangeListener {
-        public final /* synthetic */ sd0 a;
+    public class C3896a implements CompoundButton.OnCheckedChangeListener {
 
-        public a(sd0 sd0Var) {
-            this.a = sd0Var;
+        /* renamed from: a */
+        public final /* synthetic */ sd0 f35483a;
+
+        public C3896a(sd0 sd0Var) {
+            this.f35483a = sd0Var;
         }
 
         @Override // android.widget.CompoundButton.OnCheckedChangeListener
         public void onCheckedChanged(CompoundButton compoundButton, boolean z) {
-            zt1.this.c(-1, this.a);
+            zt1.this.m1917c(-1, this.f35483a);
         }
     }
 
+    /* renamed from: com.daaw.zt1$b */
     /* loaded from: classes.dex */
-    public class b implements RadioGroup.OnCheckedChangeListener {
-        public final /* synthetic */ sd0 a;
+    public class C3897b implements RadioGroup.OnCheckedChangeListener {
 
-        public b(sd0 sd0Var) {
-            this.a = sd0Var;
+        /* renamed from: a */
+        public final /* synthetic */ sd0 f35485a;
+
+        public C3897b(sd0 sd0Var) {
+            this.f35485a = sd0Var;
         }
 
         @Override // android.widget.RadioGroup.OnCheckedChangeListener
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            zt1.this.c(-1, this.a);
+            zt1.this.m1917c(-1, this.f35485a);
         }
     }
 
+    /* renamed from: com.daaw.zt1$c */
     /* loaded from: classes.dex */
-    public static class c {
-        public int a;
-        public boolean b;
+    public static class C3898c {
+
+        /* renamed from: a */
+        public int f35487a;
+
+        /* renamed from: b */
+        public boolean f35488b;
     }
 
-    public zt1(al alVar, View view, String str) {
+    public zt1(C0645al c0645al, View view, String str) {
         super(view.getContext(), (AttributeSet) null, 0, (int) R.style.MyListPopupWindowDarkStyle);
-        this.a = null;
-        this.b = null;
-        d(view.getContext(), view, str);
+        this.f35481a = null;
+        this.f35482b = null;
+        m1916d(view.getContext(), view, str);
     }
 
-    public static zt1 b(al alVar, View view, String str) {
-        return new zt1(alVar, view, str);
+    /* renamed from: b */
+    public static zt1 m1918b(C0645al c0645al, View view, String str) {
+        return new zt1(c0645al, view, str);
     }
 
-    public final void c(int i, sd0 sd0Var) {
-        if (this.a == null || this.b == null) {
+    /* renamed from: c */
+    public final void m1917c(int i, sd0 sd0Var) {
+        if (this.f35481a == null || this.f35482b == null) {
             return;
         }
         int i2 = 0;
         while (true) {
-            if (i2 >= this.a.size()) {
+            if (i2 >= this.f35481a.size()) {
                 i2 = 0;
                 break;
-            } else if (this.a.get(i2).isChecked()) {
+            } else if (this.f35481a.get(i2).isChecked()) {
                 break;
             } else {
                 i2++;
             }
         }
-        c cVar = new c();
-        cVar.a = i2;
-        cVar.b = this.b.get(0).isChecked();
-        d.a(Integer.valueOf(i), sd0Var, cVar);
+        C3898c c3898c = new C3898c();
+        c3898c.f35487a = i2;
+        c3898c.f35488b = this.f35482b.get(0).isChecked();
+        f35480d.m9795a(Integer.valueOf(i), sd0Var, c3898c);
     }
 
-    public void d(Context context, View view, String str) {
-        c a2 = c.a(-1, null, str, null);
+    /* renamed from: d */
+    public void m1916d(Context context, View view, String str) {
+        C3898c m3155a = f35479c.m3155a(-1, null, str, null);
         View inflate = View.inflate(view.getContext(), R.layout.popup_dialog_view, null);
         LinearLayout linearLayout = (LinearLayout) inflate.findViewById(R.id.layoutCheckOptions);
         RadioGroup radioGroup = (RadioGroup) inflate.findViewById(R.id.radioGroupOptions);
         Space space = (Space) inflate.findViewById(R.id.space);
-        this.a = new ArrayList();
-        this.b = new ArrayList();
-        this.a.add((RadioButton) inflate.findViewById(R.id.radioViewSmall));
-        this.a.add((RadioButton) inflate.findViewById(R.id.radioViewMedium));
-        this.a.add((RadioButton) inflate.findViewById(R.id.radioViewLarge));
-        this.b.add((CheckBox) inflate.findViewById(R.id.chkShowArt));
-        int i = a2.a;
-        if (i >= 0 && i < this.a.size()) {
-            radioGroup.check(this.a.get(a2.a).getId());
+        this.f35481a = new ArrayList();
+        this.f35482b = new ArrayList();
+        this.f35481a.add((RadioButton) inflate.findViewById(R.id.radioViewSmall));
+        this.f35481a.add((RadioButton) inflate.findViewById(R.id.radioViewMedium));
+        this.f35481a.add((RadioButton) inflate.findViewById(R.id.radioViewLarge));
+        this.f35482b.add((CheckBox) inflate.findViewById(R.id.chkShowArt));
+        int i = m3155a.f35487a;
+        if (i >= 0 && i < this.f35481a.size()) {
+            radioGroup.check(this.f35481a.get(m3155a.f35487a).getId());
         }
-        this.b.get(0).setChecked(a2.b);
-        for (CheckBox checkBox : this.b) {
-            checkBox.setOnCheckedChangeListener(new a(null));
+        this.f35482b.get(0).setChecked(m3155a.f35488b);
+        for (CheckBox checkBox : this.f35482b) {
+            checkBox.setOnCheckedChangeListener(new C3896a(null));
         }
-        radioGroup.setOnCheckedChangeListener(new b(null));
+        radioGroup.setOnCheckedChangeListener(new C3897b(null));
         setContentView(inflate);
         setHeight(-2);
         setWidth(-2);

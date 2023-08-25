@@ -11,23 +11,27 @@ import javax.annotation.ParametersAreNonnullByDefault;
 /* loaded from: classes.dex */
 public final class zzcdy extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzcdy> CREATOR = new kw3();
-    public final String p;
-    public final String q;
+
+    /* renamed from: p */
+    public final String f36979p;
+
+    /* renamed from: q */
+    public final String f36980q;
 
     public zzcdy(ServerSideVerificationOptions serverSideVerificationOptions) {
         this(serverSideVerificationOptions.getUserId(), serverSideVerificationOptions.getCustomData());
     }
 
     public zzcdy(String str, String str2) {
-        this.p = str;
-        this.q = str2;
+        this.f36979p = str;
+        this.f36980q = str2;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.q(parcel, 1, this.p, false);
-        z71.q(parcel, 2, this.q, false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2717q(parcel, 1, this.f36979p, false);
+        z71.m2717q(parcel, 2, this.f36980q, false);
+        z71.m2732b(parcel, m2733a);
     }
 }

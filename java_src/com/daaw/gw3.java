@@ -4,15 +4,17 @@ import android.os.RemoteException;
 import com.google.android.gms.ads.rewarded.RewardItem;
 /* loaded from: classes.dex */
 public final class gw3 implements RewardItem {
-    public final tv3 a;
+
+    /* renamed from: a */
+    public final tv3 f11778a;
 
     public gw3(tv3 tv3Var) {
-        this.a = tv3Var;
+        this.f11778a = tv3Var;
     }
 
     @Override // com.google.android.gms.ads.rewarded.RewardItem
     public final int getAmount() {
-        tv3 tv3Var = this.a;
+        tv3 tv3Var = this.f11778a;
         if (tv3Var != null) {
             try {
                 return tv3Var.zze();
@@ -25,7 +27,7 @@ public final class gw3 implements RewardItem {
 
     @Override // com.google.android.gms.ads.rewarded.RewardItem
     public final String getType() {
-        tv3 tv3Var = this.a;
+        tv3 tv3Var = this.f11778a;
         if (tv3Var != null) {
             try {
                 return tv3Var.zzf();

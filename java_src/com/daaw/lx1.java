@@ -14,29 +14,38 @@ import android.view.accessibility.AccessibilityEvent;
 import java.util.List;
 /* loaded from: classes.dex */
 public class lx1 implements Window.Callback {
-    public final Window.Callback p;
 
+    /* renamed from: p */
+    public final Window.Callback f17888p;
+
+    /* renamed from: com.daaw.lx1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static boolean a(Window.Callback callback, SearchEvent searchEvent) {
+    public static class C2131a {
+        /* renamed from: a */
+        public static boolean m16390a(Window.Callback callback, SearchEvent searchEvent) {
             return callback.onSearchRequested(searchEvent);
         }
 
-        public static ActionMode b(Window.Callback callback, ActionMode.Callback callback2, int i) {
+        /* renamed from: b */
+        public static ActionMode m16389b(Window.Callback callback, ActionMode.Callback callback2, int i) {
             return callback.onWindowStartingActionMode(callback2, i);
         }
     }
 
+    /* renamed from: com.daaw.lx1$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public static void a(Window.Callback callback, List<KeyboardShortcutGroup> list, Menu menu, int i) {
+    public static class C2132b {
+        /* renamed from: a */
+        public static void m16388a(Window.Callback callback, List<KeyboardShortcutGroup> list, Menu menu, int i) {
             callback.onProvideKeyboardShortcuts(list, menu, i);
         }
     }
 
+    /* renamed from: com.daaw.lx1$c */
     /* loaded from: classes.dex */
-    public static class c {
-        public static void a(Window.Callback callback, boolean z) {
+    public static class C2133c {
+        /* renamed from: a */
+        public static void m16387a(Window.Callback callback, boolean z) {
             callback.onPointerCaptureChanged(z);
         }
     }
@@ -45,130 +54,131 @@ public class lx1 implements Window.Callback {
         if (callback == null) {
             throw new IllegalArgumentException("Window callback may not be null");
         }
-        this.p = callback;
+        this.f17888p = callback;
     }
 
-    public final Window.Callback a() {
-        return this.p;
+    /* renamed from: a */
+    public final Window.Callback m16391a() {
+        return this.f17888p;
     }
 
     @Override // android.view.Window.Callback
     public boolean dispatchGenericMotionEvent(MotionEvent motionEvent) {
-        return this.p.dispatchGenericMotionEvent(motionEvent);
+        return this.f17888p.dispatchGenericMotionEvent(motionEvent);
     }
 
     @Override // android.view.Window.Callback
     public boolean dispatchKeyEvent(KeyEvent keyEvent) {
-        return this.p.dispatchKeyEvent(keyEvent);
+        return this.f17888p.dispatchKeyEvent(keyEvent);
     }
 
     @Override // android.view.Window.Callback
     public boolean dispatchKeyShortcutEvent(KeyEvent keyEvent) {
-        return this.p.dispatchKeyShortcutEvent(keyEvent);
+        return this.f17888p.dispatchKeyShortcutEvent(keyEvent);
     }
 
     @Override // android.view.Window.Callback
     public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
-        return this.p.dispatchPopulateAccessibilityEvent(accessibilityEvent);
+        return this.f17888p.dispatchPopulateAccessibilityEvent(accessibilityEvent);
     }
 
     @Override // android.view.Window.Callback
     public boolean dispatchTouchEvent(MotionEvent motionEvent) {
-        return this.p.dispatchTouchEvent(motionEvent);
+        return this.f17888p.dispatchTouchEvent(motionEvent);
     }
 
     @Override // android.view.Window.Callback
     public boolean dispatchTrackballEvent(MotionEvent motionEvent) {
-        return this.p.dispatchTrackballEvent(motionEvent);
+        return this.f17888p.dispatchTrackballEvent(motionEvent);
     }
 
     @Override // android.view.Window.Callback
     public void onActionModeFinished(ActionMode actionMode) {
-        this.p.onActionModeFinished(actionMode);
+        this.f17888p.onActionModeFinished(actionMode);
     }
 
     @Override // android.view.Window.Callback
     public void onActionModeStarted(ActionMode actionMode) {
-        this.p.onActionModeStarted(actionMode);
+        this.f17888p.onActionModeStarted(actionMode);
     }
 
     @Override // android.view.Window.Callback
     public void onAttachedToWindow() {
-        this.p.onAttachedToWindow();
+        this.f17888p.onAttachedToWindow();
     }
 
     @Override // android.view.Window.Callback
     public boolean onCreatePanelMenu(int i, Menu menu) {
-        return this.p.onCreatePanelMenu(i, menu);
+        return this.f17888p.onCreatePanelMenu(i, menu);
     }
 
     @Override // android.view.Window.Callback
     public View onCreatePanelView(int i) {
-        return this.p.onCreatePanelView(i);
+        return this.f17888p.onCreatePanelView(i);
     }
 
     @Override // android.view.Window.Callback
     public void onDetachedFromWindow() {
-        this.p.onDetachedFromWindow();
+        this.f17888p.onDetachedFromWindow();
     }
 
     @Override // android.view.Window.Callback
     public boolean onMenuItemSelected(int i, MenuItem menuItem) {
-        return this.p.onMenuItemSelected(i, menuItem);
+        return this.f17888p.onMenuItemSelected(i, menuItem);
     }
 
     @Override // android.view.Window.Callback
     public boolean onMenuOpened(int i, Menu menu) {
-        return this.p.onMenuOpened(i, menu);
+        return this.f17888p.onMenuOpened(i, menu);
     }
 
     @Override // android.view.Window.Callback
     public void onPanelClosed(int i, Menu menu) {
-        this.p.onPanelClosed(i, menu);
+        this.f17888p.onPanelClosed(i, menu);
     }
 
     @Override // android.view.Window.Callback
     public void onPointerCaptureChanged(boolean z) {
-        c.a(this.p, z);
+        C2133c.m16387a(this.f17888p, z);
     }
 
     @Override // android.view.Window.Callback
     public boolean onPreparePanel(int i, View view, Menu menu) {
-        return this.p.onPreparePanel(i, view, menu);
+        return this.f17888p.onPreparePanel(i, view, menu);
     }
 
     @Override // android.view.Window.Callback
     public void onProvideKeyboardShortcuts(List<KeyboardShortcutGroup> list, Menu menu, int i) {
-        b.a(this.p, list, menu, i);
+        C2132b.m16388a(this.f17888p, list, menu, i);
     }
 
     @Override // android.view.Window.Callback
     public boolean onSearchRequested() {
-        return this.p.onSearchRequested();
+        return this.f17888p.onSearchRequested();
     }
 
     @Override // android.view.Window.Callback
     public boolean onSearchRequested(SearchEvent searchEvent) {
-        return a.a(this.p, searchEvent);
+        return C2131a.m16390a(this.f17888p, searchEvent);
     }
 
     @Override // android.view.Window.Callback
     public void onWindowAttributesChanged(WindowManager.LayoutParams layoutParams) {
-        this.p.onWindowAttributesChanged(layoutParams);
+        this.f17888p.onWindowAttributesChanged(layoutParams);
     }
 
     @Override // android.view.Window.Callback
     public void onWindowFocusChanged(boolean z) {
-        this.p.onWindowFocusChanged(z);
+        this.f17888p.onWindowFocusChanged(z);
     }
 
     @Override // android.view.Window.Callback
     public ActionMode onWindowStartingActionMode(ActionMode.Callback callback) {
-        return this.p.onWindowStartingActionMode(callback);
+        return this.f17888p.onWindowStartingActionMode(callback);
     }
 
     @Override // android.view.Window.Callback
     public ActionMode onWindowStartingActionMode(ActionMode.Callback callback, int i) {
-        return a.b(this.p, callback, i);
+        return C2131a.m16389b(this.f17888p, callback, i);
     }
 }

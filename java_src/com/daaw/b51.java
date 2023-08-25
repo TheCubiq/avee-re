@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface b51 {
-    void a(Exception exc);
+    /* renamed from: a */
+    void mo21159a(Exception exc);
 
-    void d(z41<?> z41Var);
+    /* renamed from: d */
+    void mo21156d(z41<?> z41Var);
 }

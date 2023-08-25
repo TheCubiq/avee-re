@@ -4,11 +4,14 @@ import android.os.IInterface;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public interface ro3 extends IInterface {
-    void P2(yd0 yd0Var);
+    /* renamed from: P2 */
+    void mo11107P2(yd0 yd0Var);
 
-    void U2(mn3 mn3Var);
+    /* renamed from: U2 */
+    void mo11106U2(mn3 mn3Var);
 
-    void a(String str);
+    /* renamed from: a */
+    void mo11105a(String str);
 
     void zzf(zze zzeVar);
 }

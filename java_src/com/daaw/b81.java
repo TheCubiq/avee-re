@@ -7,220 +7,279 @@ import java.io.EOFException;
 import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public final class b81 implements sm1 {
-    public final l2 a;
-    public final int b;
-    public final a81 c;
-    public final a81.a d;
-    public final rv0 e;
-    public a f;
-    public a g;
-    public a h;
-    public Format i;
-    public boolean j;
-    public Format k;
-    public long l;
-    public long m;
-    public boolean n;
-    public b o;
 
+    /* renamed from: a */
+    public final InterfaceC2006l2 f4518a;
+
+    /* renamed from: b */
+    public final int f4519b;
+
+    /* renamed from: c */
+    public final a81 f4520c;
+
+    /* renamed from: d */
+    public final a81.C0610a f4521d;
+
+    /* renamed from: e */
+    public final rv0 f4522e;
+
+    /* renamed from: f */
+    public C0825a f4523f;
+
+    /* renamed from: g */
+    public C0825a f4524g;
+
+    /* renamed from: h */
+    public C0825a f4525h;
+
+    /* renamed from: i */
+    public Format f4526i;
+
+    /* renamed from: j */
+    public boolean f4527j;
+
+    /* renamed from: k */
+    public Format f4528k;
+
+    /* renamed from: l */
+    public long f4529l;
+
+    /* renamed from: m */
+    public long f4530m;
+
+    /* renamed from: n */
+    public boolean f4531n;
+
+    /* renamed from: o */
+    public InterfaceC0826b f4532o;
+
+    /* renamed from: com.daaw.b81$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final long a;
-        public final long b;
-        public boolean c;
-        public k2 d;
-        public a e;
+    public static final class C0825a {
 
-        public a(long j, int i) {
-            this.a = j;
-            this.b = j + i;
+        /* renamed from: a */
+        public final long f4533a;
+
+        /* renamed from: b */
+        public final long f4534b;
+
+        /* renamed from: c */
+        public boolean f4535c;
+
+        /* renamed from: d */
+        public C1896k2 f4536d;
+
+        /* renamed from: e */
+        public C0825a f4537e;
+
+        public C0825a(long j, int i) {
+            this.f4533a = j;
+            this.f4534b = j + i;
         }
 
-        public a a() {
-            this.d = null;
-            a aVar = this.e;
-            this.e = null;
-            return aVar;
+        /* renamed from: a */
+        public C0825a m26331a() {
+            this.f4536d = null;
+            C0825a c0825a = this.f4537e;
+            this.f4537e = null;
+            return c0825a;
         }
 
-        public void b(k2 k2Var, a aVar) {
-            this.d = k2Var;
-            this.e = aVar;
-            this.c = true;
+        /* renamed from: b */
+        public void m26330b(C1896k2 c1896k2, C0825a c0825a) {
+            this.f4536d = c1896k2;
+            this.f4537e = c0825a;
+            this.f4535c = true;
         }
 
-        public int c(long j) {
-            return ((int) (j - this.a)) + this.d.b;
+        /* renamed from: c */
+        public int m26329c(long j) {
+            return ((int) (j - this.f4533a)) + this.f4536d.f15607b;
         }
     }
 
+    /* renamed from: com.daaw.b81$b */
     /* loaded from: classes.dex */
-    public interface b {
-        void j(Format format);
+    public interface InterfaceC0826b {
+        /* renamed from: j */
+        void mo11473j(Format format);
     }
 
-    public b81(l2 l2Var) {
-        this.a = l2Var;
-        int e = l2Var.e();
-        this.b = e;
-        this.c = new a81();
-        this.d = new a81.a();
-        this.e = new rv0(32);
-        a aVar = new a(0L, e);
-        this.f = aVar;
-        this.g = aVar;
-        this.h = aVar;
+    public b81(InterfaceC2006l2 interfaceC2006l2) {
+        this.f4518a = interfaceC2006l2;
+        int mo17197e = interfaceC2006l2.mo17197e();
+        this.f4519b = mo17197e;
+        this.f4520c = new a81();
+        this.f4521d = new a81.C0610a();
+        this.f4522e = new rv0(32);
+        C0825a c0825a = new C0825a(0L, mo17197e);
+        this.f4523f = c0825a;
+        this.f4524g = c0825a;
+        this.f4525h = c0825a;
     }
 
-    public static Format n(Format format, long j) {
+    /* renamed from: n */
+    public static Format m26344n(Format format, long j) {
         if (format == null) {
             return null;
         }
         if (j != 0) {
-            long j2 = format.L;
-            return j2 != Long.MAX_VALUE ? format.l(j2 + j) : format;
+            long j2 = format.f35711L;
+            return j2 != Long.MAX_VALUE ? format.m1726l(j2 + j) : format;
         }
         return format;
     }
 
-    public final void A(long j, byte[] bArr, int i) {
-        e(j);
+    /* renamed from: A */
+    public final void m26363A(long j, byte[] bArr, int i) {
+        m26353e(j);
         int i2 = i;
         while (i2 > 0) {
-            int min = Math.min(i2, (int) (this.g.b - j));
-            a aVar = this.g;
-            System.arraycopy(aVar.d.a, aVar.c(j), bArr, i - i2, min);
+            int min = Math.min(i2, (int) (this.f4524g.f4534b - j));
+            C0825a c0825a = this.f4524g;
+            System.arraycopy(c0825a.f4536d.f15606a, c0825a.m26329c(j), bArr, i - i2, min);
             i2 -= min;
             j += min;
-            a aVar2 = this.g;
-            if (j == aVar2.b) {
-                this.g = aVar2.e;
+            C0825a c0825a2 = this.f4524g;
+            if (j == c0825a2.f4534b) {
+                this.f4524g = c0825a2.f4537e;
             }
         }
     }
 
-    public final void B(gq gqVar, a81.a aVar) {
+    /* renamed from: B */
+    public final void m26362B(C1454gq c1454gq, a81.C0610a c0610a) {
         int i;
-        long j = aVar.b;
-        this.e.G(1);
-        A(j, this.e.a, 1);
+        long j = c0610a.f2986b;
+        this.f4522e.m10924G(1);
+        m26363A(j, this.f4522e.f25637a, 1);
         long j2 = j + 1;
-        byte b2 = this.e.a[0];
-        boolean z = (b2 & 128) != 0;
-        int i2 = b2 & Byte.MAX_VALUE;
-        jn jnVar = gqVar.q;
-        if (jnVar.a == null) {
-            jnVar.a = new byte[16];
+        byte b = this.f4522e.f25637a[0];
+        boolean z = (b & 128) != 0;
+        int i2 = b & Byte.MAX_VALUE;
+        C1845jn c1845jn = c1454gq.f11564q;
+        if (c1845jn.f15217a == null) {
+            c1845jn.f15217a = new byte[16];
         }
-        A(j2, jnVar.a, i2);
+        m26363A(j2, c1845jn.f15217a, i2);
         long j3 = j2 + i2;
         if (z) {
-            this.e.G(2);
-            A(j3, this.e.a, 2);
+            this.f4522e.m10924G(2);
+            m26363A(j3, this.f4522e.f25637a, 2);
             j3 += 2;
-            i = this.e.D();
+            i = this.f4522e.m10927D();
         } else {
             i = 1;
         }
-        jn jnVar2 = gqVar.q;
-        int[] iArr = jnVar2.d;
+        C1845jn c1845jn2 = c1454gq.f11564q;
+        int[] iArr = c1845jn2.f15220d;
         if (iArr == null || iArr.length < i) {
             iArr = new int[i];
         }
         int[] iArr2 = iArr;
-        int[] iArr3 = jnVar2.e;
+        int[] iArr3 = c1845jn2.f15221e;
         if (iArr3 == null || iArr3.length < i) {
             iArr3 = new int[i];
         }
         int[] iArr4 = iArr3;
         if (z) {
             int i3 = i * 6;
-            this.e.G(i3);
-            A(j3, this.e.a, i3);
+            this.f4522e.m10924G(i3);
+            m26363A(j3, this.f4522e.f25637a, i3);
             j3 += i3;
-            this.e.J(0);
+            this.f4522e.m10921J(0);
             for (int i4 = 0; i4 < i; i4++) {
-                iArr2[i4] = this.e.D();
-                iArr4[i4] = this.e.B();
+                iArr2[i4] = this.f4522e.m10927D();
+                iArr4[i4] = this.f4522e.m10929B();
             }
         } else {
             iArr2[0] = 0;
-            iArr4[0] = aVar.a - ((int) (j3 - aVar.b));
+            iArr4[0] = c0610a.f2985a - ((int) (j3 - c0610a.f2986b));
         }
-        sm1.a aVar2 = aVar.c;
-        jn jnVar3 = gqVar.q;
-        jnVar3.c(i, iArr2, iArr4, aVar2.b, jnVar3.a, aVar2.a, aVar2.c, aVar2.d);
-        long j4 = aVar.b;
+        sm1.C2956a c2956a = c0610a.f2987c;
+        C1845jn c1845jn3 = c1454gq.f11564q;
+        c1845jn3.m18402c(i, iArr2, iArr4, c2956a.f26413b, c1845jn3.f15217a, c2956a.f26412a, c2956a.f26414c, c2956a.f26415d);
+        long j4 = c0610a.f2986b;
         int i5 = (int) (j3 - j4);
-        aVar.b = j4 + i5;
-        aVar.a -= i5;
+        c0610a.f2986b = j4 + i5;
+        c0610a.f2985a -= i5;
     }
 
-    public void C() {
-        D(false);
+    /* renamed from: C */
+    public void m26361C() {
+        m26360D(false);
     }
 
-    public void D(boolean z) {
-        this.c.x(z);
-        h(this.f);
-        a aVar = new a(0L, this.b);
-        this.f = aVar;
-        this.g = aVar;
-        this.h = aVar;
-        this.m = 0L;
-        this.a.b();
+    /* renamed from: D */
+    public void m26360D(boolean z) {
+        this.f4520c.m27561x(z);
+        m26350h(this.f4523f);
+        C0825a c0825a = new C0825a(0L, this.f4519b);
+        this.f4523f = c0825a;
+        this.f4524g = c0825a;
+        this.f4525h = c0825a;
+        this.f4530m = 0L;
+        this.f4518a.mo17200b();
     }
 
-    public void E() {
-        this.c.y();
-        this.g = this.f;
+    /* renamed from: E */
+    public void m26359E() {
+        this.f4520c.m27560y();
+        this.f4524g = this.f4523f;
     }
 
-    public boolean F(int i) {
-        return this.c.z(i);
+    /* renamed from: F */
+    public boolean m26358F(int i) {
+        return this.f4520c.m27559z(i);
     }
 
-    public void G(long j) {
-        if (this.l != j) {
-            this.l = j;
-            this.j = true;
+    /* renamed from: G */
+    public void m26357G(long j) {
+        if (this.f4529l != j) {
+            this.f4529l = j;
+            this.f4527j = true;
         }
     }
 
-    public void H(b bVar) {
-        this.o = bVar;
+    /* renamed from: H */
+    public void m26356H(InterfaceC0826b interfaceC0826b) {
+        this.f4532o = interfaceC0826b;
     }
 
-    public void I(int i) {
-        this.c.A(i);
+    /* renamed from: I */
+    public void m26355I(int i) {
+        this.f4520c.m27585A(i);
     }
 
-    public void J() {
-        this.n = true;
+    /* renamed from: J */
+    public void m26354J() {
+        this.f4531n = true;
     }
 
     @Override // com.daaw.sm1
-    public void a(long j, int i, int i2, int i3, sm1.a aVar) {
-        if (this.j) {
-            d(this.k);
+    /* renamed from: a */
+    public void mo10159a(long j, int i, int i2, int i3, sm1.C2956a c2956a) {
+        if (this.f4527j) {
+            mo10156d(this.f4528k);
         }
-        if (this.n) {
-            if ((i & 1) == 0 || !this.c.c(j)) {
+        if (this.f4531n) {
+            if ((i & 1) == 0 || !this.f4520c.m27582c(j)) {
                 return;
             }
-            this.n = false;
+            this.f4531n = false;
         }
-        this.c.d(j + this.l, i, (this.m - i2) - i3, i2, aVar);
+        this.f4520c.m27581d(j + this.f4529l, i, (this.f4530m - i2) - i3, i2, c2956a);
     }
 
     @Override // com.daaw.sm1
-    public int b(a00 a00Var, int i, boolean z) {
-        int x = x(i);
-        a aVar = this.h;
-        int b2 = a00Var.b(aVar.d.a, aVar.c(this.m), x);
-        if (b2 != -1) {
-            w(b2);
-            return b2;
+    /* renamed from: b */
+    public int mo10158b(a00 a00Var, int i, boolean z) {
+        int m26334x = m26334x(i);
+        C0825a c0825a = this.f4525h;
+        int mo5865b = a00Var.mo5865b(c0825a.f4536d.f15606a, c0825a.m26329c(this.f4530m), m26334x);
+        if (mo5865b != -1) {
+            m26335w(mo5865b);
+            return mo5865b;
         } else if (z) {
             return -1;
         } else {
@@ -229,207 +288,230 @@ public final class b81 implements sm1 {
     }
 
     @Override // com.daaw.sm1
-    public void c(rv0 rv0Var, int i) {
+    /* renamed from: c */
+    public void mo10157c(rv0 rv0Var, int i) {
         while (i > 0) {
-            int x = x(i);
-            a aVar = this.h;
-            rv0Var.g(aVar.d.a, aVar.c(this.m), x);
-            i -= x;
-            w(x);
+            int m26334x = m26334x(i);
+            C0825a c0825a = this.f4525h;
+            rv0Var.m10913g(c0825a.f4536d.f15606a, c0825a.m26329c(this.f4530m), m26334x);
+            i -= m26334x;
+            m26335w(m26334x);
         }
     }
 
     @Override // com.daaw.sm1
-    public void d(Format format) {
-        Format n = n(format, this.l);
-        boolean l = this.c.l(n);
-        this.k = format;
-        this.j = false;
-        b bVar = this.o;
-        if (bVar == null || !l) {
+    /* renamed from: d */
+    public void mo10156d(Format format) {
+        Format m26344n = m26344n(format, this.f4529l);
+        boolean m27573l = this.f4520c.m27573l(m26344n);
+        this.f4528k = format;
+        this.f4527j = false;
+        InterfaceC0826b interfaceC0826b = this.f4532o;
+        if (interfaceC0826b == null || !m27573l) {
             return;
         }
-        bVar.j(n);
+        interfaceC0826b.mo11473j(m26344n);
     }
 
-    public final void e(long j) {
+    /* renamed from: e */
+    public final void m26353e(long j) {
         while (true) {
-            a aVar = this.g;
-            if (j < aVar.b) {
+            C0825a c0825a = this.f4524g;
+            if (j < c0825a.f4534b) {
                 return;
             }
-            this.g = aVar.e;
+            this.f4524g = c0825a.f4537e;
         }
     }
 
-    public int f(long j, boolean z, boolean z2) {
-        return this.c.a(j, z, z2);
+    /* renamed from: f */
+    public int m26352f(long j, boolean z, boolean z2) {
+        return this.f4520c.m27584a(j, z, z2);
     }
 
-    public int g() {
-        return this.c.b();
+    /* renamed from: g */
+    public int m26351g() {
+        return this.f4520c.m27583b();
     }
 
-    public final void h(a aVar) {
-        if (aVar.c) {
-            a aVar2 = this.h;
-            int i = (aVar2.c ? 1 : 0) + (((int) (aVar2.a - aVar.a)) / this.b);
-            k2[] k2VarArr = new k2[i];
+    /* renamed from: h */
+    public final void m26350h(C0825a c0825a) {
+        if (c0825a.f4535c) {
+            C0825a c0825a2 = this.f4525h;
+            int i = (c0825a2.f4535c ? 1 : 0) + (((int) (c0825a2.f4533a - c0825a.f4533a)) / this.f4519b);
+            C1896k2[] c1896k2Arr = new C1896k2[i];
             for (int i2 = 0; i2 < i; i2++) {
-                k2VarArr[i2] = aVar.d;
-                aVar = aVar.a();
+                c1896k2Arr[i2] = c0825a.f4536d;
+                c0825a = c0825a.m26331a();
             }
-            this.a.d(k2VarArr);
+            this.f4518a.mo17198d(c1896k2Arr);
         }
     }
 
-    public final void i(long j) {
-        a aVar;
+    /* renamed from: i */
+    public final void m26349i(long j) {
+        C0825a c0825a;
         if (j == -1) {
             return;
         }
         while (true) {
-            aVar = this.f;
-            if (j < aVar.b) {
+            c0825a = this.f4523f;
+            if (j < c0825a.f4534b) {
                 break;
             }
-            this.a.c(aVar.d);
-            this.f = this.f.a();
+            this.f4518a.mo17199c(c0825a.f4536d);
+            this.f4523f = this.f4523f.m26331a();
         }
-        if (this.g.a < aVar.a) {
-            this.g = aVar;
+        if (this.f4524g.f4533a < c0825a.f4533a) {
+            this.f4524g = c0825a;
         }
     }
 
-    public void j(long j, boolean z, boolean z2) {
-        i(this.c.g(j, z, z2));
+    /* renamed from: j */
+    public void m26348j(long j, boolean z, boolean z2) {
+        m26349i(this.f4520c.m27578g(j, z, z2));
     }
 
-    public void k() {
-        i(this.c.h());
+    /* renamed from: k */
+    public void m26347k() {
+        m26349i(this.f4520c.m27577h());
     }
 
-    public void l() {
-        i(this.c.i());
+    /* renamed from: l */
+    public void m26346l() {
+        m26349i(this.f4520c.m27576i());
     }
 
-    public void m(int i) {
-        long j = this.c.j(i);
-        this.m = j;
-        if (j != 0) {
-            a aVar = this.f;
-            if (j != aVar.a) {
-                while (this.m > aVar.b) {
-                    aVar = aVar.e;
+    /* renamed from: m */
+    public void m26345m(int i) {
+        long m27575j = this.f4520c.m27575j(i);
+        this.f4530m = m27575j;
+        if (m27575j != 0) {
+            C0825a c0825a = this.f4523f;
+            if (m27575j != c0825a.f4533a) {
+                while (this.f4530m > c0825a.f4534b) {
+                    c0825a = c0825a.f4537e;
                 }
-                a aVar2 = aVar.e;
-                h(aVar2);
-                a aVar3 = new a(aVar.b, this.b);
-                aVar.e = aVar3;
-                if (this.m == aVar.b) {
-                    aVar = aVar3;
+                C0825a c0825a2 = c0825a.f4537e;
+                m26350h(c0825a2);
+                C0825a c0825a3 = new C0825a(c0825a.f4534b, this.f4519b);
+                c0825a.f4537e = c0825a3;
+                if (this.f4530m == c0825a.f4534b) {
+                    c0825a = c0825a3;
                 }
-                this.h = aVar;
-                if (this.g == aVar2) {
-                    this.g = aVar3;
+                this.f4525h = c0825a;
+                if (this.f4524g == c0825a2) {
+                    this.f4524g = c0825a3;
                     return;
                 }
                 return;
             }
         }
-        h(this.f);
-        a aVar4 = new a(this.m, this.b);
-        this.f = aVar4;
-        this.g = aVar4;
-        this.h = aVar4;
+        m26350h(this.f4523f);
+        C0825a c0825a4 = new C0825a(this.f4530m, this.f4519b);
+        this.f4523f = c0825a4;
+        this.f4524g = c0825a4;
+        this.f4525h = c0825a4;
     }
 
-    public int o() {
-        return this.c.m();
+    /* renamed from: o */
+    public int m26343o() {
+        return this.f4520c.m27572m();
     }
 
-    public long p() {
-        return this.c.n();
+    /* renamed from: p */
+    public long m26342p() {
+        return this.f4520c.m27571n();
     }
 
-    public long q() {
-        return this.c.o();
+    /* renamed from: q */
+    public long m26341q() {
+        return this.f4520c.m27570o();
     }
 
-    public int r() {
-        return this.c.q();
+    /* renamed from: r */
+    public int m26340r() {
+        return this.f4520c.m27568q();
     }
 
-    public Format s() {
-        return this.c.s();
+    /* renamed from: s */
+    public Format m26339s() {
+        return this.f4520c.m27566s();
     }
 
-    public int t() {
-        return this.c.t();
+    /* renamed from: t */
+    public int m26338t() {
+        return this.f4520c.m27565t();
     }
 
-    public boolean u() {
-        return this.c.u();
+    /* renamed from: u */
+    public boolean m26337u() {
+        return this.f4520c.m27564u();
     }
 
-    public int v() {
-        return this.c.v();
+    /* renamed from: v */
+    public int m26336v() {
+        return this.f4520c.m27563v();
     }
 
-    public final void w(int i) {
-        long j = this.m + i;
-        this.m = j;
-        a aVar = this.h;
-        if (j == aVar.b) {
-            this.h = aVar.e;
+    /* renamed from: w */
+    public final void m26335w(int i) {
+        long j = this.f4530m + i;
+        this.f4530m = j;
+        C0825a c0825a = this.f4525h;
+        if (j == c0825a.f4534b) {
+            this.f4525h = c0825a.f4537e;
         }
     }
 
-    public final int x(int i) {
-        a aVar = this.h;
-        if (!aVar.c) {
-            aVar.b(this.a.a(), new a(this.h.b, this.b));
+    /* renamed from: x */
+    public final int m26334x(int i) {
+        C0825a c0825a = this.f4525h;
+        if (!c0825a.f4535c) {
+            c0825a.m26330b(this.f4518a.mo17201a(), new C0825a(this.f4525h.f4534b, this.f4519b));
         }
-        return Math.min(i, (int) (this.h.b - this.m));
+        return Math.min(i, (int) (this.f4525h.f4534b - this.f4530m));
     }
 
-    public int y(k30 k30Var, gq gqVar, boolean z, boolean z2, long j) {
-        int w = this.c.w(k30Var, gqVar, z, z2, this.i, this.d);
-        if (w == -5) {
-            this.i = k30Var.a;
+    /* renamed from: y */
+    public int m26333y(k30 k30Var, C1454gq c1454gq, boolean z, boolean z2, long j) {
+        int m27562w = this.f4520c.m27562w(k30Var, c1454gq, z, z2, this.f4526i, this.f4521d);
+        if (m27562w == -5) {
+            this.f4526i = k30Var.f15633a;
             return -5;
-        } else if (w != -4) {
-            if (w == -3) {
+        } else if (m27562w != -4) {
+            if (m27562w == -3) {
                 return -3;
             }
             throw new IllegalStateException();
         } else {
-            if (!gqVar.j()) {
-                if (gqVar.s < j) {
-                    gqVar.e(Integer.MIN_VALUE);
+            if (!c1454gq.m11437j()) {
+                if (c1454gq.f11566s < j) {
+                    c1454gq.m11441e(Integer.MIN_VALUE);
                 }
-                if (gqVar.p()) {
-                    B(gqVar, this.d);
+                if (c1454gq.m21349p()) {
+                    m26362B(c1454gq, this.f4521d);
                 }
-                gqVar.n(this.d.a);
-                a81.a aVar = this.d;
-                z(aVar.b, gqVar.r, aVar.a);
+                c1454gq.m21351n(this.f4521d.f2985a);
+                a81.C0610a c0610a = this.f4521d;
+                m26332z(c0610a.f2986b, c1454gq.f11565r, c0610a.f2985a);
             }
             return -4;
         }
     }
 
-    public final void z(long j, ByteBuffer byteBuffer, int i) {
-        e(j);
+    /* renamed from: z */
+    public final void m26332z(long j, ByteBuffer byteBuffer, int i) {
+        m26353e(j);
         while (i > 0) {
-            int min = Math.min(i, (int) (this.g.b - j));
-            a aVar = this.g;
-            byteBuffer.put(aVar.d.a, aVar.c(j), min);
+            int min = Math.min(i, (int) (this.f4524g.f4534b - j));
+            C0825a c0825a = this.f4524g;
+            byteBuffer.put(c0825a.f4536d.f15606a, c0825a.m26329c(j), min);
             i -= min;
             j += min;
-            a aVar2 = this.g;
-            if (j == aVar2.b) {
-                this.g = aVar2.e;
+            C0825a c0825a2 = this.f4524g;
+            if (j == c0825a2.f4534b) {
+                this.f4524g = c0825a2.f4537e;
             }
         }
     }

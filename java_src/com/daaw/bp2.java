@@ -5,25 +5,31 @@ import android.os.IInterface;
 import android.os.Parcel;
 /* loaded from: classes.dex */
 public class bp2 implements IInterface {
-    public final IBinder p;
-    public final String q;
+
+    /* renamed from: p */
+    public final IBinder f5027p;
+
+    /* renamed from: q */
+    public final String f5028q;
 
     public bp2(IBinder iBinder, String str) {
-        this.p = iBinder;
-        this.q = str;
+        this.f5027p = iBinder;
+        this.f5028q = str;
     }
 
-    public final Parcel D() {
+    /* renamed from: D */
+    public final Parcel m25952D() {
         Parcel obtain = Parcel.obtain();
-        obtain.writeInterfaceToken(this.q);
+        obtain.writeInterfaceToken(this.f5028q);
         return obtain;
     }
 
-    public final Parcel I(int i, Parcel parcel) {
+    /* renamed from: I */
+    public final Parcel m25951I(int i, Parcel parcel) {
         Parcel obtain = Parcel.obtain();
         try {
             try {
-                this.p.transact(i, parcel, obtain, 0);
+                this.f5027p.transact(i, parcel, obtain, 0);
                 obtain.readException();
                 return obtain;
             } catch (RuntimeException e) {
@@ -35,10 +41,11 @@ public class bp2 implements IInterface {
         }
     }
 
-    public final void M(int i, Parcel parcel) {
+    /* renamed from: M */
+    public final void m25950M(int i, Parcel parcel) {
         Parcel obtain = Parcel.obtain();
         try {
-            this.p.transact(i, parcel, obtain, 0);
+            this.f5027p.transact(i, parcel, obtain, 0);
             obtain.readException();
         } finally {
             parcel.recycle();
@@ -48,12 +55,13 @@ public class bp2 implements IInterface {
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.p;
+        return this.f5027p;
     }
 
-    public final void g3(int i, Parcel parcel) {
+    /* renamed from: g3 */
+    public final void m25949g3(int i, Parcel parcel) {
         try {
-            this.p.transact(i, parcel, null, 1);
+            this.f5027p.transact(i, parcel, null, 1);
         } finally {
             parcel.recycle();
         }

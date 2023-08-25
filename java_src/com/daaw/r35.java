@@ -10,37 +10,53 @@ import java.util.Map;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public interface r35 {
-    void a(View view, MotionEvent motionEvent, View view2);
+    /* renamed from: a */
+    void mo11804a(View view, MotionEvent motionEvent, View view2);
 
-    void b(View view, Map map, Map map2, ImageView.ScaleType scaleType);
+    /* renamed from: b */
+    void mo11803b(View view, Map map, Map map2, ImageView.ScaleType scaleType);
 
-    void c(View view, Map map);
+    /* renamed from: c */
+    void mo11802c(View view, Map map);
 
-    boolean d(Bundle bundle);
+    /* renamed from: d */
+    boolean mo11801d(Bundle bundle);
 
-    void e(View view);
+    /* renamed from: e */
+    void mo11800e(View view);
 
-    void f(View view, Map map, Map map2, View.OnTouchListener onTouchListener, View.OnClickListener onClickListener);
+    /* renamed from: f */
+    void mo11799f(View view, Map map, Map map2, View.OnTouchListener onTouchListener, View.OnClickListener onClickListener);
 
-    void g(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType);
+    /* renamed from: g */
+    void mo11798g(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType);
 
-    void h(Bundle bundle);
+    /* renamed from: h */
+    void mo11797h(Bundle bundle);
 
-    void i(Bundle bundle);
+    /* renamed from: i */
+    void mo11796i(Bundle bundle);
 
-    JSONObject j(View view, Map map, Map map2, ImageView.ScaleType scaleType);
+    /* renamed from: j */
+    JSONObject mo11795j(View view, Map map, Map map2, ImageView.ScaleType scaleType);
 
-    void k(zzcs zzcsVar);
+    /* renamed from: k */
+    void mo11794k(zzcs zzcsVar);
 
-    void l(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType, int i);
+    /* renamed from: l */
+    void mo11793l(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType, int i);
 
-    void m(ve3 ve3Var);
+    /* renamed from: m */
+    void mo11792m(ve3 ve3Var);
 
-    void n(String str);
+    /* renamed from: n */
+    void mo11791n(String str);
 
-    void o(zzcw zzcwVar);
+    /* renamed from: o */
+    void mo11790o(zzcw zzcwVar);
 
-    JSONObject p(View view, Map map, Map map2, ImageView.ScaleType scaleType);
+    /* renamed from: p */
+    JSONObject mo11789p(View view, Map map, Map map2, ImageView.ScaleType scaleType);
 
     boolean zzA();
 

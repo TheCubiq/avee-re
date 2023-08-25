@@ -1,17 +1,22 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class db0 {
-    public static final char[] a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
-    public static final char[] b = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
-    public static String a(byte[] bArr) {
+    /* renamed from: a */
+    public static final char[] f6731a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+    /* renamed from: b */
+    public static final char[] f6732b = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+
+    /* renamed from: a */
+    public static String m24574a(byte[] bArr) {
         int length = bArr.length;
         char[] cArr = new char[length + length];
         int i = 0;
-        for (byte b2 : bArr) {
-            int i2 = b2 & 255;
+        for (byte b : bArr) {
+            int i2 = b & 255;
             int i3 = i + 1;
-            char[] cArr2 = b;
+            char[] cArr2 = f6732b;
             cArr[i] = cArr2[i2 >>> 4];
             i = i3 + 1;
             cArr[i3] = cArr2[i2 & 15];
@@ -19,18 +24,20 @@ public class db0 {
         return new String(cArr);
     }
 
-    public static String b(byte[] bArr, boolean z) {
+    /* renamed from: b */
+    public static String m24573b(byte[] bArr, boolean z) {
         int length = bArr.length;
         StringBuilder sb = new StringBuilder(length + length);
         for (int i = 0; i < length && (!z || i != length - 1 || (bArr[i] & 255) != 0); i++) {
-            char[] cArr = a;
+            char[] cArr = f6731a;
             sb.append(cArr[(bArr[i] & 240) >>> 4]);
             sb.append(cArr[bArr[i] & 15]);
         }
         return sb.toString();
     }
 
-    public static byte[] c(String str) {
+    /* renamed from: c */
+    public static byte[] m24572c(String str) {
         int length = str.length();
         if (length % 2 == 0) {
             byte[] bArr = new byte[length / 2];

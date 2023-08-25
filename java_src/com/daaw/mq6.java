@@ -9,51 +9,65 @@ import android.view.View;
 /* loaded from: classes.dex */
 public final class mq6 implements Application.ActivityLifecycleCallbacks {
     @SuppressLint({"StaticFieldLeak"})
-    public static final mq6 s = new mq6();
-    public boolean p;
-    public boolean q;
-    public rq6 r;
 
-    public static mq6 a() {
-        return s;
+    /* renamed from: s */
+    public static final mq6 f19076s = new mq6();
+
+    /* renamed from: p */
+    public boolean f19077p;
+
+    /* renamed from: q */
+    public boolean f19078q;
+
+    /* renamed from: r */
+    public rq6 f19079r;
+
+    /* renamed from: a */
+    public static mq6 m15843a() {
+        return f19076s;
     }
 
-    public final void b() {
-        this.p = true;
-        this.q = false;
-        e();
+    /* renamed from: b */
+    public final void m15842b() {
+        this.f19077p = true;
+        this.f19078q = false;
+        m15839e();
     }
 
-    public final void c() {
-        this.p = false;
-        this.q = false;
-        this.r = null;
+    /* renamed from: c */
+    public final void m15841c() {
+        this.f19077p = false;
+        this.f19078q = false;
+        this.f19079r = null;
     }
 
-    public final void d(rq6 rq6Var) {
-        this.r = rq6Var;
+    /* renamed from: d */
+    public final void m15840d(rq6 rq6Var) {
+        this.f19079r = rq6Var;
     }
 
-    public final void e() {
-        boolean z = this.q;
-        for (xp6 xp6Var : lq6.a().c()) {
-            xq6 g = xp6Var.g();
-            if (g.k()) {
-                qq6.a().b(g.a(), "setState", true != z ? "foregrounded" : "backgrounded");
+    /* renamed from: e */
+    public final void m15839e() {
+        boolean z = this.f19078q;
+        for (xp6 xp6Var : lq6.m16667a().m16665c()) {
+            xq6 m4831g = xp6Var.m4831g();
+            if (m4831g.m4801k()) {
+                qq6.m12283a().m12282b(m4831g.m4811a(), "setState", true != z ? "foregrounded" : "backgrounded");
             }
         }
     }
 
-    public final void f(boolean z) {
-        if (this.q != z) {
-            this.q = z;
-            if (this.p) {
-                e();
-                if (this.r != null) {
+    /* renamed from: f */
+    public final void m15838f(boolean z) {
+        if (this.f19078q != z) {
+            this.f19078q = z;
+            if (this.f19077p) {
+                m15839e();
+                if (this.f19079r != null) {
                     if (!z) {
-                        pr6.d().i();
+                        pr6.m13193d().m13188i();
                     } else {
-                        pr6.d().h();
+                        pr6.m13193d().m13189h();
                     }
                 }
             }
@@ -82,22 +96,22 @@ public final class mq6 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityStarted(Activity activity) {
-        f(false);
+        m15838f(false);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityStopped(Activity activity) {
-        View f;
+        View m4832f;
         ActivityManager.RunningAppProcessInfo runningAppProcessInfo = new ActivityManager.RunningAppProcessInfo();
         ActivityManager.getMyMemoryState(runningAppProcessInfo);
         int i = runningAppProcessInfo.importance;
         boolean z = true;
         boolean z2 = true;
-        for (xp6 xp6Var : lq6.a().b()) {
-            if (xp6Var.j() && (f = xp6Var.f()) != null && f.hasWindowFocus()) {
+        for (xp6 xp6Var : lq6.m16667a().m16666b()) {
+            if (xp6Var.m4828j() && (m4832f = xp6Var.m4832f()) != null && m4832f.hasWindowFocus()) {
                 z2 = false;
             }
         }
-        f((i == 100 || !z2) ? false : false);
+        m15838f((i == 100 || !z2) ? false : false);
     }
 }

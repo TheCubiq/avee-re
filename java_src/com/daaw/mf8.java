@@ -10,20 +10,21 @@ public final class mf8 extends gg8 {
     }
 
     @Override // com.daaw.gg8
-    public final void a() {
-        if (!j()) {
-            for (int i = 0; i < b(); i++) {
-                Map.Entry g = g(i);
-                if (((x88) g.getKey()).zzc()) {
-                    g.setValue(Collections.unmodifiableList((List) g.getValue()));
+    /* renamed from: a */
+    public final void mo16039a() {
+        if (!m21647j()) {
+            for (int i = 0; i < m21655b(); i++) {
+                Map.Entry m21650g = m21650g(i);
+                if (((x88) m21650g.getKey()).zzc()) {
+                    m21650g.setValue(Collections.unmodifiableList((List) m21650g.getValue()));
                 }
             }
-            for (Map.Entry entry : c()) {
+            for (Map.Entry entry : m21654c()) {
                 if (((x88) entry.getKey()).zzc()) {
                     entry.setValue(Collections.unmodifiableList((List) entry.getValue()));
                 }
             }
         }
-        super.a();
+        super.mo16039a();
     }
 }

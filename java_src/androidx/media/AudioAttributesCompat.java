@@ -4,23 +4,30 @@ import android.util.SparseIntArray;
 import com.daaw.ks1;
 /* loaded from: classes.dex */
 public class AudioAttributesCompat implements ks1 {
-    public static final SparseIntArray b;
-    public static final int[] c;
-    public AudioAttributesImpl a;
+
+    /* renamed from: b */
+    public static final SparseIntArray f1789b;
+
+    /* renamed from: c */
+    public static final int[] f1790c;
+
+    /* renamed from: a */
+    public AudioAttributesImpl f1791a;
 
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
-        b = sparseIntArray;
+        f1789b = sparseIntArray;
         sparseIntArray.put(5, 1);
         sparseIntArray.put(6, 2);
         sparseIntArray.put(7, 2);
         sparseIntArray.put(8, 1);
         sparseIntArray.put(9, 1);
         sparseIntArray.put(10, 1);
-        c = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16};
+        f1790c = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16};
     }
 
-    public static int a(boolean z, int i, int i2) {
+    /* renamed from: a */
+    public static int m28999a(boolean z, int i, int i2) {
         if ((i & 1) == 1) {
             return z ? 1 : 7;
         } else if ((i & 4) == 4) {
@@ -62,7 +69,8 @@ public class AudioAttributesCompat implements ks1 {
         }
     }
 
-    public static String b(int i) {
+    /* renamed from: b */
+    public static String m28998b(int i) {
         switch (i) {
             case 0:
                 return "USAGE_UNKNOWN";
@@ -104,18 +112,18 @@ public class AudioAttributesCompat implements ks1 {
 
     public boolean equals(Object obj) {
         if (obj instanceof AudioAttributesCompat) {
-            AudioAttributesImpl audioAttributesImpl = this.a;
-            AudioAttributesImpl audioAttributesImpl2 = ((AudioAttributesCompat) obj).a;
+            AudioAttributesImpl audioAttributesImpl = this.f1791a;
+            AudioAttributesImpl audioAttributesImpl2 = ((AudioAttributesCompat) obj).f1791a;
             return audioAttributesImpl == null ? audioAttributesImpl2 == null : audioAttributesImpl.equals(audioAttributesImpl2);
         }
         return false;
     }
 
     public int hashCode() {
-        return this.a.hashCode();
+        return this.f1791a.hashCode();
     }
 
     public String toString() {
-        return this.a.toString();
+        return this.f1791a.toString();
     }
 }

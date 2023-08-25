@@ -12,15 +12,17 @@ public final class tx5 extends ja8 implements be8 {
     static {
         tx5 tx5Var = new tx5();
         zza = tx5Var;
-        ja8.v(tx5.class, tx5Var);
+        ja8.m18661v(tx5.class, tx5Var);
     }
 
-    public static tx5 E() {
+    /* renamed from: E */
+    public static tx5 m8719E() {
         return zza;
     }
 
     @Override // com.daaw.ja8
-    public final Object C(int i, Object obj, Object obj2) {
+    /* renamed from: C */
+    public final Object mo4853C(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -35,52 +37,62 @@ public final class tx5 extends ja8 implements be8 {
                 }
                 return new tx5();
             }
-            return ja8.s(zza, "\u0001\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001ဌ\u0000\u0002ဇ\u0001\u0003ဈ\u0002\u0004ဈ\u0003\u0005ဈ\u0004", new Object[]{"zzd", "zze", mv5.a, "zzf", "zzg", "zzh", "zzi"});
+            return ja8.m18664s(zza, "\u0001\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001ဌ\u0000\u0002ဇ\u0001\u0003ဈ\u0002\u0004ဈ\u0003\u0005ဈ\u0004", new Object[]{"zzd", "zze", mv5.f19170a, "zzf", "zzg", "zzh", "zzi"});
         }
         return (byte) 1;
     }
 
-    public final String F() {
+    /* renamed from: F */
+    public final String m8718F() {
         return this.zzg;
     }
 
-    public final String G() {
+    /* renamed from: G */
+    public final String m8717G() {
         return this.zzi;
     }
 
-    public final String H() {
+    /* renamed from: H */
+    public final String m8716H() {
         return this.zzh;
     }
 
-    public final boolean I() {
+    /* renamed from: I */
+    public final boolean m8715I() {
         return this.zzf;
     }
 
-    public final boolean J() {
+    /* renamed from: J */
+    public final boolean m8714J() {
         return (this.zzd & 1) != 0;
     }
 
-    public final boolean K() {
+    /* renamed from: K */
+    public final boolean m8713K() {
         return (this.zzd & 4) != 0;
     }
 
-    public final boolean L() {
+    /* renamed from: L */
+    public final boolean m8712L() {
         return (this.zzd & 2) != 0;
     }
 
-    public final boolean M() {
+    /* renamed from: M */
+    public final boolean m8711M() {
         return (this.zzd & 16) != 0;
     }
 
-    public final boolean N() {
+    /* renamed from: N */
+    public final boolean m8710N() {
         return (this.zzd & 8) != 0;
     }
 
-    public final int O() {
-        int a = pw5.a(this.zze);
-        if (a == 0) {
+    /* renamed from: O */
+    public final int m8709O() {
+        int m12971a = pw5.m12971a(this.zze);
+        if (m12971a == 0) {
             return 1;
         }
-        return a;
+        return m12971a;
     }
 }

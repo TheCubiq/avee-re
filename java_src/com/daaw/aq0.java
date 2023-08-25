@@ -5,50 +5,65 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class aq0 {
-    public de0 a;
-    public bq0 b = new bq0();
-    public List<WeakReference<fe0>> c = new ArrayList();
+
+    /* renamed from: a */
+    public de0 f3427a;
+
+    /* renamed from: b */
+    public bq0 f3428b = new bq0();
+
+    /* renamed from: c */
+    public List<WeakReference<fe0>> f3429c = new ArrayList();
 
     public aq0(de0 de0Var) {
-        this.a = de0Var;
+        this.f3427a = de0Var;
     }
 
-    public void a(fe0 fe0Var) {
-        this.c.add(new WeakReference<>(fe0Var));
+    /* renamed from: a */
+    public void m27224a(fe0 fe0Var) {
+        this.f3429c.add(new WeakReference<>(fe0Var));
     }
 
-    public fe0 b(int i) {
-        if (i < 0 || i >= this.c.size()) {
+    /* renamed from: b */
+    public fe0 m27223b(int i) {
+        if (i < 0 || i >= this.f3429c.size()) {
             return null;
         }
-        return this.c.get(i).get();
+        return this.f3429c.get(i).get();
     }
 
-    public float c(float f, boolean z, float f2, float f3) {
+    /* renamed from: c */
+    public float m27222c(float f, boolean z, float f2, float f3) {
         return (!z || f3 >= f2) ? f * f2 : f * f3;
     }
 
-    public float d(float f, boolean z, float f2, float f3) {
+    /* renamed from: d */
+    public float m27221d(float f, boolean z, float f2, float f3) {
         return (!z || f2 >= f3) ? f * f3 : f * f2;
     }
 
-    public float e(float f) {
-        return f(f, true);
+    /* renamed from: e */
+    public float m27220e(float f) {
+        return m27219f(f, true);
     }
 
-    public float f(float f, boolean z) {
-        return f * ((!z || this.a.a() >= this.a.f()) ? this.a.f() : this.a.a());
+    /* renamed from: f */
+    public float m27219f(float f, boolean z) {
+        return f * ((!z || this.f3427a.mo2890a() >= this.f3427a.mo2885f()) ? this.f3427a.mo2885f() : this.f3427a.mo2890a());
     }
 
-    public float g(float f, boolean z) {
-        return f * ((!z || this.a.f() >= this.a.a()) ? this.a.a() : this.a.f());
+    /* renamed from: g */
+    public float m27218g(float f, boolean z) {
+        return f * ((!z || this.f3427a.mo2885f() >= this.f3427a.mo2890a()) ? this.f3427a.mo2890a() : this.f3427a.mo2885f());
     }
 
-    public float h(float f) {
-        return f * (this.a.a() < this.a.f() ? this.a.a() : this.a.f());
+    /* renamed from: h */
+    public float m27217h(float f) {
+        return f * (this.f3427a.mo2890a() < this.f3427a.mo2885f() ? this.f3427a.mo2890a() : this.f3427a.mo2885f());
     }
 
-    public float i(int i) {
+    /* renamed from: i */
+    public float m27216i(int i) {
         float f;
         if (i != 1) {
             if (i == 2) {
@@ -58,12 +73,13 @@ public class aq0 {
             } else {
                 f = 1.0f;
             }
-            return this.a.f() * f;
+            return this.f3427a.mo2885f() * f;
         }
-        return this.a.f() * 0.0f;
+        return this.f3427a.mo2885f() * 0.0f;
     }
 
-    public float j(int i) {
+    /* renamed from: j */
+    public float m27215j(int i) {
         float f;
         if (i != 1) {
             if (i == 2) {
@@ -73,46 +89,53 @@ public class aq0 {
             } else {
                 f = 1.0f;
             }
-            return this.a.a() * f;
+            return this.f3427a.mo2890a() * f;
         }
-        return this.a.a() * 0.0f;
+        return this.f3427a.mo2890a() * 0.0f;
     }
 
-    public float k(float f, boolean z) {
-        return f * ((!z || this.a.a() >= this.a.f()) ? this.a.f() : this.a.a());
+    /* renamed from: k */
+    public float m27214k(float f, boolean z) {
+        return f * ((!z || this.f3427a.mo2890a() >= this.f3427a.mo2885f()) ? this.f3427a.mo2885f() : this.f3427a.mo2890a());
     }
 
-    public float l(float f, boolean z) {
-        return f * ((!z || this.a.f() >= this.a.a()) ? this.a.a() : this.a.f());
+    /* renamed from: l */
+    public float m27213l(float f, boolean z) {
+        return f * ((!z || this.f3427a.mo2885f() >= this.f3427a.mo2890a()) ? this.f3427a.mo2890a() : this.f3427a.mo2885f());
     }
 
-    public String m(String str) {
-        String d = this.a.b().b().d(str);
-        if (d == null) {
-            lz1.c("result null, " + str);
+    /* renamed from: m */
+    public String m27212m(String str) {
+        String mo2873d = this.f3427a.mo2889b().mo4184b().mo2873d(str);
+        if (mo2873d == null) {
+            lz1.m16363c("result null, " + str);
             return str;
         }
-        return d;
+        return mo2873d;
     }
 
-    public bs1 n(String str, bs1 bs1Var, bs1 bs1Var2) {
-        bs1 a = this.a.b().b().a(str, bs1Var, bs1Var2, this.b, this.a);
-        if (a == null) {
-            lz1.c("result null, " + str);
+    /* renamed from: n */
+    public bs1 m27211n(String str, bs1 bs1Var, bs1 bs1Var2) {
+        bs1 mo2876a = this.f3427a.mo2889b().mo4184b().mo2876a(str, bs1Var, bs1Var2, this.f3428b, this.f3427a);
+        if (mo2876a == null) {
+            lz1.m16363c("result null, " + str);
             return new bs1(0.0f, 0.0f);
         }
-        return a;
+        return mo2876a;
     }
 
-    public void o() {
-        this.c.clear();
+    /* renamed from: o */
+    public void m27210o() {
+        this.f3429c.clear();
     }
 
-    public void p(float f) {
-        this.b.a = f;
+    /* renamed from: p */
+    public void m27209p(float f) {
+        this.f3428b.f5036a = f;
     }
 
-    public void q(float f) {
-        this.b.b = f;
+    /* renamed from: q */
+    public void m27208q(float f) {
+        this.f3428b.f5037b = f;
     }
 }

@@ -11,21 +11,25 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public class kw4 {
     @GuardedBy("this")
-    public final Map p = new HashMap();
+
+    /* renamed from: p */
+    public final Map f16787p = new HashMap();
 
     public kw4(Set set) {
-        A0(set);
+        m17379A0(set);
     }
 
-    public final synchronized void A0(Set set) {
+    /* renamed from: A0 */
+    public final synchronized void m17379A0(Set set) {
         Iterator it = set.iterator();
         while (it.hasNext()) {
-            m0((ly4) it.next());
+            m17377m0((ly4) it.next());
         }
     }
 
-    public final synchronized void B0(final jw4 jw4Var) {
-        for (Map.Entry entry : this.p.entrySet()) {
+    /* renamed from: B0 */
+    public final synchronized void m17378B0(final jw4 jw4Var) {
+        for (Map.Entry entry : this.f16787p.entrySet()) {
             final Object key = entry.getKey();
             ((Executor) entry.getValue()).execute(new Runnable() { // from class: com.daaw.iw4
                 @Override // java.lang.Runnable
@@ -33,7 +37,7 @@ public class kw4 {
                     try {
                         jw4.this.zza(key);
                     } catch (Throwable th) {
-                        zzt.zzo().t(th, "EventEmitter.notify");
+                        zzt.zzo().m11903t(th, "EventEmitter.notify");
                         zze.zzb("Event emitter exception.", th);
                     }
                 }
@@ -41,11 +45,13 @@ public class kw4 {
         }
     }
 
-    public final synchronized void m0(ly4 ly4Var) {
-        n0(ly4Var.a, ly4Var.b);
+    /* renamed from: m0 */
+    public final synchronized void m17377m0(ly4 ly4Var) {
+        m17376n0(ly4Var.f17910a, ly4Var.f17911b);
     }
 
-    public final synchronized void n0(Object obj, Executor executor) {
-        this.p.put(obj, executor);
+    /* renamed from: n0 */
+    public final synchronized void m17376n0(Object obj, Executor executor) {
+        this.f16787p.put(obj, executor);
     }
 }

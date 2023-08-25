@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class bp5 implements wz7 {
-    public static bp5 a() {
+    /* renamed from: a */
+    public static bp5 m25948a() {
         bp5 bp5Var;
-        bp5Var = ap5.a;
+        bp5Var = ap5.f3423a;
         return bp5Var;
     }
 

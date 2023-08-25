@@ -6,69 +6,83 @@ import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class ny6 implements p46 {
-    public final p46 a;
-    public long b;
-    public Uri c;
-    public Map d;
+
+    /* renamed from: a */
+    public final p46 f20857a;
+
+    /* renamed from: b */
+    public long f20858b;
+
+    /* renamed from: c */
+    public Uri f20859c;
+
+    /* renamed from: d */
+    public Map f20860d;
 
     public ny6(p46 p46Var) {
         Objects.requireNonNull(p46Var);
-        this.a = p46Var;
-        this.c = Uri.EMPTY;
-        this.d = Collections.emptyMap();
+        this.f20857a = p46Var;
+        this.f20859c = Uri.EMPTY;
+        this.f20860d = Collections.emptyMap();
     }
 
     @Override // com.daaw.xp8
-    public final int a(byte[] bArr, int i, int i2) {
-        int a = this.a.a(bArr, i, i2);
-        if (a != -1) {
-            this.b += a;
+    /* renamed from: a */
+    public final int mo1980a(byte[] bArr, int i, int i2) {
+        int mo1980a = this.f20857a.mo1980a(bArr, i, i2);
+        if (mo1980a != -1) {
+            this.f20858b += mo1980a;
         }
-        return a;
+        return mo1980a;
     }
 
     @Override // com.daaw.p46
-    public final void d(qz6 qz6Var) {
+    /* renamed from: d */
+    public final void mo1979d(qz6 qz6Var) {
         Objects.requireNonNull(qz6Var);
-        this.a.d(qz6Var);
+        this.f20857a.mo1979d(qz6Var);
     }
 
     @Override // com.daaw.p46
-    public final long g(pa6 pa6Var) {
-        this.c = pa6Var.a;
-        this.d = Collections.emptyMap();
-        long g = this.a.g(pa6Var);
+    /* renamed from: g */
+    public final long mo1978g(pa6 pa6Var) {
+        this.f20859c = pa6Var.f22769a;
+        this.f20860d = Collections.emptyMap();
+        long mo1978g = this.f20857a.mo1978g(pa6Var);
         Uri zzc = zzc();
         Objects.requireNonNull(zzc);
-        this.c = zzc;
-        this.d = zze();
-        return g;
+        this.f20859c = zzc;
+        this.f20860d = zze();
+        return mo1978g;
     }
 
-    public final long k() {
-        return this.b;
+    /* renamed from: k */
+    public final long m14718k() {
+        return this.f20858b;
     }
 
-    public final Uri l() {
-        return this.c;
+    /* renamed from: l */
+    public final Uri m14717l() {
+        return this.f20859c;
     }
 
-    public final Map m() {
-        return this.d;
+    /* renamed from: m */
+    public final Map m14716m() {
+        return this.f20860d;
     }
 
     @Override // com.daaw.p46
     public final Uri zzc() {
-        return this.a.zzc();
+        return this.f20857a.zzc();
     }
 
     @Override // com.daaw.p46
     public final void zzd() {
-        this.a.zzd();
+        this.f20857a.zzd();
     }
 
     @Override // com.daaw.p46
     public final Map zze() {
-        return this.a.zze();
+        return this.f20857a.zze();
     }
 }

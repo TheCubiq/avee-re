@@ -5,12 +5,14 @@ public final class fb2 implements bb2 {
     }
 
     @Override // com.daaw.bb2
-    public final long a(k09 k09Var) {
+    /* renamed from: a */
+    public final long mo7303a(k09 k09Var) {
         return -1L;
     }
 
     @Override // com.daaw.bb2
-    public final void b(long j) {
+    /* renamed from: b */
+    public final void mo7302b(long j) {
     }
 
     @Override // com.daaw.bb2

@@ -1,5 +1,7 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final /* synthetic */ class wx8 {
-    public final /* synthetic */ cy8 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ cy8 f31647a;
 }

@@ -4,86 +4,179 @@ import android.annotation.TargetApi;
 import android.media.MediaCodec;
 import android.media.MediaCrypto;
 import android.media.MediaFormat;
+import android.os.Looper;
 import android.os.SystemClock;
 import com.daaw.fo0;
 import com.google.android.exoplayer2.Format;
+import com.google.android.exoplayer2.drm.InterfaceC3933d;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 @TargetApi(16)
 /* loaded from: classes.dex */
-public abstract class do0 extends xa {
-    public static final byte[] l0 = sq1.r("0000016742C00BDA259000000168CE0F13200000016588840DCE7118A0002FBF1C31C3275D78");
-    public final boolean A;
-    public final gq B;
-    public final gq C;
-    public final k30 D;
-    public final List<Long> E;
-    public final MediaCodec.BufferInfo F;
-    public Format G;
-    public com.google.android.exoplayer2.drm.d<i40> H;
-    public com.google.android.exoplayer2.drm.d<i40> I;
-    public MediaCodec J;
-    public co0 K;
-    public int L;
-    public boolean M;
-    public boolean N;
-    public boolean O;
-    public boolean P;
-    public boolean Q;
-    public boolean R;
-    public boolean S;
-    public boolean T;
-    public ByteBuffer[] U;
-    public ByteBuffer[] V;
-    public long W;
-    public int X;
-    public int Y;
-    public ByteBuffer Z;
-    public boolean a0;
-    public boolean b0;
-    public int c0;
-    public int d0;
-    public boolean e0;
-    public boolean f0;
-    public boolean g0;
-    public boolean h0;
-    public boolean i0;
-    public boolean j0;
-    public fq k0;
-    public final eo0 y;
-    public final yu<i40> z;
+public abstract class do0 extends AbstractC3517xa {
 
+    /* renamed from: l0 */
+    public static final byte[] f7506l0 = sq1.m9998r("0000016742C00BDA259000000168CE0F13200000016588840DCE7118A0002FBF1C31C3275D78");
+
+    /* renamed from: A */
+    public final boolean f7507A;
+
+    /* renamed from: B */
+    public final C1454gq f7508B;
+
+    /* renamed from: C */
+    public final C1454gq f7509C;
+
+    /* renamed from: D */
+    public final k30 f7510D;
+
+    /* renamed from: E */
+    public final List<Long> f7511E;
+
+    /* renamed from: F */
+    public final MediaCodec.BufferInfo f7512F;
+
+    /* renamed from: G */
+    public Format f7513G;
+
+    /* renamed from: H */
+    public InterfaceC3933d<i40> f7514H;
+
+    /* renamed from: I */
+    public InterfaceC3933d<i40> f7515I;
+
+    /* renamed from: J */
+    public MediaCodec f7516J;
+
+    /* renamed from: K */
+    public co0 f7517K;
+
+    /* renamed from: L */
+    public int f7518L;
+
+    /* renamed from: M */
+    public boolean f7519M;
+
+    /* renamed from: N */
+    public boolean f7520N;
+
+    /* renamed from: O */
+    public boolean f7521O;
+
+    /* renamed from: P */
+    public boolean f7522P;
+
+    /* renamed from: Q */
+    public boolean f7523Q;
+
+    /* renamed from: R */
+    public boolean f7524R;
+
+    /* renamed from: S */
+    public boolean f7525S;
+
+    /* renamed from: T */
+    public boolean f7526T;
+
+    /* renamed from: U */
+    public ByteBuffer[] f7527U;
+
+    /* renamed from: V */
+    public ByteBuffer[] f7528V;
+
+    /* renamed from: W */
+    public long f7529W;
+
+    /* renamed from: X */
+    public int f7530X;
+
+    /* renamed from: Y */
+    public int f7531Y;
+
+    /* renamed from: Z */
+    public ByteBuffer f7532Z;
+
+    /* renamed from: a0 */
+    public boolean f7533a0;
+
+    /* renamed from: b0 */
+    public boolean f7534b0;
+
+    /* renamed from: c0 */
+    public int f7535c0;
+
+    /* renamed from: d0 */
+    public int f7536d0;
+
+    /* renamed from: e0 */
+    public boolean f7537e0;
+
+    /* renamed from: f0 */
+    public boolean f7538f0;
+
+    /* renamed from: g0 */
+    public boolean f7539g0;
+
+    /* renamed from: h0 */
+    public boolean f7540h0;
+
+    /* renamed from: i0 */
+    public boolean f7541i0;
+
+    /* renamed from: j0 */
+    public boolean f7542j0;
+
+    /* renamed from: k0 */
+    public C1321fq f7543k0;
+
+    /* renamed from: y */
+    public final eo0 f7544y;
+
+    /* renamed from: z */
+    public final InterfaceC3746yu<i40> f7545z;
+
+    /* renamed from: com.daaw.do0$a */
     /* loaded from: classes.dex */
-    public static class a extends Exception {
-        public final String p;
-        public final boolean q;
-        public final String r;
-        public final String s;
+    public static class C1118a extends Exception {
 
-        public a(Format format, Throwable th, boolean z, int i) {
+        /* renamed from: p */
+        public final String f7546p;
+
+        /* renamed from: q */
+        public final boolean f7547q;
+
+        /* renamed from: r */
+        public final String f7548r;
+
+        /* renamed from: s */
+        public final String f7549s;
+
+        public C1118a(Format format, Throwable th, boolean z, int i) {
             super("Decoder init failed: [" + i + "], " + format, th);
-            this.p = format.u;
-            this.q = z;
-            this.r = null;
-            this.s = a(i);
+            this.f7546p = format.f35721u;
+            this.f7547q = z;
+            this.f7548r = null;
+            this.f7549s = m24168a(i);
         }
 
-        public a(Format format, Throwable th, boolean z, String str) {
+        public C1118a(Format format, Throwable th, boolean z, String str) {
             super("Decoder init failed: " + str + ", " + format, th);
-            this.p = format.u;
-            this.q = z;
-            this.r = str;
-            this.s = sq1.a >= 21 ? b(th) : null;
+            this.f7546p = format.f35721u;
+            this.f7547q = z;
+            this.f7548r = str;
+            this.f7549s = sq1.f26525a >= 21 ? m24167b(th) : null;
         }
 
-        public static String a(int i) {
+        /* renamed from: a */
+        public static String m24168a(int i) {
             String str = i < 0 ? "neg_" : "";
             return "com.google.android.exoplayer.MediaCodecTrackRenderer_" + str + Math.abs(i);
         }
 
         @TargetApi(21)
-        public static String b(Throwable th) {
+        /* renamed from: b */
+        public static String m24167b(Throwable th) {
             if (th instanceof MediaCodec.CodecException) {
                 return ((MediaCodec.CodecException) th).getDiagnosticInfo();
             }
@@ -91,82 +184,90 @@ public abstract class do0 extends xa {
         }
     }
 
-    public do0(int i, eo0 eo0Var, yu<i40> yuVar, boolean z) {
+    public do0(int i, eo0 eo0Var, InterfaceC3746yu<i40> interfaceC3746yu, boolean z) {
         super(i);
-        s6.f(sq1.a >= 16);
-        this.y = (eo0) s6.e(eo0Var);
-        this.z = yuVar;
-        this.A = z;
-        this.B = new gq(0);
-        this.C = gq.r();
-        this.D = new k30();
-        this.E = new ArrayList();
-        this.F = new MediaCodec.BufferInfo();
-        this.c0 = 0;
-        this.d0 = 0;
+        C2914s6.m10685f(sq1.f26525a >= 16);
+        this.f7544y = (eo0) C2914s6.m10686e(eo0Var);
+        this.f7545z = interfaceC3746yu;
+        this.f7507A = z;
+        this.f7508B = new C1454gq(0);
+        this.f7509C = C1454gq.m21347r();
+        this.f7510D = new k30();
+        this.f7511E = new ArrayList();
+        this.f7512F = new MediaCodec.BufferInfo();
+        this.f7535c0 = 0;
+        this.f7536d0 = 0;
     }
 
-    public static boolean L(String str, Format format) {
-        return sq1.a < 21 && format.w.isEmpty() && "OMX.MTK.VIDEO.DECODER.AVC".equals(str);
+    /* renamed from: L */
+    public static boolean m24196L(String str, Format format) {
+        return sq1.f26525a < 21 && format.f35723w.isEmpty() && "OMX.MTK.VIDEO.DECODER.AVC".equals(str);
     }
 
-    public static boolean M(String str) {
-        int i = sq1.a;
-        return (i <= 23 && "OMX.google.vorbis.decoder".equals(str)) || (i <= 19 && "hb2000".equals(sq1.b) && ("OMX.amlogic.avc.decoder.awesome".equals(str) || "OMX.amlogic.avc.decoder.awesome.secure".equals(str)));
+    /* renamed from: M */
+    public static boolean m24195M(String str) {
+        int i = sq1.f26525a;
+        return (i <= 23 && "OMX.google.vorbis.decoder".equals(str)) || (i <= 19 && "hb2000".equals(sq1.f26526b) && ("OMX.amlogic.avc.decoder.awesome".equals(str) || "OMX.amlogic.avc.decoder.awesome.secure".equals(str)));
     }
 
-    public static boolean N(String str) {
-        return sq1.a == 21 && "OMX.google.aac.decoder".equals(str);
+    /* renamed from: N */
+    public static boolean m24194N(String str) {
+        return sq1.f26525a == 21 && "OMX.google.aac.decoder".equals(str);
     }
 
-    public static boolean O(String str) {
-        return sq1.a <= 17 && ("OMX.rk.video_decoder.avc".equals(str) || "OMX.allwinner.video.decoder.avc".equals(str));
+    /* renamed from: O */
+    public static boolean m24193O(String str) {
+        return sq1.f26525a <= 17 && ("OMX.rk.video_decoder.avc".equals(str) || "OMX.allwinner.video.decoder.avc".equals(str));
     }
 
-    public static boolean P(String str) {
-        int i = sq1.a;
-        return i < 18 || (i == 18 && ("OMX.SEC.avc.dec".equals(str) || "OMX.SEC.avc.dec.secure".equals(str))) || (i == 19 && sq1.d.startsWith("SM-G800") && ("OMX.Exynos.avc.dec".equals(str) || "OMX.Exynos.avc.dec.secure".equals(str)));
+    /* renamed from: P */
+    public static boolean m24192P(String str) {
+        int i = sq1.f26525a;
+        return i < 18 || (i == 18 && ("OMX.SEC.avc.dec".equals(str) || "OMX.SEC.avc.dec.secure".equals(str))) || (i == 19 && sq1.f26528d.startsWith("SM-G800") && ("OMX.Exynos.avc.dec".equals(str) || "OMX.Exynos.avc.dec.secure".equals(str)));
     }
 
-    public static boolean Q(String str, Format format) {
-        return sq1.a <= 18 && format.G == 1 && "OMX.MTK.AUDIO.DECODER.MP3".equals(str);
+    /* renamed from: Q */
+    public static boolean m24191Q(String str, Format format) {
+        return sq1.f26525a <= 18 && format.f35706G == 1 && "OMX.MTK.AUDIO.DECODER.MP3".equals(str);
     }
 
-    public static MediaCodec.CryptoInfo a0(gq gqVar, int i) {
-        MediaCodec.CryptoInfo a2 = gqVar.q.a();
+    /* renamed from: a0 */
+    public static MediaCodec.CryptoInfo m24183a0(C1454gq c1454gq, int i) {
+        MediaCodec.CryptoInfo m18404a = c1454gq.f11564q.m18404a();
         if (i == 0) {
-            return a2;
+            return m18404a;
         }
-        if (a2.numBytesOfClearData == null) {
-            a2.numBytesOfClearData = new int[1];
+        if (m18404a.numBytesOfClearData == null) {
+            m18404a.numBytesOfClearData = new int[1];
         }
-        int[] iArr = a2.numBytesOfClearData;
+        int[] iArr = m18404a.numBytesOfClearData;
         iArr[0] = iArr[0] + i;
-        return a2;
+        return m18404a;
     }
 
-    @Override // com.daaw.xa
-    public void A() {
-        this.G = null;
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: A */
+    public void mo3466A() {
+        this.f7513G = null;
         try {
-            o0();
+            mo21391o0();
             try {
-                com.google.android.exoplayer2.drm.d<i40> dVar = this.H;
-                if (dVar != null) {
-                    this.z.f(dVar);
+                InterfaceC3933d<i40> interfaceC3933d = this.f7514H;
+                if (interfaceC3933d != null) {
+                    this.f7545z.mo1671f(interfaceC3933d);
                 }
                 try {
-                    com.google.android.exoplayer2.drm.d<i40> dVar2 = this.I;
-                    if (dVar2 != null && dVar2 != this.H) {
-                        this.z.f(dVar2);
+                    InterfaceC3933d<i40> interfaceC3933d2 = this.f7515I;
+                    if (interfaceC3933d2 != null && interfaceC3933d2 != this.f7514H) {
+                        this.f7545z.mo1671f(interfaceC3933d2);
                     }
                 } finally {
                 }
             } catch (Throwable th) {
                 try {
-                    com.google.android.exoplayer2.drm.d<i40> dVar3 = this.I;
-                    if (dVar3 != null && dVar3 != this.H) {
-                        this.z.f(dVar3);
+                    InterfaceC3933d<i40> interfaceC3933d3 = this.f7515I;
+                    if (interfaceC3933d3 != null && interfaceC3933d3 != this.f7514H) {
+                        this.f7545z.mo1671f(interfaceC3933d3);
                     }
                     throw th;
                 } finally {
@@ -174,22 +275,22 @@ public abstract class do0 extends xa {
             }
         } catch (Throwable th2) {
             try {
-                if (this.H != null) {
-                    this.z.f(this.H);
+                if (this.f7514H != null) {
+                    this.f7545z.mo1671f(this.f7514H);
                 }
                 try {
-                    com.google.android.exoplayer2.drm.d<i40> dVar4 = this.I;
-                    if (dVar4 != null && dVar4 != this.H) {
-                        this.z.f(dVar4);
+                    InterfaceC3933d<i40> interfaceC3933d4 = this.f7515I;
+                    if (interfaceC3933d4 != null && interfaceC3933d4 != this.f7514H) {
+                        this.f7545z.mo1671f(interfaceC3933d4);
                     }
                     throw th2;
                 } finally {
                 }
             } catch (Throwable th3) {
                 try {
-                    com.google.android.exoplayer2.drm.d<i40> dVar5 = this.I;
-                    if (dVar5 != null && dVar5 != this.H) {
-                        this.z.f(dVar5);
+                    InterfaceC3933d<i40> interfaceC3933d5 = this.f7515I;
+                    if (interfaceC3933d5 != null && interfaceC3933d5 != this.f7514H) {
+                        this.f7545z.mo1671f(interfaceC3933d5);
                     }
                     throw th3;
                 } finally {
@@ -198,41 +299,47 @@ public abstract class do0 extends xa {
         }
     }
 
-    @Override // com.daaw.xa
-    public void B(boolean z) {
-        this.k0 = new fq();
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: B */
+    public void mo5370B(boolean z) {
+        this.f7543k0 = new C1321fq();
     }
 
-    @Override // com.daaw.xa
-    public void C(long j, boolean z) {
-        this.g0 = false;
-        this.h0 = false;
-        if (this.J != null) {
-            U();
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: C */
+    public void mo3465C(long j, boolean z) {
+        this.f7539g0 = false;
+        this.f7540h0 = false;
+        if (this.f7516J != null) {
+            mo21404U();
         }
     }
 
-    @Override // com.daaw.xa
-    public void D() {
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: D */
+    public void mo5369D() {
     }
 
-    @Override // com.daaw.xa
-    public void E() {
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: E */
+    public void mo5368E() {
     }
 
-    public abstract int J(MediaCodec mediaCodec, co0 co0Var, Format format, Format format2);
+    /* renamed from: J */
+    public abstract int mo21417J(MediaCodec mediaCodec, co0 co0Var, Format format, Format format2);
 
-    public final int K(String str) {
-        int i = sq1.a;
+    /* renamed from: K */
+    public final int m24197K(String str) {
+        int i = sq1.f26525a;
         if (i <= 25 && "OMX.Exynos.avc.dec.secure".equals(str)) {
-            String str2 = sq1.d;
+            String str2 = sq1.f26528d;
             if (str2.startsWith("SM-T585") || str2.startsWith("SM-A510") || str2.startsWith("SM-A520") || str2.startsWith("SM-J700")) {
                 return 2;
             }
         }
         if (i < 24) {
             if ("OMX.Nvidia.h264.decode".equals(str) || "OMX.Nvidia.h264.decode.secure".equals(str)) {
-                String str3 = sq1.b;
+                String str3 = sq1.f26526b;
                 return ("flounder".equals(str3) || "flounder_lte".equals(str3) || "grouper".equals(str3) || "tilapia".equals(str3)) ? 1 : 0;
             }
             return 0;
@@ -240,492 +347,551 @@ public abstract class do0 extends xa {
         return 0;
     }
 
-    public abstract void R(co0 co0Var, MediaCodec mediaCodec, Format format, MediaCrypto mediaCrypto);
+    /* renamed from: R */
+    public abstract void mo21408R(co0 co0Var, MediaCodec mediaCodec, Format format, MediaCrypto mediaCrypto);
 
-    public final boolean S(long j, long j2) {
-        boolean l02;
+    /* renamed from: S */
+    public final boolean m24190S(long j, long j2) {
+        boolean mo14855l0;
         int dequeueOutputBuffer;
-        if (!d0()) {
-            if (this.Q && this.f0) {
+        if (!m24180d0()) {
+            if (this.f7523Q && this.f7538f0) {
                 try {
-                    dequeueOutputBuffer = this.J.dequeueOutputBuffer(this.F, Z());
+                    dequeueOutputBuffer = this.f7516J.dequeueOutputBuffer(this.f7512F, m24184Z());
                 } catch (IllegalStateException unused) {
-                    k0();
-                    if (this.h0) {
-                        o0();
+                    m24178k0();
+                    if (this.f7540h0) {
+                        mo21391o0();
                     }
                     return false;
                 }
             } else {
-                dequeueOutputBuffer = this.J.dequeueOutputBuffer(this.F, Z());
+                dequeueOutputBuffer = this.f7516J.dequeueOutputBuffer(this.f7512F, m24184Z());
             }
             if (dequeueOutputBuffer < 0) {
                 if (dequeueOutputBuffer == -2) {
-                    n0();
+                    m24176n0();
                     return true;
                 } else if (dequeueOutputBuffer == -3) {
-                    m0();
+                    m24177m0();
                     return true;
                 } else {
-                    if (this.O && (this.g0 || this.d0 == 2)) {
-                        k0();
+                    if (this.f7521O && (this.f7539g0 || this.f7536d0 == 2)) {
+                        m24178k0();
                     }
                     return false;
                 }
-            } else if (this.T) {
-                this.T = false;
-                this.J.releaseOutputBuffer(dequeueOutputBuffer, false);
+            } else if (this.f7526T) {
+                this.f7526T = false;
+                this.f7516J.releaseOutputBuffer(dequeueOutputBuffer, false);
                 return true;
             } else {
-                MediaCodec.BufferInfo bufferInfo = this.F;
+                MediaCodec.BufferInfo bufferInfo = this.f7512F;
                 if (bufferInfo.size == 0 && (bufferInfo.flags & 4) != 0) {
-                    k0();
+                    m24178k0();
                     return false;
                 }
-                this.Y = dequeueOutputBuffer;
-                ByteBuffer c0 = c0(dequeueOutputBuffer);
-                this.Z = c0;
-                if (c0 != null) {
-                    c0.position(this.F.offset);
-                    ByteBuffer byteBuffer = this.Z;
-                    MediaCodec.BufferInfo bufferInfo2 = this.F;
+                this.f7531Y = dequeueOutputBuffer;
+                ByteBuffer m24181c0 = m24181c0(dequeueOutputBuffer);
+                this.f7532Z = m24181c0;
+                if (m24181c0 != null) {
+                    m24181c0.position(this.f7512F.offset);
+                    ByteBuffer byteBuffer = this.f7532Z;
+                    MediaCodec.BufferInfo bufferInfo2 = this.f7512F;
                     byteBuffer.limit(bufferInfo2.offset + bufferInfo2.size);
                 }
-                this.a0 = u0(this.F.presentationTimeUs);
+                this.f7533a0 = m24171u0(this.f7512F.presentationTimeUs);
             }
         }
-        if (this.Q && this.f0) {
+        if (this.f7523Q && this.f7538f0) {
             try {
-                MediaCodec mediaCodec = this.J;
-                ByteBuffer byteBuffer2 = this.Z;
-                int i = this.Y;
-                MediaCodec.BufferInfo bufferInfo3 = this.F;
-                l02 = l0(j, j2, mediaCodec, byteBuffer2, i, bufferInfo3.flags, bufferInfo3.presentationTimeUs, this.a0);
+                MediaCodec mediaCodec = this.f7516J;
+                ByteBuffer byteBuffer2 = this.f7532Z;
+                int i = this.f7531Y;
+                MediaCodec.BufferInfo bufferInfo3 = this.f7512F;
+                mo14855l0 = mo14855l0(j, j2, mediaCodec, byteBuffer2, i, bufferInfo3.flags, bufferInfo3.presentationTimeUs, this.f7533a0);
             } catch (IllegalStateException unused2) {
-                k0();
-                if (this.h0) {
-                    o0();
+                m24178k0();
+                if (this.f7540h0) {
+                    mo21391o0();
                 }
                 return false;
             }
         } else {
-            MediaCodec mediaCodec2 = this.J;
-            ByteBuffer byteBuffer3 = this.Z;
-            int i2 = this.Y;
-            MediaCodec.BufferInfo bufferInfo4 = this.F;
-            l02 = l0(j, j2, mediaCodec2, byteBuffer3, i2, bufferInfo4.flags, bufferInfo4.presentationTimeUs, this.a0);
+            MediaCodec mediaCodec2 = this.f7516J;
+            ByteBuffer byteBuffer3 = this.f7532Z;
+            int i2 = this.f7531Y;
+            MediaCodec.BufferInfo bufferInfo4 = this.f7512F;
+            mo14855l0 = mo14855l0(j, j2, mediaCodec2, byteBuffer3, i2, bufferInfo4.flags, bufferInfo4.presentationTimeUs, this.f7533a0);
         }
-        if (l02) {
-            i0(this.F.presentationTimeUs);
-            boolean z = (this.F.flags & 4) != 0;
-            s0();
+        if (mo14855l0) {
+            mo21393i0(this.f7512F.presentationTimeUs);
+            boolean z = (this.f7512F.flags & 4) != 0;
+            m24172s0();
             if (!z) {
                 return true;
             }
-            k0();
+            m24178k0();
         }
         return false;
     }
 
-    public final boolean T() {
+    /* renamed from: T */
+    public final boolean m24189T() {
         int position;
-        int G;
-        MediaCodec mediaCodec = this.J;
-        if (mediaCodec == null || this.d0 == 2 || this.g0) {
+        int m5367G;
+        MediaCodec mediaCodec = this.f7516J;
+        if (mediaCodec == null || this.f7536d0 == 2 || this.f7539g0) {
             return false;
         }
-        if (this.X < 0) {
+        if (this.f7530X < 0) {
             int dequeueInputBuffer = mediaCodec.dequeueInputBuffer(0L);
-            this.X = dequeueInputBuffer;
+            this.f7530X = dequeueInputBuffer;
             if (dequeueInputBuffer < 0) {
                 return false;
             }
-            this.B.r = b0(dequeueInputBuffer);
-            this.B.f();
+            this.f7508B.f11565r = m24182b0(dequeueInputBuffer);
+            this.f7508B.mo3749f();
         }
-        if (this.d0 == 1) {
-            if (!this.O) {
-                this.f0 = true;
-                this.J.queueInputBuffer(this.X, 0, 0, 0L, 4);
-                r0();
+        if (this.f7536d0 == 1) {
+            if (!this.f7521O) {
+                this.f7538f0 = true;
+                this.f7516J.queueInputBuffer(this.f7530X, 0, 0, 0L, 4);
+                m24173r0();
             }
-            this.d0 = 2;
+            this.f7536d0 = 2;
             return false;
-        } else if (this.S) {
-            this.S = false;
-            ByteBuffer byteBuffer = this.B.r;
-            byte[] bArr = l0;
+        } else if (this.f7525S) {
+            this.f7525S = false;
+            ByteBuffer byteBuffer = this.f7508B.f11565r;
+            byte[] bArr = f7506l0;
             byteBuffer.put(bArr);
-            this.J.queueInputBuffer(this.X, 0, bArr.length, 0L, 0);
-            r0();
-            this.e0 = true;
+            this.f7516J.queueInputBuffer(this.f7530X, 0, bArr.length, 0L, 0);
+            m24173r0();
+            this.f7537e0 = true;
             return true;
         } else {
-            if (this.i0) {
-                G = -4;
+            if (this.f7541i0) {
+                m5367G = -4;
                 position = 0;
             } else {
-                if (this.c0 == 1) {
-                    for (int i = 0; i < this.G.w.size(); i++) {
-                        this.B.r.put(this.G.w.get(i));
+                if (this.f7535c0 == 1) {
+                    for (int i = 0; i < this.f7513G.f35723w.size(); i++) {
+                        this.f7508B.f11565r.put(this.f7513G.f35723w.get(i));
                     }
-                    this.c0 = 2;
+                    this.f7535c0 = 2;
                 }
-                position = this.B.r.position();
-                G = G(this.D, this.B, false);
+                position = this.f7508B.f11565r.position();
+                m5367G = m5367G(this.f7510D, this.f7508B, false);
             }
-            if (G == -3) {
+            if (m5367G == -3) {
                 return false;
             }
-            if (G == -5) {
-                if (this.c0 == 2) {
-                    this.B.f();
-                    this.c0 = 1;
+            if (m5367G == -5) {
+                if (this.f7535c0 == 2) {
+                    this.f7508B.mo3749f();
+                    this.f7535c0 = 1;
                 }
-                g0(this.D.a);
+                mo14857g0(this.f7510D.f15633a);
                 return true;
-            } else if (this.B.j()) {
-                if (this.c0 == 2) {
-                    this.B.f();
-                    this.c0 = 1;
+            } else if (this.f7508B.m11437j()) {
+                if (this.f7535c0 == 2) {
+                    this.f7508B.mo3749f();
+                    this.f7535c0 = 1;
                 }
-                this.g0 = true;
-                if (!this.e0) {
-                    k0();
+                this.f7539g0 = true;
+                if (!this.f7537e0) {
+                    m24178k0();
                     return false;
                 }
                 try {
-                    if (!this.O) {
-                        this.f0 = true;
-                        this.J.queueInputBuffer(this.X, 0, 0, 0L, 4);
-                        r0();
+                    if (!this.f7521O) {
+                        this.f7538f0 = true;
+                        this.f7516J.queueInputBuffer(this.f7530X, 0, 0, 0L, 4);
+                        m24173r0();
                     }
                     return false;
                 } catch (MediaCodec.CryptoException e) {
-                    throw qz.a(e, x());
+                    throw C2802qz.m11927a(e, m5348x());
                 }
-            } else if (this.j0 && !this.B.k()) {
-                this.B.f();
-                if (this.c0 == 2) {
-                    this.c0 = 1;
+            } else if (this.f7542j0 && !this.f7508B.m11436k()) {
+                this.f7508B.mo3749f();
+                if (this.f7535c0 == 2) {
+                    this.f7535c0 = 1;
                 }
                 return true;
             } else {
-                this.j0 = false;
-                boolean p = this.B.p();
-                boolean v0 = v0(p);
-                this.i0 = v0;
-                if (v0) {
+                this.f7542j0 = false;
+                boolean m21349p = this.f7508B.m21349p();
+                boolean m24170v0 = m24170v0(m21349p);
+                this.f7541i0 = m24170v0;
+                if (m24170v0) {
                     return false;
                 }
-                if (this.M && !p) {
-                    sr0.b(this.B.r);
-                    if (this.B.r.position() == 0) {
+                if (this.f7519M && !m21349p) {
+                    sr0.m9977b(this.f7508B.f11565r);
+                    if (this.f7508B.f11565r.position() == 0) {
                         return true;
                     }
-                    this.M = false;
+                    this.f7519M = false;
                 }
                 try {
-                    gq gqVar = this.B;
-                    long j = gqVar.s;
-                    if (gqVar.i()) {
-                        this.E.add(Long.valueOf(j));
+                    C1454gq c1454gq = this.f7508B;
+                    long j = c1454gq.f11566s;
+                    if (c1454gq.m11438i()) {
+                        this.f7511E.add(Long.valueOf(j));
                     }
-                    this.B.o();
-                    j0(this.B);
-                    if (p) {
-                        this.J.queueSecureInputBuffer(this.X, 0, a0(this.B, position), j, 0);
+                    this.f7508B.m21350o();
+                    mo21392j0(this.f7508B);
+                    if (m21349p) {
+                        this.f7516J.queueSecureInputBuffer(this.f7530X, 0, m24183a0(this.f7508B, position), j, 0);
                     } else {
-                        this.J.queueInputBuffer(this.X, 0, this.B.r.limit(), j, 0);
+                        this.f7516J.queueInputBuffer(this.f7530X, 0, this.f7508B.f11565r.limit(), j, 0);
                     }
-                    r0();
-                    this.e0 = true;
-                    this.c0 = 0;
-                    this.k0.c++;
+                    m24173r0();
+                    this.f7537e0 = true;
+                    this.f7535c0 = 0;
+                    this.f7543k0.f9764c++;
                     return true;
                 } catch (MediaCodec.CryptoException e2) {
-                    throw qz.a(e2, x());
+                    throw C2802qz.m11927a(e2, m5348x());
                 }
             }
         }
     }
 
-    public void U() {
-        this.W = -9223372036854775807L;
-        r0();
-        s0();
-        this.j0 = true;
-        this.i0 = false;
-        this.a0 = false;
-        this.E.clear();
-        this.S = false;
-        this.T = false;
-        if (this.N || ((this.P && this.f0) || this.d0 != 0)) {
-            o0();
-            e0();
+    /* renamed from: U */
+    public void mo21404U() {
+        this.f7529W = -9223372036854775807L;
+        m24173r0();
+        m24172s0();
+        this.f7542j0 = true;
+        this.f7541i0 = false;
+        this.f7533a0 = false;
+        this.f7511E.clear();
+        this.f7525S = false;
+        this.f7526T = false;
+        if (this.f7520N || ((this.f7522P && this.f7538f0) || this.f7536d0 != 0)) {
+            mo21391o0();
+            m24179e0();
         } else {
-            this.J.flush();
-            this.e0 = false;
+            this.f7516J.flush();
+            this.f7537e0 = false;
         }
-        if (!this.b0 || this.G == null) {
+        if (!this.f7534b0 || this.f7513G == null) {
             return;
         }
-        this.c0 = 1;
+        this.f7535c0 = 1;
     }
 
-    public final MediaCodec V() {
-        return this.J;
+    /* renamed from: V */
+    public final MediaCodec m24188V() {
+        return this.f7516J;
     }
 
-    public final void W() {
-        if (sq1.a < 21) {
-            this.U = this.J.getInputBuffers();
-            this.V = this.J.getOutputBuffers();
+    /* renamed from: W */
+    public final void m24187W() {
+        if (sq1.f26525a < 21) {
+            this.f7527U = this.f7516J.getInputBuffers();
+            this.f7528V = this.f7516J.getOutputBuffers();
         }
     }
 
-    public final co0 X() {
-        return this.K;
+    /* renamed from: X */
+    public final co0 m24186X() {
+        return this.f7517K;
     }
 
-    public co0 Y(eo0 eo0Var, Format format, boolean z) {
-        return eo0Var.b(format.u, z);
+    /* renamed from: Y */
+    public co0 mo24185Y(eo0 eo0Var, Format format, boolean z) {
+        return eo0Var.mo23339b(format.f35721u, z);
     }
 
-    public long Z() {
+    /* renamed from: Z */
+    public long m24184Z() {
         return 0L;
     }
 
     @Override // com.daaw.b41
-    public final int a(Format format) {
+    /* renamed from: a */
+    public final int mo3460a(Format format) {
         try {
-            return w0(this.y, this.z, format);
-        } catch (fo0.c e) {
-            throw qz.a(e, x());
+            return mo21389w0(this.f7544y, this.f7545z, format);
+        } catch (fo0.C1312c e) {
+            throw C2802qz.m11927a(e, m5348x());
         }
     }
 
-    public final ByteBuffer b0(int i) {
-        return sq1.a >= 21 ? this.J.getInputBuffer(i) : this.U[i];
+    /* renamed from: b0 */
+    public final ByteBuffer m24182b0(int i) {
+        return sq1.f26525a >= 21 ? this.f7516J.getInputBuffer(i) : this.f7527U[i];
     }
 
     @Override // com.daaw.a41
-    public boolean c() {
-        return this.h0;
+    /* renamed from: c */
+    public boolean mo3459c() {
+        return this.f7540h0;
     }
 
-    public final ByteBuffer c0(int i) {
-        return sq1.a >= 21 ? this.J.getOutputBuffer(i) : this.V[i];
+    /* renamed from: c0 */
+    public final ByteBuffer m24181c0(int i) {
+        return sq1.f26525a >= 21 ? this.f7516J.getOutputBuffer(i) : this.f7528V[i];
     }
 
     @Override // com.daaw.a41
-    public boolean d() {
-        return (this.G == null || this.i0 || (!z() && !d0() && (this.W == -9223372036854775807L || SystemClock.elapsedRealtime() >= this.W))) ? false : true;
+    /* renamed from: d */
+    public boolean mo3458d() {
+        return (this.f7513G == null || this.f7541i0 || (!m5346z() && !m24180d0() && (this.f7529W == -9223372036854775807L || SystemClock.elapsedRealtime() >= this.f7529W))) ? false : true;
     }
 
-    public final boolean d0() {
-        return this.Y >= 0;
+    /* renamed from: d0 */
+    public final boolean m24180d0() {
+        return this.f7531Y >= 0;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:33:0x0095 A[RETURN] */
     /* JADX WARN: Removed duplicated region for block: B:34:0x0096  */
     /* JADX WARN: Removed duplicated region for block: B:45:0x0035 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* renamed from: e0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void e0() {
-        /*
-            Method dump skipped, instructions count: 328
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.do0.e0():void");
+    public final void m24179e0() {
+        Format format;
+        MediaCrypto mediaCrypto;
+        boolean z;
+        if (this.f7516J != null || (format = this.f7513G) == null) {
+            return;
+        }
+        InterfaceC3933d<i40> interfaceC3933d = this.f7515I;
+        this.f7514H = interfaceC3933d;
+        String str = format.f35721u;
+        if (interfaceC3933d != null) {
+            i40 mo1664b = interfaceC3933d.mo1664b();
+            if (mo1664b != null) {
+                mediaCrypto = mo1664b.m20145a();
+                z = mo1664b.m20144b(str);
+                if (this.f7517K == null) {
+                    try {
+                        co0 mo24185Y = mo24185Y(this.f7544y, this.f7513G, z);
+                        this.f7517K = mo24185Y;
+                        if (mo24185Y == null && z) {
+                            co0 mo24185Y2 = mo24185Y(this.f7544y, this.f7513G, false);
+                            this.f7517K = mo24185Y2;
+                            if (mo24185Y2 != null) {
+                                StringBuilder sb = new StringBuilder();
+                                sb.append("Drm session requires secure decoder for ");
+                                sb.append(str);
+                                sb.append(", but no secure decoder available. Trying to proceed with ");
+                                sb.append(this.f7517K.f5990a);
+                                sb.append(".");
+                            }
+                        }
+                    } catch (fo0.C1312c e) {
+                        m24169x0(new C1118a(this.f7513G, e, z, -49998));
+                    }
+                    if (this.f7517K == null) {
+                        m24169x0(new C1118a(this.f7513G, (Throwable) null, z, -49999));
+                    }
+                }
+                if (mo21390t0(this.f7517K)) {
+                    return;
+                }
+                String str2 = this.f7517K.f5990a;
+                this.f7518L = m24197K(str2);
+                this.f7519M = m24196L(str2, this.f7513G);
+                this.f7520N = m24192P(str2);
+                this.f7521O = m24193O(str2);
+                this.f7522P = m24195M(str2);
+                this.f7523Q = m24194N(str2);
+                this.f7524R = m24191Q(str2, this.f7513G);
+                try {
+                    long elapsedRealtime = SystemClock.elapsedRealtime();
+                    mm1.m15937a("createCodec:" + str2);
+                    this.f7516J = MediaCodec.createByCodecName(str2);
+                    mm1.m15935c();
+                    mm1.m15937a("configureCodec");
+                    mo21408R(this.f7517K, this.f7516J, this.f7513G, mediaCrypto);
+                    mm1.m15935c();
+                    mm1.m15937a("startCodec");
+                    this.f7516J.start();
+                    mm1.m15935c();
+                    long elapsedRealtime2 = SystemClock.elapsedRealtime();
+                    mo21394f0(str2, elapsedRealtime2, elapsedRealtime2 - elapsedRealtime);
+                    m24187W();
+                } catch (Exception e2) {
+                    m24169x0(new C1118a(this.f7513G, e2, z, str2));
+                }
+                this.f7529W = getState() == 2 ? SystemClock.elapsedRealtime() + 1000 : -9223372036854775807L;
+                m24173r0();
+                m24172s0();
+                this.f7542j0 = true;
+                this.f7543k0.f9762a++;
+                return;
+            } else if (this.f7514H.mo1663c() == null) {
+                return;
+            }
+        }
+        mediaCrypto = null;
+        z = false;
+        if (this.f7517K == null) {
+        }
+        if (mo21390t0(this.f7517K)) {
+        }
     }
 
-    public abstract void f0(String str, long j, long j2);
+    /* renamed from: f0 */
+    public abstract void mo21394f0(String str, long j, long j2);
 
     /* JADX WARN: Code restructure failed: missing block: B:33:0x007a, code lost:
-        if (r6.z == r0.z) goto L34;
+        if (r6.f35726z == r0.f35726z) goto L34;
      */
+    /* renamed from: g0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void g0(com.google.android.exoplayer2.Format r6) {
-        /*
-            r5 = this;
-            com.google.android.exoplayer2.Format r0 = r5.G
-            r5.G = r6
-            com.google.android.exoplayer2.drm.DrmInitData r6 = r6.x
-            r1 = 0
-            if (r0 != 0) goto Lb
-            r2 = r1
-            goto Ld
-        Lb:
-            com.google.android.exoplayer2.drm.DrmInitData r2 = r0.x
-        Ld:
-            boolean r6 = com.daaw.sq1.b(r6, r2)
-            r2 = 1
-            r6 = r6 ^ r2
-            if (r6 == 0) goto L49
-            com.google.android.exoplayer2.Format r6 = r5.G
-            com.google.android.exoplayer2.drm.DrmInitData r6 = r6.x
-            if (r6 == 0) goto L47
-            com.daaw.yu<com.daaw.i40> r6 = r5.z
-            if (r6 == 0) goto L37
-            android.os.Looper r1 = android.os.Looper.myLooper()
-            com.google.android.exoplayer2.Format r3 = r5.G
-            com.google.android.exoplayer2.drm.DrmInitData r3 = r3.x
-            com.google.android.exoplayer2.drm.d r6 = r6.a(r1, r3)
-            r5.I = r6
-            com.google.android.exoplayer2.drm.d<com.daaw.i40> r1 = r5.H
-            if (r6 != r1) goto L49
-            com.daaw.yu<com.daaw.i40> r1 = r5.z
-            r1.f(r6)
-            goto L49
-        L37:
-            java.lang.IllegalStateException r6 = new java.lang.IllegalStateException
-            java.lang.String r0 = "Media requires a DrmSessionManager"
-            r6.<init>(r0)
-            int r0 = r5.x()
-            com.daaw.qz r6 = com.daaw.qz.a(r6, r0)
-            throw r6
-        L47:
-            r5.I = r1
-        L49:
-            com.google.android.exoplayer2.drm.d<com.daaw.i40> r6 = r5.I
-            com.google.android.exoplayer2.drm.d<com.daaw.i40> r1 = r5.H
-            r3 = 0
-            if (r6 != r1) goto L87
-            android.media.MediaCodec r6 = r5.J
-            if (r6 == 0) goto L87
-            com.daaw.co0 r1 = r5.K
-            com.google.android.exoplayer2.Format r4 = r5.G
-            int r6 = r5.J(r6, r1, r0, r4)
-            if (r6 == 0) goto L87
-            if (r6 == r2) goto L86
-            r1 = 3
-            if (r6 != r1) goto L80
-            r5.b0 = r2
-            r5.c0 = r2
-            int r6 = r5.L
-            r1 = 2
-            if (r6 == r1) goto L7c
-            if (r6 != r2) goto L7d
-            com.google.android.exoplayer2.Format r6 = r5.G
-            int r1 = r6.y
-            int r4 = r0.y
-            if (r1 != r4) goto L7d
-            int r6 = r6.z
-            int r0 = r0.z
-            if (r6 != r0) goto L7d
-        L7c:
-            r3 = 1
-        L7d:
-            r5.S = r3
-            goto L86
-        L80:
-            java.lang.IllegalStateException r6 = new java.lang.IllegalStateException
-            r6.<init>()
-            throw r6
-        L86:
-            r3 = 1
-        L87:
-            if (r3 != 0) goto L96
-            boolean r6 = r5.e0
-            if (r6 == 0) goto L90
-            r5.d0 = r2
-            goto L96
-        L90:
-            r5.o0()
-            r5.e0()
-        L96:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.do0.g0(com.google.android.exoplayer2.Format):void");
-    }
-
-    public abstract void h0(MediaCodec mediaCodec, MediaFormat mediaFormat);
-
-    public void i0(long j) {
-    }
-
-    public abstract void j0(gq gqVar);
-
-    public final void k0() {
-        if (this.d0 == 2) {
-            o0();
-            e0();
+    public void mo14857g0(Format format) {
+        MediaCodec mediaCodec;
+        int mo21417J;
+        Format format2 = this.f7513G;
+        this.f7513G = format;
+        if (!sq1.m10016b(format.f35724x, format2 == null ? null : format2.f35724x)) {
+            if (this.f7513G.f35724x != null) {
+                InterfaceC3746yu<i40> interfaceC3746yu = this.f7545z;
+                if (interfaceC3746yu == null) {
+                    throw C2802qz.m11927a(new IllegalStateException("Media requires a DrmSessionManager"), m5348x());
+                }
+                InterfaceC3933d<i40> mo1676a = interfaceC3746yu.mo1676a(Looper.myLooper(), this.f7513G.f35724x);
+                this.f7515I = mo1676a;
+                if (mo1676a == this.f7514H) {
+                    this.f7545z.mo1671f(mo1676a);
+                }
+            } else {
+                this.f7515I = null;
+            }
+        }
+        boolean z = false;
+        if (this.f7515I == this.f7514H && (mediaCodec = this.f7516J) != null && (mo21417J = mo21417J(mediaCodec, this.f7517K, format2, this.f7513G)) != 0) {
+            if (mo21417J != 1) {
+                if (mo21417J != 3) {
+                    throw new IllegalStateException();
+                }
+                this.f7534b0 = true;
+                this.f7535c0 = 1;
+                int i = this.f7518L;
+                if (i != 2) {
+                    if (i == 1) {
+                        Format format3 = this.f7513G;
+                        if (format3.f35725y == format2.f35725y) {
+                        }
+                    }
+                    this.f7525S = z;
+                }
+                z = true;
+                this.f7525S = z;
+            }
+            z = true;
+        }
+        if (z) {
             return;
         }
-        this.h0 = true;
-        p0();
-    }
-
-    public abstract boolean l0(long j, long j2, MediaCodec mediaCodec, ByteBuffer byteBuffer, int i, int i2, long j3, boolean z);
-
-    public final void m0() {
-        if (sq1.a < 21) {
-            this.V = this.J.getOutputBuffers();
-        }
-    }
-
-    public final void n0() {
-        MediaFormat outputFormat = this.J.getOutputFormat();
-        if (this.L != 0 && outputFormat.getInteger("width") == 32 && outputFormat.getInteger("height") == 32) {
-            this.T = true;
+        if (this.f7537e0) {
+            this.f7536d0 = 1;
             return;
         }
-        if (this.R) {
+        mo21391o0();
+        m24179e0();
+    }
+
+    /* renamed from: h0 */
+    public abstract void mo14856h0(MediaCodec mediaCodec, MediaFormat mediaFormat);
+
+    /* renamed from: i0 */
+    public void mo21393i0(long j) {
+    }
+
+    /* renamed from: j0 */
+    public abstract void mo21392j0(C1454gq c1454gq);
+
+    /* renamed from: k0 */
+    public final void m24178k0() {
+        if (this.f7536d0 == 2) {
+            mo21391o0();
+            m24179e0();
+            return;
+        }
+        this.f7540h0 = true;
+        mo24175p0();
+    }
+
+    /* renamed from: l0 */
+    public abstract boolean mo14855l0(long j, long j2, MediaCodec mediaCodec, ByteBuffer byteBuffer, int i, int i2, long j3, boolean z);
+
+    /* renamed from: m0 */
+    public final void m24177m0() {
+        if (sq1.f26525a < 21) {
+            this.f7528V = this.f7516J.getOutputBuffers();
+        }
+    }
+
+    /* renamed from: n0 */
+    public final void m24176n0() {
+        MediaFormat outputFormat = this.f7516J.getOutputFormat();
+        if (this.f7518L != 0 && outputFormat.getInteger("width") == 32 && outputFormat.getInteger("height") == 32) {
+            this.f7526T = true;
+            return;
+        }
+        if (this.f7524R) {
             outputFormat.setInteger("channel-count", 1);
         }
-        h0(this.J, outputFormat);
+        mo14856h0(this.f7516J, outputFormat);
     }
 
-    public void o0() {
-        this.W = -9223372036854775807L;
-        r0();
-        s0();
-        this.i0 = false;
-        this.a0 = false;
-        this.E.clear();
-        q0();
-        this.K = null;
-        this.b0 = false;
-        this.e0 = false;
-        this.M = false;
-        this.N = false;
-        this.L = 0;
-        this.O = false;
-        this.P = false;
-        this.R = false;
-        this.S = false;
-        this.T = false;
-        this.f0 = false;
-        this.c0 = 0;
-        this.d0 = 0;
-        MediaCodec mediaCodec = this.J;
+    /* renamed from: o0 */
+    public void mo21391o0() {
+        this.f7529W = -9223372036854775807L;
+        m24173r0();
+        m24172s0();
+        this.f7541i0 = false;
+        this.f7533a0 = false;
+        this.f7511E.clear();
+        m24174q0();
+        this.f7517K = null;
+        this.f7534b0 = false;
+        this.f7537e0 = false;
+        this.f7519M = false;
+        this.f7520N = false;
+        this.f7518L = 0;
+        this.f7521O = false;
+        this.f7522P = false;
+        this.f7524R = false;
+        this.f7525S = false;
+        this.f7526T = false;
+        this.f7538f0 = false;
+        this.f7535c0 = 0;
+        this.f7536d0 = 0;
+        MediaCodec mediaCodec = this.f7516J;
         if (mediaCodec != null) {
-            this.k0.b++;
+            this.f7543k0.f9763b++;
             try {
                 mediaCodec.stop();
                 try {
-                    this.J.release();
-                    this.J = null;
-                    com.google.android.exoplayer2.drm.d<i40> dVar = this.H;
-                    if (dVar == null || this.I == dVar) {
+                    this.f7516J.release();
+                    this.f7516J = null;
+                    InterfaceC3933d<i40> interfaceC3933d = this.f7514H;
+                    if (interfaceC3933d == null || this.f7515I == interfaceC3933d) {
                         return;
                     }
                     try {
-                        this.z.f(dVar);
+                        this.f7545z.mo1671f(interfaceC3933d);
                     } finally {
                     }
                 } catch (Throwable th) {
-                    this.J = null;
-                    com.google.android.exoplayer2.drm.d<i40> dVar2 = this.H;
-                    if (dVar2 != null && this.I != dVar2) {
+                    this.f7516J = null;
+                    InterfaceC3933d<i40> interfaceC3933d2 = this.f7514H;
+                    if (interfaceC3933d2 != null && this.f7515I != interfaceC3933d2) {
                         try {
-                            this.z.f(dVar2);
+                            this.f7545z.mo1671f(interfaceC3933d2);
                         } finally {
                         }
                     }
@@ -733,22 +899,22 @@ public abstract class do0 extends xa {
                 }
             } catch (Throwable th2) {
                 try {
-                    this.J.release();
-                    this.J = null;
-                    com.google.android.exoplayer2.drm.d<i40> dVar3 = this.H;
-                    if (dVar3 != null && this.I != dVar3) {
+                    this.f7516J.release();
+                    this.f7516J = null;
+                    InterfaceC3933d<i40> interfaceC3933d3 = this.f7514H;
+                    if (interfaceC3933d3 != null && this.f7515I != interfaceC3933d3) {
                         try {
-                            this.z.f(dVar3);
+                            this.f7545z.mo1671f(interfaceC3933d3);
                         } finally {
                         }
                     }
                     throw th2;
                 } catch (Throwable th3) {
-                    this.J = null;
-                    com.google.android.exoplayer2.drm.d<i40> dVar4 = this.H;
-                    if (dVar4 != null && this.I != dVar4) {
+                    this.f7516J = null;
+                    InterfaceC3933d<i40> interfaceC3933d4 = this.f7514H;
+                    if (interfaceC3933d4 != null && this.f7515I != interfaceC3933d4) {
                         try {
-                            this.z.f(dVar4);
+                            this.f7545z.mo1671f(interfaceC3933d4);
                         } finally {
                         }
                     }
@@ -758,104 +924,115 @@ public abstract class do0 extends xa {
         }
     }
 
-    @Override // com.daaw.xa, com.daaw.b41
-    public final int p() {
+    @Override // com.daaw.AbstractC3517xa, com.daaw.b41
+    /* renamed from: p */
+    public final int mo5355p() {
         return 8;
     }
 
-    public void p0() {
+    /* renamed from: p0 */
+    public void mo24175p0() {
     }
 
     @Override // com.daaw.a41
-    public void q(long j, long j2) {
-        if (this.h0) {
-            p0();
+    /* renamed from: q */
+    public void mo3457q(long j, long j2) {
+        if (this.f7540h0) {
+            mo24175p0();
             return;
         }
-        if (this.G == null) {
-            this.C.f();
-            int G = G(this.D, this.C, true);
-            if (G != -5) {
-                if (G == -4) {
-                    s6.f(this.C.j());
-                    this.g0 = true;
-                    k0();
+        if (this.f7513G == null) {
+            this.f7509C.mo3749f();
+            int m5367G = m5367G(this.f7510D, this.f7509C, true);
+            if (m5367G != -5) {
+                if (m5367G == -4) {
+                    C2914s6.m10685f(this.f7509C.m11437j());
+                    this.f7539g0 = true;
+                    m24178k0();
                     return;
                 }
                 return;
             }
-            g0(this.D.a);
+            mo14857g0(this.f7510D.f15633a);
         }
-        e0();
-        if (this.J != null) {
-            mm1.a("drainAndFeed");
+        m24179e0();
+        if (this.f7516J != null) {
+            mm1.m15937a("drainAndFeed");
             do {
-            } while (S(j, j2));
+            } while (m24190S(j, j2));
             do {
-            } while (T());
-            mm1.c();
+            } while (m24189T());
+            mm1.m15935c();
         } else {
-            this.k0.d += H(j);
-            this.C.f();
-            int G2 = G(this.D, this.C, false);
-            if (G2 == -5) {
-                g0(this.D.a);
-            } else if (G2 == -4) {
-                s6.f(this.C.j());
-                this.g0 = true;
-                k0();
+            this.f7543k0.f9765d += m5366H(j);
+            this.f7509C.mo3749f();
+            int m5367G2 = m5367G(this.f7510D, this.f7509C, false);
+            if (m5367G2 == -5) {
+                mo14857g0(this.f7510D.f15633a);
+            } else if (m5367G2 == -4) {
+                C2914s6.m10685f(this.f7509C.m11437j());
+                this.f7539g0 = true;
+                m24178k0();
             }
         }
-        this.k0.a();
+        this.f7543k0.m22418a();
     }
 
-    public final void q0() {
-        if (sq1.a < 21) {
-            this.U = null;
-            this.V = null;
+    /* renamed from: q0 */
+    public final void m24174q0() {
+        if (sq1.f26525a < 21) {
+            this.f7527U = null;
+            this.f7528V = null;
         }
     }
 
-    public final void r0() {
-        this.X = -1;
-        this.B.r = null;
+    /* renamed from: r0 */
+    public final void m24173r0() {
+        this.f7530X = -1;
+        this.f7508B.f11565r = null;
     }
 
-    public final void s0() {
-        this.Y = -1;
-        this.Z = null;
+    /* renamed from: s0 */
+    public final void m24172s0() {
+        this.f7531Y = -1;
+        this.f7532Z = null;
     }
 
-    public boolean t0(co0 co0Var) {
+    /* renamed from: t0 */
+    public boolean mo21390t0(co0 co0Var) {
         return true;
     }
 
-    public final boolean u0(long j) {
-        int size = this.E.size();
+    /* renamed from: u0 */
+    public final boolean m24171u0(long j) {
+        int size = this.f7511E.size();
         for (int i = 0; i < size; i++) {
-            if (this.E.get(i).longValue() == j) {
-                this.E.remove(i);
+            if (this.f7511E.get(i).longValue() == j) {
+                this.f7511E.remove(i);
                 return true;
             }
         }
         return false;
     }
 
-    public final boolean v0(boolean z) {
-        com.google.android.exoplayer2.drm.d<i40> dVar = this.H;
-        if (dVar == null || (!z && this.A)) {
+    /* renamed from: v0 */
+    public final boolean m24170v0(boolean z) {
+        InterfaceC3933d<i40> interfaceC3933d = this.f7514H;
+        if (interfaceC3933d == null || (!z && this.f7507A)) {
             return false;
         }
-        int state = dVar.getState();
+        int state = interfaceC3933d.getState();
         if (state != 1) {
             return state != 4;
         }
-        throw qz.a(this.H.c(), x());
+        throw C2802qz.m11927a(this.f7514H.mo1663c(), m5348x());
     }
 
-    public abstract int w0(eo0 eo0Var, yu<i40> yuVar, Format format);
+    /* renamed from: w0 */
+    public abstract int mo21389w0(eo0 eo0Var, InterfaceC3746yu<i40> interfaceC3746yu, Format format);
 
-    public final void x0(a aVar) {
-        throw qz.a(aVar, x());
+    /* renamed from: x0 */
+    public final void m24169x0(C1118a c1118a) {
+        throw C2802qz.m11927a(c1118a, m5348x());
     }
 }

@@ -1,34 +1,46 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class a51 {
-    public String a = null;
-    public String b = null;
-    public long c = -1;
 
-    public long a() {
-        return this.c;
+    /* renamed from: a */
+    public String f2894a = null;
+
+    /* renamed from: b */
+    public String f2895b = null;
+
+    /* renamed from: c */
+    public long f2896c = -1;
+
+    /* renamed from: a */
+    public long m27609a() {
+        return this.f2896c;
     }
 
-    public String b() {
-        return this.b;
+    /* renamed from: b */
+    public String m27608b() {
+        return this.f2895b;
     }
 
-    public String c() {
-        return this.a;
+    /* renamed from: c */
+    public String m27607c() {
+        return this.f2894a;
     }
 
-    public void d(long j) {
+    /* renamed from: d */
+    public void m27606d(long j) {
         if (j < 0) {
             j = -1;
         }
-        this.c = j;
+        this.f2896c = j;
     }
 
-    public void e(String str) {
-        this.b = str.trim().replace('\\', '/');
+    /* renamed from: e */
+    public void m27605e(String str) {
+        this.f2895b = str.trim().replace('\\', '/');
     }
 
-    public void f(String str) {
-        this.a = dh1.a(str);
+    /* renamed from: f */
+    public void m27604f(String str) {
+        this.f2894a = dh1.m24412a(str);
     }
 }

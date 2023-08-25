@@ -10,7 +10,8 @@ import com.daaw.xn1;
 import com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver;
 /* loaded from: classes.dex */
 public class AlarmManagerSchedulerBroadcastReceiver extends BroadcastReceiver {
-    public static /* synthetic */ void b() {
+    /* renamed from: b */
+    public static /* synthetic */ void m1748b() {
     }
 
     @Override // android.content.BroadcastReceiver
@@ -19,15 +20,15 @@ public class AlarmManagerSchedulerBroadcastReceiver extends BroadcastReceiver {
         String queryParameter2 = intent.getData().getQueryParameter("extras");
         int intValue = Integer.valueOf(intent.getData().getQueryParameter("priority")).intValue();
         int i = intent.getExtras().getInt("attemptNumber");
-        xn1.f(context);
-        sn1.a d = sn1.a().b(queryParameter).d(fz0.b(intValue));
+        xn1.m4946f(context);
+        sn1.AbstractC2958a mo6330d = sn1.m10151a().mo6332b(queryParameter).mo6330d(fz0.m22131b(intValue));
         if (queryParameter2 != null) {
-            d.c(Base64.decode(queryParameter2, 0));
+            mo6330d.mo6331c(Base64.decode(queryParameter2, 0));
         }
-        xn1.c().e().v(d.a(), i, new Runnable() { // from class: com.daaw.w1
+        xn1.m4949c().m4947e().m23281v(mo6330d.mo6333a(), i, new Runnable() { // from class: com.daaw.w1
             @Override // java.lang.Runnable
             public final void run() {
-                AlarmManagerSchedulerBroadcastReceiver.b();
+                AlarmManagerSchedulerBroadcastReceiver.m1748b();
             }
         });
     }

@@ -8,17 +8,21 @@ import com.daaw.x93;
 /* loaded from: classes.dex */
 public final class zzadx implements zzbp {
     public static final Parcelable.Creator<zzadx> CREATOR = new u72();
-    public final float p;
-    public final int q;
+
+    /* renamed from: p */
+    public final float f36771p;
+
+    /* renamed from: q */
+    public final int f36772q;
 
     public zzadx(float f, int i) {
-        this.p = f;
-        this.q = i;
+        this.f36771p = f;
+        this.f36772q = i;
     }
 
     public /* synthetic */ zzadx(Parcel parcel, v72 v72Var) {
-        this.p = parcel.readFloat();
-        this.q = parcel.readInt();
+        this.f36771p = parcel.readFloat();
+        this.f36772q = parcel.readInt();
     }
 
     @Override // android.os.Parcelable
@@ -32,7 +36,7 @@ public final class zzadx implements zzbp {
         }
         if (obj != null && zzadx.class == obj.getClass()) {
             zzadx zzadxVar = (zzadx) obj;
-            if (this.p == zzadxVar.p && this.q == zzadxVar.q) {
+            if (this.f36771p == zzadxVar.f36771p && this.f36772q == zzadxVar.f36772q) {
                 return true;
             }
         }
@@ -40,22 +44,23 @@ public final class zzadx implements zzbp {
     }
 
     @Override // com.google.android.gms.internal.ads.zzbp
-    public final /* synthetic */ void f(x93 x93Var) {
+    /* renamed from: f */
+    public final /* synthetic */ void mo1104f(x93 x93Var) {
     }
 
     public final int hashCode() {
-        return ((Float.valueOf(this.p).hashCode() + 527) * 31) + this.q;
+        return ((Float.valueOf(this.f36771p).hashCode() + 527) * 31) + this.f36772q;
     }
 
     public final String toString() {
-        float f = this.p;
-        int i = this.q;
+        float f = this.f36771p;
+        int i = this.f36772q;
         return "smta: captureFrameRate=" + f + ", svcTemporalLayerCount=" + i;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeFloat(this.p);
-        parcel.writeInt(this.q);
+        parcel.writeFloat(this.f36771p);
+        parcel.writeInt(this.f36772q);
     }
 }

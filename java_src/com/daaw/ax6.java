@@ -9,10 +9,11 @@ public abstract class ax6 extends cp2 implements bx6 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
-            dp2.c(parcel);
-            R1((Bundle) dp2.a(parcel, Bundle.CREATOR));
+            dp2.m24105c(parcel);
+            mo13902R1((Bundle) dp2.m24107a(parcel, Bundle.CREATOR));
             return true;
         }
         return false;

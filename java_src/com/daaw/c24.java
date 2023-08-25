@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.view.Surface;
 import android.view.TextureView;
+import android.view.View;
 import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.util.zze;
 import com.google.android.gms.ads.internal.util.zzs;
@@ -18,27 +19,61 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class c24 extends e24 implements TextureView.SurfaceTextureListener, MediaPlayer.OnBufferingUpdateListener, MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener, MediaPlayer.OnInfoListener, MediaPlayer.OnPreparedListener, MediaPlayer.OnVideoSizeChangedListener {
-    public static final Map I;
-    public int A;
-    public int B;
-    public w24 C;
-    public final boolean D;
-    public int E;
-    public d24 F;
-    public boolean G;
-    public Integer H;
-    public final y24 s;
-    public final z24 t;
-    public final boolean u;
-    public int v;
-    public int w;
-    public MediaPlayer x;
-    public Uri y;
-    public int z;
+
+    /* renamed from: I */
+    public static final Map f5381I;
+
+    /* renamed from: A */
+    public int f5382A;
+
+    /* renamed from: B */
+    public int f5383B;
+
+    /* renamed from: C */
+    public w24 f5384C;
+
+    /* renamed from: D */
+    public final boolean f5385D;
+
+    /* renamed from: E */
+    public int f5386E;
+
+    /* renamed from: F */
+    public d24 f5387F;
+
+    /* renamed from: G */
+    public boolean f5388G;
+
+    /* renamed from: H */
+    public Integer f5389H;
+
+    /* renamed from: s */
+    public final y24 f5390s;
+
+    /* renamed from: t */
+    public final z24 f5391t;
+
+    /* renamed from: u */
+    public final boolean f5392u;
+
+    /* renamed from: v */
+    public int f5393v;
+
+    /* renamed from: w */
+    public int f5394w;
+
+    /* renamed from: x */
+    public MediaPlayer f5395x;
+
+    /* renamed from: y */
+    public Uri f5396y;
+
+    /* renamed from: z */
+    public int f5397z;
 
     static {
         HashMap hashMap = new HashMap();
-        I = hashMap;
+        f5381I = hashMap;
         hashMap.put(-1004, "MEDIA_ERROR_IO");
         hashMap.put(-1007, "MEDIA_ERROR_MALFORMED");
         hashMap.put(-1010, "MEDIA_ERROR_UNSUPPORTED");
@@ -59,24 +94,25 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
 
     public c24(Context context, y24 y24Var, boolean z, boolean z2, x24 x24Var, z24 z24Var, Integer num) {
         super(context, num);
-        this.v = 0;
-        this.w = 0;
-        this.G = false;
-        this.H = null;
+        this.f5393v = 0;
+        this.f5394w = 0;
+        this.f5388G = false;
+        this.f5389H = null;
         setSurfaceTextureListener(this);
-        this.s = y24Var;
-        this.t = z24Var;
-        this.D = z;
-        this.u = z2;
-        z24Var.a(this);
+        this.f5390s = y24Var;
+        this.f5391t = z24Var;
+        this.f5385D = z;
+        this.f5392u = z2;
+        z24Var.m2964a(this);
     }
 
-    public static /* bridge */ /* synthetic */ void I(c24 c24Var, MediaPlayer mediaPlayer) {
+    /* renamed from: I */
+    public static /* bridge */ /* synthetic */ void m25676I(c24 c24Var, MediaPlayer mediaPlayer) {
         MediaPlayer.TrackInfo[] trackInfo;
         String string;
         String str;
         MediaFormat format;
-        if (!((Boolean) zzba.zzc().b(g93.F1)).booleanValue() || c24Var.s == null || mediaPlayer == null || (trackInfo = mediaPlayer.getTrackInfo()) == null) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10413F1)).booleanValue() || c24Var.f5390s == null || mediaPlayer == null || (trackInfo = mediaPlayer.getTrackInfo()) == null) {
             return;
         }
         HashMap hashMap = new HashMap();
@@ -95,7 +131,7 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
                         }
                         if (format2.containsKey("bitrate")) {
                             Integer valueOf = Integer.valueOf(format2.getInteger("bitrate"));
-                            c24Var.H = valueOf;
+                            c24Var.f5389H = valueOf;
                             hashMap.put("bitRate", String.valueOf(valueOf));
                         }
                         if (format2.containsKey("width") && format2.containsKey("height")) {
@@ -125,85 +161,89 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
         if (hashMap.isEmpty()) {
             return;
         }
-        c24Var.s.T("onMetadataEvent", hashMap);
+        c24Var.f5390s.mo6434T("onMetadataEvent", hashMap);
     }
 
-    public final void B() {
+    /* renamed from: B */
+    public final void m25683B() {
         zze.zza("AdMediaPlayerView init MediaPlayer");
         SurfaceTexture surfaceTexture = getSurfaceTexture();
-        if (this.y == null || surfaceTexture == null) {
+        if (this.f5396y == null || surfaceTexture == null) {
             return;
         }
-        C(false);
+        m25682C(false);
         try {
             zzt.zzk();
             MediaPlayer mediaPlayer = new MediaPlayer();
-            this.x = mediaPlayer;
+            this.f5395x = mediaPlayer;
             mediaPlayer.setOnBufferingUpdateListener(this);
-            this.x.setOnCompletionListener(this);
-            this.x.setOnErrorListener(this);
-            this.x.setOnInfoListener(this);
-            this.x.setOnPreparedListener(this);
-            this.x.setOnVideoSizeChangedListener(this);
-            this.B = 0;
-            if (this.D) {
+            this.f5395x.setOnCompletionListener(this);
+            this.f5395x.setOnErrorListener(this);
+            this.f5395x.setOnInfoListener(this);
+            this.f5395x.setOnPreparedListener(this);
+            this.f5395x.setOnVideoSizeChangedListener(this);
+            this.f5383B = 0;
+            if (this.f5385D) {
                 w24 w24Var = new w24(getContext());
-                this.C = w24Var;
-                w24Var.c(surfaceTexture, getWidth(), getHeight());
-                this.C.start();
-                SurfaceTexture a = this.C.a();
-                if (a != null) {
-                    surfaceTexture = a;
+                this.f5384C = w24Var;
+                w24Var.m6577c(surfaceTexture, getWidth(), getHeight());
+                this.f5384C.start();
+                SurfaceTexture m6579a = this.f5384C.m6579a();
+                if (m6579a != null) {
+                    surfaceTexture = m6579a;
                 } else {
-                    this.C.d();
-                    this.C = null;
+                    this.f5384C.m6576d();
+                    this.f5384C = null;
                 }
             }
-            this.x.setDataSource(getContext(), this.y);
+            this.f5395x.setDataSource(getContext(), this.f5396y);
             zzt.zzl();
-            this.x.setSurface(new Surface(surfaceTexture));
-            this.x.setAudioStreamType(3);
-            this.x.setScreenOnWhilePlaying(true);
-            this.x.prepareAsync();
-            D(1);
+            this.f5395x.setSurface(new Surface(surfaceTexture));
+            this.f5395x.setAudioStreamType(3);
+            this.f5395x.setScreenOnWhilePlaying(true);
+            this.f5395x.prepareAsync();
+            m25681D(1);
         } catch (IOException | IllegalArgumentException | IllegalStateException e) {
-            k04.zzk("Failed to initialize MediaPlayer at ".concat(String.valueOf(this.y)), e);
-            onError(this.x, 1, 0);
+            k04.zzk("Failed to initialize MediaPlayer at ".concat(String.valueOf(this.f5396y)), e);
+            onError(this.f5395x, 1, 0);
         }
     }
 
-    public final void C(boolean z) {
+    /* renamed from: C */
+    public final void m25682C(boolean z) {
         zze.zza("AdMediaPlayerView release");
-        w24 w24Var = this.C;
+        w24 w24Var = this.f5384C;
         if (w24Var != null) {
-            w24Var.d();
-            this.C = null;
+            w24Var.m6576d();
+            this.f5384C = null;
         }
-        MediaPlayer mediaPlayer = this.x;
+        MediaPlayer mediaPlayer = this.f5395x;
         if (mediaPlayer != null) {
             mediaPlayer.reset();
-            this.x.release();
-            this.x = null;
-            D(0);
+            this.f5395x.release();
+            this.f5395x = null;
+            m25681D(0);
             if (z) {
-                this.w = 0;
+                this.f5394w = 0;
             }
         }
     }
 
-    public final void D(int i) {
+    /* renamed from: D */
+    public final void m25681D(int i) {
         if (i == 3) {
-            this.t.c();
-            this.q.b();
-        } else if (this.v == 3) {
-            this.t.e();
-            this.q.c();
+            this.f5391t.m2962c();
+            this.f8053q.m22941b();
+        } else if (this.f5393v == 3) {
+            this.f5391t.m2960e();
+            this.f8053q.m22940c();
         }
-        this.v = i;
+        this.f5393v = i;
     }
 
-    public final void E(float f) {
-        MediaPlayer mediaPlayer = this.x;
+    /* renamed from: E */
+    public final void m25680E(float f) {
+        MediaPlayer mediaPlayer = this.f5395x;
         if (mediaPlayer == null) {
             k04.zzj("AdMediaPlayerView setMediaPlayerVolume() called before onPrepared().");
             return;
@@ -214,45 +254,51 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
         }
     }
 
-    public final boolean F() {
+    /* renamed from: F */
+    public final boolean m25679F() {
         int i;
-        return (this.x == null || (i = this.v) == -1 || i == 0 || i == 1) ? false : true;
+        return (this.f5395x == null || (i = this.f5393v) == -1 || i == 0 || i == 1) ? false : true;
     }
 
-    public final /* synthetic */ void c(int i) {
-        d24 d24Var = this.F;
+    /* renamed from: c */
+    public final /* synthetic */ void m25674c(int i) {
+        d24 d24Var = this.f5387F;
         if (d24Var != null) {
             d24Var.onWindowVisibilityChanged(i);
         }
     }
 
     @Override // com.daaw.e24
-    public final int h() {
-        if (F()) {
-            return this.x.getCurrentPosition();
+    /* renamed from: h */
+    public final int mo9565h() {
+        if (m25679F()) {
+            return this.f5395x.getCurrentPosition();
         }
         return 0;
     }
 
     @Override // com.daaw.e24
-    public final int i() {
-        if (Build.VERSION.SDK_INT < 26 || !F()) {
+    /* renamed from: i */
+    public final int mo9564i() {
+        if (Build.VERSION.SDK_INT < 26 || !m25679F()) {
             return -1;
         }
-        return this.x.getMetrics().getInt("android.media.mediaplayer.dropped");
+        return this.f5395x.getMetrics().getInt("android.media.mediaplayer.dropped");
     }
 
     @Override // com.daaw.e24
-    public final int j() {
-        if (F()) {
-            return this.x.getDuration();
+    /* renamed from: j */
+    public final int mo9563j() {
+        if (m25679F()) {
+            return this.f5395x.getDuration();
         }
         return -1;
     }
 
     @Override // com.daaw.e24
-    public final int k() {
-        MediaPlayer mediaPlayer = this.x;
+    /* renamed from: k */
+    public final int mo9562k() {
+        MediaPlayer mediaPlayer = this.f5395x;
         if (mediaPlayer != null) {
             return mediaPlayer.getVideoHeight();
         }
@@ -260,8 +306,9 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
     }
 
     @Override // com.daaw.e24
-    public final int l() {
-        MediaPlayer mediaPlayer = this.x;
+    /* renamed from: l */
+    public final int mo9561l() {
+        MediaPlayer mediaPlayer = this.f5395x;
         if (mediaPlayer != null) {
             return mediaPlayer.getVideoWidth();
         }
@@ -269,54 +316,57 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
     }
 
     @Override // com.daaw.e24
-    public final long m() {
+    /* renamed from: m */
+    public final long mo9560m() {
         return 0L;
     }
 
     @Override // com.daaw.e24
-    public final long n() {
-        if (this.H != null) {
-            return (o() * this.B) / 100;
+    /* renamed from: n */
+    public final long mo9559n() {
+        if (this.f5389H != null) {
+            return (mo9558o() * this.f5383B) / 100;
         }
         return -1L;
     }
 
     @Override // com.daaw.e24
-    public final long o() {
-        if (this.H != null) {
-            return j() * this.H.intValue();
+    /* renamed from: o */
+    public final long mo9558o() {
+        if (this.f5389H != null) {
+            return mo9563j() * this.f5389H.intValue();
         }
         return -1L;
     }
 
     @Override // android.media.MediaPlayer.OnBufferingUpdateListener
     public final void onBufferingUpdate(MediaPlayer mediaPlayer, int i) {
-        this.B = i;
+        this.f5383B = i;
     }
 
     @Override // android.media.MediaPlayer.OnCompletionListener
     public final void onCompletion(MediaPlayer mediaPlayer) {
         zze.zza("AdMediaPlayerView completion");
-        D(5);
-        this.w = 5;
+        m25681D(5);
+        this.f5394w = 5;
         zzs.zza.post(new s14(this));
     }
 
     @Override // android.media.MediaPlayer.OnErrorListener
     public final boolean onError(MediaPlayer mediaPlayer, int i, int i2) {
-        Map map = I;
+        Map map = f5381I;
         String str = (String) map.get(Integer.valueOf(i));
         String str2 = (String) map.get(Integer.valueOf(i2));
         k04.zzj("AdMediaPlayerView MediaPlayer error: " + str + ":" + str2);
-        D(-1);
-        this.w = -1;
+        m25681D(-1);
+        this.f5394w = -1;
         zzs.zza.post(new t14(this, str, str2));
         return true;
     }
 
     @Override // android.media.MediaPlayer.OnInfoListener
     public final boolean onInfo(MediaPlayer mediaPlayer, int i, int i2) {
-        Map map = I;
+        Map map = f5381I;
         zze.zza("AdMediaPlayerView MediaPlayer info: " + ((String) map.get(Integer.valueOf(i))) + ":" + ((String) map.get(Integer.valueOf(i2))));
         return true;
     }
@@ -327,128 +377,103 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
     @Override // android.view.View
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void onMeasure(int r6, int r7) {
-        /*
-            r5 = this;
-            int r0 = r5.z
-            int r0 = android.view.TextureView.getDefaultSize(r0, r6)
-            int r1 = r5.A
-            int r1 = android.view.TextureView.getDefaultSize(r1, r7)
-            int r2 = r5.z
-            if (r2 <= 0) goto L7e
-            int r2 = r5.A
-            if (r2 <= 0) goto L7e
-            com.daaw.w24 r2 = r5.C
-            if (r2 != 0) goto L7e
-            int r0 = android.view.View.MeasureSpec.getMode(r6)
-            int r6 = android.view.View.MeasureSpec.getSize(r6)
-            int r1 = android.view.View.MeasureSpec.getMode(r7)
-            int r7 = android.view.View.MeasureSpec.getSize(r7)
-            r2 = 1073741824(0x40000000, float:2.0)
-            if (r0 != r2) goto L43
-            if (r1 != r2) goto L41
-            int r0 = r5.z
-            int r1 = r0 * r7
-            int r2 = r5.A
-            int r3 = r6 * r2
-            if (r1 >= r3) goto L3c
-            int r0 = r1 / r2
-        L3a:
-            r1 = r7
-            goto L7e
-        L3c:
-            if (r1 <= r3) goto L63
-            int r1 = r3 / r0
-            goto L54
-        L41:
-            r0 = 1073741824(0x40000000, float:2.0)
-        L43:
-            r3 = -2147483648(0xffffffff80000000, float:-0.0)
-            if (r0 != r2) goto L56
-            int r0 = r5.A
-            int r0 = r0 * r6
-            int r2 = r5.z
-            int r0 = r0 / r2
-            if (r1 != r3) goto L53
-            if (r0 <= r7) goto L53
-            goto L63
-        L53:
-            r1 = r0
-        L54:
-            r0 = r6
-            goto L7e
-        L56:
-            if (r1 != r2) goto L67
-            int r1 = r5.z
-            int r1 = r1 * r7
-            int r2 = r5.A
-            int r1 = r1 / r2
-            if (r0 != r3) goto L65
-            if (r1 <= r6) goto L65
-        L63:
-            r0 = r6
-            goto L3a
-        L65:
-            r0 = r1
-            goto L3a
-        L67:
-            int r2 = r5.z
-            int r4 = r5.A
-            if (r1 != r3) goto L73
-            if (r4 <= r7) goto L73
-            int r1 = r7 * r2
-            int r1 = r1 / r4
-            goto L75
-        L73:
-            r1 = r2
-            r7 = r4
-        L75:
-            if (r0 != r3) goto L65
-            if (r1 <= r6) goto L65
-            int r4 = r4 * r6
-            int r1 = r4 / r2
-            goto L54
-        L7e:
-            r5.setMeasuredDimension(r0, r1)
-            com.daaw.w24 r6 = r5.C
-            if (r6 == 0) goto L88
-            r6.b(r0, r1)
-        L88:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.c24.onMeasure(int, int):void");
+    public final void onMeasure(int i, int i2) {
+        int i3;
+        int defaultSize = TextureView.getDefaultSize(this.f5397z, i);
+        int defaultSize2 = TextureView.getDefaultSize(this.f5382A, i2);
+        if (this.f5397z > 0 && this.f5382A > 0 && this.f5384C == null) {
+            int mode = View.MeasureSpec.getMode(i);
+            int size = View.MeasureSpec.getSize(i);
+            int mode2 = View.MeasureSpec.getMode(i2);
+            int size2 = View.MeasureSpec.getSize(i2);
+            if (mode == 1073741824) {
+                if (mode2 == 1073741824) {
+                    int i4 = this.f5397z;
+                    int i5 = i4 * size2;
+                    int i6 = this.f5382A;
+                    int i7 = size * i6;
+                    if (i5 < i7) {
+                        defaultSize = i5 / i6;
+                        defaultSize2 = size2;
+                    } else {
+                        if (i5 > i7) {
+                            defaultSize2 = i7 / i4;
+                            defaultSize = size;
+                        }
+                        defaultSize = size;
+                        defaultSize2 = size2;
+                    }
+                } else {
+                    mode = 1073741824;
+                }
+            }
+            if (mode == 1073741824) {
+                int i8 = (this.f5382A * size) / this.f5397z;
+                if (mode2 != Integer.MIN_VALUE || i8 <= size2) {
+                    defaultSize2 = i8;
+                    defaultSize = size;
+                }
+                defaultSize = size;
+                defaultSize2 = size2;
+            } else {
+                if (mode2 == 1073741824) {
+                    i3 = (this.f5397z * size2) / this.f5382A;
+                    if (mode == Integer.MIN_VALUE) {
+                    }
+                } else {
+                    int i9 = this.f5397z;
+                    int i10 = this.f5382A;
+                    if (mode2 != Integer.MIN_VALUE || i10 <= size2) {
+                        i3 = i9;
+                        size2 = i10;
+                    } else {
+                        i3 = (size2 * i9) / i10;
+                    }
+                    if (mode == Integer.MIN_VALUE && i3 > size) {
+                        defaultSize2 = (i10 * size) / i9;
+                        defaultSize = size;
+                    }
+                }
+                defaultSize = i3;
+                defaultSize2 = size2;
+            }
+        }
+        setMeasuredDimension(defaultSize, defaultSize2);
+        w24 w24Var = this.f5384C;
+        if (w24Var != null) {
+            w24Var.m6578b(defaultSize, defaultSize2);
+        }
     }
 
     @Override // android.media.MediaPlayer.OnPreparedListener
     public final void onPrepared(MediaPlayer mediaPlayer) {
         zze.zza("AdMediaPlayerView prepared");
-        D(2);
-        this.t.b();
+        m25681D(2);
+        this.f5391t.m2963b();
         zzs.zza.post(new r14(this, mediaPlayer));
-        this.z = mediaPlayer.getVideoWidth();
-        this.A = mediaPlayer.getVideoHeight();
-        int i = this.E;
+        this.f5397z = mediaPlayer.getVideoWidth();
+        this.f5382A = mediaPlayer.getVideoHeight();
+        int i = this.f5386E;
         if (i != 0) {
-            s(i);
+            mo9554s(i);
         }
-        if (this.u && F() && this.x.getCurrentPosition() > 0 && this.w != 3) {
+        if (this.f5392u && m25679F() && this.f5395x.getCurrentPosition() > 0 && this.f5394w != 3) {
             zze.zza("AdMediaPlayerView nudging MediaPlayer");
-            E(0.0f);
-            this.x.start();
-            int currentPosition = this.x.getCurrentPosition();
-            long a = zzt.zzB().a();
-            while (F() && this.x.getCurrentPosition() == currentPosition && zzt.zzB().a() - a <= 250) {
+            m25680E(0.0f);
+            this.f5395x.start();
+            int currentPosition = this.f5395x.getCurrentPosition();
+            long mo15860a = zzt.zzB().mo15860a();
+            while (m25679F() && this.f5395x.getCurrentPosition() == currentPosition && zzt.zzB().mo15860a() - mo15860a <= 250) {
             }
-            this.x.pause();
+            this.f5395x.pause();
             zzn();
         }
-        int i2 = this.z;
-        int i3 = this.A;
+        int i2 = this.f5397z;
+        int i3 = this.f5382A;
         k04.zzi("AdMediaPlayerView stream dimensions: " + i2 + " x " + i3);
-        if (this.w == 3) {
-            r();
+        if (this.f5394w == 3) {
+            mo9555r();
         }
         zzn();
     }
@@ -456,61 +481,61 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
     @Override // android.view.TextureView.SurfaceTextureListener
     public final void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i2) {
         zze.zza("AdMediaPlayerView surface created");
-        B();
+        m25683B();
         zzs.zza.post(new u14(this));
     }
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
         zze.zza("AdMediaPlayerView surface destroyed");
-        MediaPlayer mediaPlayer = this.x;
-        if (mediaPlayer != null && this.E == 0) {
-            this.E = mediaPlayer.getCurrentPosition();
+        MediaPlayer mediaPlayer = this.f5395x;
+        if (mediaPlayer != null && this.f5386E == 0) {
+            this.f5386E = mediaPlayer.getCurrentPosition();
         }
-        w24 w24Var = this.C;
+        w24 w24Var = this.f5384C;
         if (w24Var != null) {
-            w24Var.d();
+            w24Var.m6576d();
         }
         zzs.zza.post(new w14(this));
-        C(true);
+        m25682C(true);
         return true;
     }
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, int i, int i2) {
         zze.zza("AdMediaPlayerView surface changed");
-        int i3 = this.w;
+        int i3 = this.f5394w;
         boolean z = false;
-        if (this.z == i && this.A == i2) {
+        if (this.f5397z == i && this.f5382A == i2) {
             z = true;
         }
-        if (this.x != null && i3 == 3 && z) {
-            int i4 = this.E;
+        if (this.f5395x != null && i3 == 3 && z) {
+            int i4 = this.f5386E;
             if (i4 != 0) {
-                s(i4);
+                mo9554s(i4);
             }
-            r();
+            mo9555r();
         }
-        w24 w24Var = this.C;
+        w24 w24Var = this.f5384C;
         if (w24Var != null) {
-            w24Var.b(i, i2);
+            w24Var.m6578b(i, i2);
         }
         zzs.zza.post(new v14(this, i, i2));
     }
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
-        this.t.f(this);
-        this.p.a(surfaceTexture, this.F);
+        this.f5391t.m2959f(this);
+        this.f8052p.m10750a(surfaceTexture, this.f5387F);
     }
 
     @Override // android.media.MediaPlayer.OnVideoSizeChangedListener
     public final void onVideoSizeChanged(MediaPlayer mediaPlayer, int i, int i2) {
         zze.zza("AdMediaPlayerView size changed: " + i + " x " + i2);
-        this.z = mediaPlayer.getVideoWidth();
+        this.f5397z = mediaPlayer.getVideoWidth();
         int videoHeight = mediaPlayer.getVideoHeight();
-        this.A = videoHeight;
-        if (this.z == 0 || videoHeight == 0) {
+        this.f5382A = videoHeight;
+        if (this.f5397z == 0 || videoHeight == 0) {
             return;
         }
         requestLayout();
@@ -522,54 +547,59 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
         zzs.zza.post(new Runnable() { // from class: com.daaw.q14
             @Override // java.lang.Runnable
             public final void run() {
-                c24.this.c(i);
+                c24.this.m25674c(i);
             }
         });
         super.onWindowVisibilityChanged(i);
     }
 
     @Override // com.daaw.e24
-    public final String p() {
-        return "MediaPlayer".concat(true != this.D ? "" : " spherical");
+    /* renamed from: p */
+    public final String mo9557p() {
+        return "MediaPlayer".concat(true != this.f5385D ? "" : " spherical");
     }
 
     @Override // com.daaw.e24
-    public final void q() {
+    /* renamed from: q */
+    public final void mo9556q() {
         zze.zza("AdMediaPlayerView pause");
-        if (F() && this.x.isPlaying()) {
-            this.x.pause();
-            D(4);
+        if (m25679F() && this.f5395x.isPlaying()) {
+            this.f5395x.pause();
+            m25681D(4);
             zzs.zza.post(new b24(this));
         }
-        this.w = 4;
+        this.f5394w = 4;
     }
 
     @Override // com.daaw.e24
-    public final void r() {
+    /* renamed from: r */
+    public final void mo9555r() {
         zze.zza("AdMediaPlayerView play");
-        if (F()) {
-            this.x.start();
-            D(3);
-            this.p.b();
+        if (m25679F()) {
+            this.f5395x.start();
+            m25681D(3);
+            this.f8052p.m10749b();
             zzs.zza.post(new x14(this));
         }
-        this.w = 3;
+        this.f5394w = 3;
     }
 
     @Override // com.daaw.e24
-    public final void s(int i) {
+    /* renamed from: s */
+    public final void mo9554s(int i) {
         zze.zza("AdMediaPlayerView seek " + i);
-        if (!F()) {
-            this.E = i;
+        if (!m25679F()) {
+            this.f5386E = i;
             return;
         }
-        this.x.seekTo(i);
-        this.E = 0;
+        this.f5395x.seekTo(i);
+        this.f5386E = 0;
     }
 
     @Override // com.daaw.e24
-    public final void t(d24 d24Var) {
-        this.F = d24Var;
+    /* renamed from: t */
+    public final void mo9553t(d24 d24Var) {
+        this.f5387F = d24Var;
     }
 
     @Override // android.view.View
@@ -580,45 +610,48 @@ public final class c24 extends e24 implements TextureView.SurfaceTextureListener
     }
 
     @Override // com.daaw.e24
-    public final void u(String str) {
+    /* renamed from: u */
+    public final void mo9552u(String str) {
         Uri parse = Uri.parse(str);
-        zzbei h = zzbei.h(parse);
-        if (h == null || h.p != null) {
-            if (h != null) {
-                parse = Uri.parse(h.p);
+        zzbei m1106h = zzbei.m1106h(parse);
+        if (m1106h == null || m1106h.f36833p != null) {
+            if (m1106h != null) {
+                parse = Uri.parse(m1106h.f36833p);
             }
-            this.y = parse;
-            this.E = 0;
-            B();
+            this.f5396y = parse;
+            this.f5386E = 0;
+            m25683B();
             requestLayout();
             invalidate();
         }
     }
 
     @Override // com.daaw.e24
-    public final void v() {
+    /* renamed from: v */
+    public final void mo9551v() {
         zze.zza("AdMediaPlayerView stop");
-        MediaPlayer mediaPlayer = this.x;
+        MediaPlayer mediaPlayer = this.f5395x;
         if (mediaPlayer != null) {
             mediaPlayer.stop();
-            this.x.release();
-            this.x = null;
-            D(0);
-            this.w = 0;
+            this.f5395x.release();
+            this.f5395x = null;
+            m25681D(0);
+            this.f5394w = 0;
         }
-        this.t.d();
+        this.f5391t.m2961d();
     }
 
     @Override // com.daaw.e24
-    public final void w(float f, float f2) {
-        w24 w24Var = this.C;
+    /* renamed from: w */
+    public final void mo9550w(float f, float f2) {
+        w24 w24Var = this.f5384C;
         if (w24Var != null) {
-            w24Var.e(f, f2);
+            w24Var.m6575e(f, f2);
         }
     }
 
     @Override // com.daaw.e24, com.daaw.e34
     public final void zzn() {
-        E(this.q.a());
+        m25680E(this.f8053q.m22942a());
     }
 }

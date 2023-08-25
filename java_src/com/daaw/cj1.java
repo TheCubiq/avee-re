@@ -16,62 +16,76 @@ import java.util.List;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public class cj1 implements r81 {
-    public static final String t = ll0.f("SystemJobScheduler");
-    public final Context p;
-    public final JobScheduler q;
-    public final ey1 r;
-    public final bj1 s;
+
+    /* renamed from: t */
+    public static final String f5826t = ll0.m16883f("SystemJobScheduler");
+
+    /* renamed from: p */
+    public final Context f5827p;
+
+    /* renamed from: q */
+    public final JobScheduler f5828q;
+
+    /* renamed from: r */
+    public final ey1 f5829r;
+
+    /* renamed from: s */
+    public final bj1 f5830s;
 
     public cj1(Context context, ey1 ey1Var) {
         this(context, ey1Var, (JobScheduler) context.getSystemService("jobscheduler"), new bj1(context));
     }
 
     public cj1(Context context, ey1 ey1Var, JobScheduler jobScheduler, bj1 bj1Var) {
-        this.p = context;
-        this.r = ey1Var;
-        this.q = jobScheduler;
-        this.s = bj1Var;
+        this.f5827p = context;
+        this.f5829r = ey1Var;
+        this.f5828q = jobScheduler;
+        this.f5830s = bj1Var;
     }
 
-    public static void b(Context context) {
-        List<JobInfo> g;
+    /* renamed from: b */
+    public static void m25362b(Context context) {
+        List<JobInfo> m25359g;
         JobScheduler jobScheduler = (JobScheduler) context.getSystemService("jobscheduler");
-        if (jobScheduler == null || (g = g(context, jobScheduler)) == null || g.isEmpty()) {
+        if (jobScheduler == null || (m25359g = m25359g(context, jobScheduler)) == null || m25359g.isEmpty()) {
             return;
         }
-        for (JobInfo jobInfo : g) {
-            c(jobScheduler, jobInfo.getId());
+        for (JobInfo jobInfo : m25359g) {
+            m25361c(jobScheduler, jobInfo.getId());
         }
     }
 
-    public static void c(JobScheduler jobScheduler, int i) {
+    /* renamed from: c */
+    public static void m25361c(JobScheduler jobScheduler, int i) {
         try {
             jobScheduler.cancel(i);
         } catch (Throwable th) {
-            ll0.c().b(t, String.format(Locale.getDefault(), "Exception while trying to cancel job (%d)", Integer.valueOf(i)), th);
+            ll0.m16885c().mo16881b(f5826t, String.format(Locale.getDefault(), "Exception while trying to cancel job (%d)", Integer.valueOf(i)), th);
         }
     }
 
-    public static List<Integer> f(Context context, JobScheduler jobScheduler, String str) {
-        List<JobInfo> g = g(context, jobScheduler);
-        if (g == null) {
+    /* renamed from: f */
+    public static List<Integer> m25360f(Context context, JobScheduler jobScheduler, String str) {
+        List<JobInfo> m25359g = m25359g(context, jobScheduler);
+        if (m25359g == null) {
             return null;
         }
         ArrayList arrayList = new ArrayList(2);
-        for (JobInfo jobInfo : g) {
-            if (str.equals(h(jobInfo))) {
+        for (JobInfo jobInfo : m25359g) {
+            if (str.equals(m25358h(jobInfo))) {
                 arrayList.add(Integer.valueOf(jobInfo.getId()));
             }
         }
         return arrayList;
     }
 
-    public static List<JobInfo> g(Context context, JobScheduler jobScheduler) {
+    /* renamed from: g */
+    public static List<JobInfo> m25359g(Context context, JobScheduler jobScheduler) {
         List<JobInfo> list;
         try {
             list = jobScheduler.getAllPendingJobs();
         } catch (Throwable th) {
-            ll0.c().b(t, "getAllPendingJobs() is not reliable on this device.", th);
+            ll0.m16885c().mo16881b(f5826t, "getAllPendingJobs() is not reliable on this device.", th);
             list = null;
         }
         if (list == null) {
@@ -87,7 +101,8 @@ public class cj1 implements r81 {
         return arrayList;
     }
 
-    public static String h(JobInfo jobInfo) {
+    /* renamed from: h */
+    public static String m25358h(JobInfo jobInfo) {
         PersistableBundle extras = jobInfo.getExtras();
         if (extras != null) {
             try {
@@ -102,27 +117,28 @@ public class cj1 implements r81 {
         return null;
     }
 
-    public static boolean i(Context context, ey1 ey1Var) {
+    /* renamed from: i */
+    public static boolean m25357i(Context context, ey1 ey1Var) {
         JobScheduler jobScheduler = (JobScheduler) context.getSystemService("jobscheduler");
-        List<JobInfo> g = g(context, jobScheduler);
-        List<String> a = ey1Var.o().y().a();
+        List<JobInfo> m25359g = m25359g(context, jobScheduler);
+        List<String> mo2279a = ey1Var.m23000o().mo27936y().mo2279a();
         boolean z = false;
-        HashSet hashSet = new HashSet(g != null ? g.size() : 0);
-        if (g != null && !g.isEmpty()) {
-            for (JobInfo jobInfo : g) {
-                String h = h(jobInfo);
-                if (TextUtils.isEmpty(h)) {
-                    c(jobScheduler, jobInfo.getId());
+        HashSet hashSet = new HashSet(m25359g != null ? m25359g.size() : 0);
+        if (m25359g != null && !m25359g.isEmpty()) {
+            for (JobInfo jobInfo : m25359g) {
+                String m25358h = m25358h(jobInfo);
+                if (TextUtils.isEmpty(m25358h)) {
+                    m25361c(jobScheduler, jobInfo.getId());
                 } else {
-                    hashSet.add(h);
+                    hashSet.add(m25358h);
                 }
             }
         }
-        Iterator<String> it = a.iterator();
+        Iterator<String> it = mo2279a.iterator();
         while (true) {
             if (it.hasNext()) {
                 if (!hashSet.contains(it.next())) {
-                    ll0.c().a(t, "Reconciling jobs", new Throwable[0]);
+                    ll0.m16885c().mo16882a(f5826t, "Reconciling jobs", new Throwable[0]);
                     z = true;
                     break;
                 }
@@ -131,96 +147,100 @@ public class cj1 implements r81 {
             }
         }
         if (z) {
-            WorkDatabase o = ey1Var.o();
-            o.c();
+            WorkDatabase m23000o = ey1Var.m23000o();
+            m23000o.m26481c();
             try {
-                ry1 B = o.B();
-                for (String str : a) {
-                    B.b(str, -1L);
+                ry1 mo27951B = m23000o.mo27951B();
+                for (String str : mo2279a) {
+                    mo27951B.mo9730b(str, -1L);
                 }
-                o.r();
+                m23000o.m26466r();
             } finally {
-                o.g();
+                m23000o.m26477g();
             }
         }
         return z;
     }
 
     @Override // com.daaw.r81
-    public boolean a() {
+    /* renamed from: a */
+    public boolean mo9090a() {
         return true;
     }
 
     @Override // com.daaw.r81
-    public void d(String str) {
-        List<Integer> f = f(this.p, this.q, str);
-        if (f == null || f.isEmpty()) {
+    /* renamed from: d */
+    public void mo9088d(String str) {
+        List<Integer> m25360f = m25360f(this.f5827p, this.f5828q, str);
+        if (m25360f == null || m25360f.isEmpty()) {
             return;
         }
-        for (Integer num : f) {
-            c(this.q, num.intValue());
+        for (Integer num : m25360f) {
+            m25361c(this.f5828q, num.intValue());
         }
-        this.r.o().y().d(str);
+        this.f5829r.m23000o().mo27936y().mo2276d(str);
     }
 
     @Override // com.daaw.r81
-    public void e(qy1... qy1VarArr) {
-        List<Integer> f;
-        WorkDatabase o = this.r.o();
-        te0 te0Var = new te0(o);
+    /* renamed from: e */
+    public void mo9087e(qy1... qy1VarArr) {
+        List<Integer> m25360f;
+        WorkDatabase m23000o = this.f5829r.m23000o();
+        te0 te0Var = new te0(m23000o);
         for (qy1 qy1Var : qy1VarArr) {
-            o.c();
+            m23000o.m26481c();
             try {
-                qy1 m = o.B().m(qy1Var.a);
-                if (m == null) {
-                    ll0.c().h(t, "Skipping scheduling " + qy1Var.a + " because it's no longer in the DB", new Throwable[0]);
-                } else if (m.b != yx1.ENQUEUED) {
-                    ll0.c().h(t, "Skipping scheduling " + qy1Var.a + " because it is no longer enqueued", new Throwable[0]);
+                qy1 mo9719m = m23000o.mo27951B().mo9719m(qy1Var.f24624a);
+                if (mo9719m == null) {
+                    ll0.m16885c().mo16878h(f5826t, "Skipping scheduling " + qy1Var.f24624a + " because it's no longer in the DB", new Throwable[0]);
+                } else if (mo9719m.f24625b != yx1.ENQUEUED) {
+                    ll0.m16885c().mo16878h(f5826t, "Skipping scheduling " + qy1Var.f24624a + " because it is no longer enqueued", new Throwable[0]);
                 } else {
-                    yi1 c = o.y().c(qy1Var.a);
-                    int d = c != null ? c.b : te0Var.d(this.r.i().i(), this.r.i().g());
-                    if (c == null) {
-                        this.r.o().y().b(new yi1(qy1Var.a, d));
+                    yi1 mo2277c = m23000o.mo27936y().mo2277c(qy1Var.f24624a);
+                    int m9234d = mo2277c != null ? mo2277c.f33688b : te0Var.m9234d(this.f5829r.m23006i().m27979i(), this.f5829r.m23006i().m27981g());
+                    if (mo2277c == null) {
+                        this.f5829r.m23000o().mo27936y().mo2278b(new yi1(qy1Var.f24624a, m9234d));
                     }
-                    j(qy1Var, d);
-                    if (Build.VERSION.SDK_INT == 23 && (f = f(this.p, this.q, qy1Var.a)) != null) {
-                        int indexOf = f.indexOf(Integer.valueOf(d));
+                    m25356j(qy1Var, m9234d);
+                    if (Build.VERSION.SDK_INT == 23 && (m25360f = m25360f(this.f5827p, this.f5828q, qy1Var.f24624a)) != null) {
+                        int indexOf = m25360f.indexOf(Integer.valueOf(m9234d));
                         if (indexOf >= 0) {
-                            f.remove(indexOf);
+                            m25360f.remove(indexOf);
                         }
-                        j(qy1Var, !f.isEmpty() ? f.get(0).intValue() : te0Var.d(this.r.i().i(), this.r.i().g()));
+                        m25356j(qy1Var, !m25360f.isEmpty() ? m25360f.get(0).intValue() : te0Var.m9234d(this.f5829r.m23006i().m27979i(), this.f5829r.m23006i().m27981g()));
                     }
                 }
-                o.r();
-                o.g();
+                m23000o.m26466r();
+                m23000o.m26477g();
             } catch (Throwable th) {
-                o.g();
+                m23000o.m26477g();
                 throw th;
             }
         }
     }
 
-    public void j(qy1 qy1Var, int i) {
-        JobInfo a = this.s.a(qy1Var, i);
-        ll0 c = ll0.c();
-        String str = t;
-        c.a(str, String.format("Scheduling work ID %s Job ID %s", qy1Var.a, Integer.valueOf(i)), new Throwable[0]);
+    /* renamed from: j */
+    public void m25356j(qy1 qy1Var, int i) {
+        JobInfo m26128a = this.f5830s.m26128a(qy1Var, i);
+        ll0 m16885c = ll0.m16885c();
+        String str = f5826t;
+        m16885c.mo16882a(str, String.format("Scheduling work ID %s Job ID %s", qy1Var.f24624a, Integer.valueOf(i)), new Throwable[0]);
         try {
-            if (this.q.schedule(a) == 0) {
-                ll0.c().h(str, String.format("Unable to schedule work ID %s", qy1Var.a), new Throwable[0]);
-                if (qy1Var.q && qy1Var.r == zu0.RUN_AS_NON_EXPEDITED_WORK_REQUEST) {
-                    qy1Var.q = false;
-                    ll0.c().a(str, String.format("Scheduling a non-expedited job (work ID %s)", qy1Var.a), new Throwable[0]);
-                    j(qy1Var, i);
+            if (this.f5828q.schedule(m26128a) == 0) {
+                ll0.m16885c().mo16878h(str, String.format("Unable to schedule work ID %s", qy1Var.f24624a), new Throwable[0]);
+                if (qy1Var.f24640q && qy1Var.f24641r == zu0.RUN_AS_NON_EXPEDITED_WORK_REQUEST) {
+                    qy1Var.f24640q = false;
+                    ll0.m16885c().mo16882a(str, String.format("Scheduling a non-expedited job (work ID %s)", qy1Var.f24624a), new Throwable[0]);
+                    m25356j(qy1Var, i);
                 }
             }
         } catch (IllegalStateException e) {
-            List<JobInfo> g = g(this.p, this.q);
-            String format = String.format(Locale.getDefault(), "JobScheduler 100 job limit exceeded.  We count %d WorkManager jobs in JobScheduler; we have %d tracked jobs in our DB; our Configuration limit is %d.", Integer.valueOf(g != null ? g.size() : 0), Integer.valueOf(this.r.o().B().f().size()), Integer.valueOf(this.r.i().h()));
-            ll0.c().b(t, format, new Throwable[0]);
+            List<JobInfo> m25359g = m25359g(this.f5827p, this.f5828q);
+            String format = String.format(Locale.getDefault(), "JobScheduler 100 job limit exceeded.  We count %d WorkManager jobs in JobScheduler; we have %d tracked jobs in our DB; our Configuration limit is %d.", Integer.valueOf(m25359g != null ? m25359g.size() : 0), Integer.valueOf(this.f5829r.m23000o().mo27951B().mo9726f().size()), Integer.valueOf(this.f5829r.m23006i().m27980h()));
+            ll0.m16885c().mo16881b(f5826t, format, new Throwable[0]);
             throw new IllegalStateException(format, e);
         } catch (Throwable th) {
-            ll0.c().b(t, String.format("Unable to schedule %s", qy1Var), th);
+            ll0.m16885c().mo16881b(f5826t, String.format("Unable to schedule %s", qy1Var), th);
         }
     }
 }

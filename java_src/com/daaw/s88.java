@@ -7,99 +7,110 @@ import android.content.Intent;
 import android.os.IBinder;
 /* loaded from: classes2.dex */
 public final class s88 {
-    public final Context a;
+
+    /* renamed from: a */
+    public final Context f26005a;
 
     public s88(Context context) {
-        ry0.j(context);
-        this.a = context;
+        ry0.m10830j(context);
+        this.f26005a = context;
     }
 
-    public final int a(final Intent intent, int i, final int i2) {
-        dr6 H = dr6.H(this.a, null, null);
-        final om5 i3 = H.i();
+    /* renamed from: a */
+    public final int m10526a(final Intent intent, int i, final int i2) {
+        dr6 m24051H = dr6.m24051H(this.f26005a, null, null);
+        final om5 mo3895i = m24051H.mo3895i();
         if (intent == null) {
-            i3.w().a("AppMeasurementService started with null intent");
+            mo3895i.m14155w().m20653a("AppMeasurementService started with null intent");
             return 2;
         }
         String action = intent.getAction();
-        H.a();
-        i3.v().c("Local AppMeasurementService called. startId, action", Integer.valueOf(i2), action);
+        m24051H.mo3911a();
+        mo3895i.m14156v().m20651c("Local AppMeasurementService called. startId, action", Integer.valueOf(i2), action);
         if ("com.google.android.gms.measurement.UPLOAD".equals(action)) {
-            h(new Runnable() { // from class: com.daaw.j88
+            m10519h(new Runnable() { // from class: com.daaw.j88
                 @Override // java.lang.Runnable
                 public final void run() {
-                    s88.this.c(i2, i3, intent);
+                    s88.this.m10524c(i2, mo3895i, intent);
                 }
             });
         }
         return 2;
     }
 
-    public final IBinder b(Intent intent) {
+    /* renamed from: b */
+    public final IBinder m10525b(Intent intent) {
         if (intent == null) {
-            k().q().a("onBind called with null intent");
+            m10516k().m14160q().m20653a("onBind called with null intent");
             return null;
         }
         String action = intent.getAction();
         if ("com.google.android.gms.measurement.START".equals(action)) {
-            return new ob7(yb8.f0(this.a), null);
+            return new ob7(yb8.m3900f0(this.f26005a), null);
         }
-        k().w().b("onBind received unknown action", action);
+        m10516k().m14155w().m20652b("onBind received unknown action", action);
         return null;
     }
 
-    public final /* synthetic */ void c(int i, om5 om5Var, Intent intent) {
-        if (((p88) this.a).b(i)) {
-            om5Var.v().b("Local AppMeasurementService processed last upload request. StartId", Integer.valueOf(i));
-            k().v().a("Completed wakeful intent.");
-            ((p88) this.a).c(intent);
+    /* renamed from: c */
+    public final /* synthetic */ void m10524c(int i, om5 om5Var, Intent intent) {
+        if (((p88) this.f26005a).mo1083b(i)) {
+            om5Var.m14156v().m20652b("Local AppMeasurementService processed last upload request. StartId", Integer.valueOf(i));
+            m10516k().m14156v().m20653a("Completed wakeful intent.");
+            ((p88) this.f26005a).mo1082c(intent);
         }
     }
 
-    public final /* synthetic */ void d(om5 om5Var, JobParameters jobParameters) {
-        om5Var.v().a("AppMeasurementJobService processed last upload request.");
-        ((p88) this.a).d(jobParameters, false);
+    /* renamed from: d */
+    public final /* synthetic */ void m10523d(om5 om5Var, JobParameters jobParameters) {
+        om5Var.m14156v().m20653a("AppMeasurementJobService processed last upload request.");
+        ((p88) this.f26005a).mo1081d(jobParameters, false);
     }
 
-    public final void e() {
-        dr6 H = dr6.H(this.a, null, null);
-        om5 i = H.i();
-        H.a();
-        i.v().a("Local AppMeasurementService is starting up");
+    /* renamed from: e */
+    public final void m10522e() {
+        dr6 m24051H = dr6.m24051H(this.f26005a, null, null);
+        om5 mo3895i = m24051H.mo3895i();
+        m24051H.mo3911a();
+        mo3895i.m14156v().m20653a("Local AppMeasurementService is starting up");
     }
 
-    public final void f() {
-        dr6 H = dr6.H(this.a, null, null);
-        om5 i = H.i();
-        H.a();
-        i.v().a("Local AppMeasurementService is shutting down");
+    /* renamed from: f */
+    public final void m10521f() {
+        dr6 m24051H = dr6.m24051H(this.f26005a, null, null);
+        om5 mo3895i = m24051H.mo3895i();
+        m24051H.mo3911a();
+        mo3895i.m14156v().m20653a("Local AppMeasurementService is shutting down");
     }
 
-    public final void g(Intent intent) {
+    /* renamed from: g */
+    public final void m10520g(Intent intent) {
         if (intent == null) {
-            k().q().a("onRebind called with null intent");
+            m10516k().m14160q().m20653a("onRebind called with null intent");
             return;
         }
-        k().v().b("onRebind called. action", intent.getAction());
+        m10516k().m14156v().m20652b("onRebind called. action", intent.getAction());
     }
 
-    public final void h(Runnable runnable) {
-        yb8 f0 = yb8.f0(this.a);
-        f0.r().z(new m88(this, f0, runnable));
+    /* renamed from: h */
+    public final void m10519h(Runnable runnable) {
+        yb8 m3900f0 = yb8.m3900f0(this.f26005a);
+        m3900f0.mo3882r().m6978z(new m88(this, m3900f0, runnable));
     }
 
     @TargetApi(24)
-    public final boolean i(final JobParameters jobParameters) {
-        dr6 H = dr6.H(this.a, null, null);
-        final om5 i = H.i();
+    /* renamed from: i */
+    public final boolean m10518i(final JobParameters jobParameters) {
+        dr6 m24051H = dr6.m24051H(this.f26005a, null, null);
+        final om5 mo3895i = m24051H.mo3895i();
         String string = jobParameters.getExtras().getString("action");
-        H.a();
-        i.v().b("Local AppMeasurementJobService called. action", string);
+        m24051H.mo3911a();
+        mo3895i.m14156v().m20652b("Local AppMeasurementJobService called. action", string);
         if ("com.google.android.gms.measurement.UPLOAD".equals(string)) {
-            h(new Runnable() { // from class: com.daaw.g88
+            m10519h(new Runnable() { // from class: com.daaw.g88
                 @Override // java.lang.Runnable
                 public final void run() {
-                    s88.this.d(i, jobParameters);
+                    s88.this.m10523d(mo3895i, jobParameters);
                 }
             });
             return true;
@@ -107,16 +118,18 @@ public final class s88 {
         return true;
     }
 
-    public final boolean j(Intent intent) {
+    /* renamed from: j */
+    public final boolean m10517j(Intent intent) {
         if (intent == null) {
-            k().q().a("onUnbind called with null intent");
+            m10516k().m14160q().m20653a("onUnbind called with null intent");
             return true;
         }
-        k().v().b("onUnbind called for intent. action", intent.getAction());
+        m10516k().m14156v().m20652b("onUnbind called for intent. action", intent.getAction());
         return true;
     }
 
-    public final om5 k() {
-        return dr6.H(this.a, null, null).i();
+    /* renamed from: k */
+    public final om5 m10516k() {
+        return dr6.m24051H(this.f26005a, null, null).mo3895i();
     }
 }

@@ -6,59 +6,75 @@ import java.util.Map;
 import java.util.Set;
 /* loaded from: classes.dex */
 public abstract class ee7 {
-    public final Class a;
-    public final Map b;
-    public final Class c;
+
+    /* renamed from: a */
+    public final Class f8422a;
+
+    /* renamed from: b */
+    public final Map f8423b;
+
+    /* renamed from: c */
+    public final Class f8424c;
 
     @SafeVarargs
     public ee7(Class cls, cf7... cf7VarArr) {
-        this.a = cls;
+        this.f8422a = cls;
         HashMap hashMap = new HashMap();
         for (int i = 0; i <= 0; i++) {
             cf7 cf7Var = cf7VarArr[i];
-            if (hashMap.containsKey(cf7Var.b())) {
-                throw new IllegalArgumentException("KeyTypeManager constructed with duplicate factories for primitive ".concat(String.valueOf(cf7Var.b().getCanonicalName())));
+            if (hashMap.containsKey(cf7Var.m25395b())) {
+                throw new IllegalArgumentException("KeyTypeManager constructed with duplicate factories for primitive ".concat(String.valueOf(cf7Var.m25395b().getCanonicalName())));
             }
-            hashMap.put(cf7Var.b(), cf7Var);
+            hashMap.put(cf7Var.m25395b(), cf7Var);
         }
-        this.c = cf7VarArr[0].b();
-        this.b = Collections.unmodifiableMap(hashMap);
+        this.f8424c = cf7VarArr[0].m25395b();
+        this.f8423b = Collections.unmodifiableMap(hashMap);
     }
 
-    public de7 a() {
+    /* renamed from: a */
+    public de7 mo5331a() {
         throw new UnsupportedOperationException("Creating keys is not supported.");
     }
 
-    public abstract mm7 b();
+    /* renamed from: b */
+    public abstract mm7 mo5330b();
 
-    public abstract xt7 c(yq7 yq7Var);
+    /* renamed from: c */
+    public abstract xt7 mo5329c(yq7 yq7Var);
 
-    public abstract String d();
+    /* renamed from: d */
+    public abstract String mo5328d();
 
-    public abstract void e(xt7 xt7Var);
+    /* renamed from: e */
+    public abstract void mo5327e(xt7 xt7Var);
 
-    public int f() {
+    /* renamed from: f */
+    public int mo11546f() {
         return 1;
     }
 
-    public final Class g() {
-        return this.c;
+    /* renamed from: g */
+    public final Class m23536g() {
+        return this.f8424c;
     }
 
-    public final Class h() {
-        return this.a;
+    /* renamed from: h */
+    public final Class m23535h() {
+        return this.f8422a;
     }
 
-    public final Object i(xt7 xt7Var, Class cls) {
-        cf7 cf7Var = (cf7) this.b.get(cls);
+    /* renamed from: i */
+    public final Object m23534i(xt7 xt7Var, Class cls) {
+        cf7 cf7Var = (cf7) this.f8423b.get(cls);
         if (cf7Var != null) {
-            return cf7Var.a(xt7Var);
+            return cf7Var.mo2495a(xt7Var);
         }
         String canonicalName = cls.getCanonicalName();
         throw new IllegalArgumentException("Requested primitive class " + canonicalName + " not supported.");
     }
 
-    public final Set j() {
-        return this.b.keySet();
+    /* renamed from: j */
+    public final Set m23533j() {
+        return this.f8423b.keySet();
     }
 }

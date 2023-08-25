@@ -6,43 +6,60 @@ import com.google.android.gms.ads.internal.util.zzg;
 import com.google.android.gms.ads.internal.zzt;
 /* loaded from: classes.dex */
 public final class c26 implements i76 {
-    public static final Object h = new Object();
-    public final String a;
-    public final String b;
-    public final wn4 c;
-    public final zj6 d;
-    public final ri6 e;
-    public final zzg f = zzt.zzo().h();
-    public final fd5 g;
+
+    /* renamed from: h */
+    public static final Object f5399h = new Object();
+
+    /* renamed from: a */
+    public final String f5400a;
+
+    /* renamed from: b */
+    public final String f5401b;
+
+    /* renamed from: c */
+    public final wn4 f5402c;
+
+    /* renamed from: d */
+    public final zj6 f5403d;
+
+    /* renamed from: e */
+    public final ri6 f5404e;
+
+    /* renamed from: f */
+    public final zzg f5405f = zzt.zzo().m11915h();
+
+    /* renamed from: g */
+    public final fd5 f5406g;
 
     public c26(String str, String str2, wn4 wn4Var, zj6 zj6Var, ri6 ri6Var, fd5 fd5Var) {
-        this.a = str;
-        this.b = str2;
-        this.c = wn4Var;
-        this.d = zj6Var;
-        this.e = ri6Var;
-        this.g = fd5Var;
+        this.f5400a = str;
+        this.f5401b = str2;
+        this.f5402c = wn4Var;
+        this.f5403d = zj6Var;
+        this.f5404e = ri6Var;
+        this.f5406g = fd5Var;
     }
 
-    public final /* synthetic */ void a(Bundle bundle, Bundle bundle2) {
-        if (((Boolean) zzba.zzc().b(g93.Z4)).booleanValue()) {
+    /* renamed from: a */
+    public final /* synthetic */ void m25673a(Bundle bundle, Bundle bundle2) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10616Z4)).booleanValue()) {
             bundle2.putBundle("quality_signals", bundle);
         } else {
-            if (((Boolean) zzba.zzc().b(g93.Y4)).booleanValue()) {
-                synchronized (h) {
-                    this.c.f(this.e.d);
-                    bundle2.putBundle("quality_signals", this.d.a());
+            if (((Boolean) zzba.zzc().m23658b(g93.f10606Y4)).booleanValue()) {
+                synchronized (f5399h) {
+                    this.f5402c.m5936f(this.f5404e.f25344d);
+                    bundle2.putBundle("quality_signals", this.f5403d.m2195a());
                 }
             } else {
-                this.c.f(this.e.d);
-                bundle2.putBundle("quality_signals", this.d.a());
+                this.f5402c.m5936f(this.f5404e.f25344d);
+                bundle2.putBundle("quality_signals", this.f5403d.m2195a());
             }
         }
-        bundle2.putString("seq_num", this.a);
-        if (this.f.zzP()) {
+        bundle2.putString("seq_num", this.f5400a);
+        if (this.f5405f.zzP()) {
             return;
         }
-        bundle2.putString("session_id", this.b);
+        bundle2.putString("session_id", this.f5401b);
     }
 
     @Override // com.daaw.i76
@@ -53,17 +70,18 @@ public final class c26 implements i76 {
     @Override // com.daaw.i76
     public final f77 zzb() {
         final Bundle bundle = new Bundle();
-        if (((Boolean) zzba.zzc().b(g93.T6)).booleanValue()) {
-            this.g.a().put("seq_num", this.a);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10558T6)).booleanValue()) {
+            this.f5406g.m22773a().put("seq_num", this.f5400a);
         }
-        if (((Boolean) zzba.zzc().b(g93.Z4)).booleanValue()) {
-            this.c.f(this.e.d);
-            bundle.putAll(this.d.a());
+        if (((Boolean) zzba.zzc().m23658b(g93.f10616Z4)).booleanValue()) {
+            this.f5402c.m5936f(this.f5404e.f25344d);
+            bundle.putAll(this.f5403d.m2195a());
         }
-        return s67.i(new h76() { // from class: com.daaw.b26
+        return s67.m10634i(new h76() { // from class: com.daaw.b26
             @Override // com.daaw.h76
-            public final void b(Object obj) {
-                c26.this.a(bundle, (Bundle) obj);
+            /* renamed from: b */
+            public final void mo2851b(Object obj) {
+                c26.this.m25673a(bundle, (Bundle) obj);
             }
         });
     }

@@ -22,23 +22,42 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @Deprecated
 /* loaded from: classes.dex */
 public final class l93 {
-    public String d;
-    public Context e;
-    public String f;
-    public AtomicBoolean h;
-    public File i;
-    public final BlockingQueue a = new ArrayBlockingQueue(100);
-    public final LinkedHashMap b = new LinkedHashMap();
-    public final Map c = new HashMap();
-    public final HashSet g = new HashSet(Arrays.asList("noop", "activeViewPingSent", "viewabilityChanged", "visibilityChanged"));
 
-    public static /* synthetic */ void c(l93 l93Var) {
+    /* renamed from: d */
+    public String f17158d;
+
+    /* renamed from: e */
+    public Context f17159e;
+
+    /* renamed from: f */
+    public String f17160f;
+
+    /* renamed from: h */
+    public AtomicBoolean f17162h;
+
+    /* renamed from: i */
+    public File f17163i;
+
+    /* renamed from: a */
+    public final BlockingQueue f17155a = new ArrayBlockingQueue(100);
+
+    /* renamed from: b */
+    public final LinkedHashMap f17156b = new LinkedHashMap();
+
+    /* renamed from: c */
+    public final Map f17157c = new HashMap();
+
+    /* renamed from: g */
+    public final HashSet f17161g = new HashSet(Arrays.asList("noop", "activeViewPingSent", "viewabilityChanged", "visibilityChanged"));
+
+    /* renamed from: c */
+    public static /* synthetic */ void m17084c(l93 l93Var) {
         while (true) {
             try {
-                v93 v93Var = (v93) l93Var.a.take();
-                u93 a = v93Var.a();
-                if (!TextUtils.isEmpty(a.b())) {
-                    l93Var.g(l93Var.b(l93Var.b, v93Var.b()), a);
+                v93 v93Var = (v93) l93Var.f17155a.take();
+                u93 m7317a = v93Var.m7317a();
+                if (!TextUtils.isEmpty(m7317a.m8406b())) {
+                    l93Var.m17080g(l93Var.m17085b(l93Var.f17156b, v93Var.m7316b()), m7317a);
                 }
             } catch (InterruptedException e) {
                 k04.zzk("CsiReporter:reporter interrupted", e);
@@ -47,87 +66,93 @@ public final class l93 {
         }
     }
 
-    public final r93 a(String str) {
-        r93 r93Var = (r93) this.c.get(str);
-        return r93Var != null ? r93Var : r93.a;
+    /* renamed from: a */
+    public final r93 m17086a(String str) {
+        r93 r93Var = (r93) this.f17157c.get(str);
+        return r93Var != null ? r93Var : r93.f24986a;
     }
 
-    public final Map b(Map map, Map map2) {
+    /* renamed from: b */
+    public final Map m17085b(Map map, Map map2) {
         LinkedHashMap linkedHashMap = new LinkedHashMap(map);
         for (Map.Entry entry : map2.entrySet()) {
             String str = (String) entry.getKey();
             String str2 = (String) linkedHashMap.get(str);
-            linkedHashMap.put(str, a(str).a(str2, (String) entry.getValue()));
+            linkedHashMap.put(str, m17086a(str).mo11550a(str2, (String) entry.getValue()));
         }
         return linkedHashMap;
     }
 
-    public final void d(Context context, String str, String str2, Map map) {
+    /* renamed from: d */
+    public final void m17083d(Context context, String str, String str2, Map map) {
         File externalStorageDirectory;
-        this.e = context;
-        this.f = str;
-        this.d = str2;
+        this.f17159e = context;
+        this.f17160f = str;
+        this.f17158d = str2;
         AtomicBoolean atomicBoolean = new AtomicBoolean(false);
-        this.h = atomicBoolean;
-        atomicBoolean.set(((Boolean) va3.c.e()).booleanValue());
-        if (this.h.get() && (externalStorageDirectory = Environment.getExternalStorageDirectory()) != null) {
-            this.i = new File(externalStorageDirectory, "sdk_csi_data.txt");
+        this.f17162h = atomicBoolean;
+        atomicBoolean.set(((Boolean) va3.f30079c.m16137e()).booleanValue());
+        if (this.f17162h.get() && (externalStorageDirectory = Environment.getExternalStorageDirectory()) != null) {
+            this.f17163i = new File(externalStorageDirectory, "sdk_csi_data.txt");
         }
         for (Map.Entry entry : map.entrySet()) {
-            this.b.put((String) entry.getKey(), (String) entry.getValue());
+            this.f17156b.put((String) entry.getKey(), (String) entry.getValue());
         }
-        z04.a.execute(new Runnable() { // from class: com.daaw.k93
+        z04.f34305a.execute(new Runnable() { // from class: com.daaw.k93
             @Override // java.lang.Runnable
             public final void run() {
-                l93.c(l93.this);
+                l93.m17084c(l93.this);
             }
         });
-        Map map2 = this.c;
-        r93 r93Var = r93.b;
+        Map map2 = this.f17157c;
+        r93 r93Var = r93.f24987b;
         map2.put("action", r93Var);
-        this.c.put("ad_format", r93Var);
-        this.c.put("e", r93.c);
+        this.f17157c.put("ad_format", r93Var);
+        this.f17157c.put("e", r93.f24988c);
     }
 
-    public final void e(String str) {
-        if (this.g.contains(str)) {
+    /* renamed from: e */
+    public final void m17082e(String str) {
+        if (this.f17161g.contains(str)) {
             return;
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        linkedHashMap.put("sdkVersion", this.f);
+        linkedHashMap.put("sdkVersion", this.f17160f);
         linkedHashMap.put("ue", str);
-        g(b(this.b, linkedHashMap), null);
+        m17080g(m17085b(this.f17156b, linkedHashMap), null);
     }
 
-    public final boolean f(v93 v93Var) {
-        return this.a.offer(v93Var);
+    /* renamed from: f */
+    public final boolean m17081f(v93 v93Var) {
+        return this.f17155a.offer(v93Var);
     }
 
-    public final void g(Map map, u93 u93Var) {
+    /* renamed from: g */
+    public final void m17080g(Map map, u93 u93Var) {
         FileOutputStream fileOutputStream;
-        Uri.Builder buildUpon = Uri.parse(this.d).buildUpon();
+        Uri.Builder buildUpon = Uri.parse(this.f17158d).buildUpon();
         for (Map.Entry entry : map.entrySet()) {
             buildUpon.appendQueryParameter((String) entry.getKey(), (String) entry.getValue());
         }
         String uri = buildUpon.build().toString();
         if (u93Var != null) {
             StringBuilder sb = new StringBuilder(uri);
-            if (!TextUtils.isEmpty(u93Var.b())) {
+            if (!TextUtils.isEmpty(u93Var.m8406b())) {
                 sb.append("&it=");
-                sb.append(u93Var.b());
+                sb.append(u93Var.m8406b());
             }
-            if (!TextUtils.isEmpty(u93Var.a())) {
+            if (!TextUtils.isEmpty(u93Var.m8407a())) {
                 sb.append("&blat=");
-                sb.append(u93Var.a());
+                sb.append(u93Var.m8407a());
             }
             uri = sb.toString();
         }
-        if (!this.h.get()) {
+        if (!this.f17162h.get()) {
             zzt.zzp();
-            zzs.zzH(this.e, this.f, uri);
+            zzs.zzH(this.f17159e, this.f17160f, uri);
             return;
         }
-        File file = this.i;
+        File file = this.f17163i;
         if (file == null) {
             k04.zzj("CsiReporter: File doesn't exist. Cannot write CSI data to file.");
             return;

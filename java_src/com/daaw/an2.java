@@ -12,15 +12,19 @@ import java.nio.ByteBuffer;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public final class an2 {
-    public static final char[] a = "0123456789abcdef".toCharArray();
 
-    public static long a(double d, int i, DisplayMetrics displayMetrics) {
+    /* renamed from: a */
+    public static final char[] f3332a = "0123456789abcdef".toCharArray();
+
+    /* renamed from: a */
+    public static long m27330a(double d, int i, DisplayMetrics displayMetrics) {
         double d2 = displayMetrics.density;
         Double.isNaN(d2);
         return Math.round(d / d2);
     }
 
-    public static Activity b(View view) {
+    /* renamed from: b */
+    public static Activity m27329b(View view) {
         View rootView = view.getRootView();
         if (rootView != null) {
             view = rootView;
@@ -35,20 +39,22 @@ public final class an2 {
         return null;
     }
 
-    public static String c(byte[] bArr) {
+    /* renamed from: c */
+    public static String m27328c(byte[] bArr) {
         int length = bArr.length;
         char[] cArr = new char[length + length];
         for (int i = 0; i < bArr.length; i++) {
             int i2 = bArr[i] & 255;
             int i3 = i + i;
-            char[] cArr2 = a;
+            char[] cArr2 = f3332a;
             cArr[i3] = cArr2[i2 >>> 4];
             cArr[i3 + 1] = cArr2[i2 & 15];
         }
         return new String(cArr);
     }
 
-    public static String d(String str) {
+    /* renamed from: d */
+    public static String m27327d(String str) {
         if (str == null || !str.matches("^[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}$")) {
             return str;
         }
@@ -57,28 +63,33 @@ public final class an2 {
         ByteBuffer wrap = ByteBuffer.wrap(bArr);
         wrap.putLong(fromString.getMostSignificantBits());
         wrap.putLong(fromString.getLeastSignificantBits());
-        return uj2.a(bArr, true);
+        return uj2.m8102a(bArr, true);
     }
 
-    public static String e(Throwable th) {
+    /* renamed from: e */
+    public static String m27326e(Throwable th) {
         StringWriter stringWriter = new StringWriter();
         th.printStackTrace(new PrintWriter(stringWriter));
         return stringWriter.toString();
     }
 
-    public static boolean f() {
+    /* renamed from: f */
+    public static boolean m27325f() {
         return Looper.myLooper() == Looper.getMainLooper();
     }
 
-    public static boolean g(String str) {
+    /* renamed from: g */
+    public static boolean m27324g(String str) {
         return str == null || str.isEmpty();
     }
 
-    public static boolean h(DisplayMetrics displayMetrics) {
+    /* renamed from: h */
+    public static boolean m27323h(DisplayMetrics displayMetrics) {
         return (displayMetrics == null || displayMetrics.density == 0.0f) ? false : true;
     }
 
-    public static byte[] i(String str) {
+    /* renamed from: i */
+    public static byte[] m27322i(String str) {
         int length = str.length();
         if (length % 2 == 0) {
             byte[] bArr = new byte[length / 2];

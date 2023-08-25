@@ -1,17 +1,19 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class hw7 {
-    public static /* bridge */ /* synthetic */ void a(byte b, byte b2, byte b3, byte b4, char[] cArr, int i) {
-        if (g(b2) || (((b << 28) + (b2 + 112)) >> 30) != 0 || g(b3) || g(b4)) {
-            throw xs7.d();
+    /* renamed from: a */
+    public static /* bridge */ /* synthetic */ void m20344a(byte b, byte b2, byte b3, byte b4, char[] cArr, int i) {
+        if (m20338g(b2) || (((b << 28) + (b2 + 112)) >> 30) != 0 || m20338g(b3) || m20338g(b4)) {
+            throw xs7.m4540d();
         }
         int i2 = ((b & 7) << 18) | ((b2 & 63) << 12) | ((b3 & 63) << 6) | (b4 & 63);
         cArr[i] = (char) ((i2 >>> 10) + 55232);
         cArr[i + 1] = (char) ((i2 & 1023) + 56320);
     }
 
-    public static /* bridge */ /* synthetic */ void b(byte b, byte b2, byte b3, char[] cArr, int i) {
-        if (!g(b2)) {
+    /* renamed from: b */
+    public static /* bridge */ /* synthetic */ void m20343b(byte b, byte b2, byte b3, char[] cArr, int i) {
+        if (!m20338g(b2)) {
             if (b == -32) {
                 if (b2 >= -96) {
                     b = -32;
@@ -22,34 +24,39 @@ public final class hw7 {
                     b = -19;
                 }
             }
-            if (!g(b3)) {
+            if (!m20338g(b3)) {
                 cArr[i] = (char) (((b & 15) << 12) | ((b2 & 63) << 6) | (b3 & 63));
                 return;
             }
         }
-        throw xs7.d();
+        throw xs7.m4540d();
     }
 
-    public static /* bridge */ /* synthetic */ void c(byte b, byte b2, char[] cArr, int i) {
-        if (b < -62 || g(b2)) {
-            throw xs7.d();
+    /* renamed from: c */
+    public static /* bridge */ /* synthetic */ void m20342c(byte b, byte b2, char[] cArr, int i) {
+        if (b < -62 || m20338g(b2)) {
+            throw xs7.m4540d();
         }
         cArr[i] = (char) (((b & 31) << 6) | (b2 & 63));
     }
 
-    public static /* bridge */ /* synthetic */ boolean d(byte b) {
+    /* renamed from: d */
+    public static /* bridge */ /* synthetic */ boolean m20341d(byte b) {
         return b >= 0;
     }
 
-    public static /* bridge */ /* synthetic */ boolean e(byte b) {
+    /* renamed from: e */
+    public static /* bridge */ /* synthetic */ boolean m20340e(byte b) {
         return b < -16;
     }
 
-    public static /* bridge */ /* synthetic */ boolean f(byte b) {
+    /* renamed from: f */
+    public static /* bridge */ /* synthetic */ boolean m20339f(byte b) {
         return b < -32;
     }
 
-    public static boolean g(byte b) {
+    /* renamed from: g */
+    public static boolean m20338g(byte b) {
         return b > -65;
     }
 }

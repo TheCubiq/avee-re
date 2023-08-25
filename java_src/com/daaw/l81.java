@@ -1,73 +1,88 @@
 package com.daaw;
 
 import android.os.Bundle;
-import androidx.lifecycle.c;
+import androidx.lifecycle.AbstractC0344c;
 import androidx.savedstate.Recreator;
 /* loaded from: classes.dex */
 public final class l81 {
-    public static final a d = new a(null);
-    public final m81 a;
-    public final k81 b;
-    public boolean c;
 
+    /* renamed from: d */
+    public static final C2020a f17129d = new C2020a(null);
+
+    /* renamed from: a */
+    public final m81 f17130a;
+
+    /* renamed from: b */
+    public final k81 f17131b;
+
+    /* renamed from: c */
+    public boolean f17132c;
+
+    /* renamed from: com.daaw.l81$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public a() {
+    public static final class C2020a {
+        public C2020a() {
         }
 
-        public /* synthetic */ a(pq pqVar) {
+        public /* synthetic */ C2020a(C2575pq c2575pq) {
             this();
         }
 
-        public final l81 a(m81 m81Var) {
-            ug0.f(m81Var, "owner");
+        /* renamed from: a */
+        public final l81 m17102a(m81 m81Var) {
+            ug0.m8268f(m81Var, "owner");
             return new l81(m81Var, null);
         }
     }
 
     public l81(m81 m81Var) {
-        this.a = m81Var;
-        this.b = new k81();
+        this.f17130a = m81Var;
+        this.f17131b = new k81();
     }
 
-    public /* synthetic */ l81(m81 m81Var, pq pqVar) {
+    public /* synthetic */ l81(m81 m81Var, C2575pq c2575pq) {
         this(m81Var);
     }
 
-    public static final l81 a(m81 m81Var) {
-        return d.a(m81Var);
+    /* renamed from: a */
+    public static final l81 m17107a(m81 m81Var) {
+        return f17129d.m17102a(m81Var);
     }
 
-    public final k81 b() {
-        return this.b;
+    /* renamed from: b */
+    public final k81 m17106b() {
+        return this.f17131b;
     }
 
-    public final void c() {
-        androidx.lifecycle.c a2 = this.a.a();
-        ug0.e(a2, "owner.lifecycle");
-        if (!(a2.b() == c.EnumC0020c.INITIALIZED)) {
+    /* renamed from: c */
+    public final void m17105c() {
+        AbstractC0344c mo2327a = this.f17130a.mo2327a();
+        ug0.m8269e(mo2327a, "owner.lifecycle");
+        if (!(mo2327a.mo29047b() == AbstractC0344c.EnumC0347c.INITIALIZED)) {
             throw new IllegalStateException("Restarter must be created only during owner's initialization stage".toString());
         }
-        a2.a(new Recreator(this.a));
-        this.b.e(a2);
-        this.c = true;
+        mo2327a.mo29048a(new Recreator(this.f17130a));
+        this.f17131b.m17969e(mo2327a);
+        this.f17132c = true;
     }
 
-    public final void d(Bundle bundle) {
-        if (!this.c) {
-            c();
+    /* renamed from: d */
+    public final void m17104d(Bundle bundle) {
+        if (!this.f17132c) {
+            m17105c();
         }
-        androidx.lifecycle.c a2 = this.a.a();
-        ug0.e(a2, "owner.lifecycle");
-        if (!a2.b().a(c.EnumC0020c.STARTED)) {
-            this.b.f(bundle);
+        AbstractC0344c mo2327a = this.f17130a.mo2327a();
+        ug0.m8269e(mo2327a, "owner.lifecycle");
+        if (!mo2327a.mo29047b().m29049a(AbstractC0344c.EnumC0347c.STARTED)) {
+            this.f17131b.m17968f(bundle);
             return;
         }
-        throw new IllegalStateException(("performRestore cannot be called when owner is " + a2.b()).toString());
+        throw new IllegalStateException(("performRestore cannot be called when owner is " + mo2327a.mo29047b()).toString());
     }
 
-    public final void e(Bundle bundle) {
-        ug0.f(bundle, "outBundle");
-        this.b.g(bundle);
+    /* renamed from: e */
+    public final void m17103e(Bundle bundle) {
+        ug0.m8268f(bundle, "outBundle");
+        this.f17131b.m17967g(bundle);
     }
 }

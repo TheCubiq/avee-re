@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class f09 {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f8987a;
 
     public f09(int i, int i2, String str) {
-        this.a = str;
+        this.f8987a = str;
     }
 
-    public static f09 a(ik5 ik5Var) {
+    /* renamed from: a */
+    public static f09 m22974a(ik5 ik5Var) {
         String str;
-        ik5Var.g(2);
-        int s = ik5Var.s();
-        int i = s >> 1;
-        int s2 = (ik5Var.s() >> 3) | ((s & 1) << 5);
+        ik5Var.m19715g(2);
+        int m19703s = ik5Var.m19703s();
+        int i = m19703s >> 1;
+        int m19703s2 = (ik5Var.m19703s() >> 3) | ((m19703s & 1) << 5);
         if (i == 4 || i == 5 || i == 7) {
             str = "dvhe";
         } else if (i == 8) {
@@ -22,7 +25,7 @@ public final class f09 {
         } else {
             str = "avc3";
         }
-        String str2 = s2 < 10 ? ".0" : ".";
-        return new f09(i, s2, str + ".0" + i + str2 + s2);
+        String str2 = m19703s2 < 10 ? ".0" : ".";
+        return new f09(i, m19703s2, str + ".0" + i + str2 + m19703s2);
     }
 }

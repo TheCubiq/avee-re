@@ -1,32 +1,47 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class dl0 {
-    public static final dl0 c = new a().a();
-    public final long a;
-    public final b b;
 
+    /* renamed from: c */
+    public static final dl0 f7222c = new C1101a().m24283a();
+
+    /* renamed from: a */
+    public final long f7223a;
+
+    /* renamed from: b */
+    public final EnumC1102b f7224b;
+
+    /* renamed from: com.daaw.dl0$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public long a = 0;
-        public b b = b.REASON_UNKNOWN;
+    public static final class C1101a {
 
-        public dl0 a() {
-            return new dl0(this.a, this.b);
+        /* renamed from: a */
+        public long f7225a = 0;
+
+        /* renamed from: b */
+        public EnumC1102b f7226b = EnumC1102b.REASON_UNKNOWN;
+
+        /* renamed from: a */
+        public dl0 m24283a() {
+            return new dl0(this.f7225a, this.f7226b);
         }
 
-        public a b(long j) {
-            this.a = j;
+        /* renamed from: b */
+        public C1101a m24282b(long j) {
+            this.f7225a = j;
             return this;
         }
 
-        public a c(b bVar) {
-            this.b = bVar;
+        /* renamed from: c */
+        public C1101a m24281c(EnumC1102b enumC1102b) {
+            this.f7226b = enumC1102b;
             return this;
         }
     }
 
+    /* renamed from: com.daaw.dl0$b */
     /* loaded from: classes.dex */
-    public enum b implements tz0 {
+    public enum EnumC1102b implements tz0 {
         REASON_UNKNOWN(0),
         MESSAGE_TOO_OLD(1),
         CACHE_FULL(2),
@@ -35,34 +50,40 @@ public final class dl0 {
         INVALID_PAYLOD(5),
         SERVER_ERROR(6);
         
-        public final int p;
 
-        b(int i) {
-            this.p = i;
+        /* renamed from: p */
+        public final int f7235p;
+
+        EnumC1102b(int i) {
+            this.f7235p = i;
         }
 
         @Override // com.daaw.tz0
-        public int a() {
-            return this.p;
+        /* renamed from: a */
+        public int mo8669a() {
+            return this.f7235p;
         }
     }
 
-    public dl0(long j, b bVar) {
-        this.a = j;
-        this.b = bVar;
+    public dl0(long j, EnumC1102b enumC1102b) {
+        this.f7223a = j;
+        this.f7224b = enumC1102b;
     }
 
-    public static a c() {
-        return new a();
+    /* renamed from: c */
+    public static C1101a m24284c() {
+        return new C1101a();
     }
 
     @uz0(tag = 1)
-    public long a() {
-        return this.a;
+    /* renamed from: a */
+    public long m24286a() {
+        return this.f7223a;
     }
 
     @uz0(tag = 3)
-    public b b() {
-        return this.b;
+    /* renamed from: b */
+    public EnumC1102b m24285b() {
+        return this.f7224b;
     }
 }

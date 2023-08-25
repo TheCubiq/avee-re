@@ -11,18 +11,27 @@ import java.util.Iterator;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public abstract class yq7 implements Iterable, Serializable {
-    public static final yq7 q = new uq7(vs7.d);
-    public static final Comparator r;
-    public static final xq7 s;
-    public int p = 0;
+
+    /* renamed from: q */
+    public static final yq7 f33966q = new uq7(vs7.f30560d);
+
+    /* renamed from: r */
+    public static final Comparator f33967r;
+
+    /* renamed from: s */
+    public static final xq7 f33968s;
+
+    /* renamed from: p */
+    public int f33969p = 0;
 
     static {
-        int i = jq7.a;
-        s = new xq7(null);
-        r = new pq7();
+        int i = jq7.f15342a;
+        f33968s = new xq7(null);
+        f33967r = new pq7();
     }
 
-    public static int A(int i, int i2, int i3) {
+    /* renamed from: A */
+    public static int m3429A(int i, int i2, int i3) {
         int i4 = i2 - i;
         if ((i | i2 | i4 | (i3 - i2)) < 0) {
             if (i < 0) {
@@ -36,12 +45,14 @@ public abstract class yq7 implements Iterable, Serializable {
         return i4;
     }
 
-    public static vq7 D() {
+    /* renamed from: D */
+    public static vq7 m3426D() {
         return new vq7(128);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static yq7 E(Iterable iterable) {
+    /* renamed from: E */
+    public static yq7 m3425E(Iterable iterable) {
         int size;
         if (iterable instanceof Collection) {
             size = iterable.size();
@@ -53,25 +64,29 @@ public abstract class yq7 implements Iterable, Serializable {
                 size++;
             }
         }
-        return size == 0 ? q : n(iterable.iterator(), size);
+        return size == 0 ? f33966q : m3412n(iterable.iterator(), size);
     }
 
-    public static yq7 F(byte[] bArr) {
-        return G(bArr, 0, bArr.length);
+    /* renamed from: F */
+    public static yq7 m3424F(byte[] bArr) {
+        return m3423G(bArr, 0, bArr.length);
     }
 
-    public static yq7 G(byte[] bArr, int i, int i2) {
-        A(i, i + i2, bArr.length);
+    /* renamed from: G */
+    public static yq7 m3423G(byte[] bArr, int i, int i2) {
+        m3429A(i, i + i2, bArr.length);
         byte[] bArr2 = new byte[i2];
         System.arraycopy(bArr, i, bArr2, 0, i2);
         return new uq7(bArr2);
     }
 
-    public static yq7 H(String str) {
-        return new uq7(str.getBytes(vs7.b));
+    /* renamed from: H */
+    public static yq7 m3422H(String str) {
+        return new uq7(str.getBytes(vs7.f30558b));
     }
 
-    public static yq7 I(InputStream inputStream) {
+    /* renamed from: I */
+    public static yq7 m3421I(InputStream inputStream) {
         ArrayList arrayList = new ArrayList();
         int i = 256;
         while (true) {
@@ -84,20 +99,22 @@ public abstract class yq7 implements Iterable, Serializable {
                 }
                 i2 += read;
             }
-            yq7 G = i2 == 0 ? null : G(bArr, 0, i2);
-            if (G == null) {
-                return E(arrayList);
+            yq7 m3423G = i2 == 0 ? null : m3423G(bArr, 0, i2);
+            if (m3423G == null) {
+                return m3425E(arrayList);
             }
-            arrayList.add(G);
+            arrayList.add(m3423G);
             i = Math.min(i + i, 8192);
         }
     }
 
-    public static yq7 J(byte[] bArr) {
+    /* renamed from: J */
+    public static yq7 m3420J(byte[] bArr) {
         return new uq7(bArr);
     }
 
-    public static void e(int i, int i2) {
+    /* renamed from: e */
+    public static void m3418e(int i, int i2) {
         if (((i2 - (i + 1)) | i) < 0) {
             if (i < 0) {
                 throw new ArrayIndexOutOfBoundsException("Index < 0: " + i);
@@ -106,26 +123,28 @@ public abstract class yq7 implements Iterable, Serializable {
         }
     }
 
-    public static yq7 n(Iterator it, int i) {
+    /* renamed from: n */
+    public static yq7 m3412n(Iterator it, int i) {
         if (i > 0) {
             if (i == 1) {
                 return (yq7) it.next();
             }
             int i2 = i >>> 1;
-            yq7 n = n(it, i2);
-            yq7 n2 = n(it, i - i2);
-            if (Integer.MAX_VALUE - n.o() >= n2.o()) {
-                return bv7.L(n, n2);
+            yq7 m3412n = m3412n(it, i2);
+            yq7 m3412n2 = m3412n(it, i - i2);
+            if (Integer.MAX_VALUE - m3412n.mo3411o() >= m3412n2.mo3411o()) {
+                return bv7.m25804L(m3412n, m3412n2);
             }
-            int o = n.o();
-            int o2 = n2.o();
-            throw new IllegalArgumentException("ByteString would be too long: " + o + "+" + o2);
+            int mo3411o = m3412n.mo3411o();
+            int mo3411o2 = m3412n2.mo3411o();
+            throw new IllegalArgumentException("ByteString would be too long: " + mo3411o + "+" + mo3411o2);
         }
         throw new IllegalArgumentException(String.format("length (%s) must be >= 1", Integer.valueOf(i)));
     }
 
-    public final int B() {
-        return this.p;
+    /* renamed from: B */
+    public final int m3428B() {
+        return this.f33969p;
     }
 
     @Override // java.lang.Iterable
@@ -134,82 +153,100 @@ public abstract class yq7 implements Iterable, Serializable {
         return new oq7(this);
     }
 
-    public final String d(Charset charset) {
-        return o() == 0 ? "" : w(charset);
+    /* renamed from: d */
+    public final String m3419d(Charset charset) {
+        return mo3411o() == 0 ? "" : mo3403w(charset);
     }
 
     public abstract boolean equals(Object obj);
 
     @Deprecated
-    public final void f(byte[] bArr, int i, int i2, int i3) {
-        A(0, i3, o());
-        A(i2, i2 + i3, bArr.length);
+    /* renamed from: f */
+    public final void m3417f(byte[] bArr, int i, int i2, int i3) {
+        m3429A(0, i3, mo3411o());
+        m3429A(i2, i2 + i3, bArr.length);
         if (i3 > 0) {
-            p(bArr, 0, i2, i3);
+            mo3410p(bArr, 0, i2, i3);
         }
     }
 
-    public final boolean h() {
-        return o() == 0;
+    /* renamed from: h */
+    public final boolean m3416h() {
+        return mo3411o() == 0;
     }
 
     public final int hashCode() {
-        int i = this.p;
+        int i = this.f33969p;
         if (i == 0) {
-            int o = o();
-            i = s(o, 0, o);
+            int mo3411o = mo3411o();
+            i = mo3407s(mo3411o, 0, mo3411o);
             if (i == 0) {
                 i = 1;
             }
-            this.p = i;
+            this.f33969p = i;
         }
         return i;
     }
 
-    public final byte[] j() {
-        int o = o();
-        if (o == 0) {
-            return vs7.d;
+    /* renamed from: j */
+    public final byte[] m3415j() {
+        int mo3411o = mo3411o();
+        if (mo3411o == 0) {
+            return vs7.f30560d;
         }
-        byte[] bArr = new byte[o];
-        p(bArr, 0, 0, o);
+        byte[] bArr = new byte[mo3411o];
+        mo3410p(bArr, 0, 0, mo3411o);
         return bArr;
     }
 
-    public abstract byte k(int i);
+    /* renamed from: k */
+    public abstract byte mo3414k(int i);
 
-    public abstract byte m(int i);
+    /* renamed from: m */
+    public abstract byte mo3413m(int i);
 
-    public abstract int o();
+    /* renamed from: o */
+    public abstract int mo3411o();
 
-    public abstract void p(byte[] bArr, int i, int i2, int i3);
+    /* renamed from: p */
+    public abstract void mo3410p(byte[] bArr, int i, int i2, int i3);
 
-    public abstract int q();
+    /* renamed from: q */
+    public abstract int mo3409q();
 
-    public abstract boolean r();
+    /* renamed from: r */
+    public abstract boolean mo3408r();
 
-    public abstract int s(int i, int i2, int i3);
+    /* renamed from: s */
+    public abstract int mo3407s(int i, int i2, int i3);
 
-    public abstract int t(int i, int i2, int i3);
+    /* renamed from: t */
+    public abstract int mo3406t(int i, int i2, int i3);
 
     public final String toString() {
         Locale locale = Locale.ROOT;
         Object[] objArr = new Object[3];
         objArr[0] = Integer.toHexString(System.identityHashCode(this));
-        objArr[1] = Integer.valueOf(o());
-        objArr[2] = o() <= 50 ? rv7.a(this) : rv7.a(u(0, 47)).concat("...");
+        objArr[1] = Integer.valueOf(mo3411o());
+        objArr[2] = mo3411o() <= 50 ? rv7.m10875a(this) : rv7.m10875a(mo3405u(0, 47)).concat("...");
         return String.format(locale, "<ByteString@%s size=%d contents=\"%s\">", objArr);
     }
 
-    public abstract yq7 u(int i, int i2);
+    /* renamed from: u */
+    public abstract yq7 mo3405u(int i, int i2);
 
-    public abstract jr7 v();
+    /* renamed from: v */
+    public abstract jr7 mo3404v();
 
-    public abstract String w(Charset charset);
+    /* renamed from: w */
+    public abstract String mo3403w(Charset charset);
 
-    public abstract ByteBuffer x();
+    /* renamed from: x */
+    public abstract ByteBuffer mo3402x();
 
-    public abstract void y(nq7 nq7Var);
+    /* renamed from: y */
+    public abstract void mo3401y(nq7 nq7Var);
 
-    public abstract boolean z();
+    /* renamed from: z */
+    public abstract boolean mo3400z();
 }

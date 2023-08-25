@@ -4,36 +4,44 @@ import android.util.SparseArray;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class lb8 {
-    public final r32 a;
-    public final SparseArray b;
+
+    /* renamed from: a */
+    public final r32 f17234a;
+
+    /* renamed from: b */
+    public final SparseArray f17235b;
 
     public lb8(r32 r32Var, SparseArray sparseArray) {
-        this.a = r32Var;
-        SparseArray sparseArray2 = new SparseArray(r32Var.b());
-        for (int i = 0; i < r32Var.b(); i++) {
-            int a = r32Var.a(i);
-            ib8 ib8Var = (ib8) sparseArray.get(a);
+        this.f17234a = r32Var;
+        SparseArray sparseArray2 = new SparseArray(r32Var.m11806b());
+        for (int i = 0; i < r32Var.m11806b(); i++) {
+            int m11807a = r32Var.m11807a(i);
+            ib8 ib8Var = (ib8) sparseArray.get(m11807a);
             Objects.requireNonNull(ib8Var);
-            sparseArray2.append(a, ib8Var);
+            sparseArray2.append(m11807a, ib8Var);
         }
-        this.b = sparseArray2;
+        this.f17235b = sparseArray2;
     }
 
-    public final int a(int i) {
-        return this.a.a(i);
+    /* renamed from: a */
+    public final int m17062a(int i) {
+        return this.f17234a.m11807a(i);
     }
 
-    public final int b() {
-        return this.a.b();
+    /* renamed from: b */
+    public final int m17061b() {
+        return this.f17234a.m11806b();
     }
 
-    public final ib8 c(int i) {
-        ib8 ib8Var = (ib8) this.b.get(i);
+    /* renamed from: c */
+    public final ib8 m17060c(int i) {
+        ib8 ib8Var = (ib8) this.f17235b.get(i);
         Objects.requireNonNull(ib8Var);
         return ib8Var;
     }
 
-    public final boolean d(int i) {
-        return this.a.c(i);
+    /* renamed from: d */
+    public final boolean m17059d(int i) {
+        return this.f17234a.m11805c(i);
     }
 }

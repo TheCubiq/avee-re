@@ -5,7 +5,9 @@ import android.os.ParcelFileDescriptor;
 import com.google.android.gms.ads.internal.util.zzaz;
 /* loaded from: classes.dex */
 public interface eu3 extends IInterface {
-    void K(zzaz zzazVar);
+    /* renamed from: K */
+    void mo19641K(zzaz zzazVar);
 
-    void y(ParcelFileDescriptor parcelFileDescriptor);
+    /* renamed from: y */
+    void mo19640y(ParcelFileDescriptor parcelFileDescriptor);
 }

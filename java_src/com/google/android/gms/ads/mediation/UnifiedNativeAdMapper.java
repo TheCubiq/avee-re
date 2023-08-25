@@ -8,39 +8,75 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public abstract class UnifiedNativeAdMapper {
-    public String a;
-    public List b;
-    public String c;
-    public NativeAd.Image d;
-    public String e;
-    public String f;
-    public Double g;
-    public String h;
-    public String i;
-    public VideoController j;
-    public boolean k;
-    public View l;
-    public View m;
-    public Object n;
-    public Bundle o = new Bundle();
-    public boolean p;
-    public boolean q;
-    public float r;
+
+    /* renamed from: a */
+    public String f36419a;
+
+    /* renamed from: b */
+    public List f36420b;
+
+    /* renamed from: c */
+    public String f36421c;
+
+    /* renamed from: d */
+    public NativeAd.Image f36422d;
+
+    /* renamed from: e */
+    public String f36423e;
+
+    /* renamed from: f */
+    public String f36424f;
+
+    /* renamed from: g */
+    public Double f36425g;
+
+    /* renamed from: h */
+    public String f36426h;
+
+    /* renamed from: i */
+    public String f36427i;
+
+    /* renamed from: j */
+    public VideoController f36428j;
+
+    /* renamed from: k */
+    public boolean f36429k;
+
+    /* renamed from: l */
+    public View f36430l;
+
+    /* renamed from: m */
+    public View f36431m;
+
+    /* renamed from: n */
+    public Object f36432n;
+
+    /* renamed from: o */
+    public Bundle f36433o = new Bundle();
+
+    /* renamed from: p */
+    public boolean f36434p;
+
+    /* renamed from: q */
+    public boolean f36435q;
+
+    /* renamed from: r */
+    public float f36436r;
 
     public View getAdChoicesContent() {
-        return this.l;
+        return this.f36430l;
     }
 
     public final String getAdvertiser() {
-        return this.f;
+        return this.f36424f;
     }
 
     public final String getBody() {
-        return this.c;
+        return this.f36421c;
     }
 
     public final String getCallToAction() {
-        return this.e;
+        return this.f36423e;
     }
 
     public float getCurrentTime() {
@@ -52,117 +88,117 @@ public abstract class UnifiedNativeAdMapper {
     }
 
     public final Bundle getExtras() {
-        return this.o;
+        return this.f36433o;
     }
 
     public final String getHeadline() {
-        return this.a;
+        return this.f36419a;
     }
 
     public final NativeAd.Image getIcon() {
-        return this.d;
+        return this.f36422d;
     }
 
     public final List<NativeAd.Image> getImages() {
-        return this.b;
+        return this.f36420b;
     }
 
     public float getMediaContentAspectRatio() {
-        return this.r;
+        return this.f36436r;
     }
 
     public final boolean getOverrideClickHandling() {
-        return this.q;
+        return this.f36435q;
     }
 
     public final boolean getOverrideImpressionRecording() {
-        return this.p;
+        return this.f36434p;
     }
 
     public final String getPrice() {
-        return this.i;
+        return this.f36427i;
     }
 
     public final Double getStarRating() {
-        return this.g;
+        return this.f36425g;
     }
 
     public final String getStore() {
-        return this.h;
+        return this.f36426h;
     }
 
     public void handleClick(View view) {
     }
 
     public boolean hasVideoContent() {
-        return this.k;
+        return this.f36429k;
     }
 
     public void recordImpression() {
     }
 
     public void setAdChoicesContent(View view) {
-        this.l = view;
+        this.f36430l = view;
     }
 
     public final void setAdvertiser(String str) {
-        this.f = str;
+        this.f36424f = str;
     }
 
     public final void setBody(String str) {
-        this.c = str;
+        this.f36421c = str;
     }
 
     public final void setCallToAction(String str) {
-        this.e = str;
+        this.f36423e = str;
     }
 
     public final void setExtras(Bundle bundle) {
-        this.o = bundle;
+        this.f36433o = bundle;
     }
 
     public void setHasVideoContent(boolean z) {
-        this.k = z;
+        this.f36429k = z;
     }
 
     public final void setHeadline(String str) {
-        this.a = str;
+        this.f36419a = str;
     }
 
     public final void setIcon(NativeAd.Image image) {
-        this.d = image;
+        this.f36422d = image;
     }
 
     public final void setImages(List<NativeAd.Image> list) {
-        this.b = list;
+        this.f36420b = list;
     }
 
     public void setMediaContentAspectRatio(float f) {
-        this.r = f;
+        this.f36436r = f;
     }
 
     public void setMediaView(View view) {
-        this.m = view;
+        this.f36431m = view;
     }
 
     public final void setOverrideClickHandling(boolean z) {
-        this.q = z;
+        this.f36435q = z;
     }
 
     public final void setOverrideImpressionRecording(boolean z) {
-        this.p = z;
+        this.f36434p = z;
     }
 
     public final void setPrice(String str) {
-        this.i = str;
+        this.f36427i = str;
     }
 
     public final void setStarRating(Double d) {
-        this.g = d;
+        this.f36425g = d;
     }
 
     public final void setStore(String str) {
-        this.h = str;
+        this.f36426h = str;
     }
 
     public void trackViews(View view, Map<String, View> map, Map<String, View> map2) {
@@ -172,22 +208,22 @@ public abstract class UnifiedNativeAdMapper {
     }
 
     public final View zza() {
-        return this.m;
+        return this.f36431m;
     }
 
     public final VideoController zzb() {
-        return this.j;
+        return this.f36428j;
     }
 
     public final Object zzc() {
-        return this.n;
+        return this.f36432n;
     }
 
     public final void zzd(Object obj) {
-        this.n = obj;
+        this.f36432n = obj;
     }
 
     public final void zze(VideoController videoController) {
-        this.j = videoController;
+        this.f36428j = videoController;
     }
 }

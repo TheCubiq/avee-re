@@ -10,27 +10,27 @@ import com.google.android.gms.common.internal.zzj;
 public final class n98 implements Parcelable.Creator {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         Bundle bundle = null;
         Feature[] featureArr = null;
         ConnectionTelemetryConfiguration connectionTelemetryConfiguration = null;
         int i = 0;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            int l = y71.l(r);
-            if (l == 1) {
-                bundle = y71.a(parcel, r);
-            } else if (l == 2) {
-                featureArr = (Feature[]) y71.i(parcel, r, Feature.CREATOR);
-            } else if (l == 3) {
-                i = y71.t(parcel, r);
-            } else if (l != 4) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            int m4047l = y71.m4047l(m4041r);
+            if (m4047l == 1) {
+                bundle = y71.m4058a(parcel, m4041r);
+            } else if (m4047l == 2) {
+                featureArr = (Feature[]) y71.m4050i(parcel, m4041r, Feature.CREATOR);
+            } else if (m4047l == 3) {
+                i = y71.m4039t(parcel, m4041r);
+            } else if (m4047l != 4) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                connectionTelemetryConfiguration = (ConnectionTelemetryConfiguration) y71.e(parcel, r, ConnectionTelemetryConfiguration.CREATOR);
+                connectionTelemetryConfiguration = (ConnectionTelemetryConfiguration) y71.m4054e(parcel, m4041r, ConnectionTelemetryConfiguration.CREATOR);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzj(bundle, featureArr, i, connectionTelemetryConfiguration);
     }
 

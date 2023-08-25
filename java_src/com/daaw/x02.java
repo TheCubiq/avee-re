@@ -3,15 +3,23 @@ package com.daaw;
 import com.google.android.gms.common.internal.MethodInvocation;
 /* loaded from: classes.dex */
 public final class x02 {
-    public final MethodInvocation a;
-    public final int b;
-    public final long c;
-    public final int d;
+
+    /* renamed from: a */
+    public final MethodInvocation f31711a;
+
+    /* renamed from: b */
+    public final int f31712b;
+
+    /* renamed from: c */
+    public final long f31713c;
+
+    /* renamed from: d */
+    public final int f31714d;
 
     public x02(MethodInvocation methodInvocation, int i, long j, int i2) {
-        this.a = methodInvocation;
-        this.b = i;
-        this.c = j;
-        this.d = i2;
+        this.f31711a = methodInvocation;
+        this.f31712b = i;
+        this.f31713c = j;
+        this.f31714d = i2;
     }
 }

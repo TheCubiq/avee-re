@@ -1,18 +1,22 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class vj1 implements uj1 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f30262a;
 
     public vj1(int i) {
-        this.a = i;
+        this.f30262a = i;
     }
 
     @Override // com.daaw.uj1
-    public void a() {
+    /* renamed from: a */
+    public void mo7119a() {
     }
 
     @Override // com.daaw.uj1
-    public int b() {
-        return this.a;
+    /* renamed from: b */
+    public int mo7118b() {
+        return this.f30262a;
     }
 }

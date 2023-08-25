@@ -8,27 +8,35 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class jz6 {
     @CheckForNull
-    public static final Object a;
+
+    /* renamed from: a */
+    public static final Object f15556a;
     @CheckForNull
-    public static final Method b;
+
+    /* renamed from: b */
+    public static final Method f15557b;
     @CheckForNull
-    public static final Method c;
+
+    /* renamed from: c */
+    public static final Method f15558c;
 
     static {
-        Object b2 = b();
-        a = b2;
-        b = b2 == null ? null : c("getStackTraceElement", Throwable.class, Integer.TYPE);
-        c = b2 != null ? d(b2) : null;
+        Object m18126b = m18126b();
+        f15556a = m18126b;
+        f15557b = m18126b == null ? null : m18125c("getStackTraceElement", Throwable.class, Integer.TYPE);
+        f15558c = m18126b != null ? m18124d(m18126b) : null;
     }
 
-    public static String a(Throwable th) {
+    /* renamed from: a */
+    public static String m18127a(Throwable th) {
         StringWriter stringWriter = new StringWriter();
         th.printStackTrace(new PrintWriter(stringWriter));
         return stringWriter.toString();
     }
 
     @CheckForNull
-    public static Object b() {
+    /* renamed from: b */
+    public static Object m18126b() {
         try {
             return Class.forName("sun.misc.SharedSecrets", false, null).getMethod("getJavaLangAccess", new Class[0]).invoke(null, new Object[0]);
         } catch (ThreadDeath e) {
@@ -39,7 +47,8 @@ public final class jz6 {
     }
 
     @CheckForNull
-    public static Method c(String str, Class... clsArr) {
+    /* renamed from: c */
+    public static Method m18125c(String str, Class... clsArr) {
         try {
             return Class.forName("sun.misc.JavaLangAccess", false, null).getMethod(str, clsArr);
         } catch (ThreadDeath e) {
@@ -50,14 +59,15 @@ public final class jz6 {
     }
 
     @CheckForNull
-    public static Method d(Object obj) {
+    /* renamed from: d */
+    public static Method m18124d(Object obj) {
         try {
-            Method c2 = c("getStackTraceDepth", Throwable.class);
-            if (c2 == null) {
+            Method m18125c = m18125c("getStackTraceDepth", Throwable.class);
+            if (m18125c == null) {
                 return null;
             }
-            c2.invoke(obj, new Throwable());
-            return c2;
+            m18125c.invoke(obj, new Throwable());
+            return m18125c;
         } catch (IllegalAccessException | UnsupportedOperationException | InvocationTargetException unused) {
             return null;
         }

@@ -2,26 +2,29 @@ package com.daaw;
 /* loaded from: classes.dex */
 public final class dp6 extends fs7 implements yt7 {
     public dp6() {
-        super(gp6.N());
+        super(gp6.m21356N());
     }
 
     public /* synthetic */ dp6(cp6 cp6Var) {
-        super(gp6.N());
+        super(gp6.m21356N());
     }
 
-    public final int s() {
-        return ((gp6) this.q).L();
+    /* renamed from: s */
+    public final int m24099s() {
+        return ((gp6) this.f9851q).m21358L();
     }
 
-    public final dp6 t(ep6 ep6Var) {
-        p();
-        gp6.P((gp6) this.q, (fp6) ep6Var.n());
+    /* renamed from: t */
+    public final dp6 m24098t(ep6 ep6Var) {
+        m22313p();
+        gp6.m21354P((gp6) this.f9851q, (fp6) ep6Var.m22315n());
         return this;
     }
 
-    public final dp6 u() {
-        p();
-        gp6.O((gp6) this.q);
+    /* renamed from: u */
+    public final dp6 m24097u() {
+        m22313p();
+        gp6.m21355O((gp6) this.f9851q);
         return this;
     }
 }

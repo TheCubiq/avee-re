@@ -9,9 +9,10 @@ public final class da3 extends bp2 implements fa3 {
     }
 
     @Override // com.daaw.fa3
-    public final void a0(ca3 ca3Var) {
-        Parcel D = D();
-        dp2.g(D, ca3Var);
-        M(1, D);
+    /* renamed from: a0 */
+    public final void mo22818a0(ca3 ca3Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, ca3Var);
+        m25950M(1, m25952D);
     }
 }

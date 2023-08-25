@@ -16,11 +16,14 @@ import com.daaw.tx0;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class fe1 extends DialogFragment {
-    public static tw1<i2, ImageView, Boolean, Boolean> p = new tw1<>();
 
+    /* renamed from: p */
+    public static tw1<C1652i2, ImageView, Boolean, Boolean> f9487p = new tw1<>();
+
+    /* renamed from: com.daaw.fe1$a */
     /* loaded from: classes.dex */
-    public class a implements DialogInterface.OnClickListener {
-        public a() {
+    public class DialogInterface$OnClickListenerC1274a implements DialogInterface.OnClickListener {
+        public DialogInterface$OnClickListenerC1274a() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -28,52 +31,55 @@ public class fe1 extends DialogFragment {
         }
     }
 
-    public static fe1 a(al alVar, Context context, tx0 tx0Var) {
-        fe1 c = c(context, tx0Var);
-        gr1.x(c, "SongDetailsDialog", alVar);
-        return c;
+    /* renamed from: a */
+    public static fe1 m22753a(C0645al c0645al, Context context, tx0 tx0Var) {
+        fe1 m22751c = m22751c(context, tx0Var);
+        gr1.m21311x(m22751c, "SongDetailsDialog", c0645al);
+        return m22751c;
     }
 
-    public static String b(int i) {
+    /* renamed from: b */
+    public static String m22752b(int i) {
         if (i > 0) {
             return "" + i;
         }
         return "";
     }
 
-    public static fe1 c(Context context, tx0 tx0Var) {
+    /* renamed from: c */
+    public static fe1 m22751c(Context context, tx0 tx0Var) {
         fe1 fe1Var = new fe1();
         ArrayList<String> arrayList = new ArrayList<>();
-        tx0.c k = tx0Var.k(context);
-        arrayList.add(b(k.l));
-        arrayList.add(b(k.m));
-        arrayList.add(k.e);
-        arrayList.add(k.g);
-        arrayList.add(k.f);
-        arrayList.add(k.h);
-        arrayList.add(b(k.n));
-        arrayList.add(k.p);
-        if (k.o > 0) {
-            arrayList.add("" + (k.o / 1000) + "kbps");
+        tx0.C3144c m8741k = tx0Var.m8741k(context);
+        arrayList.add(m22752b(m8741k.f28231l));
+        arrayList.add(m22752b(m8741k.f28232m));
+        arrayList.add(m8741k.f28224e);
+        arrayList.add(m8741k.f28226g);
+        arrayList.add(m8741k.f28225f);
+        arrayList.add(m8741k.f28227h);
+        arrayList.add(m22752b(m8741k.f28233n));
+        arrayList.add(m8741k.f28235p);
+        if (m8741k.f28234o > 0) {
+            arrayList.add("" + (m8741k.f28234o / 1000) + "kbps");
         } else {
             arrayList.add("");
         }
-        if (k.j <= 0 || k.k <= 0) {
+        if (m8741k.f28229j <= 0 || m8741k.f28230k <= 0) {
             arrayList.add("");
         } else {
-            arrayList.add("" + k.j + "x" + k.k);
+            arrayList.add("" + m8741k.f28229j + "x" + m8741k.f28230k);
         }
-        String d = k.a.d();
-        String e = k.a.e();
+        String m8729d = m8741k.f28220a.m8729d();
+        String m8728e = m8741k.f28220a.m8728e();
         Bundle bundle = new Bundle();
-        bundle.putInt("arg1", k.b ? 1 : 0);
-        bundle.putString("argSrc", tx0Var.g());
-        bundle.putString("argSrcFile", k.a.b);
+        bundle.putInt("arg1", m8741k.f28221b ? 1 : 0);
+        bundle.putString("argSrc", tx0Var.m8745g());
+        bundle.putString("argSrcFile", m8741k.f28220a.f28204b);
         bundle.putStringArrayList("arg2", arrayList);
-        bundle.putString("arg3", d);
-        bundle.putString("arg4", e);
-        bundle.putString("arg5", k.a.a.toString());
-        bundle.putString("arg6", k.a.b());
+        bundle.putString("arg3", m8729d);
+        bundle.putString("arg4", m8728e);
+        bundle.putString("arg5", m8741k.f28220a.f28203a.toString());
+        bundle.putString("arg6", m8741k.f28220a.m8731b());
         fe1Var.setArguments(bundle);
         return fe1Var;
     }
@@ -114,8 +120,8 @@ public class fe1 extends DialogFragment {
                 }
             }
         }
-        p.a(new i2(parse, string3, string4), (ImageView) inflate.findViewById(R.id.imgArtwork), Boolean.FALSE, Boolean.TRUE);
-        builder.setNegativeButton(R.string.dialog_close, new a());
+        f9487p.m8756a(new C1652i2(parse, string3, string4), (ImageView) inflate.findViewById(R.id.imgArtwork), Boolean.FALSE, Boolean.TRUE);
+        builder.setNegativeButton(R.string.dialog_close, new DialogInterface$OnClickListenerC1274a());
         return builder.create();
     }
 }

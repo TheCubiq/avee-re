@@ -1,13 +1,19 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class v92 {
-    public final long a;
-    public final boolean b;
-    public final int c;
+
+    /* renamed from: a */
+    public final long f30050a;
+
+    /* renamed from: b */
+    public final boolean f30051b;
+
+    /* renamed from: c */
+    public final int f30052c;
 
     public v92(long j, boolean z, int i) {
-        this.a = j;
-        this.b = z;
-        this.c = i;
+        this.f30050a = j;
+        this.f30051b = z;
+        this.f30052c = i;
     }
 }

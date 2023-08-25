@@ -1,143 +1,164 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ef5 {
-    public final zh3 a;
+
+    /* renamed from: a */
+    public final zh3 f8445a;
 
     public ef5(zh3 zh3Var) {
-        this.a = zh3Var;
+        this.f8445a = zh3Var;
     }
 
-    public final void a() {
-        s(new df5("initialize", null));
+    /* renamed from: a */
+    public final void m23522a() {
+        m23504s(new df5("initialize", null));
     }
 
-    public final void b(long j) {
+    /* renamed from: b */
+    public final void m23521b(long j) {
         df5 df5Var = new df5("interstitial", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdClicked";
-        this.a.zzb(df5.a(df5Var));
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdClicked";
+        this.f8445a.zzb(df5.m24428a(df5Var));
     }
 
-    public final void c(long j) {
+    /* renamed from: c */
+    public final void m23520c(long j) {
         df5 df5Var = new df5("interstitial", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdClosed";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdClosed";
+        m23504s(df5Var);
     }
 
-    public final void d(long j, int i) {
+    /* renamed from: d */
+    public final void m23519d(long j, int i) {
         df5 df5Var = new df5("interstitial", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdFailedToLoad";
-        df5Var.d = Integer.valueOf(i);
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdFailedToLoad";
+        df5Var.f7035d = Integer.valueOf(i);
+        m23504s(df5Var);
     }
 
-    public final void e(long j) {
+    /* renamed from: e */
+    public final void m23518e(long j) {
         df5 df5Var = new df5("interstitial", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdLoaded";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdLoaded";
+        m23504s(df5Var);
     }
 
-    public final void f(long j) {
+    /* renamed from: f */
+    public final void m23517f(long j) {
         df5 df5Var = new df5("interstitial", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onNativeAdObjectNotAvailable";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onNativeAdObjectNotAvailable";
+        m23504s(df5Var);
     }
 
-    public final void g(long j) {
+    /* renamed from: g */
+    public final void m23516g(long j) {
         df5 df5Var = new df5("interstitial", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdOpened";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdOpened";
+        m23504s(df5Var);
     }
 
-    public final void h(long j) {
+    /* renamed from: h */
+    public final void m23515h(long j) {
         df5 df5Var = new df5("creation", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "nativeObjectCreated";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "nativeObjectCreated";
+        m23504s(df5Var);
     }
 
-    public final void i(long j) {
+    /* renamed from: i */
+    public final void m23514i(long j) {
         df5 df5Var = new df5("creation", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "nativeObjectNotCreated";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "nativeObjectNotCreated";
+        m23504s(df5Var);
     }
 
-    public final void j(long j) {
+    /* renamed from: j */
+    public final void m23513j(long j) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdClicked";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdClicked";
+        m23504s(df5Var);
     }
 
-    public final void k(long j) {
+    /* renamed from: k */
+    public final void m23512k(long j) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onRewardedAdClosed";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onRewardedAdClosed";
+        m23504s(df5Var);
     }
 
-    public final void l(long j, tv3 tv3Var) {
+    /* renamed from: l */
+    public final void m23511l(long j, tv3 tv3Var) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onUserEarnedReward";
-        df5Var.e = tv3Var.zzf();
-        df5Var.f = Integer.valueOf(tv3Var.zze());
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onUserEarnedReward";
+        df5Var.f7036e = tv3Var.zzf();
+        df5Var.f7037f = Integer.valueOf(tv3Var.zze());
+        m23504s(df5Var);
     }
 
-    public final void m(long j, int i) {
+    /* renamed from: m */
+    public final void m23510m(long j, int i) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onRewardedAdFailedToLoad";
-        df5Var.d = Integer.valueOf(i);
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onRewardedAdFailedToLoad";
+        df5Var.f7035d = Integer.valueOf(i);
+        m23504s(df5Var);
     }
 
-    public final void n(long j, int i) {
+    /* renamed from: n */
+    public final void m23509n(long j, int i) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onRewardedAdFailedToShow";
-        df5Var.d = Integer.valueOf(i);
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onRewardedAdFailedToShow";
+        df5Var.f7035d = Integer.valueOf(i);
+        m23504s(df5Var);
     }
 
-    public final void o(long j) {
+    /* renamed from: o */
+    public final void m23508o(long j) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onAdImpression";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onAdImpression";
+        m23504s(df5Var);
     }
 
-    public final void p(long j) {
+    /* renamed from: p */
+    public final void m23507p(long j) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onRewardedAdLoaded";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onRewardedAdLoaded";
+        m23504s(df5Var);
     }
 
-    public final void q(long j) {
+    /* renamed from: q */
+    public final void m23506q(long j) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onNativeAdObjectNotAvailable";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onNativeAdObjectNotAvailable";
+        m23504s(df5Var);
     }
 
-    public final void r(long j) {
+    /* renamed from: r */
+    public final void m23505r(long j) {
         df5 df5Var = new df5("rewarded", null);
-        df5Var.a = Long.valueOf(j);
-        df5Var.c = "onRewardedAdOpened";
-        s(df5Var);
+        df5Var.f7032a = Long.valueOf(j);
+        df5Var.f7034c = "onRewardedAdOpened";
+        m23504s(df5Var);
     }
 
-    public final void s(df5 df5Var) {
-        String a = df5.a(df5Var);
-        k04.zzi("Dispatching AFMA event on publisher webview: ".concat(a));
-        this.a.zzb(a);
+    /* renamed from: s */
+    public final void m23504s(df5 df5Var) {
+        String m24428a = df5.m24428a(df5Var);
+        k04.zzi("Dispatching AFMA event on publisher webview: ".concat(m24428a));
+        this.f8445a.zzb(m24428a);
     }
 }

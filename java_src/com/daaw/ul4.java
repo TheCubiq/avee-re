@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ul4 implements wz7 {
-    public final rl4 a;
+
+    /* renamed from: a */
+    public final rl4 f29178a;
 
     public ul4(rl4 rl4Var) {
-        this.a = rl4Var;
+        this.f29178a = rl4Var;
     }
 
-    public final jt4 a() {
-        return this.a.a();
+    /* renamed from: a */
+    public final jt4 m8034a() {
+        return this.f29178a.m11195a();
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return this.a.a();
+        return this.f29178a.m11195a();
     }
 }

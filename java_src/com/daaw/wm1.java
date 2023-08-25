@@ -3,17 +3,23 @@ package com.daaw;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 /* loaded from: classes.dex */
 public abstract class wm1 {
-    public a a;
 
+    /* renamed from: a */
+    public InterfaceC3449a f31323a;
+
+    /* renamed from: com.daaw.wm1$a */
     /* loaded from: classes.dex */
-    public interface a {
+    public interface InterfaceC3449a {
     }
 
-    public final void a(a aVar) {
-        this.a = aVar;
+    /* renamed from: a */
+    public final void m6006a(InterfaceC3449a interfaceC3449a) {
+        this.f31323a = interfaceC3449a;
     }
 
-    public abstract void b(Object obj);
+    /* renamed from: b */
+    public abstract void mo1548b(Object obj);
 
-    public abstract xm1 c(b41[] b41VarArr, TrackGroupArray trackGroupArray);
+    /* renamed from: c */
+    public abstract xm1 mo1547c(b41[] b41VarArr, TrackGroupArray trackGroupArray);
 }

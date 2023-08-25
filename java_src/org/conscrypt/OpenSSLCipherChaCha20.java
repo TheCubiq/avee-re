@@ -56,12 +56,12 @@ public class OpenSSLCipherChaCha20 extends OpenSSLCipher {
             if (ivParameterSpec.getIV().length != 12) {
                 throw new InvalidAlgorithmParameterException("IV must be 12 bytes long");
             }
-            this.iv = ivParameterSpec.getIV();
+            this.f38020iv = ivParameterSpec.getIV();
         } else if (!isEncrypting()) {
             throw new InvalidAlgorithmParameterException("IV must be specified when decrypting");
         } else {
             byte[] bArr2 = new byte[12];
-            this.iv = bArr2;
+            this.f38020iv = bArr2;
             if (secureRandom != null) {
                 secureRandom.nextBytes(bArr2);
             } else {
@@ -102,7 +102,7 @@ public class OpenSSLCipherChaCha20 extends OpenSSLCipher {
                 byte[] bArr3 = new byte[64];
                 byte[] bArr4 = new byte[64];
                 System.arraycopy(bArr, i, bArr3, this.currentBlockConsumedBytes, min);
-                NativeCrypto.chacha20_encrypt_decrypt(bArr3, 0, bArr4, 0, 64, this.encodedKey, this.iv, this.blockCounter);
+                NativeCrypto.chacha20_encrypt_decrypt(bArr3, 0, bArr4, 0, 64, this.encodedKey, this.f38020iv, this.blockCounter);
                 System.arraycopy(bArr4, this.currentBlockConsumedBytes, bArr2, i3, min);
                 int i9 = this.currentBlockConsumedBytes + min;
                 this.currentBlockConsumedBytes = i9;
@@ -122,7 +122,7 @@ public class OpenSSLCipherChaCha20 extends OpenSSLCipher {
                 i6 = i2;
                 i7 = i3;
             }
-            NativeCrypto.chacha20_encrypt_decrypt(bArr, i5, bArr2, i7, i6, this.encodedKey, this.iv, this.blockCounter);
+            NativeCrypto.chacha20_encrypt_decrypt(bArr, i5, bArr2, i7, i6, this.encodedKey, this.f38020iv, this.blockCounter);
             this.currentBlockConsumedBytes = i6 % 64;
             this.blockCounter += i6 / 64;
             return i2;

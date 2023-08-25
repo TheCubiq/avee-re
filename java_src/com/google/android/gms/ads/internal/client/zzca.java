@@ -17,11 +17,12 @@ public abstract class zzca extends cp2 implements zzcb {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             String readString = parcel.readString();
             String readString2 = parcel.readString();
-            dp2.c(parcel);
+            dp2.m24105c(parcel);
             zzc(readString, readString2);
             parcel2.writeNoException();
             return true;

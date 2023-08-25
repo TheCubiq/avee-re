@@ -3,17 +3,21 @@ package com.daaw;
 import com.google.android.gms.internal.ads.zzcbj;
 /* loaded from: classes.dex */
 public final class ma6 {
-    public final zzcbj a;
+
+    /* renamed from: a */
+    public final zzcbj f18726a;
 
     public ma6(zzcbj zzcbjVar) {
-        this.a = zzcbjVar;
+        this.f18726a = zzcbjVar;
     }
 
-    public final String a() {
-        return this.a.u;
+    /* renamed from: a */
+    public final String m16132a() {
+        return this.f18726a.f36958u;
     }
 
-    public final String b() {
-        return this.a.v;
+    /* renamed from: b */
+    public final String m16131b() {
+        return this.f18726a.f36959v;
     }
 }

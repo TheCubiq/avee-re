@@ -6,24 +6,31 @@ import android.os.Bundle;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
 public final class g13 implements Application.ActivityLifecycleCallbacks {
-    public final Application p;
-    public final WeakReference q;
-    public boolean r = false;
+
+    /* renamed from: p */
+    public final Application f10145p;
+
+    /* renamed from: q */
+    public final WeakReference f10146q;
+
+    /* renamed from: r */
+    public boolean f10147r = false;
 
     public g13(Application application, Application.ActivityLifecycleCallbacks activityLifecycleCallbacks) {
-        this.q = new WeakReference(activityLifecycleCallbacks);
-        this.p = application;
+        this.f10146q = new WeakReference(activityLifecycleCallbacks);
+        this.f10145p = application;
     }
 
-    public final void a(f13 f13Var) {
+    /* renamed from: a */
+    public final void m22094a(f13 f13Var) {
         try {
-            Application.ActivityLifecycleCallbacks activityLifecycleCallbacks = (Application.ActivityLifecycleCallbacks) this.q.get();
+            Application.ActivityLifecycleCallbacks activityLifecycleCallbacks = (Application.ActivityLifecycleCallbacks) this.f10146q.get();
             if (activityLifecycleCallbacks != null) {
-                f13Var.a(activityLifecycleCallbacks);
-            } else if (this.r) {
+                f13Var.mo3006a(activityLifecycleCallbacks);
+            } else if (this.f10147r) {
             } else {
-                this.p.unregisterActivityLifecycleCallbacks(this);
-                this.r = true;
+                this.f10145p.unregisterActivityLifecycleCallbacks(this);
+                this.f10147r = true;
             }
         } catch (Exception e) {
             k04.zzh("Error while dispatching lifecycle callback.", e);
@@ -32,36 +39,36 @@ public final class g13 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityCreated(Activity activity, Bundle bundle) {
-        a(new y03(this, activity, bundle));
+        m22094a(new y03(this, activity, bundle));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityDestroyed(Activity activity) {
-        a(new e13(this, activity));
+        m22094a(new e13(this, activity));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityPaused(Activity activity) {
-        a(new b13(this, activity));
+        m22094a(new b13(this, activity));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityResumed(Activity activity) {
-        a(new a13(this, activity));
+        m22094a(new a13(this, activity));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
-        a(new d13(this, activity, bundle));
+        m22094a(new d13(this, activity, bundle));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityStarted(Activity activity) {
-        a(new z03(this, activity));
+        m22094a(new z03(this, activity));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityStopped(Activity activity) {
-        a(new c13(this, activity));
+        m22094a(new c13(this, activity));
     }
 }

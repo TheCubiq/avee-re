@@ -5,10 +5,12 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class y04 extends i57 {
-    public final Executor p;
+
+    /* renamed from: p */
+    public final Executor f33200p;
 
     public /* synthetic */ y04(Executor executor, u04 u04Var) {
-        this.p = executor;
+        this.f33200p = executor;
     }
 
     @Override // java.util.concurrent.ExecutorService
@@ -18,7 +20,7 @@ public final class y04 extends i57 {
 
     @Override // java.util.concurrent.Executor
     public final void execute(Runnable runnable) {
-        this.p.execute(runnable);
+        this.f33200p.execute(runnable);
     }
 
     @Override // java.util.concurrent.ExecutorService

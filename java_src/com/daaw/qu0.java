@@ -4,34 +4,43 @@ import android.annotation.SuppressLint;
 /* loaded from: classes.dex */
 public interface qu0 {
     @SuppressLint({"SyntheticAccessor"})
-    public static final b.c a = new b.c();
+
+    /* renamed from: a */
+    public static final AbstractC2755b.C2758c f24327a = new AbstractC2755b.C2758c();
     @SuppressLint({"SyntheticAccessor"})
-    public static final b.C0086b b = new b.C0086b();
 
+    /* renamed from: b */
+    public static final AbstractC2755b.C2757b f24328b = new AbstractC2755b.C2757b();
+
+    /* renamed from: com.daaw.qu0$b */
     /* loaded from: classes.dex */
-    public static abstract class b {
+    public static abstract class AbstractC2755b {
 
+        /* renamed from: com.daaw.qu0$b$a */
         /* loaded from: classes.dex */
-        public static final class a extends b {
-            public final Throwable a;
+        public static final class C2756a extends AbstractC2755b {
 
-            public a(Throwable th) {
-                this.a = th;
+            /* renamed from: a */
+            public final Throwable f24329a;
+
+            public C2756a(Throwable th) {
+                this.f24329a = th;
             }
 
-            public Throwable a() {
-                return this.a;
+            /* renamed from: a */
+            public Throwable m12221a() {
+                return this.f24329a;
             }
 
             public String toString() {
-                return String.format("FAILURE (%s)", this.a.getMessage());
+                return String.format("FAILURE (%s)", this.f24329a.getMessage());
             }
         }
 
-        /* renamed from: com.daaw.qu0$b$b  reason: collision with other inner class name */
+        /* renamed from: com.daaw.qu0$b$b */
         /* loaded from: classes.dex */
-        public static final class C0086b extends b {
-            public C0086b() {
+        public static final class C2757b extends AbstractC2755b {
+            public C2757b() {
             }
 
             public String toString() {
@@ -39,9 +48,10 @@ public interface qu0 {
             }
         }
 
+        /* renamed from: com.daaw.qu0$b$c */
         /* loaded from: classes.dex */
-        public static final class c extends b {
-            public c() {
+        public static final class C2758c extends AbstractC2755b {
+            public C2758c() {
             }
 
             public String toString() {

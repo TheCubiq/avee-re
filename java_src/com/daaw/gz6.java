@@ -32,19 +32,22 @@ public enum gz6 {
     USER_HOME("user.home"),
     USER_DIR("user.dir");
     
-    public final String p;
+
+    /* renamed from: p */
+    public final String f11897p;
 
     gz6(String str) {
-        this.p = str;
+        this.f11897p = str;
     }
 
     @CheckForNull
-    public final String a() {
-        return System.getProperty(this.p);
+    /* renamed from: a */
+    public final String m21128a() {
+        return System.getProperty(this.f11897p);
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return this.p + "=" + System.getProperty(this.p);
+        return this.f11897p + "=" + System.getProperty(this.f11897p);
     }
 }

@@ -4,13 +4,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 /* loaded from: classes.dex */
 public abstract class AbsSavedState implements Parcelable {
-    public final Parcelable p;
-    public static final AbsSavedState q = new AbsSavedState() { // from class: androidx.customview.view.AbsSavedState.1
-    };
-    public static final Parcelable.Creator<AbsSavedState> CREATOR = new a();
 
+    /* renamed from: p */
+    public final Parcelable f1209p;
+
+    /* renamed from: q */
+    public static final AbsSavedState f1208q = new AbsSavedState() { // from class: androidx.customview.view.AbsSavedState.1
+    };
+    public static final Parcelable.Creator<AbsSavedState> CREATOR = new C0213a();
+
+    /* renamed from: androidx.customview.view.AbsSavedState$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.ClassLoaderCreator<AbsSavedState> {
+    public static class C0213a implements Parcelable.ClassLoaderCreator<AbsSavedState> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public AbsSavedState createFromParcel(Parcel parcel) {
@@ -21,7 +26,7 @@ public abstract class AbsSavedState implements Parcelable {
         /* renamed from: b */
         public AbsSavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
             if (parcel.readParcelable(classLoader) == null) {
-                return AbsSavedState.q;
+                return AbsSavedState.f1208q;
             }
             throw new IllegalStateException("superState must be null");
         }
@@ -34,23 +39,24 @@ public abstract class AbsSavedState implements Parcelable {
     }
 
     public AbsSavedState() {
-        this.p = null;
+        this.f1209p = null;
     }
 
     public AbsSavedState(Parcel parcel, ClassLoader classLoader) {
         Parcelable readParcelable = parcel.readParcelable(classLoader);
-        this.p = readParcelable == null ? q : readParcelable;
+        this.f1209p = readParcelable == null ? f1208q : readParcelable;
     }
 
     public AbsSavedState(Parcelable parcelable) {
         if (parcelable == null) {
             throw new IllegalArgumentException("superState must not be null");
         }
-        this.p = parcelable == q ? null : parcelable;
+        this.f1209p = parcelable == f1208q ? null : parcelable;
     }
 
-    public final Parcelable a() {
-        return this.p;
+    /* renamed from: a */
+    public final Parcelable m29657a() {
+        return this.f1209p;
     }
 
     @Override // android.os.Parcelable
@@ -60,6 +66,6 @@ public abstract class AbsSavedState implements Parcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeParcelable(this.p, i);
+        parcel.writeParcelable(this.f1209p, i);
     }
 }

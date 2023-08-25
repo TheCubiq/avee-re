@@ -5,30 +5,36 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class lz6 extends c47 {
     @CheckForNull
-    public Object p;
-    public int q = 2;
+
+    /* renamed from: p */
+    public Object f17927p;
+
+    /* renamed from: q */
+    public int f17928q = 2;
 
     @CheckForNull
-    public abstract Object a();
+    /* renamed from: a */
+    public abstract Object mo16353a();
 
     @CheckForNull
-    public final Object b() {
-        this.q = 3;
+    /* renamed from: b */
+    public final Object m16352b() {
+        this.f17928q = 3;
         return null;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        sy6.h(this.q != 4);
-        int i = this.q;
+        sy6.m9701h(this.f17928q != 4);
+        int i = this.f17928q;
         int i2 = i - 1;
         if (i != 0) {
             if (i2 != 0) {
                 if (i2 != 2) {
-                    this.q = 4;
-                    this.p = a();
-                    if (this.q != 3) {
-                        this.q = 1;
+                    this.f17928q = 4;
+                    this.f17927p = mo16353a();
+                    if (this.f17928q != 3) {
+                        this.f17928q = 1;
                         return true;
                     }
                 }
@@ -42,9 +48,9 @@ public abstract class lz6 extends c47 {
     @Override // java.util.Iterator
     public final Object next() {
         if (hasNext()) {
-            this.q = 2;
-            Object obj = this.p;
-            this.p = null;
+            this.f17928q = 2;
+            Object obj = this.f17927p;
+            this.f17927p = null;
             return obj;
         }
         throw new NoSuchElementException();

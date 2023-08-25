@@ -1,6 +1,10 @@
 package com.daaw;
 
+import android.app.ActivityManager;
+import android.app.KeyguardManager;
+import android.content.Context;
 import android.graphics.Rect;
+import android.os.Process;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,55 +13,91 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.zzt;
+import java.util.Iterator;
+import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
 import org.json.JSONException;
 import org.json.JSONObject;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class s13 extends Thread {
-    public final int A;
-    public final String B;
-    public final boolean C;
-    public final boolean D;
-    public final boolean E;
-    public boolean p;
-    public boolean q;
-    public final Object r;
-    public final j13 s;
-    public final int t;
-    public final int u;
-    public final int v;
-    public final int w;
-    public final int x;
-    public final int y;
-    public final int z;
+
+    /* renamed from: A */
+    public final int f25777A;
+
+    /* renamed from: B */
+    public final String f25778B;
+
+    /* renamed from: C */
+    public final boolean f25779C;
+
+    /* renamed from: D */
+    public final boolean f25780D;
+
+    /* renamed from: E */
+    public final boolean f25781E;
+
+    /* renamed from: p */
+    public boolean f25782p;
+
+    /* renamed from: q */
+    public boolean f25783q;
+
+    /* renamed from: r */
+    public final Object f25784r;
+
+    /* renamed from: s */
+    public final j13 f25785s;
+
+    /* renamed from: t */
+    public final int f25786t;
+
+    /* renamed from: u */
+    public final int f25787u;
+
+    /* renamed from: v */
+    public final int f25788v;
+
+    /* renamed from: w */
+    public final int f25789w;
+
+    /* renamed from: x */
+    public final int f25790x;
+
+    /* renamed from: y */
+    public final int f25791y;
+
+    /* renamed from: z */
+    public final int f25792z;
 
     public s13() {
         j13 j13Var = new j13();
-        this.p = false;
-        this.q = false;
-        this.s = j13Var;
-        this.r = new Object();
-        this.u = ((Long) sa3.d.e()).intValue();
-        this.v = ((Long) sa3.a.e()).intValue();
-        this.w = ((Long) sa3.e.e()).intValue();
-        this.x = ((Long) sa3.c.e()).intValue();
-        this.y = ((Integer) zzba.zzc().b(g93.Q)).intValue();
-        this.z = ((Integer) zzba.zzc().b(g93.R)).intValue();
-        this.A = ((Integer) zzba.zzc().b(g93.S)).intValue();
-        this.t = ((Long) sa3.f.e()).intValue();
-        this.B = (String) zzba.zzc().b(g93.U);
-        this.C = ((Boolean) zzba.zzc().b(g93.V)).booleanValue();
-        this.D = ((Boolean) zzba.zzc().b(g93.W)).booleanValue();
-        this.E = ((Boolean) zzba.zzc().b(g93.X)).booleanValue();
+        this.f25782p = false;
+        this.f25783q = false;
+        this.f25785s = j13Var;
+        this.f25784r = new Object();
+        this.f25787u = ((Long) sa3.f26047d.m16137e()).intValue();
+        this.f25788v = ((Long) sa3.f26044a.m16137e()).intValue();
+        this.f25789w = ((Long) sa3.f26048e.m16137e()).intValue();
+        this.f25790x = ((Long) sa3.f26046c.m16137e()).intValue();
+        this.f25791y = ((Integer) zzba.zzc().m23658b(g93.f10521Q)).intValue();
+        this.f25792z = ((Integer) zzba.zzc().m23658b(g93.f10531R)).intValue();
+        this.f25777A = ((Integer) zzba.zzc().m23658b(g93.f10541S)).intValue();
+        this.f25786t = ((Long) sa3.f26049f.m16137e()).intValue();
+        this.f25778B = (String) zzba.zzc().m23658b(g93.f10561U);
+        this.f25779C = ((Boolean) zzba.zzc().m23658b(g93.f10571V)).booleanValue();
+        this.f25780D = ((Boolean) zzba.zzc().m23658b(g93.f10581W)).booleanValue();
+        this.f25781E = ((Boolean) zzba.zzc().m23658b(g93.f10591X)).booleanValue();
         setName("ContentFetchTask");
     }
 
-    public final i13 a() {
-        return this.s.a(this.E);
+    /* renamed from: a */
+    public final i13 m10763a() {
+        return this.f25785s.m19174a(this.f25781E);
     }
 
-    public final r13 b(View view, i13 i13Var) {
+    /* renamed from: b */
+    public final r13 m10762b(View view, i13 i13Var) {
         if (view == null) {
             return new r13(this, 0, 0);
         }
@@ -67,12 +107,12 @@ public final class s13 extends Thread {
             if (TextUtils.isEmpty(text)) {
                 return new r13(this, 0, 0);
             }
-            i13Var.k(text.toString(), globalVisibleRect, view.getX(), view.getY(), view.getWidth(), view.getHeight());
+            i13Var.m20207k(text.toString(), globalVisibleRect, view.getX(), view.getY(), view.getWidth(), view.getHeight());
             return new r13(this, 1, 0);
         } else if ((view instanceof WebView) && !(view instanceof a74)) {
             WebView webView = (WebView) view;
-            if (vw0.d()) {
-                i13Var.h();
+            if (vw0.m6701d()) {
+                i13Var.m20210h();
                 webView.post(new q13(this, i13Var, webView, globalVisibleRect));
                 return new r13(this, 0, 1);
             }
@@ -82,9 +122,9 @@ public final class s13 extends Thread {
             int i = 0;
             int i2 = 0;
             for (int i3 = 0; i3 < viewGroup.getChildCount(); i3++) {
-                r13 b = b(viewGroup.getChildAt(i3), i13Var);
-                i += b.a;
-                i2 += b.b;
+                r13 m10762b = m10762b(viewGroup.getChildAt(i3), i13Var);
+                i += m10762b.f24727a;
+                i2 += m10762b.f24728b;
             }
             return new r13(this, i, i2);
         } else {
@@ -95,141 +135,97 @@ public final class s13 extends Thread {
     /* JADX WARN: Code restructure failed: missing block: B:24:0x0071, code lost:
         if (r11 == 0) goto L24;
      */
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void c(android.view.View r11) {
-        /*
-            r10 = this;
-            com.daaw.i13 r9 = new com.daaw.i13     // Catch: java.lang.Exception -> L83
-            int r1 = r10.u     // Catch: java.lang.Exception -> L83
-            int r2 = r10.v     // Catch: java.lang.Exception -> L83
-            int r3 = r10.w     // Catch: java.lang.Exception -> L83
-            int r4 = r10.x     // Catch: java.lang.Exception -> L83
-            int r5 = r10.y     // Catch: java.lang.Exception -> L83
-            int r6 = r10.z     // Catch: java.lang.Exception -> L83
-            int r7 = r10.A     // Catch: java.lang.Exception -> L83
-            boolean r8 = r10.D     // Catch: java.lang.Exception -> L83
-            r0 = r9
-            r0.<init>(r1, r2, r3, r4, r5, r6, r7, r8)     // Catch: java.lang.Exception -> L83
-            com.daaw.n13 r0 = com.google.android.gms.ads.internal.zzt.zzb()     // Catch: java.lang.Exception -> L83
-            android.content.Context r0 = r0.b()     // Catch: java.lang.Exception -> L83
-            if (r0 == 0) goto L54
-            java.lang.String r1 = r10.B     // Catch: java.lang.Exception -> L83
-            boolean r1 = android.text.TextUtils.isEmpty(r1)     // Catch: java.lang.Exception -> L83
-            if (r1 != 0) goto L54
-            android.content.res.Resources r1 = r0.getResources()     // Catch: java.lang.Exception -> L83
-            com.daaw.y83 r2 = com.daaw.g93.T     // Catch: java.lang.Exception -> L83
-            com.daaw.e93 r3 = com.google.android.gms.ads.internal.client.zzba.zzc()     // Catch: java.lang.Exception -> L83
-            java.lang.Object r2 = r3.b(r2)     // Catch: java.lang.Exception -> L83
-            java.lang.String r2 = (java.lang.String) r2     // Catch: java.lang.Exception -> L83
-            java.lang.String r3 = "id"
-            java.lang.String r0 = r0.getPackageName()     // Catch: java.lang.Exception -> L83
-            int r0 = r1.getIdentifier(r2, r3, r0)     // Catch: java.lang.Exception -> L83
-            java.lang.Object r0 = r11.getTag(r0)     // Catch: java.lang.Exception -> L83
-            java.lang.String r0 = (java.lang.String) r0     // Catch: java.lang.Exception -> L83
-            if (r0 == 0) goto L54
-            java.lang.String r1 = r10.B     // Catch: java.lang.Exception -> L83
-            boolean r0 = r0.equals(r1)     // Catch: java.lang.Exception -> L83
-            if (r0 != 0) goto L53
-            goto L54
-        L53:
-            return
-        L54:
-            com.daaw.r13 r11 = r10.b(r11, r9)     // Catch: java.lang.Exception -> L83
-            r9.m()     // Catch: java.lang.Exception -> L83
-            int r0 = r11.a     // Catch: java.lang.Exception -> L83
-            if (r0 != 0) goto L65
-            int r0 = r11.b     // Catch: java.lang.Exception -> L83
-            if (r0 == 0) goto L64
-            goto L65
-        L64:
-            return
-        L65:
-            int r11 = r11.b     // Catch: java.lang.Exception -> L83
-            if (r11 != 0) goto L71
-            int r11 = r9.c()     // Catch: java.lang.Exception -> L83
-            if (r11 == 0) goto L70
-            goto L73
-        L70:
-            return
-        L71:
-            if (r11 != 0) goto L7d
-        L73:
-            com.daaw.j13 r11 = r10.s     // Catch: java.lang.Exception -> L83
-            boolean r11 = r11.d(r9)     // Catch: java.lang.Exception -> L83
-            if (r11 != 0) goto L7c
-            goto L7d
-        L7c:
-            return
-        L7d:
-            com.daaw.j13 r11 = r10.s     // Catch: java.lang.Exception -> L83
-            r11.b(r9)     // Catch: java.lang.Exception -> L83
-            return
-        L83:
-            r11 = move-exception
-            java.lang.String r0 = "Exception in fetchContentOnUIThread"
-            com.daaw.k04.zzh(r0, r11)
-            com.daaw.qz3 r0 = com.google.android.gms.ads.internal.zzt.zzo()
-            java.lang.String r1 = "ContentFetchTask.fetchContent"
-            r0.u(r11, r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.s13.c(android.view.View):void");
+    public final void m10761c(View view) {
+        try {
+            i13 i13Var = new i13(this.f25787u, this.f25788v, this.f25789w, this.f25790x, this.f25791y, this.f25792z, this.f25777A, this.f25780D);
+            Context m15599b = zzt.zzb().m15599b();
+            if (m15599b != null && !TextUtils.isEmpty(this.f25778B)) {
+                String str = (String) view.getTag(m15599b.getResources().getIdentifier((String) zzba.zzc().m23658b(g93.f10551T), "id", m15599b.getPackageName()));
+                if (str != null && str.equals(this.f25778B)) {
+                    return;
+                }
+            }
+            r13 m10762b = m10762b(view, i13Var);
+            i13Var.m20205m();
+            if (m10762b.f24727a == 0 && m10762b.f24728b == 0) {
+                return;
+            }
+            int i = m10762b.f24728b;
+            if (i == 0) {
+                if (i13Var.m20215c() == 0) {
+                    return;
+                }
+            }
+            if (this.f25785s.m19171d(i13Var)) {
+                return;
+            }
+            this.f25785s.m19173b(i13Var);
+        } catch (Exception e) {
+            k04.zzh("Exception in fetchContentOnUIThread", e);
+            zzt.zzo().m11902u(e, "ContentFetchTask.fetchContent");
+        }
     }
 
-    public final void d(i13 i13Var, WebView webView, String str, boolean z) {
-        i13Var.g();
+    /* renamed from: d */
+    public final void m10760d(i13 i13Var, WebView webView, String str, boolean z) {
+        i13Var.m20211g();
         try {
             if (!TextUtils.isEmpty(str)) {
                 String optString = new JSONObject(str).optString("text");
-                if (this.C || TextUtils.isEmpty(webView.getTitle())) {
-                    i13Var.l(optString, z, webView.getX(), webView.getY(), webView.getWidth(), webView.getHeight());
+                if (this.f25779C || TextUtils.isEmpty(webView.getTitle())) {
+                    i13Var.m20206l(optString, z, webView.getX(), webView.getY(), webView.getWidth(), webView.getHeight());
                 } else {
                     String title = webView.getTitle();
-                    i13Var.l(title + "\n" + optString, z, webView.getX(), webView.getY(), webView.getWidth(), webView.getHeight());
+                    i13Var.m20206l(title + "\n" + optString, z, webView.getX(), webView.getY(), webView.getWidth(), webView.getHeight());
                 }
             }
-            if (i13Var.o()) {
-                this.s.c(i13Var);
+            if (i13Var.m20203o()) {
+                this.f25785s.m19172c(i13Var);
             }
         } catch (JSONException unused) {
             k04.zze("Json string may be malformed.");
         } catch (Throwable th) {
             k04.zzf("Failed to get webview content.", th);
-            zzt.zzo().u(th, "ContentFetchTask.processWebViewContent");
+            zzt.zzo().m11902u(th, "ContentFetchTask.processWebViewContent");
         }
     }
 
-    public final void e() {
-        synchronized (this.r) {
-            if (this.p) {
+    /* renamed from: e */
+    public final void m10759e() {
+        synchronized (this.f25784r) {
+            if (this.f25782p) {
                 k04.zze("Content hash thread already started, quitting...");
                 return;
             }
-            this.p = true;
+            this.f25782p = true;
             start();
         }
     }
 
-    public final void f() {
-        synchronized (this.r) {
-            this.q = true;
+    /* renamed from: f */
+    public final void m10758f() {
+        synchronized (this.f25784r) {
+            this.f25783q = true;
             k04.zze("ContentFetchThread: paused, mPause = true");
         }
     }
 
-    public final void g() {
-        synchronized (this.r) {
-            this.q = false;
-            this.r.notifyAll();
+    /* renamed from: g */
+    public final void m10757g() {
+        synchronized (this.f25784r) {
+            this.f25783q = false;
+            this.f25784r.notifyAll();
             k04.zze("ContentFetchThread: wakeup");
         }
     }
 
-    public final boolean h() {
-        return this.q;
+    /* renamed from: h */
+    public final boolean m10756h() {
+        return this.f25783q;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:16:0x0042, code lost:
@@ -248,7 +244,7 @@ public final class s13 extends Thread {
         if (r0.isScreenOn() == false) goto L5;
      */
     /* JADX WARN: Code restructure failed: missing block: B:23:0x005a, code lost:
-        r0 = com.google.android.gms.ads.internal.zzt.zzb().a();
+        r0 = com.google.android.gms.ads.internal.zzt.zzb().m15600a();
      */
     /* JADX WARN: Code restructure failed: missing block: B:24:0x0062, code lost:
         if (r0 != null) goto L55;
@@ -272,7 +268,7 @@ public final class s13 extends Thread {
         r0 = move-exception;
      */
     /* JADX WARN: Code restructure failed: missing block: B:36:0x008f, code lost:
-        com.google.android.gms.ads.internal.zzt.zzo().u(r0, "ContentFetchTask.extractContent");
+        com.google.android.gms.ads.internal.zzt.zzo().m11902u(r0, "ContentFetchTask.extractContent");
         com.daaw.k04.zze("Failed getting root view of activity. Content not extracted.");
      */
     /* JADX WARN: Code restructure failed: missing block: B:44:0x00c1, code lost:
@@ -280,7 +276,7 @@ public final class s13 extends Thread {
      */
     /* JADX WARN: Code restructure failed: missing block: B:45:0x00c2, code lost:
         com.daaw.k04.zzh("Error in ContentFetchTask", r0);
-        com.google.android.gms.ads.internal.zzt.zzo().u(r0, "ContentFetchTask.run");
+        com.google.android.gms.ads.internal.zzt.zzo().m11902u(r0, "ContentFetchTask.run");
      */
     /* JADX WARN: Code restructure failed: missing block: B:46:0x00d1, code lost:
         r0 = move-exception;
@@ -292,130 +288,50 @@ public final class s13 extends Thread {
     @Override // java.lang.Thread, java.lang.Runnable
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public final void run() {
-        /*
-            r6 = this;
-        L0:
-            com.daaw.n13 r0 = com.google.android.gms.ads.internal.zzt.zzb()     // Catch: java.lang.Throwable -> La8
-            android.content.Context r0 = r0.b()     // Catch: java.lang.Throwable -> La8
-            if (r0 != 0) goto Lc
-            goto Lb2
-        Lc:
-            java.lang.String r1 = "activity"
-            java.lang.Object r1 = r0.getSystemService(r1)     // Catch: java.lang.Throwable -> La8
-            android.app.ActivityManager r1 = (android.app.ActivityManager) r1     // Catch: java.lang.Throwable -> La8
-            java.lang.String r2 = "keyguard"
-            java.lang.Object r2 = r0.getSystemService(r2)     // Catch: java.lang.Throwable -> La8
-            android.app.KeyguardManager r2 = (android.app.KeyguardManager) r2     // Catch: java.lang.Throwable -> La8
-            if (r1 == 0) goto Lb2
-            if (r2 == 0) goto Lb2
-            java.util.List r1 = r1.getRunningAppProcesses()     // Catch: java.lang.Throwable -> La8
-            if (r1 == 0) goto Lb2
-            java.util.Iterator r1 = r1.iterator()     // Catch: java.lang.Throwable -> La8
-        L2a:
-            boolean r3 = r1.hasNext()     // Catch: java.lang.Throwable -> La8
-            if (r3 == 0) goto Lb2
-            java.lang.Object r3 = r1.next()     // Catch: java.lang.Throwable -> La8
-            android.app.ActivityManager$RunningAppProcessInfo r3 = (android.app.ActivityManager.RunningAppProcessInfo) r3     // Catch: java.lang.Throwable -> La8
-            int r4 = android.os.Process.myPid()     // Catch: java.lang.Throwable -> La8
-            int r5 = r3.pid     // Catch: java.lang.Throwable -> La8
-            if (r4 != r5) goto L2a
-            int r1 = r3.importance     // Catch: java.lang.Throwable -> La8
-            r3 = 100
-            if (r1 != r3) goto Lb2
-            boolean r1 = r2.inKeyguardRestrictedInputMode()     // Catch: java.lang.Throwable -> La8
-            if (r1 != 0) goto Lb2
-            java.lang.String r1 = "power"
-            java.lang.Object r0 = r0.getSystemService(r1)     // Catch: java.lang.Throwable -> La8
-            android.os.PowerManager r0 = (android.os.PowerManager) r0     // Catch: java.lang.Throwable -> La8
-            if (r0 == 0) goto Lb2
-            boolean r0 = r0.isScreenOn()     // Catch: java.lang.Throwable -> La8
-            if (r0 == 0) goto Lb2
-            com.daaw.n13 r0 = com.google.android.gms.ads.internal.zzt.zzb()     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            android.app.Activity r0 = r0.a()     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            if (r0 != 0) goto L6d
-            java.lang.String r0 = "ContentFetchThread: no activity. Sleeping."
-            com.daaw.k04.zze(r0)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-        L69:
-            r6.f()     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            goto Lb8
-        L6d:
-            r1 = 0
-            android.view.Window r2 = r0.getWindow()     // Catch: java.lang.Exception -> L8e
-            if (r2 == 0) goto L9d
-            android.view.Window r2 = r0.getWindow()     // Catch: java.lang.Exception -> L8e
-            android.view.View r2 = r2.getDecorView()     // Catch: java.lang.Exception -> L8e
-            if (r2 == 0) goto L9d
-            android.view.Window r0 = r0.getWindow()     // Catch: java.lang.Exception -> L8e
-            android.view.View r0 = r0.getDecorView()     // Catch: java.lang.Exception -> L8e
-            r2 = 16908290(0x1020002, float:2.3877235E-38)
-            android.view.View r1 = r0.findViewById(r2)     // Catch: java.lang.Exception -> L8e
-            goto L9d
-        L8e:
-            r0 = move-exception
-            com.daaw.qz3 r2 = com.google.android.gms.ads.internal.zzt.zzo()     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            java.lang.String r3 = "ContentFetchTask.extractContent"
-            r2.u(r0, r3)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            java.lang.String r0 = "Failed getting root view of activity. Content not extracted."
-            com.daaw.k04.zze(r0)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-        L9d:
-            if (r1 == 0) goto Lb8
-            com.daaw.o13 r0 = new com.daaw.o13     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            r0.<init>(r6, r1)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            r1.post(r0)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            goto Lb8
-        La8:
-            r0 = move-exception
-            com.daaw.qz3 r1 = com.google.android.gms.ads.internal.zzt.zzo()     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            java.lang.String r2 = "ContentFetchTask.isInForeground"
-            r1.u(r0, r2)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-        Lb2:
-            java.lang.String r0 = "ContentFetchTask: sleeping"
-            com.daaw.k04.zze(r0)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            goto L69
-        Lb8:
-            int r0 = r6.t     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            int r0 = r0 * 1000
-            long r0 = (long) r0     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            java.lang.Thread.sleep(r0)     // Catch: java.lang.Exception -> Lc1 java.lang.InterruptedException -> Ld1
-            goto Ld7
-        Lc1:
-            r0 = move-exception
-            java.lang.String r1 = "Error in ContentFetchTask"
-            com.daaw.k04.zzh(r1, r0)
-            com.daaw.qz3 r1 = com.google.android.gms.ads.internal.zzt.zzo()
-            java.lang.String r2 = "ContentFetchTask.run"
-            r1.u(r0, r2)
-            goto Ld7
-        Ld1:
-            r0 = move-exception
-            java.lang.String r1 = "Error in ContentFetchTask"
-            com.daaw.k04.zzh(r1, r0)
-        Ld7:
-            java.lang.Object r0 = r6.r
-            monitor-enter(r0)
-        Lda:
-            boolean r1 = r6.q     // Catch: java.lang.Throwable -> Lec
-            if (r1 == 0) goto Le9
-            java.lang.String r1 = "ContentFetchTask: waiting"
-            com.daaw.k04.zze(r1)     // Catch: java.lang.InterruptedException -> Lda java.lang.Throwable -> Lec
-            java.lang.Object r1 = r6.r     // Catch: java.lang.InterruptedException -> Lda java.lang.Throwable -> Lec
-            r1.wait()     // Catch: java.lang.InterruptedException -> Lda java.lang.Throwable -> Lec
-            goto Lda
-        Le9:
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> Lec
-            goto L0
-        Lec:
-            r1 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> Lec
-            goto Lf0
-        Lef:
-            throw r1
-        Lf0:
-            goto Lef
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.s13.run():void");
+        List<ActivityManager.RunningAppProcessInfo> runningAppProcesses;
+        View view;
+        while (true) {
+            try {
+                Context m15599b = zzt.zzb().m15599b();
+                if (m15599b != null) {
+                    ActivityManager activityManager = (ActivityManager) m15599b.getSystemService("activity");
+                    KeyguardManager keyguardManager = (KeyguardManager) m15599b.getSystemService("keyguard");
+                    if (activityManager != null && keyguardManager != null && (runningAppProcesses = activityManager.getRunningAppProcesses()) != null) {
+                        Iterator<ActivityManager.RunningAppProcessInfo> it = runningAppProcesses.iterator();
+                        while (true) {
+                            if (!it.hasNext()) {
+                                break;
+                            }
+                            ActivityManager.RunningAppProcessInfo next = it.next();
+                            if (Process.myPid() == next.pid) {
+                                break;
+                            }
+                        }
+                    }
+                }
+            } catch (Throwable th) {
+                zzt.zzo().m11902u(th, "ContentFetchTask.isInForeground");
+            }
+            k04.zze("ContentFetchTask: sleeping");
+            m10758f();
+            Thread.sleep(this.f25786t * 1000);
+            synchronized (this.f25784r) {
+                while (this.f25783q) {
+                    try {
+                        k04.zze("ContentFetchTask: waiting");
+                        this.f25784r.wait();
+                    } catch (InterruptedException unused) {
+                    }
+                }
+            }
+        }
+        if (view != null) {
+            view.post(new o13(this, view));
+        }
+        Thread.sleep(this.f25786t * 1000);
+        synchronized (this.f25784r) {
+        }
     }
 }

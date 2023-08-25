@@ -1,17 +1,20 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public abstract class pu0 {
-    public abstract e7<?> a();
+    /* renamed from: a */
+    public abstract AbstractC1164e7<?> mo13144a();
 
-    public final boolean b(pu0 pu0Var) {
-        e7<?> a;
-        e7<?> a2 = a();
-        return (a2 == null || (a = pu0Var.a()) == null || a2.f() >= a.f()) ? false : true;
+    /* renamed from: b */
+    public final boolean m13143b(pu0 pu0Var) {
+        AbstractC1164e7<?> mo13144a;
+        AbstractC1164e7<?> mo13144a2 = mo13144a();
+        return (mo13144a2 == null || (mo13144a = pu0Var.mo13144a()) == null || mo13144a2.m23695f() >= mo13144a.m23695f()) ? false : true;
     }
 
-    public abstract Object c(Object obj);
+    /* renamed from: c */
+    public abstract Object mo13142c(Object obj);
 
     public String toString() {
-        return aq.a(this) + '@' + aq.b(this);
+        return C0666aq.m27227a(this) + '@' + C0666aq.m27226b(this);
     }
 }

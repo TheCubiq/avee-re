@@ -10,37 +10,47 @@ import com.google.android.gms.ads.internal.client.zzdn;
 import com.google.android.gms.ads.internal.client.zzfe;
 /* loaded from: classes.dex */
 public final class l23 extends AppOpenAd {
-    public final p23 a;
-    public final String b;
-    public final m23 c = new m23();
-    public FullScreenContentCallback d;
-    public OnPaidEventListener e;
+
+    /* renamed from: a */
+    public final p23 f16972a;
+
+    /* renamed from: b */
+    public final String f16973b;
+
+    /* renamed from: c */
+    public final m23 f16974c = new m23();
+
+    /* renamed from: d */
+    public FullScreenContentCallback f16975d;
+
+    /* renamed from: e */
+    public OnPaidEventListener f16976e;
 
     public l23(p23 p23Var, String str) {
-        this.a = p23Var;
-        this.b = str;
+        this.f16972a = p23Var;
+        this.f16973b = str;
     }
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final String getAdUnitId() {
-        return this.b;
+        return this.f16973b;
     }
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final FullScreenContentCallback getFullScreenContentCallback() {
-        return this.d;
+        return this.f16975d;
     }
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final OnPaidEventListener getOnPaidEventListener() {
-        return this.e;
+        return this.f16976e;
     }
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final ResponseInfo getResponseInfo() {
         zzdn zzdnVar;
         try {
-            zzdnVar = this.a.zzf();
+            zzdnVar = this.f16972a.zzf();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
             zzdnVar = null;
@@ -50,14 +60,14 @@ public final class l23 extends AppOpenAd {
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final void setFullScreenContentCallback(FullScreenContentCallback fullScreenContentCallback) {
-        this.d = fullScreenContentCallback;
-        this.c.g3(fullScreenContentCallback);
+        this.f16975d = fullScreenContentCallback;
+        this.f16974c.m16294g3(fullScreenContentCallback);
     }
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final void setImmersiveMode(boolean z) {
         try {
-            this.a.V2(z);
+            this.f16972a.mo7136V2(z);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -65,9 +75,9 @@ public final class l23 extends AppOpenAd {
 
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final void setOnPaidEventListener(OnPaidEventListener onPaidEventListener) {
-        this.e = onPaidEventListener;
+        this.f16976e = onPaidEventListener;
         try {
-            this.a.Y0(new zzfe(onPaidEventListener));
+            this.f16972a.mo7134Y0(new zzfe(onPaidEventListener));
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -76,7 +86,7 @@ public final class l23 extends AppOpenAd {
     @Override // com.google.android.gms.ads.appopen.AppOpenAd
     public final void show(Activity activity) {
         try {
-            this.a.t1(nt0.g3(activity), this.c);
+            this.f16972a.mo7133t1(nt0.m14830g3(activity), this.f16974c);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }

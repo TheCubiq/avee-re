@@ -3,6 +3,7 @@ package com.daaw;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.view.View;
@@ -10,6 +11,7 @@ import com.daaw.avee.MainActivity;
 import com.daaw.avee.MediaControlsView;
 import com.daaw.avee.R;
 import com.daaw.avee.SettingsActivity;
+import com.daaw.avee.comp.playback.C0743c;
 import com.daaw.avee.comp.playback.MediaPlaybackService;
 import com.daaw.pw1;
 import com.daaw.qw1;
@@ -19,82 +21,113 @@ import com.daaw.vw1;
 import com.daaw.ww1;
 import com.daaw.xw1;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class c60 {
-    public static boolean j;
-    public static boolean k;
-    public static boolean l;
-    public static volatile boolean m;
-    public List<Object> a = new LinkedList();
-    public Handler b = new Handler();
-    public boolean c = false;
-    public final int d = 201709;
-    public final Date e = new Date(x21.D0, 11, 24);
-    public final Date f = new Date(x21.D0, 11, 26);
-    public final Date g = new Date(x21.E0, 0, 1);
-    public final Date h = new Date(x21.E0, 0, 2);
-    public final Date i = new Date(x21.E0, 0, 4);
 
+    /* renamed from: j */
+    public static boolean f5518j;
+
+    /* renamed from: k */
+    public static boolean f5519k;
+
+    /* renamed from: l */
+    public static boolean f5520l;
+
+    /* renamed from: m */
+    public static volatile boolean f5521m;
+
+    /* renamed from: a */
+    public List<Object> f5522a = new LinkedList();
+
+    /* renamed from: b */
+    public Handler f5523b = new Handler();
+
+    /* renamed from: c */
+    public boolean f5524c = false;
+
+    /* renamed from: d */
+    public final int f5525d = 201709;
+
+    /* renamed from: e */
+    public final Date f5526e = new Date(x21.f31774D0, 11, 24);
+
+    /* renamed from: f */
+    public final Date f5527f = new Date(x21.f31774D0, 11, 26);
+
+    /* renamed from: g */
+    public final Date f5528g = new Date(x21.f31779E0, 0, 1);
+
+    /* renamed from: h */
+    public final Date f5529h = new Date(x21.f31779E0, 0, 2);
+
+    /* renamed from: i */
+    public final Date f5530i = new Date(x21.f31779E0, 0, 4);
+
+    /* renamed from: com.daaw.c60$a */
     /* loaded from: classes.dex */
-    public class a implements vw1.a<Boolean> {
-        public a() {
+    public class C0916a implements vw1.InterfaceC3381a<Boolean> {
+        public C0916a() {
         }
 
-        @Override // com.daaw.vw1.a
+        @Override // com.daaw.vw1.InterfaceC3381a
         /* renamed from: b */
-        public Boolean a() {
-            if (!c60.this.c) {
-                c60.this.m(dx0.e());
+        public Boolean mo3126a() {
+            if (!c60.this.f5524c) {
+                c60.this.m25584m(dx0.m23837e());
             }
-            boolean z = c60.k;
-            c60.k = false;
+            boolean z = c60.f5519k;
+            c60.f5519k = false;
             return Boolean.valueOf(z);
         }
     }
 
+    /* renamed from: com.daaw.c60$b */
     /* loaded from: classes.dex */
-    public class b implements rw1.a<er0<tx0, vd0>, be0> {
-        public b() {
+    public class C0917b implements rw1.InterfaceC2894a<er0<tx0, vd0>, be0> {
+        public C0917b() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(er0<tx0, vd0> er0Var, be0 be0Var) {
+        public void mo2813c(er0<tx0, vd0> er0Var, be0 be0Var) {
             tx0 tx0Var;
-            if (c60.l) {
+            if (c60.f5520l) {
                 lo1<tx0, vd0> lo1Var = er0Var.size() > 0 ? er0Var.get(0) : null;
-                if (lo1Var != null && (tx0Var = lo1Var.a) != null) {
-                    com.daaw.avee.comp.playback.c.e.a(tx0Var.g(), Boolean.FALSE, 0L, null);
+                if (lo1Var != null && (tx0Var = lo1Var.f17576a) != null) {
+                    C0743c.f4011e.m16455a(tx0Var.m8745g(), Boolean.FALSE, 0L, null);
                 }
-                c60.l = false;
+                c60.f5520l = false;
             }
         }
     }
 
+    /* renamed from: com.daaw.c60$c */
     /* loaded from: classes.dex */
-    public class c implements rw1.a<Activity, Integer> {
-        public c() {
+    public class C0918c implements rw1.InterfaceC2894a<Activity, Integer> {
+        public C0918c() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(Activity activity, Integer num) {
-            com.daaw.avee.comp.playback.c.u.a();
-            boolean z = c60.j;
-            c60.k = z;
-            c60.l = z;
-            if ((num.intValue() == i5.a || num.intValue() == i5.d) && Build.VERSION.SDK_INT >= 23) {
+        public void mo2813c(Activity activity, Integer num) {
+            C0743c.f4027u.m20363a();
+            boolean z = c60.f5518j;
+            c60.f5519k = z;
+            c60.f5520l = z;
+            if ((num.intValue() == C1658i5.f13254a || num.intValue() == C1658i5.f13257d) && Build.VERSION.SDK_INT >= 23) {
                 activity.recreate();
             }
         }
     }
 
+    /* renamed from: com.daaw.c60$d */
     /* loaded from: classes.dex */
-    public class d implements sw1.a<View, View, View> {
-        public d() {
+    public class C0919d implements sw1.InterfaceC2987a<View, View, View> {
+        public C0919d() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:10:0x0023, code lost:
@@ -106,354 +139,318 @@ public class c60 {
         /* JADX WARN: Code restructure failed: missing block: B:9:0x0021, code lost:
             if (r3 != null) goto L9;
          */
-        @Override // com.daaw.sw1.a
+        @Override // com.daaw.sw1.InterfaceC2987a
         /* renamed from: b */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
         */
-        public void a(android.view.View r2, android.view.View r3, android.view.View r4) {
-            /*
-                r1 = this;
-                java.util.Date r4 = new java.util.Date
-                r4.<init>()
-                com.daaw.c60 r0 = com.daaw.c60.this
-                java.util.Date r0 = r0.e
-                boolean r0 = r4.after(r0)
-                if (r0 == 0) goto L27
-                com.daaw.c60 r0 = com.daaw.c60.this
-                java.util.Date r0 = r0.f
-                boolean r0 = r4.before(r0)
-                if (r0 == 0) goto L27
-                r4 = 2131231100(0x7f08017c, float:1.8078271E38)
-                if (r2 == 0) goto L21
-                r2.setBackgroundResource(r4)
-            L21:
-                if (r3 == 0) goto L46
-            L23:
-                r3.setBackgroundResource(r4)
-                goto L46
-            L27:
-                com.daaw.c60 r0 = com.daaw.c60.this
-                java.util.Date r0 = r0.g
-                boolean r0 = r4.after(r0)
-                if (r0 == 0) goto L46
-                com.daaw.c60 r0 = com.daaw.c60.this
-                java.util.Date r0 = r0.h
-                boolean r4 = r4.before(r0)
-                if (r4 == 0) goto L46
-                r4 = 2131231061(0x7f080155, float:1.8078192E38)
-                if (r2 == 0) goto L43
-                r2.setBackgroundResource(r4)
-            L43:
-                if (r3 == 0) goto L46
-                goto L23
-            L46:
-                com.daaw.c60 r2 = com.daaw.c60.this
-                com.daaw.c60.h(r2)
-                return
-            */
-            throw new UnsupportedOperationException("Method not decompiled: com.daaw.c60.d.a(android.view.View, android.view.View, android.view.View):void");
+        public void mo3118a(View view, View view2, View view3) {
+            int i;
+            Date date = new Date();
+            if (date.after(c60.this.f5526e) && date.before(c60.this.f5527f)) {
+                i = R.drawable.snowflakes_pattern;
+                if (view != null) {
+                    view.setBackgroundResource(R.drawable.snowflakes_pattern);
+                }
+            } else if (date.after(c60.this.f5528g) && date.before(c60.this.f5529h)) {
+                i = R.drawable.newyear201x_pattern;
+                if (view != null) {
+                    view.setBackgroundResource(R.drawable.newyear201x_pattern);
+                }
+            }
+            c60.this.m25588i();
         }
     }
 
+    /* renamed from: com.daaw.c60$e */
     /* loaded from: classes.dex */
-    public class e implements pw1.a {
-        public e() {
+    public class C0920e implements pw1.InterfaceC2649a {
+        public C0920e() {
         }
 
-        @Override // com.daaw.pw1.a
-        public void a() {
-            Context c = dx0.c();
-            if (c != null) {
-                vy.a.a(c.getResources().getString(R.string.clearing_cache));
-                cr1.e(c);
+        @Override // com.daaw.pw1.InterfaceC2649a
+        /* renamed from: a */
+        public void mo3124a() {
+            Context m23839c = dx0.m23839c();
+            if (m23839c != null) {
+                C3385vy.f30703a.m12018a(m23839c.getResources().getString(R.string.clearing_cache));
+                cr1.m25075e(m23839c);
             }
         }
     }
 
+    /* renamed from: com.daaw.c60$f */
     /* loaded from: classes.dex */
-    public class f implements qw1.a<al> {
-        public f() {
+    public class C0921f implements qw1.InterfaceC2788a<C0645al> {
+        public C0921f() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(al alVar) {
-            j5.e().c0(j5.X, 0);
-            c60.this.n(alVar.a());
+        public void mo3122b(C0645al c0645al) {
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18931c0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14288X, 0);
+            c60.this.m25583n(c0645al.m27378a());
         }
     }
 
+    /* renamed from: com.daaw.c60$g */
     /* loaded from: classes.dex */
-    public class g implements qw1.a<vx> {
-        public g() {
+    public class C0922g implements qw1.InterfaceC2788a<DialogFragmentC3382vx> {
+        public C0922g() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(vx vxVar) {
-            j5 e = j5.e();
-            e.c0(j5.X, 201709);
-            e.T(dx0.e());
-            i5.a(dx0.e(), vxVar.getActivity());
+        public void mo3122b(DialogFragmentC3382vx dialogFragmentC3382vx) {
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5 m18928e = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e();
+            m18928e.m18931c0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14288X, 201709);
+            m18928e.m18943T(dx0.m23837e());
+            C1658i5.m20123a(dx0.m23837e(), dialogFragmentC3382vx.getActivity());
         }
     }
 
+    /* renamed from: com.daaw.c60$h */
     /* loaded from: classes.dex */
-    public class h implements qw1.a<vx> {
-        public h() {
+    public class C0923h implements qw1.InterfaceC2788a<DialogFragmentC3382vx> {
+        public C0923h() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(vx vxVar) {
-            j5.e().c0(j5.X, 0);
-            MainActivity r0 = MainActivity.r0();
-            if (r0 != null) {
-                r0.l0();
+        public void mo3122b(DialogFragmentC3382vx dialogFragmentC3382vx) {
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18931c0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14288X, 0);
+            MainActivity m26903r0 = MainActivity.m26903r0();
+            if (m26903r0 != null) {
+                m26903r0.m26909l0();
             }
-            Activity activity = vxVar.getActivity();
+            Activity activity = dialogFragmentC3382vx.getActivity();
             if (activity != null) {
                 activity.finish();
             }
         }
     }
 
+    /* renamed from: com.daaw.c60$i */
     /* loaded from: classes.dex */
-    public class i implements qw1.a<Activity> {
-        public i() {
+    public class C0924i implements qw1.InterfaceC2788a<Activity> {
+        public C0924i() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Activity activity) {
+        public void mo3122b(Activity activity) {
         }
     }
 
+    /* renamed from: com.daaw.c60$j */
     /* loaded from: classes.dex */
-    public class j implements qw1.a<Activity> {
-        public j() {
+    public class C0925j implements qw1.InterfaceC2788a<Activity> {
+        public C0925j() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Activity activity) {
-            c60.this.n(activity);
+        public void mo3122b(Activity activity) {
+            c60.this.m25583n(activity);
         }
     }
 
+    /* renamed from: com.daaw.c60$k */
     /* loaded from: classes.dex */
-    public class k implements qw1.a<Activity> {
-        public k() {
+    public class C0926k implements qw1.InterfaceC2788a<Activity> {
+        public C0926k() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Activity activity) {
-            j5.e().T(activity);
+        public void mo3122b(Activity activity) {
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18943T(activity);
         }
     }
 
+    /* renamed from: com.daaw.c60$l */
     /* loaded from: classes.dex */
-    public class l implements qw1.a<Context> {
-        public l() {
+    public class C0927l implements qw1.InterfaceC2788a<Context> {
+        public C0927l() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Context context) {
-            c60.this.m(context);
+        public void mo3122b(Context context) {
+            c60.this.m25584m(context);
         }
     }
 
+    /* renamed from: com.daaw.c60$m */
     /* loaded from: classes.dex */
-    public class m implements qw1.a<Context> {
+    public class C0928m implements qw1.InterfaceC2788a<Context> {
 
+        /* renamed from: com.daaw.c60$m$a */
         /* loaded from: classes.dex */
-        public class a implements Runnable {
-            public final /* synthetic */ Context p;
+        public class RunnableC0929a implements Runnable {
 
-            public a(Context context) {
-                this.p = context;
+            /* renamed from: p */
+            public final /* synthetic */ Context f5544p;
+
+            public RunnableC0929a(Context context) {
+                this.f5544p = context;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                c60.this.m(this.p);
+                c60.this.m25584m(this.f5544p);
             }
         }
 
-        public m() {
+        public C0928m() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(Context context) {
-            c60.this.b.post(new a(context));
+        public void mo3122b(Context context) {
+            c60.this.f5523b.post(new RunnableC0929a(context));
         }
     }
 
     public c60() {
-        SettingsActivity.u.b(new e(), this.a);
-        SettingsActivity.v.b(new f(), this.a);
-        i();
-        vx.v.b(new g(), this.a);
-        vx.w.b(new h(), this.a);
-        MainActivity.h0.b(new i(), this.a);
-        MainActivity.i0.b(new j(), this.a);
-        MainActivity.l0.b(new k(), this.a);
-        MainActivity.q0.b(new l(), this.a);
-        MediaPlaybackService.b0.b(new m(), this.a);
-        l01.t.b(new a(), this.a);
-        l01.v.b(new b(), this.a);
-        MainActivity.D0.b(new c(), this.a);
-        MediaControlsView.p.a().b(new d(), this.a);
-        dj0.t.b(new rw1.a() { // from class: com.daaw.z50
-            @Override // com.daaw.rw1.a
-            public final void c(Object obj, Object obj2) {
-                c60.this.j((Integer) obj, (View) obj2);
+        SettingsActivity.f3770u.m12989b(new C0920e(), this.f5522a);
+        SettingsActivity.f3771v.m12017b(new C0921f(), this.f5522a);
+        m25588i();
+        DialogFragmentC3382vx.f30686v.m12017b(new C0922g(), this.f5522a);
+        DialogFragmentC3382vx.f30687w.m12017b(new C0923h(), this.f5522a);
+        MainActivity.f3715h0.m12017b(new C0924i(), this.f5522a);
+        MainActivity.f3716i0.m12017b(new C0925j(), this.f5522a);
+        MainActivity.f3719l0.m12017b(new C0926k(), this.f5522a);
+        MainActivity.f3724q0.m12017b(new C0927l(), this.f5522a);
+        MediaPlaybackService.f3858b0.m12017b(new C0928m(), this.f5522a);
+        l01.f16923t.m6691b(new C0916a(), this.f5522a);
+        l01.f16925v.m10861b(new C0917b(), this.f5522a);
+        MainActivity.f3705D0.m10861b(new C0918c(), this.f5522a);
+        MediaControlsView.f3764p.m26885a().m9794b(new C0919d(), this.f5522a);
+        dj0.f7182t.m10861b(new rw1.InterfaceC2894a() { // from class: com.daaw.z50
+            @Override // com.daaw.rw1.InterfaceC2894a
+            /* renamed from: c */
+            public final void mo2813c(Object obj, Object obj2) {
+                c60.this.m25587j((Integer) obj, (View) obj2);
             }
-        }, this.a);
-        g2.b.b(new ww1.a() { // from class: com.daaw.a60
-            @Override // com.daaw.ww1.a
-            public final Object b(Object obj) {
-                File k2;
-                k2 = c60.k(obj);
-                return k2;
+        }, this.f5522a);
+        C1354g2.f10158b.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.a60
+            @Override // com.daaw.ww1.InterfaceC3477a
+            /* renamed from: b */
+            public final Object mo5751b(Object obj) {
+                File m25586k;
+                m25586k = c60.m25586k(obj);
+                return m25586k;
             }
-        }, this.a);
-        MainActivity.K0.b(new xw1.a() { // from class: com.daaw.b60
-            @Override // com.daaw.xw1.a
-            public final Object c(Object obj, Object obj2) {
-                Boolean l2;
-                l2 = c60.l((al) obj, (Intent) obj2);
-                return l2;
+        }, this.f5522a);
+        MainActivity.f3712K0.m4424b(new xw1.InterfaceC3648a() { // from class: com.daaw.b60
+            @Override // com.daaw.xw1.InterfaceC3648a
+            /* renamed from: c */
+            public final Object mo4423c(Object obj, Object obj2) {
+                Boolean m25585l;
+                m25585l = c60.m25585l((C0645al) obj, (Intent) obj2);
+                return m25585l;
             }
-        }, this.a);
+        }, this.f5522a);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void j(Integer num, View view) {
-        int i2;
+    /* renamed from: j */
+    public /* synthetic */ void m25587j(Integer num, View view) {
+        int i;
         Date date = new Date();
-        if (date.after(this.e) && date.before(this.f)) {
+        if (date.after(this.f5526e) && date.before(this.f5527f)) {
             if (view == null) {
                 return;
             }
-            i2 = R.drawable.snowflakes_pattern;
-        } else if (!date.after(this.g) || !date.before(this.h) || view == null) {
+            i = R.drawable.snowflakes_pattern;
+        } else if (!date.after(this.f5528g) || !date.before(this.f5529h) || view == null) {
             return;
         } else {
-            i2 = R.drawable.newyear201x_pattern;
+            i = R.drawable.newyear201x_pattern;
         }
-        view.setBackgroundResource(i2);
+        view.setBackgroundResource(i);
     }
 
-    public static /* synthetic */ File k(Object obj) {
-        return j5.a(((Integer) obj).intValue());
+    /* renamed from: k */
+    public static /* synthetic */ File m25586k(Object obj) {
+        return SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18936a(((Integer) obj).intValue());
     }
 
     /* JADX WARN: Removed duplicated region for block: B:24:0x0075  */
     /* JADX WARN: Removed duplicated region for block: B:26:0x008d  */
+    /* renamed from: l */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static /* synthetic */ java.lang.Boolean l(com.daaw.al r4, android.content.Intent r5) {
-        /*
-            if (r5 == 0) goto L37
-            java.lang.String r0 = r5.getAction()
-            java.lang.StringBuilder r1 = new java.lang.StringBuilder
-            r1.<init>()
-            java.lang.String r2 = "LaunchIntent: action: "
-            r1.append(r2)
-            r1.append(r0)
-            if (r0 == 0) goto L2b
-            java.lang.StringBuilder r0 = new java.lang.StringBuilder
-            r0.<init>()
-            java.lang.String r2 = ";"
-            r0.append(r2)
-            android.net.Uri r2 = r5.getData()
-            r0.append(r2)
-            java.lang.String r0 = r0.toString()
-            goto L2d
-        L2b:
-            java.lang.String r0 = ";null"
-        L2d:
-            r1.append(r0)
-            java.lang.String r0 = r1.toString()
-            com.daaw.lz1.c(r0)
-        L37:
-            r0 = 0
-            if (r5 == 0) goto L72
-            java.lang.String r1 = r5.getAction()
-            if (r1 == 0) goto L72
-            java.lang.String r2 = "android.intent.action.VIEW"
-            boolean r1 = r1.equals(r2)
-            if (r1 == 0) goto L72
-            android.net.Uri r1 = r5.getData()
-            if (r1 == 0) goto L72
-            android.content.Context r2 = r4.b()
-            android.content.ContentResolver r2 = r2.getContentResolver()
-            boolean r2 = com.daaw.rv1.b(r2, r1)
-            if (r2 == 0) goto L6a
-            android.content.Context r4 = r4.b()
-            int r4 = com.daaw.rv1.a(r4, r1)
-            if (r4 <= 0) goto L72
-            com.daaw.pv1.Z(r4)
-            goto L72
-        L6a:
-            com.daaw.tx0 r4 = new com.daaw.tx0
-            r2 = -1
-            r4.<init>(r2, r1)
-            goto L73
-        L72:
-            r4 = r0
-        L73:
-            if (r4 == 0) goto L8d
-            java.util.ArrayList r1 = new java.util.ArrayList
-            r1.<init>()
-            r1.add(r4)
-            com.daaw.rw1<java.util.List<com.daaw.tx0>, java.lang.Integer> r4 = com.daaw.avee.MainActivity.z0
-            r2 = 0
-            java.lang.Integer r2 = java.lang.Integer.valueOf(r2)
-            r4.a(r1, r2)
-            r5.setAction(r0)
-            java.lang.Boolean r4 = java.lang.Boolean.TRUE
-            return r4
-        L8d:
-            java.lang.Boolean r4 = java.lang.Boolean.FALSE
-            return r4
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.c60.l(com.daaw.al, android.content.Intent):java.lang.Boolean");
-    }
-
-    public final void i() {
-        Date date = new Date();
-        m = date.after(this.e) && date.before(this.i);
-    }
-
-    public final void m(Context context) {
-        this.c = true;
-        if (context != null) {
-            j5 e2 = j5.e();
-            e2.w(context);
-            if (j) {
-                return;
+    public static /* synthetic */ Boolean m25585l(C0645al c0645al, Intent intent) {
+        tx0 tx0Var;
+        String action;
+        Uri data;
+        String str;
+        if (intent != null) {
+            String action2 = intent.getAction();
+            StringBuilder sb = new StringBuilder();
+            sb.append("LaunchIntent: action: ");
+            sb.append(action2);
+            if (action2 != null) {
+                str = ";" + intent.getData();
+            } else {
+                str = ";null";
             }
-            j = e2.h(j5.u);
-            lz1.a("isFirstLaunch: " + j);
-            e2.a0(j5.u, false);
-            boolean z = j;
-            k = z;
-            l = z;
+            sb.append(str);
+            lz1.m16363c(sb.toString());
+        }
+        if (intent != null && (action = intent.getAction()) != null && action.equals("android.intent.action.VIEW") && (data = intent.getData()) != null) {
+            if (!rv1.m10892b(c0645al.m27377b().getContentResolver(), data)) {
+                tx0Var = new tx0(-1L, data);
+                if (tx0Var == null) {
+                    ArrayList arrayList = new ArrayList();
+                    arrayList.add(tx0Var);
+                    MainActivity.f3733z0.m10862a(arrayList, 0);
+                    intent.setAction(null);
+                    return Boolean.TRUE;
+                }
+                return Boolean.FALSE;
+            }
+            int m10893a = rv1.m10893a(c0645al.m27377b(), data);
+            if (m10893a > 0) {
+                pv1.m13091Z(m10893a);
+            }
+        }
+        tx0Var = null;
+        if (tx0Var == null) {
         }
     }
 
-    public final void n(Activity activity) {
-        if (j5.e().k(j5.X) != 201709) {
-            vx.i(new al(activity), true);
+    /* renamed from: i */
+    public final void m25588i() {
+        Date date = new Date();
+        f5521m = date.after(this.f5526e) && date.before(this.f5530i);
+    }
+
+    /* renamed from: m */
+    public final void m25584m(Context context) {
+        this.f5524c = true;
+        if (context != null) {
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5 m18928e = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e();
+            m18928e.m18903w(context);
+            if (f5518j) {
+                return;
+            }
+            f5518j = m18928e.m18922h(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14325u);
+            lz1.m16365a("isFirstLaunch: " + f5518j);
+            m18928e.m18935a0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14325u, false);
+            boolean z = f5518j;
+            f5519k = z;
+            f5520l = z;
+        }
+    }
+
+    /* renamed from: n */
+    public final void m25583n(Activity activity) {
+        if (SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18916k(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14288X) != 201709) {
+            DialogFragmentC3382vx.m6681i(new C0645al(activity), true);
         }
     }
 }

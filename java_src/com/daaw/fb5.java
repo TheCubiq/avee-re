@@ -8,7 +8,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class fb5 {
-    public static String a(JSONObject jSONObject, String str, String str2) {
+    /* renamed from: a */
+    public static String m22812a(JSONObject jSONObject, String str, String str2) {
         JSONArray optJSONArray;
         if (jSONObject != null && (optJSONArray = jSONObject.optJSONArray(str2)) != null) {
             for (int i = 0; i < optJSONArray.length(); i++) {
@@ -16,7 +17,7 @@ public final class fb5 {
                 if (optJSONObject != null) {
                     JSONArray optJSONArray2 = optJSONObject.optJSONArray("including");
                     JSONArray optJSONArray3 = optJSONObject.optJSONArray("excluding");
-                    if (b(optJSONArray2, str) && !b(optJSONArray3, str)) {
+                    if (m22811b(optJSONArray2, str) && !m22811b(optJSONArray3, str)) {
                         return optJSONObject.optString("effective_ad_unit_id", "");
                     }
                 }
@@ -25,15 +26,16 @@ public final class fb5 {
         return "";
     }
 
-    public static boolean b(JSONArray jSONArray, String str) {
+    /* renamed from: b */
+    public static boolean m22811b(JSONArray jSONArray, String str) {
         if (jSONArray != null && str != null) {
             for (int i = 0; i < jSONArray.length(); i++) {
                 String optString = jSONArray.optString(i);
                 try {
                 } catch (PatternSyntaxException e) {
-                    zzt.zzo().u(e, "RtbAdapterMap.hasAtleastOneRegexMatch");
+                    zzt.zzo().m11902u(e, "RtbAdapterMap.hasAtleastOneRegexMatch");
                 }
-                if ((((Boolean) zzba.zzc().b(g93.a9)).booleanValue() ? Pattern.compile(optString, 2) : Pattern.compile(optString)).matcher(str).lookingAt()) {
+                if ((((Boolean) zzba.zzc().m23658b(g93.f10631a9)).booleanValue() ? Pattern.compile(optString, 2) : Pattern.compile(optString)).matcher(str).lookingAt()) {
                     return true;
                 }
             }

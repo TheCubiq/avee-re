@@ -9,7 +9,8 @@ public abstract class vh3 extends cp2 implements zh3 {
         super("com.google.android.gms.ads.internal.h5.client.IH5AdsEventListener");
     }
 
-    public static zh3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static zh3 m7142g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -18,10 +19,11 @@ public abstract class vh3 extends cp2 implements zh3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             String readString = parcel.readString();
-            dp2.c(parcel);
+            dp2.m24105c(parcel);
             zzb(readString);
             parcel2.writeNoException();
             return true;

@@ -1,13 +1,19 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class j42 {
-    public static final j42 c = new j42(0, 0);
-    public final long a;
-    public final long b;
+
+    /* renamed from: c */
+    public static final j42 f14255c = new j42(0, 0);
+
+    /* renamed from: a */
+    public final long f14256a;
+
+    /* renamed from: b */
+    public final long f14257b;
 
     public j42(long j, long j2) {
-        this.a = j;
-        this.b = j2;
+        this.f14256a = j;
+        this.f14257b = j2;
     }
 
     public final boolean equals(Object obj) {
@@ -16,7 +22,7 @@ public final class j42 {
         }
         if (obj != null && j42.class == obj.getClass()) {
             j42 j42Var = (j42) obj;
-            if (this.a == j42Var.a && this.b == j42Var.b) {
+            if (this.f14256a == j42Var.f14256a && this.f14257b == j42Var.f14257b) {
                 return true;
             }
         }
@@ -24,12 +30,12 @@ public final class j42 {
     }
 
     public final int hashCode() {
-        return (((int) this.a) * 31) + ((int) this.b);
+        return (((int) this.f14256a) * 31) + ((int) this.f14257b);
     }
 
     public final String toString() {
-        long j = this.a;
-        long j2 = this.b;
+        long j = this.f14256a;
+        long j2 = this.f14257b;
         return "[timeUs=" + j + ", position=" + j2 + "]";
     }
 }

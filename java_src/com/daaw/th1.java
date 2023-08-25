@@ -3,11 +3,15 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface th1 {
-    int a(long j);
+    /* renamed from: a */
+    int mo3753a(long j);
 
-    long b(int i);
+    /* renamed from: b */
+    long mo3752b(int i);
 
-    List<ln> c(long j);
+    /* renamed from: c */
+    List<C2099ln> mo3751c(long j);
 
-    int d();
+    /* renamed from: d */
+    int mo3750d();
 }

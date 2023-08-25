@@ -5,53 +5,65 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class z42 {
-    public s32 a;
-    public s32 b;
-    public final List c;
+
+    /* renamed from: a */
+    public s32 f34446a;
+
+    /* renamed from: b */
+    public s32 f34447b;
+
+    /* renamed from: c */
+    public final List f34448c;
 
     public z42() {
-        this.a = new s32("", 0L, null);
-        this.b = new s32("", 0L, null);
-        this.c = new ArrayList();
+        this.f34446a = new s32("", 0L, null);
+        this.f34447b = new s32("", 0L, null);
+        this.f34448c = new ArrayList();
     }
 
     public z42(s32 s32Var) {
-        this.a = s32Var;
-        this.b = s32Var.clone();
-        this.c = new ArrayList();
+        this.f34446a = s32Var;
+        this.f34447b = s32Var.clone();
+        this.f34448c = new ArrayList();
     }
 
-    public final s32 a() {
-        return this.a;
+    /* renamed from: a */
+    public final s32 m2826a() {
+        return this.f34446a;
     }
 
-    public final s32 b() {
-        return this.b;
+    /* renamed from: b */
+    public final s32 m2825b() {
+        return this.f34447b;
     }
 
-    public final List c() {
-        return this.c;
+    /* renamed from: c */
+    public final List m2824c() {
+        return this.f34448c;
     }
 
     public final /* bridge */ /* synthetic */ Object clone() {
-        z42 z42Var = new z42(this.a.clone());
-        for (s32 s32Var : this.c) {
-            z42Var.c.add(s32Var.clone());
+        z42 z42Var = new z42(this.f34446a.clone());
+        for (s32 s32Var : this.f34448c) {
+            z42Var.f34448c.add(s32Var.clone());
         }
         return z42Var;
     }
 
-    public final void d(s32 s32Var) {
-        this.a = s32Var;
-        this.b = s32Var.clone();
-        this.c.clear();
+    /* renamed from: d */
+    public final void m2823d(s32 s32Var) {
+        this.f34446a = s32Var;
+        this.f34447b = s32Var.clone();
+        this.f34448c.clear();
     }
 
-    public final void e(String str, long j, Map map) {
-        this.c.add(new s32(str, j, map));
+    /* renamed from: e */
+    public final void m2822e(String str, long j, Map map) {
+        this.f34448c.add(new s32(str, j, map));
     }
 
-    public final void f(s32 s32Var) {
-        this.b = s32Var;
+    /* renamed from: f */
+    public final void m2821f(s32 s32Var) {
+        this.f34447b = s32Var;
     }
 }

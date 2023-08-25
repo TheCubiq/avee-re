@@ -8,19 +8,22 @@ public final class ul7 extends ls7 implements yt7 {
     static {
         ul7 ul7Var = new ul7();
         zzb = ul7Var;
-        ls7.C(ul7.class, ul7Var);
+        ls7.m16597C(ul7.class, ul7Var);
     }
 
-    public static tl7 M() {
-        return (tl7) zzb.H();
+    /* renamed from: M */
+    public static tl7 m8030M() {
+        return (tl7) zzb.m16592H();
     }
 
-    public static ul7 O() {
+    /* renamed from: O */
+    public static ul7 m8028O() {
         return zzb;
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -35,20 +38,22 @@ public final class ul7 extends ls7 implements yt7 {
                 }
                 return new ul7();
             }
-            return ls7.z(zzb, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u000b", new Object[]{"zzd", "zze"});
+            return ls7.m16573z(zzb, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u000b", new Object[]{"zzd", "zze"});
         }
         return (byte) 1;
     }
 
-    public final int L() {
+    /* renamed from: L */
+    public final int m8031L() {
         return this.zze;
     }
 
-    public final int Q() {
-        int b = il7.b(this.zzd);
-        if (b == 0) {
+    /* renamed from: Q */
+    public final int m8026Q() {
+        int m19656b = il7.m19656b(this.zzd);
+        if (m19656b == 0) {
             return 1;
         }
-        return b;
+        return m19656b;
     }
 }

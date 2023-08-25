@@ -5,32 +5,36 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import com.android.billingclient.api.Purchase;
+import com.daaw.C3518xb;
 import com.daaw.j01;
-import com.daaw.xb;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.json.JSONException;
 /* loaded from: classes2.dex */
 public final class yx2 {
-    public static final int a = Runtime.getRuntime().availableProcessors();
 
-    public static int a(Intent intent, String str) {
+    /* renamed from: a */
+    public static final int f34243a = Runtime.getRuntime().availableProcessors();
+
+    /* renamed from: a */
+    public static int m3105a(Intent intent, String str) {
         if (intent == null) {
-            l("ProxyBillingActivity", "Got null intent!");
+            m3094l("ProxyBillingActivity", "Got null intent!");
             return 0;
         }
-        return n(intent.getExtras(), "ProxyBillingActivity");
+        return m3092n(intent.getExtras(), "ProxyBillingActivity");
     }
 
-    public static int b(Bundle bundle, String str) {
+    /* renamed from: b */
+    public static int m3104b(Bundle bundle, String str) {
         String concat;
         if (bundle == null) {
             concat = "Unexpected null bundle received!";
         } else {
             Object obj = bundle.get("RESPONSE_CODE");
             if (obj == null) {
-                k(str, "getResponseCodeFromBundle() got null response code, assuming OK");
+                m3095k(str, "getResponseCodeFromBundle() got null response code, assuming OK");
                 return 0;
             } else if (obj instanceof Integer) {
                 return ((Integer) obj).intValue();
@@ -38,36 +42,38 @@ public final class yx2 {
                 concat = "Unexpected type for bundle response code: ".concat(obj.getClass().getName());
             }
         }
-        l(str, concat);
+        m3094l(str, concat);
         return 6;
     }
 
-    public static Bundle c(c0 c0Var, String str) {
+    /* renamed from: c */
+    public static Bundle m3103c(C0902c0 c0902c0, String str) {
         Bundle bundle = new Bundle();
         bundle.putString("playBillingLibraryVersion", str);
         return bundle;
     }
 
-    public static Bundle d(tb tbVar, boolean z, boolean z2, boolean z3, String str) {
+    /* renamed from: d */
+    public static Bundle m3102d(C3030tb c3030tb, boolean z, boolean z2, boolean z3, String str) {
         Bundle bundle = new Bundle();
         bundle.putString("playBillingLibraryVersion", str);
-        if (tbVar.b() != 0) {
-            bundle.putInt("prorationMode", tbVar.b());
+        if (c3030tb.m9414b() != 0) {
+            bundle.putInt("prorationMode", c3030tb.m9414b());
         }
-        if (!TextUtils.isEmpty(tbVar.c())) {
-            bundle.putString("accountId", tbVar.c());
+        if (!TextUtils.isEmpty(c3030tb.m9413c())) {
+            bundle.putString("accountId", c3030tb.m9413c());
         }
-        if (!TextUtils.isEmpty(tbVar.d())) {
-            bundle.putString("obfuscatedProfileId", tbVar.d());
+        if (!TextUtils.isEmpty(c3030tb.m9412d())) {
+            bundle.putString("obfuscatedProfileId", c3030tb.m9412d());
         }
-        if (tbVar.o()) {
+        if (c3030tb.m9401o()) {
             bundle.putBoolean("isOfferPersonalizedByDeveloper", true);
         }
         if (!TextUtils.isEmpty(null)) {
             bundle.putStringArrayList("skusToReplace", new ArrayList<>(Arrays.asList(null)));
         }
-        if (!TextUtils.isEmpty(tbVar.e())) {
-            bundle.putString("oldSkuPurchaseToken", tbVar.e());
+        if (!TextUtils.isEmpty(c3030tb.m9411e())) {
+            bundle.putString("oldSkuPurchaseToken", c3030tb.m9411e());
         }
         if (!TextUtils.isEmpty(null)) {
             bundle.putString("oldSkuPurchaseId", null);
@@ -87,7 +93,8 @@ public final class yx2 {
         return bundle;
     }
 
-    public static Bundle e(String str, ArrayList arrayList, String str2) {
+    /* renamed from: e */
+    public static Bundle m3101e(String str, ArrayList arrayList, String str2) {
         Bundle bundle = new Bundle();
         bundle.putString("playBillingLibraryVersion", str);
         bundle.putBoolean("enablePendingPurchases", true);
@@ -96,7 +103,7 @@ public final class yx2 {
         int size = arrayList.size();
         boolean z = false;
         for (int i = 0; i < size; i++) {
-            j01.b bVar = (j01.b) arrayList.get(i);
+            j01.C1777b c1777b = (j01.C1777b) arrayList.get(i);
             arrayList2.add(null);
             z |= !TextUtils.isEmpty(null);
         }
@@ -106,7 +113,8 @@ public final class yx2 {
         return bundle;
     }
 
-    public static Bundle f(boolean z, boolean z2, String str) {
+    /* renamed from: f */
+    public static Bundle m3100f(boolean z, boolean z2, String str) {
         Bundle bundle = new Bundle();
         bundle.putString("playBillingLibraryVersion", str);
         if (z && z2) {
@@ -115,42 +123,46 @@ public final class yx2 {
         return bundle;
     }
 
-    public static xb g(Intent intent, String str) {
+    /* renamed from: g */
+    public static C3518xb m3099g(Intent intent, String str) {
         if (intent != null) {
-            xb.a c = xb.c();
-            c.c(b(intent.getExtras(), str));
-            c.b(h(intent.getExtras(), str));
-            return c.a();
+            C3518xb.C3519a m5323c = C3518xb.m5323c();
+            m5323c.m5318c(m3104b(intent.getExtras(), str));
+            m5323c.m5319b(m3098h(intent.getExtras(), str));
+            return m5323c.m5320a();
         }
-        l("BillingHelper", "Got null intent!");
-        xb.a c2 = xb.c();
-        c2.c(6);
-        c2.b("An internal error occurred.");
-        return c2.a();
+        m3094l("BillingHelper", "Got null intent!");
+        C3518xb.C3519a m5323c2 = C3518xb.m5323c();
+        m5323c2.m5318c(6);
+        m5323c2.m5319b("An internal error occurred.");
+        return m5323c2.m5320a();
     }
 
-    public static String h(Bundle bundle, String str) {
+    /* renamed from: h */
+    public static String m3098h(Bundle bundle, String str) {
         if (bundle == null) {
-            l(str, "Unexpected null bundle received!");
+            m3094l(str, "Unexpected null bundle received!");
             return "";
         }
         Object obj = bundle.get("DEBUG_MESSAGE");
         if (obj == null) {
-            k(str, "getDebugMessageFromBundle() got null response code, assuming OK");
+            m3095k(str, "getDebugMessageFromBundle() got null response code, assuming OK");
             return "";
         } else if (obj instanceof String) {
             return (String) obj;
         } else {
-            l(str, "Unexpected type for debug message: ".concat(obj.getClass().getName()));
+            m3094l(str, "Unexpected type for debug message: ".concat(obj.getClass().getName()));
             return "";
         }
     }
 
-    public static String i(int i) {
-        return b32.a(i).toString();
+    /* renamed from: i */
+    public static String m3097i(int i) {
+        return b32.m26498a(i).toString();
     }
 
-    public static List j(Bundle bundle) {
+    /* renamed from: j */
+    public static List m3096j(Bundle bundle) {
         if (bundle == null) {
             return null;
         }
@@ -158,26 +170,27 @@ public final class yx2 {
         ArrayList<String> stringArrayList2 = bundle.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
         ArrayList arrayList = new ArrayList();
         if (stringArrayList == null || stringArrayList2 == null) {
-            Purchase o = o(bundle.getString("INAPP_PURCHASE_DATA"), bundle.getString("INAPP_DATA_SIGNATURE"));
-            if (o == null) {
-                k("BillingHelper", "Couldn't find single purchase data as well.");
+            Purchase m3091o = m3091o(bundle.getString("INAPP_PURCHASE_DATA"), bundle.getString("INAPP_DATA_SIGNATURE"));
+            if (m3091o == null) {
+                m3095k("BillingHelper", "Couldn't find single purchase data as well.");
                 return null;
             }
-            arrayList.add(o);
+            arrayList.add(m3091o);
         } else {
             int size = stringArrayList.size();
-            k("BillingHelper", "Found purchase list of " + size + " items");
+            m3095k("BillingHelper", "Found purchase list of " + size + " items");
             for (int i = 0; i < stringArrayList.size() && i < stringArrayList2.size(); i++) {
-                Purchase o2 = o(stringArrayList.get(i), stringArrayList2.get(i));
-                if (o2 != null) {
-                    arrayList.add(o2);
+                Purchase m3091o2 = m3091o(stringArrayList.get(i), stringArrayList2.get(i));
+                if (m3091o2 != null) {
+                    arrayList.add(m3091o2);
                 }
             }
         }
         return arrayList;
     }
 
-    public static void k(String str, String str2) {
+    /* renamed from: k */
+    public static void m3095k(String str, String str2) {
         if (!Log.isLoggable(str, 2) || str2.isEmpty()) {
             return;
         }
@@ -190,29 +203,33 @@ public final class yx2 {
         }
     }
 
-    public static void l(String str, String str2) {
+    /* renamed from: l */
+    public static void m3094l(String str, String str2) {
     }
 
-    public static void m(String str, String str2, Throwable th) {
+    /* renamed from: m */
+    public static void m3093m(String str, String str2, Throwable th) {
     }
 
-    public static int n(Bundle bundle, String str) {
+    /* renamed from: n */
+    public static int m3092n(Bundle bundle, String str) {
         if (bundle == null) {
-            l(str, "Unexpected null bundle received!");
+            m3094l(str, "Unexpected null bundle received!");
             return 0;
         }
         return bundle.getInt("IN_APP_MESSAGE_RESPONSE_CODE", 0);
     }
 
-    public static Purchase o(String str, String str2) {
+    /* renamed from: o */
+    public static Purchase m3091o(String str, String str2) {
         if (str == null || str2 == null) {
-            k("BillingHelper", "Received a null purchase data.");
+            m3095k("BillingHelper", "Received a null purchase data.");
             return null;
         }
         try {
             return new Purchase(str, str2);
         } catch (JSONException e) {
-            l("BillingHelper", "Got JSONException while parsing purchase data: ".concat(e.toString()));
+            m3094l("BillingHelper", "Got JSONException while parsing purchase data: ".concat(e.toString()));
             return null;
         }
     }

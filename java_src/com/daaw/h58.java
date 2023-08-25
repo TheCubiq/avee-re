@@ -1,168 +1,179 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class h58 {
-    public static int a(byte[] bArr, int i, e58 e58Var) {
-        int j = j(bArr, i, e58Var);
-        int i2 = e58Var.a;
+    /* renamed from: a */
+    public static int m21017a(byte[] bArr, int i, e58 e58Var) {
+        int m21008j = m21008j(bArr, i, e58Var);
+        int i2 = e58Var.f8130a;
         if (i2 >= 0) {
-            if (i2 <= bArr.length - j) {
+            if (i2 <= bArr.length - m21008j) {
                 if (i2 == 0) {
-                    e58Var.c = y68.q;
-                    return j;
+                    e58Var.f8132c = y68.f33399q;
+                    return m21008j;
                 }
-                e58Var.c = y68.q(bArr, j, i2);
-                return j + i2;
+                e58Var.f8132c = y68.m4063q(bArr, m21008j, i2);
+                return m21008j + i2;
             }
-            throw mb8.f();
+            throw mb8.m16104f();
         }
-        throw mb8.d();
+        throw mb8.m16106d();
     }
 
-    public static int b(byte[] bArr, int i) {
+    /* renamed from: b */
+    public static int m21016b(byte[] bArr, int i) {
         return ((bArr[i + 3] & 255) << 24) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16);
     }
 
-    public static int c(ve8 ve8Var, byte[] bArr, int i, int i2, int i3, e58 e58Var) {
+    /* renamed from: c */
+    public static int m21015c(ve8 ve8Var, byte[] bArr, int i, int i2, int i3, e58 e58Var) {
         Object zze = ve8Var.zze();
-        int n = n(zze, ve8Var, bArr, i, i2, i3, e58Var);
-        ve8Var.b(zze);
-        e58Var.c = zze;
-        return n;
+        int m21004n = m21004n(zze, ve8Var, bArr, i, i2, i3, e58Var);
+        ve8Var.mo7204b(zze);
+        e58Var.f8132c = zze;
+        return m21004n;
     }
 
-    public static int d(ve8 ve8Var, byte[] bArr, int i, int i2, e58 e58Var) {
+    /* renamed from: d */
+    public static int m21014d(ve8 ve8Var, byte[] bArr, int i, int i2, e58 e58Var) {
         Object zze = ve8Var.zze();
-        int o = o(zze, ve8Var, bArr, i, i2, e58Var);
-        ve8Var.b(zze);
-        e58Var.c = zze;
-        return o;
+        int m21003o = m21003o(zze, ve8Var, bArr, i, i2, e58Var);
+        ve8Var.mo7204b(zze);
+        e58Var.f8132c = zze;
+        return m21003o;
     }
 
-    public static int e(ve8 ve8Var, int i, byte[] bArr, int i2, int i3, db8 db8Var, e58 e58Var) {
-        int d = d(ve8Var, bArr, i2, i3, e58Var);
+    /* renamed from: e */
+    public static int m21013e(ve8 ve8Var, int i, byte[] bArr, int i2, int i3, db8 db8Var, e58 e58Var) {
+        int m21014d = m21014d(ve8Var, bArr, i2, i3, e58Var);
         while (true) {
-            db8Var.add(e58Var.c);
-            if (d >= i3) {
+            db8Var.add(e58Var.f8132c);
+            if (m21014d >= i3) {
                 break;
             }
-            int j = j(bArr, d, e58Var);
-            if (i != e58Var.a) {
+            int m21008j = m21008j(bArr, m21014d, e58Var);
+            if (i != e58Var.f8130a) {
                 break;
             }
-            d = d(ve8Var, bArr, j, i3, e58Var);
+            m21014d = m21014d(ve8Var, bArr, m21008j, i3, e58Var);
         }
-        return d;
+        return m21014d;
     }
 
-    public static int f(byte[] bArr, int i, db8 db8Var, e58 e58Var) {
+    /* renamed from: f */
+    public static int m21012f(byte[] bArr, int i, db8 db8Var, e58 e58Var) {
         ma8 ma8Var = (ma8) db8Var;
-        int j = j(bArr, i, e58Var);
-        int i2 = e58Var.a + j;
-        while (j < i2) {
-            j = j(bArr, j, e58Var);
-            ma8Var.i(e58Var.a);
+        int m21008j = m21008j(bArr, i, e58Var);
+        int i2 = e58Var.f8130a + m21008j;
+        while (m21008j < i2) {
+            m21008j = m21008j(bArr, m21008j, e58Var);
+            ma8Var.m16123i(e58Var.f8130a);
         }
-        if (j == i2) {
-            return j;
+        if (m21008j == i2) {
+            return m21008j;
         }
-        throw mb8.f();
+        throw mb8.m16104f();
     }
 
-    public static int g(byte[] bArr, int i, e58 e58Var) {
-        int j = j(bArr, i, e58Var);
-        int i2 = e58Var.a;
+    /* renamed from: g */
+    public static int m21011g(byte[] bArr, int i, e58 e58Var) {
+        int m21008j = m21008j(bArr, i, e58Var);
+        int i2 = e58Var.f8130a;
         if (i2 >= 0) {
             if (i2 == 0) {
-                e58Var.c = "";
-                return j;
+                e58Var.f8132c = "";
+                return m21008j;
             }
-            e58Var.c = new String(bArr, j, i2, gb8.b);
-            return j + i2;
+            e58Var.f8132c = new String(bArr, m21008j, i2, gb8.f11017b);
+            return m21008j + i2;
         }
-        throw mb8.d();
+        throw mb8.m16106d();
     }
 
-    public static int h(byte[] bArr, int i, e58 e58Var) {
-        int j = j(bArr, i, e58Var);
-        int i2 = e58Var.a;
+    /* renamed from: h */
+    public static int m21010h(byte[] bArr, int i, e58 e58Var) {
+        int m21008j = m21008j(bArr, i, e58Var);
+        int i2 = e58Var.f8130a;
         if (i2 >= 0) {
             if (i2 == 0) {
-                e58Var.c = "";
-                return j;
+                e58Var.f8132c = "";
+                return m21008j;
             }
-            e58Var.c = ei8.d(bArr, j, i2);
-            return j + i2;
+            e58Var.f8132c = ei8.m23448d(bArr, m21008j, i2);
+            return m21008j + i2;
         }
-        throw mb8.d();
+        throw mb8.m16106d();
     }
 
-    public static int i(int i, byte[] bArr, int i2, int i3, qg8 qg8Var, e58 e58Var) {
+    /* renamed from: i */
+    public static int m21009i(int i, byte[] bArr, int i2, int i3, qg8 qg8Var, e58 e58Var) {
         if ((i >>> 3) != 0) {
             int i4 = i & 7;
             if (i4 == 0) {
-                int m = m(bArr, i2, e58Var);
-                qg8Var.j(i, Long.valueOf(e58Var.b));
-                return m;
+                int m21005m = m21005m(bArr, i2, e58Var);
+                qg8Var.m12537j(i, Long.valueOf(e58Var.f8131b));
+                return m21005m;
             } else if (i4 == 1) {
-                qg8Var.j(i, Long.valueOf(p(bArr, i2)));
+                qg8Var.m12537j(i, Long.valueOf(m21002p(bArr, i2)));
                 return i2 + 8;
             } else if (i4 == 2) {
-                int j = j(bArr, i2, e58Var);
-                int i5 = e58Var.a;
+                int m21008j = m21008j(bArr, i2, e58Var);
+                int i5 = e58Var.f8130a;
                 if (i5 >= 0) {
-                    if (i5 <= bArr.length - j) {
-                        qg8Var.j(i, i5 == 0 ? y68.q : y68.q(bArr, j, i5));
-                        return j + i5;
+                    if (i5 <= bArr.length - m21008j) {
+                        qg8Var.m12537j(i, i5 == 0 ? y68.f33399q : y68.m4063q(bArr, m21008j, i5));
+                        return m21008j + i5;
                     }
-                    throw mb8.f();
+                    throw mb8.m16104f();
                 }
-                throw mb8.d();
+                throw mb8.m16106d();
             } else if (i4 != 3) {
                 if (i4 == 5) {
-                    qg8Var.j(i, Integer.valueOf(b(bArr, i2)));
+                    qg8Var.m12537j(i, Integer.valueOf(m21016b(bArr, i2)));
                     return i2 + 4;
                 }
-                throw mb8.b();
+                throw mb8.m16108b();
             } else {
                 int i6 = (i & (-8)) | 4;
-                qg8 f = qg8.f();
+                qg8 m12541f = qg8.m12541f();
                 int i7 = 0;
                 while (true) {
                     if (i2 >= i3) {
                         break;
                     }
-                    int j2 = j(bArr, i2, e58Var);
-                    int i8 = e58Var.a;
+                    int m21008j2 = m21008j(bArr, i2, e58Var);
+                    int i8 = e58Var.f8130a;
                     i7 = i8;
                     if (i8 == i6) {
-                        i2 = j2;
+                        i2 = m21008j2;
                         break;
                     }
-                    int i9 = i(i7, bArr, j2, i3, f, e58Var);
+                    int m21009i = m21009i(i7, bArr, m21008j2, i3, m12541f, e58Var);
                     i7 = i8;
-                    i2 = i9;
+                    i2 = m21009i;
                 }
                 if (i2 > i3 || i7 != i6) {
-                    throw mb8.e();
+                    throw mb8.m16105e();
                 }
-                qg8Var.j(i, f);
+                qg8Var.m12537j(i, m12541f);
                 return i2;
             }
         }
-        throw mb8.b();
+        throw mb8.m16108b();
     }
 
-    public static int j(byte[] bArr, int i, e58 e58Var) {
+    /* renamed from: j */
+    public static int m21008j(byte[] bArr, int i, e58 e58Var) {
         int i2 = i + 1;
         byte b = bArr[i];
         if (b >= 0) {
-            e58Var.a = b;
+            e58Var.f8130a = b;
             return i2;
         }
-        return k(b, bArr, i2, e58Var);
+        return m21007k(b, bArr, i2, e58Var);
     }
 
-    public static int k(int i, byte[] bArr, int i2, e58 e58Var) {
+    /* renamed from: k */
+    public static int m21007k(int i, byte[] bArr, int i2, e58 e58Var) {
         int i3;
         int i4;
         int i5 = i & 127;
@@ -191,7 +202,7 @@ public final class h58 {
                         while (true) {
                             int i10 = i8 + 1;
                             if (bArr[i8] >= 0) {
-                                e58Var.a = i9;
+                                e58Var.f8130a = i9;
                                 return i10;
                             }
                             i8 = i10;
@@ -199,37 +210,39 @@ public final class h58 {
                     }
                 }
             }
-            e58Var.a = i7 | i3;
+            e58Var.f8130a = i7 | i3;
             return i8;
         }
         i4 = b << 7;
-        e58Var.a = i5 | i4;
+        e58Var.f8130a = i5 | i4;
         return i6;
     }
 
-    public static int l(int i, byte[] bArr, int i2, int i3, db8 db8Var, e58 e58Var) {
+    /* renamed from: l */
+    public static int m21006l(int i, byte[] bArr, int i2, int i3, db8 db8Var, e58 e58Var) {
         ma8 ma8Var = (ma8) db8Var;
-        int j = j(bArr, i2, e58Var);
+        int m21008j = m21008j(bArr, i2, e58Var);
         while (true) {
-            ma8Var.i(e58Var.a);
-            if (j >= i3) {
+            ma8Var.m16123i(e58Var.f8130a);
+            if (m21008j >= i3) {
                 break;
             }
-            int j2 = j(bArr, j, e58Var);
-            if (i != e58Var.a) {
+            int m21008j2 = m21008j(bArr, m21008j, e58Var);
+            if (i != e58Var.f8130a) {
                 break;
             }
-            j = j(bArr, j2, e58Var);
+            m21008j = m21008j(bArr, m21008j2, e58Var);
         }
-        return j;
+        return m21008j;
     }
 
-    public static int m(byte[] bArr, int i, e58 e58Var) {
+    /* renamed from: m */
+    public static int m21005m(byte[] bArr, int i, e58 e58Var) {
         byte b;
         int i2 = i + 1;
         long j = bArr[i];
         if (j >= 0) {
-            e58Var.b = j;
+            e58Var.f8131b = j;
             return i2;
         }
         int i3 = i2 + 1;
@@ -243,34 +256,37 @@ public final class h58 {
             b2 = bArr[i3];
             i3 = i5;
         }
-        e58Var.b = j2;
+        e58Var.f8131b = j2;
         return i3;
     }
 
-    public static int n(Object obj, ve8 ve8Var, byte[] bArr, int i, int i2, int i3, e58 e58Var) {
-        int H = ((fe8) ve8Var).H(obj, bArr, i, i2, i3, e58Var);
-        e58Var.c = obj;
-        return H;
+    /* renamed from: n */
+    public static int m21004n(Object obj, ve8 ve8Var, byte[] bArr, int i, int i2, int i3, e58 e58Var) {
+        int m22735H = ((fe8) ve8Var).m22735H(obj, bArr, i, i2, i3, e58Var);
+        e58Var.f8132c = obj;
+        return m22735H;
     }
 
-    public static int o(Object obj, ve8 ve8Var, byte[] bArr, int i, int i2, e58 e58Var) {
+    /* renamed from: o */
+    public static int m21003o(Object obj, ve8 ve8Var, byte[] bArr, int i, int i2, e58 e58Var) {
         int i3 = i + 1;
         int i4 = bArr[i];
         if (i4 < 0) {
-            i3 = k(i4, bArr, i3, e58Var);
-            i4 = e58Var.a;
+            i3 = m21007k(i4, bArr, i3, e58Var);
+            i4 = e58Var.f8130a;
         }
         int i5 = i3;
         if (i4 < 0 || i4 > i2 - i5) {
-            throw mb8.f();
+            throw mb8.m16104f();
         }
         int i6 = i4 + i5;
-        ve8Var.g(obj, bArr, i5, i6, e58Var);
-        e58Var.c = obj;
+        ve8Var.mo7199g(obj, bArr, i5, i6, e58Var);
+        e58Var.f8132c = obj;
         return i6;
     }
 
-    public static long p(byte[] bArr, int i) {
+    /* renamed from: p */
+    public static long m21002p(byte[] bArr, int i) {
         return ((bArr[i + 7] & 255) << 56) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 3] & 255) << 24) | ((bArr[i + 4] & 255) << 32) | ((bArr[i + 5] & 255) << 40) | ((bArr[i + 6] & 255) << 48);
     }
 }

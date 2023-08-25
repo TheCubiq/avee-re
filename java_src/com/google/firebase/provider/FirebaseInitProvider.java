@@ -12,27 +12,34 @@ import com.daaw.s10;
 import java.util.concurrent.atomic.AtomicBoolean;
 /* loaded from: classes2.dex */
 public class FirebaseInitProvider extends ContentProvider {
-    public static jf1 p = jf1.e();
-    public static AtomicBoolean q = new AtomicBoolean(false);
 
-    public static void a(ProviderInfo providerInfo) {
-        ry0.k(providerInfo, "FirebaseInitProvider ProviderInfo cannot be null.");
+    /* renamed from: p */
+    public static jf1 f37911p = jf1.m18538e();
+
+    /* renamed from: q */
+    public static AtomicBoolean f37912q = new AtomicBoolean(false);
+
+    /* renamed from: a */
+    public static void m62a(ProviderInfo providerInfo) {
+        ry0.m10829k(providerInfo, "FirebaseInitProvider ProviderInfo cannot be null.");
         if ("com.google.firebase.firebaseinitprovider".equals(providerInfo.authority)) {
             throw new IllegalStateException("Incorrect provider authority in manifest. Most likely due to a missing applicationId variable in application's build.gradle.");
         }
     }
 
-    public static jf1 b() {
-        return p;
+    /* renamed from: b */
+    public static jf1 m61b() {
+        return f37911p;
     }
 
-    public static boolean c() {
-        return q.get();
+    /* renamed from: c */
+    public static boolean m60c() {
+        return f37912q.get();
     }
 
     @Override // android.content.ContentProvider
     public void attachInfo(Context context, ProviderInfo providerInfo) {
-        a(providerInfo);
+        m62a(providerInfo);
         super.attachInfo(context, providerInfo);
     }
 
@@ -54,11 +61,11 @@ public class FirebaseInitProvider extends ContentProvider {
     @Override // android.content.ContentProvider
     public boolean onCreate() {
         try {
-            q.set(true);
-            s10.p(getContext());
+            f37912q.set(true);
+            s10.m10780p(getContext());
             return false;
         } finally {
-            q.set(false);
+            f37912q.set(false);
         }
     }
 

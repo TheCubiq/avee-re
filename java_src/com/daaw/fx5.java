@@ -6,15 +6,18 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class fx5 implements zzf {
     @GuardedBy("this")
-    public zzf a;
 
-    public final synchronized void a(zzf zzfVar) {
-        this.a = zzfVar;
+    /* renamed from: a */
+    public zzf f10083a;
+
+    /* renamed from: a */
+    public final synchronized void m22146a(zzf zzfVar) {
+        this.f10083a = zzfVar;
     }
 
     @Override // com.google.android.gms.ads.internal.zzf
     public final synchronized void zza(View view) {
-        zzf zzfVar = this.a;
+        zzf zzfVar = this.f10083a;
         if (zzfVar != null) {
             zzfVar.zza(view);
         }
@@ -22,7 +25,7 @@ public final class fx5 implements zzf {
 
     @Override // com.google.android.gms.ads.internal.zzf
     public final synchronized void zzb() {
-        zzf zzfVar = this.a;
+        zzf zzfVar = this.f10083a;
         if (zzfVar != null) {
             zzfVar.zzb();
         }
@@ -30,7 +33,7 @@ public final class fx5 implements zzf {
 
     @Override // com.google.android.gms.ads.internal.zzf
     public final synchronized void zzc() {
-        zzf zzfVar = this.a;
+        zzf zzfVar = this.f10083a;
         if (zzfVar != null) {
             zzfVar.zzc();
         }

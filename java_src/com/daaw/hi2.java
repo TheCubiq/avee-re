@@ -4,379 +4,427 @@ public final class hi2 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public hi2() {
-        /*
-            r1 = this;
-            com.daaw.fj2 r0 = com.daaw.fj2.E0()
-            r1.<init>(r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.hi2.<init>():void");
+        super(r0);
+        fj2 fj2Var;
+        fj2Var = fj2.zzb;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ hi2(com.daaw.gi2 r1) {
-        /*
-            r0 = this;
-            com.daaw.fj2 r1 = com.daaw.fj2.E0()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.hi2.<init>(com.daaw.gi2):void");
+    public /* synthetic */ hi2(gi2 gi2Var) {
+        super(r1);
+        fj2 fj2Var;
+        fj2Var = fj2.zzb;
     }
 
-    public final hi2 A(long j) {
-        p();
-        fj2.S((fj2) this.q, j);
+    /* renamed from: A */
+    public final hi2 m20791A(long j) {
+        m22313p();
+        fj2.m22577S((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 B(long j) {
-        p();
-        fj2.R((fj2) this.q, j);
+    /* renamed from: B */
+    public final hi2 m20790B(long j) {
+        m22313p();
+        fj2.m22579R((fj2) this.f9851q, j);
         return this;
     }
 
     @Deprecated
-    public final hi2 C(long j) {
-        p();
-        fj2.O((fj2) this.q, j);
+    /* renamed from: C */
+    public final hi2 m20789C(long j) {
+        m22313p();
+        fj2.m22585O((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 D(long j) {
-        p();
-        fj2.T0((fj2) this.q, j);
+    /* renamed from: D */
+    public final hi2 m20788D(long j) {
+        m22313p();
+        fj2.m22574T0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 E(long j) {
-        p();
-        fj2.Q((fj2) this.q, j);
+    /* renamed from: E */
+    public final hi2 m20787E(long j) {
+        m22313p();
+        fj2.m22581Q((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 F(long j) {
-        p();
-        fj2.R0((fj2) this.q, j);
+    /* renamed from: F */
+    public final hi2 m20786F(long j) {
+        m22313p();
+        fj2.m22578R0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 G(long j) {
-        p();
-        fj2.S0((fj2) this.q, j);
+    /* renamed from: G */
+    public final hi2 m20785G(long j) {
+        m22313p();
+        fj2.m22576S0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 H(long j) {
-        p();
-        fj2.a0((fj2) this.q, j);
+    /* renamed from: H */
+    public final hi2 m20784H(long j) {
+        m22313p();
+        fj2.m22561a0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 I(long j) {
-        p();
-        fj2.m0((fj2) this.q, j);
+    /* renamed from: I */
+    public final hi2 m20783I(long j) {
+        m22313p();
+        fj2.m22547m0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 J(cj2 cj2Var) {
-        p();
-        fj2.b0((fj2) this.q, cj2Var);
+    /* renamed from: J */
+    public final hi2 m20782J(cj2 cj2Var) {
+        m22313p();
+        fj2.m22559b0((fj2) this.f9851q, cj2Var);
         return this;
     }
 
-    public final hi2 K(long j) {
-        p();
-        fj2.b1((fj2) this.q, j);
+    /* renamed from: K */
+    public final hi2 m20781K(long j) {
+        m22313p();
+        fj2.m22558b1((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 L(long j) {
-        p();
-        fj2.U0((fj2) this.q, j);
+    /* renamed from: L */
+    public final hi2 m20780L(long j) {
+        m22313p();
+        fj2.m22572U0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 M(long j) {
-        p();
-        fj2.X0((fj2) this.q, j);
+    /* renamed from: M */
+    public final hi2 m20779M(long j) {
+        m22313p();
+        fj2.m22566X0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 N(long j) {
-        p();
-        fj2.L((fj2) this.q, j);
+    /* renamed from: N */
+    public final hi2 m20778N(long j) {
+        m22313p();
+        fj2.m22591L((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 O(long j) {
-        p();
-        fj2.a1((fj2) this.q, j);
+    /* renamed from: O */
+    public final hi2 m20777O(long j) {
+        m22313p();
+        fj2.m22560a1((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 P(long j) {
-        p();
-        fj2.N((fj2) this.q, j);
+    /* renamed from: P */
+    public final hi2 m20776P(long j) {
+        m22313p();
+        fj2.m22587N((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 Q(ej2 ej2Var) {
-        p();
-        fj2.e0((fj2) this.q, ej2Var);
+    /* renamed from: Q */
+    public final hi2 m20775Q(ej2 ej2Var) {
+        m22313p();
+        fj2.m22555e0((fj2) this.f9851q, ej2Var);
         return this;
     }
 
-    public final hi2 R(String str) {
-        p();
-        fj2.M((fj2) this.q, str);
+    /* renamed from: R */
+    public final hi2 m20774R(String str) {
+        m22313p();
+        fj2.m22589M((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 S(cj2 cj2Var) {
-        p();
-        fj2.c0((fj2) this.q, cj2Var);
+    /* renamed from: S */
+    public final hi2 m20773S(cj2 cj2Var) {
+        m22313p();
+        fj2.m22557c0((fj2) this.f9851q, cj2Var);
         return this;
     }
 
-    public final hi2 T(int i) {
-        p();
-        fj2.z0((fj2) this.q, i);
+    /* renamed from: T */
+    public final hi2 m20772T(int i) {
+        m22313p();
+        fj2.m22534z0((fj2) this.f9851q, i);
         return this;
     }
 
-    public final hi2 U(int i) {
-        p();
-        fj2.D0((fj2) this.q, 6);
+    /* renamed from: U */
+    public final hi2 m20771U(int i) {
+        m22313p();
+        fj2.m22599D0((fj2) this.f9851q, 6);
         return this;
     }
 
-    public final hi2 V(int i) {
-        p();
-        fj2.A0((fj2) this.q, i);
+    /* renamed from: V */
+    public final hi2 m20770V(int i) {
+        m22313p();
+        fj2.m22602A0((fj2) this.f9851q, i);
         return this;
     }
 
-    public final hi2 W(int i) {
-        p();
-        fj2.C0((fj2) this.q, i);
+    /* renamed from: W */
+    public final hi2 m20769W(int i) {
+        m22313p();
+        fj2.m22600C0((fj2) this.f9851q, i);
         return this;
     }
 
-    public final hi2 X(int i) {
-        p();
-        fj2.B0((fj2) this.q, i);
+    /* renamed from: X */
+    public final hi2 m20768X(int i) {
+        m22313p();
+        fj2.m22601B0((fj2) this.f9851q, i);
         return this;
     }
 
-    public final hi2 Y(int i) {
-        p();
-        fj2.y0((fj2) this.q, i);
+    /* renamed from: Y */
+    public final hi2 m20767Y(int i) {
+        m22313p();
+        fj2.m22535y0((fj2) this.f9851q, i);
         return this;
     }
 
-    public final hi2 Z() {
-        p();
-        ((fj2) this.q).zzaf = ls7.w();
+    /* renamed from: Z */
+    public final hi2 m20766Z() {
+        m22313p();
+        ((fj2) this.f9851q).zzaf = ls7.m16576w();
         return this;
     }
 
-    public final hi2 a0(long j) {
-        p();
-        fj2.i0((fj2) this.q, j);
+    /* renamed from: a0 */
+    public final hi2 m20765a0(long j) {
+        m22313p();
+        fj2.m22551i0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 b0(String str) {
-        p();
-        fj2.k0((fj2) this.q, str);
+    /* renamed from: b0 */
+    public final hi2 m20764b0(String str) {
+        m22313p();
+        fj2.m22549k0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 c0(long j) {
-        p();
-        fj2.j0((fj2) this.q, j);
+    /* renamed from: c0 */
+    public final hi2 m20763c0(long j) {
+        m22313p();
+        fj2.m22550j0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 d0(long j) {
-        p();
-        fj2.n0((fj2) this.q, j);
+    /* renamed from: d0 */
+    public final hi2 m20762d0(long j) {
+        m22313p();
+        fj2.m22546n0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 e0(String str) {
-        p();
-        fj2.q0((fj2) this.q, str);
+    /* renamed from: e0 */
+    public final hi2 m20761e0(String str) {
+        m22313p();
+        fj2.m22543q0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 f0(String str) {
-        p();
-        fj2.L0((fj2) this.q, str);
+    /* renamed from: f0 */
+    public final hi2 m20760f0(String str) {
+        m22313p();
+        fj2.m22590L0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 g0(String str) {
-        p();
-        fj2.W((fj2) this.q, str);
+    /* renamed from: g0 */
+    public final hi2 m20759g0(String str) {
+        m22313p();
+        fj2.m22569W((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 h0(long j) {
-        p();
-        fj2.M0((fj2) this.q, j);
+    /* renamed from: h0 */
+    public final hi2 m20758h0(long j) {
+        m22313p();
+        fj2.m22588M0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 i0(long j) {
-        p();
-        fj2.f0((fj2) this.q, j);
+    /* renamed from: i0 */
+    public final hi2 m20757i0(long j) {
+        m22313p();
+        fj2.m22554f0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 j0(long j) {
-        p();
-        fj2.O0((fj2) this.q, j);
+    /* renamed from: j0 */
+    public final hi2 m20756j0(long j) {
+        m22313p();
+        fj2.m22584O0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 k0(long j) {
-        p();
-        fj2.N0((fj2) this.q, j);
+    /* renamed from: k0 */
+    public final hi2 m20755k0(long j) {
+        m22313p();
+        fj2.m22586N0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 l0(String str) {
-        p();
-        fj2.Z0((fj2) this.q, str);
+    /* renamed from: l0 */
+    public final hi2 m20754l0(String str) {
+        m22313p();
+        fj2.m22562Z0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 m0(long j) {
-        p();
-        fj2.U((fj2) this.q, j);
+    /* renamed from: m0 */
+    public final hi2 m20753m0(long j) {
+        m22313p();
+        fj2.m22573U((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 n0(long j) {
-        p();
-        fj2.Y((fj2) this.q, j);
+    /* renamed from: n0 */
+    public final hi2 m20752n0(long j) {
+        m22313p();
+        fj2.m22565Y((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 o0(long j) {
-        p();
-        fj2.Z((fj2) this.q, j);
+    /* renamed from: o0 */
+    public final hi2 m20751o0(long j) {
+        m22313p();
+        fj2.m22563Z((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 p0(boolean z) {
-        p();
-        fj2.s0((fj2) this.q, z);
+    /* renamed from: p0 */
+    public final hi2 m20750p0(boolean z) {
+        m22313p();
+        fj2.m22541s0((fj2) this.f9851q, z);
         return this;
     }
 
-    public final hi2 q0(String str) {
-        p();
-        fj2.r0((fj2) this.q, str);
+    /* renamed from: q0 */
+    public final hi2 m20749q0(String str) {
+        m22313p();
+        fj2.m22542r0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 r0(long j) {
-        p();
-        fj2.t0((fj2) this.q, j);
+    /* renamed from: r0 */
+    public final hi2 m20748r0(long j) {
+        m22313p();
+        fj2.m22540t0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 s(long j) {
-        p();
-        fj2.Q0((fj2) this.q, j);
+    /* renamed from: s */
+    public final hi2 m20747s(long j) {
+        m22313p();
+        fj2.m22580Q0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 s0(long j) {
-        p();
-        fj2.p0((fj2) this.q, j);
+    /* renamed from: s0 */
+    public final hi2 m20746s0(long j) {
+        m22313p();
+        fj2.m22544p0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 t(String str) {
-        p();
-        fj2.K0((fj2) this.q, str);
+    /* renamed from: t */
+    public final hi2 m20745t(String str) {
+        m22313p();
+        fj2.m22592K0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 t0(long j) {
-        p();
-        fj2.o0((fj2) this.q, j);
+    /* renamed from: t0 */
+    public final hi2 m20744t0(long j) {
+        m22313p();
+        fj2.m22545o0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 u(long j) {
-        p();
-        fj2.g0((fj2) this.q, j);
+    /* renamed from: u */
+    public final hi2 m20743u(long j) {
+        m22313p();
+        fj2.m22553g0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 u0(String str) {
-        p();
-        fj2.X((fj2) this.q, str);
+    /* renamed from: u0 */
+    public final hi2 m20742u0(String str) {
+        m22313p();
+        fj2.m22567X((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 v(long j) {
-        p();
-        fj2.V0((fj2) this.q, j);
+    /* renamed from: v */
+    public final hi2 m20741v(long j) {
+        m22313p();
+        fj2.m22570V0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 v0(String str) {
-        p();
-        fj2.Y0((fj2) this.q, str);
+    /* renamed from: v0 */
+    public final hi2 m20740v0(String str) {
+        m22313p();
+        fj2.m22564Y0((fj2) this.f9851q, str);
         return this;
     }
 
-    public final hi2 w(long j) {
-        p();
-        fj2.h0((fj2) this.q, j);
+    /* renamed from: w */
+    public final hi2 m20739w(long j) {
+        m22313p();
+        fj2.m22552h0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 w0(long j) {
-        p();
-        fj2.W0((fj2) this.q, j);
+    /* renamed from: w0 */
+    public final hi2 m20738w0(long j) {
+        m22313p();
+        fj2.m22568W0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 x(long j) {
-        p();
-        fj2.V((fj2) this.q, j);
+    /* renamed from: x */
+    public final hi2 m20737x(long j) {
+        m22313p();
+        fj2.m22571V((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 x0(long j) {
-        p();
-        fj2.P0((fj2) this.q, j);
+    /* renamed from: x0 */
+    public final hi2 m20736x0(long j) {
+        m22313p();
+        fj2.m22582P0((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 y(long j) {
-        p();
-        fj2.T((fj2) this.q, j);
+    /* renamed from: y */
+    public final hi2 m20735y(long j) {
+        m22313p();
+        fj2.m22575T((fj2) this.f9851q, j);
         return this;
     }
 
-    public final hi2 z(long j) {
-        p();
-        fj2.P((fj2) this.q, j);
+    /* renamed from: z */
+    public final hi2 m20734z(long j) {
+        m22313p();
+        fj2.m22583P((fj2) this.f9851q, j);
         return this;
     }
 }

@@ -8,111 +8,159 @@ import android.text.TextUtils;
 import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.client.zze;
 import com.google.android.gms.ads.internal.zzt;
+import java.util.Iterator;
 /* loaded from: classes.dex */
 public final class ko6 implements io6 {
-    public final Context a;
-    public final int o;
-    public long b = 0;
-    public long c = -1;
-    public boolean d = false;
-    public int p = 2;
-    public int q = 2;
-    public int e = 0;
-    public String f = "";
-    public String g = "";
-    public String h = "";
-    public String i = "";
-    public String j = "";
-    public String k = "";
-    public String l = "";
-    public boolean m = false;
-    public boolean n = false;
+
+    /* renamed from: a */
+    public final Context f16585a;
+
+    /* renamed from: o */
+    public final int f16599o;
+
+    /* renamed from: b */
+    public long f16586b = 0;
+
+    /* renamed from: c */
+    public long f16587c = -1;
+
+    /* renamed from: d */
+    public boolean f16588d = false;
+
+    /* renamed from: p */
+    public int f16600p = 2;
+
+    /* renamed from: q */
+    public int f16601q = 2;
+
+    /* renamed from: e */
+    public int f16589e = 0;
+
+    /* renamed from: f */
+    public String f16590f = "";
+
+    /* renamed from: g */
+    public String f16591g = "";
+
+    /* renamed from: h */
+    public String f16592h = "";
+
+    /* renamed from: i */
+    public String f16593i = "";
+
+    /* renamed from: j */
+    public String f16594j = "";
+
+    /* renamed from: k */
+    public String f16595k = "";
+
+    /* renamed from: l */
+    public String f16596l = "";
+
+    /* renamed from: m */
+    public boolean f16597m = false;
+
+    /* renamed from: n */
+    public boolean f16598n = false;
 
     public ko6(Context context, int i) {
-        this.a = context;
-        this.o = i;
+        this.f16585a = context;
+        this.f16599o = i;
     }
 
-    public final synchronized ko6 A(boolean z) {
-        this.d = z;
+    /* renamed from: A */
+    public final synchronized ko6 m17599A(boolean z) {
+        this.f16588d = z;
         return this;
     }
 
-    public final synchronized ko6 B(Throwable th) {
-        if (((Boolean) zzba.zzc().b(g93.T7)).booleanValue()) {
-            this.k = et3.f(th);
-            this.j = (String) fz6.c(by6.b('\n')).d(et3.e(th)).iterator().next();
+    /* renamed from: B */
+    public final synchronized ko6 m17598B(Throwable th) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10559T7)).booleanValue()) {
+            this.f16595k = et3.m23190f(th);
+            this.f16594j = (String) fz6.m22122c(by6.m25734b('\n')).m22121d(et3.m23191e(th)).iterator().next();
         }
         return this;
     }
 
-    public final synchronized ko6 C() {
+    /* renamed from: C */
+    public final synchronized ko6 m17597C() {
         Configuration configuration;
-        this.e = zzt.zzq().zzm(this.a);
-        Resources resources = this.a.getResources();
+        this.f16589e = zzt.zzq().zzm(this.f16585a);
+        Resources resources = this.f16585a.getResources();
         int i = 2;
         if (resources != null && (configuration = resources.getConfiguration()) != null) {
             i = configuration.orientation == 2 ? 4 : 3;
         }
-        this.q = i;
-        this.b = zzt.zzB().b();
-        this.n = true;
+        this.f16601q = i;
+        this.f16586b = zzt.zzB().mo15859b();
+        this.f16598n = true;
         return this;
     }
 
-    public final synchronized ko6 D() {
-        this.c = zzt.zzB().b();
-        return this;
-    }
-
-    @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 a(String str) {
-        z(str);
+    /* renamed from: D */
+    public final synchronized ko6 m17596D() {
+        this.f16587c = zzt.zzB().mo15859b();
         return this;
     }
 
     @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 b(zze zzeVar) {
-        v(zzeVar);
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ io6 mo17594a(String str) {
+        m17569z(str);
         return this;
     }
 
     @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 c(int i) {
-        o(i);
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ io6 mo17593b(zze zzeVar) {
+        m17573v(zzeVar);
         return this;
     }
 
     @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 d(ei6 ei6Var) {
-        w(ei6Var);
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ io6 mo17592c(int i) {
+        m17580o(i);
         return this;
     }
 
     @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 e(Throwable th) {
-        B(th);
+    /* renamed from: d */
+    public final /* bridge */ /* synthetic */ io6 mo17591d(ei6 ei6Var) {
+        m17572w(ei6Var);
         return this;
     }
 
     @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 l(String str) {
-        y(str);
+    /* renamed from: e */
+    public final /* bridge */ /* synthetic */ io6 mo17590e(Throwable th) {
+        m17598B(th);
         return this;
     }
 
     @Override // com.daaw.io6
-    public final /* bridge */ /* synthetic */ io6 m(String str) {
-        x(str);
+    /* renamed from: l */
+    public final /* bridge */ /* synthetic */ io6 mo17583l(String str) {
+        m17570y(str);
         return this;
     }
 
-    public final synchronized ko6 o(int i) {
-        this.p = i;
+    @Override // com.daaw.io6
+    /* renamed from: m */
+    public final /* bridge */ /* synthetic */ io6 mo17582m(String str) {
+        m17571x(str);
         return this;
     }
 
-    public final synchronized ko6 v(zze zzeVar) {
+    /* renamed from: o */
+    public final synchronized ko6 m17580o(int i) {
+        this.f16600p = i;
+        return this;
+    }
+
+    /* renamed from: v */
+    public final synchronized ko6 m17573v(zze zzeVar) {
         IBinder iBinder = zzeVar.zze;
         if (iBinder == null) {
             return this;
@@ -120,117 +168,98 @@ public final class ko6 implements io6 {
         eq4 eq4Var = (eq4) iBinder;
         String zzk = eq4Var.zzk();
         if (!TextUtils.isEmpty(zzk)) {
-            this.f = zzk;
+            this.f16590f = zzk;
         }
         String zzi = eq4Var.zzi();
         if (!TextUtils.isEmpty(zzi)) {
-            this.g = zzi;
+            this.f16591g = zzi;
         }
         return this;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:34:0x002b, code lost:
-        r2.g = r0.c0;
+        r2.f16591g = r0.f27685c0;
      */
+    /* renamed from: w */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final synchronized com.daaw.ko6 w(com.daaw.ei6 r3) {
-        /*
-            r2 = this;
-            monitor-enter(r2)
-            com.daaw.wh6 r0 = r3.b     // Catch: java.lang.Throwable -> L31
-            java.lang.String r0 = r0.b     // Catch: java.lang.Throwable -> L31
-            boolean r0 = android.text.TextUtils.isEmpty(r0)     // Catch: java.lang.Throwable -> L31
-            if (r0 != 0) goto L11
-            com.daaw.wh6 r0 = r3.b     // Catch: java.lang.Throwable -> L31
-            java.lang.String r0 = r0.b     // Catch: java.lang.Throwable -> L31
-            r2.f = r0     // Catch: java.lang.Throwable -> L31
-        L11:
-            java.util.List r3 = r3.a     // Catch: java.lang.Throwable -> L31
-            java.util.Iterator r3 = r3.iterator()     // Catch: java.lang.Throwable -> L31
-        L17:
-            boolean r0 = r3.hasNext()     // Catch: java.lang.Throwable -> L31
-            if (r0 == 0) goto L2f
-            java.lang.Object r0 = r3.next()     // Catch: java.lang.Throwable -> L31
-            com.daaw.th6 r0 = (com.daaw.th6) r0     // Catch: java.lang.Throwable -> L31
-            java.lang.String r1 = r0.c0     // Catch: java.lang.Throwable -> L31
-            boolean r1 = android.text.TextUtils.isEmpty(r1)     // Catch: java.lang.Throwable -> L31
-            if (r1 != 0) goto L17
-            java.lang.String r3 = r0.c0     // Catch: java.lang.Throwable -> L31
-            r2.g = r3     // Catch: java.lang.Throwable -> L31
-        L2f:
-            monitor-exit(r2)
-            return r2
-        L31:
-            r3 = move-exception
-            monitor-exit(r2)
-            goto L35
-        L34:
-            throw r3
-        L35:
-            goto L34
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.ko6.w(com.daaw.ei6):com.daaw.ko6");
-    }
-
-    public final synchronized ko6 x(String str) {
-        if (((Boolean) zzba.zzc().b(g93.T7)).booleanValue()) {
-            this.l = str;
+    public final synchronized ko6 m17572w(ei6 ei6Var) {
+        if (!TextUtils.isEmpty(ei6Var.f8508b.f31252b)) {
+            this.f16590f = ei6Var.f8508b.f31252b;
+        }
+        Iterator it = ei6Var.f8507a.iterator();
+        while (true) {
+            if (!it.hasNext()) {
+                break;
+            }
+            th6 th6Var = (th6) it.next();
+            if (!TextUtils.isEmpty(th6Var.f27685c0)) {
+                break;
+            }
         }
         return this;
     }
 
-    public final synchronized ko6 y(String str) {
-        this.h = str;
+    /* renamed from: x */
+    public final synchronized ko6 m17571x(String str) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10559T7)).booleanValue()) {
+            this.f16596l = str;
+        }
         return this;
     }
 
-    public final synchronized ko6 z(String str) {
-        this.i = str;
+    /* renamed from: y */
+    public final synchronized ko6 m17570y(String str) {
+        this.f16592h = str;
+        return this;
+    }
+
+    /* renamed from: z */
+    public final synchronized ko6 m17569z(String str) {
+        this.f16593i = str;
         return this;
     }
 
     @Override // com.daaw.io6
     public final /* bridge */ /* synthetic */ io6 zzf(boolean z) {
-        A(z);
+        m17599A(z);
         return this;
     }
 
     @Override // com.daaw.io6
     public final /* bridge */ /* synthetic */ io6 zzh() {
-        C();
+        m17597C();
         return this;
     }
 
     @Override // com.daaw.io6
     public final /* bridge */ /* synthetic */ io6 zzi() {
-        D();
+        m17596D();
         return this;
     }
 
     @Override // com.daaw.io6
     public final synchronized boolean zzj() {
-        return this.n;
+        return this.f16598n;
     }
 
     @Override // com.daaw.io6
     public final boolean zzk() {
-        return !TextUtils.isEmpty(this.h);
+        return !TextUtils.isEmpty(this.f16592h);
     }
 
     @Override // com.daaw.io6
     public final synchronized mo6 zzl() {
-        if (this.m) {
+        if (this.f16597m) {
             return null;
         }
-        this.m = true;
-        if (!this.n) {
-            C();
+        this.f16597m = true;
+        if (!this.f16598n) {
+            m17597C();
         }
-        if (this.c < 0) {
-            D();
+        if (this.f16587c < 0) {
+            m17596D();
         }
         return new mo6(this, null);
     }

@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class op7 {
-    public static String a(byte[] bArr) {
+    /* renamed from: a */
+    public static String m14096a(byte[] bArr) {
         int length = bArr.length;
         StringBuilder sb = new StringBuilder(length + length);
         for (byte b : bArr) {

@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ao1 {
-    void a(Exception exc);
+    /* renamed from: a */
+    void mo21970a(Exception exc);
 }

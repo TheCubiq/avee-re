@@ -18,25 +18,61 @@ import java.util.Set;
 import org.checkerframework.checker.initialization.qual.NotOnlyInitialized;
 /* loaded from: classes.dex */
 public final class zzdx {
-    public final Date a;
-    public final String b;
-    public final List c;
-    public final int d;
-    public final Set e;
-    public final Bundle f;
-    public final Map g;
-    public final String h;
-    public final String i;
+
+    /* renamed from: a */
+    public final Date f36128a;
+
+    /* renamed from: b */
+    public final String f36129b;
+
+    /* renamed from: c */
+    public final List f36130c;
+
+    /* renamed from: d */
+    public final int f36131d;
+
+    /* renamed from: e */
+    public final Set f36132e;
+
+    /* renamed from: f */
+    public final Bundle f36133f;
+
+    /* renamed from: g */
+    public final Map f36134g;
+
+    /* renamed from: h */
+    public final String f36135h;
+
+    /* renamed from: i */
+    public final String f36136i;
     @NotOnlyInitialized
-    public final SearchAdRequest j;
-    public final int k;
-    public final Set l;
-    public final Bundle m;
-    public final Set n;
-    public final boolean o;
-    public final AdInfo p;
-    public final String q;
-    public final int r;
+
+    /* renamed from: j */
+    public final SearchAdRequest f36137j;
+
+    /* renamed from: k */
+    public final int f36138k;
+
+    /* renamed from: l */
+    public final Set f36139l;
+
+    /* renamed from: m */
+    public final Bundle f36140m;
+
+    /* renamed from: n */
+    public final Set f36141n;
+
+    /* renamed from: o */
+    public final boolean f36142o;
+
+    /* renamed from: p */
+    public final AdInfo f36143p;
+
+    /* renamed from: q */
+    public final String f36144q;
+
+    /* renamed from: r */
+    public final int f36145r;
 
     public zzdx(zzdw zzdwVar, SearchAdRequest searchAdRequest) {
         Date date;
@@ -56,58 +92,58 @@ public final class zzdx {
         AdInfo adInfo;
         String str4;
         int i3;
-        date = zzdwVar.g;
-        this.a = date;
-        str = zzdwVar.h;
-        this.b = str;
-        list = zzdwVar.i;
-        this.c = list;
-        i = zzdwVar.j;
-        this.d = i;
-        hashSet = zzdwVar.a;
-        this.e = Collections.unmodifiableSet(hashSet);
-        bundle = zzdwVar.b;
-        this.f = bundle;
-        hashMap = zzdwVar.c;
-        this.g = Collections.unmodifiableMap(hashMap);
-        str2 = zzdwVar.k;
-        this.h = str2;
-        str3 = zzdwVar.l;
-        this.i = str3;
-        this.j = searchAdRequest;
-        i2 = zzdwVar.m;
-        this.k = i2;
-        hashSet2 = zzdwVar.d;
-        this.l = Collections.unmodifiableSet(hashSet2);
-        bundle2 = zzdwVar.e;
-        this.m = bundle2;
-        hashSet3 = zzdwVar.f;
-        this.n = Collections.unmodifiableSet(hashSet3);
-        z = zzdwVar.n;
-        this.o = z;
-        adInfo = zzdwVar.o;
-        this.p = adInfo;
-        str4 = zzdwVar.p;
-        this.q = str4;
-        i3 = zzdwVar.q;
-        this.r = i3;
+        date = zzdwVar.f36117g;
+        this.f36128a = date;
+        str = zzdwVar.f36118h;
+        this.f36129b = str;
+        list = zzdwVar.f36119i;
+        this.f36130c = list;
+        i = zzdwVar.f36120j;
+        this.f36131d = i;
+        hashSet = zzdwVar.f36111a;
+        this.f36132e = Collections.unmodifiableSet(hashSet);
+        bundle = zzdwVar.f36112b;
+        this.f36133f = bundle;
+        hashMap = zzdwVar.f36113c;
+        this.f36134g = Collections.unmodifiableMap(hashMap);
+        str2 = zzdwVar.f36121k;
+        this.f36135h = str2;
+        str3 = zzdwVar.f36122l;
+        this.f36136i = str3;
+        this.f36137j = searchAdRequest;
+        i2 = zzdwVar.f36123m;
+        this.f36138k = i2;
+        hashSet2 = zzdwVar.f36114d;
+        this.f36139l = Collections.unmodifiableSet(hashSet2);
+        bundle2 = zzdwVar.f36115e;
+        this.f36140m = bundle2;
+        hashSet3 = zzdwVar.f36116f;
+        this.f36141n = Collections.unmodifiableSet(hashSet3);
+        z = zzdwVar.f36124n;
+        this.f36142o = z;
+        adInfo = zzdwVar.f36125o;
+        this.f36143p = adInfo;
+        str4 = zzdwVar.f36126p;
+        this.f36144q = str4;
+        i3 = zzdwVar.f36127q;
+        this.f36145r = i3;
     }
 
     @Deprecated
     public final int zza() {
-        return this.d;
+        return this.f36131d;
     }
 
     public final int zzb() {
-        return this.r;
+        return this.f36145r;
     }
 
     public final int zzc() {
-        return this.k;
+        return this.f36138k;
     }
 
     public final Bundle zzd(Class cls) {
-        Bundle bundle = this.f.getBundle("com.google.android.gms.ads.mediation.customevent.CustomEventAdapter");
+        Bundle bundle = this.f36133f.getBundle("com.google.android.gms.ads.mediation.customevent.CustomEventAdapter");
         if (bundle != null) {
             return bundle.getBundle(cls.getName());
         }
@@ -115,72 +151,72 @@ public final class zzdx {
     }
 
     public final Bundle zze() {
-        return this.m;
+        return this.f36140m;
     }
 
     public final Bundle zzf(Class cls) {
-        return this.f.getBundle(cls.getName());
+        return this.f36133f.getBundle(cls.getName());
     }
 
     public final Bundle zzg() {
-        return this.f;
+        return this.f36133f;
     }
 
     @Deprecated
     public final NetworkExtras zzh(Class cls) {
-        return (NetworkExtras) this.g.get(cls);
+        return (NetworkExtras) this.f36134g.get(cls);
     }
 
     public final AdInfo zzi() {
-        return this.p;
+        return this.f36143p;
     }
 
     public final SearchAdRequest zzj() {
-        return this.j;
+        return this.f36137j;
     }
 
     public final String zzk() {
-        return this.q;
+        return this.f36144q;
     }
 
     public final String zzl() {
-        return this.b;
+        return this.f36129b;
     }
 
     public final String zzm() {
-        return this.h;
+        return this.f36135h;
     }
 
     public final String zzn() {
-        return this.i;
+        return this.f36136i;
     }
 
     @Deprecated
     public final Date zzo() {
-        return this.a;
+        return this.f36128a;
     }
 
     public final List zzp() {
-        return new ArrayList(this.c);
+        return new ArrayList(this.f36130c);
     }
 
     public final Set zzq() {
-        return this.n;
+        return this.f36141n;
     }
 
     public final Set zzr() {
-        return this.e;
+        return this.f36132e;
     }
 
     @Deprecated
     public final boolean zzs() {
-        return this.o;
+        return this.f36142o;
     }
 
     public final boolean zzt(Context context) {
         RequestConfiguration zzc = zzej.zzf().zzc();
         zzay.zzb();
-        String E = d04.E(context);
-        return this.l.contains(E) || zzc.getTestDeviceIds().contains(E);
+        String m24832E = d04.m24832E(context);
+        return this.f36139l.contains(m24832E) || zzc.getTestDeviceIds().contains(m24832E);
     }
 }

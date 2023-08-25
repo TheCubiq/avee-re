@@ -1,56 +1,67 @@
 package com.daaw;
 
 import android.content.Context;
-import com.daaw.mj;
+import com.daaw.AbstractC2179mj;
 import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
-public class sx1 implements mj.a {
-    public static final String d = ll0.f("WorkConstraintsTracker");
-    public final rx1 a;
-    public final mj<?>[] b;
-    public final Object c;
+public class sx1 implements AbstractC2179mj.InterfaceC2180a {
+
+    /* renamed from: d */
+    public static final String f26735d = ll0.m16883f("WorkConstraintsTracker");
+
+    /* renamed from: a */
+    public final rx1 f26736a;
+
+    /* renamed from: b */
+    public final AbstractC2179mj<?>[] f26737b;
+
+    /* renamed from: c */
+    public final Object f26738c;
 
     public sx1(Context context, wj1 wj1Var, rx1 rx1Var) {
         Context applicationContext = context.getApplicationContext();
-        this.a = rx1Var;
-        this.b = new mj[]{new jb(applicationContext, wj1Var), new lb(applicationContext, wj1Var), new ag1(applicationContext, wj1Var), new ks0(applicationContext, wj1Var), new rs0(applicationContext, wj1Var), new ns0(applicationContext, wj1Var), new ms0(applicationContext, wj1Var)};
-        this.c = new Object();
+        this.f26736a = rx1Var;
+        this.f26737b = new AbstractC2179mj[]{new C1817jb(applicationContext, wj1Var), new C2024lb(applicationContext, wj1Var), new ag1(applicationContext, wj1Var), new ks0(applicationContext, wj1Var), new rs0(applicationContext, wj1Var), new ns0(applicationContext, wj1Var), new ms0(applicationContext, wj1Var)};
+        this.f26738c = new Object();
     }
 
-    @Override // com.daaw.mj.a
-    public void a(List<String> list) {
-        synchronized (this.c) {
+    @Override // com.daaw.AbstractC2179mj.InterfaceC2180a
+    /* renamed from: a */
+    public void mo9792a(List<String> list) {
+        synchronized (this.f26738c) {
             ArrayList arrayList = new ArrayList();
             for (String str : list) {
-                if (c(str)) {
-                    ll0.c().a(d, String.format("Constraints met for %s", str), new Throwable[0]);
+                if (m9790c(str)) {
+                    ll0.m16885c().mo16882a(f26735d, String.format("Constraints met for %s", str), new Throwable[0]);
                     arrayList.add(str);
                 }
             }
-            rx1 rx1Var = this.a;
+            rx1 rx1Var = this.f26736a;
             if (rx1Var != null) {
-                rx1Var.f(arrayList);
+                rx1Var.mo10848f(arrayList);
             }
         }
     }
 
-    @Override // com.daaw.mj.a
-    public void b(List<String> list) {
-        synchronized (this.c) {
-            rx1 rx1Var = this.a;
+    @Override // com.daaw.AbstractC2179mj.InterfaceC2180a
+    /* renamed from: b */
+    public void mo9791b(List<String> list) {
+        synchronized (this.f26738c) {
+            rx1 rx1Var = this.f26736a;
             if (rx1Var != null) {
-                rx1Var.b(list);
+                rx1Var.mo10849b(list);
             }
         }
     }
 
-    public boolean c(String str) {
-        mj<?>[] mjVarArr;
-        synchronized (this.c) {
-            for (mj<?> mjVar : this.b) {
-                if (mjVar.d(str)) {
-                    ll0.c().a(d, String.format("Work %s constrained by %s", str, mjVar.getClass().getSimpleName()), new Throwable[0]);
+    /* renamed from: c */
+    public boolean m9790c(String str) {
+        AbstractC2179mj<?>[] abstractC2179mjArr;
+        synchronized (this.f26738c) {
+            for (AbstractC2179mj<?> abstractC2179mj : this.f26737b) {
+                if (abstractC2179mj.m16019d(str)) {
+                    ll0.m16885c().mo16882a(f26735d, String.format("Work %s constrained by %s", str, abstractC2179mj.getClass().getSimpleName()), new Throwable[0]);
                     return false;
                 }
             }
@@ -58,24 +69,26 @@ public class sx1 implements mj.a {
         }
     }
 
-    public void d(Iterable<qy1> iterable) {
-        synchronized (this.c) {
-            for (mj<?> mjVar : this.b) {
-                mjVar.g(null);
+    /* renamed from: d */
+    public void m9789d(Iterable<qy1> iterable) {
+        synchronized (this.f26738c) {
+            for (AbstractC2179mj<?> abstractC2179mj : this.f26737b) {
+                abstractC2179mj.m16016g(null);
             }
-            for (mj<?> mjVar2 : this.b) {
-                mjVar2.e(iterable);
+            for (AbstractC2179mj<?> abstractC2179mj2 : this.f26737b) {
+                abstractC2179mj2.m16018e(iterable);
             }
-            for (mj<?> mjVar3 : this.b) {
-                mjVar3.g(this);
+            for (AbstractC2179mj<?> abstractC2179mj3 : this.f26737b) {
+                abstractC2179mj3.m16016g(this);
             }
         }
     }
 
-    public void e() {
-        synchronized (this.c) {
-            for (mj<?> mjVar : this.b) {
-                mjVar.f();
+    /* renamed from: e */
+    public void m9788e() {
+        synchronized (this.f26738c) {
+            for (AbstractC2179mj<?> abstractC2179mj : this.f26737b) {
+                abstractC2179mj.m16017f();
             }
         }
     }

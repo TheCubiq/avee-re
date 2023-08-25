@@ -4,68 +4,85 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.LinkedList;
 /* loaded from: classes.dex */
 public final class ek6 {
-    public final int b;
-    public final int c;
-    public final LinkedList a = new LinkedList();
-    public final fl6 d = new fl6();
+
+    /* renamed from: b */
+    public final int f8540b;
+
+    /* renamed from: c */
+    public final int f8541c;
+
+    /* renamed from: a */
+    public final LinkedList f8539a = new LinkedList();
+
+    /* renamed from: d */
+    public final fl6 f8542d = new fl6();
 
     public ek6(int i, int i2) {
-        this.b = i;
-        this.c = i2;
+        this.f8540b = i;
+        this.f8541c = i2;
     }
 
-    public final int a() {
-        return this.d.a();
+    /* renamed from: a */
+    public final int m23428a() {
+        return this.f8542d.m22501a();
     }
 
-    public final int b() {
-        i();
-        return this.a.size();
+    /* renamed from: b */
+    public final int m23427b() {
+        m23420i();
+        return this.f8539a.size();
     }
 
-    public final long c() {
-        return this.d.b();
+    /* renamed from: c */
+    public final long m23426c() {
+        return this.f8542d.m22500b();
     }
 
-    public final long d() {
-        return this.d.c();
+    /* renamed from: d */
+    public final long m23425d() {
+        return this.f8542d.m22499c();
     }
 
-    public final qk6 e() {
-        this.d.f();
-        i();
-        if (this.a.isEmpty()) {
+    /* renamed from: e */
+    public final qk6 m23424e() {
+        this.f8542d.m22496f();
+        m23420i();
+        if (this.f8539a.isEmpty()) {
             return null;
         }
-        qk6 qk6Var = (qk6) this.a.remove();
+        qk6 qk6Var = (qk6) this.f8539a.remove();
         if (qk6Var != null) {
-            this.d.h();
+            this.f8542d.m22494h();
         }
         return qk6Var;
     }
 
-    public final el6 f() {
-        return this.d.d();
+    /* renamed from: f */
+    public final el6 m23423f() {
+        return this.f8542d.m22498d();
     }
 
-    public final String g() {
-        return this.d.e();
+    /* renamed from: g */
+    public final String m23422g() {
+        return this.f8542d.m22497e();
     }
 
-    public final boolean h(qk6 qk6Var) {
-        this.d.f();
-        i();
-        if (this.a.size() == this.b) {
+    /* renamed from: h */
+    public final boolean m23421h(qk6 qk6Var) {
+        this.f8542d.m22496f();
+        m23420i();
+        if (this.f8539a.size() == this.f8540b) {
             return false;
         }
-        this.a.add(qk6Var);
+        this.f8539a.add(qk6Var);
         return true;
     }
 
-    public final void i() {
-        while (!this.a.isEmpty() && zzt.zzB().a() - ((qk6) this.a.getFirst()).d >= this.c) {
-            this.d.g();
-            this.a.remove();
+    /* renamed from: i */
+    public final void m23420i() {
+        while (!this.f8539a.isEmpty() && zzt.zzB().mo15860a() - ((qk6) this.f8539a.getFirst()).f24126d >= this.f8541c) {
+            this.f8542d.m22495g();
+            this.f8539a.remove();
         }
     }
 }

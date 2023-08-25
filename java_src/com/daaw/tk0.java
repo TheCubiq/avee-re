@@ -3,9 +3,11 @@ package com.daaw;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public interface tk0 {
-    String a();
+    /* renamed from: a */
+    String mo8083a();
 
-    Object b();
+    /* renamed from: b */
+    Object mo8082b();
 
     Locale get(int i);
 

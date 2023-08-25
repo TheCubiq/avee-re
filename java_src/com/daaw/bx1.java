@@ -3,138 +3,179 @@ package com.daaw;
 import android.text.Layout;
 import android.text.SpannableStringBuilder;
 /* loaded from: classes.dex */
-public final class bx1 extends ln {
-    public final long D;
-    public final long E;
+public final class bx1 extends C2099ln {
 
+    /* renamed from: D */
+    public final long f5241D;
+
+    /* renamed from: E */
+    public final long f5242E;
+
+    /* renamed from: com.daaw.bx1$a */
     /* loaded from: classes.dex */
-    public static /* synthetic */ class a {
-        public static final /* synthetic */ int[] a;
+    public static /* synthetic */ class C0894a {
+
+        /* renamed from: a */
+        public static final /* synthetic */ int[] f5243a;
 
         static {
             int[] iArr = new int[Layout.Alignment.values().length];
-            a = iArr;
+            f5243a = iArr;
             try {
                 iArr[Layout.Alignment.ALIGN_NORMAL.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                a[Layout.Alignment.ALIGN_CENTER.ordinal()] = 2;
+                f5243a[Layout.Alignment.ALIGN_CENTER.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                a[Layout.Alignment.ALIGN_OPPOSITE.ordinal()] = 3;
+                f5243a[Layout.Alignment.ALIGN_OPPOSITE.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
     }
 
+    /* renamed from: com.daaw.bx1$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public long a;
-        public long b;
-        public SpannableStringBuilder c;
-        public Layout.Alignment d;
-        public float e;
-        public int f;
-        public int g;
-        public float h;
-        public int i;
-        public float j;
+    public static class C0895b {
 
-        public b() {
-            c();
+        /* renamed from: a */
+        public long f5244a;
+
+        /* renamed from: b */
+        public long f5245b;
+
+        /* renamed from: c */
+        public SpannableStringBuilder f5246c;
+
+        /* renamed from: d */
+        public Layout.Alignment f5247d;
+
+        /* renamed from: e */
+        public float f5248e;
+
+        /* renamed from: f */
+        public int f5249f;
+
+        /* renamed from: g */
+        public int f5250g;
+
+        /* renamed from: h */
+        public float f5251h;
+
+        /* renamed from: i */
+        public int f5252i;
+
+        /* renamed from: j */
+        public float f5253j;
+
+        public C0895b() {
+            m25775c();
         }
 
-        public bx1 a() {
-            if (this.h != Float.MIN_VALUE && this.i == Integer.MIN_VALUE) {
-                b();
+        /* renamed from: a */
+        public bx1 m25777a() {
+            if (this.f5251h != Float.MIN_VALUE && this.f5252i == Integer.MIN_VALUE) {
+                m25776b();
             }
-            return new bx1(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j);
+            return new bx1(this.f5244a, this.f5245b, this.f5246c, this.f5247d, this.f5248e, this.f5249f, this.f5250g, this.f5251h, this.f5252i, this.f5253j);
         }
 
-        public final b b() {
-            Layout.Alignment alignment = this.d;
+        /* renamed from: b */
+        public final C0895b m25776b() {
+            Layout.Alignment alignment = this.f5247d;
             if (alignment == null) {
-                this.i = Integer.MIN_VALUE;
+                this.f5252i = Integer.MIN_VALUE;
             } else {
-                int i = a.a[alignment.ordinal()];
+                int i = C0894a.f5243a[alignment.ordinal()];
                 if (i != 1) {
                     if (i == 2) {
-                        this.i = 1;
+                        this.f5252i = 1;
                     } else if (i != 3) {
                         StringBuilder sb = new StringBuilder();
                         sb.append("Unrecognized alignment: ");
-                        sb.append(this.d);
+                        sb.append(this.f5247d);
                     } else {
-                        this.i = 2;
+                        this.f5252i = 2;
                     }
                 }
-                this.i = 0;
+                this.f5252i = 0;
             }
             return this;
         }
 
-        public void c() {
-            this.a = 0L;
-            this.b = 0L;
-            this.c = null;
-            this.d = null;
-            this.e = Float.MIN_VALUE;
-            this.f = Integer.MIN_VALUE;
-            this.g = Integer.MIN_VALUE;
-            this.h = Float.MIN_VALUE;
-            this.i = Integer.MIN_VALUE;
-            this.j = Float.MIN_VALUE;
+        /* renamed from: c */
+        public void m25775c() {
+            this.f5244a = 0L;
+            this.f5245b = 0L;
+            this.f5246c = null;
+            this.f5247d = null;
+            this.f5248e = Float.MIN_VALUE;
+            this.f5249f = Integer.MIN_VALUE;
+            this.f5250g = Integer.MIN_VALUE;
+            this.f5251h = Float.MIN_VALUE;
+            this.f5252i = Integer.MIN_VALUE;
+            this.f5253j = Float.MIN_VALUE;
         }
 
-        public b d(long j) {
-            this.b = j;
+        /* renamed from: d */
+        public C0895b m25774d(long j) {
+            this.f5245b = j;
             return this;
         }
 
-        public b e(float f) {
-            this.e = f;
+        /* renamed from: e */
+        public C0895b m25773e(float f) {
+            this.f5248e = f;
             return this;
         }
 
-        public b f(int i) {
-            this.g = i;
+        /* renamed from: f */
+        public C0895b m25772f(int i) {
+            this.f5250g = i;
             return this;
         }
 
-        public b g(int i) {
-            this.f = i;
+        /* renamed from: g */
+        public C0895b m25771g(int i) {
+            this.f5249f = i;
             return this;
         }
 
-        public b h(float f) {
-            this.h = f;
+        /* renamed from: h */
+        public C0895b m25770h(float f) {
+            this.f5251h = f;
             return this;
         }
 
-        public b i(int i) {
-            this.i = i;
+        /* renamed from: i */
+        public C0895b m25769i(int i) {
+            this.f5252i = i;
             return this;
         }
 
-        public b j(long j) {
-            this.a = j;
+        /* renamed from: j */
+        public C0895b m25768j(long j) {
+            this.f5244a = j;
             return this;
         }
 
-        public b k(SpannableStringBuilder spannableStringBuilder) {
-            this.c = spannableStringBuilder;
+        /* renamed from: k */
+        public C0895b m25767k(SpannableStringBuilder spannableStringBuilder) {
+            this.f5246c = spannableStringBuilder;
             return this;
         }
 
-        public b l(Layout.Alignment alignment) {
-            this.d = alignment;
+        /* renamed from: l */
+        public C0895b m25766l(Layout.Alignment alignment) {
+            this.f5247d = alignment;
             return this;
         }
 
-        public b m(float f) {
-            this.j = f;
+        /* renamed from: m */
+        public C0895b m25765m(float f) {
+            this.f5253j = f;
             return this;
         }
     }
@@ -145,15 +186,16 @@ public final class bx1 extends ln {
 
     public bx1(long j, long j2, CharSequence charSequence, Layout.Alignment alignment, float f, int i, int i2, float f2, int i3, float f3) {
         super(charSequence, alignment, f, i, i2, f2, i3, f3);
-        this.D = j;
-        this.E = j2;
+        this.f5241D = j;
+        this.f5242E = j2;
     }
 
     public bx1(CharSequence charSequence) {
         this(0L, 0L, charSequence);
     }
 
-    public boolean a() {
-        return this.s == Float.MIN_VALUE && this.v == Float.MIN_VALUE;
+    /* renamed from: a */
+    public boolean m25778a() {
+        return this.f17550s == Float.MIN_VALUE && this.f17553v == Float.MIN_VALUE;
     }
 }

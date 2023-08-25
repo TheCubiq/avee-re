@@ -8,19 +8,21 @@ public final class sb7 extends mb7 {
     }
 
     @Override // com.daaw.mb7
-    public final int a() {
+    /* renamed from: a */
+    public final int mo10469a() {
         return 24;
     }
 
     @Override // com.daaw.mb7
-    public final int[] b(int[] iArr, int i) {
+    /* renamed from: b */
+    public final int[] mo10468b(int[] iArr, int i) {
         int length = iArr.length;
         if (length == 6) {
             int[] iArr2 = new int[16];
-            ib7.b(r0, this.a);
+            ib7.m19984b(r0, this.f18772a);
             int[] iArr3 = {0, 0, 0, 0, iArr3[12], iArr3[13], iArr3[14], iArr3[15], 0, 0, 0, 0, iArr[0], iArr[1], iArr[2], iArr[3]};
-            ib7.c(iArr3);
-            ib7.b(iArr2, Arrays.copyOf(iArr3, 8));
+            ib7.m19983c(iArr3);
+            ib7.m19984b(iArr2, Arrays.copyOf(iArr3, 8));
             iArr2[12] = i;
             iArr2[13] = 0;
             iArr2[14] = iArr[4];

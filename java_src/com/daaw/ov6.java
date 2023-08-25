@@ -1,22 +1,24 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ov6 {
-    public static f77 a(rj1 rj1Var) {
+    /* renamed from: a */
+    public static f77 m13909a(rj1 rj1Var) {
         final nv6 nv6Var = new nv6(rj1Var);
-        rj1Var.c(m77.b(), new cu0() { // from class: com.daaw.mv6
+        rj1Var.mo11247c(m77.m16187b(), new cu0() { // from class: com.daaw.mv6
             @Override // com.daaw.cu0
-            public final void a(rj1 rj1Var2) {
+            /* renamed from: a */
+            public final void mo6614a(rj1 rj1Var2) {
                 nv6 nv6Var2 = nv6.this;
-                if (rj1Var2.l()) {
+                if (rj1Var2.mo11238l()) {
                     nv6Var2.cancel(false);
-                } else if (rj1Var2.n()) {
-                    nv6Var2.h(rj1Var2.k());
+                } else if (rj1Var2.mo11236n()) {
+                    nv6Var2.mo14486h(rj1Var2.mo11239k());
                 } else {
-                    Exception j = rj1Var2.j();
-                    if (j == null) {
+                    Exception mo11240j = rj1Var2.mo11240j();
+                    if (mo11240j == null) {
                         throw new IllegalStateException();
                     }
-                    nv6Var2.i(j);
+                    nv6Var2.mo14485i(mo11240j);
                 }
             }
         });

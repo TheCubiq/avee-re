@@ -6,34 +6,41 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 /* loaded from: classes.dex */
 public class qw1<T1> {
-    public Map<WeakReference<a<T1>>, Object> a = new ConcurrentHashMap();
 
+    /* renamed from: a */
+    public Map<WeakReference<InterfaceC2788a<T1>>, Object> f24538a = new ConcurrentHashMap();
+
+    /* renamed from: com.daaw.qw1$a */
     /* loaded from: classes.dex */
-    public interface a<T1> {
-        void b(T1 t1);
+    public interface InterfaceC2788a<T1> {
+        /* renamed from: b */
+        void mo3122b(T1 t1);
     }
 
-    public void a(T1 t1) {
-        for (WeakReference<a<T1>> weakReference : this.a.keySet()) {
-            a<T1> aVar = weakReference.get();
-            if (aVar != null) {
-                aVar.b(t1);
+    /* renamed from: a */
+    public void m12018a(T1 t1) {
+        for (WeakReference<InterfaceC2788a<T1>> weakReference : this.f24538a.keySet()) {
+            InterfaceC2788a<T1> interfaceC2788a = weakReference.get();
+            if (interfaceC2788a != null) {
+                interfaceC2788a.mo3122b(t1);
             } else {
-                this.a.remove(weakReference);
+                this.f24538a.remove(weakReference);
             }
         }
     }
 
-    public void b(a<T1> aVar, List<Object> list) {
-        list.add(aVar);
-        this.a.put(new WeakReference<>(aVar), this);
+    /* renamed from: b */
+    public void m12017b(InterfaceC2788a<T1> interfaceC2788a, List<Object> list) {
+        list.add(interfaceC2788a);
+        this.f24538a.put(new WeakReference<>(interfaceC2788a), this);
     }
 
-    public void c(List<Object> list) {
-        for (WeakReference<a<T1>> weakReference : this.a.keySet()) {
-            a<T1> aVar = weakReference.get();
-            if (aVar == null || list.remove(aVar)) {
-                this.a.remove(weakReference);
+    /* renamed from: c */
+    public void m12016c(List<Object> list) {
+        for (WeakReference<InterfaceC2788a<T1>> weakReference : this.f24538a.keySet()) {
+            InterfaceC2788a<T1> interfaceC2788a = weakReference.get();
+            if (interfaceC2788a == null || list.remove(interfaceC2788a)) {
+                this.f24538a.remove(weakReference);
             }
         }
     }

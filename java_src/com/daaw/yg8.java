@@ -7,20 +7,23 @@ import java.util.ListIterator;
 import java.util.RandomAccess;
 /* loaded from: classes2.dex */
 public final class yg8 extends AbstractList implements RandomAccess, ac8 {
-    public final ac8 p;
+
+    /* renamed from: p */
+    public final ac8 f33675p;
 
     public yg8(ac8 ac8Var) {
-        this.p = ac8Var;
+        this.f33675p = ac8Var;
     }
 
     @Override // com.daaw.ac8
-    public final void g(y68 y68Var) {
+    /* renamed from: g */
+    public final void mo3754g(y68 y68Var) {
         throw new UnsupportedOperationException();
     }
 
     @Override // java.util.AbstractList, java.util.List
     public final /* bridge */ /* synthetic */ Object get(int i) {
-        return ((xb8) this.p).get(i);
+        return ((xb8) this.f33675p).get(i);
     }
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.List
@@ -35,7 +38,7 @@ public final class yg8 extends AbstractList implements RandomAccess, ac8 {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.p.size();
+        return this.f33675p.size();
     }
 
     @Override // com.daaw.ac8
@@ -45,11 +48,11 @@ public final class yg8 extends AbstractList implements RandomAccess, ac8 {
 
     @Override // com.daaw.ac8
     public final Object zzf(int i) {
-        return this.p.zzf(i);
+        return this.f33675p.zzf(i);
     }
 
     @Override // com.daaw.ac8
     public final List zzh() {
-        return this.p.zzh();
+        return this.f33675p.zzh();
     }
 }

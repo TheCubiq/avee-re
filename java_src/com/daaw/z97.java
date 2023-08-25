@@ -3,50 +3,61 @@ package com.daaw;
 import java.security.GeneralSecurityException;
 /* loaded from: classes.dex */
 public final class z97 {
-    public static final String a;
-    public static final String b;
+
+    /* renamed from: a */
+    public static final String f34628a;
+
+    /* renamed from: b */
+    public static final String f34629b;
     @Deprecated
-    public static final co7 c;
+
+    /* renamed from: c */
+    public static final co7 f34630c;
     @Deprecated
-    public static final co7 d;
+
+    /* renamed from: d */
+    public static final co7 f34631d;
     @Deprecated
-    public static final co7 e;
+
+    /* renamed from: e */
+    public static final co7 f34632e;
 
     static {
         new fa7();
-        a = "type.googleapis.com/google.crypto.tink.AesCtrHmacAeadKey";
+        f34628a = "type.googleapis.com/google.crypto.tink.AesCtrHmacAeadKey";
         new ra7();
-        b = "type.googleapis.com/google.crypto.tink.AesGcmKey";
+        f34629b = "type.googleapis.com/google.crypto.tink.AesGcmKey";
         new ua7();
         new oa7();
         new ab7();
         new eb7();
         new xa7();
         new hb7();
-        co7 M = co7.M();
-        c = M;
-        d = M;
-        e = M;
+        co7 m25169M = co7.m25169M();
+        f34630c = m25169M;
+        f34631d = m25169M;
+        f34632e = m25169M;
         try {
-            a();
-        } catch (GeneralSecurityException e2) {
-            throw new ExceptionInInitializerError(e2);
+            m2585a();
+        } catch (GeneralSecurityException e) {
+            throw new ExceptionInInitializerError(e);
         }
     }
 
-    public static void a() {
-        w97.o(new ca7());
-        fh7.a();
-        w97.n(new fa7(), true);
-        w97.n(new ra7(), true);
-        if (yb7.b()) {
+    /* renamed from: a */
+    public static void m2585a() {
+        w97.m6284o(new ca7());
+        fh7.m22636a();
+        w97.m6285n(new fa7(), true);
+        w97.m6285n(new ra7(), true);
+        if (yb7.m3938b()) {
             return;
         }
-        w97.n(new oa7(), true);
-        ua7.k(true);
-        w97.n(new xa7(), true);
-        w97.n(new ab7(), true);
-        w97.n(new eb7(), true);
-        w97.n(new hb7(), true);
+        w97.m6285n(new oa7(), true);
+        ua7.m8361k(true);
+        w97.m6285n(new xa7(), true);
+        w97.m6285n(new ab7(), true);
+        w97.m6285n(new eb7(), true);
+        w97.m6285n(new hb7(), true);
     }
 }

@@ -4,42 +4,34 @@ public final class lj7 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public lj7() {
-        /*
-            r1 = this;
-            com.daaw.mj7 r0 = com.daaw.mj7.N()
-            r1.<init>(r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.lj7.<init>():void");
+        super(r0);
+        mj7 mj7Var;
+        mj7Var = mj7.zzb;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ lj7(com.daaw.hj7 r1) {
-        /*
-            r0 = this;
-            com.daaw.mj7 r1 = com.daaw.mj7.N()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.lj7.<init>(com.daaw.hj7):void");
+    public /* synthetic */ lj7(hj7 hj7Var) {
+        super(r1);
+        mj7 mj7Var;
+        mj7Var = mj7.zzb;
     }
 
-    public final lj7 s(yq7 yq7Var) {
-        p();
-        ((mj7) this.q).zze = yq7Var;
+    /* renamed from: s */
+    public final lj7 m16900s(yq7 yq7Var) {
+        m22313p();
+        ((mj7) this.f9851q).zze = yq7Var;
         return this;
     }
 
-    public final lj7 t(int i) {
-        p();
-        ((mj7) this.q).zzd = 0;
+    /* renamed from: t */
+    public final lj7 m16899t(int i) {
+        m22313p();
+        ((mj7) this.f9851q).zzd = 0;
         return this;
     }
 }

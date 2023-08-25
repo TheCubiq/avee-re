@@ -1,9 +1,11 @@
 package com.daaw;
 
-import com.daaw.k3;
+import com.daaw.C1897k3;
 /* loaded from: classes2.dex */
-public interface o12 extends k3.f {
-    void b(p12 p12Var);
+public interface o12 extends C1897k3.InterfaceC1906f {
+    /* renamed from: b */
+    void mo6179b(p12 p12Var);
 
-    void c();
+    /* renamed from: c */
+    void mo6178c();
 }

@@ -24,34 +24,61 @@ import org.json.JSONObject;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class n55 implements r35 {
-    public final sn3 a;
-    public final gr4 b;
-    public final jq4 c;
-    public final ty4 d;
-    public final Context e;
-    public final th6 f;
-    public final zzchu g;
-    public final ri6 h;
-    public boolean i = false;
-    public boolean j = false;
-    public boolean k = true;
-    public final on3 l;
-    public final pn3 m;
+
+    /* renamed from: a */
+    public final sn3 f19480a;
+
+    /* renamed from: b */
+    public final gr4 f19481b;
+
+    /* renamed from: c */
+    public final jq4 f19482c;
+
+    /* renamed from: d */
+    public final ty4 f19483d;
+
+    /* renamed from: e */
+    public final Context f19484e;
+
+    /* renamed from: f */
+    public final th6 f19485f;
+
+    /* renamed from: g */
+    public final zzchu f19486g;
+
+    /* renamed from: h */
+    public final ri6 f19487h;
+
+    /* renamed from: i */
+    public boolean f19488i = false;
+
+    /* renamed from: j */
+    public boolean f19489j = false;
+
+    /* renamed from: k */
+    public boolean f19490k = true;
+
+    /* renamed from: l */
+    public final on3 f19491l;
+
+    /* renamed from: m */
+    public final pn3 f19492m;
 
     public n55(on3 on3Var, pn3 pn3Var, sn3 sn3Var, gr4 gr4Var, jq4 jq4Var, ty4 ty4Var, Context context, th6 th6Var, zzchu zzchuVar, ri6 ri6Var, byte[] bArr) {
-        this.l = on3Var;
-        this.m = pn3Var;
-        this.a = sn3Var;
-        this.b = gr4Var;
-        this.c = jq4Var;
-        this.d = ty4Var;
-        this.e = context;
-        this.f = th6Var;
-        this.g = zzchuVar;
-        this.h = ri6Var;
+        this.f19491l = on3Var;
+        this.f19492m = pn3Var;
+        this.f19480a = sn3Var;
+        this.f19481b = gr4Var;
+        this.f19482c = jq4Var;
+        this.f19483d = ty4Var;
+        this.f19484e = context;
+        this.f19485f = th6Var;
+        this.f19486g = zzchuVar;
+        this.f19487h = ri6Var;
     }
 
-    public static final HashMap r(Map map) {
+    /* renamed from: r */
+    public static final HashMap m15514r(Map map) {
         HashMap hashMap = new HashMap();
         if (map == null) {
             return hashMap;
@@ -68,34 +95,36 @@ public final class n55 implements r35 {
     }
 
     @Override // com.daaw.r35
-    public final void a(View view, MotionEvent motionEvent, View view2) {
+    /* renamed from: a */
+    public final void mo11804a(View view, MotionEvent motionEvent, View view2) {
     }
 
     @Override // com.daaw.r35
-    public final void b(View view, Map map, Map map2, ImageView.ScaleType scaleType) {
+    /* renamed from: b */
+    public final void mo11803b(View view, Map map, Map map2, ImageView.ScaleType scaleType) {
         try {
-            if (!this.i) {
-                this.i = zzt.zzs().zzn(this.e, this.g.p, this.f.D.toString(), this.h.f);
+            if (!this.f19488i) {
+                this.f19488i = zzt.zzs().zzn(this.f19484e, this.f19486g.f36993p, this.f19485f.f27657D.toString(), this.f19487h.f25346f);
             }
-            if (this.k) {
-                sn3 sn3Var = this.a;
+            if (this.f19490k) {
+                sn3 sn3Var = this.f19480a;
                 if (sn3Var != null && !sn3Var.zzB()) {
-                    this.a.zzx();
-                    this.b.zza();
+                    this.f19480a.zzx();
+                    this.f19481b.zza();
                     return;
                 }
-                on3 on3Var = this.l;
-                if (on3Var != null && !on3Var.r3()) {
-                    this.l.zzt();
-                    this.b.zza();
+                on3 on3Var = this.f19491l;
+                if (on3Var != null && !on3Var.m14128r3()) {
+                    this.f19491l.zzt();
+                    this.f19481b.zza();
                     return;
                 }
-                pn3 pn3Var = this.m;
-                if (pn3Var == null || pn3Var.r3()) {
+                pn3 pn3Var = this.f19492m;
+                if (pn3Var == null || pn3Var.m13271r3()) {
                     return;
                 }
-                this.m.zzr();
-                this.b.zza();
+                this.f19492m.zzr();
+                this.f19481b.zza();
             }
         } catch (RemoteException e) {
             k04.zzk("Failed to call recordImpression", e);
@@ -103,22 +132,23 @@ public final class n55 implements r35 {
     }
 
     @Override // com.daaw.r35
-    public final void c(View view, Map map) {
+    /* renamed from: c */
+    public final void mo11802c(View view, Map map) {
         try {
-            yd0 g3 = nt0.g3(view);
-            sn3 sn3Var = this.a;
+            yd0 m14830g3 = nt0.m14830g3(view);
+            sn3 sn3Var = this.f19480a;
             if (sn3Var != null) {
-                sn3Var.n0(g3);
+                sn3Var.mo10145n0(m14830g3);
                 return;
             }
-            on3 on3Var = this.l;
+            on3 on3Var = this.f19491l;
             if (on3Var != null) {
-                on3Var.w2(g3);
+                on3Var.m14127w2(m14830g3);
                 return;
             }
-            pn3 pn3Var = this.m;
+            pn3 pn3Var = this.f19492m;
             if (pn3Var != null) {
-                pn3Var.q3(g3);
+                pn3Var.m13272q3(m14830g3);
             }
         } catch (RemoteException e) {
             k04.zzk("Failed to call untrackView", e);
@@ -126,23 +156,26 @@ public final class n55 implements r35 {
     }
 
     @Override // com.daaw.r35
-    public final boolean d(Bundle bundle) {
+    /* renamed from: d */
+    public final boolean mo11801d(Bundle bundle) {
         return false;
     }
 
     @Override // com.daaw.r35
-    public final void e(View view) {
+    /* renamed from: e */
+    public final void mo11800e(View view) {
     }
 
     @Override // com.daaw.r35
-    public final void f(View view, Map map, Map map2, View.OnTouchListener onTouchListener, View.OnClickListener onClickListener) {
+    /* renamed from: f */
+    public final void mo11799f(View view, Map map, Map map2, View.OnTouchListener onTouchListener, View.OnClickListener onClickListener) {
         Object obj;
         yd0 zzn;
         try {
-            yd0 g3 = nt0.g3(view);
-            JSONObject jSONObject = this.f.l0;
+            yd0 m14830g3 = nt0.m14830g3(view);
+            JSONObject jSONObject = this.f19485f.f27703l0;
             boolean z = true;
-            if (((Boolean) zzba.zzc().b(g93.q1)).booleanValue() && jSONObject.length() != 0) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10799q1)).booleanValue() && jSONObject.length() != 0) {
                 Map hashMap = map == null ? new HashMap() : map;
                 Map hashMap2 = map2 == null ? new HashMap() : map2;
                 HashMap hashMap3 = new HashMap();
@@ -156,8 +189,8 @@ public final class n55 implements r35 {
                         WeakReference weakReference = (WeakReference) hashMap3.get(next);
                         if (weakReference != null && (obj = weakReference.get()) != null) {
                             Class<?> cls = obj.getClass();
-                            if (((Boolean) zzba.zzc().b(g93.r1)).booleanValue() && next.equals("3010")) {
-                                sn3 sn3Var = this.a;
+                            if (((Boolean) zzba.zzc().m23658b(g93.f10810r1)).booleanValue() && next.equals("3010")) {
+                                sn3 sn3Var = this.f19480a;
                                 Object obj2 = null;
                                 if (sn3Var != null) {
                                     try {
@@ -165,16 +198,16 @@ public final class n55 implements r35 {
                                     } catch (RemoteException | IllegalArgumentException unused) {
                                     }
                                 } else {
-                                    on3 on3Var = this.l;
+                                    on3 on3Var = this.f19491l;
                                     if (on3Var != null) {
-                                        zzn = on3Var.l3();
+                                        zzn = on3Var.m14134l3();
                                     } else {
-                                        pn3 pn3Var = this.m;
-                                        zzn = pn3Var != null ? pn3Var.k3() : null;
+                                        pn3 pn3Var = this.f19492m;
+                                        zzn = pn3Var != null ? pn3Var.m13278k3() : null;
                                     }
                                 }
                                 if (zzn != null) {
-                                    obj2 = nt0.M(zzn);
+                                    obj2 = nt0.m14831M(zzn);
                                 }
                                 if (obj2 != null) {
                                     cls = obj2.getClass();
@@ -184,7 +217,7 @@ public final class n55 implements r35 {
                                 ArrayList<String> arrayList = new ArrayList();
                                 zzbu.zzc(optJSONArray, arrayList);
                                 zzt.zzp();
-                                ClassLoader classLoader = this.e.getClassLoader();
+                                ClassLoader classLoader = this.f19484e.getClassLoader();
                                 for (String str : arrayList) {
                                     if (Class.forName(str, false, classLoader).isAssignableFrom(cls)) {
                                         break;
@@ -199,24 +232,24 @@ public final class n55 implements r35 {
                     }
                 }
             }
-            this.k = z;
-            HashMap r = r(map);
-            HashMap r2 = r(map2);
-            sn3 sn3Var2 = this.a;
+            this.f19490k = z;
+            HashMap m15514r = m15514r(map);
+            HashMap m15514r2 = m15514r(map2);
+            sn3 sn3Var2 = this.f19480a;
             if (sn3Var2 != null) {
-                sn3Var2.n2(g3, nt0.g3(r), nt0.g3(r2));
+                sn3Var2.mo10144n2(m14830g3, nt0.m14830g3(m15514r), nt0.m14830g3(m15514r2));
                 return;
             }
-            on3 on3Var2 = this.l;
+            on3 on3Var2 = this.f19491l;
             if (on3Var2 != null) {
-                on3Var2.p3(g3, nt0.g3(r), nt0.g3(r2));
-                this.l.o3(g3);
+                on3Var2.m14130p3(m14830g3, nt0.m14830g3(m15514r), nt0.m14830g3(m15514r2));
+                this.f19491l.m14131o3(m14830g3);
                 return;
             }
-            pn3 pn3Var2 = this.m;
+            pn3 pn3Var2 = this.f19492m;
             if (pn3Var2 != null) {
-                pn3Var2.p3(g3, nt0.g3(r), nt0.g3(r2));
-                this.m.o3(g3);
+                pn3Var2.m13273p3(m14830g3, nt0.m14830g3(m15514r), nt0.m14830g3(m15514r2));
+                this.f19492m.m13274o3(m14830g3);
             }
         } catch (RemoteException e) {
             k04.zzk("Failed to call trackView", e);
@@ -224,38 +257,44 @@ public final class n55 implements r35 {
     }
 
     @Override // com.daaw.r35
-    public final void g(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType) {
-        if (this.j && this.f.M) {
+    /* renamed from: g */
+    public final void mo11798g(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType) {
+        if (this.f19489j && this.f19485f.f27666M) {
             return;
         }
-        q(view);
+        m15515q(view);
     }
 
     @Override // com.daaw.r35
-    public final void h(Bundle bundle) {
+    /* renamed from: h */
+    public final void mo11797h(Bundle bundle) {
     }
 
     @Override // com.daaw.r35
-    public final void i(Bundle bundle) {
+    /* renamed from: i */
+    public final void mo11796i(Bundle bundle) {
     }
 
     @Override // com.daaw.r35
-    public final JSONObject j(View view, Map map, Map map2, ImageView.ScaleType scaleType) {
+    /* renamed from: j */
+    public final JSONObject mo11795j(View view, Map map, Map map2, ImageView.ScaleType scaleType) {
         return null;
     }
 
     @Override // com.daaw.r35
-    public final void k(zzcs zzcsVar) {
+    /* renamed from: k */
+    public final void mo11794k(zzcs zzcsVar) {
         k04.zzj("Mute This Ad is not supported for 3rd party ads");
     }
 
     @Override // com.daaw.r35
-    public final void l(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType, int i) {
+    /* renamed from: l */
+    public final void mo11793l(View view, View view2, Map map, Map map2, boolean z, ImageView.ScaleType scaleType, int i) {
         String str;
-        if (!this.j) {
+        if (!this.f19489j) {
             str = "Custom click reporting for 3p ads failed. enableCustomClickGesture is not set.";
-        } else if (this.f.M) {
-            q(view2);
+        } else if (this.f19485f.f27666M) {
+            m15515q(view2);
             return;
         } else {
             str = "Custom click reporting for 3p ads failed. Ad unit id not in allow list.";
@@ -264,53 +303,58 @@ public final class n55 implements r35 {
     }
 
     @Override // com.daaw.r35
-    public final void m(ve3 ve3Var) {
+    /* renamed from: m */
+    public final void mo11792m(ve3 ve3Var) {
     }
 
     @Override // com.daaw.r35
-    public final void n(String str) {
+    /* renamed from: n */
+    public final void mo11791n(String str) {
     }
 
     @Override // com.daaw.r35
-    public final void o(zzcw zzcwVar) {
+    /* renamed from: o */
+    public final void mo11790o(zzcw zzcwVar) {
         k04.zzj("Mute This Ad is not supported for 3rd party ads");
     }
 
     @Override // com.daaw.r35
-    public final JSONObject p(View view, Map map, Map map2, ImageView.ScaleType scaleType) {
+    /* renamed from: p */
+    public final JSONObject mo11789p(View view, Map map, Map map2, ImageView.ScaleType scaleType) {
         return null;
     }
 
-    public final void q(View view) {
+    /* renamed from: q */
+    public final void m15515q(View view) {
         try {
-            sn3 sn3Var = this.a;
+            sn3 sn3Var = this.f19480a;
             if (sn3Var != null && !sn3Var.zzA()) {
-                this.a.w2(nt0.g3(view));
-                this.c.onAdClicked();
-                if (((Boolean) zzba.zzc().b(g93.W8)).booleanValue()) {
-                    this.d.zzq();
+                this.f19480a.mo10143w2(nt0.m14830g3(view));
+                this.f19482c.onAdClicked();
+                if (((Boolean) zzba.zzc().m23658b(g93.f10590W8)).booleanValue()) {
+                    this.f19483d.zzq();
                     return;
                 }
                 return;
             }
-            on3 on3Var = this.l;
-            if (on3Var != null && !on3Var.q3()) {
-                this.l.n3(nt0.g3(view));
-                this.c.onAdClicked();
-                if (((Boolean) zzba.zzc().b(g93.W8)).booleanValue()) {
-                    this.d.zzq();
+            on3 on3Var = this.f19491l;
+            if (on3Var != null && !on3Var.m14129q3()) {
+                this.f19491l.m14132n3(nt0.m14830g3(view));
+                this.f19482c.onAdClicked();
+                if (((Boolean) zzba.zzc().m23658b(g93.f10590W8)).booleanValue()) {
+                    this.f19483d.zzq();
                     return;
                 }
                 return;
             }
-            pn3 pn3Var = this.m;
+            pn3 pn3Var = this.f19492m;
             if (pn3Var == null || pn3Var.zzv()) {
                 return;
             }
-            this.m.n3(nt0.g3(view));
-            this.c.onAdClicked();
-            if (((Boolean) zzba.zzc().b(g93.W8)).booleanValue()) {
-                this.d.zzq();
+            this.f19492m.m13275n3(nt0.m14830g3(view));
+            this.f19482c.onAdClicked();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10590W8)).booleanValue()) {
+                this.f19483d.zzq();
             }
         } catch (RemoteException e) {
             k04.zzk("Failed to call handleClick", e);
@@ -324,7 +368,7 @@ public final class n55 implements r35 {
 
     @Override // com.daaw.r35
     public final boolean zzB() {
-        return this.f.M;
+        return this.f19485f.f27666M;
     }
 
     @Override // com.daaw.r35
@@ -355,6 +399,6 @@ public final class n55 implements r35 {
 
     @Override // com.daaw.r35
     public final void zzv() {
-        this.j = true;
+        this.f19489j = true;
     }
 }

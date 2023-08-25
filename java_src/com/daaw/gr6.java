@@ -4,14 +4,16 @@ import android.os.Build;
 import android.view.View;
 /* loaded from: classes.dex */
 public final class gr6 {
-    public static float a(View view) {
+    /* renamed from: a */
+    public static float m21306a(View view) {
         if (Build.VERSION.SDK_INT >= 21) {
             return view.getZ();
         }
         return 0.0f;
     }
 
-    public static String b(View view) {
+    /* renamed from: b */
+    public static String m21305b(View view) {
         if (view.isAttachedToWindow()) {
             int visibility = view.getVisibility();
             if (visibility == 8) {

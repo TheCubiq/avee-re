@@ -4,5 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class sa0 {
-    public List<Object> a = new LinkedList();
+
+    /* renamed from: a */
+    public List<Object> f26042a = new LinkedList();
 }

@@ -9,15 +9,23 @@ import java.util.regex.Pattern;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class xn5 implements em6 {
-    public static final Pattern d = Pattern.compile("([^;]+=[^;]+)(;\\s|$)", 2);
-    public final String a;
-    public final io6 b;
-    public final to6 c;
+
+    /* renamed from: d */
+    public static final Pattern f32833d = Pattern.compile("([^;]+=[^;]+)(;\\s|$)", 2);
+
+    /* renamed from: a */
+    public final String f32834a;
+
+    /* renamed from: b */
+    public final io6 f32835b;
+
+    /* renamed from: c */
+    public final to6 f32836c;
 
     public xn5(String str, to6 to6Var, io6 io6Var) {
-        this.a = str;
-        this.c = to6Var;
-        this.b = io6Var;
+        this.f32834a = str;
+        this.f32836c = to6Var;
+        this.f32835b = io6Var;
     }
 
     @Override // com.daaw.em6
@@ -35,36 +43,36 @@ public final class xn5 implements em6 {
         JSONObject jSONObject2;
         String str;
         wn5 wn5Var = (wn5) obj;
-        jSONObject = wn5Var.a;
+        jSONObject = wn5Var.f31397a;
         int optInt = jSONObject.optInt("http_timeout_millis", 60000);
-        pu3Var = wn5Var.b;
+        pu3Var = wn5Var.f31398b;
         String str2 = "";
-        if (pu3Var.a() != -2) {
-            if (pu3Var.a() == 1) {
-                if (pu3Var.f() != null) {
-                    str2 = TextUtils.join(", ", pu3Var.f());
+        if (pu3Var.m13130a() != -2) {
+            if (pu3Var.m13130a() == 1) {
+                if (pu3Var.m13125f() != null) {
+                    str2 = TextUtils.join(", ", pu3Var.m13125f());
                     k04.zzg(str2);
                 }
                 gi5Var = new gi5(2, "Error building request URL: ".concat(String.valueOf(str2)));
             } else {
                 gi5Var = new gi5(1);
             }
-            to6 to6Var = this.c;
-            io6 io6Var = this.b;
-            io6Var.e(gi5Var);
+            to6 to6Var = this.f32836c;
+            io6 io6Var = this.f32835b;
+            io6Var.mo17590e(gi5Var);
             io6Var.zzf(false);
-            to6Var.a(io6Var);
+            to6Var.m8902a(io6Var);
             throw gi5Var;
         }
         HashMap hashMap = new HashMap();
-        pu3Var2 = wn5Var.b;
-        if (pu3Var2.h() && !TextUtils.isEmpty(this.a)) {
-            if (((Boolean) zzba.zzc().b(g93.I0)).booleanValue()) {
-                String str3 = this.a;
+        pu3Var2 = wn5Var.f31398b;
+        if (pu3Var2.m13123h() && !TextUtils.isEmpty(this.f32834a)) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10442I0)).booleanValue()) {
+                String str3 = this.f32834a;
                 if (TextUtils.isEmpty(str3)) {
                     str = "";
                 } else {
-                    Matcher matcher = d.matcher(str3);
+                    Matcher matcher = f32833d.matcher(str3);
                     str = "";
                     while (matcher.find()) {
                         String group = matcher.group(1);
@@ -83,30 +91,30 @@ public final class xn5 implements em6 {
                     hashMap.put("Cookie", str);
                 }
             } else {
-                hashMap.put("Cookie", this.a);
+                hashMap.put("Cookie", this.f32834a);
             }
         }
-        pu3Var3 = wn5Var.b;
-        if (pu3Var3.i()) {
-            jSONObject2 = wn5Var.a;
-            yn5.a(hashMap, jSONObject2);
+        pu3Var3 = wn5Var.f31398b;
+        if (pu3Var3.m13122i()) {
+            jSONObject2 = wn5Var.f31397a;
+            yn5.m3481a(hashMap, jSONObject2);
         }
-        pu3Var4 = wn5Var.b;
+        pu3Var4 = wn5Var.f31398b;
         if (pu3Var4 != null) {
-            pu3Var7 = wn5Var.b;
-            if (!TextUtils.isEmpty(pu3Var7.d())) {
-                pu3Var8 = wn5Var.b;
-                str2 = pu3Var8.d();
+            pu3Var7 = wn5Var.f31398b;
+            if (!TextUtils.isEmpty(pu3Var7.m13127d())) {
+                pu3Var8 = wn5Var.f31398b;
+                str2 = pu3Var8.m13127d();
             }
         }
-        to6 to6Var2 = this.c;
-        io6 io6Var2 = this.b;
+        to6 to6Var2 = this.f32836c;
+        io6 io6Var2 = this.f32835b;
         io6Var2.zzf(true);
-        to6Var2.a(io6Var2);
-        pu3Var5 = wn5Var.b;
-        String e = pu3Var5.e();
-        byte[] bytes = str2.getBytes(cy6.c);
-        pu3Var6 = wn5Var.b;
-        return new on5(e, optInt, hashMap, bytes, "", pu3Var6.i());
+        to6Var2.m8902a(io6Var2);
+        pu3Var5 = wn5Var.f31398b;
+        String m13126e = pu3Var5.m13126e();
+        byte[] bytes = str2.getBytes(cy6.f6275c);
+        pu3Var6 = wn5Var.f31398b;
+        return new on5(m13126e, optInt, hashMap, bytes, "", pu3Var6.m13122i());
     }
 }

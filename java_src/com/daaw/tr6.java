@@ -7,7 +7,7 @@ public final class tr6 extends rr6 {
 
     @Override // android.os.AsyncTask
     public final /* bridge */ /* synthetic */ Object doInBackground(Object[] objArr) {
-        this.b.e(null);
+        this.f25542b.m18308e(null);
         return null;
     }
 }

@@ -3,58 +3,65 @@ package com.daaw;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class g17 extends h07 {
-    public final Object p;
-    public int q;
-    public final /* synthetic */ i17 r;
+
+    /* renamed from: p */
+    public final Object f10153p;
+
+    /* renamed from: q */
+    public int f10154q;
+
+    /* renamed from: r */
+    public final /* synthetic */ i17 f10155r;
 
     public g17(i17 i17Var, int i) {
-        this.r = i17Var;
-        this.p = i17.i(i17Var, i);
-        this.q = i;
+        this.f10155r = i17Var;
+        this.f10153p = i17.m20190i(i17Var, i);
+        this.f10154q = i;
     }
 
-    public final void a() {
-        int x;
-        int i = this.q;
-        if (i == -1 || i >= this.r.size() || !ky6.a(this.p, i17.i(this.r, this.q))) {
-            x = this.r.x(this.p);
-            this.q = x;
+    /* renamed from: a */
+    public final void m22092a() {
+        int m20175x;
+        int i = this.f10154q;
+        if (i == -1 || i >= this.f10155r.size() || !ky6.m17316a(this.f10153p, i17.m20190i(this.f10155r, this.f10154q))) {
+            m20175x = this.f10155r.m20175x(this.f10153p);
+            this.f10154q = m20175x;
         }
     }
 
     @Override // com.daaw.h07, java.util.Map.Entry
     public final Object getKey() {
-        return this.p;
+        return this.f10153p;
     }
 
     @Override // com.daaw.h07, java.util.Map.Entry
     public final Object getValue() {
-        Map n = this.r.n();
-        if (n != null) {
-            return n.get(this.p);
+        Map m20185n = this.f10155r.m20185n();
+        if (m20185n != null) {
+            return m20185n.get(this.f10153p);
         }
-        a();
-        int i = this.q;
+        m22092a();
+        int i = this.f10154q;
         if (i == -1) {
             return null;
         }
-        return i17.l(this.r, i);
+        return i17.m20187l(this.f10155r, i);
     }
 
     @Override // java.util.Map.Entry
     public final Object setValue(Object obj) {
-        Map n = this.r.n();
-        if (n != null) {
-            return n.put(this.p, obj);
+        Map m20185n = this.f10155r.m20185n();
+        if (m20185n != null) {
+            return m20185n.put(this.f10153p, obj);
         }
-        a();
-        int i = this.q;
+        m22092a();
+        int i = this.f10154q;
         if (i == -1) {
-            this.r.put(this.p, obj);
+            this.f10155r.put(this.f10153p, obj);
             return null;
         }
-        Object l = i17.l(this.r, i);
-        i17.o(this.r, this.q, obj);
-        return l;
+        Object m20187l = i17.m20187l(this.f10155r, i);
+        i17.m20184o(this.f10155r, this.f10154q, obj);
+        return m20187l;
     }
 }

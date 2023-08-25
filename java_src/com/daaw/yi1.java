@@ -1,12 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class yi1 {
-    public final String a;
-    public final int b;
+
+    /* renamed from: a */
+    public final String f33687a;
+
+    /* renamed from: b */
+    public final int f33688b;
 
     public yi1(String str, int i) {
-        this.a = str;
-        this.b = i;
+        this.f33687a = str;
+        this.f33688b = i;
     }
 
     public boolean equals(Object obj) {
@@ -15,15 +19,15 @@ public class yi1 {
         }
         if (obj instanceof yi1) {
             yi1 yi1Var = (yi1) obj;
-            if (this.b != yi1Var.b) {
+            if (this.f33688b != yi1Var.f33688b) {
                 return false;
             }
-            return this.a.equals(yi1Var.a);
+            return this.f33687a.equals(yi1Var.f33687a);
         }
         return false;
     }
 
     public int hashCode() {
-        return (this.a.hashCode() * 31) + this.b;
+        return (this.f33687a.hashCode() * 31) + this.f33688b;
     }
 }

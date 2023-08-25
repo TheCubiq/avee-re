@@ -6,7 +6,9 @@ import android.net.NetworkCapabilities;
 import android.os.Build;
 /* loaded from: classes.dex */
 public final class wl2 {
-    public NetworkCapabilities a;
+
+    /* renamed from: a */
+    public NetworkCapabilities f31317a;
 
     public wl2(ConnectivityManager connectivityManager) {
         if (connectivityManager == null || Build.VERSION.SDK_INT < 24) {
@@ -16,29 +18,31 @@ public final class wl2 {
             connectivityManager.registerDefaultNetworkCallback(new vl2(this));
         } catch (RuntimeException unused) {
             synchronized (wl2.class) {
-                this.a = null;
+                this.f31317a = null;
             }
         }
     }
 
-    public static wl2 c(Context context) {
+    /* renamed from: c */
+    public static wl2 m6014c(Context context) {
         if (context != null) {
             return new wl2((ConnectivityManager) context.getSystemService("connectivity"));
         }
         return null;
     }
 
-    public final long a() {
+    /* renamed from: a */
+    public final long m6016a() {
         synchronized (wl2.class) {
-            NetworkCapabilities networkCapabilities = this.a;
+            NetworkCapabilities networkCapabilities = this.f31317a;
             if (networkCapabilities != null) {
                 if (networkCapabilities.hasTransport(4)) {
                     return 2L;
                 }
-                if (this.a.hasTransport(1)) {
+                if (this.f31317a.hasTransport(1)) {
                     return 1L;
                 }
-                if (this.a.hasTransport(0)) {
+                if (this.f31317a.hasTransport(0)) {
                     return 0L;
                 }
             }
@@ -46,7 +50,8 @@ public final class wl2 {
         }
     }
 
-    public final NetworkCapabilities b() {
-        return this.a;
+    /* renamed from: b */
+    public final NetworkCapabilities m6015b() {
+        return this.f31317a;
     }
 }

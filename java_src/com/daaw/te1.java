@@ -9,134 +9,177 @@ import android.util.SparseArray;
 import org.conscrypt.NativeConstants;
 /* loaded from: classes.dex */
 public class te1 {
-    public static Bitmap i = Bitmap.createBitmap(NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV, NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV, Bitmap.Config.ARGB_8888);
-    public static final char[] j = {61451, 7838};
-    public final ve[] a;
-    public vr1 b;
-    public z6 c;
-    public SparseArray<a> d;
-    public bs1 e;
-    public int f;
-    public int g;
-    public boolean h;
 
+    /* renamed from: i */
+    public static Bitmap f27556i = Bitmap.createBitmap(NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV, NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV, Bitmap.Config.ARGB_8888);
+
+    /* renamed from: j */
+    public static final char[] f27557j = {61451, 7838};
+
+    /* renamed from: a */
+    public final C3325ve[] f27558a;
+
+    /* renamed from: b */
+    public vr1 f27559b;
+
+    /* renamed from: c */
+    public C3812z6 f27560c;
+
+    /* renamed from: d */
+    public SparseArray<C3071a> f27561d;
+
+    /* renamed from: e */
+    public bs1 f27562e;
+
+    /* renamed from: f */
+    public int f27563f;
+
+    /* renamed from: g */
+    public int f27564g;
+
+    /* renamed from: h */
+    public boolean f27565h;
+
+    /* renamed from: com.daaw.te1$a */
     /* loaded from: classes.dex */
-    public class a {
-        public float a;
-        public float b;
-        public float c;
-        public float d;
-        public float e;
-        public float f;
-        public float g;
-        public float h;
+    public class C3071a {
 
-        public a() {
+        /* renamed from: a */
+        public float f27566a;
+
+        /* renamed from: b */
+        public float f27567b;
+
+        /* renamed from: c */
+        public float f27568c;
+
+        /* renamed from: d */
+        public float f27569d;
+
+        /* renamed from: e */
+        public float f27570e;
+
+        /* renamed from: f */
+        public float f27571f;
+
+        /* renamed from: g */
+        public float f27572g;
+
+        /* renamed from: h */
+        public float f27573h;
+
+        public C3071a() {
         }
     }
 
-    public te1(Typeface typeface, int i2, ve... veVarArr) {
-        this.h = true;
-        this.a = veVarArr;
+    public te1(Typeface typeface, int i, C3325ve... c3325veArr) {
+        this.f27565h = true;
+        this.f27558a = c3325veArr;
         try {
-            e(typeface, i2);
+            m9228e(typeface, i);
         } catch (Exception e) {
-            lz1.b(e, "failed to create SpriteFont");
-            this.h = false;
+            lz1.m16364b(e, "failed to create SpriteFont");
+            this.f27565h = false;
         }
-        if (f()) {
+        if (m9227f()) {
             return;
         }
         try {
-            e(typeface, i2 / 2);
+            m9228e(typeface, i / 2);
         } catch (Exception e2) {
-            lz1.b(e2, "failed to create SpriteFont");
-            this.h = false;
+            lz1.m16364b(e2, "failed to create SpriteFont");
+            this.f27565h = false;
         }
-        if (f()) {
+        if (m9227f()) {
             return;
         }
-        lz1.c("failed to create SpriteFont");
+        lz1.m16363c("failed to create SpriteFont");
     }
 
-    public static int g(int i2) {
-        return br1.s(i2, 4096);
+    /* renamed from: g */
+    public static int m9226g(int i) {
+        return br1.m25890s(i, 4096);
     }
 
-    public void a() {
-        this.c.a();
+    /* renamed from: a */
+    public void m9232a() {
+        this.f27560c.mo2801a();
     }
 
-    public float b() {
-        return this.f;
+    /* renamed from: b */
+    public float m9231b() {
+        return this.f27563f;
     }
 
-    public qc0 c() {
-        return this.c;
+    /* renamed from: c */
+    public qc0 m9230c() {
+        return this.f27560c;
     }
 
-    public a d(char c) {
-        SparseArray<a> sparseArray = this.d;
+    /* renamed from: d */
+    public C3071a m9229d(char c) {
+        SparseArray<C3071a> sparseArray = this.f27561d;
         return sparseArray.get(c, sparseArray.valueAt(0));
     }
 
-    public final void e(Typeface typeface, int i2) {
-        ve[] veVarArr;
+    /* renamed from: e */
+    public final void m9228e(Typeface typeface, int i) {
+        C3325ve[] c3325veArr;
+        int i2;
         int i3;
         int i4;
-        int i5;
-        int i6 = 0;
-        int length = j.length;
-        for (ve veVar : this.a) {
-            length += veVar.a();
+        int i5 = 0;
+        int length = f27557j.length;
+        for (C3325ve c3325ve : this.f27558a) {
+            length += c3325ve.m7238a();
         }
         char[] cArr = new char[length];
-        int i7 = 0;
-        for (ve veVar2 : this.a) {
-            for (int i8 = 0; i8 < veVar2.c; i8++) {
-                cArr[i7] = veVar2.m(i8);
-                i7++;
+        int i6 = 0;
+        for (C3325ve c3325ve2 : this.f27558a) {
+            for (int i7 = 0; i7 < c3325ve2.f30167c; i7++) {
+                cArr[i6] = c3325ve2.m7226m(i7);
+                i6++;
             }
         }
-        char[] cArr2 = j;
+        char[] cArr2 = f27557j;
         int length2 = cArr2.length;
-        int i9 = 0;
+        int i8 = 0;
         while (true) {
-            i3 = 1;
-            if (i9 >= length2) {
+            i2 = 1;
+            if (i8 >= length2) {
                 break;
             }
-            cArr[i7] = cArr2[i9];
-            i7++;
-            i9++;
+            cArr[i6] = cArr2[i8];
+            i6++;
+            i8++;
         }
-        this.h = true;
+        this.f27565h = true;
         Paint paint = new Paint();
         paint.setTypeface(typeface);
-        paint.setTextSize(i2);
+        paint.setTextSize(i);
         paint.setAntiAlias(true);
         paint.setColor(-1);
         paint.setTextAlign(Paint.Align.LEFT);
         Paint.FontMetricsInt fontMetricsInt = paint.getFontMetricsInt();
-        int i10 = fontMetricsInt.top;
-        int i11 = fontMetricsInt.ascent;
-        int i12 = fontMetricsInt.descent;
-        int i13 = fontMetricsInt.bottom;
-        this.g = i13 - i10;
-        this.f = i12 - i11;
-        this.d = new SparseArray<>(length);
-        int ceil = ((int) Math.ceil(Math.sqrt(length))) * (this.g + 1);
-        int g = g(ceil);
-        int g2 = g(ceil);
+        int i9 = fontMetricsInt.top;
+        int i10 = fontMetricsInt.ascent;
+        int i11 = fontMetricsInt.descent;
+        int i12 = fontMetricsInt.bottom;
+        this.f27564g = i12 - i9;
+        this.f27563f = i11 - i10;
+        this.f27561d = new SparseArray<>(length);
+        int ceil = ((int) Math.ceil(Math.sqrt(length))) * (this.f27564g + 1);
+        int m9226g = m9226g(ceil);
+        int m9226g2 = m9226g(ceil);
         Bitmap bitmap = null;
         try {
-            int g3 = g(g);
-            int g4 = g(g2);
-            lz1.c("Creating bitmap atlas for fonts, W:" + g3 + " H: " + g4);
-            if (g4 > 1024 || g3 > 1024) {
-                bitmap = Bitmap.createBitmap(g3, g4, Bitmap.Config.ARGB_8888);
+            int m9226g3 = m9226g(m9226g);
+            int m9226g4 = m9226g(m9226g2);
+            lz1.m16363c("Creating bitmap atlas for fonts, W:" + m9226g3 + " H: " + m9226g4);
+            if (m9226g4 > 1024 || m9226g3 > 1024) {
+                bitmap = Bitmap.createBitmap(m9226g3, m9226g4, Bitmap.Config.ARGB_8888);
             } else {
-                bitmap = i;
+                bitmap = f27556i;
                 bitmap.eraseColor(0);
             }
         } catch (Exception e) {
@@ -146,75 +189,77 @@ public class te1 {
         }
         Bitmap bitmap2 = bitmap;
         if (bitmap2 == null) {
-            this.h = false;
-            lz1.c("failed to create bitmap W:" + g(g) + " H: " + g(g2));
+            this.f27565h = false;
+            lz1.m16363c("failed to create bitmap W:" + m9226g(m9226g) + " H: " + m9226g(m9226g2));
             return;
         }
         Canvas canvas = new Canvas(bitmap2);
         float[] fArr = new float[length];
         if (paint.getTextWidths(cArr, 0, length, fArr) < length) {
-            lz1.c("widthsReturned < charWidths.length");
+            lz1.m16363c("widthsReturned < charWidths.length");
         }
-        int abs = Math.abs(i10);
+        int abs = Math.abs(i9);
         canvas.drawColor(0);
+        int i13 = 0;
         int i14 = 0;
-        int i15 = 0;
-        while (i15 < length) {
-            a aVar = new a();
-            char[] cArr3 = new char[i3];
-            cArr3[i6] = cArr[i15];
-            float f = fArr[i15];
+        while (i14 < length) {
+            C3071a c3071a = new C3071a();
+            char[] cArr3 = new char[i2];
+            cArr3[i5] = cArr[i14];
+            float f = fArr[i14];
             Rect rect = new Rect();
-            paint.getTextBounds(cArr3, i6, i3, rect);
-            if (i14 + rect.width() >= bitmap2.getWidth()) {
-                i4 = abs + this.g;
-                i5 = 0;
+            paint.getTextBounds(cArr3, i5, i2, rect);
+            if (i13 + rect.width() >= bitmap2.getWidth()) {
+                i3 = abs + this.f27564g;
+                i4 = 0;
             } else {
-                i4 = abs;
-                i5 = i14;
+                i3 = abs;
+                i4 = i13;
             }
-            int i16 = i15;
-            int i17 = i13;
-            canvas.drawText(cArr3, 0, 1, i5 - rect.left, i4, paint);
-            aVar.a = i5;
-            aVar.b = i4 - Math.abs(i10);
-            aVar.c = rect.width();
-            aVar.d = this.g;
-            aVar.e = rect.left;
-            aVar.f = i17;
-            aVar.g = f;
-            aVar.h = this.f;
-            this.d.append(cArr[i16], aVar);
-            i14 = i5 + rect.width() + 2;
-            i15 = i16 + 1;
-            abs = i4;
-            i13 = i17;
-            i6 = 0;
-            i3 = 1;
+            int i15 = i14;
+            int i16 = i12;
+            canvas.drawText(cArr3, 0, 1, i4 - rect.left, i3, paint);
+            c3071a.f27566a = i4;
+            c3071a.f27567b = i3 - Math.abs(i9);
+            c3071a.f27568c = rect.width();
+            c3071a.f27569d = this.f27564g;
+            c3071a.f27570e = rect.left;
+            c3071a.f27571f = i16;
+            c3071a.f27572g = f;
+            c3071a.f27573h = this.f27563f;
+            this.f27561d.append(cArr[i15], c3071a);
+            i13 = i4 + rect.width() + 2;
+            i14 = i15 + 1;
+            abs = i3;
+            i12 = i16;
+            i5 = 0;
+            i2 = 1;
         }
-        int i18 = i13;
+        int i17 = i12;
         if (abs != 0) {
-            i14 = bitmap2.getWidth();
+            i13 = bitmap2.getWidth();
         }
-        int g5 = g(i14);
-        int g6 = g(abs + Math.abs(i18) + 1);
-        Bitmap createBitmap = Bitmap.createBitmap(bitmap2, 0, 0, g5, g6);
-        this.e = new bs1(g5, g6);
-        this.b = new vr1(createBitmap, 9729, 9729, 10497, false);
-        this.c = new z6(this.b, true);
+        int m9226g5 = m9226g(i13);
+        int m9226g6 = m9226g(abs + Math.abs(i17) + 1);
+        Bitmap createBitmap = Bitmap.createBitmap(bitmap2, 0, 0, m9226g5, m9226g6);
+        this.f27562e = new bs1(m9226g5, m9226g6);
+        this.f27559b = new vr1(createBitmap, 9729, 9729, 10497, false);
+        this.f27560c = new C3812z6(this.f27559b, true);
         if (createBitmap != bitmap2) {
             createBitmap.recycle();
         }
-        if (i != bitmap2) {
+        if (f27556i != bitmap2) {
             bitmap2.recycle();
         }
     }
 
-    public boolean f() {
-        return this.h;
+    /* renamed from: f */
+    public boolean m9227f() {
+        return this.f27565h;
     }
 
-    public bs1 h() {
-        return this.e;
+    /* renamed from: h */
+    public bs1 m9225h() {
+        return this.f27562e;
     }
 }

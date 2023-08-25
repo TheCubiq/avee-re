@@ -7,24 +7,34 @@ import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class zzbbb implements Parcelable {
     public static final Parcelable.Creator<zzbbb> CREATOR = new vz2();
-    public final int p;
-    public final int q;
-    public final int r;
-    public final byte[] s;
-    public int t;
+
+    /* renamed from: p */
+    public final int f36819p;
+
+    /* renamed from: q */
+    public final int f36820q;
+
+    /* renamed from: r */
+    public final int f36821r;
+
+    /* renamed from: s */
+    public final byte[] f36822s;
+
+    /* renamed from: t */
+    public int f36823t;
 
     public zzbbb(int i, int i2, int i3, byte[] bArr) {
-        this.p = i;
-        this.q = i2;
-        this.r = i3;
-        this.s = bArr;
+        this.f36819p = i;
+        this.f36820q = i2;
+        this.f36821r = i3;
+        this.f36822s = bArr;
     }
 
     public zzbbb(Parcel parcel) {
-        this.p = parcel.readInt();
-        this.q = parcel.readInt();
-        this.r = parcel.readInt();
-        this.s = parcel.readInt() != 0 ? parcel.createByteArray() : null;
+        this.f36819p = parcel.readInt();
+        this.f36820q = parcel.readInt();
+        this.f36821r = parcel.readInt();
+        this.f36822s = parcel.readInt() != 0 ? parcel.createByteArray() : null;
     }
 
     @Override // android.os.Parcelable
@@ -38,7 +48,7 @@ public final class zzbbb implements Parcelable {
         }
         if (obj != null && zzbbb.class == obj.getClass()) {
             zzbbb zzbbbVar = (zzbbb) obj;
-            if (this.p == zzbbbVar.p && this.q == zzbbbVar.q && this.r == zzbbbVar.r && Arrays.equals(this.s, zzbbbVar.s)) {
+            if (this.f36819p == zzbbbVar.f36819p && this.f36820q == zzbbbVar.f36820q && this.f36821r == zzbbbVar.f36821r && Arrays.equals(this.f36822s, zzbbbVar.f36822s)) {
                 return true;
             }
         }
@@ -46,30 +56,30 @@ public final class zzbbb implements Parcelable {
     }
 
     public final int hashCode() {
-        int i = this.t;
+        int i = this.f36823t;
         if (i == 0) {
-            int hashCode = ((((((this.p + 527) * 31) + this.q) * 31) + this.r) * 31) + Arrays.hashCode(this.s);
-            this.t = hashCode;
+            int hashCode = ((((((this.f36819p + 527) * 31) + this.f36820q) * 31) + this.f36821r) * 31) + Arrays.hashCode(this.f36822s);
+            this.f36823t = hashCode;
             return hashCode;
         }
         return i;
     }
 
     public final String toString() {
-        int i = this.p;
-        int i2 = this.q;
-        int i3 = this.r;
-        boolean z = this.s != null;
+        int i = this.f36819p;
+        int i2 = this.f36820q;
+        int i3 = this.f36821r;
+        boolean z = this.f36822s != null;
         return "ColorInfo(" + i + ", " + i2 + ", " + i3 + ", " + z + ")";
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.p);
-        parcel.writeInt(this.q);
-        parcel.writeInt(this.r);
-        parcel.writeInt(this.s != null ? 1 : 0);
-        byte[] bArr = this.s;
+        parcel.writeInt(this.f36819p);
+        parcel.writeInt(this.f36820q);
+        parcel.writeInt(this.f36821r);
+        parcel.writeInt(this.f36822s != null ? 1 : 0);
+        byte[] bArr = this.f36822s;
         if (bArr != null) {
             parcel.writeByteArray(bArr);
         }

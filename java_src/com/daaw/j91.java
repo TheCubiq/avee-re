@@ -5,18 +5,22 @@ import java.util.Date;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public final class j91 extends nj1 {
-    public long b;
+
+    /* renamed from: b */
+    public long f14538b;
 
     public j91() {
         super(null);
-        this.b = -9223372036854775807L;
+        this.f14538b = -9223372036854775807L;
     }
 
-    public static Boolean e(rv0 rv0Var) {
-        return Boolean.valueOf(rv0Var.x() == 1);
+    /* renamed from: e */
+    public static Boolean m18723e(rv0 rv0Var) {
+        return Boolean.valueOf(rv0Var.m10896x() == 1);
     }
 
-    public static Object f(rv0 rv0Var, int i) {
+    /* renamed from: f */
+    public static Object m18722f(rv0 rv0Var, int i) {
         if (i != 0) {
             if (i != 1) {
                 if (i != 2) {
@@ -26,94 +30,104 @@ public final class j91 extends nj1 {
                                 if (i != 11) {
                                     return null;
                                 }
-                                return g(rv0Var);
+                                return m18721g(rv0Var);
                             }
-                            return k(rv0Var);
+                            return m18717k(rv0Var);
                         }
-                        return i(rv0Var);
+                        return m18719i(rv0Var);
                     }
-                    return j(rv0Var);
+                    return m18718j(rv0Var);
                 }
-                return l(rv0Var);
+                return m18716l(rv0Var);
             }
-            return e(rv0Var);
+            return m18723e(rv0Var);
         }
-        return h(rv0Var);
+        return m18720h(rv0Var);
     }
 
-    public static Date g(rv0 rv0Var) {
-        Date date = new Date((long) h(rv0Var).doubleValue());
-        rv0Var.K(2);
+    /* renamed from: g */
+    public static Date m18721g(rv0 rv0Var) {
+        Date date = new Date((long) m18720h(rv0Var).doubleValue());
+        rv0Var.m10920K(2);
         return date;
     }
 
-    public static Double h(rv0 rv0Var) {
-        return Double.valueOf(Double.longBitsToDouble(rv0Var.q()));
+    /* renamed from: h */
+    public static Double m18720h(rv0 rv0Var) {
+        return Double.valueOf(Double.longBitsToDouble(rv0Var.m10903q()));
     }
 
-    public static HashMap<String, Object> i(rv0 rv0Var) {
-        int B = rv0Var.B();
-        HashMap<String, Object> hashMap = new HashMap<>(B);
-        for (int i = 0; i < B; i++) {
-            hashMap.put(l(rv0Var), f(rv0Var, m(rv0Var)));
+    /* renamed from: i */
+    public static HashMap<String, Object> m18719i(rv0 rv0Var) {
+        int m10929B = rv0Var.m10929B();
+        HashMap<String, Object> hashMap = new HashMap<>(m10929B);
+        for (int i = 0; i < m10929B; i++) {
+            hashMap.put(m18716l(rv0Var), m18722f(rv0Var, m18715m(rv0Var)));
         }
         return hashMap;
     }
 
-    public static HashMap<String, Object> j(rv0 rv0Var) {
+    /* renamed from: j */
+    public static HashMap<String, Object> m18718j(rv0 rv0Var) {
         HashMap<String, Object> hashMap = new HashMap<>();
         while (true) {
-            String l = l(rv0Var);
-            int m = m(rv0Var);
-            if (m == 9) {
+            String m18716l = m18716l(rv0Var);
+            int m18715m = m18715m(rv0Var);
+            if (m18715m == 9) {
                 return hashMap;
             }
-            hashMap.put(l, f(rv0Var, m));
+            hashMap.put(m18716l, m18722f(rv0Var, m18715m));
         }
     }
 
-    public static ArrayList<Object> k(rv0 rv0Var) {
-        int B = rv0Var.B();
-        ArrayList<Object> arrayList = new ArrayList<>(B);
-        for (int i = 0; i < B; i++) {
-            arrayList.add(f(rv0Var, m(rv0Var)));
+    /* renamed from: k */
+    public static ArrayList<Object> m18717k(rv0 rv0Var) {
+        int m10929B = rv0Var.m10929B();
+        ArrayList<Object> arrayList = new ArrayList<>(m10929B);
+        for (int i = 0; i < m10929B; i++) {
+            arrayList.add(m18722f(rv0Var, m18715m(rv0Var)));
         }
         return arrayList;
     }
 
-    public static String l(rv0 rv0Var) {
-        int D = rv0Var.D();
-        int c = rv0Var.c();
-        rv0Var.K(D);
-        return new String(rv0Var.a, c, D);
+    /* renamed from: l */
+    public static String m18716l(rv0 rv0Var) {
+        int m10927D = rv0Var.m10927D();
+        int m10917c = rv0Var.m10917c();
+        rv0Var.m10920K(m10927D);
+        return new String(rv0Var.f25637a, m10917c, m10927D);
     }
 
-    public static int m(rv0 rv0Var) {
-        return rv0Var.x();
+    /* renamed from: m */
+    public static int m18715m(rv0 rv0Var) {
+        return rv0Var.m10896x();
     }
 
     @Override // com.daaw.nj1
-    public boolean b(rv0 rv0Var) {
+    /* renamed from: b */
+    public boolean mo9922b(rv0 rv0Var) {
         return true;
     }
 
     @Override // com.daaw.nj1
-    public void c(rv0 rv0Var, long j) {
-        if (m(rv0Var) != 2) {
+    /* renamed from: c */
+    public void mo9921c(rv0 rv0Var, long j) {
+        if (m18715m(rv0Var) != 2) {
             throw new tv0();
         }
-        if ("onMetaData".equals(l(rv0Var)) && m(rv0Var) == 8) {
-            HashMap<String, Object> i = i(rv0Var);
-            if (i.containsKey("duration")) {
-                double doubleValue = ((Double) i.get("duration")).doubleValue();
+        if ("onMetaData".equals(m18716l(rv0Var)) && m18715m(rv0Var) == 8) {
+            HashMap<String, Object> m18719i = m18719i(rv0Var);
+            if (m18719i.containsKey("duration")) {
+                double doubleValue = ((Double) m18719i.get("duration")).doubleValue();
                 if (doubleValue > 0.0d) {
-                    this.b = (long) (doubleValue * 1000000.0d);
+                    this.f14538b = (long) (doubleValue * 1000000.0d);
                 }
             }
         }
     }
 
-    public long d() {
-        return this.b;
+    /* renamed from: d */
+    public long m18724d() {
+        return this.f14538b;
     }
 }

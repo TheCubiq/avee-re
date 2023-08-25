@@ -6,10 +6,11 @@ import java.util.Objects;
 import java.util.RandomAccess;
 /* loaded from: classes.dex */
 public final class h27 {
-    public static boolean a(Iterable iterable, ty6 ty6Var) {
+    /* renamed from: a */
+    public static boolean m21081a(Iterable iterable, ty6 ty6Var) {
         if ((iterable instanceof RandomAccess) && (iterable instanceof List)) {
             Objects.requireNonNull(ty6Var);
-            return c((List) iterable, ty6Var);
+            return m21079c((List) iterable, ty6Var);
         }
         Iterator it = iterable.iterator();
         Objects.requireNonNull(ty6Var);
@@ -23,7 +24,8 @@ public final class h27 {
         return z;
     }
 
-    public static void b(List list, ty6 ty6Var, int i, int i2) {
+    /* renamed from: b */
+    public static void m21080b(List list, ty6 ty6Var, int i, int i2) {
         int size = list.size();
         while (true) {
             size--;
@@ -42,7 +44,8 @@ public final class h27 {
         }
     }
 
-    public static boolean c(List list, ty6 ty6Var) {
+    /* renamed from: c */
+    public static boolean m21079c(List list, ty6 ty6Var) {
         int i = 0;
         int i2 = 0;
         while (i < list.size()) {
@@ -52,10 +55,10 @@ public final class h27 {
                     try {
                         list.set(i2, obj);
                     } catch (IllegalArgumentException unused) {
-                        b(list, ty6Var, i2, i);
+                        m21080b(list, ty6Var, i2, i);
                         return true;
                     } catch (UnsupportedOperationException unused2) {
-                        b(list, ty6Var, i2, i);
+                        m21080b(list, ty6Var, i2, i);
                         return true;
                     }
                 }

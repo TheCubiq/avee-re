@@ -8,30 +8,30 @@ import com.google.android.gms.internal.ads.zzbef;
 public final class i33 implements Parcelable.Creator {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         ParcelFileDescriptor parcelFileDescriptor = null;
         long j = 0;
         boolean z = false;
         boolean z2 = false;
         boolean z3 = false;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            int l = y71.l(r);
-            if (l == 2) {
-                parcelFileDescriptor = (ParcelFileDescriptor) y71.e(parcel, r, ParcelFileDescriptor.CREATOR);
-            } else if (l == 3) {
-                z = y71.m(parcel, r);
-            } else if (l == 4) {
-                z2 = y71.m(parcel, r);
-            } else if (l == 5) {
-                j = y71.u(parcel, r);
-            } else if (l != 6) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            int m4047l = y71.m4047l(m4041r);
+            if (m4047l == 2) {
+                parcelFileDescriptor = (ParcelFileDescriptor) y71.m4054e(parcel, m4041r, ParcelFileDescriptor.CREATOR);
+            } else if (m4047l == 3) {
+                z = y71.m4046m(parcel, m4041r);
+            } else if (m4047l == 4) {
+                z2 = y71.m4046m(parcel, m4041r);
+            } else if (m4047l == 5) {
+                j = y71.m4038u(parcel, m4041r);
+            } else if (m4047l != 6) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                z3 = y71.m(parcel, r);
+                z3 = y71.m4046m(parcel, m4041r);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzbef(parcelFileDescriptor, z, z2, j, z3);
     }
 

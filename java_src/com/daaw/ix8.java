@@ -7,27 +7,35 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class ix8 implements Map, Serializable {
     @CheckForNull
-    public transient py8 p;
-    @CheckForNull
-    public transient py8 q;
-    @CheckForNull
-    public transient aq8 r;
 
-    public abstract aq8 a();
+    /* renamed from: p */
+    public transient py8 f14109p;
+    @CheckForNull
+
+    /* renamed from: q */
+    public transient py8 f14110q;
+    @CheckForNull
+
+    /* renamed from: r */
+    public transient aq8 f14111r;
+
+    /* renamed from: a */
+    public abstract aq8 mo19267a();
 
     @Override // java.util.Map
     /* renamed from: b */
     public final aq8 values() {
-        aq8 aq8Var = this.r;
+        aq8 aq8Var = this.f14111r;
         if (aq8Var == null) {
-            aq8 a = a();
-            this.r = a;
-            return a;
+            aq8 mo19267a = mo19267a();
+            this.f14111r = mo19267a;
+            return mo19267a;
         }
         return aq8Var;
     }
 
-    public abstract py8 c();
+    /* renamed from: c */
+    public abstract py8 mo19265c();
 
     @Override // java.util.Map
     @Deprecated
@@ -45,16 +53,17 @@ public abstract class ix8 implements Map, Serializable {
         return values().contains(obj);
     }
 
-    public abstract py8 d();
+    /* renamed from: d */
+    public abstract py8 mo19264d();
 
     @Override // java.util.Map
     /* renamed from: e */
     public final py8 entrySet() {
-        py8 py8Var = this.p;
+        py8 py8Var = this.f14109p;
         if (py8Var == null) {
-            py8 c = c();
-            this.p = c;
-            return c;
+            py8 mo19265c = mo19265c();
+            this.f14109p = mo19265c;
+            return mo19265c;
         }
         return py8Var;
     }
@@ -83,7 +92,7 @@ public abstract class ix8 implements Map, Serializable {
 
     @Override // java.util.Map
     public final int hashCode() {
-        return pa2.a(entrySet());
+        return pa2.m13536a(entrySet());
     }
 
     @Override // java.util.Map
@@ -93,11 +102,11 @@ public abstract class ix8 implements Map, Serializable {
 
     @Override // java.util.Map
     public final /* bridge */ /* synthetic */ Set keySet() {
-        py8 py8Var = this.q;
+        py8 py8Var = this.f14110q;
         if (py8Var == null) {
-            py8 d = d();
-            this.q = d;
-            return d;
+            py8 mo19264d = mo19264d();
+            this.f14110q = mo19264d;
+            return mo19264d;
         }
         return py8Var;
     }

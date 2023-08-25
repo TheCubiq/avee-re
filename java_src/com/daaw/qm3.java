@@ -6,104 +6,116 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class qm3 extends w84 {
-    public final g5 p;
 
-    public qm3(g5 g5Var) {
-        this.p = g5Var;
+    /* renamed from: p */
+    public final C1361g5 f24190p;
+
+    public qm3(C1361g5 c1361g5) {
+        this.f24190p = c1361g5;
     }
 
     @Override // com.daaw.x84
-    public final void A2(String str, String str2, yd0 yd0Var) {
-        this.p.u(str, str2, yd0Var != null ? nt0.M(yd0Var) : null);
+    /* renamed from: A2 */
+    public final void mo5442A2(String str, String str2, yd0 yd0Var) {
+        this.f24190p.m21945u(str, str2, yd0Var != null ? nt0.m14831M(yd0Var) : null);
     }
 
     @Override // com.daaw.x84
-    public final void H(Bundle bundle) {
-        this.p.s(bundle);
+    /* renamed from: H */
+    public final void mo5441H(Bundle bundle) {
+        this.f24190p.m21947s(bundle);
     }
 
     @Override // com.daaw.x84
-    public final Map H2(String str, String str2, boolean z) {
-        return this.p.m(str, str2, z);
+    /* renamed from: H2 */
+    public final Map mo5440H2(String str, String str2, boolean z) {
+        return this.f24190p.m21953m(str, str2, z);
     }
 
     @Override // com.daaw.x84
-    public final List I1(String str, String str2) {
-        return this.p.g(str, str2);
+    /* renamed from: I1 */
+    public final List mo5439I1(String str, String str2) {
+        return this.f24190p.m21959g(str, str2);
     }
 
     @Override // com.daaw.x84
-    public final void S2(String str, String str2, Bundle bundle) {
-        this.p.b(str, str2, bundle);
+    /* renamed from: S2 */
+    public final void mo5438S2(String str, String str2, Bundle bundle) {
+        this.f24190p.m21964b(str, str2, bundle);
     }
 
     @Override // com.daaw.x84
-    public final void Y1(String str, String str2, Bundle bundle) {
-        this.p.n(str, str2, bundle);
+    /* renamed from: Y1 */
+    public final void mo5437Y1(String str, String str2, Bundle bundle) {
+        this.f24190p.m21952n(str, str2, bundle);
     }
 
     @Override // com.daaw.x84
-    public final void n(String str) {
-        this.p.a(str);
+    /* renamed from: n */
+    public final void mo5436n(String str) {
+        this.f24190p.m21965a(str);
     }
 
     @Override // com.daaw.x84
-    public final void o(Bundle bundle) {
-        this.p.o(bundle);
+    /* renamed from: o */
+    public final void mo5435o(Bundle bundle) {
+        this.f24190p.m21951o(bundle);
     }
 
     @Override // com.daaw.x84
-    public final void u2(yd0 yd0Var, String str, String str2) {
-        this.p.t(yd0Var != null ? (Activity) nt0.M(yd0Var) : null, str, str2);
+    /* renamed from: u2 */
+    public final void mo5434u2(yd0 yd0Var, String str, String str2) {
+        this.f24190p.m21946t(yd0Var != null ? (Activity) nt0.m14831M(yd0Var) : null, str, str2);
     }
 
     @Override // com.daaw.x84
-    public final Bundle x(Bundle bundle) {
-        return this.p.p(bundle);
+    /* renamed from: x */
+    public final Bundle mo5433x(Bundle bundle) {
+        return this.f24190p.m21950p(bundle);
     }
 
     @Override // com.daaw.x84
     public final int zzb(String str) {
-        return this.p.l(str);
+        return this.f24190p.m21954l(str);
     }
 
     @Override // com.daaw.x84
     public final long zzc() {
-        return this.p.d();
+        return this.f24190p.m21962d();
     }
 
     @Override // com.daaw.x84
     public final String zze() {
-        return this.p.e();
+        return this.f24190p.m21961e();
     }
 
     @Override // com.daaw.x84
     public final String zzf() {
-        return this.p.f();
+        return this.f24190p.m21960f();
     }
 
     @Override // com.daaw.x84
     public final String zzg() {
-        return this.p.h();
+        return this.f24190p.m21958h();
     }
 
     @Override // com.daaw.x84
     public final String zzh() {
-        return this.p.i();
+        return this.f24190p.m21957i();
     }
 
     @Override // com.daaw.x84
     public final String zzi() {
-        return this.p.j();
+        return this.f24190p.m21956j();
     }
 
     @Override // com.daaw.x84
     public final void zzn(String str) {
-        this.p.c(str);
+        this.f24190p.m21963c(str);
     }
 
     @Override // com.daaw.x84
     public final void zzq(Bundle bundle) {
-        this.p.r(bundle);
+        this.f24190p.m21948r(bundle);
     }
 }

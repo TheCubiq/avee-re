@@ -1,19 +1,22 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class za6 implements wz7 {
-    public final wa6 a;
+
+    /* renamed from: a */
+    public final wa6 f34695a;
 
     public za6(wa6 wa6Var) {
-        this.a = wa6Var;
+        this.f34695a = wa6Var;
     }
 
-    public static boolean b(wa6 wa6Var) {
-        return wa6Var.g();
+    /* renamed from: b */
+    public static boolean m2562b(wa6 wa6Var) {
+        return wa6Var.m6266g();
     }
 
     @Override // com.daaw.m08
     /* renamed from: a */
     public final Boolean zzb() {
-        return Boolean.valueOf(this.a.g());
+        return Boolean.valueOf(this.f34695a.m6266g());
     }
 }

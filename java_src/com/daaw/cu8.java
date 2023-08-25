@@ -1,73 +1,87 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class cu8 extends sq8 {
-    public final rr8 k;
+
+    /* renamed from: k */
+    public final rr8 f6194k;
 
     public cu8(rr8 rr8Var) {
-        this.k = rr8Var;
+        this.f6194k = rr8Var;
     }
 
     @Override // com.daaw.sq8
-    public final /* synthetic */ int B(Object obj, int i) {
+    /* renamed from: B */
+    public final /* synthetic */ int mo9987B(Object obj, int i) {
         Void r1 = (Void) obj;
         return i;
     }
 
     @Override // com.daaw.sq8
-    public final /* synthetic */ long C(Object obj, long j) {
+    /* renamed from: C */
+    public final /* synthetic */ long mo9986C(Object obj, long j) {
         Void r1 = (Void) obj;
         return j;
     }
 
     @Override // com.daaw.sq8
-    public final /* synthetic */ pr8 D(Object obj, pr8 pr8Var) {
+    /* renamed from: D */
+    public final /* synthetic */ pr8 mo9985D(Object obj, pr8 pr8Var) {
         Void r1 = (Void) obj;
-        return F(pr8Var);
+        return mo17451F(pr8Var);
     }
 
     @Override // com.daaw.sq8
-    public final /* synthetic */ void E(Object obj, rr8 rr8Var, l64 l64Var) {
+    /* renamed from: E */
+    public final /* synthetic */ void mo9984E(Object obj, rr8 rr8Var, l64 l64Var) {
         Void r1 = (Void) obj;
-        G(l64Var);
+        mo17450G(l64Var);
     }
 
-    public pr8 F(pr8 pr8Var) {
+    /* renamed from: F */
+    public pr8 mo17451F(pr8 pr8Var) {
         throw null;
     }
 
-    public void G(l64 l64Var) {
+    /* renamed from: G */
+    public void mo17450G(l64 l64Var) {
         throw null;
     }
 
-    public void H() {
+    /* renamed from: H */
+    public void mo17449H() {
         throw null;
     }
 
     @Override // com.daaw.lq8, com.daaw.rr8
-    public final boolean b() {
-        this.k.b();
+    /* renamed from: b */
+    public final boolean mo11007b() {
+        this.f6194k.mo11007b();
         return true;
     }
 
     @Override // com.daaw.rr8
-    public final f53 h() {
-        return this.k.h();
+    /* renamed from: h */
+    public final f53 mo11003h() {
+        return this.f6194k.mo11003h();
     }
 
     @Override // com.daaw.rr8
-    public void l(nr8 nr8Var) {
+    /* renamed from: l */
+    public void mo10999l(nr8 nr8Var) {
         throw null;
     }
 
     @Override // com.daaw.lq8, com.daaw.rr8
-    public final l64 p() {
-        this.k.p();
+    /* renamed from: p */
+    public final l64 mo10996p() {
+        this.f6194k.mo10996p();
         return null;
     }
 
     @Override // com.daaw.sq8, com.daaw.lq8
-    public final void w(qz6 qz6Var) {
-        super.w(qz6Var);
-        H();
+    /* renamed from: w */
+    public final void mo9980w(qz6 qz6Var) {
+        super.mo9980w(qz6Var);
+        mo17449H();
     }
 }

@@ -3,19 +3,24 @@ package com.daaw;
 import com.google.android.exoplayer2.Format;
 /* loaded from: classes.dex */
 public interface sp0 {
-    public static final sp0 a = new a();
 
+    /* renamed from: a */
+    public static final sp0 f26479a = new C2964a();
+
+    /* renamed from: com.daaw.sp0$a */
     /* loaded from: classes.dex */
-    public static class a implements sp0 {
+    public static class C2964a implements sp0 {
         @Override // com.daaw.sp0
-        public boolean a(Format format) {
-            String str = format.u;
+        /* renamed from: a */
+        public boolean mo10095a(Format format) {
+            String str = format.f35721u;
             return "application/id3".equals(str) || "application/x-emsg".equals(str) || "application/x-scte35".equals(str);
         }
 
         @Override // com.daaw.sp0
-        public rp0 b(Format format) {
-            String str = format.u;
+        /* renamed from: b */
+        public rp0 mo10094b(Format format) {
+            String str = format.f35721u;
             str.hashCode();
             char c = 65535;
             switch (str.hashCode()) {
@@ -42,7 +47,7 @@ public interface sp0 {
                 case 0:
                     return new qe0();
                 case 1:
-                    return new iy();
+                    return new C1770iy();
                 case 2:
                     return new re1();
                 default:
@@ -51,7 +56,9 @@ public interface sp0 {
         }
     }
 
-    boolean a(Format format);
+    /* renamed from: a */
+    boolean mo10095a(Format format);
 
-    rp0 b(Format format);
+    /* renamed from: b */
+    rp0 mo10094b(Format format);
 }

@@ -8,60 +8,73 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 /* loaded from: classes.dex */
 public final class nl2 {
-    public static final ConditionVariable c = new ConditionVariable();
-    public static volatile ku6 d = null;
-    public static volatile Random e = null;
-    public final wm2 a;
-    public volatile Boolean b;
+
+    /* renamed from: c */
+    public static final ConditionVariable f20232c = new ConditionVariable();
+
+    /* renamed from: d */
+    public static volatile ku6 f20233d = null;
+
+    /* renamed from: e */
+    public static volatile Random f20234e = null;
+
+    /* renamed from: a */
+    public final wm2 f20235a;
+
+    /* renamed from: b */
+    public volatile Boolean f20236b;
 
     public nl2(wm2 wm2Var) {
-        this.a = wm2Var;
-        wm2Var.k().execute(new ml2(this));
+        this.f20235a = wm2Var;
+        wm2Var.m5995k().execute(new ml2(this));
     }
 
-    public static final int d() {
+    /* renamed from: d */
+    public static final int m15047d() {
         try {
-            return Build.VERSION.SDK_INT >= 21 ? ThreadLocalRandom.current().nextInt() : e().nextInt();
+            return Build.VERSION.SDK_INT >= 21 ? ThreadLocalRandom.current().nextInt() : m15046e().nextInt();
         } catch (RuntimeException unused) {
-            return e().nextInt();
+            return m15046e().nextInt();
         }
     }
 
-    public static Random e() {
-        if (e == null) {
+    /* renamed from: e */
+    public static Random m15046e() {
+        if (f20234e == null) {
             synchronized (nl2.class) {
-                if (e == null) {
-                    e = new Random();
+                if (f20234e == null) {
+                    f20234e = new Random();
                 }
             }
         }
-        return e;
+        return f20234e;
     }
 
-    public final void c(int i, int i2, long j, String str, Exception exc) {
+    /* renamed from: c */
+    public final void m15048c(int i, int i2, long j, String str, Exception exc) {
         try {
-            c.block();
-            if (!this.b.booleanValue() || d == null) {
+            f20232c.block();
+            if (!this.f20236b.booleanValue() || f20233d == null) {
                 return;
             }
-            oh2 L = xh2.L();
-            L.s(this.a.a.getPackageName());
-            L.w(j);
+            oh2 m5116L = xh2.m5116L();
+            m5116L.m14278s(this.f20235a.f31324a.getPackageName());
+            m5116L.m14274w(j);
             if (str != null) {
-                L.t(str);
+                m5116L.m14277t(str);
             }
             if (exc != null) {
                 StringWriter stringWriter = new StringWriter();
                 exc.printStackTrace(new PrintWriter(stringWriter));
-                L.x(stringWriter.toString());
-                L.v(exc.getClass().getName());
+                m5116L.m14273x(stringWriter.toString());
+                m5116L.m14275v(exc.getClass().getName());
             }
-            ju6 a = d.a(((xh2) L.n()).a());
-            a.a(i);
+            ju6 m17429a = f20233d.m17429a(((xh2) m5116L.m22315n()).mo4516a());
+            m17429a.m18239a(i);
             if (i2 != -1) {
-                a.b(i2);
+                m17429a.m18238b(i2);
             }
-            a.c();
+            m17429a.m18237c();
         } catch (Exception unused) {
         }
     }

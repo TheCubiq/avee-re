@@ -1,51 +1,62 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class m37 extends y17 {
-    public static final y17 t = new m37(new Object[0], 0);
-    public final transient Object[] r;
-    public final transient int s;
+
+    /* renamed from: t */
+    public static final y17 f18426t = new m37(new Object[0], 0);
+
+    /* renamed from: r */
+    public final transient Object[] f18427r;
+
+    /* renamed from: s */
+    public final transient int f18428s;
 
     public m37(Object[] objArr, int i) {
-        this.r = objArr;
-        this.s = i;
+        this.f18427r = objArr;
+        this.f18428s = i;
     }
 
     @Override // com.daaw.y17, com.daaw.t17
-    public final int d(Object[] objArr, int i) {
-        System.arraycopy(this.r, 0, objArr, i, this.s);
-        return i + this.s;
+    /* renamed from: d */
+    public final int mo2850d(Object[] objArr, int i) {
+        System.arraycopy(this.f18427r, 0, objArr, i, this.f18428s);
+        return i + this.f18428s;
     }
 
     @Override // com.daaw.t17
-    public final int e() {
-        return this.s;
+    /* renamed from: e */
+    public final int mo5648e() {
+        return this.f18428s;
     }
 
     @Override // com.daaw.t17
-    public final int f() {
+    /* renamed from: f */
+    public final int mo5647f() {
         return 0;
     }
 
     @Override // java.util.List
     public final Object get(int i) {
-        sy6.a(i, this.s, "index");
-        Object obj = this.r[i];
+        sy6.m9708a(i, this.f18428s, "index");
+        Object obj = this.f18427r[i];
         obj.getClass();
         return obj;
     }
 
     @Override // com.daaw.t17
-    public final boolean k() {
+    /* renamed from: k */
+    public final boolean mo5646k() {
         return false;
     }
 
     @Override // com.daaw.t17
-    public final Object[] m() {
-        return this.r;
+    /* renamed from: m */
+    public final Object[] mo5645m() {
+        return this.f18427r;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.s;
+        return this.f18428s;
     }
 }

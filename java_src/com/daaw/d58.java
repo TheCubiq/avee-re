@@ -5,7 +5,8 @@ public final class d58 implements vx8, w88 {
     }
 
     @Override // com.daaw.w88
-    public final void h(int i, Object obj) {
+    /* renamed from: h */
+    public final void mo6337h(int i, Object obj) {
         throw null;
     }
 }

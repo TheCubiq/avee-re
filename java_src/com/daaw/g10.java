@@ -1,91 +1,106 @@
 package com.daaw;
 
+import com.daaw.C3845zj;
 import com.daaw.ie1;
-import com.daaw.zj;
 import java.util.Collections;
 import java.util.Comparator;
 /* loaded from: classes.dex */
 public class g10 {
-    public static Comparator<zj.s> a = new a();
-    public static Comparator<zj.s> b = new b();
-    public static Comparator<zj.s> c = new c();
-    public static Comparator<zj.s> d = new d();
 
+    /* renamed from: a */
+    public static Comparator<C3845zj.C3864s> f10140a = new C1350a();
+
+    /* renamed from: b */
+    public static Comparator<C3845zj.C3864s> f10141b = new C1351b();
+
+    /* renamed from: c */
+    public static Comparator<C3845zj.C3864s> f10142c = new C1352c();
+
+    /* renamed from: d */
+    public static Comparator<C3845zj.C3864s> f10143d = new C1353d();
+
+    /* renamed from: com.daaw.g10$a */
     /* loaded from: classes.dex */
-    public class a implements Comparator<zj.s> {
+    public class C1350a implements Comparator<C3845zj.C3864s> {
         @Override // java.util.Comparator
         /* renamed from: a */
-        public int compare(zj.s sVar, zj.s sVar2) {
-            return sVar.f().compareTo(sVar2.f());
+        public int compare(C3845zj.C3864s c3864s, C3845zj.C3864s c3864s2) {
+            return c3864s.m2209f().compareTo(c3864s2.m2209f());
         }
     }
 
+    /* renamed from: com.daaw.g10$b */
     /* loaded from: classes.dex */
-    public class b implements Comparator<zj.s> {
+    public class C1351b implements Comparator<C3845zj.C3864s> {
         @Override // java.util.Comparator
         /* renamed from: a */
-        public int compare(zj.s sVar, zj.s sVar2) {
-            return sVar.g().compareTo(sVar2.g());
+        public int compare(C3845zj.C3864s c3864s, C3845zj.C3864s c3864s2) {
+            return c3864s.m2208g().compareTo(c3864s2.m2208g());
         }
     }
 
+    /* renamed from: com.daaw.g10$c */
     /* loaded from: classes.dex */
-    public class c implements Comparator<zj.s> {
+    public class C1352c implements Comparator<C3845zj.C3864s> {
         @Override // java.util.Comparator
         /* renamed from: a */
-        public int compare(zj.s sVar, zj.s sVar2) {
-            return g10.a(sVar.e(), sVar2.e());
+        public int compare(C3845zj.C3864s c3864s, C3845zj.C3864s c3864s2) {
+            return g10.m22101a(c3864s.m2210e(), c3864s2.m2210e());
         }
     }
 
+    /* renamed from: com.daaw.g10$d */
     /* loaded from: classes.dex */
-    public class d implements Comparator<zj.s> {
+    public class C1353d implements Comparator<C3845zj.C3864s> {
         @Override // java.util.Comparator
         /* renamed from: a */
-        public int compare(zj.s sVar, zj.s sVar2) {
-            return g10.a(sVar.d(), sVar2.d());
+        public int compare(C3845zj.C3864s c3864s, C3845zj.C3864s c3864s2) {
+            return g10.m22101a(c3864s.m2211d(), c3864s2.m2211d());
         }
     }
 
-    public static int a(long j, long j2) {
+    /* renamed from: a */
+    public static int m22101a(long j, long j2) {
         if (j < j2) {
             return -1;
         }
         return j == j2 ? 0 : 1;
     }
 
-    public static Comparator<zj.s> b(ie1.h hVar, int i) {
-        int i2 = hVar.a;
+    /* renamed from: b */
+    public static Comparator<C3845zj.C3864s> m22100b(ie1.C1695h c1695h, int i) {
+        int i2 = c1695h.f13560a;
         if (i2 != 8) {
             i = i2;
         }
-        return c(hVar, i);
+        return m22099c(c1695h, i);
     }
 
-    public static Comparator<zj.s> c(ie1.h hVar, int i) {
-        Comparator<zj.s> comparator = null;
-        if (hVar == null) {
+    /* renamed from: c */
+    public static Comparator<C3845zj.C3864s> m22099c(ie1.C1695h c1695h, int i) {
+        Comparator<C3845zj.C3864s> comparator = null;
+        if (c1695h == null) {
             return null;
         }
-        boolean z = hVar.b;
-        switch (hVar.a) {
+        boolean z = c1695h.f13561b;
+        switch (c1695h.f13560a) {
             case 0:
             case 1:
             case 2:
             case 8:
-                comparator = a;
+                comparator = f10140a;
                 break;
             case 3:
-                comparator = b;
+                comparator = f10141b;
                 break;
             case 4:
             case 5:
-                comparator = c;
+                comparator = f10142c;
                 z = !z;
                 break;
             case 6:
             case 7:
-                comparator = d;
+                comparator = f10143d;
                 z = !z;
                 break;
         }

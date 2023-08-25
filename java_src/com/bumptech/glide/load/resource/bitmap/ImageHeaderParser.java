@@ -7,9 +7,15 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 /* loaded from: classes.dex */
 public class ImageHeaderParser {
-    public static final byte[] b;
-    public static final int[] c = {0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8};
-    public final b a;
+
+    /* renamed from: b */
+    public static final byte[] f2641b;
+
+    /* renamed from: c */
+    public static final int[] f2642c = {0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8};
+
+    /* renamed from: a */
+    public final C0554b f2643a;
 
     /* loaded from: classes.dex */
     public enum ImageType {
@@ -19,68 +25,84 @@ public class ImageHeaderParser {
         PNG(false),
         UNKNOWN(false);
         
-        public final boolean p;
+
+        /* renamed from: p */
+        public final boolean f2644p;
 
         ImageType(boolean z) {
-            this.p = z;
+            this.f2644p = z;
         }
 
         public boolean hasAlpha() {
-            return this.p;
+            return this.f2644p;
         }
     }
 
+    /* renamed from: com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public final ByteBuffer a;
+    public static class C0553a {
 
-        public a(byte[] bArr) {
+        /* renamed from: a */
+        public final ByteBuffer f2645a;
+
+        public C0553a(byte[] bArr) {
             ByteBuffer wrap = ByteBuffer.wrap(bArr);
-            this.a = wrap;
+            this.f2645a = wrap;
             wrap.order(ByteOrder.BIG_ENDIAN);
         }
 
-        public short a(int i) {
-            return this.a.getShort(i);
+        /* renamed from: a */
+        public short m27808a(int i) {
+            return this.f2645a.getShort(i);
         }
 
-        public int b(int i) {
-            return this.a.getInt(i);
+        /* renamed from: b */
+        public int m27807b(int i) {
+            return this.f2645a.getInt(i);
         }
 
-        public int c() {
-            return this.a.array().length;
+        /* renamed from: c */
+        public int m27806c() {
+            return this.f2645a.array().length;
         }
 
-        public void d(ByteOrder byteOrder) {
-            this.a.order(byteOrder);
+        /* renamed from: d */
+        public void m27805d(ByteOrder byteOrder) {
+            this.f2645a.order(byteOrder);
         }
     }
 
+    /* renamed from: com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public final InputStream a;
+    public static class C0554b {
 
-        public b(InputStream inputStream) {
-            this.a = inputStream;
+        /* renamed from: a */
+        public final InputStream f2646a;
+
+        public C0554b(InputStream inputStream) {
+            this.f2646a = inputStream;
         }
 
-        public int a() {
-            return this.a.read();
+        /* renamed from: a */
+        public int m27804a() {
+            return this.f2646a.read();
         }
 
-        public int b() {
-            return ((this.a.read() << 8) & 65280) | (this.a.read() & 255);
+        /* renamed from: b */
+        public int m27803b() {
+            return ((this.f2646a.read() << 8) & 65280) | (this.f2646a.read() & 255);
         }
 
-        public short c() {
-            return (short) (this.a.read() & 255);
+        /* renamed from: c */
+        public short m27802c() {
+            return (short) (this.f2646a.read() & 255);
         }
 
-        public int d(byte[] bArr) {
+        /* renamed from: d */
+        public int m27801d(byte[] bArr) {
             int length = bArr.length;
             while (length > 0) {
-                int read = this.a.read(bArr, bArr.length - length, length);
+                int read = this.f2646a.read(bArr, bArr.length - length, length);
                 if (read == -1) {
                     break;
                 }
@@ -89,15 +111,16 @@ public class ImageHeaderParser {
             return bArr.length - length;
         }
 
-        public long e(long j) {
+        /* renamed from: e */
+        public long m27800e(long j) {
             if (j < 0) {
                 return 0L;
             }
             long j2 = j;
             while (j2 > 0) {
-                long skip = this.a.skip(j2);
+                long skip = this.f2646a.skip(j2);
                 if (skip <= 0) {
-                    if (this.a.read() == -1) {
+                    if (this.f2646a.read() == -1) {
                         break;
                     }
                     skip = 1;
@@ -114,155 +137,217 @@ public class ImageHeaderParser {
             bArr = "Exif\u0000\u0000".getBytes("UTF-8");
         } catch (UnsupportedEncodingException unused) {
         }
-        b = bArr;
+        f2641b = bArr;
     }
 
     public ImageHeaderParser(InputStream inputStream) {
-        this.a = new b(inputStream);
+        this.f2643a = new C0554b(inputStream);
     }
 
-    public static int a(int i, int i2) {
+    /* renamed from: a */
+    public static int m27815a(int i, int i2) {
         return i + 2 + (i2 * 12);
     }
 
-    public static boolean e(int i) {
+    /* renamed from: e */
+    public static boolean m27811e(int i) {
         return (i & 65496) == 65496 || i == 19789 || i == 18761;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:13:0x003b  */
+    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static int g(com.bumptech.glide.load.resource.bitmap.ImageHeaderParser.a r12) {
-        /*
-            Method dump skipped, instructions count: 260
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.bumptech.glide.load.resource.bitmap.ImageHeaderParser.g(com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$a):int");
+    public static int m27809g(C0553a c0553a) {
+        ByteOrder byteOrder;
+        short m27808a;
+        int i;
+        StringBuilder sb;
+        String str;
+        short m27808a2 = c0553a.m27808a(6);
+        if (m27808a2 != 19789) {
+            if (m27808a2 == 18761) {
+                byteOrder = ByteOrder.LITTLE_ENDIAN;
+                c0553a.m27805d(byteOrder);
+                int m27807b = c0553a.m27807b(10) + 6;
+                m27808a = c0553a.m27808a(m27807b);
+                for (i = 0; i < m27808a; i++) {
+                    int m27815a = m27815a(m27807b, i);
+                    short m27808a3 = c0553a.m27808a(m27815a);
+                    if (m27808a3 == 274) {
+                        short m27808a4 = c0553a.m27808a(m27815a + 2);
+                        if (m27808a4 >= 1 && m27808a4 <= 12) {
+                            int m27807b2 = c0553a.m27807b(m27815a + 4);
+                            if (m27807b2 >= 0) {
+                                if (Log.isLoggable("ImageHeaderParser", 3)) {
+                                    StringBuilder sb2 = new StringBuilder();
+                                    sb2.append("Got tagIndex=");
+                                    sb2.append(i);
+                                    sb2.append(" tagType=");
+                                    sb2.append((int) m27808a3);
+                                    sb2.append(" formatCode=");
+                                    sb2.append((int) m27808a4);
+                                    sb2.append(" componentCount=");
+                                    sb2.append(m27807b2);
+                                }
+                                int i2 = m27807b2 + f2642c[m27808a4];
+                                if (i2 <= 4) {
+                                    int i3 = m27815a + 8;
+                                    if (i3 < 0 || i3 > c0553a.m27806c()) {
+                                        if (Log.isLoggable("ImageHeaderParser", 3)) {
+                                            StringBuilder sb3 = new StringBuilder();
+                                            sb3.append("Illegal tagValueOffset=");
+                                            sb3.append(i3);
+                                            sb3.append(" tagType=");
+                                            sb3.append((int) m27808a3);
+                                        }
+                                    } else if (i2 >= 0 && i2 + i3 <= c0553a.m27806c()) {
+                                        return c0553a.m27808a(i3);
+                                    } else {
+                                        if (Log.isLoggable("ImageHeaderParser", 3)) {
+                                            StringBuilder sb4 = new StringBuilder();
+                                            sb4.append("Illegal number of bytes for TI tag data tagType=");
+                                            sb4.append((int) m27808a3);
+                                        }
+                                    }
+                                } else if (Log.isLoggable("ImageHeaderParser", 3)) {
+                                    sb = new StringBuilder();
+                                    str = "Got byte count > 4, not orientation, continuing, formatCode=";
+                                    sb.append(str);
+                                    sb.append((int) m27808a4);
+                                }
+                            } else {
+                                continue;
+                            }
+                        } else if (Log.isLoggable("ImageHeaderParser", 3)) {
+                            sb = new StringBuilder();
+                            str = "Got invalid format code=";
+                            sb.append(str);
+                            sb.append((int) m27808a4);
+                        }
+                    }
+                }
+                return -1;
+            } else if (Log.isLoggable("ImageHeaderParser", 3)) {
+                StringBuilder sb5 = new StringBuilder();
+                sb5.append("Unknown endianness = ");
+                sb5.append((int) m27808a2);
+            }
+        }
+        byteOrder = ByteOrder.BIG_ENDIAN;
+        c0553a.m27805d(byteOrder);
+        int m27807b3 = c0553a.m27807b(10) + 6;
+        m27808a = c0553a.m27808a(m27807b3);
+        while (i < m27808a) {
+        }
+        return -1;
     }
 
-    public final byte[] b() {
-        short c2;
-        int b2;
+    /* renamed from: b */
+    public final byte[] m27814b() {
+        short m27802c;
+        int m27803b;
         long j;
-        long e;
+        long m27800e;
         do {
-            short c3 = this.a.c();
-            if (c3 != 255) {
+            short m27802c2 = this.f2643a.m27802c();
+            if (m27802c2 != 255) {
                 if (Log.isLoggable("ImageHeaderParser", 3)) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Unknown segmentId=");
-                    sb.append((int) c3);
+                    sb.append((int) m27802c2);
                 }
                 return null;
             }
-            c2 = this.a.c();
-            if (c2 == 218 || c2 == 217) {
+            m27802c = this.f2643a.m27802c();
+            if (m27802c == 218 || m27802c == 217) {
                 return null;
             }
-            b2 = this.a.b() - 2;
-            if (c2 == 225) {
-                byte[] bArr = new byte[b2];
-                int d = this.a.d(bArr);
-                if (d != b2) {
+            m27803b = this.f2643a.m27803b() - 2;
+            if (m27802c == 225) {
+                byte[] bArr = new byte[m27803b];
+                int m27801d = this.f2643a.m27801d(bArr);
+                if (m27801d != m27803b) {
                     if (Log.isLoggable("ImageHeaderParser", 3)) {
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("Unable to read segment data, type: ");
-                        sb2.append((int) c2);
+                        sb2.append((int) m27802c);
                         sb2.append(", length: ");
-                        sb2.append(b2);
+                        sb2.append(m27803b);
                         sb2.append(", actually read: ");
-                        sb2.append(d);
+                        sb2.append(m27801d);
                     }
                     return null;
                 }
                 return bArr;
             }
-            j = b2;
-            e = this.a.e(j);
-        } while (e == j);
+            j = m27803b;
+            m27800e = this.f2643a.m27800e(j);
+        } while (m27800e == j);
         if (Log.isLoggable("ImageHeaderParser", 3)) {
             StringBuilder sb3 = new StringBuilder();
             sb3.append("Unable to skip enough data, type: ");
-            sb3.append((int) c2);
+            sb3.append((int) m27802c);
             sb3.append(", wanted to skip: ");
-            sb3.append(b2);
+            sb3.append(m27803b);
             sb3.append(", but actually skipped: ");
-            sb3.append(e);
+            sb3.append(m27800e);
         }
         return null;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x0033  */
     /* JADX WARN: Removed duplicated region for block: B:23:0x003d A[RETURN] */
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public int c() {
-        /*
-            r7 = this;
-            com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$b r0 = r7.a
-            int r0 = r0.b()
-            boolean r0 = e(r0)
-            r1 = -1
-            if (r0 != 0) goto Le
-            return r1
-        Le:
-            byte[] r0 = r7.b()
-            r2 = 0
-            if (r0 == 0) goto L1d
-            int r3 = r0.length
-            byte[] r4 = com.bumptech.glide.load.resource.bitmap.ImageHeaderParser.b
-            int r4 = r4.length
-            if (r3 <= r4) goto L1d
-            r3 = 1
-            goto L1e
-        L1d:
-            r3 = 0
-        L1e:
-            if (r3 == 0) goto L30
-            r4 = 0
-        L21:
-            byte[] r5 = com.bumptech.glide.load.resource.bitmap.ImageHeaderParser.b
-            int r6 = r5.length
-            if (r4 >= r6) goto L30
-            r6 = r0[r4]
-            r5 = r5[r4]
-            if (r6 == r5) goto L2d
-            goto L31
-        L2d:
-            int r4 = r4 + 1
-            goto L21
-        L30:
-            r2 = r3
-        L31:
-            if (r2 == 0) goto L3d
-            com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$a r1 = new com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$a
-            r1.<init>(r0)
-            int r0 = g(r1)
-            return r0
-        L3d:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.bumptech.glide.load.resource.bitmap.ImageHeaderParser.c():int");
+    public int m27813c() {
+        if (!m27811e(this.f2643a.m27803b())) {
+            return -1;
+        }
+        byte[] m27814b = m27814b();
+        boolean z = false;
+        boolean z2 = m27814b != null && m27814b.length > f2641b.length;
+        if (z2) {
+            int i = 0;
+            while (true) {
+                byte[] bArr = f2641b;
+                if (i >= bArr.length) {
+                    break;
+                } else if (m27814b[i] != bArr[i]) {
+                    break;
+                } else {
+                    i++;
+                }
+            }
+            if (z) {
+                return -1;
+            }
+            return m27809g(new C0553a(m27814b));
+        }
+        z = z2;
+        if (z) {
+        }
     }
 
-    public ImageType d() {
-        int b2 = this.a.b();
-        if (b2 == 65496) {
+    /* renamed from: d */
+    public ImageType m27812d() {
+        int m27803b = this.f2643a.m27803b();
+        if (m27803b == 65496) {
             return ImageType.JPEG;
         }
-        int b3 = ((b2 << 16) & (-65536)) | (this.a.b() & 65535);
-        if (b3 != -1991225785) {
-            return (b3 >> 8) == 4671814 ? ImageType.GIF : ImageType.UNKNOWN;
+        int m27803b2 = ((m27803b << 16) & (-65536)) | (this.f2643a.m27803b() & 65535);
+        if (m27803b2 != -1991225785) {
+            return (m27803b2 >> 8) == 4671814 ? ImageType.GIF : ImageType.UNKNOWN;
         }
-        this.a.e(21L);
-        return this.a.a() >= 3 ? ImageType.PNG_A : ImageType.PNG;
+        this.f2643a.m27800e(21L);
+        return this.f2643a.m27804a() >= 3 ? ImageType.PNG_A : ImageType.PNG;
     }
 
-    public boolean f() {
-        return d().hasAlpha();
+    /* renamed from: f */
+    public boolean m27810f() {
+        return m27812d().hasAlpha();
     }
 }

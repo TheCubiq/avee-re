@@ -4,25 +4,30 @@ import java.util.Arrays;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class dq7 {
-    public final byte[] a;
+
+    /* renamed from: a */
+    public final byte[] f7640a;
 
     public dq7(byte[] bArr, int i, int i2) {
         byte[] bArr2 = new byte[i2];
-        this.a = bArr2;
+        this.f7640a = bArr2;
         System.arraycopy(bArr, 0, bArr2, 0, i2);
     }
 
-    public static dq7 b(byte[] bArr) {
+    /* renamed from: b */
+    public static dq7 m24078b(byte[] bArr) {
         Objects.requireNonNull(bArr, "data must be non-null");
         return new dq7(bArr, 0, bArr.length);
     }
 
-    public final int a() {
-        return this.a.length;
+    /* renamed from: a */
+    public final int m24079a() {
+        return this.f7640a.length;
     }
 
-    public final byte[] c() {
-        byte[] bArr = this.a;
+    /* renamed from: c */
+    public final byte[] m24077c() {
+        byte[] bArr = this.f7640a;
         int length = bArr.length;
         byte[] bArr2 = new byte[length];
         System.arraycopy(bArr, 0, bArr2, 0, length);
@@ -31,17 +36,17 @@ public final class dq7 {
 
     public final boolean equals(Object obj) {
         if (obj instanceof dq7) {
-            return Arrays.equals(((dq7) obj).a, this.a);
+            return Arrays.equals(((dq7) obj).f7640a, this.f7640a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(this.a);
+        return Arrays.hashCode(this.f7640a);
     }
 
     public final String toString() {
-        String a = op7.a(this.a);
-        return "Bytes(" + a + ")";
+        String m14096a = op7.m14096a(this.f7640a);
+        return "Bytes(" + m14096a + ")";
     }
 }

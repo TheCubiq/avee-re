@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class dx5 implements wz7 {
-    public final cx5 a;
+
+    /* renamed from: a */
+    public final cx5 f7966a;
 
     public dx5(cx5 cx5Var) {
-        this.a = cx5Var;
+        this.f7966a = cx5Var;
     }
 
-    public final fa3 a() {
-        return this.a.a();
+    /* renamed from: a */
+    public final fa3 m23827a() {
+        return this.f7966a.m24913a();
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return this.a.a();
+        return this.f7966a.m24913a();
     }
 }

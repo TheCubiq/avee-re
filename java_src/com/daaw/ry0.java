@@ -7,25 +7,29 @@ import java.util.Objects;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNull;
 /* loaded from: classes.dex */
 public final class ry0 {
-    public static void a(boolean z) {
+    /* renamed from: a */
+    public static void m10839a(boolean z) {
         if (!z) {
             throw new IllegalArgumentException();
         }
     }
 
-    public static void b(boolean z, Object obj) {
+    /* renamed from: b */
+    public static void m10838b(boolean z, Object obj) {
         if (!z) {
             throw new IllegalArgumentException(String.valueOf(obj));
         }
     }
 
-    public static void c(boolean z, String str, Object... objArr) {
+    /* renamed from: c */
+    public static void m10837c(boolean z, String str, Object... objArr) {
         if (!z) {
             throw new IllegalArgumentException(String.format(str, objArr));
         }
     }
 
-    public static void d(Handler handler) {
+    /* renamed from: d */
+    public static void m10836d(Handler handler) {
         Looper myLooper = Looper.myLooper();
         if (myLooper != handler.getLooper()) {
             String name = myLooper != null ? myLooper.getThread().getName() : "null current looper";
@@ -34,14 +38,16 @@ public final class ry0 {
         }
     }
 
-    public static void e(String str) {
-        if (!qx2.a()) {
+    /* renamed from: e */
+    public static void m10835e(String str) {
+        if (!qx2.m11972a()) {
             throw new IllegalStateException(str);
         }
     }
 
     @EnsuresNonNull({"#1"})
-    public static String f(String str) {
+    /* renamed from: f */
+    public static String m10834f(String str) {
         if (TextUtils.isEmpty(str)) {
             throw new IllegalArgumentException("Given String is empty or null");
         }
@@ -49,51 +55,59 @@ public final class ry0 {
     }
 
     @EnsuresNonNull({"#1"})
-    public static String g(String str, Object obj) {
+    /* renamed from: g */
+    public static String m10833g(String str, Object obj) {
         if (TextUtils.isEmpty(str)) {
             throw new IllegalArgumentException(String.valueOf(obj));
         }
         return str;
     }
 
-    public static void h() {
-        i("Must not be called on the main application thread");
+    /* renamed from: h */
+    public static void m10832h() {
+        m10831i("Must not be called on the main application thread");
     }
 
-    public static void i(String str) {
-        if (qx2.a()) {
+    /* renamed from: i */
+    public static void m10831i(String str) {
+        if (qx2.m11972a()) {
             throw new IllegalStateException(str);
         }
     }
 
     @EnsuresNonNull({"#1"})
-    public static <T> T j(T t) {
+    /* renamed from: j */
+    public static <T> T m10830j(T t) {
         Objects.requireNonNull(t, "null reference");
         return t;
     }
 
     @EnsuresNonNull({"#1"})
-    public static <T> T k(T t, Object obj) {
+    /* renamed from: k */
+    public static <T> T m10829k(T t, Object obj) {
         if (t != null) {
             return t;
         }
         throw new NullPointerException(String.valueOf(obj));
     }
 
-    public static int l(int i) {
+    /* renamed from: l */
+    public static int m10828l(int i) {
         if (i != 0) {
             return i;
         }
         throw new IllegalArgumentException("Given Integer is zero");
     }
 
-    public static void m(boolean z) {
+    /* renamed from: m */
+    public static void m10827m(boolean z) {
         if (!z) {
             throw new IllegalStateException();
         }
     }
 
-    public static void n(boolean z, Object obj) {
+    /* renamed from: n */
+    public static void m10826n(boolean z, Object obj) {
         if (!z) {
             throw new IllegalStateException(String.valueOf(obj));
         }

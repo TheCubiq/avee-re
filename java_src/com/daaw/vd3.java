@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class vd3 extends cp2 implements wd3 {
-    public static wd3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static wd3 m7242g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

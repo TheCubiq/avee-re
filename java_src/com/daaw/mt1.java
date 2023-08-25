@@ -5,27 +5,33 @@ import java.util.HashSet;
 import java.util.Set;
 /* loaded from: classes.dex */
 public class mt1 {
-    public final HashMap<String, ht1> a = new HashMap<>();
 
-    public final void a() {
-        for (ht1 ht1Var : this.a.values()) {
-            ht1Var.a();
+    /* renamed from: a */
+    public final HashMap<String, ht1> f19140a = new HashMap<>();
+
+    /* renamed from: a */
+    public final void m15778a() {
+        for (ht1 ht1Var : this.f19140a.values()) {
+            ht1Var.m20433a();
         }
-        this.a.clear();
+        this.f19140a.clear();
     }
 
-    public final ht1 b(String str) {
-        return this.a.get(str);
+    /* renamed from: b */
+    public final ht1 m15777b(String str) {
+        return this.f19140a.get(str);
     }
 
-    public Set<String> c() {
-        return new HashSet(this.a.keySet());
+    /* renamed from: c */
+    public Set<String> m15776c() {
+        return new HashSet(this.f19140a.keySet());
     }
 
-    public final void d(String str, ht1 ht1Var) {
-        ht1 put = this.a.put(str, ht1Var);
+    /* renamed from: d */
+    public final void m15775d(String str, ht1 ht1Var) {
+        ht1 put = this.f19140a.put(str, ht1Var);
         if (put != null) {
-            put.d();
+            put.mo7531d();
         }
     }
 }

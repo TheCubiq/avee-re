@@ -5,6 +5,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.math.BigInteger;
 import java.security.InvalidKeyException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
+import java.security.interfaces.RSAKey;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.RSAPrivateKeySpec;
@@ -81,52 +84,24 @@ class OpenSSLRSAPrivateKey implements RSAPrivateKey, OpenSSLKeyHolder {
     /* JADX WARN: Removed duplicated region for block: B:13:0x0026  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static org.conscrypt.OpenSSLKey wrapJCAPrivateKeyForTLSStackOnly(java.security.PrivateKey r3, java.security.PublicKey r4) {
-        /*
-            boolean r0 = r3 instanceof java.security.interfaces.RSAKey
-            if (r0 == 0) goto Lc
-            r0 = r3
-            java.security.interfaces.RSAKey r0 = (java.security.interfaces.RSAKey) r0
-        L7:
-            java.math.BigInteger r0 = r0.getModulus()
-            goto L15
-        Lc:
-            boolean r0 = r4 instanceof java.security.interfaces.RSAKey
-            if (r0 == 0) goto L14
-            r0 = r4
-            java.security.interfaces.RSAKey r0 = (java.security.interfaces.RSAKey) r0
-            goto L7
-        L14:
-            r0 = 0
-        L15:
-            if (r0 == 0) goto L26
-            org.conscrypt.OpenSSLKey r4 = new org.conscrypt.OpenSSLKey
-            byte[] r0 = r0.toByteArray()
-            long r0 = org.conscrypt.NativeCrypto.getRSAPrivateKeyWrapper(r3, r0)
-            r3 = 1
-            r4.<init>(r0, r3)
-            return r4
-        L26:
-            java.security.InvalidKeyException r0 = new java.security.InvalidKeyException
-            java.lang.StringBuilder r1 = new java.lang.StringBuilder
-            r1.<init>()
-            java.lang.String r2 = "RSA modulus not available. Private: "
-            r1.append(r2)
-            r1.append(r3)
-            java.lang.String r3 = ", public: "
-            r1.append(r3)
-            r1.append(r4)
-            java.lang.String r3 = r1.toString()
-            r0.<init>(r3)
-            goto L46
-        L45:
-            throw r0
-        L46:
-            goto L45
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.OpenSSLRSAPrivateKey.wrapJCAPrivateKeyForTLSStackOnly(java.security.PrivateKey, java.security.PublicKey):org.conscrypt.OpenSSLKey");
+    public static OpenSSLKey wrapJCAPrivateKeyForTLSStackOnly(PrivateKey privateKey, PublicKey publicKey) {
+        BigInteger bigInteger;
+        RSAKey rSAKey;
+        if (privateKey instanceof RSAKey) {
+            rSAKey = (RSAKey) privateKey;
+        } else if (!(publicKey instanceof RSAKey)) {
+            bigInteger = null;
+            if (bigInteger == null) {
+                return new OpenSSLKey(NativeCrypto.getRSAPrivateKeyWrapper(privateKey, bigInteger.toByteArray()), true);
+            }
+            throw new InvalidKeyException("RSA modulus not available. Private: " + privateKey + ", public: " + publicKey);
+        } else {
+            rSAKey = (RSAKey) publicKey;
+        }
+        bigInteger = rSAKey.getModulus();
+        if (bigInteger == null) {
+        }
     }
 
     public static OpenSSLKey wrapPlatformKey(RSAPrivateKey rSAPrivateKey) {

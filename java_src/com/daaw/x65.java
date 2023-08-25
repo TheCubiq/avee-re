@@ -8,20 +8,25 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class x65 {
-    public final Executor a;
-    public final s65 b;
+
+    /* renamed from: a */
+    public final Executor f32155a;
+
+    /* renamed from: b */
+    public final s65 f32156b;
 
     public x65(Executor executor, s65 s65Var) {
-        this.a = executor;
-        this.b = s65Var;
+        this.f32155a = executor;
+        this.f32156b = s65Var;
     }
 
-    public final f77 a(JSONObject jSONObject, String str) {
+    /* renamed from: a */
+    public final f77 m5499a(JSONObject jSONObject, String str) {
         final String optString;
-        f77 m;
+        f77 m10630m;
         JSONArray optJSONArray = jSONObject.optJSONArray("custom_assets");
         if (optJSONArray == null) {
-            return s67.i(Collections.emptyList());
+            return s67.m10634i(Collections.emptyList());
         }
         ArrayList arrayList = new ArrayList();
         int length = optJSONArray.length();
@@ -33,19 +38,19 @@ public final class x65 {
                 if ("string".equals(optString2)) {
                     w65Var = new w65(optString, optJSONObject.optString("string_value"));
                 } else if ("image".equals(optString2)) {
-                    m = s67.m(this.b.e(optJSONObject, "image_value"), new ey6() { // from class: com.daaw.u65
+                    m10630m = s67.m10630m(this.f32156b.m10656e(optJSONObject, "image_value"), new ey6() { // from class: com.daaw.u65
                         @Override // com.daaw.ey6
                         public final Object apply(Object obj) {
                             return new w65(optString, (dc3) obj);
                         }
-                    }, this.a);
-                    arrayList.add(m);
+                    }, this.f32155a);
+                    arrayList.add(m10630m);
                 }
             }
-            m = s67.i(w65Var);
-            arrayList.add(m);
+            m10630m = s67.m10634i(w65Var);
+            arrayList.add(m10630m);
         }
-        return s67.m(s67.e(arrayList), new ey6() { // from class: com.daaw.v65
+        return s67.m10630m(s67.m10638e(arrayList), new ey6() { // from class: com.daaw.v65
             @Override // com.daaw.ey6
             public final Object apply(Object obj) {
                 ArrayList arrayList2 = new ArrayList();
@@ -56,6 +61,6 @@ public final class x65 {
                 }
                 return arrayList2;
             }
-        }, this.a);
+        }, this.f32155a);
     }
 }

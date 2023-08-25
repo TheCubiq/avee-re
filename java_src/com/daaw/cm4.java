@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface cm4 {
-    qq5 a(int i, String str);
+    /* renamed from: a */
+    qq5 mo19170a(int i, String str);
 }

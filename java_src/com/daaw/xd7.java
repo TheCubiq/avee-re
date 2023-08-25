@@ -3,25 +3,33 @@ package com.daaw;
 import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public abstract class xd7 {
-    public final dq7 a;
-    public final Class b;
+
+    /* renamed from: a */
+    public final dq7 f32596a;
+
+    /* renamed from: b */
+    public final Class f32597b;
 
     public /* synthetic */ xd7(dq7 dq7Var, Class cls, wd7 wd7Var) {
-        this.a = dq7Var;
-        this.b = cls;
+        this.f32596a = dq7Var;
+        this.f32597b = cls;
     }
 
-    public static xd7 b(sd7 sd7Var, dq7 dq7Var, Class cls) {
+    /* renamed from: b */
+    public static xd7 m5202b(sd7 sd7Var, dq7 dq7Var, Class cls) {
         return new rd7(dq7Var, cls, sd7Var);
     }
 
-    public abstract m87 a(gf7 gf7Var, @Nullable x97 x97Var);
+    /* renamed from: a */
+    public abstract m87 mo5203a(gf7 gf7Var, @Nullable x97 x97Var);
 
-    public final dq7 c() {
-        return this.a;
+    /* renamed from: c */
+    public final dq7 m5201c() {
+        return this.f32596a;
     }
 
-    public final Class d() {
-        return this.b;
+    /* renamed from: d */
+    public final Class m5200d() {
+        return this.f32597b;
     }
 }

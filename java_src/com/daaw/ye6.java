@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ye6 {
-    qp4 a(xe6 xe6Var);
+    /* renamed from: a */
+    qp4 mo3795a(xe6 xe6Var);
 }

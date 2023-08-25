@@ -12,31 +12,52 @@ import java.util.List;
 /* loaded from: classes.dex */
 public final class zzbei extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbei> CREATOR = new k33();
-    public final String p;
-    public final long q;
-    public final String r;
-    public final String s;
-    public final String t;
-    public final Bundle u;
-    public final boolean v;
-    public long w;
-    public String x;
-    public int y;
+
+    /* renamed from: p */
+    public final String f36833p;
+
+    /* renamed from: q */
+    public final long f36834q;
+
+    /* renamed from: r */
+    public final String f36835r;
+
+    /* renamed from: s */
+    public final String f36836s;
+
+    /* renamed from: t */
+    public final String f36837t;
+
+    /* renamed from: u */
+    public final Bundle f36838u;
+
+    /* renamed from: v */
+    public final boolean f36839v;
+
+    /* renamed from: w */
+    public long f36840w;
+
+    /* renamed from: x */
+    public String f36841x;
+
+    /* renamed from: y */
+    public int f36842y;
 
     public zzbei(String str, long j, String str2, String str3, String str4, Bundle bundle, boolean z, long j2, String str5, int i) {
-        this.p = str;
-        this.q = j;
-        this.r = str2 == null ? "" : str2;
-        this.s = str3 == null ? "" : str3;
-        this.t = str4 == null ? "" : str4;
-        this.u = bundle == null ? new Bundle() : bundle;
-        this.v = z;
-        this.w = j2;
-        this.x = str5;
-        this.y = i;
+        this.f36833p = str;
+        this.f36834q = j;
+        this.f36835r = str2 == null ? "" : str2;
+        this.f36836s = str3 == null ? "" : str3;
+        this.f36837t = str4 == null ? "" : str4;
+        this.f36838u = bundle == null ? new Bundle() : bundle;
+        this.f36839v = z;
+        this.f36840w = j2;
+        this.f36841x = str5;
+        this.f36842y = i;
     }
 
-    public static zzbei h(Uri uri) {
+    /* renamed from: h */
+    public static zzbei m1106h(Uri uri) {
         try {
             if ("gcache".equals(uri.getScheme())) {
                 List<String> pathSegments = uri.getPathSegments();
@@ -69,17 +90,17 @@ public final class zzbei extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.q(parcel, 2, this.p, false);
-        z71.n(parcel, 3, this.q);
-        z71.q(parcel, 4, this.r, false);
-        z71.q(parcel, 5, this.s, false);
-        z71.q(parcel, 6, this.t, false);
-        z71.e(parcel, 7, this.u, false);
-        z71.c(parcel, 8, this.v);
-        z71.n(parcel, 9, this.w);
-        z71.q(parcel, 10, this.x, false);
-        z71.k(parcel, 11, this.y);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2717q(parcel, 2, this.f36833p, false);
+        z71.m2720n(parcel, 3, this.f36834q);
+        z71.m2717q(parcel, 4, this.f36835r, false);
+        z71.m2717q(parcel, 5, this.f36836s, false);
+        z71.m2717q(parcel, 6, this.f36837t, false);
+        z71.m2729e(parcel, 7, this.f36838u, false);
+        z71.m2731c(parcel, 8, this.f36839v);
+        z71.m2720n(parcel, 9, this.f36840w);
+        z71.m2717q(parcel, 10, this.f36841x, false);
+        z71.m2723k(parcel, 11, this.f36842y);
+        z71.m2732b(parcel, m2733a);
     }
 }

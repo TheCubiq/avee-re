@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface r81 {
-    boolean a();
+    /* renamed from: a */
+    boolean mo9090a();
 
-    void d(String str);
+    /* renamed from: d */
+    void mo9088d(String str);
 
-    void e(qy1... qy1VarArr);
+    /* renamed from: e */
+    void mo9087e(qy1... qy1VarArr);
 }

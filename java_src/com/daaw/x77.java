@@ -3,7 +3,8 @@ package com.daaw;
 import java.util.concurrent.Future;
 /* loaded from: classes.dex */
 public final class x77 {
-    public static Object a(Future future) {
+    /* renamed from: a */
+    public static Object m5484a(Future future) {
         Object obj;
         boolean z = false;
         while (true) {

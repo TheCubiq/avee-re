@@ -3,13 +3,18 @@ package com.daaw;
 import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public interface ne0 {
-    void a(int i);
+    /* renamed from: a */
+    void mo13840a(int i);
 
-    void b();
+    /* renamed from: b */
+    void mo13839b();
 
-    void c(ByteBuffer byteBuffer, long j, int i, int i2, int i3, int i4, long j2);
+    /* renamed from: c */
+    void mo13838c(ByteBuffer byteBuffer, long j, int i, int i2, int i3, int i4, long j2);
 
-    boolean d(int i);
+    /* renamed from: d */
+    boolean mo13837d(int i);
 
-    void e(boolean z);
+    /* renamed from: e */
+    void mo13836e(boolean z);
 }

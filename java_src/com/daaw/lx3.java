@@ -5,41 +5,54 @@ import com.google.android.gms.ads.internal.util.zzg;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class lx3 {
-    public Context a;
-    public ag b;
-    public zzg c;
-    public ky3 d;
+
+    /* renamed from: a */
+    public Context f17889a;
+
+    /* renamed from: b */
+    public InterfaceC0623ag f17890b;
+
+    /* renamed from: c */
+    public zzg f17891c;
+
+    /* renamed from: d */
+    public ky3 f17892d;
 
     public /* synthetic */ lx3(kx3 kx3Var) {
     }
 
-    public final lx3 a(zzg zzgVar) {
-        this.c = zzgVar;
+    /* renamed from: a */
+    public final lx3 m16386a(zzg zzgVar) {
+        this.f17891c = zzgVar;
         return this;
     }
 
-    public final lx3 b(Context context) {
+    /* renamed from: b */
+    public final lx3 m16385b(Context context) {
         Objects.requireNonNull(context);
-        this.a = context;
+        this.f17889a = context;
         return this;
     }
 
-    public final lx3 c(ag agVar) {
-        Objects.requireNonNull(agVar);
-        this.b = agVar;
+    /* renamed from: c */
+    public final lx3 m16384c(InterfaceC0623ag interfaceC0623ag) {
+        Objects.requireNonNull(interfaceC0623ag);
+        this.f17890b = interfaceC0623ag;
         return this;
     }
 
-    public final lx3 d(ky3 ky3Var) {
-        this.d = ky3Var;
+    /* renamed from: d */
+    public final lx3 m16383d(ky3 ky3Var) {
+        this.f17892d = ky3Var;
         return this;
     }
 
-    public final ly3 e() {
-        e08.c(this.a, Context.class);
-        e08.c(this.b, ag.class);
-        e08.c(this.c, zzg.class);
-        e08.c(this.d, ky3.class);
-        return new rx3(this.a, this.b, this.c, this.d, null);
+    /* renamed from: e */
+    public final ly3 m16382e() {
+        e08.m23800c(this.f17889a, Context.class);
+        e08.m23800c(this.f17890b, InterfaceC0623ag.class);
+        e08.m23800c(this.f17891c, zzg.class);
+        e08.m23800c(this.f17892d, ky3.class);
+        return new rx3(this.f17889a, this.f17890b, this.f17891c, this.f17892d, null);
     }
 }

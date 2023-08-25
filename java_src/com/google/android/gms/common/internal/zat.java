@@ -10,16 +10,24 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes.dex */
 public final class zat extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zat> CREATOR = new u22();
-    public final int p;
-    public final Account q;
-    public final int r;
-    public final GoogleSignInAccount s;
+
+    /* renamed from: p */
+    public final int f36652p;
+
+    /* renamed from: q */
+    public final Account f36653q;
+
+    /* renamed from: r */
+    public final int f36654r;
+
+    /* renamed from: s */
+    public final GoogleSignInAccount f36655s;
 
     public zat(int i, Account account, int i2, GoogleSignInAccount googleSignInAccount) {
-        this.p = i;
-        this.q = account;
-        this.r = i2;
-        this.s = googleSignInAccount;
+        this.f36652p = i;
+        this.f36653q = account;
+        this.f36654r = i2;
+        this.f36655s = googleSignInAccount;
     }
 
     public zat(Account account, int i, GoogleSignInAccount googleSignInAccount) {
@@ -28,11 +36,11 @@ public final class zat extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.p);
-        z71.p(parcel, 2, this.q, i, false);
-        z71.k(parcel, 3, this.r);
-        z71.p(parcel, 4, this.s, i, false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f36652p);
+        z71.m2718p(parcel, 2, this.f36653q, i, false);
+        z71.m2723k(parcel, 3, this.f36654r);
+        z71.m2718p(parcel, 4, this.f36655s, i, false);
+        z71.m2732b(parcel, m2733a);
     }
 }

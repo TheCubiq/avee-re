@@ -8,17 +8,17 @@ import com.google.android.gms.internal.ads.zzcbz;
 public final class mu3 implements Parcelable.Creator {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         ParcelFileDescriptor parcelFileDescriptor = null;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            if (y71.l(r) != 2) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            if (y71.m4047l(m4041r) != 2) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                parcelFileDescriptor = (ParcelFileDescriptor) y71.e(parcel, r, ParcelFileDescriptor.CREATOR);
+                parcelFileDescriptor = (ParcelFileDescriptor) y71.m4054e(parcel, m4041r, ParcelFileDescriptor.CREATOR);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzcbz(parcelFileDescriptor);
     }
 

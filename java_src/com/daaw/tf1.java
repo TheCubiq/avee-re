@@ -5,12 +5,13 @@ import java.util.Collections;
 import java.util.Comparator;
 /* loaded from: classes.dex */
 public class tf1 {
-    public static <T extends pf1> Comparator<lo1<tx0, T>> d(ie1.h hVar, int i) {
+    /* renamed from: d */
+    public static <T extends pf1> Comparator<lo1<tx0, T>> m9203d(ie1.C1695h c1695h, int i) {
         Comparator<lo1<tx0, T>> comparator = null;
-        if (hVar == null) {
+        if (c1695h == null) {
             return null;
         }
-        int i2 = hVar.a;
+        int i2 = c1695h.f13560a;
         if (i2 != 8) {
             i = i2;
         }
@@ -18,9 +19,9 @@ public class tf1 {
             comparator = new Comparator() { // from class: com.daaw.rf1
                 @Override // java.util.Comparator
                 public final int compare(Object obj, Object obj2) {
-                    int e;
-                    e = tf1.e((lo1) obj, (lo1) obj2);
-                    return e;
+                    int m9202e;
+                    m9202e = tf1.m9202e((lo1) obj, (lo1) obj2);
+                    return m9202e;
                 }
             };
         } else if (i != 3) {
@@ -29,9 +30,9 @@ public class tf1 {
                     comparator = new Comparator() { // from class: com.daaw.sf1
                         @Override // java.util.Comparator
                         public final int compare(Object obj, Object obj2) {
-                            int g;
-                            g = tf1.g((lo1) obj, (lo1) obj2);
-                            return g;
+                            int m9200g;
+                            m9200g = tf1.m9200g((lo1) obj, (lo1) obj2);
+                            return m9200g;
                         }
                     };
                     break;
@@ -40,24 +41,27 @@ public class tf1 {
             comparator = new Comparator() { // from class: com.daaw.qf1
                 @Override // java.util.Comparator
                 public final int compare(Object obj, Object obj2) {
-                    int f;
-                    f = tf1.f((lo1) obj, (lo1) obj2);
-                    return f;
+                    int m9201f;
+                    m9201f = tf1.m9201f((lo1) obj, (lo1) obj2);
+                    return m9201f;
                 }
             };
         }
-        return (comparator == null || !hVar.b) ? comparator : Collections.reverseOrder(comparator);
+        return (comparator == null || !c1695h.f13561b) ? comparator : Collections.reverseOrder(comparator);
     }
 
-    public static /* synthetic */ int e(lo1 lo1Var, lo1 lo1Var2) {
-        return ((pf1) lo1Var.b).a.compareTo(((pf1) lo1Var2.b).a);
+    /* renamed from: e */
+    public static /* synthetic */ int m9202e(lo1 lo1Var, lo1 lo1Var2) {
+        return ((pf1) lo1Var.f17577b).f22889a.compareTo(((pf1) lo1Var2.f17577b).f22889a);
     }
 
-    public static /* synthetic */ int f(lo1 lo1Var, lo1 lo1Var2) {
-        return ((pf1) lo1Var.b).b.compareTo(((pf1) lo1Var2.b).b);
+    /* renamed from: f */
+    public static /* synthetic */ int m9201f(lo1 lo1Var, lo1 lo1Var2) {
+        return ((pf1) lo1Var.f17577b).f22890b.compareTo(((pf1) lo1Var2.f17577b).f22890b);
     }
 
-    public static /* synthetic */ int g(lo1 lo1Var, lo1 lo1Var2) {
-        return Long.compare(((pf1) lo1Var.b).c, ((pf1) lo1Var2.b).c);
+    /* renamed from: g */
+    public static /* synthetic */ int m9200g(lo1 lo1Var, lo1 lo1Var2) {
+        return Long.compare(((pf1) lo1Var.f17577b).f22891c, ((pf1) lo1Var2.f17577b).f22891c);
     }
 }

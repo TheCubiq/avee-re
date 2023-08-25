@@ -6,7 +6,8 @@ import org.checkerframework.dataflow.qual.Pure;
 /* loaded from: classes.dex */
 public final class uo4 {
     @Pure
-    public static int a(int i, int i2, int i3) {
+    /* renamed from: a */
+    public static int m7877a(int i, int i2, int i3) {
         if (i < 0 || i >= i3) {
             throw new IndexOutOfBoundsException();
         }
@@ -15,7 +16,8 @@ public final class uo4 {
 
     @EnsuresNonNull({"#1"})
     @Pure
-    public static Object b(Object obj) {
+    /* renamed from: b */
+    public static Object m7876b(Object obj) {
         if (obj != null) {
             return obj;
         }
@@ -24,7 +26,8 @@ public final class uo4 {
 
     @EnsuresNonNull({"#1"})
     @Pure
-    public static String c(String str) {
+    /* renamed from: c */
+    public static String m7875c(String str) {
         if (TextUtils.isEmpty(str)) {
             throw new IllegalArgumentException();
         }
@@ -32,21 +35,24 @@ public final class uo4 {
     }
 
     @Pure
-    public static void d(boolean z) {
+    /* renamed from: d */
+    public static void m7874d(boolean z) {
         if (!z) {
             throw new IllegalArgumentException();
         }
     }
 
     @Pure
-    public static void e(boolean z, Object obj) {
+    /* renamed from: e */
+    public static void m7873e(boolean z, Object obj) {
         if (!z) {
             throw new IllegalArgumentException((String) obj);
         }
     }
 
     @Pure
-    public static void f(boolean z) {
+    /* renamed from: f */
+    public static void m7872f(boolean z) {
         if (!z) {
             throw new IllegalStateException();
         }

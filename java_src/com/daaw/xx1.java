@@ -2,57 +2,76 @@ package com.daaw;
 
 import android.content.Context;
 import androidx.work.impl.WorkDatabase;
+import androidx.work.impl.foreground.C0538a;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public class xx1 implements j30 {
-    public static final String d = ll0.f("WMFgUpdater");
-    public final wj1 a;
-    public final i30 b;
-    public final ry1 c;
 
+    /* renamed from: d */
+    public static final String f33095d = ll0.m16883f("WMFgUpdater");
+
+    /* renamed from: a */
+    public final wj1 f33096a;
+
+    /* renamed from: b */
+    public final i30 f33097b;
+
+    /* renamed from: c */
+    public final ry1 f33098c;
+
+    /* renamed from: com.daaw.xx1$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public final /* synthetic */ sb1 p;
-        public final /* synthetic */ UUID q;
-        public final /* synthetic */ g30 r;
-        public final /* synthetic */ Context s;
+    public class RunnableC3650a implements Runnable {
 
-        public a(sb1 sb1Var, UUID uuid, g30 g30Var, Context context) {
-            this.p = sb1Var;
-            this.q = uuid;
-            this.r = g30Var;
-            this.s = context;
+        /* renamed from: p */
+        public final /* synthetic */ sb1 f33099p;
+
+        /* renamed from: q */
+        public final /* synthetic */ UUID f33100q;
+
+        /* renamed from: r */
+        public final /* synthetic */ g30 f33101r;
+
+        /* renamed from: s */
+        public final /* synthetic */ Context f33102s;
+
+        public RunnableC3650a(sb1 sb1Var, UUID uuid, g30 g30Var, Context context) {
+            this.f33099p = sb1Var;
+            this.f33100q = uuid;
+            this.f33101r = g30Var;
+            this.f33102s = context;
         }
 
         @Override // java.lang.Runnable
         public void run() {
             try {
-                if (!this.p.isCancelled()) {
-                    String uuid = this.q.toString();
-                    yx1 l = xx1.this.c.l(uuid);
-                    if (l == null || l.a()) {
+                if (!this.f33099p.isCancelled()) {
+                    String uuid = this.f33100q.toString();
+                    yx1 mo9720l = xx1.this.f33098c.mo9720l(uuid);
+                    if (mo9720l == null || mo9720l.m3106a()) {
                         throw new IllegalStateException("Calls to setForegroundAsync() must complete before a ListenableWorker signals completion of work by returning an instance of Result.");
                     }
-                    xx1.this.b.a(uuid, this.r);
-                    this.s.startService(androidx.work.impl.foreground.a.a(this.s, uuid, this.r));
+                    xx1.this.f33097b.mo18160a(uuid, this.f33101r);
+                    this.f33102s.startService(C0538a.m27897a(this.f33102s, uuid, this.f33101r));
                 }
-                this.p.q(null);
+                this.f33099p.mo10473q(null);
             } catch (Throwable th) {
-                this.p.r(th);
+                this.f33099p.mo10472r(th);
             }
         }
     }
 
     public xx1(WorkDatabase workDatabase, i30 i30Var, wj1 wj1Var) {
-        this.b = i30Var;
-        this.a = wj1Var;
-        this.c = workDatabase.B();
+        this.f33097b = i30Var;
+        this.f33096a = wj1Var;
+        this.f33098c = workDatabase.mo27951B();
     }
 
     @Override // com.daaw.j30
-    public fk0<Void> a(Context context, UUID uuid, g30 g30Var) {
-        sb1 u = sb1.u();
-        this.a.b(new a(u, uuid, g30Var, context));
-        return u;
+    /* renamed from: a */
+    public fk0<Void> mo4415a(Context context, UUID uuid, g30 g30Var) {
+        sb1 m10470u = sb1.m10470u();
+        this.f33096a.mo6051b(new RunnableC3650a(m10470u, uuid, g30Var, context));
+        return m10470u;
     }
 }

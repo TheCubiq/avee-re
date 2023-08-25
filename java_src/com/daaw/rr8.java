@@ -3,31 +3,45 @@ package com.daaw;
 import android.os.Handler;
 /* loaded from: classes.dex */
 public interface rr8 {
-    void a(qr8 qr8Var);
+    /* renamed from: a */
+    void mo11008a(qr8 qr8Var);
 
-    boolean b();
+    /* renamed from: b */
+    boolean mo11007b();
 
-    void d(Handler handler, ln8 ln8Var);
+    /* renamed from: d */
+    void mo11006d(Handler handler, ln8 ln8Var);
 
-    void e();
+    /* renamed from: e */
+    void mo9983e();
 
-    void f(Handler handler, zr8 zr8Var);
+    /* renamed from: f */
+    void mo11005f(Handler handler, zr8 zr8Var);
 
-    void g(zr8 zr8Var);
+    /* renamed from: g */
+    void mo11004g(zr8 zr8Var);
 
-    f53 h();
+    /* renamed from: h */
+    f53 mo11003h();
 
-    void i(ln8 ln8Var);
+    /* renamed from: i */
+    void mo11002i(ln8 ln8Var);
 
-    void j(qr8 qr8Var);
+    /* renamed from: j */
+    void mo11001j(qr8 qr8Var);
 
-    nr8 k(pr8 pr8Var, nw8 nw8Var, long j);
+    /* renamed from: k */
+    nr8 mo11000k(pr8 pr8Var, nw8 nw8Var, long j);
 
-    void l(nr8 nr8Var);
+    /* renamed from: l */
+    void mo10999l(nr8 nr8Var);
 
-    void m(qr8 qr8Var, qz6 qz6Var, lh8 lh8Var);
+    /* renamed from: m */
+    void mo10998m(qr8 qr8Var, qz6 qz6Var, lh8 lh8Var);
 
-    void n(qr8 qr8Var);
+    /* renamed from: n */
+    void mo10997n(qr8 qr8Var);
 
-    l64 p();
+    /* renamed from: p */
+    l64 mo10996p();
 }

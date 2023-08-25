@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class f63 {
-    public static final os7 a = new d63();
 
-    public static int a(int i) {
+    /* renamed from: a */
+    public static final os7 f9188a = new d63();
+
+    /* renamed from: a */
+    public static int m22885a(int i) {
         if (i != 0) {
             if (i != 1) {
                 if (i != 2) {

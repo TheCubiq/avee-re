@@ -5,29 +5,38 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class yf8 implements Iterator {
-    public int p = -1;
-    public boolean q;
-    public Iterator r;
-    public final /* synthetic */ gg8 s;
 
-    public final Iterator a() {
+    /* renamed from: p */
+    public int f33635p = -1;
+
+    /* renamed from: q */
+    public boolean f33636q;
+
+    /* renamed from: r */
+    public Iterator f33637r;
+
+    /* renamed from: s */
+    public final /* synthetic */ gg8 f33638s;
+
+    /* renamed from: a */
+    public final Iterator m3773a() {
         Map map;
-        if (this.r == null) {
-            map = this.s.r;
-            this.r = map.entrySet().iterator();
+        if (this.f33637r == null) {
+            map = this.f33638s.f11235r;
+            this.f33637r = map.entrySet().iterator();
         }
-        return this.r;
+        return this.f33637r;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
         List list;
         Map map;
-        int i = this.p + 1;
-        list = this.s.q;
+        int i = this.f33635p + 1;
+        list = this.f33638s.f11234q;
         if (i >= list.size()) {
-            map = this.s.r;
-            return !map.isEmpty() && a().hasNext();
+            map = this.f33638s.f11235r;
+            return !map.isEmpty() && m3773a().hasNext();
         }
         return true;
     }
@@ -37,15 +46,15 @@ public final class yf8 implements Iterator {
         List list;
         Object next;
         List list2;
-        this.q = true;
-        int i = this.p + 1;
-        this.p = i;
-        list = this.s.q;
+        this.f33636q = true;
+        int i = this.f33635p + 1;
+        this.f33635p = i;
+        list = this.f33638s.f11234q;
         if (i < list.size()) {
-            list2 = this.s.q;
-            next = list2.get(this.p);
+            list2 = this.f33638s.f11234q;
+            next = list2.get(this.f33635p);
         } else {
-            next = a().next();
+            next = m3773a().next();
         }
         return (Map.Entry) next;
     }
@@ -53,20 +62,20 @@ public final class yf8 implements Iterator {
     @Override // java.util.Iterator
     public final void remove() {
         List list;
-        if (!this.q) {
+        if (!this.f33636q) {
             throw new IllegalStateException("remove() was called before next()");
         }
-        this.q = false;
-        this.s.n();
-        int i = this.p;
-        list = this.s.q;
+        this.f33636q = false;
+        this.f33638s.m21643n();
+        int i = this.f33635p;
+        list = this.f33638s.f11234q;
         if (i >= list.size()) {
-            a().remove();
+            m3773a().remove();
             return;
         }
-        gg8 gg8Var = this.s;
-        int i2 = this.p;
-        this.p = i2 - 1;
-        gg8Var.l(i2);
+        gg8 gg8Var = this.f33638s;
+        int i2 = this.f33635p;
+        this.f33635p = i2 - 1;
+        gg8Var.m21645l(i2);
     }
 }

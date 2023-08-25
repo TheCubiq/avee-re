@@ -133,7 +133,7 @@ public abstract class OpenSSLAeadCipherAES extends OpenSSLAeadCipher {
 
     @Override // org.conscrypt.OpenSSLCipher, javax.crypto.CipherSpi
     public AlgorithmParameters engineGetParameters() {
-        byte[] bArr = this.iv;
+        byte[] bArr = this.f38020iv;
         if (bArr == null) {
             return null;
         }

@@ -4,32 +4,45 @@ import android.content.Context;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class sp4 {
-    public Context a;
-    public ri6 b;
-    public Bundle c;
-    public gi6 d;
 
-    public final sp4 c(Context context) {
-        this.a = context;
+    /* renamed from: a */
+    public Context f26504a;
+
+    /* renamed from: b */
+    public ri6 f26505b;
+
+    /* renamed from: c */
+    public Bundle f26506c;
+
+    /* renamed from: d */
+    public gi6 f26507d;
+
+    /* renamed from: c */
+    public final sp4 m10066c(Context context) {
+        this.f26504a = context;
         return this;
     }
 
-    public final sp4 d(Bundle bundle) {
-        this.c = bundle;
+    /* renamed from: d */
+    public final sp4 m10065d(Bundle bundle) {
+        this.f26506c = bundle;
         return this;
     }
 
-    public final sp4 e(gi6 gi6Var) {
-        this.d = gi6Var;
+    /* renamed from: e */
+    public final sp4 m10064e(gi6 gi6Var) {
+        this.f26507d = gi6Var;
         return this;
     }
 
-    public final sp4 f(ri6 ri6Var) {
-        this.b = ri6Var;
+    /* renamed from: f */
+    public final sp4 m10063f(ri6 ri6Var) {
+        this.f26505b = ri6Var;
         return this;
     }
 
-    public final up4 g() {
+    /* renamed from: g */
+    public final up4 m10062g() {
         return new up4(this, null);
     }
 }

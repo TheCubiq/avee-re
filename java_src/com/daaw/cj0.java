@@ -3,20 +3,23 @@ package com.daaw;
 import java.io.OutputStream;
 /* loaded from: classes2.dex */
 public final class cj0 extends OutputStream {
-    public long p = 0;
 
-    public long d() {
-        return this.p;
+    /* renamed from: p */
+    public long f5825p = 0;
+
+    /* renamed from: d */
+    public long m25363d() {
+        return this.f5825p;
     }
 
     @Override // java.io.OutputStream
     public void write(int i) {
-        this.p++;
+        this.f5825p++;
     }
 
     @Override // java.io.OutputStream
     public void write(byte[] bArr) {
-        this.p += bArr.length;
+        this.f5825p += bArr.length;
     }
 
     @Override // java.io.OutputStream
@@ -25,6 +28,6 @@ public final class cj0 extends OutputStream {
         if (i < 0 || i > bArr.length || i2 < 0 || (i3 = i + i2) > bArr.length || i3 < 0) {
             throw new IndexOutOfBoundsException();
         }
-        this.p += i2;
+        this.f5825p += i2;
     }
 }

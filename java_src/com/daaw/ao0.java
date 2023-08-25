@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ao0 {
-    zw0 f(zw0 zw0Var);
+    /* renamed from: f */
+    zw0 mo15829f(zw0 zw0Var);
 
-    zw0 h();
+    /* renamed from: h */
+    zw0 mo15827h();
 
-    long o();
+    /* renamed from: o */
+    long mo15824o();
 }

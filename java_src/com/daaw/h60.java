@@ -4,16 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class h60 {
-    public final String a;
-    public final String b;
-    public List<h60> c = new ArrayList();
+
+    /* renamed from: a */
+    public final String f12079a;
+
+    /* renamed from: b */
+    public final String f12080b;
+
+    /* renamed from: c */
+    public List<h60> f12081c = new ArrayList();
 
     public h60(String str, String str2) {
-        this.a = str;
-        this.b = str2;
+        this.f12079a = str;
+        this.f12080b = str2;
     }
 
-    public List<h60> a() {
-        return this.c;
+    /* renamed from: a */
+    public List<h60> m20997a() {
+        return this.f12081c;
     }
 }

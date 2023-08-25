@@ -1,17 +1,22 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface l41 {
-    void b();
+    /* renamed from: b */
+    void mo17163b();
 
-    void c();
+    /* renamed from: c */
+    void mo17162c();
 
     void clear();
 
-    boolean e();
+    /* renamed from: e */
+    boolean mo17161e();
 
-    void g();
+    /* renamed from: g */
+    void mo17160g();
 
-    boolean i();
+    /* renamed from: i */
+    boolean mo17159i();
 
     boolean isCancelled();
 

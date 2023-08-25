@@ -9,15 +9,20 @@ import android.util.SparseArray;
 @Deprecated
 /* loaded from: classes.dex */
 public abstract class cw1 extends BroadcastReceiver {
-    public static final SparseArray<PowerManager.WakeLock> p = new SparseArray<>();
-    public static int q = 1;
 
-    public static boolean b(Intent intent) {
+    /* renamed from: p */
+    public static final SparseArray<PowerManager.WakeLock> f6218p = new SparseArray<>();
+
+    /* renamed from: q */
+    public static int f6219q = 1;
+
+    /* renamed from: b */
+    public static boolean m24948b(Intent intent) {
         int intExtra = intent.getIntExtra("androidx.contentpager.content.wakelockid", 0);
         if (intExtra == 0) {
             return false;
         }
-        SparseArray<PowerManager.WakeLock> sparseArray = p;
+        SparseArray<PowerManager.WakeLock> sparseArray = f6218p;
         synchronized (sparseArray) {
             PowerManager.WakeLock wakeLock = sparseArray.get(intExtra);
             if (wakeLock != null) {
@@ -32,14 +37,15 @@ public abstract class cw1 extends BroadcastReceiver {
         }
     }
 
-    public static ComponentName c(Context context, Intent intent) {
-        SparseArray<PowerManager.WakeLock> sparseArray = p;
+    /* renamed from: c */
+    public static ComponentName m24947c(Context context, Intent intent) {
+        SparseArray<PowerManager.WakeLock> sparseArray = f6218p;
         synchronized (sparseArray) {
-            int i = q;
+            int i = f6219q;
             int i2 = i + 1;
-            q = i2;
+            f6219q = i2;
             if (i2 <= 0) {
-                q = 1;
+                f6219q = 1;
             }
             intent.putExtra("androidx.contentpager.content.wakelockid", i);
             ComponentName startService = context.startService(intent);

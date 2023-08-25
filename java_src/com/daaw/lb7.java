@@ -6,16 +6,18 @@ public final class lb7 extends mb7 {
     }
 
     @Override // com.daaw.mb7
-    public final int a() {
+    /* renamed from: a */
+    public final int mo10469a() {
         return 12;
     }
 
     @Override // com.daaw.mb7
-    public final int[] b(int[] iArr, int i) {
+    /* renamed from: b */
+    public final int[] mo10468b(int[] iArr, int i) {
         int length = iArr.length;
         if (length == 3) {
             int[] iArr2 = new int[16];
-            ib7.b(iArr2, this.a);
+            ib7.m19984b(iArr2, this.f18772a);
             iArr2[12] = i;
             System.arraycopy(iArr, 0, iArr2, 13, 3);
             return iArr2;

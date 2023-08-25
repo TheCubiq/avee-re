@@ -3,25 +3,32 @@ package com.daaw;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public final class ul2 extends tj2 {
-    public Long a;
-    public Long b;
-    public Long c;
+
+    /* renamed from: a */
+    public Long f29172a;
+
+    /* renamed from: b */
+    public Long f29173b;
+
+    /* renamed from: c */
+    public Long f29174c;
 
     public ul2(String str) {
-        HashMap a = tj2.a(str);
-        if (a != null) {
-            this.a = (Long) a.get(0);
-            this.b = (Long) a.get(1);
-            this.c = (Long) a.get(2);
+        HashMap m9077a = tj2.m9077a(str);
+        if (m9077a != null) {
+            this.f29172a = (Long) m9077a.get(0);
+            this.f29173b = (Long) m9077a.get(1);
+            this.f29174c = (Long) m9077a.get(2);
         }
     }
 
     @Override // com.daaw.tj2
-    public final HashMap b() {
+    /* renamed from: b */
+    public final HashMap mo2114b() {
         HashMap hashMap = new HashMap();
-        hashMap.put(0, this.a);
-        hashMap.put(1, this.b);
-        hashMap.put(2, this.c);
+        hashMap.put(0, this.f29172a);
+        hashMap.put(1, this.f29173b);
+        hashMap.put(2, this.f29174c);
         return hashMap;
     }
 }

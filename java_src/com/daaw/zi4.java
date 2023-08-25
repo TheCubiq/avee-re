@@ -10,17 +10,24 @@ public abstract class zi4 extends zl4 {
         super(yl4Var);
     }
 
-    public abstract int h();
+    /* renamed from: h */
+    public abstract int mo2275h();
 
-    public abstract View i();
+    /* renamed from: i */
+    public abstract View mo2274i();
 
-    public abstract zzdq j();
+    /* renamed from: j */
+    public abstract zzdq mo2273j();
 
-    public abstract uh6 k();
+    /* renamed from: k */
+    public abstract uh6 mo2272k();
 
-    public abstract uh6 l();
+    /* renamed from: l */
+    public abstract uh6 mo2271l();
 
-    public abstract void m();
+    /* renamed from: m */
+    public abstract void mo2270m();
 
-    public abstract void n(ViewGroup viewGroup, zzq zzqVar);
+    /* renamed from: n */
+    public abstract void mo2269n(ViewGroup viewGroup, zzq zzqVar);
 }

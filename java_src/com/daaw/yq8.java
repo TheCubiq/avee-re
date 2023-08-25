@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface yq8 {
-    void a(ik5 ik5Var);
+    /* renamed from: a */
+    void mo3399a(ik5 ik5Var);
 }

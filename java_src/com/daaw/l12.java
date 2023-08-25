@@ -14,28 +14,29 @@ public abstract class l12 extends yz1 implements p12 {
     }
 
     @Override // com.daaw.yz1
-    public final boolean g3(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: g3 */
+    public final boolean mo3020g3(int i, Parcel parcel, Parcel parcel2, int i2) {
         switch (i) {
             case 3:
-                ConnectionResult connectionResult = (ConnectionResult) s02.a(parcel, ConnectionResult.CREATOR);
-                zaa zaaVar = (zaa) s02.a(parcel, zaa.CREATOR);
+                ConnectionResult connectionResult = (ConnectionResult) s02.m10803a(parcel, ConnectionResult.CREATOR);
+                zaa zaaVar = (zaa) s02.m10803a(parcel, zaa.CREATOR);
                 break;
             case 4:
             case 6:
-                Status status = (Status) s02.a(parcel, Status.CREATOR);
+                Status status = (Status) s02.m10803a(parcel, Status.CREATOR);
                 break;
             case 5:
             default:
                 return false;
             case 7:
-                Status status2 = (Status) s02.a(parcel, Status.CREATOR);
-                GoogleSignInAccount googleSignInAccount = (GoogleSignInAccount) s02.a(parcel, GoogleSignInAccount.CREATOR);
+                Status status2 = (Status) s02.m10803a(parcel, Status.CREATOR);
+                GoogleSignInAccount googleSignInAccount = (GoogleSignInAccount) s02.m10803a(parcel, GoogleSignInAccount.CREATOR);
                 break;
             case 8:
-                z0((zak) s02.a(parcel, zak.CREATOR));
+                mo13769z0((zak) s02.m10803a(parcel, zak.CREATOR));
                 break;
             case 9:
-                zag zagVar = (zag) s02.a(parcel, zag.CREATOR);
+                zag zagVar = (zag) s02.m10803a(parcel, zag.CREATOR);
                 break;
         }
         parcel2.writeNoException();

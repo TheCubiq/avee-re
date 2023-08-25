@@ -3,23 +3,27 @@ package com.daaw;
 import com.google.android.gms.ads.internal.zzi;
 /* loaded from: classes.dex */
 public final class su7 implements nt6 {
-    public final /* synthetic */ zzi a;
+
+    /* renamed from: a */
+    public final /* synthetic */ zzi f26658a;
 
     public su7(zzi zziVar) {
-        this.a = zziVar;
+        this.f26658a = zziVar;
     }
 
     @Override // com.daaw.nt6
-    public final void a(int i, long j, String str) {
+    /* renamed from: a */
+    public final void mo9847a(int i, long j, String str) {
         es6 es6Var;
-        es6Var = this.a.w;
-        es6Var.e(i, System.currentTimeMillis() - j, str);
+        es6Var = this.f26658a.f36362w;
+        es6Var.m23227e(i, System.currentTimeMillis() - j, str);
     }
 
     @Override // com.daaw.nt6
-    public final void b(int i, long j) {
+    /* renamed from: b */
+    public final void mo9846b(int i, long j) {
         es6 es6Var;
-        es6Var = this.a.w;
-        es6Var.d(i, System.currentTimeMillis() - j);
+        es6Var = this.f26658a.f36362w;
+        es6Var.m23228d(i, System.currentTimeMillis() - j);
     }
 }

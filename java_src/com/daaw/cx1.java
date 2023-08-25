@@ -22,26 +22,44 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /* loaded from: classes.dex */
 public final class cx1 {
-    public static final Pattern b = Pattern.compile("^(\\S+)\\s+-->\\s+(\\S+)(.*)?$");
-    public static final Pattern c = Pattern.compile("(\\S+?):(\\S+)");
-    public final StringBuilder a = new StringBuilder();
 
+    /* renamed from: b */
+    public static final Pattern f6247b = Pattern.compile("^(\\S+)\\s+-->\\s+(\\S+)(.*)?$");
+
+    /* renamed from: c */
+    public static final Pattern f6248c = Pattern.compile("(\\S+?):(\\S+)");
+
+    /* renamed from: a */
+    public final StringBuilder f6249a = new StringBuilder();
+
+    /* renamed from: com.daaw.cx1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public static final String[] e = new String[0];
-        public final String a;
-        public final int b;
-        public final String c;
-        public final String[] d;
+    public static final class C1024a {
 
-        public a(String str, int i, String str2, String[] strArr) {
-            this.b = i;
-            this.a = str;
-            this.c = str2;
-            this.d = strArr;
+        /* renamed from: e */
+        public static final String[] f6250e = new String[0];
+
+        /* renamed from: a */
+        public final String f6251a;
+
+        /* renamed from: b */
+        public final int f6252b;
+
+        /* renamed from: c */
+        public final String f6253c;
+
+        /* renamed from: d */
+        public final String[] f6254d;
+
+        public C1024a(String str, int i, String str2, String[] strArr) {
+            this.f6252b = i;
+            this.f6251a = str;
+            this.f6253c = str2;
+            this.f6254d = strArr;
         }
 
-        public static a a(String str, int i) {
+        /* renamed from: a */
+        public static C1024a m24916a(String str, int i) {
             String str2;
             String trim = str.trim();
             if (trim.isEmpty()) {
@@ -55,74 +73,81 @@ public final class cx1 {
                 trim = trim.substring(0, indexOf);
                 str2 = trim2;
             }
-            String[] W = sq1.W(trim, "\\.");
-            return new a(W[0], i, str2, W.length > 1 ? (String[]) Arrays.copyOfRange(W, 1, W.length) : e);
+            String[] m10022W = sq1.m10022W(trim, "\\.");
+            return new C1024a(m10022W[0], i, str2, m10022W.length > 1 ? (String[]) Arrays.copyOfRange(m10022W, 1, m10022W.length) : f6250e);
         }
 
-        public static a b() {
-            return new a("", 0, "", new String[0]);
+        /* renamed from: b */
+        public static C1024a m24915b() {
+            return new C1024a("", 0, "", new String[0]);
         }
     }
 
+    /* renamed from: com.daaw.cx1$b */
     /* loaded from: classes.dex */
-    public static final class b implements Comparable<b> {
-        public final int p;
-        public final ax1 q;
+    public static final class C1025b implements Comparable<C1025b> {
 
-        public b(int i, ax1 ax1Var) {
-            this.p = i;
-            this.q = ax1Var;
+        /* renamed from: p */
+        public final int f6255p;
+
+        /* renamed from: q */
+        public final ax1 f6256q;
+
+        public C1025b(int i, ax1 ax1Var) {
+            this.f6255p = i;
+            this.f6256q = ax1Var;
         }
 
         @Override // java.lang.Comparable
         /* renamed from: a */
-        public int compareTo(b bVar) {
-            return this.p - bVar.p;
+        public int compareTo(C1025b c1025b) {
+            return this.f6255p - c1025b.f6255p;
         }
     }
 
-    public static void a(String str, SpannableStringBuilder spannableStringBuilder) {
-        char c2;
+    /* renamed from: a */
+    public static void m24931a(String str, SpannableStringBuilder spannableStringBuilder) {
+        char c;
         str.hashCode();
-        char c3 = 65535;
+        char c2 = 65535;
         switch (str.hashCode()) {
             case 3309:
                 if (str.equals("gt")) {
-                    c3 = 0;
+                    c2 = 0;
                     break;
                 }
                 break;
             case 3464:
                 if (str.equals("lt")) {
-                    c3 = 1;
+                    c2 = 1;
                     break;
                 }
                 break;
             case 96708:
                 if (str.equals("amp")) {
-                    c3 = 2;
+                    c2 = 2;
                     break;
                 }
                 break;
             case 3374865:
                 if (str.equals("nbsp")) {
-                    c3 = 3;
+                    c2 = 3;
                     break;
                 }
                 break;
         }
-        switch (c3) {
+        switch (c2) {
             case 0:
-                c2 = '>';
+                c = '>';
                 break;
             case 1:
-                c2 = '<';
+                c = '<';
                 break;
             case 2:
-                c2 = '&';
+                c = '&';
                 break;
             case 3:
-                c2 = ' ';
+                c = ' ';
                 break;
             default:
                 StringBuilder sb = new StringBuilder();
@@ -131,243 +156,221 @@ public final class cx1 {
                 sb.append(";'");
                 return;
         }
-        spannableStringBuilder.append(c2);
+        spannableStringBuilder.append(c);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:42:0x0089 A[LOOP:0: B:41:0x0087->B:42:0x0089, LOOP_END] */
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static void b(java.lang.String r8, com.daaw.cx1.a r9, android.text.SpannableStringBuilder r10, java.util.List<com.daaw.ax1> r11, java.util.List<com.daaw.cx1.b> r12) {
-        /*
-            int r0 = r9.b
-            int r1 = r10.length()
-            java.lang.String r2 = r9.a
-            r2.hashCode()
-            int r3 = r2.hashCode()
-            r4 = 2
-            r5 = 0
-            r6 = 1
-            r7 = -1
-            switch(r3) {
-                case 0: goto L59;
-                case 98: goto L4e;
-                case 99: goto L43;
-                case 105: goto L38;
-                case 117: goto L2d;
-                case 118: goto L22;
-                case 3314158: goto L17;
-                default: goto L16;
-            }
-        L16:
-            goto L63
-        L17:
-            java.lang.String r3 = "lang"
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L20
-            goto L63
-        L20:
-            r7 = 6
-            goto L63
-        L22:
-            java.lang.String r3 = "v"
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L2b
-            goto L63
-        L2b:
-            r7 = 5
-            goto L63
-        L2d:
-            java.lang.String r3 = "u"
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L36
-            goto L63
-        L36:
-            r7 = 4
-            goto L63
-        L38:
-            java.lang.String r3 = "i"
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L41
-            goto L63
-        L41:
-            r7 = 3
-            goto L63
-        L43:
-            java.lang.String r3 = "c"
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L4c
-            goto L63
-        L4c:
-            r7 = 2
-            goto L63
-        L4e:
-            java.lang.String r3 = "b"
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L57
-            goto L63
-        L57:
-            r7 = 1
-            goto L63
-        L59:
-            java.lang.String r3 = ""
-            boolean r2 = r2.equals(r3)
-            if (r2 != 0) goto L62
-            goto L63
-        L62:
-            r7 = 0
-        L63:
-            r2 = 33
-            switch(r7) {
-                case 0: goto L7d;
-                case 1: goto L75;
-                case 2: goto L7d;
-                case 3: goto L6f;
-                case 4: goto L69;
-                case 5: goto L7d;
-                case 6: goto L7d;
-                default: goto L68;
-            }
-        L68:
-            return
-        L69:
-            android.text.style.UnderlineSpan r3 = new android.text.style.UnderlineSpan
-            r3.<init>()
-            goto L7a
-        L6f:
-            android.text.style.StyleSpan r3 = new android.text.style.StyleSpan
-            r3.<init>(r4)
-            goto L7a
-        L75:
-            android.text.style.StyleSpan r3 = new android.text.style.StyleSpan
-            r3.<init>(r6)
-        L7a:
-            r10.setSpan(r3, r0, r1, r2)
-        L7d:
-            r12.clear()
-            e(r11, r8, r9, r12)
-            int r8 = r12.size()
-        L87:
-            if (r5 >= r8) goto L97
-            java.lang.Object r9 = r12.get(r5)
-            com.daaw.cx1$b r9 = (com.daaw.cx1.b) r9
-            com.daaw.ax1 r9 = r9.q
-            c(r10, r9, r0, r1)
-            int r5 = r5 + 1
-            goto L87
-        L97:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.cx1.b(java.lang.String, com.daaw.cx1$a, android.text.SpannableStringBuilder, java.util.List, java.util.List):void");
+    public static void m24930b(String str, C1024a c1024a, SpannableStringBuilder spannableStringBuilder, List<ax1> list, List<C1025b> list2) {
+        int size;
+        Object styleSpan;
+        int i = c1024a.f6252b;
+        int length = spannableStringBuilder.length();
+        String str2 = c1024a.f6251a;
+        str2.hashCode();
+        char c = 65535;
+        switch (str2.hashCode()) {
+            case 0:
+                if (str2.equals("")) {
+                    c = 0;
+                    break;
+                }
+                break;
+            case p21.f22310Q0 /* 98 */:
+                if (str2.equals("b")) {
+                    c = 1;
+                    break;
+                }
+                break;
+            case p21.f22316R0 /* 99 */:
+                if (str2.equals("c")) {
+                    c = 2;
+                    break;
+                }
+                break;
+            case 105:
+                if (str2.equals("i")) {
+                    c = 3;
+                    break;
+                }
+                break;
+            case x21.f31774D0 /* 117 */:
+                if (str2.equals("u")) {
+                    c = 4;
+                    break;
+                }
+                break;
+            case x21.f31779E0 /* 118 */:
+                if (str2.equals("v")) {
+                    c = 5;
+                    break;
+                }
+                break;
+            case 3314158:
+                if (str2.equals("lang")) {
+                    c = 6;
+                    break;
+                }
+                break;
+        }
+        switch (c) {
+            case 0:
+            case 2:
+            case 5:
+            case 6:
+                list2.clear();
+                m24927e(list, str, c1024a, list2);
+                size = list2.size();
+                for (int i2 = 0; i2 < size; i2++) {
+                    m24929c(spannableStringBuilder, list2.get(i2).f6256q, i, length);
+                }
+                return;
+            case 1:
+                styleSpan = new StyleSpan(1);
+                spannableStringBuilder.setSpan(styleSpan, i, length, 33);
+                list2.clear();
+                m24927e(list, str, c1024a, list2);
+                size = list2.size();
+                while (i2 < size) {
+                }
+                return;
+            case 3:
+                styleSpan = new StyleSpan(2);
+                spannableStringBuilder.setSpan(styleSpan, i, length, 33);
+                list2.clear();
+                m24927e(list, str, c1024a, list2);
+                size = list2.size();
+                while (i2 < size) {
+                }
+                return;
+            case 4:
+                styleSpan = new UnderlineSpan();
+                spannableStringBuilder.setSpan(styleSpan, i, length, 33);
+                list2.clear();
+                m24927e(list, str, c1024a, list2);
+                size = list2.size();
+                while (i2 < size) {
+                }
+                return;
+            default:
+                return;
+        }
     }
 
-    public static void c(SpannableStringBuilder spannableStringBuilder, ax1 ax1Var, int i, int i2) {
+    /* renamed from: c */
+    public static void m24929c(SpannableStringBuilder spannableStringBuilder, ax1 ax1Var, int i, int i2) {
         Object absoluteSizeSpan;
         if (ax1Var == null) {
             return;
         }
-        if (ax1Var.g() != -1) {
-            spannableStringBuilder.setSpan(new StyleSpan(ax1Var.g()), i, i2, 33);
+        if (ax1Var.m26619g() != -1) {
+            spannableStringBuilder.setSpan(new StyleSpan(ax1Var.m26619g()), i, i2, 33);
         }
-        if (ax1Var.k()) {
+        if (ax1Var.m26615k()) {
             spannableStringBuilder.setSpan(new StrikethroughSpan(), i, i2, 33);
         }
-        if (ax1Var.l()) {
+        if (ax1Var.m26614l()) {
             spannableStringBuilder.setSpan(new UnderlineSpan(), i, i2, 33);
         }
-        if (ax1Var.j()) {
-            spannableStringBuilder.setSpan(new ForegroundColorSpan(ax1Var.b()), i, i2, 33);
+        if (ax1Var.m26616j()) {
+            spannableStringBuilder.setSpan(new ForegroundColorSpan(ax1Var.m26624b()), i, i2, 33);
         }
-        if (ax1Var.i()) {
-            spannableStringBuilder.setSpan(new BackgroundColorSpan(ax1Var.a()), i, i2, 33);
+        if (ax1Var.m26617i()) {
+            spannableStringBuilder.setSpan(new BackgroundColorSpan(ax1Var.m26625a()), i, i2, 33);
         }
-        if (ax1Var.c() != null) {
-            spannableStringBuilder.setSpan(new TypefaceSpan(ax1Var.c()), i, i2, 33);
+        if (ax1Var.m26623c() != null) {
+            spannableStringBuilder.setSpan(new TypefaceSpan(ax1Var.m26623c()), i, i2, 33);
         }
-        if (ax1Var.h() != null) {
-            spannableStringBuilder.setSpan(new AlignmentSpan.Standard(ax1Var.h()), i, i2, 33);
+        if (ax1Var.m26618h() != null) {
+            spannableStringBuilder.setSpan(new AlignmentSpan.Standard(ax1Var.m26618h()), i, i2, 33);
         }
-        int e = ax1Var.e();
-        if (e == 1) {
-            absoluteSizeSpan = new AbsoluteSizeSpan((int) ax1Var.d(), true);
-        } else if (e == 2) {
-            absoluteSizeSpan = new RelativeSizeSpan(ax1Var.d());
-        } else if (e != 3) {
+        int m26621e = ax1Var.m26621e();
+        if (m26621e == 1) {
+            absoluteSizeSpan = new AbsoluteSizeSpan((int) ax1Var.m26622d(), true);
+        } else if (m26621e == 2) {
+            absoluteSizeSpan = new RelativeSizeSpan(ax1Var.m26622d());
+        } else if (m26621e != 3) {
             return;
         } else {
-            absoluteSizeSpan = new RelativeSizeSpan(ax1Var.d() / 100.0f);
+            absoluteSizeSpan = new RelativeSizeSpan(ax1Var.m26622d() / 100.0f);
         }
         spannableStringBuilder.setSpan(absoluteSizeSpan, i, i2, 33);
     }
 
-    public static int d(String str, int i) {
+    /* renamed from: d */
+    public static int m24928d(String str, int i) {
         int indexOf = str.indexOf(62, i);
         return indexOf == -1 ? str.length() : indexOf + 1;
     }
 
-    public static void e(List<ax1> list, String str, a aVar, List<b> list2) {
+    /* renamed from: e */
+    public static void m24927e(List<ax1> list, String str, C1024a c1024a, List<C1025b> list2) {
         int size = list.size();
         for (int i = 0; i < size; i++) {
             ax1 ax1Var = list.get(i);
-            int f = ax1Var.f(str, aVar.a, aVar.d, aVar.c);
-            if (f > 0) {
-                list2.add(new b(f, ax1Var));
+            int m26620f = ax1Var.m26620f(str, c1024a.f6251a, c1024a.f6254d, c1024a.f6253c);
+            if (m26620f > 0) {
+                list2.add(new C1025b(m26620f, ax1Var));
             }
         }
         Collections.sort(list2);
     }
 
-    public static String f(String str) {
+    /* renamed from: f */
+    public static String m24926f(String str) {
         String trim = str.trim();
         if (trim.isEmpty()) {
             return null;
         }
-        return sq1.X(trim, "[ \\.]")[0];
+        return sq1.m10021X(trim, "[ \\.]")[0];
     }
 
-    public static boolean g(String str) {
+    /* renamed from: g */
+    public static boolean m24925g(String str) {
         str.hashCode();
-        char c2 = 65535;
+        char c = 65535;
         switch (str.hashCode()) {
-            case p21.Q0 /* 98 */:
+            case p21.f22310Q0 /* 98 */:
                 if (str.equals("b")) {
-                    c2 = 0;
+                    c = 0;
                     break;
                 }
                 break;
-            case p21.R0 /* 99 */:
+            case p21.f22316R0 /* 99 */:
                 if (str.equals("c")) {
-                    c2 = 1;
+                    c = 1;
                     break;
                 }
                 break;
             case 105:
                 if (str.equals("i")) {
-                    c2 = 2;
+                    c = 2;
                     break;
                 }
                 break;
-            case x21.D0 /* 117 */:
+            case x21.f31774D0 /* 117 */:
                 if (str.equals("u")) {
-                    c2 = 3;
+                    c = 3;
                     break;
                 }
                 break;
-            case x21.E0 /* 118 */:
+            case x21.f31779E0 /* 118 */:
                 if (str.equals("v")) {
-                    c2 = 4;
+                    c = 4;
                     break;
                 }
                 break;
             case 3314158:
                 if (str.equals("lang")) {
-                    c2 = 5;
+                    c = 5;
                     break;
                 }
                 break;
         }
-        switch (c2) {
+        switch (c) {
             case 0:
             case 1:
             case 2:
@@ -380,21 +383,22 @@ public final class cx1 {
         }
     }
 
-    public static boolean i(String str, Matcher matcher, rv0 rv0Var, bx1.b bVar, StringBuilder sb, List<ax1> list) {
+    /* renamed from: i */
+    public static boolean m24923i(String str, Matcher matcher, rv0 rv0Var, bx1.C0895b c0895b, StringBuilder sb, List<ax1> list) {
         try {
-            bVar.j(fx1.c(matcher.group(1))).d(fx1.c(matcher.group(2)));
-            j(matcher.group(3), bVar);
+            c0895b.m25768j(fx1.m22152c(matcher.group(1))).m25774d(fx1.m22152c(matcher.group(2)));
+            m24922j(matcher.group(3), c0895b);
             sb.setLength(0);
             while (true) {
-                String k = rv0Var.k();
-                if (TextUtils.isEmpty(k)) {
-                    k(str, sb.toString(), bVar, list);
+                String m10909k = rv0Var.m10909k();
+                if (TextUtils.isEmpty(m10909k)) {
+                    m24921k(str, sb.toString(), c0895b, list);
                     return true;
                 }
                 if (sb.length() > 0) {
                     sb.append("\n");
                 }
-                sb.append(k.trim());
+                sb.append(m10909k.trim());
             }
         } catch (NumberFormatException unused) {
             StringBuilder sb2 = new StringBuilder();
@@ -404,20 +408,21 @@ public final class cx1 {
         }
     }
 
-    public static void j(String str, bx1.b bVar) {
-        Matcher matcher = c.matcher(str);
+    /* renamed from: j */
+    public static void m24922j(String str, bx1.C0895b c0895b) {
+        Matcher matcher = f6248c.matcher(str);
         while (matcher.find()) {
             String group = matcher.group(1);
             String group2 = matcher.group(2);
             try {
                 if ("line".equals(group)) {
-                    l(group2, bVar);
+                    m24920l(group2, c0895b);
                 } else if ("align".equals(group)) {
-                    bVar.l(o(group2));
+                    c0895b.m25766l(m24917o(group2));
                 } else if ("position".equals(group)) {
-                    n(group2, bVar);
+                    m24918n(group2, c0895b);
                 } else if ("size".equals(group)) {
-                    bVar.m(fx1.b(group2));
+                    c0895b.m25765m(fx1.m22153b(group2));
                 } else {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Unknown cue setting ");
@@ -433,7 +438,8 @@ public final class cx1 {
         }
     }
 
-    public static void k(String str, String str2, bx1.b bVar, List<ax1> list) {
+    /* renamed from: k */
+    public static void m24921k(String str, String str2, bx1.C0895b c0895b, List<ax1> list) {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
         ArrayDeque arrayDeque = new ArrayDeque();
         ArrayList arrayList = new ArrayList();
@@ -450,7 +456,7 @@ public final class cx1 {
                     indexOf = Math.min(indexOf, indexOf2);
                 }
                 if (indexOf != -1) {
-                    a(str2.substring(i, indexOf), spannableStringBuilder);
+                    m24931a(str2.substring(i, indexOf), spannableStringBuilder);
                     if (indexOf == indexOf2) {
                         spannableStringBuilder.append(" ");
                     }
@@ -465,7 +471,7 @@ public final class cx1 {
                 int i2 = i + 1;
                 if (i2 < str2.length()) {
                     boolean z = str2.charAt(i2) == '/';
-                    i2 = d(str2, i2);
+                    i2 = m24928d(str2, i2);
                     int i3 = i2 - 2;
                     boolean z2 = str2.charAt(i3) == '/';
                     int i4 = i + (z ? 2 : 1);
@@ -473,18 +479,18 @@ public final class cx1 {
                         i3 = i2 - 1;
                     }
                     String substring = str2.substring(i4, i3);
-                    String f = f(substring);
-                    if (f != null && g(f)) {
+                    String m24926f = m24926f(substring);
+                    if (m24926f != null && m24925g(m24926f)) {
                         if (z) {
                             while (!arrayDeque.isEmpty()) {
-                                a aVar = (a) arrayDeque.pop();
-                                b(str, aVar, spannableStringBuilder, list, arrayList);
-                                if (aVar.a.equals(f)) {
+                                C1024a c1024a = (C1024a) arrayDeque.pop();
+                                m24930b(str, c1024a, spannableStringBuilder, list, arrayList);
+                                if (c1024a.f6251a.equals(m24926f)) {
                                     break;
                                 }
                             }
                         } else if (!z2) {
-                            arrayDeque.push(a.a(substring, spannableStringBuilder.length()));
+                            arrayDeque.push(C1024a.m24916a(substring, spannableStringBuilder.length()));
                         }
                     }
                 }
@@ -492,61 +498,63 @@ public final class cx1 {
             }
         }
         while (!arrayDeque.isEmpty()) {
-            b(str, (a) arrayDeque.pop(), spannableStringBuilder, list, arrayList);
+            m24930b(str, (C1024a) arrayDeque.pop(), spannableStringBuilder, list, arrayList);
         }
-        b(str, a.b(), spannableStringBuilder, list, arrayList);
-        bVar.k(spannableStringBuilder);
+        m24930b(str, C1024a.m24915b(), spannableStringBuilder, list, arrayList);
+        c0895b.m25767k(spannableStringBuilder);
     }
 
-    public static void l(String str, bx1.b bVar) {
+    /* renamed from: l */
+    public static void m24920l(String str, bx1.C0895b c0895b) {
         int indexOf = str.indexOf(44);
         if (indexOf != -1) {
-            bVar.f(m(str.substring(indexOf + 1)));
+            c0895b.m25772f(m24919m(str.substring(indexOf + 1)));
             str = str.substring(0, indexOf);
         } else {
-            bVar.f(Integer.MIN_VALUE);
+            c0895b.m25772f(Integer.MIN_VALUE);
         }
         if (str.endsWith("%")) {
-            bVar.e(fx1.b(str)).g(0);
+            c0895b.m25773e(fx1.m22153b(str)).m25771g(0);
             return;
         }
         int parseInt = Integer.parseInt(str);
         if (parseInt < 0) {
             parseInt--;
         }
-        bVar.e(parseInt).g(1);
+        c0895b.m25773e(parseInt).m25771g(1);
     }
 
-    public static int m(String str) {
+    /* renamed from: m */
+    public static int m24919m(String str) {
         str.hashCode();
-        char c2 = 65535;
+        char c = 65535;
         switch (str.hashCode()) {
             case -1364013995:
                 if (str.equals("center")) {
-                    c2 = 0;
+                    c = 0;
                     break;
                 }
                 break;
             case -1074341483:
                 if (str.equals("middle")) {
-                    c2 = 1;
+                    c = 1;
                     break;
                 }
                 break;
             case 100571:
                 if (str.equals("end")) {
-                    c2 = 2;
+                    c = 2;
                     break;
                 }
                 break;
             case 109757538:
                 if (str.equals("start")) {
-                    c2 = 3;
+                    c = 3;
                     break;
                 }
                 break;
         }
-        switch (c2) {
+        switch (c) {
             case 0:
             case 1:
                 return 1;
@@ -562,59 +570,61 @@ public final class cx1 {
         }
     }
 
-    public static void n(String str, bx1.b bVar) {
+    /* renamed from: n */
+    public static void m24918n(String str, bx1.C0895b c0895b) {
         int indexOf = str.indexOf(44);
         if (indexOf != -1) {
-            bVar.i(m(str.substring(indexOf + 1)));
+            c0895b.m25769i(m24919m(str.substring(indexOf + 1)));
             str = str.substring(0, indexOf);
         } else {
-            bVar.i(Integer.MIN_VALUE);
+            c0895b.m25769i(Integer.MIN_VALUE);
         }
-        bVar.h(fx1.b(str));
+        c0895b.m25770h(fx1.m22153b(str));
     }
 
-    public static Layout.Alignment o(String str) {
+    /* renamed from: o */
+    public static Layout.Alignment m24917o(String str) {
         str.hashCode();
-        char c2 = 65535;
+        char c = 65535;
         switch (str.hashCode()) {
             case -1364013995:
                 if (str.equals("center")) {
-                    c2 = 0;
+                    c = 0;
                     break;
                 }
                 break;
             case -1074341483:
                 if (str.equals("middle")) {
-                    c2 = 1;
+                    c = 1;
                     break;
                 }
                 break;
             case 100571:
                 if (str.equals("end")) {
-                    c2 = 2;
+                    c = 2;
                     break;
                 }
                 break;
             case 3317767:
                 if (str.equals("left")) {
-                    c2 = 3;
+                    c = 3;
                     break;
                 }
                 break;
             case 108511772:
                 if (str.equals("right")) {
-                    c2 = 4;
+                    c = 4;
                     break;
                 }
                 break;
             case 109757538:
                 if (str.equals("start")) {
-                    c2 = 5;
+                    c = 5;
                     break;
                 }
                 break;
         }
-        switch (c2) {
+        switch (c) {
             case 0:
             case 1:
                 return Layout.Alignment.ALIGN_CENTER;
@@ -632,23 +642,24 @@ public final class cx1 {
         }
     }
 
-    public boolean h(rv0 rv0Var, bx1.b bVar, List<ax1> list) {
-        String k = rv0Var.k();
-        if (k == null) {
+    /* renamed from: h */
+    public boolean m24924h(rv0 rv0Var, bx1.C0895b c0895b, List<ax1> list) {
+        String m10909k = rv0Var.m10909k();
+        if (m10909k == null) {
             return false;
         }
-        Pattern pattern = b;
-        Matcher matcher = pattern.matcher(k);
+        Pattern pattern = f6247b;
+        Matcher matcher = pattern.matcher(m10909k);
         if (matcher.matches()) {
-            return i(null, matcher, rv0Var, bVar, this.a, list);
+            return m24923i(null, matcher, rv0Var, c0895b, this.f6249a, list);
         }
-        String k2 = rv0Var.k();
-        if (k2 == null) {
+        String m10909k2 = rv0Var.m10909k();
+        if (m10909k2 == null) {
             return false;
         }
-        Matcher matcher2 = pattern.matcher(k2);
+        Matcher matcher2 = pattern.matcher(m10909k2);
         if (matcher2.matches()) {
-            return i(k.trim(), matcher2, rv0Var, bVar, this.a, list);
+            return m24923i(m10909k.trim(), matcher2, rv0Var, c0895b, this.f6249a, list);
         }
         return false;
     }

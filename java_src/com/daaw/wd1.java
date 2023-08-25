@@ -1,6 +1,7 @@
 package com.daaw;
 
 import com.daaw.avee.MainActivity;
+import com.daaw.avee.comp.playback.C0743c;
 import com.daaw.pw1;
 import com.daaw.rw1;
 import com.daaw.sw1;
@@ -11,135 +12,147 @@ import java.util.LinkedList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class wd1 {
-    public List<Object> a = new LinkedList();
 
+    /* renamed from: a */
+    public List<Object> f31177a = new LinkedList();
+
+    /* renamed from: com.daaw.wd1$a */
     /* loaded from: classes.dex */
-    public class a implements rw1.a<Integer, al> {
-        public a() {
+    public class C3426a implements rw1.InterfaceC2894a<Integer, C0645al> {
+        public C3426a() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(Integer num, al alVar) {
-            td1 c;
-            if (alVar.c() == null) {
+        public void mo2813c(Integer num, C0645al c0645al) {
+            td1 m9289c;
+            if (c0645al.m27376c() == null) {
                 return;
             }
             if (num.intValue() == 1) {
-                xd1.g(alVar);
-            } else if (num.intValue() != 10 || (c = td1.c()) == null) {
+                xd1.m5217g(c0645al);
+            } else if (num.intValue() != 10 || (m9289c = td1.m9289c()) == null) {
             } else {
-                ud1 e = c.e();
-                c.b(false, e.b, c.g(), e.c);
+                ud1 m9287e = m9289c.m9287e();
+                m9289c.m9290b(false, m9287e.f28894b, m9289c.m9285g(), m9287e.f28895c);
             }
         }
     }
 
+    /* renamed from: com.daaw.wd1$b */
     /* loaded from: classes.dex */
-    public class b implements vw1.a<ud1> {
-        public b() {
+    public class C3427b implements vw1.InterfaceC3381a<ud1> {
+        public C3427b() {
         }
 
-        @Override // com.daaw.vw1.a
+        @Override // com.daaw.vw1.InterfaceC3381a
         /* renamed from: b */
-        public ud1 a() {
-            td1 c = td1.c();
-            return c == null ? new ud1() : c.e();
+        public ud1 mo3126a() {
+            td1 m9289c = td1.m9289c();
+            return m9289c == null ? new ud1() : m9289c.m9287e();
         }
     }
 
+    /* renamed from: com.daaw.wd1$c */
     /* loaded from: classes.dex */
-    public class c implements sw1.a<Boolean, Integer, Boolean> {
-        public c() {
+    public class C3428c implements sw1.InterfaceC2987a<Boolean, Integer, Boolean> {
+        public C3428c() {
         }
 
-        @Override // com.daaw.sw1.a
+        @Override // com.daaw.sw1.InterfaceC2987a
         /* renamed from: b */
-        public void a(Boolean bool, Integer num, Boolean bool2) {
+        public void mo3118a(Boolean bool, Integer num, Boolean bool2) {
             ud1 ud1Var = new ud1();
-            ud1Var.a = bool.booleanValue();
-            ud1Var.b = num.intValue();
-            ud1Var.c = bool2.booleanValue();
-            MainActivity r0 = MainActivity.r0();
-            if (r0 != null) {
-                r0.W0(ud1Var.a, false);
+            ud1Var.f28893a = bool.booleanValue();
+            ud1Var.f28894b = num.intValue();
+            ud1Var.f28895c = bool2.booleanValue();
+            MainActivity m26903r0 = MainActivity.m26903r0();
+            if (m26903r0 != null) {
+                m26903r0.m26925W0(ud1Var.f28893a, false);
             }
         }
     }
 
+    /* renamed from: com.daaw.wd1$d */
     /* loaded from: classes.dex */
-    public class d implements pw1.a {
-        public d() {
+    public class C3429d implements pw1.InterfaceC2649a {
+        public C3429d() {
         }
 
-        @Override // com.daaw.pw1.a
-        public void a() {
-            com.daaw.avee.comp.playback.c.f.a(3);
+        @Override // com.daaw.pw1.InterfaceC2649a
+        /* renamed from: a */
+        public void mo3124a() {
+            C0743c.f4012f.m19309a(3);
         }
     }
 
+    /* renamed from: com.daaw.wd1$e */
     /* loaded from: classes.dex */
-    public class e implements tw1.a<Boolean, Integer, Date, Boolean> {
-        public e() {
+    public class C3430e implements tw1.InterfaceC3140a<Boolean, Integer, Date, Boolean> {
+        public C3430e() {
         }
 
-        @Override // com.daaw.tw1.a
+        @Override // com.daaw.tw1.InterfaceC3140a
         /* renamed from: b */
-        public void a(Boolean bool, Integer num, Date date, Boolean bool2) {
-            td1 c = td1.c();
-            if (c == null) {
+        public void mo3114a(Boolean bool, Integer num, Date date, Boolean bool2) {
+            td1 m9289c = td1.m9289c();
+            if (m9289c == null) {
                 return;
             }
-            c.b(bool.booleanValue(), num.intValue(), date, bool2.booleanValue());
+            m9289c.m9290b(bool.booleanValue(), num.intValue(), date, bool2.booleanValue());
         }
     }
 
+    /* renamed from: com.daaw.wd1$f */
     /* loaded from: classes.dex */
-    public class f implements vw1.a<ud1> {
-        public f() {
+    public class C3431f implements vw1.InterfaceC3381a<ud1> {
+        public C3431f() {
         }
 
-        @Override // com.daaw.vw1.a
+        @Override // com.daaw.vw1.InterfaceC3381a
         /* renamed from: b */
-        public ud1 a() {
-            td1 c = td1.c();
-            return c == null ? new ud1() : c.e();
+        public ud1 mo3126a() {
+            td1 m9289c = td1.m9289c();
+            return m9289c == null ? new ud1() : m9289c.m9287e();
         }
     }
 
+    /* renamed from: com.daaw.wd1$g */
     /* loaded from: classes.dex */
-    public class g implements vw1.a<Integer> {
-        public g() {
+    public class C3432g implements vw1.InterfaceC3381a<Integer> {
+        public C3432g() {
         }
 
-        @Override // com.daaw.vw1.a
+        @Override // com.daaw.vw1.InterfaceC3381a
         /* renamed from: b */
-        public Integer a() {
-            td1 c = td1.c();
-            return Integer.valueOf(c == null ? 0 : c.f());
+        public Integer mo3126a() {
+            td1 m9289c = td1.m9289c();
+            return Integer.valueOf(m9289c == null ? 0 : m9289c.m9286f());
         }
     }
 
     public wd1() {
-        MainActivity.r0.b(new a(), this.a);
-        MainActivity.t0.b(new b(), this.a);
-        td1.f.b(new c(), this.a);
-        td1.g.b(new d(), this.a);
-        xd1.x.b(new e(), this.a);
-        xd1.y.b(new f(), this.a);
-        xd1.z.b(new g(), this.a);
-        xd1.A.b(new vw1.a() { // from class: com.daaw.vd1
-            @Override // com.daaw.vw1.a
-            public final Object a() {
-                lo1 b2;
-                b2 = wd1.b();
-                return b2;
+        MainActivity.f3725r0.m10861b(new C3426a(), this.f31177a);
+        MainActivity.f3727t0.m6691b(new C3427b(), this.f31177a);
+        td1.f27493f.m9794b(new C3428c(), this.f31177a);
+        td1.f27494g.m12989b(new C3429d(), this.f31177a);
+        xd1.f32577x.m8755b(new C3430e(), this.f31177a);
+        xd1.f32578y.m6691b(new C3431f(), this.f31177a);
+        xd1.f32579z.m6691b(new C3432g(), this.f31177a);
+        xd1.f32576A.m6691b(new vw1.InterfaceC3381a() { // from class: com.daaw.vd1
+            @Override // com.daaw.vw1.InterfaceC3381a
+            /* renamed from: a */
+            public final Object mo3126a() {
+                lo1 m6163b;
+                m6163b = wd1.m6163b();
+                return m6163b;
             }
-        }, this.a);
+        }, this.f31177a);
     }
 
-    public static /* synthetic */ lo1 b() {
-        td1 c2 = td1.c();
-        return c2 == null ? new lo1(new Date(), Boolean.FALSE) : new lo1(c2.g(), Boolean.valueOf(c2.e().a));
+    /* renamed from: b */
+    public static /* synthetic */ lo1 m6163b() {
+        td1 m9289c = td1.m9289c();
+        return m9289c == null ? new lo1(new Date(), Boolean.FALSE) : new lo1(m9289c.m9285g(), Boolean.valueOf(m9289c.m9287e().f28893a));
     }
 }

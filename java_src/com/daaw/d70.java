@@ -7,101 +7,117 @@ import java.io.IOException;
 import java.io.OutputStream;
 /* loaded from: classes.dex */
 public class d70 implements e51<s60> {
-    public static final a d = new a();
-    public final r60.a a;
-    public final bc b;
-    public final a c;
 
+    /* renamed from: d */
+    public static final C1058a f6569d = new C1058a();
+
+    /* renamed from: a */
+    public final r60.InterfaceC2829a f6570a;
+
+    /* renamed from: b */
+    public final InterfaceC0832bc f6571b;
+
+    /* renamed from: c */
+    public final C1058a f6572c;
+
+    /* renamed from: com.daaw.d70$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public r60 a(r60.a aVar) {
-            return new r60(aVar);
+    public static class C1058a {
+        /* renamed from: a */
+        public r60 m24614a(r60.InterfaceC2829a interfaceC2829a) {
+            return new r60(interfaceC2829a);
         }
 
-        public c3 b() {
-            return new c3();
+        /* renamed from: b */
+        public C0912c3 m24613b() {
+            return new C0912c3();
         }
 
-        public z41<Bitmap> c(Bitmap bitmap, bc bcVar) {
-            return new dc(bitmap, bcVar);
+        /* renamed from: c */
+        public z41<Bitmap> m24612c(Bitmap bitmap, InterfaceC0832bc interfaceC0832bc) {
+            return new C1073dc(bitmap, interfaceC0832bc);
         }
 
-        public b70 d() {
+        /* renamed from: d */
+        public b70 m24611d() {
             return new b70();
         }
     }
 
-    public d70(bc bcVar) {
-        this(bcVar, d);
+    public d70(InterfaceC0832bc interfaceC0832bc) {
+        this(interfaceC0832bc, f6569d);
     }
 
-    public d70(bc bcVar, a aVar) {
-        this.b = bcVar;
-        this.a = new j60(bcVar);
-        this.c = aVar;
+    public d70(InterfaceC0832bc interfaceC0832bc, C1058a c1058a) {
+        this.f6571b = interfaceC0832bc;
+        this.f6570a = new j60(interfaceC0832bc);
+        this.f6572c = c1058a;
     }
 
-    public final r60 b(byte[] bArr) {
-        b70 d2 = this.c.d();
-        d2.o(bArr);
-        a70 c = d2.c();
-        r60 a2 = this.c.a(this.a);
-        a2.o(c, bArr);
-        a2.a();
-        return a2;
+    /* renamed from: b */
+    public final r60 m24618b(byte[] bArr) {
+        b70 m24611d = this.f6572c.m24611d();
+        m24611d.m26427o(bArr);
+        a70 m26439c = m24611d.m26439c();
+        r60 m24614a = this.f6572c.m24614a(this.f6570a);
+        m24614a.m11714o(m26439c, bArr);
+        m24614a.m11728a();
+        return m24614a;
     }
 
-    @Override // com.daaw.zw
+    @Override // com.daaw.InterfaceC3911zw
     /* renamed from: c */
-    public boolean a(z41<s60> z41Var, OutputStream outputStream) {
-        long b = jl0.b();
+    public boolean mo1827a(z41<s60> z41Var, OutputStream outputStream) {
+        long m18440b = jl0.m18440b();
         s60 s60Var = z41Var.get();
-        cn1<Bitmap> h = s60Var.h();
-        if (h instanceof np1) {
-            return e(s60Var.d(), outputStream);
+        cn1<Bitmap> m10679h = s60Var.m10679h();
+        if (m10679h instanceof np1) {
+            return m24615e(s60Var.m10683d(), outputStream);
         }
-        r60 b2 = b(s60Var.d());
-        c3 b3 = this.c.b();
-        if (b3.h(outputStream)) {
-            for (int i = 0; i < b2.f(); i++) {
-                z41<Bitmap> d2 = d(b2.i(), h, s60Var);
+        r60 m24618b = m24618b(s60Var.m10683d());
+        C0912c3 m24613b = this.f6572c.m24613b();
+        if (m24613b.m25662h(outputStream)) {
+            for (int i = 0; i < m24618b.m11723f(); i++) {
+                z41<Bitmap> m24616d = m24616d(m24618b.m11720i(), m10679h, s60Var);
                 try {
-                    if (!b3.a(d2.get())) {
+                    if (!m24613b.m25669a(m24616d.get())) {
                         return false;
                     }
-                    b3.f(b2.e(b2.d()));
-                    b2.a();
-                    d2.c();
+                    m24613b.m25664f(m24618b.m11724e(m24618b.m11725d()));
+                    m24618b.m11728a();
+                    m24616d.mo2827c();
                 } finally {
-                    d2.c();
+                    m24616d.mo2827c();
                 }
             }
-            boolean d3 = b3.d();
+            boolean m25666d = m24613b.m25666d();
             if (Log.isLoggable("GifEncoder", 2)) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Encoded gif with ");
-                sb.append(b2.f());
+                sb.append(m24618b.m11723f());
                 sb.append(" frames and ");
-                sb.append(s60Var.d().length);
+                sb.append(s60Var.m10683d().length);
                 sb.append(" bytes in ");
-                sb.append(jl0.a(b));
+                sb.append(jl0.m18441a(m18440b));
                 sb.append(" ms");
             }
-            return d3;
+            return m25666d;
         }
         return false;
     }
 
-    public final z41<Bitmap> d(Bitmap bitmap, cn1<Bitmap> cn1Var, s60 s60Var) {
-        z41<Bitmap> c = this.c.c(bitmap, this.b);
-        z41<Bitmap> a2 = cn1Var.a(c, s60Var.getIntrinsicWidth(), s60Var.getIntrinsicHeight());
-        if (!c.equals(a2)) {
-            c.c();
+    /* renamed from: d */
+    public final z41<Bitmap> m24616d(Bitmap bitmap, cn1<Bitmap> cn1Var, s60 s60Var) {
+        z41<Bitmap> m24612c = this.f6572c.m24612c(bitmap, this.f6571b);
+        z41<Bitmap> mo7395a = cn1Var.mo7395a(m24612c, s60Var.getIntrinsicWidth(), s60Var.getIntrinsicHeight());
+        if (!m24612c.equals(mo7395a)) {
+            m24612c.mo2827c();
         }
-        return a2;
+        return mo7395a;
     }
 
-    public final boolean e(byte[] bArr, OutputStream outputStream) {
+    /* renamed from: e */
+    public final boolean m24615e(byte[] bArr, OutputStream outputStream) {
         try {
             outputStream.write(bArr);
             return true;
@@ -110,7 +126,7 @@ public class d70 implements e51<s60> {
         }
     }
 
-    @Override // com.daaw.zw
+    @Override // com.daaw.InterfaceC3911zw
     public String getId() {
         return "";
     }

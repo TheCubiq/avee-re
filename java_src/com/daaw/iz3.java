@@ -3,34 +3,44 @@ package com.daaw;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class iz3 {
-    public long a = -1;
-    public long b = -1;
-    public final /* synthetic */ jz3 c;
+
+    /* renamed from: a */
+    public long f14128a = -1;
+
+    /* renamed from: b */
+    public long f14129b = -1;
+
+    /* renamed from: c */
+    public final /* synthetic */ jz3 f14130c;
 
     public iz3(jz3 jz3Var) {
-        this.c = jz3Var;
+        this.f14130c = jz3Var;
     }
 
-    public final long a() {
-        return this.b;
+    /* renamed from: a */
+    public final long m19223a() {
+        return this.f14129b;
     }
 
-    public final Bundle b() {
+    /* renamed from: b */
+    public final Bundle m19222b() {
         Bundle bundle = new Bundle();
-        bundle.putLong("topen", this.a);
-        bundle.putLong("tclose", this.b);
+        bundle.putLong("topen", this.f14128a);
+        bundle.putLong("tclose", this.f14129b);
         return bundle;
     }
 
-    public final void c() {
-        ag agVar;
-        agVar = this.c.a;
-        this.b = agVar.b();
+    /* renamed from: c */
+    public final void m19221c() {
+        InterfaceC0623ag interfaceC0623ag;
+        interfaceC0623ag = this.f14130c.f15537a;
+        this.f14129b = interfaceC0623ag.mo15859b();
     }
 
-    public final void d() {
-        ag agVar;
-        agVar = this.c.a;
-        this.a = agVar.b();
+    /* renamed from: d */
+    public final void m19220d() {
+        InterfaceC0623ag interfaceC0623ag;
+        interfaceC0623ag = this.f14130c.f15537a;
+        this.f14128a = interfaceC0623ag.mo15859b();
     }
 }

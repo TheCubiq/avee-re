@@ -6,15 +6,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final /* synthetic */ class vj3 {
-    public static void a(wj3 wj3Var, String str, Map map) {
+    /* renamed from: a */
+    public static void m7117a(wj3 wj3Var, String str, Map map) {
         try {
-            wj3Var.l(str, zzay.zzb().o(map));
+            wj3Var.mo6048l(str, zzay.zzb().m24817o(map));
         } catch (JSONException unused) {
             k04.zzj("Could not convert parameters to JSON.");
         }
     }
 
-    public static void b(wj3 wj3Var, String str, JSONObject jSONObject) {
+    /* renamed from: b */
+    public static void m7116b(wj3 wj3Var, String str, JSONObject jSONObject) {
         String jSONObject2 = jSONObject.toString();
         StringBuilder sb = new StringBuilder();
         sb.append("(window.AFMA_ReceiveMessage || function() {})('");
@@ -26,11 +28,13 @@ public final /* synthetic */ class vj3 {
         wj3Var.zza(sb.toString());
     }
 
-    public static void c(wj3 wj3Var, String str, String str2) {
+    /* renamed from: c */
+    public static void m7115c(wj3 wj3Var, String str, String str2) {
         wj3Var.zza(str + "(" + str2 + ");");
     }
 
-    public static void d(wj3 wj3Var, String str, JSONObject jSONObject) {
-        wj3Var.c(str, jSONObject.toString());
+    /* renamed from: d */
+    public static void m7114d(wj3 wj3Var, String str, JSONObject jSONObject) {
+        wj3Var.mo6049c(str, jSONObject.toString());
     }
 }

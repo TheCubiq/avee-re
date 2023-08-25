@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class d96 {
-    public abstract l76 a();
+    /* renamed from: a */
+    public abstract l76 mo12651a();
 
-    public abstract en6 b();
+    /* renamed from: b */
+    public abstract en6 mo12650b();
 }

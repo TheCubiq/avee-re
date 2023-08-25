@@ -1,16 +1,20 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class m06 implements wz7 {
-    public final m08 a;
-    public final m08 b;
+
+    /* renamed from: a */
+    public final m08 f17983a;
+
+    /* renamed from: b */
+    public final m08 f17984b;
 
     public m06(m08 m08Var, m08 m08Var2) {
-        this.a = m08Var;
-        this.b = m08Var2;
+        this.f17983a = m08Var;
+        this.f17984b = m08Var2;
     }
 
     @Override // com.daaw.m08
     public final /* bridge */ /* synthetic */ Object zzb() {
-        return new k06((ag) this.a.zzb(), ((cq4) this.b).a());
+        return new k06((InterfaceC0623ag) this.f17983a.zzb(), ((cq4) this.f17984b).m25128a());
     }
 }

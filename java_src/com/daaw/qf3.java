@@ -10,12 +10,13 @@ public final class qf3 extends hc3 implements wh3 {
     }
 
     @Override // com.daaw.wh3
-    public final Bundle x(Bundle bundle) {
-        Parcel D = D();
-        ne3.e(D, bundle);
-        Parcel I = I(1, D);
-        Bundle bundle2 = (Bundle) ne3.a(I, Bundle.CREATOR);
-        I.recycle();
+    /* renamed from: x */
+    public final Bundle mo6065x(Bundle bundle) {
+        Parcel m20847D = m20847D();
+        ne3.m15205e(m20847D, bundle);
+        Parcel m20846I = m20846I(1, m20847D);
+        Bundle bundle2 = (Bundle) ne3.m15209a(m20846I, Bundle.CREATOR);
+        m20846I.recycle();
         return bundle2;
     }
 }

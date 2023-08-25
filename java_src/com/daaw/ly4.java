@@ -3,11 +3,15 @@ package com.daaw;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public final class ly4 {
-    public final Object a;
-    public final Executor b;
+
+    /* renamed from: a */
+    public final Object f17910a;
+
+    /* renamed from: b */
+    public final Executor f17911b;
 
     public ly4(Object obj, Executor executor) {
-        this.a = obj;
-        this.b = executor;
+        this.f17910a = obj;
+        this.f17911b = executor;
     }
 }

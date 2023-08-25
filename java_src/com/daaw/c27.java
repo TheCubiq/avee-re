@@ -6,92 +6,100 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class c27 extends r17 {
     @CheckForNull
-    public Object[] d;
-    public int e;
+
+    /* renamed from: d */
+    public Object[] f5407d;
+
+    /* renamed from: e */
+    public int f5408e;
 
     public c27(int i) {
         super(i);
-        this.d = new Object[d27.n(i)];
+        this.f5407d = new Object[d27.m24765n(i)];
     }
 
     @Override // com.daaw.s17
-    public final /* bridge */ /* synthetic */ s17 a(Object obj) {
-        f(obj);
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ s17 mo7549a(Object obj) {
+        m25672f(obj);
         return this;
     }
 
-    public final c27 f(Object obj) {
+    /* renamed from: f */
+    public final c27 m25672f(Object obj) {
         Objects.requireNonNull(obj);
-        if (this.d != null) {
-            int n = d27.n(this.b);
-            int length = this.d.length;
-            if (n <= length) {
+        if (this.f5407d != null) {
+            int m24765n = d27.m24765n(this.f24734b);
+            int length = this.f5407d.length;
+            if (m24765n <= length) {
                 int i = length - 1;
                 int hashCode = obj.hashCode();
-                int a = q17.a(hashCode);
+                int m12804a = q17.m12804a(hashCode);
                 while (true) {
-                    int i2 = a & i;
-                    Object[] objArr = this.d;
+                    int i2 = m12804a & i;
+                    Object[] objArr = this.f5407d;
                     Object obj2 = objArr[i2];
                     if (obj2 != null) {
                         if (obj2.equals(obj)) {
                             break;
                         }
-                        a = i2 + 1;
+                        m12804a = i2 + 1;
                     } else {
                         objArr[i2] = obj;
-                        this.e += hashCode;
-                        super.c(obj);
+                        this.f5408e += hashCode;
+                        super.m11837c(obj);
                         break;
                     }
                 }
                 return this;
             }
         }
-        this.d = null;
-        super.c(obj);
+        this.f5407d = null;
+        super.m11837c(obj);
         return this;
     }
 
-    public final c27 g(Iterable iterable) {
-        if (this.d != null) {
+    /* renamed from: g */
+    public final c27 m25671g(Iterable iterable) {
+        if (this.f5407d != null) {
             for (Object obj : iterable) {
-                f(obj);
+                m25672f(obj);
             }
         } else {
-            super.d(iterable);
+            super.m11836d(iterable);
         }
         return this;
     }
 
-    public final d27 h() {
-        d27 x;
-        boolean y;
-        int i = this.b;
+    /* renamed from: h */
+    public final d27 m25670h() {
+        d27 m24757x;
+        boolean m24756y;
+        int i = this.f24734b;
         if (i != 0) {
             if (i == 1) {
-                Object obj = this.a[0];
+                Object obj = this.f24733a[0];
                 obj.getClass();
                 return new z37(obj);
             }
-            if (this.d == null || d27.n(i) != this.d.length) {
-                x = d27.x(this.b, this.a);
-                this.b = x.size();
+            if (this.f5407d == null || d27.m24765n(i) != this.f5407d.length) {
+                m24757x = d27.m24757x(this.f24734b, this.f24733a);
+                this.f24734b = m24757x.size();
             } else {
-                int i2 = this.b;
-                Object[] objArr = this.a;
-                y = d27.y(i2, objArr.length);
-                if (y) {
+                int i2 = this.f24734b;
+                Object[] objArr = this.f24733a;
+                m24756y = d27.m24756y(i2, objArr.length);
+                if (m24756y) {
                     objArr = Arrays.copyOf(objArr, i2);
                 }
-                int i3 = this.e;
-                Object[] objArr2 = this.d;
-                x = new s37(objArr, i3, objArr2, objArr2.length - 1, this.b);
+                int i3 = this.f5408e;
+                Object[] objArr2 = this.f5407d;
+                m24757x = new s37(objArr, i3, objArr2, objArr2.length - 1, this.f24734b);
             }
-            this.c = true;
-            this.d = null;
-            return x;
+            this.f24735c = true;
+            this.f5407d = null;
+            return m24757x;
         }
-        return s37.x;
+        return s37.f25842x;
     }
 }

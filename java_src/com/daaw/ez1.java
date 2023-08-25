@@ -3,20 +3,26 @@ package com.daaw;
 import android.content.Context;
 /* loaded from: classes.dex */
 public class ez1 {
-    public static ez1 b = new ez1();
-    public iv0 a = null;
 
-    public static iv0 a(Context context) {
-        return b.b(context);
+    /* renamed from: b */
+    public static ez1 f8970b = new ez1();
+
+    /* renamed from: a */
+    public iv0 f8971a = null;
+
+    /* renamed from: a */
+    public static iv0 m22979a(Context context) {
+        return f8970b.m22978b(context);
     }
 
-    public final synchronized iv0 b(Context context) {
-        if (this.a == null) {
+    /* renamed from: b */
+    public final synchronized iv0 m22978b(Context context) {
+        if (this.f8971a == null) {
             if (context.getApplicationContext() != null) {
                 context = context.getApplicationContext();
             }
-            this.a = new iv0(context);
+            this.f8971a = new iv0(context);
         }
-        return this.a;
+        return this.f8971a;
     }
 }

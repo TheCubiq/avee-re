@@ -5,34 +5,42 @@ import com.google.android.gms.ads.internal.client.zzdg;
 import com.google.android.gms.ads.internal.client.zzdn;
 /* loaded from: classes.dex */
 public final class vi4 extends o23 {
-    public final ei4 p;
-    public final zzbu q;
+
+    /* renamed from: p */
+    public final ei4 f30244p;
+
+    /* renamed from: q */
+    public final zzbu f30245q;
 
     public vi4(ei4 ei4Var, zzbu zzbuVar) {
-        this.p = ei4Var;
-        this.q = zzbuVar;
+        this.f30244p = ei4Var;
+        this.f30245q = zzbuVar;
     }
 
     @Override // com.daaw.p23
-    public final void V2(boolean z) {
+    /* renamed from: V2 */
+    public final void mo7136V2(boolean z) {
     }
 
     @Override // com.daaw.p23
-    public final void X1(t23 t23Var) {
-        this.p.r(t23Var);
+    /* renamed from: X1 */
+    public final void mo7135X1(t23 t23Var) {
+        this.f30244p.m23454r(t23Var);
     }
 
     @Override // com.daaw.p23
-    public final void Y0(zzdg zzdgVar) {
+    /* renamed from: Y0 */
+    public final void mo7134Y0(zzdg zzdgVar) {
     }
 
     @Override // com.daaw.p23
-    public final void t1(yd0 yd0Var, w23 w23Var) {
+    /* renamed from: t1 */
+    public final void mo7133t1(yd0 yd0Var, w23 w23Var) {
     }
 
     @Override // com.daaw.p23
     public final zzbu zze() {
-        return this.q;
+        return this.f30245q;
     }
 
     @Override // com.daaw.p23

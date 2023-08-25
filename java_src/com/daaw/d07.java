@@ -9,31 +9,41 @@ import java.util.Objects;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public class d07 extends AbstractCollection {
-    public final Object p;
-    public Collection q;
+
+    /* renamed from: p */
+    public final Object f6351p;
+
+    /* renamed from: q */
+    public Collection f6352q;
     @CheckForNull
-    public final d07 r;
+
+    /* renamed from: r */
+    public final d07 f6353r;
     @CheckForNull
-    public final Collection s;
-    public final /* synthetic */ g07 t;
+
+    /* renamed from: s */
+    public final Collection f6354s;
+
+    /* renamed from: t */
+    public final /* synthetic */ g07 f6355t;
 
     public d07(g07 g07Var, Object obj, @CheckForNull Collection collection, d07 d07Var) {
-        this.t = g07Var;
-        this.p = obj;
-        this.q = collection;
-        this.r = d07Var;
-        this.s = d07Var == null ? null : d07Var.q;
+        this.f6355t = g07Var;
+        this.f6351p = obj;
+        this.f6352q = collection;
+        this.f6353r = d07Var;
+        this.f6354s = d07Var == null ? null : d07Var.f6352q;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean add(Object obj) {
         zzb();
-        boolean isEmpty = this.q.isEmpty();
-        boolean add = this.q.add(obj);
+        boolean isEmpty = this.f6352q.isEmpty();
+        boolean add = this.f6352q.add(obj);
         if (add) {
-            g07.k(this.t);
+            g07.m22114k(this.f6355t);
             if (isEmpty) {
-                d();
+                m24805d();
                 return true;
             }
             return add;
@@ -47,11 +57,11 @@ public class d07 extends AbstractCollection {
             return false;
         }
         int size = size();
-        boolean addAll = this.q.addAll(collection);
+        boolean addAll = this.f6352q.addAll(collection);
         if (addAll) {
-            g07.m(this.t, this.q.size() - size);
+            g07.m22112m(this.f6355t, this.f6352q.size() - size);
             if (size == 0) {
-                d();
+                m24805d();
                 return true;
             }
             return addAll;
@@ -65,44 +75,46 @@ public class d07 extends AbstractCollection {
         if (size == 0) {
             return;
         }
-        this.q.clear();
-        g07.n(this.t, size);
-        e();
+        this.f6352q.clear();
+        g07.m22111n(this.f6355t, size);
+        m24804e();
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean contains(@CheckForNull Object obj) {
         zzb();
-        return this.q.contains(obj);
+        return this.f6352q.contains(obj);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean containsAll(Collection collection) {
         zzb();
-        return this.q.containsAll(collection);
+        return this.f6352q.containsAll(collection);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public final void d() {
+    /* renamed from: d */
+    public final void m24805d() {
         Map map;
-        d07 d07Var = this.r;
+        d07 d07Var = this.f6353r;
         if (d07Var != null) {
-            d07Var.d();
+            d07Var.m24805d();
             return;
         }
-        map = this.t.s;
-        map.put(this.p, this.q);
+        map = this.f6355t.f10130s;
+        map.put(this.f6351p, this.f6352q);
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public final void e() {
+    /* renamed from: e */
+    public final void m24804e() {
         Map map;
-        d07 d07Var = this.r;
+        d07 d07Var = this.f6353r;
         if (d07Var != null) {
-            d07Var.e();
-        } else if (this.q.isEmpty()) {
-            map = this.t.s;
-            map.remove(this.p);
+            d07Var.m24804e();
+        } else if (this.f6352q.isEmpty()) {
+            map = this.f6355t.f10130s;
+            map.remove(this.f6351p);
         }
     }
 
@@ -112,13 +124,13 @@ public class d07 extends AbstractCollection {
             return true;
         }
         zzb();
-        return this.q.equals(obj);
+        return this.f6352q.equals(obj);
     }
 
     @Override // java.util.Collection
     public final int hashCode() {
         zzb();
-        return this.q.hashCode();
+        return this.f6352q.hashCode();
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable
@@ -130,10 +142,10 @@ public class d07 extends AbstractCollection {
     @Override // java.util.AbstractCollection, java.util.Collection
     public final boolean remove(@CheckForNull Object obj) {
         zzb();
-        boolean remove = this.q.remove(obj);
+        boolean remove = this.f6352q.remove(obj);
         if (remove) {
-            g07.l(this.t);
-            e();
+            g07.m22113l(this.f6355t);
+            m24804e();
         }
         return remove;
     }
@@ -144,10 +156,10 @@ public class d07 extends AbstractCollection {
             return false;
         }
         int size = size();
-        boolean removeAll = this.q.removeAll(collection);
+        boolean removeAll = this.f6352q.removeAll(collection);
         if (removeAll) {
-            g07.m(this.t, this.q.size() - size);
-            e();
+            g07.m22112m(this.f6355t, this.f6352q.size() - size);
+            m24804e();
         }
         return removeAll;
     }
@@ -156,10 +168,10 @@ public class d07 extends AbstractCollection {
     public final boolean retainAll(Collection collection) {
         Objects.requireNonNull(collection);
         int size = size();
-        boolean retainAll = this.q.retainAll(collection);
+        boolean retainAll = this.f6352q.retainAll(collection);
         if (retainAll) {
-            g07.m(this.t, this.q.size() - size);
-            e();
+            g07.m22112m(this.f6355t, this.f6352q.size() - size);
+            m24804e();
         }
         return retainAll;
     }
@@ -167,29 +179,29 @@ public class d07 extends AbstractCollection {
     @Override // java.util.AbstractCollection, java.util.Collection
     public final int size() {
         zzb();
-        return this.q.size();
+        return this.f6352q.size();
     }
 
     @Override // java.util.AbstractCollection
     public final String toString() {
         zzb();
-        return this.q.toString();
+        return this.f6352q.toString();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public final void zzb() {
         Map map;
-        d07 d07Var = this.r;
+        d07 d07Var = this.f6353r;
         if (d07Var != null) {
             d07Var.zzb();
-            if (this.r.q != this.s) {
+            if (this.f6353r.f6352q != this.f6354s) {
                 throw new ConcurrentModificationException();
             }
-        } else if (this.q.isEmpty()) {
-            map = this.t.s;
-            Collection collection = (Collection) map.get(this.p);
+        } else if (this.f6352q.isEmpty()) {
+            map = this.f6355t.f10130s;
+            Collection collection = (Collection) map.get(this.f6351p);
             if (collection != null) {
-                this.q = collection;
+                this.f6352q = collection;
             }
         }
     }

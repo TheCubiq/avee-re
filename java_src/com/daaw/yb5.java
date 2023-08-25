@@ -5,13 +5,15 @@ import java.nio.ByteBuffer;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class yb5 {
-    public static void a(MediaFormat mediaFormat, String str, int i) {
+    /* renamed from: a */
+    public static void m3941a(MediaFormat mediaFormat, String str, int i) {
         if (i != -1) {
             mediaFormat.setInteger(str, i);
         }
     }
 
-    public static void b(MediaFormat mediaFormat, List list) {
+    /* renamed from: b */
+    public static void m3940b(MediaFormat mediaFormat, List list) {
         for (int i = 0; i < list.size(); i++) {
             mediaFormat.setByteBuffer("csd-" + i, ByteBuffer.wrap((byte[]) list.get(i)));
         }

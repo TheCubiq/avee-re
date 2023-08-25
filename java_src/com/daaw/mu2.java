@@ -5,33 +5,39 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class mu2 {
-    public final Map a = new HashMap();
-    public final u83 b = new u83();
+
+    /* renamed from: a */
+    public final Map f19153a = new HashMap();
+
+    /* renamed from: b */
+    public final u83 f19154b = new u83();
 
     public mu2() {
-        b(new gs2());
-        b(new kv2());
-        b(new ow2());
-        b(new t03());
-        b(new l63());
-        b(new q73());
-        b(new y93());
+        m15760b(new gs2());
+        m15760b(new kv2());
+        m15760b(new ow2());
+        m15760b(new t03());
+        m15760b(new l63());
+        m15760b(new q73());
+        m15760b(new y93());
     }
 
-    public final gl2 a(w07 w07Var, gl2 gl2Var) {
-        ou7.c(w07Var);
+    /* renamed from: a */
+    public final gl2 m15761a(w07 w07Var, gl2 gl2Var) {
+        ou7.m13921c(w07Var);
         if (gl2Var instanceof km2) {
             km2 km2Var = (km2) gl2Var;
-            ArrayList b = km2Var.b();
-            String a = km2Var.a();
-            return (this.a.containsKey(a) ? (it2) this.a.get(a) : this.b).a(a, w07Var, b);
+            ArrayList m17664b = km2Var.m17664b();
+            String m17665a = km2Var.m17665a();
+            return (this.f19153a.containsKey(m17665a) ? (it2) this.f19153a.get(m17665a) : this.f19154b).mo3983a(m17665a, w07Var, m17664b);
         }
         return gl2Var;
     }
 
-    public final void b(it2 it2Var) {
-        for (db3 db3Var : it2Var.a) {
-            this.a.put(db3Var.b().toString(), it2Var);
+    /* renamed from: b */
+    public final void m15760b(it2 it2Var) {
+        for (db3 db3Var : it2Var.f13989a) {
+            this.f19153a.put(db3Var.m24568b().toString(), it2Var);
         }
     }
 }

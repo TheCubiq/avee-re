@@ -6,52 +6,65 @@ import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public abstract class sx5 implements p46 {
-    public final boolean a;
-    public final ArrayList b = new ArrayList(1);
-    public int c;
-    public pa6 d;
+
+    /* renamed from: a */
+    public final boolean f26746a;
+
+    /* renamed from: b */
+    public final ArrayList f26747b = new ArrayList(1);
+
+    /* renamed from: c */
+    public int f26748c;
+
+    /* renamed from: d */
+    public pa6 f26749d;
 
     public sx5(boolean z) {
-        this.a = z;
+        this.f26746a = z;
     }
 
-    public final void c(int i) {
-        pa6 pa6Var = this.d;
-        int i2 = it5.a;
-        for (int i3 = 0; i3 < this.c; i3++) {
-            ((qz6) this.b.get(i3)).D(this, pa6Var, this.a, i);
+    /* renamed from: c */
+    public final void m9782c(int i) {
+        pa6 pa6Var = this.f26749d;
+        int i2 = it5.f13991a;
+        for (int i3 = 0; i3 < this.f26748c; i3++) {
+            ((qz6) this.f26747b.get(i3)).mo11898D(this, pa6Var, this.f26746a, i);
         }
     }
 
     @Override // com.daaw.p46
-    public final void d(qz6 qz6Var) {
+    /* renamed from: d */
+    public final void mo1979d(qz6 qz6Var) {
         Objects.requireNonNull(qz6Var);
-        if (this.b.contains(qz6Var)) {
+        if (this.f26747b.contains(qz6Var)) {
             return;
         }
-        this.b.add(qz6Var);
-        this.c++;
+        this.f26747b.add(qz6Var);
+        this.f26748c++;
     }
 
-    public final void k() {
-        pa6 pa6Var = this.d;
-        int i = it5.a;
-        for (int i2 = 0; i2 < this.c; i2++) {
-            ((qz6) this.b.get(i2)).a(this, pa6Var, this.a);
+    /* renamed from: k */
+    public final void m9781k() {
+        pa6 pa6Var = this.f26749d;
+        int i = it5.f13991a;
+        for (int i2 = 0; i2 < this.f26748c; i2++) {
+            ((qz6) this.f26747b.get(i2)).mo11897a(this, pa6Var, this.f26746a);
         }
-        this.d = null;
+        this.f26749d = null;
     }
 
-    public final void l(pa6 pa6Var) {
-        for (int i = 0; i < this.c; i++) {
-            ((qz6) this.b.get(i)).f(this, pa6Var, this.a);
+    /* renamed from: l */
+    public final void m9780l(pa6 pa6Var) {
+        for (int i = 0; i < this.f26748c; i++) {
+            ((qz6) this.f26747b.get(i)).mo11896f(this, pa6Var, this.f26746a);
         }
     }
 
-    public final void m(pa6 pa6Var) {
-        this.d = pa6Var;
-        for (int i = 0; i < this.c; i++) {
-            ((qz6) this.b.get(i)).l(this, pa6Var, this.a);
+    /* renamed from: m */
+    public final void m9779m(pa6 pa6Var) {
+        this.f26749d = pa6Var;
+        for (int i = 0; i < this.f26748c; i++) {
+            ((qz6) this.f26747b.get(i)).mo11895l(this, pa6Var, this.f26746a);
         }
     }
 

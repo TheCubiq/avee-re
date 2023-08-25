@@ -16,165 +16,187 @@ import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
-import com.daaw.al;
+import com.daaw.AbstractC1643i0;
+import com.daaw.AbstractC2150m4;
+import com.daaw.C0645al;
+import com.daaw.SharedPreferences$OnSharedPreferenceChangeListenerC1788j5;
 import com.daaw.as0;
 import com.daaw.avee.SettingsActivity;
 import com.daaw.br1;
-import com.daaw.i0;
-import com.daaw.j5;
 import com.daaw.lj0;
-import com.daaw.m4;
 import com.daaw.nc0;
 import com.daaw.pw1;
 import com.daaw.qw1;
 import com.daaw.us0;
 import com.daaw.vw1;
 /* loaded from: classes.dex */
-public class SettingsActivity extends m4 {
-    public static qw1<al> q = new qw1<>();
-    public static qw1<Object> r = new qw1<>();
-    public static qw1<Boolean> s = new qw1<>();
-    public static qw1<Integer> t = new qw1<>();
-    public static pw1 u = new pw1();
-    public static qw1<al> v = new qw1<>();
+public class SettingsActivity extends AbstractC2150m4 {
 
+    /* renamed from: q */
+    public static qw1<C0645al> f3766q = new qw1<>();
+
+    /* renamed from: r */
+    public static qw1<Object> f3767r = new qw1<>();
+
+    /* renamed from: s */
+    public static qw1<Boolean> f3768s = new qw1<>();
+
+    /* renamed from: t */
+    public static qw1<Integer> f3769t = new qw1<>();
+
+    /* renamed from: u */
+    public static pw1 f3770u = new pw1();
+
+    /* renamed from: v */
+    public static qw1<C0645al> f3771v = new qw1<>();
+
+    /* renamed from: com.daaw.avee.SettingsActivity$a */
     /* loaded from: classes.dex */
-    public static class a extends PreferenceFragment {
+    public static class C0687a extends PreferenceFragment {
 
-        /* renamed from: com.daaw.avee.SettingsActivity$a$a  reason: collision with other inner class name */
+        /* renamed from: com.daaw.avee.SettingsActivity$a$a */
         /* loaded from: classes.dex */
-        public class C0038a implements Preference.OnPreferenceClickListener {
+        public class C0688a implements Preference.OnPreferenceClickListener {
 
-            /* renamed from: com.daaw.avee.SettingsActivity$a$a$a  reason: collision with other inner class name */
+            /* renamed from: com.daaw.avee.SettingsActivity$a$a$a */
             /* loaded from: classes.dex */
-            public class DialogInterface$OnClickListenerC0039a implements DialogInterface.OnClickListener {
-                public DialogInterface$OnClickListenerC0039a() {
+            public class DialogInterface$OnClickListenerC0689a implements DialogInterface.OnClickListener {
+                public DialogInterface$OnClickListenerC0689a() {
                 }
 
                 @Override // android.content.DialogInterface.OnClickListener
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    a aVar = a.this;
-                    aVar.d(aVar.getActivity().getApplicationContext());
+                    C0687a c0687a = C0687a.this;
+                    c0687a.m26880d(c0687a.getActivity().getApplicationContext());
                 }
             }
 
-            public C0038a() {
+            public C0688a() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(a.this.getActivity());
+                AlertDialog.Builder builder = new AlertDialog.Builder(C0687a.this.getActivity());
                 builder.setTitle(R.string.pref_reset_dialog_title);
                 builder.setMessage(R.string.pref_reset_dialog_message);
-                builder.setPositiveButton(R.string.dialog_ok, new DialogInterface$OnClickListenerC0039a());
+                builder.setPositiveButton(R.string.dialog_ok, new DialogInterface$OnClickListenerC0689a());
                 builder.setNegativeButton(R.string.dialog_cancel, (DialogInterface.OnClickListener) null);
                 builder.create().show();
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$b */
         /* loaded from: classes.dex */
-        public class b implements Preference.OnPreferenceClickListener {
-            public b() {
+        public class C0690b implements Preference.OnPreferenceClickListener {
+            public C0690b() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                SettingsActivity.u.a();
+                SettingsActivity.f3770u.m12990a();
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$c */
         /* loaded from: classes.dex */
-        public class c implements Preference.OnPreferenceClickListener {
-            public c() {
+        public class C0691c implements Preference.OnPreferenceClickListener {
+            public C0691c() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                SettingsActivity.v.a(new al(a.this.getActivity()));
+                SettingsActivity.f3771v.m12018a(new C0645al(C0687a.this.getActivity()));
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$d */
         /* loaded from: classes.dex */
-        public class d implements Preference.OnPreferenceClickListener {
-            public d() {
+        public class C0692d implements Preference.OnPreferenceClickListener {
+            public C0692d() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                a.this.startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://www.iubenda.com/privacy-policy/8118546/full-legal")));
+                C0687a.this.startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://www.iubenda.com/privacy-policy/8118546/full-legal")));
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$e */
         /* loaded from: classes.dex */
-        public class e implements Preference.OnPreferenceChangeListener {
-            public e() {
+        public class C0693e implements Preference.OnPreferenceChangeListener {
+            public C0693e() {
             }
 
             @Override // android.preference.Preference.OnPreferenceChangeListener
             public boolean onPreferenceChange(Preference preference, Object obj) {
                 if (obj instanceof Boolean) {
-                    j5.e().Q(a.this.getActivity(), "pref_disableHeaderAds", ((Boolean) obj).booleanValue());
+                    SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18946Q(C0687a.this.getActivity(), "pref_disableHeaderAds", ((Boolean) obj).booleanValue());
                     return true;
                 }
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$f */
         /* loaded from: classes.dex */
-        public class f implements Preference.OnPreferenceChangeListener {
-            public f() {
+        public class C0694f implements Preference.OnPreferenceChangeListener {
+            public C0694f() {
             }
 
             @Override // android.preference.Preference.OnPreferenceChangeListener
             public boolean onPreferenceChange(Preference preference, Object obj) {
-                SettingsActivity.r.a(obj);
+                SettingsActivity.f3767r.m12018a(obj);
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$g */
         /* loaded from: classes.dex */
-        public class g implements Preference.OnPreferenceClickListener {
-            public g() {
+        public class C0695g implements Preference.OnPreferenceClickListener {
+            public C0695g() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                j5.e().S();
+                SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18944S();
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$h */
         /* loaded from: classes.dex */
-        public class h implements Preference.OnPreferenceClickListener {
-            public h() {
+        public class C0696h implements Preference.OnPreferenceClickListener {
+            public C0696h() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                lj0.e(a.this.getFragmentManager(), true, R.raw.licenses_fonts, R.string.pref_fontsLicenses, "");
+                lj0.m16915e(C0687a.this.getFragmentManager(), true, R.raw.licenses_fonts, R.string.pref_fontsLicenses, "");
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$i */
         /* loaded from: classes.dex */
-        public class i implements Preference.OnPreferenceClickListener {
-            public i() {
+        public class C0697i implements Preference.OnPreferenceClickListener {
+            public C0697i() {
             }
 
             @Override // android.preference.Preference.OnPreferenceClickListener
             public boolean onPreferenceClick(Preference preference) {
-                lj0.e(a.this.getFragmentManager(), true, R.raw.licenses, R.string.pref_openSourceLicenses, "");
+                lj0.m16915e(C0687a.this.getFragmentManager(), true, R.raw.licenses, R.string.pref_openSourceLicenses, "");
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$j */
         /* loaded from: classes.dex */
-        public class j implements Preference.OnPreferenceChangeListener {
-            public j() {
+        public class C0698j implements Preference.OnPreferenceChangeListener {
+            public C0698j() {
             }
 
             @Override // android.preference.Preference.OnPreferenceChangeListener
@@ -184,100 +206,106 @@ public class SettingsActivity extends m4 {
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$k */
         /* loaded from: classes.dex */
-        public class k implements Preference.OnPreferenceChangeListener {
-            public k() {
+        public class C0699k implements Preference.OnPreferenceChangeListener {
+            public C0699k() {
             }
 
             @Override // android.preference.Preference.OnPreferenceChangeListener
             public boolean onPreferenceChange(Preference preference, Object obj) {
                 preference.setSummary(obj.toString());
-                SettingsActivity.t.a(Integer.valueOf(br1.x(obj.toString(), 0)));
+                SettingsActivity.f3769t.m12018a(Integer.valueOf(br1.m25885x(obj.toString(), 0)));
                 return true;
             }
         }
 
+        /* renamed from: com.daaw.avee.SettingsActivity$a$l */
         /* loaded from: classes.dex */
-        public class l implements Preference.OnPreferenceChangeListener {
-            public l() {
+        public class C0700l implements Preference.OnPreferenceChangeListener {
+            public C0700l() {
             }
 
             @Override // android.preference.Preference.OnPreferenceChangeListener
             public boolean onPreferenceChange(Preference preference, Object obj) {
-                SettingsActivity.s.a((Boolean) obj);
+                SettingsActivity.f3768s.m12018a((Boolean) obj);
                 return true;
             }
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        public /* synthetic */ boolean c(Preference preference, Object obj) {
+        /* renamed from: c */
+        public /* synthetic */ boolean m26881c(Preference preference, Object obj) {
             if (obj instanceof Boolean) {
-                j5.e().Q(getActivity(), "pref_alwaysHideAppLogo", ((Boolean) obj).booleanValue());
+                SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18946Q(getActivity(), "pref_alwaysHideAppLogo", ((Boolean) obj).booleanValue());
                 return true;
             }
             return true;
         }
 
-        public final void b() {
-            findPreference("pref_resetToDefault").setOnPreferenceClickListener(new C0038a());
+        /* renamed from: b */
+        public final void m26882b() {
+            findPreference("pref_resetToDefault").setOnPreferenceClickListener(new C0688a());
             CheckBoxPreference checkBoxPreference = (CheckBoxPreference) findPreference("pref_disableHeaderAds");
-            vw1<Boolean> vw1Var = nc0.g;
+            vw1<Boolean> vw1Var = nc0.f19989g;
             Boolean bool = Boolean.FALSE;
-            checkBoxPreference.setEnabled(vw1Var.a(bool).booleanValue());
-            if (!nc0.g.a(bool).booleanValue()) {
+            checkBoxPreference.setEnabled(vw1Var.m6692a(bool).booleanValue());
+            if (!nc0.f19989g.m6692a(bool).booleanValue()) {
                 checkBoxPreference.setWidgetLayoutResource(R.layout.my_preference_widget_prcheckbox);
             }
-            checkBoxPreference.setChecked(j5.e().K(getActivity(), "pref_disableHeaderAds", false));
-            checkBoxPreference.setOnPreferenceChangeListener(new e());
+            checkBoxPreference.setChecked(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18952K(getActivity(), "pref_disableHeaderAds", false));
+            checkBoxPreference.setOnPreferenceChangeListener(new C0693e());
             CheckBoxPreference checkBoxPreference2 = (CheckBoxPreference) findPreference("pref_alwaysHideAppLogo");
-            checkBoxPreference2.setEnabled(nc0.g.a(bool).booleanValue());
-            if (!nc0.g.a(bool).booleanValue()) {
+            checkBoxPreference2.setEnabled(nc0.f19989g.m6692a(bool).booleanValue());
+            if (!nc0.f19989g.m6692a(bool).booleanValue()) {
                 checkBoxPreference2.setWidgetLayoutResource(R.layout.my_preference_widget_prcheckbox);
             }
-            checkBoxPreference2.setChecked(j5.e().K(getActivity(), "pref_alwaysHideAppLogo", false));
+            checkBoxPreference2.setChecked(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18952K(getActivity(), "pref_alwaysHideAppLogo", false));
             checkBoxPreference2.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() { // from class: com.daaw.ub1
                 @Override // android.preference.Preference.OnPreferenceChangeListener
                 public final boolean onPreferenceChange(Preference preference, Object obj) {
-                    boolean c2;
-                    c2 = SettingsActivity.a.this.c(preference, obj);
-                    return c2;
+                    boolean m26881c;
+                    m26881c = SettingsActivity.C0687a.this.m26881c(preference, obj);
+                    return m26881c;
                 }
             });
             Preference findPreference = findPreference("pref_appTheme");
             findPreference.setOnPreferenceClickListener(new us0(getActivity()));
-            findPreference.setOnPreferenceChangeListener(new f());
-            findPreference("pref_resetTips").setOnPreferenceClickListener(new g());
-            findPreference("pref_fontsLicenses").setOnPreferenceClickListener(new h());
-            findPreference("pref_openSourceLicenses").setOnPreferenceClickListener(new i());
+            findPreference.setOnPreferenceChangeListener(new C0694f());
+            findPreference("pref_resetTips").setOnPreferenceClickListener(new C0695g());
+            findPreference("pref_fontsLicenses").setOnPreferenceClickListener(new C0696h());
+            findPreference("pref_openSourceLicenses").setOnPreferenceClickListener(new C0697i());
             EditTextPreference editTextPreference = (EditTextPreference) findPreference("pref_playlistDefaultPath");
             editTextPreference.setSummary(editTextPreference.getText());
-            editTextPreference.setOnPreferenceChangeListener(new j());
+            editTextPreference.setOnPreferenceChangeListener(new C0698j());
             EditTextPreference editTextPreference2 = (EditTextPreference) findPreference("pref_audioVisOffset");
             editTextPreference2.setSummary(editTextPreference2.getText());
-            editTextPreference2.setOnPreferenceChangeListener(new k());
-            ((CheckBoxPreference) findPreference("pref_highQualityBlur")).setOnPreferenceChangeListener(new l());
-            findPreference("pref_clearCache").setOnPreferenceClickListener(new b());
-            findPreference("pref_eula").setOnPreferenceClickListener(new c());
-            findPreference("pref_privacyPolicy").setOnPreferenceClickListener(new d());
+            editTextPreference2.setOnPreferenceChangeListener(new C0699k());
+            ((CheckBoxPreference) findPreference("pref_highQualityBlur")).setOnPreferenceChangeListener(new C0700l());
+            findPreference("pref_clearCache").setOnPreferenceClickListener(new C0690b());
+            findPreference("pref_eula").setOnPreferenceClickListener(new C0691c());
+            findPreference("pref_privacyPolicy").setOnPreferenceClickListener(new C0692d());
         }
 
-        public void d(Context context) {
+        /* renamed from: d */
+        public void m26880d(Context context) {
             PreferenceManager.getDefaultSharedPreferences(context).edit().clear().commit();
             PreferenceManager.setDefaultValues(context, R.xml.preferences, true);
             setPreferenceScreen(null);
             addPreferencesFromResource(R.xml.preferences);
-            b();
+            m26882b();
         }
 
-        public final void e(PreferenceGroup preferenceGroup) {
+        /* renamed from: e */
+        public final void m26879e(PreferenceGroup preferenceGroup) {
             if (preferenceGroup == null) {
                 return;
             }
-            for (int i2 = 0; i2 < preferenceGroup.getPreferenceCount(); i2++) {
-                Preference preference = preferenceGroup.getPreference(i2);
+            for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
+                Preference preference = preferenceGroup.getPreference(i);
                 preference.setSingleLineTitle(false);
                 if (preference instanceof PreferenceGroup) {
-                    e((PreferenceGroup) preference);
+                    m26879e((PreferenceGroup) preference);
                 }
             }
         }
@@ -285,35 +313,36 @@ public class SettingsActivity extends m4 {
         @Override // android.preference.PreferenceFragment, android.app.Fragment
         public void onCreate(Bundle bundle) {
             super.onCreate(bundle);
-            j5.e().T(getActivity());
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18943T(getActivity());
             addPreferencesFromResource(R.xml.preferences);
-            b();
+            m26882b();
         }
 
         @Override // android.preference.PreferenceFragment
         public void setPreferenceScreen(PreferenceScreen preferenceScreen) {
             if (Build.VERSION.SDK_INT >= 26) {
-                e(preferenceScreen);
+                m26879e(preferenceScreen);
             }
             super.setPreferenceScreen(preferenceScreen);
         }
     }
 
-    public void d() {
-        i0 b = b();
-        if (b != null) {
-            b.x(getString(R.string.app_settings_name));
-            b.s(true);
+    /* renamed from: d */
+    public void m26884d() {
+        AbstractC1643i0 m16234b = m16234b();
+        if (m16234b != null) {
+            m16234b.mo15685x(getString(R.string.app_settings_name));
+            m16234b.mo15690s(true);
         }
     }
 
-    @Override // com.daaw.m4, android.preference.PreferenceActivity, android.app.Activity
+    @Override // com.daaw.AbstractC2150m4, android.preference.PreferenceActivity, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.preference_toolbar);
-        c((Toolbar) findViewById(R.id.toolbar));
-        d();
-        getFragmentManager().beginTransaction().replace(R.id.content_frame, new a()).commit();
+        m16233c((Toolbar) findViewById(R.id.toolbar));
+        m26884d();
+        getFragmentManager().beginTransaction().replace(R.id.content_frame, new C0687a()).commit();
     }
 
     @Override // android.preference.PreferenceActivity, android.app.Activity
@@ -321,7 +350,7 @@ public class SettingsActivity extends m4 {
         if (menuItem.getItemId() != 16908332) {
             return super.onOptionsItemSelected(menuItem);
         }
-        as0.e(this);
+        as0.m27107e(this);
         return true;
     }
 }

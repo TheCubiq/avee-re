@@ -5,33 +5,58 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.daaw.C3654y;
+import com.daaw.InterfaceC0785b0;
 import com.daaw.at1;
-import com.daaw.b0;
 import com.daaw.xs1;
-import com.daaw.y;
 /* loaded from: classes2.dex */
-public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.c<V> {
-    public at1 a;
-    public c b;
-    public boolean c;
-    public boolean e;
-    public float d = 0.0f;
-    public int f = 2;
-    public float g = 0.5f;
-    public float h = 0.0f;
-    public float i = 0.5f;
-    public final at1.c j = new a();
+public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.AbstractC0194c<V> {
 
+    /* renamed from: a */
+    public at1 f37163a;
+
+    /* renamed from: b */
+    public InterfaceC4015c f37164b;
+
+    /* renamed from: c */
+    public boolean f37165c;
+
+    /* renamed from: e */
+    public boolean f37167e;
+
+    /* renamed from: d */
+    public float f37166d = 0.0f;
+
+    /* renamed from: f */
+    public int f37168f = 2;
+
+    /* renamed from: g */
+    public float f37169g = 0.5f;
+
+    /* renamed from: h */
+    public float f37170h = 0.0f;
+
+    /* renamed from: i */
+    public float f37171i = 0.5f;
+
+    /* renamed from: j */
+    public final at1.AbstractC0673c f37172j = new C4013a();
+
+    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$a */
     /* loaded from: classes2.dex */
-    public class a extends at1.c {
-        public int a;
-        public int b = -1;
+    public class C4013a extends at1.AbstractC0673c {
 
-        public a() {
+        /* renamed from: a */
+        public int f37173a;
+
+        /* renamed from: b */
+        public int f37174b = -1;
+
+        public C4013a() {
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:10:0x001c, code lost:
-            r5 = r2.a;
+            r5 = r2.f37173a;
             r3 = r3.getWidth() + r5;
          */
         /* JADX WARN: Code restructure failed: missing block: B:12:0x0026, code lost:
@@ -41,136 +66,114 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.c<V>
             if (r5 != false) goto L7;
          */
         /* JADX WARN: Code restructure failed: missing block: B:9:0x0012, code lost:
-            r5 = r2.a - r3.getWidth();
-            r3 = r2.a;
+            r5 = r2.f37173a - r3.getWidth();
+            r3 = r2.f37173a;
          */
-        @Override // com.daaw.at1.c
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: a */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
         */
-        public int a(android.view.View r3, int r4, int r5) {
-            /*
-                r2 = this;
-                int r5 = com.daaw.xs1.E(r3)
-                r0 = 1
-                if (r5 != r0) goto L9
-                r5 = 1
-                goto La
-            L9:
-                r5 = 0
-            La:
-                com.google.android.material.behavior.SwipeDismissBehavior r1 = com.google.android.material.behavior.SwipeDismissBehavior.this
-                int r1 = r1.f
-                if (r1 != 0) goto L24
-                if (r5 == 0) goto L1c
-            L12:
-                int r5 = r2.a
-                int r3 = r3.getWidth()
-                int r5 = r5 - r3
-                int r3 = r2.a
-                goto L37
-            L1c:
-                int r5 = r2.a
-                int r3 = r3.getWidth()
-                int r3 = r3 + r5
-                goto L37
-            L24:
-                if (r1 != r0) goto L29
-                if (r5 == 0) goto L12
-                goto L1c
-            L29:
-                int r5 = r2.a
-                int r0 = r3.getWidth()
-                int r5 = r5 - r0
-                int r0 = r2.a
-                int r3 = r3.getWidth()
-                int r3 = r3 + r0
-            L37:
-                int r3 = com.google.android.material.behavior.SwipeDismissBehavior.G(r5, r4, r3)
-                return r3
-            */
-            throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.behavior.SwipeDismissBehavior.a.a(android.view.View, int, int):int");
+        public int mo872a(View view, int i, int i2) {
+            int width;
+            int width2;
+            boolean z = xs1.m4768E(view) == 1;
+            int i3 = SwipeDismissBehavior.this.f37168f;
+            if (i3 != 0) {
+                if (i3 != 1) {
+                    width = this.f37173a - view.getWidth();
+                    width2 = view.getWidth() + this.f37173a;
+                }
+            }
+            return SwipeDismissBehavior.m988G(width, i, width2);
         }
 
-        @Override // com.daaw.at1.c
-        public int b(View view, int i, int i2) {
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: b */
+        public int mo871b(View view, int i, int i2) {
             return view.getTop();
         }
 
-        @Override // com.daaw.at1.c
-        public int d(View view) {
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: d */
+        public int mo981d(View view) {
             return view.getWidth();
         }
 
-        @Override // com.daaw.at1.c
-        public void i(View view, int i) {
-            this.b = i;
-            this.a = view.getLeft();
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: i */
+        public void mo980i(View view, int i) {
+            this.f37174b = i;
+            this.f37173a = view.getLeft();
             ViewParent parent = view.getParent();
             if (parent != null) {
                 parent.requestDisallowInterceptTouchEvent(true);
             }
         }
 
-        @Override // com.daaw.at1.c
-        public void j(int i) {
-            c cVar = SwipeDismissBehavior.this.b;
-            if (cVar != null) {
-                cVar.b(i);
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: j */
+        public void mo869j(int i) {
+            InterfaceC4015c interfaceC4015c = SwipeDismissBehavior.this.f37164b;
+            if (interfaceC4015c != null) {
+                interfaceC4015c.m977b(i);
             }
         }
 
-        @Override // com.daaw.at1.c
-        public void k(View view, int i, int i2, int i3, int i4) {
-            float width = this.a + (view.getWidth() * SwipeDismissBehavior.this.h);
-            float width2 = this.a + (view.getWidth() * SwipeDismissBehavior.this.i);
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: k */
+        public void mo868k(View view, int i, int i2, int i3, int i4) {
+            float width = this.f37173a + (view.getWidth() * SwipeDismissBehavior.this.f37170h);
+            float width2 = this.f37173a + (view.getWidth() * SwipeDismissBehavior.this.f37171i);
             float f = i;
             if (f <= width) {
                 view.setAlpha(1.0f);
             } else if (f >= width2) {
                 view.setAlpha(0.0f);
             } else {
-                view.setAlpha(SwipeDismissBehavior.F(0.0f, 1.0f - SwipeDismissBehavior.I(width, width2, f), 1.0f));
+                view.setAlpha(SwipeDismissBehavior.m989F(0.0f, 1.0f - SwipeDismissBehavior.m986I(width, width2, f), 1.0f));
             }
         }
 
-        @Override // com.daaw.at1.c
-        public void l(View view, float f, float f2) {
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: l */
+        public void mo867l(View view, float f, float f2) {
             int i;
             boolean z;
-            c cVar;
-            this.b = -1;
+            InterfaceC4015c interfaceC4015c;
+            this.f37174b = -1;
             int width = view.getWidth();
-            if (n(view, f)) {
+            if (m979n(view, f)) {
                 int left = view.getLeft();
-                int i2 = this.a;
+                int i2 = this.f37173a;
                 i = left < i2 ? i2 - width : i2 + width;
                 z = true;
             } else {
-                i = this.a;
+                i = this.f37173a;
                 z = false;
             }
-            if (SwipeDismissBehavior.this.a.M(i, view.getTop())) {
-                xs1.j0(view, new d(view, z));
-            } else if (!z || (cVar = SwipeDismissBehavior.this.b) == null) {
+            if (SwipeDismissBehavior.this.f37163a.m27076M(i, view.getTop())) {
+                xs1.m4718j0(view, new RunnableC4016d(view, z));
+            } else if (!z || (interfaceC4015c = SwipeDismissBehavior.this.f37164b) == null) {
             } else {
-                cVar.a(view);
+                interfaceC4015c.m978a(view);
             }
         }
 
-        @Override // com.daaw.at1.c
-        public boolean m(View view, int i) {
-            int i2 = this.b;
-            return (i2 == -1 || i2 == i) && SwipeDismissBehavior.this.E(view);
+        @Override // com.daaw.at1.AbstractC0673c
+        /* renamed from: m */
+        public boolean mo866m(View view, int i) {
+            int i2 = this.f37174b;
+            return (i2 == -1 || i2 == i) && SwipeDismissBehavior.this.mo327E(view);
         }
 
-        public final boolean n(View view, float f) {
+        /* renamed from: n */
+        public final boolean m979n(View view, float f) {
             if (f == 0.0f) {
-                return Math.abs(view.getLeft() - this.a) >= Math.round(((float) view.getWidth()) * SwipeDismissBehavior.this.g);
+                return Math.abs(view.getLeft() - this.f37173a) >= Math.round(((float) view.getWidth()) * SwipeDismissBehavior.this.f37169g);
             }
-            boolean z = xs1.E(view) == 1;
-            int i = SwipeDismissBehavior.this.f;
+            boolean z = xs1.m4768E(view) == 1;
+            int i = SwipeDismissBehavior.this.f37168f;
             if (i == 2) {
                 return true;
             }
@@ -198,17 +201,19 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.c<V>
         }
     }
 
+    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$b */
     /* loaded from: classes2.dex */
-    public class b implements b0 {
-        public b() {
+    public class C4014b implements InterfaceC0785b0 {
+        public C4014b() {
         }
 
-        @Override // com.daaw.b0
-        public boolean a(View view, b0.a aVar) {
+        @Override // com.daaw.InterfaceC0785b0
+        /* renamed from: a */
+        public boolean mo864a(View view, InterfaceC0785b0.AbstractC0786a abstractC0786a) {
             boolean z = false;
-            if (SwipeDismissBehavior.this.E(view)) {
-                boolean z2 = xs1.E(view) == 1;
-                int i = SwipeDismissBehavior.this.f;
+            if (SwipeDismissBehavior.this.mo327E(view)) {
+                boolean z2 = xs1.m4768E(view) == 1;
+                int i = SwipeDismissBehavior.this.f37168f;
                 if ((i == 0 && z2) || (i == 1 && !z2)) {
                     z = true;
                 }
@@ -216,11 +221,11 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.c<V>
                 if (z) {
                     width = -width;
                 }
-                xs1.b0(view, width);
+                xs1.m4734b0(view, width);
                 view.setAlpha(0.0f);
-                c cVar = SwipeDismissBehavior.this.b;
-                if (cVar != null) {
-                    cVar.a(view);
+                InterfaceC4015c interfaceC4015c = SwipeDismissBehavior.this.f37164b;
+                if (interfaceC4015c != null) {
+                    interfaceC4015c.m978a(view);
                 }
                 return true;
             }
@@ -228,111 +233,131 @@ public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.c<V>
         }
     }
 
+    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$c */
     /* loaded from: classes2.dex */
-    public interface c {
-        void a(View view);
+    public interface InterfaceC4015c {
+        /* renamed from: a */
+        void m978a(View view);
 
-        void b(int i);
+        /* renamed from: b */
+        void m977b(int i);
     }
 
+    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$d */
     /* loaded from: classes2.dex */
-    public class d implements Runnable {
-        public final View p;
-        public final boolean q;
+    public class RunnableC4016d implements Runnable {
 
-        public d(View view, boolean z) {
-            this.p = view;
-            this.q = z;
+        /* renamed from: p */
+        public final View f37177p;
+
+        /* renamed from: q */
+        public final boolean f37178q;
+
+        public RunnableC4016d(View view, boolean z) {
+            this.f37177p = view;
+            this.f37178q = z;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            c cVar;
-            at1 at1Var = SwipeDismissBehavior.this.a;
-            if (at1Var != null && at1Var.m(true)) {
-                xs1.j0(this.p, this);
-            } else if (!this.q || (cVar = SwipeDismissBehavior.this.b) == null) {
+            InterfaceC4015c interfaceC4015c;
+            at1 at1Var = SwipeDismissBehavior.this.f37163a;
+            if (at1Var != null && at1Var.m27060m(true)) {
+                xs1.m4718j0(this.f37177p, this);
+            } else if (!this.f37178q || (interfaceC4015c = SwipeDismissBehavior.this.f37164b) == null) {
             } else {
-                cVar.a(this.p);
+                interfaceC4015c.m978a(this.f37177p);
             }
         }
     }
 
-    public static float F(float f, float f2, float f3) {
+    /* renamed from: F */
+    public static float m989F(float f, float f2, float f3) {
         return Math.min(Math.max(f, f2), f3);
     }
 
-    public static int G(int i, int i2, int i3) {
+    /* renamed from: G */
+    public static int m988G(int i, int i2, int i3) {
         return Math.min(Math.max(i, i2), i3);
     }
 
-    public static float I(float f, float f2, float f3) {
+    /* renamed from: I */
+    public static float m986I(float f, float f2, float f3) {
         return (f3 - f) / (f2 - f);
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean D(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
-        at1 at1Var = this.a;
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: D */
+    public boolean mo102D(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
+        at1 at1Var = this.f37163a;
         if (at1Var != null) {
-            at1Var.E(motionEvent);
+            at1Var.m27084E(motionEvent);
             return true;
         }
         return false;
     }
 
-    public boolean E(View view) {
+    /* renamed from: E */
+    public boolean mo327E(View view) {
         return true;
     }
 
-    public final void H(ViewGroup viewGroup) {
-        if (this.a == null) {
-            this.a = this.e ? at1.n(viewGroup, this.d, this.j) : at1.o(viewGroup, this.j);
+    /* renamed from: H */
+    public final void m987H(ViewGroup viewGroup) {
+        if (this.f37163a == null) {
+            this.f37163a = this.f37167e ? at1.m27059n(viewGroup, this.f37166d, this.f37172j) : at1.m27058o(viewGroup, this.f37172j);
         }
     }
 
-    public void J(float f) {
-        this.i = F(0.0f, f, 1.0f);
+    /* renamed from: J */
+    public void m985J(float f) {
+        this.f37171i = m989F(0.0f, f, 1.0f);
     }
 
-    public void K(float f) {
-        this.h = F(0.0f, f, 1.0f);
+    /* renamed from: K */
+    public void m984K(float f) {
+        this.f37170h = m989F(0.0f, f, 1.0f);
     }
 
-    public void L(int i) {
-        this.f = i;
+    /* renamed from: L */
+    public void m983L(int i) {
+        this.f37168f = i;
     }
 
-    public final void M(View view) {
-        xs1.l0(view, 1048576);
-        if (E(view)) {
-            xs1.n0(view, y.a.y, null, new b());
+    /* renamed from: M */
+    public final void m982M(View view) {
+        xs1.m4714l0(view, 1048576);
+        if (mo327E(view)) {
+            xs1.m4710n0(view, C3654y.C3655a.f33189y, null, new C4014b());
         }
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean k(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
-        boolean z = this.c;
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: k */
+    public boolean mo326k(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
+        boolean z = this.f37165c;
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 0) {
-            z = coordinatorLayout.B(v, (int) motionEvent.getX(), (int) motionEvent.getY());
-            this.c = z;
+            z = coordinatorLayout.m29823B(v, (int) motionEvent.getX(), (int) motionEvent.getY());
+            this.f37165c = z;
         } else if (actionMasked == 1 || actionMasked == 3) {
-            this.c = false;
+            this.f37165c = false;
         }
         if (z) {
-            H(coordinatorLayout);
-            return this.a.N(motionEvent);
+            m987H(coordinatorLayout);
+            return this.f37163a.m27075N(motionEvent);
         }
         return false;
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean l(CoordinatorLayout coordinatorLayout, V v, int i) {
-        boolean l = super.l(coordinatorLayout, v, i);
-        if (xs1.C(v) == 0) {
-            xs1.B0(v, 1);
-            M(v);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+    /* renamed from: l */
+    public boolean mo126l(CoordinatorLayout coordinatorLayout, V v, int i) {
+        boolean mo126l = super.mo126l(coordinatorLayout, v, i);
+        if (xs1.m4772C(v) == 0) {
+            xs1.m4773B0(v, 1);
+            m982M(v);
         }
-        return l;
+        return mo126l;
     }
 }

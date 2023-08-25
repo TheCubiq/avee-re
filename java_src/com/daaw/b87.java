@@ -4,21 +4,25 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 /* loaded from: classes.dex */
 public final class b87 {
-    public final InputStream a;
+
+    /* renamed from: a */
+    public final InputStream f4548a;
 
     public b87(InputStream inputStream) {
-        this.a = inputStream;
+        this.f4548a = inputStream;
     }
 
-    public static b87 b(byte[] bArr) {
+    /* renamed from: b */
+    public static b87 m26326b(byte[] bArr) {
         return new b87(new ByteArrayInputStream(bArr));
     }
 
-    public final dn7 a() {
+    /* renamed from: a */
+    public final dn7 m26327a() {
         try {
-            return dn7.P(this.a, vr7.a());
+            return dn7.m24203P(this.f4548a, vr7.m6834a());
         } finally {
-            this.a.close();
+            this.f4548a.close();
         }
     }
 }

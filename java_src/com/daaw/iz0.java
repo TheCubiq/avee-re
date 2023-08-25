@@ -7,14 +7,18 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Process;
 import android.text.TextUtils;
+import androidx.work.C0507a;
 import java.lang.reflect.Method;
 import java.util.List;
 /* loaded from: classes.dex */
 public class iz0 {
-    public static final String a = ll0.f("ProcessUtils");
+
+    /* renamed from: a */
+    public static final String f14124a = ll0.m16883f("ProcessUtils");
 
     @SuppressLint({"PrivateApi", "DiscouragedPrivateApi"})
-    public static String a(Context context) {
+    /* renamed from: a */
+    public static String m19253a(Context context) {
         List<ActivityManager.RunningAppProcessInfo> runningAppProcesses;
         if (Build.VERSION.SDK_INT >= 28) {
             return Application.getProcessName();
@@ -27,7 +31,7 @@ public class iz0 {
                 return (String) invoke;
             }
         } catch (Throwable th) {
-            ll0.c().a(a, "Unable to check ActivityThread for processName", th);
+            ll0.m16885c().mo16882a(f14124a, "Unable to check ActivityThread for processName", th);
         }
         int myPid = Process.myPid();
         ActivityManager activityManager = (ActivityManager) context.getSystemService("activity");
@@ -41,7 +45,8 @@ public class iz0 {
         return null;
     }
 
-    public static boolean b(Context context, androidx.work.a aVar) {
-        return TextUtils.equals(a(context), !TextUtils.isEmpty(aVar.c()) ? aVar.c() : context.getApplicationInfo().processName);
+    /* renamed from: b */
+    public static boolean m19252b(Context context, C0507a c0507a) {
+        return TextUtils.equals(m19253a(context), !TextUtils.isEmpty(c0507a.m27985c()) ? c0507a.m27985c() : context.getApplicationInfo().processName);
     }
 }

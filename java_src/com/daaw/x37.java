@@ -7,7 +7,7 @@ import java.util.Objects;
 public abstract class x37 extends AbstractSet {
     @Override // java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public boolean removeAll(Collection collection) {
-        return y37.d(this, collection);
+        return y37.m4141d(this, collection);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set

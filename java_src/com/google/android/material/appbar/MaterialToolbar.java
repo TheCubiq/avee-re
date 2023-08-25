@@ -2,97 +2,91 @@ package com.google.android.material.appbar;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import androidx.appcompat.widget.Toolbar;
+import com.daaw.C2366nu;
 import com.daaw.k21;
+import com.daaw.m21;
 import com.daaw.nn0;
-import com.daaw.nu;
 import com.daaw.on0;
+import com.daaw.qn0;
 import com.daaw.w01;
+import com.daaw.xk1;
 import com.daaw.xs1;
 /* loaded from: classes2.dex */
 public class MaterialToolbar extends Toolbar {
-    public static final int k0 = k21.Widget_MaterialComponents_Toolbar;
-    public Integer j0;
+
+    /* renamed from: k0 */
+    public static final int f37156k0 = k21.Widget_MaterialComponents_Toolbar;
+
+    /* renamed from: j0 */
+    public Integer f37157j0;
 
     public MaterialToolbar(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, w01.F);
+        this(context, attributeSet, w01.f30746F);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public MaterialToolbar(android.content.Context r7, android.util.AttributeSet r8, int r9) {
-        /*
-            r6 = this;
-            int r4 = com.google.android.material.appbar.MaterialToolbar.k0
-            android.content.Context r7 = com.daaw.qn0.c(r7, r8, r9, r4)
-            r6.<init>(r7, r8, r9)
-            android.content.Context r7 = r6.getContext()
-            int[] r2 = com.daaw.m21.Y2
-            r0 = 0
-            int[] r5 = new int[r0]
-            r0 = r7
-            r1 = r8
-            r3 = r9
-            android.content.res.TypedArray r8 = com.daaw.xk1.h(r0, r1, r2, r3, r4, r5)
-            int r9 = com.daaw.m21.Z2
-            boolean r0 = r8.hasValue(r9)
-            if (r0 == 0) goto L29
-            r0 = -1
-            int r9 = r8.getColor(r9, r0)
-            r6.setNavigationIconTint(r9)
-        L29:
-            r8.recycle()
-            r6.R(r7)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.appbar.MaterialToolbar.<init>(android.content.Context, android.util.AttributeSet, int):void");
+    public MaterialToolbar(Context context, AttributeSet attributeSet, int i) {
+        super(qn0.m12324c(context, attributeSet, i, r4), attributeSet, i);
+        int i2 = f37156k0;
+        Context context2 = getContext();
+        TypedArray m5026h = xk1.m5026h(context2, attributeSet, m21.f18178Y2, i, i2, new int[0]);
+        int i3 = m21.f18185Z2;
+        if (m5026h.hasValue(i3)) {
+            setNavigationIconTint(m5026h.getColor(i3, -1));
+        }
+        m5026h.recycle();
+        m996R(context2);
     }
 
-    public final void R(Context context) {
+    /* renamed from: R */
+    public final void m996R(Context context) {
         Drawable background = getBackground();
         if (background == null || (background instanceof ColorDrawable)) {
             nn0 nn0Var = new nn0();
-            nn0Var.W(ColorStateList.valueOf(background != null ? ((ColorDrawable) background).getColor() : 0));
-            nn0Var.M(context);
-            nn0Var.V(xs1.y(this));
-            xs1.v0(this, nn0Var);
+            nn0Var.m14997W(ColorStateList.valueOf(background != null ? ((ColorDrawable) background).getColor() : 0));
+            nn0Var.m15007M(context);
+            nn0Var.m14998V(xs1.m4689y(this));
+            xs1.m4694v0(this, nn0Var);
         }
     }
 
-    public final Drawable S(Drawable drawable) {
-        if (drawable == null || this.j0 == null) {
+    /* renamed from: S */
+    public final Drawable m995S(Drawable drawable) {
+        if (drawable == null || this.f37157j0 == null) {
             return drawable;
         }
-        Drawable r = nu.r(drawable);
-        nu.n(r, this.j0.intValue());
-        return r;
+        Drawable m14809r = C2366nu.m14809r(drawable);
+        C2366nu.m14813n(m14809r, this.f37157j0.intValue());
+        return m14809r;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        on0.e(this);
+        on0.m14141e(this);
     }
 
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        on0.d(this, f);
+        on0.m14142d(this, f);
     }
 
     @Override // androidx.appcompat.widget.Toolbar
     public void setNavigationIcon(Drawable drawable) {
-        super.setNavigationIcon(S(drawable));
+        super.setNavigationIcon(m995S(drawable));
     }
 
     public void setNavigationIconTint(int i) {
-        this.j0 = Integer.valueOf(i);
+        this.f37157j0 = Integer.valueOf(i);
         Drawable navigationIcon = getNavigationIcon();
         if (navigationIcon != null) {
             setNavigationIcon(navigationIcon);

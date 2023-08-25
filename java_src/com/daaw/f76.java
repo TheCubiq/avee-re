@@ -12,15 +12,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class f76 implements i76 {
-    public final g77 a;
-    public final Context b;
+
+    /* renamed from: a */
+    public final g77 f9217a;
+
+    /* renamed from: b */
+    public final Context f9218b;
 
     public f76(g77 g77Var, Context context) {
-        this.a = g77Var;
-        this.b = context;
+        this.f9217a = g77Var;
+        this.f9218b = context;
     }
 
-    public static Bundle a(Context context, JSONArray jSONArray) {
+    /* renamed from: a */
+    public static Bundle m22875a(Context context, JSONArray jSONArray) {
         SharedPreferences sharedPreferences;
         String str;
         Bundle bundle = new Bundle();
@@ -67,17 +72,19 @@ public final class f76 implements i76 {
         return bundle;
     }
 
-    public final /* synthetic */ h76 b() {
-        String str = (String) zzba.zzc().b(g93.A5);
+    /* renamed from: b */
+    public final /* synthetic */ h76 m22874b() {
+        String str = (String) zzba.zzc().m23658b(g93.f10365A5);
         if (TextUtils.isEmpty(str)) {
             return null;
         }
         try {
-            final Bundle a = a(this.b, new JSONArray(str));
+            final Bundle m22875a = m22875a(this.f9218b, new JSONArray(str));
             return new h76() { // from class: com.daaw.e76
                 @Override // com.daaw.h76
-                public final void b(Object obj) {
-                    ((Bundle) obj).putBundle("shared_pref", a);
+                /* renamed from: b */
+                public final void mo2851b(Object obj) {
+                    ((Bundle) obj).putBundle("shared_pref", m22875a);
                 }
             };
         } catch (JSONException e) {
@@ -93,10 +100,10 @@ public final class f76 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return this.a.M(new Callable() { // from class: com.daaw.d76
+        return this.f9217a.mo20112M(new Callable() { // from class: com.daaw.d76
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return f76.this.b();
+                return f76.this.m22874b();
             }
         });
     }

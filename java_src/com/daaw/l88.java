@@ -5,35 +5,43 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class l88 {
-    public static volatile l88 b;
-    public static final l88 c = new l88(true);
-    public final Map a;
+
+    /* renamed from: b */
+    public static volatile l88 f17142b;
+
+    /* renamed from: c */
+    public static final l88 f17143c = new l88(true);
+
+    /* renamed from: a */
+    public final Map f17144a;
 
     public l88() {
-        this.a = new HashMap();
+        this.f17144a = new HashMap();
     }
 
     public l88(boolean z) {
-        this.a = Collections.emptyMap();
+        this.f17144a = Collections.emptyMap();
     }
 
-    public static l88 a() {
-        l88 l88Var = b;
+    /* renamed from: a */
+    public static l88 m17099a() {
+        l88 l88Var = f17142b;
         if (l88Var != null) {
             return l88Var;
         }
         synchronized (l88.class) {
-            l88 l88Var2 = b;
+            l88 l88Var2 = f17142b;
             if (l88Var2 != null) {
                 return l88Var2;
             }
-            l88 b2 = j98.b(l88.class);
-            b = b2;
-            return b2;
+            l88 m18700b = j98.m18700b(l88.class);
+            f17142b = m18700b;
+            return m18700b;
         }
     }
 
-    public final ea8 b(zd8 zd8Var, int i) {
-        return (ea8) this.a.get(new i88(zd8Var, i));
+    /* renamed from: b */
+    public final ea8 m17098b(zd8 zd8Var, int i) {
+        return (ea8) this.f17144a.get(new i88(zd8Var, i));
     }
 }

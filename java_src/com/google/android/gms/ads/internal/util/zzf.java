@@ -10,12 +10,13 @@ public final class zzf extends gv6 {
     }
 
     @Override // com.daaw.gv6
-    public final void a(Message message) {
+    /* renamed from: a */
+    public final void mo1335a(Message message) {
         try {
-            super.a(message);
+            super.mo1335a(message);
         } catch (Throwable th) {
             com.google.android.gms.ads.internal.zzt.zzp();
-            zzs.zzI(com.google.android.gms.ads.internal.zzt.zzo().c(), th);
+            zzs.zzI(com.google.android.gms.ads.internal.zzt.zzo().m11920c(), th);
             throw th;
         }
     }
@@ -25,7 +26,7 @@ public final class zzf extends gv6 {
         try {
             super.handleMessage(message);
         } catch (Exception e) {
-            com.google.android.gms.ads.internal.zzt.zzo().u(e, "AdMobHandler.handleMessage");
+            com.google.android.gms.ads.internal.zzt.zzo().m11902u(e, "AdMobHandler.handleMessage");
         }
     }
 }

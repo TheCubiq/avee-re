@@ -4,26 +4,31 @@ import android.os.IBinder;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class mx6 extends dx6 {
-    public final /* synthetic */ IBinder q;
-    public final /* synthetic */ px6 r;
+
+    /* renamed from: q */
+    public final /* synthetic */ IBinder f19273q;
+
+    /* renamed from: r */
+    public final /* synthetic */ px6 f19274r;
 
     public mx6(px6 px6Var, IBinder iBinder) {
-        this.r = px6Var;
-        this.q = iBinder;
+        this.f19274r = px6Var;
+        this.f19273q = iBinder;
     }
 
     @Override // com.daaw.dx6
-    public final void a() {
+    /* renamed from: a */
+    public final void mo14744a() {
         List<Runnable> list;
         List list2;
-        this.r.a.m = yw6.g3(this.q);
-        qx6.n(this.r.a);
-        this.r.a.g = false;
-        list = this.r.a.d;
+        this.f19274r.f23516a.f24619m = yw6.m3147g3(this.f19273q);
+        qx6.m11957n(this.f19274r.f23516a);
+        this.f19274r.f23516a.f24613g = false;
+        list = this.f19274r.f23516a.f24610d;
         for (Runnable runnable : list) {
             runnable.run();
         }
-        list2 = this.r.a.d;
+        list2 = this.f19274r.f23516a.f24610d;
         list2.clear();
     }
 }

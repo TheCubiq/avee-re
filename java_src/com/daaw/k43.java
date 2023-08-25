@@ -14,15 +14,20 @@ public enum k43 implements ns7 {
     APP_OPEN(10),
     REWARDED_INTERSTITIAL(11);
     
-    public static final os7 C = new os7() { // from class: com.daaw.i43
+
+    /* renamed from: C */
+    public static final os7 f15662C = new os7() { // from class: com.daaw.i43
     };
-    public final int p;
+
+    /* renamed from: p */
+    public final int f15674p;
 
     k43(int i) {
-        this.p = i;
+        this.f15674p = i;
     }
 
-    public static k43 a(int i) {
+    /* renamed from: a */
+    public static k43 m18049a(int i) {
         switch (i) {
             case 0:
                 return AD_INITIATER_UNSPECIFIED;
@@ -53,16 +58,17 @@ public enum k43 implements ns7 {
         }
     }
 
-    public static ps7 b() {
-        return j43.a;
+    /* renamed from: b */
+    public static ps7 m18048b() {
+        return j43.f14258a;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.p);
+        return Integer.toString(this.f15674p);
     }
 
     public final int zza() {
-        return this.p;
+        return this.f15674p;
     }
 }

@@ -4,25 +4,28 @@ import android.os.Bundle;
 import android.text.TextUtils;
 /* loaded from: classes2.dex */
 public final class kb8 implements ad8 {
-    public final /* synthetic */ yb8 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ yb8 f16131a;
 
     public kb8(yb8 yb8Var) {
-        this.a = yb8Var;
+        this.f16131a = yb8Var;
     }
 
     @Override // com.daaw.ad8
-    public final void a(String str, String str2, Bundle bundle) {
+    /* renamed from: a */
+    public final void mo17832a(String str, String str2, Bundle bundle) {
         dr6 dr6Var;
         dr6 dr6Var2;
         if (!TextUtils.isEmpty(str)) {
-            this.a.r().z(new hb8(this, str, "_err", bundle));
+            this.f16131a.mo3882r().m6978z(new hb8(this, str, "_err", bundle));
             return;
         }
-        yb8 yb8Var = this.a;
-        dr6Var = yb8Var.l;
+        yb8 yb8Var = this.f16131a;
+        dr6Var = yb8Var.f33501l;
         if (dr6Var != null) {
-            dr6Var2 = yb8Var.l;
-            dr6Var2.i().q().b("AppId not known when logging event", "_err");
+            dr6Var2 = yb8Var.f33501l;
+            dr6Var2.mo3895i().m14160q().m20652b("AppId not known when logging event", "_err");
         }
     }
 }

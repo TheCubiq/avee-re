@@ -1,21 +1,31 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public class ng0 implements Iterable<Integer> {
-    public static final a s = new a(null);
-    public final int p;
-    public final int q;
-    public final int r;
 
+    /* renamed from: s */
+    public static final C2289a f20099s = new C2289a(null);
+
+    /* renamed from: p */
+    public final int f20100p;
+
+    /* renamed from: q */
+    public final int f20101q;
+
+    /* renamed from: r */
+    public final int f20102r;
+
+    /* renamed from: com.daaw.ng0$a */
     /* loaded from: classes2.dex */
-    public static final class a {
-        public a() {
+    public static final class C2289a {
+        public C2289a() {
         }
 
-        public /* synthetic */ a(pq pqVar) {
+        public /* synthetic */ C2289a(C2575pq c2575pq) {
             this();
         }
 
-        public final ng0 a(int i, int i2, int i3) {
+        /* renamed from: a */
+        public final ng0 m15183a(int i, int i2, int i3) {
             return new ng0(i, i2, i3);
         }
     }
@@ -27,24 +37,26 @@ public class ng0 implements Iterable<Integer> {
         if (i3 == Integer.MIN_VALUE) {
             throw new IllegalArgumentException("Step must be greater than Int.MIN_VALUE to avoid overflow on negation.");
         }
-        this.p = i;
-        this.q = nz0.b(i, i2, i3);
-        this.r = i3;
+        this.f20100p = i;
+        this.f20101q = nz0.m14712b(i, i2, i3);
+        this.f20102r = i3;
     }
 
-    public final int d() {
-        return this.p;
+    /* renamed from: d */
+    public final int m15187d() {
+        return this.f20100p;
     }
 
-    public final int e() {
-        return this.q;
+    /* renamed from: e */
+    public final int m15186e() {
+        return this.f20101q;
     }
 
     public boolean equals(Object obj) {
         if (obj instanceof ng0) {
             if (!isEmpty() || !((ng0) obj).isEmpty()) {
                 ng0 ng0Var = (ng0) obj;
-                if (this.p != ng0Var.p || this.q != ng0Var.q || this.r != ng0Var.r) {
+                if (this.f20100p != ng0Var.f20100p || this.f20101q != ng0Var.f20101q || this.f20102r != ng0Var.f20102r) {
                 }
             }
             return true;
@@ -52,29 +64,30 @@ public class ng0 implements Iterable<Integer> {
         return false;
     }
 
-    public final int f() {
-        return this.r;
+    /* renamed from: f */
+    public final int m15185f() {
+        return this.f20102r;
     }
 
     @Override // java.lang.Iterable
     /* renamed from: h */
     public mg0 iterator() {
-        return new og0(this.p, this.q, this.r);
+        return new og0(this.f20100p, this.f20101q, this.f20102r);
     }
 
     public int hashCode() {
         if (isEmpty()) {
             return -1;
         }
-        return (((this.p * 31) + this.q) * 31) + this.r;
+        return (((this.f20100p * 31) + this.f20101q) * 31) + this.f20102r;
     }
 
     public boolean isEmpty() {
-        if (this.r > 0) {
-            if (this.p > this.q) {
+        if (this.f20102r > 0) {
+            if (this.f20100p > this.f20101q) {
                 return true;
             }
-        } else if (this.p < this.q) {
+        } else if (this.f20100p < this.f20101q) {
             return true;
         }
         return false;
@@ -83,20 +96,20 @@ public class ng0 implements Iterable<Integer> {
     public String toString() {
         StringBuilder sb;
         int i;
-        if (this.r > 0) {
+        if (this.f20102r > 0) {
             sb = new StringBuilder();
-            sb.append(this.p);
+            sb.append(this.f20100p);
             sb.append("..");
-            sb.append(this.q);
+            sb.append(this.f20101q);
             sb.append(" step ");
-            i = this.r;
+            i = this.f20102r;
         } else {
             sb = new StringBuilder();
-            sb.append(this.p);
+            sb.append(this.f20100p);
             sb.append(" downTo ");
-            sb.append(this.q);
+            sb.append(this.f20101q);
             sb.append(" step ");
-            i = -this.r;
+            i = -this.f20102r;
         }
         sb.append(i);
         return sb.toString();

@@ -4,61 +4,82 @@ import android.net.Uri;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class pv2 implements wy2 {
-    public final Uri a;
-    public final kx2 b;
-    public final qv2 c;
-    public final cz2 d;
-    public final ss2 e;
-    public volatile boolean f;
-    public boolean g;
-    public long h;
-    public long i;
-    public final /* synthetic */ sv2 j;
+
+    /* renamed from: a */
+    public final Uri f23401a;
+
+    /* renamed from: b */
+    public final kx2 f23402b;
+
+    /* renamed from: c */
+    public final qv2 f23403c;
+
+    /* renamed from: d */
+    public final cz2 f23404d;
+
+    /* renamed from: e */
+    public final ss2 f23405e;
+
+    /* renamed from: f */
+    public volatile boolean f23406f;
+
+    /* renamed from: g */
+    public boolean f23407g;
+
+    /* renamed from: h */
+    public long f23408h;
+
+    /* renamed from: i */
+    public long f23409i;
+
+    /* renamed from: j */
+    public final /* synthetic */ sv2 f23410j;
 
     public pv2(sv2 sv2Var, Uri uri, kx2 kx2Var, qv2 qv2Var, cz2 cz2Var) {
-        this.j = sv2Var;
+        this.f23410j = sv2Var;
         Objects.requireNonNull(uri);
-        this.a = uri;
+        this.f23401a = uri;
         Objects.requireNonNull(kx2Var);
-        this.b = kx2Var;
+        this.f23402b = kx2Var;
         Objects.requireNonNull(qv2Var);
-        this.c = qv2Var;
-        this.d = cz2Var;
-        this.e = new ss2();
-        this.g = true;
-        this.i = -1L;
+        this.f23403c = qv2Var;
+        this.f23404d = cz2Var;
+        this.f23405e = new ss2();
+        this.f23407g = true;
+        this.f23409i = -1L;
     }
 
-    public final void b(long j, long j2) {
-        this.e.a = j;
-        this.h = j2;
-        this.g = true;
+    /* renamed from: b */
+    public final void m13018b(long j, long j2) {
+        this.f23405e.f26600a = j;
+        this.f23408h = j2;
+        this.f23407g = true;
     }
 
     @Override // com.daaw.wy2
     public final void zzb() {
-        this.f = true;
+        this.f23406f = true;
     }
 
     @Override // com.daaw.wy2
     public final void zzc() {
         ms2 ms2Var;
-        while (!this.f) {
+        while (!this.f23406f) {
             int i = 0;
             try {
-                long j = this.e.a;
-                long b = this.b.b(new mx2(this.a, null, j, j, -1L, null, 0));
-                this.i = b;
-                if (b != -1) {
-                    b += j;
-                    this.i = b;
+                long j = this.f23405e.f26600a;
+                long mo5584b = this.f23402b.mo5584b(new mx2(this.f23401a, null, j, j, -1L, null, 0));
+                this.f23409i = mo5584b;
+                if (mo5584b != -1) {
+                    mo5584b += j;
+                    this.f23409i = mo5584b;
                 }
-                ms2Var = new ms2(this.b, j, b);
+                ms2Var = new ms2(this.f23402b, j, mo5584b);
                 try {
-                    ns2 b2 = this.c.b(ms2Var, this.b.zzc());
-                    if (this.g) {
-                        b2.d(j, this.h);
-                        this.g = false;
+                    ns2 m12032b = this.f23403c.m12032b(ms2Var, this.f23402b.zzc());
+                    if (this.f23407g) {
+                        m12032b.mo1912d(j, this.f23408h);
+                        this.f23407g = false;
                     }
                     long j2 = j;
                     int i2 = 0;
@@ -67,33 +88,33 @@ public final class pv2 implements wy2 {
                             break;
                         }
                         try {
-                            if (this.f) {
+                            if (this.f23406f) {
                                 i2 = 0;
                                 break;
                             }
-                            this.d.a();
-                            i2 = b2.e(ms2Var, this.e);
-                            if (ms2Var.d() > sv2.s(this.j) + j2) {
-                                j2 = ms2Var.d();
-                                this.d.b();
-                                sv2 sv2Var = this.j;
-                                sv2.t(sv2Var).post(sv2.x(sv2Var));
+                            this.f23404d.m24860a();
+                            i2 = m12032b.mo1911e(ms2Var, this.f23405e);
+                            if (ms2Var.m15801d() > sv2.m9809s(this.f23410j) + j2) {
+                                j2 = ms2Var.m15801d();
+                                this.f23404d.m24859b();
+                                sv2 sv2Var = this.f23410j;
+                                sv2.m9808t(sv2Var).post(sv2.m9804x(sv2Var));
                             }
                         } catch (Throwable th) {
                             th = th;
                             i = i2;
                             if (i != 1 && ms2Var != null) {
-                                this.e.a = ms2Var.d();
+                                this.f23405e.f26600a = ms2Var.m15801d();
                             }
-                            pz2.m(this.b);
+                            pz2.m12837m(this.f23402b);
                             throw th;
                         }
                     }
                     if (i2 != 1) {
-                        this.e.a = ms2Var.d();
+                        this.f23405e.f26600a = ms2Var.m15801d();
                         i = i2;
                     }
-                    pz2.m(this.b);
+                    pz2.m12837m(this.f23402b);
                     if (i != 0) {
                         return;
                     }
@@ -109,6 +130,6 @@ public final class pv2 implements wy2 {
 
     @Override // com.daaw.wy2
     public final boolean zze() {
-        return this.f;
+        return this.f23406f;
     }
 }

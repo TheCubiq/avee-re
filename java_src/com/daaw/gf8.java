@@ -1,23 +1,25 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class gf8 implements ty3 {
-    public final i54 a = new i54();
+
+    /* renamed from: a */
+    public final i54 f11157a = new i54();
 
     @Override // com.daaw.ty3
     public final boolean zza() {
         l64 zzn = zzn();
-        return !zzn.o() && zzn.e(zzf(), this.a, 0L).g;
+        return !zzn.m17121o() && zzn.mo1923e(zzf(), this.f11157a, 0L).f13273g;
     }
 
     @Override // com.daaw.ty3
     public final boolean zzb() {
         l64 zzn = zzn();
-        return !zzn.o() && zzn.e(zzf(), this.a, 0L).b();
+        return !zzn.m17121o() && zzn.mo1923e(zzf(), this.f11157a, 0L).m20119b();
     }
 
     @Override // com.daaw.ty3
     public final boolean zzc() {
         l64 zzn = zzn();
-        return !zzn.o() && zzn.e(zzf(), this.a, 0L).f;
+        return !zzn.m17121o() && zzn.mo1923e(zzf(), this.f11157a, 0L).f13272f;
     }
 }

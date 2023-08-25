@@ -3,25 +3,32 @@ package com.daaw;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public final class hr6 {
-    public final nq6 a;
-    public final ArrayList b;
+
+    /* renamed from: a */
+    public final nq6 f12882a;
+
+    /* renamed from: b */
+    public final ArrayList f12883b;
 
     public hr6(nq6 nq6Var, String str) {
         ArrayList arrayList = new ArrayList();
-        this.b = arrayList;
-        this.a = nq6Var;
+        this.f12883b = arrayList;
+        this.f12882a = nq6Var;
         arrayList.add(str);
     }
 
-    public final nq6 a() {
-        return this.a;
+    /* renamed from: a */
+    public final nq6 m20460a() {
+        return this.f12882a;
     }
 
-    public final ArrayList b() {
-        return this.b;
+    /* renamed from: b */
+    public final ArrayList m20459b() {
+        return this.f12883b;
     }
 
-    public final void c(String str) {
-        this.b.add(str);
+    /* renamed from: c */
+    public final void m20458c(String str) {
+        this.f12883b.add(str);
     }
 }

@@ -7,20 +7,23 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class w96 implements h76 {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f31081a;
 
     public w96(String str) {
-        this.a = str;
+        this.f31081a = str;
     }
 
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
         try {
             JSONObject zzf = zzbu.zzf((JSONObject) obj, "pii");
-            if (TextUtils.isEmpty(this.a)) {
+            if (TextUtils.isEmpty(this.f31081a)) {
                 return;
             }
-            zzf.put("attok", this.a);
+            zzf.put("attok", this.f31081a);
         } catch (JSONException e) {
             zze.zzb("Failed putting attestation token.", e);
         }

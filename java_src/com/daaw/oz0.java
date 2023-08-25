@@ -6,12 +6,14 @@ public abstract class oz0 extends qz0 implements fi0 {
     }
 
     @Override // com.daaw.x40
-    public Object a() {
+    /* renamed from: a */
+    public Object mo5541a() {
         return get();
     }
 
-    @Override // com.daaw.kd
-    public ci0 c() {
-        return m31.c(this);
+    @Override // com.daaw.AbstractC1940kd
+    /* renamed from: c */
+    public ci0 mo13798c() {
+        return m31.m16241c(this);
     }
 }

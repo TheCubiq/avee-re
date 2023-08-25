@@ -7,20 +7,24 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class qo2 extends QueryInfoGenerationCallback {
-    public final /* synthetic */ String a;
-    public final /* synthetic */ oj1 b;
+
+    /* renamed from: a */
+    public final /* synthetic */ String f24219a;
+
+    /* renamed from: b */
+    public final /* synthetic */ oj1 f24220b;
 
     public qo2(oj1 oj1Var, String str) {
-        this.b = oj1Var;
-        this.a = str;
+        this.f24220b = oj1Var;
+        this.f24219a = str;
     }
 
     @Override // com.google.android.gms.ads.query.QueryInfoGenerationCallback
     public final void onFailure(String str) {
         WebView webView;
         k04.zzj("Failed to generate query info for the tagging library, error: ".concat(String.valueOf(str)));
-        String format = String.format("window.postMessage({'paw_id': '%1$s', 'error': '%2$s'}, '*');", this.a, str);
-        webView = this.b.b;
+        String format = String.format("window.postMessage({'paw_id': '%1$s', 'error': '%2$s'}, '*');", this.f24219a, str);
+        webView = this.f24220b.f21579b;
         webView.evaluateJavascript(format, null);
     }
 
@@ -31,13 +35,13 @@ public final class qo2 extends QueryInfoGenerationCallback {
         String query = queryInfo.getQuery();
         try {
             JSONObject jSONObject = new JSONObject();
-            jSONObject.put("paw_id", this.a);
+            jSONObject.put("paw_id", this.f24219a);
             jSONObject.put("signal", query);
             format = String.format("window.postMessage(%1$s, '*');", jSONObject);
         } catch (JSONException unused) {
-            format = String.format("window.postMessage({'paw_id': '%1$s', 'signal': '%2$s'}, '*');", this.a, queryInfo.getQuery());
+            format = String.format("window.postMessage({'paw_id': '%1$s', 'signal': '%2$s'}, '*');", this.f24219a, queryInfo.getQuery());
         }
-        webView = this.b.b;
+        webView = this.f24220b.f21579b;
         webView.evaluateJavascript(format, null);
     }
 }

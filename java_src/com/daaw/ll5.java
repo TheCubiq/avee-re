@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class ll5 {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f17526a;
 
     public ll5(String str) {
-        this.a = str;
+        this.f17526a = str;
     }
 }

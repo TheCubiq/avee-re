@@ -8,7 +8,8 @@ public enum yx1 {
     BLOCKED,
     CANCELLED;
 
-    public boolean a() {
+    /* renamed from: a */
+    public boolean m3106a() {
         return this == SUCCEEDED || this == FAILED || this == CANCELLED;
     }
 }

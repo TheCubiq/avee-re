@@ -1,13 +1,18 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class gq0 {
-    public final int a;
-    public final int b;
+
+    /* renamed from: a */
+    public final int f11568a;
+
+    /* renamed from: b */
+    public final int f11569b;
 
     public gq0(int i, int i2) {
-        this.a = i;
-        this.b = i2;
+        this.f11568a = i;
+        this.f11569b = i2;
     }
 
-    public abstract void a(ji1 ji1Var);
+    /* renamed from: a */
+    public abstract void mo21346a(ji1 ji1Var);
 }

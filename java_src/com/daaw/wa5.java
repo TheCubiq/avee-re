@@ -1,5 +1,7 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class wa5 {
-    public static final xa5 a = new xa5();
+
+    /* renamed from: a */
+    public static final xa5 f31103a = new xa5();
 }

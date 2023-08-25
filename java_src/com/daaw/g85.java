@@ -5,11 +5,13 @@ public final class g85 implements o67 {
     }
 
     @Override // com.daaw.o67
-    public final /* synthetic */ void a(Object obj) {
+    /* renamed from: a */
+    public final /* synthetic */ void mo2151a(Object obj) {
         ((a74) obj).destroy();
     }
 
     @Override // com.daaw.o67
-    public final void b(Throwable th) {
+    /* renamed from: b */
+    public final void mo2150b(Throwable th) {
     }
 }

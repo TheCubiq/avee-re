@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class x72 extends wx2 implements e92 {
-    public static e92 I(IBinder iBinder) {
+    /* renamed from: I */
+    public static e92 m5487I(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

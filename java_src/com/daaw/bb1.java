@@ -4,20 +4,30 @@ import android.graphics.PointF;
 import com.daaw.he0;
 /* loaded from: classes.dex */
 public class bb1 extends xa1 {
-    public float h = 0.5f;
-    public boolean i = false;
-    public PointF j = new PointF();
-    public PointF k = new PointF();
+
+    /* renamed from: h */
+    public float f4592h = 0.5f;
+
+    /* renamed from: i */
+    public boolean f4593i = false;
+
+    /* renamed from: j */
+    public PointF f4594j = new PointF();
+
+    /* renamed from: k */
+    public PointF f4595k = new PointF();
 
     @Override // com.daaw.xa1, com.daaw.zc0
-    public void a(un unVar) {
-        super.a(unVar);
-        this.h = unVar.o("barWidth", 0.5f);
-        this.i = unVar.n("mirror", false);
+    /* renamed from: a */
+    public void mo2493a(C3239un c3239un) {
+        super.mo2493a(c3239un);
+        this.f4592h = c3239un.m7953o("barWidth", 0.5f);
+        this.f4593i = c3239un.m7955n("mirror", false);
     }
 
     @Override // com.daaw.he0
-    public void m(de0 de0Var, he0.a[] aVarArr, float f, float f2, int i, float f3) {
+    /* renamed from: m */
+    public void mo2574m(de0 de0Var, he0.C1532a[] c1532aArr, float f, float f2, int i, float f3) {
         float f4;
         float f5;
         float f6;
@@ -30,70 +40,70 @@ public class bb1 extends xa1 {
         float f13;
         float f14;
         float f15;
-        he0.a[] aVarArr2 = aVarArr;
-        int length = aVarArr2.length;
-        float round = Math.round((1.0f * f) / (length + 1)) * this.h;
+        he0.C1532a[] c1532aArr2 = c1532aArr;
+        int length = c1532aArr2.length;
+        float round = Math.round((1.0f * f) / (length + 1)) * this.f4592h;
         int i2 = 0;
-        while (i2 < aVarArr2.length) {
-            he0.a aVar = aVarArr2[i2];
-            int i3 = aVar.a;
+        while (i2 < c1532aArr2.length) {
+            he0.C1532a c1532a = c1532aArr2[i2];
+            int i3 = c1532a.f12435a;
             if (i3 >= 0) {
-                he0.a aVar2 = aVarArr2[i3];
-                int q = q(i2, length, f3);
-                PointF pointF = this.j;
-                pointF.x = aVar2.e;
-                pointF.y = aVar2.f;
-                PointF pointF2 = this.k;
-                pointF2.x = aVar.e;
-                pointF2.y = aVar.f;
-                float f16 = this.f;
-                float f17 = aVar2.d * (-2.0f) * f2 * f16;
-                float f18 = aVar.d * (-2.0f) * f2 * f16;
-                if (this.i) {
-                    pointF.x -= aVar2.g * f17;
-                    pointF.y -= aVar2.h * f17;
+                he0.C1532a c1532a2 = c1532aArr2[i3];
+                int m5339q = m5339q(i2, length, f3);
+                PointF pointF = this.f4594j;
+                pointF.x = c1532a2.f12439e;
+                pointF.y = c1532a2.f12440f;
+                PointF pointF2 = this.f4595k;
+                pointF2.x = c1532a.f12439e;
+                pointF2.y = c1532a.f12440f;
+                float f16 = this.f32274f;
+                float f17 = c1532a2.f12438d * (-2.0f) * f2 * f16;
+                float f18 = c1532a.f12438d * (-2.0f) * f2 * f16;
+                if (this.f4593i) {
+                    pointF.x -= c1532a2.f12441g * f17;
+                    pointF.y -= c1532a2.f12442h * f17;
                     double d = f17;
                     Double.isNaN(d);
                     f17 = (float) (d * 2.0d);
-                    pointF2.x -= aVar.g * f18;
-                    pointF2.y -= aVar.h * f18;
+                    pointF2.x -= c1532a.f12441g * f18;
+                    pointF2.y -= c1532a.f12442h * f18;
                     double d2 = f18;
                     Double.isNaN(d2);
                     f18 = (float) (d2 * 2.0d);
                 }
                 if (f17 < 0.0f) {
-                    f5 = (bs1.b(aVar.g, aVar.h) * round) + this.k.x;
-                    f7 = (bs1.c(aVar.g, aVar.h) * round) + this.k.y;
-                    f4 = (aVar.g * f17) + f5;
-                    f6 = (aVar.h * f17) + f7;
+                    f5 = (bs1.m25861b(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.x;
+                    f7 = (bs1.m25860c(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.y;
+                    f4 = (c1532a.f12441g * f17) + f5;
+                    f6 = (c1532a.f12442h * f17) + f7;
                 } else {
-                    float b = (bs1.b(aVar.g, aVar.h) * round) + this.k.x;
-                    float c = (bs1.c(aVar.g, aVar.h) * round) + this.k.y;
-                    f4 = b;
-                    f5 = (aVar.g * f17) + b;
-                    f6 = c;
-                    f7 = (aVar.h * f17) + c;
+                    float m25861b = (bs1.m25861b(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.x;
+                    float m25860c = (bs1.m25860c(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.y;
+                    f4 = m25861b;
+                    f5 = (c1532a.f12441g * f17) + m25861b;
+                    f6 = m25860c;
+                    f7 = (c1532a.f12442h * f17) + m25860c;
                 }
                 if (f18 < 0.0f) {
-                    f11 = (bs1.d(aVar.g, aVar.h) * round) + this.k.x;
-                    float e = (bs1.e(aVar.g, aVar.h) * round) + this.k.y;
-                    f9 = (aVar.h * f18) + e;
-                    f8 = e;
-                    f10 = (aVar.g * f18) + f11;
+                    f11 = (bs1.m25859d(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.x;
+                    float m25858e = (bs1.m25858e(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.y;
+                    f9 = (c1532a.f12442h * f18) + m25858e;
+                    f8 = m25858e;
+                    f10 = (c1532a.f12441g * f18) + f11;
                 } else {
-                    float d3 = (bs1.d(aVar.g, aVar.h) * round) + this.k.x;
-                    float e2 = (bs1.e(aVar.g, aVar.h) * round) + this.k.y;
-                    f8 = (aVar.h * f18) + e2;
-                    f9 = e2;
-                    f10 = d3;
-                    f11 = (aVar.g * f18) + d3;
+                    float m25859d = (bs1.m25859d(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.x;
+                    float m25858e2 = (bs1.m25858e(c1532a.f12441g, c1532a.f12442h) * round) + this.f4595k.y;
+                    f8 = (c1532a.f12442h * f18) + m25858e2;
+                    f9 = m25858e2;
+                    f10 = m25859d;
+                    f11 = (c1532a.f12441g * f18) + m25859d;
                 }
                 float f19 = f9;
-                if (this.d) {
+                if (this.f32272d) {
                     float signum = Math.signum(f18);
-                    float f20 = aVar.g;
-                    float f21 = this.e;
-                    float f22 = aVar.h;
+                    float f20 = c1532a.f12441g;
+                    float f21 = this.f32273e;
+                    float f22 = c1532a.f12442h;
                     f14 = (f22 * signum * f21) + f19;
                     f12 = (f20 * signum * f21) + f10;
                     f13 = (f20 * signum * f21) + f4;
@@ -104,21 +114,22 @@ public class bb1 extends xa1 {
                     f14 = f8;
                     f15 = f7;
                 }
-                if (de0Var.h()) {
-                    de0Var.j().b(de0Var, f4, f6, f10, f19, f13, f15, f12, f14, 0.0f, q, bs1.s(), bs1.q(), de0Var.b().c(), i, null);
+                if (de0Var.mo2883h()) {
+                    de0Var.mo2881j().mo7294b(de0Var, f4, f6, f10, f19, f13, f15, f12, f14, 0.0f, m5339q, bs1.m25844s(), bs1.m25846q(), de0Var.mo2889b().mo4183c(), i, null);
                 } else {
-                    de0Var.j().d(de0Var, f4, f6, f10, f19, f13, f15, f12, f14, 0.0f, q, bs1.s(), bs1.q(), new w31(i, de0Var.b().e(), (qr1) null, (g0<y31, sr1, w31>) null, 2));
+                    de0Var.mo2881j().mo7292d(de0Var, f4, f6, f10, f19, f13, f15, f12, f14, 0.0f, m5339q, bs1.m25844s(), bs1.m25846q(), new w31(i, de0Var.mo2889b().mo4181e(), (qr1) null, (InterfaceC1348g0<y31, sr1, w31>) null, 2));
                 }
             }
             i2++;
-            aVarArr2 = aVarArr;
+            c1532aArr2 = c1532aArr;
         }
     }
 
     @Override // com.daaw.xa1, com.daaw.zc0
-    public void o(un unVar) {
-        super.o(unVar);
-        unVar.O("barWidth", this.h, "misc", 0.0f, 2.0f);
-        unVar.L("mirror", this.i, "misc");
+    /* renamed from: o */
+    public void mo2492o(C3239un c3239un) {
+        super.mo2492o(c3239un);
+        c3239un.m7990O("barWidth", this.f4592h, "misc", 0.0f, 2.0f);
+        c3239un.m7993L("mirror", this.f4593i, "misc");
     }
 }

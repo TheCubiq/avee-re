@@ -4,33 +4,40 @@ import java.util.Iterator;
 import java.util.List;
 /* loaded from: classes2.dex */
 public final class oa2 implements gl2 {
-    public final gl2 p;
-    public final String q;
+
+    /* renamed from: p */
+    public final gl2 f21192p;
+
+    /* renamed from: q */
+    public final String f21193q;
 
     public oa2() {
         throw null;
     }
 
     public oa2(String str) {
-        this.p = gl2.g;
-        this.q = str;
+        this.f21192p = gl2.f11420g;
+        this.f21193q = str;
     }
 
     public oa2(String str, gl2 gl2Var) {
-        this.p = gl2Var;
-        this.q = str;
+        this.f21192p = gl2Var;
+        this.f21193q = str;
     }
 
-    public final gl2 a() {
-        return this.p;
+    /* renamed from: a */
+    public final gl2 m14433a() {
+        return this.f21192p;
     }
 
-    public final String b() {
-        return this.q;
+    /* renamed from: b */
+    public final String m14432b() {
+        return this.f21193q;
     }
 
     @Override // com.daaw.gl2
-    public final gl2 d(String str, w07 w07Var, List list) {
+    /* renamed from: d */
+    public final gl2 mo2708d(String str, w07 w07Var, List list) {
         throw new IllegalStateException("Control does not have functions");
     }
 
@@ -40,18 +47,18 @@ public final class oa2 implements gl2 {
         }
         if (obj instanceof oa2) {
             oa2 oa2Var = (oa2) obj;
-            return this.q.equals(oa2Var.q) && this.p.equals(oa2Var.p);
+            return this.f21193q.equals(oa2Var.f21193q) && this.f21192p.equals(oa2Var.f21192p);
         }
         return false;
     }
 
     public final int hashCode() {
-        return (this.q.hashCode() * 31) + this.p.hashCode();
+        return (this.f21193q.hashCode() * 31) + this.f21192p.hashCode();
     }
 
     @Override // com.daaw.gl2
     public final gl2 zzd() {
-        return new oa2(this.q, this.p.zzd());
+        return new oa2(this.f21193q, this.f21192p.zzd());
     }
 
     @Override // com.daaw.gl2

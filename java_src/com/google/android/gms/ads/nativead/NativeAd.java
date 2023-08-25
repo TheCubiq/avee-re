@@ -40,7 +40,8 @@ public abstract class NativeAd {
         void onUnconfirmedClickReceived(String str);
     }
 
-    public abstract Object a();
+    /* renamed from: a */
+    public abstract Object mo1296a();
 
     public abstract void cancelUnconfirmedClick();
 

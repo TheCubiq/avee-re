@@ -30,28 +30,53 @@ import javax.annotation.concurrent.GuardedBy;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class ky3 {
-    public final AtomicReference a = new AtomicReference(null);
-    public final Object b = new Object();
-    @GuardedBy("gmpAppIdLock")
-    public String c = null;
-    @GuardedBy("gmpAppIdLock")
-    public String d = null;
-    public final AtomicBoolean e = new AtomicBoolean(false);
-    public final AtomicInteger f = new AtomicInteger(-1);
-    public final AtomicReference g = new AtomicReference(null);
-    public final AtomicReference h = new AtomicReference(null);
-    public final ConcurrentMap i = new ConcurrentHashMap(9);
-    public final AtomicReference j = new AtomicReference(null);
-    @GuardedBy("proxyReference")
-    public final BlockingQueue k = new ArrayBlockingQueue(20);
-    public final Object l = new Object();
 
-    public static final boolean A(Context context) {
-        if (((Boolean) zzba.zzc().b(g93.f0)).booleanValue()) {
-            if (DynamiteModule.a(context, ModuleDescriptor.MODULE_ID) < ((Integer) zzba.zzc().b(g93.g0)).intValue()) {
+    /* renamed from: a */
+    public final AtomicReference f16849a = new AtomicReference(null);
+
+    /* renamed from: b */
+    public final Object f16850b = new Object();
+    @GuardedBy("gmpAppIdLock")
+
+    /* renamed from: c */
+    public String f16851c = null;
+    @GuardedBy("gmpAppIdLock")
+
+    /* renamed from: d */
+    public String f16852d = null;
+
+    /* renamed from: e */
+    public final AtomicBoolean f16853e = new AtomicBoolean(false);
+
+    /* renamed from: f */
+    public final AtomicInteger f16854f = new AtomicInteger(-1);
+
+    /* renamed from: g */
+    public final AtomicReference f16855g = new AtomicReference(null);
+
+    /* renamed from: h */
+    public final AtomicReference f16856h = new AtomicReference(null);
+
+    /* renamed from: i */
+    public final ConcurrentMap f16857i = new ConcurrentHashMap(9);
+
+    /* renamed from: j */
+    public final AtomicReference f16858j = new AtomicReference(null);
+    @GuardedBy("proxyReference")
+
+    /* renamed from: k */
+    public final BlockingQueue f16859k = new ArrayBlockingQueue(20);
+
+    /* renamed from: l */
+    public final Object f16860l = new Object();
+
+    /* renamed from: A */
+    public static final boolean m17347A(Context context) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10677f0)).booleanValue()) {
+            if (DynamiteModule.m1149a(context, ModuleDescriptor.MODULE_ID) < ((Integer) zzba.zzc().m23658b(g93.f10688g0)).intValue()) {
                 return false;
             }
-            if (((Boolean) zzba.zzc().b(g93.h0)).booleanValue()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10699h0)).booleanValue()) {
                 try {
                     context.getClassLoader().loadClass("com.google.firebase.analytics.FirebaseAnalytics");
                     return false;
@@ -63,83 +88,89 @@ public final class ky3 {
         return false;
     }
 
-    public final Object B(String str, Object obj, iy3 iy3Var) {
-        synchronized (this.j) {
-            if (((x84) this.j.get()) != null) {
+    /* renamed from: B */
+    public final Object m17346B(String str, Object obj, iy3 iy3Var) {
+        synchronized (this.f16858j) {
+            if (((x84) this.f16858j.get()) != null) {
                 try {
-                    return iy3Var.a((x84) this.j.get());
+                    return iy3Var.mo1800a((x84) this.f16858j.get());
                 } catch (Exception unused) {
-                    c(str, false);
+                    m17340c(str, false);
                 }
             }
             return obj;
         }
     }
 
-    public final Object C(String str, Context context) {
-        if (e(context, "com.google.android.gms.measurement.AppMeasurement", this.g, true)) {
+    /* renamed from: C */
+    public final Object m17345C(String str, Context context) {
+        if (m17338e(context, "com.google.android.gms.measurement.AppMeasurement", this.f16855g, true)) {
             try {
-                return D(context, str).invoke(this.g.get(), new Object[0]);
+                return m17344D(context, str).invoke(this.f16855g.get(), new Object[0]);
             } catch (Exception unused) {
-                c(str, true);
+                m17340c(str, true);
                 return null;
             }
         }
         return null;
     }
 
-    public final Method D(Context context, String str) {
-        Method method = (Method) this.i.get(str);
+    /* renamed from: D */
+    public final Method m17344D(Context context, String str) {
+        Method method = (Method) this.f16857i.get(str);
         if (method != null) {
             return method;
         }
         try {
             Method declaredMethod = context.getClassLoader().loadClass("com.google.android.gms.measurement.AppMeasurement").getDeclaredMethod(str, new Class[0]);
-            this.i.put(str, declaredMethod);
+            this.f16857i.put(str, declaredMethod);
             return declaredMethod;
         } catch (Exception unused) {
-            c(str, false);
+            m17340c(str, false);
             return null;
         }
     }
 
-    public final ExecutorService E() {
+    /* renamed from: E */
+    public final ExecutorService m17343E() {
         ExecutorService threadPoolExecutor;
-        if (this.a.get() == null) {
-            if (vf.a()) {
-                threadPoolExecutor = fv6.a().b(((Integer) zzba.zzc().b(g93.e0)).intValue(), new hy3(this), 2);
+        if (this.f16849a.get() == null) {
+            if (C3327vf.m7198a()) {
+                threadPoolExecutor = fv6.m22241a().mo1868b(((Integer) zzba.zzc().m23658b(g93.f10666e0)).intValue(), new hy3(this), 2);
             } else {
-                y83 y83Var = g93.e0;
-                threadPoolExecutor = new ThreadPoolExecutor(((Integer) zzba.zzc().b(y83Var)).intValue(), ((Integer) zzba.zzc().b(y83Var)).intValue(), 1L, TimeUnit.MINUTES, new LinkedBlockingQueue(), new hy3(this));
+                y83 y83Var = g93.f10666e0;
+                threadPoolExecutor = new ThreadPoolExecutor(((Integer) zzba.zzc().m23658b(y83Var)).intValue(), ((Integer) zzba.zzc().m23658b(y83Var)).intValue(), 1L, TimeUnit.MINUTES, new LinkedBlockingQueue(), new hy3(this));
             }
-            tx3.a(this.a, null, threadPoolExecutor);
+            tx3.m8721a(this.f16849a, null, threadPoolExecutor);
         }
-        return (ExecutorService) this.a.get();
+        return (ExecutorService) this.f16849a.get();
     }
 
-    public final void a(Context context, String str, String str2) {
-        if (e(context, "com.google.android.gms.measurement.AppMeasurement", this.g, true)) {
-            Method method = (Method) this.i.get(str2);
+    /* renamed from: a */
+    public final void m17342a(Context context, String str, String str2) {
+        if (m17338e(context, "com.google.android.gms.measurement.AppMeasurement", this.f16855g, true)) {
+            Method method = (Method) this.f16857i.get(str2);
             if (method == null) {
                 try {
                     method = context.getClassLoader().loadClass("com.google.android.gms.measurement.AppMeasurement").getDeclaredMethod(str2, String.class);
-                    this.i.put(str2, method);
+                    this.f16857i.put(str2, method);
                 } catch (Exception unused) {
-                    c(str2, false);
+                    m17340c(str2, false);
                     method = null;
                 }
             }
             try {
-                method.invoke(this.g.get(), str);
+                method.invoke(this.f16855g.get(), str);
                 zze.zza("Invoke Firebase method " + str2 + ", Ad Unit Id: " + str);
             } catch (Exception unused2) {
-                c(str2, false);
+                m17340c(str2, false);
             }
         }
     }
 
-    public final void b(Context context, final String str, String str2, Bundle bundle) {
-        if (z(context)) {
+    /* renamed from: b */
+    public final void m17341b(Context context, final String str, String str2, Bundle bundle) {
+        if (m17317z(context)) {
             final Bundle bundle2 = new Bundle();
             try {
                 bundle2.putLong("_aeid", Long.parseLong(str2));
@@ -152,78 +183,84 @@ public final class ky3 {
             if (bundle != null) {
                 bundle2.putAll(bundle);
             }
-            if (A(context)) {
-                d("logEventInternal", new jy3() { // from class: com.daaw.wx3
+            if (m17347A(context)) {
+                m17339d("logEventInternal", new jy3() { // from class: com.daaw.wx3
                     @Override // com.daaw.jy3
-                    public final void a(x84 x84Var) {
-                        x84Var.Y1("am", str, bundle2);
+                    /* renamed from: a */
+                    public final void mo5732a(x84 x84Var) {
+                        x84Var.mo5437Y1("am", str, bundle2);
                     }
                 });
-            } else if (e(context, "com.google.android.gms.measurement.AppMeasurement", this.g, true)) {
-                Method method = (Method) this.i.get("logEventInternal");
+            } else if (m17338e(context, "com.google.android.gms.measurement.AppMeasurement", this.f16855g, true)) {
+                Method method = (Method) this.f16857i.get("logEventInternal");
                 if (method == null) {
                     try {
                         method = context.getClassLoader().loadClass("com.google.android.gms.measurement.AppMeasurement").getDeclaredMethod("logEventInternal", String.class, String.class, Bundle.class);
-                        this.i.put("logEventInternal", method);
+                        this.f16857i.put("logEventInternal", method);
                     } catch (Exception unused) {
-                        c("logEventInternal", true);
+                        m17340c("logEventInternal", true);
                         method = null;
                     }
                 }
                 try {
-                    method.invoke(this.g.get(), "am", str, bundle2);
+                    method.invoke(this.f16855g.get(), "am", str, bundle2);
                 } catch (Exception unused2) {
-                    c("logEventInternal", true);
+                    m17340c("logEventInternal", true);
                 }
             }
         }
     }
 
-    public final void c(String str, boolean z) {
-        if (this.e.get()) {
+    /* renamed from: c */
+    public final void m17340c(String str, boolean z) {
+        if (this.f16853e.get()) {
             return;
         }
         k04.zzj("Invoke Firebase method " + str + " error.");
         if (z) {
             k04.zzj("The Google Mobile Ads SDK will not integrate with Firebase. Admob/Firebase integration requires the latest Firebase SDK jar, but Firebase SDK is either missing or out of date");
-            this.e.set(true);
+            this.f16853e.set(true);
         }
     }
 
-    public final void d(final String str, final jy3 jy3Var) {
-        synchronized (this.j) {
+    /* renamed from: d */
+    public final void m17339d(final String str, final jy3 jy3Var) {
+        synchronized (this.f16858j) {
             FutureTask futureTask = new FutureTask(new Runnable() { // from class: com.daaw.xx3
                 @Override // java.lang.Runnable
                 public final void run() {
-                    ky3.this.o(jy3Var, str);
+                    ky3.this.m17328o(jy3Var, str);
                 }
             }, null);
-            if (this.j.get() != null) {
+            if (this.f16858j.get() != null) {
                 futureTask.run();
             } else {
-                this.k.offer(futureTask);
+                this.f16859k.offer(futureTask);
             }
         }
     }
 
-    public final boolean e(Context context, String str, AtomicReference atomicReference, boolean z) {
+    /* renamed from: e */
+    public final boolean m17338e(Context context, String str, AtomicReference atomicReference, boolean z) {
         if (atomicReference.get() == null) {
             try {
-                tx3.a(atomicReference, null, context.getClassLoader().loadClass(str).getDeclaredMethod("getInstance", Context.class).invoke(null, context));
+                tx3.m8721a(atomicReference, null, context.getClassLoader().loadClass(str).getDeclaredMethod("getInstance", Context.class).invoke(null, context));
             } catch (Exception unused) {
-                c("getInstance", z);
+                m17340c("getInstance", z);
                 return false;
             }
         }
         return true;
     }
 
-    public final String f(Context context) {
-        if (z(context)) {
-            if (A(context)) {
-                Long l = (Long) B("getAdEventId", null, new iy3() { // from class: com.daaw.yx3
+    /* renamed from: f */
+    public final String m17337f(Context context) {
+        if (m17317z(context)) {
+            if (m17347A(context)) {
+                Long l = (Long) m17346B("getAdEventId", null, new iy3() { // from class: com.daaw.yx3
                     @Override // com.daaw.iy3
-                    public final Object a(x84 x84Var) {
+                    /* renamed from: a */
+                    public final Object mo1800a(x84 x84Var) {
                         return Long.valueOf(x84Var.zzc());
                     }
                 });
@@ -232,43 +269,46 @@ public final class ky3 {
                 }
                 return null;
             }
-            Object C = C("generateEventId", context);
-            if (C != null) {
-                return C.toString();
+            Object m17345C = m17345C("generateEventId", context);
+            if (m17345C != null) {
+                return m17345C.toString();
             }
             return null;
         }
         return null;
     }
 
-    public final String g(Context context) {
-        if (z(context)) {
-            synchronized (this.b) {
-                String str = this.d;
+    /* renamed from: g */
+    public final String m17336g(Context context) {
+        if (m17317z(context)) {
+            synchronized (this.f16850b) {
+                String str = this.f16852d;
                 if (str != null) {
                     return str;
                 }
-                this.d = A(context) ? (String) B("getAppIdOrigin", this.d, new iy3() { // from class: com.daaw.cy3
+                this.f16852d = m17347A(context) ? (String) m17346B("getAppIdOrigin", this.f16852d, new iy3() { // from class: com.daaw.cy3
                     @Override // com.daaw.iy3
-                    public final Object a(x84 x84Var) {
+                    /* renamed from: a */
+                    public final Object mo1800a(x84 x84Var) {
                         return x84Var.zze();
                     }
                 }) : "fa";
-                return this.d;
+                return this.f16852d;
             }
         }
         return null;
     }
 
-    public final String h(final Context context) {
-        if (z(context)) {
-            long longValue = ((Long) zzba.zzc().b(g93.d0)).longValue();
-            if (A(context)) {
+    /* renamed from: h */
+    public final String m17335h(final Context context) {
+        if (m17317z(context)) {
+            long longValue = ((Long) zzba.zzc().m23658b(g93.f10655d0)).longValue();
+            if (m17347A(context)) {
                 try {
-                    return longValue < 0 ? (String) B("getAppInstanceId", null, dy3.a) : (String) E().submit(new Callable() { // from class: com.daaw.ey3
+                    return longValue < 0 ? (String) m17346B("getAppInstanceId", null, dy3.f7976a) : (String) m17343E().submit(new Callable() { // from class: com.daaw.ey3
                         @Override // java.util.concurrent.Callable
                         public final Object call() {
-                            return ky3.this.k();
+                            return ky3.this.m17332k();
                         }
                     }).get(longValue, TimeUnit.MILLISECONDS);
                 } catch (TimeoutException unused) {
@@ -277,13 +317,13 @@ public final class ky3 {
                     return null;
                 }
             } else if (longValue < 0) {
-                return (String) C("getAppInstanceId", context);
+                return (String) m17345C("getAppInstanceId", context);
             } else {
                 try {
-                    return (String) E().submit(new Callable() { // from class: com.daaw.fy3
+                    return (String) m17343E().submit(new Callable() { // from class: com.daaw.fy3
                         @Override // java.util.concurrent.Callable
                         public final Object call() {
-                            return ky3.this.l(context);
+                            return ky3.this.m17331l(context);
                         }
                     }).get(longValue, TimeUnit.MILLISECONDS);
                 } catch (TimeoutException unused3) {
@@ -296,26 +336,28 @@ public final class ky3 {
         return null;
     }
 
-    public final String i(Context context) {
-        if (z(context)) {
-            if (A(context)) {
-                return (String) B("getCurrentScreenNameOrScreenClass", "", new iy3() { // from class: com.daaw.zx3
+    /* renamed from: i */
+    public final String m17334i(Context context) {
+        if (m17317z(context)) {
+            if (m17347A(context)) {
+                return (String) m17346B("getCurrentScreenNameOrScreenClass", "", new iy3() { // from class: com.daaw.zx3
                     @Override // com.daaw.iy3
-                    public final Object a(x84 x84Var) {
+                    /* renamed from: a */
+                    public final Object mo1800a(x84 x84Var) {
                         String zzh = x84Var.zzh();
                         return (zzh == null && (zzh = x84Var.zzg()) == null) ? "" : zzh;
                     }
                 });
             }
-            if (e(context, "com.google.android.gms.measurement.AppMeasurement", this.g, true)) {
+            if (m17338e(context, "com.google.android.gms.measurement.AppMeasurement", this.f16855g, true)) {
                 try {
-                    String str = (String) D(context, "getCurrentScreenName").invoke(this.g.get(), new Object[0]);
+                    String str = (String) m17344D(context, "getCurrentScreenName").invoke(this.f16855g.get(), new Object[0]);
                     if (str == null) {
-                        str = (String) D(context, "getCurrentScreenClass").invoke(this.g.get(), new Object[0]);
+                        str = (String) m17344D(context, "getCurrentScreenClass").invoke(this.f16855g.get(), new Object[0]);
                     }
                     return str == null ? "" : str;
                 } catch (Exception unused) {
-                    c("getCurrentScreenName", false);
+                    m17340c("getCurrentScreenName", false);
                     return "";
                 }
             }
@@ -324,178 +366,200 @@ public final class ky3 {
         return "";
     }
 
-    public final String j(Context context) {
-        if (z(context)) {
-            synchronized (this.b) {
-                String str = this.c;
+    /* renamed from: j */
+    public final String m17333j(Context context) {
+        if (m17317z(context)) {
+            synchronized (this.f16850b) {
+                String str = this.f16851c;
                 if (str != null) {
                     return str;
                 }
-                this.c = A(context) ? (String) B("getGmpAppId", this.c, new iy3() { // from class: com.daaw.vx3
+                this.f16851c = m17347A(context) ? (String) m17346B("getGmpAppId", this.f16851c, new iy3() { // from class: com.daaw.vx3
                     @Override // com.daaw.iy3
-                    public final Object a(x84 x84Var) {
+                    /* renamed from: a */
+                    public final Object mo1800a(x84 x84Var) {
                         return x84Var.zzi();
                     }
-                }) : (String) C("getGmpAppId", context);
-                return this.c;
+                }) : (String) m17345C("getGmpAppId", context);
+                return this.f16851c;
             }
         }
         return null;
     }
 
-    public final /* synthetic */ String k() {
-        return (String) B("getAppInstanceId", null, dy3.a);
+    /* renamed from: k */
+    public final /* synthetic */ String m17332k() {
+        return (String) m17346B("getAppInstanceId", null, dy3.f7976a);
     }
 
-    public final /* synthetic */ String l(Context context) {
-        return (String) C("getAppInstanceId", context);
+    /* renamed from: l */
+    public final /* synthetic */ String m17331l(Context context) {
+        return (String) m17345C("getAppInstanceId", context);
     }
 
-    public final void m(Context context, final String str) {
-        if (z(context)) {
-            if (A(context)) {
-                d("beginAdUnitExposure", new jy3() { // from class: com.daaw.ux3
+    /* renamed from: m */
+    public final void m17330m(Context context, final String str) {
+        if (m17317z(context)) {
+            if (m17347A(context)) {
+                m17339d("beginAdUnitExposure", new jy3() { // from class: com.daaw.ux3
                     @Override // com.daaw.jy3
-                    public final void a(x84 x84Var) {
-                        x84Var.n(str);
+                    /* renamed from: a */
+                    public final void mo5732a(x84 x84Var) {
+                        x84Var.mo5436n(str);
                     }
                 });
             } else {
-                a(context, str, "beginAdUnitExposure");
+                m17342a(context, str, "beginAdUnitExposure");
             }
         }
     }
 
-    public final void n(Context context, final String str) {
-        if (z(context)) {
-            if (A(context)) {
-                d("endAdUnitExposure", new jy3() { // from class: com.daaw.by3
+    /* renamed from: n */
+    public final void m17329n(Context context, final String str) {
+        if (m17317z(context)) {
+            if (m17347A(context)) {
+                m17339d("endAdUnitExposure", new jy3() { // from class: com.daaw.by3
                     @Override // com.daaw.jy3
-                    public final void a(x84 x84Var) {
+                    /* renamed from: a */
+                    public final void mo5732a(x84 x84Var) {
                         x84Var.zzn(str);
                     }
                 });
             } else {
-                a(context, str, "endAdUnitExposure");
+                m17342a(context, str, "endAdUnitExposure");
             }
         }
     }
 
-    public final /* synthetic */ void o(jy3 jy3Var, String str) {
-        if (((x84) this.j.get()) != null) {
+    /* renamed from: o */
+    public final /* synthetic */ void m17328o(jy3 jy3Var, String str) {
+        if (((x84) this.f16858j.get()) != null) {
             try {
-                jy3Var.a((x84) this.j.get());
+                jy3Var.mo5732a((x84) this.f16858j.get());
             } catch (Exception unused) {
-                c(str, false);
+                m17340c(str, false);
             }
         }
     }
 
-    public final void p(Context context, String str) {
-        b(context, "_aa", str, null);
+    /* renamed from: p */
+    public final void m17327p(Context context, String str) {
+        m17341b(context, "_aa", str, null);
     }
 
-    public final void q(Context context, String str) {
-        b(context, "_aq", str, null);
+    /* renamed from: q */
+    public final void m17326q(Context context, String str) {
+        m17341b(context, "_aq", str, null);
     }
 
-    public final void r(Context context, String str) {
-        b(context, "_ac", str, null);
+    /* renamed from: r */
+    public final void m17325r(Context context, String str) {
+        m17341b(context, "_ac", str, null);
     }
 
-    public final void s(Context context, String str) {
-        b(context, "_ai", str, null);
+    /* renamed from: s */
+    public final void m17324s(Context context, String str) {
+        m17341b(context, "_ai", str, null);
     }
 
-    public final void t(Context context, String str, String str2, String str3, int i) {
-        if (z(context)) {
+    /* renamed from: t */
+    public final void m17323t(Context context, String str, String str2, String str3, int i) {
+        if (m17317z(context)) {
             Bundle bundle = new Bundle();
             bundle.putString("_ai", str2);
             bundle.putString("reward_type", str3);
             bundle.putInt("reward_value", i);
-            b(context, "_ar", str, bundle);
+            m17341b(context, "_ar", str, bundle);
             zze.zza("Log a Firebase reward video event, reward type: " + str3 + ", reward value: " + i);
         }
     }
 
-    public final void u(Context context, zzl zzlVar) {
-        if (((Boolean) zzba.zzc().b(g93.k0)).booleanValue() && z(context) && A(context)) {
-            synchronized (this.l) {
+    /* renamed from: u */
+    public final void m17322u(Context context, zzl zzlVar) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10732k0)).booleanValue() && m17317z(context) && m17347A(context)) {
+            synchronized (this.f16860l) {
             }
         }
     }
 
-    public final void v(Context context, zzff zzffVar) {
-        ly3.d(context).b().d(zzffVar);
-        if (((Boolean) zzba.zzc().b(g93.k0)).booleanValue() && z(context) && A(context)) {
-            synchronized (this.l) {
+    /* renamed from: v */
+    public final void m17321v(Context context, zzff zzffVar) {
+        ly3.m16372d(context).mo10846b().m19295d(zzffVar);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10732k0)).booleanValue() && m17317z(context) && m17347A(context)) {
+            synchronized (this.f16860l) {
             }
         }
     }
 
-    public final void w(final Bundle bundle) {
-        d("setConsent", new jy3() { // from class: com.daaw.gy3
+    /* renamed from: w */
+    public final void m17320w(final Bundle bundle) {
+        m17339d("setConsent", new jy3() { // from class: com.daaw.gy3
             @Override // com.daaw.jy3
-            public final void a(x84 x84Var) {
-                x84Var.H(bundle);
+            /* renamed from: a */
+            public final void mo5732a(x84 x84Var) {
+                x84Var.mo5441H(bundle);
             }
         });
     }
 
     @Deprecated
-    public final void x(final Context context, final String str) {
-        if (z(context) && (context instanceof Activity)) {
-            if (A(context)) {
-                d("setScreenName", new jy3() { // from class: com.daaw.ay3
+    /* renamed from: x */
+    public final void m17319x(final Context context, final String str) {
+        if (m17317z(context) && (context instanceof Activity)) {
+            if (m17347A(context)) {
+                m17339d("setScreenName", new jy3() { // from class: com.daaw.ay3
                     @Override // com.daaw.jy3
-                    public final void a(x84 x84Var) {
+                    /* renamed from: a */
+                    public final void mo5732a(x84 x84Var) {
                         Context context2 = context;
-                        x84Var.u2(nt0.g3(context2), str, context2.getPackageName());
+                        x84Var.mo5434u2(nt0.m14830g3(context2), str, context2.getPackageName());
                     }
                 });
-            } else if (e(context, "com.google.firebase.analytics.FirebaseAnalytics", this.h, false)) {
-                Method method = (Method) this.i.get("setCurrentScreen");
+            } else if (m17338e(context, "com.google.firebase.analytics.FirebaseAnalytics", this.f16856h, false)) {
+                Method method = (Method) this.f16857i.get("setCurrentScreen");
                 if (method == null) {
                     try {
                         method = context.getClassLoader().loadClass("com.google.firebase.analytics.FirebaseAnalytics").getDeclaredMethod("setCurrentScreen", Activity.class, String.class, String.class);
-                        this.i.put("setCurrentScreen", method);
+                        this.f16857i.put("setCurrentScreen", method);
                     } catch (Exception unused) {
-                        c("setCurrentScreen", false);
+                        m17340c("setCurrentScreen", false);
                         method = null;
                     }
                 }
                 try {
-                    method.invoke(this.h.get(), (Activity) context, str, context.getPackageName());
+                    method.invoke(this.f16856h.get(), (Activity) context, str, context.getPackageName());
                 } catch (Exception unused2) {
-                    c("setCurrentScreen", false);
+                    m17340c("setCurrentScreen", false);
                 }
             }
         }
     }
 
-    public final boolean y() {
-        synchronized (this.l) {
+    /* renamed from: y */
+    public final boolean m17318y() {
+        synchronized (this.f16860l) {
         }
         return false;
     }
 
-    public final boolean z(Context context) {
-        if (((Boolean) zzba.zzc().b(g93.Y)).booleanValue() && !this.e.get()) {
-            if (((Boolean) zzba.zzc().b(g93.i0)).booleanValue()) {
+    /* renamed from: z */
+    public final boolean m17317z(Context context) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10601Y)).booleanValue() && !this.f16853e.get()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10710i0)).booleanValue()) {
                 return true;
             }
-            if (this.f.get() == -1) {
+            if (this.f16854f.get() == -1) {
                 zzay.zzb();
-                if (!d04.y(context, c80.a)) {
+                if (!d04.m24807y(context, c80.f5613a)) {
                     zzay.zzb();
-                    if (d04.z(context)) {
+                    if (d04.m24806z(context)) {
                         k04.zzj("Google Play Service is out of date, the Google Mobile Ads SDK will not integrate with Firebase. Admob/Firebase integration requires updated Google Play Service.");
-                        this.f.set(0);
+                        this.f16854f.set(0);
                     }
                 }
-                this.f.set(1);
+                this.f16854f.set(1);
             }
-            if (this.f.get() == 1) {
+            if (this.f16854f.get() == 1) {
                 return true;
             }
         }

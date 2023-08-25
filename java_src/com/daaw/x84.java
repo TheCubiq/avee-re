@@ -6,25 +6,35 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public interface x84 extends IInterface {
-    void A2(String str, String str2, yd0 yd0Var);
+    /* renamed from: A2 */
+    void mo5442A2(String str, String str2, yd0 yd0Var);
 
-    void H(Bundle bundle);
+    /* renamed from: H */
+    void mo5441H(Bundle bundle);
 
-    Map H2(String str, String str2, boolean z);
+    /* renamed from: H2 */
+    Map mo5440H2(String str, String str2, boolean z);
 
-    List I1(String str, String str2);
+    /* renamed from: I1 */
+    List mo5439I1(String str, String str2);
 
-    void S2(String str, String str2, Bundle bundle);
+    /* renamed from: S2 */
+    void mo5438S2(String str, String str2, Bundle bundle);
 
-    void Y1(String str, String str2, Bundle bundle);
+    /* renamed from: Y1 */
+    void mo5437Y1(String str, String str2, Bundle bundle);
 
-    void n(String str);
+    /* renamed from: n */
+    void mo5436n(String str);
 
-    void o(Bundle bundle);
+    /* renamed from: o */
+    void mo5435o(Bundle bundle);
 
-    void u2(yd0 yd0Var, String str, String str2);
+    /* renamed from: u2 */
+    void mo5434u2(yd0 yd0Var, String str, String str2);
 
-    Bundle x(Bundle bundle);
+    /* renamed from: x */
+    Bundle mo5433x(Bundle bundle);
 
     int zzb(String str);
 

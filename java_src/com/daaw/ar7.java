@@ -3,209 +3,209 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class ar7 extends jr7 {
-    public final byte[] f;
-    public int g;
-    public int h;
-    public int i;
-    public final int j;
-    public int k;
-    public int l;
+
+    /* renamed from: f */
+    public final byte[] f3503f;
+
+    /* renamed from: g */
+    public int f3504g;
+
+    /* renamed from: h */
+    public int f3505h;
+
+    /* renamed from: i */
+    public int f3506i;
+
+    /* renamed from: j */
+    public final int f3507j;
+
+    /* renamed from: k */
+    public int f3508k;
+
+    /* renamed from: l */
+    public int f3509l;
 
     public /* synthetic */ ar7(byte[] bArr, int i, int i2, boolean z, zq7 zq7Var) {
         super(null);
-        this.l = Integer.MAX_VALUE;
-        this.f = bArr;
-        this.g = i2 + i;
-        this.i = i;
-        this.j = i;
+        this.f3509l = Integer.MAX_VALUE;
+        this.f3503f = bArr;
+        this.f3504g = i2 + i;
+        this.f3506i = i;
+        this.f3507j = i;
     }
 
     @Override // com.daaw.jr7
-    public final String A() {
-        int G = G();
-        if (G > 0) {
-            int i = this.g;
-            int i2 = this.i;
-            if (G <= i - i2) {
-                String h = lw7.h(this.f, i2, G);
-                this.i += G;
-                return h;
+    /* renamed from: A */
+    public final String mo18307A() {
+        int m27123G = m27123G();
+        if (m27123G > 0) {
+            int i = this.f3504g;
+            int i2 = this.f3506i;
+            if (m27123G <= i - i2) {
+                String m16413h = lw7.m16413h(this.f3503f, i2, m27123G);
+                this.f3506i += m27123G;
+                return m16413h;
             }
         }
-        if (G == 0) {
+        if (m27123G == 0) {
             return "";
         }
-        if (G <= 0) {
-            throw xs7.f();
+        if (m27123G <= 0) {
+            throw xs7.m4538f();
         }
-        throw xs7.j();
+        throw xs7.m4534j();
     }
 
     @Override // com.daaw.jr7
-    public final void B(int i) {
-        if (this.k != i) {
-            throw xs7.b();
+    /* renamed from: B */
+    public final void mo18306B(int i) {
+        if (this.f3508k != i) {
+            throw xs7.m4542b();
         }
     }
 
-    public final void C(int i) {
+    /* renamed from: C */
+    public final void m27127C(int i) {
         if (i >= 0) {
-            int i2 = this.g;
-            int i3 = this.i;
+            int i2 = this.f3504g;
+            int i3 = this.f3506i;
             if (i <= i2 - i3) {
-                this.i = i3 + i;
+                this.f3506i = i3 + i;
                 return;
             }
         }
         if (i >= 0) {
-            throw xs7.j();
+            throw xs7.m4534j();
         }
-        throw xs7.f();
+        throw xs7.m4538f();
     }
 
-    public final void D() {
-        int i = this.g + this.h;
-        this.g = i;
-        int i2 = i - this.j;
-        int i3 = this.l;
+    /* renamed from: D */
+    public final void m27126D() {
+        int i = this.f3504g + this.f3505h;
+        this.f3504g = i;
+        int i2 = i - this.f3507j;
+        int i3 = this.f3509l;
         if (i2 <= i3) {
-            this.h = 0;
+            this.f3505h = 0;
             return;
         }
         int i4 = i2 - i3;
-        this.h = i4;
-        this.g = i - i4;
+        this.f3505h = i4;
+        this.f3504g = i - i4;
     }
 
-    public final byte E() {
-        int i = this.i;
-        if (i != this.g) {
-            byte[] bArr = this.f;
-            this.i = i + 1;
+    /* renamed from: E */
+    public final byte m27125E() {
+        int i = this.f3506i;
+        if (i != this.f3504g) {
+            byte[] bArr = this.f3503f;
+            this.f3506i = i + 1;
             return bArr[i];
         }
-        throw xs7.j();
+        throw xs7.m4534j();
     }
 
-    public final int F() {
-        int i = this.i;
-        if (this.g - i >= 4) {
-            byte[] bArr = this.f;
-            this.i = i + 4;
+    /* renamed from: F */
+    public final int m27124F() {
+        int i = this.f3506i;
+        if (this.f3504g - i >= 4) {
+            byte[] bArr = this.f3503f;
+            this.f3506i = i + 4;
             return ((bArr[i + 3] & 255) << 24) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16);
         }
-        throw xs7.j();
+        throw xs7.m4534j();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:32:0x0067, code lost:
         if (r2[r3] >= 0) goto L13;
      */
+    /* renamed from: G */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final int G() {
-        /*
-            r5 = this;
-            int r0 = r5.i
-            int r1 = r5.g
-            if (r1 != r0) goto L7
-            goto L6c
-        L7:
-            byte[] r2 = r5.f
-            int r3 = r0 + 1
-            r0 = r2[r0]
-            if (r0 < 0) goto L12
-            r5.i = r3
-            return r0
-        L12:
-            int r1 = r1 - r3
-            r4 = 9
-            if (r1 < r4) goto L6c
-            int r1 = r3 + 1
-            r3 = r2[r3]
-            int r3 = r3 << 7
-            r0 = r0 ^ r3
-            if (r0 >= 0) goto L23
-            r0 = r0 ^ (-128(0xffffffffffffff80, float:NaN))
-            goto L69
-        L23:
-            int r3 = r1 + 1
-            r1 = r2[r1]
-            int r1 = r1 << 14
-            r0 = r0 ^ r1
-            if (r0 < 0) goto L30
-            r0 = r0 ^ 16256(0x3f80, float:2.278E-41)
-        L2e:
-            r1 = r3
-            goto L69
-        L30:
-            int r1 = r3 + 1
-            r3 = r2[r3]
-            int r3 = r3 << 21
-            r0 = r0 ^ r3
-            if (r0 >= 0) goto L3e
-            r2 = -2080896(0xffffffffffe03f80, float:NaN)
-            r0 = r0 ^ r2
-            goto L69
-        L3e:
-            int r3 = r1 + 1
-            r1 = r2[r1]
-            int r4 = r1 << 28
-            r0 = r0 ^ r4
-            r4 = 266354560(0xfe03f80, float:2.2112565E-29)
-            r0 = r0 ^ r4
-            if (r1 >= 0) goto L2e
-            int r1 = r3 + 1
-            r3 = r2[r3]
-            if (r3 >= 0) goto L69
-            int r3 = r1 + 1
-            r1 = r2[r1]
-            if (r1 >= 0) goto L2e
-            int r1 = r3 + 1
-            r3 = r2[r3]
-            if (r3 >= 0) goto L69
-            int r3 = r1 + 1
-            r1 = r2[r1]
-            if (r1 >= 0) goto L2e
-            int r1 = r3 + 1
-            r2 = r2[r3]
-            if (r2 < 0) goto L6c
-        L69:
-            r5.i = r1
-            return r0
-        L6c:
-            long r0 = r5.J()
-            int r1 = (int) r0
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.ar7.G():int");
+    public final int m27123G() {
+        int i;
+        int i2 = this.f3506i;
+        int i3 = this.f3504g;
+        if (i3 != i2) {
+            byte[] bArr = this.f3503f;
+            int i4 = i2 + 1;
+            byte b = bArr[i2];
+            if (b >= 0) {
+                this.f3506i = i4;
+                return b;
+            } else if (i3 - i4 >= 9) {
+                int i5 = i4 + 1;
+                int i6 = b ^ (bArr[i4] << 7);
+                if (i6 < 0) {
+                    i = i6 ^ (-128);
+                } else {
+                    int i7 = i5 + 1;
+                    int i8 = i6 ^ (bArr[i5] << 14);
+                    if (i8 >= 0) {
+                        i = i8 ^ 16256;
+                    } else {
+                        i5 = i7 + 1;
+                        int i9 = i8 ^ (bArr[i7] << 21);
+                        if (i9 < 0) {
+                            i = i9 ^ (-2080896);
+                        } else {
+                            i7 = i5 + 1;
+                            byte b2 = bArr[i5];
+                            i = (i9 ^ (b2 << 28)) ^ 266354560;
+                            if (b2 < 0) {
+                                i5 = i7 + 1;
+                                if (bArr[i7] < 0) {
+                                    i7 = i5 + 1;
+                                    if (bArr[i5] < 0) {
+                                        i5 = i7 + 1;
+                                        if (bArr[i7] < 0) {
+                                            i7 = i5 + 1;
+                                            if (bArr[i5] < 0) {
+                                                i5 = i7 + 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    i5 = i7;
+                }
+                this.f3506i = i5;
+                return i;
+            }
+        }
+        return (int) m27120J();
     }
 
-    public final long H() {
-        int i = this.i;
-        if (this.g - i >= 8) {
-            byte[] bArr = this.f;
-            this.i = i + 8;
+    /* renamed from: H */
+    public final long m27122H() {
+        int i = this.f3506i;
+        if (this.f3504g - i >= 8) {
+            byte[] bArr = this.f3503f;
+            this.f3506i = i + 8;
             return ((bArr[i + 7] & 255) << 56) | (bArr[i] & 255) | ((bArr[i + 1] & 255) << 8) | ((bArr[i + 2] & 255) << 16) | ((bArr[i + 3] & 255) << 24) | ((bArr[i + 4] & 255) << 32) | ((bArr[i + 5] & 255) << 40) | ((bArr[i + 6] & 255) << 48);
         }
-        throw xs7.j();
+        throw xs7.m4534j();
     }
 
-    public final long I() {
+    /* renamed from: I */
+    public final long m27121I() {
         long j;
         long j2;
         long j3;
         long j4;
         int i;
-        int i2 = this.i;
-        int i3 = this.g;
+        int i2 = this.f3506i;
+        int i3 = this.f3504g;
         if (i3 != i2) {
-            byte[] bArr = this.f;
+            byte[] bArr = this.f3503f;
             int i4 = i2 + 1;
             byte b = bArr[i2];
             if (b >= 0) {
-                this.i = i4;
+                this.f3506i = i4;
                 return b;
             } else if (i3 - i4 >= 9) {
                 int i5 = i4 + 1;
@@ -246,7 +246,7 @@ public final class ar7 extends jr7 {
                                                 if (bArr[i7] >= 0) {
                                                     j2 = j;
                                                     i5 = i10;
-                                                    this.i = i5;
+                                                    this.f3506i = i5;
                                                     return j2;
                                                 }
                                             }
@@ -255,7 +255,7 @@ public final class ar7 extends jr7 {
                                 }
                                 j2 = j3 ^ j6;
                                 i5 = i10;
-                                this.i = i5;
+                                this.f3506i = i5;
                                 return j2;
                             }
                             j4 = 266354560;
@@ -264,247 +264,270 @@ public final class ar7 extends jr7 {
                     }
                     i5 = i7;
                     j2 = j;
-                    this.i = i5;
+                    this.f3506i = i5;
                     return j2;
                 }
                 i = i6 ^ (-128);
                 j2 = i;
-                this.i = i5;
+                this.f3506i = i5;
                 return j2;
             }
         }
-        return J();
+        return m27120J();
     }
 
-    public final long J() {
+    /* renamed from: J */
+    public final long m27120J() {
         long j = 0;
         for (int i = 0; i < 64; i += 7) {
-            byte E = E();
-            j |= (E & Byte.MAX_VALUE) << i;
-            if ((E & 128) == 0) {
+            byte m27125E = m27125E();
+            j |= (m27125E & Byte.MAX_VALUE) << i;
+            if ((m27125E & 128) == 0) {
                 return j;
             }
         }
-        throw xs7.e();
+        throw xs7.m4539e();
     }
 
     @Override // com.daaw.jr7
-    public final void a(int i) {
-        this.l = i;
-        D();
+    /* renamed from: a */
+    public final void mo18305a(int i) {
+        this.f3509l = i;
+        m27126D();
     }
 
     @Override // com.daaw.jr7
-    public final boolean b() {
-        return this.i == this.g;
+    /* renamed from: b */
+    public final boolean mo18304b() {
+        return this.f3506i == this.f3504g;
     }
 
     @Override // com.daaw.jr7
-    public final boolean c() {
-        return I() != 0;
+    /* renamed from: c */
+    public final boolean mo18303c() {
+        return m27121I() != 0;
     }
 
     @Override // com.daaw.jr7
-    public final boolean d(int i) {
-        int r;
+    /* renamed from: d */
+    public final boolean mo18302d(int i) {
+        int mo18288r;
         int i2 = i & 7;
         int i3 = 0;
         if (i2 == 0) {
-            if (this.g - this.i < 10) {
+            if (this.f3504g - this.f3506i < 10) {
                 while (i3 < 10) {
-                    if (E() < 0) {
+                    if (m27125E() < 0) {
                         i3++;
                     }
                 }
-                throw xs7.e();
+                throw xs7.m4539e();
             }
             while (i3 < 10) {
-                byte[] bArr = this.f;
-                int i4 = this.i;
-                this.i = i4 + 1;
+                byte[] bArr = this.f3503f;
+                int i4 = this.f3506i;
+                this.f3506i = i4 + 1;
                 if (bArr[i4] < 0) {
                     i3++;
                 }
             }
-            throw xs7.e();
+            throw xs7.m4539e();
             return true;
         } else if (i2 == 1) {
-            C(8);
+            m27127C(8);
             return true;
         } else if (i2 == 2) {
-            C(G());
+            m27127C(m27123G());
             return true;
         } else if (i2 != 3) {
             if (i2 != 4) {
                 if (i2 == 5) {
-                    C(4);
+                    m27127C(4);
                     return true;
                 }
-                throw xs7.a();
+                throw xs7.m4543a();
             }
             return false;
         } else {
             do {
-                r = r();
-                if (r == 0) {
+                mo18288r = mo18288r();
+                if (mo18288r == 0) {
                     break;
                 }
-            } while (d(r));
-            B(((i >>> 3) << 3) | 4);
+            } while (mo18302d(mo18288r));
+            mo18306B(((i >>> 3) << 3) | 4);
             return true;
         }
     }
 
     @Override // com.daaw.jr7
-    public final double i() {
-        return Double.longBitsToDouble(H());
+    /* renamed from: i */
+    public final double mo18297i() {
+        return Double.longBitsToDouble(m27122H());
     }
 
     @Override // com.daaw.jr7
-    public final float j() {
-        return Float.intBitsToFloat(F());
+    /* renamed from: j */
+    public final float mo18296j() {
+        return Float.intBitsToFloat(m27124F());
     }
 
     @Override // com.daaw.jr7
-    public final int k() {
-        return this.i - this.j;
+    /* renamed from: k */
+    public final int mo18295k() {
+        return this.f3506i - this.f3507j;
     }
 
     @Override // com.daaw.jr7
-    public final int l(int i) {
+    /* renamed from: l */
+    public final int mo18294l(int i) {
         if (i >= 0) {
-            int i2 = i + (this.i - this.j);
+            int i2 = i + (this.f3506i - this.f3507j);
             if (i2 >= 0) {
-                int i3 = this.l;
+                int i3 = this.f3509l;
                 if (i2 <= i3) {
-                    this.l = i2;
-                    D();
+                    this.f3509l = i2;
+                    m27126D();
                     return i3;
                 }
-                throw xs7.j();
+                throw xs7.m4534j();
             }
-            throw xs7.g();
+            throw xs7.m4537g();
         }
-        throw xs7.f();
+        throw xs7.m4538f();
     }
 
     @Override // com.daaw.jr7
-    public final int m() {
-        return G();
+    /* renamed from: m */
+    public final int mo18293m() {
+        return m27123G();
     }
 
     @Override // com.daaw.jr7
-    public final int n() {
-        return F();
+    /* renamed from: n */
+    public final int mo18292n() {
+        return m27124F();
     }
 
     @Override // com.daaw.jr7
-    public final int o() {
-        return G();
+    /* renamed from: o */
+    public final int mo18291o() {
+        return m27123G();
     }
 
     @Override // com.daaw.jr7
-    public final int p() {
-        return F();
+    /* renamed from: p */
+    public final int mo18290p() {
+        return m27124F();
     }
 
     @Override // com.daaw.jr7
-    public final int q() {
-        return jr7.e(G());
+    /* renamed from: q */
+    public final int mo18289q() {
+        return jr7.m18301e(m27123G());
     }
 
     @Override // com.daaw.jr7
-    public final int r() {
-        if (b()) {
-            this.k = 0;
+    /* renamed from: r */
+    public final int mo18288r() {
+        if (mo18304b()) {
+            this.f3508k = 0;
             return 0;
         }
-        int G = G();
-        this.k = G;
-        if ((G >>> 3) != 0) {
-            return G;
+        int m27123G = m27123G();
+        this.f3508k = m27123G;
+        if ((m27123G >>> 3) != 0) {
+            return m27123G;
         }
-        throw xs7.c();
+        throw xs7.m4541c();
     }
 
     @Override // com.daaw.jr7
-    public final int s() {
-        return G();
+    /* renamed from: s */
+    public final int mo18287s() {
+        return m27123G();
     }
 
     @Override // com.daaw.jr7
-    public final long t() {
-        return H();
+    /* renamed from: t */
+    public final long mo18286t() {
+        return m27122H();
     }
 
     @Override // com.daaw.jr7
-    public final long u() {
-        return I();
+    /* renamed from: u */
+    public final long mo18285u() {
+        return m27121I();
     }
 
     @Override // com.daaw.jr7
-    public final long v() {
-        return H();
+    /* renamed from: v */
+    public final long mo18284v() {
+        return m27122H();
     }
 
     @Override // com.daaw.jr7
-    public final long w() {
-        return jr7.f(I());
+    /* renamed from: w */
+    public final long mo18283w() {
+        return jr7.m18300f(m27121I());
     }
 
     @Override // com.daaw.jr7
-    public final long x() {
-        return I();
+    /* renamed from: x */
+    public final long mo18282x() {
+        return m27121I();
     }
 
     @Override // com.daaw.jr7
-    public final yq7 y() {
-        int G = G();
-        if (G > 0) {
-            int i = this.g;
-            int i2 = this.i;
-            if (G <= i - i2) {
-                yq7 G2 = yq7.G(this.f, i2, G);
-                this.i += G;
-                return G2;
+    /* renamed from: y */
+    public final yq7 mo18281y() {
+        int m27123G = m27123G();
+        if (m27123G > 0) {
+            int i = this.f3504g;
+            int i2 = this.f3506i;
+            if (m27123G <= i - i2) {
+                yq7 m3423G = yq7.m3423G(this.f3503f, i2, m27123G);
+                this.f3506i += m27123G;
+                return m3423G;
             }
         }
-        if (G != 0) {
-            if (G > 0) {
-                int i3 = this.g;
-                int i4 = this.i;
-                if (G <= i3 - i4) {
-                    int i5 = G + i4;
-                    this.i = i5;
-                    return yq7.J(Arrays.copyOfRange(this.f, i4, i5));
+        if (m27123G != 0) {
+            if (m27123G > 0) {
+                int i3 = this.f3504g;
+                int i4 = this.f3506i;
+                if (m27123G <= i3 - i4) {
+                    int i5 = m27123G + i4;
+                    this.f3506i = i5;
+                    return yq7.m3420J(Arrays.copyOfRange(this.f3503f, i4, i5));
                 }
             }
-            if (G <= 0) {
-                throw xs7.f();
+            if (m27123G <= 0) {
+                throw xs7.m4538f();
             }
-            throw xs7.j();
+            throw xs7.m4534j();
         }
-        return yq7.q;
+        return yq7.f33966q;
     }
 
     @Override // com.daaw.jr7
-    public final String z() {
-        int G = G();
-        if (G > 0) {
-            int i = this.g;
-            int i2 = this.i;
-            if (G <= i - i2) {
-                String str = new String(this.f, i2, G, vs7.b);
-                this.i += G;
+    /* renamed from: z */
+    public final String mo18280z() {
+        int m27123G = m27123G();
+        if (m27123G > 0) {
+            int i = this.f3504g;
+            int i2 = this.f3506i;
+            if (m27123G <= i - i2) {
+                String str = new String(this.f3503f, i2, m27123G, vs7.f30558b);
+                this.f3506i += m27123G;
                 return str;
             }
         }
-        if (G == 0) {
+        if (m27123G == 0) {
             return "";
         }
-        if (G < 0) {
-            throw xs7.f();
+        if (m27123G < 0) {
+            throw xs7.m4538f();
         }
-        throw xs7.j();
+        throw xs7.m4534j();
     }
 }

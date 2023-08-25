@@ -7,16 +7,19 @@ import java.lang.reflect.InvocationTargetException;
 /* loaded from: classes.dex */
 public final class q80 {
 
+    /* renamed from: com.daaw.q80$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static Handler a(Looper looper) {
+    public static class C2698a {
+        /* renamed from: a */
+        public static Handler m12709a(Looper looper) {
             return Handler.createAsync(looper);
         }
     }
 
-    public static Handler a(Looper looper) {
+    /* renamed from: a */
+    public static Handler m12710a(Looper looper) {
         if (Build.VERSION.SDK_INT >= 28) {
-            return a.a(looper);
+            return C2698a.m12709a(looper);
         }
         try {
             return (Handler) Handler.class.getDeclaredConstructor(Looper.class, Handler.Callback.class, Boolean.TYPE).newInstance(looper, null, Boolean.TRUE);

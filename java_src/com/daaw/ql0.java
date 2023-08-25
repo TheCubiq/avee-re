@@ -4,17 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes2.dex */
 public class ql0 extends f00 {
-    public List<Double> a;
-    public List<Double> b;
-    public List<Double> c;
-    public List<Double> d;
+
+    /* renamed from: a */
+    public List<Double> f24129a;
+
+    /* renamed from: b */
+    public List<Double> f24130b;
+
+    /* renamed from: c */
+    public List<Double> f24131c;
+
+    /* renamed from: d */
+    public List<Double> f24132d;
 
     @Override // com.daaw.f00
-    public void a(int i) {
-        this.a = new ArrayList();
-        this.b = new ArrayList();
-        this.c = new ArrayList();
-        this.d = new ArrayList();
+    /* renamed from: a */
+    public void mo12359a(int i) {
+        this.f24129a = new ArrayList();
+        this.f24130b = new ArrayList();
+        this.f24131c = new ArrayList();
+        this.f24132d = new ArrayList();
         int i2 = 1;
         int i3 = 1;
         while (true) {
@@ -31,8 +40,8 @@ public class ql0 extends f00 {
             int i5 = 0;
             double d4 = 1.0d;
             while (i5 < i4) {
-                this.a.add(Double.valueOf(d4));
-                this.b.add(Double.valueOf(d));
+                this.f24129a.add(Double.valueOf(d4));
+                this.f24130b.add(Double.valueOf(d));
                 d = (d * cos) + (d4 * sin);
                 i5 += 2;
                 d4 = (d4 * cos) - (d * sin);
@@ -50,8 +59,8 @@ public class ql0 extends f00 {
             int i7 = 0;
             double d8 = 1.0d;
             while (i7 < i6) {
-                this.c.add(Double.valueOf(d8));
-                this.d.add(Double.valueOf(d7));
+                this.f24131c.add(Double.valueOf(d8));
+                this.f24132d.add(Double.valueOf(d7));
                 d7 = (d7 * cos2) + (d8 * sin2);
                 i7 += 2;
                 d8 = (d8 * cos2) - (d7 * sin2);
@@ -61,10 +70,11 @@ public class ql0 extends f00 {
     }
 
     @Override // com.daaw.f00
-    public void b(double[] dArr, boolean z) {
+    /* renamed from: b */
+    public void mo12358b(double[] dArr, boolean z) {
         double d;
         if (z) {
-            c(dArr, z);
+            m12357c(dArr, z);
             d = 1.0d;
         } else {
             d = -1.0d;
@@ -111,10 +121,11 @@ public class ql0 extends f00 {
         double d18 = dArr[0];
         dArr[0] = (dArr[1] + d18) * 0.5d;
         dArr[1] = (d18 - dArr[1]) * 0.5d;
-        c(dArr, false);
+        m12357c(dArr, false);
     }
 
-    public void c(double[] dArr, boolean z) {
+    /* renamed from: c */
+    public void m12357c(double[] dArr, boolean z) {
         int length = dArr.length / 2;
         int i = length / 2;
         int i2 = 0;
@@ -163,8 +174,8 @@ public class ql0 extends f00 {
             }
             i2 += i16;
         }
-        List<Double> list = z ? this.a : this.c;
-        List<Double> list2 = z ? this.b : this.d;
+        List<Double> list = z ? this.f24129a : this.f24131c;
+        List<Double> list2 = z ? this.f24130b : this.f24132d;
         int i17 = 1;
         int i18 = 0;
         while (length > i17) {

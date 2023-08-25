@@ -17,9 +17,12 @@ import com.google.android.gms.common.annotation.KeepName;
 @KeepName
 /* loaded from: classes.dex */
 public class GoogleApiActivity extends Activity implements DialogInterface.OnCancelListener {
-    public int p = 0;
 
-    public static Intent a(Context context, PendingIntent pendingIntent, int i, boolean z) {
+    /* renamed from: p */
+    public int f36581p = 0;
+
+    /* renamed from: a */
+    public static Intent m1201a(Context context, PendingIntent pendingIntent, int i, boolean z) {
         Intent intent = new Intent(context, GoogleApiActivity.class);
         intent.putExtra("pending_intent", pendingIntent);
         intent.putExtra("failing_client_id", i);
@@ -27,7 +30,8 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
         return intent;
     }
 
-    public final void b() {
+    /* renamed from: b */
+    public final void m1200b() {
         Bundle extras = getIntent().getExtras();
         if (extras == null) {
             finish();
@@ -38,15 +42,15 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
         if (pendingIntent == null && num == null) {
             finish();
         } else if (pendingIntent == null) {
-            w70.m().n(this, ((Integer) ry0.j(num)).intValue(), 2, this);
-            this.p = 1;
+            w70.m6477m().m6476n(this, ((Integer) ry0.m10830j(num)).intValue(), 2, this);
+            this.f36581p = 1;
         } else {
             try {
                 startIntentSenderForResult(pendingIntent.getIntentSender(), 1, null, 0, 0, 0);
-                this.p = 1;
+                this.f36581p = 1;
             } catch (ActivityNotFoundException unused) {
                 if (extras.getBoolean("notify_manager", true)) {
-                    z70.x(this).F(new ConnectionResult(22, null), getIntent().getIntExtra("failing_client_id", -1));
+                    z70.m2736x(this).m2760F(new ConnectionResult(22, null), getIntent().getIntExtra("failing_client_id", -1));
                 } else {
                     String obj = pendingIntent.toString();
                     StringBuilder sb = new StringBuilder(obj.length() + 36);
@@ -58,7 +62,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
                         sb2.concat(" This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store.");
                     }
                 }
-                this.p = 1;
+                this.f36581p = 1;
                 finish();
             } catch (IntentSender.SendIntentException unused2) {
                 finish();
@@ -71,18 +75,18 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
         super.onActivityResult(i, i2, intent);
         if (i == 1) {
             boolean booleanExtra = getIntent().getBooleanExtra("notify_manager", true);
-            this.p = 0;
+            this.f36581p = 0;
             setResult(i2, intent);
             if (booleanExtra) {
-                z70 x = z70.x(this);
+                z70 m2736x = z70.m2736x(this);
                 if (i2 == -1) {
-                    x.a();
+                    m2736x.m2759a();
                 } else if (i2 == 0) {
-                    x.F(new ConnectionResult(13, null), getIntent().getIntExtra("failing_client_id", -1));
+                    m2736x.m2760F(new ConnectionResult(13, null), getIntent().getIntExtra("failing_client_id", -1));
                 }
             }
         } else if (i == 2) {
-            this.p = 0;
+            this.f36581p = 0;
             setResult(i2, intent);
         }
         finish();
@@ -90,7 +94,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
 
     @Override // android.content.DialogInterface.OnCancelListener
     public final void onCancel(DialogInterface dialogInterface) {
-        this.p = 0;
+        this.f36581p = 0;
         setResult(0);
         finish();
     }
@@ -99,16 +103,16 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         if (bundle != null) {
-            this.p = bundle.getInt("resolution");
+            this.f36581p = bundle.getInt("resolution");
         }
-        if (this.p != 1) {
-            b();
+        if (this.f36581p != 1) {
+            m1200b();
         }
     }
 
     @Override // android.app.Activity
     public final void onSaveInstanceState(Bundle bundle) {
-        bundle.putInt("resolution", this.p);
+        bundle.putInt("resolution", this.f36581p);
         super.onSaveInstanceState(bundle);
     }
 }

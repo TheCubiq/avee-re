@@ -2,22 +2,24 @@ package com.daaw;
 /* loaded from: classes.dex */
 public final class c63 extends fs7 implements yt7 {
     public c63() {
-        super(o63.M());
+        super(o63.m14528M());
     }
 
     public /* synthetic */ c63(h43 h43Var) {
-        super(o63.M());
+        super(o63.m14528M());
     }
 
-    public final c63 s(int i) {
-        p();
-        o63.T((o63) this.q, i);
+    /* renamed from: s */
+    public final c63 m25569s(int i) {
+        m22313p();
+        o63.m14521T((o63) this.f9851q, i);
         return this;
     }
 
-    public final c63 t(int i) {
-        p();
-        o63.S((o63) this.q, i);
+    /* renamed from: t */
+    public final c63 m25568t(int i) {
+        m22313p();
+        o63.m14522S((o63) this.f9851q, i);
         return this;
     }
 }

@@ -3,11 +3,14 @@ package com.daaw;
 import android.widget.ListView;
 /* loaded from: classes.dex */
 public interface vc1 {
-    boolean a();
+    /* renamed from: a */
+    boolean mo7286a();
 
     void dismiss();
 
-    void h();
+    /* renamed from: h */
+    void mo7285h();
 
-    ListView k();
+    /* renamed from: k */
+    ListView mo7284k();
 }

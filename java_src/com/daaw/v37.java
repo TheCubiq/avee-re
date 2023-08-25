@@ -10,11 +10,11 @@ public class v37 extends l07 implements Set {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean equals(@CheckForNull Object obj) {
-        return y37.c(this, obj);
+        return y37.m4142c(this, obj);
     }
 
     @Override // java.util.Collection, java.util.Set
     public final int hashCode() {
-        return y37.a(this);
+        return y37.m4144a(this);
     }
 }

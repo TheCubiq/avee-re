@@ -15,39 +15,43 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 /* loaded from: classes2.dex */
 public final class FirebaseAnalytics {
-    public static volatile FirebaseAnalytics b;
-    public final gk5 a;
+
+    /* renamed from: b */
+    public static volatile FirebaseAnalytics f37905b;
+
+    /* renamed from: a */
+    public final gk5 f37906a;
 
     public FirebaseAnalytics(gk5 gk5Var) {
-        ry0.j(gk5Var);
-        this.a = gk5Var;
+        ry0.m10830j(gk5Var);
+        this.f37906a = gk5Var;
     }
 
     @Keep
     public static FirebaseAnalytics getInstance(Context context) {
-        if (b == null) {
+        if (f37905b == null) {
             synchronized (FirebaseAnalytics.class) {
-                if (b == null) {
-                    b = new FirebaseAnalytics(gk5.u(context, null, null, null, null));
+                if (f37905b == null) {
+                    f37905b = new FirebaseAnalytics(gk5.m21515u(context, null, null, null, null));
                 }
             }
         }
-        return b;
+        return f37905b;
     }
 
     @Keep
     public static s28 getScionFrontendApiImplementation(Context context, Bundle bundle) {
-        gk5 u = gk5.u(context, null, null, null, bundle);
-        if (u == null) {
+        gk5 m21515u = gk5.m21515u(context, null, null, null, bundle);
+        if (m21515u == null) {
             return null;
         }
-        return new xk4(u);
+        return new xk4(m21515u);
     }
 
     @Keep
     public String getFirebaseInstanceId() {
         try {
-            return (String) dk1.b(d20.m().getId(), 30000L, TimeUnit.MILLISECONDS);
+            return (String) dk1.m24307b(d20.m24782m().getId(), 30000L, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
         } catch (ExecutionException e2) {
@@ -60,6 +64,6 @@ public final class FirebaseAnalytics {
     @Keep
     @Deprecated
     public void setCurrentScreen(Activity activity, String str, String str2) {
-        this.a.e(activity, str, str2);
+        this.f37906a.m21531e(activity, str, str2);
     }
 }

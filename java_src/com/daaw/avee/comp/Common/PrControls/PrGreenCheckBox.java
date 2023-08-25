@@ -4,9 +4,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import androidx.appcompat.widget.AppCompatCheckBox;
+import com.daaw.C2575pq;
 import com.daaw.avee.comp.Common.PrControls.PrGreenCheckBox;
 import com.daaw.oy0;
-import com.daaw.pq;
 import com.daaw.ug0;
 import com.daaw.vw1;
 import com.daaw.ww1;
@@ -14,16 +14,23 @@ import java.util.LinkedList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class PrGreenCheckBox extends AppCompatCheckBox {
-    public static final a u = new a(null);
-    public static final vw1<Boolean> v = new vw1<>();
-    public final List<Object> t;
 
+    /* renamed from: u */
+    public static final C0705a f3804u = new C0705a(null);
+
+    /* renamed from: v */
+    public static final vw1<Boolean> f3805v = new vw1<>();
+
+    /* renamed from: t */
+    public final List<Object> f3806t;
+
+    /* renamed from: com.daaw.avee.comp.Common.PrControls.PrGreenCheckBox$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public a() {
+    public static final class C0705a {
+        public C0705a() {
         }
 
-        public /* synthetic */ a(pq pqVar) {
+        public /* synthetic */ C0705a(C2575pq c2575pq) {
             this();
         }
     }
@@ -31,13 +38,14 @@ public final class PrGreenCheckBox extends AppCompatCheckBox {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PrGreenCheckBox(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        ug0.f(context, "context");
-        this.t = new LinkedList();
-        c();
+        ug0.m8268f(context, "context");
+        this.f3806t = new LinkedList();
+        m26865c();
     }
 
-    public static final Boolean d(PrGreenCheckBox prGreenCheckBox, Integer num) {
-        ug0.f(prGreenCheckBox, "this$0");
+    /* renamed from: d */
+    public static final Boolean m26864d(PrGreenCheckBox prGreenCheckBox, Integer num) {
+        ug0.m8268f(prGreenCheckBox, "this$0");
         int id = prGreenCheckBox.getId();
         if (num != null && num.intValue() == id) {
             prGreenCheckBox.setEnabled(true);
@@ -47,41 +55,43 @@ public final class PrGreenCheckBox extends AppCompatCheckBox {
         return Boolean.FALSE;
     }
 
-    public final void c() {
+    /* renamed from: c */
+    public final void m26865c() {
         boolean booleanValue;
-        vw1<Boolean> vw1Var = oy0.e;
+        vw1<Boolean> vw1Var = oy0.f22101e;
         Boolean bool = Boolean.FALSE;
-        Boolean a2 = vw1Var.a(bool);
-        ug0.e(a2, "adsDisabled.invoke(false)");
-        if (a2.booleanValue()) {
+        Boolean m6692a = vw1Var.m6692a(bool);
+        ug0.m8269e(m6692a, "adsDisabled.invoke(false)");
+        if (m6692a.booleanValue()) {
             booleanValue = true;
         } else {
-            oy0.d.b(new ww1.a() { // from class: com.daaw.ny0
-                @Override // com.daaw.ww1.a
-                public final Object b(Object obj) {
-                    Boolean d;
-                    d = PrGreenCheckBox.d(PrGreenCheckBox.this, (Integer) obj);
-                    return d;
+            oy0.f22100d.m5752b(new ww1.InterfaceC3477a() { // from class: com.daaw.ny0
+                @Override // com.daaw.ww1.InterfaceC3477a
+                /* renamed from: b */
+                public final Object mo5751b(Object obj) {
+                    Boolean m26864d;
+                    m26864d = PrGreenCheckBox.m26864d(PrGreenCheckBox.this, (Integer) obj);
+                    return m26864d;
                 }
-            }, this.t);
-            Boolean a3 = oy0.c.a(Integer.valueOf(getId()), bool);
-            ug0.e(a3, "isFieldUnlocked(id, false)");
-            booleanValue = a3.booleanValue();
+            }, this.f3806t);
+            Boolean m5753a = oy0.f22099c.m5753a(Integer.valueOf(getId()), bool);
+            ug0.m8269e(m5753a, "isFieldUnlocked(id, false)");
+            booleanValue = m5753a.booleanValue();
         }
         setEnabled(booleanValue);
     }
 
     @Override // android.widget.TextView, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        ug0.f(motionEvent, "event");
+        ug0.m8268f(motionEvent, "event");
         if (motionEvent.getActionMasked() == 0 || motionEvent.getActionMasked() == 5) {
             if (isChecked()) {
                 setChecked(false);
             } else {
                 if (!isEnabled()) {
-                    Boolean a2 = oy0.b.a(Integer.valueOf(getId()), Boolean.FALSE);
-                    ug0.e(a2, "unlockField(id, false)");
-                    if (a2.booleanValue()) {
+                    Boolean m5753a = oy0.f22098b.m5753a(Integer.valueOf(getId()), Boolean.FALSE);
+                    ug0.m8269e(m5753a, "unlockField(id, false)");
+                    if (m5753a.booleanValue()) {
                         setEnabled(true);
                     }
                 }

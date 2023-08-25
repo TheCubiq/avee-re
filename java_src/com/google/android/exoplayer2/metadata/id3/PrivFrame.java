@@ -6,12 +6,17 @@ import com.daaw.sq1;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class PrivFrame extends Id3Frame {
-    public static final Parcelable.Creator<PrivFrame> CREATOR = new a();
-    public final String q;
-    public final byte[] r;
+    public static final Parcelable.Creator<PrivFrame> CREATOR = new C3949a();
 
+    /* renamed from: q */
+    public final String f35803q;
+
+    /* renamed from: r */
+    public final byte[] f35804r;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.id3.PrivFrame$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<PrivFrame> {
+    public static class C3949a implements Parcelable.Creator<PrivFrame> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public PrivFrame createFromParcel(Parcel parcel) {
@@ -27,14 +32,14 @@ public final class PrivFrame extends Id3Frame {
 
     public PrivFrame(Parcel parcel) {
         super("PRIV");
-        this.q = parcel.readString();
-        this.r = parcel.createByteArray();
+        this.f35803q = parcel.readString();
+        this.f35804r = parcel.createByteArray();
     }
 
     public PrivFrame(String str, byte[] bArr) {
         super("PRIV");
-        this.q = str;
-        this.r = bArr;
+        this.f35803q = str;
+        this.f35804r = bArr;
     }
 
     public boolean equals(Object obj) {
@@ -45,22 +50,22 @@ public final class PrivFrame extends Id3Frame {
             return false;
         }
         PrivFrame privFrame = (PrivFrame) obj;
-        return sq1.b(this.q, privFrame.q) && Arrays.equals(this.r, privFrame.r);
+        return sq1.m10016b(this.f35803q, privFrame.f35803q) && Arrays.equals(this.f35804r, privFrame.f35804r);
     }
 
     public int hashCode() {
-        String str = this.q;
-        return ((527 + (str != null ? str.hashCode() : 0)) * 31) + Arrays.hashCode(this.r);
+        String str = this.f35803q;
+        return ((527 + (str != null ? str.hashCode() : 0)) * 31) + Arrays.hashCode(this.f35804r);
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame
     public String toString() {
-        return this.p + ": owner=" + this.q;
+        return this.f35802p + ": owner=" + this.f35803q;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.q);
-        parcel.writeByteArray(this.r);
+        parcel.writeString(this.f35803q);
+        parcel.writeByteArray(this.f35804r);
     }
 }

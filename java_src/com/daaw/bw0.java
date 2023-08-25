@@ -5,30 +5,41 @@ import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class bw0 {
 
+    /* renamed from: com.daaw.bw0$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public int a;
-        public boolean b;
+    public static class C0890a {
+
+        /* renamed from: a */
+        public int f5223a;
+
+        /* renamed from: b */
+        public boolean f5224b;
     }
 
+    /* renamed from: com.daaw.bw0$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public char a;
-        public float[] b;
+    public static class C0891b {
 
-        public b(char c, float[] fArr) {
-            this.a = c;
-            this.b = fArr;
+        /* renamed from: a */
+        public char f5225a;
+
+        /* renamed from: b */
+        public float[] f5226b;
+
+        public C0891b(char c, float[] fArr) {
+            this.f5225a = c;
+            this.f5226b = fArr;
         }
 
-        public b(b bVar) {
-            this.a = bVar.a;
-            float[] fArr = bVar.b;
-            this.b = bw0.c(fArr, 0, fArr.length);
+        public C0891b(C0891b c0891b) {
+            this.f5225a = c0891b.f5225a;
+            float[] fArr = c0891b.f5226b;
+            this.f5226b = bw0.m25798c(fArr, 0, fArr.length);
         }
 
         /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-        public static void a(Path path, float[] fArr, char c, char c2, float[] fArr2) {
+        /* renamed from: a */
+        public static void m25790a(Path path, float[] fArr, char c, char c2, float[] fArr2) {
             int i;
             int i2;
             float f;
@@ -48,25 +59,25 @@ public class bw0 {
             float f14 = fArr[5];
             switch (c3) {
                 case 'A':
-                case p21.P0 /* 97 */:
+                case p21.f22304P0 /* 97 */:
                     i = 7;
                     break;
                 case 'C':
-                case p21.R0 /* 99 */:
+                case p21.f22316R0 /* 99 */:
                     i = 6;
                     break;
                 case 'H':
                 case 'V':
-                case p21.W0 /* 104 */:
-                case x21.E0 /* 118 */:
+                case p21.f22346W0 /* 104 */:
+                case x21.f31779E0 /* 118 */:
                     i = 1;
                     break;
                 case 'L':
                 case 'M':
                 case 'T':
-                case p21.Z0 /* 108 */:
+                case p21.f22364Z0 /* 108 */:
                 case 'm':
-                case x21.C0 /* 116 */:
+                case x21.f31769C0 /* 116 */:
                 default:
                     i = 2;
                     break;
@@ -77,7 +88,7 @@ public class bw0 {
                     i = 4;
                     break;
                 case 'Z':
-                case x21.I0 /* 122 */:
+                case x21.f31799I0 /* 122 */:
                     path.close();
                     path.moveTo(f13, f14);
                     f9 = f13;
@@ -281,7 +292,7 @@ public class bw0 {
                         int i44 = i3 + 5;
                         int i45 = i3 + 6;
                         i2 = i3;
-                        c(path, f15, f16, fArr2[i44] + f15, fArr2[i45] + f16, fArr2[i3 + 0], fArr2[i3 + 1], fArr2[i3 + 2], fArr2[i3 + 3] != 0.0f, fArr2[i3 + 4] != 0.0f);
+                        m25788c(path, f15, f16, fArr2[i44] + f15, fArr2[i45] + f16, fArr2[i3 + 0], fArr2[i3 + 1], fArr2[i3 + 2], fArr2[i3 + 3] != 0.0f, fArr2[i3 + 4] != 0.0f);
                         f15 += fArr2[i44];
                         f16 += fArr2[i45];
                     }
@@ -292,7 +303,7 @@ public class bw0 {
                     i2 = i3;
                     int i46 = i2 + 5;
                     int i47 = i2 + 6;
-                    c(path, f15, f16, fArr2[i46], fArr2[i47], fArr2[i2 + 0], fArr2[i2 + 1], fArr2[i2 + 2], fArr2[i2 + 3] != 0.0f, fArr2[i2 + 4] != 0.0f);
+                    m25788c(path, f15, f16, fArr2[i46], fArr2[i47], fArr2[i2 + 0], fArr2[i2 + 1], fArr2[i2 + 2], fArr2[i2 + 3] != 0.0f, fArr2[i2 + 4] != 0.0f);
                     f15 = fArr2[i46];
                     f16 = fArr2[i47];
                 }
@@ -310,7 +321,8 @@ public class bw0 {
             fArr[5] = f18;
         }
 
-        public static void b(Path path, double d, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9) {
+        /* renamed from: b */
+        public static void m25789b(Path path, double d, double d2, double d3, double d4, double d5, double d6, double d7, double d8, double d9) {
             double d10 = d3;
             int ceil = (int) Math.ceil(Math.abs((d9 * 4.0d) / 3.141592653589793d));
             double cos = Math.cos(d7);
@@ -362,7 +374,8 @@ public class bw0 {
             }
         }
 
-        public static void c(Path path, float f, float f2, float f3, float f4, float f5, float f6, float f7, boolean z, boolean z2) {
+        /* renamed from: c */
+        public static void m25788c(Path path, float f, float f2, float f3, float f4, float f5, float f6, float f7, boolean z, boolean z2) {
             double d;
             double d2;
             double radians = Math.toRadians(f7);
@@ -407,7 +420,7 @@ public class bw0 {
                 sb.append("Points are too far apart ");
                 sb.append(d20);
                 float sqrt = (float) (Math.sqrt(d20) / 1.99999d);
-                c(path, f, f2, f3, f4, f5 * sqrt, f6 * sqrt, f7, z, z2);
+                m25788c(path, f, f2, f3, f4, f5 * sqrt, f6 * sqrt, f7, z, z2);
                 return;
             }
             double sqrt2 = Math.sqrt(d21);
@@ -429,49 +442,54 @@ public class bw0 {
             double d24 = d * d6;
             Double.isNaN(d9);
             double d25 = d2 * d9;
-            b(path, (d24 * cos) - (d25 * sin), (d24 * sin) + (d25 * cos), d6, d9, d3, d5, radians, atan2, atan22);
+            m25789b(path, (d24 * cos) - (d25 * sin), (d24 * sin) + (d25 * cos), d6, d9, d3, d5, radians, atan2, atan22);
         }
 
-        public static void e(b[] bVarArr, Path path) {
+        /* renamed from: e */
+        public static void m25786e(C0891b[] c0891bArr, Path path) {
             float[] fArr = new float[6];
             char c = 'm';
-            for (int i = 0; i < bVarArr.length; i++) {
-                a(path, fArr, c, bVarArr[i].a, bVarArr[i].b);
-                c = bVarArr[i].a;
+            for (int i = 0; i < c0891bArr.length; i++) {
+                m25790a(path, fArr, c, c0891bArr[i].f5225a, c0891bArr[i].f5226b);
+                c = c0891bArr[i].f5225a;
             }
         }
 
-        public void d(b bVar, b bVar2, float f) {
-            this.a = bVar.a;
+        /* renamed from: d */
+        public void m25787d(C0891b c0891b, C0891b c0891b2, float f) {
+            this.f5225a = c0891b.f5225a;
             int i = 0;
             while (true) {
-                float[] fArr = bVar.b;
+                float[] fArr = c0891b.f5226b;
                 if (i >= fArr.length) {
                     return;
                 }
-                this.b[i] = (fArr[i] * (1.0f - f)) + (bVar2.b[i] * f);
+                this.f5226b[i] = (fArr[i] * (1.0f - f)) + (c0891b2.f5226b[i] * f);
                 i++;
             }
         }
     }
 
-    public static void a(ArrayList<b> arrayList, char c, float[] fArr) {
-        arrayList.add(new b(c, fArr));
+    /* renamed from: a */
+    public static void m25800a(ArrayList<C0891b> arrayList, char c, float[] fArr) {
+        arrayList.add(new C0891b(c, fArr));
     }
 
-    public static boolean b(b[] bVarArr, b[] bVarArr2) {
-        if (bVarArr == null || bVarArr2 == null || bVarArr.length != bVarArr2.length) {
+    /* renamed from: b */
+    public static boolean m25799b(C0891b[] c0891bArr, C0891b[] c0891bArr2) {
+        if (c0891bArr == null || c0891bArr2 == null || c0891bArr.length != c0891bArr2.length) {
             return false;
         }
-        for (int i = 0; i < bVarArr.length; i++) {
-            if (bVarArr[i].a != bVarArr2[i].a || bVarArr[i].b.length != bVarArr2[i].b.length) {
+        for (int i = 0; i < c0891bArr.length; i++) {
+            if (c0891bArr[i].f5225a != c0891bArr2[i].f5225a || c0891bArr[i].f5226b.length != c0891bArr2[i].f5226b.length) {
                 return false;
             }
         }
         return true;
     }
 
-    public static float[] c(float[] fArr, int i, int i2) {
+    /* renamed from: c */
+    public static float[] m25798c(float[] fArr, int i, int i2) {
         if (i <= i2) {
             int length = fArr.length;
             if (i < 0 || i > length) {
@@ -486,7 +504,8 @@ public class bw0 {
         throw new IllegalArgumentException();
     }
 
-    public static b[] d(String str) {
+    /* renamed from: d */
+    public static C0891b[] m25797d(String str) {
         if (str == null) {
             return null;
         }
@@ -494,26 +513,27 @@ public class bw0 {
         int i = 1;
         int i2 = 0;
         while (i < str.length()) {
-            int i3 = i(str, i);
-            String trim = str.substring(i2, i3).trim();
+            int m25792i = m25792i(str, i);
+            String trim = str.substring(i2, m25792i).trim();
             if (trim.length() > 0) {
-                a(arrayList, trim.charAt(0), h(trim));
+                m25800a(arrayList, trim.charAt(0), m25793h(trim));
             }
-            i2 = i3;
-            i = i3 + 1;
+            i2 = m25792i;
+            i = m25792i + 1;
         }
         if (i - i2 == 1 && i2 < str.length()) {
-            a(arrayList, str.charAt(i2), new float[0]);
+            m25800a(arrayList, str.charAt(i2), new float[0]);
         }
-        return (b[]) arrayList.toArray(new b[arrayList.size()]);
+        return (C0891b[]) arrayList.toArray(new C0891b[arrayList.size()]);
     }
 
-    public static Path e(String str) {
+    /* renamed from: e */
+    public static Path m25796e(String str) {
         Path path = new Path();
-        b[] d = d(str);
-        if (d != null) {
+        C0891b[] m25797d = m25797d(str);
+        if (m25797d != null) {
             try {
-                b.e(d, path);
+                C0891b.m25786e(m25797d, path);
                 return path;
             } catch (RuntimeException e) {
                 throw new RuntimeException("Error in parsing " + str, e);
@@ -522,15 +542,16 @@ public class bw0 {
         return null;
     }
 
-    public static b[] f(b[] bVarArr) {
-        if (bVarArr == null) {
+    /* renamed from: f */
+    public static C0891b[] m25795f(C0891b[] c0891bArr) {
+        if (c0891bArr == null) {
             return null;
         }
-        b[] bVarArr2 = new b[bVarArr.length];
-        for (int i = 0; i < bVarArr.length; i++) {
-            bVarArr2[i] = new b(bVarArr[i]);
+        C0891b[] c0891bArr2 = new C0891b[c0891bArr.length];
+        for (int i = 0; i < c0891bArr.length; i++) {
+            c0891bArr2[i] = new C0891b(c0891bArr[i]);
         }
-        return bVarArr2;
+        return c0891bArr2;
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -539,97 +560,82 @@ public class bw0 {
      */
     /* JADX WARN: Removed duplicated region for block: B:24:0x0038 A[LOOP:0: B:3:0x0007->B:24:0x0038, LOOP_END] */
     /* JADX WARN: Removed duplicated region for block: B:28:0x003b A[SYNTHETIC] */
+    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static void g(java.lang.String r8, int r9, com.daaw.bw0.a r10) {
-        /*
-            r0 = 0
-            r10.b = r0
-            r1 = r9
-            r2 = 0
-            r3 = 0
-            r4 = 0
-        L7:
-            int r5 = r8.length()
-            if (r1 >= r5) goto L3b
-            char r5 = r8.charAt(r1)
-            r6 = 32
-            r7 = 1
-            if (r5 == r6) goto L33
-            r6 = 69
-            if (r5 == r6) goto L31
-            r6 = 101(0x65, float:1.42E-43)
-            if (r5 == r6) goto L31
-            switch(r5) {
-                case 44: goto L33;
-                case 45: goto L2a;
-                case 46: goto L22;
-                default: goto L21;
+    public static void m25794g(String str, int i, C0890a c0890a) {
+        c0890a.f5224b = false;
+        boolean z = false;
+        boolean z2 = false;
+        boolean z3 = false;
+        for (int i2 = i; i2 < str.length(); i2++) {
+            char charAt = str.charAt(i2);
+            if (charAt != ' ') {
+                if (charAt != 'E' && charAt != 'e') {
+                    switch (charAt) {
+                        case ',':
+                            break;
+                        case '-':
+                            if (i2 != i) {
+                            }
+                            z = false;
+                            break;
+                        case '.':
+                            if (!z2) {
+                                z = false;
+                                z2 = true;
+                                break;
+                            }
+                            c0890a.f5224b = true;
+                            break;
+                        default:
+                            z = false;
+                            break;
+                    }
+                } else {
+                    z = true;
+                }
+                if (!z3) {
+                    c0890a.f5223a = i2;
+                }
             }
-        L21:
-            goto L2f
-        L22:
-            if (r3 != 0) goto L27
-            r2 = 0
-            r3 = 1
-            goto L35
-        L27:
-            r10.b = r7
-            goto L33
-        L2a:
-            if (r1 == r9) goto L2f
-            if (r2 != 0) goto L2f
-            goto L27
-        L2f:
-            r2 = 0
-            goto L35
-        L31:
-            r2 = 1
-            goto L35
-        L33:
-            r2 = 0
-            r4 = 1
-        L35:
-            if (r4 == 0) goto L38
-            goto L3b
-        L38:
-            int r1 = r1 + 1
-            goto L7
-        L3b:
-            r10.a = r1
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.bw0.g(java.lang.String, int, com.daaw.bw0$a):void");
+            z = false;
+            z3 = true;
+            if (!z3) {
+            }
+        }
+        c0890a.f5223a = i2;
     }
 
-    public static float[] h(String str) {
+    /* renamed from: h */
+    public static float[] m25793h(String str) {
         if (str.charAt(0) == 'z' || str.charAt(0) == 'Z') {
             return new float[0];
         }
         try {
             float[] fArr = new float[str.length()];
-            a aVar = new a();
+            C0890a c0890a = new C0890a();
             int length = str.length();
             int i = 1;
             int i2 = 0;
             while (i < length) {
-                g(str, i, aVar);
-                int i3 = aVar.a;
+                m25794g(str, i, c0890a);
+                int i3 = c0890a.f5223a;
                 if (i < i3) {
                     fArr[i2] = Float.parseFloat(str.substring(i, i3));
                     i2++;
                 }
-                i = aVar.b ? i3 : i3 + 1;
+                i = c0890a.f5224b ? i3 : i3 + 1;
             }
-            return c(fArr, 0, i2);
+            return m25798c(fArr, 0, i2);
         } catch (NumberFormatException e) {
             throw new RuntimeException("error in parsing \"" + str + "\"", e);
         }
     }
 
-    public static int i(String str, int i) {
+    /* renamed from: i */
+    public static int m25792i(String str, int i) {
         while (i < str.length()) {
             char charAt = str.charAt(i);
             if (((charAt - 'A') * (charAt - 'Z') <= 0 || (charAt - 'a') * (charAt - 'z') <= 0) && charAt != 'e' && charAt != 'E') {
@@ -640,11 +646,12 @@ public class bw0 {
         return i;
     }
 
-    public static void j(b[] bVarArr, b[] bVarArr2) {
-        for (int i = 0; i < bVarArr2.length; i++) {
-            bVarArr[i].a = bVarArr2[i].a;
-            for (int i2 = 0; i2 < bVarArr2[i].b.length; i2++) {
-                bVarArr[i].b[i2] = bVarArr2[i].b[i2];
+    /* renamed from: j */
+    public static void m25791j(C0891b[] c0891bArr, C0891b[] c0891bArr2) {
+        for (int i = 0; i < c0891bArr2.length; i++) {
+            c0891bArr[i].f5225a = c0891bArr2[i].f5225a;
+            for (int i2 = 0; i2 < c0891bArr2[i].f5226b.length; i2++) {
+                c0891bArr[i].f5226b[i2] = c0891bArr2[i].f5226b[i2];
             }
         }
     }

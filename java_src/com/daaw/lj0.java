@@ -22,16 +22,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 /* loaded from: classes2.dex */
 public class lj0 extends DialogFragment {
-    public static ww1<String, Integer> u = new ww1<>();
-    public AsyncTask<Void, Void, String> p;
-    public int q = R.raw.licenses;
-    public String r = "";
-    public WebView s;
-    public ProgressBar t;
 
+    /* renamed from: u */
+    public static ww1<String, Integer> f17448u = new ww1<>();
+
+    /* renamed from: p */
+    public AsyncTask<Void, Void, String> f17449p;
+
+    /* renamed from: q */
+    public int f17450q = R.raw.licenses;
+
+    /* renamed from: r */
+    public String f17451r = "";
+
+    /* renamed from: s */
+    public WebView f17452s;
+
+    /* renamed from: t */
+    public ProgressBar f17453t;
+
+    /* renamed from: com.daaw.lj0$a */
     /* loaded from: classes2.dex */
-    public class a extends WebViewClient {
-        public a() {
+    public class C2044a extends WebViewClient {
+        public C2044a() {
         }
 
         @Override // android.webkit.WebViewClient
@@ -43,10 +56,10 @@ public class lj0 extends DialogFragment {
         public boolean shouldOverrideUrlLoading(WebView webView, String str) {
             if (str.startsWith("local:")) {
                 String[] strArr = new String[2];
-                br1.C(str, "//", strArr);
-                int intValue = lj0.u.a(strArr[1], 0).intValue();
+                br1.m25914C(str, "//", strArr);
+                int intValue = lj0.f17448u.m5753a(strArr[1], 0).intValue();
                 if (intValue > 0) {
-                    lj0.this.f(intValue);
+                    lj0.this.m16914f(intValue);
                     return true;
                 }
             }
@@ -54,9 +67,10 @@ public class lj0 extends DialogFragment {
         }
     }
 
+    /* renamed from: com.daaw.lj0$b */
     /* loaded from: classes2.dex */
-    public class b implements DialogInterface.OnClickListener {
-        public b() {
+    public class DialogInterface$OnClickListenerC2045b implements DialogInterface.OnClickListener {
+        public DialogInterface$OnClickListenerC2045b() {
         }
 
         @Override // android.content.DialogInterface.OnClickListener
@@ -65,18 +79,21 @@ public class lj0 extends DialogFragment {
         }
     }
 
+    /* renamed from: com.daaw.lj0$c */
     /* loaded from: classes2.dex */
-    public class c extends AsyncTask<Void, Void, String> {
-        public final /* synthetic */ int a;
+    public class AsyncTaskC2046c extends AsyncTask<Void, Void, String> {
 
-        public c(int i) {
-            this.a = i;
+        /* renamed from: a */
+        public final /* synthetic */ int f17456a;
+
+        public AsyncTaskC2046c(int i) {
+            this.f17456a = i;
         }
 
         @Override // android.os.AsyncTask
         /* renamed from: a */
         public String doInBackground(Void... voidArr) {
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(lj0.this.getActivity().getResources().openRawResource(this.a)));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(lj0.this.getActivity().getResources().openRawResource(this.f17456a)));
             StringBuilder sb = new StringBuilder();
             while (true) {
                 try {
@@ -100,25 +117,27 @@ public class lj0 extends DialogFragment {
             if (lj0.this.getActivity() == null || isCancelled()) {
                 return;
             }
-            lj0.this.t.setVisibility(4);
-            lj0.this.s.setVisibility(0);
-            WebView webView = lj0.this.s;
-            webView.loadDataWithBaseURL("file:///android_asset/" + lj0.this.r, str, "text/html", "utf-8", null);
-            lj0.this.p = null;
+            lj0.this.f17453t.setVisibility(4);
+            lj0.this.f17452s.setVisibility(0);
+            WebView webView = lj0.this.f17452s;
+            webView.loadDataWithBaseURL("file:///android_asset/" + lj0.this.f17451r, str, "text/html", "utf-8", null);
+            lj0.this.f17449p = null;
         }
     }
 
-    public static void e(FragmentManager fragmentManager, boolean z, int i, int i2, String str) {
+    /* renamed from: e */
+    public static void m16915e(FragmentManager fragmentManager, boolean z, int i, int i2, String str) {
         FragmentTransaction beginTransaction = fragmentManager.beginTransaction();
         Fragment findFragmentByTag = fragmentManager.findFragmentByTag("nz.net.speakman.androidlicensespage.LicensesFragment");
         if (findFragmentByTag != null) {
             beginTransaction.remove(findFragmentByTag);
         }
         beginTransaction.addToBackStack(null);
-        g(z, i, i2, str).show(beginTransaction, "nz.net.speakman.androidlicensespage.LicensesFragment");
+        m16913g(z, i, i2, str).show(beginTransaction, "nz.net.speakman.androidlicensespage.LicensesFragment");
     }
 
-    public static lj0 g(boolean z, int i, int i2, String str) {
+    /* renamed from: g */
+    public static lj0 m16913g(boolean z, int i, int i2, String str) {
         lj0 lj0Var = new lj0();
         Bundle bundle = new Bundle();
         bundle.putBoolean("keyShowCloseButton", z);
@@ -129,17 +148,19 @@ public class lj0 extends DialogFragment {
         return lj0Var;
     }
 
-    public final void f(int i) {
-        this.p = new c(i).execute(new Void[0]);
+    /* renamed from: f */
+    public final void m16914f(int i) {
+        this.f17449p = new AsyncTaskC2046c(i).execute(new Void[0]);
     }
 
-    public void h(AlertDialog.Builder builder) {
+    /* renamed from: h */
+    public void mo6682h(AlertDialog.Builder builder) {
     }
 
     @Override // android.app.DialogFragment, android.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        f(this.q);
+        m16914f(this.f17450q);
     }
 
     @Override // android.app.DialogFragment
@@ -148,17 +169,17 @@ public class lj0 extends DialogFragment {
         boolean z;
         View inflate = LayoutInflater.from(getActivity()).inflate(R.layout.licenses_fragment, (ViewGroup) null);
         WebView webView = (WebView) inflate.findViewById(R.id.licensesFragmentWebView);
-        this.s = webView;
+        this.f17452s = webView;
         webView.getSettings().setJavaScriptEnabled(true);
-        this.t = (ProgressBar) inflate.findViewById(R.id.licensesFragmentIndeterminateProgress);
-        this.s.setWebViewClient(new a());
+        this.f17453t = (ProgressBar) inflate.findViewById(R.id.licensesFragmentIndeterminateProgress);
+        this.f17452s.setWebViewClient(new C2044a());
         Bundle arguments = getArguments();
         int i = 0;
         if (arguments != null) {
             z = arguments.getBoolean("keyShowCloseButton");
-            this.q = arguments.getInt("licenseResId", R.raw.licenses);
+            this.f17450q = arguments.getInt("licenseResId", R.raw.licenses);
             i = arguments.getInt("titleResId", 0);
-            this.r = arguments.getString("extraUrl", "");
+            this.f17451r = arguments.getString("extraUrl", "");
         } else {
             z = false;
         }
@@ -168,16 +189,16 @@ public class lj0 extends DialogFragment {
         }
         builder.setView(inflate);
         if (z) {
-            builder.setNegativeButton(getActivity().getResources().getString(R.string.dialog_close), new b());
+            builder.setNegativeButton(getActivity().getResources().getString(R.string.dialog_close), new DialogInterface$OnClickListenerC2045b());
         }
-        h(builder);
+        mo6682h(builder);
         return builder.create();
     }
 
     @Override // android.app.Fragment
     public void onDestroy() {
         super.onDestroy();
-        AsyncTask<Void, Void, String> asyncTask = this.p;
+        AsyncTask<Void, Void, String> asyncTask = this.f17449p;
         if (asyncTask != null) {
             asyncTask.cancel(true);
         }

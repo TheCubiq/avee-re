@@ -10,17 +10,17 @@ public final class rv3 extends bp2 implements tv3 {
 
     @Override // com.daaw.tv3
     public final int zze() {
-        Parcel I = I(2, D());
-        int readInt = I.readInt();
-        I.recycle();
+        Parcel m25951I = m25951I(2, m25952D());
+        int readInt = m25951I.readInt();
+        m25951I.recycle();
         return readInt;
     }
 
     @Override // com.daaw.tv3
     public final String zzf() {
-        Parcel I = I(1, D());
-        String readString = I.readString();
-        I.recycle();
+        Parcel m25951I = m25951I(1, m25952D());
+        String readString = m25951I.readString();
+        m25951I.recycle();
         return readString;
     }
 }

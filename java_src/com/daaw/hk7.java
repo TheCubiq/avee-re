@@ -6,19 +6,22 @@ public final class hk7 extends ls7 implements yt7 {
     static {
         hk7 hk7Var = new hk7();
         zzb = hk7Var;
-        ls7.C(hk7.class, hk7Var);
+        ls7.m16597C(hk7.class, hk7Var);
     }
 
-    public static hk7 M() {
+    /* renamed from: M */
+    public static hk7 m20647M() {
         return zzb;
     }
 
-    public static hk7 N(yq7 yq7Var, vr7 vr7Var) {
-        return (hk7) ls7.q(zzb, yq7Var, vr7Var);
+    /* renamed from: N */
+    public static hk7 m20646N(yq7 yq7Var, vr7 vr7Var) {
+        return (hk7) ls7.m16582q(zzb, yq7Var, vr7Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -33,7 +36,7 @@ public final class hk7 extends ls7 implements yt7 {
                 }
                 return new hk7();
             }
-            return ls7.z(zzb, "\u0000\u0000", null);
+            return ls7.m16573z(zzb, "\u0000\u0000", null);
         }
         return (byte) 1;
     }

@@ -7,62 +7,79 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class ph4 implements m13 {
-    public final ScheduledExecutorService a;
-    public final ag b;
-    @GuardedBy("this")
-    public ScheduledFuture c;
-    @GuardedBy("this")
-    public long d = -1;
-    @GuardedBy("this")
-    public long e = -1;
-    @GuardedBy("this")
-    public Runnable f = null;
-    @GuardedBy("this")
-    public boolean g = false;
 
-    public ph4(ScheduledExecutorService scheduledExecutorService, ag agVar) {
-        this.a = scheduledExecutorService;
-        this.b = agVar;
-        zzt.zzb().c(this);
+    /* renamed from: a */
+    public final ScheduledExecutorService f22936a;
+
+    /* renamed from: b */
+    public final InterfaceC0623ag f22937b;
+    @GuardedBy("this")
+
+    /* renamed from: c */
+    public ScheduledFuture f22938c;
+    @GuardedBy("this")
+
+    /* renamed from: d */
+    public long f22939d = -1;
+    @GuardedBy("this")
+
+    /* renamed from: e */
+    public long f22940e = -1;
+    @GuardedBy("this")
+
+    /* renamed from: f */
+    public Runnable f22941f = null;
+    @GuardedBy("this")
+
+    /* renamed from: g */
+    public boolean f22942g = false;
+
+    public ph4(ScheduledExecutorService scheduledExecutorService, InterfaceC0623ag interfaceC0623ag) {
+        this.f22936a = scheduledExecutorService;
+        this.f22937b = interfaceC0623ag;
+        zzt.zzb().m15598c(this);
     }
 
-    public final synchronized void a() {
-        if (this.g) {
+    /* renamed from: a */
+    public final synchronized void m13385a() {
+        if (this.f22942g) {
             return;
         }
-        ScheduledFuture scheduledFuture = this.c;
+        ScheduledFuture scheduledFuture = this.f22938c;
         if (scheduledFuture == null || scheduledFuture.isDone()) {
-            this.e = -1L;
+            this.f22940e = -1L;
         } else {
-            this.c.cancel(true);
-            this.e = this.d - this.b.b();
+            this.f22938c.cancel(true);
+            this.f22940e = this.f22939d - this.f22937b.mo15859b();
         }
-        this.g = true;
+        this.f22942g = true;
     }
 
-    public final synchronized void b() {
+    /* renamed from: b */
+    public final synchronized void m13384b() {
         ScheduledFuture scheduledFuture;
-        if (this.g) {
-            if (this.e > 0 && (scheduledFuture = this.c) != null && scheduledFuture.isCancelled()) {
-                this.c = this.a.schedule(this.f, this.e, TimeUnit.MILLISECONDS);
+        if (this.f22942g) {
+            if (this.f22940e > 0 && (scheduledFuture = this.f22938c) != null && scheduledFuture.isCancelled()) {
+                this.f22938c = this.f22936a.schedule(this.f22941f, this.f22940e, TimeUnit.MILLISECONDS);
             }
-            this.g = false;
+            this.f22942g = false;
         }
     }
 
-    public final synchronized void c(int i, Runnable runnable) {
-        this.f = runnable;
+    /* renamed from: c */
+    public final synchronized void m13383c(int i, Runnable runnable) {
+        this.f22941f = runnable;
         long j = i;
-        this.d = this.b.b() + j;
-        this.c = this.a.schedule(runnable, j, TimeUnit.MILLISECONDS);
+        this.f22939d = this.f22937b.mo15859b() + j;
+        this.f22938c = this.f22936a.schedule(runnable, j, TimeUnit.MILLISECONDS);
     }
 
     @Override // com.daaw.m13
     public final void zza(boolean z) {
         if (z) {
-            b();
+            m13384b();
         } else {
-            a();
+            m13385a();
         }
     }
 }

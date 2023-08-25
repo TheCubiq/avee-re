@@ -9,9 +9,10 @@ public final class ke3 extends bp2 implements me3 {
     }
 
     @Override // com.daaw.me3
-    public final void c2(ye3 ye3Var) {
-        Parcel D = D();
-        dp2.g(D, ye3Var);
-        M(1, D);
+    /* renamed from: c2 */
+    public final void mo5844c2(ye3 ye3Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, ye3Var);
+        m25950M(1, m25952D);
     }
 }

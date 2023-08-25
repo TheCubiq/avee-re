@@ -6,32 +6,39 @@ import android.util.TypedValue;
 import android.view.View;
 /* loaded from: classes2.dex */
 public class jn0 {
-    public static int a(Context context, int i, int i2) {
-        TypedValue a = en0.a(context, i);
-        return a != null ? a.data : i2;
+    /* renamed from: a */
+    public static int m18398a(Context context, int i, int i2) {
+        TypedValue m23358a = en0.m23358a(context, i);
+        return m23358a != null ? m23358a.data : i2;
     }
 
-    public static int b(Context context, int i, String str) {
-        return en0.c(context, i, str);
+    /* renamed from: b */
+    public static int m18397b(Context context, int i, String str) {
+        return en0.m23356c(context, i, str);
     }
 
-    public static int c(View view, int i) {
-        return en0.d(view, i);
+    /* renamed from: c */
+    public static int m18396c(View view, int i) {
+        return en0.m23355d(view, i);
     }
 
-    public static int d(View view, int i, int i2) {
-        return a(view.getContext(), i, i2);
+    /* renamed from: d */
+    public static int m18395d(View view, int i, int i2) {
+        return m18398a(view.getContext(), i, i2);
     }
 
-    public static int e(int i, int i2) {
-        return zg.f(i2, i);
+    /* renamed from: e */
+    public static int m18394e(int i, int i2) {
+        return C3838zg.m2348f(i2, i);
     }
 
-    public static int f(int i, int i2, float f) {
-        return e(i, zg.j(i2, Math.round(Color.alpha(i2) * f)));
+    /* renamed from: f */
+    public static int m18393f(int i, int i2, float f) {
+        return m18394e(i, C3838zg.m2344j(i2, Math.round(Color.alpha(i2) * f)));
     }
 
-    public static int g(View view, int i, int i2, float f) {
-        return f(c(view, i), c(view, i2), f);
+    /* renamed from: g */
+    public static int m18392g(View view, int i, int i2, float f) {
+        return m18393f(m18396c(view, i), m18396c(view, i2), f);
     }
 }

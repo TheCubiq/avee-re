@@ -28,23 +28,55 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.checkerframework.checker.initialization.qual.NotOnlyInitialized;
 /* loaded from: classes.dex */
 public final class zzea {
-    public final xm3 a;
-    public final zzp b;
-    public final AtomicBoolean c;
-    public final VideoController d;
-    public final zzaz e;
-    public zza f;
-    public AdListener g;
-    public AdSize[] h;
-    public AppEventListener i;
-    public zzbu j;
-    public VideoOptions k;
-    public String l;
+
+    /* renamed from: a */
+    public final xm3 f36146a;
+
+    /* renamed from: b */
+    public final zzp f36147b;
+
+    /* renamed from: c */
+    public final AtomicBoolean f36148c;
+
+    /* renamed from: d */
+    public final VideoController f36149d;
+
+    /* renamed from: e */
+    public final zzaz f36150e;
+
+    /* renamed from: f */
+    public zza f36151f;
+
+    /* renamed from: g */
+    public AdListener f36152g;
+
+    /* renamed from: h */
+    public AdSize[] f36153h;
+
+    /* renamed from: i */
+    public AppEventListener f36154i;
+
+    /* renamed from: j */
+    public zzbu f36155j;
+
+    /* renamed from: k */
+    public VideoOptions f36156k;
+
+    /* renamed from: l */
+    public String f36157l;
     @NotOnlyInitialized
-    public final ViewGroup m;
-    public int n;
-    public boolean o;
-    public OnPaidEventListener p;
+
+    /* renamed from: m */
+    public final ViewGroup f36158m;
+
+    /* renamed from: n */
+    public int f36159n;
+
+    /* renamed from: o */
+    public boolean f36160o;
+
+    /* renamed from: p */
+    public OnPaidEventListener f36161p;
 
     public zzea(ViewGroup viewGroup) {
         this(viewGroup, null, false, zzp.zza, null, 0);
@@ -64,61 +96,64 @@ public final class zzea {
 
     public zzea(ViewGroup viewGroup, AttributeSet attributeSet, boolean z, zzp zzpVar, zzbu zzbuVar, int i) {
         zzq zzqVar;
-        this.a = new xm3();
-        this.d = new VideoController();
-        this.e = new cd5(this);
-        this.m = viewGroup;
-        this.b = zzpVar;
-        this.j = null;
-        this.c = new AtomicBoolean(false);
-        this.n = i;
+        this.f36146a = new xm3();
+        this.f36149d = new VideoController();
+        this.f36150e = new cd5(this);
+        this.f36158m = viewGroup;
+        this.f36147b = zzpVar;
+        this.f36155j = null;
+        this.f36148c = new AtomicBoolean(false);
+        this.f36159n = i;
         if (attributeSet != null) {
             Context context = viewGroup.getContext();
             try {
                 zzy zzyVar = new zzy(context, attributeSet);
-                this.h = zzyVar.zzb(z);
-                this.l = zzyVar.zza();
+                this.f36153h = zzyVar.zzb(z);
+                this.f36157l = zzyVar.zza();
                 if (viewGroup.isInEditMode()) {
                     d04 zzb = zzay.zzb();
-                    AdSize adSize = this.h[0];
-                    int i2 = this.n;
+                    AdSize adSize = this.f36153h[0];
+                    int i2 = this.f36159n;
                     if (adSize.equals(AdSize.INVALID)) {
                         zzqVar = zzq.zze();
                     } else {
                         zzq zzqVar2 = new zzq(context, adSize);
-                        zzqVar2.zzj = b(i2);
+                        zzqVar2.zzj = m1410b(i2);
                         zzqVar = zzqVar2;
                     }
-                    zzb.s(viewGroup, zzqVar, "Ads by Google");
+                    zzb.m24813s(viewGroup, zzqVar, "Ads by Google");
                 }
             } catch (IllegalArgumentException e) {
-                zzay.zzb().r(viewGroup, new zzq(context, AdSize.BANNER), e.getMessage(), e.getMessage());
+                zzay.zzb().m24814r(viewGroup, new zzq(context, AdSize.BANNER), e.getMessage(), e.getMessage());
             }
         }
     }
 
-    public static zzq a(Context context, AdSize[] adSizeArr, int i) {
+    /* renamed from: a */
+    public static zzq m1411a(Context context, AdSize[] adSizeArr, int i) {
         for (AdSize adSize : adSizeArr) {
             if (adSize.equals(AdSize.INVALID)) {
                 return zzq.zze();
             }
         }
         zzq zzqVar = new zzq(context, adSizeArr);
-        zzqVar.zzj = b(i);
+        zzqVar.zzj = m1410b(i);
         return zzqVar;
     }
 
-    public static boolean b(int i) {
+    /* renamed from: b */
+    public static boolean m1410b(int i) {
         return i == 1;
     }
 
-    public final /* synthetic */ void d(yd0 yd0Var) {
-        this.m.addView((View) nt0.M(yd0Var));
+    /* renamed from: d */
+    public final /* synthetic */ void m1408d(yd0 yd0Var) {
+        this.f36158m.addView((View) nt0.m14831M(yd0Var));
     }
 
     public final boolean zzA() {
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 return zzbuVar.zzY();
             }
@@ -130,24 +165,24 @@ public final class zzea {
     }
 
     public final AdSize[] zzB() {
-        return this.h;
+        return this.f36153h;
     }
 
     public final AdListener zza() {
-        return this.g;
+        return this.f36152g;
     }
 
     public final AdSize zzb() {
         zzq zzg;
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null && (zzg = zzbuVar.zzg()) != null) {
                 return com.google.android.gms.ads.zzb.zzc(zzg.zze, zzg.zzb, zzg.zza);
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
-        AdSize[] adSizeArr = this.h;
+        AdSize[] adSizeArr = this.f36153h;
         if (adSizeArr != null) {
             return adSizeArr[0];
         }
@@ -155,13 +190,13 @@ public final class zzea {
     }
 
     public final OnPaidEventListener zzc() {
-        return this.p;
+        return this.f36161p;
     }
 
     public final ResponseInfo zzd() {
         zzdn zzdnVar = null;
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzdnVar = zzbuVar.zzk();
             }
@@ -172,19 +207,19 @@ public final class zzea {
     }
 
     public final VideoController zzf() {
-        return this.d;
+        return this.f36149d;
     }
 
     public final VideoOptions zzg() {
-        return this.k;
+        return this.f36156k;
     }
 
     public final AppEventListener zzh() {
-        return this.i;
+        return this.f36154i;
     }
 
     public final zzdq zzi() {
-        zzbu zzbuVar = this.j;
+        zzbu zzbuVar = this.f36155j;
         if (zzbuVar != null) {
             try {
                 return zzbuVar.zzl();
@@ -197,19 +232,19 @@ public final class zzea {
 
     public final String zzj() {
         zzbu zzbuVar;
-        if (this.l == null && (zzbuVar = this.j) != null) {
+        if (this.f36157l == null && (zzbuVar = this.f36155j) != null) {
             try {
-                this.l = zzbuVar.zzr();
+                this.f36157l = zzbuVar.zzr();
             } catch (RemoteException e) {
                 k04.zzl("#007 Could not call remote method.", e);
             }
         }
-        return this.l;
+        return this.f36157l;
     }
 
     public final void zzk() {
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzx();
             }
@@ -220,53 +255,53 @@ public final class zzea {
 
     public final void zzm(zzdx zzdxVar) {
         try {
-            if (this.j == null) {
-                if (this.h == null || this.l == null) {
+            if (this.f36155j == null) {
+                if (this.f36153h == null || this.f36157l == null) {
                     throw new IllegalStateException("The ad size and ad unit ID must be set before loadAd is called.");
                 }
-                Context context = this.m.getContext();
-                zzq a = a(context, this.h, this.n);
-                zzbu zzbuVar = (zzbu) ("search_v2".equals(a.zza) ? new mg2(zzay.zza(), context, a, this.l).d(context, false) : new he2(zzay.zza(), context, a, this.l, this.a).d(context, false));
-                this.j = zzbuVar;
-                zzbuVar.zzD(new zzg(this.e));
-                zza zzaVar = this.f;
+                Context context = this.f36158m.getContext();
+                zzq m1411a = m1411a(context, this.f36153h, this.f36159n);
+                zzbu zzbuVar = (zzbu) ("search_v2".equals(m1411a.zza) ? new mg2(zzay.zza(), context, m1411a, this.f36157l).m17432d(context, false) : new he2(zzay.zza(), context, m1411a, this.f36157l, this.f36146a).m17432d(context, false));
+                this.f36155j = zzbuVar;
+                zzbuVar.zzD(new zzg(this.f36150e));
+                zza zzaVar = this.f36151f;
                 if (zzaVar != null) {
-                    this.j.zzC(new zzb(zzaVar));
+                    this.f36155j.zzC(new zzb(zzaVar));
                 }
-                AppEventListener appEventListener = this.i;
+                AppEventListener appEventListener = this.f36154i;
                 if (appEventListener != null) {
-                    this.j.zzG(new h13(appEventListener));
+                    this.f36155j.zzG(new h13(appEventListener));
                 }
-                if (this.k != null) {
-                    this.j.zzU(new zzfl(this.k));
+                if (this.f36156k != null) {
+                    this.f36155j.zzU(new zzfl(this.f36156k));
                 }
-                this.j.zzP(new zzfe(this.p));
-                this.j.zzN(this.o);
-                zzbu zzbuVar2 = this.j;
+                this.f36155j.zzP(new zzfe(this.f36161p));
+                this.f36155j.zzN(this.f36160o);
+                zzbu zzbuVar2 = this.f36155j;
                 if (zzbuVar2 != null) {
                     try {
                         final yd0 zzn = zzbuVar2.zzn();
                         if (zzn != null) {
-                            if (((Boolean) ya3.f.e()).booleanValue()) {
-                                if (((Boolean) zzba.zzc().b(g93.n9)).booleanValue()) {
-                                    d04.b.post(new Runnable() { // from class: com.google.android.gms.ads.internal.client.zzdy
+                            if (((Boolean) ya3.f33454f.m16137e()).booleanValue()) {
+                                if (((Boolean) zzba.zzc().m23658b(g93.f10774n9)).booleanValue()) {
+                                    d04.f6340b.post(new Runnable() { // from class: com.google.android.gms.ads.internal.client.zzdy
                                         @Override // java.lang.Runnable
                                         public final void run() {
-                                            zzea.this.d(zzn);
+                                            zzea.this.m1408d(zzn);
                                         }
                                     });
                                 }
                             }
-                            this.m.addView((View) nt0.M(zzn));
+                            this.f36158m.addView((View) nt0.m14831M(zzn));
                         }
                     } catch (RemoteException e) {
                         k04.zzl("#007 Could not call remote method.", e);
                     }
                 }
             }
-            zzbu zzbuVar3 = this.j;
+            zzbu zzbuVar3 = this.f36155j;
             Objects.requireNonNull(zzbuVar3);
-            zzbuVar3.zzaa(this.b.zza(this.m.getContext(), zzdxVar));
+            zzbuVar3.zzaa(this.f36147b.zza(this.f36158m.getContext(), zzdxVar));
         } catch (RemoteException e2) {
             k04.zzl("#007 Could not call remote method.", e2);
         }
@@ -274,7 +309,7 @@ public final class zzea {
 
     public final void zzn() {
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzz();
             }
@@ -284,11 +319,11 @@ public final class zzea {
     }
 
     public final void zzo() {
-        if (this.c.getAndSet(true)) {
+        if (this.f36148c.getAndSet(true)) {
             return;
         }
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzA();
             }
@@ -299,7 +334,7 @@ public final class zzea {
 
     public final void zzp() {
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzB();
             }
@@ -310,8 +345,8 @@ public final class zzea {
 
     public final void zzq(zza zzaVar) {
         try {
-            this.f = zzaVar;
-            zzbu zzbuVar = this.j;
+            this.f36151f = zzaVar;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzC(zzaVar != null ? new zzb(zzaVar) : null);
             }
@@ -321,41 +356,41 @@ public final class zzea {
     }
 
     public final void zzr(AdListener adListener) {
-        this.g = adListener;
-        this.e.zza(adListener);
+        this.f36152g = adListener;
+        this.f36150e.zza(adListener);
     }
 
     public final void zzs(AdSize... adSizeArr) {
-        if (this.h != null) {
+        if (this.f36153h != null) {
             throw new IllegalStateException("The ad size can only be set once on AdView.");
         }
         zzt(adSizeArr);
     }
 
     public final void zzt(AdSize... adSizeArr) {
-        this.h = adSizeArr;
+        this.f36153h = adSizeArr;
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
-                zzbuVar.zzF(a(this.m.getContext(), this.h, this.n));
+                zzbuVar.zzF(m1411a(this.f36158m.getContext(), this.f36153h, this.f36159n));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
-        this.m.requestLayout();
+        this.f36158m.requestLayout();
     }
 
     public final void zzu(String str) {
-        if (this.l != null) {
+        if (this.f36157l != null) {
             throw new IllegalStateException("The ad unit ID can only be set once on AdView.");
         }
-        this.l = str;
+        this.f36157l = str;
     }
 
     public final void zzv(AppEventListener appEventListener) {
         try {
-            this.i = appEventListener;
-            zzbu zzbuVar = this.j;
+            this.f36154i = appEventListener;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzG(appEventListener != null ? new h13(appEventListener) : null);
             }
@@ -365,9 +400,9 @@ public final class zzea {
     }
 
     public final void zzw(boolean z) {
-        this.o = z;
+        this.f36160o = z;
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzN(z);
             }
@@ -378,8 +413,8 @@ public final class zzea {
 
     public final void zzx(OnPaidEventListener onPaidEventListener) {
         try {
-            this.p = onPaidEventListener;
-            zzbu zzbuVar = this.j;
+            this.f36161p = onPaidEventListener;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzP(new zzfe(onPaidEventListener));
             }
@@ -389,9 +424,9 @@ public final class zzea {
     }
 
     public final void zzy(VideoOptions videoOptions) {
-        this.k = videoOptions;
+        this.f36156k = videoOptions;
         try {
-            zzbu zzbuVar = this.j;
+            zzbu zzbuVar = this.f36155j;
             if (zzbuVar != null) {
                 zzbuVar.zzU(videoOptions == null ? null : new zzfl(videoOptions));
             }
@@ -403,9 +438,9 @@ public final class zzea {
     public final boolean zzz(zzbu zzbuVar) {
         try {
             yd0 zzn = zzbuVar.zzn();
-            if (zzn != null && ((View) nt0.M(zzn)).getParent() == null) {
-                this.m.addView((View) nt0.M(zzn));
-                this.j = zzbuVar;
+            if (zzn != null && ((View) nt0.m14831M(zzn)).getParent() == null) {
+                this.f36158m.addView((View) nt0.m14831M(zzn));
+                this.f36155j = zzbuVar;
                 return true;
             }
             return false;

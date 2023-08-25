@@ -5,188 +5,222 @@ import android.os.Build;
 import android.window.OnBackInvokedCallback;
 import android.window.OnBackInvokedDispatcher;
 import androidx.activity.OnBackPressedDispatcher;
-import androidx.lifecycle.c;
-import androidx.lifecycle.d;
+import androidx.lifecycle.AbstractC0344c;
+import androidx.lifecycle.InterfaceC0348d;
+import com.daaw.InterfaceC3057td;
+import com.daaw.InterfaceC3222uj;
 import com.daaw.sj0;
-import com.daaw.td;
-import com.daaw.uj;
 import com.daaw.wt0;
 import java.util.ArrayDeque;
 import java.util.Iterator;
 /* loaded from: classes.dex */
 public final class OnBackPressedDispatcher {
-    public final Runnable a;
-    public uj<Boolean> c;
-    public OnBackInvokedCallback d;
-    public OnBackInvokedDispatcher e;
-    public final ArrayDeque<wt0> b = new ArrayDeque<>();
-    public boolean f = false;
+
+    /* renamed from: a */
+    public final Runnable f107a;
+
+    /* renamed from: c */
+    public InterfaceC3222uj<Boolean> f109c;
+
+    /* renamed from: d */
+    public OnBackInvokedCallback f110d;
+
+    /* renamed from: e */
+    public OnBackInvokedDispatcher f111e;
+
+    /* renamed from: b */
+    public final ArrayDeque<wt0> f108b = new ArrayDeque<>();
+
+    /* renamed from: f */
+    public boolean f112f = false;
 
     /* loaded from: classes.dex */
-    public class LifecycleOnBackPressedCancellable implements d, td {
-        public final androidx.lifecycle.c a;
-        public final wt0 b;
-        public td c;
+    public class LifecycleOnBackPressedCancellable implements InterfaceC0348d, InterfaceC3057td {
 
-        public LifecycleOnBackPressedCancellable(androidx.lifecycle.c cVar, wt0 wt0Var) {
-            this.a = cVar;
-            this.b = wt0Var;
-            cVar.a(this);
+        /* renamed from: a */
+        public final AbstractC0344c f113a;
+
+        /* renamed from: b */
+        public final wt0 f114b;
+
+        /* renamed from: c */
+        public InterfaceC3057td f115c;
+
+        public LifecycleOnBackPressedCancellable(AbstractC0344c abstractC0344c, wt0 wt0Var) {
+            this.f113a = abstractC0344c;
+            this.f114b = wt0Var;
+            abstractC0344c.mo29048a(this);
         }
 
-        @Override // androidx.lifecycle.d
-        public void a(sj0 sj0Var, c.b bVar) {
-            if (bVar == c.b.ON_START) {
-                this.c = OnBackPressedDispatcher.this.c(this.b);
-            } else if (bVar != c.b.ON_STOP) {
-                if (bVar == c.b.ON_DESTROY) {
+        @Override // androidx.lifecycle.InterfaceC0348d
+        /* renamed from: a */
+        public void mo18735a(sj0 sj0Var, AbstractC0344c.EnumC0346b enumC0346b) {
+            if (enumC0346b == AbstractC0344c.EnumC0346b.ON_START) {
+                this.f115c = OnBackPressedDispatcher.this.m30372c(this.f114b);
+            } else if (enumC0346b != AbstractC0344c.EnumC0346b.ON_STOP) {
+                if (enumC0346b == AbstractC0344c.EnumC0346b.ON_DESTROY) {
                     cancel();
                 }
             } else {
-                td tdVar = this.c;
-                if (tdVar != null) {
-                    tdVar.cancel();
+                InterfaceC3057td interfaceC3057td = this.f115c;
+                if (interfaceC3057td != null) {
+                    interfaceC3057td.cancel();
                 }
             }
         }
 
-        @Override // com.daaw.td
+        @Override // com.daaw.InterfaceC3057td
         public void cancel() {
-            this.a.c(this);
-            this.b.e(this);
-            td tdVar = this.c;
-            if (tdVar != null) {
-                tdVar.cancel();
-                this.c = null;
+            this.f113a.mo29046c(this);
+            this.f114b.m5813e(this);
+            InterfaceC3057td interfaceC3057td = this.f115c;
+            if (interfaceC3057td != null) {
+                interfaceC3057td.cancel();
+                this.f115c = null;
             }
         }
     }
 
+    /* renamed from: androidx.activity.OnBackPressedDispatcher$a */
     /* loaded from: classes.dex */
-    public class a implements OnBackInvokedCallback {
-        public a() {
+    public class C0045a implements OnBackInvokedCallback {
+        public C0045a() {
         }
     }
 
+    /* renamed from: androidx.activity.OnBackPressedDispatcher$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public static void a(OnBackInvokedDispatcher onBackInvokedDispatcher, int i, OnBackInvokedCallback onBackInvokedCallback) {
+    public static class C0046b {
+        /* renamed from: a */
+        public static void m30366a(OnBackInvokedDispatcher onBackInvokedDispatcher, int i, OnBackInvokedCallback onBackInvokedCallback) {
             onBackInvokedDispatcher.registerOnBackInvokedCallback(i, onBackInvokedCallback);
         }
 
-        public static void b(OnBackInvokedDispatcher onBackInvokedDispatcher, OnBackInvokedCallback onBackInvokedCallback) {
+        /* renamed from: b */
+        public static void m30365b(OnBackInvokedDispatcher onBackInvokedDispatcher, OnBackInvokedCallback onBackInvokedCallback) {
             onBackInvokedDispatcher.unregisterOnBackInvokedCallback(onBackInvokedCallback);
         }
     }
 
+    /* renamed from: androidx.activity.OnBackPressedDispatcher$c */
     /* loaded from: classes.dex */
-    public class c implements td {
-        public final wt0 a;
+    public class C0047c implements InterfaceC3057td {
 
-        public c(wt0 wt0Var) {
-            this.a = wt0Var;
+        /* renamed from: a */
+        public final wt0 f118a;
+
+        public C0047c(wt0 wt0Var) {
+            this.f118a = wt0Var;
         }
 
-        @Override // com.daaw.td
+        @Override // com.daaw.InterfaceC3057td
         public void cancel() {
-            OnBackPressedDispatcher.this.b.remove(this.a);
-            this.a.e(this);
+            OnBackPressedDispatcher.this.f108b.remove(this.f118a);
+            this.f118a.m5813e(this);
             if (Build.VERSION.SDK_INT >= 33) {
-                this.a.g(null);
-                OnBackPressedDispatcher.this.h();
+                this.f118a.m5811g(null);
+                OnBackPressedDispatcher.this.m30367h();
             }
         }
     }
 
     public OnBackPressedDispatcher(Runnable runnable) {
-        this.a = runnable;
+        this.f107a = runnable;
         if (Build.VERSION.SDK_INT >= 33) {
-            this.c = new uj() { // from class: com.daaw.xt0
-                @Override // com.daaw.uj
-                public final void a(Object obj) {
-                    OnBackPressedDispatcher.this.e((Boolean) obj);
+            this.f109c = new InterfaceC3222uj() { // from class: com.daaw.xt0
+                @Override // com.daaw.InterfaceC3222uj
+                /* renamed from: a */
+                public final void mo2971a(Object obj) {
+                    OnBackPressedDispatcher.this.m30370e((Boolean) obj);
                 }
             };
-            this.d = new a();
+            this.f110d = new C0045a();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void e(Boolean bool) {
+    /* renamed from: e */
+    public /* synthetic */ void m30370e(Boolean bool) {
         if (Build.VERSION.SDK_INT >= 33) {
-            h();
+            m30367h();
         }
     }
 
     @SuppressLint({"LambdaLast"})
-    public void b(sj0 sj0Var, wt0 wt0Var) {
-        androidx.lifecycle.c a2 = sj0Var.a();
-        if (a2.b() == c.EnumC0020c.DESTROYED) {
+    /* renamed from: b */
+    public void m30373b(sj0 sj0Var, wt0 wt0Var) {
+        AbstractC0344c mo2327a = sj0Var.mo2327a();
+        if (mo2327a.mo29047b() == AbstractC0344c.EnumC0347c.DESTROYED) {
             return;
         }
-        wt0Var.a(new LifecycleOnBackPressedCancellable(a2, wt0Var));
+        wt0Var.m5817a(new LifecycleOnBackPressedCancellable(mo2327a, wt0Var));
         if (Build.VERSION.SDK_INT >= 33) {
-            h();
-            wt0Var.g(this.c);
+            m30367h();
+            wt0Var.m5811g(this.f109c);
         }
     }
 
-    public td c(wt0 wt0Var) {
-        this.b.add(wt0Var);
-        c cVar = new c(wt0Var);
-        wt0Var.a(cVar);
+    /* renamed from: c */
+    public InterfaceC3057td m30372c(wt0 wt0Var) {
+        this.f108b.add(wt0Var);
+        C0047c c0047c = new C0047c(wt0Var);
+        wt0Var.m5817a(c0047c);
         if (Build.VERSION.SDK_INT >= 33) {
-            h();
-            wt0Var.g(this.c);
+            m30367h();
+            wt0Var.m5811g(this.f109c);
         }
-        return cVar;
+        return c0047c;
     }
 
-    public boolean d() {
-        Iterator<wt0> descendingIterator = this.b.descendingIterator();
+    /* renamed from: d */
+    public boolean m30371d() {
+        Iterator<wt0> descendingIterator = this.f108b.descendingIterator();
         while (descendingIterator.hasNext()) {
-            if (descendingIterator.next().c()) {
+            if (descendingIterator.next().m5815c()) {
                 return true;
             }
         }
         return false;
     }
 
-    public void f() {
-        Iterator<wt0> descendingIterator = this.b.descendingIterator();
+    /* renamed from: f */
+    public void m30369f() {
+        Iterator<wt0> descendingIterator = this.f108b.descendingIterator();
         while (descendingIterator.hasNext()) {
             wt0 next = descendingIterator.next();
-            if (next.c()) {
-                next.b();
+            if (next.m5815c()) {
+                next.mo5816b();
                 return;
             }
         }
-        Runnable runnable = this.a;
+        Runnable runnable = this.f107a;
         if (runnable != null) {
             runnable.run();
         }
     }
 
-    public void g(OnBackInvokedDispatcher onBackInvokedDispatcher) {
-        this.e = onBackInvokedDispatcher;
-        h();
+    /* renamed from: g */
+    public void m30368g(OnBackInvokedDispatcher onBackInvokedDispatcher) {
+        this.f111e = onBackInvokedDispatcher;
+        m30367h();
     }
 
-    public void h() {
+    /* renamed from: h */
+    public void m30367h() {
         boolean z;
-        boolean d = d();
-        OnBackInvokedDispatcher onBackInvokedDispatcher = this.e;
+        boolean m30371d = m30371d();
+        OnBackInvokedDispatcher onBackInvokedDispatcher = this.f111e;
         if (onBackInvokedDispatcher != null) {
-            if (d && !this.f) {
-                b.a(onBackInvokedDispatcher, 1000000, this.d);
+            if (m30371d && !this.f112f) {
+                C0046b.m30366a(onBackInvokedDispatcher, 1000000, this.f110d);
                 z = true;
-            } else if (d || !this.f) {
+            } else if (m30371d || !this.f112f) {
                 return;
             } else {
-                b.b(onBackInvokedDispatcher, this.d);
+                C0046b.m30365b(onBackInvokedDispatcher, this.f110d);
                 z = false;
             }
-            this.f = z;
+            this.f112f = z;
         }
     }
 }

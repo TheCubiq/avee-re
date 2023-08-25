@@ -22,23 +22,34 @@ import com.google.android.material.textfield.TextInputLayout;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes2.dex */
 public class ChipTextInputComboView extends FrameLayout implements Checkable {
-    public final Chip p;
-    public final TextInputLayout q;
-    public final EditText r;
-    public TextWatcher s;
-    public TextView t;
 
+    /* renamed from: p */
+    public final Chip f37814p;
+
+    /* renamed from: q */
+    public final TextInputLayout f37815q;
+
+    /* renamed from: r */
+    public final EditText f37816r;
+
+    /* renamed from: s */
+    public TextWatcher f37817s;
+
+    /* renamed from: t */
+    public TextView f37818t;
+
+    /* renamed from: com.google.android.material.timepicker.ChipTextInputComboView$b */
     /* loaded from: classes2.dex */
-    public class b extends uk1 {
-        public b() {
+    public class C4156b extends uk1 {
+        public C4156b() {
         }
 
         @Override // com.daaw.uk1, android.text.TextWatcher
         public void afterTextChanged(Editable editable) {
             if (TextUtils.isEmpty(editable)) {
-                ChipTextInputComboView.this.p.setText(ChipTextInputComboView.this.c("00"));
+                ChipTextInputComboView.this.f37814p.setText(ChipTextInputComboView.this.m171c("00"));
             } else {
-                ChipTextInputComboView.this.p.setText(ChipTextInputComboView.this.c(editable));
+                ChipTextInputComboView.this.f37814p.setText(ChipTextInputComboView.this.m171c(editable));
             }
         }
     }
@@ -51,70 +62,72 @@ public class ChipTextInputComboView extends FrameLayout implements Checkable {
         super(context, attributeSet, i);
         LayoutInflater from = LayoutInflater.from(context);
         Chip chip = (Chip) from.inflate(a21.material_time_chip, (ViewGroup) this, false);
-        this.p = chip;
+        this.f37814p = chip;
         TextInputLayout textInputLayout = (TextInputLayout) from.inflate(a21.material_time_input, (ViewGroup) this, false);
-        this.q = textInputLayout;
+        this.f37815q = textInputLayout;
         EditText editText = textInputLayout.getEditText();
-        this.r = editText;
+        this.f37816r = editText;
         editText.setVisibility(4);
-        b bVar = new b();
-        this.s = bVar;
-        editText.addTextChangedListener(bVar);
-        d();
+        C4156b c4156b = new C4156b();
+        this.f37817s = c4156b;
+        editText.addTextChangedListener(c4156b);
+        m170d();
         addView(chip);
         addView(textInputLayout);
-        this.t = (TextView) findViewById(m11.material_label);
+        this.f37818t = (TextView) findViewById(m11.material_label);
         editText.setSaveEnabled(false);
     }
 
-    public final String c(CharSequence charSequence) {
-        return TimeModel.a(getResources(), charSequence);
+    /* renamed from: c */
+    public final String m171c(CharSequence charSequence) {
+        return TimeModel.m145a(getResources(), charSequence);
     }
 
-    public final void d() {
+    /* renamed from: d */
+    public final void m170d() {
         if (Build.VERSION.SDK_INT >= 24) {
-            this.r.setImeHintLocales(getContext().getResources().getConfiguration().getLocales());
+            this.f37816r.setImeHintLocales(getContext().getResources().getConfiguration().getLocales());
         }
     }
 
     @Override // android.widget.Checkable
     public boolean isChecked() {
-        return this.p.isChecked();
+        return this.f37814p.isChecked();
     }
 
     @Override // android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        d();
+        m170d();
     }
 
     @Override // android.widget.Checkable
     public void setChecked(boolean z) {
-        this.p.setChecked(z);
-        this.r.setVisibility(z ? 0 : 4);
-        this.p.setVisibility(z ? 8 : 0);
+        this.f37814p.setChecked(z);
+        this.f37816r.setVisibility(z ? 0 : 4);
+        this.f37814p.setVisibility(z ? 8 : 0);
         if (isChecked()) {
-            this.r.requestFocus();
-            if (TextUtils.isEmpty(this.r.getText())) {
+            this.f37816r.requestFocus();
+            if (TextUtils.isEmpty(this.f37816r.getText())) {
                 return;
             }
-            EditText editText = this.r;
+            EditText editText = this.f37816r;
             editText.setSelection(editText.getText().length());
         }
     }
 
     @Override // android.view.View
     public void setOnClickListener(View.OnClickListener onClickListener) {
-        this.p.setOnClickListener(onClickListener);
+        this.f37814p.setOnClickListener(onClickListener);
     }
 
     @Override // android.view.View
     public void setTag(int i, Object obj) {
-        this.p.setTag(i, obj);
+        this.f37814p.setTag(i, obj);
     }
 
     @Override // android.widget.Checkable
     public void toggle() {
-        this.p.toggle();
+        this.f37814p.toggle();
     }
 }

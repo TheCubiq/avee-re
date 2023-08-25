@@ -1,29 +1,38 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ns6 extends js6 {
-    public final String a;
-    public final boolean b;
-    public final boolean c;
+
+    /* renamed from: a */
+    public final String f20620a;
+
+    /* renamed from: b */
+    public final boolean f20621b;
+
+    /* renamed from: c */
+    public final boolean f20622c;
 
     public /* synthetic */ ns6(String str, boolean z, boolean z2, ms6 ms6Var) {
-        this.a = str;
-        this.b = z;
-        this.c = z2;
+        this.f20620a = str;
+        this.f20621b = z;
+        this.f20622c = z2;
     }
 
     @Override // com.daaw.js6
-    public final String b() {
-        return this.a;
+    /* renamed from: b */
+    public final String mo14843b() {
+        return this.f20620a;
     }
 
     @Override // com.daaw.js6
-    public final boolean c() {
-        return this.c;
+    /* renamed from: c */
+    public final boolean mo14842c() {
+        return this.f20622c;
     }
 
     @Override // com.daaw.js6
-    public final boolean d() {
-        return this.b;
+    /* renamed from: d */
+    public final boolean mo14841d() {
+        return this.f20621b;
     }
 
     public final boolean equals(Object obj) {
@@ -32,7 +41,7 @@ public final class ns6 extends js6 {
         }
         if (obj instanceof js6) {
             js6 js6Var = (js6) obj;
-            if (this.a.equals(js6Var.b()) && this.b == js6Var.d() && this.c == js6Var.c()) {
+            if (this.f20620a.equals(js6Var.mo14843b()) && this.f20621b == js6Var.mo14841d() && this.f20622c == js6Var.mo14842c()) {
                 return true;
             }
         }
@@ -40,13 +49,13 @@ public final class ns6 extends js6 {
     }
 
     public final int hashCode() {
-        return ((((this.a.hashCode() ^ 1000003) * 1000003) ^ (true != this.b ? 1237 : 1231)) * 1000003) ^ (true == this.c ? 1231 : 1237);
+        return ((((this.f20620a.hashCode() ^ 1000003) * 1000003) ^ (true != this.f20621b ? 1237 : 1231)) * 1000003) ^ (true == this.f20622c ? 1231 : 1237);
     }
 
     public final String toString() {
-        String str = this.a;
-        boolean z = this.b;
-        boolean z2 = this.c;
+        String str = this.f20620a;
+        boolean z = this.f20621b;
+        boolean z2 = this.f20622c;
         return "AdShield2Options{clientVersion=" + str + ", shouldGetAdvertisingId=" + z + ", isGooglePlayServicesAvailable=" + z2 + "}";
     }
 }

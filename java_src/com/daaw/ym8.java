@@ -6,175 +6,210 @@ import java.nio.ShortBuffer;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class ym8 implements hi8 {
-    public int b;
-    public float c = 1.0f;
-    public float d = 1.0f;
-    public di8 e;
-    public di8 f;
-    public di8 g;
-    public di8 h;
-    public boolean i;
-    public wm8 j;
-    public ByteBuffer k;
-    public ShortBuffer l;
-    public ByteBuffer m;
-    public long n;
-    public long o;
-    public boolean p;
+
+    /* renamed from: b */
+    public int f33849b;
+
+    /* renamed from: c */
+    public float f33850c = 1.0f;
+
+    /* renamed from: d */
+    public float f33851d = 1.0f;
+
+    /* renamed from: e */
+    public di8 f33852e;
+
+    /* renamed from: f */
+    public di8 f33853f;
+
+    /* renamed from: g */
+    public di8 f33854g;
+
+    /* renamed from: h */
+    public di8 f33855h;
+
+    /* renamed from: i */
+    public boolean f33856i;
+
+    /* renamed from: j */
+    public wm8 f33857j;
+
+    /* renamed from: k */
+    public ByteBuffer f33858k;
+
+    /* renamed from: l */
+    public ShortBuffer f33859l;
+
+    /* renamed from: m */
+    public ByteBuffer f33860m;
+
+    /* renamed from: n */
+    public long f33861n;
+
+    /* renamed from: o */
+    public long f33862o;
+
+    /* renamed from: p */
+    public boolean f33863p;
 
     public ym8() {
-        di8 di8Var = di8.e;
-        this.e = di8Var;
-        this.f = di8Var;
-        this.g = di8Var;
-        this.h = di8Var;
-        ByteBuffer byteBuffer = hi8.a;
-        this.k = byteBuffer;
-        this.l = byteBuffer.asShortBuffer();
-        this.m = byteBuffer;
-        this.b = -1;
+        di8 di8Var = di8.f7132e;
+        this.f33852e = di8Var;
+        this.f33853f = di8Var;
+        this.f33854g = di8Var;
+        this.f33855h = di8Var;
+        ByteBuffer byteBuffer = hi8.f12557a;
+        this.f33858k = byteBuffer;
+        this.f33859l = byteBuffer.asShortBuffer();
+        this.f33860m = byteBuffer;
+        this.f33849b = -1;
     }
 
     @Override // com.daaw.hi8
-    public final di8 a(di8 di8Var) {
-        if (di8Var.c == 2) {
-            int i = this.b;
+    /* renamed from: a */
+    public final di8 mo3499a(di8 di8Var) {
+        if (di8Var.f7135c == 2) {
+            int i = this.f33849b;
             if (i == -1) {
-                i = di8Var.a;
+                i = di8Var.f7133a;
             }
-            this.e = di8Var;
-            di8 di8Var2 = new di8(i, di8Var.b, 2);
-            this.f = di8Var2;
-            this.i = true;
+            this.f33852e = di8Var;
+            di8 di8Var2 = new di8(i, di8Var.f7134b, 2);
+            this.f33853f = di8Var2;
+            this.f33856i = true;
             return di8Var2;
         }
         throw new fi8(di8Var);
     }
 
     @Override // com.daaw.hi8
-    public final void b(ByteBuffer byteBuffer) {
+    /* renamed from: b */
+    public final void mo3498b(ByteBuffer byteBuffer) {
         if (byteBuffer.hasRemaining()) {
-            wm8 wm8Var = this.j;
+            wm8 wm8Var = this.f33857j;
             Objects.requireNonNull(wm8Var);
             ShortBuffer asShortBuffer = byteBuffer.asShortBuffer();
             int remaining = byteBuffer.remaining();
-            this.n += remaining;
-            wm8Var.f(asShortBuffer);
+            this.f33861n += remaining;
+            wm8Var.m5964f(asShortBuffer);
             byteBuffer.position(byteBuffer.position() + remaining);
         }
     }
 
-    public final long c(long j) {
+    /* renamed from: c */
+    public final long m3497c(long j) {
         wm8 wm8Var;
-        long j2 = this.o;
+        long j2 = this.f33862o;
         if (j2 < 1024) {
-            double d = this.c;
+            double d = this.f33850c;
             double d2 = j;
             Double.isNaN(d);
             Double.isNaN(d2);
             return (long) (d * d2);
         }
-        long j3 = this.n;
-        Objects.requireNonNull(this.j);
-        long b = j3 - wm8Var.b();
-        int i = this.h.a;
-        int i2 = this.g.a;
-        return i == i2 ? it5.g0(j, b, j2) : it5.g0(j, b * i, j2 * i2);
+        long j3 = this.f33861n;
+        Objects.requireNonNull(this.f33857j);
+        long m5968b = j3 - wm8Var.m5968b();
+        int i = this.f33855h.f7133a;
+        int i2 = this.f33854g.f7133a;
+        return i == i2 ? it5.m19392g0(j, m5968b, j2) : it5.m19392g0(j, m5968b * i, j2 * i2);
     }
 
-    public final void d(float f) {
-        if (this.d != f) {
-            this.d = f;
-            this.i = true;
+    /* renamed from: d */
+    public final void m3496d(float f) {
+        if (this.f33851d != f) {
+            this.f33851d = f;
+            this.f33856i = true;
         }
     }
 
-    public final void e(float f) {
-        if (this.c != f) {
-            this.c = f;
-            this.i = true;
+    /* renamed from: e */
+    public final void m3495e(float f) {
+        if (this.f33850c != f) {
+            this.f33850c = f;
+            this.f33856i = true;
         }
     }
 
     @Override // com.daaw.hi8
     public final ByteBuffer zzb() {
-        int a;
-        wm8 wm8Var = this.j;
-        if (wm8Var != null && (a = wm8Var.a()) > 0) {
-            if (this.k.capacity() < a) {
-                ByteBuffer order = ByteBuffer.allocateDirect(a).order(ByteOrder.nativeOrder());
-                this.k = order;
-                this.l = order.asShortBuffer();
+        int m5969a;
+        wm8 wm8Var = this.f33857j;
+        if (wm8Var != null && (m5969a = wm8Var.m5969a()) > 0) {
+            if (this.f33858k.capacity() < m5969a) {
+                ByteBuffer order = ByteBuffer.allocateDirect(m5969a).order(ByteOrder.nativeOrder());
+                this.f33858k = order;
+                this.f33859l = order.asShortBuffer();
             } else {
-                this.k.clear();
-                this.l.clear();
+                this.f33858k.clear();
+                this.f33859l.clear();
             }
-            wm8Var.d(this.l);
-            this.o += a;
-            this.k.limit(a);
-            this.m = this.k;
+            wm8Var.m5966d(this.f33859l);
+            this.f33862o += m5969a;
+            this.f33858k.limit(m5969a);
+            this.f33860m = this.f33858k;
         }
-        ByteBuffer byteBuffer = this.m;
-        this.m = hi8.a;
+        ByteBuffer byteBuffer = this.f33860m;
+        this.f33860m = hi8.f12557a;
         return byteBuffer;
     }
 
     @Override // com.daaw.hi8
     public final void zzc() {
         if (zzg()) {
-            di8 di8Var = this.e;
-            this.g = di8Var;
-            di8 di8Var2 = this.f;
-            this.h = di8Var2;
-            if (this.i) {
-                this.j = new wm8(di8Var.a, di8Var.b, this.c, this.d, di8Var2.a);
+            di8 di8Var = this.f33852e;
+            this.f33854g = di8Var;
+            di8 di8Var2 = this.f33853f;
+            this.f33855h = di8Var2;
+            if (this.f33856i) {
+                this.f33857j = new wm8(di8Var.f7133a, di8Var.f7134b, this.f33850c, this.f33851d, di8Var2.f7133a);
             } else {
-                wm8 wm8Var = this.j;
+                wm8 wm8Var = this.f33857j;
                 if (wm8Var != null) {
-                    wm8Var.c();
+                    wm8Var.m5967c();
                 }
             }
         }
-        this.m = hi8.a;
-        this.n = 0L;
-        this.o = 0L;
-        this.p = false;
+        this.f33860m = hi8.f12557a;
+        this.f33861n = 0L;
+        this.f33862o = 0L;
+        this.f33863p = false;
     }
 
     @Override // com.daaw.hi8
     public final void zzd() {
-        wm8 wm8Var = this.j;
+        wm8 wm8Var = this.f33857j;
         if (wm8Var != null) {
-            wm8Var.e();
+            wm8Var.m5965e();
         }
-        this.p = true;
+        this.f33863p = true;
     }
 
     @Override // com.daaw.hi8
     public final void zzf() {
-        this.c = 1.0f;
-        this.d = 1.0f;
-        di8 di8Var = di8.e;
-        this.e = di8Var;
-        this.f = di8Var;
-        this.g = di8Var;
-        this.h = di8Var;
-        ByteBuffer byteBuffer = hi8.a;
-        this.k = byteBuffer;
-        this.l = byteBuffer.asShortBuffer();
-        this.m = byteBuffer;
-        this.b = -1;
-        this.i = false;
-        this.j = null;
-        this.n = 0L;
-        this.o = 0L;
-        this.p = false;
+        this.f33850c = 1.0f;
+        this.f33851d = 1.0f;
+        di8 di8Var = di8.f7132e;
+        this.f33852e = di8Var;
+        this.f33853f = di8Var;
+        this.f33854g = di8Var;
+        this.f33855h = di8Var;
+        ByteBuffer byteBuffer = hi8.f12557a;
+        this.f33858k = byteBuffer;
+        this.f33859l = byteBuffer.asShortBuffer();
+        this.f33860m = byteBuffer;
+        this.f33849b = -1;
+        this.f33856i = false;
+        this.f33857j = null;
+        this.f33861n = 0L;
+        this.f33862o = 0L;
+        this.f33863p = false;
     }
 
     @Override // com.daaw.hi8
     public final boolean zzg() {
-        if (this.f.a != -1) {
-            return Math.abs(this.c + (-1.0f)) >= 1.0E-4f || Math.abs(this.d + (-1.0f)) >= 1.0E-4f || this.f.a != this.e.a;
+        if (this.f33853f.f7133a != -1) {
+            return Math.abs(this.f33850c + (-1.0f)) >= 1.0E-4f || Math.abs(this.f33851d + (-1.0f)) >= 1.0E-4f || this.f33853f.f7133a != this.f33852e.f7133a;
         }
         return false;
     }
@@ -182,6 +217,6 @@ public final class ym8 implements hi8 {
     @Override // com.daaw.hi8
     public final boolean zzh() {
         wm8 wm8Var;
-        return this.p && ((wm8Var = this.j) == null || wm8Var.a() == 0);
+        return this.f33863p && ((wm8Var = this.f33857j) == null || wm8Var.m5969a() == 0);
     }
 }

@@ -13,23 +13,25 @@ public final class bf3 extends r31 {
     }
 
     @Override // com.daaw.r31
-    public final /* synthetic */ Object a(IBinder iBinder) {
+    /* renamed from: a */
+    public final /* synthetic */ Object mo1391a(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
         IInterface queryLocalInterface = iBinder.queryLocalInterface("com.google.android.gms.ads.internal.formats.client.INativeAdViewHolderDelegateCreator");
-        return queryLocalInterface instanceof id3 ? (id3) queryLocalInterface : new gd3(iBinder);
+        return queryLocalInterface instanceof InterfaceC1684id3 ? (InterfaceC1684id3) queryLocalInterface : new gd3(iBinder);
     }
 
-    public final fd3 c(View view, HashMap hashMap, HashMap hashMap2) {
+    /* renamed from: c */
+    public final fd3 m26189c(View view, HashMap hashMap, HashMap hashMap2) {
         try {
-            IBinder d0 = ((id3) b(view.getContext())).d0(nt0.g3(view), nt0.g3(hashMap), nt0.g3(hashMap2));
-            if (d0 == null) {
+            IBinder mo19913d0 = ((InterfaceC1684id3) m11808b(view.getContext())).mo19913d0(nt0.m14830g3(view), nt0.m14830g3(hashMap), nt0.m14830g3(hashMap2));
+            if (mo19913d0 == null) {
                 return null;
             }
-            IInterface queryLocalInterface = d0.queryLocalInterface("com.google.android.gms.ads.internal.formats.client.INativeAdViewHolderDelegate");
-            return queryLocalInterface instanceof fd3 ? (fd3) queryLocalInterface : new dd3(d0);
-        } catch (RemoteException | r31.a e) {
+            IInterface queryLocalInterface = mo19913d0.queryLocalInterface("com.google.android.gms.ads.internal.formats.client.INativeAdViewHolderDelegate");
+            return queryLocalInterface instanceof fd3 ? (fd3) queryLocalInterface : new dd3(mo19913d0);
+        } catch (RemoteException | r31.C2817a e) {
             k04.zzk("Could not create remote NativeAdViewHolderDelegate.", e);
             return null;
         }

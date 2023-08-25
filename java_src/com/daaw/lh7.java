@@ -3,7 +3,8 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class lh7 {
-    public static byte[] a(byte[] bArr) {
+    /* renamed from: a */
+    public static byte[] m16947a(byte[] bArr) {
         int length = bArr.length;
         if (length < 16) {
             byte[] copyOf = Arrays.copyOf(bArr, 16);
@@ -13,7 +14,8 @@ public final class lh7 {
         throw new IllegalArgumentException("x must be smaller than a block.");
     }
 
-    public static byte[] b(byte[] bArr) {
+    /* renamed from: b */
+    public static byte[] m16946b(byte[] bArr) {
         if (bArr.length == 16) {
             byte[] bArr2 = new byte[16];
             for (int i = 0; i < 16; i++) {

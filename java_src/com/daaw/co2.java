@@ -8,17 +8,18 @@ public final class co2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
+    /* renamed from: a */
+    public final void mo2099a() {
         try {
             int i = 1;
-            boolean booleanValue = ((Boolean) this.f.invoke(null, this.b.b())).booleanValue();
-            hi2 hi2Var = this.e;
+            boolean booleanValue = ((Boolean) this.f20529f.invoke(null, this.f20525b.m6004b())).booleanValue();
+            hi2 hi2Var = this.f20528e;
             if (true == booleanValue) {
                 i = 2;
             }
-            hi2Var.X(i);
+            hi2Var.m20768X(i);
         } catch (InvocationTargetException unused) {
-            this.e.X(3);
+            this.f20528e.m20768X(3);
         }
     }
 }

@@ -3,41 +3,57 @@ package com.daaw;
 import java.io.InputStream;
 /* loaded from: classes.dex */
 public final class v33 {
-    public final InputStream a;
-    public final boolean b;
-    public final boolean c;
-    public final long d;
-    public final boolean e;
+
+    /* renamed from: a */
+    public final InputStream f29812a;
+
+    /* renamed from: b */
+    public final boolean f29813b;
+
+    /* renamed from: c */
+    public final boolean f29814c;
+
+    /* renamed from: d */
+    public final long f29815d;
+
+    /* renamed from: e */
+    public final boolean f29816e;
 
     public v33(InputStream inputStream, boolean z, boolean z2, long j, boolean z3) {
-        this.a = inputStream;
-        this.b = z;
-        this.c = z2;
-        this.d = j;
-        this.e = z3;
+        this.f29812a = inputStream;
+        this.f29813b = z;
+        this.f29814c = z2;
+        this.f29815d = j;
+        this.f29816e = z3;
     }
 
-    public static v33 b(InputStream inputStream, boolean z, boolean z2, long j, boolean z3) {
+    /* renamed from: b */
+    public static v33 m7516b(InputStream inputStream, boolean z, boolean z2, long j, boolean z3) {
         return new v33(inputStream, z, z2, j, z3);
     }
 
-    public final long a() {
-        return this.d;
+    /* renamed from: a */
+    public final long m7517a() {
+        return this.f29815d;
     }
 
-    public final InputStream c() {
-        return this.a;
+    /* renamed from: c */
+    public final InputStream m7515c() {
+        return this.f29812a;
     }
 
-    public final boolean d() {
-        return this.b;
+    /* renamed from: d */
+    public final boolean m7514d() {
+        return this.f29813b;
     }
 
-    public final boolean e() {
-        return this.e;
+    /* renamed from: e */
+    public final boolean m7513e() {
+        return this.f29816e;
     }
 
-    public final boolean f() {
-        return this.c;
+    /* renamed from: f */
+    public final boolean m7512f() {
+        return this.f29814c;
     }
 }

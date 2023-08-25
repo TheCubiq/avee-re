@@ -8,62 +8,84 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public class yz0 {
-    public final Map<Class<?>, lt0<?>> a;
-    public final Map<Class<?>, xr1<?>> b;
-    public final lt0<Object> c;
 
+    /* renamed from: a */
+    public final Map<Class<?>, lt0<?>> f34283a;
+
+    /* renamed from: b */
+    public final Map<Class<?>, xr1<?>> f34284b;
+
+    /* renamed from: c */
+    public final lt0<Object> f34285c;
+
+    /* renamed from: com.daaw.yz0$a */
     /* loaded from: classes2.dex */
-    public static final class a implements ax<a> {
-        public static final lt0<Object> d = new lt0() { // from class: com.daaw.xz0
-            @Override // com.daaw.yw
-            public final void a(Object obj, mt0 mt0Var) {
-                yz0.a.e(obj, mt0Var);
+    public static final class C3785a implements InterfaceC0779ax<C3785a> {
+
+        /* renamed from: d */
+        public static final lt0<Object> f34286d = new lt0() { // from class: com.daaw.xz0
+            @Override // com.daaw.InterfaceC3756yw
+            /* renamed from: a */
+            public final void mo2307a(Object obj, mt0 mt0Var) {
+                yz0.C3785a.m3022e(obj, mt0Var);
             }
         };
-        public final Map<Class<?>, lt0<?>> a = new HashMap();
-        public final Map<Class<?>, xr1<?>> b = new HashMap();
-        public lt0<Object> c = d;
 
-        public static /* synthetic */ void e(Object obj, mt0 mt0Var) {
-            throw new cx("Couldn't find encoder for type " + obj.getClass().getCanonicalName());
+        /* renamed from: a */
+        public final Map<Class<?>, lt0<?>> f34287a = new HashMap();
+
+        /* renamed from: b */
+        public final Map<Class<?>, xr1<?>> f34288b = new HashMap();
+
+        /* renamed from: c */
+        public lt0<Object> f34289c = f34286d;
+
+        /* renamed from: e */
+        public static /* synthetic */ void m3022e(Object obj, mt0 mt0Var) {
+            throw new C1012cx("Couldn't find encoder for type " + obj.getClass().getCanonicalName());
         }
 
-        public yz0 c() {
-            return new yz0(new HashMap(this.a), new HashMap(this.b), this.c);
+        /* renamed from: c */
+        public yz0 m3024c() {
+            return new yz0(new HashMap(this.f34287a), new HashMap(this.f34288b), this.f34289c);
         }
 
-        public a d(dj djVar) {
-            djVar.a(this);
+        /* renamed from: d */
+        public C3785a m3023d(InterfaceC1090dj interfaceC1090dj) {
+            interfaceC1090dj.mo7393a(this);
             return this;
         }
 
-        @Override // com.daaw.ax
+        @Override // com.daaw.InterfaceC0779ax
         /* renamed from: f */
-        public <U> a a(Class<U> cls, lt0<? super U> lt0Var) {
-            this.a.put(cls, lt0Var);
-            this.b.remove(cls);
+        public <U> C3785a mo2325a(Class<U> cls, lt0<? super U> lt0Var) {
+            this.f34287a.put(cls, lt0Var);
+            this.f34288b.remove(cls);
             return this;
         }
     }
 
     public yz0(Map<Class<?>, lt0<?>> map, Map<Class<?>, xr1<?>> map2, lt0<Object> lt0Var) {
-        this.a = map;
-        this.b = map2;
-        this.c = lt0Var;
+        this.f34283a = map;
+        this.f34284b = map2;
+        this.f34285c = lt0Var;
     }
 
-    public static a a() {
-        return new a();
+    /* renamed from: a */
+    public static C3785a m3028a() {
+        return new C3785a();
     }
 
-    public void b(Object obj, OutputStream outputStream) {
-        new wz0(outputStream, this.a, this.b, this.c).s(obj);
+    /* renamed from: b */
+    public void m3027b(Object obj, OutputStream outputStream) {
+        new wz0(outputStream, this.f34283a, this.f34284b, this.f34285c).m5685s(obj);
     }
 
-    public byte[] c(Object obj) {
+    /* renamed from: c */
+    public byte[] m3026c(Object obj) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         try {
-            b(obj, byteArrayOutputStream);
+            m3027b(obj, byteArrayOutputStream);
         } catch (IOException unused) {
         }
         return byteArrayOutputStream.toByteArray();

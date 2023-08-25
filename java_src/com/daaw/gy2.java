@@ -7,10 +7,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class gy2 extends LinkedHashMap {
-    public final /* synthetic */ zzc p;
+
+    /* renamed from: p */
+    public final /* synthetic */ zzc f11852p;
 
     public gy2(zzc zzcVar) {
-        this.p = zzcVar;
+        this.f11852p = zzcVar;
     }
 
     @Override // java.util.LinkedHashMap
@@ -18,17 +20,17 @@ public final class gy2 extends LinkedHashMap {
         int i;
         ArrayDeque arrayDeque;
         int i2;
-        synchronized (this.p) {
+        synchronized (this.f11852p) {
             int size = size();
-            zzc zzcVar = this.p;
-            i = zzcVar.a;
+            zzc zzcVar = this.f11852p;
+            i = zzcVar.f36527a;
             if (size <= i) {
                 return false;
             }
-            arrayDeque = zzcVar.f;
+            arrayDeque = zzcVar.f36532f;
             arrayDeque.add(new Pair((String) entry.getKey(), (String) ((Pair) entry.getValue()).second));
             int size2 = size();
-            i2 = this.p.a;
+            i2 = this.f11852p.f36527a;
             return size2 > i2;
         }
     }

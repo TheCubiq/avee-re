@@ -14,27 +14,28 @@ public class g84 extends h74 {
         super(a74Var, x33Var, z);
     }
 
-    public final WebResourceResponse G0(WebView webView, String str, Map map) {
+    /* renamed from: G0 */
+    public final WebResourceResponse m21885G0(WebView webView, String str, Map map) {
         if (!(webView instanceof a74)) {
             k04.zzj("Tried to intercept request from a WebView that wasn't an AdWebView.");
             return null;
         }
         a74 a74Var = (a74) webView;
-        cx3 cx3Var = this.J;
+        cx3 cx3Var = this.f12142J;
         if (cx3Var != null) {
-            cx3Var.a(str, map, 1);
+            cx3Var.mo3152a(str, map, 1);
         }
         if (!"mraid.js".equalsIgnoreCase(new File(str).getName())) {
             if (map == null) {
                 map = Collections.emptyMap();
             }
-            return super.T(str, map);
+            return super.m20968T(str, map);
         }
         if (a74Var.zzP() != null) {
             a74Var.zzP().zzE();
         }
-        String str2 = (String) zzba.zzc().b(a74Var.o().i() ? g93.M : a74Var.L() ? g93.L : g93.K);
+        String str2 = (String) zzba.zzc().m23658b(a74Var.mo6408o().m7329i() ? g93.f10481M : a74Var.mo6449L() ? g93.f10471L : g93.f10461K);
         zzt.zzp();
-        return zzs.zzu(a74Var.getContext(), a74Var.zzp().p, str2);
+        return zzs.zzu(a74Var.getContext(), a74Var.zzp().f36993p, str2);
     }
 }

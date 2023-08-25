@@ -7,13 +7,15 @@ public enum ii8 {
     DOUBLE(Double.valueOf(0.0d)),
     BOOLEAN(Boolean.FALSE),
     STRING(""),
-    BYTE_STRING(y68.q),
+    BYTE_STRING(y68.f33399q),
     ENUM(null),
     MESSAGE(null);
     
-    public final Object p;
+
+    /* renamed from: p */
+    public final Object f13681p;
 
     ii8(Object obj) {
-        this.p = obj;
+        this.f13681p = obj;
     }
 }

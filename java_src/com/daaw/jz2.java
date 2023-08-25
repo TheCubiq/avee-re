@@ -1,186 +1,136 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class jz2 {
-    public final byte[] a;
-    public final int b;
-    public int c;
-    public int d = 0;
+
+    /* renamed from: a */
+    public final byte[] f15533a;
+
+    /* renamed from: b */
+    public final int f15534b;
+
+    /* renamed from: c */
+    public int f15535c;
+
+    /* renamed from: d */
+    public int f15536d = 0;
 
     public jz2(byte[] bArr, int i, int i2) {
-        this.a = bArr;
-        this.c = i;
-        this.b = i2;
-        g();
+        this.f15533a = bArr;
+        this.f15535c = i;
+        this.f15534b = i2;
+        m18140g();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:25:0x0080, code lost:
         if (r0 == 8) goto L23;
      */
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final int a(int r9) {
-        /*
-            r8 = this;
-            int r0 = r9 >> 3
-            r1 = 0
-            r2 = 0
-        L4:
-            r3 = 255(0xff, float:3.57E-43)
-            if (r1 >= r0) goto L40
-            int r4 = r8.c
-            int r4 = r4 + 1
-            boolean r4 = r8.h(r4)
-            if (r4 == 0) goto L17
-            int r4 = r8.c
-            int r4 = r4 + 2
-            goto L1b
-        L17:
-            int r4 = r8.c
-            int r4 = r4 + 1
-        L1b:
-            int r5 = r8.d
-            if (r5 == 0) goto L30
-            byte[] r6 = r8.a
-            int r7 = r8.c
-            r7 = r6[r7]
-            r7 = r7 & r3
-            int r7 = r7 << r5
-            r6 = r6[r4]
-            r6 = r6 & r3
-            int r5 = 8 - r5
-            int r5 = r6 >>> r5
-            r5 = r5 | r7
-            goto L36
-        L30:
-            byte[] r5 = r8.a
-            int r6 = r8.c
-            r5 = r5[r6]
-        L36:
-            int r9 = r9 + (-8)
-            r3 = r3 & r5
-            int r3 = r3 << r9
-            r2 = r2 | r3
-            r8.c = r4
-            int r1 = r1 + 1
-            goto L4
-        L40:
-            if (r9 <= 0) goto L86
-            int r0 = r8.d
-            int r0 = r0 + r9
-            r1 = 8
-            int r9 = 8 - r9
-            int r9 = r3 >> r9
-            byte r9 = (byte) r9
-            int r4 = r8.c
-            int r4 = r4 + 1
-            boolean r4 = r8.h(r4)
-            if (r4 == 0) goto L5b
-            int r4 = r8.c
-            int r4 = r4 + 2
-            goto L5f
-        L5b:
-            int r4 = r8.c
-            int r4 = r4 + 1
-        L5f:
-            byte[] r5 = r8.a
-            int r6 = r8.c
-            if (r0 <= r1) goto L78
-            r6 = r5[r6]
-            r6 = r6 & r3
-            int r7 = r0 + (-8)
-            int r6 = r6 << r7
-            r5 = r5[r4]
-            r3 = r3 & r5
-            int r5 = 16 - r0
-            int r3 = r3 >> r5
-            r3 = r3 | r6
-            r9 = r9 & r3
-            r9 = r9 | r2
-        L74:
-            r8.c = r4
-        L76:
-            r2 = r9
-            goto L83
-        L78:
-            r5 = r5[r6]
-            r3 = r3 & r5
-            int r5 = 8 - r0
-            int r3 = r3 >> r5
-            r9 = r9 & r3
-            r9 = r9 | r2
-            if (r0 != r1) goto L76
-            goto L74
-        L83:
-            int r0 = r0 % r1
-            r8.d = r0
-        L86:
-            r8.g()
-            return r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.jz2.a(int):int");
+    public final int m18146a(int i) {
+        int i2;
+        int i3;
+        int i4 = i >> 3;
+        int i5 = 0;
+        for (int i6 = 0; i6 < i4; i6++) {
+            int i7 = m18139h(this.f15535c + 1) ? this.f15535c + 2 : this.f15535c + 1;
+            int i8 = this.f15536d;
+            if (i8 != 0) {
+                byte[] bArr = this.f15533a;
+                i3 = ((bArr[i7] & 255) >>> (8 - i8)) | ((bArr[this.f15535c] & 255) << i8);
+            } else {
+                i3 = this.f15533a[this.f15535c];
+            }
+            i -= 8;
+            i5 |= (255 & i3) << i;
+            this.f15535c = i7;
+        }
+        if (i > 0) {
+            int i9 = this.f15536d + i;
+            byte b = (byte) (255 >> (8 - i));
+            int i10 = m18139h(this.f15535c + 1) ? this.f15535c + 2 : this.f15535c + 1;
+            byte[] bArr2 = this.f15533a;
+            int i11 = this.f15535c;
+            if (i9 > 8) {
+                i2 = (b & (((255 & bArr2[i10]) >> (16 - i9)) | ((bArr2[i11] & 255) << (i9 - 8)))) | i5;
+            } else {
+                i2 = (b & ((255 & bArr2[i11]) >> (8 - i9))) | i5;
+            }
+            this.f15535c = i10;
+            i5 = i2;
+            this.f15536d = i9 % 8;
+        }
+        m18140g();
+        return i5;
     }
 
-    public final int b() {
-        int f = f();
-        return (f % 2 == 0 ? -1 : 1) * ((f + 1) / 2);
+    /* renamed from: b */
+    public final int m18145b() {
+        int m18141f = m18141f();
+        return (m18141f % 2 == 0 ? -1 : 1) * ((m18141f + 1) / 2);
     }
 
-    public final int c() {
-        return f();
+    /* renamed from: c */
+    public final int m18144c() {
+        return m18141f();
     }
 
-    public final void d(int i) {
-        int i2 = this.c;
+    /* renamed from: d */
+    public final void m18143d(int i) {
+        int i2 = this.f15535c;
         int i3 = (i >> 3) + i2;
-        this.c = i3;
-        int i4 = this.d + (i & 7);
-        this.d = i4;
+        this.f15535c = i3;
+        int i4 = this.f15536d + (i & 7);
+        this.f15536d = i4;
         if (i4 > 7) {
-            this.c = i3 + 1;
-            this.d = i4 - 8;
+            this.f15535c = i3 + 1;
+            this.f15536d = i4 - 8;
         }
         while (true) {
             i2++;
-            if (i2 > this.c) {
-                g();
+            if (i2 > this.f15535c) {
+                m18140g();
                 return;
-            } else if (h(i2)) {
-                this.c++;
+            } else if (m18139h(i2)) {
+                this.f15535c++;
                 i2 += 2;
             }
         }
     }
 
-    public final boolean e() {
-        return a(1) == 1;
+    /* renamed from: e */
+    public final boolean m18142e() {
+        return m18146a(1) == 1;
     }
 
-    public final int f() {
+    /* renamed from: f */
+    public final int m18141f() {
         int i = 0;
-        while (!e()) {
+        while (!m18142e()) {
             i++;
         }
-        return ((1 << i) - 1) + (i > 0 ? a(i) : 0);
+        return ((1 << i) - 1) + (i > 0 ? m18146a(i) : 0);
     }
 
-    public final void g() {
+    /* renamed from: g */
+    public final void m18140g() {
         int i;
         int i2;
-        int i3 = this.c;
+        int i3 = this.f15535c;
         boolean z = true;
-        if (i3 < 0 || (i = this.d) < 0 || i >= 8 || (i3 >= (i2 = this.b) && (i3 != i2 || i != 0))) {
+        if (i3 < 0 || (i = this.f15536d) < 0 || i >= 8 || (i3 >= (i2 = this.f15534b) && (i3 != i2 || i != 0))) {
             z = false;
         }
-        az2.e(z);
+        az2.m26583e(z);
     }
 
-    public final boolean h(int i) {
-        if (i < 2 || i >= this.b) {
+    /* renamed from: h */
+    public final boolean m18139h(int i) {
+        if (i < 2 || i >= this.f15534b) {
             return false;
         }
-        byte[] bArr = this.a;
+        byte[] bArr = this.f15533a;
         return bArr[i] == 3 && bArr[i + (-2)] == 0 && bArr[i + (-1)] == 0;
     }
 }

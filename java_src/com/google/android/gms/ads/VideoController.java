@@ -12,11 +12,17 @@ public final class VideoController {
     public static final int PLAYBACK_STATE_PLAYING = 1;
     public static final int PLAYBACK_STATE_READY = 5;
     public static final int PLAYBACK_STATE_UNKNOWN = 0;
-    public final Object a = new Object();
+
+    /* renamed from: a */
+    public final Object f36040a = new Object();
     @GuardedBy("lock")
-    public zzdq b;
+
+    /* renamed from: b */
+    public zzdq f36041b;
     @GuardedBy("lock")
-    public VideoLifecycleCallbacks c;
+
+    /* renamed from: c */
+    public VideoLifecycleCallbacks f36042c;
 
     /* loaded from: classes.dex */
     public static abstract class VideoLifecycleCallbacks {
@@ -37,8 +43,8 @@ public final class VideoController {
     }
 
     public int getPlaybackState() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar == null) {
                 return 0;
             }
@@ -53,23 +59,23 @@ public final class VideoController {
 
     public VideoLifecycleCallbacks getVideoLifecycleCallbacks() {
         VideoLifecycleCallbacks videoLifecycleCallbacks;
-        synchronized (this.a) {
-            videoLifecycleCallbacks = this.c;
+        synchronized (this.f36040a) {
+            videoLifecycleCallbacks = this.f36042c;
         }
         return videoLifecycleCallbacks;
     }
 
     public boolean hasVideoContent() {
         boolean z;
-        synchronized (this.a) {
-            z = this.b != null;
+        synchronized (this.f36040a) {
+            z = this.f36041b != null;
         }
         return z;
     }
 
     public boolean isClickToExpandEnabled() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar == null) {
                 return false;
             }
@@ -83,8 +89,8 @@ public final class VideoController {
     }
 
     public boolean isCustomControlsEnabled() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar == null) {
                 return false;
             }
@@ -98,8 +104,8 @@ public final class VideoController {
     }
 
     public boolean isMuted() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar == null) {
                 return true;
             }
@@ -113,8 +119,8 @@ public final class VideoController {
     }
 
     public void mute(boolean z) {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar != null) {
                 try {
                     zzdqVar.zzj(z);
@@ -126,8 +132,8 @@ public final class VideoController {
     }
 
     public void pause() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar != null) {
                 try {
                     zzdqVar.zzk();
@@ -139,8 +145,8 @@ public final class VideoController {
     }
 
     public void play() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar != null) {
                 try {
                     zzdqVar.zzl();
@@ -153,9 +159,9 @@ public final class VideoController {
 
     public void setVideoLifecycleCallbacks(VideoLifecycleCallbacks videoLifecycleCallbacks) {
         zzfk zzfkVar;
-        synchronized (this.a) {
-            this.c = videoLifecycleCallbacks;
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            this.f36042c = videoLifecycleCallbacks;
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar != null) {
                 if (videoLifecycleCallbacks == null) {
                     zzfkVar = null;
@@ -172,8 +178,8 @@ public final class VideoController {
     }
 
     public void stop() {
-        synchronized (this.a) {
-            zzdq zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdq zzdqVar = this.f36041b;
             if (zzdqVar != null) {
                 try {
                     zzdqVar.zzn();
@@ -186,16 +192,16 @@ public final class VideoController {
 
     public final zzdq zza() {
         zzdq zzdqVar;
-        synchronized (this.a) {
-            zzdqVar = this.b;
+        synchronized (this.f36040a) {
+            zzdqVar = this.f36041b;
         }
         return zzdqVar;
     }
 
     public final void zzb(zzdq zzdqVar) {
-        synchronized (this.a) {
-            this.b = zzdqVar;
-            VideoLifecycleCallbacks videoLifecycleCallbacks = this.c;
+        synchronized (this.f36040a) {
+            this.f36041b = zzdqVar;
+            VideoLifecycleCallbacks videoLifecycleCallbacks = this.f36042c;
             if (videoLifecycleCallbacks != null) {
                 setVideoLifecycleCallbacks(videoLifecycleCallbacks);
             }

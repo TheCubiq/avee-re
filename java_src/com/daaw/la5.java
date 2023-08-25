@@ -8,18 +8,20 @@ import com.google.android.gms.ads.internal.util.zzas;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public final class la5 extends FrameLayout {
-    public final zzas p;
+
+    /* renamed from: p */
+    public final zzas f17178p;
 
     public la5(Context context, View view, zzas zzasVar) {
         super(context);
         setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
         addView(view);
-        this.p = zzasVar;
+        this.f17178p = zzasVar;
     }
 
     @Override // android.view.ViewGroup
     public final boolean onInterceptTouchEvent(MotionEvent motionEvent) {
-        this.p.zzm(motionEvent);
+        this.f17178p.zzm(motionEvent);
         return false;
     }
 

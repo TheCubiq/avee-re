@@ -11,19 +11,25 @@ import com.google.android.gms.ads.MediaContent;
 import com.google.android.gms.ads.VideoController;
 /* loaded from: classes.dex */
 public final class zzep implements MediaContent {
-    public final sc3 a;
-    public final VideoController b = new VideoController();
-    public final sd3 c;
+
+    /* renamed from: a */
+    public final sc3 f36179a;
+
+    /* renamed from: b */
+    public final VideoController f36180b = new VideoController();
+
+    /* renamed from: c */
+    public final sd3 f36181c;
 
     public zzep(sc3 sc3Var, sd3 sd3Var) {
-        this.a = sc3Var;
-        this.c = sd3Var;
+        this.f36179a = sc3Var;
+        this.f36181c = sd3Var;
     }
 
     @Override // com.google.android.gms.ads.MediaContent
     public final float getAspectRatio() {
         try {
-            return this.a.zze();
+            return this.f36179a.zze();
         } catch (RemoteException e) {
             k04.zzh("", e);
             return 0.0f;
@@ -33,7 +39,7 @@ public final class zzep implements MediaContent {
     @Override // com.google.android.gms.ads.MediaContent
     public final float getCurrentTime() {
         try {
-            return this.a.zzf();
+            return this.f36179a.zzf();
         } catch (RemoteException e) {
             k04.zzh("", e);
             return 0.0f;
@@ -43,7 +49,7 @@ public final class zzep implements MediaContent {
     @Override // com.google.android.gms.ads.MediaContent
     public final float getDuration() {
         try {
-            return this.a.zzg();
+            return this.f36179a.zzg();
         } catch (RemoteException e) {
             k04.zzh("", e);
             return 0.0f;
@@ -53,9 +59,9 @@ public final class zzep implements MediaContent {
     @Override // com.google.android.gms.ads.MediaContent
     public final Drawable getMainImage() {
         try {
-            yd0 zzi = this.a.zzi();
+            yd0 zzi = this.f36179a.zzi();
             if (zzi != null) {
-                return (Drawable) nt0.M(zzi);
+                return (Drawable) nt0.m14831M(zzi);
             }
             return null;
         } catch (RemoteException e) {
@@ -67,19 +73,19 @@ public final class zzep implements MediaContent {
     @Override // com.google.android.gms.ads.MediaContent
     public final VideoController getVideoController() {
         try {
-            if (this.a.zzh() != null) {
-                this.b.zzb(this.a.zzh());
+            if (this.f36179a.zzh() != null) {
+                this.f36180b.zzb(this.f36179a.zzh());
             }
         } catch (RemoteException e) {
             k04.zzh("Exception occurred while getting video controller", e);
         }
-        return this.b;
+        return this.f36180b;
     }
 
     @Override // com.google.android.gms.ads.MediaContent
     public final boolean hasVideoContent() {
         try {
-            return this.a.zzk();
+            return this.f36179a.zzk();
         } catch (RemoteException e) {
             k04.zzh("", e);
             return false;
@@ -89,7 +95,7 @@ public final class zzep implements MediaContent {
     @Override // com.google.android.gms.ads.MediaContent
     public final void setMainImage(Drawable drawable) {
         try {
-            this.a.zzj(nt0.g3(drawable));
+            this.f36179a.zzj(nt0.m14830g3(drawable));
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -97,10 +103,10 @@ public final class zzep implements MediaContent {
 
     @Override // com.google.android.gms.ads.MediaContent
     public final sd3 zza() {
-        return this.c;
+        return this.f36181c;
     }
 
     public final sc3 zzb() {
-        return this.a;
+        return this.f36179a;
     }
 }

@@ -15,47 +15,67 @@ import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
-import com.daaw.zk;
+import com.daaw.C3866zk;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import org.xmlpull.v1.XmlPullParserException;
 /* loaded from: classes.dex */
 public class FileProvider extends ContentProvider {
-    public static final String[] r = {"_display_name", "_size"};
-    public static final File s = new File("/");
-    public static final HashMap<String, b> t = new HashMap<>();
-    public b p;
-    public int q = 0;
 
+    /* renamed from: r */
+    public static final String[] f1161r = {"_display_name", "_size"};
+
+    /* renamed from: s */
+    public static final File f1162s = new File("/");
+
+    /* renamed from: t */
+    public static final HashMap<String, InterfaceC0202b> f1163t = new HashMap<>();
+
+    /* renamed from: p */
+    public InterfaceC0202b f1164p;
+
+    /* renamed from: q */
+    public int f1165q = 0;
+
+    /* renamed from: androidx.core.content.FileProvider$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static File[] a(Context context) {
+    public static class C0201a {
+        /* renamed from: a */
+        public static File[] m29735a(Context context) {
             return context.getExternalMediaDirs();
         }
     }
 
+    /* renamed from: androidx.core.content.FileProvider$b */
     /* loaded from: classes.dex */
-    public interface b {
-        File a(Uri uri);
+    public interface InterfaceC0202b {
+        /* renamed from: a */
+        File mo29734a(Uri uri);
     }
 
+    /* renamed from: androidx.core.content.FileProvider$c */
     /* loaded from: classes.dex */
-    public static class c implements b {
-        public final String a;
-        public final HashMap<String, File> b = new HashMap<>();
+    public static class C0203c implements InterfaceC0202b {
 
-        public c(String str) {
-            this.a = str;
+        /* renamed from: a */
+        public final String f1166a;
+
+        /* renamed from: b */
+        public final HashMap<String, File> f1167b = new HashMap<>();
+
+        public C0203c(String str) {
+            this.f1166a = str;
         }
 
-        @Override // androidx.core.content.FileProvider.b
-        public File a(Uri uri) {
+        @Override // androidx.core.content.FileProvider.InterfaceC0202b
+        /* renamed from: a */
+        public File mo29734a(Uri uri) {
             String encodedPath = uri.getEncodedPath();
             int indexOf = encodedPath.indexOf(47, 1);
             String decode = Uri.decode(encodedPath.substring(1, indexOf));
             String decode2 = Uri.decode(encodedPath.substring(indexOf + 1));
-            File file = this.b.get(decode);
+            File file = this.f1167b.get(decode);
             if (file == null) {
                 throw new IllegalArgumentException("Unable to find configured root for " + uri);
             }
@@ -71,19 +91,21 @@ public class FileProvider extends ContentProvider {
             }
         }
 
-        public void b(String str, File file) {
+        /* renamed from: b */
+        public void m29733b(String str, File file) {
             if (TextUtils.isEmpty(str)) {
                 throw new IllegalArgumentException("Name must not be empty");
             }
             try {
-                this.b.put(str, file.getCanonicalFile());
+                this.f1167b.put(str, file.getCanonicalFile());
             } catch (IOException e) {
                 throw new IllegalArgumentException("Failed to resolve canonical path for " + file, e);
             }
         }
     }
 
-    public static File a(File file, String... strArr) {
+    /* renamed from: a */
+    public static File m29742a(File file, String... strArr) {
         for (String str : strArr) {
             if (str != null) {
                 file = new File(file, str);
@@ -92,19 +114,22 @@ public class FileProvider extends ContentProvider {
         return file;
     }
 
-    public static Object[] b(Object[] objArr, int i) {
+    /* renamed from: b */
+    public static Object[] m29741b(Object[] objArr, int i) {
         Object[] objArr2 = new Object[i];
         System.arraycopy(objArr, 0, objArr2, 0, i);
         return objArr2;
     }
 
-    public static String[] c(String[] strArr, int i) {
+    /* renamed from: c */
+    public static String[] m29740c(String[] strArr, int i) {
         String[] strArr2 = new String[i];
         System.arraycopy(strArr, 0, strArr2, 0, i);
         return strArr2;
     }
 
-    public static XmlResourceParser d(Context context, String str, ProviderInfo providerInfo, int i) {
+    /* renamed from: d */
+    public static XmlResourceParser m29739d(Context context, String str, ProviderInfo providerInfo, int i) {
         if (providerInfo == null) {
             throw new IllegalArgumentException("Couldn't find meta-data for provider with authority " + str);
         }
@@ -120,16 +145,17 @@ public class FileProvider extends ContentProvider {
         throw new IllegalArgumentException("Missing android.support.FILE_PROVIDER_PATHS meta-data");
     }
 
-    public static b e(Context context, String str, int i) {
-        b bVar;
-        HashMap<String, b> hashMap = t;
+    /* renamed from: e */
+    public static InterfaceC0202b m29738e(Context context, String str, int i) {
+        InterfaceC0202b interfaceC0202b;
+        HashMap<String, InterfaceC0202b> hashMap = f1163t;
         synchronized (hashMap) {
-            bVar = hashMap.get(str);
-            if (bVar == null) {
+            interfaceC0202b = hashMap.get(str);
+            if (interfaceC0202b == null) {
                 try {
                     try {
-                        bVar = g(context, str, i);
-                        hashMap.put(str, bVar);
+                        interfaceC0202b = m29736g(context, str, i);
+                        hashMap.put(str, interfaceC0202b);
                     } catch (XmlPullParserException e) {
                         throw new IllegalArgumentException("Failed to parse android.support.FILE_PROVIDER_PATHS meta-data", e);
                     }
@@ -138,10 +164,11 @@ public class FileProvider extends ContentProvider {
                 }
             }
         }
-        return bVar;
+        return interfaceC0202b;
     }
 
-    public static int f(String str) {
+    /* renamed from: f */
+    public static int m29737f(String str) {
         if ("r".equals(str)) {
             return 268435456;
         }
@@ -160,21 +187,22 @@ public class FileProvider extends ContentProvider {
         throw new IllegalArgumentException("Invalid mode: " + str);
     }
 
-    public static b g(Context context, String str, int i) {
-        c cVar = new c(str);
-        XmlResourceParser d = d(context, str, context.getPackageManager().resolveContentProvider(str, 128), i);
+    /* renamed from: g */
+    public static InterfaceC0202b m29736g(Context context, String str, int i) {
+        C0203c c0203c = new C0203c(str);
+        XmlResourceParser m29739d = m29739d(context, str, context.getPackageManager().resolveContentProvider(str, 128), i);
         while (true) {
-            int next = d.next();
+            int next = m29739d.next();
             if (next == 1) {
-                return cVar;
+                return c0203c;
             }
             if (next == 2) {
-                String name = d.getName();
+                String name = m29739d.getName();
                 File file = null;
-                String attributeValue = d.getAttributeValue(null, "name");
-                String attributeValue2 = d.getAttributeValue(null, "path");
+                String attributeValue = m29739d.getAttributeValue(null, "name");
+                String attributeValue2 = m29739d.getAttributeValue(null, "path");
                 if ("root-path".equals(name)) {
-                    file = s;
+                    file = f1162s;
                 } else if ("files-path".equals(name)) {
                     file = context.getFilesDir();
                 } else if ("cache-path".equals(name)) {
@@ -182,23 +210,23 @@ public class FileProvider extends ContentProvider {
                 } else if ("external-path".equals(name)) {
                     file = Environment.getExternalStorageDirectory();
                 } else if ("external-files-path".equals(name)) {
-                    File[] g = zk.g(context, null);
-                    if (g.length > 0) {
-                        file = g[0];
+                    File[] m2176g = C3866zk.m2176g(context, null);
+                    if (m2176g.length > 0) {
+                        file = m2176g[0];
                     }
                 } else if ("external-cache-path".equals(name)) {
-                    File[] f = zk.f(context);
-                    if (f.length > 0) {
-                        file = f[0];
+                    File[] m2177f = C3866zk.m2177f(context);
+                    if (m2177f.length > 0) {
+                        file = m2177f[0];
                     }
                 } else if (Build.VERSION.SDK_INT >= 21 && "external-media-path".equals(name)) {
-                    File[] a2 = a.a(context);
-                    if (a2.length > 0) {
-                        file = a2[0];
+                    File[] m29735a = C0201a.m29735a(context);
+                    if (m29735a.length > 0) {
+                        file = m29735a[0];
                     }
                 }
                 if (file != null) {
-                    cVar.b(attributeValue, a(file, attributeValue2));
+                    c0203c.m29733b(attributeValue, m29742a(file, attributeValue2));
                 }
             }
         }
@@ -214,24 +242,24 @@ public class FileProvider extends ContentProvider {
             throw new SecurityException("Provider must grant uri permissions");
         }
         String str = providerInfo.authority.split(";")[0];
-        HashMap<String, b> hashMap = t;
+        HashMap<String, InterfaceC0202b> hashMap = f1163t;
         synchronized (hashMap) {
             hashMap.remove(str);
         }
-        this.p = e(context, str, this.q);
+        this.f1164p = m29738e(context, str, this.f1165q);
     }
 
     @Override // android.content.ContentProvider
     public int delete(Uri uri, String str, String[] strArr) {
-        return this.p.a(uri).delete() ? 1 : 0;
+        return this.f1164p.mo29734a(uri).delete() ? 1 : 0;
     }
 
     @Override // android.content.ContentProvider
     public String getType(Uri uri) {
-        File a2 = this.p.a(uri);
-        int lastIndexOf = a2.getName().lastIndexOf(46);
+        File mo29734a = this.f1164p.mo29734a(uri);
+        int lastIndexOf = mo29734a.getName().lastIndexOf(46);
         if (lastIndexOf >= 0) {
-            String mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(a2.getName().substring(lastIndexOf + 1));
+            String mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(mo29734a.getName().substring(lastIndexOf + 1));
             return mimeTypeFromExtension != null ? mimeTypeFromExtension : "application/octet-stream";
         }
         return "application/octet-stream";
@@ -250,16 +278,16 @@ public class FileProvider extends ContentProvider {
     @Override // android.content.ContentProvider
     @SuppressLint({"UnknownNullness"})
     public ParcelFileDescriptor openFile(Uri uri, String str) {
-        return ParcelFileDescriptor.open(this.p.a(uri), f(str));
+        return ParcelFileDescriptor.open(this.f1164p.mo29734a(uri), m29737f(str));
     }
 
     @Override // android.content.ContentProvider
     public Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         int i;
-        File a2 = this.p.a(uri);
+        File mo29734a = this.f1164p.mo29734a(uri);
         String queryParameter = uri.getQueryParameter("displayName");
         if (strArr == null) {
-            strArr = r;
+            strArr = f1161r;
         }
         String[] strArr3 = new String[strArr.length];
         Object[] objArr = new Object[strArr.length];
@@ -268,18 +296,18 @@ public class FileProvider extends ContentProvider {
             if ("_display_name".equals(str3)) {
                 strArr3[i2] = "_display_name";
                 i = i2 + 1;
-                objArr[i2] = queryParameter == null ? a2.getName() : queryParameter;
+                objArr[i2] = queryParameter == null ? mo29734a.getName() : queryParameter;
             } else if ("_size".equals(str3)) {
                 strArr3[i2] = "_size";
                 i = i2 + 1;
-                objArr[i2] = Long.valueOf(a2.length());
+                objArr[i2] = Long.valueOf(mo29734a.length());
             }
             i2 = i;
         }
-        String[] c2 = c(strArr3, i2);
-        Object[] b2 = b(objArr, i2);
-        MatrixCursor matrixCursor = new MatrixCursor(c2, 1);
-        matrixCursor.addRow(b2);
+        String[] m29740c = m29740c(strArr3, i2);
+        Object[] m29741b = m29741b(objArr, i2);
+        MatrixCursor matrixCursor = new MatrixCursor(m29740c, 1);
+        matrixCursor.addRow(m29741b);
         return matrixCursor;
     }
 

@@ -11,21 +11,24 @@ import java.util.Iterator;
 import java.util.List;
 /* loaded from: classes.dex */
 public class w51 {
-    public List<Object> a = new ArrayList(1);
 
+    /* renamed from: a */
+    public List<Object> f30893a = new ArrayList(1);
+
+    /* renamed from: com.daaw.w51$a */
     /* loaded from: classes.dex */
-    public class a implements rw1.a<al, Collection<tx0>> {
-        public a() {
+    public class C3399a implements rw1.InterfaceC2894a<C0645al, Collection<tx0>> {
+        public C3399a() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(al alVar, Collection<tx0> collection) {
+        public void mo2813c(C0645al c0645al, Collection<tx0> collection) {
             tx0 next;
             Resources resources;
             int i;
-            if (!i5.b(alVar.b(), alVar.a())) {
-                resources = alVar.b().getResources();
+            if (!C1658i5.m20122b(c0645al.m27377b(), c0645al.m27378a())) {
+                resources = c0645al.m27377b().getResources();
                 i = R.string.ringtone_failed_set_no_permission;
             } else if (collection.size() <= 0) {
                 return;
@@ -34,22 +37,22 @@ public class w51 {
                 if (!it.hasNext() || (next = it.next()) == null) {
                     return;
                 }
-                tx0.c k = next.k(alVar.b());
-                int length = k.a.b.length();
-                Context b = alVar.b();
+                tx0.C3144c m8741k = next.m8741k(c0645al.m27377b());
+                int length = m8741k.f28220a.f28204b.length();
+                Context m27377b = c0645al.m27377b();
                 if (length > 0) {
-                    x51.a(b, k.a.b, k.g, k.e, k.c);
+                    x51.m5525a(m27377b, m8741k.f28220a.f28204b, m8741k.f28226g, m8741k.f28224e, m8741k.f28222c);
                     return;
                 } else {
-                    resources = b.getResources();
+                    resources = m27377b.getResources();
                     i = R.string.ringtone_failed_set_not_useable;
                 }
             }
-            vy.a.a(resources.getString(i));
+            C3385vy.f30703a.m12018a(resources.getString(i));
         }
     }
 
     public w51() {
-        dj0.B.b(new a(), this.a);
+        dj0.f7138B.m10861b(new C3399a(), this.f30893a);
     }
 }

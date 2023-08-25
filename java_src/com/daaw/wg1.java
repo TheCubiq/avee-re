@@ -6,15 +6,18 @@ import java.net.URL;
 /* loaded from: classes.dex */
 public class wg1 extends jq1<InputStream> {
 
+    /* renamed from: com.daaw.wg1$a */
     /* loaded from: classes.dex */
-    public static class a implements nq0<URL, InputStream> {
+    public static class C3438a implements nq0<URL, InputStream> {
         @Override // com.daaw.nq0
-        public mq0<URL, InputStream> a(Context context, d60 d60Var) {
-            return new wg1(d60Var.a(o70.class, InputStream.class));
+        /* renamed from: a */
+        public mq0<URL, InputStream> mo3945a(Context context, d60 d60Var) {
+            return new wg1(d60Var.m24637a(o70.class, InputStream.class));
         }
 
         @Override // com.daaw.nq0
-        public void b() {
+        /* renamed from: b */
+        public void mo3944b() {
         }
     }
 

@@ -5,29 +5,36 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public final class d67 extends e67 {
-    public final Callable t;
-    public final /* synthetic */ f67 u;
+
+    /* renamed from: t */
+    public final Callable f6563t;
+
+    /* renamed from: u */
+    public final /* synthetic */ f67 f6564u;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public d67(f67 f67Var, Callable callable, Executor executor) {
         super(f67Var, executor);
-        this.u = f67Var;
+        this.f6564u = f67Var;
         Objects.requireNonNull(callable);
-        this.t = callable;
+        this.f6563t = callable;
     }
 
     @Override // com.daaw.e77
-    public final Object a() {
-        return this.t.call();
+    /* renamed from: a */
+    public final Object mo8452a() {
+        return this.f6563t.call();
     }
 
     @Override // com.daaw.e77
-    public final String b() {
-        return this.t.toString();
+    /* renamed from: b */
+    public final String mo8451b() {
+        return this.f6563t.toString();
     }
 
     @Override // com.daaw.e67
-    public final void h(Object obj) {
-        this.u.h(obj);
+    /* renamed from: h */
+    public final void mo23698h(Object obj) {
+        this.f6564u.mo14486h(obj);
     }
 }

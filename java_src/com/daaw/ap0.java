@@ -3,11 +3,13 @@ package com.daaw;
 import android.media.session.MediaSession;
 /* loaded from: classes.dex */
 public class ap0 {
-    public static Object a(Object obj) {
+    /* renamed from: a */
+    public static Object m27276a(Object obj) {
         return ((MediaSession.QueueItem) obj).getDescription();
     }
 
-    public static long b(Object obj) {
+    /* renamed from: b */
+    public static long m27275b(Object obj) {
         return ((MediaSession.QueueItem) obj).getQueueId();
     }
 }

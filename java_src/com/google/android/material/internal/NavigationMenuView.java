@@ -2,12 +2,12 @@ package com.google.android.material.internal;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import androidx.appcompat.view.menu.e;
-import androidx.appcompat.view.menu.j;
+import androidx.appcompat.view.menu.C0082e;
+import androidx.appcompat.view.menu.InterfaceC0093j;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 /* loaded from: classes2.dex */
-public class NavigationMenuView extends RecyclerView implements j {
+public class NavigationMenuView extends RecyclerView implements InterfaceC0093j {
     public NavigationMenuView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
@@ -17,8 +17,9 @@ public class NavigationMenuView extends RecyclerView implements j {
         setLayoutManager(new LinearLayoutManager(context, 1, false));
     }
 
-    @Override // androidx.appcompat.view.menu.j
-    public void b(e eVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j
+    /* renamed from: b */
+    public void mo347b(C0082e c0082e) {
     }
 
     public int getWindowAnimations() {

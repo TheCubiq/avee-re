@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ha3 {
-    public static /* synthetic */ String a(int i) {
+    /* renamed from: a */
+    public static /* synthetic */ String m20887a(int i) {
         switch (i) {
             case 2:
                 return "CONTEXT_NOT_AN_ACTIVITY";

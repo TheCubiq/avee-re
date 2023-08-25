@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class gv4 implements wz7 {
-    public static gv4 a() {
+    /* renamed from: a */
+    public static gv4 m21200a() {
         gv4 gv4Var;
-        gv4Var = fv4.a;
+        gv4Var = fv4.f9993a;
         return gv4Var;
     }
 

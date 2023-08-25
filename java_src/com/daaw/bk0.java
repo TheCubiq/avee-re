@@ -7,97 +7,117 @@ import com.daaw.ts1;
 import java.lang.ref.WeakReference;
 import java.util.List;
 /* loaded from: classes.dex */
-public abstract class bk0<T, V extends List<T>> extends yj implements ts1.a {
-    public WeakReference<oc0> C;
-    public V D;
-    public w40<V> E;
-    public r40<yj, V> F;
+public abstract class bk0<T, V extends List<T>> extends AbstractC3711yj implements ts1.InterfaceC3115a {
 
-    public bk0(Context context, r40<yj, V> r40Var, w40<V> w40Var, String str, me0<String> me0Var, int i, int i2) {
+    /* renamed from: C */
+    public WeakReference<oc0> f4870C;
+
+    /* renamed from: D */
+    public V f4871D;
+
+    /* renamed from: E */
+    public w40<V> f4872E;
+
+    /* renamed from: F */
+    public r40<AbstractC3711yj, V> f4873F;
+
+    public bk0(Context context, r40<AbstractC3711yj, V> r40Var, w40<V> w40Var, String str, me0<String> me0Var, int i, int i2) {
         super(context, str, me0Var, i, i2);
-        this.C = new WeakReference<>(null);
-        this.F = r40Var;
-        this.E = w40Var;
-        this.D = r40Var.a(this);
+        this.f4870C = new WeakReference<>(null);
+        this.f4873F = r40Var;
+        this.f4872E = w40Var;
+        this.f4871D = r40Var.mo5050a(this);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // com.daaw.yj
-    public boolean A() {
-        if (B((String) Q(true).b, false)) {
+    @Override // com.daaw.AbstractC3711yj
+    /* renamed from: A */
+    public boolean mo2264A() {
+        if (m3684B((String) mo15605Q(true).f17577b, false)) {
             return true;
         }
-        lo1 Q = Q(false);
-        List list = (List) Q.a;
+        lo1 mo15605Q = mo15605Q(false);
+        List list = (List) mo15605Q.f17576a;
         if (list == null) {
-            T(this.E.a(), null);
+            m26094T(this.f4872E.mo3478a(), null);
         } else {
-            T(list, (String) Q.b);
+            m26094T(list, (String) mo15605Q.f17577b);
         }
         return true;
     }
 
-    public oc0 P() {
-        return this.C.get();
+    /* renamed from: P */
+    public oc0 m26097P() {
+        return this.f4870C.get();
     }
 
-    public lo1<V, String> Q(boolean z) {
+    /* renamed from: Q */
+    public lo1<V, String> mo15605Q(boolean z) {
         V v;
-        V a;
-        if (z || (a = this.F.a(this)) == null) {
+        V mo5050a;
+        if (z || (mo5050a = this.f4873F.mo5050a(this)) == null) {
             v = null;
         } else {
-            v = this.E.a();
-            v.addAll(a);
+            v = this.f4872E.mo3478a();
+            v.addAll(mo5050a);
         }
         return new lo1<>(v, "");
     }
 
-    public Object R(int i) {
-        return this.D.get(i);
+    /* renamed from: R */
+    public Object m26096R(int i) {
+        return this.f4871D.get(i);
     }
 
-    public V S() {
-        return this.D;
+    /* renamed from: S */
+    public V m26095S() {
+        return this.f4871D;
     }
 
-    public void T(V v, String str) {
-        if (B(str, true)) {
+    /* renamed from: T */
+    public void m26094T(V v, String str) {
+        if (m3684B(str, true)) {
             return;
         }
-        q6.f(v);
-        this.D = v;
-        oc0 P = P();
-        if (P != null) {
-            P.a();
+        C2691q6.m12752f(v);
+        this.f4871D = v;
+        oc0 m26097P = m26097P();
+        if (m26097P != null) {
+            m26097P.mo8846a();
         }
     }
 
-    @Override // com.daaw.yj, com.daaw.wc0, com.daaw.ts1.a
-    public int a() {
-        return this.D.size();
+    @Override // com.daaw.AbstractC3711yj, com.daaw.wc0, com.daaw.ts1.InterfaceC3115a
+    /* renamed from: a */
+    public int mo2250a() {
+        return this.f4871D.size();
     }
 
-    @Override // com.daaw.ts1.a
-    public void f(oc0 oc0Var) {
-        this.C = new WeakReference<>(oc0Var);
+    @Override // com.daaw.ts1.InterfaceC3115a
+    /* renamed from: f */
+    public void mo2243f(oc0 oc0Var) {
+        this.f4870C = new WeakReference<>(oc0Var);
     }
 
-    @Override // com.daaw.ts1.a
-    public void j(int i, int i2, List<Integer> list) {
+    @Override // com.daaw.ts1.InterfaceC3115a
+    /* renamed from: j */
+    public void mo2237j(int i, int i2, List<Integer> list) {
     }
 
-    @Override // com.daaw.ts1.a
-    public void k() {
+    @Override // com.daaw.ts1.InterfaceC3115a
+    /* renamed from: k */
+    public void mo2235k() {
     }
 
-    @Override // com.daaw.ts1.a
-    public RecyclerView.c0 r(ViewGroup viewGroup, int i) {
-        return gt1.a(viewGroup.getContext(), viewGroup, i, this);
+    @Override // com.daaw.ts1.InterfaceC3115a
+    /* renamed from: r */
+    public RecyclerView.AbstractC0376c0 mo2233r(ViewGroup viewGroup, int i) {
+        return gt1.m21239a(viewGroup.getContext(), viewGroup, i, this);
     }
 
-    @Override // com.daaw.ts1.a
-    public int t(int i) {
+    @Override // com.daaw.ts1.InterfaceC3115a
+    /* renamed from: t */
+    public int mo2232t(int i) {
         return i;
     }
 }

@@ -3,20 +3,27 @@ package com.daaw;
 import android.view.ViewGroup;
 /* loaded from: classes.dex */
 public class p81 {
-    public ViewGroup a;
-    public Runnable b;
 
-    public static p81 b(ViewGroup viewGroup) {
+    /* renamed from: a */
+    public ViewGroup f22692a;
+
+    /* renamed from: b */
+    public Runnable f22693b;
+
+    /* renamed from: b */
+    public static p81 m13594b(ViewGroup viewGroup) {
         return (p81) viewGroup.getTag(v11.transition_current_scene);
     }
 
-    public static void c(ViewGroup viewGroup, p81 p81Var) {
+    /* renamed from: c */
+    public static void m13593c(ViewGroup viewGroup, p81 p81Var) {
         viewGroup.setTag(v11.transition_current_scene, p81Var);
     }
 
-    public void a() {
+    /* renamed from: a */
+    public void m13595a() {
         Runnable runnable;
-        if (b(this.a) != this || (runnable = this.b) == null) {
+        if (m13594b(this.f22692a) != this || (runnable = this.f22693b) == null) {
             return;
         }
         runnable.run();

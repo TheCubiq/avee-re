@@ -14,31 +14,35 @@ import android.os.Build;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public class cz1 extends bz1 {
-    public static Method w;
+
+    /* renamed from: w */
+    public static Method f6309w;
 
     public cz1(Drawable drawable) {
         super(drawable);
-        g();
+        m24861g();
     }
 
     public cz1(dz1 dz1Var, Resources resources) {
         super(dz1Var, resources);
-        g();
+        m24861g();
     }
 
     @Override // com.daaw.bz1
-    public boolean c() {
+    /* renamed from: c */
+    public boolean mo24862c() {
         if (Build.VERSION.SDK_INT == 21) {
-            Drawable drawable = this.u;
+            Drawable drawable = this.f5293u;
             return (drawable instanceof GradientDrawable) || (drawable instanceof DrawableContainer) || (drawable instanceof InsetDrawable) || (drawable instanceof RippleDrawable);
         }
         return false;
     }
 
-    public final void g() {
-        if (w == null) {
+    /* renamed from: g */
+    public final void m24861g() {
+        if (f6309w == null) {
             try {
-                w = Drawable.class.getDeclaredMethod("isProjected", new Class[0]);
+                f6309w = Drawable.class.getDeclaredMethod("isProjected", new Class[0]);
             } catch (Exception unused) {
             }
         }
@@ -46,19 +50,19 @@ public class cz1 extends bz1 {
 
     @Override // android.graphics.drawable.Drawable
     public Rect getDirtyBounds() {
-        return this.u.getDirtyBounds();
+        return this.f5293u.getDirtyBounds();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void getOutline(Outline outline) {
-        this.u.getOutline(outline);
+        this.f5293u.getOutline(outline);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean isProjected() {
         Method method;
-        Drawable drawable = this.u;
-        if (drawable != null && (method = w) != null) {
+        Drawable drawable = this.f5293u;
+        if (drawable != null && (method = f6309w) != null) {
             try {
                 return ((Boolean) method.invoke(drawable, new Object[0])).booleanValue();
             } catch (Exception unused) {
@@ -69,12 +73,12 @@ public class cz1 extends bz1 {
 
     @Override // android.graphics.drawable.Drawable
     public void setHotspot(float f, float f2) {
-        this.u.setHotspot(f, f2);
+        this.f5293u.setHotspot(f, f2);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setHotspotBounds(int i, int i2, int i3, int i4) {
-        this.u.setHotspotBounds(i, i2, i3, i4);
+        this.f5293u.setHotspotBounds(i, i2, i3, i4);
     }
 
     @Override // com.daaw.bz1, android.graphics.drawable.Drawable
@@ -88,28 +92,28 @@ public class cz1 extends bz1 {
 
     @Override // com.daaw.bz1, android.graphics.drawable.Drawable, com.daaw.ql1
     public void setTint(int i) {
-        if (c()) {
+        if (mo24862c()) {
             super.setTint(i);
         } else {
-            this.u.setTint(i);
+            this.f5293u.setTint(i);
         }
     }
 
     @Override // com.daaw.bz1, android.graphics.drawable.Drawable, com.daaw.ql1
     public void setTintList(ColorStateList colorStateList) {
-        if (c()) {
+        if (mo24862c()) {
             super.setTintList(colorStateList);
         } else {
-            this.u.setTintList(colorStateList);
+            this.f5293u.setTintList(colorStateList);
         }
     }
 
     @Override // com.daaw.bz1, android.graphics.drawable.Drawable, com.daaw.ql1
     public void setTintMode(PorterDuff.Mode mode) {
-        if (c()) {
+        if (mo24862c()) {
             super.setTintMode(mode);
         } else {
-            this.u.setTintMode(mode);
+            this.f5293u.setTintMode(mode);
         }
     }
 }

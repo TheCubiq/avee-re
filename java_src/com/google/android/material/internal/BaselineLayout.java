@@ -6,16 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 /* loaded from: classes2.dex */
 public class BaselineLayout extends ViewGroup {
-    public int p;
+
+    /* renamed from: p */
+    public int f37624p;
 
     public BaselineLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        this.p = -1;
+        this.f37624p = -1;
     }
 
     @Override // android.view.View
     public int getBaseline() {
-        return this.p;
+        return this.f37624p;
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -30,7 +32,7 @@ public class BaselineLayout extends ViewGroup {
                 int measuredWidth = childAt.getMeasuredWidth();
                 int measuredHeight = childAt.getMeasuredHeight();
                 int i6 = ((paddingRight - measuredWidth) / 2) + paddingLeft;
-                int baseline = (this.p == -1 || childAt.getBaseline() == -1) ? paddingTop : (this.p + paddingTop) - childAt.getBaseline();
+                int baseline = (this.f37624p == -1 || childAt.getBaseline() == -1) ? paddingTop : (this.f37624p + paddingTop) - childAt.getBaseline();
                 childAt.layout(i6, baseline, measuredWidth + i6, measuredHeight + baseline);
             }
         }
@@ -60,7 +62,7 @@ public class BaselineLayout extends ViewGroup {
         }
         if (i6 != -1) {
             i3 = Math.max(i3, Math.max(i7, getPaddingBottom()) + i6);
-            this.p = i6;
+            this.f37624p = i6;
         }
         setMeasuredDimension(View.resolveSizeAndState(Math.max(i4, getSuggestedMinimumWidth()), i, i5), View.resolveSizeAndState(Math.max(i3, getSuggestedMinimumHeight()), i2, i5 << 16));
     }

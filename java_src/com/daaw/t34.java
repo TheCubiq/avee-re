@@ -13,349 +13,414 @@ import java.nio.ByteBuffer;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class t34 extends e24 implements TextureView.SurfaceTextureListener, o24 {
-    public boolean A;
-    public int B;
-    public w24 C;
-    public final boolean D;
-    public boolean E;
-    public boolean F;
-    public int G;
-    public int H;
-    public float I;
-    public final y24 s;
-    public final z24 t;
-    public final x24 u;
-    public d24 v;
-    public Surface w;
-    public p24 x;
-    public String y;
-    public String[] z;
+
+    /* renamed from: A */
+    public boolean f26960A;
+
+    /* renamed from: B */
+    public int f26961B;
+
+    /* renamed from: C */
+    public w24 f26962C;
+
+    /* renamed from: D */
+    public final boolean f26963D;
+
+    /* renamed from: E */
+    public boolean f26964E;
+
+    /* renamed from: F */
+    public boolean f26965F;
+
+    /* renamed from: G */
+    public int f26966G;
+
+    /* renamed from: H */
+    public int f26967H;
+
+    /* renamed from: I */
+    public float f26968I;
+
+    /* renamed from: s */
+    public final y24 f26969s;
+
+    /* renamed from: t */
+    public final z24 f26970t;
+
+    /* renamed from: u */
+    public final x24 f26971u;
+
+    /* renamed from: v */
+    public d24 f26972v;
+
+    /* renamed from: w */
+    public Surface f26973w;
+
+    /* renamed from: x */
+    public p24 f26974x;
+
+    /* renamed from: y */
+    public String f26975y;
+
+    /* renamed from: z */
+    public String[] f26976z;
 
     public t34(Context context, z24 z24Var, y24 y24Var, boolean z, boolean z2, x24 x24Var, Integer num) {
         super(context, num);
-        this.B = 1;
-        this.s = y24Var;
-        this.t = z24Var;
-        this.D = z;
-        this.u = x24Var;
+        this.f26961B = 1;
+        this.f26969s = y24Var;
+        this.f26970t = z24Var;
+        this.f26963D = z;
+        this.f26971u = x24Var;
         setSurfaceTextureListener(this);
-        z24Var.a(this);
+        z24Var.m2964a(this);
     }
 
-    public static String Q(String str, Exception exc) {
+    /* renamed from: Q */
+    public static String m9584Q(String str, Exception exc) {
         String canonicalName = exc.getClass().getCanonicalName();
         String message = exc.getMessage();
         return str + "/" + canonicalName + ":" + message;
     }
 
     @Override // com.daaw.e24
-    public final void A(int i) {
-        p24 p24Var = this.x;
+    /* renamed from: A */
+    public final void mo9600A(int i) {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.O(i);
+            p24Var.mo13741O(i);
         }
     }
 
-    public final p24 B() {
-        return this.u.m ? new n64(this.s.getContext(), this.u, this.s) : new l44(this.s.getContext(), this.u, this.s);
+    /* renamed from: B */
+    public final p24 m9599B() {
+        return this.f26971u.f32034m ? new n64(this.f26969s.getContext(), this.f26971u, this.f26969s) : new l44(this.f26969s.getContext(), this.f26971u, this.f26969s);
     }
 
-    public final String C() {
-        return zzt.zzp().zzc(this.s.getContext(), this.s.zzp().p);
+    /* renamed from: C */
+    public final String m9598C() {
+        return zzt.zzp().zzc(this.f26969s.getContext(), this.f26969s.zzp().f36993p);
     }
 
-    public final /* synthetic */ void D(String str) {
-        d24 d24Var = this.v;
+    /* renamed from: D */
+    public final /* synthetic */ void m9597D(String str) {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
-            d24Var.c("ExoPlayerAdapter error", str);
+            d24Var.mo16288c("ExoPlayerAdapter error", str);
         }
     }
 
-    public final /* synthetic */ void E() {
-        d24 d24Var = this.v;
+    /* renamed from: E */
+    public final /* synthetic */ void m9596E() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zza();
         }
     }
 
-    public final /* synthetic */ void F() {
-        d24 d24Var = this.v;
+    /* renamed from: F */
+    public final /* synthetic */ void m9595F() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zzf();
         }
     }
 
-    public final /* synthetic */ void G(boolean z, long j) {
-        this.s.m0(z, j);
+    /* renamed from: G */
+    public final /* synthetic */ void m9594G(boolean z, long j) {
+        this.f26969s.mo4237m0(z, j);
     }
 
-    public final /* synthetic */ void H(String str) {
-        d24 d24Var = this.v;
+    /* renamed from: H */
+    public final /* synthetic */ void m9593H(String str) {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zzc("ExoPlayerAdapter exception", str);
         }
     }
 
-    public final /* synthetic */ void I() {
-        d24 d24Var = this.v;
+    /* renamed from: I */
+    public final /* synthetic */ void m9592I() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zzg();
         }
     }
 
-    public final /* synthetic */ void J() {
-        d24 d24Var = this.v;
+    /* renamed from: J */
+    public final /* synthetic */ void m9591J() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zzh();
         }
     }
 
-    public final /* synthetic */ void K() {
-        d24 d24Var = this.v;
+    /* renamed from: K */
+    public final /* synthetic */ void m9590K() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zzi();
         }
     }
 
-    public final /* synthetic */ void L(int i, int i2) {
-        d24 d24Var = this.v;
+    /* renamed from: L */
+    public final /* synthetic */ void m9589L(int i, int i2) {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
-            d24Var.a(i, i2);
+            d24Var.mo16290a(i, i2);
         }
     }
 
-    public final /* synthetic */ void M() {
-        W(this.q.a(), false);
+    /* renamed from: M */
+    public final /* synthetic */ void m9588M() {
+        m9578W(this.f8053q.m22942a(), false);
     }
 
-    public final /* synthetic */ void N(int i) {
-        d24 d24Var = this.v;
+    /* renamed from: N */
+    public final /* synthetic */ void m9587N(int i) {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.onWindowVisibilityChanged(i);
         }
     }
 
-    public final /* synthetic */ void O() {
-        d24 d24Var = this.v;
+    /* renamed from: O */
+    public final /* synthetic */ void m9586O() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zzd();
         }
     }
 
-    public final /* synthetic */ void P() {
-        d24 d24Var = this.v;
+    /* renamed from: P */
+    public final /* synthetic */ void m9585P() {
+        d24 d24Var = this.f26972v;
         if (d24Var != null) {
             d24Var.zze();
         }
     }
 
-    public final void R() {
-        p24 p24Var = this.x;
+    /* renamed from: R */
+    public final void m9583R() {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.Q(true);
+            p24Var.mo13739Q(true);
         }
     }
 
-    public final void S() {
-        if (this.E) {
+    /* renamed from: S */
+    public final void m9582S() {
+        if (this.f26964E) {
             return;
         }
-        this.E = true;
+        this.f26964E = true;
         zzs.zza.post(new Runnable() { // from class: com.daaw.n34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.F();
+                t34.this.m9595F();
             }
         });
         zzn();
-        this.t.b();
-        if (this.F) {
-            r();
+        this.f26970t.m2963b();
+        if (this.f26965F) {
+            mo9555r();
         }
     }
 
-    public final void T(boolean z) {
+    /* renamed from: T */
+    public final void m9581T(boolean z) {
         String concat;
-        p24 p24Var = this.x;
-        if ((p24Var != null && !z) || this.y == null || this.w == null) {
+        p24 p24Var = this.f26974x;
+        if ((p24Var != null && !z) || this.f26975y == null || this.f26973w == null) {
             return;
         }
         if (z) {
-            if (!b0()) {
+            if (!m9571b0()) {
                 concat = "No valid ExoPlayerAdapter exists when switch source.";
                 k04.zzj(concat);
                 return;
             }
-            p24Var.U();
-            V();
+            p24Var.mo13735U();
+            m9579V();
         }
-        if (this.y.startsWith("cache:")) {
-            j54 H = this.s.H(this.y);
-            if (!(H instanceof s54)) {
-                if (H instanceof p54) {
-                    p54 p54Var = (p54) H;
-                    String C = C();
-                    ByteBuffer x = p54Var.x();
-                    boolean y = p54Var.y();
-                    String v = p54Var.v();
-                    if (v == null) {
+        if (this.f26975y.startsWith("cache:")) {
+            j54 mo4244H = this.f26969s.mo4244H(this.f26975y);
+            if (!(mo4244H instanceof s54)) {
+                if (mo4244H instanceof p54) {
+                    p54 p54Var = (p54) mo4244H;
+                    String m9598C = m9598C();
+                    ByteBuffer m13624x = p54Var.m13624x();
+                    boolean m13623y = p54Var.m13623y();
+                    String m13625v = p54Var.m13625v();
+                    if (m13625v == null) {
                         concat = "Stream cache URL is null.";
                     } else {
-                        p24 B = B();
-                        this.x = B;
-                        B.H(new Uri[]{Uri.parse(v)}, C, x, y);
+                        p24 m9599B = m9599B();
+                        this.f26974x = m9599B;
+                        m9599B.mo13748H(new Uri[]{Uri.parse(m13625v)}, m9598C, m13624x, m13623y);
                     }
                 } else {
-                    concat = "Stream cache miss: ".concat(String.valueOf(this.y));
+                    concat = "Stream cache miss: ".concat(String.valueOf(this.f26975y));
                 }
                 k04.zzj(concat);
                 return;
             }
-            p24 v2 = ((s54) H).v();
-            this.x = v2;
-            if (!v2.V()) {
+            p24 m10695v = ((s54) mo4244H).m10695v();
+            this.f26974x = m10695v;
+            if (!m10695v.mo13734V()) {
                 concat = "Precached video player has been released.";
                 k04.zzj(concat);
                 return;
             }
         } else {
-            this.x = B();
-            String C2 = C();
-            Uri[] uriArr = new Uri[this.z.length];
+            this.f26974x = m9599B();
+            String m9598C2 = m9598C();
+            Uri[] uriArr = new Uri[this.f26976z.length];
             int i = 0;
             while (true) {
-                String[] strArr = this.z;
+                String[] strArr = this.f26976z;
                 if (i >= strArr.length) {
                     break;
                 }
                 uriArr[i] = Uri.parse(strArr[i]);
                 i++;
             }
-            this.x.G(uriArr, C2);
+            this.f26974x.mo13749G(uriArr, m9598C2);
         }
-        this.x.M(this);
-        X(this.w, false);
-        if (this.x.V()) {
-            int Y = this.x.Y();
-            this.B = Y;
-            if (Y == 3) {
-                S();
+        this.f26974x.mo13743M(this);
+        m9577X(this.f26973w, false);
+        if (this.f26974x.mo13734V()) {
+            int mo13731Y = this.f26974x.mo13731Y();
+            this.f26961B = mo13731Y;
+            if (mo13731Y == 3) {
+                m9582S();
             }
         }
     }
 
-    public final void U() {
-        p24 p24Var = this.x;
+    /* renamed from: U */
+    public final void m9580U() {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.Q(false);
+            p24Var.mo13739Q(false);
         }
     }
 
-    public final void V() {
-        if (this.x != null) {
-            X(null, true);
-            p24 p24Var = this.x;
+    /* renamed from: V */
+    public final void m9579V() {
+        if (this.f26974x != null) {
+            m9577X(null, true);
+            p24 p24Var = this.f26974x;
             if (p24Var != null) {
-                p24Var.M(null);
-                this.x.I();
-                this.x = null;
+                p24Var.mo13743M(null);
+                this.f26974x.mo13747I();
+                this.f26974x = null;
             }
-            this.B = 1;
-            this.A = false;
-            this.E = false;
-            this.F = false;
+            this.f26961B = 1;
+            this.f26960A = false;
+            this.f26964E = false;
+            this.f26965F = false;
         }
     }
 
-    public final void W(float f, boolean z) {
-        p24 p24Var = this.x;
+    /* renamed from: W */
+    public final void m9578W(float f, boolean z) {
+        p24 p24Var = this.f26974x;
         if (p24Var == null) {
             k04.zzj("Trying to set volume before player is initialized.");
             return;
         }
         try {
-            p24Var.T(f, false);
+            p24Var.mo13736T(f, false);
         } catch (IOException e) {
             k04.zzk("", e);
         }
     }
 
-    public final void X(Surface surface, boolean z) {
-        p24 p24Var = this.x;
+    /* renamed from: X */
+    public final void m9577X(Surface surface, boolean z) {
+        p24 p24Var = this.f26974x;
         if (p24Var == null) {
             k04.zzj("Trying to set surface before player is initialized.");
             return;
         }
         try {
-            p24Var.S(surface, z);
+            p24Var.mo13737S(surface, z);
         } catch (IOException e) {
             k04.zzk("", e);
         }
     }
 
-    public final void Y() {
-        Z(this.G, this.H);
+    /* renamed from: Y */
+    public final void m9576Y() {
+        m9575Z(this.f26966G, this.f26967H);
     }
 
-    public final void Z(int i, int i2) {
+    /* renamed from: Z */
+    public final void m9575Z(int i, int i2) {
         float f = i2 > 0 ? i / i2 : 1.0f;
-        if (this.I != f) {
-            this.I = f;
+        if (this.f26968I != f) {
+            this.f26968I = f;
             requestLayout();
         }
     }
 
     @Override // com.daaw.e24
-    public final void a(int i) {
-        p24 p24Var = this.x;
+    /* renamed from: a */
+    public final void mo9574a(int i) {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.R(i);
+            p24Var.mo13738R(i);
         }
     }
 
-    public final boolean a0() {
-        return b0() && this.B != 1;
+    /* renamed from: a0 */
+    public final boolean m9573a0() {
+        return m9571b0() && this.f26961B != 1;
     }
 
     @Override // com.daaw.e24
-    public final void b(String str, String[] strArr) {
+    /* renamed from: b */
+    public final void mo9572b(String str, String[] strArr) {
         if (str == null) {
             return;
         }
         boolean z = true;
         if (strArr == null) {
-            this.z = new String[]{str};
+            this.f26976z = new String[]{str};
         } else {
-            this.z = (String[]) Arrays.copyOf(strArr, strArr.length);
+            this.f26976z = (String[]) Arrays.copyOf(strArr, strArr.length);
         }
-        String str2 = this.y;
-        z = (!this.u.n || str2 == null || str.equals(str2) || this.B != 4) ? false : false;
-        this.y = str;
-        T(z);
+        String str2 = this.f26975y;
+        z = (!this.f26971u.f32035n || str2 == null || str.equals(str2) || this.f26961B != 4) ? false : false;
+        this.f26975y = str;
+        m9581T(z);
     }
 
-    public final boolean b0() {
-        p24 p24Var = this.x;
-        return (p24Var == null || !p24Var.V() || this.A) ? false : true;
+    /* renamed from: b0 */
+    public final boolean m9571b0() {
+        p24 p24Var = this.f26974x;
+        return (p24Var == null || !p24Var.mo13734V() || this.f26960A) ? false : true;
     }
 
     @Override // com.daaw.o24
-    public final void c(int i) {
-        if (this.B != i) {
-            this.B = i;
+    /* renamed from: c */
+    public final void mo9570c(int i) {
+        if (this.f26961B != i) {
+            this.f26961B = i;
             if (i == 3) {
-                S();
+                m9582S();
             } else if (i != 4) {
             } else {
-                if (this.u.a) {
-                    U();
+                if (this.f26971u.f32022a) {
+                    m9580U();
                 }
-                this.t.e();
-                this.q.c();
+                this.f26970t.m2960e();
+                this.f8053q.m22940c();
                 zzs.zza.post(new Runnable() { // from class: com.daaw.h34
                     @Override // java.lang.Runnable
                     public final void run() {
-                        t34.this.E();
+                        t34.this.m9596E();
                     }
                 });
             }
@@ -363,112 +428,124 @@ public final class t34 extends e24 implements TextureView.SurfaceTextureListener
     }
 
     @Override // com.daaw.o24
-    public final void d(String str, Exception exc) {
-        final String Q = Q("onLoadException", exc);
-        k04.zzj("ExoPlayerAdapter exception: ".concat(Q));
-        zzt.zzo().t(exc, "AdExoPlayerView.onException");
+    /* renamed from: d */
+    public final void mo9569d(String str, Exception exc) {
+        final String m9584Q = m9584Q("onLoadException", exc);
+        k04.zzj("ExoPlayerAdapter exception: ".concat(m9584Q));
+        zzt.zzo().m11903t(exc, "AdExoPlayerView.onException");
         zzs.zza.post(new Runnable() { // from class: com.daaw.i34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.H(Q);
+                t34.this.m9593H(m9584Q);
             }
         });
     }
 
     @Override // com.daaw.o24
-    public final void e(final boolean z, final long j) {
-        if (this.s != null) {
-            z04.e.execute(new Runnable() { // from class: com.daaw.g34
+    /* renamed from: e */
+    public final void mo9568e(final boolean z, final long j) {
+        if (this.f26969s != null) {
+            z04.f34309e.execute(new Runnable() { // from class: com.daaw.g34
                 @Override // java.lang.Runnable
                 public final void run() {
-                    t34.this.G(z, j);
+                    t34.this.m9594G(z, j);
                 }
             });
         }
     }
 
     @Override // com.daaw.o24
-    public final void f(String str, Exception exc) {
-        final String Q = Q(str, exc);
-        k04.zzj("ExoPlayerAdapter error: ".concat(Q));
-        this.A = true;
-        if (this.u.a) {
-            U();
+    /* renamed from: f */
+    public final void mo9567f(String str, Exception exc) {
+        final String m9584Q = m9584Q(str, exc);
+        k04.zzj("ExoPlayerAdapter error: ".concat(m9584Q));
+        this.f26960A = true;
+        if (this.f26971u.f32022a) {
+            m9580U();
         }
         zzs.zza.post(new Runnable() { // from class: com.daaw.j34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.D(Q);
+                t34.this.m9597D(m9584Q);
             }
         });
-        zzt.zzo().t(exc, "AdExoPlayerView.onError");
+        zzt.zzo().m11903t(exc, "AdExoPlayerView.onError");
     }
 
     @Override // com.daaw.o24
-    public final void g(int i, int i2) {
-        this.G = i;
-        this.H = i2;
-        Y();
+    /* renamed from: g */
+    public final void mo9566g(int i, int i2) {
+        this.f26966G = i;
+        this.f26967H = i2;
+        m9576Y();
     }
 
     @Override // com.daaw.e24
-    public final int h() {
-        if (a0()) {
-            return (int) this.x.d0();
+    /* renamed from: h */
+    public final int mo9565h() {
+        if (m9573a0()) {
+            return (int) this.f26974x.mo13726d0();
         }
         return 0;
     }
 
     @Override // com.daaw.e24
-    public final int i() {
-        p24 p24Var = this.x;
+    /* renamed from: i */
+    public final int mo9564i() {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            return p24Var.W();
+            return p24Var.mo13733W();
         }
         return -1;
     }
 
     @Override // com.daaw.e24
-    public final int j() {
-        if (a0()) {
-            return (int) this.x.e0();
+    /* renamed from: j */
+    public final int mo9563j() {
+        if (m9573a0()) {
+            return (int) this.f26974x.mo13725e0();
         }
         return 0;
     }
 
     @Override // com.daaw.e24
-    public final int k() {
-        return this.H;
+    /* renamed from: k */
+    public final int mo9562k() {
+        return this.f26967H;
     }
 
     @Override // com.daaw.e24
-    public final int l() {
-        return this.G;
+    /* renamed from: l */
+    public final int mo9561l() {
+        return this.f26966G;
     }
 
     @Override // com.daaw.e24
-    public final long m() {
-        p24 p24Var = this.x;
+    /* renamed from: m */
+    public final long mo9560m() {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            return p24Var.c0();
+            return p24Var.mo13727c0();
         }
         return -1L;
     }
 
     @Override // com.daaw.e24
-    public final long n() {
-        p24 p24Var = this.x;
+    /* renamed from: n */
+    public final long mo9559n() {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            return p24Var.E();
+            return p24Var.mo13751E();
         }
         return -1L;
     }
 
     @Override // com.daaw.e24
-    public final long o() {
-        p24 p24Var = this.x;
+    /* renamed from: o */
+    public final long mo9558o() {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            return p24Var.F();
+            return p24Var.mo13750F();
         }
         return -1L;
     }
@@ -478,8 +555,8 @@ public final class t34 extends e24 implements TextureView.SurfaceTextureListener
         super.onMeasure(i, i2);
         int measuredWidth = getMeasuredWidth();
         int measuredHeight = getMeasuredHeight();
-        float f = this.I;
-        if (f != 0.0f && this.C == null) {
+        float f = this.f26968I;
+        if (f != 0.0f && this.f26962C == null) {
             float f2 = measuredWidth;
             float f3 = f2 / measuredHeight;
             if (f > f3) {
@@ -490,71 +567,71 @@ public final class t34 extends e24 implements TextureView.SurfaceTextureListener
             }
         }
         setMeasuredDimension(measuredWidth, measuredHeight);
-        w24 w24Var = this.C;
+        w24 w24Var = this.f26962C;
         if (w24Var != null) {
-            w24Var.b(measuredWidth, measuredHeight);
+            w24Var.m6578b(measuredWidth, measuredHeight);
         }
     }
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i2) {
-        if (this.D) {
+        if (this.f26963D) {
             w24 w24Var = new w24(getContext());
-            this.C = w24Var;
-            w24Var.c(surfaceTexture, i, i2);
-            this.C.start();
-            SurfaceTexture a = this.C.a();
-            if (a != null) {
-                surfaceTexture = a;
+            this.f26962C = w24Var;
+            w24Var.m6577c(surfaceTexture, i, i2);
+            this.f26962C.start();
+            SurfaceTexture m6579a = this.f26962C.m6579a();
+            if (m6579a != null) {
+                surfaceTexture = m6579a;
             } else {
-                this.C.d();
-                this.C = null;
+                this.f26962C.m6576d();
+                this.f26962C = null;
             }
         }
         Surface surface = new Surface(surfaceTexture);
-        this.w = surface;
-        if (this.x == null) {
-            T(false);
+        this.f26973w = surface;
+        if (this.f26974x == null) {
+            m9581T(false);
         } else {
-            X(surface, true);
-            if (!this.u.a) {
-                R();
+            m9577X(surface, true);
+            if (!this.f26971u.f32022a) {
+                m9583R();
             }
         }
-        if (this.G == 0 || this.H == 0) {
-            Z(i, i2);
+        if (this.f26966G == 0 || this.f26967H == 0) {
+            m9575Z(i, i2);
         } else {
-            Y();
+            m9576Y();
         }
         zzs.zza.post(new Runnable() { // from class: com.daaw.o34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.J();
+                t34.this.m9591J();
             }
         });
     }
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
-        q();
-        w24 w24Var = this.C;
+        mo9556q();
+        w24 w24Var = this.f26962C;
         if (w24Var != null) {
-            w24Var.d();
-            this.C = null;
+            w24Var.m6576d();
+            this.f26962C = null;
         }
-        if (this.x != null) {
-            U();
-            Surface surface = this.w;
+        if (this.f26974x != null) {
+            m9580U();
+            Surface surface = this.f26973w;
             if (surface != null) {
                 surface.release();
             }
-            this.w = null;
-            X(null, true);
+            this.f26973w = null;
+            m9577X(null, true);
         }
         zzs.zza.post(new Runnable() { // from class: com.daaw.r34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.K();
+                t34.this.m9590K();
             }
         });
         return true;
@@ -562,22 +639,22 @@ public final class t34 extends e24 implements TextureView.SurfaceTextureListener
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, final int i, final int i2) {
-        w24 w24Var = this.C;
+        w24 w24Var = this.f26962C;
         if (w24Var != null) {
-            w24Var.b(i, i2);
+            w24Var.m6578b(i, i2);
         }
         zzs.zza.post(new Runnable() { // from class: com.daaw.q34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.L(i, i2);
+                t34.this.m9589L(i, i2);
             }
         });
     }
 
     @Override // android.view.TextureView.SurfaceTextureListener
     public final void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
-        this.t.f(this);
-        this.p.a(surfaceTexture, this.v);
+        this.f26970t.m2959f(this);
+        this.f8052p.m10750a(surfaceTexture, this.f26972v);
     }
 
     @Override // android.view.View
@@ -586,129 +663,140 @@ public final class t34 extends e24 implements TextureView.SurfaceTextureListener
         zzs.zza.post(new Runnable() { // from class: com.daaw.p34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.N(i);
+                t34.this.m9587N(i);
             }
         });
         super.onWindowVisibilityChanged(i);
     }
 
     @Override // com.daaw.e24
-    public final String p() {
-        return "ExoPlayer/3".concat(true != this.D ? "" : " spherical");
+    /* renamed from: p */
+    public final String mo9557p() {
+        return "ExoPlayer/3".concat(true != this.f26963D ? "" : " spherical");
     }
 
     @Override // com.daaw.e24
-    public final void q() {
-        if (a0()) {
-            if (this.u.a) {
-                U();
+    /* renamed from: q */
+    public final void mo9556q() {
+        if (m9573a0()) {
+            if (this.f26971u.f32022a) {
+                m9580U();
             }
-            this.x.P(false);
-            this.t.e();
-            this.q.c();
+            this.f26974x.mo13740P(false);
+            this.f26970t.m2960e();
+            this.f8053q.m22940c();
             zzs.zza.post(new Runnable() { // from class: com.daaw.m34
                 @Override // java.lang.Runnable
                 public final void run() {
-                    t34.this.O();
+                    t34.this.m9586O();
                 }
             });
         }
     }
 
     @Override // com.daaw.e24
-    public final void r() {
-        if (!a0()) {
-            this.F = true;
+    /* renamed from: r */
+    public final void mo9555r() {
+        if (!m9573a0()) {
+            this.f26965F = true;
             return;
         }
-        if (this.u.a) {
-            R();
+        if (this.f26971u.f32022a) {
+            m9583R();
         }
-        this.x.P(true);
-        this.t.c();
-        this.q.b();
-        this.p.b();
+        this.f26974x.mo13740P(true);
+        this.f26970t.m2962c();
+        this.f8053q.m22941b();
+        this.f8052p.m10749b();
         zzs.zza.post(new Runnable() { // from class: com.daaw.s34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.P();
+                t34.this.m9585P();
             }
         });
     }
 
     @Override // com.daaw.e24
-    public final void s(int i) {
-        if (a0()) {
-            this.x.J(i);
+    /* renamed from: s */
+    public final void mo9554s(int i) {
+        if (m9573a0()) {
+            this.f26974x.mo13746J(i);
         }
     }
 
     @Override // com.daaw.e24
-    public final void t(d24 d24Var) {
-        this.v = d24Var;
+    /* renamed from: t */
+    public final void mo9553t(d24 d24Var) {
+        this.f26972v = d24Var;
     }
 
     @Override // com.daaw.e24
-    public final void u(String str) {
+    /* renamed from: u */
+    public final void mo9552u(String str) {
         if (str != null) {
-            b(str, null);
+            mo9572b(str, null);
         }
     }
 
     @Override // com.daaw.e24
-    public final void v() {
-        if (b0()) {
-            this.x.U();
-            V();
+    /* renamed from: v */
+    public final void mo9551v() {
+        if (m9571b0()) {
+            this.f26974x.mo13735U();
+            m9579V();
         }
-        this.t.e();
-        this.q.c();
-        this.t.d();
+        this.f26970t.m2960e();
+        this.f8053q.m22940c();
+        this.f26970t.m2961d();
     }
 
     @Override // com.daaw.e24
-    public final void w(float f, float f2) {
-        w24 w24Var = this.C;
+    /* renamed from: w */
+    public final void mo9550w(float f, float f2) {
+        w24 w24Var = this.f26962C;
         if (w24Var != null) {
-            w24Var.e(f, f2);
+            w24Var.m6575e(f, f2);
         }
     }
 
     @Override // com.daaw.e24
-    public final void x(int i) {
-        p24 p24Var = this.x;
+    /* renamed from: x */
+    public final void mo9549x(int i) {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.K(i);
+            p24Var.mo13745K(i);
         }
     }
 
     @Override // com.daaw.e24
-    public final void y(int i) {
-        p24 p24Var = this.x;
+    /* renamed from: y */
+    public final void mo9548y(int i) {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.L(i);
+            p24Var.mo13744L(i);
         }
     }
 
     @Override // com.daaw.e24
-    public final void z(int i) {
-        p24 p24Var = this.x;
+    /* renamed from: z */
+    public final void mo9547z(int i) {
+        p24 p24Var = this.f26974x;
         if (p24Var != null) {
-            p24Var.N(i);
+            p24Var.mo13742N(i);
         }
     }
 
     @Override // com.daaw.e24, com.daaw.e34
     public final void zzn() {
-        if (this.u.m) {
+        if (this.f26971u.f32034m) {
             zzs.zza.post(new Runnable() { // from class: com.daaw.l34
                 @Override // java.lang.Runnable
                 public final void run() {
-                    t34.this.M();
+                    t34.this.m9588M();
                 }
             });
         } else {
-            W(this.q.a(), false);
+            m9578W(this.f8053q.m22942a(), false);
         }
     }
 
@@ -717,7 +805,7 @@ public final class t34 extends e24 implements TextureView.SurfaceTextureListener
         zzs.zza.post(new Runnable() { // from class: com.daaw.k34
             @Override // java.lang.Runnable
             public final void run() {
-                t34.this.I();
+                t34.this.m9592I();
             }
         });
     }

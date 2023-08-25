@@ -1,11 +1,15 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface d81 {
-    void a();
+    /* renamed from: a */
+    void mo3789a();
 
-    boolean d();
+    /* renamed from: d */
+    boolean mo3787d();
 
-    int j(k30 k30Var, gq gqVar, boolean z);
+    /* renamed from: j */
+    int mo3786j(k30 k30Var, C1454gq c1454gq, boolean z);
 
-    int n(long j);
+    /* renamed from: n */
+    int mo3785n(long j);
 }

@@ -4,23 +4,29 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 /* loaded from: classes.dex */
 public class iw1<T1> {
-    public WeakReference<a<T1>> a = new WeakReference<>(null);
 
+    /* renamed from: a */
+    public WeakReference<InterfaceC1765a<T1>> f14071a = new WeakReference<>(null);
+
+    /* renamed from: com.daaw.iw1$a */
     /* loaded from: classes.dex */
-    public interface a<T1> {
-        void b(T1 t1);
+    public interface InterfaceC1765a<T1> {
+        /* renamed from: b */
+        void mo19307b(T1 t1);
     }
 
-    public void a(T1 t1) {
-        a<T1> aVar = this.a.get();
-        if (aVar != null) {
-            aVar.b(t1);
+    /* renamed from: a */
+    public void m19309a(T1 t1) {
+        InterfaceC1765a<T1> interfaceC1765a = this.f14071a.get();
+        if (interfaceC1765a != null) {
+            interfaceC1765a.mo19307b(t1);
         }
     }
 
-    public iw1<T1> b(a<T1> aVar, List<Object> list) {
-        list.add(aVar);
-        this.a = new WeakReference<>(aVar);
+    /* renamed from: b */
+    public iw1<T1> m19308b(InterfaceC1765a<T1> interfaceC1765a, List<Object> list) {
+        list.add(interfaceC1765a);
+        this.f14071a = new WeakReference<>(interfaceC1765a);
         return this;
     }
 }

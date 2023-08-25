@@ -17,144 +17,191 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class m24 extends FrameLayout implements d24 {
-    public long A;
-    public long B;
-    public String C;
-    public String[] D;
-    public Bitmap E;
-    public final ImageView F;
-    public boolean G;
-    public final Integer H;
-    public final y24 p;
-    public final FrameLayout q;
-    public final View r;
-    public final v93 s;
-    public final a34 t;
-    public final long u;
-    public final e24 v;
-    public boolean w;
-    public boolean x;
-    public boolean y;
-    public boolean z;
+
+    /* renamed from: A */
+    public long f18389A;
+
+    /* renamed from: B */
+    public long f18390B;
+
+    /* renamed from: C */
+    public String f18391C;
+
+    /* renamed from: D */
+    public String[] f18392D;
+
+    /* renamed from: E */
+    public Bitmap f18393E;
+
+    /* renamed from: F */
+    public final ImageView f18394F;
+
+    /* renamed from: G */
+    public boolean f18395G;
+
+    /* renamed from: H */
+    public final Integer f18396H;
+
+    /* renamed from: p */
+    public final y24 f18397p;
+
+    /* renamed from: q */
+    public final FrameLayout f18398q;
+
+    /* renamed from: r */
+    public final View f18399r;
+
+    /* renamed from: s */
+    public final v93 f18400s;
+
+    /* renamed from: t */
+    public final a34 f18401t;
+
+    /* renamed from: u */
+    public final long f18402u;
+
+    /* renamed from: v */
+    public final e24 f18403v;
+
+    /* renamed from: w */
+    public boolean f18404w;
+
+    /* renamed from: x */
+    public boolean f18405x;
+
+    /* renamed from: y */
+    public boolean f18406y;
+
+    /* renamed from: z */
+    public boolean f18407z;
 
     public m24(Context context, y24 y24Var, int i, boolean z, v93 v93Var, x24 x24Var, Integer num) {
         super(context);
-        this.p = y24Var;
-        this.s = v93Var;
+        this.f18397p = y24Var;
+        this.f18400s = v93Var;
         FrameLayout frameLayout = new FrameLayout(context);
-        this.q = frameLayout;
+        this.f18398q = frameLayout;
         addView(frameLayout, new FrameLayout.LayoutParams(-1, -1));
-        ry0.j(y24Var.zzm());
+        ry0.m10830j(y24Var.zzm());
         f24 f24Var = y24Var.zzm().zza;
-        e24 t34Var = i == 2 ? new t34(context, new z24(context, y24Var.zzp(), y24Var.b(), v93Var, y24Var.zzn()), y24Var, z, f24.a(y24Var), x24Var, num) : new c24(context, y24Var, z, f24.a(y24Var), x24Var, new z24(context, y24Var.zzp(), y24Var.b(), v93Var, y24Var.zzn()), num);
-        this.v = t34Var;
-        this.H = num;
+        e24 t34Var = i == 2 ? new t34(context, new z24(context, y24Var.zzp(), y24Var.mo4241b(), v93Var, y24Var.zzn()), y24Var, z, f24.m22961a(y24Var), x24Var, num) : new c24(context, y24Var, z, f24.m22961a(y24Var), x24Var, new z24(context, y24Var.zzp(), y24Var.mo4241b(), v93Var, y24Var.zzn()), num);
+        this.f18403v = t34Var;
+        this.f18396H = num;
         View view = new View(context);
-        this.r = view;
+        this.f18399r = view;
         view.setBackgroundColor(0);
         frameLayout.addView(t34Var, new FrameLayout.LayoutParams(-1, -1, 17));
-        if (((Boolean) zzba.zzc().b(g93.D)).booleanValue()) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10391D)).booleanValue()) {
             frameLayout.addView(view, new FrameLayout.LayoutParams(-1, -1));
             frameLayout.bringChildToFront(view);
         }
-        if (((Boolean) zzba.zzc().b(g93.A)).booleanValue()) {
-            q();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10359A)).booleanValue()) {
+            m16274q();
         }
-        this.F = new ImageView(context);
-        this.u = ((Long) zzba.zzc().b(g93.F)).longValue();
-        boolean booleanValue = ((Boolean) zzba.zzc().b(g93.C)).booleanValue();
-        this.z = booleanValue;
+        this.f18394F = new ImageView(context);
+        this.f18402u = ((Long) zzba.zzc().m23658b(g93.f10411F)).longValue();
+        boolean booleanValue = ((Boolean) zzba.zzc().m23658b(g93.f10381C)).booleanValue();
+        this.f18407z = booleanValue;
         if (v93Var != null) {
-            v93Var.d("spinner_used", true != booleanValue ? "0" : "1");
+            v93Var.m7314d("spinner_used", true != booleanValue ? "0" : "1");
         }
-        this.t = new a34(this);
-        t34Var.t(this);
+        this.f18401t = new a34(this);
+        t34Var.mo9553t(this);
     }
 
-    public final void A(MotionEvent motionEvent) {
-        e24 e24Var = this.v;
+    /* renamed from: A */
+    public final void m16293A(MotionEvent motionEvent) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
         e24Var.dispatchTouchEvent(motionEvent);
     }
 
-    public final void B(int i) {
-        e24 e24Var = this.v;
+    /* renamed from: B */
+    public final void m16292B(int i) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.x(i);
+        e24Var.mo9549x(i);
     }
 
-    public final void C(int i) {
-        e24 e24Var = this.v;
+    /* renamed from: C */
+    public final void m16291C(int i) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.y(i);
+        e24Var.mo9548y(i);
     }
 
     @Override // com.daaw.d24
-    public final void a(int i, int i2) {
-        if (this.z) {
-            y83 y83Var = g93.E;
-            int max = Math.max(i / ((Integer) zzba.zzc().b(y83Var)).intValue(), 1);
-            int max2 = Math.max(i2 / ((Integer) zzba.zzc().b(y83Var)).intValue(), 1);
-            Bitmap bitmap = this.E;
-            if (bitmap != null && bitmap.getWidth() == max && this.E.getHeight() == max2) {
+    /* renamed from: a */
+    public final void mo16290a(int i, int i2) {
+        if (this.f18407z) {
+            y83 y83Var = g93.f10401E;
+            int max = Math.max(i / ((Integer) zzba.zzc().m23658b(y83Var)).intValue(), 1);
+            int max2 = Math.max(i2 / ((Integer) zzba.zzc().m23658b(y83Var)).intValue(), 1);
+            Bitmap bitmap = this.f18393E;
+            if (bitmap != null && bitmap.getWidth() == max && this.f18393E.getHeight() == max2) {
                 return;
             }
-            this.E = Bitmap.createBitmap(max, max2, Bitmap.Config.ARGB_8888);
-            this.G = false;
+            this.f18393E = Bitmap.createBitmap(max, max2, Bitmap.Config.ARGB_8888);
+            this.f18395G = false;
         }
     }
 
-    public final void b(int i) {
-        e24 e24Var = this.v;
+    /* renamed from: b */
+    public final void m16289b(int i) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.z(i);
+        e24Var.mo9547z(i);
     }
 
     @Override // com.daaw.d24
-    public final void c(String str, String str2) {
-        m("error", "what", str, "extra", str2);
+    /* renamed from: c */
+    public final void mo16288c(String str, String str2) {
+        m16278m("error", "what", str, "extra", str2);
     }
 
-    public final void d(int i) {
-        e24 e24Var = this.v;
+    /* renamed from: d */
+    public final void m16287d(int i) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.A(i);
+        e24Var.mo9600A(i);
     }
 
-    public final void e(int i) {
-        if (((Boolean) zzba.zzc().b(g93.D)).booleanValue()) {
-            this.q.setBackgroundColor(i);
-            this.r.setBackgroundColor(i);
+    /* renamed from: e */
+    public final void m16286e(int i) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10391D)).booleanValue()) {
+            this.f18398q.setBackgroundColor(i);
+            this.f18399r.setBackgroundColor(i);
         }
     }
 
-    public final void f(int i) {
-        e24 e24Var = this.v;
+    /* renamed from: f */
+    public final void m16285f(int i) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.a(i);
+        e24Var.mo9574a(i);
     }
 
     public final void finalize() {
         try {
-            this.t.a();
-            final e24 e24Var = this.v;
+            this.f18401t.m27720a();
+            final e24 e24Var = this.f18403v;
             if (e24Var != null) {
-                z04.e.execute(new Runnable() { // from class: com.daaw.g24
+                z04.f34309e.execute(new Runnable() { // from class: com.daaw.g24
                     @Override // java.lang.Runnable
                     public final void run() {
-                        e24.this.v();
+                        e24.this.mo9551v();
                     }
                 });
             }
@@ -163,12 +210,14 @@ public final class m24 extends FrameLayout implements d24 {
         }
     }
 
-    public final void g(String str, String[] strArr) {
-        this.C = str;
-        this.D = strArr;
+    /* renamed from: g */
+    public final void m16284g(String str, String[] strArr) {
+        this.f18391C = str;
+        this.f18392D = strArr;
     }
 
-    public final void h(int i, int i2, int i3, int i4) {
+    /* renamed from: h */
+    public final void m16283h(int i, int i2, int i3, int i4) {
         if (zze.zzc()) {
             zze.zza("Set video bounds to x:" + i + ";y:" + i2 + ";w:" + i3 + ";h:" + i4);
         }
@@ -177,48 +226,53 @@ public final class m24 extends FrameLayout implements d24 {
         }
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(i3, i4);
         layoutParams.setMargins(i, i2, 0, 0);
-        this.q.setLayoutParams(layoutParams);
+        this.f18398q.setLayoutParams(layoutParams);
         requestLayout();
     }
 
-    public final void i(float f) {
-        e24 e24Var = this.v;
+    /* renamed from: i */
+    public final void m16282i(float f) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.q.e(f);
+        e24Var.f8053q.m22938e(f);
         e24Var.zzn();
     }
 
-    public final void j(float f, float f2) {
-        e24 e24Var = this.v;
+    /* renamed from: j */
+    public final void m16281j(float f, float f2) {
+        e24 e24Var = this.f18403v;
         if (e24Var != null) {
-            e24Var.w(f, f2);
+            e24Var.mo9550w(f, f2);
         }
     }
 
-    public final void k() {
-        e24 e24Var = this.v;
+    /* renamed from: k */
+    public final void m16280k() {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.q.d(false);
+        e24Var.f8053q.m22939d(false);
         e24Var.zzn();
     }
 
-    public final void l() {
-        if (this.p.zzk() == null || !this.x || this.y) {
+    /* renamed from: l */
+    public final void m16279l() {
+        if (this.f18397p.zzk() == null || !this.f18405x || this.f18406y) {
             return;
         }
-        this.p.zzk().getWindow().clearFlags(128);
-        this.x = false;
+        this.f18397p.zzk().getWindow().clearFlags(128);
+        this.f18405x = false;
     }
 
-    public final void m(String str, String... strArr) {
+    /* renamed from: m */
+    public final void m16278m(String str, String... strArr) {
         HashMap hashMap = new HashMap();
-        Integer o = o();
-        if (o != null) {
-            hashMap.put("playerId", o.toString());
+        Integer m16276o = m16276o();
+        if (m16276o != null) {
+            hashMap.put("playerId", m16276o.toString());
         }
         hashMap.put("event", str);
         String str2 = null;
@@ -230,32 +284,34 @@ public final class m24 extends FrameLayout implements d24 {
                 str2 = null;
             }
         }
-        this.p.T("onVideoEvent", hashMap);
+        this.f18397p.mo6434T("onVideoEvent", hashMap);
     }
 
-    public final boolean n() {
-        return this.F.getParent() != null;
+    /* renamed from: n */
+    public final boolean m16277n() {
+        return this.f18394F.getParent() != null;
     }
 
-    public final Integer o() {
-        e24 e24Var = this.v;
-        return e24Var != null ? e24Var.r : this.H;
+    /* renamed from: o */
+    public final Integer m16276o() {
+        e24 e24Var = this.f18403v;
+        return e24Var != null ? e24Var.f8054r : this.f18396H;
     }
 
     @Override // android.view.View
     public final void onWindowFocusChanged(final boolean z) {
         super.onWindowFocusChanged(z);
-        a34 a34Var = this.t;
+        a34 a34Var = this.f18401t;
         if (z) {
-            a34Var.b();
+            a34Var.m27719b();
         } else {
-            a34Var.a();
-            this.B = this.A;
+            a34Var.m27720a();
+            this.f18390B = this.f18389A;
         }
         zzs.zza.post(new Runnable() { // from class: com.daaw.h24
             @Override // java.lang.Runnable
             public final void run() {
-                m24.this.t(z);
+                m24.this.m16271t(z);
             }
         });
     }
@@ -265,206 +321,216 @@ public final class m24 extends FrameLayout implements d24 {
         boolean z;
         super.onWindowVisibilityChanged(i);
         if (i == 0) {
-            this.t.b();
+            this.f18401t.m27719b();
             z = true;
         } else {
-            this.t.a();
-            this.B = this.A;
+            this.f18401t.m27720a();
+            this.f18390B = this.f18389A;
             z = false;
         }
         zzs.zza.post(new l24(this, z));
     }
 
-    public final void q() {
-        e24 e24Var = this.v;
+    /* renamed from: q */
+    public final void m16274q() {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
         TextView textView = new TextView(e24Var.getContext());
-        textView.setText("AdMob - ".concat(this.v.p()));
+        textView.setText("AdMob - ".concat(this.f18403v.mo9557p()));
         textView.setTextColor(-65536);
         textView.setBackgroundColor(-256);
-        this.q.addView(textView, new FrameLayout.LayoutParams(-2, -2, 17));
-        this.q.bringChildToFront(textView);
+        this.f18398q.addView(textView, new FrameLayout.LayoutParams(-2, -2, 17));
+        this.f18398q.bringChildToFront(textView);
     }
 
-    public final void r() {
-        this.t.a();
-        e24 e24Var = this.v;
+    /* renamed from: r */
+    public final void m16273r() {
+        this.f18401t.m27720a();
+        e24 e24Var = this.f18403v;
         if (e24Var != null) {
-            e24Var.v();
+            e24Var.mo9551v();
         }
-        l();
+        m16279l();
     }
 
-    public final /* synthetic */ void s() {
-        m("firstFrameRendered", new String[0]);
+    /* renamed from: s */
+    public final /* synthetic */ void m16272s() {
+        m16278m("firstFrameRendered", new String[0]);
     }
 
-    public final /* synthetic */ void t(boolean z) {
-        m("windowFocusChanged", "hasWindowFocus", String.valueOf(z));
+    /* renamed from: t */
+    public final /* synthetic */ void m16271t(boolean z) {
+        m16278m("windowFocusChanged", "hasWindowFocus", String.valueOf(z));
     }
 
-    public final void u() {
-        if (this.v == null) {
+    /* renamed from: u */
+    public final void m16270u() {
+        if (this.f18403v == null) {
             return;
         }
-        if (TextUtils.isEmpty(this.C)) {
-            m("no_src", new String[0]);
+        if (TextUtils.isEmpty(this.f18391C)) {
+            m16278m("no_src", new String[0]);
         } else {
-            this.v.b(this.C, this.D);
+            this.f18403v.mo9572b(this.f18391C, this.f18392D);
         }
     }
 
-    public final void v() {
-        e24 e24Var = this.v;
+    /* renamed from: v */
+    public final void m16269v() {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.q.d(true);
+        e24Var.f8053q.m22939d(true);
         e24Var.zzn();
     }
 
-    public final void w() {
-        e24 e24Var = this.v;
+    /* renamed from: w */
+    public final void m16268w() {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        long h = e24Var.h();
-        if (this.A == h || h <= 0) {
+        long mo9565h = e24Var.mo9565h();
+        if (this.f18389A == mo9565h || mo9565h <= 0) {
             return;
         }
-        float f = ((float) h) / 1000.0f;
-        if (((Boolean) zzba.zzc().b(g93.F1)).booleanValue()) {
-            m("timeupdate", "time", String.valueOf(f), "totalBytes", String.valueOf(this.v.o()), "qoeCachedBytes", String.valueOf(this.v.m()), "qoeLoadedBytes", String.valueOf(this.v.n()), "droppedFrames", String.valueOf(this.v.i()), "reportTime", String.valueOf(zzt.zzB().a()));
+        float f = ((float) mo9565h) / 1000.0f;
+        if (((Boolean) zzba.zzc().m23658b(g93.f10413F1)).booleanValue()) {
+            m16278m("timeupdate", "time", String.valueOf(f), "totalBytes", String.valueOf(this.f18403v.mo9558o()), "qoeCachedBytes", String.valueOf(this.f18403v.mo9560m()), "qoeLoadedBytes", String.valueOf(this.f18403v.mo9559n()), "droppedFrames", String.valueOf(this.f18403v.mo9564i()), "reportTime", String.valueOf(zzt.zzB().mo15860a()));
         } else {
-            m("timeupdate", "time", String.valueOf(f));
+            m16278m("timeupdate", "time", String.valueOf(f));
         }
-        this.A = h;
+        this.f18389A = mo9565h;
     }
 
-    public final void x() {
-        e24 e24Var = this.v;
+    /* renamed from: x */
+    public final void m16267x() {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.q();
+        e24Var.mo9556q();
     }
 
-    public final void y() {
-        e24 e24Var = this.v;
+    /* renamed from: y */
+    public final void m16266y() {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.r();
+        e24Var.mo9555r();
     }
 
-    public final void z(int i) {
-        e24 e24Var = this.v;
+    /* renamed from: z */
+    public final void m16265z(int i) {
+        e24 e24Var = this.f18403v;
         if (e24Var == null) {
             return;
         }
-        e24Var.s(i);
+        e24Var.mo9554s(i);
     }
 
     @Override // com.daaw.d24
     public final void zza() {
-        if (((Boolean) zzba.zzc().b(g93.I1)).booleanValue()) {
-            this.t.a();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10443I1)).booleanValue()) {
+            this.f18401t.m27720a();
         }
-        m("ended", new String[0]);
-        l();
+        m16278m("ended", new String[0]);
+        m16279l();
     }
 
     @Override // com.daaw.d24
     public final void zzc(String str, String str2) {
-        m("exception", "what", "ExoPlayerAdapter exception", "extra", str2);
+        m16278m("exception", "what", "ExoPlayerAdapter exception", "extra", str2);
     }
 
     @Override // com.daaw.d24
     public final void zzd() {
-        m("pause", new String[0]);
-        l();
-        this.w = false;
+        m16278m("pause", new String[0]);
+        m16279l();
+        this.f18404w = false;
     }
 
     @Override // com.daaw.d24
     public final void zze() {
-        if (((Boolean) zzba.zzc().b(g93.I1)).booleanValue()) {
-            this.t.b();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10443I1)).booleanValue()) {
+            this.f18401t.m27719b();
         }
-        if (this.p.zzk() != null && !this.x) {
-            boolean z = (this.p.zzk().getWindow().getAttributes().flags & 128) != 0;
-            this.y = z;
+        if (this.f18397p.zzk() != null && !this.f18405x) {
+            boolean z = (this.f18397p.zzk().getWindow().getAttributes().flags & 128) != 0;
+            this.f18406y = z;
             if (!z) {
-                this.p.zzk().getWindow().addFlags(128);
-                this.x = true;
+                this.f18397p.zzk().getWindow().addFlags(128);
+                this.f18405x = true;
             }
         }
-        this.w = true;
+        this.f18404w = true;
     }
 
     @Override // com.daaw.d24
     public final void zzf() {
-        e24 e24Var = this.v;
-        if (e24Var != null && this.B == 0) {
-            m("canplaythrough", "duration", String.valueOf(e24Var.j() / 1000.0f), "videoWidth", String.valueOf(this.v.l()), "videoHeight", String.valueOf(this.v.k()));
+        e24 e24Var = this.f18403v;
+        if (e24Var != null && this.f18390B == 0) {
+            m16278m("canplaythrough", "duration", String.valueOf(e24Var.mo9563j() / 1000.0f), "videoWidth", String.valueOf(this.f18403v.mo9561l()), "videoHeight", String.valueOf(this.f18403v.mo9562k()));
         }
     }
 
     @Override // com.daaw.d24
     public final void zzg() {
-        this.r.setVisibility(4);
+        this.f18399r.setVisibility(4);
         zzs.zza.post(new Runnable() { // from class: com.daaw.i24
             @Override // java.lang.Runnable
             public final void run() {
-                m24.this.s();
+                m24.this.m16272s();
             }
         });
     }
 
     @Override // com.daaw.d24
     public final void zzh() {
-        this.t.b();
+        this.f18401t.m27719b();
         zzs.zza.post(new j24(this));
     }
 
     @Override // com.daaw.d24
     public final void zzi() {
-        if (this.G && this.E != null && !n()) {
-            this.F.setImageBitmap(this.E);
-            this.F.invalidate();
-            this.q.addView(this.F, new FrameLayout.LayoutParams(-1, -1));
-            this.q.bringChildToFront(this.F);
+        if (this.f18395G && this.f18393E != null && !m16277n()) {
+            this.f18394F.setImageBitmap(this.f18393E);
+            this.f18394F.invalidate();
+            this.f18398q.addView(this.f18394F, new FrameLayout.LayoutParams(-1, -1));
+            this.f18398q.bringChildToFront(this.f18394F);
         }
-        this.t.a();
-        this.B = this.A;
+        this.f18401t.m27720a();
+        this.f18390B = this.f18389A;
         zzs.zza.post(new k24(this));
     }
 
     @Override // com.daaw.d24
     public final void zzk() {
-        if (this.w && n()) {
-            this.q.removeView(this.F);
+        if (this.f18404w && m16277n()) {
+            this.f18398q.removeView(this.f18394F);
         }
-        if (this.v == null || this.E == null) {
+        if (this.f18403v == null || this.f18393E == null) {
             return;
         }
-        long b = zzt.zzB().b();
-        if (this.v.getBitmap(this.E) != null) {
-            this.G = true;
+        long mo15859b = zzt.zzB().mo15859b();
+        if (this.f18403v.getBitmap(this.f18393E) != null) {
+            this.f18395G = true;
         }
-        long b2 = zzt.zzB().b() - b;
+        long mo15859b2 = zzt.zzB().mo15859b() - mo15859b;
         if (zze.zzc()) {
-            zze.zza("Spinner frame grab took " + b2 + "ms");
+            zze.zza("Spinner frame grab took " + mo15859b2 + "ms");
         }
-        if (b2 > this.u) {
+        if (mo15859b2 > this.f18402u) {
             k04.zzj("Spinner frame grab crossed jank threshold! Suspending spinner.");
-            this.z = false;
-            this.E = null;
-            v93 v93Var = this.s;
+            this.f18407z = false;
+            this.f18393E = null;
+            v93 v93Var = this.f18400s;
             if (v93Var != null) {
-                v93Var.d("spinner_jank", Long.toString(b2));
+                v93Var.m7314d("spinner_jank", Long.toString(mo15859b2));
             }
         }
     }

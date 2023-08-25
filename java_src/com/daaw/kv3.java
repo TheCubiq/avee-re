@@ -10,9 +10,10 @@ public final class kv3 extends hc3 implements ox3 {
     }
 
     @Override // com.daaw.ox3
-    public final void T0(Bundle bundle) {
-        Parcel D = D();
-        ne3.e(D, bundle);
-        M(1, D);
+    /* renamed from: T0 */
+    public final void mo13884T0(Bundle bundle) {
+        Parcel m20847D = m20847D();
+        ne3.m15205e(m20847D, bundle);
+        m20845M(1, m20847D);
     }
 }

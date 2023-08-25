@@ -13,22 +13,25 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 /* loaded from: classes.dex */
 public class ca1 {
-    public static PublicKey a(String str) {
+    /* renamed from: a */
+    public static PublicKey m25473a(String str) {
         try {
             return KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(Base64.decode(str, 0)));
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         } catch (InvalidKeySpecException e2) {
             String str2 = "Invalid key specification: " + e2;
-            b(str2);
+            m25472b(str2);
             throw new IOException(str2);
         }
     }
 
-    public static void b(String str) {
+    /* renamed from: b */
+    public static void m25472b(String str) {
     }
 
-    public static boolean c(PublicKey publicKey, String str, String str2) {
+    /* renamed from: c */
+    public static boolean m25471c(PublicKey publicKey, String str, String str2) {
         String str3;
         try {
             byte[] decode = Base64.decode(str2, 0);
@@ -39,30 +42,31 @@ public class ca1 {
                 if (signature.verify(decode)) {
                     return true;
                 }
-                b("Signature verification failed.");
+                m25472b("Signature verification failed.");
                 return false;
             } catch (InvalidKeyException unused) {
                 str3 = "Invalid key specification.";
-                b(str3);
+                m25472b(str3);
                 return false;
             } catch (NoSuchAlgorithmException e) {
                 throw new RuntimeException(e);
             } catch (SignatureException unused2) {
                 str3 = "Signature exception.";
-                b(str3);
+                m25472b(str3);
                 return false;
             }
         } catch (IllegalArgumentException unused3) {
-            b("Base64 decoding failed.");
+            m25472b("Base64 decoding failed.");
             return false;
         }
     }
 
-    public static boolean d(String str, String str2, String str3) {
+    /* renamed from: d */
+    public static boolean m25470d(String str, String str2, String str3) {
         if (TextUtils.isEmpty(str2) || TextUtils.isEmpty(str) || TextUtils.isEmpty(str3)) {
-            b("Purchase verification failed: missing data.");
+            m25472b("Purchase verification failed: missing data.");
             return false;
         }
-        return c(a(str), str2, str3);
+        return m25471c(m25473a(str), str2, str3);
     }
 }

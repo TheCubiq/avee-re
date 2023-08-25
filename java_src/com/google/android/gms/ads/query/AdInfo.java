@@ -6,12 +6,16 @@ import org.json.JSONObject;
 @Deprecated
 /* loaded from: classes.dex */
 public class AdInfo {
-    public final QueryInfo a;
-    public final String b;
+
+    /* renamed from: a */
+    public final QueryInfo f36537a;
+
+    /* renamed from: b */
+    public final String f36538b;
 
     public AdInfo(QueryInfo queryInfo, String str) {
-        this.a = queryInfo;
-        this.b = str;
+        this.f36537a = queryInfo;
+        this.f36538b = str;
     }
 
     public static String getRequestId(String str) {
@@ -30,10 +34,10 @@ public class AdInfo {
     }
 
     public String getAdString() {
-        return this.b;
+        return this.f36538b;
     }
 
     public QueryInfo getQueryInfo() {
-        return this.a;
+        return this.f36537a;
     }
 }

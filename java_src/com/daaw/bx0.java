@@ -4,50 +4,72 @@ import com.google.android.exoplayer2.source.TrackGroupArray;
 /* loaded from: classes.dex */
 public interface bx0 {
 
+    /* renamed from: com.daaw.bx0$a */
     /* loaded from: classes.dex */
-    public interface a {
-        void A(qz qzVar);
+    public interface InterfaceC0893a {
+        /* renamed from: A */
+        void mo13834A(C2802qz c2802qz);
 
-        void c(zw0 zw0Var);
+        /* renamed from: c */
+        void mo13821c(zw0 zw0Var);
 
-        void d(boolean z);
+        /* renamed from: d */
+        void mo13820d(boolean z);
 
-        void e(int i);
+        /* renamed from: e */
+        void mo13819e(int i);
 
-        void g();
+        /* renamed from: g */
+        void mo13818g();
 
-        void m(TrackGroupArray trackGroupArray, um1 um1Var);
+        /* renamed from: m */
+        void mo13813m(TrackGroupArray trackGroupArray, um1 um1Var);
 
-        void s(boolean z, int i);
+        /* renamed from: s */
+        void mo13808s(boolean z, int i);
 
-        void v(nl1 nl1Var, Object obj, int i);
+        /* renamed from: v */
+        void mo13805v(nl1 nl1Var, Object obj, int i);
     }
 
-    void a();
+    /* renamed from: a */
+    void mo8694a();
 
-    void b(a aVar);
+    /* renamed from: b */
+    void mo8693b(InterfaceC0893a interfaceC0893a);
 
-    boolean c();
+    /* renamed from: c */
+    boolean mo8692c();
 
-    int e();
+    /* renamed from: e */
+    int mo8690e();
 
-    void f(long j);
+    /* renamed from: f */
+    void mo8689f(long j);
 
-    int g();
+    /* renamed from: g */
+    int mo8688g();
 
     long getDuration();
 
-    void h(boolean z);
+    /* renamed from: h */
+    void mo8687h(boolean z);
 
-    long i();
+    /* renamed from: i */
+    long mo8686i();
 
-    long j();
+    /* renamed from: j */
+    long mo8685j();
 
-    int k();
+    /* renamed from: k */
+    int mo8684k();
 
-    int m();
+    /* renamed from: m */
+    int mo8682m();
 
-    nl1 n();
+    /* renamed from: n */
+    nl1 mo8681n();
 
-    long o();
+    /* renamed from: o */
+    long mo8680o();
 }

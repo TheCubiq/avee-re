@@ -1,18 +1,20 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class e33 implements m13 {
-    public final /* synthetic */ h33 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ h33 f8077a;
 
     public e33(h33 h33Var) {
-        this.a = h33Var;
+        this.f8077a = h33Var;
     }
 
     @Override // com.daaw.m13
     public final void zza(boolean z) {
         if (z) {
-            this.a.l();
+            this.f8077a.m21044l();
         } else {
-            h33.h(this.a);
+            h33.m21048h(this.f8077a);
         }
     }
 }

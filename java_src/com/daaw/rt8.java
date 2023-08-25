@@ -8,24 +8,29 @@ import java.util.RandomAccess;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class rt8 extends aq8 implements List, RandomAccess {
-    public static final bd2 q = new fr8(t32.t, 0);
 
-    public static rt8 o(Object[] objArr) {
-        return p(objArr, objArr.length);
+    /* renamed from: q */
+    public static final bd2 f25595q = new fr8(t32.f26953t, 0);
+
+    /* renamed from: o */
+    public static rt8 m10945o(Object[] objArr) {
+        return m10944p(objArr, objArr.length);
     }
 
-    public static rt8 p(Object[] objArr, int i) {
-        return i == 0 ? t32.t : new t32(objArr, i);
+    /* renamed from: p */
+    public static rt8 m10944p(Object[] objArr, int i) {
+        return i == 0 ? t32.f26953t : new t32(objArr, i);
     }
 
-    public static rt8 q(Collection collection) {
+    /* renamed from: q */
+    public static rt8 m10943q(Collection collection) {
         if (collection instanceof aq8) {
-            rt8 h = ((aq8) collection).h();
-            if (h.k()) {
-                Object[] array = h.toArray();
-                return p(array, array.length);
+            rt8 mo10948h = ((aq8) collection).mo10948h();
+            if (mo10948h.mo9608k()) {
+                Object[] array = mo10948h.toArray();
+                return m10944p(array, array.length);
             }
-            return h;
+            return mo10948h;
         }
         Object[] array2 = collection.toArray();
         int length = array2.length;
@@ -34,11 +39,12 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
                 throw new NullPointerException("at index " + i);
             }
         }
-        return p(array2, length);
+        return m10944p(array2, length);
     }
 
-    public static rt8 r() {
-        return t32.t;
+    /* renamed from: r */
+    public static rt8 m10942r() {
+        return t32.f26953t;
     }
 
     @Override // java.util.List
@@ -59,7 +65,8 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
     }
 
     @Override // com.daaw.aq8
-    public int d(Object[] objArr, int i) {
+    /* renamed from: d */
+    public int mo9611d(Object[] objArr, int i) {
         int size = size();
         for (int i2 = 0; i2 < size; i2++) {
             objArr[i2] = get(i2);
@@ -78,7 +85,7 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
             if (size == list.size()) {
                 if (list instanceof RandomAccess) {
                     for (int i = 0; i < size; i++) {
-                        if (vc8.a(get(i), list.get(i))) {
+                        if (vc8.m7268a(get(i), list.get(i))) {
                         }
                     }
                     return true;
@@ -88,7 +95,7 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
                 while (true) {
                     if (it.hasNext()) {
                         if (it2.hasNext()) {
-                            if (!vc8.a(it.next(), it2.next())) {
+                            if (!vc8.m7268a(it.next(), it2.next())) {
                                 break;
                             }
                         } else {
@@ -105,7 +112,8 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
 
     @Override // com.daaw.aq8
     @Deprecated
-    public final rt8 h() {
+    /* renamed from: h */
+    public final rt8 mo10948h() {
         return this;
     }
 
@@ -139,7 +147,8 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
     }
 
     @Override // com.daaw.aq8
-    public final ub2 j() {
+    /* renamed from: j */
+    public final ub2 mo10947j() {
         return listIterator(0);
     }
 
@@ -164,9 +173,9 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
     @Override // java.util.List
     /* renamed from: n */
     public rt8 subList(int i, int i2) {
-        jf8.d(i, i2, size());
+        jf8.m18533d(i, i2, size());
         int i3 = i2 - i;
-        return i3 == size() ? this : i3 == 0 ? t32.t : new ks8(this, i, i3);
+        return i3 == size() ? this : i3 == 0 ? t32.f26953t : new ks8(this, i, i3);
     }
 
     @Override // java.util.List
@@ -178,8 +187,8 @@ public abstract class rt8 extends aq8 implements List, RandomAccess {
     @Override // java.util.List
     /* renamed from: s */
     public final bd2 listIterator(int i) {
-        jf8.b(i, size(), "index");
-        return isEmpty() ? q : new fr8(this, i);
+        jf8.m18535b(i, size(), "index");
+        return isEmpty() ? f25595q : new fr8(this, i);
     }
 
     @Override // java.util.List

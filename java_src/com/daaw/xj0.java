@@ -1,35 +1,46 @@
 package com.daaw;
 /* loaded from: classes2.dex */
-public final class xj0 extends pl implements Runnable, gs {
-    public final pl q;
-    public final int r;
-    private volatile int runningWorkers;
-    public final /* synthetic */ gs s;
-    public final zk0<Runnable> t;
+public final class xj0 extends AbstractC2557pl implements Runnable, InterfaceC1459gs {
 
-    public xj0(pl plVar, int i) {
-        this.q = plVar;
-        this.r = i;
-        gs gsVar = plVar instanceof gs ? (gs) plVar : null;
-        this.s = gsVar == null ? vq.a() : gsVar;
-        this.t = new zk0<>(false);
+    /* renamed from: q */
+    public final AbstractC2557pl f32762q;
+
+    /* renamed from: r */
+    public final int f32763r;
+    private volatile int runningWorkers;
+
+    /* renamed from: s */
+    public final /* synthetic */ InterfaceC1459gs f32764s;
+
+    /* renamed from: t */
+    public final zk0<Runnable> f32765t;
+
+    public xj0(AbstractC2557pl abstractC2557pl, int i) {
+        this.f32762q = abstractC2557pl;
+        this.f32763r = i;
+        InterfaceC1459gs interfaceC1459gs = abstractC2557pl instanceof InterfaceC1459gs ? (InterfaceC1459gs) abstractC2557pl : null;
+        this.f32764s = interfaceC1459gs == null ? C3359vq.m6934a() : interfaceC1459gs;
+        this.f32765t = new zk0<>(false);
     }
 
-    @Override // com.daaw.pl
-    public void T(nl nlVar, Runnable runnable) {
-        if (!W(runnable) && X()) {
-            this.q.T(this, this);
+    @Override // com.daaw.AbstractC2557pl
+    /* renamed from: T */
+    public void mo5048T(InterfaceC2307nl interfaceC2307nl, Runnable runnable) {
+        if (!m5047W(runnable) && m5046X()) {
+            this.f32762q.mo5048T(this, this);
         }
     }
 
-    public final boolean W(Runnable runnable) {
-        this.t.a(runnable);
-        return this.runningWorkers >= this.r;
+    /* renamed from: W */
+    public final boolean m5047W(Runnable runnable) {
+        this.f32765t.m2156a(runnable);
+        return this.runningWorkers >= this.f32763r;
     }
 
-    public final boolean X() {
+    /* renamed from: X */
+    public final boolean m5046X() {
         synchronized (this) {
-            if (this.runningWorkers >= this.r) {
+            if (this.runningWorkers >= this.f32763r) {
                 return false;
             }
             this.runningWorkers++;
@@ -44,7 +55,7 @@ public final class xj0 extends pl implements Runnable, gs {
         r4.runningWorkers--;
      */
     /* JADX WARN: Code restructure failed: missing block: B:18:0x0037, code lost:
-        if (r4.t.c() != 0) goto L27;
+        if (r4.f32765t.m2154c() != 0) goto L27;
      */
     /* JADX WARN: Code restructure failed: missing block: B:19:0x0039, code lost:
         monitor-exit(r4);
@@ -54,66 +65,31 @@ public final class xj0 extends pl implements Runnable, gs {
      */
     /* JADX WARN: Code restructure failed: missing block: B:21:0x003b, code lost:
         r4.runningWorkers++;
-        r1 = com.daaw.lp1.a;
+        r1 = com.daaw.lp1.f17593a;
      */
     @Override // java.lang.Runnable
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public void run() {
-        /*
-            r4 = this;
-            r0 = 0
-        L1:
-            r1 = 0
-        L2:
-            com.daaw.zk0<java.lang.Runnable> r2 = r4.t
-            java.lang.Object r2 = r2.d()
-            java.lang.Runnable r2 = (java.lang.Runnable) r2
-            if (r2 == 0) goto L2a
-            r2.run()     // Catch: java.lang.Throwable -> L10
-            goto L16
-        L10:
-            r2 = move-exception
-            com.daaw.mw r3 = com.daaw.mw.p
-            com.daaw.sl.a(r3, r2)
-        L16:
-            int r1 = r1 + 1
-            r2 = 16
-            if (r1 < r2) goto L2
-            com.daaw.pl r2 = r4.q
-            boolean r2 = r2.U(r4)
-            if (r2 == 0) goto L2
-            com.daaw.pl r0 = r4.q
-            r0.T(r4, r4)
-            return
-        L2a:
-            monitor-enter(r4)
-            int r1 = r4.runningWorkers     // Catch: java.lang.Throwable -> L45
-            int r1 = r1 + (-1)
-            r4.runningWorkers = r1     // Catch: java.lang.Throwable -> L45
-            com.daaw.zk0<java.lang.Runnable> r1 = r4.t     // Catch: java.lang.Throwable -> L45
-            int r1 = r1.c()     // Catch: java.lang.Throwable -> L45
-            if (r1 != 0) goto L3b
-            monitor-exit(r4)
-            return
-        L3b:
-            int r1 = r4.runningWorkers     // Catch: java.lang.Throwable -> L45
-            int r1 = r1 + 1
-            r4.runningWorkers = r1     // Catch: java.lang.Throwable -> L45
-            com.daaw.lp1 r1 = com.daaw.lp1.a     // Catch: java.lang.Throwable -> L45
-            monitor-exit(r4)
-            goto L1
-        L45:
-            r0 = move-exception
-            monitor-exit(r4)
-            goto L49
-        L48:
-            throw r0
-        L49:
-            goto L48
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.xj0.run():void");
+        while (true) {
+            int i = 0;
+            while (true) {
+                Runnable m2153d = this.f32765t.m2153d();
+                if (m2153d == null) {
+                    break;
+                }
+                try {
+                    m2153d.run();
+                } catch (Throwable th) {
+                    C2954sl.m10220a(C2215mw.f19172p, th);
+                }
+                i++;
+                if (i >= 16 && this.f32762q.mo11594U(this)) {
+                    this.f32762q.mo5048T(this, this);
+                    return;
+                }
+            }
+        }
     }
 }

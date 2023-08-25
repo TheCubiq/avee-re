@@ -8,26 +8,34 @@ import android.view.ViewConfiguration;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public final class zs1 {
-    public static Method a;
 
+    /* renamed from: a */
+    public static Method f35448a;
+
+    /* renamed from: com.daaw.zs1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static float a(ViewConfiguration viewConfiguration) {
+    public static class C3892a {
+        /* renamed from: a */
+        public static float m1948a(ViewConfiguration viewConfiguration) {
             return viewConfiguration.getScaledHorizontalScrollFactor();
         }
 
-        public static float b(ViewConfiguration viewConfiguration) {
+        /* renamed from: b */
+        public static float m1947b(ViewConfiguration viewConfiguration) {
             return viewConfiguration.getScaledVerticalScrollFactor();
         }
     }
 
+    /* renamed from: com.daaw.zs1$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public static int a(ViewConfiguration viewConfiguration) {
+    public static class C3893b {
+        /* renamed from: a */
+        public static int m1946a(ViewConfiguration viewConfiguration) {
             return viewConfiguration.getScaledHoverSlop();
         }
 
-        public static boolean b(ViewConfiguration viewConfiguration) {
+        /* renamed from: b */
+        public static boolean m1945b(ViewConfiguration viewConfiguration) {
             return viewConfiguration.shouldShowMenuShortcutsWhenKeyboardPresent();
         }
     }
@@ -35,15 +43,16 @@ public final class zs1 {
     static {
         if (Build.VERSION.SDK_INT == 25) {
             try {
-                a = ViewConfiguration.class.getDeclaredMethod("getScaledScrollFactor", new Class[0]);
+                f35448a = ViewConfiguration.class.getDeclaredMethod("getScaledScrollFactor", new Class[0]);
             } catch (Exception unused) {
             }
         }
     }
 
-    public static float a(ViewConfiguration viewConfiguration, Context context) {
+    /* renamed from: a */
+    public static float m1953a(ViewConfiguration viewConfiguration, Context context) {
         Method method;
-        if (Build.VERSION.SDK_INT >= 25 && (method = a) != null) {
+        if (Build.VERSION.SDK_INT >= 25 && (method = f35448a) != null) {
             try {
                 return ((Integer) method.invoke(viewConfiguration, new Object[0])).intValue();
             } catch (Exception unused) {
@@ -56,21 +65,25 @@ public final class zs1 {
         return 0.0f;
     }
 
-    public static float b(ViewConfiguration viewConfiguration, Context context) {
-        return Build.VERSION.SDK_INT >= 26 ? a.a(viewConfiguration) : a(viewConfiguration, context);
+    /* renamed from: b */
+    public static float m1952b(ViewConfiguration viewConfiguration, Context context) {
+        return Build.VERSION.SDK_INT >= 26 ? C3892a.m1948a(viewConfiguration) : m1953a(viewConfiguration, context);
     }
 
-    public static int c(ViewConfiguration viewConfiguration) {
-        return Build.VERSION.SDK_INT >= 28 ? b.a(viewConfiguration) : viewConfiguration.getScaledTouchSlop() / 2;
+    /* renamed from: c */
+    public static int m1951c(ViewConfiguration viewConfiguration) {
+        return Build.VERSION.SDK_INT >= 28 ? C3893b.m1946a(viewConfiguration) : viewConfiguration.getScaledTouchSlop() / 2;
     }
 
-    public static float d(ViewConfiguration viewConfiguration, Context context) {
-        return Build.VERSION.SDK_INT >= 26 ? a.b(viewConfiguration) : a(viewConfiguration, context);
+    /* renamed from: d */
+    public static float m1950d(ViewConfiguration viewConfiguration, Context context) {
+        return Build.VERSION.SDK_INT >= 26 ? C3892a.m1947b(viewConfiguration) : m1953a(viewConfiguration, context);
     }
 
-    public static boolean e(ViewConfiguration viewConfiguration, Context context) {
+    /* renamed from: e */
+    public static boolean m1949e(ViewConfiguration viewConfiguration, Context context) {
         if (Build.VERSION.SDK_INT >= 28) {
-            return b.b(viewConfiguration);
+            return C3893b.m1945b(viewConfiguration);
         }
         Resources resources = context.getResources();
         int identifier = resources.getIdentifier("config_showMenuShortcutsWhenKeyboardPresent", "bool", "android");

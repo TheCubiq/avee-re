@@ -9,9 +9,9 @@ import org.conscrypt.OpenSSLCipher;
 public abstract class OpenSSLEvpCipherDESEDE extends OpenSSLEvpCipher {
     private static final int DES_BLOCK_SIZE = 8;
 
-    /* renamed from: org.conscrypt.OpenSSLEvpCipherDESEDE$1  reason: invalid class name */
+    /* renamed from: org.conscrypt.OpenSSLEvpCipherDESEDE$1 */
     /* loaded from: classes2.dex */
-    public static /* synthetic */ class AnonymousClass1 {
+    public static /* synthetic */ class C42081 {
         public static final /* synthetic */ int[] $SwitchMap$org$conscrypt$OpenSSLCipher$Padding;
 
         static {
@@ -71,7 +71,7 @@ public abstract class OpenSSLEvpCipherDESEDE extends OpenSSLEvpCipher {
 
     @Override // org.conscrypt.OpenSSLCipher
     public void checkSupportedPadding(OpenSSLCipher.Padding padding) {
-        int i = AnonymousClass1.$SwitchMap$org$conscrypt$OpenSSLCipher$Padding[padding.ordinal()];
+        int i = C42081.$SwitchMap$org$conscrypt$OpenSSLCipher$Padding[padding.ordinal()];
         if (i == 1 || i == 2) {
             return;
         }

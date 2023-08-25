@@ -6,44 +6,56 @@ import android.media.AudioTrack;
 @TargetApi(19)
 /* loaded from: classes.dex */
 public final class hr2 extends gr2 {
-    public final AudioTimestamp j;
-    public long k;
-    public long l;
-    public long m;
+
+    /* renamed from: j */
+    public final AudioTimestamp f12870j;
+
+    /* renamed from: k */
+    public long f12871k;
+
+    /* renamed from: l */
+    public long f12872l;
+
+    /* renamed from: m */
+    public long f12873m;
 
     public hr2() {
         super(null);
-        this.j = new AudioTimestamp();
+        this.f12870j = new AudioTimestamp();
     }
 
     @Override // com.daaw.gr2
-    public final long c() {
-        return this.m;
+    /* renamed from: c */
+    public final long mo20464c() {
+        return this.f12873m;
     }
 
     @Override // com.daaw.gr2
-    public final long d() {
-        return this.j.nanoTime;
+    /* renamed from: d */
+    public final long mo20463d() {
+        return this.f12870j.nanoTime;
     }
 
     @Override // com.daaw.gr2
-    public final void g(AudioTrack audioTrack, boolean z) {
-        super.g(audioTrack, z);
-        this.k = 0L;
-        this.l = 0L;
-        this.m = 0L;
+    /* renamed from: g */
+    public final void mo20462g(AudioTrack audioTrack, boolean z) {
+        super.mo20462g(audioTrack, z);
+        this.f12871k = 0L;
+        this.f12872l = 0L;
+        this.f12873m = 0L;
     }
 
     @Override // com.daaw.gr2
-    public final boolean h() {
-        boolean timestamp = this.a.getTimestamp(this.j);
+    /* renamed from: h */
+    public final boolean mo20461h() {
+        boolean timestamp = this.f11616a.getTimestamp(this.f12870j);
         if (timestamp) {
-            long j = this.j.framePosition;
-            if (this.l > j) {
-                this.k++;
+            long j = this.f12870j.framePosition;
+            if (this.f12872l > j) {
+                this.f12871k++;
             }
-            this.l = j;
-            this.m = j + (this.k << 32);
+            this.f12872l = j;
+            this.f12873m = j + (this.f12871k << 32);
         }
         return timestamp;
     }

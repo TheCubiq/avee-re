@@ -9,14 +9,15 @@ public final class ai3 extends bp2 implements ci3 {
     }
 
     @Override // com.daaw.ci3
-    public final void f(String str) {
-        Parcel D = D();
-        D.writeString(str);
-        M(1, D);
+    /* renamed from: f */
+    public final void mo18491f(String str) {
+        Parcel m25952D = m25952D();
+        m25952D.writeString(str);
+        m25950M(1, m25952D);
     }
 
     @Override // com.daaw.ci3
     public final void zze() {
-        M(2, D());
+        m25950M(2, m25952D());
     }
 }

@@ -7,103 +7,162 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class kz0 {
-    public final String a;
-    public final JSONObject b;
-    public final String c;
-    public final String d;
-    public final String e;
-    public final String f;
-    public final String g;
-    public final String h;
-    public final List i;
 
+    /* renamed from: a */
+    public final String f16868a;
+
+    /* renamed from: b */
+    public final JSONObject f16869b;
+
+    /* renamed from: c */
+    public final String f16870c;
+
+    /* renamed from: d */
+    public final String f16871d;
+
+    /* renamed from: e */
+    public final String f16872e;
+
+    /* renamed from: f */
+    public final String f16873f;
+
+    /* renamed from: g */
+    public final String f16874g;
+
+    /* renamed from: h */
+    public final String f16875h;
+
+    /* renamed from: i */
+    public final List f16876i;
+
+    /* renamed from: com.daaw.kz0$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final String a;
-        public final long b;
-        public final String c;
-        public final String d;
-        public final String e;
+    public static final class C1998a {
 
-        public a(JSONObject jSONObject) {
-            this.a = jSONObject.optString("formattedPrice");
-            this.b = jSONObject.optLong("priceAmountMicros");
-            this.c = jSONObject.optString("priceCurrencyCode");
-            this.d = jSONObject.optString("offerIdToken");
-            this.e = jSONObject.optString("offerId");
+        /* renamed from: a */
+        public final String f16877a;
+
+        /* renamed from: b */
+        public final long f16878b;
+
+        /* renamed from: c */
+        public final String f16879c;
+
+        /* renamed from: d */
+        public final String f16880d;
+
+        /* renamed from: e */
+        public final String f16881e;
+
+        public C1998a(JSONObject jSONObject) {
+            this.f16877a = jSONObject.optString("formattedPrice");
+            this.f16878b = jSONObject.optLong("priceAmountMicros");
+            this.f16879c = jSONObject.optString("priceCurrencyCode");
+            this.f16880d = jSONObject.optString("offerIdToken");
+            this.f16881e = jSONObject.optString("offerId");
             jSONObject.optInt("offerType");
         }
 
-        public final String a() {
-            return this.d;
+        /* renamed from: a */
+        public final String m17306a() {
+            return this.f16880d;
         }
     }
 
+    /* renamed from: com.daaw.kz0$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final String a;
-        public final long b;
-        public final String c;
-        public final String d;
-        public final int e;
-        public final int f;
+    public static final class C1999b {
 
-        public b(JSONObject jSONObject) {
-            this.d = jSONObject.optString("billingPeriod");
-            this.c = jSONObject.optString("priceCurrencyCode");
-            this.a = jSONObject.optString("formattedPrice");
-            this.b = jSONObject.optLong("priceAmountMicros");
-            this.f = jSONObject.optInt("recurrenceMode");
-            this.e = jSONObject.optInt("billingCycleCount");
+        /* renamed from: a */
+        public final String f16882a;
+
+        /* renamed from: b */
+        public final long f16883b;
+
+        /* renamed from: c */
+        public final String f16884c;
+
+        /* renamed from: d */
+        public final String f16885d;
+
+        /* renamed from: e */
+        public final int f16886e;
+
+        /* renamed from: f */
+        public final int f16887f;
+
+        public C1999b(JSONObject jSONObject) {
+            this.f16885d = jSONObject.optString("billingPeriod");
+            this.f16884c = jSONObject.optString("priceCurrencyCode");
+            this.f16882a = jSONObject.optString("formattedPrice");
+            this.f16883b = jSONObject.optLong("priceAmountMicros");
+            this.f16887f = jSONObject.optInt("recurrenceMode");
+            this.f16886e = jSONObject.optInt("billingCycleCount");
         }
 
-        public String a() {
-            return this.d;
+        /* renamed from: a */
+        public String m17305a() {
+            return this.f16885d;
         }
 
-        public String b() {
-            return this.a;
+        /* renamed from: b */
+        public String m17304b() {
+            return this.f16882a;
         }
 
-        public long c() {
-            return this.b;
+        /* renamed from: c */
+        public long m17303c() {
+            return this.f16883b;
         }
     }
 
+    /* renamed from: com.daaw.kz0$c */
     /* loaded from: classes.dex */
-    public static class c {
-        public final List<b> a;
+    public static class C2000c {
 
-        public c(JSONArray jSONArray) {
+        /* renamed from: a */
+        public final List<C1999b> f16888a;
+
+        public C2000c(JSONArray jSONArray) {
             ArrayList arrayList = new ArrayList();
             if (jSONArray != null) {
                 for (int i = 0; i < jSONArray.length(); i++) {
                     JSONObject optJSONObject = jSONArray.optJSONObject(i);
                     if (optJSONObject != null) {
-                        arrayList.add(new b(optJSONObject));
+                        arrayList.add(new C1999b(optJSONObject));
                     }
                 }
             }
-            this.a = arrayList;
+            this.f16888a = arrayList;
         }
 
-        public List<b> a() {
-            return this.a;
+        /* renamed from: a */
+        public List<C1999b> m17302a() {
+            return this.f16888a;
         }
     }
 
+    /* renamed from: com.daaw.kz0$d */
     /* loaded from: classes.dex */
-    public static final class d {
-        public final String a;
-        public final c b;
-        public final List<String> c;
-        public final i53 d;
+    public static final class C2001d {
 
-        public d(JSONObject jSONObject) {
-            this.a = jSONObject.getString("offerIdToken");
-            this.b = new c(jSONObject.getJSONArray("pricingPhases"));
+        /* renamed from: a */
+        public final String f16889a;
+
+        /* renamed from: b */
+        public final C2000c f16890b;
+
+        /* renamed from: c */
+        public final List<String> f16891c;
+
+        /* renamed from: d */
+        public final i53 f16892d;
+
+        public C2001d(JSONObject jSONObject) {
+            this.f16889a = jSONObject.getString("offerIdToken");
+            this.f16890b = new C2000c(jSONObject.getJSONArray("pricingPhases"));
             JSONObject optJSONObject = jSONObject.optJSONObject("installmentPlanDetails");
-            this.d = optJSONObject == null ? null : new i53(optJSONObject);
+            this.f16892d = optJSONObject == null ? null : new i53(optJSONObject);
             ArrayList arrayList = new ArrayList();
             JSONArray optJSONArray = jSONObject.optJSONArray("offerTags");
             if (optJSONArray != null) {
@@ -111,72 +170,79 @@ public final class kz0 {
                     arrayList.add(optJSONArray.getString(i));
                 }
             }
-            this.c = arrayList;
+            this.f16891c = arrayList;
         }
 
-        public String a() {
-            return this.a;
+        /* renamed from: a */
+        public String m17301a() {
+            return this.f16889a;
         }
 
-        public c b() {
-            return this.b;
+        /* renamed from: b */
+        public C2000c m17300b() {
+            return this.f16890b;
         }
     }
 
     public kz0(String str) {
-        this.a = str;
+        this.f16868a = str;
         JSONObject jSONObject = new JSONObject(str);
-        this.b = jSONObject;
+        this.f16869b = jSONObject;
         String optString = jSONObject.optString("productId");
-        this.c = optString;
+        this.f16870c = optString;
         String optString2 = jSONObject.optString("type");
-        this.d = optString2;
+        this.f16871d = optString2;
         if (TextUtils.isEmpty(optString)) {
             throw new IllegalArgumentException("Product id cannot be empty.");
         }
         if (TextUtils.isEmpty(optString2)) {
             throw new IllegalArgumentException("Product type cannot be empty.");
         }
-        this.e = jSONObject.optString("title");
-        this.f = jSONObject.optString("name");
-        this.g = jSONObject.optString("description");
-        this.h = jSONObject.optString("skuDetailsToken");
+        this.f16872e = jSONObject.optString("title");
+        this.f16873f = jSONObject.optString("name");
+        this.f16874g = jSONObject.optString("description");
+        this.f16875h = jSONObject.optString("skuDetailsToken");
         if (optString2.equals("inapp")) {
-            this.i = null;
+            this.f16876i = null;
             return;
         }
         ArrayList arrayList = new ArrayList();
         JSONArray optJSONArray = jSONObject.optJSONArray("subscriptionOfferDetails");
         if (optJSONArray != null) {
             for (int i = 0; i < optJSONArray.length(); i++) {
-                arrayList.add(new d(optJSONArray.getJSONObject(i)));
+                arrayList.add(new C2001d(optJSONArray.getJSONObject(i)));
             }
         }
-        this.i = arrayList;
+        this.f16876i = arrayList;
     }
 
-    public a a() {
-        JSONObject optJSONObject = this.b.optJSONObject("oneTimePurchaseOfferDetails");
+    /* renamed from: a */
+    public C1998a m17312a() {
+        JSONObject optJSONObject = this.f16869b.optJSONObject("oneTimePurchaseOfferDetails");
         if (optJSONObject != null) {
-            return new a(optJSONObject);
+            return new C1998a(optJSONObject);
         }
         return null;
     }
 
-    public String b() {
-        return this.c;
+    /* renamed from: b */
+    public String m17311b() {
+        return this.f16870c;
     }
 
-    public String c() {
-        return this.d;
+    /* renamed from: c */
+    public String m17310c() {
+        return this.f16871d;
     }
 
-    public List<d> d() {
-        return this.i;
+    /* renamed from: d */
+    public List<C2001d> m17309d() {
+        return this.f16876i;
     }
 
-    public final String e() {
-        return this.b.optString("packageName");
+    /* renamed from: e */
+    public final String m17308e() {
+        return this.f16869b.optString("packageName");
     }
 
     public final boolean equals(Object obj) {
@@ -184,27 +250,28 @@ public final class kz0 {
             return true;
         }
         if (obj instanceof kz0) {
-            return TextUtils.equals(this.a, ((kz0) obj).a);
+            return TextUtils.equals(this.f16868a, ((kz0) obj).f16868a);
         }
         return false;
     }
 
-    public final String f() {
-        return this.h;
+    /* renamed from: f */
+    public final String m17307f() {
+        return this.f16875h;
     }
 
     public final int hashCode() {
-        return this.a.hashCode();
+        return this.f16868a.hashCode();
     }
 
     public final String toString() {
-        String str = this.a;
-        String obj = this.b.toString();
-        String str2 = this.c;
-        String str3 = this.d;
-        String str4 = this.e;
-        String str5 = this.h;
-        String valueOf = String.valueOf(this.i);
+        String str = this.f16868a;
+        String obj = this.f16869b.toString();
+        String str2 = this.f16870c;
+        String str3 = this.f16871d;
+        String str4 = this.f16872e;
+        String str5 = this.f16875h;
+        String valueOf = String.valueOf(this.f16876i);
         return "ProductDetails{jsonString='" + str + "', parsedJson=" + obj + ", productId='" + str2 + "', productType='" + str3 + "', title='" + str4 + "', productDetailsToken='" + str5 + "', subscriptionOfferDetails=" + valueOf + "}";
     }
 }

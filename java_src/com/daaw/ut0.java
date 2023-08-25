@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ut0 {
-    long a(a00 a00Var);
+    /* renamed from: a */
+    long mo7738a(a00 a00Var);
 
-    da1 c();
+    /* renamed from: c */
+    da1 mo7737c();
 
-    long d(long j);
+    /* renamed from: d */
+    long mo7736d(long j);
 }

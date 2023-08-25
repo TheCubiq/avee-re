@@ -5,42 +5,47 @@ import java.util.Objects;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class z37 extends d27 {
-    public final transient Object r;
+
+    /* renamed from: r */
+    public final transient Object f34428r;
 
     public z37(Object obj) {
         Objects.requireNonNull(obj);
-        this.r = obj;
+        this.f34428r = obj;
     }
 
     @Override // com.daaw.t17, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final boolean contains(@CheckForNull Object obj) {
-        return this.r.equals(obj);
+        return this.f34428r.equals(obj);
     }
 
     @Override // com.daaw.t17
-    public final int d(Object[] objArr, int i) {
-        objArr[i] = this.r;
+    /* renamed from: d */
+    public final int mo2850d(Object[] objArr, int i) {
+        objArr[i] = this.f34428r;
         return i + 1;
     }
 
     @Override // com.daaw.d27, com.daaw.t17
-    public final y17 h() {
-        return y17.v(this.r);
+    /* renamed from: h */
+    public final y17 mo2849h() {
+        return y17.m4259v(this.f34428r);
     }
 
     @Override // com.daaw.d27, java.util.Collection, java.util.Set
     public final int hashCode() {
-        return this.r.hashCode();
+        return this.f34428r.hashCode();
     }
 
     @Override // com.daaw.d27, com.daaw.t17, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
     public final /* synthetic */ Iterator iterator() {
-        return new j27(this.r);
+        return new j27(this.f34428r);
     }
 
     @Override // com.daaw.d27, com.daaw.t17
-    public final c47 j() {
-        return new j27(this.r);
+    /* renamed from: j */
+    public final c47 mo2848j() {
+        return new j27(this.f34428r);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
@@ -50,6 +55,6 @@ public final class z37 extends d27 {
 
     @Override // java.util.AbstractCollection
     public final String toString() {
-        return '[' + this.r.toString() + ']';
+        return '[' + this.f34428r.toString() + ']';
     }
 }

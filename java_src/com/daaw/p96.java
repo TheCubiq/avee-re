@@ -5,22 +5,33 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class p96 implements i76 {
-    public final qz3 a;
-    public final String b;
-    public final ScheduledExecutorService c;
-    public final g77 d;
-    public final y23 e;
+
+    /* renamed from: a */
+    public final qz3 f22727a;
+
+    /* renamed from: b */
+    public final String f22728b;
+
+    /* renamed from: c */
+    public final ScheduledExecutorService f22729c;
+
+    /* renamed from: d */
+    public final g77 f22730d;
+
+    /* renamed from: e */
+    public final y23 f22731e;
 
     public p96(String str, y23 y23Var, qz3 qz3Var, ScheduledExecutorService scheduledExecutorService, g77 g77Var, byte[] bArr) {
-        this.b = str;
-        this.e = y23Var;
-        this.a = qz3Var;
-        this.c = scheduledExecutorService;
-        this.d = g77Var;
+        this.f22728b = str;
+        this.f22731e = y23Var;
+        this.f22727a = qz3Var;
+        this.f22729c = scheduledExecutorService;
+        this.f22730d = g77Var;
     }
 
-    public final /* synthetic */ q96 a(Exception exc) {
-        this.a.u(exc, "AppSetIdInfoGmscoreSignal");
+    /* renamed from: a */
+    public final /* synthetic */ q96 m13567a(Exception exc) {
+        this.f22727a.m11902u(exc, "AppSetIdInfoGmscoreSignal");
         return new q96(null, -1);
     }
 
@@ -31,26 +42,26 @@ public final class p96 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        if (((Boolean) zzba.zzc().b(g93.p2)).booleanValue()) {
-            if (((Boolean) zzba.zzc().b(g93.u2)).booleanValue()) {
-                f77 n = s67.n(ov6.a(dk1.e(null)), new w57() { // from class: com.daaw.n96
+        if (((Boolean) zzba.zzc().m23658b(g93.f10789p2)).booleanValue()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10844u2)).booleanValue()) {
+                f77 m10629n = s67.m10629n(ov6.m13909a(dk1.m24304e(null)), new w57() { // from class: com.daaw.n96
                     @Override // com.daaw.w57
                     public final f77 zza(Object obj) {
-                        m5 m5Var = (m5) obj;
-                        return m5Var == null ? s67.i(new q96(null, -1)) : s67.i(new q96(m5Var.a(), m5Var.b()));
+                        C2151m5 c2151m5 = (C2151m5) obj;
+                        return c2151m5 == null ? s67.m10634i(new q96(null, -1)) : s67.m10634i(new q96(c2151m5.m16211a(), c2151m5.m16210b()));
                     }
-                }, this.d);
-                if (((Boolean) pa3.a.e()).booleanValue()) {
-                    n = s67.o(n, ((Long) pa3.b.e()).longValue(), TimeUnit.MILLISECONDS, this.c);
+                }, this.f22730d);
+                if (((Boolean) pa3.f22767a.m16137e()).booleanValue()) {
+                    m10629n = s67.m10628o(m10629n, ((Long) pa3.f22768b.m16137e()).longValue(), TimeUnit.MILLISECONDS, this.f22729c);
                 }
-                return s67.f(n, Exception.class, new ey6() { // from class: com.daaw.o96
+                return s67.m10637f(m10629n, Exception.class, new ey6() { // from class: com.daaw.o96
                     @Override // com.daaw.ey6
                     public final Object apply(Object obj) {
-                        return p96.this.a((Exception) obj);
+                        return p96.this.m13567a((Exception) obj);
                     }
-                }, this.d);
+                }, this.f22730d);
             }
         }
-        return s67.i(new q96(null, -1));
+        return s67.m10634i(new q96(null, -1));
     }
 }

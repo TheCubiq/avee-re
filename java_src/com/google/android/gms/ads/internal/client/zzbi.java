@@ -12,13 +12,13 @@ public final class zzbi extends bp2 implements zzbk {
 
     @Override // com.google.android.gms.ads.internal.client.zzbk
     public final void zzb(zze zzeVar) {
-        Parcel D = D();
-        dp2.e(D, zzeVar);
-        M(2, D);
+        Parcel m25952D = m25952D();
+        dp2.m24103e(m25952D, zzeVar);
+        m25950M(2, m25952D);
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbk
     public final void zzc() {
-        M(1, D());
+        m25950M(1, m25952D());
     }
 }

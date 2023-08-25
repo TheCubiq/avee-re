@@ -1,54 +1,60 @@
 package androidx.appcompat.widget;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import androidx.appcompat.widget.b;
+import androidx.appcompat.widget.C0164b;
+import com.daaw.g80;
 import com.daaw.o11;
 import com.daaw.xs1;
 /* loaded from: classes.dex */
-public class AlertDialogLayout extends b {
+public class AlertDialogLayout extends C0164b {
     public AlertDialogLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
     }
 
-    private void A(View view, int i, int i2, int i3, int i4) {
+    /* renamed from: A */
+    private void m30094A(View view, int i, int i2, int i3, int i4) {
         view.layout(i, i2, i3 + i, i4 + i2);
     }
 
-    public static int B(View view) {
-        int F = xs1.F(view);
-        if (F > 0) {
-            return F;
+    /* renamed from: B */
+    public static int m30093B(View view) {
+        int m4766F = xs1.m4766F(view);
+        if (m4766F > 0) {
+            return m4766F;
         }
         if (view instanceof ViewGroup) {
             ViewGroup viewGroup = (ViewGroup) view;
             if (viewGroup.getChildCount() == 1) {
-                return B(viewGroup.getChildAt(0));
+                return m30093B(viewGroup.getChildAt(0));
             }
         }
         return 0;
     }
 
-    private void l(int i, int i2) {
+    /* renamed from: l */
+    private void m30091l(int i, int i2) {
         int makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 1073741824);
         for (int i3 = 0; i3 < i; i3++) {
             View childAt = getChildAt(i3);
             if (childAt.getVisibility() != 8) {
-                b.a aVar = (b.a) childAt.getLayoutParams();
-                if (((LinearLayout.LayoutParams) aVar).width == -1) {
-                    int i4 = ((LinearLayout.LayoutParams) aVar).height;
-                    ((LinearLayout.LayoutParams) aVar).height = childAt.getMeasuredHeight();
+                C0164b.C0165a c0165a = (C0164b.C0165a) childAt.getLayoutParams();
+                if (((LinearLayout.LayoutParams) c0165a).width == -1) {
+                    int i4 = ((LinearLayout.LayoutParams) c0165a).height;
+                    ((LinearLayout.LayoutParams) c0165a).height = childAt.getMeasuredHeight();
                     measureChildWithMargins(childAt, makeMeasureSpec, 0, i2, 0);
-                    ((LinearLayout.LayoutParams) aVar).height = i4;
+                    ((LinearLayout.LayoutParams) c0165a).height = i4;
                 }
             }
         }
     }
 
-    public final boolean C(int i, int i2) {
+    /* renamed from: C */
+    public final boolean m30092C(int i, int i2) {
         int i3;
         int i4;
         int i5;
@@ -85,7 +91,7 @@ public class AlertDialogLayout extends b {
         }
         if (view2 != null) {
             view2.measure(i, 0);
-            i4 = B(view2);
+            i4 = m30093B(view2);
             i5 = view2.getMeasuredHeight() - i4;
             paddingTop += i4;
             i3 = View.combineMeasuredStates(i3, view2.getMeasuredState());
@@ -127,129 +133,69 @@ public class AlertDialogLayout extends b {
         }
         setMeasuredDimension(View.resolveSizeAndState(i10 + getPaddingLeft() + getPaddingRight(), i, i3), View.resolveSizeAndState(paddingTop, i2, 0));
         if (mode2 != 1073741824) {
-            l(childCount, i2);
+            m30091l(childCount, i2);
             return true;
         }
         return true;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:32:0x00a6  */
-    @Override // androidx.appcompat.widget.b, android.view.ViewGroup, android.view.View
+    @Override // androidx.appcompat.widget.C0164b, android.view.ViewGroup, android.view.View
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void onLayout(boolean r18, int r19, int r20, int r21, int r22) {
-        /*
-            r17 = this;
-            r6 = r17
-            int r7 = r17.getPaddingLeft()
-            int r0 = r21 - r19
-            int r1 = r17.getPaddingRight()
-            int r8 = r0 - r1
-            int r0 = r0 - r7
-            int r1 = r17.getPaddingRight()
-            int r9 = r0 - r1
-            int r0 = r17.getMeasuredHeight()
-            int r10 = r17.getChildCount()
-            int r1 = r17.getGravity()
-            r2 = r1 & 112(0x70, float:1.57E-43)
-            r3 = 8388615(0x800007, float:1.1754953E-38)
-            r11 = r1 & r3
-            r1 = 16
-            if (r2 == r1) goto L40
-            r1 = 80
-            if (r2 == r1) goto L35
-            int r0 = r17.getPaddingTop()
-            goto L4b
-        L35:
-            int r1 = r17.getPaddingTop()
-            int r1 = r1 + r22
-            int r1 = r1 - r20
-            int r0 = r1 - r0
-            goto L4b
-        L40:
-            int r1 = r17.getPaddingTop()
-            int r2 = r22 - r20
-            int r2 = r2 - r0
-            int r2 = r2 / 2
-            int r0 = r1 + r2
-        L4b:
-            android.graphics.drawable.Drawable r1 = r17.getDividerDrawable()
-            r2 = 0
-            if (r1 != 0) goto L54
-            r12 = 0
-            goto L59
-        L54:
-            int r1 = r1.getIntrinsicHeight()
-            r12 = r1
-        L59:
-            r13 = 0
-        L5a:
-            if (r13 >= r10) goto Lbd
-            android.view.View r1 = r6.getChildAt(r13)
-            if (r1 == 0) goto Lba
-            int r2 = r1.getVisibility()
-            r3 = 8
-            if (r2 == r3) goto Lba
-            int r4 = r1.getMeasuredWidth()
-            int r14 = r1.getMeasuredHeight()
-            android.view.ViewGroup$LayoutParams r2 = r1.getLayoutParams()
-            r15 = r2
-            androidx.appcompat.widget.b$a r15 = (androidx.appcompat.widget.b.a) r15
-            int r2 = r15.gravity
-            if (r2 >= 0) goto L7e
-            r2 = r11
-        L7e:
-            int r3 = com.daaw.xs1.E(r17)
-            int r2 = com.daaw.g80.b(r2, r3)
-            r2 = r2 & 7
-            r3 = 1
-            if (r2 == r3) goto L95
-            r3 = 5
-            if (r2 == r3) goto L92
-            int r2 = r15.leftMargin
-            int r2 = r2 + r7
-            goto La0
-        L92:
-            int r2 = r8 - r4
-            goto L9d
-        L95:
-            int r2 = r9 - r4
-            int r2 = r2 / 2
-            int r2 = r2 + r7
-            int r3 = r15.leftMargin
-            int r2 = r2 + r3
-        L9d:
-            int r3 = r15.rightMargin
-            int r2 = r2 - r3
-        La0:
-            boolean r3 = r6.t(r13)
-            if (r3 == 0) goto La7
-            int r0 = r0 + r12
-        La7:
-            int r3 = r15.topMargin
-            int r16 = r0 + r3
-            r0 = r17
-            r3 = r16
-            r5 = r14
-            r0.A(r1, r2, r3, r4, r5)
-            int r0 = r15.bottomMargin
-            int r14 = r14 + r0
-            int r16 = r16 + r14
-            r0 = r16
-        Lba:
-            int r13 = r13 + 1
-            goto L5a
-        Lbd:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.appcompat.widget.AlertDialogLayout.onLayout(boolean, int, int, int, int):void");
+    public void onLayout(boolean z, int i, int i2, int i3, int i4) {
+        int i5;
+        int i6;
+        int paddingLeft = getPaddingLeft();
+        int i7 = i3 - i;
+        int paddingRight = i7 - getPaddingRight();
+        int paddingRight2 = (i7 - paddingLeft) - getPaddingRight();
+        int measuredHeight = getMeasuredHeight();
+        int childCount = getChildCount();
+        int gravity = getGravity();
+        int i8 = gravity & 112;
+        int i9 = gravity & 8388615;
+        int paddingTop = i8 != 16 ? i8 != 80 ? getPaddingTop() : ((getPaddingTop() + i4) - i2) - measuredHeight : getPaddingTop() + (((i4 - i2) - measuredHeight) / 2);
+        Drawable dividerDrawable = getDividerDrawable();
+        int intrinsicHeight = dividerDrawable == null ? 0 : dividerDrawable.getIntrinsicHeight();
+        for (int i10 = 0; i10 < childCount; i10++) {
+            View childAt = getChildAt(i10);
+            if (childAt != null && childAt.getVisibility() != 8) {
+                int measuredWidth = childAt.getMeasuredWidth();
+                int measuredHeight2 = childAt.getMeasuredHeight();
+                C0164b.C0165a c0165a = (C0164b.C0165a) childAt.getLayoutParams();
+                int i11 = ((LinearLayout.LayoutParams) c0165a).gravity;
+                if (i11 < 0) {
+                    i11 = i9;
+                }
+                int m21894b = g80.m21894b(i11, xs1.m4768E(this)) & 7;
+                if (m21894b == 1) {
+                    i5 = ((paddingRight2 - measuredWidth) / 2) + paddingLeft + ((LinearLayout.LayoutParams) c0165a).leftMargin;
+                } else if (m21894b != 5) {
+                    i6 = ((LinearLayout.LayoutParams) c0165a).leftMargin + paddingLeft;
+                    if (m29925t(i10)) {
+                        paddingTop += intrinsicHeight;
+                    }
+                    int i12 = paddingTop + ((LinearLayout.LayoutParams) c0165a).topMargin;
+                    m30094A(childAt, i6, i12, measuredWidth, measuredHeight2);
+                    paddingTop = i12 + measuredHeight2 + ((LinearLayout.LayoutParams) c0165a).bottomMargin;
+                } else {
+                    i5 = paddingRight - measuredWidth;
+                }
+                i6 = i5 - ((LinearLayout.LayoutParams) c0165a).rightMargin;
+                if (m29925t(i10)) {
+                }
+                int i122 = paddingTop + ((LinearLayout.LayoutParams) c0165a).topMargin;
+                m30094A(childAt, i6, i122, measuredWidth, measuredHeight2);
+                paddingTop = i122 + measuredHeight2 + ((LinearLayout.LayoutParams) c0165a).bottomMargin;
+            }
+        }
     }
 
-    @Override // androidx.appcompat.widget.b, android.view.View
+    @Override // androidx.appcompat.widget.C0164b, android.view.View
     public void onMeasure(int i, int i2) {
-        if (C(i, i2)) {
+        if (m30092C(i, i2)) {
             return;
         }
         super.onMeasure(i, i2);

@@ -1,15 +1,20 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface o24 {
-    void c(int i);
+    /* renamed from: c */
+    void mo9570c(int i);
 
-    void d(String str, Exception exc);
+    /* renamed from: d */
+    void mo9569d(String str, Exception exc);
 
-    void e(boolean z, long j);
+    /* renamed from: e */
+    void mo9568e(boolean z, long j);
 
-    void f(String str, Exception exc);
+    /* renamed from: f */
+    void mo9567f(String str, Exception exc);
 
-    void g(int i, int i2);
+    /* renamed from: g */
+    void mo9566g(int i, int i2);
 
     void zzv();
 }

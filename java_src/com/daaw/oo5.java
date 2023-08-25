@@ -13,7 +13,7 @@ public final class oo5 extends SQLiteOpenHelper {
     public final void onCreate(SQLiteDatabase sQLiteDatabase) {
         sQLiteDatabase.execSQL("CREATE TABLE offline_signal_contents (timestamp INTEGER PRIMARY_KEY, serialized_proto_data BLOB)");
         sQLiteDatabase.execSQL("CREATE TABLE offline_signal_statistics (statistic_name TEXT PRIMARY_KEY, value INTEGER)");
-        kp5.e(sQLiteDatabase);
+        kp5.m17541e(sQLiteDatabase);
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper

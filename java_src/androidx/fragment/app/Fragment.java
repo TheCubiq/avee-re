@@ -21,14 +21,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import androidx.lifecycle.AbstractC0344c;
+import androidx.lifecycle.C0349e;
+import androidx.lifecycle.InterfaceC0348d;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.c;
+import com.daaw.AbstractC1589hn;
 import com.daaw.bu1;
 import com.daaw.c40;
 import com.daaw.ci1;
 import com.daaw.du1;
 import com.daaw.eu1;
-import com.daaw.hn;
 import com.daaw.jt1;
 import com.daaw.k81;
 import com.daaw.kc1;
@@ -55,104 +57,217 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes.dex */
 public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuListener, sj0, nt1, w80, m81 {
-    public static final Object p0 = new Object();
-    public boolean A;
-    public boolean B;
-    public boolean C;
-    public boolean D;
-    public boolean E;
-    public boolean F;
-    public int G;
-    public FragmentManager H;
-    public androidx.fragment.app.e<?> I;
-    public Fragment K;
-    public int L;
-    public int M;
-    public String N;
-    public boolean O;
-    public boolean P;
-    public boolean Q;
-    public boolean R;
-    public boolean S;
-    public boolean U;
-    public ViewGroup V;
-    public View W;
-    public boolean X;
-    public e Z;
-    public boolean b0;
-    public boolean c0;
-    public float d0;
-    public LayoutInflater e0;
-    public boolean f0;
-    public androidx.lifecycle.e h0;
-    public c40 i0;
-    public jt1.b k0;
-    public l81 l0;
-    public int m0;
-    public Bundle q;
-    public SparseArray<Parcelable> r;
-    public Bundle s;
-    public Boolean t;
-    public Bundle v;
-    public Fragment w;
-    public int y;
-    public int p = -1;
-    public String u = UUID.randomUUID().toString();
-    public String x = null;
-    public Boolean z = null;
-    public FragmentManager J = new u30();
-    public boolean T = true;
-    public boolean Y = true;
-    public Runnable a0 = new a();
-    public c.EnumC0020c g0 = c.EnumC0020c.RESUMED;
-    public kr0<sj0> j0 = new kr0<>();
-    public final AtomicInteger n0 = new AtomicInteger();
-    public final ArrayList<g> o0 = new ArrayList<>();
 
+    /* renamed from: p0 */
+    public static final Object f1353p0 = new Object();
+
+    /* renamed from: A */
+    public boolean f1354A;
+
+    /* renamed from: B */
+    public boolean f1355B;
+
+    /* renamed from: C */
+    public boolean f1356C;
+
+    /* renamed from: D */
+    public boolean f1357D;
+
+    /* renamed from: E */
+    public boolean f1358E;
+
+    /* renamed from: F */
+    public boolean f1359F;
+
+    /* renamed from: G */
+    public int f1360G;
+
+    /* renamed from: H */
+    public FragmentManager f1361H;
+
+    /* renamed from: I */
+    public AbstractC0305e<?> f1362I;
+
+    /* renamed from: K */
+    public Fragment f1364K;
+
+    /* renamed from: L */
+    public int f1365L;
+
+    /* renamed from: M */
+    public int f1366M;
+
+    /* renamed from: N */
+    public String f1367N;
+
+    /* renamed from: O */
+    public boolean f1368O;
+
+    /* renamed from: P */
+    public boolean f1369P;
+
+    /* renamed from: Q */
+    public boolean f1370Q;
+
+    /* renamed from: R */
+    public boolean f1371R;
+
+    /* renamed from: S */
+    public boolean f1372S;
+
+    /* renamed from: U */
+    public boolean f1374U;
+
+    /* renamed from: V */
+    public ViewGroup f1375V;
+
+    /* renamed from: W */
+    public View f1376W;
+
+    /* renamed from: X */
+    public boolean f1377X;
+
+    /* renamed from: Z */
+    public C0258e f1379Z;
+
+    /* renamed from: b0 */
+    public boolean f1381b0;
+
+    /* renamed from: c0 */
+    public boolean f1382c0;
+
+    /* renamed from: d0 */
+    public float f1383d0;
+
+    /* renamed from: e0 */
+    public LayoutInflater f1384e0;
+
+    /* renamed from: f0 */
+    public boolean f1385f0;
+
+    /* renamed from: h0 */
+    public C0349e f1387h0;
+
+    /* renamed from: i0 */
+    public c40 f1388i0;
+
+    /* renamed from: k0 */
+    public jt1.InterfaceC1864b f1390k0;
+
+    /* renamed from: l0 */
+    public l81 f1391l0;
+
+    /* renamed from: m0 */
+    public int f1392m0;
+
+    /* renamed from: q */
+    public Bundle f1396q;
+
+    /* renamed from: r */
+    public SparseArray<Parcelable> f1397r;
+
+    /* renamed from: s */
+    public Bundle f1398s;
+
+    /* renamed from: t */
+    public Boolean f1399t;
+
+    /* renamed from: v */
+    public Bundle f1401v;
+
+    /* renamed from: w */
+    public Fragment f1402w;
+
+    /* renamed from: y */
+    public int f1404y;
+
+    /* renamed from: p */
+    public int f1395p = -1;
+
+    /* renamed from: u */
+    public String f1400u = UUID.randomUUID().toString();
+
+    /* renamed from: x */
+    public String f1403x = null;
+
+    /* renamed from: z */
+    public Boolean f1405z = null;
+
+    /* renamed from: J */
+    public FragmentManager f1363J = new u30();
+
+    /* renamed from: T */
+    public boolean f1373T = true;
+
+    /* renamed from: Y */
+    public boolean f1378Y = true;
+
+    /* renamed from: a0 */
+    public Runnable f1380a0 = new RunnableC0254a();
+
+    /* renamed from: g0 */
+    public AbstractC0344c.EnumC0347c f1386g0 = AbstractC0344c.EnumC0347c.RESUMED;
+
+    /* renamed from: j0 */
+    public kr0<sj0> f1389j0 = new kr0<>();
+
+    /* renamed from: n0 */
+    public final AtomicInteger f1393n0 = new AtomicInteger();
+
+    /* renamed from: o0 */
+    public final ArrayList<AbstractC0260g> f1394o0 = new ArrayList<>();
+
+    /* renamed from: androidx.fragment.app.Fragment$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public a() {
+    public class RunnableC0254a implements Runnable {
+        public RunnableC0254a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Fragment.this.F1();
+            Fragment.this.m29484F1();
         }
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$b */
     /* loaded from: classes.dex */
-    public class b implements Runnable {
-        public b() {
+    public class RunnableC0255b implements Runnable {
+        public RunnableC0255b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Fragment.this.h(false);
+            Fragment.this.m29436h(false);
         }
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$c */
     /* loaded from: classes.dex */
-    public class c implements Runnable {
-        public final /* synthetic */ l p;
+    public class RunnableC0256c implements Runnable {
 
-        public c(l lVar) {
-            this.p = lVar;
+        /* renamed from: p */
+        public final /* synthetic */ AbstractC0325l f1409p;
+
+        public RunnableC0256c(AbstractC0325l abstractC0325l) {
+            this.f1409p = abstractC0325l;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            this.p.g();
+            this.f1409p.m29101g();
         }
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$d */
     /* loaded from: classes.dex */
-    public class d extends r30 {
-        public d() {
+    public class C0257d extends r30 {
+        public C0257d() {
         }
 
         @Override // com.daaw.r30
-        public View f(int i) {
-            View view = Fragment.this.W;
+        /* renamed from: f */
+        public View mo11810f(int i) {
+            View view = Fragment.this.f1376W;
             if (view != null) {
                 return view.findViewById(i);
             }
@@ -160,636 +275,761 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
 
         @Override // com.daaw.r30
-        public boolean h() {
-            return Fragment.this.W != null;
+        /* renamed from: h */
+        public boolean mo11809h() {
+            return Fragment.this.f1376W != null;
         }
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$e */
     /* loaded from: classes.dex */
-    public static class e {
-        public View a;
-        public Animator b;
-        public boolean c;
-        public int d;
-        public int e;
-        public int f;
-        public int g;
-        public int h;
-        public ArrayList<String> i;
-        public ArrayList<String> j;
-        public Object k = null;
-        public Object l;
-        public Object m;
-        public Object n;
-        public Object o;
-        public Object p;
-        public Boolean q;
-        public Boolean r;
-        public float s;
-        public View t;
-        public boolean u;
-        public h v;
-        public boolean w;
+    public static class C0258e {
 
-        public e() {
-            Object obj = Fragment.p0;
-            this.l = obj;
-            this.m = null;
-            this.n = obj;
-            this.o = null;
-            this.p = obj;
-            this.s = 1.0f;
-            this.t = null;
+        /* renamed from: a */
+        public View f1412a;
+
+        /* renamed from: b */
+        public Animator f1413b;
+
+        /* renamed from: c */
+        public boolean f1414c;
+
+        /* renamed from: d */
+        public int f1415d;
+
+        /* renamed from: e */
+        public int f1416e;
+
+        /* renamed from: f */
+        public int f1417f;
+
+        /* renamed from: g */
+        public int f1418g;
+
+        /* renamed from: h */
+        public int f1419h;
+
+        /* renamed from: i */
+        public ArrayList<String> f1420i;
+
+        /* renamed from: j */
+        public ArrayList<String> f1421j;
+
+        /* renamed from: k */
+        public Object f1422k = null;
+
+        /* renamed from: l */
+        public Object f1423l;
+
+        /* renamed from: m */
+        public Object f1424m;
+
+        /* renamed from: n */
+        public Object f1425n;
+
+        /* renamed from: o */
+        public Object f1426o;
+
+        /* renamed from: p */
+        public Object f1427p;
+
+        /* renamed from: q */
+        public Boolean f1428q;
+
+        /* renamed from: r */
+        public Boolean f1429r;
+
+        /* renamed from: s */
+        public float f1430s;
+
+        /* renamed from: t */
+        public View f1431t;
+
+        /* renamed from: u */
+        public boolean f1432u;
+
+        /* renamed from: v */
+        public InterfaceC0261h f1433v;
+
+        /* renamed from: w */
+        public boolean f1434w;
+
+        public C0258e() {
+            Object obj = Fragment.f1353p0;
+            this.f1423l = obj;
+            this.f1424m = null;
+            this.f1425n = obj;
+            this.f1426o = null;
+            this.f1427p = obj;
+            this.f1430s = 1.0f;
+            this.f1431t = null;
         }
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$f */
     /* loaded from: classes.dex */
-    public static class f extends RuntimeException {
-        public f(String str, Exception exc) {
+    public static class C0259f extends RuntimeException {
+        public C0259f(String str, Exception exc) {
             super(str, exc);
         }
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$g */
     /* loaded from: classes.dex */
-    public static abstract class g {
-        public abstract void a();
+    public static abstract class AbstractC0260g {
+        /* renamed from: a */
+        public abstract void m29391a();
     }
 
+    /* renamed from: androidx.fragment.app.Fragment$h */
     /* loaded from: classes.dex */
-    public interface h {
-        void a();
+    public interface InterfaceC0261h {
+        /* renamed from: a */
+        void mo29265a();
 
-        void b();
+        /* renamed from: b */
+        void mo29264b();
     }
 
     public Fragment() {
-        X();
+        m29456X();
     }
 
     @Deprecated
-    public static Fragment Z(Context context, String str, Bundle bundle) {
+    /* renamed from: Z */
+    public static Fragment m29452Z(Context context, String str, Bundle bundle) {
         try {
-            Fragment newInstance = androidx.fragment.app.d.d(context.getClassLoader(), str).getConstructor(new Class[0]).newInstance(new Object[0]);
+            Fragment newInstance = C0304d.m29216d(context.getClassLoader(), str).getConstructor(new Class[0]).newInstance(new Object[0]);
             if (bundle != null) {
                 bundle.setClassLoader(newInstance.getClass().getClassLoader());
-                newInstance.w1(bundle);
+                newInstance.m29400w1(bundle);
             }
             return newInstance;
-        } catch (IllegalAccessException e2) {
-            throw new f("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e2);
-        } catch (InstantiationException e3) {
-            throw new f("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e3);
-        } catch (NoSuchMethodException e4) {
-            throw new f("Unable to instantiate fragment " + str + ": could not find Fragment constructor", e4);
-        } catch (InvocationTargetException e5) {
-            throw new f("Unable to instantiate fragment " + str + ": calling Fragment constructor caused an exception", e5);
+        } catch (IllegalAccessException e) {
+            throw new C0259f("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e);
+        } catch (InstantiationException e2) {
+            throw new C0259f("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e2);
+        } catch (NoSuchMethodException e3) {
+            throw new C0259f("Unable to instantiate fragment " + str + ": could not find Fragment constructor", e3);
+        } catch (InvocationTargetException e4) {
+            throw new C0259f("Unable to instantiate fragment " + str + ": calling Fragment constructor caused an exception", e4);
         }
     }
 
-    public kc1 A() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: A */
+    public kc1 m29501A() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        Objects.requireNonNull(eVar);
+        Objects.requireNonNull(c0258e);
         return null;
     }
 
-    public void A0(Context context, AttributeSet attributeSet, Bundle bundle) {
-        this.U = true;
-        androidx.fragment.app.e<?> eVar = this.I;
-        Activity j = eVar == null ? null : eVar.j();
-        if (j != null) {
-            this.U = false;
-            z0(j, attributeSet, bundle);
+    /* renamed from: A0 */
+    public void m29500A0(Context context, AttributeSet attributeSet, Bundle bundle) {
+        this.f1374U = true;
+        AbstractC0305e<?> abstractC0305e = this.f1362I;
+        Activity m29215j = abstractC0305e == null ? null : abstractC0305e.m29215j();
+        if (m29215j != null) {
+            this.f1374U = false;
+            m29393z0(m29215j, attributeSet, bundle);
         }
     }
 
-    public void A1(h hVar) {
-        l();
-        e eVar = this.Z;
-        h hVar2 = eVar.v;
-        if (hVar == hVar2) {
+    /* renamed from: A1 */
+    public void m29499A1(InterfaceC0261h interfaceC0261h) {
+        m29429l();
+        C0258e c0258e = this.f1379Z;
+        InterfaceC0261h interfaceC0261h2 = c0258e.f1433v;
+        if (interfaceC0261h == interfaceC0261h2) {
             return;
         }
-        if (hVar != null && hVar2 != null) {
+        if (interfaceC0261h != null && interfaceC0261h2 != null) {
             throw new IllegalStateException("Trying to set a replacement startPostponedEnterTransition on " + this);
         }
-        if (eVar.u) {
-            eVar.v = hVar;
+        if (c0258e.f1432u) {
+            c0258e.f1433v = interfaceC0261h;
         }
-        if (hVar != null) {
-            hVar.a();
+        if (interfaceC0261h != null) {
+            interfaceC0261h.mo29265a();
         }
     }
 
-    public View B() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: B */
+    public View m29498B() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        return eVar.t;
+        return c0258e.f1431t;
     }
 
-    public void B0(boolean z) {
+    /* renamed from: B0 */
+    public void m29497B0(boolean z) {
     }
 
-    public void B1(boolean z) {
-        if (this.Z == null) {
+    /* renamed from: B1 */
+    public void m29496B1(boolean z) {
+        if (this.f1379Z == null) {
             return;
         }
-        l().c = z;
+        m29429l().f1414c = z;
     }
 
-    public final Object C() {
-        androidx.fragment.app.e<?> eVar = this.I;
-        if (eVar == null) {
+    /* renamed from: C */
+    public final Object m29495C() {
+        AbstractC0305e<?> abstractC0305e = this.f1362I;
+        if (abstractC0305e == null) {
             return null;
         }
-        return eVar.m();
+        return abstractC0305e.mo13651m();
     }
 
-    public boolean C0(MenuItem menuItem) {
+    /* renamed from: C0 */
+    public boolean m29494C0(MenuItem menuItem) {
         return false;
     }
 
-    public void C1(float f2) {
-        l().s = f2;
+    /* renamed from: C1 */
+    public void m29493C1(float f) {
+        m29429l().f1430s = f;
     }
 
     @Deprecated
-    public LayoutInflater D(Bundle bundle) {
-        androidx.fragment.app.e<?> eVar = this.I;
-        if (eVar != null) {
-            LayoutInflater n = eVar.n();
-            vi0.b(n, this.J.t0());
-            return n;
+    /* renamed from: D */
+    public LayoutInflater m29492D(Bundle bundle) {
+        AbstractC0305e<?> abstractC0305e = this.f1362I;
+        if (abstractC0305e != null) {
+            LayoutInflater mo13650n = abstractC0305e.mo13650n();
+            vi0.m7139b(mo13650n, this.f1363J.m29286t0());
+            return mo13650n;
         }
         throw new IllegalStateException("onGetLayoutInflater() cannot be executed until the Fragment is attached to the FragmentManager.");
     }
 
-    public void D0(Menu menu) {
+    /* renamed from: D0 */
+    public void m29491D0(Menu menu) {
     }
 
-    public void D1(ArrayList<String> arrayList, ArrayList<String> arrayList2) {
-        l();
-        e eVar = this.Z;
-        eVar.i = arrayList;
-        eVar.j = arrayList2;
+    /* renamed from: D1 */
+    public void m29490D1(ArrayList<String> arrayList, ArrayList<String> arrayList2) {
+        m29429l();
+        C0258e c0258e = this.f1379Z;
+        c0258e.f1420i = arrayList;
+        c0258e.f1421j = arrayList2;
     }
 
-    public final int E() {
-        c.EnumC0020c enumC0020c = this.g0;
-        return (enumC0020c == c.EnumC0020c.INITIALIZED || this.K == null) ? enumC0020c.ordinal() : Math.min(enumC0020c.ordinal(), this.K.E());
+    /* renamed from: E */
+    public final int m29489E() {
+        AbstractC0344c.EnumC0347c enumC0347c = this.f1386g0;
+        return (enumC0347c == AbstractC0344c.EnumC0347c.INITIALIZED || this.f1364K == null) ? enumC0347c.ordinal() : Math.min(enumC0347c.ordinal(), this.f1364K.m29489E());
     }
 
-    public void E0() {
-        this.U = true;
+    /* renamed from: E0 */
+    public void m29488E0() {
+        this.f1374U = true;
     }
 
     @Deprecated
-    public void E1(@SuppressLint({"UnknownNullness"}) Intent intent, int i, Bundle bundle) {
-        if (this.I != null) {
-            H().K0(this, intent, i, bundle);
+    /* renamed from: E1 */
+    public void m29487E1(@SuppressLint({"UnknownNullness"}) Intent intent, int i, Bundle bundle) {
+        if (this.f1362I != null) {
+            m29481H().m29369K0(this, intent, i, bundle);
             return;
         }
         throw new IllegalStateException("Fragment " + this + " not attached to Activity");
     }
 
-    public int F() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: F */
+    public int m29486F() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return 0;
         }
-        return eVar.h;
+        return c0258e.f1419h;
     }
 
-    public void F0(boolean z) {
+    /* renamed from: F0 */
+    public void m29485F0(boolean z) {
     }
 
-    public void F1() {
-        if (this.Z == null || !l().u) {
+    /* renamed from: F1 */
+    public void m29484F1() {
+        if (this.f1379Z == null || !m29429l().f1432u) {
             return;
         }
-        if (this.I == null) {
-            l().u = false;
-        } else if (Looper.myLooper() != this.I.l().getLooper()) {
-            this.I.l().postAtFrontOfQueue(new b());
+        if (this.f1362I == null) {
+            m29429l().f1432u = false;
+        } else if (Looper.myLooper() != this.f1362I.m29213l().getLooper()) {
+            this.f1362I.m29213l().postAtFrontOfQueue(new RunnableC0255b());
         } else {
-            h(true);
+            m29436h(true);
         }
     }
 
-    public final Fragment G() {
-        return this.K;
+    /* renamed from: G */
+    public final Fragment m29483G() {
+        return this.f1364K;
     }
 
-    public void G0(Menu menu) {
+    /* renamed from: G0 */
+    public void m29482G0(Menu menu) {
     }
 
-    public final FragmentManager H() {
-        FragmentManager fragmentManager = this.H;
+    /* renamed from: H */
+    public final FragmentManager m29481H() {
+        FragmentManager fragmentManager = this.f1361H;
         if (fragmentManager != null) {
             return fragmentManager;
         }
         throw new IllegalStateException("Fragment " + this + " not associated with a fragment manager.");
     }
 
-    public void H0(boolean z) {
+    /* renamed from: H0 */
+    public void m29480H0(boolean z) {
     }
 
-    public boolean I() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: I */
+    public boolean m29479I() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return false;
         }
-        return eVar.c;
+        return c0258e.f1414c;
     }
 
     @Deprecated
-    public void I0(int i, String[] strArr, int[] iArr) {
+    /* renamed from: I0 */
+    public void m29478I0(int i, String[] strArr, int[] iArr) {
     }
 
-    public int J() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: J */
+    public int m29477J() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return 0;
         }
-        return eVar.f;
+        return c0258e.f1417f;
     }
 
-    public void J0() {
-        this.U = true;
+    /* renamed from: J0 */
+    public void mo25245J0() {
+        this.f1374U = true;
     }
 
-    public int K() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: K */
+    public int m29476K() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return 0;
         }
-        return eVar.g;
+        return c0258e.f1418g;
     }
 
-    public void K0(Bundle bundle) {
+    /* renamed from: K0 */
+    public void mo549K0(Bundle bundle) {
     }
 
-    public float L() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: L */
+    public float m29475L() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return 1.0f;
         }
-        return eVar.s;
+        return c0258e.f1430s;
     }
 
-    public void L0() {
-        this.U = true;
+    /* renamed from: L0 */
+    public void mo548L0() {
+        this.f1374U = true;
     }
 
-    public Object M() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: M */
+    public Object m29474M() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        Object obj = eVar.n;
-        return obj == p0 ? z() : obj;
+        Object obj = c0258e.f1425n;
+        return obj == f1353p0 ? m29394z() : obj;
     }
 
-    public void M0() {
-        this.U = true;
+    /* renamed from: M0 */
+    public void mo547M0() {
+        this.f1374U = true;
     }
 
-    public final Resources N() {
-        return o1().getResources();
+    /* renamed from: N */
+    public final Resources m29473N() {
+        return m29420o1().getResources();
     }
 
-    public void N0(View view, Bundle bundle) {
+    /* renamed from: N0 */
+    public void mo26875N0(View view, Bundle bundle) {
     }
 
-    public Object O() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: O */
+    public Object m29472O() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        Object obj = eVar.l;
-        return obj == p0 ? w() : obj;
+        Object obj = c0258e.f1423l;
+        return obj == f1353p0 ? m29401w() : obj;
     }
 
-    public void O0(Bundle bundle) {
-        this.U = true;
+    /* renamed from: O0 */
+    public void mo13996O0(Bundle bundle) {
+        this.f1374U = true;
     }
 
-    public Object P() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: P */
+    public Object m29471P() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        return eVar.o;
+        return c0258e.f1426o;
     }
 
-    public void P0(Bundle bundle) {
-        this.J.Q0();
-        this.p = 3;
-        this.U = false;
-        i0(bundle);
-        if (this.U) {
-            r1();
-            this.J.y();
+    /* renamed from: P0 */
+    public void m29470P0(Bundle bundle) {
+        this.f1363J.m29357Q0();
+        this.f1395p = 3;
+        this.f1374U = false;
+        m29433i0(bundle);
+        if (this.f1374U) {
+            m29411r1();
+            this.f1363J.m29277y();
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onActivityCreated()");
     }
 
-    public Object Q() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: Q */
+    public Object m29469Q() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        Object obj = eVar.p;
-        return obj == p0 ? P() : obj;
+        Object obj = c0258e.f1427p;
+        return obj == f1353p0 ? m29471P() : obj;
     }
 
-    public void Q0() {
-        Iterator<g> it = this.o0.iterator();
+    /* renamed from: Q0 */
+    public void m29468Q0() {
+        Iterator<AbstractC0260g> it = this.f1394o0.iterator();
         while (it.hasNext()) {
-            it.next().a();
+            it.next().m29391a();
         }
-        this.o0.clear();
-        this.J.j(this.I, j(), this);
-        this.p = 0;
-        this.U = false;
-        l0(this.I.k());
-        if (this.U) {
-            this.H.I(this);
-            this.J.z();
+        this.f1394o0.clear();
+        this.f1363J.m29311j(this.f1362I, mo13987j(), this);
+        this.f1395p = 0;
+        this.f1374U = false;
+        mo13986l0(this.f1362I.m29214k());
+        if (this.f1374U) {
+            this.f1361H.m29374I(this);
+            this.f1363J.m29275z();
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onAttach()");
     }
 
-    public ArrayList<String> R() {
+    /* renamed from: R */
+    public ArrayList<String> m29467R() {
         ArrayList<String> arrayList;
-        e eVar = this.Z;
-        return (eVar == null || (arrayList = eVar.i) == null) ? new ArrayList<>() : arrayList;
+        C0258e c0258e = this.f1379Z;
+        return (c0258e == null || (arrayList = c0258e.f1420i) == null) ? new ArrayList<>() : arrayList;
     }
 
-    public void R0(Configuration configuration) {
+    /* renamed from: R0 */
+    public void m29466R0(Configuration configuration) {
         onConfigurationChanged(configuration);
-        this.J.A(configuration);
+        this.f1363J.m29390A(configuration);
     }
 
-    public ArrayList<String> S() {
+    /* renamed from: S */
+    public ArrayList<String> m29465S() {
         ArrayList<String> arrayList;
-        e eVar = this.Z;
-        return (eVar == null || (arrayList = eVar.j) == null) ? new ArrayList<>() : arrayList;
+        C0258e c0258e = this.f1379Z;
+        return (c0258e == null || (arrayList = c0258e.f1421j) == null) ? new ArrayList<>() : arrayList;
     }
 
-    public boolean S0(MenuItem menuItem) {
-        if (this.O) {
+    /* renamed from: S0 */
+    public boolean m29464S0(MenuItem menuItem) {
+        if (this.f1368O) {
             return false;
         }
-        if (n0(menuItem)) {
+        if (m29423n0(menuItem)) {
             return true;
         }
-        return this.J.B(menuItem);
+        return this.f1363J.m29388B(menuItem);
     }
 
-    public final String T(int i) {
-        return N().getString(i);
+    /* renamed from: T */
+    public final String m29463T(int i) {
+        return m29473N().getString(i);
     }
 
-    public void T0(Bundle bundle) {
-        this.J.Q0();
-        this.p = 1;
-        this.U = false;
-        this.h0.a(new androidx.lifecycle.d() { // from class: androidx.fragment.app.Fragment.5
-            @Override // androidx.lifecycle.d
-            public void a(sj0 sj0Var, c.b bVar) {
+    /* renamed from: T0 */
+    public void m29462T0(Bundle bundle) {
+        this.f1363J.m29357Q0();
+        this.f1395p = 1;
+        this.f1374U = false;
+        this.f1387h0.mo29048a(new InterfaceC0348d() { // from class: androidx.fragment.app.Fragment.5
+            @Override // androidx.lifecycle.InterfaceC0348d
+            /* renamed from: a */
+            public void mo18735a(sj0 sj0Var, AbstractC0344c.EnumC0346b enumC0346b) {
                 View view;
-                if (bVar != c.b.ON_STOP || (view = Fragment.this.W) == null) {
+                if (enumC0346b != AbstractC0344c.EnumC0346b.ON_STOP || (view = Fragment.this.f1376W) == null) {
                     return;
                 }
                 view.cancelPendingInputEvents();
             }
         });
-        this.l0.d(bundle);
-        o0(bundle);
-        this.f0 = true;
-        if (this.U) {
-            this.h0.h(c.b.ON_CREATE);
+        this.f1391l0.m17104d(bundle);
+        mo526o0(bundle);
+        this.f1385f0 = true;
+        if (this.f1374U) {
+            this.f1387h0.m29041h(AbstractC0344c.EnumC0346b.ON_CREATE);
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onCreate()");
     }
 
     @Deprecated
-    public final Fragment U() {
+    /* renamed from: U */
+    public final Fragment m29461U() {
         String str;
-        Fragment fragment = this.w;
+        Fragment fragment = this.f1402w;
         if (fragment != null) {
             return fragment;
         }
-        FragmentManager fragmentManager = this.H;
-        if (fragmentManager == null || (str = this.x) == null) {
+        FragmentManager fragmentManager = this.f1361H;
+        if (fragmentManager == null || (str = this.f1403x) == null) {
             return null;
         }
-        return fragmentManager.f0(str);
+        return fragmentManager.m29322f0(str);
     }
 
-    public boolean U0(Menu menu, MenuInflater menuInflater) {
+    /* renamed from: U0 */
+    public boolean m29460U0(Menu menu, MenuInflater menuInflater) {
         boolean z = false;
-        if (this.O) {
+        if (this.f1368O) {
             return false;
         }
-        if (this.S && this.T) {
+        if (this.f1372S && this.f1373T) {
             z = true;
-            r0(menu, menuInflater);
+            m29412r0(menu, menuInflater);
         }
-        return z | this.J.D(menu, menuInflater);
+        return z | this.f1363J.m29384D(menu, menuInflater);
     }
 
-    public View V() {
-        return this.W;
+    /* renamed from: V */
+    public View m29459V() {
+        return this.f1376W;
     }
 
-    public void V0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        this.J.Q0();
-        this.F = true;
-        this.i0 = new c40(this, g());
-        View s0 = s0(layoutInflater, viewGroup, bundle);
-        this.W = s0;
-        if (s0 == null) {
-            if (this.i0.f()) {
+    /* renamed from: V0 */
+    public void mo13988V0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        this.f1363J.m29357Q0();
+        this.f1359F = true;
+        this.f1388i0 = new c40(this, mo13652g());
+        View mo523s0 = mo523s0(layoutInflater, viewGroup, bundle);
+        this.f1376W = mo523s0;
+        if (mo523s0 == null) {
+            if (this.f1388i0.m25636f()) {
                 throw new IllegalStateException("Called getViewLifecycleOwner() but onCreateView() returned null");
             }
-            this.i0 = null;
+            this.f1388i0 = null;
             return;
         }
-        this.i0.e();
-        bu1.a(this.W, this.i0);
-        eu1.a(this.W, this.i0);
-        du1.a(this.W, this.i0);
-        this.j0.j(this.i0);
+        this.f1388i0.m25637e();
+        bu1.m25826a(this.f1376W, this.f1388i0);
+        eu1.m23179a(this.f1376W, this.f1388i0);
+        du1.m23947a(this.f1376W, this.f1388i0);
+        this.f1389j0.mo15133j(this.f1388i0);
     }
 
-    public LiveData<sj0> W() {
-        return this.j0;
+    /* renamed from: W */
+    public LiveData<sj0> m29458W() {
+        return this.f1389j0;
     }
 
-    public void W0() {
-        this.J.E();
-        this.h0.h(c.b.ON_DESTROY);
-        this.p = 0;
-        this.U = false;
-        this.f0 = false;
-        t0();
-        if (this.U) {
+    /* renamed from: W0 */
+    public void m29457W0() {
+        this.f1363J.m29382E();
+        this.f1387h0.m29041h(AbstractC0344c.EnumC0346b.ON_DESTROY);
+        this.f1395p = 0;
+        this.f1374U = false;
+        this.f1385f0 = false;
+        mo19773t0();
+        if (this.f1374U) {
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onDestroy()");
     }
 
-    public final void X() {
-        this.h0 = new androidx.lifecycle.e(this);
-        this.l0 = l81.a(this);
-        this.k0 = null;
+    /* renamed from: X */
+    public final void m29456X() {
+        this.f1387h0 = new C0349e(this);
+        this.f1391l0 = l81.m17107a(this);
+        this.f1390k0 = null;
     }
 
-    public void X0() {
-        this.J.F();
-        if (this.W != null && this.i0.a().b().a(c.EnumC0020c.CREATED)) {
-            this.i0.b(c.b.ON_DESTROY);
+    /* renamed from: X0 */
+    public void m29455X0() {
+        this.f1363J.m29380F();
+        if (this.f1376W != null && this.f1388i0.mo2327a().mo29047b().m29049a(AbstractC0344c.EnumC0347c.CREATED)) {
+            this.f1388i0.m25638b(AbstractC0344c.EnumC0346b.ON_DESTROY);
         }
-        this.p = 1;
-        this.U = false;
-        v0();
-        if (this.U) {
-            mk0.b(this).c();
-            this.F = false;
+        this.f1395p = 1;
+        this.f1374U = false;
+        mo13985v0();
+        if (this.f1374U) {
+            mk0.m15994b(this).mo15137c();
+            this.f1359F = false;
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onDestroyView()");
     }
 
-    public void Y() {
-        X();
-        this.u = UUID.randomUUID().toString();
-        this.A = false;
-        this.B = false;
-        this.C = false;
-        this.D = false;
-        this.E = false;
-        this.G = 0;
-        this.H = null;
-        this.J = new u30();
-        this.I = null;
-        this.L = 0;
-        this.M = 0;
-        this.N = null;
-        this.O = false;
-        this.P = false;
+    /* renamed from: Y */
+    public void m29454Y() {
+        m29456X();
+        this.f1400u = UUID.randomUUID().toString();
+        this.f1354A = false;
+        this.f1355B = false;
+        this.f1356C = false;
+        this.f1357D = false;
+        this.f1358E = false;
+        this.f1360G = 0;
+        this.f1361H = null;
+        this.f1363J = new u30();
+        this.f1362I = null;
+        this.f1365L = 0;
+        this.f1366M = 0;
+        this.f1367N = null;
+        this.f1368O = false;
+        this.f1369P = false;
     }
 
-    public void Y0() {
-        this.p = -1;
-        this.U = false;
-        w0();
-        this.e0 = null;
-        if (this.U) {
-            if (this.J.D0()) {
+    /* renamed from: Y0 */
+    public void m29453Y0() {
+        this.f1395p = -1;
+        this.f1374U = false;
+        mo13984w0();
+        this.f1384e0 = null;
+        if (this.f1374U) {
+            if (this.f1363J.m29383D0()) {
                 return;
             }
-            this.J.E();
-            this.J = new u30();
+            this.f1363J.m29382E();
+            this.f1363J = new u30();
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onDetach()");
     }
 
-    public LayoutInflater Z0(Bundle bundle) {
-        LayoutInflater x0 = x0(bundle);
-        this.e0 = x0;
-        return x0;
+    /* renamed from: Z0 */
+    public LayoutInflater m29451Z0(Bundle bundle) {
+        LayoutInflater mo13983x0 = mo13983x0(bundle);
+        this.f1384e0 = mo13983x0;
+        return mo13983x0;
     }
 
     @Override // com.daaw.sj0
-    public androidx.lifecycle.c a() {
-        return this.h0;
+    /* renamed from: a */
+    public AbstractC0344c mo2327a() {
+        return this.f1387h0;
     }
 
-    public boolean a0() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: a0 */
+    public boolean m29450a0() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return false;
         }
-        return eVar.w;
+        return c0258e.f1434w;
     }
 
-    public void a1() {
+    /* renamed from: a1 */
+    public void m29449a1() {
         onLowMemory();
-        this.J.G();
+        this.f1363J.m29378G();
     }
 
-    public final boolean b0() {
-        return this.G > 0;
+    /* renamed from: b0 */
+    public final boolean m29448b0() {
+        return this.f1360G > 0;
     }
 
-    public void b1(boolean z) {
-        B0(z);
-        this.J.H(z);
+    /* renamed from: b1 */
+    public void m29447b1(boolean z) {
+        m29497B0(z);
+        this.f1363J.m29376H(z);
     }
 
-    public final boolean c0() {
+    /* renamed from: c0 */
+    public final boolean m29446c0() {
         FragmentManager fragmentManager;
-        return this.T && ((fragmentManager = this.H) == null || fragmentManager.G0(this.K));
+        return this.f1373T && ((fragmentManager = this.f1361H) == null || fragmentManager.m29377G0(this.f1364K));
     }
 
-    public boolean c1(MenuItem menuItem) {
-        if (this.O) {
+    /* renamed from: c1 */
+    public boolean m29445c1(MenuItem menuItem) {
+        if (this.f1368O) {
             return false;
         }
-        if (this.S && this.T && C0(menuItem)) {
+        if (this.f1372S && this.f1373T && m29494C0(menuItem)) {
             return true;
         }
-        return this.J.J(menuItem);
+        return this.f1363J.m29372J(menuItem);
     }
 
     @Override // com.daaw.w80
-    public /* synthetic */ hn d() {
-        return v80.a(this);
+    /* renamed from: d */
+    public /* synthetic */ AbstractC1589hn mo6345d() {
+        return v80.m7348a(this);
     }
 
-    public boolean d0() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: d0 */
+    public boolean m29444d0() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return false;
         }
-        return eVar.u;
+        return c0258e.f1432u;
     }
 
-    public void d1(Menu menu) {
-        if (this.O) {
+    /* renamed from: d1 */
+    public void m29443d1(Menu menu) {
+        if (this.f1368O) {
             return;
         }
-        if (this.S && this.T) {
-            D0(menu);
+        if (this.f1372S && this.f1373T) {
+            m29491D0(menu);
         }
-        this.J.K(menu);
+        this.f1363J.m29370K(menu);
     }
 
-    public final boolean e0() {
-        return this.B;
+    /* renamed from: e0 */
+    public final boolean m29442e0() {
+        return this.f1355B;
     }
 
-    public void e1() {
-        this.J.M();
-        if (this.W != null) {
-            this.i0.b(c.b.ON_PAUSE);
+    /* renamed from: e1 */
+    public void m29441e1() {
+        this.f1363J.m29366M();
+        if (this.f1376W != null) {
+            this.f1388i0.m25638b(AbstractC0344c.EnumC0346b.ON_PAUSE);
         }
-        this.h0.h(c.b.ON_PAUSE);
-        this.p = 6;
-        this.U = false;
-        E0();
-        if (this.U) {
+        this.f1387h0.m29041h(AbstractC0344c.EnumC0346b.ON_PAUSE);
+        this.f1395p = 6;
+        this.f1374U = false;
+        m29488E0();
+        if (this.f1374U) {
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onPause()");
@@ -799,83 +1039,91 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         return super.equals(obj);
     }
 
-    public final boolean f0() {
-        Fragment G = G();
-        return G != null && (G.e0() || G.f0());
+    /* renamed from: f0 */
+    public final boolean m29440f0() {
+        Fragment m29483G = m29483G();
+        return m29483G != null && (m29483G.m29442e0() || m29483G.m29440f0());
     }
 
-    public void f1(boolean z) {
-        F0(z);
-        this.J.N(z);
+    /* renamed from: f1 */
+    public void m29439f1(boolean z) {
+        m29485F0(z);
+        this.f1363J.m29364N(z);
     }
 
     @Override // com.daaw.nt1
-    public mt1 g() {
-        if (this.H != null) {
-            if (E() != c.EnumC0020c.INITIALIZED.ordinal()) {
-                return this.H.z0(this);
+    /* renamed from: g */
+    public mt1 mo13652g() {
+        if (this.f1361H != null) {
+            if (m29489E() != AbstractC0344c.EnumC0347c.INITIALIZED.ordinal()) {
+                return this.f1361H.m29274z0(this);
             }
             throw new IllegalStateException("Calling getViewModelStore() before a Fragment reaches onCreate() when using setMaxLifecycle(INITIALIZED) is not supported");
         }
         throw new IllegalStateException("Can't access ViewModels from detached fragment");
     }
 
-    public final boolean g0() {
-        FragmentManager fragmentManager = this.H;
+    /* renamed from: g0 */
+    public final boolean m29438g0() {
+        FragmentManager fragmentManager = this.f1361H;
         if (fragmentManager == null) {
             return false;
         }
-        return fragmentManager.J0();
+        return fragmentManager.m29371J0();
     }
 
-    public boolean g1(Menu menu) {
+    /* renamed from: g1 */
+    public boolean m29437g1(Menu menu) {
         boolean z = false;
-        if (this.O) {
+        if (this.f1368O) {
             return false;
         }
-        if (this.S && this.T) {
+        if (this.f1372S && this.f1373T) {
             z = true;
-            G0(menu);
+            m29482G0(menu);
         }
-        return z | this.J.O(menu);
+        return z | this.f1363J.m29362O(menu);
     }
 
-    public void h(boolean z) {
+    /* renamed from: h */
+    public void m29436h(boolean z) {
         ViewGroup viewGroup;
         FragmentManager fragmentManager;
-        e eVar = this.Z;
-        h hVar = null;
-        if (eVar != null) {
-            eVar.u = false;
-            h hVar2 = eVar.v;
-            eVar.v = null;
-            hVar = hVar2;
+        C0258e c0258e = this.f1379Z;
+        InterfaceC0261h interfaceC0261h = null;
+        if (c0258e != null) {
+            c0258e.f1432u = false;
+            InterfaceC0261h interfaceC0261h2 = c0258e.f1433v;
+            c0258e.f1433v = null;
+            interfaceC0261h = interfaceC0261h2;
         }
-        if (hVar != null) {
-            hVar.b();
-        } else if (!FragmentManager.P || this.W == null || (viewGroup = this.V) == null || (fragmentManager = this.H) == null) {
+        if (interfaceC0261h != null) {
+            interfaceC0261h.mo29264b();
+        } else if (!FragmentManager.f1436P || this.f1376W == null || (viewGroup = this.f1375V) == null || (fragmentManager = this.f1361H) == null) {
         } else {
-            l n = l.n(viewGroup, fragmentManager);
-            n.p();
+            AbstractC0325l m29094n = AbstractC0325l.m29094n(viewGroup, fragmentManager);
+            m29094n.m29092p();
             if (z) {
-                this.I.l().post(new c(n));
+                this.f1362I.m29213l().post(new RunnableC0256c(m29094n));
             } else {
-                n.g();
+                m29094n.m29101g();
             }
         }
     }
 
-    public void h0() {
-        this.J.Q0();
+    /* renamed from: h0 */
+    public void m29435h0() {
+        this.f1363J.m29357Q0();
     }
 
-    public void h1() {
-        boolean H0 = this.H.H0(this);
-        Boolean bool = this.z;
-        if (bool == null || bool.booleanValue() != H0) {
-            this.z = Boolean.valueOf(H0);
-            H0(H0);
-            this.J.P();
+    /* renamed from: h1 */
+    public void m29434h1() {
+        boolean m29375H0 = this.f1361H.m29375H0(this);
+        Boolean bool = this.f1405z;
+        if (bool == null || bool.booleanValue() != m29375H0) {
+            this.f1405z = Boolean.valueOf(m29375H0);
+            m29480H0(m29375H0);
+            this.f1363J.m29360P();
         }
     }
 
@@ -884,40 +1132,45 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
     }
 
     @Override // com.daaw.m81
-    public final k81 i() {
-        return this.l0.b();
+    /* renamed from: i */
+    public final k81 mo16178i() {
+        return this.f1391l0.m17106b();
     }
 
     @Deprecated
-    public void i0(Bundle bundle) {
-        this.U = true;
+    /* renamed from: i0 */
+    public void m29433i0(Bundle bundle) {
+        this.f1374U = true;
     }
 
-    public void i1() {
-        this.J.Q0();
-        this.J.a0(true);
-        this.p = 7;
-        this.U = false;
-        J0();
-        if (!this.U) {
+    /* renamed from: i1 */
+    public void m29432i1() {
+        this.f1363J.m29357Q0();
+        this.f1363J.m29337a0(true);
+        this.f1395p = 7;
+        this.f1374U = false;
+        mo25245J0();
+        if (!this.f1374U) {
             throw new ci1("Fragment " + this + " did not call through to super.onResume()");
         }
-        androidx.lifecycle.e eVar = this.h0;
-        c.b bVar = c.b.ON_RESUME;
-        eVar.h(bVar);
-        if (this.W != null) {
-            this.i0.b(bVar);
+        C0349e c0349e = this.f1387h0;
+        AbstractC0344c.EnumC0346b enumC0346b = AbstractC0344c.EnumC0346b.ON_RESUME;
+        c0349e.m29041h(enumC0346b);
+        if (this.f1376W != null) {
+            this.f1388i0.m25638b(enumC0346b);
         }
-        this.J.Q();
+        this.f1363J.m29358Q();
     }
 
-    public r30 j() {
-        return new d();
+    /* renamed from: j */
+    public r30 mo13987j() {
+        return new C0257d();
     }
 
     @Deprecated
-    public void j0(int i, int i2, Intent intent) {
-        if (FragmentManager.E0(2)) {
+    /* renamed from: j0 */
+    public void mo25244j0(int i, int i2, Intent intent) {
+        if (FragmentManager.m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("Fragment ");
             sb.append(this);
@@ -930,364 +1183,392 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    public void j1(Bundle bundle) {
-        K0(bundle);
-        this.l0.e(bundle);
-        Parcelable e1 = this.J.e1();
-        if (e1 != null) {
-            bundle.putParcelable("android:support:fragments", e1);
+    /* renamed from: j1 */
+    public void m29431j1(Bundle bundle) {
+        mo549K0(bundle);
+        this.f1391l0.m17103e(bundle);
+        Parcelable m29324e1 = this.f1363J.m29324e1();
+        if (m29324e1 != null) {
+            bundle.putParcelable("android:support:fragments", m29324e1);
         }
     }
 
-    public void k(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+    /* renamed from: k */
+    public void mo25243k(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         printWriter.print(str);
         printWriter.print("mFragmentId=#");
-        printWriter.print(Integer.toHexString(this.L));
+        printWriter.print(Integer.toHexString(this.f1365L));
         printWriter.print(" mContainerId=#");
-        printWriter.print(Integer.toHexString(this.M));
+        printWriter.print(Integer.toHexString(this.f1366M));
         printWriter.print(" mTag=");
-        printWriter.println(this.N);
+        printWriter.println(this.f1367N);
         printWriter.print(str);
         printWriter.print("mState=");
-        printWriter.print(this.p);
+        printWriter.print(this.f1395p);
         printWriter.print(" mWho=");
-        printWriter.print(this.u);
+        printWriter.print(this.f1400u);
         printWriter.print(" mBackStackNesting=");
-        printWriter.println(this.G);
+        printWriter.println(this.f1360G);
         printWriter.print(str);
         printWriter.print("mAdded=");
-        printWriter.print(this.A);
+        printWriter.print(this.f1354A);
         printWriter.print(" mRemoving=");
-        printWriter.print(this.B);
+        printWriter.print(this.f1355B);
         printWriter.print(" mFromLayout=");
-        printWriter.print(this.C);
+        printWriter.print(this.f1356C);
         printWriter.print(" mInLayout=");
-        printWriter.println(this.D);
+        printWriter.println(this.f1357D);
         printWriter.print(str);
         printWriter.print("mHidden=");
-        printWriter.print(this.O);
+        printWriter.print(this.f1368O);
         printWriter.print(" mDetached=");
-        printWriter.print(this.P);
+        printWriter.print(this.f1369P);
         printWriter.print(" mMenuVisible=");
-        printWriter.print(this.T);
+        printWriter.print(this.f1373T);
         printWriter.print(" mHasMenu=");
-        printWriter.println(this.S);
+        printWriter.println(this.f1372S);
         printWriter.print(str);
         printWriter.print("mRetainInstance=");
-        printWriter.print(this.Q);
+        printWriter.print(this.f1370Q);
         printWriter.print(" mUserVisibleHint=");
-        printWriter.println(this.Y);
-        if (this.H != null) {
+        printWriter.println(this.f1378Y);
+        if (this.f1361H != null) {
             printWriter.print(str);
             printWriter.print("mFragmentManager=");
-            printWriter.println(this.H);
+            printWriter.println(this.f1361H);
         }
-        if (this.I != null) {
+        if (this.f1362I != null) {
             printWriter.print(str);
             printWriter.print("mHost=");
-            printWriter.println(this.I);
+            printWriter.println(this.f1362I);
         }
-        if (this.K != null) {
+        if (this.f1364K != null) {
             printWriter.print(str);
             printWriter.print("mParentFragment=");
-            printWriter.println(this.K);
+            printWriter.println(this.f1364K);
         }
-        if (this.v != null) {
+        if (this.f1401v != null) {
             printWriter.print(str);
             printWriter.print("mArguments=");
-            printWriter.println(this.v);
+            printWriter.println(this.f1401v);
         }
-        if (this.q != null) {
+        if (this.f1396q != null) {
             printWriter.print(str);
             printWriter.print("mSavedFragmentState=");
-            printWriter.println(this.q);
+            printWriter.println(this.f1396q);
         }
-        if (this.r != null) {
+        if (this.f1397r != null) {
             printWriter.print(str);
             printWriter.print("mSavedViewState=");
-            printWriter.println(this.r);
+            printWriter.println(this.f1397r);
         }
-        if (this.s != null) {
+        if (this.f1398s != null) {
             printWriter.print(str);
             printWriter.print("mSavedViewRegistryState=");
-            printWriter.println(this.s);
+            printWriter.println(this.f1398s);
         }
-        Fragment U = U();
-        if (U != null) {
+        Fragment m29461U = m29461U();
+        if (m29461U != null) {
             printWriter.print(str);
             printWriter.print("mTarget=");
-            printWriter.print(U);
+            printWriter.print(m29461U);
             printWriter.print(" mTargetRequestCode=");
-            printWriter.println(this.y);
+            printWriter.println(this.f1404y);
         }
         printWriter.print(str);
         printWriter.print("mPopDirection=");
-        printWriter.println(I());
-        if (v() != 0) {
+        printWriter.println(m29479I());
+        if (m29403v() != 0) {
             printWriter.print(str);
             printWriter.print("getEnterAnim=");
-            printWriter.println(v());
+            printWriter.println(m29403v());
         }
-        if (y() != 0) {
+        if (m29397y() != 0) {
             printWriter.print(str);
             printWriter.print("getExitAnim=");
-            printWriter.println(y());
+            printWriter.println(m29397y());
         }
-        if (J() != 0) {
+        if (m29477J() != 0) {
             printWriter.print(str);
             printWriter.print("getPopEnterAnim=");
-            printWriter.println(J());
+            printWriter.println(m29477J());
         }
-        if (K() != 0) {
+        if (m29476K() != 0) {
             printWriter.print(str);
             printWriter.print("getPopExitAnim=");
-            printWriter.println(K());
+            printWriter.println(m29476K());
         }
-        if (this.V != null) {
+        if (this.f1375V != null) {
             printWriter.print(str);
             printWriter.print("mContainer=");
-            printWriter.println(this.V);
+            printWriter.println(this.f1375V);
         }
-        if (this.W != null) {
+        if (this.f1376W != null) {
             printWriter.print(str);
             printWriter.print("mView=");
-            printWriter.println(this.W);
+            printWriter.println(this.f1376W);
         }
-        if (q() != null) {
+        if (m29416q() != null) {
             printWriter.print(str);
             printWriter.print("mAnimatingAway=");
-            printWriter.println(q());
+            printWriter.println(m29416q());
         }
-        if (u() != null) {
-            mk0.b(this).a(str, fileDescriptor, printWriter, strArr);
+        if (m29406u() != null) {
+            mk0.m15994b(this).mo15138a(str, fileDescriptor, printWriter, strArr);
         }
         printWriter.print(str);
-        printWriter.println("Child " + this.J + ":");
-        FragmentManager fragmentManager = this.J;
-        fragmentManager.W(str + "  ", fileDescriptor, printWriter, strArr);
+        printWriter.println("Child " + this.f1363J + ":");
+        FragmentManager fragmentManager = this.f1363J;
+        fragmentManager.m29346W(str + "  ", fileDescriptor, printWriter, strArr);
     }
 
     @Deprecated
-    public void k0(Activity activity) {
-        this.U = true;
+    /* renamed from: k0 */
+    public void mo19774k0(Activity activity) {
+        this.f1374U = true;
     }
 
-    public void k1() {
-        this.J.Q0();
-        this.J.a0(true);
-        this.p = 5;
-        this.U = false;
-        L0();
-        if (!this.U) {
+    /* renamed from: k1 */
+    public void m29430k1() {
+        this.f1363J.m29357Q0();
+        this.f1363J.m29337a0(true);
+        this.f1395p = 5;
+        this.f1374U = false;
+        mo548L0();
+        if (!this.f1374U) {
             throw new ci1("Fragment " + this + " did not call through to super.onStart()");
         }
-        androidx.lifecycle.e eVar = this.h0;
-        c.b bVar = c.b.ON_START;
-        eVar.h(bVar);
-        if (this.W != null) {
-            this.i0.b(bVar);
+        C0349e c0349e = this.f1387h0;
+        AbstractC0344c.EnumC0346b enumC0346b = AbstractC0344c.EnumC0346b.ON_START;
+        c0349e.m29041h(enumC0346b);
+        if (this.f1376W != null) {
+            this.f1388i0.m25638b(enumC0346b);
         }
-        this.J.R();
+        this.f1363J.m29356R();
     }
 
-    public final e l() {
-        if (this.Z == null) {
-            this.Z = new e();
+    /* renamed from: l */
+    public final C0258e m29429l() {
+        if (this.f1379Z == null) {
+            this.f1379Z = new C0258e();
         }
-        return this.Z;
+        return this.f1379Z;
     }
 
-    public void l0(Context context) {
-        this.U = true;
-        androidx.fragment.app.e<?> eVar = this.I;
-        Activity j = eVar == null ? null : eVar.j();
-        if (j != null) {
-            this.U = false;
-            k0(j);
+    /* renamed from: l0 */
+    public void mo13986l0(Context context) {
+        this.f1374U = true;
+        AbstractC0305e<?> abstractC0305e = this.f1362I;
+        Activity m29215j = abstractC0305e == null ? null : abstractC0305e.m29215j();
+        if (m29215j != null) {
+            this.f1374U = false;
+            mo19774k0(m29215j);
         }
     }
 
-    public void l1() {
-        this.J.T();
-        if (this.W != null) {
-            this.i0.b(c.b.ON_STOP);
+    /* renamed from: l1 */
+    public void m29428l1() {
+        this.f1363J.m29352T();
+        if (this.f1376W != null) {
+            this.f1388i0.m25638b(AbstractC0344c.EnumC0346b.ON_STOP);
         }
-        this.h0.h(c.b.ON_STOP);
-        this.p = 4;
-        this.U = false;
-        M0();
-        if (this.U) {
+        this.f1387h0.m29041h(AbstractC0344c.EnumC0346b.ON_STOP);
+        this.f1395p = 4;
+        this.f1374U = false;
+        mo547M0();
+        if (this.f1374U) {
             return;
         }
         throw new ci1("Fragment " + this + " did not call through to super.onStop()");
     }
 
-    public Fragment m(String str) {
-        return str.equals(this.u) ? this : this.J.i0(str);
+    /* renamed from: m */
+    public Fragment m29427m(String str) {
+        return str.equals(this.f1400u) ? this : this.f1363J.m29313i0(str);
     }
 
     @Deprecated
-    public void m0(Fragment fragment) {
+    /* renamed from: m0 */
+    public void m29426m0(Fragment fragment) {
     }
 
-    public void m1() {
-        N0(this.W, this.q);
-        this.J.U();
+    /* renamed from: m1 */
+    public void m29425m1() {
+        mo26875N0(this.f1376W, this.f1396q);
+        this.f1363J.m29350U();
     }
 
-    public final p30 n() {
-        androidx.fragment.app.e<?> eVar = this.I;
-        if (eVar == null) {
+    /* renamed from: n */
+    public final p30 m29424n() {
+        AbstractC0305e<?> abstractC0305e = this.f1362I;
+        if (abstractC0305e == null) {
             return null;
         }
-        return (p30) eVar.j();
+        return (p30) abstractC0305e.m29215j();
     }
 
-    public boolean n0(MenuItem menuItem) {
+    /* renamed from: n0 */
+    public boolean m29423n0(MenuItem menuItem) {
         return false;
     }
 
-    public final p30 n1() {
-        p30 n = n();
-        if (n != null) {
-            return n;
+    /* renamed from: n1 */
+    public final p30 m29422n1() {
+        p30 m29424n = m29424n();
+        if (m29424n != null) {
+            return m29424n;
         }
         throw new IllegalStateException("Fragment " + this + " not attached to an activity.");
     }
 
-    public boolean o() {
+    /* renamed from: o */
+    public boolean m29421o() {
         Boolean bool;
-        e eVar = this.Z;
-        if (eVar == null || (bool = eVar.r) == null) {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null || (bool = c0258e.f1429r) == null) {
             return true;
         }
         return bool.booleanValue();
     }
 
-    public void o0(Bundle bundle) {
-        this.U = true;
-        q1(bundle);
-        if (this.J.I0(1)) {
+    /* renamed from: o0 */
+    public void mo526o0(Bundle bundle) {
+        this.f1374U = true;
+        m29414q1(bundle);
+        if (this.f1363J.m29373I0(1)) {
             return;
         }
-        this.J.C();
+        this.f1363J.m29386C();
     }
 
-    public final Context o1() {
-        Context u = u();
-        if (u != null) {
-            return u;
+    /* renamed from: o1 */
+    public final Context m29420o1() {
+        Context m29406u = m29406u();
+        if (m29406u != null) {
+            return m29406u;
         }
         throw new IllegalStateException("Fragment " + this + " not attached to a context.");
     }
 
     @Override // android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
-        this.U = true;
+        this.f1374U = true;
     }
 
     @Override // android.view.View.OnCreateContextMenuListener
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-        n1().onCreateContextMenu(contextMenu, view, contextMenuInfo);
+        m29422n1().onCreateContextMenu(contextMenu, view, contextMenuInfo);
     }
 
     @Override // android.content.ComponentCallbacks
     public void onLowMemory() {
-        this.U = true;
+        this.f1374U = true;
     }
 
-    public boolean p() {
+    /* renamed from: p */
+    public boolean m29419p() {
         Boolean bool;
-        e eVar = this.Z;
-        if (eVar == null || (bool = eVar.q) == null) {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null || (bool = c0258e.f1428q) == null) {
             return true;
         }
         return bool.booleanValue();
     }
 
-    public Animation p0(int i, boolean z, int i2) {
+    /* renamed from: p0 */
+    public Animation m29418p0(int i, boolean z, int i2) {
         return null;
     }
 
-    public final View p1() {
-        View V = V();
-        if (V != null) {
-            return V;
+    /* renamed from: p1 */
+    public final View m29417p1() {
+        View m29459V = m29459V();
+        if (m29459V != null) {
+            return m29459V;
         }
         throw new IllegalStateException("Fragment " + this + " did not return a View from onCreateView() or this was called before onCreateView().");
     }
 
-    public View q() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: q */
+    public View m29416q() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        return eVar.a;
+        return c0258e.f1412a;
     }
 
-    public Animator q0(int i, boolean z, int i2) {
+    /* renamed from: q0 */
+    public Animator m29415q0(int i, boolean z, int i2) {
         return null;
     }
 
-    public void q1(Bundle bundle) {
+    /* renamed from: q1 */
+    public void m29414q1(Bundle bundle) {
         Parcelable parcelable;
         if (bundle == null || (parcelable = bundle.getParcelable("android:support:fragments")) == null) {
             return;
         }
-        this.J.c1(parcelable);
-        this.J.C();
+        this.f1363J.m29330c1(parcelable);
+        this.f1363J.m29386C();
     }
 
-    public Animator r() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: r */
+    public Animator m29413r() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        return eVar.b;
+        return c0258e.f1413b;
     }
 
-    public void r0(Menu menu, MenuInflater menuInflater) {
+    /* renamed from: r0 */
+    public void m29412r0(Menu menu, MenuInflater menuInflater) {
     }
 
-    public final void r1() {
-        if (FragmentManager.E0(3)) {
+    /* renamed from: r1 */
+    public final void m29411r1() {
+        if (FragmentManager.m29381E0(3)) {
             StringBuilder sb = new StringBuilder();
             sb.append("moveto RESTORE_VIEW_STATE: ");
             sb.append(this);
         }
-        if (this.W != null) {
-            s1(this.q);
+        if (this.f1376W != null) {
+            m29409s1(this.f1396q);
         }
-        this.q = null;
+        this.f1396q = null;
     }
 
-    public final Bundle s() {
-        return this.v;
+    /* renamed from: s */
+    public final Bundle m29410s() {
+        return this.f1401v;
     }
 
-    public View s0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        int i = this.m0;
+    /* renamed from: s0 */
+    public View mo523s0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        int i = this.f1392m0;
         if (i != 0) {
             return layoutInflater.inflate(i, viewGroup, false);
         }
         return null;
     }
 
-    public final void s1(Bundle bundle) {
-        SparseArray<Parcelable> sparseArray = this.r;
+    /* renamed from: s1 */
+    public final void m29409s1(Bundle bundle) {
+        SparseArray<Parcelable> sparseArray = this.f1397r;
         if (sparseArray != null) {
-            this.W.restoreHierarchyState(sparseArray);
-            this.r = null;
+            this.f1376W.restoreHierarchyState(sparseArray);
+            this.f1397r = null;
         }
-        if (this.W != null) {
-            this.i0.h(this.s);
-            this.s = null;
+        if (this.f1376W != null) {
+            this.f1388i0.m25635h(this.f1398s);
+            this.f1398s = null;
         }
-        this.U = false;
-        O0(bundle);
-        if (this.U) {
-            if (this.W != null) {
-                this.i0.b(c.b.ON_CREATE);
+        this.f1374U = false;
+        mo13996O0(bundle);
+        if (this.f1374U) {
+            if (this.f1376W != null) {
+                this.f1388i0.m25638b(AbstractC0344c.EnumC0346b.ON_CREATE);
                 return;
             }
             return;
@@ -1297,22 +1578,25 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
 
     @Deprecated
     public void startActivityForResult(@SuppressLint({"UnknownNullness"}) Intent intent, int i) {
-        E1(intent, i, null);
+        m29487E1(intent, i, null);
     }
 
-    public final FragmentManager t() {
-        if (this.I != null) {
-            return this.J;
+    /* renamed from: t */
+    public final FragmentManager m29408t() {
+        if (this.f1362I != null) {
+            return this.f1363J;
         }
         throw new IllegalStateException("Fragment " + this + " has not been attached yet.");
     }
 
-    public void t0() {
-        this.U = true;
+    /* renamed from: t0 */
+    public void mo19773t0() {
+        this.f1374U = true;
     }
 
-    public void t1(View view) {
-        l().a = view;
+    /* renamed from: t1 */
+    public void m29407t1(View view) {
+        m29429l().f1412a = view;
     }
 
     public String toString() {
@@ -1322,125 +1606,143 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         sb.append(Integer.toHexString(System.identityHashCode(this)));
         sb.append("}");
         sb.append(" (");
-        sb.append(this.u);
-        if (this.L != 0) {
+        sb.append(this.f1400u);
+        if (this.f1365L != 0) {
             sb.append(" id=0x");
-            sb.append(Integer.toHexString(this.L));
+            sb.append(Integer.toHexString(this.f1365L));
         }
-        if (this.N != null) {
+        if (this.f1367N != null) {
             sb.append(" tag=");
-            sb.append(this.N);
+            sb.append(this.f1367N);
         }
         sb.append(")");
         return sb.toString();
     }
 
-    public Context u() {
-        androidx.fragment.app.e<?> eVar = this.I;
-        if (eVar == null) {
+    /* renamed from: u */
+    public Context m29406u() {
+        AbstractC0305e<?> abstractC0305e = this.f1362I;
+        if (abstractC0305e == null) {
             return null;
         }
-        return eVar.k();
+        return abstractC0305e.m29214k();
     }
 
-    public void u0() {
+    /* renamed from: u0 */
+    public void m29405u0() {
     }
 
-    public void u1(int i, int i2, int i3, int i4) {
-        if (this.Z == null && i == 0 && i2 == 0 && i3 == 0 && i4 == 0) {
+    /* renamed from: u1 */
+    public void m29404u1(int i, int i2, int i3, int i4) {
+        if (this.f1379Z == null && i == 0 && i2 == 0 && i3 == 0 && i4 == 0) {
             return;
         }
-        l().d = i;
-        l().e = i2;
-        l().f = i3;
-        l().g = i4;
+        m29429l().f1415d = i;
+        m29429l().f1416e = i2;
+        m29429l().f1417f = i3;
+        m29429l().f1418g = i4;
     }
 
-    public int v() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: v */
+    public int m29403v() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return 0;
         }
-        return eVar.d;
+        return c0258e.f1415d;
     }
 
-    public void v0() {
-        this.U = true;
+    /* renamed from: v0 */
+    public void mo13985v0() {
+        this.f1374U = true;
     }
 
-    public void v1(Animator animator) {
-        l().b = animator;
+    /* renamed from: v1 */
+    public void m29402v1(Animator animator) {
+        m29429l().f1413b = animator;
     }
 
-    public Object w() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: w */
+    public Object m29401w() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        return eVar.k;
+        return c0258e.f1422k;
     }
 
-    public void w0() {
-        this.U = true;
+    /* renamed from: w0 */
+    public void mo13984w0() {
+        this.f1374U = true;
     }
 
-    public void w1(Bundle bundle) {
-        if (this.H != null && g0()) {
+    /* renamed from: w1 */
+    public void m29400w1(Bundle bundle) {
+        if (this.f1361H != null && m29438g0()) {
             throw new IllegalStateException("Fragment already added and state has been saved");
         }
-        this.v = bundle;
+        this.f1401v = bundle;
     }
 
-    public kc1 x() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: x */
+    public kc1 m29399x() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        Objects.requireNonNull(eVar);
+        Objects.requireNonNull(c0258e);
         return null;
     }
 
-    public LayoutInflater x0(Bundle bundle) {
-        return D(bundle);
+    /* renamed from: x0 */
+    public LayoutInflater mo13983x0(Bundle bundle) {
+        return m29492D(bundle);
     }
 
-    public void x1(View view) {
-        l().t = view;
+    /* renamed from: x1 */
+    public void m29398x1(View view) {
+        m29429l().f1431t = view;
     }
 
-    public int y() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: y */
+    public int m29397y() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return 0;
         }
-        return eVar.e;
+        return c0258e.f1416e;
     }
 
-    public void y0(boolean z) {
+    /* renamed from: y0 */
+    public void m29396y0(boolean z) {
     }
 
-    public void y1(boolean z) {
-        l().w = z;
+    /* renamed from: y1 */
+    public void m29395y1(boolean z) {
+        m29429l().f1434w = z;
     }
 
-    public Object z() {
-        e eVar = this.Z;
-        if (eVar == null) {
+    /* renamed from: z */
+    public Object m29394z() {
+        C0258e c0258e = this.f1379Z;
+        if (c0258e == null) {
             return null;
         }
-        return eVar.m;
+        return c0258e.f1424m;
     }
 
     @Deprecated
-    public void z0(Activity activity, AttributeSet attributeSet, Bundle bundle) {
-        this.U = true;
+    /* renamed from: z0 */
+    public void m29393z0(Activity activity, AttributeSet attributeSet, Bundle bundle) {
+        this.f1374U = true;
     }
 
-    public void z1(int i) {
-        if (this.Z == null && i == 0) {
+    /* renamed from: z1 */
+    public void m29392z1(int i) {
+        if (this.f1379Z == null && i == 0) {
             return;
         }
-        l();
-        this.Z.h = i;
+        m29429l();
+        this.f1379Z.f1419h = i;
     }
 }

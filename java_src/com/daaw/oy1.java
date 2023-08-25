@@ -1,80 +1,107 @@
 package com.daaw;
 
 import android.os.Build;
+import androidx.work.C0511b;
 import androidx.work.ListenableWorker;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public abstract class oy1 {
-    public UUID a;
-    public qy1 b;
-    public Set<String> c;
 
+    /* renamed from: a */
+    public UUID f22103a;
+
+    /* renamed from: b */
+    public qy1 f22104b;
+
+    /* renamed from: c */
+    public Set<String> f22105c;
+
+    /* renamed from: com.daaw.oy1$a */
     /* loaded from: classes.dex */
-    public static abstract class a<B extends a<?, ?>, W extends oy1> {
-        public qy1 c;
-        public Class<? extends ListenableWorker> e;
-        public boolean a = false;
-        public Set<String> d = new HashSet();
-        public UUID b = UUID.randomUUID();
+    public static abstract class AbstractC2494a<B extends AbstractC2494a<?, ?>, W extends oy1> {
 
-        public a(Class<? extends ListenableWorker> cls) {
-            this.e = cls;
-            this.c = new qy1(this.b.toString(), cls.getName());
-            a(cls.getName());
+        /* renamed from: c */
+        public qy1 f22108c;
+
+        /* renamed from: e */
+        public Class<? extends ListenableWorker> f22110e;
+
+        /* renamed from: a */
+        public boolean f22106a = false;
+
+        /* renamed from: d */
+        public Set<String> f22109d = new HashSet();
+
+        /* renamed from: b */
+        public UUID f22107b = UUID.randomUUID();
+
+        public AbstractC2494a(Class<? extends ListenableWorker> cls) {
+            this.f22110e = cls;
+            this.f22108c = new qy1(this.f22107b.toString(), cls.getName());
+            m13867a(cls.getName());
         }
 
-        public final B a(String str) {
-            this.d.add(str);
-            return d();
+        /* renamed from: a */
+        public final B m13867a(String str) {
+            this.f22109d.add(str);
+            return mo13864d();
         }
 
-        public final W b() {
-            W c = c();
-            sj sjVar = this.c.j;
+        /* renamed from: b */
+        public final W m13866b() {
+            W mo13865c = mo13865c();
+            C2943sj c2943sj = this.f22108c.f24633j;
             int i = Build.VERSION.SDK_INT;
-            boolean z = (i >= 24 && sjVar.e()) || sjVar.f() || sjVar.g() || (i >= 23 && sjVar.h());
-            if (this.c.q && z) {
+            boolean z = (i >= 24 && c2943sj.m10319e()) || c2943sj.m10318f() || c2943sj.m10317g() || (i >= 23 && c2943sj.m10316h());
+            if (this.f22108c.f24640q && z) {
                 throw new IllegalArgumentException("Expedited jobs only support network and storage constraints");
             }
-            this.b = UUID.randomUUID();
-            qy1 qy1Var = new qy1(this.c);
-            this.c = qy1Var;
-            qy1Var.a = this.b.toString();
-            return c;
+            this.f22107b = UUID.randomUUID();
+            qy1 qy1Var = new qy1(this.f22108c);
+            this.f22108c = qy1Var;
+            qy1Var.f24624a = this.f22107b.toString();
+            return mo13865c;
         }
 
-        public abstract W c();
+        /* renamed from: c */
+        public abstract W mo13865c();
 
-        public abstract B d();
+        /* renamed from: d */
+        public abstract B mo13864d();
 
-        public final B e(sj sjVar) {
-            this.c.j = sjVar;
-            return d();
+        /* renamed from: e */
+        public final B m13863e(C2943sj c2943sj) {
+            this.f22108c.f24633j = c2943sj;
+            return mo13864d();
         }
 
-        public final B f(androidx.work.b bVar) {
-            this.c.e = bVar;
-            return d();
+        /* renamed from: f */
+        public final B m13862f(C0511b c0511b) {
+            this.f22108c.f24628e = c0511b;
+            return mo13864d();
         }
     }
 
     public oy1(UUID uuid, qy1 qy1Var, Set<String> set) {
-        this.a = uuid;
-        this.b = qy1Var;
-        this.c = set;
+        this.f22103a = uuid;
+        this.f22104b = qy1Var;
+        this.f22105c = set;
     }
 
-    public String a() {
-        return this.a.toString();
+    /* renamed from: a */
+    public String m13870a() {
+        return this.f22103a.toString();
     }
 
-    public Set<String> b() {
-        return this.c;
+    /* renamed from: b */
+    public Set<String> m13869b() {
+        return this.f22105c;
     }
 
-    public qy1 c() {
-        return this.b;
+    /* renamed from: c */
+    public qy1 m13868c() {
+        return this.f22104b;
     }
 }

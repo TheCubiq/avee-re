@@ -6,34 +6,44 @@ import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
 /* loaded from: classes.dex */
 public class gz1<T, V extends List<T>> {
-    public static final String c = null;
-    public a<T> a;
-    public w40<V> b;
 
+    /* renamed from: c */
+    public static final String f11860c = null;
+
+    /* renamed from: a */
+    public InterfaceC1490a<T> f11861a;
+
+    /* renamed from: b */
+    public w40<V> f11862b;
+
+    /* renamed from: com.daaw.gz1$a */
     /* loaded from: classes.dex */
-    public interface a<T> {
-        T a(String str, String str2, int i, String str3);
+    public interface InterfaceC1490a<T> {
+        /* renamed from: a */
+        T mo13429a(String str, String str2, int i, String str3);
     }
 
-    public gz1(a<T> aVar, w40<V> w40Var) {
-        this.a = aVar;
-        this.b = w40Var;
+    public gz1(InterfaceC1490a<T> interfaceC1490a, w40<V> w40Var) {
+        this.f11861a = interfaceC1490a;
+        this.f11862b = w40Var;
     }
 
-    public V a(InputStream inputStream, wf1 wf1Var) {
+    /* renamed from: a */
+    public V m21135a(InputStream inputStream, wf1 wf1Var) {
         try {
             XmlPullParser newPullParser = Xml.newPullParser();
             newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", false);
             newPullParser.setInput(inputStream, null);
             newPullParser.nextTag();
-            return c(newPullParser);
+            return m21133c(newPullParser);
         } finally {
             inputStream.close();
         }
     }
 
-    public final T b(XmlPullParser xmlPullParser) {
-        xmlPullParser.require(2, c, "entry");
+    /* renamed from: b */
+    public final T m21134b(XmlPullParser xmlPullParser) {
+        xmlPullParser.require(2, f11860c, "entry");
         String str = null;
         String str2 = null;
         String str3 = null;
@@ -42,37 +52,39 @@ public class gz1<T, V extends List<T>> {
             if (xmlPullParser.getEventType() == 2) {
                 String name = xmlPullParser.getName();
                 if (name.equals("server_name")) {
-                    str = e(xmlPullParser, name);
+                    str = m21131e(xmlPullParser, name);
                 } else if (name.equals("listen_url")) {
-                    str2 = e(xmlPullParser, name);
+                    str2 = m21131e(xmlPullParser, name);
                 } else if (name.equals("bitrate")) {
-                    str3 = e(xmlPullParser, name);
+                    str3 = m21131e(xmlPullParser, name);
                 } else if (name.equals("genre")) {
-                    str4 = e(xmlPullParser, name);
+                    str4 = m21131e(xmlPullParser, name);
                 } else {
-                    f(xmlPullParser);
+                    m21130f(xmlPullParser);
                 }
             }
         }
-        return this.a.a(str, str2, br1.w(str3), str4);
+        return this.f11861a.mo13429a(str, str2, br1.m25886w(str3), str4);
     }
 
-    public final V c(XmlPullParser xmlPullParser) {
-        V a2 = this.b.a();
-        xmlPullParser.require(2, c, "directory");
+    /* renamed from: c */
+    public final V m21133c(XmlPullParser xmlPullParser) {
+        V mo3478a = this.f11862b.mo3478a();
+        xmlPullParser.require(2, f11860c, "directory");
         while (xmlPullParser.next() != 3) {
             if (xmlPullParser.getEventType() == 2) {
                 if (xmlPullParser.getName().equals("entry")) {
-                    a2.add(b(xmlPullParser));
+                    mo3478a.add(m21134b(xmlPullParser));
                 } else {
-                    f(xmlPullParser);
+                    m21130f(xmlPullParser);
                 }
             }
         }
-        return a2;
+        return mo3478a;
     }
 
-    public final String d(XmlPullParser xmlPullParser) {
+    /* renamed from: d */
+    public final String m21132d(XmlPullParser xmlPullParser) {
         if (xmlPullParser.next() == 4) {
             String text = xmlPullParser.getText();
             xmlPullParser.nextTag();
@@ -81,15 +93,17 @@ public class gz1<T, V extends List<T>> {
         return "";
     }
 
-    public final String e(XmlPullParser xmlPullParser, String str) {
-        String str2 = c;
+    /* renamed from: e */
+    public final String m21131e(XmlPullParser xmlPullParser, String str) {
+        String str2 = f11860c;
         xmlPullParser.require(2, str2, str);
-        String d = d(xmlPullParser);
+        String m21132d = m21132d(xmlPullParser);
         xmlPullParser.require(3, str2, str);
-        return d;
+        return m21132d;
     }
 
-    public final void f(XmlPullParser xmlPullParser) {
+    /* renamed from: f */
+    public final void m21130f(XmlPullParser xmlPullParser) {
         if (xmlPullParser.getEventType() != 2) {
             throw new IllegalStateException();
         }

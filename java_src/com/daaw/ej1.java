@@ -1,13 +1,17 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final /* synthetic */ class ej1 {
-    public static final int a = Runtime.getRuntime().availableProcessors();
 
-    public static final int a() {
-        return a;
+    /* renamed from: a */
+    public static final int f8512a = Runtime.getRuntime().availableProcessors();
+
+    /* renamed from: a */
+    public static final int m23445a() {
+        return f8512a;
     }
 
-    public static final String b(String str) {
+    /* renamed from: b */
+    public static final String m23444b(String str) {
         try {
             return System.getProperty(str);
         } catch (SecurityException unused) {

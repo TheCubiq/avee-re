@@ -9,7 +9,9 @@ public final class AdSize {
     public static final int LANDSCAPE_AD_HEIGHT = 32;
     public static final int LARGE_AD_HEIGHT = 90;
     public static final int PORTRAIT_AD_HEIGHT = 50;
-    public final com.google.android.gms.ads.AdSize a;
+
+    /* renamed from: a */
+    public final com.google.android.gms.ads.AdSize f35699a;
     public static final AdSize SMART_BANNER = new AdSize(-1, -2, "mb");
     public static final AdSize BANNER = new AdSize(320, 50, "mb");
     public static final AdSize IAB_MRECT = new AdSize(300, 250, "as");
@@ -26,12 +28,12 @@ public final class AdSize {
     }
 
     public AdSize(com.google.android.gms.ads.AdSize adSize) {
-        this.a = adSize;
+        this.f35699a = adSize;
     }
 
     public boolean equals(Object obj) {
         if (obj instanceof AdSize) {
-            return this.a.equals(((AdSize) obj).a);
+            return this.f35699a.equals(((AdSize) obj).f35699a);
         }
         return false;
     }
@@ -62,27 +64,27 @@ public final class AdSize {
     }
 
     public int getHeight() {
-        return this.a.getHeight();
+        return this.f35699a.getHeight();
     }
 
     public int getHeightInPixels(Context context) {
-        return this.a.getHeightInPixels(context);
+        return this.f35699a.getHeightInPixels(context);
     }
 
     public int getWidth() {
-        return this.a.getWidth();
+        return this.f35699a.getWidth();
     }
 
     public int getWidthInPixels(Context context) {
-        return this.a.getWidthInPixels(context);
+        return this.f35699a.getWidthInPixels(context);
     }
 
     public int hashCode() {
-        return this.a.hashCode();
+        return this.f35699a.hashCode();
     }
 
     public boolean isAutoHeight() {
-        return this.a.isAutoHeight();
+        return this.f35699a.isAutoHeight();
     }
 
     public boolean isCustomAdSize() {
@@ -90,7 +92,7 @@ public final class AdSize {
     }
 
     public boolean isFullWidth() {
-        return this.a.isFullWidth();
+        return this.f35699a.isFullWidth();
     }
 
     public boolean isSizeAppropriate(int i, int i2) {
@@ -107,6 +109,6 @@ public final class AdSize {
     }
 
     public String toString() {
-        return this.a.toString();
+        return this.f35699a.toString();
     }
 }

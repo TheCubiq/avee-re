@@ -1,17 +1,23 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface yj4 extends qp4 {
-    yj4 c(wi4 wi4Var);
+    /* renamed from: c */
+    yj4 mo3648c(wi4 wi4Var);
 
-    yj4 d(l15 l15Var);
+    /* renamed from: d */
+    yj4 mo3647d(l15 l15Var);
 
-    yj4 i(rl4 rl4Var);
+    /* renamed from: i */
+    yj4 mo3646i(rl4 rl4Var);
 
-    yj4 k(pw4 pw4Var);
+    /* renamed from: k */
+    yj4 mo3645k(pw4 pw4Var);
 
-    yj4 n(up4 up4Var);
+    /* renamed from: n */
+    yj4 mo3644n(up4 up4Var);
 
-    yj4 o(cx5 cx5Var);
+    /* renamed from: o */
+    yj4 mo3643o(cx5 cx5Var);
 
     zj4 zzj();
 }

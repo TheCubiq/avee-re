@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface kz8 {
-    long a(long j);
+    /* renamed from: a */
+    long mo15520a(long j);
 }

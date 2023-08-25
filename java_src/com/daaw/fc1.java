@@ -3,9 +3,12 @@ package com.daaw;
 import android.graphics.drawable.Drawable;
 /* loaded from: classes2.dex */
 public interface fc1 {
-    void a(int i, int i2, int i3, int i4);
+    /* renamed from: a */
+    void mo434a(int i, int i2, int i3, int i4);
 
-    void b(Drawable drawable);
+    /* renamed from: b */
+    void mo433b(Drawable drawable);
 
-    boolean c();
+    /* renamed from: c */
+    boolean mo432c();
 }

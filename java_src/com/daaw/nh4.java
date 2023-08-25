@@ -6,60 +6,81 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class nh4 implements q03 {
-    public a74 p;
-    public final Executor q;
-    public final wg4 r;
-    public final ag s;
-    public boolean t = false;
-    public boolean u = false;
-    public final zg4 v = new zg4();
 
-    public nh4(Executor executor, wg4 wg4Var, ag agVar) {
-        this.q = executor;
-        this.r = wg4Var;
-        this.s = agVar;
+    /* renamed from: p */
+    public a74 f20122p;
+
+    /* renamed from: q */
+    public final Executor f20123q;
+
+    /* renamed from: r */
+    public final wg4 f20124r;
+
+    /* renamed from: s */
+    public final InterfaceC0623ag f20125s;
+
+    /* renamed from: t */
+    public boolean f20126t = false;
+
+    /* renamed from: u */
+    public boolean f20127u = false;
+
+    /* renamed from: v */
+    public final zg4 f20128v = new zg4();
+
+    public nh4(Executor executor, wg4 wg4Var, InterfaceC0623ag interfaceC0623ag) {
+        this.f20123q = executor;
+        this.f20124r = wg4Var;
+        this.f20125s = interfaceC0623ag;
     }
 
-    public final void b() {
-        this.t = false;
+    /* renamed from: b */
+    public final void m15174b() {
+        this.f20126t = false;
     }
 
-    public final void c() {
-        this.t = true;
-        l();
+    /* renamed from: c */
+    public final void m15173c() {
+        this.f20126t = true;
+        m15169l();
     }
 
-    public final /* synthetic */ void e(JSONObject jSONObject) {
-        this.p.C0("AFMA_updateActiveView", jSONObject);
+    /* renamed from: e */
+    public final /* synthetic */ void m15172e(JSONObject jSONObject) {
+        this.f20122p.mo6461C0("AFMA_updateActiveView", jSONObject);
     }
 
     @Override // com.daaw.q03
-    public final void e0(p03 p03Var) {
-        zg4 zg4Var = this.v;
-        zg4Var.a = this.u ? false : p03Var.j;
-        zg4Var.d = this.s.b();
-        this.v.f = p03Var;
-        if (this.t) {
-            l();
+    /* renamed from: e0 */
+    public final void mo6420e0(p03 p03Var) {
+        zg4 zg4Var = this.f20128v;
+        zg4Var.f35031a = this.f20127u ? false : p03Var.f22185j;
+        zg4Var.f35034d = this.f20125s.mo15859b();
+        this.f20128v.f35036f = p03Var;
+        if (this.f20126t) {
+            m15169l();
         }
     }
 
-    public final void f(boolean z) {
-        this.u = z;
+    /* renamed from: f */
+    public final void m15171f(boolean z) {
+        this.f20127u = z;
     }
 
-    public final void k(a74 a74Var) {
-        this.p = a74Var;
+    /* renamed from: k */
+    public final void m15170k(a74 a74Var) {
+        this.f20122p = a74Var;
     }
 
-    public final void l() {
+    /* renamed from: l */
+    public final void m15169l() {
         try {
-            final JSONObject a = this.r.a(this.v);
-            if (this.p != null) {
-                this.q.execute(new Runnable() { // from class: com.daaw.mh4
+            final JSONObject mo6074a = this.f20124r.mo6074a(this.f20128v);
+            if (this.f20122p != null) {
+                this.f20123q.execute(new Runnable() { // from class: com.daaw.mh4
                     @Override // java.lang.Runnable
                     public final void run() {
-                        nh4.this.e(a);
+                        nh4.this.m15172e(mo6074a);
                     }
                 });
             }

@@ -7,15 +7,19 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class dz5 implements ct4 {
-    public final AtomicReference p = new AtomicReference();
 
-    public final void a(zzdg zzdgVar) {
-        this.p.set(zzdgVar);
+    /* renamed from: p */
+    public final AtomicReference f8003p = new AtomicReference();
+
+    /* renamed from: a */
+    public final void m23803a(zzdg zzdgVar) {
+        this.f8003p.set(zzdgVar);
     }
 
     @Override // com.daaw.ct4
-    public final void f(final zzs zzsVar) {
-        ne6.a(this.p, new me6() { // from class: com.daaw.cz5
+    /* renamed from: f */
+    public final void mo9172f(final zzs zzsVar) {
+        ne6.m15202a(this.f8003p, new me6() { // from class: com.daaw.cz5
             @Override // com.daaw.me6
             public final void zza(Object obj) {
                 ((zzdg) obj).zze(zzs.this);

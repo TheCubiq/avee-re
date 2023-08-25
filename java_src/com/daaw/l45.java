@@ -20,32 +20,55 @@ import com.google.android.gms.internal.ads.zzblz;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public final class l45 {
-    public static final ImageView.ScaleType k = ImageView.ScaleType.CENTER_INSIDE;
-    public final zzg a;
-    public final ri6 b;
-    public final o35 c;
-    public final j35 d;
-    public final x45 e;
-    public final i55 f;
-    public final Executor g;
-    public final Executor h;
-    public final zzblz i;
-    public final g35 j;
+
+    /* renamed from: k */
+    public static final ImageView.ScaleType f17051k = ImageView.ScaleType.CENTER_INSIDE;
+
+    /* renamed from: a */
+    public final zzg f17052a;
+
+    /* renamed from: b */
+    public final ri6 f17053b;
+
+    /* renamed from: c */
+    public final o35 f17054c;
+
+    /* renamed from: d */
+    public final j35 f17055d;
+
+    /* renamed from: e */
+    public final x45 f17056e;
+
+    /* renamed from: f */
+    public final i55 f17057f;
+
+    /* renamed from: g */
+    public final Executor f17058g;
+
+    /* renamed from: h */
+    public final Executor f17059h;
+
+    /* renamed from: i */
+    public final zzblz f17060i;
+
+    /* renamed from: j */
+    public final g35 f17061j;
 
     public l45(zzg zzgVar, ri6 ri6Var, o35 o35Var, j35 j35Var, x45 x45Var, i55 i55Var, Executor executor, Executor executor2, g35 g35Var) {
-        this.a = zzgVar;
-        this.b = ri6Var;
-        this.i = ri6Var.i;
-        this.c = o35Var;
-        this.d = j35Var;
-        this.e = x45Var;
-        this.f = i55Var;
-        this.g = executor;
-        this.h = executor2;
-        this.j = g35Var;
+        this.f17052a = zzgVar;
+        this.f17053b = ri6Var;
+        this.f17060i = ri6Var.f25349i;
+        this.f17054c = o35Var;
+        this.f17055d = j35Var;
+        this.f17056e = x45Var;
+        this.f17057f = i55Var;
+        this.f17058g = executor;
+        this.f17059h = executor2;
+        this.f17061j = g35Var;
     }
 
-    public static void g(RelativeLayout.LayoutParams layoutParams, int i) {
+    /* renamed from: g */
+    public static void m17136g(RelativeLayout.LayoutParams layoutParams, int i) {
         if (i == 0) {
             layoutParams.addRule(10);
             layoutParams.addRule(9);
@@ -61,32 +84,34 @@ public final class l45 {
         }
     }
 
-    public final /* synthetic */ void a(ViewGroup viewGroup) {
+    /* renamed from: a */
+    public final /* synthetic */ void m17142a(ViewGroup viewGroup) {
         boolean z = viewGroup != null;
-        j35 j35Var = this.d;
-        if (j35Var.N() != null) {
-            if (j35Var.K() == 2 || j35Var.K() == 1) {
-                this.a.zzI(this.b.f, String.valueOf(j35Var.K()), z);
-            } else if (j35Var.K() == 6) {
-                this.a.zzI(this.b.f, "2", z);
-                this.a.zzI(this.b.f, "1", z);
+        j35 j35Var = this.f17055d;
+        if (j35Var.m19142N() != null) {
+            if (j35Var.m19145K() == 2 || j35Var.m19145K() == 1) {
+                this.f17052a.zzI(this.f17053b.f25346f, String.valueOf(j35Var.m19145K()), z);
+            } else if (j35Var.m19145K() == 6) {
+                this.f17052a.zzI(this.f17053b.f25346f, "2", z);
+                this.f17052a.zzI(this.f17053b.f25346f, "1", z);
             }
         }
     }
 
-    public final /* synthetic */ void b(k55 k55Var) {
+    /* renamed from: b */
+    public final /* synthetic */ void m17141b(k55 k55Var) {
         ViewGroup viewGroup;
         View view;
         final ViewGroup viewGroup2;
-        sc3 a;
+        sc3 m22051a;
         Drawable drawable;
         ImageView.ScaleType scaleType;
-        if (this.c.f() || this.c.e()) {
+        if (this.f17054c.mo14577f() || this.f17054c.mo14578e()) {
             String[] strArr = {NativeAd.ASSET_ADCHOICES_CONTAINER_VIEW, "3011"};
             for (int i = 0; i < 2; i++) {
-                View s = k55Var.s(strArr[i]);
-                if (s != null && (s instanceof ViewGroup)) {
-                    viewGroup = (ViewGroup) s;
+                View mo18042s = k55Var.mo18042s(strArr[i]);
+                if (mo18042s != null && (mo18042s instanceof ViewGroup)) {
+                    viewGroup = (ViewGroup) mo18042s;
                     break;
                 }
             }
@@ -94,21 +119,21 @@ public final class l45 {
         viewGroup = null;
         Context context = k55Var.zzf().getContext();
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-2, -2);
-        j35 j35Var = this.d;
-        if (j35Var.M() != null) {
-            view = j35Var.M();
-            zzblz zzblzVar = this.i;
+        j35 j35Var = this.f17055d;
+        if (j35Var.m19143M() != null) {
+            view = j35Var.m19143M();
+            zzblz zzblzVar = this.f17060i;
             if (zzblzVar != null && viewGroup == null) {
-                g(layoutParams, zzblzVar.t);
+                m17136g(layoutParams, zzblzVar.f36847t);
                 view.setLayoutParams(layoutParams);
             }
-        } else if (j35Var.T() instanceof ac3) {
-            ac3 ac3Var = (ac3) j35Var.T();
+        } else if (j35Var.m19136T() instanceof ac3) {
+            ac3 ac3Var = (ac3) j35Var.m19136T();
             if (viewGroup == null) {
-                g(layoutParams, ac3Var.zzc());
+                m17136g(layoutParams, ac3Var.zzc());
             }
             View bc3Var = new bc3(context, ac3Var, layoutParams);
-            bc3Var.setContentDescription((CharSequence) zzba.zzc().b(g93.m3));
+            bc3Var.setContentDescription((CharSequence) zzba.zzc().m23658b(g93.f10757m3));
             view = bc3Var;
         } else {
             view = null;
@@ -129,9 +154,9 @@ public final class l45 {
                     zzh.addView(zzaVar);
                 }
             }
-            k55Var.D(k55Var.zzk(), view, true);
+            k55Var.mo18043D(k55Var.zzk(), view, true);
         }
-        y17 y17Var = h45.D;
+        y17 y17Var = h45.f12041D;
         int size = y17Var.size();
         int i2 = 0;
         while (true) {
@@ -139,56 +164,56 @@ public final class l45 {
                 viewGroup2 = null;
                 break;
             }
-            View s2 = k55Var.s((String) y17Var.get(i2));
+            View mo18042s2 = k55Var.mo18042s((String) y17Var.get(i2));
             i2++;
-            if (s2 instanceof ViewGroup) {
-                viewGroup2 = (ViewGroup) s2;
+            if (mo18042s2 instanceof ViewGroup) {
+                viewGroup2 = (ViewGroup) mo18042s2;
                 break;
             }
         }
-        this.h.execute(new Runnable() { // from class: com.daaw.i45
+        this.f17059h.execute(new Runnable() { // from class: com.daaw.i45
             @Override // java.lang.Runnable
             public final void run() {
-                l45.this.a(viewGroup2);
+                l45.this.m17142a(viewGroup2);
             }
         });
         if (viewGroup2 == null) {
             return;
         }
-        if (h(viewGroup2, true)) {
-            j35 j35Var2 = this.d;
-            if (j35Var2.Z() != null) {
-                j35Var2.Z().I(new k45(k55Var, viewGroup2));
+        if (m17135h(viewGroup2, true)) {
+            j35 j35Var2 = this.f17055d;
+            if (j35Var2.m19130Z() != null) {
+                j35Var2.m19130Z().mo6454I(new k45(k55Var, viewGroup2));
             }
-        } else if (((Boolean) zzba.zzc().b(g93.K8)).booleanValue() && h(viewGroup2, false)) {
-            j35 j35Var3 = this.d;
-            if (j35Var3.X() != null) {
-                j35Var3.X().I(new k45(k55Var, viewGroup2));
+        } else if (((Boolean) zzba.zzc().m23658b(g93.f10470K8)).booleanValue() && m17135h(viewGroup2, false)) {
+            j35 j35Var3 = this.f17055d;
+            if (j35Var3.m19132X() != null) {
+                j35Var3.m19132X().mo6454I(new k45(k55Var, viewGroup2));
             }
         } else {
             viewGroup2.removeAllViews();
             View zzf = k55Var.zzf();
             Context context2 = zzf != null ? zzf.getContext() : null;
-            if (context2 == null || (a = this.j.a()) == null) {
+            if (context2 == null || (m22051a = this.f17061j.m22051a()) == null) {
                 return;
             }
             try {
-                yd0 zzi = a.zzi();
-                if (zzi == null || (drawable = (Drawable) nt0.M(zzi)) == null) {
+                yd0 zzi = m22051a.zzi();
+                if (zzi == null || (drawable = (Drawable) nt0.m14831M(zzi)) == null) {
                     return;
                 }
                 ImageView imageView = new ImageView(context2);
                 imageView.setImageDrawable(drawable);
                 yd0 zzj = k55Var.zzj();
                 if (zzj != null) {
-                    if (((Boolean) zzba.zzc().b(g93.D5)).booleanValue()) {
-                        scaleType = (ImageView.ScaleType) nt0.M(zzj);
+                    if (((Boolean) zzba.zzc().m23658b(g93.f10397D5)).booleanValue()) {
+                        scaleType = (ImageView.ScaleType) nt0.m14831M(zzj);
                         imageView.setScaleType(scaleType);
                         imageView.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
                         viewGroup2.addView(imageView);
                     }
                 }
-                scaleType = k;
+                scaleType = f17051k;
                 imageView.setScaleType(scaleType);
                 imageView.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
                 viewGroup2.addView(imageView);
@@ -198,30 +223,32 @@ public final class l45 {
         }
     }
 
-    public final void c(k55 k55Var) {
-        if (k55Var == null || this.e == null || k55Var.zzh() == null || !this.c.g()) {
+    /* renamed from: c */
+    public final void m17140c(k55 k55Var) {
+        if (k55Var == null || this.f17056e == null || k55Var.zzh() == null || !this.f17054c.mo14576g()) {
             return;
         }
         try {
-            k55Var.zzh().addView(this.e.a());
+            k55Var.zzh().addView(this.f17056e.m5539a());
         } catch (l74 e) {
             zze.zzb("web view can not be obtained", e);
         }
     }
 
-    public final void d(k55 k55Var) {
+    /* renamed from: d */
+    public final void m17139d(k55 k55Var) {
         if (k55Var == null) {
             return;
         }
         Context context = k55Var.zzf().getContext();
-        if (zzbx.zzh(context, this.c.a)) {
+        if (zzbx.zzh(context, this.f17054c.f21011a)) {
             if (!(context instanceof Activity)) {
                 k04.zze("Activity context is needed for policy validator.");
-            } else if (this.f == null || k55Var.zzh() == null) {
+            } else if (this.f17057f == null || k55Var.zzh() == null) {
             } else {
                 try {
                     WindowManager windowManager = (WindowManager) context.getSystemService("window");
-                    windowManager.addView(this.f.a(k55Var.zzh(), windowManager), zzbx.zzb());
+                    windowManager.addView(this.f17057f.m20118a(k55Var.zzh(), windowManager), zzbx.zzb());
                 } catch (l74 e) {
                     zze.zzb("web view can not be obtained", e);
                 }
@@ -229,29 +256,32 @@ public final class l45 {
         }
     }
 
-    public final void e(final k55 k55Var) {
-        this.g.execute(new Runnable() { // from class: com.daaw.j45
+    /* renamed from: e */
+    public final void m17138e(final k55 k55Var) {
+        this.f17058g.execute(new Runnable() { // from class: com.daaw.j45
             @Override // java.lang.Runnable
             public final void run() {
-                l45.this.b(k55Var);
+                l45.this.m17141b(k55Var);
             }
         });
     }
 
-    public final boolean f(ViewGroup viewGroup) {
-        return h(viewGroup, true);
+    /* renamed from: f */
+    public final boolean m17137f(ViewGroup viewGroup) {
+        return m17135h(viewGroup, true);
     }
 
-    public final boolean h(ViewGroup viewGroup, boolean z) {
-        View N = z ? this.d.N() : this.d.O();
-        if (N == null) {
+    /* renamed from: h */
+    public final boolean m17135h(ViewGroup viewGroup, boolean z) {
+        View m19142N = z ? this.f17055d.m19142N() : this.f17055d.m19141O();
+        if (m19142N == null) {
             return false;
         }
         viewGroup.removeAllViews();
-        if (N.getParent() instanceof ViewGroup) {
-            ((ViewGroup) N.getParent()).removeView(N);
+        if (m19142N.getParent() instanceof ViewGroup) {
+            ((ViewGroup) m19142N.getParent()).removeView(m19142N);
         }
-        viewGroup.addView(N, ((Boolean) zzba.zzc().b(g93.o3)).booleanValue() ? new FrameLayout.LayoutParams(-1, -1, 17) : new FrameLayout.LayoutParams(-2, -2, 17));
+        viewGroup.addView(m19142N, ((Boolean) zzba.zzc().m23658b(g93.f10779o3)).booleanValue() ? new FrameLayout.LayoutParams(-1, -1, 17) : new FrameLayout.LayoutParams(-2, -2, 17));
         return true;
     }
 }

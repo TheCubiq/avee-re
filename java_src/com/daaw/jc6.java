@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class jc6 implements xe6 {
-    public ri6 a;
+
+    /* renamed from: a */
+    public ri6 f14990a;
 
     public jc6() {
     }

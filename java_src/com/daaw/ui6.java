@@ -3,21 +3,25 @@ package com.daaw;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class ui6 {
-    public final JSONObject a;
+
+    /* renamed from: a */
+    public final JSONObject f29101a;
 
     public ui6(JSONObject jSONObject) {
-        this.a = jSONObject;
+        this.f29101a = jSONObject;
     }
 
-    public final String a() {
-        if (b() - 1 != 1) {
+    /* renamed from: a */
+    public final String m8112a() {
+        if (m8111b() - 1 != 1) {
             return "javascript";
         }
         return null;
     }
 
-    public final int b() {
-        int optInt = this.a.optInt("media_type", -1);
+    /* renamed from: b */
+    public final int m8111b() {
+        int optInt = this.f29101a.optInt("media_type", -1);
         if (optInt != 0) {
             return optInt != 1 ? 3 : 1;
         }

@@ -19,29 +19,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import androidx.activity.OnBackPressedDispatcher;
+import androidx.activity.result.AbstractC0051a;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.IntentSenderRequest;
+import androidx.fragment.app.AbstractC0314j;
+import androidx.fragment.app.C0297c;
+import androidx.fragment.app.C0316k;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.c;
-import androidx.fragment.app.j;
-import androidx.fragment.app.k;
-import androidx.lifecycle.c;
-import com.daaw.j6;
+import androidx.lifecycle.AbstractC0344c;
+import androidx.lifecycle.InterfaceC0348d;
+import com.daaw.AbstractC3274v0;
+import com.daaw.AbstractC3658y0;
+import com.daaw.C1798j6;
+import com.daaw.C3391w0;
+import com.daaw.C3423wd;
+import com.daaw.C3489x0;
+import com.daaw.InterfaceC3153u0;
+import com.daaw.InterfaceC3790z0;
 import com.daaw.kl0;
 import com.daaw.mt1;
 import com.daaw.ne1;
+import com.daaw.nt1;
 import com.daaw.r11;
 import com.daaw.r30;
 import com.daaw.s30;
 import com.daaw.sj0;
-import com.daaw.u0;
-import com.daaw.v0;
 import com.daaw.v30;
 import com.daaw.w30;
-import com.daaw.wd;
 import com.daaw.wt0;
-import com.daaw.y0;
 import com.daaw.y30;
+import com.daaw.yt0;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayDeque;
@@ -57,67 +64,160 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes.dex */
 public abstract class FragmentManager {
-    public static boolean O = false;
-    public static boolean P = true;
-    public y0<IntentSenderRequest> A;
-    public y0<String[]> B;
-    public boolean D;
-    public boolean E;
-    public boolean F;
-    public boolean G;
-    public boolean H;
-    public ArrayList<androidx.fragment.app.a> I;
-    public ArrayList<Boolean> J;
-    public ArrayList<Fragment> K;
-    public ArrayList<o> L;
-    public v30 M;
-    public boolean b;
-    public ArrayList<androidx.fragment.app.a> d;
-    public ArrayList<Fragment> e;
-    public OnBackPressedDispatcher g;
-    public ArrayList<l> l;
-    public androidx.fragment.app.e<?> r;
-    public r30 s;
-    public Fragment t;
-    public Fragment u;
-    public y0<Intent> z;
-    public final ArrayList<m> a = new ArrayList<>();
-    public final androidx.fragment.app.i c = new androidx.fragment.app.i();
-    public final androidx.fragment.app.f f = new androidx.fragment.app.f(this);
-    public final wt0 h = new c(false);
-    public final AtomicInteger i = new AtomicInteger();
-    public final Map<String, Bundle> j = Collections.synchronizedMap(new HashMap());
-    public final Map<String, Object> k = Collections.synchronizedMap(new HashMap());
-    public Map<Fragment, HashSet<wd>> m = Collections.synchronizedMap(new HashMap());
-    public final k.g n = new d();
-    public final androidx.fragment.app.g o = new androidx.fragment.app.g(this);
-    public final CopyOnWriteArrayList<w30> p = new CopyOnWriteArrayList<>();
-    public int q = -1;
-    public androidx.fragment.app.d v = null;
-    public androidx.fragment.app.d w = new e();
-    public ne1 x = null;
-    public ne1 y = new f();
-    public ArrayDeque<LaunchedFragmentInfo> C = new ArrayDeque<>();
-    public Runnable N = new g();
 
-    /* renamed from: androidx.fragment.app.FragmentManager$6  reason: invalid class name */
+    /* renamed from: O */
+    public static boolean f1435O = false;
+
+    /* renamed from: P */
+    public static boolean f1436P = true;
+
+    /* renamed from: A */
+    public AbstractC3658y0<IntentSenderRequest> f1437A;
+
+    /* renamed from: B */
+    public AbstractC3658y0<String[]> f1438B;
+
+    /* renamed from: D */
+    public boolean f1440D;
+
+    /* renamed from: E */
+    public boolean f1441E;
+
+    /* renamed from: F */
+    public boolean f1442F;
+
+    /* renamed from: G */
+    public boolean f1443G;
+
+    /* renamed from: H */
+    public boolean f1444H;
+
+    /* renamed from: I */
+    public ArrayList<C0281a> f1445I;
+
+    /* renamed from: J */
+    public ArrayList<Boolean> f1446J;
+
+    /* renamed from: K */
+    public ArrayList<Fragment> f1447K;
+
+    /* renamed from: L */
+    public ArrayList<C0278o> f1448L;
+
+    /* renamed from: M */
+    public v30 f1449M;
+
+    /* renamed from: b */
+    public boolean f1452b;
+
+    /* renamed from: d */
+    public ArrayList<C0281a> f1454d;
+
+    /* renamed from: e */
+    public ArrayList<Fragment> f1455e;
+
+    /* renamed from: g */
+    public OnBackPressedDispatcher f1457g;
+
+    /* renamed from: l */
+    public ArrayList<InterfaceC0275l> f1462l;
+
+    /* renamed from: r */
+    public AbstractC0305e<?> f1468r;
+
+    /* renamed from: s */
+    public r30 f1469s;
+
+    /* renamed from: t */
+    public Fragment f1470t;
+
+    /* renamed from: u */
+    public Fragment f1471u;
+
+    /* renamed from: z */
+    public AbstractC3658y0<Intent> f1476z;
+
+    /* renamed from: a */
+    public final ArrayList<InterfaceC0276m> f1451a = new ArrayList<>();
+
+    /* renamed from: c */
+    public final C0313i f1453c = new C0313i();
+
+    /* renamed from: f */
+    public final LayoutInflater$Factory2C0306f f1456f = new LayoutInflater$Factory2C0306f(this);
+
+    /* renamed from: h */
+    public final wt0 f1458h = new C0266c(false);
+
+    /* renamed from: i */
+    public final AtomicInteger f1459i = new AtomicInteger();
+
+    /* renamed from: j */
+    public final Map<String, Bundle> f1460j = Collections.synchronizedMap(new HashMap());
+
+    /* renamed from: k */
+    public final Map<String, Object> f1461k = Collections.synchronizedMap(new HashMap());
+
+    /* renamed from: m */
+    public Map<Fragment, HashSet<C3423wd>> f1463m = Collections.synchronizedMap(new HashMap());
+
+    /* renamed from: n */
+    public final C0316k.InterfaceC0323g f1464n = new C0267d();
+
+    /* renamed from: o */
+    public final C0308g f1465o = new C0308g(this);
+
+    /* renamed from: p */
+    public final CopyOnWriteArrayList<w30> f1466p = new CopyOnWriteArrayList<>();
+
+    /* renamed from: q */
+    public int f1467q = -1;
+
+    /* renamed from: v */
+    public C0304d f1472v = null;
+
+    /* renamed from: w */
+    public C0304d f1473w = new C0268e();
+
+    /* renamed from: x */
+    public ne1 f1474x = null;
+
+    /* renamed from: y */
+    public ne1 f1475y = new C0269f();
+
+    /* renamed from: C */
+    public ArrayDeque<LaunchedFragmentInfo> f1439C = new ArrayDeque<>();
+
+    /* renamed from: N */
+    public Runnable f1450N = new RunnableC0270g();
+
+    /* renamed from: androidx.fragment.app.FragmentManager$6 */
     /* loaded from: classes.dex */
-    class AnonymousClass6 implements androidx.lifecycle.d {
-        public final /* synthetic */ String a;
-        public final /* synthetic */ y30 b;
-        public final /* synthetic */ androidx.lifecycle.c c;
-        public final /* synthetic */ FragmentManager d;
+    class C02626 implements InterfaceC0348d {
 
-        @Override // androidx.lifecycle.d
-        public void a(sj0 sj0Var, c.b bVar) {
+        /* renamed from: a */
+        public final /* synthetic */ String f1477a;
+
+        /* renamed from: b */
+        public final /* synthetic */ y30 f1478b;
+
+        /* renamed from: c */
+        public final /* synthetic */ AbstractC0344c f1479c;
+
+        /* renamed from: d */
+        public final /* synthetic */ FragmentManager f1480d;
+
+        @Override // androidx.lifecycle.InterfaceC0348d
+        /* renamed from: a */
+        public void mo18735a(sj0 sj0Var, AbstractC0344c.EnumC0346b enumC0346b) {
             Bundle bundle;
-            if (bVar == c.b.ON_START && (bundle = (Bundle) this.d.j.get(this.a)) != null) {
-                this.b.a(this.a, bundle);
-                this.d.q(this.a);
+            if (enumC0346b == AbstractC0344c.EnumC0346b.ON_START && (bundle = (Bundle) this.f1480d.f1460j.get(this.f1477a)) != null) {
+                this.f1478b.m4230a(this.f1477a, bundle);
+                this.f1480d.m29293q(this.f1477a);
             }
-            if (bVar == c.b.ON_DESTROY) {
-                this.c.c(this);
-                this.d.k.remove(this.a);
+            if (enumC0346b == AbstractC0344c.EnumC0346b.ON_DESTROY) {
+                this.f1479c.mo29046c(this);
+                this.f1480d.f1461k.remove(this.f1477a);
             }
         }
     }
@@ -125,12 +225,17 @@ public abstract class FragmentManager {
     @SuppressLint({"BanParcelableUsage"})
     /* loaded from: classes.dex */
     public static class LaunchedFragmentInfo implements Parcelable {
-        public static final Parcelable.Creator<LaunchedFragmentInfo> CREATOR = new a();
-        public String p;
-        public int q;
+        public static final Parcelable.Creator<LaunchedFragmentInfo> CREATOR = new C0263a();
 
+        /* renamed from: p */
+        public String f1481p;
+
+        /* renamed from: q */
+        public int f1482q;
+
+        /* renamed from: androidx.fragment.app.FragmentManager$LaunchedFragmentInfo$a */
         /* loaded from: classes.dex */
-        public class a implements Parcelable.Creator<LaunchedFragmentInfo> {
+        public class C0263a implements Parcelable.Creator<LaunchedFragmentInfo> {
             @Override // android.os.Parcelable.Creator
             /* renamed from: a */
             public LaunchedFragmentInfo createFromParcel(Parcel parcel) {
@@ -145,13 +250,13 @@ public abstract class FragmentManager {
         }
 
         public LaunchedFragmentInfo(Parcel parcel) {
-            this.p = parcel.readString();
-            this.q = parcel.readInt();
+            this.f1481p = parcel.readString();
+            this.f1482q = parcel.readInt();
         }
 
         public LaunchedFragmentInfo(String str, int i) {
-            this.p = str;
-            this.q = i;
+            this.f1481p = str;
+            this.f1482q = i;
         }
 
         @Override // android.os.Parcelable
@@ -161,31 +266,32 @@ public abstract class FragmentManager {
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
-            parcel.writeString(this.p);
-            parcel.writeInt(this.q);
+            parcel.writeString(this.f1481p);
+            parcel.writeInt(this.f1482q);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$a */
     /* loaded from: classes.dex */
-    public class a implements u0<ActivityResult> {
-        public a() {
+    public class C0264a implements InterfaceC3153u0<ActivityResult> {
+        public C0264a() {
         }
 
-        @Override // com.daaw.u0
+        @Override // com.daaw.InterfaceC3153u0
         /* renamed from: b */
-        public void a(ActivityResult activityResult) {
-            LaunchedFragmentInfo pollFirst = FragmentManager.this.C.pollFirst();
+        public void mo8646a(ActivityResult activityResult) {
+            LaunchedFragmentInfo pollFirst = FragmentManager.this.f1439C.pollFirst();
             if (pollFirst == null) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("No IntentSenders were started for ");
                 sb.append(this);
                 return;
             }
-            String str = pollFirst.p;
-            int i = pollFirst.q;
-            Fragment i2 = FragmentManager.this.c.i(str);
-            if (i2 != null) {
-                i2.j0(i, activityResult.b(), activityResult.a());
+            String str = pollFirst.f1481p;
+            int i = pollFirst.f1482q;
+            Fragment m29167i = FragmentManager.this.f1453c.m29167i(str);
+            if (m29167i != null) {
+                m29167i.mo25244j0(i, activityResult.m30363b(), activityResult.m30364a());
                 return;
             }
             StringBuilder sb2 = new StringBuilder();
@@ -194,33 +300,34 @@ public abstract class FragmentManager {
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$b */
     /* loaded from: classes.dex */
-    public class b implements u0<Map<String, Boolean>> {
-        public b() {
+    public class C0265b implements InterfaceC3153u0<Map<String, Boolean>> {
+        public C0265b() {
         }
 
-        @Override // com.daaw.u0
+        @Override // com.daaw.InterfaceC3153u0
         @SuppressLint({"SyntheticAccessor"})
         /* renamed from: b */
-        public void a(Map<String, Boolean> map) {
+        public void mo8646a(Map<String, Boolean> map) {
             String[] strArr = (String[]) map.keySet().toArray(new String[0]);
             ArrayList arrayList = new ArrayList(map.values());
             int[] iArr = new int[arrayList.size()];
             for (int i = 0; i < arrayList.size(); i++) {
                 iArr[i] = ((Boolean) arrayList.get(i)).booleanValue() ? 0 : -1;
             }
-            LaunchedFragmentInfo pollFirst = FragmentManager.this.C.pollFirst();
+            LaunchedFragmentInfo pollFirst = FragmentManager.this.f1439C.pollFirst();
             if (pollFirst == null) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("No permissions were requested for ");
                 sb.append(this);
                 return;
             }
-            String str = pollFirst.p;
-            int i2 = pollFirst.q;
-            Fragment i3 = FragmentManager.this.c.i(str);
-            if (i3 != null) {
-                i3.I0(i2, strArr, iArr);
+            String str = pollFirst.f1481p;
+            int i2 = pollFirst.f1482q;
+            Fragment m29167i = FragmentManager.this.f1453c.m29167i(str);
+            if (m29167i != null) {
+                m29167i.m29478I0(i2, strArr, iArr);
                 return;
             }
             StringBuilder sb2 = new StringBuilder();
@@ -229,129 +336,151 @@ public abstract class FragmentManager {
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$c */
     /* loaded from: classes.dex */
-    public class c extends wt0 {
-        public c(boolean z) {
+    public class C0266c extends wt0 {
+        public C0266c(boolean z) {
             super(z);
         }
 
         @Override // com.daaw.wt0
-        public void b() {
-            FragmentManager.this.A0();
+        /* renamed from: b */
+        public void mo5816b() {
+            FragmentManager.this.m29389A0();
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$d */
     /* loaded from: classes.dex */
-    public class d implements k.g {
-        public d() {
+    public class C0267d implements C0316k.InterfaceC0323g {
+        public C0267d() {
         }
 
-        @Override // androidx.fragment.app.k.g
-        public void a(Fragment fragment, wd wdVar) {
-            FragmentManager.this.f(fragment, wdVar);
+        @Override // androidx.fragment.app.C0316k.InterfaceC0323g
+        /* renamed from: a */
+        public void mo29109a(Fragment fragment, C3423wd c3423wd) {
+            FragmentManager.this.m29323f(fragment, c3423wd);
         }
 
-        @Override // androidx.fragment.app.k.g
-        public void b(Fragment fragment, wd wdVar) {
-            if (wdVar.b()) {
+        @Override // androidx.fragment.app.C0316k.InterfaceC0323g
+        /* renamed from: b */
+        public void mo29108b(Fragment fragment, C3423wd c3423wd) {
+            if (c3423wd.m6172b()) {
                 return;
             }
-            FragmentManager.this.Y0(fragment, wdVar);
+            FragmentManager.this.m29341Y0(fragment, c3423wd);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$e */
     /* loaded from: classes.dex */
-    public class e extends androidx.fragment.app.d {
-        public e() {
+    public class C0268e extends C0304d {
+        public C0268e() {
         }
 
-        @Override // androidx.fragment.app.d
-        public Fragment a(ClassLoader classLoader, String str) {
-            return FragmentManager.this.s0().d(FragmentManager.this.s0().k(), str, null);
+        @Override // androidx.fragment.app.C0304d
+        /* renamed from: a */
+        public Fragment mo29219a(ClassLoader classLoader, String str) {
+            return FragmentManager.this.m29288s0().m11811d(FragmentManager.this.m29288s0().m29214k(), str, null);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$f */
     /* loaded from: classes.dex */
-    public class f implements ne1 {
-        public f() {
+    public class C0269f implements ne1 {
+        public C0269f() {
         }
 
         @Override // com.daaw.ne1
-        public androidx.fragment.app.l a(ViewGroup viewGroup) {
-            return new androidx.fragment.app.b(viewGroup);
+        /* renamed from: a */
+        public AbstractC0325l mo15210a(ViewGroup viewGroup) {
+            return new C0282b(viewGroup);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$g */
     /* loaded from: classes.dex */
-    public class g implements Runnable {
-        public g() {
+    public class RunnableC0270g implements Runnable {
+        public RunnableC0270g() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            FragmentManager.this.a0(true);
+            FragmentManager.this.m29337a0(true);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$h */
     /* loaded from: classes.dex */
-    public class h extends AnimatorListenerAdapter {
-        public final /* synthetic */ ViewGroup a;
-        public final /* synthetic */ View b;
-        public final /* synthetic */ Fragment c;
+    public class C0271h extends AnimatorListenerAdapter {
 
-        public h(ViewGroup viewGroup, View view, Fragment fragment) {
-            this.a = viewGroup;
-            this.b = view;
-            this.c = fragment;
+        /* renamed from: a */
+        public final /* synthetic */ ViewGroup f1490a;
+
+        /* renamed from: b */
+        public final /* synthetic */ View f1491b;
+
+        /* renamed from: c */
+        public final /* synthetic */ Fragment f1492c;
+
+        public C0271h(ViewGroup viewGroup, View view, Fragment fragment) {
+            this.f1490a = viewGroup;
+            this.f1491b = view;
+            this.f1492c = fragment;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            this.a.endViewTransition(this.b);
+            this.f1490a.endViewTransition(this.f1491b);
             animator.removeListener(this);
-            Fragment fragment = this.c;
-            View view = fragment.W;
-            if (view == null || !fragment.O) {
+            Fragment fragment = this.f1492c;
+            View view = fragment.f1376W;
+            if (view == null || !fragment.f1368O) {
                 return;
             }
             view.setVisibility(8);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$i */
     /* loaded from: classes.dex */
-    public class i implements w30 {
-        public final /* synthetic */ Fragment p;
+    public class C0272i implements w30 {
 
-        public i(Fragment fragment) {
-            this.p = fragment;
+        /* renamed from: p */
+        public final /* synthetic */ Fragment f1494p;
+
+        public C0272i(Fragment fragment) {
+            this.f1494p = fragment;
         }
 
         @Override // com.daaw.w30
-        public void b(FragmentManager fragmentManager, Fragment fragment) {
-            this.p.m0(fragment);
+        /* renamed from: b */
+        public void mo6558b(FragmentManager fragmentManager, Fragment fragment) {
+            this.f1494p.m29426m0(fragment);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$j */
     /* loaded from: classes.dex */
-    public class j implements u0<ActivityResult> {
-        public j() {
+    public class C0273j implements InterfaceC3153u0<ActivityResult> {
+        public C0273j() {
         }
 
-        @Override // com.daaw.u0
+        @Override // com.daaw.InterfaceC3153u0
         /* renamed from: b */
-        public void a(ActivityResult activityResult) {
-            LaunchedFragmentInfo pollFirst = FragmentManager.this.C.pollFirst();
+        public void mo8646a(ActivityResult activityResult) {
+            LaunchedFragmentInfo pollFirst = FragmentManager.this.f1439C.pollFirst();
             if (pollFirst == null) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("No Activities were started for result for ");
                 sb.append(this);
                 return;
             }
-            String str = pollFirst.p;
-            int i = pollFirst.q;
-            Fragment i2 = FragmentManager.this.c.i(str);
-            if (i2 != null) {
-                i2.j0(i, activityResult.b(), activityResult.a());
+            String str = pollFirst.f1481p;
+            int i = pollFirst.f1482q;
+            Fragment m29167i = FragmentManager.this.f1453c.m29167i(str);
+            if (m29167i != null) {
+                m29167i.mo25244j0(i, activityResult.m30363b(), activityResult.m30364a());
                 return;
             }
             StringBuilder sb2 = new StringBuilder();
@@ -360,23 +489,24 @@ public abstract class FragmentManager {
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$k */
     /* loaded from: classes.dex */
-    public static class k extends v0<IntentSenderRequest, ActivityResult> {
-        @Override // com.daaw.v0
+    public static class C0274k extends AbstractC3274v0<IntentSenderRequest, ActivityResult> {
+        @Override // com.daaw.AbstractC3274v0
         /* renamed from: d */
-        public Intent a(Context context, IntentSenderRequest intentSenderRequest) {
+        public Intent mo5672a(Context context, IntentSenderRequest intentSenderRequest) {
             Bundle bundleExtra;
             Intent intent = new Intent("androidx.activity.result.contract.action.INTENT_SENDER_REQUEST");
-            Intent a = intentSenderRequest.a();
-            if (a != null && (bundleExtra = a.getBundleExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE")) != null) {
+            Intent m30359a = intentSenderRequest.m30359a();
+            if (m30359a != null && (bundleExtra = m30359a.getBundleExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE")) != null) {
                 intent.putExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE", bundleExtra);
-                a.removeExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE");
-                if (a.getBooleanExtra("androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE", false)) {
-                    intentSenderRequest = new IntentSenderRequest.b(intentSenderRequest.g()).b(null).c(intentSenderRequest.c(), intentSenderRequest.b()).a();
+                m30359a.removeExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE");
+                if (m30359a.getBooleanExtra("androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE", false)) {
+                    intentSenderRequest = new IntentSenderRequest.C0050b(intentSenderRequest.m30356g()).m30352b(null).m30351c(intentSenderRequest.m30357c(), intentSenderRequest.m30358b()).m30353a();
                 }
             }
             intent.putExtra("androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST", intentSenderRequest);
-            if (FragmentManager.E0(2)) {
+            if (FragmentManager.m29381E0(2)) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("CreateIntent created the following intent: ");
                 sb.append(intent);
@@ -384,122 +514,150 @@ public abstract class FragmentManager {
             return intent;
         }
 
-        @Override // com.daaw.v0
+        @Override // com.daaw.AbstractC3274v0
         /* renamed from: e */
-        public ActivityResult c(int i, Intent intent) {
+        public ActivityResult mo5671c(int i, Intent intent) {
             return new ActivityResult(i, intent);
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$l */
     /* loaded from: classes.dex */
-    public interface l {
-        void a();
+    public interface InterfaceC0275l {
+        /* renamed from: a */
+        void m29266a();
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$m */
     /* loaded from: classes.dex */
-    public interface m {
-        boolean a(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2);
+    public interface InterfaceC0276m {
+        /* renamed from: a */
+        boolean mo29252a(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2);
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$n */
     /* loaded from: classes.dex */
-    public class n implements m {
-        public final String a;
-        public final int b;
-        public final int c;
+    public class C0277n implements InterfaceC0276m {
 
-        public n(String str, int i, int i2) {
-            this.a = str;
-            this.b = i;
-            this.c = i2;
+        /* renamed from: a */
+        public final String f1497a;
+
+        /* renamed from: b */
+        public final int f1498b;
+
+        /* renamed from: c */
+        public final int f1499c;
+
+        public C0277n(String str, int i, int i2) {
+            this.f1497a = str;
+            this.f1498b = i;
+            this.f1499c = i2;
         }
 
-        @Override // androidx.fragment.app.FragmentManager.m
-        public boolean a(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2) {
-            Fragment fragment = FragmentManager.this.u;
-            if (fragment == null || this.b >= 0 || this.a != null || !fragment.t().U0()) {
-                return FragmentManager.this.W0(arrayList, arrayList2, this.a, this.b, this.c);
+        @Override // androidx.fragment.app.FragmentManager.InterfaceC0276m
+        /* renamed from: a */
+        public boolean mo29252a(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2) {
+            Fragment fragment = FragmentManager.this.f1471u;
+            if (fragment == null || this.f1498b >= 0 || this.f1497a != null || !fragment.m29408t().m29349U0()) {
+                return FragmentManager.this.m29345W0(arrayList, arrayList2, this.f1497a, this.f1498b, this.f1499c);
             }
             return false;
         }
     }
 
+    /* renamed from: androidx.fragment.app.FragmentManager$o */
     /* loaded from: classes.dex */
-    public static class o implements Fragment.h {
-        public final boolean a;
-        public final androidx.fragment.app.a b;
-        public int c;
+    public static class C0278o implements Fragment.InterfaceC0261h {
 
-        public o(androidx.fragment.app.a aVar, boolean z) {
-            this.a = z;
-            this.b = aVar;
+        /* renamed from: a */
+        public final boolean f1501a;
+
+        /* renamed from: b */
+        public final C0281a f1502b;
+
+        /* renamed from: c */
+        public int f1503c;
+
+        public C0278o(C0281a c0281a, boolean z) {
+            this.f1501a = z;
+            this.f1502b = c0281a;
         }
 
-        @Override // androidx.fragment.app.Fragment.h
-        public void a() {
-            this.c++;
+        @Override // androidx.fragment.app.Fragment.InterfaceC0261h
+        /* renamed from: a */
+        public void mo29265a() {
+            this.f1503c++;
         }
 
-        @Override // androidx.fragment.app.Fragment.h
-        public void b() {
-            int i = this.c - 1;
-            this.c = i;
+        @Override // androidx.fragment.app.Fragment.InterfaceC0261h
+        /* renamed from: b */
+        public void mo29264b() {
+            int i = this.f1503c - 1;
+            this.f1503c = i;
             if (i != 0) {
                 return;
             }
-            this.b.t.f1();
+            this.f1502b.f1525t.m29321f1();
         }
 
-        public void c() {
-            androidx.fragment.app.a aVar = this.b;
-            aVar.t.t(aVar, this.a, false, false);
+        /* renamed from: c */
+        public void m29263c() {
+            C0281a c0281a = this.f1502b;
+            c0281a.f1525t.m29287t(c0281a, this.f1501a, false, false);
         }
 
-        public void d() {
-            boolean z = this.c > 0;
-            for (Fragment fragment : this.b.t.r0()) {
-                fragment.A1(null);
-                if (z && fragment.d0()) {
-                    fragment.F1();
+        /* renamed from: d */
+        public void m29262d() {
+            boolean z = this.f1503c > 0;
+            for (Fragment fragment : this.f1502b.f1525t.m29290r0()) {
+                fragment.m29499A1(null);
+                if (z && fragment.m29444d0()) {
+                    fragment.m29484F1();
                 }
             }
-            androidx.fragment.app.a aVar = this.b;
-            aVar.t.t(aVar, this.a, !z, true);
+            C0281a c0281a = this.f1502b;
+            c0281a.f1525t.m29287t(c0281a, this.f1501a, !z, true);
         }
 
-        public boolean e() {
-            return this.c == 0;
+        /* renamed from: e */
+        public boolean m29261e() {
+            return this.f1503c == 0;
         }
     }
 
-    public static boolean E0(int i2) {
-        return O || Log.isLoggable("FragmentManager", i2);
+    /* renamed from: E0 */
+    public static boolean m29381E0(int i) {
+        return f1435O || Log.isLoggable("FragmentManager", i);
     }
 
-    public static void c0(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2, int i2, int i3) {
-        while (i2 < i3) {
-            androidx.fragment.app.a aVar = arrayList.get(i2);
-            if (arrayList2.get(i2).booleanValue()) {
-                aVar.p(-1);
-                aVar.u(i2 == i3 + (-1));
+    /* renamed from: c0 */
+    public static void m29331c0(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2, int i, int i2) {
+        while (i < i2) {
+            C0281a c0281a = arrayList.get(i);
+            if (arrayList2.get(i).booleanValue()) {
+                c0281a.m29251p(-1);
+                c0281a.m29246u(i == i2 + (-1));
             } else {
-                aVar.p(1);
-                aVar.t();
+                c0281a.m29251p(1);
+                c0281a.m29247t();
             }
-            i2++;
+            i++;
         }
     }
 
-    public static int d1(int i2) {
-        if (i2 != 4097) {
-            if (i2 != 4099) {
-                return i2 != 8194 ? 0 : 4097;
+    /* renamed from: d1 */
+    public static int m29327d1(int i) {
+        if (i != 4097) {
+            if (i != 4099) {
+                return i != 8194 ? 0 : 4097;
             }
             return 4099;
         }
         return 8194;
     }
 
-    public static Fragment y0(View view) {
+    /* renamed from: y0 */
+    public static Fragment m29276y0(View view) {
         Object tag = view.getTag(r11.fragment_container_view_tag);
         if (tag instanceof Fragment) {
             return (Fragment) tag;
@@ -507,70 +665,77 @@ public abstract class FragmentManager {
         return null;
     }
 
-    public void A(Configuration configuration) {
-        for (Fragment fragment : this.c.n()) {
+    /* renamed from: A */
+    public void m29390A(Configuration configuration) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
             if (fragment != null) {
-                fragment.R0(configuration);
+                fragment.m29466R0(configuration);
             }
         }
     }
 
-    public void A0() {
-        a0(true);
-        if (this.h.c()) {
-            U0();
+    /* renamed from: A0 */
+    public void m29389A0() {
+        m29337a0(true);
+        if (this.f1458h.m5815c()) {
+            m29349U0();
         } else {
-            this.g.f();
+            this.f1457g.m30369f();
         }
     }
 
-    public boolean B(MenuItem menuItem) {
-        if (this.q < 1) {
+    /* renamed from: B */
+    public boolean m29388B(MenuItem menuItem) {
+        if (this.f1467q < 1) {
             return false;
         }
-        for (Fragment fragment : this.c.n()) {
-            if (fragment != null && fragment.S0(menuItem)) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
+            if (fragment != null && fragment.m29464S0(menuItem)) {
                 return true;
             }
         }
         return false;
     }
 
-    public void B0(Fragment fragment) {
-        if (E0(2)) {
+    /* renamed from: B0 */
+    public void m29387B0(Fragment fragment) {
+        if (m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("hide: ");
             sb.append(fragment);
         }
-        if (fragment.O) {
+        if (fragment.f1368O) {
             return;
         }
-        fragment.O = true;
-        fragment.c0 = true ^ fragment.c0;
-        j1(fragment);
+        fragment.f1368O = true;
+        fragment.f1382c0 = true ^ fragment.f1382c0;
+        m29309j1(fragment);
     }
 
-    public void C() {
-        this.E = false;
-        this.F = false;
-        this.M.n(false);
-        S(1);
+    /* renamed from: C */
+    public void m29386C() {
+        this.f1441E = false;
+        this.f1442F = false;
+        this.f1449M.m7521n(false);
+        m29354S(1);
     }
 
-    public void C0(Fragment fragment) {
-        if (fragment.A && F0(fragment)) {
-            this.D = true;
+    /* renamed from: C0 */
+    public void m29385C0(Fragment fragment) {
+        if (fragment.f1354A && m29379F0(fragment)) {
+            this.f1440D = true;
         }
     }
 
-    public boolean D(Menu menu, MenuInflater menuInflater) {
-        if (this.q < 1) {
+    /* renamed from: D */
+    public boolean m29384D(Menu menu, MenuInflater menuInflater) {
+        if (this.f1467q < 1) {
             return false;
         }
         ArrayList<Fragment> arrayList = null;
         boolean z = false;
-        for (Fragment fragment : this.c.n()) {
-            if (fragment != null && G0(fragment) && fragment.U0(menu, menuInflater)) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
+            if (fragment != null && m29377G0(fragment) && fragment.m29460U0(menu, menuInflater)) {
                 if (arrayList == null) {
                     arrayList = new ArrayList<>();
                 }
@@ -578,252 +743,275 @@ public abstract class FragmentManager {
                 z = true;
             }
         }
-        if (this.e != null) {
-            for (int i2 = 0; i2 < this.e.size(); i2++) {
-                Fragment fragment2 = this.e.get(i2);
+        if (this.f1455e != null) {
+            for (int i = 0; i < this.f1455e.size(); i++) {
+                Fragment fragment2 = this.f1455e.get(i);
                 if (arrayList == null || !arrayList.contains(fragment2)) {
-                    fragment2.u0();
+                    fragment2.m29405u0();
                 }
             }
         }
-        this.e = arrayList;
+        this.f1455e = arrayList;
         return z;
     }
 
-    public boolean D0() {
-        return this.G;
+    /* renamed from: D0 */
+    public boolean m29383D0() {
+        return this.f1443G;
     }
 
-    public void E() {
-        this.G = true;
-        a0(true);
-        X();
-        S(-1);
-        this.r = null;
-        this.s = null;
-        this.t = null;
-        if (this.g != null) {
-            this.h.d();
-            this.g = null;
+    /* renamed from: E */
+    public void m29382E() {
+        this.f1443G = true;
+        m29337a0(true);
+        m29344X();
+        m29354S(-1);
+        this.f1468r = null;
+        this.f1469s = null;
+        this.f1470t = null;
+        if (this.f1457g != null) {
+            this.f1458h.m5814d();
+            this.f1457g = null;
         }
-        y0<Intent> y0Var = this.z;
-        if (y0Var != null) {
-            y0Var.c();
-            this.A.c();
-            this.B.c();
+        AbstractC3658y0<Intent> abstractC3658y0 = this.f1476z;
+        if (abstractC3658y0 != null) {
+            abstractC3658y0.mo4277c();
+            this.f1437A.mo4277c();
+            this.f1438B.mo4277c();
         }
     }
 
-    public void F() {
-        S(1);
+    /* renamed from: F */
+    public void m29380F() {
+        m29354S(1);
     }
 
-    public final boolean F0(Fragment fragment) {
-        return (fragment.S && fragment.T) || fragment.J.n();
+    /* renamed from: F0 */
+    public final boolean m29379F0(Fragment fragment) {
+        return (fragment.f1372S && fragment.f1373T) || fragment.f1363J.m29299n();
     }
 
-    public void G() {
-        for (Fragment fragment : this.c.n()) {
+    /* renamed from: G */
+    public void m29378G() {
+        for (Fragment fragment : this.f1453c.m29162n()) {
             if (fragment != null) {
-                fragment.a1();
+                fragment.m29449a1();
             }
         }
     }
 
-    public boolean G0(Fragment fragment) {
+    /* renamed from: G0 */
+    public boolean m29377G0(Fragment fragment) {
         if (fragment == null) {
             return true;
         }
-        return fragment.c0();
+        return fragment.m29446c0();
     }
 
-    public void H(boolean z) {
-        for (Fragment fragment : this.c.n()) {
+    /* renamed from: H */
+    public void m29376H(boolean z) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
             if (fragment != null) {
-                fragment.b1(z);
+                fragment.m29447b1(z);
             }
         }
     }
 
-    public boolean H0(Fragment fragment) {
+    /* renamed from: H0 */
+    public boolean m29375H0(Fragment fragment) {
         if (fragment == null) {
             return true;
         }
-        FragmentManager fragmentManager = fragment.H;
-        return fragment.equals(fragmentManager.w0()) && H0(fragmentManager.t);
+        FragmentManager fragmentManager = fragment.f1361H;
+        return fragment.equals(fragmentManager.m29280w0()) && m29375H0(fragmentManager.f1470t);
     }
 
-    public void I(Fragment fragment) {
-        Iterator<w30> it = this.p.iterator();
+    /* renamed from: I */
+    public void m29374I(Fragment fragment) {
+        Iterator<w30> it = this.f1466p.iterator();
         while (it.hasNext()) {
-            it.next().b(this, fragment);
+            it.next().mo6558b(this, fragment);
         }
     }
 
-    public boolean I0(int i2) {
-        return this.q >= i2;
+    /* renamed from: I0 */
+    public boolean m29373I0(int i) {
+        return this.f1467q >= i;
     }
 
-    public boolean J(MenuItem menuItem) {
-        if (this.q < 1) {
+    /* renamed from: J */
+    public boolean m29372J(MenuItem menuItem) {
+        if (this.f1467q < 1) {
             return false;
         }
-        for (Fragment fragment : this.c.n()) {
-            if (fragment != null && fragment.c1(menuItem)) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
+            if (fragment != null && fragment.m29445c1(menuItem)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean J0() {
-        return this.E || this.F;
+    /* renamed from: J0 */
+    public boolean m29371J0() {
+        return this.f1441E || this.f1442F;
     }
 
-    public void K(Menu menu) {
-        if (this.q < 1) {
+    /* renamed from: K */
+    public void m29370K(Menu menu) {
+        if (this.f1467q < 1) {
             return;
         }
-        for (Fragment fragment : this.c.n()) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
             if (fragment != null) {
-                fragment.d1(menu);
+                fragment.m29443d1(menu);
             }
         }
     }
 
-    public void K0(Fragment fragment, @SuppressLint({"UnknownNullness"}) Intent intent, int i2, Bundle bundle) {
-        if (this.z == null) {
-            this.r.p(fragment, intent, i2, bundle);
+    /* renamed from: K0 */
+    public void m29369K0(Fragment fragment, @SuppressLint({"UnknownNullness"}) Intent intent, int i, Bundle bundle) {
+        if (this.f1476z == null) {
+            this.f1468r.m29212p(fragment, intent, i, bundle);
             return;
         }
-        this.C.addLast(new LaunchedFragmentInfo(fragment.u, i2));
+        this.f1439C.addLast(new LaunchedFragmentInfo(fragment.f1400u, i));
         if (intent != null && bundle != null) {
             intent.putExtra("androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE", bundle);
         }
-        this.z.a(intent);
+        this.f1476z.m4279a(intent);
     }
 
-    public final void L(Fragment fragment) {
-        if (fragment == null || !fragment.equals(f0(fragment.u))) {
+    /* renamed from: L */
+    public final void m29368L(Fragment fragment) {
+        if (fragment == null || !fragment.equals(m29322f0(fragment.f1400u))) {
             return;
         }
-        fragment.h1();
+        fragment.m29434h1();
     }
 
-    public final void L0(j6<Fragment> j6Var) {
-        int size = j6Var.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            Fragment n2 = j6Var.n(i2);
-            if (!n2.A) {
-                View p1 = n2.p1();
-                n2.d0 = p1.getAlpha();
-                p1.setAlpha(0.0f);
+    /* renamed from: L0 */
+    public final void m29367L0(C1798j6<Fragment> c1798j6) {
+        int size = c1798j6.size();
+        for (int i = 0; i < size; i++) {
+            Fragment m18787n = c1798j6.m18787n(i);
+            if (!m18787n.f1354A) {
+                View m29417p1 = m18787n.m29417p1();
+                m18787n.f1383d0 = m29417p1.getAlpha();
+                m29417p1.setAlpha(0.0f);
             }
         }
     }
 
-    public void M() {
-        S(5);
+    /* renamed from: M */
+    public void m29366M() {
+        m29354S(5);
     }
 
-    public void M0(Fragment fragment) {
-        if (!this.c.c(fragment.u)) {
-            if (E0(3)) {
+    /* renamed from: M0 */
+    public void m29365M0(Fragment fragment) {
+        if (!this.f1453c.m29173c(fragment.f1400u)) {
+            if (m29381E0(3)) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Ignoring moving ");
                 sb.append(fragment);
                 sb.append(" to state ");
-                sb.append(this.q);
+                sb.append(this.f1467q);
                 sb.append("since it is not added to ");
                 sb.append(this);
                 return;
             }
             return;
         }
-        O0(fragment);
-        View view = fragment.W;
-        if (view != null && fragment.b0 && fragment.V != null) {
-            float f2 = fragment.d0;
-            if (f2 > 0.0f) {
-                view.setAlpha(f2);
+        m29361O0(fragment);
+        View view = fragment.f1376W;
+        if (view != null && fragment.f1381b0 && fragment.f1375V != null) {
+            float f = fragment.f1383d0;
+            if (f > 0.0f) {
+                view.setAlpha(f);
             }
-            fragment.d0 = 0.0f;
-            fragment.b0 = false;
-            c.d c2 = androidx.fragment.app.c.c(this.r.k(), fragment, true, fragment.I());
-            if (c2 != null) {
-                Animation animation = c2.a;
+            fragment.f1383d0 = 0.0f;
+            fragment.f1381b0 = false;
+            C0297c.C0302d m29221c = C0297c.m29221c(this.f1468r.m29214k(), fragment, true, fragment.m29479I());
+            if (m29221c != null) {
+                Animation animation = m29221c.f1581a;
                 if (animation != null) {
-                    fragment.W.startAnimation(animation);
+                    fragment.f1376W.startAnimation(animation);
                 } else {
-                    c2.b.setTarget(fragment.W);
-                    c2.b.start();
+                    m29221c.f1582b.setTarget(fragment.f1376W);
+                    m29221c.f1582b.start();
                 }
             }
         }
-        if (fragment.c0) {
-            u(fragment);
+        if (fragment.f1382c0) {
+            m29285u(fragment);
         }
     }
 
-    public void N(boolean z) {
-        for (Fragment fragment : this.c.n()) {
+    /* renamed from: N */
+    public void m29364N(boolean z) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
             if (fragment != null) {
-                fragment.f1(z);
+                fragment.m29439f1(z);
             }
         }
     }
 
-    public void N0(int i2, boolean z) {
-        androidx.fragment.app.e<?> eVar;
-        if (this.r == null && i2 != -1) {
+    /* renamed from: N0 */
+    public void m29363N0(int i, boolean z) {
+        AbstractC0305e<?> abstractC0305e;
+        if (this.f1468r == null && i != -1) {
             throw new IllegalStateException("No activity");
         }
-        if (z || i2 != this.q) {
-            this.q = i2;
-            if (P) {
-                this.c.r();
+        if (z || i != this.f1467q) {
+            this.f1467q = i;
+            if (f1436P) {
+                this.f1453c.m29158r();
             } else {
-                for (Fragment fragment : this.c.n()) {
-                    M0(fragment);
+                for (Fragment fragment : this.f1453c.m29162n()) {
+                    m29365M0(fragment);
                 }
-                for (androidx.fragment.app.h hVar : this.c.k()) {
-                    Fragment k2 = hVar.k();
-                    if (!k2.b0) {
-                        M0(k2);
+                for (C0310h c0310h : this.f1453c.m29165k()) {
+                    Fragment m29187k = c0310h.m29187k();
+                    if (!m29187k.f1381b0) {
+                        m29365M0(m29187k);
                     }
-                    if (k2.B && !k2.b0()) {
-                        this.c.q(hVar);
+                    if (m29187k.f1355B && !m29187k.m29448b0()) {
+                        this.f1453c.m29159q(c0310h);
                     }
                 }
             }
-            l1();
-            if (this.D && (eVar = this.r) != null && this.q == 7) {
-                eVar.q();
-                this.D = false;
+            m29303l1();
+            if (this.f1440D && (abstractC0305e = this.f1468r) != null && this.f1467q == 7) {
+                abstractC0305e.mo13648q();
+                this.f1440D = false;
             }
         }
     }
 
-    public boolean O(Menu menu) {
+    /* renamed from: O */
+    public boolean m29362O(Menu menu) {
         boolean z = false;
-        if (this.q < 1) {
+        if (this.f1467q < 1) {
             return false;
         }
-        for (Fragment fragment : this.c.n()) {
-            if (fragment != null && G0(fragment) && fragment.g1(menu)) {
+        for (Fragment fragment : this.f1453c.m29162n()) {
+            if (fragment != null && m29377G0(fragment) && fragment.m29437g1(menu)) {
                 z = true;
             }
         }
         return z;
     }
 
-    public void O0(Fragment fragment) {
-        P0(fragment, this.q);
+    /* renamed from: O0 */
+    public void m29361O0(Fragment fragment) {
+        m29359P0(fragment, this.f1467q);
     }
 
-    public void P() {
-        m1();
-        L(this.u);
+    /* renamed from: P */
+    public void m29360P() {
+        m29300m1();
+        m29368L(this.f1471u);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:24:0x0051, code lost:
@@ -835,186 +1023,351 @@ public abstract class FragmentManager {
     /* JADX WARN: Removed duplicated region for block: B:37:0x0070  */
     /* JADX WARN: Removed duplicated region for block: B:39:0x0075  */
     /* JADX WARN: Removed duplicated region for block: B:99:0x0150  */
+    /* renamed from: P0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void P0(androidx.fragment.app.Fragment r10, int r11) {
-        /*
-            Method dump skipped, instructions count: 384
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.fragment.app.FragmentManager.P0(androidx.fragment.app.Fragment, int):void");
-    }
-
-    public void Q() {
-        this.E = false;
-        this.F = false;
-        this.M.n(false);
-        S(7);
-    }
-
-    public void Q0() {
-        if (this.r == null) {
-            return;
+    public void m29359P0(Fragment fragment, int i) {
+        ViewGroup viewGroup;
+        C0310h m29163m = this.f1453c.m29163m(fragment.f1400u);
+        int i2 = 1;
+        if (m29163m == null) {
+            m29163m = new C0310h(this.f1465o, this.f1453c, fragment);
+            m29163m.m29178t(1);
         }
-        this.E = false;
-        this.F = false;
-        this.M.n(false);
-        for (Fragment fragment : this.c.n()) {
-            if (fragment != null) {
-                fragment.h0();
+        if (fragment.f1356C && fragment.f1357D && fragment.f1395p == 2) {
+            i = Math.max(i, 2);
+        }
+        int min = Math.min(i, m29163m.m29194d());
+        int i3 = fragment.f1395p;
+        if (i3 <= min) {
+            if (i3 < min && !this.f1463m.isEmpty()) {
+                m29302m(fragment);
             }
-        }
-    }
-
-    public void R() {
-        this.E = false;
-        this.F = false;
-        this.M.n(false);
-        S(5);
-    }
-
-    public void R0(s30 s30Var) {
-        View view;
-        for (androidx.fragment.app.h hVar : this.c.k()) {
-            Fragment k2 = hVar.k();
-            if (k2.M == s30Var.getId() && (view = k2.W) != null && view.getParent() == null) {
-                k2.V = s30Var;
-                hVar.b();
+            int i4 = fragment.f1395p;
+            if (i4 != -1) {
+                if (i4 != 0) {
+                    if (i4 != 1) {
+                        if (i4 != 2) {
+                            if (i4 != 4) {
+                            }
+                            if (min > 4) {
+                                m29163m.m29177u();
+                            }
+                            if (min > 5) {
+                                m29163m.m29182p();
+                            }
+                        }
+                        if (min > 2) {
+                            m29163m.m29197a();
+                        }
+                        if (min > 4) {
+                        }
+                        if (min > 5) {
+                        }
+                    }
+                    if (min > -1) {
+                        m29163m.m29188j();
+                    }
+                    if (min > 1) {
+                        m29163m.m29192f();
+                    }
+                    if (min > 2) {
+                    }
+                    if (min > 4) {
+                    }
+                    if (min > 5) {
+                    }
+                }
+            } else if (min > -1) {
+                m29163m.m29195c();
             }
-        }
-    }
-
-    public final void S(int i2) {
-        try {
-            this.b = true;
-            this.c.d(i2);
-            N0(i2, false);
-            if (P) {
-                for (androidx.fragment.app.l lVar : r()) {
-                    lVar.j();
+            if (min > 0) {
+                m29163m.m29193e();
+            }
+            if (min > -1) {
+            }
+            if (min > 1) {
+            }
+            if (min > 2) {
+            }
+            if (min > 4) {
+            }
+            if (min > 5) {
+            }
+        } else if (i3 > min) {
+            if (i3 != 0) {
+                if (i3 != 1) {
+                    if (i3 != 2) {
+                        if (i3 != 4) {
+                            if (i3 != 5) {
+                                if (i3 == 7) {
+                                    if (min < 7) {
+                                        m29163m.m29184n();
+                                    }
+                                }
+                            }
+                            if (min < 5) {
+                                m29163m.m29176v();
+                            }
+                        }
+                        if (min < 4) {
+                            if (m29381E0(3)) {
+                                StringBuilder sb = new StringBuilder();
+                                sb.append("movefrom ACTIVITY_CREATED: ");
+                                sb.append(fragment);
+                            }
+                            if (fragment.f1376W != null && this.f1468r.mo13649o(fragment) && fragment.f1397r == null) {
+                                m29163m.m29179s();
+                            }
+                        }
+                    }
+                    if (min < 2) {
+                        C0297c.C0302d c0302d = null;
+                        View view = fragment.f1376W;
+                        if (view != null && (viewGroup = fragment.f1375V) != null) {
+                            viewGroup.endViewTransition(view);
+                            fragment.f1376W.clearAnimation();
+                            if (!fragment.m29440f0()) {
+                                if (this.f1467q > -1 && !this.f1443G && fragment.f1376W.getVisibility() == 0 && fragment.f1383d0 >= 0.0f) {
+                                    c0302d = C0297c.m29221c(this.f1468r.m29214k(), fragment, false, fragment.m29479I());
+                                }
+                                fragment.f1383d0 = 0.0f;
+                                ViewGroup viewGroup2 = fragment.f1375V;
+                                View view2 = fragment.f1376W;
+                                if (c0302d != null) {
+                                    C0297c.m29223a(fragment, c0302d, this.f1464n);
+                                }
+                                viewGroup2.removeView(view2);
+                                if (m29381E0(2)) {
+                                    StringBuilder sb2 = new StringBuilder();
+                                    sb2.append("Removing view ");
+                                    sb2.append(view2);
+                                    sb2.append(" for fragment ");
+                                    sb2.append(fragment);
+                                    sb2.append(" from container ");
+                                    sb2.append(viewGroup2);
+                                }
+                                if (viewGroup2 != fragment.f1375V) {
+                                    return;
+                                }
+                            }
+                        }
+                        if (this.f1463m.get(fragment) == null) {
+                            m29163m.m29190h();
+                        }
+                    }
+                }
+                if (min < 1) {
+                    if (this.f1463m.get(fragment) == null) {
+                        m29163m.m29191g();
+                    }
+                    if (i2 < 0) {
+                        m29163m.m29189i();
+                    }
+                    min = i2;
                 }
             }
-            this.b = false;
-            a0(true);
+            i2 = min;
+            if (i2 < 0) {
+            }
+            min = i2;
+        }
+        if (fragment.f1395p != min) {
+            if (m29381E0(3)) {
+                StringBuilder sb3 = new StringBuilder();
+                sb3.append("moveToState: Fragment state for ");
+                sb3.append(fragment);
+                sb3.append(" not updated inline; expected state ");
+                sb3.append(min);
+                sb3.append(" found ");
+                sb3.append(fragment.f1395p);
+            }
+            fragment.f1395p = min;
+        }
+    }
+
+    /* renamed from: Q */
+    public void m29358Q() {
+        this.f1441E = false;
+        this.f1442F = false;
+        this.f1449M.m7521n(false);
+        m29354S(7);
+    }
+
+    /* renamed from: Q0 */
+    public void m29357Q0() {
+        if (this.f1468r == null) {
+            return;
+        }
+        this.f1441E = false;
+        this.f1442F = false;
+        this.f1449M.m7521n(false);
+        for (Fragment fragment : this.f1453c.m29162n()) {
+            if (fragment != null) {
+                fragment.m29435h0();
+            }
+        }
+    }
+
+    /* renamed from: R */
+    public void m29356R() {
+        this.f1441E = false;
+        this.f1442F = false;
+        this.f1449M.m7521n(false);
+        m29354S(5);
+    }
+
+    /* renamed from: R0 */
+    public void m29355R0(s30 s30Var) {
+        View view;
+        for (C0310h c0310h : this.f1453c.m29165k()) {
+            Fragment m29187k = c0310h.m29187k();
+            if (m29187k.f1366M == s30Var.getId() && (view = m29187k.f1376W) != null && view.getParent() == null) {
+                m29187k.f1375V = s30Var;
+                c0310h.m29196b();
+            }
+        }
+    }
+
+    /* renamed from: S */
+    public final void m29354S(int i) {
+        try {
+            this.f1452b = true;
+            this.f1453c.m29172d(i);
+            m29363N0(i, false);
+            if (f1436P) {
+                for (AbstractC0325l abstractC0325l : m29291r()) {
+                    abstractC0325l.m29098j();
+                }
+            }
+            this.f1452b = false;
+            m29337a0(true);
         } catch (Throwable th) {
-            this.b = false;
+            this.f1452b = false;
             throw th;
         }
     }
 
-    public void S0(androidx.fragment.app.h hVar) {
-        Fragment k2 = hVar.k();
-        if (k2.X) {
-            if (this.b) {
-                this.H = true;
+    /* renamed from: S0 */
+    public void m29353S0(C0310h c0310h) {
+        Fragment m29187k = c0310h.m29187k();
+        if (m29187k.f1377X) {
+            if (this.f1452b) {
+                this.f1444H = true;
                 return;
             }
-            k2.X = false;
-            if (P) {
-                hVar.m();
+            m29187k.f1377X = false;
+            if (f1436P) {
+                c0310h.m29185m();
             } else {
-                O0(k2);
+                m29361O0(m29187k);
             }
         }
     }
 
-    public void T() {
-        this.F = true;
-        this.M.n(true);
-        S(4);
+    /* renamed from: T */
+    public void m29352T() {
+        this.f1442F = true;
+        this.f1449M.m7521n(true);
+        m29354S(4);
     }
 
-    public void T0(int i2, int i3) {
-        if (i2 >= 0) {
-            Y(new n(null, i2, i3), false);
+    /* renamed from: T0 */
+    public void m29351T0(int i, int i2) {
+        if (i >= 0) {
+            m29342Y(new C0277n(null, i, i2), false);
             return;
         }
-        throw new IllegalArgumentException("Bad id: " + i2);
+        throw new IllegalArgumentException("Bad id: " + i);
     }
 
-    public void U() {
-        S(2);
+    /* renamed from: U */
+    public void m29350U() {
+        m29354S(2);
     }
 
-    public boolean U0() {
-        return V0(null, -1, 0);
+    /* renamed from: U0 */
+    public boolean m29349U0() {
+        return m29347V0(null, -1, 0);
     }
 
-    public final void V() {
-        if (this.H) {
-            this.H = false;
-            l1();
+    /* renamed from: V */
+    public final void m29348V() {
+        if (this.f1444H) {
+            this.f1444H = false;
+            m29303l1();
         }
     }
 
-    public final boolean V0(String str, int i2, int i3) {
-        a0(false);
-        Z(true);
-        Fragment fragment = this.u;
-        if (fragment == null || i2 >= 0 || str != null || !fragment.t().U0()) {
-            boolean W0 = W0(this.I, this.J, str, i2, i3);
-            if (W0) {
-                this.b = true;
+    /* renamed from: V0 */
+    public final boolean m29347V0(String str, int i, int i2) {
+        m29337a0(false);
+        m29340Z(true);
+        Fragment fragment = this.f1471u;
+        if (fragment == null || i >= 0 || str != null || !fragment.m29408t().m29349U0()) {
+            boolean m29345W0 = m29345W0(this.f1445I, this.f1446J, str, i, i2);
+            if (m29345W0) {
+                this.f1452b = true;
                 try {
-                    a1(this.I, this.J);
+                    m29336a1(this.f1445I, this.f1446J);
                 } finally {
-                    p();
+                    m29295p();
                 }
             }
-            m1();
-            V();
-            this.c.b();
-            return W0;
+            m29300m1();
+            m29348V();
+            this.f1453c.m29174b();
+            return m29345W0;
         }
         return true;
     }
 
-    public void W(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+    /* renamed from: W */
+    public void m29346W(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         int size;
         int size2;
         String str2 = str + "    ";
-        this.c.e(str, fileDescriptor, printWriter, strArr);
-        ArrayList<Fragment> arrayList = this.e;
+        this.f1453c.m29171e(str, fileDescriptor, printWriter, strArr);
+        ArrayList<Fragment> arrayList = this.f1455e;
         if (arrayList != null && (size2 = arrayList.size()) > 0) {
             printWriter.print(str);
             printWriter.println("Fragments Created Menus:");
-            for (int i2 = 0; i2 < size2; i2++) {
+            for (int i = 0; i < size2; i++) {
+                printWriter.print(str);
+                printWriter.print("  #");
+                printWriter.print(i);
+                printWriter.print(": ");
+                printWriter.println(this.f1455e.get(i).toString());
+            }
+        }
+        ArrayList<C0281a> arrayList2 = this.f1454d;
+        if (arrayList2 != null && (size = arrayList2.size()) > 0) {
+            printWriter.print(str);
+            printWriter.println("Back Stack:");
+            for (int i2 = 0; i2 < size; i2++) {
+                C0281a c0281a = this.f1454d.get(i2);
                 printWriter.print(str);
                 printWriter.print("  #");
                 printWriter.print(i2);
                 printWriter.print(": ");
-                printWriter.println(this.e.get(i2).toString());
-            }
-        }
-        ArrayList<androidx.fragment.app.a> arrayList2 = this.d;
-        if (arrayList2 != null && (size = arrayList2.size()) > 0) {
-            printWriter.print(str);
-            printWriter.println("Back Stack:");
-            for (int i3 = 0; i3 < size; i3++) {
-                androidx.fragment.app.a aVar = this.d.get(i3);
-                printWriter.print(str);
-                printWriter.print("  #");
-                printWriter.print(i3);
-                printWriter.print(": ");
-                printWriter.println(aVar.toString());
-                aVar.r(str2, printWriter);
+                printWriter.println(c0281a.toString());
+                c0281a.m29249r(str2, printWriter);
             }
         }
         printWriter.print(str);
-        printWriter.println("Back Stack Index: " + this.i.get());
-        synchronized (this.a) {
-            int size3 = this.a.size();
+        printWriter.println("Back Stack Index: " + this.f1459i.get());
+        synchronized (this.f1451a) {
+            int size3 = this.f1451a.size();
             if (size3 > 0) {
                 printWriter.print(str);
                 printWriter.println("Pending Actions:");
-                for (int i4 = 0; i4 < size3; i4++) {
+                for (int i3 = 0; i3 < size3; i3++) {
                     printWriter.print(str);
                     printWriter.print("  #");
-                    printWriter.print(i4);
+                    printWriter.print(i3);
                     printWriter.print(": ");
-                    printWriter.println(this.a.get(i4));
+                    printWriter.println(this.f1451a.get(i3));
                 }
             }
         }
@@ -1022,50 +1375,51 @@ public abstract class FragmentManager {
         printWriter.println("FragmentManager misc state:");
         printWriter.print(str);
         printWriter.print("  mHost=");
-        printWriter.println(this.r);
+        printWriter.println(this.f1468r);
         printWriter.print(str);
         printWriter.print("  mContainer=");
-        printWriter.println(this.s);
-        if (this.t != null) {
+        printWriter.println(this.f1469s);
+        if (this.f1470t != null) {
             printWriter.print(str);
             printWriter.print("  mParent=");
-            printWriter.println(this.t);
+            printWriter.println(this.f1470t);
         }
         printWriter.print(str);
         printWriter.print("  mCurState=");
-        printWriter.print(this.q);
+        printWriter.print(this.f1467q);
         printWriter.print(" mStateSaved=");
-        printWriter.print(this.E);
+        printWriter.print(this.f1441E);
         printWriter.print(" mStopped=");
-        printWriter.print(this.F);
+        printWriter.print(this.f1442F);
         printWriter.print(" mDestroyed=");
-        printWriter.println(this.G);
-        if (this.D) {
+        printWriter.println(this.f1443G);
+        if (this.f1440D) {
             printWriter.print(str);
             printWriter.print("  mNeedMenuInvalidate=");
-            printWriter.println(this.D);
+            printWriter.println(this.f1440D);
         }
     }
 
-    public boolean W0(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2, String str, int i2, int i3) {
-        int i4;
-        ArrayList<androidx.fragment.app.a> arrayList3 = this.d;
+    /* renamed from: W0 */
+    public boolean m29345W0(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2, String str, int i, int i2) {
+        int i3;
+        ArrayList<C0281a> arrayList3 = this.f1454d;
         if (arrayList3 == null) {
             return false;
         }
-        if (str == null && i2 < 0 && (i3 & 1) == 0) {
+        if (str == null && i < 0 && (i2 & 1) == 0) {
             int size = arrayList3.size() - 1;
             if (size < 0) {
                 return false;
             }
-            arrayList.add(this.d.remove(size));
+            arrayList.add(this.f1454d.remove(size));
             arrayList2.add(Boolean.TRUE);
         } else {
-            if (str != null || i2 >= 0) {
+            if (str != null || i >= 0) {
                 int size2 = arrayList3.size() - 1;
                 while (size2 >= 0) {
-                    androidx.fragment.app.a aVar = this.d.get(size2);
-                    if ((str != null && str.equals(aVar.w())) || (i2 >= 0 && i2 == aVar.v)) {
+                    C0281a c0281a = this.f1454d.get(size2);
+                    if ((str != null && str.equals(c0281a.m29244w())) || (i >= 0 && i == c0281a.f1527v)) {
                         break;
                     }
                     size2--;
@@ -1073,348 +1427,360 @@ public abstract class FragmentManager {
                 if (size2 < 0) {
                     return false;
                 }
-                if ((i3 & 1) != 0) {
+                if ((i2 & 1) != 0) {
                     while (true) {
                         size2--;
                         if (size2 < 0) {
                             break;
                         }
-                        androidx.fragment.app.a aVar2 = this.d.get(size2);
-                        if (str == null || !str.equals(aVar2.w())) {
-                            if (i2 < 0 || i2 != aVar2.v) {
+                        C0281a c0281a2 = this.f1454d.get(size2);
+                        if (str == null || !str.equals(c0281a2.m29244w())) {
+                            if (i < 0 || i != c0281a2.f1527v) {
                                 break;
                             }
                         }
                     }
                 }
-                i4 = size2;
+                i3 = size2;
             } else {
-                i4 = -1;
+                i3 = -1;
             }
-            if (i4 == this.d.size() - 1) {
+            if (i3 == this.f1454d.size() - 1) {
                 return false;
             }
-            for (int size3 = this.d.size() - 1; size3 > i4; size3--) {
-                arrayList.add(this.d.remove(size3));
+            for (int size3 = this.f1454d.size() - 1; size3 > i3; size3--) {
+                arrayList.add(this.f1454d.remove(size3));
                 arrayList2.add(Boolean.TRUE);
             }
         }
         return true;
     }
 
-    public final void X() {
-        if (P) {
-            for (androidx.fragment.app.l lVar : r()) {
-                lVar.j();
+    /* renamed from: X */
+    public final void m29344X() {
+        if (f1436P) {
+            for (AbstractC0325l abstractC0325l : m29291r()) {
+                abstractC0325l.m29098j();
             }
-        } else if (!this.m.isEmpty()) {
-            for (Fragment fragment : this.m.keySet()) {
-                m(fragment);
-                O0(fragment);
+        } else if (!this.f1463m.isEmpty()) {
+            for (Fragment fragment : this.f1463m.keySet()) {
+                m29302m(fragment);
+                m29361O0(fragment);
             }
         }
     }
 
-    public final int X0(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2, int i2, int i3, j6<Fragment> j6Var) {
-        int i4 = i3;
-        for (int i5 = i3 - 1; i5 >= i2; i5--) {
-            androidx.fragment.app.a aVar = arrayList.get(i5);
-            boolean booleanValue = arrayList2.get(i5).booleanValue();
-            if (aVar.A() && !aVar.y(arrayList, i5 + 1, i3)) {
-                if (this.L == null) {
-                    this.L = new ArrayList<>();
+    /* renamed from: X0 */
+    public final int m29343X0(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2, int i, int i2, C1798j6<Fragment> c1798j6) {
+        int i3 = i2;
+        for (int i4 = i2 - 1; i4 >= i; i4--) {
+            C0281a c0281a = arrayList.get(i4);
+            boolean booleanValue = arrayList2.get(i4).booleanValue();
+            if (c0281a.m29256A() && !c0281a.m29242y(arrayList, i4 + 1, i2)) {
+                if (this.f1448L == null) {
+                    this.f1448L = new ArrayList<>();
                 }
-                o oVar = new o(aVar, booleanValue);
-                this.L.add(oVar);
-                aVar.C(oVar);
+                C0278o c0278o = new C0278o(c0281a, booleanValue);
+                this.f1448L.add(c0278o);
+                c0281a.m29254C(c0278o);
                 if (booleanValue) {
-                    aVar.t();
+                    c0281a.m29247t();
                 } else {
-                    aVar.u(false);
+                    c0281a.m29246u(false);
                 }
-                i4--;
-                if (i5 != i4) {
-                    arrayList.remove(i5);
-                    arrayList.add(i4, aVar);
+                i3--;
+                if (i4 != i3) {
+                    arrayList.remove(i4);
+                    arrayList.add(i3, c0281a);
                 }
-                d(j6Var);
+                m29329d(c1798j6);
             }
         }
-        return i4;
+        return i3;
     }
 
-    public void Y(m mVar, boolean z) {
+    /* renamed from: Y */
+    public void m29342Y(InterfaceC0276m interfaceC0276m, boolean z) {
         if (!z) {
-            if (this.r == null) {
-                if (!this.G) {
+            if (this.f1468r == null) {
+                if (!this.f1443G) {
                     throw new IllegalStateException("FragmentManager has not been attached to a host.");
                 }
                 throw new IllegalStateException("FragmentManager has been destroyed");
             }
-            o();
+            m29297o();
         }
-        synchronized (this.a) {
-            if (this.r == null) {
+        synchronized (this.f1451a) {
+            if (this.f1468r == null) {
                 if (!z) {
                     throw new IllegalStateException("Activity has been destroyed");
                 }
                 return;
             }
-            this.a.add(mVar);
-            f1();
+            this.f1451a.add(interfaceC0276m);
+            m29321f1();
         }
     }
 
-    public void Y0(Fragment fragment, wd wdVar) {
-        HashSet<wd> hashSet = this.m.get(fragment);
-        if (hashSet != null && hashSet.remove(wdVar) && hashSet.isEmpty()) {
-            this.m.remove(fragment);
-            if (fragment.p < 5) {
-                w(fragment);
-                O0(fragment);
+    /* renamed from: Y0 */
+    public void m29341Y0(Fragment fragment, C3423wd c3423wd) {
+        HashSet<C3423wd> hashSet = this.f1463m.get(fragment);
+        if (hashSet != null && hashSet.remove(c3423wd) && hashSet.isEmpty()) {
+            this.f1463m.remove(fragment);
+            if (fragment.f1395p < 5) {
+                m29281w(fragment);
+                m29361O0(fragment);
             }
         }
     }
 
-    public final void Z(boolean z) {
-        if (this.b) {
+    /* renamed from: Z */
+    public final void m29340Z(boolean z) {
+        if (this.f1452b) {
             throw new IllegalStateException("FragmentManager is already executing transactions");
         }
-        if (this.r == null) {
-            if (!this.G) {
+        if (this.f1468r == null) {
+            if (!this.f1443G) {
                 throw new IllegalStateException("FragmentManager has not been attached to a host.");
             }
             throw new IllegalStateException("FragmentManager has been destroyed");
-        } else if (Looper.myLooper() != this.r.l().getLooper()) {
+        } else if (Looper.myLooper() != this.f1468r.m29213l().getLooper()) {
             throw new IllegalStateException("Must be called from main thread of fragment host");
         } else {
             if (!z) {
-                o();
+                m29297o();
             }
-            if (this.I == null) {
-                this.I = new ArrayList<>();
-                this.J = new ArrayList<>();
+            if (this.f1445I == null) {
+                this.f1445I = new ArrayList<>();
+                this.f1446J = new ArrayList<>();
             }
-            this.b = true;
+            this.f1452b = true;
             try {
-                e0(null, null);
+                m29325e0(null, null);
             } finally {
-                this.b = false;
+                this.f1452b = false;
             }
         }
     }
 
-    public void Z0(Fragment fragment) {
-        if (E0(2)) {
+    /* renamed from: Z0 */
+    public void m29339Z0(Fragment fragment) {
+        if (m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("remove: ");
             sb.append(fragment);
             sb.append(" nesting=");
-            sb.append(fragment.G);
+            sb.append(fragment.f1360G);
         }
-        boolean z = !fragment.b0();
-        if (!fragment.P || z) {
-            this.c.s(fragment);
-            if (F0(fragment)) {
-                this.D = true;
+        boolean z = !fragment.m29448b0();
+        if (!fragment.f1369P || z) {
+            this.f1453c.m29157s(fragment);
+            if (m29379F0(fragment)) {
+                this.f1440D = true;
             }
-            fragment.B = true;
-            j1(fragment);
+            fragment.f1355B = true;
+            m29309j1(fragment);
         }
     }
 
-    public boolean a0(boolean z) {
-        Z(z);
+    /* renamed from: a0 */
+    public boolean m29337a0(boolean z) {
+        m29340Z(z);
         boolean z2 = false;
-        while (k0(this.I, this.J)) {
-            this.b = true;
+        while (m29307k0(this.f1445I, this.f1446J)) {
+            this.f1452b = true;
             try {
-                a1(this.I, this.J);
-                p();
+                m29336a1(this.f1445I, this.f1446J);
+                m29295p();
                 z2 = true;
             } catch (Throwable th) {
-                p();
+                m29295p();
                 throw th;
             }
         }
-        m1();
-        V();
-        this.c.b();
+        m29300m1();
+        m29348V();
+        this.f1453c.m29174b();
         return z2;
     }
 
-    public final void a1(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2) {
+    /* renamed from: a1 */
+    public final void m29336a1(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2) {
         if (arrayList.isEmpty()) {
             return;
         }
         if (arrayList.size() != arrayList2.size()) {
             throw new IllegalStateException("Internal error with the back stack records");
         }
-        e0(arrayList, arrayList2);
+        m29325e0(arrayList, arrayList2);
         int size = arrayList.size();
+        int i = 0;
         int i2 = 0;
-        int i3 = 0;
-        while (i2 < size) {
-            if (!arrayList.get(i2).r) {
-                if (i3 != i2) {
-                    d0(arrayList, arrayList2, i3, i2);
+        while (i < size) {
+            if (!arrayList.get(i).f1628r) {
+                if (i2 != i) {
+                    m29328d0(arrayList, arrayList2, i2, i);
                 }
-                i3 = i2 + 1;
-                if (arrayList2.get(i2).booleanValue()) {
-                    while (i3 < size && arrayList2.get(i3).booleanValue() && !arrayList.get(i3).r) {
-                        i3++;
+                i2 = i + 1;
+                if (arrayList2.get(i).booleanValue()) {
+                    while (i2 < size && arrayList2.get(i2).booleanValue() && !arrayList.get(i2).f1628r) {
+                        i2++;
                     }
                 }
-                d0(arrayList, arrayList2, i2, i3);
-                i2 = i3 - 1;
+                m29328d0(arrayList, arrayList2, i, i2);
+                i = i2 - 1;
             }
-            i2++;
+            i++;
         }
-        if (i3 != size) {
-            d0(arrayList, arrayList2, i3, size);
+        if (i2 != size) {
+            m29328d0(arrayList, arrayList2, i2, size);
         }
     }
 
-    public void b0(m mVar, boolean z) {
-        if (z && (this.r == null || this.G)) {
+    /* renamed from: b0 */
+    public void m29334b0(InterfaceC0276m interfaceC0276m, boolean z) {
+        if (z && (this.f1468r == null || this.f1443G)) {
             return;
         }
-        Z(z);
-        if (mVar.a(this.I, this.J)) {
-            this.b = true;
+        m29340Z(z);
+        if (interfaceC0276m.mo29252a(this.f1445I, this.f1446J)) {
+            this.f1452b = true;
             try {
-                a1(this.I, this.J);
+                m29336a1(this.f1445I, this.f1446J);
             } finally {
-                p();
+                m29295p();
             }
         }
-        m1();
-        V();
-        this.c.b();
+        m29300m1();
+        m29348V();
+        this.f1453c.m29174b();
     }
 
-    public final void b1() {
-        if (this.l != null) {
-            for (int i2 = 0; i2 < this.l.size(); i2++) {
-                this.l.get(i2).a();
+    /* renamed from: b1 */
+    public final void m29333b1() {
+        if (this.f1462l != null) {
+            for (int i = 0; i < this.f1462l.size(); i++) {
+                this.f1462l.get(i).m29266a();
             }
         }
     }
 
-    public void c1(Parcelable parcelable) {
-        androidx.fragment.app.h hVar;
+    /* renamed from: c1 */
+    public void m29330c1(Parcelable parcelable) {
+        C0310h c0310h;
         if (parcelable == null) {
             return;
         }
         FragmentManagerState fragmentManagerState = (FragmentManagerState) parcelable;
-        if (fragmentManagerState.p == null) {
+        if (fragmentManagerState.f1504p == null) {
             return;
         }
-        this.c.t();
-        Iterator<FragmentState> it = fragmentManagerState.p.iterator();
+        this.f1453c.m29156t();
+        Iterator<FragmentState> it = fragmentManagerState.f1504p.iterator();
         while (it.hasNext()) {
             FragmentState next = it.next();
             if (next != null) {
-                Fragment g2 = this.M.g(next.q);
-                if (g2 != null) {
-                    if (E0(2)) {
+                Fragment m7528g = this.f1449M.m7528g(next.f1515q);
+                if (m7528g != null) {
+                    if (m29381E0(2)) {
                         StringBuilder sb = new StringBuilder();
                         sb.append("restoreSaveState: re-attaching retained ");
-                        sb.append(g2);
+                        sb.append(m7528g);
                     }
-                    hVar = new androidx.fragment.app.h(this.o, this.c, g2, next);
+                    c0310h = new C0310h(this.f1465o, this.f1453c, m7528g, next);
                 } else {
-                    hVar = new androidx.fragment.app.h(this.o, this.c, this.r.k().getClassLoader(), p0(), next);
+                    c0310h = new C0310h(this.f1465o, this.f1453c, this.f1468r.m29214k().getClassLoader(), m29294p0(), next);
                 }
-                Fragment k2 = hVar.k();
-                k2.H = this;
-                if (E0(2)) {
+                Fragment m29187k = c0310h.m29187k();
+                m29187k.f1361H = this;
+                if (m29381E0(2)) {
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("restoreSaveState: active (");
-                    sb2.append(k2.u);
+                    sb2.append(m29187k.f1400u);
                     sb2.append("): ");
-                    sb2.append(k2);
+                    sb2.append(m29187k);
                 }
-                hVar.o(this.r.k().getClassLoader());
-                this.c.p(hVar);
-                hVar.t(this.q);
+                c0310h.m29183o(this.f1468r.m29214k().getClassLoader());
+                this.f1453c.m29160p(c0310h);
+                c0310h.m29178t(this.f1467q);
             }
         }
-        for (Fragment fragment : this.M.j()) {
-            if (!this.c.c(fragment.u)) {
-                if (E0(2)) {
+        for (Fragment fragment : this.f1449M.m7525j()) {
+            if (!this.f1453c.m29173c(fragment.f1400u)) {
+                if (m29381E0(2)) {
                     StringBuilder sb3 = new StringBuilder();
                     sb3.append("Discarding retained Fragment ");
                     sb3.append(fragment);
                     sb3.append(" that was not found in the set of active Fragments ");
-                    sb3.append(fragmentManagerState.p);
+                    sb3.append(fragmentManagerState.f1504p);
                 }
-                this.M.m(fragment);
-                fragment.H = this;
-                androidx.fragment.app.h hVar2 = new androidx.fragment.app.h(this.o, this.c, fragment);
-                hVar2.t(1);
-                hVar2.m();
-                fragment.B = true;
-                hVar2.m();
+                this.f1449M.m7522m(fragment);
+                fragment.f1361H = this;
+                C0310h c0310h2 = new C0310h(this.f1465o, this.f1453c, fragment);
+                c0310h2.m29178t(1);
+                c0310h2.m29185m();
+                fragment.f1355B = true;
+                c0310h2.m29185m();
             }
         }
-        this.c.u(fragmentManagerState.q);
-        if (fragmentManagerState.r != null) {
-            this.d = new ArrayList<>(fragmentManagerState.r.length);
-            int i2 = 0;
+        this.f1453c.m29155u(fragmentManagerState.f1505q);
+        if (fragmentManagerState.f1506r != null) {
+            this.f1454d = new ArrayList<>(fragmentManagerState.f1506r.length);
+            int i = 0;
             while (true) {
-                BackStackState[] backStackStateArr = fragmentManagerState.r;
-                if (i2 >= backStackStateArr.length) {
+                BackStackState[] backStackStateArr = fragmentManagerState.f1506r;
+                if (i >= backStackStateArr.length) {
                     break;
                 }
-                androidx.fragment.app.a a2 = backStackStateArr[i2].a(this);
-                if (E0(2)) {
+                C0281a m29504a = backStackStateArr[i].m29504a(this);
+                if (m29381E0(2)) {
                     StringBuilder sb4 = new StringBuilder();
                     sb4.append("restoreAllState: back stack #");
-                    sb4.append(i2);
+                    sb4.append(i);
                     sb4.append(" (index ");
-                    sb4.append(a2.v);
+                    sb4.append(m29504a.f1527v);
                     sb4.append("): ");
-                    sb4.append(a2);
+                    sb4.append(m29504a);
                     PrintWriter printWriter = new PrintWriter(new kl0("FragmentManager"));
-                    a2.s("  ", printWriter, false);
+                    m29504a.m29248s("  ", printWriter, false);
                     printWriter.close();
                 }
-                this.d.add(a2);
-                i2++;
+                this.f1454d.add(m29504a);
+                i++;
             }
         } else {
-            this.d = null;
+            this.f1454d = null;
         }
-        this.i.set(fragmentManagerState.s);
-        String str = fragmentManagerState.t;
+        this.f1459i.set(fragmentManagerState.f1507s);
+        String str = fragmentManagerState.f1508t;
         if (str != null) {
-            Fragment f0 = f0(str);
-            this.u = f0;
-            L(f0);
+            Fragment m29322f0 = m29322f0(str);
+            this.f1471u = m29322f0;
+            m29368L(m29322f0);
         }
-        ArrayList<String> arrayList = fragmentManagerState.u;
+        ArrayList<String> arrayList = fragmentManagerState.f1509u;
         if (arrayList != null) {
-            for (int i3 = 0; i3 < arrayList.size(); i3++) {
-                Bundle bundle = fragmentManagerState.v.get(i3);
-                bundle.setClassLoader(this.r.k().getClassLoader());
-                this.j.put(arrayList.get(i3), bundle);
+            for (int i2 = 0; i2 < arrayList.size(); i2++) {
+                Bundle bundle = fragmentManagerState.f1510v.get(i2);
+                bundle.setClassLoader(this.f1468r.m29214k().getClassLoader());
+                this.f1460j.put(arrayList.get(i2), bundle);
             }
         }
-        this.C = new ArrayDeque<>(fragmentManagerState.w);
+        this.f1439C = new ArrayDeque<>(fragmentManagerState.f1511w);
     }
 
-    public final void d(j6<Fragment> j6Var) {
-        int i2 = this.q;
-        if (i2 < 1) {
+    /* renamed from: d */
+    public final void m29329d(C1798j6<Fragment> c1798j6) {
+        int i = this.f1467q;
+        if (i < 1) {
             return;
         }
-        int min = Math.min(i2, 5);
-        for (Fragment fragment : this.c.n()) {
-            if (fragment.p < min) {
-                P0(fragment, min);
-                if (fragment.W != null && !fragment.O && fragment.b0) {
-                    j6Var.add(fragment);
+        int min = Math.min(i, 5);
+        for (Fragment fragment : this.f1453c.m29162n()) {
+            if (fragment.f1395p < min) {
+                m29359P0(fragment, min);
+                if (fragment.f1376W != null && !fragment.f1368O && fragment.f1381b0) {
+                    c1798j6.add(fragment);
                 }
             }
         }
@@ -1429,184 +1795,323 @@ public abstract class FragmentManager {
     /* JADX WARN: Type inference failed for: r1v17 */
     /* JADX WARN: Type inference failed for: r1v3 */
     /* JADX WARN: Type inference failed for: r1v4, types: [boolean, int] */
+    /* renamed from: d0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void d0(java.util.ArrayList<androidx.fragment.app.a> r18, java.util.ArrayList<java.lang.Boolean> r19, int r20, int r21) {
-        /*
-            Method dump skipped, instructions count: 450
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.fragment.app.FragmentManager.d0(java.util.ArrayList, java.util.ArrayList, int, int):void");
-    }
-
-    public void e(androidx.fragment.app.a aVar) {
-        if (this.d == null) {
-            this.d = new ArrayList<>();
+    public final void m29328d0(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2, int i, int i2) {
+        ?? r1;
+        boolean z;
+        int i3;
+        int i4;
+        ArrayList<Boolean> arrayList3;
+        int i5;
+        int i6;
+        ArrayList<Boolean> arrayList4;
+        int i7;
+        boolean z2;
+        int i8;
+        boolean z3 = arrayList.get(i).f1628r;
+        ArrayList<Fragment> arrayList5 = this.f1447K;
+        if (arrayList5 == null) {
+            this.f1447K = new ArrayList<>();
+        } else {
+            arrayList5.clear();
         }
-        this.d.add(aVar);
-    }
-
-    public final void e0(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2) {
-        int indexOf;
-        int indexOf2;
-        ArrayList<o> arrayList3 = this.L;
-        int size = arrayList3 == null ? 0 : arrayList3.size();
-        int i2 = 0;
-        while (i2 < size) {
-            o oVar = this.L.get(i2);
-            if (arrayList == null || oVar.a || (indexOf2 = arrayList.indexOf(oVar.b)) == -1 || arrayList2 == null || !arrayList2.get(indexOf2).booleanValue()) {
-                if (oVar.e() || (arrayList != null && oVar.b.y(arrayList, 0, arrayList.size()))) {
-                    this.L.remove(i2);
-                    i2--;
-                    size--;
-                    if (arrayList == null || oVar.a || (indexOf = arrayList.indexOf(oVar.b)) == -1 || arrayList2 == null || !arrayList2.get(indexOf).booleanValue()) {
-                        oVar.d();
+        this.f1447K.addAll(this.f1453c.m29162n());
+        Fragment m29280w0 = m29280w0();
+        boolean z4 = false;
+        for (int i9 = i; i9 < i2; i9++) {
+            C0281a c0281a = arrayList.get(i9);
+            m29280w0 = !arrayList2.get(i9).booleanValue() ? c0281a.m29245v(this.f1447K, m29280w0) : c0281a.m29253D(this.f1447K, m29280w0);
+            z4 = z4 || c0281a.f1619i;
+        }
+        this.f1447K.clear();
+        if (!z3 && this.f1467q >= 1) {
+            if (!f1436P) {
+                r1 = 1;
+                C0316k.m29136B(this.f1468r.m29214k(), this.f1469s, arrayList, arrayList2, i, i2, false, this.f1464n);
+                m29331c0(arrayList, arrayList2, i, i2);
+                if (f1436P) {
+                    if (z3) {
+                        C1798j6 c1798j6 = new C1798j6();
+                        m29329d(c1798j6);
+                        i5 = 1;
+                        z = z3;
+                        i3 = i2;
+                        i4 = i;
+                        arrayList3 = arrayList2;
+                        i6 = m29343X0(arrayList, arrayList2, i, i2, c1798j6);
+                        m29367L0(c1798j6);
+                    } else {
+                        z = z3;
+                        i3 = i2;
+                        i4 = i;
+                        arrayList3 = arrayList2;
+                        i5 = 1;
+                        i6 = i3;
+                    }
+                    if (i6 == i4 || !z) {
+                        arrayList4 = arrayList3;
+                        i7 = i3;
+                    } else {
+                        if (this.f1467q >= i5) {
+                            arrayList4 = arrayList3;
+                            int i10 = i6;
+                            i7 = i3;
+                            z2 = true;
+                            C0316k.m29136B(this.f1468r.m29214k(), this.f1469s, arrayList, arrayList2, i, i10, true, this.f1464n);
+                        } else {
+                            arrayList4 = arrayList3;
+                            i7 = i3;
+                            z2 = true;
+                        }
+                        m29363N0(this.f1467q, z2);
+                    }
+                } else {
+                    boolean booleanValue = arrayList2.get(i2 - 1).booleanValue();
+                    for (int i11 = i; i11 < i2; i11++) {
+                        C0281a c0281a2 = arrayList.get(i11);
+                        if (booleanValue) {
+                            for (int size = c0281a2.f1613c.size() - r1; size >= 0; size--) {
+                                Fragment fragment = c0281a2.f1613c.get(size).f1631b;
+                                if (fragment != null) {
+                                    m29283v(fragment).m29185m();
+                                }
+                            }
+                        } else {
+                            Iterator<AbstractC0314j.C0315a> it = c0281a2.f1613c.iterator();
+                            while (it.hasNext()) {
+                                Fragment fragment2 = it.next().f1631b;
+                                if (fragment2 != null) {
+                                    m29283v(fragment2).m29185m();
+                                }
+                            }
+                        }
+                    }
+                    m29363N0(this.f1467q, r1);
+                    for (AbstractC0325l abstractC0325l : m29289s(arrayList, i, i2)) {
+                        abstractC0325l.m29090r(booleanValue);
+                        abstractC0325l.m29092p();
+                        abstractC0325l.m29101g();
+                    }
+                    i7 = i2;
+                    arrayList4 = arrayList2;
+                }
+                for (i8 = i; i8 < i7; i8++) {
+                    C0281a c0281a3 = arrayList.get(i8);
+                    if (arrayList4.get(i8).booleanValue() && c0281a3.f1527v >= 0) {
+                        c0281a3.f1527v = -1;
+                    }
+                    c0281a3.m29255B();
+                }
+                if (z4) {
+                    return;
+                }
+                m29333b1();
+                return;
+            }
+            for (int i12 = i; i12 < i2; i12++) {
+                Iterator<AbstractC0314j.C0315a> it2 = arrayList.get(i12).f1613c.iterator();
+                while (it2.hasNext()) {
+                    Fragment fragment3 = it2.next().f1631b;
+                    if (fragment3 != null && fragment3.f1361H != null) {
+                        this.f1453c.m29160p(m29283v(fragment3));
                     }
                 }
-                i2++;
-            } else {
-                this.L.remove(i2);
-                i2--;
-                size--;
             }
-            oVar.c();
-            i2++;
+        }
+        r1 = 1;
+        m29331c0(arrayList, arrayList2, i, i2);
+        if (f1436P) {
+        }
+        while (i8 < i7) {
+        }
+        if (z4) {
         }
     }
 
-    public Parcelable e1() {
+    /* renamed from: e */
+    public void m29326e(C0281a c0281a) {
+        if (this.f1454d == null) {
+            this.f1454d = new ArrayList<>();
+        }
+        this.f1454d.add(c0281a);
+    }
+
+    /* renamed from: e0 */
+    public final void m29325e0(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2) {
+        int indexOf;
+        int indexOf2;
+        ArrayList<C0278o> arrayList3 = this.f1448L;
+        int size = arrayList3 == null ? 0 : arrayList3.size();
+        int i = 0;
+        while (i < size) {
+            C0278o c0278o = this.f1448L.get(i);
+            if (arrayList == null || c0278o.f1501a || (indexOf2 = arrayList.indexOf(c0278o.f1502b)) == -1 || arrayList2 == null || !arrayList2.get(indexOf2).booleanValue()) {
+                if (c0278o.m29261e() || (arrayList != null && c0278o.f1502b.m29242y(arrayList, 0, arrayList.size()))) {
+                    this.f1448L.remove(i);
+                    i--;
+                    size--;
+                    if (arrayList == null || c0278o.f1501a || (indexOf = arrayList.indexOf(c0278o.f1502b)) == -1 || arrayList2 == null || !arrayList2.get(indexOf).booleanValue()) {
+                        c0278o.m29262d();
+                    }
+                }
+                i++;
+            } else {
+                this.f1448L.remove(i);
+                i--;
+                size--;
+            }
+            c0278o.m29263c();
+            i++;
+        }
+    }
+
+    /* renamed from: e1 */
+    public Parcelable m29324e1() {
         int size;
-        j0();
-        X();
-        a0(true);
-        this.E = true;
-        this.M.n(true);
-        ArrayList<FragmentState> v = this.c.v();
+        m29310j0();
+        m29344X();
+        m29337a0(true);
+        this.f1441E = true;
+        this.f1449M.m7521n(true);
+        ArrayList<FragmentState> m29154v = this.f1453c.m29154v();
         BackStackState[] backStackStateArr = null;
-        if (v.isEmpty()) {
-            E0(2);
+        if (m29154v.isEmpty()) {
+            m29381E0(2);
             return null;
         }
-        ArrayList<String> w = this.c.w();
-        ArrayList<androidx.fragment.app.a> arrayList = this.d;
+        ArrayList<String> m29153w = this.f1453c.m29153w();
+        ArrayList<C0281a> arrayList = this.f1454d;
         if (arrayList != null && (size = arrayList.size()) > 0) {
             backStackStateArr = new BackStackState[size];
-            for (int i2 = 0; i2 < size; i2++) {
-                backStackStateArr[i2] = new BackStackState(this.d.get(i2));
-                if (E0(2)) {
+            for (int i = 0; i < size; i++) {
+                backStackStateArr[i] = new BackStackState(this.f1454d.get(i));
+                if (m29381E0(2)) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("saveAllState: adding back stack #");
-                    sb.append(i2);
+                    sb.append(i);
                     sb.append(": ");
-                    sb.append(this.d.get(i2));
+                    sb.append(this.f1454d.get(i));
                 }
             }
         }
         FragmentManagerState fragmentManagerState = new FragmentManagerState();
-        fragmentManagerState.p = v;
-        fragmentManagerState.q = w;
-        fragmentManagerState.r = backStackStateArr;
-        fragmentManagerState.s = this.i.get();
-        Fragment fragment = this.u;
+        fragmentManagerState.f1504p = m29154v;
+        fragmentManagerState.f1505q = m29153w;
+        fragmentManagerState.f1506r = backStackStateArr;
+        fragmentManagerState.f1507s = this.f1459i.get();
+        Fragment fragment = this.f1471u;
         if (fragment != null) {
-            fragmentManagerState.t = fragment.u;
+            fragmentManagerState.f1508t = fragment.f1400u;
         }
-        fragmentManagerState.u.addAll(this.j.keySet());
-        fragmentManagerState.v.addAll(this.j.values());
-        fragmentManagerState.w = new ArrayList<>(this.C);
+        fragmentManagerState.f1509u.addAll(this.f1460j.keySet());
+        fragmentManagerState.f1510v.addAll(this.f1460j.values());
+        fragmentManagerState.f1511w = new ArrayList<>(this.f1439C);
         return fragmentManagerState;
     }
 
-    public void f(Fragment fragment, wd wdVar) {
-        if (this.m.get(fragment) == null) {
-            this.m.put(fragment, new HashSet<>());
+    /* renamed from: f */
+    public void m29323f(Fragment fragment, C3423wd c3423wd) {
+        if (this.f1463m.get(fragment) == null) {
+            this.f1463m.put(fragment, new HashSet<>());
         }
-        this.m.get(fragment).add(wdVar);
+        this.f1463m.get(fragment).add(c3423wd);
     }
 
-    public Fragment f0(String str) {
-        return this.c.f(str);
+    /* renamed from: f0 */
+    public Fragment m29322f0(String str) {
+        return this.f1453c.m29170f(str);
     }
 
-    public void f1() {
-        synchronized (this.a) {
-            ArrayList<o> arrayList = this.L;
+    /* renamed from: f1 */
+    public void m29321f1() {
+        synchronized (this.f1451a) {
+            ArrayList<C0278o> arrayList = this.f1448L;
             boolean z = (arrayList == null || arrayList.isEmpty()) ? false : true;
-            boolean z2 = this.a.size() == 1;
+            boolean z2 = this.f1451a.size() == 1;
             if (z || z2) {
-                this.r.l().removeCallbacks(this.N);
-                this.r.l().post(this.N);
-                m1();
+                this.f1468r.m29213l().removeCallbacks(this.f1450N);
+                this.f1468r.m29213l().post(this.f1450N);
+                m29300m1();
             }
         }
     }
 
-    public androidx.fragment.app.h g(Fragment fragment) {
-        if (E0(2)) {
+    /* renamed from: g */
+    public C0310h m29320g(Fragment fragment) {
+        if (m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("add: ");
             sb.append(fragment);
         }
-        androidx.fragment.app.h v = v(fragment);
-        fragment.H = this;
-        this.c.p(v);
-        if (!fragment.P) {
-            this.c.a(fragment);
-            fragment.B = false;
-            if (fragment.W == null) {
-                fragment.c0 = false;
+        C0310h m29283v = m29283v(fragment);
+        fragment.f1361H = this;
+        this.f1453c.m29160p(m29283v);
+        if (!fragment.f1369P) {
+            this.f1453c.m29175a(fragment);
+            fragment.f1355B = false;
+            if (fragment.f1376W == null) {
+                fragment.f1382c0 = false;
             }
-            if (F0(fragment)) {
-                this.D = true;
+            if (m29379F0(fragment)) {
+                this.f1440D = true;
             }
         }
-        return v;
+        return m29283v;
     }
 
-    public Fragment g0(int i2) {
-        return this.c.g(i2);
+    /* renamed from: g0 */
+    public Fragment m29319g0(int i) {
+        return this.f1453c.m29169g(i);
     }
 
-    public void g1(Fragment fragment, boolean z) {
-        ViewGroup o0 = o0(fragment);
-        if (o0 == null || !(o0 instanceof s30)) {
+    /* renamed from: g1 */
+    public void m29318g1(Fragment fragment, boolean z) {
+        ViewGroup m29296o0 = m29296o0(fragment);
+        if (m29296o0 == null || !(m29296o0 instanceof s30)) {
             return;
         }
-        ((s30) o0).setDrawDisappearingViewsLast(!z);
+        ((s30) m29296o0).setDrawDisappearingViewsLast(!z);
     }
 
-    public void h(w30 w30Var) {
-        this.p.add(w30Var);
+    /* renamed from: h */
+    public void m29317h(w30 w30Var) {
+        this.f1466p.add(w30Var);
     }
 
-    public Fragment h0(String str) {
-        return this.c.h(str);
+    /* renamed from: h0 */
+    public Fragment m29316h0(String str) {
+        return this.f1453c.m29168h(str);
     }
 
-    public void h1(Fragment fragment, c.EnumC0020c enumC0020c) {
-        if (fragment.equals(f0(fragment.u)) && (fragment.I == null || fragment.H == this)) {
-            fragment.g0 = enumC0020c;
+    /* renamed from: h1 */
+    public void m29315h1(Fragment fragment, AbstractC0344c.EnumC0347c enumC0347c) {
+        if (fragment.equals(m29322f0(fragment.f1400u)) && (fragment.f1362I == null || fragment.f1361H == this)) {
+            fragment.f1386g0 = enumC0347c;
             return;
         }
         throw new IllegalArgumentException("Fragment " + fragment + " is not an active fragment of FragmentManager " + this);
     }
 
-    public int i() {
-        return this.i.getAndIncrement();
+    /* renamed from: i */
+    public int m29314i() {
+        return this.f1459i.getAndIncrement();
     }
 
-    public Fragment i0(String str) {
-        return this.c.i(str);
+    /* renamed from: i0 */
+    public Fragment m29313i0(String str) {
+        return this.f1453c.m29167i(str);
     }
 
-    public void i1(Fragment fragment) {
-        if (fragment == null || (fragment.equals(f0(fragment.u)) && (fragment.I == null || fragment.H == this))) {
-            Fragment fragment2 = this.u;
-            this.u = fragment;
-            L(fragment2);
-            L(this.u);
+    /* renamed from: i1 */
+    public void m29312i1(Fragment fragment) {
+        if (fragment == null || (fragment.equals(m29322f0(fragment.f1400u)) && (fragment.f1362I == null || fragment.f1361H == this))) {
+            Fragment fragment2 = this.f1471u;
+            this.f1471u = fragment;
+            m29368L(fragment2);
+            m29368L(this.f1471u);
             return;
         }
         throw new IllegalArgumentException("Fragment " + fragment + " is not an active fragment of FragmentManager " + this);
@@ -1618,145 +2123,209 @@ public abstract class FragmentManager {
     /* JADX WARN: Removed duplicated region for block: B:23:0x0044  */
     /* JADX WARN: Removed duplicated region for block: B:29:0x0070  */
     /* JADX WARN: Removed duplicated region for block: B:38:? A[RETURN, SYNTHETIC] */
-    @android.annotation.SuppressLint({"SyntheticAccessor"})
+    @SuppressLint({"SyntheticAccessor"})
+    /* renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void j(androidx.fragment.app.e<?> r3, com.daaw.r30 r4, androidx.fragment.app.Fragment r5) {
-        /*
-            Method dump skipped, instructions count: 269
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.fragment.app.FragmentManager.j(androidx.fragment.app.e, com.daaw.r30, androidx.fragment.app.Fragment):void");
-    }
-
-    public final void j0() {
-        if (P) {
-            for (androidx.fragment.app.l lVar : r()) {
-                lVar.k();
-            }
-        } else if (this.L != null) {
-            while (!this.L.isEmpty()) {
-                this.L.remove(0).d();
-            }
+    public void m29311j(AbstractC0305e<?> abstractC0305e, r30 r30Var, Fragment fragment) {
+        w30 w30Var;
+        AbstractC0305e<?> abstractC0305e2;
+        String str;
+        if (this.f1468r != null) {
+            throw new IllegalStateException("Already attached");
         }
-    }
-
-    public final void j1(Fragment fragment) {
-        ViewGroup o0 = o0(fragment);
-        if (o0 == null || fragment.v() + fragment.y() + fragment.J() + fragment.K() <= 0) {
+        this.f1468r = abstractC0305e;
+        this.f1469s = r30Var;
+        this.f1470t = fragment;
+        if (fragment == null) {
+            if (abstractC0305e instanceof w30) {
+                w30Var = (w30) abstractC0305e;
+            }
+            if (this.f1470t != null) {
+                m29300m1();
+            }
+            if (abstractC0305e instanceof yt0) {
+                yt0 yt0Var = (yt0) abstractC0305e;
+                OnBackPressedDispatcher mo3233c = yt0Var.mo3233c();
+                this.f1457g = mo3233c;
+                sj0 sj0Var = yt0Var;
+                if (fragment != null) {
+                    sj0Var = fragment;
+                }
+                mo3233c.m30373b(sj0Var, this.f1458h);
+            }
+            this.f1449M = fragment == null ? fragment.f1361H.m29301m0(fragment) : abstractC0305e instanceof nt1 ? v30.m7526i(((nt1) abstractC0305e).mo13652g()) : new v30(false);
+            this.f1449M.m7521n(m29371J0());
+            this.f1453c.m29152x(this.f1449M);
+            abstractC0305e2 = this.f1468r;
+            if (abstractC0305e2 instanceof InterfaceC3790z0) {
+                return;
+            }
+            AbstractC0051a mo3011e = ((InterfaceC3790z0) abstractC0305e2).mo3011e();
+            if (fragment != null) {
+                str = fragment.f1400u + ":";
+            } else {
+                str = "";
+            }
+            String str2 = "FragmentManager:" + str;
+            this.f1476z = mo3011e.m30342i(str2 + "StartActivityForResult", new C3489x0(), new C0273j());
+            this.f1437A = mo3011e.m30342i(str2 + "StartIntentSenderForResult", new C0274k(), new C0264a());
+            this.f1438B = mo3011e.m30342i(str2 + "RequestPermissions", new C3391w0(), new C0265b());
             return;
         }
-        int i2 = r11.visible_removing_fragment_view_tag;
-        if (o0.getTag(i2) == null) {
-            o0.setTag(i2, fragment);
+        w30Var = new C0272i(fragment);
+        m29317h(w30Var);
+        if (this.f1470t != null) {
         }
-        ((Fragment) o0.getTag(i2)).B1(fragment.I());
+        if (abstractC0305e instanceof yt0) {
+        }
+        this.f1449M = fragment == null ? fragment.f1361H.m29301m0(fragment) : abstractC0305e instanceof nt1 ? v30.m7526i(((nt1) abstractC0305e).mo13652g()) : new v30(false);
+        this.f1449M.m7521n(m29371J0());
+        this.f1453c.m29152x(this.f1449M);
+        abstractC0305e2 = this.f1468r;
+        if (abstractC0305e2 instanceof InterfaceC3790z0) {
+        }
     }
 
-    public void k(Fragment fragment) {
-        if (E0(2)) {
+    /* renamed from: j0 */
+    public final void m29310j0() {
+        if (f1436P) {
+            for (AbstractC0325l abstractC0325l : m29291r()) {
+                abstractC0325l.m29097k();
+            }
+        } else if (this.f1448L != null) {
+            while (!this.f1448L.isEmpty()) {
+                this.f1448L.remove(0).m29262d();
+            }
+        }
+    }
+
+    /* renamed from: j1 */
+    public final void m29309j1(Fragment fragment) {
+        ViewGroup m29296o0 = m29296o0(fragment);
+        if (m29296o0 == null || fragment.m29403v() + fragment.m29397y() + fragment.m29477J() + fragment.m29476K() <= 0) {
+            return;
+        }
+        int i = r11.visible_removing_fragment_view_tag;
+        if (m29296o0.getTag(i) == null) {
+            m29296o0.setTag(i, fragment);
+        }
+        ((Fragment) m29296o0.getTag(i)).m29496B1(fragment.m29479I());
+    }
+
+    /* renamed from: k */
+    public void m29308k(Fragment fragment) {
+        if (m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("attach: ");
             sb.append(fragment);
         }
-        if (fragment.P) {
-            fragment.P = false;
-            if (fragment.A) {
+        if (fragment.f1369P) {
+            fragment.f1369P = false;
+            if (fragment.f1354A) {
                 return;
             }
-            this.c.a(fragment);
-            if (E0(2)) {
+            this.f1453c.m29175a(fragment);
+            if (m29381E0(2)) {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("add from attach: ");
                 sb2.append(fragment);
             }
-            if (F0(fragment)) {
-                this.D = true;
+            if (m29379F0(fragment)) {
+                this.f1440D = true;
             }
         }
     }
 
-    public final boolean k0(ArrayList<androidx.fragment.app.a> arrayList, ArrayList<Boolean> arrayList2) {
-        synchronized (this.a) {
-            if (this.a.isEmpty()) {
+    /* renamed from: k0 */
+    public final boolean m29307k0(ArrayList<C0281a> arrayList, ArrayList<Boolean> arrayList2) {
+        synchronized (this.f1451a) {
+            if (this.f1451a.isEmpty()) {
                 return false;
             }
-            int size = this.a.size();
+            int size = this.f1451a.size();
             boolean z = false;
-            for (int i2 = 0; i2 < size; i2++) {
-                z |= this.a.get(i2).a(arrayList, arrayList2);
+            for (int i = 0; i < size; i++) {
+                z |= this.f1451a.get(i).mo29252a(arrayList, arrayList2);
             }
-            this.a.clear();
-            this.r.l().removeCallbacks(this.N);
+            this.f1451a.clear();
+            this.f1468r.m29213l().removeCallbacks(this.f1450N);
             return z;
         }
     }
 
-    public void k1(Fragment fragment) {
-        if (E0(2)) {
+    /* renamed from: k1 */
+    public void m29306k1(Fragment fragment) {
+        if (m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("show: ");
             sb.append(fragment);
         }
-        if (fragment.O) {
-            fragment.O = false;
-            fragment.c0 = !fragment.c0;
+        if (fragment.f1368O) {
+            fragment.f1368O = false;
+            fragment.f1382c0 = !fragment.f1382c0;
         }
     }
 
-    public androidx.fragment.app.j l() {
-        return new androidx.fragment.app.a(this);
+    /* renamed from: l */
+    public AbstractC0314j m29305l() {
+        return new C0281a(this);
     }
 
-    public int l0() {
-        ArrayList<androidx.fragment.app.a> arrayList = this.d;
+    /* renamed from: l0 */
+    public int m29304l0() {
+        ArrayList<C0281a> arrayList = this.f1454d;
         if (arrayList != null) {
             return arrayList.size();
         }
         return 0;
     }
 
-    public final void l1() {
-        for (androidx.fragment.app.h hVar : this.c.k()) {
-            S0(hVar);
+    /* renamed from: l1 */
+    public final void m29303l1() {
+        for (C0310h c0310h : this.f1453c.m29165k()) {
+            m29353S0(c0310h);
         }
     }
 
-    public final void m(Fragment fragment) {
-        HashSet<wd> hashSet = this.m.get(fragment);
+    /* renamed from: m */
+    public final void m29302m(Fragment fragment) {
+        HashSet<C3423wd> hashSet = this.f1463m.get(fragment);
         if (hashSet != null) {
-            Iterator<wd> it = hashSet.iterator();
+            Iterator<C3423wd> it = hashSet.iterator();
             while (it.hasNext()) {
-                it.next().a();
+                it.next().m6173a();
             }
             hashSet.clear();
-            w(fragment);
-            this.m.remove(fragment);
+            m29281w(fragment);
+            this.f1463m.remove(fragment);
         }
     }
 
-    public final v30 m0(Fragment fragment) {
-        return this.M.h(fragment);
+    /* renamed from: m0 */
+    public final v30 m29301m0(Fragment fragment) {
+        return this.f1449M.m7527h(fragment);
     }
 
-    public final void m1() {
-        synchronized (this.a) {
+    /* renamed from: m1 */
+    public final void m29300m1() {
+        synchronized (this.f1451a) {
             boolean z = true;
-            if (this.a.isEmpty()) {
-                this.h.f((l0() <= 0 || !H0(this.t)) ? false : false);
+            if (this.f1451a.isEmpty()) {
+                this.f1458h.m5812f((m29304l0() <= 0 || !m29375H0(this.f1470t)) ? false : false);
             } else {
-                this.h.f(true);
+                this.f1458h.m5812f(true);
             }
         }
     }
 
-    public boolean n() {
+    /* renamed from: n */
+    public boolean m29299n() {
         boolean z = false;
-        for (Fragment fragment : this.c.l()) {
+        for (Fragment fragment : this.f1453c.m29164l()) {
             if (fragment != null) {
-                z = F0(fragment);
+                z = m29379F0(fragment);
                 continue;
             }
             if (z) {
@@ -1766,122 +2335,135 @@ public abstract class FragmentManager {
         return false;
     }
 
-    public r30 n0() {
-        return this.s;
+    /* renamed from: n0 */
+    public r30 m29298n0() {
+        return this.f1469s;
     }
 
-    public final void o() {
-        if (J0()) {
+    /* renamed from: o */
+    public final void m29297o() {
+        if (m29371J0()) {
             throw new IllegalStateException("Can not perform this action after onSaveInstanceState");
         }
     }
 
-    public final ViewGroup o0(Fragment fragment) {
-        ViewGroup viewGroup = fragment.V;
+    /* renamed from: o0 */
+    public final ViewGroup m29296o0(Fragment fragment) {
+        ViewGroup viewGroup = fragment.f1375V;
         if (viewGroup != null) {
             return viewGroup;
         }
-        if (fragment.M > 0 && this.s.h()) {
-            View f2 = this.s.f(fragment.M);
-            if (f2 instanceof ViewGroup) {
-                return (ViewGroup) f2;
+        if (fragment.f1366M > 0 && this.f1469s.mo11809h()) {
+            View mo11810f = this.f1469s.mo11810f(fragment.f1366M);
+            if (mo11810f instanceof ViewGroup) {
+                return (ViewGroup) mo11810f;
             }
         }
         return null;
     }
 
-    public final void p() {
-        this.b = false;
-        this.J.clear();
-        this.I.clear();
+    /* renamed from: p */
+    public final void m29295p() {
+        this.f1452b = false;
+        this.f1446J.clear();
+        this.f1445I.clear();
     }
 
-    public androidx.fragment.app.d p0() {
-        androidx.fragment.app.d dVar = this.v;
-        if (dVar != null) {
-            return dVar;
+    /* renamed from: p0 */
+    public C0304d m29294p0() {
+        C0304d c0304d = this.f1472v;
+        if (c0304d != null) {
+            return c0304d;
         }
-        Fragment fragment = this.t;
-        return fragment != null ? fragment.H.p0() : this.w;
+        Fragment fragment = this.f1470t;
+        return fragment != null ? fragment.f1361H.m29294p0() : this.f1473w;
     }
 
-    public final void q(String str) {
-        this.j.remove(str);
+    /* renamed from: q */
+    public final void m29293q(String str) {
+        this.f1460j.remove(str);
     }
 
-    public androidx.fragment.app.i q0() {
-        return this.c;
+    /* renamed from: q0 */
+    public C0313i m29292q0() {
+        return this.f1453c;
     }
 
-    public final Set<androidx.fragment.app.l> r() {
+    /* renamed from: r */
+    public final Set<AbstractC0325l> m29291r() {
         HashSet hashSet = new HashSet();
-        for (androidx.fragment.app.h hVar : this.c.k()) {
-            ViewGroup viewGroup = hVar.k().V;
+        for (C0310h c0310h : this.f1453c.m29165k()) {
+            ViewGroup viewGroup = c0310h.m29187k().f1375V;
             if (viewGroup != null) {
-                hashSet.add(androidx.fragment.app.l.o(viewGroup, x0()));
+                hashSet.add(AbstractC0325l.m29093o(viewGroup, m29278x0()));
             }
         }
         return hashSet;
     }
 
-    public List<Fragment> r0() {
-        return this.c.n();
+    /* renamed from: r0 */
+    public List<Fragment> m29290r0() {
+        return this.f1453c.m29162n();
     }
 
-    public final Set<androidx.fragment.app.l> s(ArrayList<androidx.fragment.app.a> arrayList, int i2, int i3) {
+    /* renamed from: s */
+    public final Set<AbstractC0325l> m29289s(ArrayList<C0281a> arrayList, int i, int i2) {
         ViewGroup viewGroup;
         HashSet hashSet = new HashSet();
-        while (i2 < i3) {
-            Iterator<j.a> it = arrayList.get(i2).c.iterator();
+        while (i < i2) {
+            Iterator<AbstractC0314j.C0315a> it = arrayList.get(i).f1613c.iterator();
             while (it.hasNext()) {
-                Fragment fragment = it.next().b;
-                if (fragment != null && (viewGroup = fragment.V) != null) {
-                    hashSet.add(androidx.fragment.app.l.n(viewGroup, this));
+                Fragment fragment = it.next().f1631b;
+                if (fragment != null && (viewGroup = fragment.f1375V) != null) {
+                    hashSet.add(AbstractC0325l.m29094n(viewGroup, this));
                 }
             }
-            i2++;
+            i++;
         }
         return hashSet;
     }
 
-    public androidx.fragment.app.e<?> s0() {
-        return this.r;
+    /* renamed from: s0 */
+    public AbstractC0305e<?> m29288s0() {
+        return this.f1468r;
     }
 
-    public void t(androidx.fragment.app.a aVar, boolean z, boolean z2, boolean z3) {
+    /* renamed from: t */
+    public void m29287t(C0281a c0281a, boolean z, boolean z2, boolean z3) {
         if (z) {
-            aVar.u(z3);
+            c0281a.m29246u(z3);
         } else {
-            aVar.t();
+            c0281a.m29247t();
         }
         ArrayList arrayList = new ArrayList(1);
         ArrayList arrayList2 = new ArrayList(1);
-        arrayList.add(aVar);
+        arrayList.add(c0281a);
         arrayList2.add(Boolean.valueOf(z));
-        if (z2 && this.q >= 1) {
-            androidx.fragment.app.k.B(this.r.k(), this.s, arrayList, arrayList2, 0, 1, true, this.n);
+        if (z2 && this.f1467q >= 1) {
+            C0316k.m29136B(this.f1468r.m29214k(), this.f1469s, arrayList, arrayList2, 0, 1, true, this.f1464n);
         }
         if (z3) {
-            N0(this.q, true);
+            m29363N0(this.f1467q, true);
         }
-        for (Fragment fragment : this.c.l()) {
-            if (fragment != null && fragment.W != null && fragment.b0 && aVar.x(fragment.M)) {
-                float f2 = fragment.d0;
-                if (f2 > 0.0f) {
-                    fragment.W.setAlpha(f2);
+        for (Fragment fragment : this.f1453c.m29164l()) {
+            if (fragment != null && fragment.f1376W != null && fragment.f1381b0 && c0281a.m29243x(fragment.f1366M)) {
+                float f = fragment.f1383d0;
+                if (f > 0.0f) {
+                    fragment.f1376W.setAlpha(f);
                 }
                 if (z3) {
-                    fragment.d0 = 0.0f;
+                    fragment.f1383d0 = 0.0f;
                 } else {
-                    fragment.d0 = -1.0f;
-                    fragment.b0 = false;
+                    fragment.f1383d0 = -1.0f;
+                    fragment.f1381b0 = false;
                 }
             }
         }
     }
 
-    public LayoutInflater.Factory2 t0() {
-        return this.f;
+    /* renamed from: t0 */
+    public LayoutInflater.Factory2 m29286t0() {
+        return this.f1456f;
     }
 
     public String toString() {
@@ -1890,21 +2472,21 @@ public abstract class FragmentManager {
         sb.append("FragmentManager{");
         sb.append(Integer.toHexString(System.identityHashCode(this)));
         sb.append(" in ");
-        Fragment fragment = this.t;
+        Fragment fragment = this.f1470t;
         if (fragment != null) {
             sb.append(fragment.getClass().getSimpleName());
             sb.append("{");
-            obj = this.t;
+            obj = this.f1470t;
         } else {
-            androidx.fragment.app.e<?> eVar = this.r;
-            if (eVar == null) {
+            AbstractC0305e<?> abstractC0305e = this.f1468r;
+            if (abstractC0305e == null) {
                 sb.append("null");
                 sb.append("}}");
                 return sb.toString();
             }
-            sb.append(eVar.getClass().getSimpleName());
+            sb.append(abstractC0305e.getClass().getSimpleName());
             sb.append("{");
-            obj = this.r;
+            obj = this.f1468r;
         }
         sb.append(Integer.toHexString(System.identityHashCode(obj)));
         sb.append("}");
@@ -1912,120 +2494,131 @@ public abstract class FragmentManager {
         return sb.toString();
     }
 
-    public final void u(Fragment fragment) {
+    /* renamed from: u */
+    public final void m29285u(Fragment fragment) {
         Animator animator;
-        if (fragment.W != null) {
-            c.d c2 = androidx.fragment.app.c.c(this.r.k(), fragment, !fragment.O, fragment.I());
-            if (c2 == null || (animator = c2.b) == null) {
-                if (c2 != null) {
-                    fragment.W.startAnimation(c2.a);
-                    c2.a.start();
+        if (fragment.f1376W != null) {
+            C0297c.C0302d m29221c = C0297c.m29221c(this.f1468r.m29214k(), fragment, !fragment.f1368O, fragment.m29479I());
+            if (m29221c == null || (animator = m29221c.f1582b) == null) {
+                if (m29221c != null) {
+                    fragment.f1376W.startAnimation(m29221c.f1581a);
+                    m29221c.f1581a.start();
                 }
-                fragment.W.setVisibility((!fragment.O || fragment.a0()) ? 0 : 8);
-                if (fragment.a0()) {
-                    fragment.y1(false);
+                fragment.f1376W.setVisibility((!fragment.f1368O || fragment.m29450a0()) ? 0 : 8);
+                if (fragment.m29450a0()) {
+                    fragment.m29395y1(false);
                 }
             } else {
-                animator.setTarget(fragment.W);
-                if (!fragment.O) {
-                    fragment.W.setVisibility(0);
-                } else if (fragment.a0()) {
-                    fragment.y1(false);
+                animator.setTarget(fragment.f1376W);
+                if (!fragment.f1368O) {
+                    fragment.f1376W.setVisibility(0);
+                } else if (fragment.m29450a0()) {
+                    fragment.m29395y1(false);
                 } else {
-                    ViewGroup viewGroup = fragment.V;
-                    View view = fragment.W;
+                    ViewGroup viewGroup = fragment.f1375V;
+                    View view = fragment.f1376W;
                     viewGroup.startViewTransition(view);
-                    c2.b.addListener(new h(viewGroup, view, fragment));
+                    m29221c.f1582b.addListener(new C0271h(viewGroup, view, fragment));
                 }
-                c2.b.start();
+                m29221c.f1582b.start();
             }
         }
-        C0(fragment);
-        fragment.c0 = false;
-        fragment.y0(fragment.O);
+        m29385C0(fragment);
+        fragment.f1382c0 = false;
+        fragment.m29396y0(fragment.f1368O);
     }
 
-    public androidx.fragment.app.g u0() {
-        return this.o;
+    /* renamed from: u0 */
+    public C0308g m29284u0() {
+        return this.f1465o;
     }
 
-    public androidx.fragment.app.h v(Fragment fragment) {
-        androidx.fragment.app.h m2 = this.c.m(fragment.u);
-        if (m2 != null) {
-            return m2;
+    /* renamed from: v */
+    public C0310h m29283v(Fragment fragment) {
+        C0310h m29163m = this.f1453c.m29163m(fragment.f1400u);
+        if (m29163m != null) {
+            return m29163m;
         }
-        androidx.fragment.app.h hVar = new androidx.fragment.app.h(this.o, this.c, fragment);
-        hVar.o(this.r.k().getClassLoader());
-        hVar.t(this.q);
-        return hVar;
+        C0310h c0310h = new C0310h(this.f1465o, this.f1453c, fragment);
+        c0310h.m29183o(this.f1468r.m29214k().getClassLoader());
+        c0310h.m29178t(this.f1467q);
+        return c0310h;
     }
 
-    public Fragment v0() {
-        return this.t;
+    /* renamed from: v0 */
+    public Fragment m29282v0() {
+        return this.f1470t;
     }
 
-    public final void w(Fragment fragment) {
-        fragment.X0();
-        this.o.n(fragment, false);
-        fragment.V = null;
-        fragment.W = null;
-        fragment.i0 = null;
-        fragment.j0.j(null);
-        fragment.D = false;
+    /* renamed from: w */
+    public final void m29281w(Fragment fragment) {
+        fragment.m29455X0();
+        this.f1465o.m29198n(fragment, false);
+        fragment.f1375V = null;
+        fragment.f1376W = null;
+        fragment.f1388i0 = null;
+        fragment.f1389j0.mo15133j(null);
+        fragment.f1357D = false;
     }
 
-    public Fragment w0() {
-        return this.u;
+    /* renamed from: w0 */
+    public Fragment m29280w0() {
+        return this.f1471u;
     }
 
-    public void x(Fragment fragment) {
-        if (E0(2)) {
+    /* renamed from: x */
+    public void m29279x(Fragment fragment) {
+        if (m29381E0(2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("detach: ");
             sb.append(fragment);
         }
-        if (fragment.P) {
+        if (fragment.f1369P) {
             return;
         }
-        fragment.P = true;
-        if (fragment.A) {
-            if (E0(2)) {
+        fragment.f1369P = true;
+        if (fragment.f1354A) {
+            if (m29381E0(2)) {
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("remove from detach: ");
                 sb2.append(fragment);
             }
-            this.c.s(fragment);
-            if (F0(fragment)) {
-                this.D = true;
+            this.f1453c.m29157s(fragment);
+            if (m29379F0(fragment)) {
+                this.f1440D = true;
             }
-            j1(fragment);
+            m29309j1(fragment);
         }
     }
 
-    public ne1 x0() {
-        ne1 ne1Var = this.x;
+    /* renamed from: x0 */
+    public ne1 m29278x0() {
+        ne1 ne1Var = this.f1474x;
         if (ne1Var != null) {
             return ne1Var;
         }
-        Fragment fragment = this.t;
-        return fragment != null ? fragment.H.x0() : this.y;
+        Fragment fragment = this.f1470t;
+        return fragment != null ? fragment.f1361H.m29278x0() : this.f1475y;
     }
 
-    public void y() {
-        this.E = false;
-        this.F = false;
-        this.M.n(false);
-        S(4);
+    /* renamed from: y */
+    public void m29277y() {
+        this.f1441E = false;
+        this.f1442F = false;
+        this.f1449M.m7521n(false);
+        m29354S(4);
     }
 
-    public void z() {
-        this.E = false;
-        this.F = false;
-        this.M.n(false);
-        S(0);
+    /* renamed from: z */
+    public void m29275z() {
+        this.f1441E = false;
+        this.f1442F = false;
+        this.f1449M.m7521n(false);
+        m29354S(0);
     }
 
-    public mt1 z0(Fragment fragment) {
-        return this.M.k(fragment);
+    /* renamed from: z0 */
+    public mt1 m29274z0(Fragment fragment) {
+        return this.f1449M.m7524k(fragment);
     }
 }

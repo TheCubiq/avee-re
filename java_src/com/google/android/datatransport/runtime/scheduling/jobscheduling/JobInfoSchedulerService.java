@@ -10,7 +10,8 @@ import com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfo
 /* loaded from: classes.dex */
 public class JobInfoSchedulerService extends JobService {
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void b(JobParameters jobParameters) {
+    /* renamed from: b */
+    public /* synthetic */ void m1746b(JobParameters jobParameters) {
         jobFinished(jobParameters, false);
     }
 
@@ -20,15 +21,15 @@ public class JobInfoSchedulerService extends JobService {
         String string2 = jobParameters.getExtras().getString("extras");
         int i = jobParameters.getExtras().getInt("priority");
         int i2 = jobParameters.getExtras().getInt("attemptNumber");
-        xn1.f(getApplicationContext());
-        sn1.a d = sn1.a().b(string).d(fz0.b(i));
+        xn1.m4946f(getApplicationContext());
+        sn1.AbstractC2958a mo6330d = sn1.m10151a().mo6332b(string).mo6330d(fz0.m22131b(i));
         if (string2 != null) {
-            d.c(Base64.decode(string2, 0));
+            mo6330d.mo6331c(Base64.decode(string2, 0));
         }
-        xn1.c().e().v(d.a(), i2, new Runnable() { // from class: com.daaw.qh0
+        xn1.m4949c().m4947e().m23281v(mo6330d.mo6333a(), i2, new Runnable() { // from class: com.daaw.qh0
             @Override // java.lang.Runnable
             public final void run() {
-                JobInfoSchedulerService.this.b(jobParameters);
+                JobInfoSchedulerService.this.m1746b(jobParameters);
             }
         });
         return true;

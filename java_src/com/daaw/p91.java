@@ -7,18 +7,19 @@ public class p91 implements m10<h60> {
     }
 
     @Override // com.daaw.m10
-    public String a(String str) {
+    /* renamed from: a */
+    public String mo11570a(String str) {
         return str.toLowerCase();
     }
 
     @Override // com.daaw.m10
     /* renamed from: d */
-    public boolean b(String str, h60 h60Var) {
-        return h60Var.a.toLowerCase().contains(str);
+    public boolean mo11569b(String str, h60 h60Var) {
+        return h60Var.f12079a.toLowerCase().contains(str);
     }
 
     @Override // com.daaw.m10
     /* renamed from: e */
-    public void c(h60 h60Var) {
+    public void mo11568c(h60 h60Var) {
     }
 }

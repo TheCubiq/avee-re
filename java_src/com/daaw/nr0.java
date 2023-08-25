@@ -9,92 +9,113 @@ import java.lang.ref.WeakReference;
 import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public class nr0 extends bo0 {
-    public int A0;
-    public int B0;
-    public String C0;
-    public int D0;
-    public ne0 E0;
-    public WeakReference<Object> F0;
-    public int G0;
 
-    public nr0(ne0 ne0Var, int i, WeakReference<Object> weakReference, Context context, eo0 eo0Var, yu<i40> yuVar, boolean z, Handler handler, n7 n7Var, g7 g7Var, m7... m7VarArr) {
-        super(context, eo0Var, yuVar, z, handler, n7Var, g7Var, m7VarArr);
-        this.A0 = 44100;
-        this.B0 = 2;
-        this.C0 = "audio/raw";
-        this.G0 = 0;
-        this.F0 = weakReference;
-        this.D0 = i;
-        this.E0 = ne0Var;
-        kv1.a(this, i, ne0Var);
+    /* renamed from: A0 */
+    public int f20596A0;
+
+    /* renamed from: B0 */
+    public int f20597B0;
+
+    /* renamed from: C0 */
+    public String f20598C0;
+
+    /* renamed from: D0 */
+    public int f20599D0;
+
+    /* renamed from: E0 */
+    public ne0 f20600E0;
+
+    /* renamed from: F0 */
+    public WeakReference<Object> f20601F0;
+
+    /* renamed from: G0 */
+    public int f20602G0;
+
+    public nr0(ne0 ne0Var, int i, WeakReference<Object> weakReference, Context context, eo0 eo0Var, InterfaceC3746yu<i40> interfaceC3746yu, boolean z, Handler handler, InterfaceC2251n7 interfaceC2251n7, C1372g7 c1372g7, InterfaceC2154m7... interfaceC2154m7Arr) {
+        super(context, eo0Var, interfaceC3746yu, z, handler, interfaceC2251n7, c1372g7, interfaceC2154m7Arr);
+        this.f20596A0 = 44100;
+        this.f20597B0 = 2;
+        this.f20598C0 = "audio/raw";
+        this.f20602G0 = 0;
+        this.f20601F0 = weakReference;
+        this.f20599D0 = i;
+        this.f20600E0 = ne0Var;
+        kv1.m17411a(this, i, ne0Var);
     }
 
-    @Override // com.daaw.bo0, com.daaw.do0, com.daaw.xa
-    public void A() {
-        ne0 b = kv1.b(this, this.D0, this.E0);
-        if (b != null) {
-            b.e(false);
+    @Override // com.daaw.bo0, com.daaw.do0, com.daaw.AbstractC3517xa
+    /* renamed from: A */
+    public void mo3466A() {
+        ne0 m17410b = kv1.m17410b(this, this.f20599D0, this.f20600E0);
+        if (m17410b != null) {
+            m17410b.mo13836e(false);
         }
-        super.A();
+        super.mo3466A();
     }
 
-    @Override // com.daaw.bo0, com.daaw.do0, com.daaw.xa
-    public void B(boolean z) {
-        ne0 b = kv1.b(this, this.D0, this.E0);
-        if (b != null) {
-            b.e(true);
+    @Override // com.daaw.bo0, com.daaw.do0, com.daaw.AbstractC3517xa
+    /* renamed from: B */
+    public void mo5370B(boolean z) {
+        ne0 m17410b = kv1.m17410b(this, this.f20599D0, this.f20600E0);
+        if (m17410b != null) {
+            m17410b.mo13836e(true);
         }
-        super.B(z);
+        super.mo5370B(z);
     }
 
-    @Override // com.daaw.bo0, com.daaw.do0, com.daaw.xa
-    public void C(long j, boolean z) {
-        super.C(j, z);
+    @Override // com.daaw.bo0, com.daaw.do0, com.daaw.AbstractC3517xa
+    /* renamed from: C */
+    public void mo3465C(long j, boolean z) {
+        super.mo3465C(j, z);
     }
 
     @Override // com.daaw.bo0
-    public void F0(int i) {
-        super.F0(i);
-        ne0 b = kv1.b(this, this.D0, this.E0);
-        if (b != null) {
-            b.a(i);
+    /* renamed from: F0 */
+    public void mo14858F0(int i) {
+        super.mo14858F0(i);
+        ne0 m17410b = kv1.m17410b(this, this.f20599D0, this.f20600E0);
+        if (m17410b != null) {
+            m17410b.mo13840a(i);
         }
     }
 
     @Override // com.daaw.bo0, com.daaw.do0
-    public void g0(Format format) {
-        super.g0(format);
-        int i = format.q;
+    /* renamed from: g0 */
+    public void mo14857g0(Format format) {
+        super.mo14857g0(format);
+        int i = format.f35717q;
         if (i < 0) {
-            this.G0 = 16;
+            this.f20602G0 = 16;
         } else {
-            this.G0 = (i / format.H) / format.G;
+            this.f20602G0 = (i / format.f35707H) / format.f35706G;
         }
     }
 
     @Override // com.daaw.bo0, com.daaw.do0
-    public void h0(MediaCodec mediaCodec, MediaFormat mediaFormat) {
-        this.A0 = 44100;
-        this.B0 = 2;
-        this.C0 = "audio/raw";
+    /* renamed from: h0 */
+    public void mo14856h0(MediaCodec mediaCodec, MediaFormat mediaFormat) {
+        this.f20596A0 = 44100;
+        this.f20597B0 = 2;
+        this.f20598C0 = "audio/raw";
         if (mediaFormat.containsKey("sample-rate")) {
-            this.A0 = mediaFormat.getInteger("sample-rate");
+            this.f20596A0 = mediaFormat.getInteger("sample-rate");
         }
         if (mediaFormat.containsKey("channel-count")) {
-            this.B0 = mediaFormat.getInteger("channel-count");
+            this.f20597B0 = mediaFormat.getInteger("channel-count");
         }
         if (mediaFormat.containsKey("mime")) {
-            this.C0 = mediaFormat.getString("mime");
+            this.f20598C0 = mediaFormat.getString("mime");
         }
-        super.h0(mediaCodec, mediaFormat);
+        super.mo14856h0(mediaCodec, mediaFormat);
     }
 
     @Override // com.daaw.bo0, com.daaw.do0
-    public boolean l0(long j, long j2, MediaCodec mediaCodec, ByteBuffer byteBuffer, int i, int i2, long j3, boolean z) {
-        ne0 b = kv1.b(this, this.D0, this.E0);
-        if (!z && (i2 & 2) == 0 && b != null && i >= 0 && i < 8192 && byteBuffer != null) {
-            b.c(byteBuffer, j3 - 0, i, this.A0, this.B0, this.G0, j - 0);
+    /* renamed from: l0 */
+    public boolean mo14855l0(long j, long j2, MediaCodec mediaCodec, ByteBuffer byteBuffer, int i, int i2, long j3, boolean z) {
+        ne0 m17410b = kv1.m17410b(this, this.f20599D0, this.f20600E0);
+        if (!z && (i2 & 2) == 0 && m17410b != null && i >= 0 && i < 8192 && byteBuffer != null) {
+            m17410b.mo13838c(byteBuffer, j3 - 0, i, this.f20596A0, this.f20597B0, this.f20602G0, j - 0);
         }
-        return super.l0(j, j2, mediaCodec, byteBuffer, i, i2, j3, z);
+        return super.mo14855l0(j, j2, mediaCodec, byteBuffer, i, i2, j3, z);
     }
 }

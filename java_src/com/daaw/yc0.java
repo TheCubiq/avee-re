@@ -8,36 +8,42 @@ import android.os.Parcel;
 /* loaded from: classes.dex */
 public interface yc0 extends IInterface {
 
+    /* renamed from: com.daaw.yc0$a */
     /* loaded from: classes.dex */
-    public static abstract class a extends Binder implements yc0 {
+    public static abstract class AbstractBinderC3688a extends Binder implements yc0 {
 
-        /* renamed from: com.daaw.yc0$a$a  reason: collision with other inner class name */
+        /* renamed from: com.daaw.yc0$a$a */
         /* loaded from: classes.dex */
-        public static class C0091a implements yc0 {
-            public static yc0 q;
-            public IBinder p;
+        public static class C3689a implements yc0 {
 
-            public C0091a(IBinder iBinder) {
-                this.p = iBinder;
+            /* renamed from: q */
+            public static yc0 f33516q;
+
+            /* renamed from: p */
+            public IBinder f33517p;
+
+            public C3689a(IBinder iBinder) {
+                this.f33517p = iBinder;
             }
 
             @Override // android.os.IInterface
             public IBinder asBinder() {
-                return this.p;
+                return this.f33517p;
             }
 
             @Override // com.daaw.yc0
-            public boolean e1(long j) {
+            /* renamed from: e1 */
+            public boolean mo3867e1(long j) {
                 Parcel obtain = Parcel.obtain();
                 Parcel obtain2 = Parcel.obtain();
                 try {
                     obtain.writeInterfaceToken("android.support.customtabs.ICustomTabsService");
                     obtain.writeLong(j);
-                    if (this.p.transact(2, obtain, obtain2, 0) || a.I() == null) {
+                    if (this.f33517p.transact(2, obtain, obtain2, 0) || AbstractBinderC3688a.m3868I() == null) {
                         obtain2.readException();
                         return obtain2.readInt() != 0;
                     }
-                    return a.I().e1(j);
+                    return AbstractBinderC3688a.m3868I().mo3867e1(j);
                 } finally {
                     obtain2.recycle();
                     obtain.recycle();
@@ -45,7 +51,8 @@ public interface yc0 extends IInterface {
             }
 
             @Override // com.daaw.yc0
-            public boolean h2(xc0 xc0Var, Bundle bundle) {
+            /* renamed from: h2 */
+            public boolean mo3866h2(xc0 xc0Var, Bundle bundle) {
                 Parcel obtain = Parcel.obtain();
                 Parcel obtain2 = Parcel.obtain();
                 try {
@@ -57,11 +64,11 @@ public interface yc0 extends IInterface {
                     } else {
                         obtain.writeInt(0);
                     }
-                    if (this.p.transact(10, obtain, obtain2, 0) || a.I() == null) {
+                    if (this.f33517p.transact(10, obtain, obtain2, 0) || AbstractBinderC3688a.m3868I() == null) {
                         obtain2.readException();
                         return obtain2.readInt() != 0;
                     }
-                    return a.I().h2(xc0Var, bundle);
+                    return AbstractBinderC3688a.m3868I().mo3866h2(xc0Var, bundle);
                 } finally {
                     obtain2.recycle();
                     obtain.recycle();
@@ -69,17 +76,18 @@ public interface yc0 extends IInterface {
             }
 
             @Override // com.daaw.yc0
-            public boolean o0(xc0 xc0Var) {
+            /* renamed from: o0 */
+            public boolean mo3865o0(xc0 xc0Var) {
                 Parcel obtain = Parcel.obtain();
                 Parcel obtain2 = Parcel.obtain();
                 try {
                     obtain.writeInterfaceToken("android.support.customtabs.ICustomTabsService");
                     obtain.writeStrongBinder(xc0Var != null ? xc0Var.asBinder() : null);
-                    if (this.p.transact(3, obtain, obtain2, 0) || a.I() == null) {
+                    if (this.f33517p.transact(3, obtain, obtain2, 0) || AbstractBinderC3688a.m3868I() == null) {
                         obtain2.readException();
                         return obtain2.readInt() != 0;
                     }
-                    return a.I().o0(xc0Var);
+                    return AbstractBinderC3688a.m3868I().mo3865o0(xc0Var);
                 } finally {
                     obtain2.recycle();
                     obtain.recycle();
@@ -87,22 +95,27 @@ public interface yc0 extends IInterface {
             }
         }
 
-        public static yc0 D(IBinder iBinder) {
+        /* renamed from: D */
+        public static yc0 m3869D(IBinder iBinder) {
             if (iBinder == null) {
                 return null;
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("android.support.customtabs.ICustomTabsService");
-            return (queryLocalInterface == null || !(queryLocalInterface instanceof yc0)) ? new C0091a(iBinder) : (yc0) queryLocalInterface;
+            return (queryLocalInterface == null || !(queryLocalInterface instanceof yc0)) ? new C3689a(iBinder) : (yc0) queryLocalInterface;
         }
 
-        public static yc0 I() {
-            return C0091a.q;
+        /* renamed from: I */
+        public static yc0 m3868I() {
+            return C3689a.f33516q;
         }
     }
 
-    boolean e1(long j);
+    /* renamed from: e1 */
+    boolean mo3867e1(long j);
 
-    boolean h2(xc0 xc0Var, Bundle bundle);
+    /* renamed from: h2 */
+    boolean mo3866h2(xc0 xc0Var, Bundle bundle);
 
-    boolean o0(xc0 xc0Var);
+    /* renamed from: o0 */
+    boolean mo3865o0(xc0 xc0Var);
 }

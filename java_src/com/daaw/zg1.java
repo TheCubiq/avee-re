@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class zg1 {
-    public static String a(String str, String str2) {
+    /* renamed from: a */
+    public static String m2343a(String str, String str2) {
         int length = str.length() - str2.length();
         if (length < 0 || length > 1) {
             throw new IllegalArgumentException("Invalid input received");

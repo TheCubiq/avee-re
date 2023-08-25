@@ -3,18 +3,28 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class np7 {
-    public static final int[] a = {0, 3, 6, 9, 12, 16, 19, 22, 25, 28};
-    public static final int[] b = {0, 2, 3, 5, 6, 0, 1, 3, 4, 6};
-    public static final int[] c = {67108863, 33554431};
-    public static final int[] d = {26, 25};
 
-    public static void a(long[] jArr, long[] jArr2, long[] jArr3) {
+    /* renamed from: a */
+    public static final int[] f20557a = {0, 3, 6, 9, 12, 16, 19, 22, 25, 28};
+
+    /* renamed from: b */
+    public static final int[] f20558b = {0, 2, 3, 5, 6, 0, 1, 3, 4, 6};
+
+    /* renamed from: c */
+    public static final int[] f20559c = {67108863, 33554431};
+
+    /* renamed from: d */
+    public static final int[] f20560d = {26, 25};
+
+    /* renamed from: a */
+    public static void m14898a(long[] jArr, long[] jArr2, long[] jArr3) {
         long[] jArr4 = new long[19];
-        b(jArr4, jArr2, jArr3);
-        c(jArr4, jArr);
+        m14897b(jArr4, jArr2, jArr3);
+        m14896c(jArr4, jArr);
     }
 
-    public static void b(long[] jArr, long[] jArr2, long[] jArr3) {
+    /* renamed from: b */
+    public static void m14897b(long[] jArr, long[] jArr2, long[] jArr3) {
         jArr[0] = jArr2[0] * jArr3[0];
         jArr[1] = (jArr2[0] * jArr3[1]) + (jArr2[1] * jArr3[0]);
         long j = jArr2[1];
@@ -52,13 +62,15 @@ public final class np7 {
         jArr[18] = (j16 + j16) * jArr3[9];
     }
 
-    public static void c(long[] jArr, long[] jArr2) {
-        e(jArr);
-        d(jArr);
+    /* renamed from: c */
+    public static void m14896c(long[] jArr, long[] jArr2) {
+        m14894e(jArr);
+        m14895d(jArr);
         System.arraycopy(jArr, 0, jArr2, 0, 10);
     }
 
-    public static void d(long[] jArr) {
+    /* renamed from: d */
+    public static void m14895d(long[] jArr) {
         jArr[10] = 0;
         int i = 0;
         while (i < 10) {
@@ -86,7 +98,8 @@ public final class np7 {
         jArr[1] = jArr[1] + j9;
     }
 
-    public static void e(long[] jArr) {
+    /* renamed from: e */
+    public static void m14894e(long[] jArr) {
         long j = jArr[8] + (jArr[18] << 4);
         jArr[8] = j;
         long j2 = jArr[18];
@@ -143,13 +156,15 @@ public final class np7 {
         jArr[0] = j27 + jArr[10];
     }
 
-    public static void f(long[] jArr, long[] jArr2, long j) {
+    /* renamed from: f */
+    public static void m14893f(long[] jArr, long[] jArr2, long j) {
         for (int i = 0; i < 10; i++) {
             jArr[i] = jArr2[i] * j;
         }
     }
 
-    public static void g(long[] jArr, long[] jArr2) {
+    /* renamed from: g */
+    public static void m14892g(long[] jArr, long[] jArr2) {
         long j = jArr2[0];
         long j2 = jArr2[0];
         long j3 = jArr2[1];
@@ -199,22 +214,25 @@ public final class np7 {
         long j47 = jArr2[8];
         long j48 = jArr2[8];
         long j49 = jArr2[9];
-        c(new long[]{j * j, (j2 + j2) * jArr2[1], j4 + j4, j5 + j5, (j6 * j6) + (j7 * 4 * j8) + ((j9 + j9) * jArr2[4]), j10 + j10, j17 + j17, j18 + j18, (j19 * j19) + j25 + j25, j26 + j26, j33 + j33, j34 + j34, (j35 * j35) + j39 + j39, j40 + j40, j45 + j45, j46 + j46, (j47 * j47) + (jArr2[7] * 4 * jArr2[9]), (j48 + j48) * jArr2[9], (j49 + j49) * j49}, jArr);
+        m14896c(new long[]{j * j, (j2 + j2) * jArr2[1], j4 + j4, j5 + j5, (j6 * j6) + (j7 * 4 * j8) + ((j9 + j9) * jArr2[4]), j10 + j10, j17 + j17, j18 + j18, (j19 * j19) + j25 + j25, j26 + j26, j33 + j33, j34 + j34, (j35 * j35) + j39 + j39, j40 + j40, j45 + j45, j46 + j46, (j47 * j47) + (jArr2[7] * 4 * jArr2[9]), (j48 + j48) * jArr2[9], (j49 + j49) * j49}, jArr);
     }
 
-    public static void h(long[] jArr, long[] jArr2, long[] jArr3) {
+    /* renamed from: h */
+    public static void m14891h(long[] jArr, long[] jArr2, long[] jArr3) {
         for (int i = 0; i < 10; i++) {
             jArr[i] = jArr2[i] - jArr3[i];
         }
     }
 
-    public static void i(long[] jArr, long[] jArr2, long[] jArr3) {
+    /* renamed from: i */
+    public static void m14890i(long[] jArr, long[] jArr2, long[] jArr3) {
         for (int i = 0; i < 10; i++) {
             jArr[i] = jArr2[i] + jArr3[i];
         }
     }
 
-    public static byte[] j(long[] jArr) {
+    /* renamed from: j */
+    public static byte[] m14889j(long[] jArr) {
         int i;
         long j;
         long j2;
@@ -231,7 +249,7 @@ public final class np7 {
                 long j3 = copyOf[i9];
                 copyOf[i9] = j3 + (i7 << i6);
                 i9++;
-                copyOf[i9] = copyOf[i9] - (-((int) (((j3 >> 31) & j3) >> d[i9 & 1])));
+                copyOf[i9] = copyOf[i9] - (-((int) (((j3 >> 31) & j3) >> f20560d[i9 & 1])));
             }
             long j4 = copyOf[9];
             int i10 = -((int) (((j4 >> 31) & j4) >> 25));
@@ -245,8 +263,8 @@ public final class np7 {
             int i12 = 0;
             while (i12 < 9) {
                 long j6 = copyOf[i12];
-                int i13 = d[i12 & 1];
-                copyOf[i12] = c[i5] & j6;
+                int i13 = f20560d[i12 & 1];
+                copyOf[i12] = f20559c[i5] & j6;
                 i12++;
                 copyOf[i12] = copyOf[i12] + ((int) (j6 >> i13));
             }
@@ -255,7 +273,7 @@ public final class np7 {
         copyOf[0] = copyOf[0] + (((int) (j >> 25)) * 19);
         int i14 = ((((int) j2) - 67108845) >> 31) ^ (-1);
         for (int i15 = 1; i15 < 10; i15++) {
-            int i16 = (((int) copyOf[i15]) ^ c[i15 & 1]) ^ (-1);
+            int i16 = (((int) copyOf[i15]) ^ f20559c[i15 & 1]) ^ (-1);
             int i17 = i16 & (i16 << 16);
             int i18 = i17 & (i17 << 8);
             int i19 = i18 & (i18 << 4);
@@ -271,15 +289,15 @@ public final class np7 {
             copyOf[i22] = copyOf[i22] - j7;
         }
         for (int i23 = 0; i23 < 10; i23++) {
-            copyOf[i23] = copyOf[i23] << b[i23];
+            copyOf[i23] = copyOf[i23] << f20558b[i23];
         }
         byte[] bArr = new byte[32];
         for (int i24 = 0; i24 < 10; i24++) {
-            int[] iArr = a;
+            int[] iArr = f20557a;
             int i25 = iArr[i24];
-            byte b2 = bArr[i25];
+            byte b = bArr[i25];
             long j8 = copyOf[i24];
-            bArr[i25] = (byte) (b2 | (j8 & 255));
+            bArr[i25] = (byte) (b | (j8 & 255));
             bArr[iArr[i24] + 1] = (byte) (bArr[i2] | ((j8 >> 8) & 255));
             bArr[iArr[i24] + 2] = (byte) (bArr[i3] | ((j8 >> 16) & 255));
             bArr[iArr[i24] + 3] = (byte) (bArr[i4] | ((j8 >> 24) & 255));
@@ -287,11 +305,12 @@ public final class np7 {
         return bArr;
     }
 
-    public static long[] k(byte[] bArr) {
+    /* renamed from: k */
+    public static long[] m14888k(byte[] bArr) {
         long[] jArr = new long[10];
         for (int i = 0; i < 10; i++) {
-            int i2 = a[i];
-            jArr[i] = (((((bArr[i2] & 255) | ((bArr[i2 + 1] & 255) << 8)) | ((bArr[i2 + 2] & 255) << 16)) | ((bArr[i2 + 3] & 255) << 24)) >> b[i]) & c[i & 1];
+            int i2 = f20557a[i];
+            jArr[i] = (((((bArr[i2] & 255) | ((bArr[i2 + 1] & 255) << 8)) | ((bArr[i2 + 2] & 255) << 16)) | ((bArr[i2 + 3] & 255) << 24)) >> f20558b[i]) & f20559c[i & 1];
         }
         return jArr;
     }

@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface mp2 {
-    void b(int i, Object obj);
+    /* renamed from: b */
+    void mo9954b(int i, Object obj);
 }

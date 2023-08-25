@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface a84 {
-    wh6 v();
+    /* renamed from: v */
+    wh6 mo6398v();
 }

@@ -27,60 +27,101 @@ import java.util.List;
 import java.util.WeakHashMap;
 /* loaded from: classes.dex */
 public class bi1 extends c51 implements View.OnClickListener {
-    public final SearchView A;
-    public final SearchableInfo B;
-    public final Context C;
-    public final WeakHashMap<String, Drawable.ConstantState> D;
-    public final int E;
-    public boolean F;
-    public int G;
-    public ColorStateList H;
-    public int I;
-    public int J;
-    public int K;
-    public int L;
-    public int M;
-    public int N;
 
+    /* renamed from: A */
+    public final SearchView f4815A;
+
+    /* renamed from: B */
+    public final SearchableInfo f4816B;
+
+    /* renamed from: C */
+    public final Context f4817C;
+
+    /* renamed from: D */
+    public final WeakHashMap<String, Drawable.ConstantState> f4818D;
+
+    /* renamed from: E */
+    public final int f4819E;
+
+    /* renamed from: F */
+    public boolean f4820F;
+
+    /* renamed from: G */
+    public int f4821G;
+
+    /* renamed from: H */
+    public ColorStateList f4822H;
+
+    /* renamed from: I */
+    public int f4823I;
+
+    /* renamed from: J */
+    public int f4824J;
+
+    /* renamed from: K */
+    public int f4825K;
+
+    /* renamed from: L */
+    public int f4826L;
+
+    /* renamed from: M */
+    public int f4827M;
+
+    /* renamed from: N */
+    public int f4828N;
+
+    /* renamed from: com.daaw.bi1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final TextView a;
-        public final TextView b;
-        public final ImageView c;
-        public final ImageView d;
-        public final ImageView e;
+    public static final class C0843a {
 
-        public a(View view) {
-            this.a = (TextView) view.findViewById(16908308);
-            this.b = (TextView) view.findViewById(16908309);
-            this.c = (ImageView) view.findViewById(16908295);
-            this.d = (ImageView) view.findViewById(16908296);
-            this.e = (ImageView) view.findViewById(o11.edit_query);
+        /* renamed from: a */
+        public final TextView f4829a;
+
+        /* renamed from: b */
+        public final TextView f4830b;
+
+        /* renamed from: c */
+        public final ImageView f4831c;
+
+        /* renamed from: d */
+        public final ImageView f4832d;
+
+        /* renamed from: e */
+        public final ImageView f4833e;
+
+        public C0843a(View view) {
+            this.f4829a = (TextView) view.findViewById(16908308);
+            this.f4830b = (TextView) view.findViewById(16908309);
+            this.f4831c = (ImageView) view.findViewById(16908295);
+            this.f4832d = (ImageView) view.findViewById(16908296);
+            this.f4833e = (ImageView) view.findViewById(o11.edit_query);
         }
     }
 
     public bi1(Context context, SearchView searchView, SearchableInfo searchableInfo, WeakHashMap<String, Drawable.ConstantState> weakHashMap) {
         super(context, searchView.getSuggestionRowLayout(), null, true);
-        this.F = false;
-        this.G = 1;
-        this.I = -1;
-        this.J = -1;
-        this.K = -1;
-        this.L = -1;
-        this.M = -1;
-        this.N = -1;
-        this.A = searchView;
-        this.B = searchableInfo;
-        this.E = searchView.getSuggestionCommitIconResId();
-        this.C = context;
-        this.D = weakHashMap;
+        this.f4820F = false;
+        this.f4821G = 1;
+        this.f4823I = -1;
+        this.f4824J = -1;
+        this.f4825K = -1;
+        this.f4826L = -1;
+        this.f4827M = -1;
+        this.f4828N = -1;
+        this.f4815A = searchView;
+        this.f4816B = searchableInfo;
+        this.f4819E = searchView.getSuggestionCommitIconResId();
+        this.f4817C = context;
+        this.f4818D = weakHashMap;
     }
 
-    public static String o(Cursor cursor, String str) {
-        return x(cursor, cursor.getColumnIndex(str));
+    /* renamed from: o */
+    public static String m26157o(Cursor cursor, String str) {
+        return m26149x(cursor, cursor.getColumnIndex(str));
     }
 
-    public static String x(Cursor cursor, int i) {
+    /* renamed from: x */
+    public static String m26149x(Cursor cursor, int i) {
         if (i == -1) {
             return null;
         }
@@ -91,27 +132,31 @@ public class bi1 extends c51 implements View.OnClickListener {
         }
     }
 
-    public final void A(TextView textView, CharSequence charSequence) {
+    /* renamed from: A */
+    public final void m26164A(TextView textView, CharSequence charSequence) {
         textView.setText(charSequence);
         textView.setVisibility(TextUtils.isEmpty(charSequence) ? 8 : 0);
     }
 
-    public final void B(String str, Drawable drawable) {
+    /* renamed from: B */
+    public final void m26163B(String str, Drawable drawable) {
         if (drawable != null) {
-            this.D.put(str, drawable.getConstantState());
+            this.f4818D.put(str, drawable.getConstantState());
         }
     }
 
-    public final void C(Cursor cursor) {
+    /* renamed from: C */
+    public final void m26162C(Cursor cursor) {
         Bundle extras = cursor != null ? cursor.getExtras() : null;
         if (extras != null) {
             extras.getBoolean("in_progress");
         }
     }
 
-    @Override // com.daaw.nn, com.daaw.pn.a
-    public void a(Cursor cursor) {
-        if (this.F) {
+    @Override // com.daaw.AbstractC2317nn, com.daaw.C2563pn.InterfaceC2564a
+    /* renamed from: a */
+    public void mo13286a(Cursor cursor) {
+        if (this.f4820F) {
             if (cursor != null) {
                 cursor.close();
                 return;
@@ -119,48 +164,50 @@ public class bi1 extends c51 implements View.OnClickListener {
             return;
         }
         try {
-            super.a(cursor);
+            super.mo13286a(cursor);
             if (cursor != null) {
-                this.I = cursor.getColumnIndex("suggest_text_1");
-                this.J = cursor.getColumnIndex("suggest_text_2");
-                this.K = cursor.getColumnIndex("suggest_text_2_url");
-                this.L = cursor.getColumnIndex("suggest_icon_1");
-                this.M = cursor.getColumnIndex("suggest_icon_2");
-                this.N = cursor.getColumnIndex("suggest_flags");
+                this.f4823I = cursor.getColumnIndex("suggest_text_1");
+                this.f4824J = cursor.getColumnIndex("suggest_text_2");
+                this.f4825K = cursor.getColumnIndex("suggest_text_2_url");
+                this.f4826L = cursor.getColumnIndex("suggest_icon_1");
+                this.f4827M = cursor.getColumnIndex("suggest_icon_2");
+                this.f4828N = cursor.getColumnIndex("suggest_flags");
             }
         } catch (Exception unused) {
         }
     }
 
-    @Override // com.daaw.nn, com.daaw.pn.a
-    public CharSequence c(Cursor cursor) {
-        String o;
-        String o2;
+    @Override // com.daaw.AbstractC2317nn, com.daaw.C2563pn.InterfaceC2564a
+    /* renamed from: c */
+    public CharSequence mo13284c(Cursor cursor) {
+        String m26157o;
+        String m26157o2;
         if (cursor == null) {
             return null;
         }
-        String o3 = o(cursor, "suggest_intent_query");
-        if (o3 != null) {
-            return o3;
+        String m26157o3 = m26157o(cursor, "suggest_intent_query");
+        if (m26157o3 != null) {
+            return m26157o3;
         }
-        if (!this.B.shouldRewriteQueryFromData() || (o2 = o(cursor, "suggest_intent_data")) == null) {
-            if (!this.B.shouldRewriteQueryFromText() || (o = o(cursor, "suggest_text_1")) == null) {
+        if (!this.f4816B.shouldRewriteQueryFromData() || (m26157o2 = m26157o(cursor, "suggest_intent_data")) == null) {
+            if (!this.f4816B.shouldRewriteQueryFromText() || (m26157o = m26157o(cursor, "suggest_text_1")) == null) {
                 return null;
             }
-            return o;
+            return m26157o;
         }
-        return o2;
+        return m26157o2;
     }
 
-    @Override // com.daaw.pn.a
-    public Cursor d(CharSequence charSequence) {
+    @Override // com.daaw.C2563pn.InterfaceC2564a
+    /* renamed from: d */
+    public Cursor mo13283d(CharSequence charSequence) {
         String charSequence2 = charSequence == null ? "" : charSequence.toString();
-        if (this.A.getVisibility() == 0 && this.A.getWindowVisibility() == 0) {
+        if (this.f4815A.getVisibility() == 0 && this.f4815A.getWindowVisibility() == 0) {
             try {
-                Cursor w = w(this.B, charSequence2, 50);
-                if (w != null) {
-                    w.getCount();
-                    return w;
+                Cursor m26150w = m26150w(this.f4816B, charSequence2, 50);
+                if (m26150w != null) {
+                    m26150w.getCount();
+                    return m26150w;
                 }
             } catch (RuntimeException unused) {
             }
@@ -168,82 +215,84 @@ public class bi1 extends c51 implements View.OnClickListener {
         return null;
     }
 
-    @Override // com.daaw.nn
-    public void e(View view, Context context, Cursor cursor) {
-        a aVar = (a) view.getTag();
-        int i = this.N;
+    @Override // com.daaw.AbstractC2317nn
+    /* renamed from: e */
+    public void mo15025e(View view, Context context, Cursor cursor) {
+        C0843a c0843a = (C0843a) view.getTag();
+        int i = this.f4828N;
         int i2 = i != -1 ? cursor.getInt(i) : 0;
-        if (aVar.a != null) {
-            A(aVar.a, x(cursor, this.I));
+        if (c0843a.f4829a != null) {
+            m26164A(c0843a.f4829a, m26149x(cursor, this.f4823I));
         }
-        if (aVar.b != null) {
-            String x = x(cursor, this.K);
-            CharSequence l = x != null ? l(x) : x(cursor, this.J);
-            if (TextUtils.isEmpty(l)) {
-                TextView textView = aVar.a;
+        if (c0843a.f4830b != null) {
+            String m26149x = m26149x(cursor, this.f4825K);
+            CharSequence m26160l = m26149x != null ? m26160l(m26149x) : m26149x(cursor, this.f4824J);
+            if (TextUtils.isEmpty(m26160l)) {
+                TextView textView = c0843a.f4829a;
                 if (textView != null) {
                     textView.setSingleLine(false);
-                    aVar.a.setMaxLines(2);
+                    c0843a.f4829a.setMaxLines(2);
                 }
             } else {
-                TextView textView2 = aVar.a;
+                TextView textView2 = c0843a.f4829a;
                 if (textView2 != null) {
                     textView2.setSingleLine(true);
-                    aVar.a.setMaxLines(1);
+                    c0843a.f4829a.setMaxLines(1);
                 }
             }
-            A(aVar.b, l);
+            m26164A(c0843a.f4830b, m26160l);
         }
-        ImageView imageView = aVar.c;
+        ImageView imageView = c0843a.f4831c;
         if (imageView != null) {
-            z(imageView, u(cursor), 4);
+            m26147z(imageView, m26152u(cursor), 4);
         }
-        ImageView imageView2 = aVar.d;
+        ImageView imageView2 = c0843a.f4832d;
         if (imageView2 != null) {
-            z(imageView2, v(cursor), 8);
+            m26147z(imageView2, m26151v(cursor), 8);
         }
-        int i3 = this.G;
+        int i3 = this.f4821G;
         if (i3 != 2 && (i3 != 1 || (i2 & 1) == 0)) {
-            aVar.e.setVisibility(8);
+            c0843a.f4833e.setVisibility(8);
             return;
         }
-        aVar.e.setVisibility(0);
-        aVar.e.setTag(aVar.a.getText());
-        aVar.e.setOnClickListener(this);
+        c0843a.f4833e.setVisibility(0);
+        c0843a.f4833e.setTag(c0843a.f4829a.getText());
+        c0843a.f4833e.setOnClickListener(this);
     }
 
-    @Override // com.daaw.nn, android.widget.BaseAdapter, android.widget.SpinnerAdapter
+    @Override // com.daaw.AbstractC2317nn, android.widget.BaseAdapter, android.widget.SpinnerAdapter
     public View getDropDownView(int i, View view, ViewGroup viewGroup) {
         try {
             return super.getDropDownView(i, view, viewGroup);
         } catch (RuntimeException e) {
-            View g = g(this.C, b(), viewGroup);
-            if (g != null) {
-                ((a) g.getTag()).a.setText(e.toString());
+            View mo15023g = mo15023g(this.f4817C, mo13285b(), viewGroup);
+            if (mo15023g != null) {
+                ((C0843a) mo15023g.getTag()).f4829a.setText(e.toString());
             }
-            return g;
+            return mo15023g;
         }
     }
 
-    @Override // com.daaw.nn, android.widget.Adapter
+    @Override // com.daaw.AbstractC2317nn, android.widget.Adapter
     public View getView(int i, View view, ViewGroup viewGroup) {
         try {
             return super.getView(i, view, viewGroup);
         } catch (RuntimeException e) {
-            View h = h(this.C, b(), viewGroup);
-            if (h != null) {
-                ((a) h.getTag()).a.setText(e.toString());
+            View mo15022h = mo15022h(this.f4817C, mo13285b(), viewGroup);
+            if (mo15022h != null) {
+                ((C0843a) mo15022h.getTag()).f4829a.setText(e.toString());
             }
-            return h;
+            return mo15022h;
         }
     }
 
-    @Override // com.daaw.c51, com.daaw.nn
-    public View h(Context context, Cursor cursor, ViewGroup viewGroup) {
-        View h = super.h(context, cursor, viewGroup);
-        h.setTag(new a(h));
-        ((ImageView) h.findViewById(o11.edit_query)).setImageResource(this.E);
-        return h;
+    @Override // com.daaw.c51, com.daaw.AbstractC2317nn
+    /* renamed from: h */
+    public View mo15022h(Context context, Cursor cursor, ViewGroup viewGroup) {
+        View mo15022h = super.mo15022h(context, cursor, viewGroup);
+        mo15022h.setTag(new C0843a(mo15022h));
+        ((ImageView) mo15022h.findViewById(o11.edit_query)).setImageResource(this.f4819E);
+        return mo15022h;
     }
 
     @Override // android.widget.BaseAdapter, android.widget.Adapter
@@ -251,27 +300,30 @@ public class bi1 extends c51 implements View.OnClickListener {
         return false;
     }
 
-    public final Drawable k(String str) {
-        Drawable.ConstantState constantState = this.D.get(str);
+    /* renamed from: k */
+    public final Drawable m26161k(String str) {
+        Drawable.ConstantState constantState = this.f4818D.get(str);
         if (constantState == null) {
             return null;
         }
         return constantState.newDrawable();
     }
 
-    public final CharSequence l(CharSequence charSequence) {
-        if (this.H == null) {
+    /* renamed from: l */
+    public final CharSequence m26160l(CharSequence charSequence) {
+        if (this.f4822H == null) {
             TypedValue typedValue = new TypedValue();
-            this.C.getTheme().resolveAttribute(x01.textColorSearchUrl, typedValue, true);
-            this.H = this.C.getResources().getColorStateList(typedValue.resourceId);
+            this.f4817C.getTheme().resolveAttribute(x01.textColorSearchUrl, typedValue, true);
+            this.f4822H = this.f4817C.getResources().getColorStateList(typedValue.resourceId);
         }
         SpannableString spannableString = new SpannableString(charSequence);
-        spannableString.setSpan(new TextAppearanceSpan(null, 0, 0, this.H, null), 0, charSequence.length(), 33);
+        spannableString.setSpan(new TextAppearanceSpan(null, 0, 0, this.f4822H, null), 0, charSequence.length(), 33);
         return spannableString;
     }
 
-    public final Drawable m(ComponentName componentName) {
-        PackageManager packageManager = this.C.getPackageManager();
+    /* renamed from: m */
+    public final Drawable m26159m(ComponentName componentName) {
+        PackageManager packageManager = this.f4817C.getPackageManager();
         try {
             ActivityInfo activityInfo = packageManager.getActivityInfo(componentName, 128);
             int iconResource = activityInfo.getIconResource();
@@ -294,55 +346,58 @@ public class bi1 extends c51 implements View.OnClickListener {
         }
     }
 
-    public final Drawable n(ComponentName componentName) {
+    /* renamed from: n */
+    public final Drawable m26158n(ComponentName componentName) {
         String flattenToShortString = componentName.flattenToShortString();
-        if (!this.D.containsKey(flattenToShortString)) {
-            Drawable m = m(componentName);
-            this.D.put(flattenToShortString, m != null ? m.getConstantState() : null);
-            return m;
+        if (!this.f4818D.containsKey(flattenToShortString)) {
+            Drawable m26159m = m26159m(componentName);
+            this.f4818D.put(flattenToShortString, m26159m != null ? m26159m.getConstantState() : null);
+            return m26159m;
         }
-        Drawable.ConstantState constantState = this.D.get(flattenToShortString);
+        Drawable.ConstantState constantState = this.f4818D.get(flattenToShortString);
         if (constantState == null) {
             return null;
         }
-        return constantState.newDrawable(this.C.getResources());
+        return constantState.newDrawable(this.f4817C.getResources());
     }
 
     @Override // android.widget.BaseAdapter
     public void notifyDataSetChanged() {
         super.notifyDataSetChanged();
-        C(b());
+        m26162C(mo13285b());
     }
 
     @Override // android.widget.BaseAdapter
     public void notifyDataSetInvalidated() {
         super.notifyDataSetInvalidated();
-        C(b());
+        m26162C(mo13285b());
     }
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Object tag = view.getTag();
         if (tag instanceof CharSequence) {
-            this.A.U((CharSequence) tag);
+            this.f4815A.m30041U((CharSequence) tag);
         }
     }
 
-    public final Drawable p() {
-        Drawable n = n(this.B.getSearchActivity());
-        return n != null ? n : this.C.getPackageManager().getDefaultActivityIcon();
+    /* renamed from: p */
+    public final Drawable m26156p() {
+        Drawable m26158n = m26158n(this.f4816B.getSearchActivity());
+        return m26158n != null ? m26158n : this.f4817C.getPackageManager().getDefaultActivityIcon();
     }
 
-    public final Drawable q(Uri uri) {
+    /* renamed from: q */
+    public final Drawable m26155q(Uri uri) {
         try {
             if ("android.resource".equals(uri.getScheme())) {
                 try {
-                    return r(uri);
+                    return m26154r(uri);
                 } catch (Resources.NotFoundException unused) {
                     throw new FileNotFoundException("Resource does not exist: " + uri);
                 }
             }
-            InputStream openInputStream = this.C.getContentResolver().openInputStream(uri);
+            InputStream openInputStream = this.f4817C.getContentResolver().openInputStream(uri);
             if (openInputStream == null) {
                 throw new FileNotFoundException("Failed to open " + uri);
             }
@@ -371,14 +426,15 @@ public class bi1 extends c51 implements View.OnClickListener {
         return null;
     }
 
-    public Drawable r(Uri uri) {
+    /* renamed from: r */
+    public Drawable m26154r(Uri uri) {
         int parseInt;
         String authority = uri.getAuthority();
         if (TextUtils.isEmpty(authority)) {
             throw new FileNotFoundException("No authority: " + uri);
         }
         try {
-            Resources resourcesForApplication = this.C.getPackageManager().getResourcesForApplication(authority);
+            Resources resourcesForApplication = this.f4817C.getPackageManager().getResourcesForApplication(authority);
             List<String> pathSegments = uri.getPathSegments();
             if (pathSegments == null) {
                 throw new FileNotFoundException("No path: " + uri);
@@ -404,54 +460,58 @@ public class bi1 extends c51 implements View.OnClickListener {
         }
     }
 
-    public final Drawable t(String str) {
+    /* renamed from: t */
+    public final Drawable m26153t(String str) {
         if (str == null || str.isEmpty() || "0".equals(str)) {
             return null;
         }
         try {
             int parseInt = Integer.parseInt(str);
-            String str2 = "android.resource://" + this.C.getPackageName() + "/" + parseInt;
-            Drawable k = k(str2);
-            if (k != null) {
-                return k;
+            String str2 = "android.resource://" + this.f4817C.getPackageName() + "/" + parseInt;
+            Drawable m26161k = m26161k(str2);
+            if (m26161k != null) {
+                return m26161k;
             }
-            Drawable e = zk.e(this.C, parseInt);
-            B(str2, e);
-            return e;
+            Drawable m2178e = C3866zk.m2178e(this.f4817C, parseInt);
+            m26163B(str2, m2178e);
+            return m2178e;
         } catch (Resources.NotFoundException unused) {
             StringBuilder sb = new StringBuilder();
             sb.append("Icon resource not found: ");
             sb.append(str);
             return null;
         } catch (NumberFormatException unused2) {
-            Drawable k2 = k(str);
-            if (k2 != null) {
-                return k2;
+            Drawable m26161k2 = m26161k(str);
+            if (m26161k2 != null) {
+                return m26161k2;
             }
-            Drawable q = q(Uri.parse(str));
-            B(str, q);
-            return q;
+            Drawable m26155q = m26155q(Uri.parse(str));
+            m26163B(str, m26155q);
+            return m26155q;
         }
     }
 
-    public final Drawable u(Cursor cursor) {
-        int i = this.L;
+    /* renamed from: u */
+    public final Drawable m26152u(Cursor cursor) {
+        int i = this.f4826L;
         if (i == -1) {
             return null;
         }
-        Drawable t = t(cursor.getString(i));
-        return t != null ? t : p();
+        Drawable m26153t = m26153t(cursor.getString(i));
+        return m26153t != null ? m26153t : m26156p();
     }
 
-    public final Drawable v(Cursor cursor) {
-        int i = this.M;
+    /* renamed from: v */
+    public final Drawable m26151v(Cursor cursor) {
+        int i = this.f4827M;
         if (i == -1) {
             return null;
         }
-        return t(cursor.getString(i));
+        return m26153t(cursor.getString(i));
     }
 
-    public Cursor w(SearchableInfo searchableInfo, String str, int i) {
+    /* renamed from: w */
+    public Cursor m26150w(SearchableInfo searchableInfo, String str, int i) {
         String suggestAuthority;
         String[] strArr = null;
         if (searchableInfo == null || (suggestAuthority = searchableInfo.getSuggestAuthority()) == null) {
@@ -473,14 +533,16 @@ public class bi1 extends c51 implements View.OnClickListener {
         if (i > 0) {
             fragment.appendQueryParameter("limit", String.valueOf(i));
         }
-        return this.C.getContentResolver().query(fragment.build(), null, suggestSelection, strArr2, null);
+        return this.f4817C.getContentResolver().query(fragment.build(), null, suggestSelection, strArr2, null);
     }
 
-    public void y(int i) {
-        this.G = i;
+    /* renamed from: y */
+    public void m26148y(int i) {
+        this.f4821G = i;
     }
 
-    public final void z(ImageView imageView, Drawable drawable, int i) {
+    /* renamed from: z */
+    public final void m26147z(ImageView imageView, Drawable drawable, int i) {
         imageView.setImageDrawable(drawable);
         if (drawable == null) {
             imageView.setVisibility(i);

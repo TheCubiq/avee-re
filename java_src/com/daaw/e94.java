@@ -7,43 +7,55 @@ import com.google.android.gms.internal.ads.zzchu;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
 public final class e94 {
-    public final zzchu a;
-    public final Context b;
-    public final WeakReference c;
+
+    /* renamed from: a */
+    public final zzchu f8271a;
+
+    /* renamed from: b */
+    public final Context f8272b;
+
+    /* renamed from: c */
+    public final WeakReference f8273c;
 
     public /* synthetic */ e94(c94 c94Var, d94 d94Var) {
         zzchu zzchuVar;
         Context context;
         WeakReference weakReference;
-        zzchuVar = c94Var.a;
-        this.a = zzchuVar;
-        context = c94Var.b;
-        this.b = context;
-        weakReference = c94Var.c;
-        this.c = weakReference;
+        zzchuVar = c94Var.f5643a;
+        this.f8271a = zzchuVar;
+        context = c94Var.f5644b;
+        this.f8272b = context;
+        weakReference = c94Var.f5645c;
+        this.f8273c = weakReference;
     }
 
-    public final Context a() {
-        return this.b;
+    /* renamed from: a */
+    public final Context m23653a() {
+        return this.f8272b;
     }
 
-    public final sl2 b() {
-        return new sl2(new zzi(this.b, this.a));
+    /* renamed from: b */
+    public final sl2 m23652b() {
+        return new sl2(new zzi(this.f8272b, this.f8271a));
     }
 
-    public final yb3 c() {
-        return new yb3(this.b);
+    /* renamed from: c */
+    public final yb3 m23651c() {
+        return new yb3(this.f8272b);
     }
 
-    public final zzchu d() {
-        return this.a;
+    /* renamed from: d */
+    public final zzchu m23650d() {
+        return this.f8271a;
     }
 
-    public final String e() {
-        return zzt.zzp().zzc(this.b, this.a.p);
+    /* renamed from: e */
+    public final String m23649e() {
+        return zzt.zzp().zzc(this.f8272b, this.f8271a.f36993p);
     }
 
-    public final WeakReference f() {
-        return this.c;
+    /* renamed from: f */
+    public final WeakReference m23648f() {
+        return this.f8273c;
     }
 }

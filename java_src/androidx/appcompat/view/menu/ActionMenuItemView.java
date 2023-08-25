@@ -11,55 +11,82 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import androidx.appcompat.view.menu.e;
-import androidx.appcompat.view.menu.j;
+import androidx.appcompat.view.menu.C0082e;
+import androidx.appcompat.view.menu.InterfaceC0093j;
 import androidx.appcompat.widget.ActionMenuView;
+import com.daaw.C3397w4;
 import com.daaw.em1;
 import com.daaw.l30;
 import com.daaw.vc1;
-import com.daaw.w4;
 import com.daaw.x21;
 /* loaded from: classes.dex */
-public class ActionMenuItemView extends w4 implements j.a, View.OnClickListener, ActionMenuView.a {
-    public b A;
-    public boolean B;
-    public boolean C;
-    public int D;
-    public int E;
-    public int F;
-    public g v;
-    public CharSequence w;
-    public Drawable x;
-    public e.b y;
-    public l30 z;
+public class ActionMenuItemView extends C3397w4 implements InterfaceC0093j.InterfaceC0094a, View.OnClickListener, ActionMenuView.InterfaceC0114a {
 
+    /* renamed from: A */
+    public AbstractC0071b f267A;
+
+    /* renamed from: B */
+    public boolean f268B;
+
+    /* renamed from: C */
+    public boolean f269C;
+
+    /* renamed from: D */
+    public int f270D;
+
+    /* renamed from: E */
+    public int f271E;
+
+    /* renamed from: F */
+    public int f272F;
+
+    /* renamed from: v */
+    public C0086g f273v;
+
+    /* renamed from: w */
+    public CharSequence f274w;
+
+    /* renamed from: x */
+    public Drawable f275x;
+
+    /* renamed from: y */
+    public C0082e.InterfaceC0084b f276y;
+
+    /* renamed from: z */
+    public l30 f277z;
+
+    /* renamed from: androidx.appcompat.view.menu.ActionMenuItemView$a */
     /* loaded from: classes.dex */
-    public class a extends l30 {
-        public a() {
+    public class C0070a extends l30 {
+        public C0070a() {
             super(ActionMenuItemView.this);
         }
 
         @Override // com.daaw.l30
-        public vc1 b() {
-            b bVar = ActionMenuItemView.this.A;
-            if (bVar != null) {
-                return bVar.a();
+        /* renamed from: b */
+        public vc1 mo17188b() {
+            AbstractC0071b abstractC0071b = ActionMenuItemView.this.f267A;
+            if (abstractC0071b != null) {
+                return abstractC0071b.mo30114a();
             }
             return null;
         }
 
         @Override // com.daaw.l30
-        public boolean c() {
-            vc1 b;
+        /* renamed from: c */
+        public boolean mo17187c() {
+            vc1 mo17188b;
             ActionMenuItemView actionMenuItemView = ActionMenuItemView.this;
-            e.b bVar = actionMenuItemView.y;
-            return bVar != null && bVar.a(actionMenuItemView.v) && (b = b()) != null && b.a();
+            C0082e.InterfaceC0084b interfaceC0084b = actionMenuItemView.f276y;
+            return interfaceC0084b != null && interfaceC0084b.mo30097a(actionMenuItemView.f273v) && (mo17188b = mo17188b()) != null && mo17188b.mo7286a();
         }
     }
 
+    /* renamed from: androidx.appcompat.view.menu.ActionMenuItemView$b */
     /* loaded from: classes.dex */
-    public static abstract class b {
-        public abstract vc1 a();
+    public static abstract class AbstractC0071b {
+        /* renamed from: a */
+        public abstract vc1 mo30114a();
     }
 
     public ActionMenuItemView(Context context, AttributeSet attributeSet) {
@@ -69,49 +96,55 @@ public class ActionMenuItemView extends w4 implements j.a, View.OnClickListener,
     public ActionMenuItemView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         Resources resources = context.getResources();
-        this.B = g();
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, x21.v, i, 0);
-        this.D = obtainStyledAttributes.getDimensionPixelSize(x21.w, 0);
+        this.f268B = m30297g();
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, x21.f31987v, i, 0);
+        this.f270D = obtainStyledAttributes.getDimensionPixelSize(x21.f31992w, 0);
         obtainStyledAttributes.recycle();
-        this.F = (int) ((resources.getDisplayMetrics().density * 32.0f) + 0.5f);
+        this.f272F = (int) ((resources.getDisplayMetrics().density * 32.0f) + 0.5f);
         setOnClickListener(this);
-        this.E = -1;
+        this.f271E = -1;
         setSaveEnabled(false);
     }
 
-    @Override // androidx.appcompat.widget.ActionMenuView.a
-    public boolean a() {
-        return f();
+    @Override // androidx.appcompat.widget.ActionMenuView.InterfaceC0114a
+    /* renamed from: a */
+    public boolean mo30096a() {
+        return m30298f();
     }
 
-    @Override // androidx.appcompat.widget.ActionMenuView.a
-    public boolean b() {
-        return f() && this.v.getIcon() == null;
+    @Override // androidx.appcompat.widget.ActionMenuView.InterfaceC0114a
+    /* renamed from: b */
+    public boolean mo30095b() {
+        return m30298f() && this.f273v.getIcon() == null;
     }
 
-    @Override // androidx.appcompat.view.menu.j.a
-    public boolean d() {
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j.InterfaceC0094a
+    /* renamed from: d */
+    public boolean mo349d() {
         return true;
     }
 
-    @Override // androidx.appcompat.view.menu.j.a
-    public void e(g gVar, int i) {
-        this.v = gVar;
-        setIcon(gVar.getIcon());
-        setTitle(gVar.i(this));
-        setId(gVar.getItemId());
-        setVisibility(gVar.isVisible() ? 0 : 8);
-        setEnabled(gVar.isEnabled());
-        if (gVar.hasSubMenu() && this.z == null) {
-            this.z = new a();
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j.InterfaceC0094a
+    /* renamed from: e */
+    public void mo348e(C0086g c0086g, int i) {
+        this.f273v = c0086g;
+        setIcon(c0086g.getIcon());
+        setTitle(c0086g.m30207i(this));
+        setId(c0086g.getItemId());
+        setVisibility(c0086g.isVisible() ? 0 : 8);
+        setEnabled(c0086g.isEnabled());
+        if (c0086g.hasSubMenu() && this.f277z == null) {
+            this.f277z = new C0070a();
         }
     }
 
-    public boolean f() {
+    /* renamed from: f */
+    public boolean m30298f() {
         return !TextUtils.isEmpty(getText());
     }
 
-    public final boolean g() {
+    /* renamed from: g */
+    public final boolean m30297g() {
         Configuration configuration = getContext().getResources().getConfiguration();
         int i = configuration.screenWidthDp;
         return i >= 480 || (i >= 640 && configuration.screenHeightDp >= 480) || configuration.orientation == 2;
@@ -122,66 +155,67 @@ public class ActionMenuItemView extends w4 implements j.a, View.OnClickListener,
         return Button.class.getName();
     }
 
-    @Override // androidx.appcompat.view.menu.j.a
-    public g getItemData() {
-        return this.v;
+    @Override // androidx.appcompat.view.menu.InterfaceC0093j.InterfaceC0094a
+    public C0086g getItemData() {
+        return this.f273v;
     }
 
-    public final void h() {
+    /* renamed from: h */
+    public final void m30296h() {
         boolean z = true;
-        boolean z2 = !TextUtils.isEmpty(this.w);
-        if (this.x != null && (!this.v.B() || (!this.B && !this.C))) {
+        boolean z2 = !TextUtils.isEmpty(this.f274w);
+        if (this.f275x != null && (!this.f273v.m30214B() || (!this.f268B && !this.f269C))) {
             z = false;
         }
         boolean z3 = z2 & z;
-        setText(z3 ? this.w : null);
-        CharSequence contentDescription = this.v.getContentDescription();
+        setText(z3 ? this.f274w : null);
+        CharSequence contentDescription = this.f273v.getContentDescription();
         if (TextUtils.isEmpty(contentDescription)) {
-            contentDescription = z3 ? null : this.v.getTitle();
+            contentDescription = z3 ? null : this.f273v.getTitle();
         }
         setContentDescription(contentDescription);
-        CharSequence tooltipText = this.v.getTooltipText();
+        CharSequence tooltipText = this.f273v.getTooltipText();
         if (TextUtils.isEmpty(tooltipText)) {
-            em1.a(this, z3 ? null : this.v.getTitle());
+            em1.m23375a(this, z3 ? null : this.f273v.getTitle());
         } else {
-            em1.a(this, tooltipText);
+            em1.m23375a(this, tooltipText);
         }
     }
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        e.b bVar = this.y;
-        if (bVar != null) {
-            bVar.a(this.v);
+        C0082e.InterfaceC0084b interfaceC0084b = this.f276y;
+        if (interfaceC0084b != null) {
+            interfaceC0084b.mo30097a(this.f273v);
         }
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        this.B = g();
-        h();
+        this.f268B = m30297g();
+        m30296h();
     }
 
-    @Override // com.daaw.w4, android.widget.TextView, android.view.View
+    @Override // com.daaw.C3397w4, android.widget.TextView, android.view.View
     public void onMeasure(int i, int i2) {
         int i3;
-        boolean f = f();
-        if (f && (i3 = this.E) >= 0) {
+        boolean m30298f = m30298f();
+        if (m30298f && (i3 = this.f271E) >= 0) {
             super.setPadding(i3, getPaddingTop(), getPaddingRight(), getPaddingBottom());
         }
         super.onMeasure(i, i2);
         int mode = View.MeasureSpec.getMode(i);
         int size = View.MeasureSpec.getSize(i);
         int measuredWidth = getMeasuredWidth();
-        int min = mode == Integer.MIN_VALUE ? Math.min(size, this.D) : this.D;
-        if (mode != 1073741824 && this.D > 0 && measuredWidth < min) {
+        int min = mode == Integer.MIN_VALUE ? Math.min(size, this.f270D) : this.f270D;
+        if (mode != 1073741824 && this.f270D > 0 && measuredWidth < min) {
             super.onMeasure(View.MeasureSpec.makeMeasureSpec(min, 1073741824), i2);
         }
-        if (f || this.x == null) {
+        if (m30298f || this.f275x == null) {
             return;
         }
-        super.setPadding((getMeasuredWidth() - this.x.getBounds().width()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+        super.setPadding((getMeasuredWidth() - this.f275x.getBounds().width()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -192,7 +226,7 @@ public class ActionMenuItemView extends w4 implements j.a, View.OnClickListener,
     @Override // android.widget.TextView, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
         l30 l30Var;
-        if (this.v.hasSubMenu() && (l30Var = this.z) != null && l30Var.onTouch(this, motionEvent)) {
+        if (this.f273v.hasSubMenu() && (l30Var = this.f277z) != null && l30Var.onTouch(this, motionEvent)) {
             return true;
         }
         return super.onTouchEvent(motionEvent);
@@ -205,21 +239,21 @@ public class ActionMenuItemView extends w4 implements j.a, View.OnClickListener,
     }
 
     public void setExpandedFormat(boolean z) {
-        if (this.C != z) {
-            this.C = z;
-            g gVar = this.v;
-            if (gVar != null) {
-                gVar.c();
+        if (this.f269C != z) {
+            this.f269C = z;
+            C0086g c0086g = this.f273v;
+            if (c0086g != null) {
+                c0086g.m30213c();
             }
         }
     }
 
     public void setIcon(Drawable drawable) {
-        this.x = drawable;
+        this.f275x = drawable;
         if (drawable != null) {
             int intrinsicWidth = drawable.getIntrinsicWidth();
             int intrinsicHeight = drawable.getIntrinsicHeight();
-            int i = this.F;
+            int i = this.f272F;
             if (intrinsicWidth > i) {
                 intrinsicHeight = (int) (intrinsicHeight * (i / intrinsicWidth));
                 intrinsicWidth = i;
@@ -232,25 +266,25 @@ public class ActionMenuItemView extends w4 implements j.a, View.OnClickListener,
             drawable.setBounds(0, 0, intrinsicWidth, i);
         }
         setCompoundDrawables(drawable, null, null, null);
-        h();
+        m30296h();
     }
 
-    public void setItemInvoker(e.b bVar) {
-        this.y = bVar;
+    public void setItemInvoker(C0082e.InterfaceC0084b interfaceC0084b) {
+        this.f276y = interfaceC0084b;
     }
 
     @Override // android.widget.TextView, android.view.View
     public void setPadding(int i, int i2, int i3, int i4) {
-        this.E = i;
+        this.f271E = i;
         super.setPadding(i, i2, i3, i4);
     }
 
-    public void setPopupCallback(b bVar) {
-        this.A = bVar;
+    public void setPopupCallback(AbstractC0071b abstractC0071b) {
+        this.f267A = abstractC0071b;
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.w = charSequence;
-        h();
+        this.f274w = charSequence;
+        m30296h();
     }
 }

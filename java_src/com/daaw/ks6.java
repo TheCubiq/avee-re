@@ -6,11 +6,15 @@ import android.view.MotionEvent;
 import android.view.View;
 /* loaded from: classes.dex */
 public interface ks6 {
-    String a(Context context, String str);
+    /* renamed from: a */
+    String mo7715a(Context context, String str);
 
-    void b(String str, MotionEvent motionEvent);
+    /* renamed from: b */
+    void mo7714b(String str, MotionEvent motionEvent);
 
-    String c(Context context, String str, String str2, View view, Activity activity);
+    /* renamed from: c */
+    String mo7713c(Context context, String str, String str2, View view, Activity activity);
 
-    String d(Context context, String str, View view, Activity activity);
+    /* renamed from: d */
+    String mo7712d(Context context, String str, View view, Activity activity);
 }

@@ -34,8 +34,9 @@ import javax.net.ssl.SSLParameters;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.X509ExtendedTrustManager;
-import org.conscrypt.ct.CTPolicy;
-import org.conscrypt.ct.CTVerifier;
+import org.conscrypt.p004ct.CTLogStore;
+import org.conscrypt.p004ct.CTPolicy;
+import org.conscrypt.p004ct.CTVerifier;
 /* loaded from: classes2.dex */
 public final class TrustManagerImpl extends X509ExtendedTrustManager {
     private static ConscryptHostnameVerifier defaultHostnameVerifier;
@@ -176,14 +177,159 @@ public final class TrustManagerImpl extends X509ExtendedTrustManager {
     /* JADX WARN: Removed duplicated region for block: B:39:0x008b  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public TrustManagerImpl(java.security.KeyStore r6, org.conscrypt.CertPinManager r7, org.conscrypt.ConscryptCertStore r8, org.conscrypt.CertBlocklist r9, org.conscrypt.ct.CTLogStore r10, org.conscrypt.ct.CTVerifier r11, org.conscrypt.ct.CTPolicy r12) {
-        /*
-            Method dump skipped, instructions count: 178
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.TrustManagerImpl.<init>(java.security.KeyStore, org.conscrypt.CertPinManager, org.conscrypt.ConscryptCertStore, org.conscrypt.CertBlocklist, org.conscrypt.ct.CTLogStore, org.conscrypt.ct.CTVerifier, org.conscrypt.ct.CTPolicy):void");
+    public TrustManagerImpl(KeyStore keyStore, CertPinManager certPinManager, ConscryptCertStore conscryptCertStore, CertBlocklist certBlocklist, CTLogStore cTLogStore, CTVerifier cTVerifier, CTPolicy cTPolicy) {
+        X509Certificate[] x509CertificateArr;
+        X509Certificate[] x509CertificateArr2;
+        CertPathValidator certPathValidator;
+        Exception exc;
+        CertificateFactory certificateFactory;
+        ConscryptCertStore conscryptCertStore2;
+        CertificateFactory certificateFactory2;
+        CertPathValidator certPathValidator2;
+        TrustedCertificateIndex trustedCertificateIndex;
+        TrustedCertificateIndex trustedCertificateIndex2 = null;
+        try {
+            certPathValidator2 = CertPathValidator.getInstance("PKIX");
+            try {
+                certificateFactory2 = CertificateFactory.getInstance("X509");
+                try {
+                } catch (Exception e) {
+                    e = e;
+                    keyStore = null;
+                    x509CertificateArr = null;
+                }
+            } catch (Exception e2) {
+                keyStore = null;
+                x509CertificateArr = null;
+                certPathValidator = certPathValidator2;
+                exc = e2;
+                x509CertificateArr2 = null;
+                certificateFactory = null;
+            }
+        } catch (Exception e3) {
+            keyStore = null;
+            x509CertificateArr = null;
+            x509CertificateArr2 = null;
+            certPathValidator = null;
+            exc = e3;
+            certificateFactory = null;
+        }
+        if ("AndroidCAStore".equals(keyStore.getType())) {
+            if (Platform.supportsConscryptCertStore()) {
+                if (conscryptCertStore == null) {
+                    try {
+                        conscryptCertStore = Platform.newDefaultCertStore();
+                    } catch (Exception e4) {
+                        e = e4;
+                        x509CertificateArr = null;
+                        exc = e;
+                        certificateFactory = certificateFactory2;
+                        certPathValidator = certPathValidator2;
+                        x509CertificateArr2 = x509CertificateArr;
+                        CertificateFactory certificateFactory3 = certificateFactory;
+                        conscryptCertStore2 = x509CertificateArr2;
+                        certPathValidator2 = certPathValidator;
+                        certificateFactory2 = certificateFactory3;
+                        if (certBlocklist == null) {
+                        }
+                        if (cTLogStore == null) {
+                        }
+                        if (cTPolicy == null) {
+                        }
+                        this.pinManager = certPinManager;
+                        this.rootKeyStore = keyStore;
+                        this.trustedCertificateStore = conscryptCertStore2;
+                        this.validator = certPathValidator2;
+                        this.factory = certificateFactory2;
+                        this.trustedCertificateIndex = trustedCertificateIndex2;
+                        this.intermediateIndex = new TrustedCertificateIndex();
+                        this.acceptedIssuers = x509CertificateArr;
+                        this.err = exc;
+                        this.blocklist = certBlocklist;
+                        this.ctVerifier = new CTVerifier(cTLogStore);
+                        this.ctPolicy = cTPolicy;
+                    }
+                }
+                try {
+                    trustedCertificateIndex = new TrustedCertificateIndex();
+                    conscryptCertStore2 = conscryptCertStore;
+                    x509CertificateArr = null;
+                    TrustedCertificateIndex trustedCertificateIndex3 = trustedCertificateIndex;
+                    exc = null;
+                    trustedCertificateIndex2 = trustedCertificateIndex3;
+                } catch (Exception e5) {
+                    exc = e5;
+                    certificateFactory = certificateFactory2;
+                    certPathValidator = certPathValidator2;
+                    x509CertificateArr2 = conscryptCertStore;
+                    x509CertificateArr = null;
+                    CertificateFactory certificateFactory32 = certificateFactory;
+                    conscryptCertStore2 = x509CertificateArr2;
+                    certPathValidator2 = certPathValidator;
+                    certificateFactory2 = certificateFactory32;
+                    if (certBlocklist == null) {
+                    }
+                    if (cTLogStore == null) {
+                    }
+                    if (cTPolicy == null) {
+                    }
+                    this.pinManager = certPinManager;
+                    this.rootKeyStore = keyStore;
+                    this.trustedCertificateStore = conscryptCertStore2;
+                    this.validator = certPathValidator2;
+                    this.factory = certificateFactory2;
+                    this.trustedCertificateIndex = trustedCertificateIndex2;
+                    this.intermediateIndex = new TrustedCertificateIndex();
+                    this.acceptedIssuers = x509CertificateArr;
+                    this.err = exc;
+                    this.blocklist = certBlocklist;
+                    this.ctVerifier = new CTVerifier(cTLogStore);
+                    this.ctPolicy = cTPolicy;
+                }
+                certBlocklist = certBlocklist == null ? Platform.newDefaultBlocklist() : certBlocklist;
+                cTLogStore = cTLogStore == null ? Platform.newDefaultLogStore() : cTLogStore;
+                cTPolicy = cTPolicy == null ? Platform.newDefaultPolicy(cTLogStore) : cTPolicy;
+                this.pinManager = certPinManager;
+                this.rootKeyStore = keyStore;
+                this.trustedCertificateStore = conscryptCertStore2;
+                this.validator = certPathValidator2;
+                this.factory = certificateFactory2;
+                this.trustedCertificateIndex = trustedCertificateIndex2;
+                this.intermediateIndex = new TrustedCertificateIndex();
+                this.acceptedIssuers = x509CertificateArr;
+                this.err = exc;
+                this.blocklist = certBlocklist;
+                this.ctVerifier = new CTVerifier(cTLogStore);
+                this.ctPolicy = cTPolicy;
+            }
+        }
+        X509Certificate[] acceptedIssuers = acceptedIssuers(keyStore);
+        trustedCertificateIndex = new TrustedCertificateIndex(trustAnchors(acceptedIssuers));
+        conscryptCertStore2 = conscryptCertStore;
+        x509CertificateArr = acceptedIssuers;
+        keyStore = null;
+        TrustedCertificateIndex trustedCertificateIndex32 = trustedCertificateIndex;
+        exc = null;
+        trustedCertificateIndex2 = trustedCertificateIndex32;
+        if (certBlocklist == null) {
+        }
+        if (cTLogStore == null) {
+        }
+        if (cTPolicy == null) {
+        }
+        this.pinManager = certPinManager;
+        this.rootKeyStore = keyStore;
+        this.trustedCertificateStore = conscryptCertStore2;
+        this.validator = certPathValidator2;
+        this.factory = certificateFactory2;
+        this.trustedCertificateIndex = trustedCertificateIndex2;
+        this.intermediateIndex = new TrustedCertificateIndex();
+        this.acceptedIssuers = x509CertificateArr;
+        this.err = exc;
+        this.blocklist = certBlocklist;
+        this.ctVerifier = new CTVerifier(cTLogStore);
+        this.ctPolicy = cTPolicy;
     }
 
     private static X509Certificate[] acceptedIssuers(KeyStore keyStore) {

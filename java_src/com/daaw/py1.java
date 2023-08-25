@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface py1 {
-    void a(sn1 sn1Var, int i);
+    /* renamed from: a */
+    void mo7556a(sn1 sn1Var, int i);
 
-    void b(sn1 sn1Var, int i, boolean z);
+    /* renamed from: b */
+    void mo7555b(sn1 sn1Var, int i, boolean z);
 }

@@ -9,46 +9,72 @@ import com.daaw.ki1;
 import java.io.File;
 /* loaded from: classes.dex */
 public class k40 implements ki1 {
-    public final Context p;
-    public final String q;
-    public final ki1.a r;
-    public final boolean s;
-    public final Object t = new Object();
-    public a u;
-    public boolean v;
 
+    /* renamed from: p */
+    public final Context f15645p;
+
+    /* renamed from: q */
+    public final String f15646q;
+
+    /* renamed from: r */
+    public final ki1.AbstractC1949a f15647r;
+
+    /* renamed from: s */
+    public final boolean f15648s;
+
+    /* renamed from: t */
+    public final Object f15649t = new Object();
+
+    /* renamed from: u */
+    public C1910a f15650u;
+
+    /* renamed from: v */
+    public boolean f15651v;
+
+    /* renamed from: com.daaw.k40$a */
     /* loaded from: classes.dex */
-    public static class a extends SQLiteOpenHelper {
-        public final j40[] p;
-        public final ki1.a q;
-        public boolean r;
+    public static class C1910a extends SQLiteOpenHelper {
 
-        /* renamed from: com.daaw.k40$a$a  reason: collision with other inner class name */
+        /* renamed from: p */
+        public final j40[] f15652p;
+
+        /* renamed from: q */
+        public final ki1.AbstractC1949a f15653q;
+
+        /* renamed from: r */
+        public boolean f15654r;
+
+        /* renamed from: com.daaw.k40$a$a */
         /* loaded from: classes.dex */
-        public class C0059a implements DatabaseErrorHandler {
-            public final /* synthetic */ ki1.a a;
-            public final /* synthetic */ j40[] b;
+        public class C1911a implements DatabaseErrorHandler {
 
-            public C0059a(ki1.a aVar, j40[] j40VarArr) {
-                this.a = aVar;
-                this.b = j40VarArr;
+            /* renamed from: a */
+            public final /* synthetic */ ki1.AbstractC1949a f15655a;
+
+            /* renamed from: b */
+            public final /* synthetic */ j40[] f15656b;
+
+            public C1911a(ki1.AbstractC1949a abstractC1949a, j40[] j40VarArr) {
+                this.f15655a = abstractC1949a;
+                this.f15656b = j40VarArr;
             }
 
             @Override // android.database.DatabaseErrorHandler
             public void onCorruption(SQLiteDatabase sQLiteDatabase) {
-                this.a.c(a.n(this.b, sQLiteDatabase));
+                this.f15655a.m17728c(C1910a.m18054n(this.f15656b, sQLiteDatabase));
             }
         }
 
-        public a(Context context, String str, j40[] j40VarArr, ki1.a aVar) {
-            super(context, str, null, aVar.a, new C0059a(aVar, j40VarArr));
-            this.q = aVar;
-            this.p = j40VarArr;
+        public C1910a(Context context, String str, j40[] j40VarArr, ki1.AbstractC1949a abstractC1949a) {
+            super(context, str, null, abstractC1949a.f16393a, new C1911a(abstractC1949a, j40VarArr));
+            this.f15653q = abstractC1949a;
+            this.f15652p = j40VarArr;
         }
 
-        public static j40 n(j40[] j40VarArr, SQLiteDatabase sQLiteDatabase) {
+        /* renamed from: n */
+        public static j40 m18054n(j40[] j40VarArr, SQLiteDatabase sQLiteDatabase) {
             j40 j40Var = j40VarArr[0];
-            if (j40Var == null || !j40Var.d(sQLiteDatabase)) {
+            if (j40Var == null || !j40Var.m19091d(sQLiteDatabase)) {
                 j40VarArr[0] = new j40(sQLiteDatabase);
             }
             return j40VarArr[0];
@@ -57,101 +83,105 @@ public class k40 implements ki1 {
         @Override // android.database.sqlite.SQLiteOpenHelper, java.lang.AutoCloseable
         public synchronized void close() {
             super.close();
-            this.p[0] = null;
+            this.f15652p[0] = null;
         }
 
-        public j40 d(SQLiteDatabase sQLiteDatabase) {
-            return n(this.p, sQLiteDatabase);
+        /* renamed from: d */
+        public j40 m18055d(SQLiteDatabase sQLiteDatabase) {
+            return m18054n(this.f15652p, sQLiteDatabase);
         }
 
         @Override // android.database.sqlite.SQLiteOpenHelper
         public void onConfigure(SQLiteDatabase sQLiteDatabase) {
-            this.q.b(d(sQLiteDatabase));
+            this.f15653q.mo17729b(m18055d(sQLiteDatabase));
         }
 
         @Override // android.database.sqlite.SQLiteOpenHelper
         public void onCreate(SQLiteDatabase sQLiteDatabase) {
-            this.q.d(d(sQLiteDatabase));
+            this.f15653q.mo17727d(m18055d(sQLiteDatabase));
         }
 
         @Override // android.database.sqlite.SQLiteOpenHelper
         public void onDowngrade(SQLiteDatabase sQLiteDatabase, int i, int i2) {
-            this.r = true;
-            this.q.e(d(sQLiteDatabase), i, i2);
+            this.f15654r = true;
+            this.f15653q.mo17726e(m18055d(sQLiteDatabase), i, i2);
         }
 
         @Override // android.database.sqlite.SQLiteOpenHelper
         public void onOpen(SQLiteDatabase sQLiteDatabase) {
-            if (this.r) {
+            if (this.f15654r) {
                 return;
             }
-            this.q.f(d(sQLiteDatabase));
+            this.f15653q.mo17725f(m18055d(sQLiteDatabase));
         }
 
         @Override // android.database.sqlite.SQLiteOpenHelper
         public void onUpgrade(SQLiteDatabase sQLiteDatabase, int i, int i2) {
-            this.r = true;
-            this.q.g(d(sQLiteDatabase), i, i2);
+            this.f15654r = true;
+            this.f15653q.mo17724g(m18055d(sQLiteDatabase), i, i2);
         }
 
-        public synchronized ji1 q() {
-            this.r = false;
+        /* renamed from: q */
+        public synchronized ji1 m18053q() {
+            this.f15654r = false;
             SQLiteDatabase writableDatabase = super.getWritableDatabase();
-            if (!this.r) {
-                return d(writableDatabase);
+            if (!this.f15654r) {
+                return m18055d(writableDatabase);
             }
             close();
-            return q();
+            return m18053q();
         }
     }
 
-    public k40(Context context, String str, ki1.a aVar, boolean z) {
-        this.p = context;
-        this.q = str;
-        this.r = aVar;
-        this.s = z;
+    public k40(Context context, String str, ki1.AbstractC1949a abstractC1949a, boolean z) {
+        this.f15645p = context;
+        this.f15646q = str;
+        this.f15647r = abstractC1949a;
+        this.f15648s = z;
     }
 
     @Override // com.daaw.ki1
-    public ji1 A() {
-        return d().q();
+    /* renamed from: A */
+    public ji1 mo14533A() {
+        return m18056d().m18053q();
     }
 
     @Override // com.daaw.ki1, java.io.Closeable, java.lang.AutoCloseable
     public void close() {
-        d().close();
+        m18056d().close();
     }
 
-    public final a d() {
-        a aVar;
-        synchronized (this.t) {
-            if (this.u == null) {
+    /* renamed from: d */
+    public final C1910a m18056d() {
+        C1910a c1910a;
+        synchronized (this.f15649t) {
+            if (this.f15650u == null) {
                 j40[] j40VarArr = new j40[1];
-                if (Build.VERSION.SDK_INT < 23 || this.q == null || !this.s) {
-                    this.u = new a(this.p, this.q, j40VarArr, this.r);
+                if (Build.VERSION.SDK_INT < 23 || this.f15646q == null || !this.f15648s) {
+                    this.f15650u = new C1910a(this.f15645p, this.f15646q, j40VarArr, this.f15647r);
                 } else {
-                    this.u = new a(this.p, new File(this.p.getNoBackupFilesDir(), this.q).getAbsolutePath(), j40VarArr, this.r);
+                    this.f15650u = new C1910a(this.f15645p, new File(this.f15645p.getNoBackupFilesDir(), this.f15646q).getAbsolutePath(), j40VarArr, this.f15647r);
                 }
-                this.u.setWriteAheadLoggingEnabled(this.v);
+                this.f15650u.setWriteAheadLoggingEnabled(this.f15651v);
             }
-            aVar = this.u;
+            c1910a = this.f15650u;
         }
-        return aVar;
+        return c1910a;
     }
 
     @Override // com.daaw.ki1
     public String getDatabaseName() {
-        return this.q;
+        return this.f15646q;
     }
 
     @Override // com.daaw.ki1
     public void setWriteAheadLoggingEnabled(boolean z) {
-        synchronized (this.t) {
-            a aVar = this.u;
-            if (aVar != null) {
-                aVar.setWriteAheadLoggingEnabled(z);
+        synchronized (this.f15649t) {
+            C1910a c1910a = this.f15650u;
+            if (c1910a != null) {
+                c1910a.setWriteAheadLoggingEnabled(z);
             }
-            this.v = z;
+            this.f15651v = z;
         }
     }
 }

@@ -13,15 +13,27 @@ import com.daaw.x21;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
 public final class ViewStubCompat extends View {
-    public int p;
-    public int q;
-    public WeakReference<View> r;
-    public LayoutInflater s;
-    public a t;
 
+    /* renamed from: p */
+    public int f799p;
+
+    /* renamed from: q */
+    public int f800q;
+
+    /* renamed from: r */
+    public WeakReference<View> f801r;
+
+    /* renamed from: s */
+    public LayoutInflater f802s;
+
+    /* renamed from: t */
+    public InterfaceC0161a f803t;
+
+    /* renamed from: androidx.appcompat.widget.ViewStubCompat$a */
     /* loaded from: classes.dex */
-    public interface a {
-        void a(ViewStubCompat viewStubCompat, View view);
+    public interface InterfaceC0161a {
+        /* renamed from: a */
+        void m29940a(ViewStubCompat viewStubCompat, View view);
     }
 
     public ViewStubCompat(Context context, AttributeSet attributeSet) {
@@ -30,27 +42,28 @@ public final class ViewStubCompat extends View {
 
     public ViewStubCompat(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.p = 0;
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, x21.Q3, i, 0);
-        this.q = obtainStyledAttributes.getResourceId(x21.T3, -1);
-        this.p = obtainStyledAttributes.getResourceId(x21.S3, 0);
-        setId(obtainStyledAttributes.getResourceId(x21.R3, -1));
+        this.f799p = 0;
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, x21.f31842Q3, i, 0);
+        this.f800q = obtainStyledAttributes.getResourceId(x21.f31857T3, -1);
+        this.f799p = obtainStyledAttributes.getResourceId(x21.f31852S3, 0);
+        setId(obtainStyledAttributes.getResourceId(x21.f31847R3, -1));
         obtainStyledAttributes.recycle();
         setVisibility(8);
         setWillNotDraw(true);
     }
 
-    public View a() {
+    /* renamed from: a */
+    public View m29941a() {
         ViewParent parent = getParent();
         if (parent instanceof ViewGroup) {
-            if (this.p != 0) {
+            if (this.f799p != 0) {
                 ViewGroup viewGroup = (ViewGroup) parent;
-                LayoutInflater layoutInflater = this.s;
+                LayoutInflater layoutInflater = this.f802s;
                 if (layoutInflater == null) {
                     layoutInflater = LayoutInflater.from(getContext());
                 }
-                View inflate = layoutInflater.inflate(this.p, viewGroup, false);
-                int i = this.q;
+                View inflate = layoutInflater.inflate(this.f799p, viewGroup, false);
+                int i = this.f800q;
                 if (i != -1) {
                     inflate.setId(i);
                 }
@@ -62,10 +75,10 @@ public final class ViewStubCompat extends View {
                 } else {
                     viewGroup.addView(inflate, indexOfChild);
                 }
-                this.r = new WeakReference<>(inflate);
-                a aVar = this.t;
-                if (aVar != null) {
-                    aVar.a(this, inflate);
+                this.f801r = new WeakReference<>(inflate);
+                InterfaceC0161a interfaceC0161a = this.f803t;
+                if (interfaceC0161a != null) {
+                    interfaceC0161a.m29940a(this, inflate);
                 }
                 return inflate;
             }
@@ -84,15 +97,15 @@ public final class ViewStubCompat extends View {
     }
 
     public int getInflatedId() {
-        return this.q;
+        return this.f800q;
     }
 
     public LayoutInflater getLayoutInflater() {
-        return this.s;
+        return this.f802s;
     }
 
     public int getLayoutResource() {
-        return this.p;
+        return this.f799p;
     }
 
     @Override // android.view.View
@@ -101,24 +114,24 @@ public final class ViewStubCompat extends View {
     }
 
     public void setInflatedId(int i) {
-        this.q = i;
+        this.f800q = i;
     }
 
     public void setLayoutInflater(LayoutInflater layoutInflater) {
-        this.s = layoutInflater;
+        this.f802s = layoutInflater;
     }
 
     public void setLayoutResource(int i) {
-        this.p = i;
+        this.f799p = i;
     }
 
-    public void setOnInflateListener(a aVar) {
-        this.t = aVar;
+    public void setOnInflateListener(InterfaceC0161a interfaceC0161a) {
+        this.f803t = interfaceC0161a;
     }
 
     @Override // android.view.View
     public void setVisibility(int i) {
-        WeakReference<View> weakReference = this.r;
+        WeakReference<View> weakReference = this.f801r;
         if (weakReference != null) {
             View view = weakReference.get();
             if (view == null) {
@@ -129,7 +142,7 @@ public final class ViewStubCompat extends View {
         }
         super.setVisibility(i);
         if (i == 0 || i == 4) {
-            a();
+            m29941a();
         }
     }
 }

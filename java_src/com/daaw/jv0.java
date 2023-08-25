@@ -1,30 +1,35 @@
 package com.daaw;
 /* loaded from: classes2.dex */
-public final class jv0 implements qf {
-    public final Class<?> a;
-    public final String b;
+public final class jv0 implements InterfaceC2710qf {
+
+    /* renamed from: a */
+    public final Class<?> f15439a;
+
+    /* renamed from: b */
+    public final String f15440b;
 
     public jv0(Class<?> cls, String str) {
-        ug0.f(cls, "jClass");
-        ug0.f(str, "moduleName");
-        this.a = cls;
-        this.b = str;
+        ug0.m8268f(cls, "jClass");
+        ug0.m8268f(str, "moduleName");
+        this.f15439a = cls;
+        this.f15440b = str;
     }
 
-    @Override // com.daaw.qf
-    public Class<?> a() {
-        return this.a;
+    @Override // com.daaw.InterfaceC2710qf
+    /* renamed from: a */
+    public Class<?> mo11353a() {
+        return this.f15439a;
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof jv0) && ug0.a(a(), ((jv0) obj).a());
+        return (obj instanceof jv0) && ug0.m8273a(mo11353a(), ((jv0) obj).mo11353a());
     }
 
     public int hashCode() {
-        return a().hashCode();
+        return mo11353a().hashCode();
     }
 
     public String toString() {
-        return a().toString() + " (Kotlin reflection is not available)";
+        return mo11353a().toString() + " (Kotlin reflection is not available)";
     }
 }

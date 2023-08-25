@@ -2,18 +2,25 @@ package com.google.android.exoplayer2.source;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.daaw.s6;
+import com.daaw.C2914s6;
 import com.google.android.exoplayer2.Format;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class TrackGroup implements Parcelable {
-    public static final Parcelable.Creator<TrackGroup> CREATOR = new a();
-    public final int p;
-    public final Format[] q;
-    public int r;
+    public static final Parcelable.Creator<TrackGroup> CREATOR = new C3960a();
 
+    /* renamed from: p */
+    public final int f35844p;
+
+    /* renamed from: q */
+    public final Format[] f35845q;
+
+    /* renamed from: r */
+    public int f35846r;
+
+    /* renamed from: com.google.android.exoplayer2.source.TrackGroup$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<TrackGroup> {
+    public static class C3960a implements Parcelable.Creator<TrackGroup> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public TrackGroup createFromParcel(Parcel parcel) {
@@ -29,27 +36,29 @@ public final class TrackGroup implements Parcelable {
 
     public TrackGroup(Parcel parcel) {
         int readInt = parcel.readInt();
-        this.p = readInt;
-        this.q = new Format[readInt];
-        for (int i = 0; i < this.p; i++) {
-            this.q[i] = (Format) parcel.readParcelable(Format.class.getClassLoader());
+        this.f35844p = readInt;
+        this.f35845q = new Format[readInt];
+        for (int i = 0; i < this.f35844p; i++) {
+            this.f35845q[i] = (Format) parcel.readParcelable(Format.class.getClassLoader());
         }
     }
 
     public TrackGroup(Format... formatArr) {
-        s6.f(formatArr.length > 0);
-        this.q = formatArr;
-        this.p = formatArr.length;
+        C2914s6.m10685f(formatArr.length > 0);
+        this.f35845q = formatArr;
+        this.f35844p = formatArr.length;
     }
 
-    public Format a(int i) {
-        return this.q[i];
+    /* renamed from: a */
+    public Format m1598a(int i) {
+        return this.f35845q[i];
     }
 
-    public int b(Format format) {
+    /* renamed from: b */
+    public int m1597b(Format format) {
         int i = 0;
         while (true) {
-            Format[] formatArr = this.q;
+            Format[] formatArr = this.f35845q;
             if (i >= formatArr.length) {
                 return -1;
             }
@@ -73,21 +82,21 @@ public final class TrackGroup implements Parcelable {
             return false;
         }
         TrackGroup trackGroup = (TrackGroup) obj;
-        return this.p == trackGroup.p && Arrays.equals(this.q, trackGroup.q);
+        return this.f35844p == trackGroup.f35844p && Arrays.equals(this.f35845q, trackGroup.f35845q);
     }
 
     public int hashCode() {
-        if (this.r == 0) {
-            this.r = 527 + Arrays.hashCode(this.q);
+        if (this.f35846r == 0) {
+            this.f35846r = 527 + Arrays.hashCode(this.f35845q);
         }
-        return this.r;
+        return this.f35846r;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.p);
-        for (int i2 = 0; i2 < this.p; i2++) {
-            parcel.writeParcelable(this.q[i2], 0);
+        parcel.writeInt(this.f35844p);
+        for (int i2 = 0; i2 < this.f35844p; i2++) {
+            parcel.writeParcelable(this.f35845q[i2], 0);
         }
     }
 }

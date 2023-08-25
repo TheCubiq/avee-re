@@ -1,7 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class kq2 {
-    public Object a;
-    public Object b;
-    public long c;
+
+    /* renamed from: a */
+    public Object f16694a;
+
+    /* renamed from: b */
+    public Object f16695b;
+
+    /* renamed from: c */
+    public long f16696c;
 }

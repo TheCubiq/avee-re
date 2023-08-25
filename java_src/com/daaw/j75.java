@@ -6,59 +6,72 @@ import java.util.Map;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public final class j75 {
-    public final Executor a;
-    public final nh4 b;
-    public final ny4 c;
+
+    /* renamed from: a */
+    public final Executor f14495a;
+
+    /* renamed from: b */
+    public final nh4 f14496b;
+
+    /* renamed from: c */
+    public final ny4 f14497c;
 
     public j75(Executor executor, nh4 nh4Var, ny4 ny4Var) {
-        this.a = executor;
-        this.c = ny4Var;
-        this.b = nh4Var;
+        this.f14495a = executor;
+        this.f14497c = ny4Var;
+        this.f14496b = nh4Var;
     }
 
-    public final void a(final a74 a74Var) {
+    /* renamed from: a */
+    public final void m18762a(final a74 a74Var) {
         if (a74Var == null) {
             return;
         }
-        this.c.C0(a74Var.g());
-        this.c.n0(new q03() { // from class: com.daaw.f75
+        this.f14497c.m14720C0(a74Var.mo6418g());
+        this.f14497c.m17376n0(new q03() { // from class: com.daaw.f75
             @Override // com.daaw.q03
-            public final void e0(p03 p03Var) {
+            /* renamed from: e0 */
+            public final void mo6420e0(p03 p03Var) {
                 t84 zzP = a74.this.zzP();
-                Rect rect = p03Var.d;
-                zzP.G(rect.left, rect.top, false);
+                Rect rect = p03Var.f22179d;
+                zzP.mo9453G(rect.left, rect.top, false);
             }
-        }, this.a);
-        this.c.n0(new q03() { // from class: com.daaw.g75
+        }, this.f14495a);
+        this.f14497c.m17376n0(new q03() { // from class: com.daaw.g75
             @Override // com.daaw.q03
-            public final void e0(p03 p03Var) {
+            /* renamed from: e0 */
+            public final void mo6420e0(p03 p03Var) {
                 a74 a74Var2 = a74.this;
                 HashMap hashMap = new HashMap();
-                hashMap.put("isVisible", true != p03Var.j ? "0" : "1");
-                a74Var2.T("onAdVisibilityChanged", hashMap);
+                hashMap.put("isVisible", true != p03Var.f22185j ? "0" : "1");
+                a74Var2.mo6434T("onAdVisibilityChanged", hashMap);
             }
-        }, this.a);
-        this.c.n0(this.b, this.a);
-        this.b.k(a74Var);
-        a74Var.y("/trackActiveViewUnit", new zg3() { // from class: com.daaw.h75
+        }, this.f14495a);
+        this.f14497c.m17376n0(this.f14496b, this.f14495a);
+        this.f14496b.m15170k(a74Var);
+        a74Var.mo6392y("/trackActiveViewUnit", new zg3() { // from class: com.daaw.h75
             @Override // com.daaw.zg3
-            public final void a(Object obj, Map map) {
-                j75.this.b((a74) obj, map);
+            /* renamed from: a */
+            public final void mo2341a(Object obj, Map map) {
+                j75.this.m18761b((a74) obj, map);
             }
         });
-        a74Var.y("/untrackActiveViewUnit", new zg3() { // from class: com.daaw.i75
+        a74Var.mo6392y("/untrackActiveViewUnit", new zg3() { // from class: com.daaw.i75
             @Override // com.daaw.zg3
-            public final void a(Object obj, Map map) {
-                j75.this.c((a74) obj, map);
+            /* renamed from: a */
+            public final void mo2341a(Object obj, Map map) {
+                j75.this.m18760c((a74) obj, map);
             }
         });
     }
 
-    public final /* synthetic */ void b(a74 a74Var, Map map) {
-        this.b.c();
+    /* renamed from: b */
+    public final /* synthetic */ void m18761b(a74 a74Var, Map map) {
+        this.f14496b.m15173c();
     }
 
-    public final /* synthetic */ void c(a74 a74Var, Map map) {
-        this.b.b();
+    /* renamed from: c */
+    public final /* synthetic */ void m18760c(a74 a74Var, Map map) {
+        this.f14496b.m15174b();
     }
 }

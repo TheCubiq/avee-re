@@ -23,26 +23,41 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class zzaw {
-    public final Object a = new Object();
-    @GuardedBy("lock")
-    public String b = "";
-    @GuardedBy("lock")
-    public String c = "";
-    @GuardedBy("lock")
-    public boolean d = false;
-    @GuardedBy("lock")
-    public boolean e = false;
-    public String f = "";
-    public dh5 g;
 
-    public static final String c(Context context, String str, String str2) {
+    /* renamed from: a */
+    public final Object f36255a = new Object();
+    @GuardedBy("lock")
+
+    /* renamed from: b */
+    public String f36256b = "";
+    @GuardedBy("lock")
+
+    /* renamed from: c */
+    public String f36257c = "";
+    @GuardedBy("lock")
+
+    /* renamed from: d */
+    public boolean f36258d = false;
+    @GuardedBy("lock")
+
+    /* renamed from: e */
+    public boolean f36259e = false;
+
+    /* renamed from: f */
+    public String f36260f = "";
+
+    /* renamed from: g */
+    public dh5 f36261g;
+
+    /* renamed from: c */
+    public static final String m1355c(Context context, String str, String str2) {
         String valueOf;
         String str3;
         HashMap hashMap = new HashMap();
         hashMap.put("User-Agent", com.google.android.gms.ads.internal.zzt.zzp().zzc(context, str2));
         f77 zzb = new zzbo(context).zzb(0, str, hashMap, null);
         try {
-            return (String) zzb.get(((Integer) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.l4)).intValue(), TimeUnit.MILLISECONDS);
+            return (String) zzb.get(((Integer) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10747l4)).intValue(), TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {
             e = e;
             valueOf = String.valueOf(str);
@@ -63,7 +78,8 @@ public final class zzaw {
         }
     }
 
-    public final void a(Context context, String str, boolean z, boolean z2) {
+    /* renamed from: a */
+    public final void m1357a(Context context, String str, boolean z, boolean z2) {
         if (context instanceof Activity) {
             zzs.zza.post(new es2(this, context, str, z, z2));
         } else {
@@ -73,104 +89,68 @@ public final class zzaw {
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x0074  */
     /* JADX WARN: Removed duplicated region for block: B:19:0x0075  */
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final boolean b(android.content.Context r4, java.lang.String r5, java.lang.String r6) {
-        /*
-            r3 = this;
-            com.daaw.y83 r0 = com.daaw.g93.i4
-            com.daaw.e93 r1 = com.google.android.gms.ads.internal.client.zzba.zzc()
-            java.lang.Object r0 = r1.b(r0)
-            java.lang.String r0 = (java.lang.String) r0
-            android.net.Uri r0 = r3.d(r4, r0, r5, r6)
-            java.lang.String r0 = r0.toString()
-            java.lang.String r4 = c(r4, r0, r6)
-            boolean r6 = android.text.TextUtils.isEmpty(r4)
-            r0 = 0
-            if (r6 == 0) goto L25
-            java.lang.String r4 = "Not linked for in app preview."
-            com.daaw.k04.zze(r4)
-            return r0
-        L25:
-            java.lang.String r4 = r4.trim()
-            org.json.JSONObject r6 = new org.json.JSONObject     // Catch: org.json.JSONException -> L84
-            r6.<init>(r4)     // Catch: org.json.JSONException -> L84
-            java.lang.String r4 = "gct"
-            java.lang.String r4 = r6.optString(r4)     // Catch: org.json.JSONException -> L84
-            java.lang.String r1 = "status"
-            java.lang.String r6 = r6.optString(r1)     // Catch: org.json.JSONException -> L84
-            r3.f = r6     // Catch: org.json.JSONException -> L84
-            com.daaw.y83 r6 = com.daaw.g93.m8     // Catch: org.json.JSONException -> L84
-            com.daaw.e93 r1 = com.google.android.gms.ads.internal.client.zzba.zzc()     // Catch: org.json.JSONException -> L84
-            java.lang.Object r6 = r1.b(r6)     // Catch: org.json.JSONException -> L84
-            java.lang.Boolean r6 = (java.lang.Boolean) r6     // Catch: org.json.JSONException -> L84
-            boolean r6 = r6.booleanValue()     // Catch: org.json.JSONException -> L84
-            r1 = 1
-            if (r6 == 0) goto L7a
-            java.lang.String r6 = "0"
-            java.lang.String r2 = r3.f     // Catch: org.json.JSONException -> L84
-            boolean r6 = r6.equals(r2)     // Catch: org.json.JSONException -> L84
-            if (r6 != 0) goto L66
-            java.lang.String r6 = "2"
-            java.lang.String r2 = r3.f     // Catch: org.json.JSONException -> L84
-            boolean r6 = r6.equals(r2)     // Catch: org.json.JSONException -> L84
-            if (r6 == 0) goto L64
-            goto L66
-        L64:
-            r6 = 0
-            goto L67
-        L66:
-            r6 = 1
-        L67:
-            r3.zzf(r6)     // Catch: org.json.JSONException -> L84
-            com.daaw.qz3 r2 = com.google.android.gms.ads.internal.zzt.zzo()     // Catch: org.json.JSONException -> L84
-            com.google.android.gms.ads.internal.util.zzg r2 = r2.h()     // Catch: org.json.JSONException -> L84
-            if (r6 == 0) goto L75
-            goto L77
-        L75:
-            java.lang.String r5 = ""
-        L77:
-            r2.zzA(r5)     // Catch: org.json.JSONException -> L84
-        L7a:
-            java.lang.Object r5 = r3.a
-            monitor-enter(r5)
-            r3.c = r4     // Catch: java.lang.Throwable -> L81
-            monitor-exit(r5)     // Catch: java.lang.Throwable -> L81
-            return r1
-        L81:
-            r4 = move-exception
-            monitor-exit(r5)     // Catch: java.lang.Throwable -> L81
-            throw r4
-        L84:
-            r4 = move-exception
-            java.lang.String r5 = "Fail to get in app preview response json."
-            com.daaw.k04.zzk(r5, r4)
-            return r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.ads.internal.util.zzaw.b(android.content.Context, java.lang.String, java.lang.String):boolean");
+    public final boolean m1356b(Context context, String str, String str2) {
+        boolean z;
+        String m1355c = m1355c(context, m1354d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10714i4), str, str2).toString(), str2);
+        if (TextUtils.isEmpty(m1355c)) {
+            k04.zze("Not linked for in app preview.");
+            return false;
+        }
+        try {
+            JSONObject jSONObject = new JSONObject(m1355c.trim());
+            String optString = jSONObject.optString("gct");
+            this.f36260f = jSONObject.optString("status");
+            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+                if (!"0".equals(this.f36260f) && !"2".equals(this.f36260f)) {
+                    z = false;
+                    zzf(z);
+                    zzg m11915h = com.google.android.gms.ads.internal.zzt.zzo().m11915h();
+                    if (z) {
+                        str = "";
+                    }
+                    m11915h.zzA(str);
+                }
+                z = true;
+                zzf(z);
+                zzg m11915h2 = com.google.android.gms.ads.internal.zzt.zzo().m11915h();
+                if (z) {
+                }
+                m11915h2.zzA(str);
+            }
+            synchronized (this.f36255a) {
+                this.f36257c = optString;
+            }
+            return true;
+        } catch (JSONException e) {
+            k04.zzk("Fail to get in app preview response json.", e);
+            return false;
+        }
     }
 
-    public final Uri d(Context context, String str, String str2, String str3) {
+    /* renamed from: d */
+    public final Uri m1354d(Context context, String str, String str2, String str3) {
         String str4;
         String str5;
         Uri.Builder buildUpon = Uri.parse(str).buildUpon();
-        synchronized (this.a) {
-            if (TextUtils.isEmpty(this.b)) {
+        synchronized (this.f36255a) {
+            if (TextUtils.isEmpty(this.f36256b)) {
                 com.google.android.gms.ads.internal.zzt.zzp();
                 try {
-                    str5 = new String(xd0.d(context.openFileInput("debug_signals_id.txt"), true), "UTF-8");
+                    str5 = new String(xd0.m5224d(context.openFileInput("debug_signals_id.txt"), true), "UTF-8");
                 } catch (IOException unused) {
                     k04.zze("Error reading from internal storage.");
                     str5 = "";
                 }
-                this.b = str5;
+                this.f36256b = str5;
                 if (TextUtils.isEmpty(str5)) {
                     com.google.android.gms.ads.internal.zzt.zzp();
-                    this.b = UUID.randomUUID().toString();
+                    this.f36256b = UUID.randomUUID().toString();
                     com.google.android.gms.ads.internal.zzt.zzp();
-                    String str6 = this.b;
+                    String str6 = this.f36256b;
                     try {
                         FileOutputStream openFileOutput = context.openFileOutput("debug_signals_id.txt", 0);
                         openFileOutput.write(str6.getBytes("UTF-8"));
@@ -180,7 +160,7 @@ public final class zzaw {
                     }
                 }
             }
-            str4 = this.b;
+            str4 = this.f36256b;
         }
         buildUpon.appendQueryParameter("linkedDeviceId", str4);
         buildUpon.appendQueryParameter("adSlotPath", str2);
@@ -189,75 +169,75 @@ public final class zzaw {
     }
 
     public final dh5 zza() {
-        return this.g;
+        return this.f36261g;
     }
 
     public final String zzb() {
         String str;
-        synchronized (this.a) {
-            str = this.c;
+        synchronized (this.f36255a) {
+            str = this.f36257c;
         }
         return str;
     }
 
     public final void zzc(Context context) {
         dh5 dh5Var;
-        if (!((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.m8)).booleanValue() || (dh5Var = this.g) == null) {
+        if (!((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10762m8)).booleanValue() || (dh5Var = this.f36261g) == null) {
             return;
         }
-        dh5Var.h(new yp2(this, context), ch5.DEBUG_MENU);
+        dh5Var.m24403h(new yp2(this, context), ch5.DEBUG_MENU);
     }
 
     public final void zzd(Context context, String str, String str2) {
         com.google.android.gms.ads.internal.zzt.zzp();
-        zzs.zzR(context, d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.h4), str, str2));
+        zzs.zzR(context, m1354d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10703h4), str, str2));
     }
 
     public final void zze(Context context, String str, String str2, String str3) {
-        Uri.Builder buildUpon = d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.k4), str3, str).buildUpon();
+        Uri.Builder buildUpon = m1354d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10736k4), str3, str).buildUpon();
         buildUpon.appendQueryParameter("debugData", str2);
         com.google.android.gms.ads.internal.zzt.zzp();
         zzs.zzH(context, str, buildUpon.build().toString());
     }
 
     public final void zzf(boolean z) {
-        synchronized (this.a) {
-            this.e = z;
-            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.m8)).booleanValue()) {
-                com.google.android.gms.ads.internal.zzt.zzo().h().zzB(z);
-                dh5 dh5Var = this.g;
+        synchronized (this.f36255a) {
+            this.f36259e = z;
+            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+                com.google.android.gms.ads.internal.zzt.zzo().m11915h().zzB(z);
+                dh5 dh5Var = this.f36261g;
                 if (dh5Var != null) {
-                    dh5Var.j(z);
+                    dh5Var.m24401j(z);
                 }
             }
         }
     }
 
     public final void zzg(dh5 dh5Var) {
-        this.g = dh5Var;
+        this.f36261g = dh5Var;
     }
 
     public final void zzh(boolean z) {
-        synchronized (this.a) {
-            this.d = z;
+        synchronized (this.f36255a) {
+            this.f36258d = z;
         }
     }
 
     public final boolean zzj(Context context, String str, String str2) {
-        String c = c(context, d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.j4), str, str2).toString(), str2);
-        if (TextUtils.isEmpty(c)) {
+        String m1355c = m1355c(context, m1354d(context, (String) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10725j4), str, str2).toString(), str2);
+        if (TextUtils.isEmpty(m1355c)) {
             k04.zze("Not linked for debug signals.");
             return false;
         }
         try {
-            boolean equals = "1".equals(new JSONObject(c.trim()).optString("debug_mode"));
+            boolean equals = "1".equals(new JSONObject(m1355c.trim()).optString("debug_mode"));
             zzf(equals);
-            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.m8)).booleanValue()) {
-                zzg h = com.google.android.gms.ads.internal.zzt.zzo().h();
+            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+                zzg m11915h = com.google.android.gms.ads.internal.zzt.zzo().m11915h();
                 if (true != equals) {
                     str = "";
                 }
-                h.zzA(str);
+                m11915h.zzA(str);
             }
             return equals;
         } catch (JSONException e) {
@@ -268,16 +248,16 @@ public final class zzaw {
 
     public final boolean zzl() {
         boolean z;
-        synchronized (this.a) {
-            z = this.e;
+        synchronized (this.f36255a) {
+            z = this.f36259e;
         }
         return z;
     }
 
     public final boolean zzm() {
         boolean z;
-        synchronized (this.a) {
-            z = this.d;
+        synchronized (this.f36255a) {
+            z = this.f36258d;
         }
         return z;
     }

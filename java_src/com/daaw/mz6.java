@@ -12,12 +12,14 @@ public class mz6 extends g07 implements m27 {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // com.daaw.g07
-    public final Collection i(Collection collection) {
+    /* renamed from: i */
+    public final Collection mo15651i(Collection collection) {
         return Collections.unmodifiableList(collection);
     }
 
     @Override // com.daaw.g07
-    public final Collection j(Object obj, Collection collection) {
-        return o(obj, (List) collection, null);
+    /* renamed from: j */
+    public final Collection mo15650j(Object obj, Collection collection) {
+        return m22110o(obj, (List) collection, null);
     }
 }

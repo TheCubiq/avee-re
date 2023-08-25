@@ -4,14 +4,17 @@ import android.text.TextUtils;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class u74 implements zg3 {
-    public final /* synthetic */ w74 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ w74 f28763a;
 
     public u74(w74 w74Var) {
-        this.a = w74Var;
+        this.f28763a = w74Var;
     }
 
     @Override // com.daaw.zg3
-    public final /* bridge */ /* synthetic */ void a(Object obj, Map map) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ void mo2341a(Object obj, Map map) {
         int i;
         a74 a74Var = (a74) obj;
         if (map != null) {
@@ -21,12 +24,12 @@ public final class u74 implements zg3 {
             }
             try {
                 int parseInt = Integer.parseInt(str);
-                synchronized (this.a) {
-                    w74 w74Var = this.a;
-                    i = w74Var.U;
+                synchronized (this.f28763a) {
+                    w74 w74Var = this.f28763a;
+                    i = w74Var.f30992U;
                     if (i != parseInt) {
-                        w74Var.U = parseInt;
-                        this.a.requestLayout();
+                        w74Var.f30992U = parseInt;
+                        this.f28763a.requestLayout();
                     }
                 }
             } catch (Exception e) {

@@ -4,9 +4,11 @@ import java.util.Collection;
 import java.util.Map;
 /* loaded from: classes.dex */
 public interface w27 {
-    boolean a(Object obj, Object obj2);
+    /* renamed from: a */
+    boolean mo6568a(Object obj, Object obj2);
 
-    Map b();
+    /* renamed from: b */
+    Map mo6567b();
 
     int zzh();
 

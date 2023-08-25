@@ -22,51 +22,82 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class qz3 {
-    public final Object a = new Object();
-    public final zzj b;
-    public final xz3 c;
-    public boolean d;
-    public Context e;
-    public zzchu f;
-    public String g;
-    public l93 h;
-    public Boolean i;
-    public final AtomicInteger j;
-    public final pz3 k;
-    public final Object l;
-    public f77 m;
-    public final AtomicBoolean n;
+
+    /* renamed from: a */
+    public final Object f24659a = new Object();
+
+    /* renamed from: b */
+    public final zzj f24660b;
+
+    /* renamed from: c */
+    public final xz3 f24661c;
+
+    /* renamed from: d */
+    public boolean f24662d;
+
+    /* renamed from: e */
+    public Context f24663e;
+
+    /* renamed from: f */
+    public zzchu f24664f;
+
+    /* renamed from: g */
+    public String f24665g;
+
+    /* renamed from: h */
+    public l93 f24666h;
+
+    /* renamed from: i */
+    public Boolean f24667i;
+
+    /* renamed from: j */
+    public final AtomicInteger f24668j;
+
+    /* renamed from: k */
+    public final pz3 f24669k;
+
+    /* renamed from: l */
+    public final Object f24670l;
+
+    /* renamed from: m */
+    public f77 f24671m;
+
+    /* renamed from: n */
+    public final AtomicBoolean f24672n;
 
     public qz3() {
         zzj zzjVar = new zzj();
-        this.b = zzjVar;
-        this.c = new xz3(zzay.zzd(), zzjVar);
-        this.d = false;
-        this.h = null;
-        this.i = null;
-        this.j = new AtomicInteger(0);
-        this.k = new pz3(null);
-        this.l = new Object();
-        this.n = new AtomicBoolean();
+        this.f24660b = zzjVar;
+        this.f24661c = new xz3(zzay.zzd(), zzjVar);
+        this.f24662d = false;
+        this.f24666h = null;
+        this.f24667i = null;
+        this.f24668j = new AtomicInteger(0);
+        this.f24669k = new pz3(null);
+        this.f24670l = new Object();
+        this.f24672n = new AtomicBoolean();
     }
 
-    public final int a() {
-        return this.j.get();
+    /* renamed from: a */
+    public final int m11922a() {
+        return this.f24668j.get();
     }
 
-    public final Context c() {
-        return this.e;
+    /* renamed from: c */
+    public final Context m11920c() {
+        return this.f24663e;
     }
 
-    public final Resources d() {
-        if (this.f.s) {
-            return this.e.getResources();
+    /* renamed from: d */
+    public final Resources m11919d() {
+        if (this.f24664f.f36996s) {
+            return this.f24663e.getResources();
         }
         try {
-            if (((Boolean) zzba.zzc().b(g93.Y8)).booleanValue()) {
-                return o04.a(this.e).getResources();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10610Y8)).booleanValue()) {
+                return o04.m14657a(this.f24663e).getResources();
             }
-            o04.a(this.e).getResources();
+            o04.m14657a(this.f24663e).getResources();
             return null;
         } catch (n04 e) {
             k04.zzk("Cannot load resource from dynamite apk or local jar", e);
@@ -74,73 +105,80 @@ public final class qz3 {
         }
     }
 
-    public final l93 f() {
+    /* renamed from: f */
+    public final l93 m11917f() {
         l93 l93Var;
-        synchronized (this.a) {
-            l93Var = this.h;
+        synchronized (this.f24659a) {
+            l93Var = this.f24666h;
         }
         return l93Var;
     }
 
-    public final xz3 g() {
-        return this.c;
+    /* renamed from: g */
+    public final xz3 m11916g() {
+        return this.f24661c;
     }
 
-    public final zzg h() {
+    /* renamed from: h */
+    public final zzg m11915h() {
         zzj zzjVar;
-        synchronized (this.a) {
-            zzjVar = this.b;
+        synchronized (this.f24659a) {
+            zzjVar = this.f24660b;
         }
         return zzjVar;
     }
 
-    public final f77 j() {
-        if (this.e != null) {
-            if (!((Boolean) zzba.zzc().b(g93.o2)).booleanValue()) {
-                synchronized (this.l) {
-                    f77 f77Var = this.m;
+    /* renamed from: j */
+    public final f77 m11913j() {
+        if (this.f24663e != null) {
+            if (!((Boolean) zzba.zzc().m23658b(g93.f10778o2)).booleanValue()) {
+                synchronized (this.f24670l) {
+                    f77 f77Var = this.f24671m;
                     if (f77Var != null) {
                         return f77Var;
                     }
-                    f77 M = z04.a.M(new Callable() { // from class: com.daaw.lz3
+                    f77 mo20112M = z04.f34305a.mo20112M(new Callable() { // from class: com.daaw.lz3
                         @Override // java.util.concurrent.Callable
                         public final Object call() {
-                            return qz3.this.n();
+                            return qz3.this.m11909n();
                         }
                     });
-                    this.m = M;
-                    return M;
+                    this.f24671m = mo20112M;
+                    return mo20112M;
                 }
             }
         }
-        return s67.i(new ArrayList());
+        return s67.m10634i(new ArrayList());
     }
 
-    public final Boolean k() {
+    /* renamed from: k */
+    public final Boolean m11912k() {
         Boolean bool;
-        synchronized (this.a) {
-            bool = this.i;
+        synchronized (this.f24659a) {
+            bool = this.f24667i;
         }
         return bool;
     }
 
-    public final String m() {
-        return this.g;
+    /* renamed from: m */
+    public final String m11910m() {
+        return this.f24665g;
     }
 
-    public final /* synthetic */ ArrayList n() {
-        Context a = av3.a(this.e);
+    /* renamed from: n */
+    public final /* synthetic */ ArrayList m11909n() {
+        Context m26956a = av3.m26956a(this.f24663e);
         ArrayList arrayList = new ArrayList();
         try {
-            PackageInfo f = ez1.a(a).f(a.getApplicationInfo().packageName, 4096);
-            if (f.requestedPermissions != null && f.requestedPermissionsFlags != null) {
+            PackageInfo m19341f = ez1.m22979a(m26956a).m19341f(m26956a.getApplicationInfo().packageName, 4096);
+            if (m19341f.requestedPermissions != null && m19341f.requestedPermissionsFlags != null) {
                 int i = 0;
                 while (true) {
-                    String[] strArr = f.requestedPermissions;
+                    String[] strArr = m19341f.requestedPermissions;
                     if (i >= strArr.length) {
                         break;
                     }
-                    if ((f.requestedPermissionsFlags[i] & 2) != 0) {
+                    if ((m19341f.requestedPermissionsFlags[i] & 2) != 0) {
                         arrayList.add(strArr[i]);
                     }
                     i++;
@@ -151,73 +189,82 @@ public final class qz3 {
         return arrayList;
     }
 
-    public final void p() {
-        this.k.a();
+    /* renamed from: p */
+    public final void m11907p() {
+        this.f24669k.m12832a();
     }
 
-    public final void q() {
-        this.j.decrementAndGet();
+    /* renamed from: q */
+    public final void m11906q() {
+        this.f24668j.decrementAndGet();
     }
 
-    public final void r() {
-        this.j.incrementAndGet();
+    /* renamed from: r */
+    public final void m11905r() {
+        this.f24668j.incrementAndGet();
     }
 
     @TargetApi(23)
-    public final void s(Context context, zzchu zzchuVar) {
+    /* renamed from: s */
+    public final void m11904s(Context context, zzchu zzchuVar) {
         l93 l93Var;
-        synchronized (this.a) {
-            if (!this.d) {
-                this.e = context.getApplicationContext();
-                this.f = zzchuVar;
-                zzt.zzb().c(this.c);
-                this.b.zzr(this.e);
-                et3.d(this.e, this.f);
+        synchronized (this.f24659a) {
+            if (!this.f24662d) {
+                this.f24663e = context.getApplicationContext();
+                this.f24664f = zzchuVar;
+                zzt.zzb().m15598c(this.f24661c);
+                this.f24660b.zzr(this.f24663e);
+                et3.m23192d(this.f24663e, this.f24664f);
                 zzt.zze();
-                if (((Boolean) ua3.c.e()).booleanValue()) {
+                if (((Boolean) ua3.f28852c.m16137e()).booleanValue()) {
                     l93Var = new l93();
                 } else {
                     zze.zza("CsiReporterFactory: CSI is not enabled. No CSI reporter created.");
                     l93Var = null;
                 }
-                this.h = l93Var;
+                this.f24666h = l93Var;
                 if (l93Var != null) {
-                    c14.a(new mz3(this).zzb(), "AppState.registerCsiReporter");
+                    c14.m25685a(new mz3(this).zzb(), "AppState.registerCsiReporter");
                 }
-                if (vw0.i()) {
-                    if (((Boolean) zzba.zzc().b(g93.D7)).booleanValue()) {
+                if (vw0.m6696i()) {
+                    if (((Boolean) zzba.zzc().m23658b(g93.f10399D7)).booleanValue()) {
                         ((ConnectivityManager) context.getSystemService("connectivity")).registerDefaultNetworkCallback(new nz3(this));
                     }
                 }
-                this.d = true;
-                j();
+                this.f24662d = true;
+                m11913j();
             }
         }
-        zzt.zzp().zzc(context, zzchuVar.p);
+        zzt.zzp().zzc(context, zzchuVar.f36993p);
     }
 
-    public final void t(Throwable th, String str) {
-        et3.d(this.e, this.f).b(th, str, ((Double) nb3.g.e()).floatValue());
+    /* renamed from: t */
+    public final void m11903t(Throwable th, String str) {
+        et3.m23192d(this.f24663e, this.f24664f).mo21235b(th, str, ((Double) nb3.f19787g.m16137e()).floatValue());
     }
 
-    public final void u(Throwable th, String str) {
-        et3.d(this.e, this.f).a(th, str);
+    /* renamed from: u */
+    public final void m11902u(Throwable th, String str) {
+        et3.m23192d(this.f24663e, this.f24664f).mo21236a(th, str);
     }
 
-    public final void v(Boolean bool) {
-        synchronized (this.a) {
-            this.i = bool;
+    /* renamed from: v */
+    public final void m11901v(Boolean bool) {
+        synchronized (this.f24659a) {
+            this.f24667i = bool;
         }
     }
 
-    public final void w(String str) {
-        this.g = str;
+    /* renamed from: w */
+    public final void m11900w(String str) {
+        this.f24665g = str;
     }
 
-    public final boolean x(Context context) {
-        if (vw0.i()) {
-            if (((Boolean) zzba.zzc().b(g93.D7)).booleanValue()) {
-                return this.n.get();
+    /* renamed from: x */
+    public final boolean m11899x(Context context) {
+        if (vw0.m6696i()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10399D7)).booleanValue()) {
+                return this.f24672n.get();
             }
         }
         NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService("connectivity")).getActiveNetworkInfo();

@@ -19,58 +19,62 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public class DiagnosticsWorker extends Worker {
-    public static final String v = ll0.f("DiagnosticsWrkr");
+
+    /* renamed from: v */
+    public static final String f2581v = ll0.m16883f("DiagnosticsWrkr");
 
     public DiagnosticsWorker(Context context, WorkerParameters workerParameters) {
         super(context, workerParameters);
     }
 
-    public static String a(qy1 qy1Var, String str, Integer num, String str2) {
-        return String.format("\n%s\t %s\t %s\t %s\t %s\t %s\t", qy1Var.a, qy1Var.c, num, qy1Var.b.name(), str, str2);
+    /* renamed from: a */
+    public static String m27871a(qy1 qy1Var, String str, Integer num, String str2) {
+        return String.format("\n%s\t %s\t %s\t %s\t %s\t %s\t", qy1Var.f24624a, qy1Var.f24626c, num, qy1Var.f24625b.name(), str, str2);
     }
 
-    public static String c(hy1 hy1Var, uy1 uy1Var, zi1 zi1Var, List<qy1> list) {
+    /* renamed from: c */
+    public static String m27870c(hy1 hy1Var, uy1 uy1Var, zi1 zi1Var, List<qy1> list) {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("\n Id \t Class Name\t %s\t State\t Unique Name\t Tags\t", Build.VERSION.SDK_INT >= 23 ? "Job Id" : "Alarm Id"));
         for (qy1 qy1Var : list) {
             Integer num = null;
-            yi1 c = zi1Var.c(qy1Var.a);
-            if (c != null) {
-                num = Integer.valueOf(c.b);
+            yi1 mo2277c = zi1Var.mo2277c(qy1Var.f24624a);
+            if (mo2277c != null) {
+                num = Integer.valueOf(mo2277c.f33688b);
             }
-            sb.append(a(qy1Var, TextUtils.join(",", hy1Var.b(qy1Var.a)), num, TextUtils.join(",", uy1Var.a(qy1Var.a))));
+            sb.append(m27871a(qy1Var, TextUtils.join(",", hy1Var.mo19261b(qy1Var.f24624a)), num, TextUtils.join(",", uy1Var.mo6670a(qy1Var.f24624a))));
         }
         return sb.toString();
     }
 
     @Override // androidx.work.Worker
-    public ListenableWorker.a doWork() {
-        WorkDatabase o = ey1.k(getApplicationContext()).o();
-        ry1 B = o.B();
-        hy1 z = o.z();
-        uy1 C = o.C();
-        zi1 y = o.y();
-        List<qy1> d = B.d(System.currentTimeMillis() - TimeUnit.DAYS.toMillis(1L));
-        List<qy1> h = B.h();
-        List<qy1> t = B.t(200);
-        if (d != null && !d.isEmpty()) {
-            ll0 c = ll0.c();
-            String str = v;
-            c.d(str, "Recently completed work:\n\n", new Throwable[0]);
-            ll0.c().d(str, c(z, C, y, d), new Throwable[0]);
+    public ListenableWorker.AbstractC0501a doWork() {
+        WorkDatabase m23000o = ey1.m23004k(getApplicationContext()).m23000o();
+        ry1 mo27951B = m23000o.mo27951B();
+        hy1 mo27935z = m23000o.mo27935z();
+        uy1 mo27950C = m23000o.mo27950C();
+        zi1 mo27936y = m23000o.mo27936y();
+        List<qy1> mo9728d = mo27951B.mo9728d(System.currentTimeMillis() - TimeUnit.DAYS.toMillis(1L));
+        List<qy1> mo9724h = mo27951B.mo9724h();
+        List<qy1> mo9712t = mo27951B.mo9712t(200);
+        if (mo9728d != null && !mo9728d.isEmpty()) {
+            ll0 m16885c = ll0.m16885c();
+            String str = f2581v;
+            m16885c.mo16880d(str, "Recently completed work:\n\n", new Throwable[0]);
+            ll0.m16885c().mo16880d(str, m27870c(mo27935z, mo27950C, mo27936y, mo9728d), new Throwable[0]);
         }
-        if (h != null && !h.isEmpty()) {
-            ll0 c2 = ll0.c();
-            String str2 = v;
-            c2.d(str2, "Running work:\n\n", new Throwable[0]);
-            ll0.c().d(str2, c(z, C, y, h), new Throwable[0]);
+        if (mo9724h != null && !mo9724h.isEmpty()) {
+            ll0 m16885c2 = ll0.m16885c();
+            String str2 = f2581v;
+            m16885c2.mo16880d(str2, "Running work:\n\n", new Throwable[0]);
+            ll0.m16885c().mo16880d(str2, m27870c(mo27935z, mo27950C, mo27936y, mo9724h), new Throwable[0]);
         }
-        if (t != null && !t.isEmpty()) {
-            ll0 c3 = ll0.c();
-            String str3 = v;
-            c3.d(str3, "Enqueued work:\n\n", new Throwable[0]);
-            ll0.c().d(str3, c(z, C, y, t), new Throwable[0]);
+        if (mo9712t != null && !mo9712t.isEmpty()) {
+            ll0 m16885c3 = ll0.m16885c();
+            String str3 = f2581v;
+            m16885c3.mo16880d(str3, "Enqueued work:\n\n", new Throwable[0]);
+            ll0.m16885c().mo16880d(str3, m27870c(mo27935z, mo27950C, mo27936y, mo9712t), new Throwable[0]);
         }
-        return ListenableWorker.a.c();
+        return ListenableWorker.AbstractC0501a.m28004c();
     }
 }

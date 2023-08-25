@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class j43 implements ps7 {
-    public static final ps7 a = new j43();
+
+    /* renamed from: a */
+    public static final ps7 f14258a = new j43();
 
     @Override // com.daaw.ps7
-    public final boolean a(int i) {
-        return k43.a(i) != null;
+    /* renamed from: a */
+    public final boolean mo3065a(int i) {
+        return k43.m18049a(i) != null;
     }
 }

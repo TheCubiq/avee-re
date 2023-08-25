@@ -9,11 +9,13 @@ import android.net.Uri;
 import com.google.android.gms.ads.internal.client.zzek;
 /* loaded from: classes.dex */
 public class MobileAdsInitProvider extends ContentProvider {
-    public final zzek p = new zzek();
+
+    /* renamed from: p */
+    public final zzek f36025p = new zzek();
 
     @Override // android.content.ContentProvider
     public void attachInfo(Context context, ProviderInfo providerInfo) {
-        this.p.attachInfo(context, providerInfo);
+        this.f36025p.attachInfo(context, providerInfo);
     }
 
     @Override // android.content.ContentProvider

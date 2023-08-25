@@ -4,18 +4,28 @@ import android.text.TextUtils;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public final class f54 implements Runnable {
-    public final /* synthetic */ String p;
-    public final /* synthetic */ String q;
-    public final /* synthetic */ String r;
-    public final /* synthetic */ String s;
-    public final /* synthetic */ j54 t;
+
+    /* renamed from: p */
+    public final /* synthetic */ String f9126p;
+
+    /* renamed from: q */
+    public final /* synthetic */ String f9127q;
+
+    /* renamed from: r */
+    public final /* synthetic */ String f9128r;
+
+    /* renamed from: s */
+    public final /* synthetic */ String f9129s;
+
+    /* renamed from: t */
+    public final /* synthetic */ j54 f9130t;
 
     public f54(j54 j54Var, String str, String str2, String str3, String str4) {
-        this.t = j54Var;
-        this.p = str;
-        this.q = str2;
-        this.r = str3;
-        this.s = str4;
+        this.f9130t = j54Var;
+        this.f9126p = str;
+        this.f9127q = str2;
+        this.f9128r = str3;
+        this.f9129s = str4;
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -24,11 +34,11 @@ public final class f54 implements Runnable {
         char c;
         HashMap hashMap = new HashMap();
         hashMap.put("event", "precacheCanceled");
-        hashMap.put("src", this.p);
-        if (!TextUtils.isEmpty(this.q)) {
-            hashMap.put("cachedSrc", this.q);
+        hashMap.put("src", this.f9126p);
+        if (!TextUtils.isEmpty(this.f9127q)) {
+            hashMap.put("cachedSrc", this.f9127q);
         }
-        String str = this.r;
+        String str = this.f9128r;
         switch (str.hashCode()) {
             case -1947652542:
                 if (str.equals("interrupted")) {
@@ -134,10 +144,10 @@ public final class f54 implements Runnable {
                 break;
         }
         hashMap.put("type", str2);
-        hashMap.put("reason", this.r);
-        if (!TextUtils.isEmpty(this.s)) {
-            hashMap.put("message", this.s);
+        hashMap.put("reason", this.f9128r);
+        if (!TextUtils.isEmpty(this.f9129s)) {
+            hashMap.put("message", this.f9129s);
         }
-        j54.b(this.t, "onPrecacheEvent", hashMap);
+        j54.m18857b(this.f9130t, "onPrecacheEvent", hashMap);
     }
 }

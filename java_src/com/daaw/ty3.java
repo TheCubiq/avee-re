@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ty3 {
-    void a(int i, long j);
+    /* renamed from: a */
+    void mo8696a(int i, long j);
 
     boolean zza();
 

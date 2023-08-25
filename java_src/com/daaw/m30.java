@@ -14,152 +14,178 @@ import java.lang.ref.WeakReference;
 import java.util.HashMap;
 /* loaded from: classes.dex */
 public class m30 extends dj0 {
-    public HashMap<String, b> p0 = new HashMap<>();
-    public String q0 = "";
-    public View r0;
-    public PagerSlidingTabStrip s0;
-    public RecyclerView t0;
-    public ts1 u0;
 
+    /* renamed from: p0 */
+    public HashMap<String, C2149b> f18411p0 = new HashMap<>();
+
+    /* renamed from: q0 */
+    public String f18412q0 = "";
+
+    /* renamed from: r0 */
+    public View f18413r0;
+
+    /* renamed from: s0 */
+    public PagerSlidingTabStrip f18414s0;
+
+    /* renamed from: t0 */
+    public RecyclerView f18415t0;
+
+    /* renamed from: u0 */
+    public ts1 f18416u0;
+
+    /* renamed from: com.daaw.m30$a */
     /* loaded from: classes.dex */
-    public class a implements View.OnClickListener {
-        public a() {
+    public class View$OnClickListenerC2148a implements View.OnClickListener {
+        public View$OnClickListenerC2148a() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            m30.this.t(null, (String) view.getTag());
+            m30.this.m16250t(null, (String) view.getTag());
         }
     }
 
+    /* renamed from: com.daaw.m30$b */
     /* loaded from: classes.dex */
-    public class b {
-        public int a = 0;
+    public class C2149b {
 
-        public b() {
+        /* renamed from: a */
+        public int f18418a = 0;
+
+        public C2149b() {
         }
     }
 
-    public static m30 w() {
+    /* renamed from: w */
+    public static m30 m16247w() {
         m30 m30Var = new m30();
         m30Var.setArguments(new Bundle());
         return m30Var;
     }
 
-    public void A() {
-        wc0 z;
-        if (p()) {
-            boolean z2 = false;
-            ts1 ts1Var = (ts1) this.t0.getAdapter();
-            if (ts1Var != null && (z = ts1Var.z()) != null) {
-                z2 = z.h(true);
+    /* renamed from: A */
+    public void m16263A() {
+        wc0 m8843z;
+        if (m16254p()) {
+            boolean z = false;
+            ts1 ts1Var = (ts1) this.f18415t0.getAdapter();
+            if (ts1Var != null && (m8843z = ts1Var.m8843z()) != null) {
+                z = m8843z.mo3669h(true);
             }
-            if (z2) {
+            if (z) {
                 return;
             }
-            u(null, this.q0, true);
+            m16249u(null, this.f18412q0, true);
         }
     }
 
-    public void B() {
-        RecyclerView recyclerView = this.t0;
-        C(recyclerView != null ? (ts1) recyclerView.getAdapter() : null);
+    /* renamed from: B */
+    public void m16262B() {
+        RecyclerView recyclerView = this.f18415t0;
+        m16261C(recyclerView != null ? (ts1) recyclerView.getAdapter() : null);
     }
 
-    public final void C(ts1 ts1Var) {
-        q6.f(getActivity());
-        m91 o = o(ts1Var);
-        dj0.r.a(0, Boolean.valueOf(o.a), o.b, o.c);
+    /* renamed from: C */
+    public final void m16261C(ts1 ts1Var) {
+        C2691q6.m12752f(getActivity());
+        m91 m16255o = m16255o(ts1Var);
+        dj0.f7180r.m8756a(0, Boolean.valueOf(m16255o.f18680a), m16255o.f18681b, m16255o.f18682c);
     }
 
-    public void D(Context context, String str) {
+    /* renamed from: D */
+    public void m16260D(Context context, String str) {
         ts1 ts1Var;
-        RecyclerView recyclerView = this.t0;
+        RecyclerView recyclerView = this.f18415t0;
         if (recyclerView == null || (ts1Var = (ts1) recyclerView.getAdapter()) == null) {
             return;
         }
-        ts1Var.z().o(context, str);
+        ts1Var.m8843z().mo2234o(context, str);
     }
 
-    public void E() {
-        RecyclerView.g adapter;
-        RecyclerView recyclerView = this.t0;
+    /* renamed from: E */
+    public void m16259E() {
+        RecyclerView.AbstractC0380g adapter;
+        RecyclerView recyclerView = this.f18415t0;
         if (recyclerView == null || (adapter = recyclerView.getAdapter()) == null) {
             return;
         }
-        int d = adapter.d();
-        for (int i = 0; i < d; i++) {
-            RecyclerView.c0 X = this.t0.X(i);
-            if (X instanceof uk) {
-                ((uk) X).R();
+        int mo497d = adapter.mo497d();
+        for (int i = 0; i < mo497d; i++) {
+            RecyclerView.AbstractC0376c0 m28850X = this.f18415t0.m28850X(i);
+            if (m28850X instanceof C3223uk) {
+                ((C3223uk) m28850X).m8096R();
             }
         }
     }
 
-    public boolean l() {
-        String str = this.q0;
+    /* renamed from: l */
+    public boolean m16258l() {
+        String str = this.f18412q0;
         return (str == null || str.equals("/")) ? false : true;
     }
 
-    public int m() {
-        RecyclerView.o layoutManager = this.t0.getLayoutManager();
+    /* renamed from: m */
+    public int m16257m() {
+        RecyclerView.AbstractC0391o layoutManager = this.f18415t0.getLayoutManager();
         if (layoutManager == null || !(layoutManager instanceof LinearLayoutManager)) {
             return 0;
         }
-        return ((LinearLayoutManager) layoutManager).Z1();
+        return ((LinearLayoutManager) layoutManager).m28939Z1();
     }
 
-    public m91 n() {
-        RecyclerView recyclerView = this.t0;
-        return o(recyclerView != null ? (ts1) recyclerView.getAdapter() : null);
+    /* renamed from: n */
+    public m91 m16256n() {
+        RecyclerView recyclerView = this.f18415t0;
+        return m16255o(recyclerView != null ? (ts1) recyclerView.getAdapter() : null);
     }
 
-    public final m91 o(ts1 ts1Var) {
+    /* renamed from: o */
+    public final m91 m16255o(ts1 ts1Var) {
         Activity activity = getActivity();
-        return activity == null ? m91.d : dj0.h(activity, ts1Var);
+        return activity == null ? m91.f18679d : dj0.m24360h(activity, ts1Var);
     }
 
     @Override // android.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        String t = j5.e().t(j5.a0);
-        this.q0 = t;
-        if (t == null) {
-            this.q0 = "";
+        String m18906t = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18906t(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14291a0);
+        this.f18412q0 = m18906t;
+        if (m18906t == null) {
+            this.f18412q0 = "";
         }
-        t(null, this.q0);
+        m16250t(null, this.f18412q0);
     }
 
     @Override // android.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        String t = j5.e().t(j5.a0);
-        this.q0 = t;
-        if (t == null) {
-            this.q0 = "";
+        String m18906t = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18906t(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14291a0);
+        this.f18412q0 = m18906t;
+        if (m18906t == null) {
+            this.f18412q0 = "";
         }
         View inflate = layoutInflater.inflate(R.layout.fragment_0, viewGroup, false);
-        gr1.u(inflate.findViewById(R.id.viewStatusBarBg));
-        dj0.t.a(0, inflate.findViewById(R.id.viewActionBarBgSkin));
-        this.r0 = inflate.findViewById(R.id.backSwipeProgress);
-        r(0.0f);
-        this.s0 = (PagerSlidingTabStrip) inflate.findViewById(R.id.tabStripPath);
+        gr1.m21314u(inflate.findViewById(R.id.viewStatusBarBg));
+        dj0.f7182t.m10862a(0, inflate.findViewById(R.id.viewActionBarBgSkin));
+        this.f18413r0 = inflate.findViewById(R.id.backSwipeProgress);
+        m16252r(0.0f);
+        this.f18414s0 = (PagerSlidingTabStrip) inflate.findViewById(R.id.tabStripPath);
         int color = getResources().getColor(R.color.action_bar_fg);
-        this.s0.setTextColor(color);
-        this.s0.setTextColorSelected(color);
-        this.s0.setDividerColor(color);
-        this.s0.setUnderlineColor(color);
-        this.s0.setIndicatorColor(color);
-        this.s0.setOnClickListener(new a());
-        this.t0 = (RecyclerView) inflate.findViewById(R.id.recyclerViewItems);
-        this.t0.setLayoutManager(new LinearLayoutManager(getActivity()));
-        RecyclerView recyclerView = this.t0;
-        recyclerView.h(new ke1(1, gr1.n(recyclerView, R.attr.containerBackgroundDark)));
+        this.f18414s0.setTextColor(color);
+        this.f18414s0.setTextColorSelected(color);
+        this.f18414s0.setDividerColor(color);
+        this.f18414s0.setUnderlineColor(color);
+        this.f18414s0.setIndicatorColor(color);
+        this.f18414s0.setOnClickListener(new View$OnClickListenerC2148a());
+        this.f18415t0 = (RecyclerView) inflate.findViewById(R.id.recyclerViewItems);
+        this.f18415t0.setLayoutManager(new LinearLayoutManager(getActivity()));
+        RecyclerView recyclerView = this.f18415t0;
+        recyclerView.m28824h(new ke1(1, gr1.m21321n(recyclerView, R.attr.containerBackgroundDark)));
         View findViewById = inflate.findViewById(R.id.tabStripPathGroup);
-        gr1.i(findViewById, findViewById.getParent());
-        this.u0 = new jk(getActivity(), 0, new WeakReference(this)).F(getActivity());
-        t(null, this.q0);
-        E();
-        B();
+        gr1.m21326i(findViewById, findViewById.getParent());
+        this.f18416u0 = new C1832jk(getActivity(), 0, new WeakReference(this)).m3681F(getActivity());
+        m16250t(null, this.f18412q0);
+        m16259E();
+        m16262B();
         return inflate;
     }
 
@@ -168,66 +194,73 @@ public class m30 extends dj0 {
         super.onDestroy();
     }
 
-    public boolean p() {
-        return this.s0 != null;
+    /* renamed from: p */
+    public boolean m16254p() {
+        return this.f18414s0 != null;
     }
 
-    public void q() {
-        String str = this.q0;
+    /* renamed from: q */
+    public void m16253q() {
+        String str = this.f18412q0;
         int lastIndexOf = str.charAt(str.length() + (-1)) == '/' ? str.lastIndexOf(47, str.length() - 2) : str.lastIndexOf(47);
-        t(null, lastIndexOf <= 0 ? "/" : str.substring(0, lastIndexOf));
+        m16250t(null, lastIndexOf <= 0 ? "/" : str.substring(0, lastIndexOf));
     }
 
-    public void r(float f) {
-        View view = this.r0;
+    /* renamed from: r */
+    public void m16252r(float f) {
+        View view = this.f18413r0;
         if (view == null) {
             return;
         }
         view.setPivotX(1.0f);
-        this.r0.setScaleX(f);
+        this.f18413r0.setScaleX(f);
     }
 
-    public void s(ts1 ts1Var, String str) {
+    /* renamed from: s */
+    public void m16251s(ts1 ts1Var, String str) {
         if (ts1Var == null) {
-            ts1Var = (ts1) this.t0.getAdapter();
+            ts1Var = (ts1) this.f18415t0.getAdapter();
         }
         if (ts1Var == null) {
             return;
         }
-        ts1 v = v(ts1Var, str);
-        this.q0 = v.z().e();
-        j5.e().g0(j5.a0, this.q0);
-        y(v);
+        ts1 m16248v = m16248v(ts1Var, str);
+        this.f18412q0 = m16248v.m8843z().mo3670e();
+        SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18923g0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14291a0, this.f18412q0);
+        m16245y(m16248v);
     }
 
-    public void t(ts1 ts1Var, String str) {
-        u(ts1Var, str, false);
+    /* renamed from: t */
+    public void m16250t(ts1 ts1Var, String str) {
+        m16249u(ts1Var, str, false);
     }
 
-    public void u(ts1 ts1Var, String str, boolean z) {
+    /* renamed from: u */
+    public void m16249u(ts1 ts1Var, String str, boolean z) {
         RecyclerView recyclerView;
         ts1 ts1Var2;
         str = (str.length() <= 0 || str.charAt(0) != '/') ? "/" : "/";
         if (ts1Var == null) {
-            ts1Var = this.u0;
+            ts1Var = this.f18416u0;
         }
-        if (z || ts1Var == null || (recyclerView = this.t0) == null || (ts1Var2 = (ts1) recyclerView.getAdapter()) == null || !ts1Var.z().p(str).equals(ts1Var2.z().e())) {
+        if (z || ts1Var == null || (recyclerView = this.f18415t0) == null || (ts1Var2 = (ts1) recyclerView.getAdapter()) == null || !ts1Var.m8843z().mo3664p(str).equals(ts1Var2.m8843z().mo3670e())) {
             if (str.length() > 0 && str.charAt(0) == '/') {
                 if (ts1Var == null) {
-                    ts1Var = this.u0;
+                    ts1Var = this.f18416u0;
                 }
-                this.s0.v();
-                this.s0.u(ts1Var.z().l(), ts1Var.z().i(), ts1Var.z().e());
+                this.f18414s0.m27826v();
+                this.f18414s0.m27827u(ts1Var.m8843z().mo3667l(), ts1Var.m8843z().mo3668i(), ts1Var.m8843z().mo3670e());
                 str = str.substring(1, str.length());
             }
-            ts1 v = v(ts1Var, str);
-            this.q0 = v.z().e();
-            j5.e().g0(j5.a0, this.q0);
-            y(v);
+            ts1 m16248v = m16248v(ts1Var, str);
+            this.f18412q0 = m16248v.m8843z().mo3670e();
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18923g0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14291a0, this.f18412q0);
+            m16245y(m16248v);
         }
     }
 
-    public ts1 v(ts1 ts1Var, String str) {
+    /* renamed from: v */
+    public ts1 m16248v(ts1 ts1Var, String str) {
         String substring;
         if (str == null || str.isEmpty()) {
             return ts1Var;
@@ -240,103 +273,72 @@ public class m30 extends dj0 {
             substring = str.substring(indexOf + 1, str.length());
             str = substring2;
         }
-        ts1 d = ts1Var.z().d(getActivity(), str);
-        if (d != null) {
-            this.s0.u(d.z().l(), d.z().i(), d.z().e());
-            return v(d, substring);
+        ts1 mo2246d = ts1Var.m8843z().mo2246d(getActivity(), str);
+        if (mo2246d != null) {
+            this.f18414s0.m27827u(mo2246d.m8843z().mo3667l(), mo2246d.m8843z().mo3668i(), mo2246d.m8843z().mo3670e());
+            return m16248v(mo2246d, substring);
         }
         return ts1Var;
     }
 
-    public void x(sd0 sd0Var) {
+    /* renamed from: x */
+    public void m16246x(sd0 sd0Var) {
         ts1 ts1Var;
-        RecyclerView recyclerView = this.t0;
-        if (recyclerView == null || (ts1Var = (ts1) recyclerView.getAdapter()) == null || !ts1Var.z().y(sd0Var)) {
+        RecyclerView recyclerView = this.f18415t0;
+        if (recyclerView == null || (ts1Var = (ts1) recyclerView.getAdapter()) == null || !ts1Var.m8843z().mo3659y(sd0Var)) {
             return;
         }
-        ts1Var.i();
+        ts1Var.m28714i();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:10:0x0032, code lost:
         if (r2.equals(r3) != false) goto L9;
      */
+    /* renamed from: y */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void y(com.daaw.ts1 r8) {
-        /*
-            r7 = this;
-            androidx.recyclerview.widget.RecyclerView r0 = r7.t0
-            androidx.recyclerview.widget.RecyclerView$g r0 = r0.getAdapter()
-            com.daaw.ts1 r0 = (com.daaw.ts1) r0
-            r1 = 0
-            if (r0 == 0) goto L57
-            com.daaw.wc0 r2 = r0.z()
-            java.lang.String r2 = r2.e()
-            com.daaw.wc0 r3 = r8.z()
-            java.lang.String r3 = r3.e()
-            int r4 = r3.length()
-            int r5 = r2.length()
-            r6 = 1
-            if (r4 >= r5) goto L2e
-            boolean r4 = r2.contains(r3)
-            if (r4 == 0) goto L2e
-            r1 = 1
-            goto L35
-        L2e:
-            boolean r3 = r2.equals(r3)
-            if (r3 == 0) goto L35
-            goto L36
-        L35:
-            r6 = 0
-        L36:
-            if (r1 == 0) goto L3e
-            java.util.HashMap<java.lang.String, com.daaw.m30$b> r3 = r7.p0
-            r3.remove(r2)
-            goto L58
-        L3e:
-            com.daaw.m30$b r2 = new com.daaw.m30$b
-            r2.<init>()
-            int r3 = r7.m()
-            r2.a = r3
-            java.util.HashMap<java.lang.String, com.daaw.m30$b> r3 = r7.p0
-            com.daaw.wc0 r4 = r0.z()
-            java.lang.String r4 = r4.e()
-            r3.put(r4, r2)
-            goto L58
-        L57:
-            r6 = 0
-        L58:
-            if (r0 == r8) goto L82
-            if (r0 == 0) goto L5f
-            r0.y()
-        L5f:
-            r7.C(r8)
-            androidx.recyclerview.widget.RecyclerView r0 = r7.t0
-            r0.setAdapter(r8)
-            if (r1 != 0) goto L6b
-            if (r6 == 0) goto L82
-        L6b:
-            java.util.HashMap<java.lang.String, com.daaw.m30$b> r0 = r7.p0
-            com.daaw.wc0 r8 = r8.z()
-            java.lang.String r8 = r8.e()
-            java.lang.Object r8 = r0.get(r8)
-            com.daaw.m30$b r8 = (com.daaw.m30.b) r8
-            if (r8 == 0) goto L82
-            int r8 = r8.a
-            r7.z(r8)
-        L82:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.m30.y(com.daaw.ts1):void");
+    public void m16245y(ts1 ts1Var) {
+        boolean z;
+        C2149b c2149b;
+        ts1 ts1Var2 = (ts1) this.f18415t0.getAdapter();
+        boolean z2 = false;
+        if (ts1Var2 != null) {
+            String mo3670e = ts1Var2.m8843z().mo3670e();
+            String mo3670e2 = ts1Var.m8843z().mo3670e();
+            z = true;
+            if (mo3670e2.length() < mo3670e.length() && mo3670e.contains(mo3670e2)) {
+                z2 = true;
+            }
+            z = false;
+            if (z2) {
+                this.f18411p0.remove(mo3670e);
+            } else {
+                C2149b c2149b2 = new C2149b();
+                c2149b2.f18418a = m16257m();
+                this.f18411p0.put(ts1Var2.m8843z().mo3670e(), c2149b2);
+            }
+        } else {
+            z = false;
+        }
+        if (ts1Var2 != ts1Var) {
+            if (ts1Var2 != null) {
+                ts1Var2.m8844y();
+            }
+            m16261C(ts1Var);
+            this.f18415t0.setAdapter(ts1Var);
+            if ((z2 || z) && (c2149b = this.f18411p0.get(ts1Var.m8843z().mo3670e())) != null) {
+                m16244z(c2149b.f18418a);
+            }
+        }
     }
 
-    public void z(int i) {
-        RecyclerView.o layoutManager = this.t0.getLayoutManager();
+    /* renamed from: z */
+    public void m16244z(int i) {
+        RecyclerView.AbstractC0391o layoutManager = this.f18415t0.getLayoutManager();
         if (layoutManager == null || i == -1) {
             return;
         }
-        layoutManager.x1(i);
+        layoutManager.mo28397x1(i);
     }
 }

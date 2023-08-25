@@ -1,33 +1,42 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class bm8 implements e48 {
-    public static final bm8 q = new bm8();
-    public final e48 p = q48.a(q48.b(new fm8()));
 
-    public static boolean b() {
-        q.zza().zza();
+    /* renamed from: q */
+    public static final bm8 f4973q = new bm8();
+
+    /* renamed from: p */
+    public final e48 f4974p = q48.m12772a(q48.m12771b(new fm8()));
+
+    /* renamed from: b */
+    public static boolean m25989b() {
+        f4973q.zza().zza();
         return true;
     }
 
-    public static boolean c() {
-        return q.zza().zzb();
+    /* renamed from: c */
+    public static boolean m25988c() {
+        return f4973q.zza().zzb();
     }
 
-    public static boolean d() {
-        return q.zza().zzc();
+    /* renamed from: d */
+    public static boolean m25987d() {
+        return f4973q.zza().zzc();
     }
 
-    public static boolean e() {
-        return q.zza().zzd();
+    /* renamed from: e */
+    public static boolean m25986e() {
+        return f4973q.zza().zzd();
     }
 
-    public static boolean f() {
-        return q.zza().zze();
+    /* renamed from: f */
+    public static boolean m25985f() {
+        return f4973q.zza().zze();
     }
 
     @Override // com.daaw.e48
     /* renamed from: a */
     public final dm8 zza() {
-        return (dm8) this.p.zza();
+        return (dm8) this.f4974p.zza();
     }
 }

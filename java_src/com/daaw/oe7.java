@@ -5,7 +5,8 @@ public final class oe7 implements qh7 {
     }
 
     @Override // com.daaw.qh7
-    public final ph7 a(vh7 vh7Var, String str, String str2) {
-        return me7.a;
+    /* renamed from: a */
+    public final ph7 mo12515a(vh7 vh7Var, String str, String str2) {
+        return me7.f18845a;
     }
 }

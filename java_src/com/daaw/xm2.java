@@ -9,16 +9,33 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 /* loaded from: classes.dex */
 public final class xm2 {
-    public long a = -1;
-    public long b = -1;
-    public long c = -1;
-    public long d = -1;
-    public long e = -1;
-    public long f = -1;
-    public long g = -1;
-    public long h = -1;
 
-    public static DisplayMetrics l(Context context) {
+    /* renamed from: a */
+    public long f32795a = -1;
+
+    /* renamed from: b */
+    public long f32796b = -1;
+
+    /* renamed from: c */
+    public long f32797c = -1;
+
+    /* renamed from: d */
+    public long f32798d = -1;
+
+    /* renamed from: e */
+    public long f32799e = -1;
+
+    /* renamed from: f */
+    public long f32800f = -1;
+
+    /* renamed from: g */
+    public long f32801g = -1;
+
+    /* renamed from: h */
+    public long f32802h = -1;
+
+    /* renamed from: l */
+    public static DisplayMetrics m4992l(Context context) {
         Display defaultDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
         DisplayMetrics displayMetrics = new DisplayMetrics();
         try {
@@ -29,7 +46,8 @@ public final class xm2 {
         return displayMetrics;
     }
 
-    public static boolean m(View view) {
+    /* renamed from: m */
+    public static boolean m4991m(View view) {
         try {
             if (view.getClass().getName().contains("DebugGestureViewWrapper")) {
                 view = ((ViewGroup) view).getChildAt(0);
@@ -47,63 +65,74 @@ public final class xm2 {
         }
     }
 
-    public final long a() {
-        return this.g;
+    /* renamed from: a */
+    public final long m5003a() {
+        return this.f32801g;
     }
 
-    public final long b() {
-        return this.e;
+    /* renamed from: b */
+    public final long m5002b() {
+        return this.f32799e;
     }
 
-    public final long c() {
-        return this.a;
+    /* renamed from: c */
+    public final long m5001c() {
+        return this.f32795a;
     }
 
-    public final long d() {
-        return this.c;
+    /* renamed from: d */
+    public final long m5000d() {
+        return this.f32797c;
     }
 
-    public final long e() {
-        return this.h;
+    /* renamed from: e */
+    public final long m4999e() {
+        return this.f32802h;
     }
 
-    public final long f() {
-        return this.f;
+    /* renamed from: f */
+    public final long m4998f() {
+        return this.f32800f;
     }
 
-    public final long g() {
-        return this.b;
+    /* renamed from: g */
+    public final long m4997g() {
+        return this.f32796b;
     }
 
-    public final long h() {
-        return this.d;
+    /* renamed from: h */
+    public final long m4996h() {
+        return this.f32798d;
     }
 
-    public final void i() {
-        this.h = this.g;
-        this.g = SystemClock.uptimeMillis();
+    /* renamed from: i */
+    public final void m4995i() {
+        this.f32802h = this.f32801g;
+        this.f32801g = SystemClock.uptimeMillis();
     }
 
-    public final void j() {
-        this.b = this.a;
-        this.a = SystemClock.uptimeMillis();
+    /* renamed from: j */
+    public final void m4994j() {
+        this.f32796b = this.f32795a;
+        this.f32795a = SystemClock.uptimeMillis();
     }
 
-    public final void k(Context context, View view) {
-        this.d = this.c;
-        this.c = SystemClock.uptimeMillis();
-        long j = this.e;
+    /* renamed from: k */
+    public final void m4993k(Context context, View view) {
+        this.f32798d = this.f32797c;
+        this.f32797c = SystemClock.uptimeMillis();
+        long j = this.f32799e;
         if (j != -1) {
-            this.f = j;
+            this.f32800f = j;
         }
-        DisplayMetrics l = l(context);
-        int i = l.widthPixels;
-        int i2 = l.heightPixels;
-        int min = Math.min(view.getWidth(), l.widthPixels) * Math.min(view.getHeight(), l.heightPixels);
-        if (min + min < i * i2 && !(min == 0 && m(view))) {
-            this.e = -1L;
+        DisplayMetrics m4992l = m4992l(context);
+        int i = m4992l.widthPixels;
+        int i2 = m4992l.heightPixels;
+        int min = Math.min(view.getWidth(), m4992l.widthPixels) * Math.min(view.getHeight(), m4992l.heightPixels);
+        if (min + min < i * i2 && !(min == 0 && m4991m(view))) {
+            this.f32799e = -1L;
         } else {
-            this.e = this.c;
+            this.f32799e = this.f32797c;
         }
     }
 }

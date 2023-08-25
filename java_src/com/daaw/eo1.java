@@ -6,92 +6,129 @@ import java.util.List;
 /* loaded from: classes.dex */
 public interface eo1 {
 
+    /* renamed from: com.daaw.eo1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final String a;
-        public final int b;
-        public final byte[] c;
+    public static final class C1205a {
 
-        public a(String str, int i, byte[] bArr) {
-            this.a = str;
-            this.b = i;
-            this.c = bArr;
+        /* renamed from: a */
+        public final String f8611a;
+
+        /* renamed from: b */
+        public final int f8612b;
+
+        /* renamed from: c */
+        public final byte[] f8613c;
+
+        public C1205a(String str, int i, byte[] bArr) {
+            this.f8611a = str;
+            this.f8612b = i;
+            this.f8613c = bArr;
         }
     }
 
+    /* renamed from: com.daaw.eo1$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final int a;
-        public final String b;
-        public final List<a> c;
-        public final byte[] d;
+    public static final class C1206b {
 
-        public b(int i, String str, List<a> list, byte[] bArr) {
-            this.a = i;
-            this.b = str;
-            this.c = list == null ? Collections.emptyList() : Collections.unmodifiableList(list);
-            this.d = bArr;
+        /* renamed from: a */
+        public final int f8614a;
+
+        /* renamed from: b */
+        public final String f8615b;
+
+        /* renamed from: c */
+        public final List<C1205a> f8616c;
+
+        /* renamed from: d */
+        public final byte[] f8617d;
+
+        public C1206b(int i, String str, List<C1205a> list, byte[] bArr) {
+            this.f8614a = i;
+            this.f8615b = str;
+            this.f8616c = list == null ? Collections.emptyList() : Collections.unmodifiableList(list);
+            this.f8617d = bArr;
         }
     }
 
+    /* renamed from: com.daaw.eo1$c */
     /* loaded from: classes.dex */
-    public interface c {
-        eo1 a(int i, b bVar);
+    public interface InterfaceC1207c {
+        /* renamed from: a */
+        eo1 mo23338a(int i, C1206b c1206b);
 
-        SparseArray<eo1> b();
+        /* renamed from: b */
+        SparseArray<eo1> mo23337b();
     }
 
+    /* renamed from: com.daaw.eo1$d */
     /* loaded from: classes.dex */
-    public static final class d {
-        public final String a;
-        public final int b;
-        public final int c;
-        public int d;
-        public String e;
+    public static final class C1208d {
 
-        public d(int i, int i2) {
+        /* renamed from: a */
+        public final String f8618a;
+
+        /* renamed from: b */
+        public final int f8619b;
+
+        /* renamed from: c */
+        public final int f8620c;
+
+        /* renamed from: d */
+        public int f8621d;
+
+        /* renamed from: e */
+        public String f8622e;
+
+        public C1208d(int i, int i2) {
             this(Integer.MIN_VALUE, i, i2);
         }
 
-        public d(int i, int i2, int i3) {
+        public C1208d(int i, int i2, int i3) {
             String str;
             if (i != Integer.MIN_VALUE) {
                 str = i + "/";
             } else {
                 str = "";
             }
-            this.a = str;
-            this.b = i2;
-            this.c = i3;
-            this.d = Integer.MIN_VALUE;
+            this.f8618a = str;
+            this.f8619b = i2;
+            this.f8620c = i3;
+            this.f8621d = Integer.MIN_VALUE;
         }
 
-        public void a() {
-            int i = this.d;
-            this.d = i == Integer.MIN_VALUE ? this.b : i + this.c;
-            this.e = this.a + this.d;
+        /* renamed from: a */
+        public void m23336a() {
+            int i = this.f8621d;
+            this.f8621d = i == Integer.MIN_VALUE ? this.f8619b : i + this.f8620c;
+            this.f8622e = this.f8618a + this.f8621d;
         }
 
-        public String b() {
-            d();
-            return this.e;
+        /* renamed from: b */
+        public String m23335b() {
+            m23333d();
+            return this.f8622e;
         }
 
-        public int c() {
-            d();
-            return this.d;
+        /* renamed from: c */
+        public int m23334c() {
+            m23333d();
+            return this.f8621d;
         }
 
-        public final void d() {
-            if (this.d == Integer.MIN_VALUE) {
+        /* renamed from: d */
+        public final void m23333d() {
+            if (this.f8621d == Integer.MIN_VALUE) {
                 throw new IllegalStateException("generateNewId() must be called before retrieving ids.");
             }
         }
     }
 
-    void a(rv0 rv0Var, boolean z);
+    /* renamed from: a */
+    void mo15752a(rv0 rv0Var, boolean z);
 
-    void b();
+    /* renamed from: b */
+    void mo15751b();
 
-    void c(ol1 ol1Var, d00 d00Var, d dVar);
+    /* renamed from: c */
+    void mo15750c(ol1 ol1Var, d00 d00Var, C1208d c1208d);
 }

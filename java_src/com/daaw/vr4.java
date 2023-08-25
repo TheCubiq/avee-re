@@ -7,17 +7,18 @@ public final class vr4 extends kw4 {
         super(set);
     }
 
-    public final void C0(final cv3 cv3Var, final String str, final String str2) {
-        B0(new jw4() { // from class: com.daaw.pr4
+    /* renamed from: C0 */
+    public final void m6836C0(final cv3 cv3Var, final String str, final String str2) {
+        m17378B0(new jw4() { // from class: com.daaw.pr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((lq4) obj).m(cv3.this, str, str2);
+                ((lq4) obj).mo5170m(cv3.this, str, str2);
             }
         });
     }
 
     public final void zza() {
-        B0(new jw4() { // from class: com.daaw.sr4
+        m17378B0(new jw4() { // from class: com.daaw.sr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((lq4) obj).zzj();
@@ -26,7 +27,7 @@ public final class vr4 extends kw4 {
     }
 
     public final void zzb() {
-        B0(new jw4() { // from class: com.daaw.tr4
+        m17378B0(new jw4() { // from class: com.daaw.tr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((lq4) obj).zzm();
@@ -35,7 +36,7 @@ public final class vr4 extends kw4 {
     }
 
     public final void zzc() {
-        B0(new jw4() { // from class: com.daaw.qr4
+        m17378B0(new jw4() { // from class: com.daaw.qr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((lq4) obj).zzo();
@@ -44,19 +45,19 @@ public final class vr4 extends kw4 {
     }
 
     public final void zze() {
-        B0(new jw4() { // from class: com.daaw.rr4
+        m17378B0(new jw4() { // from class: com.daaw.rr4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((lq4) obj).c();
+                ((lq4) obj).mo5175c();
             }
         });
     }
 
     public final void zzf() {
-        B0(new jw4() { // from class: com.daaw.ur4
+        m17378B0(new jw4() { // from class: com.daaw.ur4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((lq4) obj).T();
+                ((lq4) obj).mo5177T();
             }
         });
     }

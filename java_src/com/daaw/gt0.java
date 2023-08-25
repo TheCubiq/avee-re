@@ -10,28 +10,40 @@ import java.util.HashSet;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class gt0 {
-    public static final Object c = new Object();
-    public static Set<String> d = new HashSet();
-    public static final Object e = new Object();
-    public final Context a;
-    public final NotificationManager b;
+
+    /* renamed from: c */
+    public static final Object f11719c = new Object();
+
+    /* renamed from: d */
+    public static Set<String> f11720d = new HashSet();
+
+    /* renamed from: e */
+    public static final Object f11721e = new Object();
+
+    /* renamed from: a */
+    public final Context f11722a;
+
+    /* renamed from: b */
+    public final NotificationManager f11723b;
 
     public gt0(Context context) {
-        this.a = context;
-        this.b = (NotificationManager) context.getSystemService("notification");
+        this.f11722a = context;
+        this.f11723b = (NotificationManager) context.getSystemService("notification");
     }
 
-    public static gt0 b(Context context) {
+    /* renamed from: b */
+    public static gt0 m21240b(Context context) {
         return new gt0(context);
     }
 
-    public boolean a() {
+    /* renamed from: a */
+    public boolean m21241a() {
         if (Build.VERSION.SDK_INT >= 24) {
-            return this.b.areNotificationsEnabled();
+            return this.f11723b.areNotificationsEnabled();
         }
-        AppOpsManager appOpsManager = (AppOpsManager) this.a.getSystemService("appops");
-        ApplicationInfo applicationInfo = this.a.getApplicationInfo();
-        String packageName = this.a.getApplicationContext().getPackageName();
+        AppOpsManager appOpsManager = (AppOpsManager) this.f11722a.getSystemService("appops");
+        ApplicationInfo applicationInfo = this.f11722a.getApplicationInfo();
+        String packageName = this.f11722a.getApplicationContext().getPackageName();
         int i = applicationInfo.uid;
         try {
             Class<?> cls = Class.forName(AppOpsManager.class.getName());

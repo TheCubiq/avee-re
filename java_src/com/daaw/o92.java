@@ -1,39 +1,45 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class o92 implements m92 {
-    public final int a;
-    public final int b;
-    public final ik5 c;
+
+    /* renamed from: a */
+    public final int f21173a;
+
+    /* renamed from: b */
+    public final int f21174b;
+
+    /* renamed from: c */
+    public final ik5 f21175c;
 
     public o92(b92 b92Var, f92 f92Var) {
-        ik5 ik5Var = b92Var.b;
-        this.c = ik5Var;
-        ik5Var.f(12);
-        int v = ik5Var.v();
-        if ("audio/raw".equals(f92Var.l)) {
-            int Y = it5.Y(f92Var.A, f92Var.y);
-            if (v == 0 || v % Y != 0) {
-                s95.e("AtomParsers", "Audio sample size mismatch. stsd sample size: " + Y + ", stsz sample size: " + v);
-                v = Y;
+        ik5 ik5Var = b92Var.f4558b;
+        this.f21175c = ik5Var;
+        ik5Var.m19716f(12);
+        int m19700v = ik5Var.m19700v();
+        if ("audio/raw".equals(f92Var.f9275l)) {
+            int m19407Y = it5.m19407Y(f92Var.f9258A, f92Var.f9288y);
+            if (m19700v == 0 || m19700v % m19407Y != 0) {
+                s95.m10493e("AtomParsers", "Audio sample size mismatch. stsd sample size: " + m19407Y + ", stsz sample size: " + m19700v);
+                m19700v = m19407Y;
             }
         }
-        this.a = v == 0 ? -1 : v;
-        this.b = ik5Var.v();
+        this.f21173a = m19700v == 0 ? -1 : m19700v;
+        this.f21174b = ik5Var.m19700v();
     }
 
     @Override // com.daaw.m92
     public final int zza() {
-        return this.a;
+        return this.f21173a;
     }
 
     @Override // com.daaw.m92
     public final int zzb() {
-        return this.b;
+        return this.f21174b;
     }
 
     @Override // com.daaw.m92
     public final int zzc() {
-        int i = this.a;
-        return i == -1 ? this.c.v() : i;
+        int i = this.f21173a;
+        return i == -1 ? this.f21175c.m19700v() : i;
     }
 }

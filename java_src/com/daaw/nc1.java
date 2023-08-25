@@ -5,43 +5,52 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public class nc1 {
-    public final BlockingQueue<a> a;
 
+    /* renamed from: a */
+    public final BlockingQueue<C2283a> f20016a;
+
+    /* renamed from: com.daaw.nc1$a */
     /* loaded from: classes.dex */
-    public class a {
-        public final short[] a;
+    public class C2283a {
 
-        public a(short[] sArr) {
-            this.a = sArr;
+        /* renamed from: a */
+        public final short[] f20017a;
+
+        public C2283a(short[] sArr) {
+            this.f20017a = sArr;
         }
 
-        public void a() {
-            nc1.this.c(this);
+        /* renamed from: a */
+        public void m15243a() {
+            nc1.this.m15244c(this);
         }
     }
 
     public nc1(int i) {
-        this.a = new ArrayBlockingQueue(i, true);
+        this.f20016a = new ArrayBlockingQueue(i, true);
     }
 
-    public a a(int i, long j) {
+    /* renamed from: a */
+    public C2283a m15246a(int i, long j) {
         try {
-            a poll = this.a.poll(j, TimeUnit.MILLISECONDS);
+            C2283a poll = this.f20016a.poll(j, TimeUnit.MILLISECONDS);
             if (poll != null) {
-                if (poll.a.length == i) {
+                if (poll.f20017a.length == i) {
                     return poll;
                 }
             }
         } catch (InterruptedException unused) {
         }
-        return b(i);
+        return m15245b(i);
     }
 
-    public a b(int i) {
-        return new a(new short[i]);
+    /* renamed from: b */
+    public C2283a m15245b(int i) {
+        return new C2283a(new short[i]);
     }
 
-    public void c(a aVar) {
-        this.a.offer(aVar);
+    /* renamed from: c */
+    public void m15244c(C2283a c2283a) {
+        this.f20016a.offer(c2283a);
     }
 }

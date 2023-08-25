@@ -1,14 +1,22 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class cu2 {
-    public final fu2 a;
-    public final iu2 b;
-    public final ws2 c;
-    public int d;
+
+    /* renamed from: a */
+    public final fu2 f6183a;
+
+    /* renamed from: b */
+    public final iu2 f6184b;
+
+    /* renamed from: c */
+    public final ws2 f6185c;
+
+    /* renamed from: d */
+    public int f6186d;
 
     public cu2(fu2 fu2Var, iu2 iu2Var, ws2 ws2Var) {
-        this.a = fu2Var;
-        this.b = iu2Var;
-        this.c = ws2Var;
+        this.f6183a = fu2Var;
+        this.f6184b = iu2Var;
+        this.f6185c = ws2Var;
     }
 }

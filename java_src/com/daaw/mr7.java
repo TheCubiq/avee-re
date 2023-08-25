@@ -3,9 +3,15 @@ package com.daaw;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class mr7 extends qr7 {
-    public final byte[] d;
-    public final int e;
-    public int f;
+
+    /* renamed from: d */
+    public final byte[] f19111d;
+
+    /* renamed from: e */
+    public final int f19112e;
+
+    /* renamed from: f */
+    public int f19113f;
 
     public mr7(byte[] bArr, int i, int i2) {
         super(null);
@@ -14,247 +20,268 @@ public final class mr7 extends qr7 {
         if (((length - i2) | i2) < 0) {
             throw new IllegalArgumentException(String.format("Array range is invalid. Buffer.length=%d, offset=%d, length=%d", Integer.valueOf(length), 0, Integer.valueOf(i2)));
         }
-        this.d = bArr;
-        this.f = 0;
-        this.e = i2;
+        this.f19111d = bArr;
+        this.f19113f = 0;
+        this.f19112e = i2;
     }
 
     @Override // com.daaw.qr7
-    public final void A(int i, int i2) {
-        B(i << 3);
-        B(i2);
+    /* renamed from: A */
+    public final void mo12269A(int i, int i2) {
+        mo12268B(i << 3);
+        mo12268B(i2);
     }
 
     @Override // com.daaw.qr7
-    public final void B(int i) {
+    /* renamed from: B */
+    public final void mo12268B(int i) {
         while ((i & (-128)) != 0) {
             try {
-                byte[] bArr = this.d;
-                int i2 = this.f;
-                this.f = i2 + 1;
+                byte[] bArr = this.f19111d;
+                int i2 = this.f19113f;
+                this.f19113f = i2 + 1;
                 bArr[i2] = (byte) ((i & 127) | 128);
                 i >>>= 7;
             } catch (IndexOutOfBoundsException e) {
-                throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f), Integer.valueOf(this.e), 1), e);
+                throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f19113f), Integer.valueOf(this.f19112e), 1), e);
             }
         }
-        byte[] bArr2 = this.d;
-        int i3 = this.f;
-        this.f = i3 + 1;
+        byte[] bArr2 = this.f19111d;
+        int i3 = this.f19113f;
+        this.f19113f = i3 + 1;
         bArr2[i3] = (byte) i;
     }
 
     @Override // com.daaw.qr7
-    public final void C(int i, long j) {
-        B(i << 3);
-        D(j);
+    /* renamed from: C */
+    public final void mo12267C(int i, long j) {
+        mo12268B(i << 3);
+        mo12266D(j);
     }
 
     @Override // com.daaw.qr7
-    public final void D(long j) {
+    /* renamed from: D */
+    public final void mo12266D(long j) {
         boolean z;
-        z = qr7.c;
-        if (z && this.e - this.f >= 10) {
+        z = qr7.f24291c;
+        if (z && this.f19112e - this.f19113f >= 10) {
             while ((j & (-128)) != 0) {
-                byte[] bArr = this.d;
-                int i = this.f;
-                this.f = i + 1;
-                gw7.y(bArr, i, (byte) ((((int) j) & 127) | 128));
+                byte[] bArr = this.f19111d;
+                int i = this.f19113f;
+                this.f19113f = i + 1;
+                gw7.m21161y(bArr, i, (byte) ((((int) j) & 127) | 128));
                 j >>>= 7;
             }
-            byte[] bArr2 = this.d;
-            int i2 = this.f;
-            this.f = i2 + 1;
-            gw7.y(bArr2, i2, (byte) j);
+            byte[] bArr2 = this.f19111d;
+            int i2 = this.f19113f;
+            this.f19113f = i2 + 1;
+            gw7.m21161y(bArr2, i2, (byte) j);
             return;
         }
         while ((j & (-128)) != 0) {
             try {
-                byte[] bArr3 = this.d;
-                int i3 = this.f;
-                this.f = i3 + 1;
+                byte[] bArr3 = this.f19111d;
+                int i3 = this.f19113f;
+                this.f19113f = i3 + 1;
                 bArr3[i3] = (byte) ((((int) j) & 127) | 128);
                 j >>>= 7;
             } catch (IndexOutOfBoundsException e) {
-                throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f), Integer.valueOf(this.e), 1), e);
+                throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f19113f), Integer.valueOf(this.f19112e), 1), e);
             }
         }
-        byte[] bArr4 = this.d;
-        int i4 = this.f;
-        this.f = i4 + 1;
+        byte[] bArr4 = this.f19111d;
+        int i4 = this.f19113f;
+        this.f19113f = i4 + 1;
         bArr4[i4] = (byte) j;
     }
 
-    public final void I(byte[] bArr, int i, int i2) {
+    /* renamed from: I */
+    public final void m15808I(byte[] bArr, int i, int i2) {
         try {
-            System.arraycopy(bArr, i, this.d, this.f, i2);
-            this.f += i2;
+            System.arraycopy(bArr, i, this.f19111d, this.f19113f, i2);
+            this.f19113f += i2;
         } catch (IndexOutOfBoundsException e) {
-            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f), Integer.valueOf(this.e), Integer.valueOf(i2)), e);
+            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f19113f), Integer.valueOf(this.f19112e), Integer.valueOf(i2)), e);
         }
     }
 
-    public final void J(String str) {
-        int i = this.f;
+    /* renamed from: J */
+    public final void m15807J(String str) {
+        int i = this.f19113f;
         try {
-            int f = qr7.f(str.length() * 3);
-            int f2 = qr7.f(str.length());
-            if (f2 != f) {
-                B(lw7.e(str));
-                byte[] bArr = this.d;
-                int i2 = this.f;
-                this.f = lw7.d(str, bArr, i2, this.e - i2);
+            int m12256f = qr7.m12256f(str.length() * 3);
+            int m12256f2 = qr7.m12256f(str.length());
+            if (m12256f2 != m12256f) {
+                mo12268B(lw7.m16416e(str));
+                byte[] bArr = this.f19111d;
+                int i2 = this.f19113f;
+                this.f19113f = lw7.m16417d(str, bArr, i2, this.f19112e - i2);
                 return;
             }
-            int i3 = i + f2;
-            this.f = i3;
-            int d = lw7.d(str, this.d, i3, this.e - i3);
-            this.f = i;
-            B((d - i) - f2);
-            this.f = d;
+            int i3 = i + m12256f2;
+            this.f19113f = i3;
+            int m16417d = lw7.m16417d(str, this.f19111d, i3, this.f19112e - i3);
+            this.f19113f = i;
+            mo12268B((m16417d - i) - m12256f2);
+            this.f19113f = m16417d;
         } catch (kw7 e) {
-            this.f = i;
-            k(str, e);
+            this.f19113f = i;
+            m12251k(str, e);
         } catch (IndexOutOfBoundsException e2) {
             throw new nr7(e2);
         }
     }
 
     @Override // com.daaw.qr7, com.daaw.nq7
-    public final void a(byte[] bArr, int i, int i2) {
-        I(bArr, i, i2);
+    /* renamed from: a */
+    public final void mo12261a(byte[] bArr, int i, int i2) {
+        m15808I(bArr, i, i2);
     }
 
     @Override // com.daaw.qr7
-    public final void m() {
+    /* renamed from: m */
+    public final void mo12249m() {
     }
 
     @Override // com.daaw.qr7
-    public final void n(byte b) {
+    /* renamed from: n */
+    public final void mo12248n(byte b) {
         try {
-            byte[] bArr = this.d;
-            int i = this.f;
-            this.f = i + 1;
+            byte[] bArr = this.f19111d;
+            int i = this.f19113f;
+            this.f19113f = i + 1;
             bArr[i] = b;
         } catch (IndexOutOfBoundsException e) {
-            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f), Integer.valueOf(this.e), 1), e);
+            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f19113f), Integer.valueOf(this.f19112e), 1), e);
         }
     }
 
     @Override // com.daaw.qr7
-    public final void o(int i, boolean z) {
-        B(i << 3);
-        n(z ? (byte) 1 : (byte) 0);
+    /* renamed from: o */
+    public final void mo12247o(int i, boolean z) {
+        mo12268B(i << 3);
+        mo12248n(z ? (byte) 1 : (byte) 0);
     }
 
     @Override // com.daaw.qr7
-    public final void p(int i, yq7 yq7Var) {
-        B((i << 3) | 2);
-        B(yq7Var.o());
-        yq7Var.y(this);
+    /* renamed from: p */
+    public final void mo12246p(int i, yq7 yq7Var) {
+        mo12268B((i << 3) | 2);
+        mo12268B(yq7Var.mo3411o());
+        yq7Var.mo3401y(this);
     }
 
     @Override // com.daaw.qr7
-    public final int q() {
-        return this.e - this.f;
+    /* renamed from: q */
+    public final int mo12245q() {
+        return this.f19112e - this.f19113f;
     }
 
     @Override // com.daaw.qr7
-    public final void r(int i, int i2) {
-        B((i << 3) | 5);
-        s(i2);
+    /* renamed from: r */
+    public final void mo12244r(int i, int i2) {
+        mo12268B((i << 3) | 5);
+        mo12243s(i2);
     }
 
     @Override // com.daaw.qr7
-    public final void s(int i) {
+    /* renamed from: s */
+    public final void mo12243s(int i) {
         try {
-            byte[] bArr = this.d;
-            int i2 = this.f;
+            byte[] bArr = this.f19111d;
+            int i2 = this.f19113f;
             int i3 = i2 + 1;
-            this.f = i3;
+            this.f19113f = i3;
             bArr[i2] = (byte) (i & 255);
             int i4 = i3 + 1;
-            this.f = i4;
+            this.f19113f = i4;
             bArr[i3] = (byte) ((i >> 8) & 255);
             int i5 = i4 + 1;
-            this.f = i5;
+            this.f19113f = i5;
             bArr[i4] = (byte) ((i >> 16) & 255);
-            this.f = i5 + 1;
+            this.f19113f = i5 + 1;
             bArr[i5] = (byte) ((i >> 24) & 255);
         } catch (IndexOutOfBoundsException e) {
-            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f), Integer.valueOf(this.e), 1), e);
+            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f19113f), Integer.valueOf(this.f19112e), 1), e);
         }
     }
 
     @Override // com.daaw.qr7
-    public final void t(int i, long j) {
-        B((i << 3) | 1);
-        u(j);
+    /* renamed from: t */
+    public final void mo12242t(int i, long j) {
+        mo12268B((i << 3) | 1);
+        mo12241u(j);
     }
 
     @Override // com.daaw.qr7
-    public final void u(long j) {
+    /* renamed from: u */
+    public final void mo12241u(long j) {
         try {
-            byte[] bArr = this.d;
-            int i = this.f;
+            byte[] bArr = this.f19111d;
+            int i = this.f19113f;
             int i2 = i + 1;
-            this.f = i2;
+            this.f19113f = i2;
             bArr[i] = (byte) (((int) j) & 255);
             int i3 = i2 + 1;
-            this.f = i3;
+            this.f19113f = i3;
             bArr[i2] = (byte) (((int) (j >> 8)) & 255);
             int i4 = i3 + 1;
-            this.f = i4;
+            this.f19113f = i4;
             bArr[i3] = (byte) (((int) (j >> 16)) & 255);
             int i5 = i4 + 1;
-            this.f = i5;
+            this.f19113f = i5;
             bArr[i4] = (byte) (((int) (j >> 24)) & 255);
             int i6 = i5 + 1;
-            this.f = i6;
+            this.f19113f = i6;
             bArr[i5] = (byte) (((int) (j >> 32)) & 255);
             int i7 = i6 + 1;
-            this.f = i7;
+            this.f19113f = i7;
             bArr[i6] = (byte) (((int) (j >> 40)) & 255);
             int i8 = i7 + 1;
-            this.f = i8;
+            this.f19113f = i8;
             bArr[i7] = (byte) (((int) (j >> 48)) & 255);
-            this.f = i8 + 1;
+            this.f19113f = i8 + 1;
             bArr[i8] = (byte) (((int) (j >> 56)) & 255);
         } catch (IndexOutOfBoundsException e) {
-            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f), Integer.valueOf(this.e), 1), e);
+            throw new nr7(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f19113f), Integer.valueOf(this.f19112e), 1), e);
         }
     }
 
     @Override // com.daaw.qr7
-    public final void v(int i, int i2) {
-        B(i << 3);
-        w(i2);
+    /* renamed from: v */
+    public final void mo12240v(int i, int i2) {
+        mo12268B(i << 3);
+        mo12239w(i2);
     }
 
     @Override // com.daaw.qr7
-    public final void w(int i) {
+    /* renamed from: w */
+    public final void mo12239w(int i) {
         if (i >= 0) {
-            B(i);
+            mo12268B(i);
         } else {
-            D(i);
+            mo12266D(i);
         }
     }
 
     @Override // com.daaw.qr7
-    public final void x(int i, xt7 xt7Var, cv7 cv7Var) {
-        B((i << 3) | 2);
-        B(((hq7) xt7Var).f(cv7Var));
-        cv7Var.f(xt7Var, this.a);
+    /* renamed from: x */
+    public final void mo12238x(int i, xt7 xt7Var, cv7 cv7Var) {
+        mo12268B((i << 3) | 2);
+        mo12268B(((hq7) xt7Var).mo16589f(cv7Var));
+        cv7Var.mo24956f(xt7Var, this.f24292a);
     }
 
     @Override // com.daaw.qr7
-    public final void y(int i, String str) {
-        B((i << 3) | 2);
-        J(str);
+    /* renamed from: y */
+    public final void mo12237y(int i, String str) {
+        mo12268B((i << 3) | 2);
+        m15807J(str);
     }
 
     @Override // com.daaw.qr7
-    public final void z(int i, int i2) {
-        B((i << 3) | i2);
+    /* renamed from: z */
+    public final void mo12236z(int i, int i2) {
+        mo12268B((i << 3) | i2);
     }
 }

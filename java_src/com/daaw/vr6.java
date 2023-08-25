@@ -10,12 +10,13 @@ public final class vr6 extends qr6 {
     }
 
     @Override // com.daaw.rr6
-    public final void a(String str) {
-        lq6 a;
-        if (!TextUtils.isEmpty(str) && (a = lq6.a()) != null) {
-            for (xp6 xp6Var : a.c()) {
-                if (this.c.contains(xp6Var.h())) {
-                    xp6Var.g().e(str, this.e);
+    /* renamed from: a */
+    public final void mo6835a(String str) {
+        lq6 m16667a;
+        if (!TextUtils.isEmpty(str) && (m16667a = lq6.m16667a()) != null) {
+            for (xp6 xp6Var : m16667a.m16665c()) {
+                if (this.f24287c.contains(xp6Var.m4830h())) {
+                    xp6Var.m4831g().m4807e(str, this.f24289e);
                 }
             }
         }
@@ -24,11 +25,11 @@ public final class vr6 extends qr6 {
 
     @Override // android.os.AsyncTask
     public final /* bridge */ /* synthetic */ Object doInBackground(Object[] objArr) {
-        if (br6.j(this.d, this.b.a())) {
+        if (br6.m25873j(this.f24288d, this.f25542b.m18312a())) {
             return null;
         }
-        this.b.e(this.d);
-        return this.d.toString();
+        this.f25542b.m18308e(this.f24288d);
+        return this.f24288d.toString();
     }
 
     @Override // com.daaw.rr6, android.os.AsyncTask

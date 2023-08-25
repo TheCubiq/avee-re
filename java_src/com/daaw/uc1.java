@@ -7,203 +7,236 @@ import java.util.List;
 import org.xmlpull.v1.XmlPullParser;
 /* loaded from: classes.dex */
 public class uc1<G, GList extends List<G>, TStation, VStation extends List<TStation>> {
-    public static boolean e;
-    public static final String f = null;
-    public c<G> a;
-    public r40<G, GList> b;
-    public d<TStation> c;
-    public w40<VStation> d;
 
+    /* renamed from: e */
+    public static boolean f28872e;
+
+    /* renamed from: f */
+    public static final String f28873f = null;
+
+    /* renamed from: a */
+    public InterfaceC3197c<G> f28874a;
+
+    /* renamed from: b */
+    public r40<G, GList> f28875b;
+
+    /* renamed from: c */
+    public InterfaceC3198d<TStation> f28876c;
+
+    /* renamed from: d */
+    public w40<VStation> f28877d;
+
+    /* renamed from: com.daaw.uc1$a */
     /* loaded from: classes.dex */
-    public class a implements e<String, XmlPullParser, Boolean> {
-        public final /* synthetic */ List a;
+    public class C3195a implements InterfaceC3199e<String, XmlPullParser, Boolean> {
 
-        public a(List list) {
-            this.a = list;
+        /* renamed from: a */
+        public final /* synthetic */ List f28878a;
+
+        public C3195a(List list) {
+            this.f28878a = list;
         }
 
-        @Override // com.daaw.uc1.e
+        @Override // com.daaw.uc1.InterfaceC3199e
         /* renamed from: b */
-        public Boolean a(String str, XmlPullParser xmlPullParser) {
-            uc1.this.g(xmlPullParser, this.a, null);
+        public Boolean mo8322a(String str, XmlPullParser xmlPullParser) {
+            uc1.this.m8334g(xmlPullParser, this.f28878a, null);
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.uc1$b */
     /* loaded from: classes.dex */
-    public class b implements e<String, XmlPullParser, Boolean> {
-        public final /* synthetic */ List a;
+    public class C3196b implements InterfaceC3199e<String, XmlPullParser, Boolean> {
 
-        public b(List list) {
-            this.a = list;
+        /* renamed from: a */
+        public final /* synthetic */ List f28880a;
+
+        public C3196b(List list) {
+            this.f28880a = list;
         }
 
-        @Override // com.daaw.uc1.e
+        @Override // com.daaw.uc1.InterfaceC3199e
         /* renamed from: b */
-        public Boolean a(String str, XmlPullParser xmlPullParser) {
-            uc1.this.j(xmlPullParser, this.a);
+        public Boolean mo8322a(String str, XmlPullParser xmlPullParser) {
+            uc1.this.m8331j(xmlPullParser, this.f28880a);
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.uc1$c */
     /* loaded from: classes.dex */
-    public interface c<T> {
-        T a(String str, String str2);
+    public interface InterfaceC3197c<T> {
+        /* renamed from: a */
+        T mo8324a(String str, String str2);
     }
 
+    /* renamed from: com.daaw.uc1$d */
     /* loaded from: classes.dex */
-    public interface d<TStation> {
-        TStation a(String str, String str2, int i, String str3, String str4, String[] strArr);
+    public interface InterfaceC3198d<TStation> {
+        /* renamed from: a */
+        TStation mo8323a(String str, String str2, int i, String str3, String str4, String[] strArr);
     }
 
+    /* renamed from: com.daaw.uc1$e */
     /* loaded from: classes.dex */
-    public interface e<T1, T2, R> {
-        R a(T1 t1, T2 t2);
+    public interface InterfaceC3199e<T1, T2, R> {
+        /* renamed from: a */
+        R mo8322a(T1 t1, T2 t2);
     }
 
-    public uc1(c<G> cVar, r40<G, GList> r40Var, d<TStation> dVar, w40<VStation> w40Var) {
-        this.a = cVar;
-        this.b = r40Var;
-        this.c = dVar;
-        this.d = w40Var;
+    public uc1(InterfaceC3197c<G> interfaceC3197c, r40<G, GList> r40Var, InterfaceC3198d<TStation> interfaceC3198d, w40<VStation> w40Var) {
+        this.f28874a = interfaceC3197c;
+        this.f28875b = r40Var;
+        this.f28876c = interfaceC3198d;
+        this.f28877d = w40Var;
     }
 
-    public GList c(InputStream inputStream, wf1 wf1Var) {
+    /* renamed from: c */
+    public GList m8338c(InputStream inputStream, wf1 wf1Var) {
         try {
             XmlPullParser newPullParser = Xml.newPullParser();
             newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", false);
-            if (e) {
+            if (f28872e) {
                 newPullParser.setInput(new StringReader("<response>\n <statusCode>200</statusCode>\n <statusText>Ok</statusText>\n <data>\n  <genrelist>\n   <genre name=\"Alternative\" id=\"1\" parentid=\"0\" haschildren=\"true\">\n    <genrelist>\n     <genre name=\"Adult Alternative\" id=\"2\" parentid=\"1\" haschildren=\"false\"/>\n     <genre name=\"Britpop\" id=\"3\" parentid=\"1\" haschildren=\"false\"/>\n     <genre name=\"Classic Alternative\" id=\"4\" parentid=\"1\" haschildren=\"false\"/> \n    </genrelist>\n   </genre>\n  </genrelist>\n </data>\n</response>"));
             } else {
                 newPullParser.setInput(inputStream, null);
             }
             newPullParser.nextTag();
-            GList a2 = this.b.a(null);
-            h(newPullParser, wf1Var, new a(a2));
-            return a2;
+            GList mo5050a = this.f28875b.mo5050a(null);
+            m8333h(newPullParser, wf1Var, new C3195a(mo5050a));
+            return mo5050a;
         } finally {
             inputStream.close();
         }
     }
 
-    public VStation d(InputStream inputStream, wf1 wf1Var) {
+    /* renamed from: d */
+    public VStation m8337d(InputStream inputStream, wf1 wf1Var) {
         try {
             XmlPullParser newPullParser = Xml.newPullParser();
             newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", false);
-            if (e) {
+            if (f28872e) {
                 newPullParser.setInput(new StringReader("<response>\n <statusCode>200</statusCode>\n <statusText>Ok</statusText>\n <data>\n  <stationlist>\n   <tunein base=\"/sbin/tunein-station.pls\"/>\n   <station name=\".977 The Hitz Channel\" mt=\"audio/mpeg\" id=\"9907\" \n    br=\"128\" genre=\"Pop Rock Top 40\"\n    ct=\"Chingy - Balla Baby\" lc=\"11576\"/>\n   <station name=\"TechnoBase.FM - 24h Techno, Dance, Trance, House and More - 128k MP3-[SHOUTcast.com]\"\n    mt=\"audio/mpeg\"id=\"7429\" br=\"128\"genre=\"Techno Trance  Dance House\"\n    ct=\"We aRe oNe\" lc=\"8308\" ml=\"8500\" nsc=\"No\" cst=\"\"/>\n   <station name=\"Absolutely Smooth Jazz - S K Y . F M - the world's smoothest\n    jazz 24 hours a day-[SHOUTcast.com]\" mt=\"audio/mpeg\" id=\"948\"br=\"96\" genre=\"Soft Smooth Jazz\"\n    ct=\"Jonathan Butler/Kirk Whalum - Dancing on the Shore\" lc=\"6801\" ml=\"10023\" nsc=\"No\" cst=\"\"/>\n  </stationlist> \n </data>\n</response>"));
             } else {
                 newPullParser.setInput(inputStream, null);
             }
             newPullParser.nextTag();
-            VStation a2 = this.d.a();
-            h(newPullParser, wf1Var, new b(a2));
-            return a2;
+            VStation mo3478a = this.f28877d.mo3478a();
+            m8333h(newPullParser, wf1Var, new C3196b(mo3478a));
+            return mo3478a;
         } finally {
             inputStream.close();
         }
     }
 
-    public final void e(XmlPullParser xmlPullParser, e<String, XmlPullParser, Boolean> eVar) {
-        xmlPullParser.require(2, f, "data");
+    /* renamed from: e */
+    public final void m8336e(XmlPullParser xmlPullParser, InterfaceC3199e<String, XmlPullParser, Boolean> interfaceC3199e) {
+        xmlPullParser.require(2, f28873f, "data");
         while (xmlPullParser.next() != 3) {
-            if (xmlPullParser.getEventType() == 2 && !eVar.a(xmlPullParser.getName(), xmlPullParser).booleanValue()) {
-                n(xmlPullParser);
+            if (xmlPullParser.getEventType() == 2 && !interfaceC3199e.mo8322a(xmlPullParser.getName(), xmlPullParser).booleanValue()) {
+                m8327n(xmlPullParser);
             }
         }
     }
 
-    public final G f(XmlPullParser xmlPullParser, GList glist) {
-        String str = f;
+    /* renamed from: f */
+    public final G m8335f(XmlPullParser xmlPullParser, GList glist) {
+        String str = f28873f;
         xmlPullParser.require(2, str, "genre");
-        G a2 = this.a.a(xmlPullParser.getAttributeValue(str, "name"), xmlPullParser.getAttributeValue(str, "id"));
-        GList a3 = this.b.a(a2);
+        G mo8324a = this.f28874a.mo8324a(xmlPullParser.getAttributeValue(str, "name"), xmlPullParser.getAttributeValue(str, "id"));
+        GList mo5050a = this.f28875b.mo5050a(mo8324a);
         while (xmlPullParser.next() != 3) {
             if (xmlPullParser.getEventType() == 2) {
-                if (!xmlPullParser.getName().equals("genrelist") || a3 == null) {
-                    n(xmlPullParser);
+                if (!xmlPullParser.getName().equals("genrelist") || mo5050a == null) {
+                    m8327n(xmlPullParser);
                 } else {
-                    g(xmlPullParser, a3, null);
+                    m8334g(xmlPullParser, mo5050a, null);
                 }
             }
         }
-        return a2;
+        return mo8324a;
     }
 
-    public final void g(XmlPullParser xmlPullParser, GList glist, GList glist2) {
-        xmlPullParser.require(2, f, "genrelist");
+    /* renamed from: g */
+    public final void m8334g(XmlPullParser xmlPullParser, GList glist, GList glist2) {
+        xmlPullParser.require(2, f28873f, "genrelist");
         while (xmlPullParser.next() != 3) {
             if (xmlPullParser.getEventType() == 2) {
                 if (xmlPullParser.getName().equals("genre")) {
-                    G f2 = f(xmlPullParser, null);
+                    G m8335f = m8335f(xmlPullParser, null);
                     if (glist != null) {
-                        glist.add(f2);
+                        glist.add(m8335f);
                     }
                 } else {
-                    n(xmlPullParser);
+                    m8327n(xmlPullParser);
                 }
             }
         }
     }
 
-    public final void h(XmlPullParser xmlPullParser, wf1 wf1Var, e<String, XmlPullParser, Boolean> eVar) {
-        xmlPullParser.require(2, f, "response");
+    /* renamed from: h */
+    public final void m8333h(XmlPullParser xmlPullParser, wf1 wf1Var, InterfaceC3199e<String, XmlPullParser, Boolean> interfaceC3199e) {
+        xmlPullParser.require(2, f28873f, "response");
         String str = null;
         String str2 = null;
         while (xmlPullParser.next() != 3) {
             if (xmlPullParser.getEventType() == 2) {
                 String name = xmlPullParser.getName();
                 if (name.equals("statusCode")) {
-                    str = l(xmlPullParser, name);
+                    str = m8329l(xmlPullParser, name);
                 } else if (name.equals("statusText")) {
-                    str2 = l(xmlPullParser, name);
+                    str2 = m8329l(xmlPullParser, name);
                 } else if (name.equals("data")) {
-                    e(xmlPullParser, eVar);
+                    m8336e(xmlPullParser, interfaceC3199e);
                 } else {
-                    n(xmlPullParser);
+                    m8327n(xmlPullParser);
                 }
             }
         }
         if (str == null || str.equals("200")) {
             return;
         }
-        wf1Var.a(str2);
+        wf1Var.m6096a(str2);
     }
 
-    public final TStation i(XmlPullParser xmlPullParser, String[] strArr) {
-        String str = f;
+    /* renamed from: i */
+    public final TStation m8332i(XmlPullParser xmlPullParser, String[] strArr) {
+        String str = f28873f;
         xmlPullParser.require(2, str, "station");
         String attributeValue = xmlPullParser.getAttributeValue(str, "name");
         String attributeValue2 = xmlPullParser.getAttributeValue(str, "id");
-        int x = br1.x(xmlPullParser.getAttributeValue(str, "br"), 0);
+        int m25885x = br1.m25885x(xmlPullParser.getAttributeValue(str, "br"), 0);
         String attributeValue3 = xmlPullParser.getAttributeValue(str, "genre");
         String attributeValue4 = xmlPullParser.getAttributeValue(str, "ct");
         xmlPullParser.nextTag();
         xmlPullParser.require(3, str, "station");
-        return this.c.a(attributeValue, attributeValue2, x, attributeValue3, attributeValue4, strArr);
+        return this.f28876c.mo8323a(attributeValue, attributeValue2, m25885x, attributeValue3, attributeValue4, strArr);
     }
 
-    public final void j(XmlPullParser xmlPullParser, VStation vstation) {
+    /* renamed from: j */
+    public final void m8331j(XmlPullParser xmlPullParser, VStation vstation) {
         String[] strArr = {""};
-        xmlPullParser.require(2, f, "stationlist");
+        xmlPullParser.require(2, f28873f, "stationlist");
         while (xmlPullParser.next() != 3) {
             if (xmlPullParser.getEventType() == 2) {
                 String name = xmlPullParser.getName();
                 if (name.equals("tunein")) {
-                    strArr[0] = m(xmlPullParser);
+                    strArr[0] = m8328m(xmlPullParser);
                 } else if (name.equals("station")) {
-                    TStation i = i(xmlPullParser, strArr);
+                    TStation m8332i = m8332i(xmlPullParser, strArr);
                     if (vstation != null) {
-                        vstation.add(i);
+                        vstation.add(m8332i);
                     }
                 } else {
-                    n(xmlPullParser);
+                    m8327n(xmlPullParser);
                 }
             }
         }
     }
 
-    public final String k(XmlPullParser xmlPullParser) {
+    /* renamed from: k */
+    public final String m8330k(XmlPullParser xmlPullParser) {
         if (xmlPullParser.next() == 4) {
             String text = xmlPullParser.getText();
             xmlPullParser.nextTag();
@@ -212,16 +245,18 @@ public class uc1<G, GList extends List<G>, TStation, VStation extends List<TStat
         return "";
     }
 
-    public final String l(XmlPullParser xmlPullParser, String str) {
-        String str2 = f;
+    /* renamed from: l */
+    public final String m8329l(XmlPullParser xmlPullParser, String str) {
+        String str2 = f28873f;
         xmlPullParser.require(2, str2, str);
-        String k = k(xmlPullParser);
+        String m8330k = m8330k(xmlPullParser);
         xmlPullParser.require(3, str2, str);
-        return k;
+        return m8330k;
     }
 
-    public final String m(XmlPullParser xmlPullParser) {
-        String str = f;
+    /* renamed from: m */
+    public final String m8328m(XmlPullParser xmlPullParser) {
+        String str = f28873f;
         xmlPullParser.require(2, str, "tunein");
         String attributeValue = xmlPullParser.getAttributeValue(str, "base");
         xmlPullParser.nextTag();
@@ -229,7 +264,8 @@ public class uc1<G, GList extends List<G>, TStation, VStation extends List<TStat
         return attributeValue;
     }
 
-    public final void n(XmlPullParser xmlPullParser) {
+    /* renamed from: n */
+    public final void m8327n(XmlPullParser xmlPullParser) {
         if (xmlPullParser.getEventType() != 2) {
             throw new IllegalStateException();
         }

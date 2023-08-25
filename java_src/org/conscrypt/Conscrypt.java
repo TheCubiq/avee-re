@@ -1,9 +1,12 @@
 package org.conscrypt;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.cert.X509Certificate;
+import java.util.Properties;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLContextSpi;
@@ -16,10 +19,13 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import org.conscrypt.p005io.IoUtils;
 /* loaded from: classes2.dex */
 public final class Conscrypt {
     private static final Version VERSION;
-    public static final /* synthetic */ int a = 0;
+
+    /* renamed from: a */
+    public static final /* synthetic */ int f38014a = 0;
 
     /* loaded from: classes2.dex */
     public static class ProviderBuilder {
@@ -85,67 +91,74 @@ public final class Conscrypt {
 
     /* JADX WARN: Removed duplicated region for block: B:21:0x004e A[ADDED_TO_REGION] */
     static {
-        /*
-            java.lang.String r0 = "-1"
-            r1 = 0
-            r2 = -1
-            java.lang.Class<org.conscrypt.Conscrypt> r3 = org.conscrypt.Conscrypt.class
-            java.lang.String r4 = "conscrypt.properties"
-            java.io.InputStream r3 = r3.getResourceAsStream(r4)     // Catch: java.lang.Throwable -> L3f java.io.IOException -> L44
-            if (r3 == 0) goto L39
-            java.util.Properties r4 = new java.util.Properties     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L45
-            r4.<init>()     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L45
-            r4.load(r3)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L45
-            java.lang.String r5 = "org.conscrypt.version.major"
-            java.lang.String r5 = r4.getProperty(r5, r0)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L45
-            int r5 = java.lang.Integer.parseInt(r5)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L45
-            java.lang.String r6 = "org.conscrypt.version.minor"
-            java.lang.String r6 = r4.getProperty(r6, r0)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L46
-            int r6 = java.lang.Integer.parseInt(r6)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L46
-            java.lang.String r7 = "org.conscrypt.version.patch"
-            java.lang.String r0 = r4.getProperty(r7, r0)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L47
-            int r0 = java.lang.Integer.parseInt(r0)     // Catch: java.lang.Throwable -> L36 java.io.IOException -> L47
-            r2 = r5
-            goto L3b
-        L36:
-            r0 = move-exception
-            r1 = r3
-            goto L40
-        L39:
-            r0 = -1
-            r6 = -1
-        L3b:
-            org.conscrypt.io.IoUtils.closeQuietly(r3)
-            goto L4c
-        L3f:
-            r0 = move-exception
-        L40:
-            org.conscrypt.io.IoUtils.closeQuietly(r1)
-            throw r0
-        L44:
-            r3 = r1
-        L45:
-            r5 = -1
-        L46:
-            r6 = -1
-        L47:
-            org.conscrypt.io.IoUtils.closeQuietly(r3)
-            r2 = r5
-            r0 = -1
-        L4c:
-            if (r2 < 0) goto L5a
-            if (r6 < 0) goto L5a
-            if (r0 < 0) goto L5a
-            org.conscrypt.Conscrypt$Version r3 = new org.conscrypt.Conscrypt$Version
-            r3.<init>(r2, r6, r0)
-            org.conscrypt.Conscrypt.VERSION = r3
-            goto L5c
-        L5a:
-            org.conscrypt.Conscrypt.VERSION = r1
-        L5c:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.Conscrypt.<clinit>():void");
+        InputStream inputStream;
+        int i;
+        int i2;
+        int i3;
+        Properties properties;
+        InputStream inputStream2 = null;
+        int i4 = -1;
+        try {
+            inputStream = Conscrypt.class.getResourceAsStream("conscrypt.properties");
+            if (inputStream != null) {
+                try {
+                    try {
+                        properties = new Properties();
+                        properties.load(inputStream);
+                        i = Integer.parseInt(properties.getProperty("org.conscrypt.version.major", "-1"));
+                    } catch (IOException unused) {
+                        i = -1;
+                        i2 = -1;
+                        IoUtils.closeQuietly(inputStream);
+                        i4 = i;
+                        i3 = -1;
+                        if (i4 >= 0) {
+                        }
+                        VERSION = null;
+                    }
+                    try {
+                        i2 = Integer.parseInt(properties.getProperty("org.conscrypt.version.minor", "-1"));
+                        try {
+                            i3 = Integer.parseInt(properties.getProperty("org.conscrypt.version.patch", "-1"));
+                            i4 = i;
+                        } catch (IOException unused2) {
+                            IoUtils.closeQuietly(inputStream);
+                            i4 = i;
+                            i3 = -1;
+                            if (i4 >= 0) {
+                            }
+                            VERSION = null;
+                        }
+                    } catch (IOException unused3) {
+                        i2 = -1;
+                        IoUtils.closeQuietly(inputStream);
+                        i4 = i;
+                        i3 = -1;
+                        if (i4 >= 0) {
+                        }
+                        VERSION = null;
+                    }
+                } catch (Throwable th) {
+                    th = th;
+                    inputStream2 = inputStream;
+                    IoUtils.closeQuietly(inputStream2);
+                    throw th;
+                }
+            } else {
+                i3 = -1;
+                i2 = -1;
+            }
+            IoUtils.closeQuietly(inputStream);
+        } catch (IOException unused4) {
+            inputStream = null;
+        } catch (Throwable th2) {
+            th = th2;
+        }
+        if (i4 >= 0 || i2 < 0 || i3 < 0) {
+            VERSION = null;
+        } else {
+            VERSION = new Version(i4, i2, i3);
+        }
     }
 
     private Conscrypt() {

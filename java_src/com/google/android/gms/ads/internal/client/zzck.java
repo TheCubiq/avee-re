@@ -21,17 +21,18 @@ public abstract class zzck extends cp2 implements zzcl {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             zzen liteSdkVersion = getLiteSdkVersion();
             parcel2.writeNoException();
-            dp2.f(parcel2, liteSdkVersion);
+            dp2.m24102f(parcel2, liteSdkVersion);
         } else if (i != 2) {
             return false;
         } else {
             an3 adapterCreator = getAdapterCreator();
             parcel2.writeNoException();
-            dp2.g(parcel2, adapterCreator);
+            dp2.m24101g(parcel2, adapterCreator);
         }
         return true;
     }

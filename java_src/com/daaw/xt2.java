@@ -1,5 +1,7 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class xt2 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f32944a;
 }

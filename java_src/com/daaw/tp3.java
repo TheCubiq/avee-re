@@ -10,16 +10,18 @@ import com.google.android.gms.ads.mediation.MediationRewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardItem;
 /* loaded from: classes.dex */
 public final class tp3 implements MediationBannerAdCallback, MediationInterstitialAdCallback, MediationRewardedAdCallback, MediationNativeAdCallback, MediationAppOpenAdCallback {
-    public final gn3 a;
+
+    /* renamed from: a */
+    public final gn3 f27945a;
 
     public tp3(gn3 gn3Var) {
-        this.a = gn3Var;
+        this.f27945a = gn3Var;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void onAdClosed() {
         try {
-            this.a.zzf();
+            this.f27945a.zzf();
         } catch (RemoteException unused) {
         }
     }
@@ -31,7 +33,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
             String message = adError.getMessage();
             String domain = adError.getDomain();
             k04.zzj("Mediated ad failed to show: Error Code = " + code + ". Error Message = " + message + " Error Domain = " + domain);
-            this.a.A(adError.zza());
+            this.f27945a.mo3338A(adError.zza());
         } catch (RemoteException unused) {
         }
     }
@@ -40,7 +42,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     public final void onAdFailedToShow(String str) {
         try {
             k04.zzj("Mediated ad failed to show: " + str);
-            this.a.n(str);
+            this.f27945a.mo3327n(str);
         } catch (RemoteException unused) {
         }
     }
@@ -48,7 +50,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationBannerAdCallback, com.google.android.gms.ads.mediation.MediationInterstitialAdCallback, com.google.android.gms.ads.mediation.MediationNativeAdCallback
     public final void onAdLeftApplication() {
         try {
-            this.a.zzn();
+            this.f27945a.zzn();
         } catch (RemoteException unused) {
         }
     }
@@ -56,7 +58,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void onAdOpened() {
         try {
-            this.a.zzp();
+            this.f27945a.zzp();
         } catch (RemoteException unused) {
         }
     }
@@ -64,7 +66,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onUserEarnedReward(RewardItem rewardItem) {
         try {
-            this.a.S0(new pw3(rewardItem));
+            this.f27945a.mo3336S0(new pw3(rewardItem));
         } catch (RemoteException unused) {
         }
     }
@@ -72,7 +74,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onVideoComplete() {
         try {
-            this.a.zzv();
+            this.f27945a.zzv();
         } catch (RemoteException unused) {
         }
     }
@@ -84,7 +86,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationNativeAdCallback
     public final void onVideoPause() {
         try {
-            this.a.k();
+            this.f27945a.mo3329k();
         } catch (RemoteException unused) {
         }
     }
@@ -92,7 +94,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationNativeAdCallback
     public final void onVideoPlay() {
         try {
-            this.a.zzx();
+            this.f27945a.zzx();
         } catch (RemoteException unused) {
         }
     }
@@ -100,7 +102,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onVideoStart() {
         try {
-            this.a.e();
+            this.f27945a.mo3332e();
         } catch (RemoteException unused) {
         }
     }
@@ -112,7 +114,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void reportAdClicked() {
         try {
-            this.a.zze();
+            this.f27945a.zze();
         } catch (RemoteException unused) {
         }
     }
@@ -120,7 +122,7 @@ public final class tp3 implements MediationBannerAdCallback, MediationInterstiti
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void reportAdImpression() {
         try {
-            this.a.zzm();
+            this.f27945a.zzm();
         } catch (RemoteException unused) {
         }
     }

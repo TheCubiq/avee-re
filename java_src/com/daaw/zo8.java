@@ -5,24 +5,36 @@ import android.media.MediaFormat;
 import android.view.Surface;
 /* loaded from: classes.dex */
 public final class zo8 {
-    public final ep8 a;
-    public final MediaFormat b;
-    public final f92 c;
-    public final Surface d;
-    public final MediaCrypto e = null;
+
+    /* renamed from: a */
+    public final ep8 f35330a;
+
+    /* renamed from: b */
+    public final MediaFormat f35331b;
+
+    /* renamed from: c */
+    public final f92 f35332c;
+
+    /* renamed from: d */
+    public final Surface f35333d;
+
+    /* renamed from: e */
+    public final MediaCrypto f35334e = null;
 
     public zo8(ep8 ep8Var, MediaFormat mediaFormat, f92 f92Var, Surface surface, MediaCrypto mediaCrypto, int i) {
-        this.a = ep8Var;
-        this.b = mediaFormat;
-        this.c = f92Var;
-        this.d = surface;
+        this.f35330a = ep8Var;
+        this.f35331b = mediaFormat;
+        this.f35332c = f92Var;
+        this.f35333d = surface;
     }
 
-    public static zo8 a(ep8 ep8Var, MediaFormat mediaFormat, f92 f92Var, MediaCrypto mediaCrypto) {
+    /* renamed from: a */
+    public static zo8 m2022a(ep8 ep8Var, MediaFormat mediaFormat, f92 f92Var, MediaCrypto mediaCrypto) {
         return new zo8(ep8Var, mediaFormat, f92Var, null, null, 0);
     }
 
-    public static zo8 b(ep8 ep8Var, MediaFormat mediaFormat, f92 f92Var, Surface surface, MediaCrypto mediaCrypto) {
+    /* renamed from: b */
+    public static zo8 m2021b(ep8 ep8Var, MediaFormat mediaFormat, f92 f92Var, Surface surface, MediaCrypto mediaCrypto) {
         return new zo8(ep8Var, mediaFormat, f92Var, surface, null, 0);
     }
 }

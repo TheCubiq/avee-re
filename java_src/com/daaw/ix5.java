@@ -4,10 +4,12 @@ import android.view.View;
 import com.google.android.gms.ads.internal.zzf;
 /* loaded from: classes.dex */
 public final class ix5 implements zzf {
-    public final /* synthetic */ pz4 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ pz4 f14108a;
 
     public ix5(jx5 jx5Var, pz4 pz4Var) {
-        this.a = pz4Var;
+        this.f14108a = pz4Var;
     }
 
     @Override // com.google.android.gms.ads.internal.zzf
@@ -16,12 +18,12 @@ public final class ix5 implements zzf {
 
     @Override // com.google.android.gms.ads.internal.zzf
     public final void zzb() {
-        this.a.a().onAdClicked();
+        this.f14108a.mo9319a().onAdClicked();
     }
 
     @Override // com.google.android.gms.ads.internal.zzf
     public final void zzc() {
-        this.a.b().zza();
-        this.a.e().zza();
+        this.f14108a.mo9318b().zza();
+        this.f14108a.mo9317e().zza();
     }
 }

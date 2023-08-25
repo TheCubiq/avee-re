@@ -13,34 +13,42 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 /* loaded from: classes.dex */
 public final class yl2 {
-    public static Cipher a;
-    public static final Object b = new Object();
-    public static final Object c = new Object();
+
+    /* renamed from: a */
+    public static Cipher f33771a;
+
+    /* renamed from: b */
+    public static final Object f33772b = new Object();
+
+    /* renamed from: c */
+    public static final Object f33773c = new Object();
 
     public yl2(SecureRandom secureRandom) {
     }
 
-    public static final Cipher c() {
+    /* renamed from: c */
+    public static final Cipher m3581c() {
         Cipher cipher;
-        synchronized (c) {
-            if (a == null) {
-                a = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        synchronized (f33773c) {
+            if (f33771a == null) {
+                f33771a = Cipher.getInstance("AES/CBC/PKCS5Padding");
             }
-            cipher = a;
+            cipher = f33771a;
         }
         return cipher;
     }
 
-    public final String a(byte[] bArr, byte[] bArr2) {
+    /* renamed from: a */
+    public final String m3583a(byte[] bArr, byte[] bArr2) {
         byte[] doFinal;
         byte[] iv;
         int length = bArr.length;
         try {
             SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "AES");
-            synchronized (b) {
-                c().init(1, secretKeySpec, (SecureRandom) null);
-                doFinal = c().doFinal(bArr2);
-                iv = c().getIV();
+            synchronized (f33772b) {
+                m3581c().init(1, secretKeySpec, (SecureRandom) null);
+                doFinal = m3581c().doFinal(bArr2);
+                iv = m3581c().getIV();
             }
             int length2 = doFinal.length + iv.length;
             ByteBuffer allocate = ByteBuffer.allocate(length2);
@@ -48,7 +56,7 @@ public final class yl2 {
             allocate.flip();
             byte[] bArr3 = new byte[length2];
             allocate.get(bArr3);
-            return uj2.a(bArr3, false);
+            return uj2.m8102a(bArr3, false);
         } catch (InvalidKeyException e) {
             throw new xl2(this, e);
         } catch (NoSuchAlgorithmException e2) {
@@ -62,24 +70,25 @@ public final class yl2 {
         }
     }
 
-    public final byte[] b(byte[] bArr, String str) {
+    /* renamed from: b */
+    public final byte[] m3582b(byte[] bArr, String str) {
         byte[] doFinal;
         int length = bArr.length;
         try {
-            byte[] b2 = uj2.b(str, false);
-            int length2 = b2.length;
+            byte[] m8101b = uj2.m8101b(str, false);
+            int length2 = m8101b.length;
             if (length2 > 16) {
                 ByteBuffer allocate = ByteBuffer.allocate(length2);
-                allocate.put(b2);
+                allocate.put(m8101b);
                 allocate.flip();
                 byte[] bArr2 = new byte[16];
                 byte[] bArr3 = new byte[length2 - 16];
                 allocate.get(bArr2);
                 allocate.get(bArr3);
                 SecretKeySpec secretKeySpec = new SecretKeySpec(bArr, "AES");
-                synchronized (b) {
-                    c().init(2, secretKeySpec, new IvParameterSpec(bArr2));
-                    doFinal = c().doFinal(bArr3);
+                synchronized (f33772b) {
+                    m3581c().init(2, secretKeySpec, new IvParameterSpec(bArr2));
+                    doFinal = m3581c().doFinal(bArr3);
                 }
                 return doFinal;
             }

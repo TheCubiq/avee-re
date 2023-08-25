@@ -6,16 +6,22 @@ import java.util.Arrays;
 import java.util.List;
 /* loaded from: classes.dex */
 public class bv0 implements oe1 {
-    public transient pe1 a = null;
-    public final List<String> b = new ArrayList();
+
+    /* renamed from: a */
+    public transient pe1 f5199a = null;
+
+    /* renamed from: b */
+    public final List<String> f5200b = new ArrayList();
 
     @Override // com.daaw.oe1
-    public pe1 a() {
-        return this.a;
+    /* renamed from: a */
+    public pe1 mo2137a() {
+        return this.f5199a;
     }
 
     @Override // com.daaw.oe1
-    public void b(OutputStream outputStream, String str) {
+    /* renamed from: b */
+    public void mo2136b(OutputStream outputStream, String str) {
         byte[] bArr = new byte[512];
         Arrays.fill(bArr, (byte) 0);
         bArr[4] = 105;
@@ -32,13 +38,13 @@ public class bv0 implements oe1 {
         bArr[15] = 80;
         bArr[16] = 76;
         bArr[17] = 65;
-        int size = this.b.size();
+        int size = this.f5200b.size();
         bArr[3] = (byte) ((size & 255) >> 0);
         bArr[2] = (byte) ((size & 65280) >> 8);
         bArr[1] = (byte) ((16711680 & size) >> 16);
         bArr[0] = (byte) ((size & (-16777216)) >> 24);
         outputStream.write(bArr);
-        for (String str2 : this.b) {
+        for (String str2 : this.f5200b) {
             Arrays.fill(bArr, (byte) 0);
             int lastIndexOf = str2.lastIndexOf(47);
             int lastIndexOf2 = str2.lastIndexOf(92);
@@ -52,11 +58,13 @@ public class bv0 implements oe1 {
         outputStream.flush();
     }
 
-    public List<String> c() {
-        return this.b;
+    /* renamed from: c */
+    public List<String> m25808c() {
+        return this.f5200b;
     }
 
-    public void d(pe1 pe1Var) {
-        this.a = pe1Var;
+    /* renamed from: d */
+    public void m25807d(pe1 pe1Var) {
+        this.f5199a = pe1Var;
     }
 }

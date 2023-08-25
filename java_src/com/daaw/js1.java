@@ -7,150 +7,182 @@ import android.util.SparseIntArray;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public class js1 extends is1 {
-    public final SparseIntArray d;
-    public final Parcel e;
-    public final int f;
-    public final int g;
-    public final String h;
-    public int i;
-    public int j;
-    public int k;
+
+    /* renamed from: d */
+    public final SparseIntArray f15364d;
+
+    /* renamed from: e */
+    public final Parcel f15365e;
+
+    /* renamed from: f */
+    public final int f15366f;
+
+    /* renamed from: g */
+    public final int f15367g;
+
+    /* renamed from: h */
+    public final String f15368h;
+
+    /* renamed from: i */
+    public int f15369i;
+
+    /* renamed from: j */
+    public int f15370j;
+
+    /* renamed from: k */
+    public int f15371k;
 
     public js1(Parcel parcel) {
-        this(parcel, parcel.dataPosition(), parcel.dataSize(), "", new g6(), new g6(), new g6());
+        this(parcel, parcel.dataPosition(), parcel.dataSize(), "", new C1370g6(), new C1370g6(), new C1370g6());
     }
 
-    public js1(Parcel parcel, int i, int i2, String str, g6<String, Method> g6Var, g6<String, Method> g6Var2, g6<String, Class> g6Var3) {
-        super(g6Var, g6Var2, g6Var3);
-        this.d = new SparseIntArray();
-        this.i = -1;
-        this.k = -1;
-        this.e = parcel;
-        this.f = i;
-        this.g = i2;
-        this.j = i;
-        this.h = str;
+    public js1(Parcel parcel, int i, int i2, String str, C1370g6<String, Method> c1370g6, C1370g6<String, Method> c1370g62, C1370g6<String, Class> c1370g63) {
+        super(c1370g6, c1370g62, c1370g63);
+        this.f15364d = new SparseIntArray();
+        this.f15369i = -1;
+        this.f15371k = -1;
+        this.f15365e = parcel;
+        this.f15366f = i;
+        this.f15367g = i2;
+        this.f15370j = i;
+        this.f15368h = str;
     }
 
     @Override // com.daaw.is1
-    public void A(byte[] bArr) {
+    /* renamed from: A */
+    public void mo18275A(byte[] bArr) {
         if (bArr == null) {
-            this.e.writeInt(-1);
+            this.f15365e.writeInt(-1);
             return;
         }
-        this.e.writeInt(bArr.length);
-        this.e.writeByteArray(bArr);
+        this.f15365e.writeInt(bArr.length);
+        this.f15365e.writeByteArray(bArr);
     }
 
     @Override // com.daaw.is1
-    public void C(CharSequence charSequence) {
-        TextUtils.writeToParcel(charSequence, this.e, 0);
+    /* renamed from: C */
+    public void mo18274C(CharSequence charSequence) {
+        TextUtils.writeToParcel(charSequence, this.f15365e, 0);
     }
 
     @Override // com.daaw.is1
-    public void E(int i) {
-        this.e.writeInt(i);
+    /* renamed from: E */
+    public void mo18273E(int i) {
+        this.f15365e.writeInt(i);
     }
 
     @Override // com.daaw.is1
-    public void G(Parcelable parcelable) {
-        this.e.writeParcelable(parcelable, 0);
+    /* renamed from: G */
+    public void mo18272G(Parcelable parcelable) {
+        this.f15365e.writeParcelable(parcelable, 0);
     }
 
     @Override // com.daaw.is1
-    public void I(String str) {
-        this.e.writeString(str);
+    /* renamed from: I */
+    public void mo18271I(String str) {
+        this.f15365e.writeString(str);
     }
 
     @Override // com.daaw.is1
-    public void a() {
-        int i = this.i;
+    /* renamed from: a */
+    public void mo18270a() {
+        int i = this.f15369i;
         if (i >= 0) {
-            int i2 = this.d.get(i);
-            int dataPosition = this.e.dataPosition();
-            this.e.setDataPosition(i2);
-            this.e.writeInt(dataPosition - i2);
-            this.e.setDataPosition(dataPosition);
+            int i2 = this.f15364d.get(i);
+            int dataPosition = this.f15365e.dataPosition();
+            this.f15365e.setDataPosition(i2);
+            this.f15365e.writeInt(dataPosition - i2);
+            this.f15365e.setDataPosition(dataPosition);
         }
     }
 
     @Override // com.daaw.is1
-    public is1 b() {
-        Parcel parcel = this.e;
+    /* renamed from: b */
+    public is1 mo18269b() {
+        Parcel parcel = this.f15365e;
         int dataPosition = parcel.dataPosition();
-        int i = this.j;
-        if (i == this.f) {
-            i = this.g;
+        int i = this.f15370j;
+        if (i == this.f15366f) {
+            i = this.f15367g;
         }
         int i2 = i;
-        return new js1(parcel, dataPosition, i2, this.h + "  ", this.a, this.b, this.c);
+        return new js1(parcel, dataPosition, i2, this.f15368h + "  ", this.f13966a, this.f13967b, this.f13968c);
     }
 
     @Override // com.daaw.is1
-    public boolean g() {
-        return this.e.readInt() != 0;
+    /* renamed from: g */
+    public boolean mo18268g() {
+        return this.f15365e.readInt() != 0;
     }
 
     @Override // com.daaw.is1
-    public byte[] i() {
-        int readInt = this.e.readInt();
+    /* renamed from: i */
+    public byte[] mo18267i() {
+        int readInt = this.f15365e.readInt();
         if (readInt < 0) {
             return null;
         }
         byte[] bArr = new byte[readInt];
-        this.e.readByteArray(bArr);
+        this.f15365e.readByteArray(bArr);
         return bArr;
     }
 
     @Override // com.daaw.is1
-    public CharSequence k() {
-        return (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(this.e);
+    /* renamed from: k */
+    public CharSequence mo18266k() {
+        return (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(this.f15365e);
     }
 
     @Override // com.daaw.is1
-    public boolean m(int i) {
-        while (this.j < this.g) {
-            int i2 = this.k;
+    /* renamed from: m */
+    public boolean mo18265m(int i) {
+        while (this.f15370j < this.f15367g) {
+            int i2 = this.f15371k;
             if (i2 == i) {
                 return true;
             }
             if (String.valueOf(i2).compareTo(String.valueOf(i)) > 0) {
                 return false;
             }
-            this.e.setDataPosition(this.j);
-            int readInt = this.e.readInt();
-            this.k = this.e.readInt();
-            this.j += readInt;
+            this.f15365e.setDataPosition(this.f15370j);
+            int readInt = this.f15365e.readInt();
+            this.f15371k = this.f15365e.readInt();
+            this.f15370j += readInt;
         }
-        return this.k == i;
+        return this.f15371k == i;
     }
 
     @Override // com.daaw.is1
-    public int o() {
-        return this.e.readInt();
+    /* renamed from: o */
+    public int mo18264o() {
+        return this.f15365e.readInt();
     }
 
     @Override // com.daaw.is1
-    public <T extends Parcelable> T q() {
-        return (T) this.e.readParcelable(getClass().getClassLoader());
+    /* renamed from: q */
+    public <T extends Parcelable> T mo18263q() {
+        return (T) this.f15365e.readParcelable(getClass().getClassLoader());
     }
 
     @Override // com.daaw.is1
-    public String s() {
-        return this.e.readString();
+    /* renamed from: s */
+    public String mo18262s() {
+        return this.f15365e.readString();
     }
 
     @Override // com.daaw.is1
-    public void w(int i) {
-        a();
-        this.i = i;
-        this.d.put(i, this.e.dataPosition());
-        E(0);
-        E(i);
+    /* renamed from: w */
+    public void mo18261w(int i) {
+        mo18270a();
+        this.f15369i = i;
+        this.f15364d.put(i, this.f15365e.dataPosition());
+        mo18273E(0);
+        mo18273E(i);
     }
 
     @Override // com.daaw.is1
-    public void y(boolean z) {
-        this.e.writeInt(z ? 1 : 0);
+    /* renamed from: y */
+    public void mo18260y(boolean z) {
+        this.f15365e.writeInt(z ? 1 : 0);
     }
 }

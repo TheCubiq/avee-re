@@ -10,14 +10,22 @@ import com.daaw.yd0;
 import com.google.android.gms.ads.internal.client.zzba;
 /* loaded from: classes.dex */
 public final class zzy extends gr3 {
-    public final AdOverlayInfoParcel p;
-    public final Activity q;
-    public boolean r = false;
-    public boolean s = false;
+
+    /* renamed from: p */
+    public final AdOverlayInfoParcel f36237p;
+
+    /* renamed from: q */
+    public final Activity f36238q;
+
+    /* renamed from: r */
+    public boolean f36239r = false;
+
+    /* renamed from: s */
+    public boolean f36240s = false;
 
     public zzy(Activity activity, AdOverlayInfoParcel adOverlayInfoParcel) {
-        this.p = adOverlayInfoParcel;
-        this.q = activity;
+        this.f36237p = adOverlayInfoParcel;
+        this.f36238q = activity;
     }
 
     @Override // com.daaw.hr3
@@ -26,14 +34,14 @@ public final class zzy extends gr3 {
     }
 
     public final synchronized void zzb() {
-        if (this.s) {
+        if (this.f36240s) {
             return;
         }
-        zzo zzoVar = this.p.zzc;
+        zzo zzoVar = this.f36237p.zzc;
         if (zzoVar != null) {
             zzoVar.zzf(4);
         }
-        this.s = true;
+        this.f36240s = true;
     }
 
     @Override // com.daaw.hr3
@@ -51,53 +59,53 @@ public final class zzy extends gr3 {
     @Override // com.daaw.hr3
     public final void zzk(Bundle bundle) {
         zzo zzoVar;
-        if (((Boolean) zzba.zzc().b(g93.V7)).booleanValue()) {
-            this.q.requestWindowFeature(1);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10579V7)).booleanValue()) {
+            this.f36238q.requestWindowFeature(1);
         }
         boolean z = false;
         if (bundle != null && bundle.getBoolean("com.google.android.gms.ads.internal.overlay.hasResumed", false)) {
             z = true;
         }
-        AdOverlayInfoParcel adOverlayInfoParcel = this.p;
+        AdOverlayInfoParcel adOverlayInfoParcel = this.f36237p;
         if (adOverlayInfoParcel != null && !z) {
             if (bundle == null) {
                 com.google.android.gms.ads.internal.client.zza zzaVar = adOverlayInfoParcel.zzb;
                 if (zzaVar != null) {
                     zzaVar.onAdClicked();
                 }
-                vy4 vy4Var = this.p.zzy;
+                vy4 vy4Var = this.f36237p.zzy;
                 if (vy4Var != null) {
                     vy4Var.zzq();
                 }
-                if (this.q.getIntent() != null && this.q.getIntent().getBooleanExtra("shouldCallOnOverlayOpened", true) && (zzoVar = this.p.zzc) != null) {
+                if (this.f36238q.getIntent() != null && this.f36238q.getIntent().getBooleanExtra("shouldCallOnOverlayOpened", true) && (zzoVar = this.f36237p.zzc) != null) {
                     zzoVar.zzb();
                 }
             }
             com.google.android.gms.ads.internal.zzt.zzh();
-            Activity activity = this.q;
-            AdOverlayInfoParcel adOverlayInfoParcel2 = this.p;
+            Activity activity = this.f36238q;
+            AdOverlayInfoParcel adOverlayInfoParcel2 = this.f36237p;
             zzc zzcVar = adOverlayInfoParcel2.zza;
             if (zza.zzb(activity, zzcVar, adOverlayInfoParcel2.zzi, zzcVar.zzi)) {
                 return;
             }
         }
-        this.q.finish();
+        this.f36238q.finish();
     }
 
     @Override // com.daaw.hr3
     public final void zzl() {
-        if (this.q.isFinishing()) {
+        if (this.f36238q.isFinishing()) {
             zzb();
         }
     }
 
     @Override // com.daaw.hr3
     public final void zzn() {
-        zzo zzoVar = this.p.zzc;
+        zzo zzoVar = this.f36237p.zzc;
         if (zzoVar != null) {
             zzoVar.zzbs();
         }
-        if (this.q.isFinishing()) {
+        if (this.f36238q.isFinishing()) {
             zzb();
         }
     }
@@ -108,12 +116,12 @@ public final class zzy extends gr3 {
 
     @Override // com.daaw.hr3
     public final void zzp() {
-        if (this.r) {
-            this.q.finish();
+        if (this.f36239r) {
+            this.f36238q.finish();
             return;
         }
-        this.r = true;
-        zzo zzoVar = this.p.zzc;
+        this.f36239r = true;
+        zzo zzoVar = this.f36237p.zzc;
         if (zzoVar != null) {
             zzoVar.zzbM();
         }
@@ -121,7 +129,7 @@ public final class zzy extends gr3 {
 
     @Override // com.daaw.hr3
     public final void zzq(Bundle bundle) {
-        bundle.putBoolean("com.google.android.gms.ads.internal.overlay.hasResumed", this.r);
+        bundle.putBoolean("com.google.android.gms.ads.internal.overlay.hasResumed", this.f36239r);
     }
 
     @Override // com.daaw.hr3
@@ -130,14 +138,14 @@ public final class zzy extends gr3 {
 
     @Override // com.daaw.hr3
     public final void zzs() {
-        if (this.q.isFinishing()) {
+        if (this.f36238q.isFinishing()) {
             zzb();
         }
     }
 
     @Override // com.daaw.hr3
     public final void zzt() {
-        zzo zzoVar = this.p.zzc;
+        zzo zzoVar = this.f36237p.zzc;
         if (zzoVar != null) {
             zzoVar.zze();
         }

@@ -8,19 +8,22 @@ import com.daaw.fk0;
 import com.daaw.sb1;
 /* loaded from: classes.dex */
 public abstract class Worker extends ListenableWorker {
-    public sb1<ListenableWorker.a> u;
 
+    /* renamed from: u */
+    public sb1<ListenableWorker.AbstractC0501a> f2424u;
+
+    /* renamed from: androidx.work.Worker$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public a() {
+    public class RunnableC0505a implements Runnable {
+        public RunnableC0505a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
             try {
-                Worker.this.u.q(Worker.this.doWork());
+                Worker.this.f2424u.mo10473q(Worker.this.doWork());
             } catch (Throwable th) {
-                Worker.this.u.r(th);
+                Worker.this.f2424u.mo10472r(th);
             }
         }
     }
@@ -31,12 +34,12 @@ public abstract class Worker extends ListenableWorker {
         super(context, workerParameters);
     }
 
-    public abstract ListenableWorker.a doWork();
+    public abstract ListenableWorker.AbstractC0501a doWork();
 
     @Override // androidx.work.ListenableWorker
-    public final fk0<ListenableWorker.a> startWork() {
-        this.u = sb1.u();
-        getBackgroundExecutor().execute(new a());
-        return this.u;
+    public final fk0<ListenableWorker.AbstractC0501a> startWork() {
+        this.f2424u = sb1.m10470u();
+        getBackgroundExecutor().execute(new RunnableC0505a());
+        return this.f2424u;
     }
 }

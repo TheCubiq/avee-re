@@ -10,6 +10,6 @@ public final class f84 extends g84 {
 
     @Override // com.daaw.h74, android.webkit.WebViewClient
     public final WebResourceResponse shouldInterceptRequest(WebView webView, String str) {
-        return G0(webView, str, null);
+        return m21885G0(webView, str, null);
     }
 }

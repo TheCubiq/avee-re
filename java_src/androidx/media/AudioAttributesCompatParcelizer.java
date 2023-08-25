@@ -5,12 +5,12 @@ import com.daaw.is1;
 public final class AudioAttributesCompatParcelizer {
     public static AudioAttributesCompat read(is1 is1Var) {
         AudioAttributesCompat audioAttributesCompat = new AudioAttributesCompat();
-        audioAttributesCompat.a = (AudioAttributesImpl) is1Var.v(audioAttributesCompat.a, 1);
+        audioAttributesCompat.f1791a = (AudioAttributesImpl) is1Var.m19450v(audioAttributesCompat.f1791a, 1);
         return audioAttributesCompat;
     }
 
     public static void write(AudioAttributesCompat audioAttributesCompat, is1 is1Var) {
-        is1Var.x(false, false);
-        is1Var.M(audioAttributesCompat.a, 1);
+        is1Var.m19449x(false, false);
+        is1Var.m19464M(audioAttributesCompat.f1791a, 1);
     }
 }

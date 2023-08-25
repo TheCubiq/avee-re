@@ -1,137 +1,99 @@
 package com.daaw;
+
+import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public final class gm8 extends kk8 {
     /* JADX WARN: Removed duplicated region for block: B:16:0x0038  */
     /* JADX WARN: Removed duplicated region for block: B:30:0x00af A[LOOP:4: B:30:0x00af->B:31:0x00b1, LOOP_START, PHI: r0 
       PHI: (r0v1 int) = (r0v0 int), (r0v2 int) binds: [B:15:0x0036, B:31:0x00b1] A[DONT_GENERATE, DONT_INLINE]] */
     @Override // com.daaw.hi8
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void b(java.nio.ByteBuffer r10) {
-        /*
-            r9 = this;
-            int r0 = r10.position()
-            int r1 = r10.limit()
-            int r2 = r1 - r0
-            com.daaw.di8 r3 = r9.b
-            int r3 = r3.c
-            r4 = 805306368(0x30000000, float:4.656613E-10)
-            r5 = 536870912(0x20000000, float:1.0842022E-19)
-            r6 = 268435456(0x10000000, float:2.5243549E-29)
-            r7 = 4
-            r8 = 3
-            if (r3 == r8) goto L2d
-            if (r3 == r7) goto L2a
-            if (r3 == r6) goto L2e
-            if (r3 == r5) goto L27
-            if (r3 != r4) goto L21
-            goto L2a
-        L21:
-            java.lang.IllegalStateException r10 = new java.lang.IllegalStateException
-            r10.<init>()
-            throw r10
-        L27:
-            int r2 = r2 / 3
-            goto L2d
-        L2a:
-            int r2 = r2 / 2
-            goto L2e
-        L2d:
-            int r2 = r2 + r2
-        L2e:
-            java.nio.ByteBuffer r2 = r9.d(r2)
-            com.daaw.di8 r3 = r9.b
-            int r3 = r3.c
-            if (r3 == r8) goto Laf
-            if (r3 == r7) goto L89
-            if (r3 == r6) goto L74
-            if (r3 == r5) goto L5d
-            if (r3 != r4) goto L57
-        L40:
-            if (r0 >= r1) goto Lc4
-            int r3 = r0 + 2
-            byte r3 = r10.get(r3)
-            r2.put(r3)
-            int r3 = r0 + 3
-            byte r3 = r10.get(r3)
-            r2.put(r3)
-            int r0 = r0 + 4
-            goto L40
-        L57:
-            java.lang.IllegalStateException r10 = new java.lang.IllegalStateException
-            r10.<init>()
-            throw r10
-        L5d:
-            if (r0 >= r1) goto Lc4
-            int r3 = r0 + 1
-            byte r3 = r10.get(r3)
-            r2.put(r3)
-            int r3 = r0 + 2
-            byte r3 = r10.get(r3)
-            r2.put(r3)
-            int r0 = r0 + 3
-            goto L5d
-        L74:
-            if (r0 >= r1) goto Lc4
-            int r3 = r0 + 1
-            byte r3 = r10.get(r3)
-            r2.put(r3)
-            byte r3 = r10.get(r0)
-            r2.put(r3)
-            int r0 = r0 + 2
-            goto L74
-        L89:
-            if (r0 >= r1) goto Lc4
-            float r3 = r10.getFloat(r0)
-            r4 = -1082130432(0xffffffffbf800000, float:-1.0)
-            r5 = 1065353216(0x3f800000, float:1.0)
-            float r3 = com.daaw.it5.A(r3, r4, r5)
-            r4 = 1191181824(0x46fffe00, float:32767.0)
-            float r3 = r3 * r4
-            int r3 = (int) r3
-            short r3 = (short) r3
-            r4 = r3 & 255(0xff, float:3.57E-43)
-            byte r4 = (byte) r4
-            r2.put(r4)
-            int r3 = r3 >> 8
-            r3 = r3 & 255(0xff, float:3.57E-43)
-            byte r3 = (byte) r3
-            r2.put(r3)
-            int r0 = r0 + 4
-            goto L89
-        Laf:
-            if (r0 >= r1) goto Lc4
-            r3 = 0
-            r2.put(r3)
-            byte r3 = r10.get(r0)
-            r3 = r3 & 255(0xff, float:3.57E-43)
-            int r3 = r3 + (-128)
-            byte r3 = (byte) r3
-            r2.put(r3)
-            int r0 = r0 + 1
-            goto Laf
-        Lc4:
-            int r0 = r10.limit()
-            r10.position(r0)
-            r2.flip()
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.gm8.b(java.nio.ByteBuffer):void");
+    public final void mo3498b(ByteBuffer byteBuffer) {
+        int i;
+        int position = byteBuffer.position();
+        int limit = byteBuffer.limit();
+        int i2 = limit - position;
+        int i3 = this.f16433b.f7135c;
+        if (i3 != 3) {
+            if (i3 != 4) {
+                if (i3 != 268435456) {
+                    if (i3 == 536870912) {
+                        i2 /= 3;
+                    } else if (i3 != 805306368) {
+                        throw new IllegalStateException();
+                    }
+                }
+                ByteBuffer m17680d = m17680d(i2);
+                i = this.f16433b.f7135c;
+                if (i == 3) {
+                    while (position < limit) {
+                        m17680d.put((byte) 0);
+                        m17680d.put((byte) ((byteBuffer.get(position) & 255) - 128));
+                        position++;
+                    }
+                } else if (i == 4) {
+                    while (position < limit) {
+                        short m19431A = (short) (it5.m19431A(byteBuffer.getFloat(position), -1.0f, 1.0f) * 32767.0f);
+                        m17680d.put((byte) (m19431A & 255));
+                        m17680d.put((byte) ((m19431A >> 8) & 255));
+                        position += 4;
+                    }
+                } else if (i == 268435456) {
+                    while (position < limit) {
+                        m17680d.put(byteBuffer.get(position + 1));
+                        m17680d.put(byteBuffer.get(position));
+                        position += 2;
+                    }
+                } else if (i == 536870912) {
+                    while (position < limit) {
+                        m17680d.put(byteBuffer.get(position + 1));
+                        m17680d.put(byteBuffer.get(position + 2));
+                        position += 3;
+                    }
+                } else if (i != 805306368) {
+                    throw new IllegalStateException();
+                } else {
+                    while (position < limit) {
+                        m17680d.put(byteBuffer.get(position + 2));
+                        m17680d.put(byteBuffer.get(position + 3));
+                        position += 4;
+                    }
+                }
+                byteBuffer.position(byteBuffer.limit());
+                m17680d.flip();
+            }
+            i2 /= 2;
+            ByteBuffer m17680d2 = m17680d(i2);
+            i = this.f16433b.f7135c;
+            if (i == 3) {
+            }
+            byteBuffer.position(byteBuffer.limit());
+            m17680d2.flip();
+        }
+        i2 += i2;
+        ByteBuffer m17680d22 = m17680d(i2);
+        i = this.f16433b.f7135c;
+        if (i == 3) {
+        }
+        byteBuffer.position(byteBuffer.limit());
+        m17680d22.flip();
     }
 
     @Override // com.daaw.kk8
-    public final di8 c(di8 di8Var) {
-        int i = di8Var.c;
+    /* renamed from: c */
+    public final di8 mo3570c(di8 di8Var) {
+        int i = di8Var.f7135c;
         if (i != 3) {
             if (i == 2) {
-                return di8.e;
+                return di8.f7132e;
             }
             if (i != 268435456 && i != 536870912 && i != 805306368 && i != 4) {
                 throw new fi8(di8Var);
             }
         }
-        return new di8(di8Var.a, di8Var.b, 2);
+        return new di8(di8Var.f7133a, di8Var.f7134b, 2);
     }
 }

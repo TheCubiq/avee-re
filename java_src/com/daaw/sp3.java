@@ -29,17 +29,28 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class sp3 extends cp3 {
-    public final RtbAdapter p;
-    public MediationInterstitialAd q;
-    public MediationRewardedAd r;
-    public MediationAppOpenAd s;
-    public String t = "";
+
+    /* renamed from: p */
+    public final RtbAdapter f26499p;
+
+    /* renamed from: q */
+    public MediationInterstitialAd f26500q;
+
+    /* renamed from: r */
+    public MediationRewardedAd f26501r;
+
+    /* renamed from: s */
+    public MediationAppOpenAd f26502s;
+
+    /* renamed from: t */
+    public String f26503t = "";
 
     public sp3(RtbAdapter rtbAdapter) {
-        this.p = rtbAdapter;
+        this.f26499p = rtbAdapter;
     }
 
-    public static final Bundle l3(String str) {
+    /* renamed from: l3 */
+    public static final Bundle m10076l3(String str) {
         k04.zzj("Server parameters: ".concat(String.valueOf(str)));
         try {
             Bundle bundle = new Bundle();
@@ -60,15 +71,17 @@ public final class sp3 extends cp3 {
         }
     }
 
-    public static final boolean m3(zzl zzlVar) {
+    /* renamed from: m3 */
+    public static final boolean m10075m3(zzl zzlVar) {
         if (zzlVar.zzf) {
             return true;
         }
         zzay.zzb();
-        return d04.x();
+        return d04.m24808x();
     }
 
-    public static final String n3(String str, zzl zzlVar) {
+    /* renamed from: n3 */
+    public static final String m10074n3(String str, zzl zzlVar) {
         String str2 = zzlVar.zzu;
         try {
             return new JSONObject(str).getString("max_ad_content_rating");
@@ -78,9 +91,10 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void E2(String str, String str2, zzl zzlVar, yd0 yd0Var, uo3 uo3Var, gn3 gn3Var) {
+    /* renamed from: E2 */
+    public final void mo10088E2(String str, String str2, zzl zzlVar, yd0 yd0Var, uo3 uo3Var, gn3 gn3Var) {
         try {
-            this.p.loadRtbInterstitialAd(new MediationInterstitialAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), this.t), new kp3(this, uo3Var, gn3Var));
+            this.f26499p.loadRtbInterstitialAd(new MediationInterstitialAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), this.f26503t), new kp3(this, uo3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render interstitial ad.", th);
             throw new RemoteException();
@@ -88,11 +102,12 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final boolean L1(yd0 yd0Var) {
-        MediationRewardedAd mediationRewardedAd = this.r;
+    /* renamed from: L1 */
+    public final boolean mo10087L1(yd0 yd0Var) {
+        MediationRewardedAd mediationRewardedAd = this.f26501r;
         if (mediationRewardedAd != null) {
             try {
-                mediationRewardedAd.showAd((Context) nt0.M(yd0Var));
+                mediationRewardedAd.showAd((Context) nt0.m14831M(yd0Var));
                 return true;
             } catch (Throwable th) {
                 k04.zzh("", th);
@@ -103,14 +118,16 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void N2(String str) {
-        this.t = str;
+    /* renamed from: N2 */
+    public final void mo10086N2(String str) {
+        this.f26503t = str;
     }
 
     @Override // com.daaw.dp3
-    public final void Q(String str, String str2, zzl zzlVar, yd0 yd0Var, oo3 oo3Var, gn3 gn3Var) {
+    /* renamed from: Q */
+    public final void mo10085Q(String str, String str2, zzl zzlVar, yd0 yd0Var, oo3 oo3Var, gn3 gn3Var) {
         try {
-            this.p.loadRtbAppOpenAd(new MediationAppOpenAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), this.t), new mp3(this, oo3Var, gn3Var));
+            this.f26499p.loadRtbAppOpenAd(new MediationAppOpenAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), this.f26503t), new mp3(this, oo3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render app open ad.", th);
             throw new RemoteException();
@@ -119,12 +136,13 @@ public final class sp3 extends cp3 {
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     @Override // com.daaw.dp3
-    public final void U(yd0 yd0Var, String str, Bundle bundle, Bundle bundle2, zzq zzqVar, gp3 gp3Var) {
+    /* renamed from: U */
+    public final void mo10084U(yd0 yd0Var, String str, Bundle bundle, Bundle bundle2, zzq zzqVar, gp3 gp3Var) {
         char c;
         AdFormat adFormat;
         try {
             qp3 qp3Var = new qp3(this, gp3Var);
-            RtbAdapter rtbAdapter = this.p;
+            RtbAdapter rtbAdapter = this.f26499p;
             switch (str.hashCode()) {
                 case -1396342996:
                     if (str.equals("banner")) {
@@ -190,7 +208,7 @@ public final class sp3 extends cp3 {
             MediationConfiguration mediationConfiguration = new MediationConfiguration(adFormat, bundle2);
             ArrayList arrayList = new ArrayList();
             arrayList.add(mediationConfiguration);
-            rtbAdapter.collectSignals(new RtbSignalData((Context) nt0.M(yd0Var), arrayList, bundle, zzb.zzc(zzqVar.zze, zzqVar.zzb, zzqVar.zza)), qp3Var);
+            rtbAdapter.collectSignals(new RtbSignalData((Context) nt0.m14831M(yd0Var), arrayList, bundle, zzb.zzc(zzqVar.zze, zzqVar.zzb, zzqVar.zza)), qp3Var);
         } catch (Throwable th) {
             k04.zzh("Error generating signals for RTB", th);
             throw new RemoteException();
@@ -198,9 +216,10 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void Z1(String str, String str2, zzl zzlVar, yd0 yd0Var, ap3 ap3Var, gn3 gn3Var) {
+    /* renamed from: Z1 */
+    public final void mo10083Z1(String str, String str2, zzl zzlVar, yd0 yd0Var, ap3 ap3Var, gn3 gn3Var) {
         try {
-            this.p.loadRtbRewardedInterstitialAd(new MediationRewardedAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), this.t), new rp3(this, ap3Var, gn3Var));
+            this.f26499p.loadRtbRewardedInterstitialAd(new MediationRewardedAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), this.f26503t), new rp3(this, ap3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render rewarded interstitial ad.", th);
             throw new RemoteException();
@@ -208,9 +227,10 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void b1(String str, String str2, zzl zzlVar, yd0 yd0Var, xo3 xo3Var, gn3 gn3Var, zzblz zzblzVar) {
+    /* renamed from: b1 */
+    public final void mo10082b1(String str, String str2, zzl zzlVar, yd0 yd0Var, xo3 xo3Var, gn3 gn3Var, zzblz zzblzVar) {
         try {
-            this.p.loadRtbNativeAd(new MediationNativeAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), this.t, zzblzVar), new lp3(this, xo3Var, gn3Var));
+            this.f26499p.loadRtbNativeAd(new MediationNativeAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), this.f26503t, zzblzVar), new lp3(this, xo3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render native ad.", th);
             throw new RemoteException();
@@ -218,27 +238,30 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void c3(String str, String str2, zzl zzlVar, yd0 yd0Var, ro3 ro3Var, gn3 gn3Var, zzq zzqVar) {
+    /* renamed from: c3 */
+    public final void mo10081c3(String str, String str2, zzl zzlVar, yd0 yd0Var, ro3 ro3Var, gn3 gn3Var, zzq zzqVar) {
         try {
-            this.p.loadRtbInterscrollerAd(new MediationBannerAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), zzb.zzc(zzqVar.zze, zzqVar.zzb, zzqVar.zza), this.t), new jp3(this, ro3Var, gn3Var));
+            this.f26499p.loadRtbInterscrollerAd(new MediationBannerAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), zzb.zzc(zzqVar.zze, zzqVar.zzb, zzqVar.zza), this.f26503t), new jp3(this, ro3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render interscroller ad.", th);
             throw new RemoteException();
         }
     }
 
-    public final Bundle k3(zzl zzlVar) {
+    /* renamed from: k3 */
+    public final Bundle m10077k3(zzl zzlVar) {
         Bundle bundle;
         Bundle bundle2 = zzlVar.zzm;
-        return (bundle2 == null || (bundle = bundle2.getBundle(this.p.getClass().getName())) == null) ? new Bundle() : bundle;
+        return (bundle2 == null || (bundle = bundle2.getBundle(this.f26499p.getClass().getName())) == null) ? new Bundle() : bundle;
     }
 
     @Override // com.daaw.dp3
-    public final boolean q(yd0 yd0Var) {
-        MediationAppOpenAd mediationAppOpenAd = this.s;
+    /* renamed from: q */
+    public final boolean mo10073q(yd0 yd0Var) {
+        MediationAppOpenAd mediationAppOpenAd = this.f26502s;
         if (mediationAppOpenAd != null) {
             try {
-                mediationAppOpenAd.showAd((Context) nt0.M(yd0Var));
+                mediationAppOpenAd.showAd((Context) nt0.m14831M(yd0Var));
                 return true;
             } catch (Throwable th) {
                 k04.zzh("", th);
@@ -249,11 +272,12 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final boolean q1(yd0 yd0Var) {
-        MediationInterstitialAd mediationInterstitialAd = this.q;
+    /* renamed from: q1 */
+    public final boolean mo10072q1(yd0 yd0Var) {
+        MediationInterstitialAd mediationInterstitialAd = this.f26500q;
         if (mediationInterstitialAd != null) {
             try {
-                mediationInterstitialAd.showAd((Context) nt0.M(yd0Var));
+                mediationInterstitialAd.showAd((Context) nt0.m14831M(yd0Var));
                 return true;
             } catch (Throwable th) {
                 k04.zzh("", th);
@@ -264,9 +288,10 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void s1(String str, String str2, zzl zzlVar, yd0 yd0Var, ro3 ro3Var, gn3 gn3Var, zzq zzqVar) {
+    /* renamed from: s1 */
+    public final void mo10071s1(String str, String str2, zzl zzlVar, yd0 yd0Var, ro3 ro3Var, gn3 gn3Var, zzq zzqVar) {
         try {
-            this.p.loadRtbBannerAd(new MediationBannerAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), zzb.zzc(zzqVar.zze, zzqVar.zzb, zzqVar.zza), this.t), new ip3(this, ro3Var, gn3Var));
+            this.f26499p.loadRtbBannerAd(new MediationBannerAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), zzb.zzc(zzqVar.zze, zzqVar.zzb, zzqVar.zza), this.f26503t), new ip3(this, ro3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render banner ad.", th);
             throw new RemoteException();
@@ -274,14 +299,16 @@ public final class sp3 extends cp3 {
     }
 
     @Override // com.daaw.dp3
-    public final void y2(String str, String str2, zzl zzlVar, yd0 yd0Var, xo3 xo3Var, gn3 gn3Var) {
-        b1(str, str2, zzlVar, yd0Var, xo3Var, gn3Var, null);
+    /* renamed from: y2 */
+    public final void mo10070y2(String str, String str2, zzl zzlVar, yd0 yd0Var, xo3 xo3Var, gn3 gn3Var) {
+        mo10082b1(str, str2, zzlVar, yd0Var, xo3Var, gn3Var, null);
     }
 
     @Override // com.daaw.dp3
-    public final void z1(String str, String str2, zzl zzlVar, yd0 yd0Var, ap3 ap3Var, gn3 gn3Var) {
+    /* renamed from: z1 */
+    public final void mo10069z1(String str, String str2, zzl zzlVar, yd0 yd0Var, ap3 ap3Var, gn3 gn3Var) {
         try {
-            this.p.loadRtbRewardedAd(new MediationRewardedAdConfiguration((Context) nt0.M(yd0Var), str, l3(str2), k3(zzlVar), m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, n3(str2, zzlVar), this.t), new rp3(this, ap3Var, gn3Var));
+            this.f26499p.loadRtbRewardedAd(new MediationRewardedAdConfiguration((Context) nt0.m14831M(yd0Var), str, m10076l3(str2), m10077k3(zzlVar), m10075m3(zzlVar), zzlVar.zzk, zzlVar.zzg, zzlVar.zzt, m10074n3(str2, zzlVar), this.f26503t), new rp3(this, ap3Var, gn3Var));
         } catch (Throwable th) {
             k04.zzh("Adapter failed to render rewarded ad.", th);
             throw new RemoteException();
@@ -290,7 +317,7 @@ public final class sp3 extends cp3 {
 
     @Override // com.daaw.dp3
     public final zzdq zze() {
-        RtbAdapter rtbAdapter = this.p;
+        RtbAdapter rtbAdapter = this.f26499p;
         if (rtbAdapter instanceof zza) {
             try {
                 return ((zza) rtbAdapter).getVideoController();
@@ -303,11 +330,11 @@ public final class sp3 extends cp3 {
 
     @Override // com.daaw.dp3
     public final zzbye zzf() {
-        return zzbye.h(this.p.getVersionInfo());
+        return zzbye.m1099h(this.f26499p.getVersionInfo());
     }
 
     @Override // com.daaw.dp3
     public final zzbye zzg() {
-        return zzbye.h(this.p.getSDKVersionInfo());
+        return zzbye.m1099h(this.f26499p.getSDKVersionInfo());
     }
 }

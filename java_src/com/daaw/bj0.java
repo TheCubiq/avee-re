@@ -6,23 +6,29 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 /* loaded from: classes2.dex */
 public class bj0<T> implements b01<Set<T>> {
-    public volatile Set<T> b = null;
-    public volatile Set<b01<T>> a = Collections.newSetFromMap(new ConcurrentHashMap());
+
+    /* renamed from: b */
+    public volatile Set<T> f4848b = null;
+
+    /* renamed from: a */
+    public volatile Set<b01<T>> f4847a = Collections.newSetFromMap(new ConcurrentHashMap());
 
     public bj0(Collection<b01<T>> collection) {
-        this.a.addAll(collection);
+        this.f4847a.addAll(collection);
     }
 
-    public static bj0<?> b(Collection<b01<?>> collection) {
+    /* renamed from: b */
+    public static bj0<?> m26131b(Collection<b01<?>> collection) {
         return new bj0<>((Set) collection);
     }
 
-    public synchronized void a(b01<T> b01Var) {
+    /* renamed from: a */
+    public synchronized void m26132a(b01<T> b01Var) {
         Set set;
-        if (this.b == null) {
-            set = this.a;
+        if (this.f4848b == null) {
+            set = this.f4847a;
         } else {
-            set = this.b;
+            set = this.f4848b;
             b01Var = (b01<T>) b01Var.get();
         }
         set.add(b01Var);
@@ -31,21 +37,22 @@ public class bj0<T> implements b01<Set<T>> {
     @Override // com.daaw.b01
     /* renamed from: c */
     public Set<T> get() {
-        if (this.b == null) {
+        if (this.f4848b == null) {
             synchronized (this) {
-                if (this.b == null) {
-                    this.b = Collections.newSetFromMap(new ConcurrentHashMap());
-                    d();
+                if (this.f4848b == null) {
+                    this.f4848b = Collections.newSetFromMap(new ConcurrentHashMap());
+                    m26129d();
                 }
             }
         }
-        return Collections.unmodifiableSet(this.b);
+        return Collections.unmodifiableSet(this.f4848b);
     }
 
-    public final synchronized void d() {
-        for (b01<T> b01Var : this.a) {
-            this.b.add(b01Var.get());
+    /* renamed from: d */
+    public final synchronized void m26129d() {
+        for (b01<T> b01Var : this.f4847a) {
+            this.f4848b.add(b01Var.get());
         }
-        this.a = null;
+        this.f4847a = null;
     }
 }

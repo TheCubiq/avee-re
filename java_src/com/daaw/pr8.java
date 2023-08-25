@@ -21,7 +21,8 @@ public final class pr8 extends md3 {
         super(obj, j, i);
     }
 
-    public final pr8 c(Object obj) {
-        return new pr8(super.a(obj));
+    /* renamed from: c */
+    public final pr8 m13184c(Object obj) {
+        return new pr8(super.m16080a(obj));
     }
 }

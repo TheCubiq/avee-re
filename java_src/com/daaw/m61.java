@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface m61 {
-    void a(long j, Runnable runnable);
+    /* renamed from: a */
+    void mo13205a(long j, Runnable runnable);
 
-    void b(Runnable runnable);
+    /* renamed from: b */
+    void mo13204b(Runnable runnable);
 }

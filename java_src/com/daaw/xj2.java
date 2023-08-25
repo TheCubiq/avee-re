@@ -11,12 +11,12 @@ public final class xj2 implements Runnable {
     @Override // java.lang.Runnable
     public final void run() {
         try {
-            yj2.c(MessageDigest.getInstance(EvpMdRef.MD5.JCA_NAME));
+            yj2.m3654c(MessageDigest.getInstance(EvpMdRef.MD5.JCA_NAME));
         } catch (NoSuchAlgorithmException unused) {
         } catch (Throwable th) {
-            yj2.e.countDown();
+            yj2.f33733e.countDown();
             throw th;
         }
-        yj2.e.countDown();
+        yj2.f33733e.countDown();
     }
 }

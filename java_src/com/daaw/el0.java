@@ -2,36 +2,44 @@ package com.daaw;
 /* loaded from: classes2.dex */
 public class el0 {
 
+    /* renamed from: com.daaw.el0$a */
     /* loaded from: classes2.dex */
-    public static class a implements bl0 {
+    public static class C1199a implements bl0 {
         @Override // com.daaw.bl0
-        public void a(Object obj) {
+        /* renamed from: a */
+        public void mo23397a(Object obj) {
         }
 
         @Override // com.daaw.bl0
-        public void b(Object obj, Throwable th) {
+        /* renamed from: b */
+        public void mo23396b(Object obj, Throwable th) {
         }
 
         @Override // com.daaw.bl0
-        public boolean c() {
+        /* renamed from: c */
+        public boolean mo23395c() {
             return false;
         }
 
         @Override // com.daaw.bl0
-        public boolean d() {
+        /* renamed from: d */
+        public boolean mo23394d() {
             return false;
         }
 
         @Override // com.daaw.bl0
-        public void e(Object obj) {
+        /* renamed from: e */
+        public void mo23393e(Object obj) {
         }
 
         @Override // com.daaw.bl0
-        public void f(Object obj) {
+        /* renamed from: f */
+        public void mo23392f(Object obj) {
         }
     }
 
-    public static bl0 a(Class<?> cls) {
-        return new a();
+    /* renamed from: a */
+    public static bl0 m23398a(Class<?> cls) {
+        return new C1199a();
     }
 }

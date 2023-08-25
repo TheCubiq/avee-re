@@ -8,11 +8,12 @@ public final class ew3 extends bp2 {
         super(iBinder, "com.google.android.gms.ads.internal.rewarded.client.IRewardedAdSkuListener");
     }
 
-    public final void h3(tv3 tv3Var, String str, String str2) {
-        Parcel D = D();
-        dp2.g(D, tv3Var);
-        D.writeString(str);
-        D.writeString(str2);
-        M(2, D);
+    /* renamed from: h3 */
+    public final void m23088h3(tv3 tv3Var, String str, String str2) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, tv3Var);
+        m25952D.writeString(str);
+        m25952D.writeString(str2);
+        m25950M(2, m25952D);
     }
 }

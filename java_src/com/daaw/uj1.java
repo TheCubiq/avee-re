@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface uj1 {
-    void a();
+    /* renamed from: a */
+    void mo7119a();
 
-    int b();
+    /* renamed from: b */
+    int mo7118b();
 }

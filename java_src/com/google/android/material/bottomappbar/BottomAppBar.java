@@ -16,126 +16,179 @@ import androidx.appcompat.widget.ActionMenuView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.customview.view.AbsSavedState;
+import com.daaw.C2166mc;
+import com.daaw.C2366nu;
 import com.daaw.dn1;
 import com.daaw.f11;
 import com.daaw.fu1;
 import com.daaw.k21;
-import com.daaw.mc;
 import com.daaw.nn0;
-import com.daaw.nu;
 import com.daaw.on0;
 import com.daaw.xs1;
 import com.google.android.material.behavior.HideBottomViewOnScrollBehavior;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 /* loaded from: classes2.dex */
-public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
-    public static final int B0 = k21.Widget_MaterialComponents_BottomAppBar;
-    public dn1<FloatingActionButton> A0;
-    public final int j0;
-    public final nn0 k0;
-    public Animator l0;
-    public Animator m0;
-    public int n0;
-    public int o0;
-    public boolean p0;
-    public int q0;
-    public ArrayList<g> r0;
-    public int s0;
-    public boolean t0;
-    public boolean u0;
-    public Behavior v0;
-    public int w0;
-    public int x0;
-    public int y0;
-    public AnimatorListenerAdapter z0;
+public class BottomAppBar extends Toolbar implements CoordinatorLayout.InterfaceC0193b {
+
+    /* renamed from: B0 */
+    public static final int f37180B0 = k21.Widget_MaterialComponents_BottomAppBar;
+
+    /* renamed from: A0 */
+    public dn1<FloatingActionButton> f37181A0;
+
+    /* renamed from: j0 */
+    public final int f37182j0;
+
+    /* renamed from: k0 */
+    public final nn0 f37183k0;
+
+    /* renamed from: l0 */
+    public Animator f37184l0;
+
+    /* renamed from: m0 */
+    public Animator f37185m0;
+
+    /* renamed from: n0 */
+    public int f37186n0;
+
+    /* renamed from: o0 */
+    public int f37187o0;
+
+    /* renamed from: p0 */
+    public boolean f37188p0;
+
+    /* renamed from: q0 */
+    public int f37189q0;
+
+    /* renamed from: r0 */
+    public ArrayList<InterfaceC4026g> f37190r0;
+
+    /* renamed from: s0 */
+    public int f37191s0;
+
+    /* renamed from: t0 */
+    public boolean f37192t0;
+
+    /* renamed from: u0 */
+    public boolean f37193u0;
+
+    /* renamed from: v0 */
+    public Behavior f37194v0;
+
+    /* renamed from: w0 */
+    public int f37195w0;
+
+    /* renamed from: x0 */
+    public int f37196x0;
+
+    /* renamed from: y0 */
+    public int f37197y0;
+
+    /* renamed from: z0 */
+    public AnimatorListenerAdapter f37198z0;
 
     /* loaded from: classes2.dex */
     public static class Behavior extends HideBottomViewOnScrollBehavior<BottomAppBar> {
-        public final Rect e;
-        public WeakReference<BottomAppBar> f;
-        public int g;
-        public final View.OnLayoutChangeListener h;
 
+        /* renamed from: e */
+        public final Rect f37199e;
+
+        /* renamed from: f */
+        public WeakReference<BottomAppBar> f37200f;
+
+        /* renamed from: g */
+        public int f37201g;
+
+        /* renamed from: h */
+        public final View.OnLayoutChangeListener f37202h;
+
+        /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$Behavior$a */
         /* loaded from: classes2.dex */
-        public class a implements View.OnLayoutChangeListener {
-            public a() {
+        public class View$OnLayoutChangeListenerC4017a implements View.OnLayoutChangeListener {
+            public View$OnLayoutChangeListenerC4017a() {
             }
 
             @Override // android.view.View.OnLayoutChangeListener
             public void onLayoutChange(View view, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
-                BottomAppBar bottomAppBar = (BottomAppBar) Behavior.this.f.get();
+                BottomAppBar bottomAppBar = (BottomAppBar) Behavior.this.f37200f.get();
                 if (bottomAppBar == null || !(view instanceof FloatingActionButton)) {
                     view.removeOnLayoutChangeListener(this);
                     return;
                 }
                 FloatingActionButton floatingActionButton = (FloatingActionButton) view;
-                floatingActionButton.j(Behavior.this.e);
-                int height = Behavior.this.e.height();
-                bottomAppBar.A0(height);
-                CoordinatorLayout.f fVar = (CoordinatorLayout.f) view.getLayoutParams();
-                if (Behavior.this.g == 0) {
-                    ((ViewGroup.MarginLayoutParams) fVar).bottomMargin = bottomAppBar.getBottomInset() + (bottomAppBar.getResources().getDimensionPixelOffset(f11.mtrl_bottomappbar_fab_bottom_margin) - ((floatingActionButton.getMeasuredHeight() - height) / 2));
-                    ((ViewGroup.MarginLayoutParams) fVar).leftMargin = bottomAppBar.getLeftInset();
-                    ((ViewGroup.MarginLayoutParams) fVar).rightMargin = bottomAppBar.getRightInset();
-                    if (fu1.d(floatingActionButton)) {
-                        ((ViewGroup.MarginLayoutParams) fVar).leftMargin += bottomAppBar.j0;
+                floatingActionButton.m457j(Behavior.this.f37199e);
+                int height = Behavior.this.f37199e.height();
+                bottomAppBar.m976A0(height);
+                CoordinatorLayout.C0197f c0197f = (CoordinatorLayout.C0197f) view.getLayoutParams();
+                if (Behavior.this.f37201g == 0) {
+                    ((ViewGroup.MarginLayoutParams) c0197f).bottomMargin = bottomAppBar.getBottomInset() + (bottomAppBar.getResources().getDimensionPixelOffset(f11.mtrl_bottomappbar_fab_bottom_margin) - ((floatingActionButton.getMeasuredHeight() - height) / 2));
+                    ((ViewGroup.MarginLayoutParams) c0197f).leftMargin = bottomAppBar.getLeftInset();
+                    ((ViewGroup.MarginLayoutParams) c0197f).rightMargin = bottomAppBar.getRightInset();
+                    if (fu1.m22259d(floatingActionButton)) {
+                        ((ViewGroup.MarginLayoutParams) c0197f).leftMargin += bottomAppBar.f37182j0;
                     } else {
-                        ((ViewGroup.MarginLayoutParams) fVar).rightMargin += bottomAppBar.j0;
+                        ((ViewGroup.MarginLayoutParams) c0197f).rightMargin += bottomAppBar.f37182j0;
                     }
                 }
             }
         }
 
         public Behavior() {
-            this.h = new a();
-            this.e = new Rect();
+            this.f37202h = new View$OnLayoutChangeListenerC4017a();
+            this.f37199e = new Rect();
         }
 
         public Behavior(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.h = new a();
-            this.e = new Rect();
+            this.f37202h = new View$OnLayoutChangeListenerC4017a();
+            this.f37199e = new Rect();
         }
 
-        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
         /* renamed from: M */
-        public boolean l(CoordinatorLayout coordinatorLayout, BottomAppBar bottomAppBar, int i) {
-            this.f = new WeakReference<>(bottomAppBar);
-            View q0 = bottomAppBar.q0();
-            if (q0 != null && !xs1.V(q0)) {
-                CoordinatorLayout.f fVar = (CoordinatorLayout.f) q0.getLayoutParams();
-                fVar.d = 49;
-                this.g = ((ViewGroup.MarginLayoutParams) fVar).bottomMargin;
-                if (q0 instanceof FloatingActionButton) {
-                    FloatingActionButton floatingActionButton = (FloatingActionButton) q0;
-                    floatingActionButton.addOnLayoutChangeListener(this.h);
-                    bottomAppBar.i0(floatingActionButton);
+        public boolean mo126l(CoordinatorLayout coordinatorLayout, BottomAppBar bottomAppBar, int i) {
+            this.f37200f = new WeakReference<>(bottomAppBar);
+            View m948q0 = bottomAppBar.m948q0();
+            if (m948q0 != null && !xs1.m4742V(m948q0)) {
+                CoordinatorLayout.C0197f c0197f = (CoordinatorLayout.C0197f) m948q0.getLayoutParams();
+                c0197f.f1139d = 49;
+                this.f37201g = ((ViewGroup.MarginLayoutParams) c0197f).bottomMargin;
+                if (m948q0 instanceof FloatingActionButton) {
+                    FloatingActionButton floatingActionButton = (FloatingActionButton) m948q0;
+                    floatingActionButton.addOnLayoutChangeListener(this.f37202h);
+                    bottomAppBar.m956i0(floatingActionButton);
                 }
-                bottomAppBar.y0();
+                bottomAppBar.m940y0();
             }
-            coordinatorLayout.I(bottomAppBar, i);
-            return super.l(coordinatorLayout, bottomAppBar, i);
+            coordinatorLayout.m29816I(bottomAppBar, i);
+            return super.mo126l(coordinatorLayout, bottomAppBar, i);
         }
 
-        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        @Override // com.google.android.material.behavior.HideBottomViewOnScrollBehavior, androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
         /* renamed from: N */
-        public boolean A(CoordinatorLayout coordinatorLayout, BottomAppBar bottomAppBar, View view, View view2, int i, int i2) {
-            return bottomAppBar.getHideOnScroll() && super.A(coordinatorLayout, bottomAppBar, view, view2, i, i2);
+        public boolean mo928A(CoordinatorLayout coordinatorLayout, BottomAppBar bottomAppBar, View view, View view2, int i, int i2) {
+            return bottomAppBar.getHideOnScroll() && super.mo928A(coordinatorLayout, bottomAppBar, view, view2, i, i2);
         }
     }
 
     /* loaded from: classes2.dex */
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new a();
-        public int r;
-        public boolean s;
+        public static final Parcelable.Creator<SavedState> CREATOR = new C4018a();
 
+        /* renamed from: r */
+        public int f37204r;
+
+        /* renamed from: s */
+        public boolean f37205s;
+
+        /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$SavedState$a */
         /* loaded from: classes2.dex */
-        public static class a implements Parcelable.ClassLoaderCreator<SavedState> {
+        public static class C4018a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             /* renamed from: a */
             public SavedState createFromParcel(Parcel parcel) {
@@ -157,8 +210,8 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
 
         public SavedState(Parcel parcel, ClassLoader classLoader) {
             super(parcel, classLoader);
-            this.r = parcel.readInt();
-            this.s = parcel.readInt() != 0;
+            this.f37204r = parcel.readInt();
+            this.f37205s = parcel.readInt() != 0;
         }
 
         public SavedState(Parcelable parcelable) {
@@ -168,141 +221,169 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
-            parcel.writeInt(this.r);
-            parcel.writeInt(this.s ? 1 : 0);
+            parcel.writeInt(this.f37204r);
+            parcel.writeInt(this.f37205s ? 1 : 0);
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$a */
     /* loaded from: classes2.dex */
-    public class a extends AnimatorListenerAdapter {
-        public a() {
+    public class C4019a extends AnimatorListenerAdapter {
+        public C4019a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            BottomAppBar.this.n0();
-            BottomAppBar.this.l0 = null;
+            BottomAppBar.this.m951n0();
+            BottomAppBar.this.f37184l0 = null;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            BottomAppBar.this.o0();
+            BottomAppBar.this.m950o0();
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$b */
     /* loaded from: classes2.dex */
-    public class b extends FloatingActionButton.b {
-        public final /* synthetic */ int a;
+    public class C4020b extends FloatingActionButton.AbstractC4091b {
 
+        /* renamed from: a */
+        public final /* synthetic */ int f37207a;
+
+        /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$b$a */
         /* loaded from: classes2.dex */
-        public class a extends FloatingActionButton.b {
-            public a() {
+        public class C4021a extends FloatingActionButton.AbstractC4091b {
+            public C4021a() {
             }
 
-            @Override // com.google.android.material.floatingactionbutton.FloatingActionButton.b
-            public void b(FloatingActionButton floatingActionButton) {
-                BottomAppBar.this.n0();
+            @Override // com.google.android.material.floatingactionbutton.FloatingActionButton.AbstractC4091b
+            /* renamed from: b */
+            public void mo435b(FloatingActionButton floatingActionButton) {
+                BottomAppBar.this.m951n0();
             }
         }
 
-        public b(int i) {
-            this.a = i;
+        public C4020b(int i) {
+            this.f37207a = i;
         }
 
-        @Override // com.google.android.material.floatingactionbutton.FloatingActionButton.b
-        public void a(FloatingActionButton floatingActionButton) {
-            floatingActionButton.setTranslationX(BottomAppBar.this.s0(this.a));
-            floatingActionButton.s(new a());
+        @Override // com.google.android.material.floatingactionbutton.FloatingActionButton.AbstractC4091b
+        /* renamed from: a */
+        public void mo436a(FloatingActionButton floatingActionButton) {
+            floatingActionButton.setTranslationX(BottomAppBar.this.m946s0(this.f37207a));
+            floatingActionButton.m448s(new C4021a());
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$c */
     /* loaded from: classes2.dex */
-    public class c extends AnimatorListenerAdapter {
-        public c() {
+    public class C4022c extends AnimatorListenerAdapter {
+        public C4022c() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            BottomAppBar.this.n0();
-            BottomAppBar.this.t0 = false;
-            BottomAppBar.this.m0 = null;
+            BottomAppBar.this.m951n0();
+            BottomAppBar.this.f37192t0 = false;
+            BottomAppBar.this.f37185m0 = null;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            BottomAppBar.this.o0();
+            BottomAppBar.this.m950o0();
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$d */
     /* loaded from: classes2.dex */
-    public class d extends AnimatorListenerAdapter {
-        public boolean a;
-        public final /* synthetic */ ActionMenuView b;
-        public final /* synthetic */ int c;
-        public final /* synthetic */ boolean d;
+    public class C4023d extends AnimatorListenerAdapter {
 
-        public d(ActionMenuView actionMenuView, int i, boolean z) {
-            this.b = actionMenuView;
-            this.c = i;
-            this.d = z;
+        /* renamed from: a */
+        public boolean f37211a;
+
+        /* renamed from: b */
+        public final /* synthetic */ ActionMenuView f37212b;
+
+        /* renamed from: c */
+        public final /* synthetic */ int f37213c;
+
+        /* renamed from: d */
+        public final /* synthetic */ boolean f37214d;
+
+        public C4023d(ActionMenuView actionMenuView, int i, boolean z) {
+            this.f37212b = actionMenuView;
+            this.f37213c = i;
+            this.f37214d = z;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationCancel(Animator animator) {
-            this.a = true;
+            this.f37211a = true;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            if (this.a) {
+            if (this.f37211a) {
                 return;
             }
-            boolean z = BottomAppBar.this.s0 != 0;
+            boolean z = BottomAppBar.this.f37191s0 != 0;
             BottomAppBar bottomAppBar = BottomAppBar.this;
-            bottomAppBar.w0(bottomAppBar.s0);
-            BottomAppBar.this.C0(this.b, this.c, this.d, z);
+            bottomAppBar.m942w0(bottomAppBar.f37191s0);
+            BottomAppBar.this.m974C0(this.f37212b, this.f37213c, this.f37214d, z);
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$e */
     /* loaded from: classes2.dex */
-    public class e implements Runnable {
-        public final /* synthetic */ ActionMenuView p;
-        public final /* synthetic */ int q;
-        public final /* synthetic */ boolean r;
+    public class RunnableC4024e implements Runnable {
 
-        public e(ActionMenuView actionMenuView, int i, boolean z) {
-            this.p = actionMenuView;
-            this.q = i;
-            this.r = z;
+        /* renamed from: p */
+        public final /* synthetic */ ActionMenuView f37216p;
+
+        /* renamed from: q */
+        public final /* synthetic */ int f37217q;
+
+        /* renamed from: r */
+        public final /* synthetic */ boolean f37218r;
+
+        public RunnableC4024e(ActionMenuView actionMenuView, int i, boolean z) {
+            this.f37216p = actionMenuView;
+            this.f37217q = i;
+            this.f37218r = z;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            ActionMenuView actionMenuView = this.p;
-            actionMenuView.setTranslationX(BottomAppBar.this.r0(actionMenuView, this.q, this.r));
+            ActionMenuView actionMenuView = this.f37216p;
+            actionMenuView.setTranslationX(BottomAppBar.this.m947r0(actionMenuView, this.f37217q, this.f37218r));
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$f */
     /* loaded from: classes2.dex */
-    public class f extends AnimatorListenerAdapter {
-        public f() {
+    public class C4025f extends AnimatorListenerAdapter {
+        public C4025f() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            BottomAppBar.this.z0.onAnimationStart(animator);
-            FloatingActionButton p0 = BottomAppBar.this.p0();
-            if (p0 != null) {
-                p0.setTranslationX(BottomAppBar.this.getFabTranslationX());
+            BottomAppBar.this.f37198z0.onAnimationStart(animator);
+            FloatingActionButton m949p0 = BottomAppBar.this.m949p0();
+            if (m949p0 != null) {
+                m949p0.setTranslationX(BottomAppBar.this.getFabTranslationX());
             }
         }
     }
 
+    /* renamed from: com.google.android.material.bottomappbar.BottomAppBar$g */
     /* loaded from: classes2.dex */
-    public interface g {
-        void a(BottomAppBar bottomAppBar);
+    public interface InterfaceC4026g {
+        /* renamed from: a */
+        void m930a(BottomAppBar bottomAppBar);
 
-        void b(BottomAppBar bottomAppBar);
+        /* renamed from: b */
+        void m929b(BottomAppBar bottomAppBar);
     }
 
     private ActionMenuView getActionMenuView() {
@@ -317,130 +398,138 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
 
     /* JADX INFO: Access modifiers changed from: private */
     public int getBottomInset() {
-        return this.w0;
+        return this.f37195w0;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public float getFabTranslationX() {
-        return s0(this.n0);
+        return m946s0(this.f37186n0);
     }
 
     private float getFabTranslationY() {
-        return -getTopEdgeTreatment().c();
+        return -getTopEdgeTreatment().m16103c();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public int getLeftInset() {
-        return this.y0;
+        return this.f37197y0;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public int getRightInset() {
-        return this.x0;
+        return this.f37196x0;
     }
 
-    private mc getTopEdgeTreatment() {
-        return (mc) this.k0.C().p();
+    private C2166mc getTopEdgeTreatment() {
+        return (C2166mc) this.f37183k0.m15017C().m21797p();
     }
 
-    public boolean A0(int i) {
-        float f2 = i;
-        if (f2 != getTopEdgeTreatment().f()) {
-            getTopEdgeTreatment().m(f2);
-            this.k0.invalidateSelf();
+    /* renamed from: A0 */
+    public boolean m976A0(int i) {
+        float f = i;
+        if (f != getTopEdgeTreatment().m16100f()) {
+            getTopEdgeTreatment().m16096m(f);
+            this.f37183k0.invalidateSelf();
             return true;
         }
         return false;
     }
 
-    public final void B0(ActionMenuView actionMenuView, int i, boolean z) {
-        C0(actionMenuView, i, z, false);
+    /* renamed from: B0 */
+    public final void m975B0(ActionMenuView actionMenuView, int i, boolean z) {
+        m974C0(actionMenuView, i, z, false);
     }
 
-    public final void C0(ActionMenuView actionMenuView, int i, boolean z, boolean z2) {
-        e eVar = new e(actionMenuView, i, z);
+    /* renamed from: C0 */
+    public final void m974C0(ActionMenuView actionMenuView, int i, boolean z, boolean z2) {
+        RunnableC4024e runnableC4024e = new RunnableC4024e(actionMenuView, i, z);
         if (z2) {
-            actionMenuView.post(eVar);
+            actionMenuView.post(runnableC4024e);
         } else {
-            eVar.run();
+            runnableC4024e.run();
         }
     }
 
     public ColorStateList getBackgroundTint() {
-        return this.k0.E();
+        return this.f37183k0.m15015E();
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.b
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.InterfaceC0193b
     public Behavior getBehavior() {
-        if (this.v0 == null) {
-            this.v0 = new Behavior();
+        if (this.f37194v0 == null) {
+            this.f37194v0 = new Behavior();
         }
-        return this.v0;
+        return this.f37194v0;
     }
 
     public float getCradleVerticalOffset() {
-        return getTopEdgeTreatment().c();
+        return getTopEdgeTreatment().m16103c();
     }
 
     public int getFabAlignmentMode() {
-        return this.n0;
+        return this.f37186n0;
     }
 
     public int getFabAnimationMode() {
-        return this.o0;
+        return this.f37187o0;
     }
 
     public float getFabCradleMargin() {
-        return getTopEdgeTreatment().d();
+        return getTopEdgeTreatment().m16102d();
     }
 
     public float getFabCradleRoundedCornerRadius() {
-        return getTopEdgeTreatment().e();
+        return getTopEdgeTreatment().m16101e();
     }
 
     public boolean getHideOnScroll() {
-        return this.p0;
+        return this.f37188p0;
     }
 
-    public final void i0(FloatingActionButton floatingActionButton) {
-        floatingActionButton.e(this.z0);
-        floatingActionButton.f(new f());
-        floatingActionButton.g(this.A0);
+    /* renamed from: i0 */
+    public final void m956i0(FloatingActionButton floatingActionButton) {
+        floatingActionButton.m462e(this.f37198z0);
+        floatingActionButton.m461f(new C4025f());
+        floatingActionButton.m460g(this.f37181A0);
     }
 
-    public final void j0() {
-        Animator animator = this.m0;
+    /* renamed from: j0 */
+    public final void m955j0() {
+        Animator animator = this.f37185m0;
         if (animator != null) {
             animator.cancel();
         }
-        Animator animator2 = this.l0;
+        Animator animator2 = this.f37184l0;
         if (animator2 != null) {
             animator2.cancel();
         }
     }
 
-    public void k0(int i, List<Animator> list) {
-        FloatingActionButton p0 = p0();
-        if (p0 == null || p0.n()) {
+    /* renamed from: k0 */
+    public void m954k0(int i, List<Animator> list) {
+        FloatingActionButton m949p0 = m949p0();
+        if (m949p0 == null || m949p0.m453n()) {
             return;
         }
-        o0();
-        p0.l(new b(i));
+        m950o0();
+        m949p0.m455l(new C4020b(i));
     }
 
-    public final void l0(int i, List<Animator> list) {
-        ObjectAnimator ofFloat = ObjectAnimator.ofFloat(p0(), "translationX", s0(i));
+    /* renamed from: l0 */
+    public final void m953l0(int i, List<Animator> list) {
+        ObjectAnimator ofFloat = ObjectAnimator.ofFloat(m949p0(), "translationX", m946s0(i));
         ofFloat.setDuration(300L);
         list.add(ofFloat);
     }
 
-    public final void m0(int i, boolean z, List<Animator> list) {
+    /* renamed from: m0 */
+    public final void m952m0(int i, boolean z, List<Animator> list) {
         ActionMenuView actionMenuView = getActionMenuView();
         if (actionMenuView == null) {
             return;
         }
         Animator ofFloat = ObjectAnimator.ofFloat(actionMenuView, "alpha", 1.0f);
-        if (Math.abs(actionMenuView.getTranslationX() - r0(actionMenuView, i, z)) <= 1.0f) {
+        if (Math.abs(actionMenuView.getTranslationX() - m947r0(actionMenuView, i, z)) <= 1.0f) {
             if (actionMenuView.getAlpha() < 1.0f) {
                 list.add(ofFloat);
                 return;
@@ -448,43 +537,45 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
             return;
         }
         ObjectAnimator ofFloat2 = ObjectAnimator.ofFloat(actionMenuView, "alpha", 0.0f);
-        ofFloat2.addListener(new d(actionMenuView, i, z));
+        ofFloat2.addListener(new C4023d(actionMenuView, i, z));
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.setDuration(150L);
         animatorSet.playSequentially(ofFloat2, ofFloat);
         list.add(animatorSet);
     }
 
-    public final void n0() {
-        ArrayList<g> arrayList;
-        int i = this.q0 - 1;
-        this.q0 = i;
-        if (i != 0 || (arrayList = this.r0) == null) {
+    /* renamed from: n0 */
+    public final void m951n0() {
+        ArrayList<InterfaceC4026g> arrayList;
+        int i = this.f37189q0 - 1;
+        this.f37189q0 = i;
+        if (i != 0 || (arrayList = this.f37190r0) == null) {
             return;
         }
-        Iterator<g> it = arrayList.iterator();
+        Iterator<InterfaceC4026g> it = arrayList.iterator();
         while (it.hasNext()) {
-            it.next().b(this);
+            it.next().m929b(this);
         }
     }
 
-    public final void o0() {
-        ArrayList<g> arrayList;
-        int i = this.q0;
-        this.q0 = i + 1;
-        if (i != 0 || (arrayList = this.r0) == null) {
+    /* renamed from: o0 */
+    public final void m950o0() {
+        ArrayList<InterfaceC4026g> arrayList;
+        int i = this.f37189q0;
+        this.f37189q0 = i + 1;
+        if (i != 0 || (arrayList = this.f37190r0) == null) {
             return;
         }
-        Iterator<g> it = arrayList.iterator();
+        Iterator<InterfaceC4026g> it = arrayList.iterator();
         while (it.hasNext()) {
-            it.next().a(this);
+            it.next().m930a(this);
         }
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        on0.f(this, this.k0);
+        on0.m14140f(this, this.f37183k0);
         if (getParent() instanceof ViewGroup) {
             ((ViewGroup) getParent()).setClipChildren(false);
         }
@@ -494,10 +585,10 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         super.onLayout(z, i, i2, i3, i4);
         if (z) {
-            j0();
-            y0();
+            m955j0();
+            m940y0();
         }
-        x0();
+        m941x0();
     }
 
     @Override // androidx.appcompat.widget.Toolbar, android.view.View
@@ -507,127 +598,114 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
             return;
         }
         SavedState savedState = (SavedState) parcelable;
-        super.onRestoreInstanceState(savedState.a());
-        this.n0 = savedState.r;
-        this.u0 = savedState.s;
+        super.onRestoreInstanceState(savedState.m29657a());
+        this.f37186n0 = savedState.f37204r;
+        this.f37193u0 = savedState.f37205s;
     }
 
     @Override // androidx.appcompat.widget.Toolbar, android.view.View
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
-        savedState.r = this.n0;
-        savedState.s = this.u0;
+        savedState.f37204r = this.f37186n0;
+        savedState.f37205s = this.f37193u0;
         return savedState;
     }
 
-    public final FloatingActionButton p0() {
-        View q0 = q0();
-        if (q0 instanceof FloatingActionButton) {
-            return (FloatingActionButton) q0;
+    /* renamed from: p0 */
+    public final FloatingActionButton m949p0() {
+        View m948q0 = m948q0();
+        if (m948q0 instanceof FloatingActionButton) {
+            return (FloatingActionButton) m948q0;
         }
         return null;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:8:0x001e  */
+    /* renamed from: q0 */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final android.view.View q0() {
-        /*
-            r4 = this;
-            android.view.ViewParent r0 = r4.getParent()
-            boolean r0 = r0 instanceof androidx.coordinatorlayout.widget.CoordinatorLayout
-            r1 = 0
-            if (r0 != 0) goto La
-            return r1
-        La:
-            android.view.ViewParent r0 = r4.getParent()
-            androidx.coordinatorlayout.widget.CoordinatorLayout r0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) r0
-            java.util.List r0 = r0.s(r4)
-            java.util.Iterator r0 = r0.iterator()
-        L18:
-            boolean r2 = r0.hasNext()
-            if (r2 == 0) goto L2d
-            java.lang.Object r2 = r0.next()
-            android.view.View r2 = (android.view.View) r2
-            boolean r3 = r2 instanceof com.google.android.material.floatingactionbutton.FloatingActionButton
-            if (r3 != 0) goto L2c
-            boolean r3 = r2 instanceof com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            if (r3 == 0) goto L18
-        L2c:
-            return r2
-        L2d:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.bottomappbar.BottomAppBar.q0():android.view.View");
-    }
-
-    public int r0(ActionMenuView actionMenuView, int i, boolean z) {
-        if (i == 1 && z) {
-            boolean d2 = fu1.d(this);
-            int measuredWidth = d2 ? getMeasuredWidth() : 0;
-            for (int i2 = 0; i2 < getChildCount(); i2++) {
-                View childAt = getChildAt(i2);
-                if ((childAt.getLayoutParams() instanceof Toolbar.e) && (((Toolbar.e) childAt.getLayoutParams()).a & 8388615) == 8388611) {
-                    measuredWidth = d2 ? Math.min(measuredWidth, childAt.getLeft()) : Math.max(measuredWidth, childAt.getRight());
+    public final View m948q0() {
+        if (getParent() instanceof CoordinatorLayout) {
+            for (View view : ((CoordinatorLayout) getParent()).m29788s(this)) {
+                if ((view instanceof FloatingActionButton) || (view instanceof ExtendedFloatingActionButton)) {
+                    return view;
+                }
+                while (r0.hasNext()) {
                 }
             }
-            return measuredWidth - ((d2 ? actionMenuView.getRight() : actionMenuView.getLeft()) + (d2 ? this.x0 : -this.y0));
+            return null;
+        }
+        return null;
+    }
+
+    /* renamed from: r0 */
+    public int m947r0(ActionMenuView actionMenuView, int i, boolean z) {
+        if (i == 1 && z) {
+            boolean m22259d = fu1.m22259d(this);
+            int measuredWidth = m22259d ? getMeasuredWidth() : 0;
+            for (int i2 = 0; i2 < getChildCount(); i2++) {
+                View childAt = getChildAt(i2);
+                if ((childAt.getLayoutParams() instanceof Toolbar.C0159e) && (((Toolbar.C0159e) childAt.getLayoutParams()).f13119a & 8388615) == 8388611) {
+                    measuredWidth = m22259d ? Math.min(measuredWidth, childAt.getLeft()) : Math.max(measuredWidth, childAt.getRight());
+                }
+            }
+            return measuredWidth - ((m22259d ? actionMenuView.getRight() : actionMenuView.getLeft()) + (m22259d ? this.f37196x0 : -this.f37197y0));
         }
         return 0;
     }
 
-    public final float s0(int i) {
-        boolean d2 = fu1.d(this);
+    /* renamed from: s0 */
+    public final float m946s0(int i) {
+        boolean m22259d = fu1.m22259d(this);
         if (i == 1) {
-            return ((getMeasuredWidth() / 2) - (this.j0 + (d2 ? this.y0 : this.x0))) * (d2 ? -1 : 1);
+            return ((getMeasuredWidth() / 2) - (this.f37182j0 + (m22259d ? this.f37197y0 : this.f37196x0))) * (m22259d ? -1 : 1);
         }
         return 0.0f;
     }
 
     public void setBackgroundTint(ColorStateList colorStateList) {
-        nu.o(this.k0, colorStateList);
+        C2366nu.m14812o(this.f37183k0, colorStateList);
     }
 
-    public void setCradleVerticalOffset(float f2) {
-        if (f2 != getCradleVerticalOffset()) {
-            getTopEdgeTreatment().i(f2);
-            this.k0.invalidateSelf();
-            y0();
+    public void setCradleVerticalOffset(float f) {
+        if (f != getCradleVerticalOffset()) {
+            getTopEdgeTreatment().m16099i(f);
+            this.f37183k0.invalidateSelf();
+            m940y0();
         }
     }
 
     @Override // android.view.View
-    public void setElevation(float f2) {
-        this.k0.V(f2);
-        getBehavior().G(this, this.k0.B() - this.k0.A());
+    public void setElevation(float f) {
+        this.f37183k0.m14998V(f);
+        getBehavior().m992G(this, this.f37183k0.m15018B() - this.f37183k0.m15019A());
     }
 
     public void setFabAlignmentMode(int i) {
-        z0(i, 0);
+        m939z0(i, 0);
     }
 
     public void setFabAnimationMode(int i) {
-        this.o0 = i;
+        this.f37187o0 = i;
     }
 
-    public void setFabCradleMargin(float f2) {
-        if (f2 != getFabCradleMargin()) {
-            getTopEdgeTreatment().j(f2);
-            this.k0.invalidateSelf();
+    public void setFabCradleMargin(float f) {
+        if (f != getFabCradleMargin()) {
+            getTopEdgeTreatment().m16098j(f);
+            this.f37183k0.invalidateSelf();
         }
     }
 
-    public void setFabCradleRoundedCornerRadius(float f2) {
-        if (f2 != getFabCradleRoundedCornerRadius()) {
-            getTopEdgeTreatment().k(f2);
-            this.k0.invalidateSelf();
+    public void setFabCradleRoundedCornerRadius(float f) {
+        if (f != getFabCradleRoundedCornerRadius()) {
+            getTopEdgeTreatment().m16097k(f);
+            this.f37183k0.invalidateSelf();
         }
     }
 
     public void setHideOnScroll(boolean z) {
-        this.p0 = z;
+        this.f37188p0 = z;
     }
 
     @Override // androidx.appcompat.widget.Toolbar
@@ -638,91 +716,98 @@ public class BottomAppBar extends Toolbar implements CoordinatorLayout.b {
     public void setTitle(CharSequence charSequence) {
     }
 
-    public final boolean t0() {
-        FloatingActionButton p0 = p0();
-        return p0 != null && p0.o();
+    /* renamed from: t0 */
+    public final boolean m945t0() {
+        FloatingActionButton m949p0 = m949p0();
+        return m949p0 != null && m949p0.m452o();
     }
 
-    public final void u0(int i, boolean z) {
-        if (!xs1.V(this)) {
-            this.t0 = false;
-            w0(this.s0);
+    /* renamed from: u0 */
+    public final void m944u0(int i, boolean z) {
+        if (!xs1.m4742V(this)) {
+            this.f37192t0 = false;
+            m942w0(this.f37191s0);
             return;
         }
-        Animator animator = this.m0;
+        Animator animator = this.f37185m0;
         if (animator != null) {
             animator.cancel();
         }
         ArrayList arrayList = new ArrayList();
-        if (!t0()) {
+        if (!m945t0()) {
             i = 0;
             z = false;
         }
-        m0(i, z, arrayList);
+        m952m0(i, z, arrayList);
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(arrayList);
-        this.m0 = animatorSet;
-        animatorSet.addListener(new c());
-        this.m0.start();
+        this.f37185m0 = animatorSet;
+        animatorSet.addListener(new C4022c());
+        this.f37185m0.start();
     }
 
-    public final void v0(int i) {
-        if (this.n0 == i || !xs1.V(this)) {
+    /* renamed from: v0 */
+    public final void m943v0(int i) {
+        if (this.f37186n0 == i || !xs1.m4742V(this)) {
             return;
         }
-        Animator animator = this.l0;
+        Animator animator = this.f37184l0;
         if (animator != null) {
             animator.cancel();
         }
         ArrayList arrayList = new ArrayList();
-        if (this.o0 == 1) {
-            l0(i, arrayList);
+        if (this.f37187o0 == 1) {
+            m953l0(i, arrayList);
         } else {
-            k0(i, arrayList);
+            m954k0(i, arrayList);
         }
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playTogether(arrayList);
-        this.l0 = animatorSet;
-        animatorSet.addListener(new a());
-        this.l0.start();
+        this.f37184l0 = animatorSet;
+        animatorSet.addListener(new C4019a());
+        this.f37184l0.start();
     }
 
-    public void w0(int i) {
+    /* renamed from: w0 */
+    public void m942w0(int i) {
         if (i != 0) {
-            this.s0 = 0;
+            this.f37191s0 = 0;
             getMenu().clear();
-            x(i);
+            m29948x(i);
         }
     }
 
-    public final void x0() {
+    /* renamed from: x0 */
+    public final void m941x0() {
         ActionMenuView actionMenuView = getActionMenuView();
-        if (actionMenuView == null || this.m0 != null) {
+        if (actionMenuView == null || this.f37185m0 != null) {
             return;
         }
         actionMenuView.setAlpha(1.0f);
-        if (t0()) {
-            B0(actionMenuView, this.n0, this.u0);
+        if (m945t0()) {
+            m975B0(actionMenuView, this.f37186n0, this.f37193u0);
         } else {
-            B0(actionMenuView, 0, false);
+            m975B0(actionMenuView, 0, false);
         }
     }
 
-    public final void y0() {
-        getTopEdgeTreatment().n(getFabTranslationX());
-        View q0 = q0();
-        this.k0.X((this.u0 && t0()) ? 1.0f : 0.0f);
-        if (q0 != null) {
-            q0.setTranslationY(getFabTranslationY());
-            q0.setTranslationX(getFabTranslationX());
+    /* renamed from: y0 */
+    public final void m940y0() {
+        getTopEdgeTreatment().m16095n(getFabTranslationX());
+        View m948q0 = m948q0();
+        this.f37183k0.m14996X((this.f37193u0 && m945t0()) ? 1.0f : 0.0f);
+        if (m948q0 != null) {
+            m948q0.setTranslationY(getFabTranslationY());
+            m948q0.setTranslationX(getFabTranslationX());
         }
     }
 
-    public void z0(int i, int i2) {
-        this.s0 = i2;
-        this.t0 = true;
-        u0(i, this.u0);
-        v0(i);
-        this.n0 = i;
+    /* renamed from: z0 */
+    public void m939z0(int i, int i2) {
+        this.f37191s0 = i2;
+        this.f37192t0 = true;
+        m944u0(i, this.f37193u0);
+        m943v0(i);
+        this.f37186n0 = i;
     }
 }

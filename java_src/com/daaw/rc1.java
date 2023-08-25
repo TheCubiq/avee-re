@@ -2,182 +2,169 @@ package com.daaw;
 
 import com.daaw.uc1;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.List;
+import org.xmlpull.v1.XmlPullParserException;
 /* loaded from: classes.dex */
 public class rc1<T, V extends List<T>, G, GList extends List<G>> {
-    public static final Object d = new Object();
-    public static rc1 e;
-    public String a = "";
-    public final String b;
-    public final uc1<G, GList, T, V> c;
 
-    public rc1(String str, uc1.c<G> cVar, r40<G, GList> r40Var, uc1.d<T> dVar, w40<V> w40Var) {
-        this.c = new uc1<>(cVar, r40Var, dVar, w40Var);
-        this.b = str;
+    /* renamed from: d */
+    public static final Object f25116d = new Object();
+
+    /* renamed from: e */
+    public static rc1 f25117e;
+
+    /* renamed from: a */
+    public String f25118a = "";
+
+    /* renamed from: b */
+    public final String f25119b;
+
+    /* renamed from: c */
+    public final uc1<G, GList, T, V> f25120c;
+
+    public rc1(String str, uc1.InterfaceC3197c<G> interfaceC3197c, r40<G, GList> r40Var, uc1.InterfaceC3198d<T> interfaceC3198d, w40<V> w40Var) {
+        this.f25120c = new uc1<>(interfaceC3197c, r40Var, interfaceC3198d, w40Var);
+        this.f25119b = str;
     }
 
-    public static <T, V extends List<T>, G, GList extends List<G>> rc1<T, V, G, GList> d(String str, uc1.c<G> cVar, r40<G, GList> r40Var, uc1.d<T> dVar, w40<V> w40Var) {
+    /* renamed from: d */
+    public static <T, V extends List<T>, G, GList extends List<G>> rc1<T, V, G, GList> m11428d(String str, uc1.InterfaceC3197c<G> interfaceC3197c, r40<G, GList> r40Var, uc1.InterfaceC3198d<T> interfaceC3198d, w40<V> w40Var) {
         rc1<T, V, G, GList> rc1Var;
-        rc1<T, V, G, GList> rc1Var2 = e;
+        rc1<T, V, G, GList> rc1Var2 = f25117e;
         if (rc1Var2 != null) {
             return rc1Var2;
         }
-        synchronized (d) {
-            if (e == null) {
-                e = new rc1(str, cVar, r40Var, dVar, w40Var);
+        synchronized (f25116d) {
+            if (f25117e == null) {
+                f25117e = new rc1(str, interfaceC3197c, r40Var, interfaceC3198d, w40Var);
             }
-            rc1Var = e;
+            rc1Var = f25117e;
         }
         return rc1Var;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* JADX WARN: Removed duplicated region for block: B:19:0x002e  */
+    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ com.daaw.lo1 g(java.io.File r4, java.lang.Boolean[] r5) {
-        /*
-            r3 = this;
-            r0 = 0
-            java.io.FileInputStream r1 = new java.io.FileInputStream     // Catch: java.io.IOException -> L7
-            r1.<init>(r4)     // Catch: java.io.IOException -> L7
-            goto L8
-        L7:
-            r1 = r0
-        L8:
-            com.daaw.wf1 r4 = new com.daaw.wf1
-            r4.<init>()
-            if (r1 != 0) goto L1a
-            java.lang.String r5 = "Network error"
-            r4.a(r5)
-            com.daaw.lo1 r5 = new com.daaw.lo1
-            r5.<init>(r0, r4)
-            return r5
-        L1a:
-            com.daaw.uc1<G, GList extends java.util.List<G>, T, V extends java.util.List<T>> r2 = r3.c     // Catch: java.io.IOException -> L21 org.xmlpull.v1.XmlPullParserException -> L25
-            java.util.List r0 = r2.c(r1, r4)     // Catch: java.io.IOException -> L21 org.xmlpull.v1.XmlPullParserException -> L25
-            goto L2b
-        L21:
-            r1 = move-exception
-            java.lang.String r2 = "io"
-            goto L28
-        L25:
-            r1 = move-exception
-            java.lang.String r2 = "xml parser"
-        L28:
-            r4.b(r2, r1)
-        L2b:
-            r1 = 0
-            if (r0 == 0) goto L36
-            int r2 = r0.size()
-            if (r2 <= 0) goto L36
-            r2 = 1
-            goto L37
-        L36:
-            r2 = 0
-        L37:
-            java.lang.Boolean r2 = java.lang.Boolean.valueOf(r2)
-            r5[r1] = r2
-            com.daaw.lo1 r5 = new com.daaw.lo1
-            r5.<init>(r0, r4)
-            return r5
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.rc1.g(java.io.File, java.lang.Boolean[]):com.daaw.lo1");
+    public /* synthetic */ lo1 m11425g(File file, Boolean[] boolArr) {
+        FileInputStream fileInputStream;
+        String str;
+        GList glist = null;
+        try {
+            fileInputStream = new FileInputStream(file);
+        } catch (IOException unused) {
+            fileInputStream = null;
+        }
+        wf1 wf1Var = new wf1();
+        if (fileInputStream == null) {
+            wf1Var.m6096a("Network error");
+            return new lo1(null, wf1Var);
+        }
+        try {
+            glist = this.f25120c.m8338c(fileInputStream, wf1Var);
+        } catch (IOException e) {
+            e = e;
+            str = "io";
+            wf1Var.m6095b(str, e);
+            boolArr[0] = Boolean.valueOf(glist == null && glist.size() > 0);
+            return new lo1(glist, wf1Var);
+        } catch (XmlPullParserException e2) {
+            e = e2;
+            str = "xml parser";
+            wf1Var.m6095b(str, e);
+            boolArr[0] = Boolean.valueOf(glist == null && glist.size() > 0);
+            return new lo1(glist, wf1Var);
+        }
+        boolArr[0] = Boolean.valueOf(glist == null && glist.size() > 0);
+        return new lo1(glist, wf1Var);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* JADX WARN: Removed duplicated region for block: B:19:0x002e  */
+    /* renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ com.daaw.lo1 h(java.io.File r4, java.lang.Boolean[] r5) {
-        /*
-            r3 = this;
-            r0 = 0
-            java.io.FileInputStream r1 = new java.io.FileInputStream     // Catch: java.io.IOException -> L7
-            r1.<init>(r4)     // Catch: java.io.IOException -> L7
-            goto L8
-        L7:
-            r1 = r0
-        L8:
-            com.daaw.wf1 r4 = new com.daaw.wf1
-            r4.<init>()
-            if (r1 != 0) goto L1a
-            java.lang.String r5 = "Network error"
-            r4.a(r5)
-            com.daaw.lo1 r5 = new com.daaw.lo1
-            r5.<init>(r0, r4)
-            return r5
-        L1a:
-            com.daaw.uc1<G, GList extends java.util.List<G>, T, V extends java.util.List<T>> r2 = r3.c     // Catch: java.io.IOException -> L21 org.xmlpull.v1.XmlPullParserException -> L25
-            java.util.List r0 = r2.d(r1, r4)     // Catch: java.io.IOException -> L21 org.xmlpull.v1.XmlPullParserException -> L25
-            goto L2b
-        L21:
-            r1 = move-exception
-            java.lang.String r2 = "io"
-            goto L28
-        L25:
-            r1 = move-exception
-            java.lang.String r2 = "xml parser"
-        L28:
-            r4.b(r2, r1)
-        L2b:
-            r1 = 0
-            if (r0 == 0) goto L36
-            int r2 = r0.size()
-            if (r2 <= 0) goto L36
-            r2 = 1
-            goto L37
-        L36:
-            r2 = 0
-        L37:
-            java.lang.Boolean r2 = java.lang.Boolean.valueOf(r2)
-            r5[r1] = r2
-            com.daaw.lo1 r5 = new com.daaw.lo1
-            r5.<init>(r0, r4)
-            return r5
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.rc1.h(java.io.File, java.lang.Boolean[]):com.daaw.lo1");
+    public /* synthetic */ lo1 m11424h(File file, Boolean[] boolArr) {
+        FileInputStream fileInputStream;
+        String str;
+        V v = null;
+        try {
+            fileInputStream = new FileInputStream(file);
+        } catch (IOException unused) {
+            fileInputStream = null;
+        }
+        wf1 wf1Var = new wf1();
+        if (fileInputStream == null) {
+            wf1Var.m6096a("Network error");
+            return new lo1(null, wf1Var);
+        }
+        try {
+            v = this.f25120c.m8337d(fileInputStream, wf1Var);
+        } catch (IOException e) {
+            e = e;
+            str = "io";
+            wf1Var.m6095b(str, e);
+            boolArr[0] = Boolean.valueOf(v == null && v.size() > 0);
+            return new lo1(v, wf1Var);
+        } catch (XmlPullParserException e2) {
+            e = e2;
+            str = "xml parser";
+            wf1Var.m6095b(str, e);
+            boolArr[0] = Boolean.valueOf(v == null && v.size() > 0);
+            return new lo1(v, wf1Var);
+        }
+        boolArr[0] = Boolean.valueOf(v == null && v.size() > 0);
+        return new lo1(v, wf1Var);
     }
 
-    public static /* synthetic */ List i(File file, Boolean[] boolArr) {
-        List<tx0> e2 = lx0.h().e(file.getAbsolutePath());
-        boolArr[0] = Boolean.valueOf(e2 != null && e2.size() > 0);
-        return e2;
+    /* renamed from: i */
+    public static /* synthetic */ List m11423i(File file, Boolean[] boolArr) {
+        List<tx0> m16395e = lx0.m16392h().m16395e(file.getAbsolutePath());
+        boolArr[0] = Boolean.valueOf(m16395e != null && m16395e.size() > 0);
+        return m16395e;
     }
 
-    public ir1<lo1<List<G>, wf1>> e(String str) {
-        return tc1.g("https://api.shoutcast.com/genre/secondary?parentid=" + str + "&k=" + tc1.f() + "&f=xml", this.b + "_genres_sec_" + str, new s40() { // from class: com.daaw.pc1
+    /* renamed from: e */
+    public ir1<lo1<List<G>, wf1>> m11427e(String str) {
+        return tc1.m9329g("https://api.shoutcast.com/genre/secondary?parentid=" + str + "&k=" + tc1.m9330f() + "&f=xml", this.f25119b + "_genres_sec_" + str, new s40() { // from class: com.daaw.pc1
             @Override // com.daaw.s40
-            public final Object a(Object obj, Object obj2) {
-                lo1 g;
-                g = rc1.this.g((File) obj, (Boolean[]) obj2);
-                return g;
+            /* renamed from: a */
+            public final Object mo2432a(Object obj, Object obj2) {
+                lo1 m11425g;
+                m11425g = rc1.this.m11425g((File) obj, (Boolean[]) obj2);
+                return m11425g;
             }
         }, 720);
     }
 
-    public ir1<lo1<V, wf1>> f(String str) {
-        return tc1.g("https://api.shoutcast.com/station/advancedsearch?genre_id=" + str + "&limit=200&f=xml&k=" + tc1.f(), this.b + "_stations_" + str, new s40() { // from class: com.daaw.oc1
+    /* renamed from: f */
+    public ir1<lo1<V, wf1>> m11426f(String str) {
+        return tc1.m9329g("https://api.shoutcast.com/station/advancedsearch?genre_id=" + str + "&limit=200&f=xml&k=" + tc1.m9330f(), this.f25119b + "_stations_" + str, new s40() { // from class: com.daaw.oc1
             @Override // com.daaw.s40
-            public final Object a(Object obj, Object obj2) {
-                lo1 h;
-                h = rc1.this.h((File) obj, (Boolean[]) obj2);
-                return h;
+            /* renamed from: a */
+            public final Object mo2432a(Object obj, Object obj2) {
+                lo1 m11424h;
+                m11424h = rc1.this.m11424h((File) obj, (Boolean[]) obj2);
+                return m11424h;
             }
         }, 720);
     }
 
-    public ir1<List<tx0>> j(String str, String str2) {
-        return tc1.g("https://yp.shoutcast.com/" + str + "?id=" + str2, this.b + "_station_" + str2, new s40() { // from class: com.daaw.qc1
+    /* renamed from: j */
+    public ir1<List<tx0>> m11422j(String str, String str2) {
+        return tc1.m9329g("https://yp.shoutcast.com/" + str + "?id=" + str2, this.f25119b + "_station_" + str2, new s40() { // from class: com.daaw.qc1
             @Override // com.daaw.s40
-            public final Object a(Object obj, Object obj2) {
-                List i;
-                i = rc1.i((File) obj, (Boolean[]) obj2);
-                return i;
+            /* renamed from: a */
+            public final Object mo2432a(Object obj, Object obj2) {
+                List m11423i;
+                m11423i = rc1.m11423i((File) obj, (Boolean[]) obj2);
+                return m11423i;
             }
         }, 720);
     }

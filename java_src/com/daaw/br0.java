@@ -1,19 +1,24 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class br0 {
-    public Class<?> a;
-    public Class<?> b;
+
+    /* renamed from: a */
+    public Class<?> f5066a;
+
+    /* renamed from: b */
+    public Class<?> f5067b;
 
     public br0() {
     }
 
     public br0(Class<?> cls, Class<?> cls2) {
-        a(cls, cls2);
+        m25917a(cls, cls2);
     }
 
-    public void a(Class<?> cls, Class<?> cls2) {
-        this.a = cls;
-        this.b = cls2;
+    /* renamed from: a */
+    public void m25917a(Class<?> cls, Class<?> cls2) {
+        this.f5066a = cls;
+        this.f5067b = cls2;
     }
 
     public boolean equals(Object obj) {
@@ -24,14 +29,14 @@ public class br0 {
             return false;
         }
         br0 br0Var = (br0) obj;
-        return this.a.equals(br0Var.a) && this.b.equals(br0Var.b);
+        return this.f5066a.equals(br0Var.f5066a) && this.f5067b.equals(br0Var.f5067b);
     }
 
     public int hashCode() {
-        return (this.a.hashCode() * 31) + this.b.hashCode();
+        return (this.f5066a.hashCode() * 31) + this.f5067b.hashCode();
     }
 
     public String toString() {
-        return "MultiClassKey{first=" + this.a + ", second=" + this.b + '}';
+        return "MultiClassKey{first=" + this.f5066a + ", second=" + this.f5067b + '}';
     }
 }

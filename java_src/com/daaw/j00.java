@@ -4,7 +4,8 @@ import android.graphics.Bitmap;
 import java.lang.reflect.Array;
 /* loaded from: classes2.dex */
 public class j00 {
-    public static Bitmap a(Bitmap bitmap, int i) {
+    /* renamed from: a */
+    public static Bitmap m19214a(Bitmap bitmap, int i) {
         Bitmap bitmap2;
         int i2;
         int i3;

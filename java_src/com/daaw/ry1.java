@@ -1,50 +1,72 @@
 package com.daaw;
 
 import android.annotation.SuppressLint;
+import androidx.work.C0511b;
 import com.daaw.qy1;
 import java.util.List;
 @SuppressLint({"UnknownNullness"})
 /* loaded from: classes.dex */
 public interface ry1 {
-    void a(String str);
+    /* renamed from: a */
+    void mo9731a(String str);
 
-    int b(String str, long j);
+    /* renamed from: b */
+    int mo9730b(String str, long j);
 
-    List<qy1.b> c(String str);
+    /* renamed from: c */
+    List<qy1.C2801b> mo9729c(String str);
 
-    List<qy1> d(long j);
+    /* renamed from: d */
+    List<qy1> mo9728d(long j);
 
-    List<qy1> e(int i);
+    /* renamed from: e */
+    List<qy1> mo9727e(int i);
 
-    List<qy1> f();
+    /* renamed from: f */
+    List<qy1> mo9726f();
 
-    void g(String str, androidx.work.b bVar);
+    /* renamed from: g */
+    void mo9725g(String str, C0511b c0511b);
 
-    List<qy1> h();
+    /* renamed from: h */
+    List<qy1> mo9724h();
 
-    boolean i();
+    /* renamed from: i */
+    boolean mo9723i();
 
-    List<String> j(String str);
+    /* renamed from: j */
+    List<String> mo9722j(String str);
 
-    int k(yx1 yx1Var, String... strArr);
+    /* renamed from: k */
+    int mo9721k(yx1 yx1Var, String... strArr);
 
-    yx1 l(String str);
+    /* renamed from: l */
+    yx1 mo9720l(String str);
 
-    qy1 m(String str);
+    /* renamed from: m */
+    qy1 mo9719m(String str);
 
-    int n(String str);
+    /* renamed from: n */
+    int mo9718n(String str);
 
-    List<String> o(String str);
+    /* renamed from: o */
+    List<String> mo9717o(String str);
 
-    List<androidx.work.b> p(String str);
+    /* renamed from: p */
+    List<C0511b> mo9716p(String str);
 
-    void q(qy1 qy1Var);
+    /* renamed from: q */
+    void mo9715q(qy1 qy1Var);
 
-    int r(String str);
+    /* renamed from: r */
+    int mo9714r(String str);
 
-    void s(String str, long j);
+    /* renamed from: s */
+    void mo9713s(String str, long j);
 
-    List<qy1> t(int i);
+    /* renamed from: t */
+    List<qy1> mo9712t(int i);
 
-    int u();
+    /* renamed from: u */
+    int mo9711u();
 }

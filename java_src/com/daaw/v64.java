@@ -4,14 +4,16 @@ import android.content.DialogInterface;
 import android.webkit.JsPromptResult;
 /* loaded from: classes.dex */
 public final class v64 implements DialogInterface.OnCancelListener {
-    public final /* synthetic */ JsPromptResult p;
+
+    /* renamed from: p */
+    public final /* synthetic */ JsPromptResult f29937p;
 
     public v64(JsPromptResult jsPromptResult) {
-        this.p = jsPromptResult;
+        this.f29937p = jsPromptResult;
     }
 
     @Override // android.content.DialogInterface.OnCancelListener
     public final void onCancel(DialogInterface dialogInterface) {
-        this.p.cancel();
+        this.f29937p.cancel();
     }
 }

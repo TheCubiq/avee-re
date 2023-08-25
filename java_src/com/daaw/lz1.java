@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class lz1 {
-    public static void a(String str) {
-        x10.a().c(str);
+    /* renamed from: a */
+    public static void m16365a(String str) {
+        x10.m5653a().m5651c(str);
     }
 
-    public static void b(Exception exc, String str) {
-        x10.a().c(str);
+    /* renamed from: b */
+    public static void m16364b(Exception exc, String str) {
+        x10.m5653a().m5651c(str);
         if (exc != null) {
-            x10.a().d(exc);
+            x10.m5653a().m5650d(exc);
         }
     }
 
-    public static void c(String str) {
-        x10.a().c(str);
+    /* renamed from: c */
+    public static void m16363c(String str) {
+        x10.m5653a().m5651c(str);
     }
 }

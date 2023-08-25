@@ -6,7 +6,8 @@ import java.security.NoSuchAlgorithmException;
 import org.conscrypt.EvpMdRef;
 /* loaded from: classes.dex */
 public final class sx6 {
-    public static String a(byte[] bArr) {
+    /* renamed from: a */
+    public static String m9778a(byte[] bArr) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance(EvpMdRef.SHA256.JCA_NAME);
             messageDigest.update(bArr);

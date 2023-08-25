@@ -1,11 +1,15 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class gy1 {
-    public final String a;
-    public final String b;
+
+    /* renamed from: a */
+    public final String f11850a;
+
+    /* renamed from: b */
+    public final String f11851b;
 
     public gy1(String str, String str2) {
-        this.a = str;
-        this.b = str2;
+        this.f11850a = str;
+        this.f11851b = str2;
     }
 }

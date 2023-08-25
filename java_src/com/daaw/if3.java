@@ -8,18 +8,21 @@ import com.google.android.gms.ads.internal.client.zzbu;
 import com.google.android.gms.ads.internal.client.zzg;
 /* loaded from: classes.dex */
 public final class if3 extends ie3 {
-    public final OnAdManagerAdViewLoadedListener p;
+
+    /* renamed from: p */
+    public final OnAdManagerAdViewLoadedListener f13617p;
 
     public if3(OnAdManagerAdViewLoadedListener onAdManagerAdViewLoadedListener) {
-        this.p = onAdManagerAdViewLoadedListener;
+        this.f13617p = onAdManagerAdViewLoadedListener;
     }
 
     @Override // com.daaw.je3
-    public final void U0(zzbu zzbuVar, yd0 yd0Var) {
+    /* renamed from: U0 */
+    public final void mo18543U0(zzbu zzbuVar, yd0 yd0Var) {
         if (zzbuVar == null || yd0Var == null) {
             return;
         }
-        AdManagerAdView adManagerAdView = new AdManagerAdView((Context) nt0.M(yd0Var));
+        AdManagerAdView adManagerAdView = new AdManagerAdView((Context) nt0.m14831M(yd0Var));
         try {
             if (zzbuVar.zzi() instanceof zzg) {
                 zzg zzgVar = (zzg) zzbuVar.zzi();
@@ -31,11 +34,11 @@ public final class if3 extends ie3 {
         try {
             if (zzbuVar.zzj() instanceof h13) {
                 h13 h13Var = (h13) zzbuVar.zzj();
-                adManagerAdView.setAppEventListener(h13Var != null ? h13Var.g3() : null);
+                adManagerAdView.setAppEventListener(h13Var != null ? h13Var.m21089g3() : null);
             }
         } catch (RemoteException e2) {
             k04.zzh("", e2);
         }
-        d04.b.post(new hf3(this, adManagerAdView, zzbuVar));
+        d04.f6340b.post(new hf3(this, adManagerAdView, zzbuVar));
     }
 }

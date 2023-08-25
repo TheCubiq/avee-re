@@ -27,14 +27,16 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
     private BufferAllocator bufferAllocator;
     private final ConscryptEngine engine;
     private final Object handshakeLock;
-    private SSLInputStream in;
+
+    /* renamed from: in */
+    private SSLInputStream f38015in;
     private SSLOutputStream out;
     private int state;
     private final Object stateLock;
 
-    /* renamed from: org.conscrypt.ConscryptEngineSocket$3  reason: invalid class name */
+    /* renamed from: org.conscrypt.ConscryptEngineSocket$3 */
     /* loaded from: classes2.dex */
-    public static /* synthetic */ class AnonymousClass3 {
+    public static /* synthetic */ class C41963 {
         public static final /* synthetic */ int[] $SwitchMap$javax$net$ssl$SSLEngineResult$HandshakeStatus;
         public static final /* synthetic */ int[] $SwitchMap$javax$net$ssl$SSLEngineResult$Status;
 
@@ -120,7 +122,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
         }
 
         private boolean isHandshaking(SSLEngineResult.HandshakeStatus handshakeStatus) {
-            int i = AnonymousClass3.$SwitchMap$javax$net$ssl$SSLEngineResult$HandshakeStatus[handshakeStatus.ordinal()];
+            int i = C41963.$SwitchMap$javax$net$ssl$SSLEngineResult$HandshakeStatus[handshakeStatus.ordinal()];
             return i == 1 || i == 2 || i == 3;
         }
 
@@ -130,94 +132,42 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
          */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
         */
-        public int processDataFromSocket(byte[] r7, int r8, int r9) {
-            /*
-                r6 = this;
-                org.conscrypt.Platform.blockGuardOnNetwork()
-                org.conscrypt.ConscryptEngineSocket r0 = org.conscrypt.ConscryptEngineSocket.this
-                r0.checkOpen()
-                r6.init()
-            Lb:
-                java.nio.ByteBuffer r0 = r6.fromEngine
-                int r0 = r0.remaining()
-                if (r0 <= 0) goto L23
-                java.nio.ByteBuffer r0 = r6.fromEngine
-                int r0 = r0.remaining()
-                int r9 = java.lang.Math.min(r0, r9)
-                java.nio.ByteBuffer r0 = r6.fromEngine
-                r0.get(r7, r8, r9)
-                return r9
-            L23:
-                java.nio.ByteBuffer r0 = r6.fromSocket
-                r0.flip()
-                java.nio.ByteBuffer r0 = r6.fromEngine
-                r0.clear()
-                org.conscrypt.ConscryptEngineSocket r0 = org.conscrypt.ConscryptEngineSocket.this
-                org.conscrypt.ConscryptEngine r0 = org.conscrypt.ConscryptEngineSocket.access$400(r0)
-                javax.net.ssl.SSLEngineResult$HandshakeStatus r0 = r0.getHandshakeStatus()
-                boolean r0 = r6.isHandshaking(r0)
-                org.conscrypt.ConscryptEngineSocket r1 = org.conscrypt.ConscryptEngineSocket.this
-                org.conscrypt.ConscryptEngine r1 = org.conscrypt.ConscryptEngineSocket.access$400(r1)
-                java.nio.ByteBuffer r2 = r6.fromSocket
-                java.nio.ByteBuffer r3 = r6.fromEngine
-                javax.net.ssl.SSLEngineResult r1 = r1.unwrap(r2, r3)
-                java.nio.ByteBuffer r2 = r6.fromSocket
-                r2.compact()
-                java.nio.ByteBuffer r2 = r6.fromEngine
-                r2.flip()
-                int[] r2 = org.conscrypt.ConscryptEngineSocket.AnonymousClass3.$SwitchMap$javax$net$ssl$SSLEngineResult$Status
-                javax.net.ssl.SSLEngineResult$Status r3 = r1.getStatus()
-                int r3 = r3.ordinal()
-                r2 = r2[r3]
-                r3 = 1
-                r4 = -1
-                r5 = 0
-                if (r2 == r3) goto L9c
-                r3 = 2
-                if (r2 == r3) goto L86
-                r7 = 3
-                if (r2 != r7) goto L6b
-                return r4
-            L6b:
-                javax.net.ssl.SSLException r7 = new javax.net.ssl.SSLException
-                java.lang.StringBuilder r8 = new java.lang.StringBuilder
-                r8.<init>()
-                java.lang.String r9 = "Unexpected engine result "
-                r8.append(r9)
-                javax.net.ssl.SSLEngineResult$Status r9 = r1.getStatus()
-                r8.append(r9)
-                java.lang.String r8 = r8.toString()
-                r7.<init>(r8)
-                throw r7
-            L86:
-                if (r0 != 0) goto La3
-                javax.net.ssl.SSLEngineResult$HandshakeStatus r0 = r1.getHandshakeStatus()
-                boolean r0 = r6.isHandshaking(r0)
-                if (r0 == 0) goto La3
-                boolean r0 = r6.isHandshakeFinished()
-                if (r0 == 0) goto La3
-                r6.renegotiate()
-                return r5
-            L9c:
-                int r0 = r1.bytesProduced()
-                if (r0 != 0) goto La3
-                goto La4
-            La3:
-                r3 = 0
-            La4:
-                if (r3 != 0) goto Lad
-                int r0 = r1.bytesProduced()
-                if (r0 != 0) goto Lad
-                return r5
-            Lad:
-                if (r3 == 0) goto Lb
-                int r0 = r6.readFromSocket()
-                if (r0 != r4) goto Lb
-                return r4
-            */
-            throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.ConscryptEngineSocket.SSLInputStream.processDataFromSocket(byte[], int, int):int");
+        public int processDataFromSocket(byte[] bArr, int i, int i2) {
+            Platform.blockGuardOnNetwork();
+            ConscryptEngineSocket.this.checkOpen();
+            init();
+            while (this.fromEngine.remaining() <= 0) {
+                this.fromSocket.flip();
+                this.fromEngine.clear();
+                boolean isHandshaking = isHandshaking(ConscryptEngineSocket.this.engine.getHandshakeStatus());
+                SSLEngineResult unwrap = ConscryptEngineSocket.this.engine.unwrap(this.fromSocket, this.fromEngine);
+                this.fromSocket.compact();
+                this.fromEngine.flip();
+                int i3 = C41963.$SwitchMap$javax$net$ssl$SSLEngineResult$Status[unwrap.getStatus().ordinal()];
+                boolean z = true;
+                if (i3 != 1) {
+                    if (i3 != 2) {
+                        if (i3 == 3) {
+                            return -1;
+                        }
+                        throw new SSLException("Unexpected engine result " + unwrap.getStatus());
+                    } else if (!isHandshaking && isHandshaking(unwrap.getHandshakeStatus()) && isHandshakeFinished()) {
+                        renegotiate();
+                        return 0;
+                    }
+                }
+                z = false;
+                if (!z && unwrap.bytesProduced() == 0) {
+                    return 0;
+                }
+                if (z && readFromSocket() == -1) {
+                    return -1;
+                }
+            }
+            int min = Math.min(this.fromEngine.remaining(), i2);
+            this.fromEngine.get(bArr, i, min);
+            return min;
         }
 
         private int readFromSocket() {
@@ -464,7 +414,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
         boolean z = false;
         while (!z) {
             try {
-                int i = AnonymousClass3.$SwitchMap$javax$net$ssl$SSLEngineResult$HandshakeStatus[this.engine.getHandshakeStatus().ordinal()];
+                int i = C41963.$SwitchMap$javax$net$ssl$SSLEngineResult$HandshakeStatus[this.engine.getHandshakeStatus().ordinal()];
                 if (i != 1) {
                     if (i == 2) {
                         this.out.writeInternal(EMPTY_BUFFER);
@@ -477,7 +427,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
                         }
                         z = true;
                     }
-                } else if (this.in.processDataFromSocket(EmptyArray.BYTE, 0, 0) < 0) {
+                } else if (this.f38015in.processDataFromSocket(EmptyArray.BYTE, 0, 0) < 0) {
                     throw SSLUtils.toSSLHandshakeException(new EOFException("connection closed"));
                 }
             } catch (SSLException e) {
@@ -643,7 +593,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
                 }
                 try {
                     super.close();
-                    SSLInputStream sSLInputStream = this.in;
+                    SSLInputStream sSLInputStream = this.f38015in;
                     if (sSLInputStream != null) {
                         sSLInputStream.release();
                     }
@@ -652,7 +602,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
             } catch (Throwable th) {
                 try {
                     super.close();
-                    SSLInputStream sSLInputStream2 = this.in;
+                    SSLInputStream sSLInputStream2 = this.f38015in;
                     if (sSLInputStream2 != null) {
                         sSLInputStream2.release();
                     }
@@ -717,7 +667,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
     public final InputStream getInputStream() {
         checkOpen();
         waitForHandshake();
-        return this.in;
+        return this.f38015in;
     }
 
     @Override // javax.net.ssl.SSLSocket
@@ -862,7 +812,7 @@ public class ConscryptEngineSocket extends OpenSSLSocketImpl implements SSLParam
                     if (this.state == 0) {
                         this.state = 2;
                         this.engine.beginHandshake();
-                        this.in = new SSLInputStream();
+                        this.f38015in = new SSLInputStream();
                         this.out = new SSLOutputStream();
                         doHandshake();
                     }

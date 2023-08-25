@@ -13,26 +13,45 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 /* loaded from: classes.dex */
-public abstract class au1<T extends View, Z> extends ya<Z> {
-    public static boolean s;
-    public static Integer t;
-    public final T q;
-    public final a r;
+public abstract class au1<T extends View, Z> extends AbstractC3683ya<Z> {
 
+    /* renamed from: s */
+    public static boolean f3601s;
+
+    /* renamed from: t */
+    public static Integer f3602t;
+
+    /* renamed from: q */
+    public final T f3603q;
+
+    /* renamed from: r */
+    public final C0675a f3604r;
+
+    /* renamed from: com.daaw.au1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public final View a;
-        public final List<sd1> b = new ArrayList();
-        public ViewTreeObserver$OnPreDrawListenerC0037a c;
-        public Point d;
+    public static class C0675a {
 
-        /* renamed from: com.daaw.au1$a$a  reason: collision with other inner class name */
+        /* renamed from: a */
+        public final View f3605a;
+
+        /* renamed from: b */
+        public final List<sd1> f3606b = new ArrayList();
+
+        /* renamed from: c */
+        public ViewTreeObserver$OnPreDrawListenerC0676a f3607c;
+
+        /* renamed from: d */
+        public Point f3608d;
+
+        /* renamed from: com.daaw.au1$a$a */
         /* loaded from: classes.dex */
-        public static class ViewTreeObserver$OnPreDrawListenerC0037a implements ViewTreeObserver.OnPreDrawListener {
-            public final WeakReference<a> p;
+        public static class ViewTreeObserver$OnPreDrawListenerC0676a implements ViewTreeObserver.OnPreDrawListener {
 
-            public ViewTreeObserver$OnPreDrawListenerC0037a(a aVar) {
-                this.p = new WeakReference<>(aVar);
+            /* renamed from: p */
+            public final WeakReference<C0675a> f3609p;
+
+            public ViewTreeObserver$OnPreDrawListenerC0676a(C0675a c0675a) {
+                this.f3609p = new WeakReference<>(c0675a);
             }
 
             @Override // android.view.ViewTreeObserver.OnPreDrawListener
@@ -42,156 +61,169 @@ public abstract class au1<T extends View, Z> extends ya<Z> {
                     sb.append("OnGlobalLayoutListener called listener=");
                     sb.append(this);
                 }
-                a aVar = this.p.get();
-                if (aVar != null) {
-                    aVar.b();
+                C0675a c0675a = this.f3609p.get();
+                if (c0675a != null) {
+                    c0675a.m27025b();
                     return true;
                 }
                 return true;
             }
         }
 
-        public a(View view) {
-            this.a = view;
+        public C0675a(View view) {
+            this.f3605a = view;
         }
 
-        public final void b() {
-            if (this.b.isEmpty()) {
+        /* renamed from: b */
+        public final void m27025b() {
+            if (this.f3606b.isEmpty()) {
                 return;
             }
-            int g = g();
-            int f = f();
-            if (h(g) && h(f)) {
-                i(g, f);
-                ViewTreeObserver viewTreeObserver = this.a.getViewTreeObserver();
+            int m27020g = m27020g();
+            int m27021f = m27021f();
+            if (m27019h(m27020g) && m27019h(m27021f)) {
+                m27018i(m27020g, m27021f);
+                ViewTreeObserver viewTreeObserver = this.f3605a.getViewTreeObserver();
                 if (viewTreeObserver.isAlive()) {
-                    viewTreeObserver.removeOnPreDrawListener(this.c);
+                    viewTreeObserver.removeOnPreDrawListener(this.f3607c);
                 }
-                this.c = null;
+                this.f3607c = null;
             }
         }
 
         @TargetApi(13)
-        public final Point c() {
-            Point point = this.d;
+        /* renamed from: c */
+        public final Point m27024c() {
+            Point point = this.f3608d;
             if (point != null) {
                 return point;
             }
-            Display defaultDisplay = ((WindowManager) this.a.getContext().getSystemService("window")).getDefaultDisplay();
+            Display defaultDisplay = ((WindowManager) this.f3605a.getContext().getSystemService("window")).getDefaultDisplay();
             Point point2 = new Point();
-            this.d = point2;
+            this.f3608d = point2;
             defaultDisplay.getSize(point2);
-            return this.d;
+            return this.f3608d;
         }
 
-        public void d(sd1 sd1Var) {
-            int g = g();
-            int f = f();
-            if (h(g) && h(f)) {
-                sd1Var.f(g, f);
+        /* renamed from: d */
+        public void m27023d(sd1 sd1Var) {
+            int m27020g = m27020g();
+            int m27021f = m27021f();
+            if (m27019h(m27020g) && m27019h(m27021f)) {
+                sd1Var.mo10453f(m27020g, m27021f);
                 return;
             }
-            if (!this.b.contains(sd1Var)) {
-                this.b.add(sd1Var);
+            if (!this.f3606b.contains(sd1Var)) {
+                this.f3606b.add(sd1Var);
             }
-            if (this.c == null) {
-                ViewTreeObserver viewTreeObserver = this.a.getViewTreeObserver();
-                ViewTreeObserver$OnPreDrawListenerC0037a viewTreeObserver$OnPreDrawListenerC0037a = new ViewTreeObserver$OnPreDrawListenerC0037a(this);
-                this.c = viewTreeObserver$OnPreDrawListenerC0037a;
-                viewTreeObserver.addOnPreDrawListener(viewTreeObserver$OnPreDrawListenerC0037a);
+            if (this.f3607c == null) {
+                ViewTreeObserver viewTreeObserver = this.f3605a.getViewTreeObserver();
+                ViewTreeObserver$OnPreDrawListenerC0676a viewTreeObserver$OnPreDrawListenerC0676a = new ViewTreeObserver$OnPreDrawListenerC0676a(this);
+                this.f3607c = viewTreeObserver$OnPreDrawListenerC0676a;
+                viewTreeObserver.addOnPreDrawListener(viewTreeObserver$OnPreDrawListenerC0676a);
             }
         }
 
-        public final int e(int i, boolean z) {
+        /* renamed from: e */
+        public final int m27022e(int i, boolean z) {
             if (i == -2) {
-                Point c = c();
-                return z ? c.y : c.x;
+                Point m27024c = m27024c();
+                return z ? m27024c.y : m27024c.x;
             }
             return i;
         }
 
-        public final int f() {
-            ViewGroup.LayoutParams layoutParams = this.a.getLayoutParams();
-            if (h(this.a.getHeight())) {
-                return this.a.getHeight();
+        /* renamed from: f */
+        public final int m27021f() {
+            ViewGroup.LayoutParams layoutParams = this.f3605a.getLayoutParams();
+            if (m27019h(this.f3605a.getHeight())) {
+                return this.f3605a.getHeight();
             }
             if (layoutParams != null) {
-                return e(layoutParams.height, true);
+                return m27022e(layoutParams.height, true);
             }
             return 0;
         }
 
-        public final int g() {
-            ViewGroup.LayoutParams layoutParams = this.a.getLayoutParams();
-            if (h(this.a.getWidth())) {
-                return this.a.getWidth();
+        /* renamed from: g */
+        public final int m27020g() {
+            ViewGroup.LayoutParams layoutParams = this.f3605a.getLayoutParams();
+            if (m27019h(this.f3605a.getWidth())) {
+                return this.f3605a.getWidth();
             }
             if (layoutParams != null) {
-                return e(layoutParams.width, false);
+                return m27022e(layoutParams.width, false);
             }
             return 0;
         }
 
-        public final boolean h(int i) {
+        /* renamed from: h */
+        public final boolean m27019h(int i) {
             return i > 0 || i == -2;
         }
 
-        public final void i(int i, int i2) {
-            for (sd1 sd1Var : this.b) {
-                sd1Var.f(i, i2);
+        /* renamed from: i */
+        public final void m27018i(int i, int i2) {
+            for (sd1 sd1Var : this.f3606b) {
+                sd1Var.mo10453f(i, i2);
             }
-            this.b.clear();
+            this.f3606b.clear();
         }
     }
 
-    public au1(T t2) {
-        Objects.requireNonNull(t2, "View must not be null!");
-        this.q = t2;
-        this.r = new a(t2);
+    public au1(T t) {
+        Objects.requireNonNull(t, "View must not be null!");
+        this.f3603q = t;
+        this.f3604r = new C0675a(t);
     }
 
-    @Override // com.daaw.ya, com.daaw.pj1
-    public void b(l41 l41Var) {
-        m(l41Var);
+    @Override // com.daaw.AbstractC3683ya, com.daaw.pj1
+    /* renamed from: b */
+    public void mo3968b(l41 l41Var) {
+        m27027m(l41Var);
     }
 
     @Override // com.daaw.pj1
-    public void e(sd1 sd1Var) {
-        this.r.d(sd1Var);
+    /* renamed from: e */
+    public void mo13330e(sd1 sd1Var) {
+        this.f3604r.m27023d(sd1Var);
     }
 
     public T getView() {
-        return this.q;
+        return this.f3603q;
     }
 
-    @Override // com.daaw.ya, com.daaw.pj1
-    public l41 j() {
-        Object l = l();
-        if (l != null) {
-            if (l instanceof l41) {
-                return (l41) l;
+    @Override // com.daaw.AbstractC3683ya, com.daaw.pj1
+    /* renamed from: j */
+    public l41 mo3964j() {
+        Object m27028l = m27028l();
+        if (m27028l != null) {
+            if (m27028l instanceof l41) {
+                return (l41) m27028l;
             }
             throw new IllegalArgumentException("You must not call setTag() on a view Glide is targeting");
         }
         return null;
     }
 
-    public final Object l() {
-        Integer num = t;
-        return num == null ? this.q.getTag() : this.q.getTag(num.intValue());
+    /* renamed from: l */
+    public final Object m27028l() {
+        Integer num = f3602t;
+        return num == null ? this.f3603q.getTag() : this.f3603q.getTag(num.intValue());
     }
 
-    public final void m(Object obj) {
-        Integer num = t;
+    /* renamed from: m */
+    public final void m27027m(Object obj) {
+        Integer num = f3602t;
         if (num != null) {
-            this.q.setTag(num.intValue(), obj);
+            this.f3603q.setTag(num.intValue(), obj);
             return;
         }
-        s = true;
-        this.q.setTag(obj);
+        f3601s = true;
+        this.f3603q.setTag(obj);
     }
 
     public String toString() {
-        return "Target for: " + this.q;
+        return "Target for: " + this.f3603q;
     }
 }

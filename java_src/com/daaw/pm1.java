@@ -3,23 +3,34 @@ package com.daaw;
 import com.daaw.sm1;
 /* loaded from: classes.dex */
 public final class pm1 {
-    public final boolean a;
-    public final String b;
-    public final sm1.a c;
-    public final int d;
-    public final byte[] e;
+
+    /* renamed from: a */
+    public final boolean f23051a;
+
+    /* renamed from: b */
+    public final String f23052b;
+
+    /* renamed from: c */
+    public final sm1.C2956a f23053c;
+
+    /* renamed from: d */
+    public final int f23054d;
+
+    /* renamed from: e */
+    public final byte[] f23055e;
 
     public pm1(boolean z, String str, int i, byte[] bArr, int i2, int i3, byte[] bArr2) {
-        s6.a((bArr2 == null) ^ (i == 0));
-        this.a = z;
-        this.b = str;
-        this.d = i;
-        this.e = bArr2;
-        this.c = new sm1.a(a(str), bArr, i2, i3);
+        C2914s6.m10690a((bArr2 == null) ^ (i == 0));
+        this.f23051a = z;
+        this.f23052b = str;
+        this.f23054d = i;
+        this.f23055e = bArr2;
+        this.f23053c = new sm1.C2956a(m13289a(str), bArr, i2, i3);
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    public static int a(String str) {
+    /* renamed from: a */
+    public static int m13289a(String str) {
         if (str == null) {
             return 1;
         }

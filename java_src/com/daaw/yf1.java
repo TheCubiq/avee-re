@@ -10,35 +10,45 @@ import javax.annotation.concurrent.GuardedBy;
 import org.json.JSONException;
 /* loaded from: classes.dex */
 public class yf1 {
-    public static final Lock c = new ReentrantLock();
+
+    /* renamed from: c */
+    public static final Lock f33624c = new ReentrantLock();
     @GuardedBy("sLk")
-    public static yf1 d;
-    public final Lock a = new ReentrantLock();
+
+    /* renamed from: d */
+    public static yf1 f33625d;
+
+    /* renamed from: a */
+    public final Lock f33626a = new ReentrantLock();
     @GuardedBy("mLk")
-    public final SharedPreferences b;
+
+    /* renamed from: b */
+    public final SharedPreferences f33627b;
 
     public yf1(Context context) {
-        this.b = context.getSharedPreferences("com.google.android.gms.signin", 0);
+        this.f33627b = context.getSharedPreferences("com.google.android.gms.signin", 0);
     }
 
-    public static yf1 a(Context context) {
-        ry0.j(context);
-        Lock lock = c;
+    /* renamed from: a */
+    public static yf1 m3782a(Context context) {
+        ry0.m10830j(context);
+        Lock lock = f33624c;
         lock.lock();
         try {
-            if (d == null) {
-                d = new yf1(context.getApplicationContext());
+            if (f33625d == null) {
+                f33625d = new yf1(context.getApplicationContext());
             }
-            yf1 yf1Var = d;
+            yf1 yf1Var = f33625d;
             lock.unlock();
             return yf1Var;
         } catch (Throwable th) {
-            c.unlock();
+            f33624c.unlock();
             throw th;
         }
     }
 
-    public static final String d(String str, String str2) {
+    /* renamed from: d */
+    public static final String m3779d(String str, String str2) {
         StringBuilder sb = new StringBuilder(str.length() + 1 + String.valueOf(str2).length());
         sb.append(str);
         sb.append(":");
@@ -46,25 +56,27 @@ public class yf1 {
         return sb.toString();
     }
 
-    public GoogleSignInAccount b() {
-        String c2;
-        String c3 = c("defaultGoogleSignInAccount");
-        if (TextUtils.isEmpty(c3) || (c2 = c(d("googleSignInAccount", c3))) == null) {
+    /* renamed from: b */
+    public GoogleSignInAccount m3781b() {
+        String m3780c;
+        String m3780c2 = m3780c("defaultGoogleSignInAccount");
+        if (TextUtils.isEmpty(m3780c2) || (m3780c = m3780c(m3779d("googleSignInAccount", m3780c2))) == null) {
             return null;
         }
         try {
-            return GoogleSignInAccount.B(c2);
+            return GoogleSignInAccount.m1220B(m3780c);
         } catch (JSONException unused) {
             return null;
         }
     }
 
-    public final String c(String str) {
-        this.a.lock();
+    /* renamed from: c */
+    public final String m3780c(String str) {
+        this.f33626a.lock();
         try {
-            return this.b.getString(str, null);
+            return this.f33627b.getString(str, null);
         } finally {
-            this.a.unlock();
+            this.f33626a.unlock();
         }
     }
 }

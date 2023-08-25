@@ -4,89 +4,93 @@ import android.app.PendingIntent;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
-import com.daaw.pa;
+import com.daaw.AbstractC2527pa;
 import com.google.android.gms.common.ConnectionResult;
 /* loaded from: classes.dex */
 public final class ly2 extends a38 {
-    public final /* synthetic */ pa a;
+
+    /* renamed from: a */
+    public final /* synthetic */ AbstractC2527pa f17908a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public ly2(pa paVar, Looper looper) {
+    public ly2(AbstractC2527pa abstractC2527pa, Looper looper) {
         super(looper);
-        this.a = paVar;
+        this.f17908a = abstractC2527pa;
     }
 
-    public static final void a(Message message) {
+    /* renamed from: a */
+    public static final void m16374a(Message message) {
         es3 es3Var = (es3) message.obj;
-        es3Var.b();
-        es3Var.e();
+        es3Var.mo16238b();
+        es3Var.m23232e();
     }
 
-    public static final boolean b(Message message) {
+    /* renamed from: b */
+    public static final boolean m16373b(Message message) {
         int i = message.what;
         return i == 2 || i == 1 || i == 7;
     }
 
     @Override // android.os.Handler
     public final void handleMessage(Message message) {
-        pa.a aVar;
-        pa.a aVar2;
+        AbstractC2527pa.InterfaceC2528a interfaceC2528a;
+        AbstractC2527pa.InterfaceC2528a interfaceC2528a2;
         ConnectionResult connectionResult;
         ConnectionResult connectionResult2;
         boolean z;
-        if (this.a.C.get() != message.arg1) {
-            if (b(message)) {
-                a(message);
+        if (this.f17908a.f22735C.get() != message.arg1) {
+            if (m16373b(message)) {
+                m16374a(message);
                 return;
             }
             return;
         }
         int i = message.what;
-        if ((i == 1 || i == 7 || ((i == 4 && !this.a.f()) || message.what == 5)) && !this.a.isConnecting()) {
-            a(message);
+        if ((i == 1 || i == 7 || ((i == 4 && !this.f17908a.m13556f()) || message.what == 5)) && !this.f17908a.isConnecting()) {
+            m16374a(message);
             return;
         }
         int i2 = message.what;
         if (i2 == 4) {
-            this.a.z = new ConnectionResult(message.arg2);
-            if (pa.H(this.a)) {
-                pa paVar = this.a;
-                z = paVar.A;
+            this.f17908a.f22761z = new ConnectionResult(message.arg2);
+            if (AbstractC2527pa.m13559H(this.f17908a)) {
+                AbstractC2527pa abstractC2527pa = this.f17908a;
+                z = abstractC2527pa.f22733A;
                 if (!z) {
-                    paVar.I(3, null);
+                    abstractC2527pa.m13558I(3, null);
                     return;
                 }
             }
-            pa paVar2 = this.a;
-            connectionResult2 = paVar2.z;
-            ConnectionResult connectionResult3 = connectionResult2 != null ? paVar2.z : new ConnectionResult(8);
-            this.a.p.a(connectionResult3);
-            this.a.p(connectionResult3);
+            AbstractC2527pa abstractC2527pa2 = this.f17908a;
+            connectionResult2 = abstractC2527pa2.f22761z;
+            ConnectionResult connectionResult3 = connectionResult2 != null ? abstractC2527pa2.f22761z : new ConnectionResult(8);
+            this.f17908a.f22751p.mo13540a(connectionResult3);
+            this.f17908a.m13551p(connectionResult3);
         } else if (i2 == 5) {
-            pa paVar3 = this.a;
-            connectionResult = paVar3.z;
-            ConnectionResult connectionResult4 = connectionResult != null ? paVar3.z : new ConnectionResult(8);
-            this.a.p.a(connectionResult4);
-            this.a.p(connectionResult4);
+            AbstractC2527pa abstractC2527pa3 = this.f17908a;
+            connectionResult = abstractC2527pa3.f22761z;
+            ConnectionResult connectionResult4 = connectionResult != null ? abstractC2527pa3.f22761z : new ConnectionResult(8);
+            this.f17908a.f22751p.mo13540a(connectionResult4);
+            this.f17908a.m13551p(connectionResult4);
         } else if (i2 == 3) {
             Object obj = message.obj;
             ConnectionResult connectionResult5 = new ConnectionResult(message.arg2, obj instanceof PendingIntent ? (PendingIntent) obj : null);
-            this.a.p.a(connectionResult5);
-            this.a.p(connectionResult5);
+            this.f17908a.f22751p.mo13540a(connectionResult5);
+            this.f17908a.m13551p(connectionResult5);
         } else if (i2 == 6) {
-            this.a.I(5, null);
-            pa paVar4 = this.a;
-            aVar = paVar4.u;
-            if (aVar != null) {
-                aVar2 = paVar4.u;
-                aVar2.D(message.arg2);
+            this.f17908a.m13558I(5, null);
+            AbstractC2527pa abstractC2527pa4 = this.f17908a;
+            interfaceC2528a = abstractC2527pa4.f22756u;
+            if (interfaceC2528a != null) {
+                interfaceC2528a2 = abstractC2527pa4.f22756u;
+                interfaceC2528a2.mo5044D(message.arg2);
             }
-            this.a.q(message.arg2);
-            pa.G(this.a, 5, 1, null);
-        } else if (i2 == 2 && !this.a.isConnected()) {
-            a(message);
-        } else if (b(message)) {
-            ((es3) message.obj).c();
+            this.f17908a.m13550q(message.arg2);
+            AbstractC2527pa.m13560G(this.f17908a, 5, 1, null);
+        } else if (i2 == 2 && !this.f17908a.isConnected()) {
+            m16374a(message);
+        } else if (m16373b(message)) {
+            ((es3) message.obj).m23234c();
         } else {
             int i3 = message.what;
             Log.wtf("GmsClient", "Don't know how to handle message: " + i3, new Exception());

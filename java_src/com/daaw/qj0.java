@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface qj0 {
-    void a();
+    /* renamed from: a */
+    void mo3969a();
 
-    void h();
+    /* renamed from: h */
+    void mo3966h();
 
     void onDestroy();
 }

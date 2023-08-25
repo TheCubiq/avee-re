@@ -8,9 +8,12 @@ import java.util.Objects;
 import java.util.Queue;
 /* loaded from: classes.dex */
 public final class f47 {
-    public static final OutputStream a = new e47();
 
-    public static byte[] a(InputStream inputStream) {
+    /* renamed from: a */
+    public static final OutputStream f9105a = new e47();
+
+    /* renamed from: a */
+    public static byte[] m22925a(InputStream inputStream) {
         Objects.requireNonNull(inputStream);
         ArrayDeque arrayDeque = new ArrayDeque(20);
         int highestOneBit = Integer.highestOneBit(0);
@@ -24,20 +27,21 @@ public final class f47 {
             while (i2 < min2) {
                 int read = inputStream.read(bArr, i2, min2 - i2);
                 if (read == -1) {
-                    return b(arrayDeque, i);
+                    return m22924b(arrayDeque, i);
                 }
                 i2 += read;
                 i += read;
             }
-            min = i47.c(min * (min < 4096 ? 4 : 2));
+            min = i47.m20124c(min * (min < 4096 ? 4 : 2));
         }
         if (inputStream.read() == -1) {
-            return b(arrayDeque, 2147483639);
+            return m22924b(arrayDeque, 2147483639);
         }
         throw new OutOfMemoryError("input is too large to fit in a byte array");
     }
 
-    public static byte[] b(Queue queue, int i) {
+    /* renamed from: b */
+    public static byte[] m22924b(Queue queue, int i) {
         if (queue.isEmpty()) {
             return new byte[0];
         }

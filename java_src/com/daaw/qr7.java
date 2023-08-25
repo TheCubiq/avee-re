@@ -5,9 +5,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /* loaded from: classes.dex */
 public abstract class qr7 extends nq7 {
-    public static final Logger b = Logger.getLogger(qr7.class.getName());
-    public static final boolean c = gw7.a();
-    public rr7 a;
+
+    /* renamed from: b */
+    public static final Logger f24290b = Logger.getLogger(qr7.class.getName());
+
+    /* renamed from: c */
+    public static final boolean f24291c = gw7.m21185a();
+
+    /* renamed from: a */
+    public rr7 f24292a;
 
     public qr7() {
     }
@@ -15,56 +21,65 @@ public abstract class qr7 extends nq7 {
     public /* synthetic */ qr7(pr7 pr7Var) {
     }
 
-    public static int E(yq7 yq7Var) {
-        int o = yq7Var.o();
-        return f(o) + o;
+    /* renamed from: E */
+    public static int m12265E(yq7 yq7Var) {
+        int mo3411o = yq7Var.mo3411o();
+        return m12256f(mo3411o) + mo3411o;
     }
 
     @Deprecated
-    public static int F(int i, xt7 xt7Var, cv7 cv7Var) {
-        int f = f(i << 3);
-        return f + f + ((hq7) xt7Var).f(cv7Var);
+    /* renamed from: F */
+    public static int m12264F(int i, xt7 xt7Var, cv7 cv7Var) {
+        int m12256f = m12256f(i << 3);
+        return m12256f + m12256f + ((hq7) xt7Var).mo16589f(cv7Var);
     }
 
-    public static int G(int i) {
+    /* renamed from: G */
+    public static int m12263G(int i) {
         if (i >= 0) {
-            return f(i);
+            return m12256f(i);
         }
         return 10;
     }
 
-    public static int H(at7 at7Var) {
-        int a = at7Var.a();
-        return f(a) + a;
+    /* renamed from: H */
+    public static int m12262H(at7 at7Var) {
+        int m27033a = at7Var.m27033a();
+        return m12256f(m27033a) + m27033a;
     }
 
-    public static int b(xt7 xt7Var, cv7 cv7Var) {
-        int f = ((hq7) xt7Var).f(cv7Var);
-        return f(f) + f;
+    /* renamed from: b */
+    public static int m12260b(xt7 xt7Var, cv7 cv7Var) {
+        int mo16589f = ((hq7) xt7Var).mo16589f(cv7Var);
+        return m12256f(mo16589f) + mo16589f;
     }
 
-    public static int c(int i) {
+    /* renamed from: c */
+    public static int m12259c(int i) {
         if (i > 4096) {
             return 4096;
         }
         return i;
     }
 
-    public static int d(String str) {
+    /* renamed from: d */
+    public static int m12258d(String str) {
         int length;
         try {
-            length = lw7.e(str);
+            length = lw7.m16416e(str);
         } catch (kw7 unused) {
-            length = str.getBytes(vs7.b).length;
+            length = str.getBytes(vs7.f30558b).length;
         }
-        return f(length) + length;
+        return m12256f(length) + length;
     }
 
-    public static int e(int i) {
-        return f(i << 3);
+    /* renamed from: e */
+    public static int m12257e(int i) {
+        return m12256f(i << 3);
     }
 
-    public static int f(int i) {
+    /* renamed from: f */
+    public static int m12256f(int i) {
         if ((i & (-128)) == 0) {
             return 1;
         }
@@ -77,7 +92,8 @@ public abstract class qr7 extends nq7 {
         return (i & (-268435456)) == 0 ? 4 : 5;
     }
 
-    public static int g(long j) {
+    /* renamed from: g */
+    public static int m12255g(long j) {
         int i;
         if (((-128) & j) == 0) {
             return 1;
@@ -98,68 +114,91 @@ public abstract class qr7 extends nq7 {
         return (j & (-16384)) != 0 ? i + 1 : i;
     }
 
-    public static qr7 h(byte[] bArr) {
+    /* renamed from: h */
+    public static qr7 m12254h(byte[] bArr) {
         return new mr7(bArr, 0, bArr.length);
     }
 
-    public static qr7 i(OutputStream outputStream, int i) {
+    /* renamed from: i */
+    public static qr7 m12253i(OutputStream outputStream, int i) {
         return new or7(outputStream, i);
     }
 
-    public abstract void A(int i, int i2);
+    /* renamed from: A */
+    public abstract void mo12269A(int i, int i2);
 
-    public abstract void B(int i);
+    /* renamed from: B */
+    public abstract void mo12268B(int i);
 
-    public abstract void C(int i, long j);
+    /* renamed from: C */
+    public abstract void mo12267C(int i, long j);
 
-    public abstract void D(long j);
+    /* renamed from: D */
+    public abstract void mo12266D(long j);
 
     @Override // com.daaw.nq7
-    public abstract void a(byte[] bArr, int i, int i2);
+    /* renamed from: a */
+    public abstract void mo12261a(byte[] bArr, int i, int i2);
 
-    public final void j() {
-        if (q() != 0) {
+    /* renamed from: j */
+    public final void m12252j() {
+        if (mo12245q() != 0) {
             throw new IllegalStateException("Did not write as much data as expected.");
         }
     }
 
-    public final void k(String str, kw7 kw7Var) {
-        b.logp(Level.WARNING, "com.google.protobuf.CodedOutputStream", "inefficientWriteStringNoTag", "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) kw7Var);
-        byte[] bytes = str.getBytes(vs7.b);
+    /* renamed from: k */
+    public final void m12251k(String str, kw7 kw7Var) {
+        f24290b.logp(Level.WARNING, "com.google.protobuf.CodedOutputStream", "inefficientWriteStringNoTag", "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) kw7Var);
+        byte[] bytes = str.getBytes(vs7.f30558b);
         try {
             int length = bytes.length;
-            B(length);
-            a(bytes, 0, length);
+            mo12268B(length);
+            mo12261a(bytes, 0, length);
         } catch (IndexOutOfBoundsException e) {
             throw new nr7(e);
         }
     }
 
-    public abstract void m();
+    /* renamed from: m */
+    public abstract void mo12249m();
 
-    public abstract void n(byte b2);
+    /* renamed from: n */
+    public abstract void mo12248n(byte b);
 
-    public abstract void o(int i, boolean z);
+    /* renamed from: o */
+    public abstract void mo12247o(int i, boolean z);
 
-    public abstract void p(int i, yq7 yq7Var);
+    /* renamed from: p */
+    public abstract void mo12246p(int i, yq7 yq7Var);
 
-    public abstract int q();
+    /* renamed from: q */
+    public abstract int mo12245q();
 
-    public abstract void r(int i, int i2);
+    /* renamed from: r */
+    public abstract void mo12244r(int i, int i2);
 
-    public abstract void s(int i);
+    /* renamed from: s */
+    public abstract void mo12243s(int i);
 
-    public abstract void t(int i, long j);
+    /* renamed from: t */
+    public abstract void mo12242t(int i, long j);
 
-    public abstract void u(long j);
+    /* renamed from: u */
+    public abstract void mo12241u(long j);
 
-    public abstract void v(int i, int i2);
+    /* renamed from: v */
+    public abstract void mo12240v(int i, int i2);
 
-    public abstract void w(int i);
+    /* renamed from: w */
+    public abstract void mo12239w(int i);
 
-    public abstract void x(int i, xt7 xt7Var, cv7 cv7Var);
+    /* renamed from: x */
+    public abstract void mo12238x(int i, xt7 xt7Var, cv7 cv7Var);
 
-    public abstract void y(int i, String str);
+    /* renamed from: y */
+    public abstract void mo12237y(int i, String str);
 
-    public abstract void z(int i, int i2);
+    /* renamed from: z */
+    public abstract void mo12236z(int i, int i2);
 }

@@ -3,80 +3,90 @@ package com.daaw;
 import java.util.Collections;
 /* loaded from: classes.dex */
 public final class t52 extends y52 {
-    public static final int[] e = {5512, 11025, 22050, 44100};
-    public boolean b;
-    public boolean c;
-    public int d;
+
+    /* renamed from: e */
+    public static final int[] f27009e = {5512, 11025, 22050, 44100};
+
+    /* renamed from: b */
+    public boolean f27010b;
+
+    /* renamed from: c */
+    public boolean f27011c;
+
+    /* renamed from: d */
+    public int f27012d;
 
     public t52(m42 m42Var) {
         super(m42Var);
     }
 
     @Override // com.daaw.y52
-    public final boolean a(ik5 ik5Var) {
+    /* renamed from: a */
+    public final boolean mo2810a(ik5 ik5Var) {
         b72 b72Var;
         int i;
-        if (this.b) {
-            ik5Var.g(1);
+        if (this.f27010b) {
+            ik5Var.m19715g(1);
         } else {
-            int s = ik5Var.s();
-            int i2 = s >> 4;
-            this.d = i2;
+            int m19703s = ik5Var.m19703s();
+            int i2 = m19703s >> 4;
+            this.f27012d = i2;
             if (i2 == 2) {
-                i = e[(s >> 2) & 3];
+                i = f27009e[(m19703s >> 2) & 3];
                 b72Var = new b72();
-                b72Var.s("audio/mpeg");
-                b72Var.e0(1);
+                b72Var.m26372s("audio/mpeg");
+                b72Var.m26389e0(1);
             } else if (i2 == 7 || i2 == 8) {
                 String str = i2 == 7 ? "audio/g711-alaw" : "audio/g711-mlaw";
                 b72Var = new b72();
-                b72Var.s(str);
-                b72Var.e0(1);
+                b72Var.m26372s(str);
+                b72Var.m26389e0(1);
                 i = 8000;
             } else {
                 if (i2 != 10) {
                     throw new x52("Audio format not supported: " + i2);
                 }
-                this.b = true;
+                this.f27010b = true;
             }
-            b72Var.t(i);
-            this.a.f(b72Var.y());
-            this.c = true;
-            this.b = true;
+            b72Var.m26371t(i);
+            this.f33371a.mo16218f(b72Var.m26366y());
+            this.f27011c = true;
+            this.f27010b = true;
         }
         return true;
     }
 
     @Override // com.daaw.y52
-    public final boolean b(ik5 ik5Var, long j) {
-        if (this.d == 2) {
-            int i = ik5Var.i();
-            this.a.c(ik5Var, i);
-            this.a.b(j, 1, i, 0, null);
+    /* renamed from: b */
+    public final boolean mo2809b(ik5 ik5Var, long j) {
+        if (this.f27012d == 2) {
+            int m19713i = ik5Var.m19713i();
+            this.f33371a.mo16221c(ik5Var, m19713i);
+            this.f33371a.mo16222b(j, 1, m19713i, 0, null);
             return true;
         }
-        int s = ik5Var.s();
-        if (s != 0 || this.c) {
-            if (this.d != 10 || s == 1) {
-                int i2 = ik5Var.i();
-                this.a.c(ik5Var, i2);
-                this.a.b(j, 1, i2, 0, null);
+        int m19703s = ik5Var.m19703s();
+        if (m19703s != 0 || this.f27011c) {
+            if (this.f27012d != 10 || m19703s == 1) {
+                int m19713i2 = ik5Var.m19713i();
+                this.f33371a.mo16221c(ik5Var, m19713i2);
+                this.f33371a.mo16222b(j, 1, m19713i2, 0, null);
                 return true;
             }
             return false;
         }
-        int i3 = ik5Var.i();
-        byte[] bArr = new byte[i3];
-        ik5Var.b(bArr, 0, i3);
-        yy8 a = zy8.a(bArr);
+        int m19713i3 = ik5Var.m19713i();
+        byte[] bArr = new byte[m19713i3];
+        ik5Var.m19720b(bArr, 0, m19713i3);
+        yy8 m1766a = zy8.m1766a(bArr);
         b72 b72Var = new b72();
-        b72Var.s("audio/mp4a-latm");
-        b72Var.f0(a.c);
-        b72Var.e0(a.b);
-        b72Var.t(a.a);
-        b72Var.i(Collections.singletonList(bArr));
-        this.a.f(b72Var.y());
-        this.c = true;
+        b72Var.m26372s("audio/mp4a-latm");
+        b72Var.m26387f0(m1766a.f34268c);
+        b72Var.m26389e0(m1766a.f34267b);
+        b72Var.m26371t(m1766a.f34266a);
+        b72Var.m26382i(Collections.singletonList(bArr));
+        this.f33371a.mo16218f(b72Var.m26366y());
+        this.f27011c = true;
         return false;
     }
 }

@@ -7,56 +7,80 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 public final class al0<E> {
     private volatile /* synthetic */ Object _next = null;
     private volatile /* synthetic */ long _state = 0;
-    public final int a;
-    public final boolean b;
-    public final int c;
-    public /* synthetic */ AtomicReferenceArray d;
-    public static final a e = new a(null);
-    public static final pi1 h = new pi1("REMOVE_FROZEN");
-    public static final /* synthetic */ AtomicReferenceFieldUpdater f = AtomicReferenceFieldUpdater.newUpdater(al0.class, Object.class, "_next");
-    public static final /* synthetic */ AtomicLongFieldUpdater g = AtomicLongFieldUpdater.newUpdater(al0.class, "_state");
 
+    /* renamed from: a */
+    public final int f3291a;
+
+    /* renamed from: b */
+    public final boolean f3292b;
+
+    /* renamed from: c */
+    public final int f3293c;
+
+    /* renamed from: d */
+    public /* synthetic */ AtomicReferenceArray f3294d;
+
+    /* renamed from: e */
+    public static final C0646a f3287e = new C0646a(null);
+
+    /* renamed from: h */
+    public static final pi1 f3290h = new pi1("REMOVE_FROZEN");
+
+    /* renamed from: f */
+    public static final /* synthetic */ AtomicReferenceFieldUpdater f3288f = AtomicReferenceFieldUpdater.newUpdater(al0.class, Object.class, "_next");
+
+    /* renamed from: g */
+    public static final /* synthetic */ AtomicLongFieldUpdater f3289g = AtomicLongFieldUpdater.newUpdater(al0.class, "_state");
+
+    /* renamed from: com.daaw.al0$a */
     /* loaded from: classes2.dex */
-    public static final class a {
-        public a() {
+    public static final class C0646a {
+        public C0646a() {
         }
 
-        public /* synthetic */ a(pq pqVar) {
+        public /* synthetic */ C0646a(C2575pq c2575pq) {
             this();
         }
 
-        public final int a(long j) {
+        /* renamed from: a */
+        public final int m27363a(long j) {
             return (j & 2305843009213693952L) != 0 ? 2 : 1;
         }
 
-        public final long b(long j, int i) {
-            return d(j, 1073741823L) | (i << 0);
+        /* renamed from: b */
+        public final long m27362b(long j, int i) {
+            return m27360d(j, 1073741823L) | (i << 0);
         }
 
-        public final long c(long j, int i) {
-            return d(j, 1152921503533105152L) | (i << 30);
+        /* renamed from: c */
+        public final long m27361c(long j, int i) {
+            return m27360d(j, 1152921503533105152L) | (i << 30);
         }
 
-        public final long d(long j, long j2) {
+        /* renamed from: d */
+        public final long m27360d(long j, long j2) {
             return j & (j2 ^ (-1));
         }
     }
 
+    /* renamed from: com.daaw.al0$b */
     /* loaded from: classes2.dex */
-    public static final class b {
-        public final int a;
+    public static final class C0647b {
 
-        public b(int i) {
-            this.a = i;
+        /* renamed from: a */
+        public final int f3295a;
+
+        public C0647b(int i) {
+            this.f3295a = i;
         }
     }
 
     public al0(int i, boolean z) {
-        this.a = i;
-        this.b = z;
+        this.f3291a = i;
+        this.f3292b = z;
         int i2 = i - 1;
-        this.c = i2;
-        this.d = new AtomicReferenceArray(i);
+        this.f3293c = i2;
+        this.f3294d = new AtomicReferenceArray(i);
         if (!(i2 <= 1073741823)) {
             throw new IllegalStateException("Check failed.".toString());
         }
@@ -68,121 +92,72 @@ public final class al0<E> {
     /* JADX WARN: Code restructure failed: missing block: B:17:0x004e, code lost:
         return 1;
      */
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final int a(E r14) {
-        /*
-            r13 = this;
-        L0:
-            long r2 = r13._state
-            r0 = 3458764513820540928(0x3000000000000000, double:1.727233711018889E-77)
-            long r0 = r0 & r2
-            r6 = 0
-            int r4 = (r0 > r6 ? 1 : (r0 == r6 ? 0 : -1))
-            if (r4 == 0) goto L12
-            com.daaw.al0$a r14 = com.daaw.al0.e
-            int r14 = r14.a(r2)
-            return r14
-        L12:
-            com.daaw.al0$a r0 = com.daaw.al0.e
-            r4 = 1073741823(0x3fffffff, double:5.304989472E-315)
-            long r4 = r4 & r2
-            r8 = 0
-            long r4 = r4 >> r8
-            int r1 = (int) r4
-            r4 = 1152921503533105152(0xfffffffc0000000, double:1.2882296003504729E-231)
-            long r4 = r4 & r2
-            r9 = 30
-            long r4 = r4 >> r9
-            int r9 = (int) r4
-            int r10 = r13.c
-            int r4 = r9 + 2
-            r4 = r4 & r10
-            r5 = r1 & r10
-            r11 = 1
-            if (r4 != r5) goto L30
-            return r11
-        L30:
-            boolean r4 = r13.b
-            r5 = 1073741823(0x3fffffff, float:1.9999999)
-            if (r4 != 0) goto L4f
-            java.util.concurrent.atomic.AtomicReferenceArray r4 = r13.d
-            r12 = r9 & r10
-            java.lang.Object r4 = r4.get(r12)
-            if (r4 == 0) goto L4f
-            int r0 = r13.a
-            r2 = 1024(0x400, float:1.435E-42)
-            if (r0 < r2) goto L4e
-            int r9 = r9 - r1
-            r1 = r9 & r5
-            int r0 = r0 >> 1
-            if (r1 <= r0) goto L0
-        L4e:
-            return r11
-        L4f:
-            int r1 = r9 + 1
-            r1 = r1 & r5
-            java.util.concurrent.atomic.AtomicLongFieldUpdater r4 = com.daaw.al0.g
-            long r11 = r0.c(r2, r1)
-            r0 = r4
-            r1 = r13
-            r4 = r11
-            boolean r0 = r0.compareAndSet(r1, r2, r4)
-            if (r0 == 0) goto L0
-            java.util.concurrent.atomic.AtomicReferenceArray r0 = r13.d
-            r1 = r9 & r10
-            r0.set(r1, r14)
-            r0 = r13
-        L69:
-            long r1 = r0._state
-            r3 = 1152921504606846976(0x1000000000000000, double:1.2882297539194267E-231)
-            long r1 = r1 & r3
-            int r3 = (r1 > r6 ? 1 : (r1 == r6 ? 0 : -1))
-            if (r3 != 0) goto L73
-            goto L7d
-        L73:
-            com.daaw.al0 r0 = r0.i()
-            com.daaw.al0 r0 = r0.e(r9, r14)
-            if (r0 != 0) goto L69
-        L7d:
-            return r8
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.al0.a(java.lang.Object):int");
+    public final int m27374a(E e) {
+        while (true) {
+            long j = this._state;
+            if ((3458764513820540928L & j) != 0) {
+                return f3287e.m27363a(j);
+            }
+            C0646a c0646a = f3287e;
+            int i = (int) ((1073741823 & j) >> 0);
+            int i2 = (int) ((1152921503533105152L & j) >> 30);
+            int i3 = this.f3293c;
+            if (((i2 + 2) & i3) == (i & i3)) {
+                return 1;
+            }
+            if (!this.f3292b && this.f3294d.get(i2 & i3) != null) {
+                int i4 = this.f3291a;
+                if (i4 < 1024 || ((i2 - i) & 1073741823) > (i4 >> 1)) {
+                    break;
+                }
+            } else if (f3289g.compareAndSet(this, j, c0646a.m27361c(j, (i2 + 1) & 1073741823))) {
+                this.f3294d.set(i2 & i3, e);
+                al0<E> al0Var = this;
+                while ((al0Var._state & 1152921504606846976L) != 0 && (al0Var = al0Var.m27366i().m27370e(i2, e)) != null) {
+                }
+                return 0;
+            }
+        }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final al0<E> b(long j) {
-        al0<E> al0Var = new al0<>(this.a * 2, this.b);
+    /* renamed from: b */
+    public final al0<E> m27373b(long j) {
+        al0<E> al0Var = new al0<>(this.f3291a * 2, this.f3292b);
         int i = (int) ((1073741823 & j) >> 0);
         int i2 = (int) ((1152921503533105152L & j) >> 30);
         while (true) {
-            int i3 = this.c;
+            int i3 = this.f3293c;
             if ((i & i3) == (i2 & i3)) {
-                al0Var._state = e.d(j, 1152921504606846976L);
+                al0Var._state = f3287e.m27360d(j, 1152921504606846976L);
                 return al0Var;
             }
-            Object obj = this.d.get(i3 & i);
+            Object obj = this.f3294d.get(i3 & i);
             if (obj == null) {
-                obj = new b(i);
+                obj = new C0647b(i);
             }
-            al0Var.d.set(al0Var.c & i, obj);
+            al0Var.f3294d.set(al0Var.f3293c & i, obj);
             i++;
         }
     }
 
-    public final al0<E> c(long j) {
+    /* renamed from: c */
+    public final al0<E> m27372c(long j) {
         while (true) {
             al0<E> al0Var = (al0) this._next;
             if (al0Var != null) {
                 return al0Var;
             }
-            j.a(f, this, null, b(j));
+            C1773j.m19216a(f3288f, this, null, m27373b(j));
         }
     }
 
-    public final boolean d() {
+    /* renamed from: d */
+    public final boolean m27371d() {
         long j;
         do {
             j = this._state;
@@ -192,30 +167,34 @@ public final class al0<E> {
             if ((1152921504606846976L & j) != 0) {
                 return false;
             }
-        } while (!g.compareAndSet(this, j, j | 2305843009213693952L));
+        } while (!f3289g.compareAndSet(this, j, j | 2305843009213693952L));
         return true;
     }
 
-    public final al0<E> e(int i, E e2) {
-        Object obj = this.d.get(this.c & i);
-        if ((obj instanceof b) && ((b) obj).a == i) {
-            this.d.set(i & this.c, e2);
+    /* renamed from: e */
+    public final al0<E> m27370e(int i, E e) {
+        Object obj = this.f3294d.get(this.f3293c & i);
+        if ((obj instanceof C0647b) && ((C0647b) obj).f3295a == i) {
+            this.f3294d.set(i & this.f3293c, e);
             return this;
         }
         return null;
     }
 
-    public final int f() {
+    /* renamed from: f */
+    public final int m27369f() {
         long j = this._state;
         return 1073741823 & (((int) ((j & 1152921503533105152L) >> 30)) - ((int) ((1073741823 & j) >> 0)));
     }
 
-    public final boolean g() {
+    /* renamed from: g */
+    public final boolean m27368g() {
         long j = this._state;
         return ((int) ((1073741823 & j) >> 0)) == ((int) ((j & 1152921503533105152L) >> 30));
     }
 
-    public final long h() {
+    /* renamed from: h */
+    public final long m27367h() {
         long j;
         long j2;
         do {
@@ -224,43 +203,45 @@ public final class al0<E> {
                 return j;
             }
             j2 = j | 1152921504606846976L;
-        } while (!g.compareAndSet(this, j, j2));
+        } while (!f3289g.compareAndSet(this, j, j2));
         return j2;
     }
 
-    public final al0<E> i() {
-        return c(h());
+    /* renamed from: i */
+    public final al0<E> m27366i() {
+        return m27372c(m27367h());
     }
 
-    public final Object j() {
+    /* renamed from: j */
+    public final Object m27365j() {
         while (true) {
             long j = this._state;
             if ((1152921504606846976L & j) != 0) {
-                return h;
+                return f3290h;
             }
-            a aVar = e;
+            C0646a c0646a = f3287e;
             int i = (int) ((1073741823 & j) >> 0);
             int i2 = (int) ((1152921503533105152L & j) >> 30);
-            int i3 = this.c;
+            int i3 = this.f3293c;
             if ((i2 & i3) == (i & i3)) {
                 return null;
             }
-            Object obj = this.d.get(i3 & i);
+            Object obj = this.f3294d.get(i3 & i);
             if (obj == null) {
-                if (this.b) {
+                if (this.f3292b) {
                     return null;
                 }
-            } else if (obj instanceof b) {
+            } else if (obj instanceof C0647b) {
                 return null;
             } else {
                 int i4 = (i + 1) & 1073741823;
-                if (g.compareAndSet(this, j, aVar.b(j, i4))) {
-                    this.d.set(this.c & i, null);
+                if (f3289g.compareAndSet(this, j, c0646a.m27362b(j, i4))) {
+                    this.f3294d.set(this.f3293c & i, null);
                     return obj;
-                } else if (this.b) {
+                } else if (this.f3292b) {
                     al0<E> al0Var = this;
                     do {
-                        al0Var = al0Var.k(i, i4);
+                        al0Var = al0Var.m27364k(i, i4);
                     } while (al0Var != null);
                     return obj;
                 }
@@ -268,19 +249,20 @@ public final class al0<E> {
         }
     }
 
-    public final al0<E> k(int i, int i2) {
+    /* renamed from: k */
+    public final al0<E> m27364k(int i, int i2) {
         long j;
-        a aVar;
+        C0646a c0646a;
         int i3;
         do {
             j = this._state;
-            aVar = e;
+            c0646a = f3287e;
             i3 = (int) ((1073741823 & j) >> 0);
             if ((1152921504606846976L & j) != 0) {
-                return i();
+                return m27366i();
             }
-        } while (!g.compareAndSet(this, j, aVar.b(j, i2)));
-        this.d.set(this.c & i3, null);
+        } while (!f3289g.compareAndSet(this, j, c0646a.m27362b(j, i2)));
+        this.f3294d.set(this.f3293c & i3, null);
         return null;
     }
 }

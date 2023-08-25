@@ -3,26 +3,32 @@ package com.daaw;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
 public abstract class yc8 extends l68 {
-    public static final WeakReference r = new WeakReference(null);
-    public WeakReference q;
+
+    /* renamed from: r */
+    public static final WeakReference f33520r = new WeakReference(null);
+
+    /* renamed from: q */
+    public WeakReference f33521q;
 
     public yc8(byte[] bArr) {
         super(bArr);
-        this.q = r;
+        this.f33521q = f33520r;
     }
 
     @Override // com.daaw.l68
-    public final byte[] g3() {
+    /* renamed from: g3 */
+    public final byte[] mo3860g3() {
         byte[] bArr;
         synchronized (this) {
-            bArr = (byte[]) this.q.get();
+            bArr = (byte[]) this.f33521q.get();
             if (bArr == null) {
-                bArr = h3();
-                this.q = new WeakReference(bArr);
+                bArr = mo3859h3();
+                this.f33521q = new WeakReference(bArr);
             }
         }
         return bArr;
     }
 
-    public abstract byte[] h3();
+    /* renamed from: h3 */
+    public abstract byte[] mo3859h3();
 }

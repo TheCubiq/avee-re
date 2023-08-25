@@ -9,19 +9,23 @@ import com.daaw.x93;
 /* loaded from: classes.dex */
 public class zzacl implements zzbp {
     public static final Parcelable.Creator<zzacl> CREATOR = new s62();
-    public final String p;
-    public final String q;
+
+    /* renamed from: p */
+    public final String f36716p;
+
+    /* renamed from: q */
+    public final String f36717q;
 
     public zzacl(Parcel parcel) {
         String readString = parcel.readString();
-        int i = it5.a;
-        this.p = readString;
-        this.q = parcel.readString();
+        int i = it5.f13991a;
+        this.f36716p = readString;
+        this.f36717q = parcel.readString();
     }
 
     public zzacl(String str, String str2) {
-        this.p = str;
-        this.q = str2;
+        this.f36716p = str;
+        this.f36717q = str2;
     }
 
     @Override // android.os.Parcelable
@@ -35,7 +39,7 @@ public class zzacl implements zzbp {
         }
         if (obj != null && getClass() == obj.getClass()) {
             zzacl zzaclVar = (zzacl) obj;
-            if (this.p.equals(zzaclVar.p) && this.q.equals(zzaclVar.q)) {
+            if (this.f36716p.equals(zzaclVar.f36716p) && this.f36717q.equals(zzaclVar.f36717q)) {
                 return true;
             }
         }
@@ -44,9 +48,10 @@ public class zzacl implements zzbp {
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     @Override // com.google.android.gms.internal.ads.zzbp
-    public final void f(x93 x93Var) {
+    /* renamed from: f */
+    public final void mo1104f(x93 x93Var) {
         char c;
-        String str = this.p;
+        String str = this.f36716p;
         switch (str.hashCode()) {
             case 62359119:
                 if (str.equals("ALBUM")) {
@@ -88,32 +93,32 @@ public class zzacl implements zzbp {
                 break;
         }
         if (c == 0) {
-            x93Var.H(this.q);
+            x93Var.m5407H(this.f36717q);
         } else if (c == 1) {
-            x93Var.u(this.q);
+            x93Var.m5378u(this.f36717q);
         } else if (c == 2) {
-            x93Var.t(this.q);
+            x93Var.m5379t(this.f36717q);
         } else if (c == 3) {
-            x93Var.s(this.q);
+            x93Var.m5380s(this.f36717q);
         } else if (c != 4) {
         } else {
-            x93Var.y(this.q);
+            x93Var.m5374y(this.f36717q);
         }
     }
 
     public final int hashCode() {
-        return ((this.p.hashCode() + 527) * 31) + this.q.hashCode();
+        return ((this.f36716p.hashCode() + 527) * 31) + this.f36717q.hashCode();
     }
 
     public final String toString() {
-        String str = this.p;
-        String str2 = this.q;
+        String str = this.f36716p;
+        String str2 = this.f36717q;
         return "VC: " + str + "=" + str2;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
+        parcel.writeString(this.f36716p);
+        parcel.writeString(this.f36717q);
     }
 }

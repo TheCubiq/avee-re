@@ -24,10 +24,10 @@ public final class zzfl extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.c(parcel, 2, this.zza);
-        z71.c(parcel, 3, this.zzb);
-        z71.c(parcel, 4, this.zzc);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2731c(parcel, 2, this.zza);
+        z71.m2731c(parcel, 3, this.zzb);
+        z71.m2731c(parcel, 4, this.zzc);
+        z71.m2732b(parcel, m2733a);
     }
 }

@@ -14,23 +14,50 @@ import android.widget.TextView;
 import com.daaw.avee.R;
 /* loaded from: classes.dex */
 public class wv1 extends PopupWindow {
-    public Handler a;
-    public ImageButton b;
-    public ImageButton c;
-    public View d;
-    public SeekBar e;
-    public TextView f;
-    public SeekBar g;
-    public TextView h;
-    public float i;
-    public float j;
-    public SeekBar k;
-    public TextView l;
-    public ImageButton m;
 
+    /* renamed from: a */
+    public Handler f31555a;
+
+    /* renamed from: b */
+    public ImageButton f31556b;
+
+    /* renamed from: c */
+    public ImageButton f31557c;
+
+    /* renamed from: d */
+    public View f31558d;
+
+    /* renamed from: e */
+    public SeekBar f31559e;
+
+    /* renamed from: f */
+    public TextView f31560f;
+
+    /* renamed from: g */
+    public SeekBar f31561g;
+
+    /* renamed from: h */
+    public TextView f31562h;
+
+    /* renamed from: i */
+    public float f31563i;
+
+    /* renamed from: j */
+    public float f31564j;
+
+    /* renamed from: k */
+    public SeekBar f31565k;
+
+    /* renamed from: l */
+    public TextView f31566l;
+
+    /* renamed from: m */
+    public ImageButton f31567m;
+
+    /* renamed from: com.daaw.wv1$a */
     /* loaded from: classes.dex */
-    public class a implements Handler.Callback {
-        public a() {
+    public class C3468a implements Handler.Callback {
+        public C3468a() {
         }
 
         @Override // android.os.Handler.Callback
@@ -39,75 +66,83 @@ public class wv1 extends PopupWindow {
         }
     }
 
+    /* renamed from: com.daaw.wv1$b */
     /* loaded from: classes.dex */
-    public class b implements View.OnClickListener {
-        public b() {
+    public class View$OnClickListenerC3469b implements View.OnClickListener {
+        public View$OnClickListenerC3469b() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.Y.a();
-            wv1.this.a.sendEmptyMessageDelayed(0, 900L);
+            ko0.f16519Y.m12990a();
+            wv1.this.f31555a.sendEmptyMessageDelayed(0, 900L);
         }
     }
 
+    /* renamed from: com.daaw.wv1$c */
     /* loaded from: classes.dex */
-    public class c implements SeekBar.OnSeekBarChangeListener {
-        public final /* synthetic */ lo1 a;
+    public class C3470c implements SeekBar.OnSeekBarChangeListener {
 
-        public c(lo1 lo1Var) {
-            this.a = lo1Var;
+        /* renamed from: a */
+        public final /* synthetic */ lo1 f31570a;
+
+        public C3470c(lo1 lo1Var) {
+            this.f31570a = lo1Var;
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onProgressChanged(SeekBar seekBar, int i, boolean z) {
-            wv1.this.h(i, ((Integer) this.a.b).intValue(), true);
+            wv1.this.m5769h(i, ((Integer) this.f31570a.f17577b).intValue(), true);
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onStartTrackingTouch(SeekBar seekBar) {
-            wv1.this.a.removeMessages(0);
+            wv1.this.f31555a.removeMessages(0);
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onStopTrackingTouch(SeekBar seekBar) {
-            wv1.this.a.sendEmptyMessageDelayed(0, 900L);
+            wv1.this.f31555a.sendEmptyMessageDelayed(0, 900L);
         }
     }
 
+    /* renamed from: com.daaw.wv1$d */
     /* loaded from: classes.dex */
-    public class d implements View.OnClickListener {
-        public d() {
+    public class View$OnClickListenerC3471d implements View.OnClickListener {
+        public View$OnClickListenerC3471d() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             qw1<Boolean> qw1Var;
             Boolean bool;
-            if (wv1.this.d.getVisibility() == 0) {
-                wv1.this.l(false, false);
-                qw1Var = ko0.X;
+            if (wv1.this.f31558d.getVisibility() == 0) {
+                wv1.this.m5765l(false, false);
+                qw1Var = ko0.f16518X;
                 bool = Boolean.FALSE;
             } else {
-                wv1.this.l(true, false);
-                qw1Var = ko0.X;
+                wv1.this.m5765l(true, false);
+                qw1Var = ko0.f16518X;
                 bool = Boolean.TRUE;
             }
-            qw1Var.a(bool);
+            qw1Var.m12018a(bool);
         }
     }
 
+    /* renamed from: com.daaw.wv1$e */
     /* loaded from: classes.dex */
-    public class e implements SeekBar.OnSeekBarChangeListener {
-        public final /* synthetic */ lo1 a;
+    public class C3472e implements SeekBar.OnSeekBarChangeListener {
 
-        public e(lo1 lo1Var) {
-            this.a = lo1Var;
+        /* renamed from: a */
+        public final /* synthetic */ lo1 f31573a;
+
+        public C3472e(lo1 lo1Var) {
+            this.f31573a = lo1Var;
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onProgressChanged(SeekBar seekBar, int i, boolean z) {
-            wv1.this.g(i, ((Integer) this.a.b).intValue(), true);
+            wv1.this.m5770g(i, ((Integer) this.f31573a.f17577b).intValue(), true);
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
@@ -119,17 +154,20 @@ public class wv1 extends PopupWindow {
         }
     }
 
+    /* renamed from: com.daaw.wv1$f */
     /* loaded from: classes.dex */
-    public class f implements SeekBar.OnSeekBarChangeListener {
-        public final /* synthetic */ mo1 a;
+    public class C3473f implements SeekBar.OnSeekBarChangeListener {
 
-        public f(mo1 mo1Var) {
-            this.a = mo1Var;
+        /* renamed from: a */
+        public final /* synthetic */ mo1 f31575a;
+
+        public C3473f(mo1 mo1Var) {
+            this.f31575a = mo1Var;
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onProgressChanged(SeekBar seekBar, int i, boolean z) {
-            wv1.this.i(i, ((Integer) this.a.b).intValue(), ((Float) this.a.c).floatValue(), true);
+            wv1.this.m5768i(i, ((Integer) this.f31575a.f19023b).intValue(), ((Float) this.f31575a.f19024c).floatValue(), true);
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
@@ -141,59 +179,60 @@ public class wv1 extends PopupWindow {
         }
     }
 
+    /* renamed from: com.daaw.wv1$g */
     /* loaded from: classes.dex */
-    public class g implements View.OnClickListener {
-        public g() {
+    public class View$OnClickListenerC3474g implements View.OnClickListener {
+        public View$OnClickListenerC3474g() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            wv1.this.a.sendEmptyMessageDelayed(0, 900L);
-            ko0.Z.a(new al(view));
+            wv1.this.f31555a.sendEmptyMessageDelayed(0, 900L);
+            ko0.f16520Z.m12018a(new C0645al(view));
         }
     }
 
     public wv1(LayoutInflater layoutInflater, View view) {
         super(view.getContext(), (AttributeSet) null, 0, (int) R.style.MyListPopupWindowDarkStyle);
-        this.a = new Handler(new a());
+        this.f31555a = new Handler(new C3468a());
         View inflate = View.inflate(view.getContext(), R.layout.popup_media_controls_volume, null);
         ImageButton imageButton = (ImageButton) inflate.findViewById(R.id.btnVolumeMute);
-        this.b = imageButton;
-        imageButton.setOnClickListener(new b());
-        this.k = (SeekBar) inflate.findViewById(R.id.seekBarVolume);
-        this.l = (TextView) inflate.findViewById(R.id.txtVolume);
-        lo1<Integer, Integer> a2 = ko0.P.a(new lo1<>(0, 0));
-        h(a2.a.intValue(), a2.b.intValue(), false);
-        this.k.setOnSeekBarChangeListener(new c(a2));
-        vw1<Boolean> vw1Var = ko0.W;
+        this.f31556b = imageButton;
+        imageButton.setOnClickListener(new View$OnClickListenerC3469b());
+        this.f31565k = (SeekBar) inflate.findViewById(R.id.seekBarVolume);
+        this.f31566l = (TextView) inflate.findViewById(R.id.txtVolume);
+        lo1<Integer, Integer> m6692a = ko0.f16510P.m6692a(new lo1<>(0, 0));
+        m5769h(m6692a.f17576a.intValue(), m6692a.f17577b.intValue(), false);
+        this.f31565k.setOnSeekBarChangeListener(new C3470c(m6692a));
+        vw1<Boolean> vw1Var = ko0.f16517W;
         Boolean bool = Boolean.FALSE;
-        boolean booleanValue = vw1Var.a(bool).booleanValue();
-        this.d = inflate.findViewById(R.id.layoutExpandable);
-        this.c = (ImageButton) inflate.findViewById(R.id.btnExpand);
-        l(booleanValue, true);
-        this.c.setOnClickListener(new d());
-        this.e = (SeekBar) inflate.findViewById(R.id.seekBarVolumeBalance);
-        this.f = (TextView) inflate.findViewById(R.id.txtVolumeBalanceStatus);
-        lo1<Integer, Integer> a3 = ko0.Q.a(new lo1<>(0, 0));
-        g(a3.a.intValue(), a3.b.intValue(), false);
-        this.e.setOnSeekBarChangeListener(new e(a3));
-        this.g = (SeekBar) inflate.findViewById(R.id.seekBarCrossfade);
-        this.h = (TextView) inflate.findViewById(R.id.txtCrossfadeStatus);
-        this.i = layoutInflater.getContext().getResources().getDimensionPixelSize(R.dimen.textSizeM3);
-        this.j = this.h.getTextSize();
-        mo1<Integer, Integer, Float> a4 = ko0.S.a(new mo1<>(0, 0, Float.valueOf(1.0f)));
-        i(a4.a.intValue(), a4.b.intValue(), a4.c.floatValue(), false);
-        this.g.setOnSeekBarChangeListener(new f(a4));
+        boolean booleanValue = vw1Var.m6692a(bool).booleanValue();
+        this.f31558d = inflate.findViewById(R.id.layoutExpandable);
+        this.f31557c = (ImageButton) inflate.findViewById(R.id.btnExpand);
+        m5765l(booleanValue, true);
+        this.f31557c.setOnClickListener(new View$OnClickListenerC3471d());
+        this.f31559e = (SeekBar) inflate.findViewById(R.id.seekBarVolumeBalance);
+        this.f31560f = (TextView) inflate.findViewById(R.id.txtVolumeBalanceStatus);
+        lo1<Integer, Integer> m6692a2 = ko0.f16511Q.m6692a(new lo1<>(0, 0));
+        m5770g(m6692a2.f17576a.intValue(), m6692a2.f17577b.intValue(), false);
+        this.f31559e.setOnSeekBarChangeListener(new C3472e(m6692a2));
+        this.f31561g = (SeekBar) inflate.findViewById(R.id.seekBarCrossfade);
+        this.f31562h = (TextView) inflate.findViewById(R.id.txtCrossfadeStatus);
+        this.f31563i = layoutInflater.getContext().getResources().getDimensionPixelSize(R.dimen.textSizeM3);
+        this.f31564j = this.f31562h.getTextSize();
+        mo1<Integer, Integer, Float> m6692a3 = ko0.f16513S.m6692a(new mo1<>(0, 0, Float.valueOf(1.0f)));
+        m5768i(m6692a3.f19022a.intValue(), m6692a3.f19023b.intValue(), m6692a3.f19024c.floatValue(), false);
+        this.f31561g.setOnSeekBarChangeListener(new C3473f(m6692a3));
         ImageButton imageButton2 = (ImageButton) inflate.findViewById(R.id.btnEq);
-        this.m = imageButton2;
-        imageButton2.setOnClickListener(new g());
+        this.f31567m = imageButton2;
+        imageButton2.setOnClickListener(new View$OnClickListenerC3474g());
         setContentView(inflate);
         setHeight(-2);
         setWidth(-2);
         setOutsideTouchable(true);
         setFocusable(true);
-        k(ko0.F.a(bool).booleanValue(), ko0.G.a(bool).booleanValue());
-        j(ko0.a0.a(bool).booleanValue());
+        m5766k(ko0.f16500F.m6692a(bool).booleanValue(), ko0.f16501G.m6692a(bool).booleanValue());
+        m5767j(ko0.f16521a0.m6692a(bool).booleanValue());
         Point point = new Point();
         view.getLocationInWindow(r9);
         view.getDisplay().getRealSize(point);
@@ -201,129 +240,113 @@ public class wv1 extends PopupWindow {
         showAtLocation(view, 8388691, iArr[0], iArr[1]);
     }
 
-    public final void g(int i, int i2, boolean z) {
+    /* renamed from: g */
+    public final void m5770g(int i, int i2, boolean z) {
         int i3 = i2 / 2;
         int round = Math.round(((i - i3) / i3) * 100.0f);
-        TextView textView = this.f;
+        TextView textView = this.f31560f;
         textView.setText(textView.getResources().getQuantityString(R.plurals.audio_stereo_balance_x, round, Integer.valueOf(round)));
         if (z) {
-            ko0.U.a(Integer.valueOf(i), Integer.valueOf(i2));
+            ko0.f16515U.m10862a(Integer.valueOf(i), Integer.valueOf(i2));
             return;
         }
-        this.e.setMax(i2);
-        this.e.setProgress(i);
+        this.f31559e.setMax(i2);
+        this.f31559e.setProgress(i);
     }
 
-    public final void h(int i, int i2, boolean z) {
+    /* renamed from: h */
+    public final void m5769h(int i, int i2, boolean z) {
         int round = Math.round((i / i2) * 100.0f);
-        TextView textView = this.l;
+        TextView textView = this.f31566l;
         textView.setText(textView.getResources().getQuantityString(R.plurals.audio_volume_x, round, Integer.valueOf(round)));
         if (z) {
-            ko0.T.a(Integer.valueOf(i), Integer.valueOf(i2));
+            ko0.f16514T.m10862a(Integer.valueOf(i), Integer.valueOf(i2));
             return;
         }
-        this.k.setMax(i2);
-        this.k.setProgress(i);
+        this.f31565k.setMax(i2);
+        this.f31565k.setProgress(i);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0035  */
     /* JADX WARN: Removed duplicated region for block: B:11:0x0040  */
+    /* renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void i(int r7, int r8, float r9, boolean r10) {
-        /*
-            r6 = this;
-            if (r7 != 0) goto Lb
-            android.widget.TextView r9 = r6.h
-            r0 = 2131755493(0x7f1001e5, float:1.9141867E38)
-        L7:
-            r9.setText(r0)
-            goto L33
-        Lb:
-            r0 = 1
-            if (r7 != r0) goto L14
-            android.widget.TextView r9 = r6.h
-            r0 = 2131755494(0x7f1001e6, float:1.9141869E38)
-            goto L7
-        L14:
-            int r1 = r7 + (-1)
-            float r1 = (float) r1
-            float r1 = r1 * r9
-            android.widget.TextView r9 = r6.h
-            android.content.res.Resources r2 = r9.getResources()
-            r3 = 2131623942(0x7f0e0006, float:1.887505E38)
-            int r4 = (int) r1
-            java.lang.Object[] r0 = new java.lang.Object[r0]
-            r5 = 0
-            java.lang.Float r1 = java.lang.Float.valueOf(r1)
-            r0[r5] = r1
-            java.lang.String r0 = r2.getQuantityString(r3, r4, r0)
-            r9.setText(r0)
-        L33:
-            if (r10 != 0) goto L40
-            android.widget.SeekBar r9 = r6.g
-            r9.setMax(r8)
-            android.widget.SeekBar r8 = r6.g
-            r8.setProgress(r7)
-            goto L4d
-        L40:
-            com.daaw.rw1<java.lang.Integer, java.lang.Integer> r9 = com.daaw.ko0.V
-            java.lang.Integer r7 = java.lang.Integer.valueOf(r7)
-            java.lang.Integer r8 = java.lang.Integer.valueOf(r8)
-            r9.a(r7, r8)
-        L4d:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.wv1.i(int, int, float, boolean):void");
+    public final void m5768i(int i, int i2, float f, boolean z) {
+        TextView textView;
+        int i3;
+        if (i == 0) {
+            textView = this.f31562h;
+            i3 = R.string.playback_crossfade_off;
+        } else if (i != 1) {
+            float f2 = (i - 1) * f;
+            TextView textView2 = this.f31562h;
+            textView2.setText(textView2.getResources().getQuantityString(R.plurals.playback_crossFade_x_sec, (int) f2, Float.valueOf(f2)));
+            if (!z) {
+                ko0.f16516V.m10862a(Integer.valueOf(i), Integer.valueOf(i2));
+                return;
+            }
+            this.f31561g.setMax(i2);
+            this.f31561g.setProgress(i);
+            return;
+        } else {
+            textView = this.f31562h;
+            i3 = R.string.playback_gapless;
+        }
+        textView.setText(i3);
+        if (!z) {
+        }
     }
 
-    public void j(boolean z) {
+    /* renamed from: j */
+    public void m5767j(boolean z) {
         ImageButton imageButton;
         ImageButton imageButton2;
         int i;
         if (z) {
-            imageButton = this.m;
-            imageButton2 = this.b;
+            imageButton = this.f31567m;
+            imageButton2 = this.f31556b;
             i = R.attr.mediaControlsHighLight;
         } else {
-            imageButton = this.m;
-            imageButton2 = this.b;
+            imageButton = this.f31567m;
+            imageButton2 = this.f31556b;
             i = R.attr.mediaControlsFG;
         }
-        imageButton.setColorFilter(gr1.n(imageButton2, i));
+        imageButton.setColorFilter(gr1.m21321n(imageButton2, i));
     }
 
-    public void k(boolean z, boolean z2) {
+    /* renamed from: k */
+    public void m5766k(boolean z, boolean z2) {
         ImageButton imageButton;
         int i;
         if (z) {
-            imageButton = this.b;
+            imageButton = this.f31556b;
             i = R.attr.mediaControlsHighLight;
         } else {
-            imageButton = this.b;
+            imageButton = this.f31556b;
             i = R.attr.mediaControlsFG;
         }
-        imageButton.setColorFilter(gr1.n(imageButton, i));
+        imageButton.setColorFilter(gr1.m21321n(imageButton, i));
     }
 
-    public final void l(boolean z, boolean z2) {
+    /* renamed from: l */
+    public final void m5765l(boolean z, boolean z2) {
         View view;
         int i;
         if (z) {
-            ViewPropertyAnimator rotation = this.c.animate().rotation(90.0f);
+            ViewPropertyAnimator rotation = this.f31557c.animate().rotation(90.0f);
             if (z2) {
                 rotation.setDuration(0L);
             }
-            view = this.d;
+            view = this.f31558d;
             i = 0;
         } else {
-            ViewPropertyAnimator rotation2 = this.c.animate().rotation(0.0f);
+            ViewPropertyAnimator rotation2 = this.f31557c.animate().rotation(0.0f);
             if (z2) {
                 rotation2.setDuration(0L);
             }
-            view = this.d;
+            view = this.f31558d;
             i = 8;
         }
         view.setVisibility(i);

@@ -3,49 +3,62 @@ package com.daaw;
 import android.os.Handler;
 /* loaded from: classes2.dex */
 public abstract class hl2 {
-    public static volatile Handler d;
-    public final xe7 a;
-    public final Runnable b;
-    public volatile long c;
+
+    /* renamed from: d */
+    public static volatile Handler f12639d;
+
+    /* renamed from: a */
+    public final xe7 f12640a;
+
+    /* renamed from: b */
+    public final Runnable f12641b;
+
+    /* renamed from: c */
+    public volatile long f12642c;
 
     public hl2(xe7 xe7Var) {
-        ry0.j(xe7Var);
-        this.a = xe7Var;
-        this.b = new dk2(this, xe7Var);
+        ry0.m10830j(xe7Var);
+        this.f12640a = xe7Var;
+        this.f12641b = new dk2(this, xe7Var);
     }
 
-    public final void b() {
-        this.c = 0L;
-        f().removeCallbacks(this.b);
+    /* renamed from: b */
+    public final void m20638b() {
+        this.f12642c = 0L;
+        m20635f().removeCallbacks(this.f12641b);
     }
 
-    public abstract void c();
+    /* renamed from: c */
+    public abstract void mo8554c();
 
-    public final void d(long j) {
-        b();
+    /* renamed from: d */
+    public final void m20637d(long j) {
+        m20638b();
         if (j >= 0) {
-            this.c = this.a.b().a();
-            if (f().postDelayed(this.b, j)) {
+            this.f12642c = this.f12640a.mo3909b().mo15860a();
+            if (m20635f().postDelayed(this.f12641b, j)) {
                 return;
             }
-            this.a.i().q().b("Failed to schedule delayed post. time", Long.valueOf(j));
+            this.f12640a.mo3895i().m14160q().m20652b("Failed to schedule delayed post. time", Long.valueOf(j));
         }
     }
 
-    public final boolean e() {
-        return this.c != 0;
+    /* renamed from: e */
+    public final boolean m20636e() {
+        return this.f12642c != 0;
     }
 
-    public final Handler f() {
+    /* renamed from: f */
+    public final Handler m20635f() {
         Handler handler;
-        if (d != null) {
-            return d;
+        if (f12639d != null) {
+            return f12639d;
         }
         synchronized (hl2.class) {
-            if (d == null) {
-                d = new np3(this.a.d().getMainLooper());
+            if (f12639d == null) {
+                f12639d = new np3(this.f12640a.mo3905d().getMainLooper());
             }
-            handler = d;
+            handler = f12639d;
         }
         return handler;
     }

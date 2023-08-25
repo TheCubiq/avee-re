@@ -8,12 +8,14 @@ public final class eq8 implements rp8 {
     }
 
     @Override // com.daaw.rp8
-    public final boolean a(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+    /* renamed from: a */
+    public final boolean mo11079a(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
         return "secure-playback".equals(str) && "video/avc".equals(str2);
     }
 
     @Override // com.daaw.rp8
-    public final boolean b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
+    /* renamed from: b */
+    public final boolean mo11078b(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities) {
         return false;
     }
 

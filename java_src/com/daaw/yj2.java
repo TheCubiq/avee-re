@@ -4,49 +4,63 @@ import com.google.android.gms.ads.internal.client.zzba;
 import java.nio.ByteBuffer;
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Vector;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class yj2 {
-    public static boolean a;
-    public static MessageDigest b;
-    public static final Object c = new Object();
-    public static final Object d = new Object();
-    public static final CountDownLatch e = new CountDownLatch(1);
 
-    public static String a(fj2 fj2Var, String str) {
-        byte[] g;
-        ls7 n;
-        byte[] a2 = fj2Var.a();
-        if (((Boolean) zzba.zzc().b(g93.N2)).booleanValue()) {
-            Vector b2 = b(a2, 255);
-            if (b2 == null || b2.size() == 0) {
-                g = g(f(4096).a(), str, true);
-                return uj2.a(g, true);
+    /* renamed from: a */
+    public static boolean f33729a;
+
+    /* renamed from: b */
+    public static MessageDigest f33730b;
+
+    /* renamed from: c */
+    public static final Object f33731c = new Object();
+
+    /* renamed from: d */
+    public static final Object f33732d = new Object();
+
+    /* renamed from: e */
+    public static final CountDownLatch f33733e = new CountDownLatch(1);
+
+    /* renamed from: a */
+    public static String m3656a(fj2 fj2Var, String str) {
+        byte[] m3650g;
+        ls7 m22315n;
+        byte[] mo4516a = fj2Var.mo4516a();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10494N2)).booleanValue()) {
+            Vector m3655b = m3655b(mo4516a, 255);
+            if (m3655b == null || m3655b.size() == 0) {
+                m3650g = m3650g(m3651f(4096).mo4516a(), str, true);
+                return uj2.m8102a(m3650g, true);
             }
-            rj2 L = sj2.L();
-            int size = b2.size();
+            rj2 m10293L = sj2.m10293L();
+            int size = m3655b.size();
             for (int i = 0; i < size; i++) {
-                L.s(yq7.F(g((byte[]) b2.get(i), str, false)));
+                m10293L.m11233s(yq7.m3424F(m3650g((byte[]) m3655b.get(i), str, false)));
             }
-            L.t(yq7.F(e(a2)));
-            n = L.n();
-        } else if (ym2.a == null) {
+            m10293L.m11232t(yq7.m3424F(m3652e(mo4516a)));
+            m22315n = m10293L.m22315n();
+        } else if (ym2.f33817a == null) {
             throw new GeneralSecurityException();
         } else {
-            byte[] a3 = ym2.a.a(a2, str != null ? str.getBytes() : new byte[0]);
-            rj2 L2 = sj2.L();
-            L2.s(yq7.F(a3));
-            L2.u(3);
-            n = L2.n();
+            byte[] mo6966a = ym2.f33817a.mo6966a(mo4516a, str != null ? str.getBytes() : new byte[0]);
+            rj2 m10293L2 = sj2.m10293L();
+            m10293L2.m11233s(yq7.m3424F(mo6966a));
+            m10293L2.m11231u(3);
+            m22315n = m10293L2.m22315n();
         }
-        g = ((sj2) n).a();
-        return uj2.a(g, true);
+        m3650g = ((sj2) m22315n).mo4516a();
+        return uj2.m8102a(m3650g, true);
     }
 
-    public static Vector b(byte[] bArr, int i) {
+    /* renamed from: b */
+    public static Vector m3655b(byte[] bArr, int i) {
         int length;
         if (bArr == null || (length = bArr.length) <= 0) {
             return null;
@@ -68,10 +82,11 @@ public final class yj2 {
         return vector;
     }
 
-    public static void d() {
-        synchronized (d) {
-            if (!a) {
-                a = true;
+    /* renamed from: d */
+    public static void m3653d() {
+        synchronized (f33732d) {
+            if (!f33729a) {
+                f33729a = true;
                 new Thread(new xj2(null)).start();
             }
         }
@@ -80,64 +95,43 @@ public final class yj2 {
     /* JADX WARN: Code restructure failed: missing block: B:41:0x001e, code lost:
         r1.reset();
         r1.update(r6);
-        r6 = com.daaw.yj2.b.digest();
+        r6 = com.daaw.yj2.f33730b.digest();
      */
+    /* renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static byte[] e(byte[] r6) {
-        /*
-            java.lang.Object r0 = com.daaw.yj2.c
-            monitor-enter(r0)
-            d()     // Catch: java.lang.Throwable -> L34
-            r1 = 0
-            java.util.concurrent.CountDownLatch r2 = com.daaw.yj2.e     // Catch: java.lang.InterruptedException -> L1b java.lang.Throwable -> L34
-            r3 = 2
-            java.util.concurrent.TimeUnit r5 = java.util.concurrent.TimeUnit.SECONDS     // Catch: java.lang.InterruptedException -> L1b java.lang.Throwable -> L34
-            boolean r2 = r2.await(r3, r5)     // Catch: java.lang.InterruptedException -> L1b java.lang.Throwable -> L34
-            if (r2 != 0) goto L14
-            goto L1c
-        L14:
-            java.security.MessageDigest r2 = com.daaw.yj2.b     // Catch: java.lang.Throwable -> L34
-            if (r2 != 0) goto L19
-            goto L1c
-        L19:
-            r1 = r2
-            goto L1c
-        L1b:
-        L1c:
-            if (r1 == 0) goto L2c
-            r1.reset()     // Catch: java.lang.Throwable -> L34
-            r1.update(r6)     // Catch: java.lang.Throwable -> L34
-            java.security.MessageDigest r6 = com.daaw.yj2.b     // Catch: java.lang.Throwable -> L34
-            byte[] r6 = r6.digest()     // Catch: java.lang.Throwable -> L34
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L34
-            return r6
-        L2c:
-            java.security.NoSuchAlgorithmException r6 = new java.security.NoSuchAlgorithmException     // Catch: java.lang.Throwable -> L34
-            java.lang.String r1 = "Cannot compute hash"
-            r6.<init>(r1)     // Catch: java.lang.Throwable -> L34
-            throw r6     // Catch: java.lang.Throwable -> L34
-        L34:
-            r6 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L34
-            throw r6
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.yj2.e(byte[]):byte[]");
+    public static byte[] m3652e(byte[] bArr) {
+        byte[] digest;
+        MessageDigest messageDigest;
+        synchronized (f33731c) {
+            m3653d();
+            MessageDigest messageDigest2 = null;
+            try {
+                if (f33733e.await(2L, TimeUnit.SECONDS) && (messageDigest = f33730b) != null) {
+                    messageDigest2 = messageDigest;
+                }
+            } catch (InterruptedException unused) {
+            }
+            throw new NoSuchAlgorithmException("Cannot compute hash");
+        }
+        return digest;
+        throw new NoSuchAlgorithmException("Cannot compute hash");
     }
 
-    public static fj2 f(int i) {
-        hi2 l0 = fj2.l0();
-        l0.v(4096L);
-        return (fj2) l0.n();
+    /* renamed from: f */
+    public static fj2 m3651f(int i) {
+        hi2 m22548l0 = fj2.m22548l0();
+        m22548l0.m20741v(4096L);
+        return (fj2) m22548l0.m22315n();
     }
 
-    public static byte[] g(byte[] bArr, String str, boolean z) {
+    /* renamed from: g */
+    public static byte[] m3650g(byte[] bArr, String str, boolean z) {
         ByteBuffer put;
         int i = true != z ? 255 : 239;
         if (bArr.length > i) {
-            bArr = f(4096).a();
+            bArr = m3651f(4096).mo4516a();
         }
         int length = bArr.length;
         if (length < i) {
@@ -149,19 +143,19 @@ public final class yj2 {
         }
         byte[] array = put.array();
         if (z) {
-            array = ByteBuffer.allocate(256).put(e(array)).put(array).array();
+            array = ByteBuffer.allocate(256).put(m3652e(array)).put(array).array();
         }
         byte[] bArr3 = new byte[256];
-        zj2[] zj2VarArr = new dl2().G2;
+        zj2[] zj2VarArr = new dl2().f7264G2;
         int length2 = zj2VarArr.length;
         for (int i2 = 0; i2 < 12; i2++) {
-            zj2VarArr[i2].a(array, bArr3);
+            zj2VarArr[i2].mo2203a(array, bArr3);
         }
         if (str != null && str.length() > 0) {
             if (str.length() > 32) {
                 str = str.substring(0, 32);
             }
-            new fq7(str.getBytes("UTF-8")).a(bArr3);
+            new fq7(str.getBytes("UTF-8")).m22399a(bArr3);
         }
         return bArr3;
     }

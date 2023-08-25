@@ -1,45 +1,54 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public class ub8 {
-    public static final l88 c = l88.c;
-    public volatile zd8 a;
-    public volatile y68 b;
 
-    public final int a() {
-        if (this.b != null) {
-            return ((p68) this.b).t.length;
+    /* renamed from: c */
+    public static final l88 f28864c = l88.f17143c;
+
+    /* renamed from: a */
+    public volatile zd8 f28865a;
+
+    /* renamed from: b */
+    public volatile y68 f28866b;
+
+    /* renamed from: a */
+    public final int m8343a() {
+        if (this.f28866b != null) {
+            return ((p68) this.f28866b).f22647t.length;
         }
-        if (this.a != null) {
-            return this.a.c();
+        if (this.f28865a != null) {
+            return this.f28865a.mo2461c();
         }
         return 0;
     }
 
-    public final y68 b() {
-        if (this.b != null) {
-            return this.b;
+    /* renamed from: b */
+    public final y68 m8342b() {
+        if (this.f28866b != null) {
+            return this.f28866b;
         }
         synchronized (this) {
-            if (this.b != null) {
-                return this.b;
+            if (this.f28866b != null) {
+                return this.f28866b;
             }
-            this.b = this.a == null ? y68.q : this.a.zzbs();
-            return this.b;
+            this.f28866b = this.f28865a == null ? y68.f33399q : this.f28865a.zzbs();
+            return this.f28866b;
         }
     }
 
-    public final void c(zd8 zd8Var) {
-        if (this.a != null) {
+    /* renamed from: c */
+    public final void m8341c(zd8 zd8Var) {
+        if (this.f28865a != null) {
             return;
         }
         synchronized (this) {
-            if (this.a == null) {
+            if (this.f28865a == null) {
                 try {
-                    this.a = zd8Var;
-                    this.b = y68.q;
+                    this.f28865a = zd8Var;
+                    this.f28866b = y68.f33399q;
                 } catch (mb8 unused) {
-                    this.a = zd8Var;
-                    this.b = y68.q;
+                    this.f28865a = zd8Var;
+                    this.f28866b = y68.f33399q;
                 }
             }
         }
@@ -51,18 +60,18 @@ public class ub8 {
         }
         if (obj instanceof ub8) {
             ub8 ub8Var = (ub8) obj;
-            zd8 zd8Var = this.a;
-            zd8 zd8Var2 = ub8Var.a;
+            zd8 zd8Var = this.f28865a;
+            zd8 zd8Var2 = ub8Var.f28865a;
             if (zd8Var == null && zd8Var2 == null) {
-                return b().equals(ub8Var.b());
+                return m8342b().equals(ub8Var.m8342b());
             }
             if (zd8Var == null || zd8Var2 == null) {
                 if (zd8Var != null) {
-                    ub8Var.c(zd8Var.d());
-                    return zd8Var.equals(ub8Var.a);
+                    ub8Var.m8341c(zd8Var.mo18673d());
+                    return zd8Var.equals(ub8Var.f28865a);
                 }
-                c(zd8Var2.d());
-                return this.a.equals(zd8Var2);
+                m8341c(zd8Var2.mo18673d());
+                return this.f28865a.equals(zd8Var2);
             }
             return zd8Var.equals(zd8Var2);
         }

@@ -4,59 +4,68 @@ import java.nio.charset.Charset;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class ik5 {
-    public byte[] a;
-    public int b;
-    public int c;
+
+    /* renamed from: a */
+    public byte[] f13718a;
+
+    /* renamed from: b */
+    public int f13719b;
+
+    /* renamed from: c */
+    public int f13720c;
 
     public ik5() {
-        this.a = it5.f;
+        this.f13718a = it5.f13996f;
     }
 
     public ik5(int i) {
-        this.a = new byte[i];
-        this.c = i;
+        this.f13718a = new byte[i];
+        this.f13720c = i;
     }
 
     public ik5(byte[] bArr) {
-        this.a = bArr;
-        this.c = bArr.length;
+        this.f13718a = bArr;
+        this.f13720c = bArr.length;
     }
 
     public ik5(byte[] bArr, int i) {
-        this.a = bArr;
-        this.c = i;
+        this.f13718a = bArr;
+        this.f13720c = i;
     }
 
-    public final long A() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: A */
+    public final long m19729A() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
         int i4 = i3 + 1;
-        this.b = i4;
+        this.f13719b = i4;
         byte b3 = bArr[i3];
-        this.b = i4 + 1;
+        this.f13719b = i4 + 1;
         return ((b2 & 255) << 16) | ((b & 255) << 24) | ((b3 & 255) << 8) | (bArr[i4] & 255);
     }
 
-    public final long B() {
-        long z = z();
-        if (z >= 0) {
-            return z;
+    /* renamed from: B */
+    public final long m19728B() {
+        long m19696z = m19696z();
+        if (m19696z >= 0) {
+            return m19696z;
         }
-        throw new IllegalStateException("Top bit not zero: " + z);
+        throw new IllegalStateException("Top bit not zero: " + m19696z);
     }
 
-    public final long C() {
+    /* renamed from: C */
+    public final long m19727C() {
         int i;
         int i2;
         byte b;
         int i3;
-        long j = this.a[this.b];
+        long j = this.f13718a[this.f13719b];
         int i4 = 7;
         while (true) {
             i = 0;
@@ -76,323 +85,354 @@ public final class ik5 {
             throw new NumberFormatException("Invalid UTF-8 sequence first byte: " + j);
         }
         for (i2 = 1; i2 < i; i2++) {
-            if ((this.a[this.b + i2] & 192) != 128) {
+            if ((this.f13718a[this.f13719b + i2] & 192) != 128) {
                 throw new NumberFormatException("Invalid UTF-8 sequence continuation byte: " + j);
             }
             j = (j << 6) | (b & 63);
         }
-        this.b += i;
+        this.f13719b += i;
         return j;
     }
 
-    public final String D(char c) {
-        int i = this.c;
-        int i2 = this.b;
+    /* renamed from: D */
+    public final String m19726D(char c) {
+        int i = this.f13720c;
+        int i2 = this.f13719b;
         if (i - i2 != 0) {
-            while (i2 < this.c && this.a[i2] != 0) {
+            while (i2 < this.f13720c && this.f13718a[i2] != 0) {
                 i2++;
             }
-            byte[] bArr = this.a;
-            int i3 = this.b;
-            String j = it5.j(bArr, i3, i2 - i3);
-            this.b = i2;
-            if (i2 < this.c) {
-                this.b = i2 + 1;
+            byte[] bArr = this.f13718a;
+            int i3 = this.f13719b;
+            String m19387j = it5.m19387j(bArr, i3, i2 - i3);
+            this.f13719b = i2;
+            if (i2 < this.f13720c) {
+                this.f13719b = i2 + 1;
             }
-            return j;
+            return m19387j;
         }
         return null;
     }
 
-    public final String E(int i) {
+    /* renamed from: E */
+    public final String m19725E(int i) {
         if (i == 0) {
             return "";
         }
-        int i2 = this.b;
+        int i2 = this.f13719b;
         int i3 = (i2 + i) - 1;
-        String j = it5.j(this.a, i2, (i3 >= this.c || this.a[i3] != 0) ? i : i - 1);
-        this.b += i;
-        return j;
+        String m19387j = it5.m19387j(this.f13718a, i2, (i3 >= this.f13720c || this.f13718a[i3] != 0) ? i : i - 1);
+        this.f13719b += i;
+        return m19387j;
     }
 
-    public final String F(int i, Charset charset) {
-        byte[] bArr = this.a;
-        int i2 = this.b;
+    /* renamed from: F */
+    public final String m19724F(int i, Charset charset) {
+        byte[] bArr = this.f13718a;
+        int i2 = this.f13719b;
         String str = new String(bArr, i2, i, charset);
-        this.b = i2 + i;
+        this.f13719b = i2 + i;
         return str;
     }
 
-    public final short G() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: G */
+    public final short m19723G() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
-        this.b = i2 + 1;
+        this.f13719b = i2 + 1;
         return (short) ((bArr[i2] & 255) | ((b & 255) << 8));
     }
 
-    public final void H(int i) {
-        byte[] bArr = this.a;
+    /* renamed from: H */
+    public final void m19722H(int i) {
+        byte[] bArr = this.f13718a;
         if (i > bArr.length) {
-            this.a = Arrays.copyOf(bArr, i);
+            this.f13718a = Arrays.copyOf(bArr, i);
         }
     }
 
-    public final void a(cj5 cj5Var, int i) {
-        b(cj5Var.a, 0, i);
-        cj5Var.h(0);
+    /* renamed from: a */
+    public final void m19721a(cj5 cj5Var, int i) {
+        m19720b(cj5Var.f5841a, 0, i);
+        cj5Var.m25324h(0);
     }
 
-    public final void b(byte[] bArr, int i, int i2) {
-        System.arraycopy(this.a, this.b, bArr, i, i2);
-        this.b += i2;
+    /* renamed from: b */
+    public final void m19720b(byte[] bArr, int i, int i2) {
+        System.arraycopy(this.f13718a, this.f13719b, bArr, i, i2);
+        this.f13719b += i2;
     }
 
-    public final void c(int i) {
-        byte[] bArr = this.a;
+    /* renamed from: c */
+    public final void m19719c(int i) {
+        byte[] bArr = this.f13718a;
         if (bArr.length < i) {
             bArr = new byte[i];
         }
-        d(bArr, i);
+        m19718d(bArr, i);
     }
 
-    public final void d(byte[] bArr, int i) {
-        this.a = bArr;
-        this.c = i;
-        this.b = 0;
+    /* renamed from: d */
+    public final void m19718d(byte[] bArr, int i) {
+        this.f13718a = bArr;
+        this.f13720c = i;
+        this.f13719b = 0;
     }
 
-    public final void e(int i) {
+    /* renamed from: e */
+    public final void m19717e(int i) {
         boolean z = false;
-        if (i >= 0 && i <= this.a.length) {
+        if (i >= 0 && i <= this.f13718a.length) {
             z = true;
         }
-        uo4.d(z);
-        this.c = i;
+        uo4.m7874d(z);
+        this.f13720c = i;
     }
 
-    public final void f(int i) {
+    /* renamed from: f */
+    public final void m19716f(int i) {
         boolean z = false;
-        if (i >= 0 && i <= this.c) {
+        if (i >= 0 && i <= this.f13720c) {
             z = true;
         }
-        uo4.d(z);
-        this.b = i;
+        uo4.m7874d(z);
+        this.f13719b = i;
     }
 
-    public final void g(int i) {
-        f(this.b + i);
+    /* renamed from: g */
+    public final void m19715g(int i) {
+        m19716f(this.f13719b + i);
     }
 
-    public final byte[] h() {
-        return this.a;
+    /* renamed from: h */
+    public final byte[] m19714h() {
+        return this.f13718a;
     }
 
-    public final int i() {
-        return this.c - this.b;
+    /* renamed from: i */
+    public final int m19713i() {
+        return this.f13720c - this.f13719b;
     }
 
-    public final int j() {
-        return this.a.length;
+    /* renamed from: j */
+    public final int m19712j() {
+        return this.f13718a.length;
     }
 
-    public final int k() {
-        return this.b;
+    /* renamed from: k */
+    public final int m19711k() {
+        return this.f13719b;
     }
 
-    public final int l() {
-        return this.c;
+    /* renamed from: l */
+    public final int m19710l() {
+        return this.f13720c;
     }
 
-    public final int m() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: m */
+    public final int m19709m() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
         int i4 = i3 + 1;
-        this.b = i4;
+        this.f13719b = i4;
         byte b3 = bArr[i3];
-        this.b = i4 + 1;
+        this.f13719b = i4 + 1;
         return (bArr[i4] & 255) | ((b & 255) << 24) | ((b2 & 255) << 16) | ((b3 & 255) << 8);
     }
 
-    public final int n() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: n */
+    public final int m19708n() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
-        this.b = i3 + 1;
+        this.f13719b = i3 + 1;
         return (bArr[i3] & 255) | (((b & 255) << 24) >> 8) | ((b2 & 255) << 8);
     }
 
-    public final int o() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: o */
+    public final int m19707o() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
         int i4 = i3 + 1;
-        this.b = i4;
+        this.f13719b = i4;
         byte b3 = bArr[i3];
-        this.b = i4 + 1;
+        this.f13719b = i4 + 1;
         return ((bArr[i4] & 255) << 24) | (b & 255) | ((b2 & 255) << 8) | ((b3 & 255) << 16);
     }
 
-    public final int p() {
-        int o = o();
-        if (o >= 0) {
-            return o;
+    /* renamed from: p */
+    public final int m19706p() {
+        int m19707o = m19707o();
+        if (m19707o >= 0) {
+            return m19707o;
         }
-        throw new IllegalStateException("Top bit not zero: " + o);
+        throw new IllegalStateException("Top bit not zero: " + m19707o);
     }
 
-    public final int q() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: q */
+    public final int m19705q() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
-        this.b = i2 + 1;
+        this.f13719b = i2 + 1;
         return ((bArr[i2] & 255) << 8) | (b & 255);
     }
 
-    public final int r() {
-        return (s() << 21) | (s() << 14) | (s() << 7) | s();
+    /* renamed from: r */
+    public final int m19704r() {
+        return (m19703s() << 21) | (m19703s() << 14) | (m19703s() << 7) | m19703s();
     }
 
-    public final int s() {
-        byte[] bArr = this.a;
-        int i = this.b;
-        this.b = i + 1;
+    /* renamed from: s */
+    public final int m19703s() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
+        this.f13719b = i + 1;
         return bArr[i] & 255;
     }
 
-    public final int t() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: t */
+    public final int m19702t() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
-        this.b = i3 + 2;
+        this.f13719b = i3 + 2;
         return (b2 & 255) | ((b & 255) << 8);
     }
 
-    public final int u() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: u */
+    public final int m19701u() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
-        this.b = i3 + 1;
+        this.f13719b = i3 + 1;
         return (bArr[i3] & 255) | ((b & 255) << 16) | ((b2 & 255) << 8);
     }
 
-    public final int v() {
-        int m = m();
-        if (m >= 0) {
-            return m;
+    /* renamed from: v */
+    public final int m19700v() {
+        int m19709m = m19709m();
+        if (m19709m >= 0) {
+            return m19709m;
         }
-        throw new IllegalStateException("Top bit not zero: " + m);
+        throw new IllegalStateException("Top bit not zero: " + m19709m);
     }
 
-    public final int w() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: w */
+    public final int m19699w() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
-        this.b = i2 + 1;
+        this.f13719b = i2 + 1;
         return (bArr[i2] & 255) | ((b & 255) << 8);
     }
 
-    public final long x() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: x */
+    public final long m19698x() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
         int i4 = i3 + 1;
-        this.b = i4;
+        this.f13719b = i4;
         byte b3 = bArr[i3];
         int i5 = i4 + 1;
-        this.b = i5;
+        this.f13719b = i5;
         byte b4 = bArr[i4];
         int i6 = i5 + 1;
-        this.b = i6;
+        this.f13719b = i6;
         byte b5 = bArr[i5];
         int i7 = i6 + 1;
-        this.b = i7;
+        this.f13719b = i7;
         byte b6 = bArr[i6];
         int i8 = i7 + 1;
-        this.b = i8;
+        this.f13719b = i8;
         byte b7 = bArr[i7];
-        this.b = i8 + 1;
+        this.f13719b = i8 + 1;
         return ((b2 & 255) << 8) | (b & 255) | ((b3 & 255) << 16) | ((b4 & 255) << 24) | ((b5 & 255) << 32) | ((b6 & 255) << 40) | ((b7 & 255) << 48) | ((bArr[i8] & 255) << 56);
     }
 
-    public final long y() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: y */
+    public final long m19697y() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
         int i4 = i3 + 1;
-        this.b = i4;
+        this.f13719b = i4;
         byte b3 = bArr[i3];
-        this.b = i4 + 1;
+        this.f13719b = i4 + 1;
         return ((b2 & 255) << 8) | (b & 255) | ((b3 & 255) << 16) | ((bArr[i4] & 255) << 24);
     }
 
-    public final long z() {
-        byte[] bArr = this.a;
-        int i = this.b;
+    /* renamed from: z */
+    public final long m19696z() {
+        byte[] bArr = this.f13718a;
+        int i = this.f13719b;
         int i2 = i + 1;
-        this.b = i2;
+        this.f13719b = i2;
         byte b = bArr[i];
         int i3 = i2 + 1;
-        this.b = i3;
+        this.f13719b = i3;
         byte b2 = bArr[i2];
         int i4 = i3 + 1;
-        this.b = i4;
+        this.f13719b = i4;
         byte b3 = bArr[i3];
         int i5 = i4 + 1;
-        this.b = i5;
+        this.f13719b = i5;
         byte b4 = bArr[i4];
         int i6 = i5 + 1;
-        this.b = i6;
+        this.f13719b = i6;
         byte b5 = bArr[i5];
         int i7 = i6 + 1;
-        this.b = i7;
+        this.f13719b = i7;
         byte b6 = bArr[i6];
         int i8 = i7 + 1;
-        this.b = i8;
+        this.f13719b = i8;
         byte b7 = bArr[i7];
-        this.b = i8 + 1;
+        this.f13719b = i8 + 1;
         return ((b2 & 255) << 48) | ((b & 255) << 56) | ((b3 & 255) << 40) | ((b4 & 255) << 32) | ((b5 & 255) << 24) | ((b6 & 255) << 16) | ((b7 & 255) << 8) | (bArr[i8] & 255);
     }
 }

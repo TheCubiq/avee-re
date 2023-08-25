@@ -11,12 +11,15 @@ import android.graphics.drawable.Drawable;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class md1 {
-    public static ThreadLocal a = new ThreadLocal();
 
-    public static Bitmap a(int i, int i2, int i3, int i4, Bitmap bitmap) {
+    /* renamed from: a */
+    public static ThreadLocal f18803a = new ThreadLocal();
+
+    /* renamed from: a */
+    public static Bitmap m16085a(int i, int i2, int i3, int i4, Bitmap bitmap) {
         Bitmap createBitmap;
-        int i5 = !br1.b(i) ? i + 1 : i;
-        int i6 = !br1.b(i2) ? i2 + 1 : i2;
+        int i5 = !br1.m25907b(i) ? i + 1 : i;
+        int i6 = !br1.m25907b(i2) ? i2 + 1 : i2;
         if (bitmap != null && bitmap.getWidth() == i5 && bitmap.getHeight() == i6) {
             createBitmap = bitmap;
         } else {
@@ -28,15 +31,15 @@ public class md1 {
         byte[] bArr = new byte[i5 * i6 * 4];
         int i7 = i5 / 2;
         int i8 = i6 / 2;
-        float l = bs1.l(i7, i8);
+        float m25851l = bs1.m25851l(i7, i8);
         float[] fArr = new float[4];
         float[] fArr2 = new float[4];
-        f80.q(fArr, i3);
-        f80.q(fArr2, i4);
+        f80.m22857q(fArr, i3);
+        f80.m22857q(fArr2, i4);
         float[] fArr3 = {0.0f, fArr[1], fArr[2], fArr[3]};
         for (int i9 = 0; i9 < i6; i9++) {
             for (int i10 = 0; i10 < i5; i10++) {
-                float min = Math.min(1.0f, bs1.l(i7 - i10, i8 - i9) / l);
+                float min = Math.min(1.0f, bs1.m25851l(i7 - i10, i8 - i9) / m25851l);
                 float f = min * min;
                 float f2 = 1.0f - f;
                 if (Math.abs(fArr[0] - fArr2[0]) > 180.0f) {
@@ -46,24 +49,27 @@ public class md1 {
                     fArr2[0] = fArr2[0] + 360.0f;
                 }
                 fArr3[0] = (fArr[0] * f2) + (fArr2[0] * f);
-                createBitmap.setPixel(i10, i9, f80.m(fArr3));
+                createBitmap.setPixel(i10, i9, f80.m22861m(fArr3));
             }
         }
         return createBitmap;
     }
 
-    public static void b(Paint paint, float f, float f2, String str, int i) {
+    /* renamed from: b */
+    public static void m16084b(Paint paint, float f, float f2, String str, int i) {
         paint.setTextSize(48.0f);
         Rect rect = new Rect();
         paint.getTextBounds(str, 0, str.length(), rect);
         paint.setTextSize(Math.min((f * 48.0f) / rect.width(), (f2 * 48.0f) / (rect.height() * i)));
     }
 
-    public static Bitmap c(int i, int i2, String str, int i3, int i4, int i5, Drawable drawable) {
-        return d(Bitmap.createBitmap(i, i2, Bitmap.Config.ARGB_8888), i, i2, str, i3, i4, i5, drawable, null);
+    /* renamed from: c */
+    public static Bitmap m16083c(int i, int i2, String str, int i3, int i4, int i5, Drawable drawable) {
+        return m16082d(Bitmap.createBitmap(i, i2, Bitmap.Config.ARGB_8888), i, i2, str, i3, i4, i5, drawable, null);
     }
 
-    public static Bitmap d(Bitmap bitmap, int i, int i2, String str, int i3, int i4, int i5, Drawable drawable, Bitmap bitmap2) {
+    /* renamed from: d */
+    public static Bitmap m16082d(Bitmap bitmap, int i, int i2, String str, int i3, int i4, int i5, Drawable drawable, Bitmap bitmap2) {
         ArrayList<String> arrayList = new ArrayList();
         String[] split = str.split("\\s+");
         int i6 = 0;
@@ -113,18 +119,18 @@ public class md1 {
         paint.setAntiAlias(true);
         int min = Math.min(i, i2);
         float f = min - (min / 11);
-        b(paint, (1.0f - Math.max(0.0f, Math.min((arrayList.size() - 1) * 0.04f, 0.4f))) * f, f * 0.9f, str4, arrayList.size());
+        m16084b(paint, (1.0f - Math.max(0.0f, Math.min((arrayList.size() - 1) * 0.04f, 0.4f))) * f, f * 0.9f, str4, arrayList.size());
         Canvas canvas = new Canvas(bitmap);
         canvas.drawColor(0, PorterDuff.Mode.CLEAR);
-        Bitmap a2 = a(i / 8, i2 / 8, i4, i5, (Bitmap) a.get());
-        if (a2 != null) {
+        Bitmap m16085a = m16085a(i / 8, i2 / 8, i4, i5, (Bitmap) f18803a.get());
+        if (m16085a != null) {
             Paint paint2 = new Paint();
             paint2.setAlpha(Color.alpha(i4));
             paint2.setAntiAlias(true);
             paint2.setFilterBitmap(true);
-            canvas.drawBitmap(a2, (Rect) null, new RectF(0.0f, 0.0f, i, i2), paint2);
+            canvas.drawBitmap(m16085a, (Rect) null, new RectF(0.0f, 0.0f, i, i2), paint2);
         }
-        a.set(a2);
+        f18803a.set(m16085a);
         float f2 = paint.getFontMetrics().leading;
         float f3 = -(paint.descent() + paint.ascent());
         float f4 = i * 0.5f;
@@ -136,7 +142,8 @@ public class md1 {
         return bitmap;
     }
 
-    public static float e(char c) {
+    /* renamed from: e */
+    public static float m16081e(char c) {
         char upperCase = Character.toUpperCase(c);
         if ((upperCase >= 'A') && (upperCase <= 'Z')) {
             return (upperCase - 'A') / 26.0f;

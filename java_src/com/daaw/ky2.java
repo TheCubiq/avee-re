@@ -14,14 +14,23 @@ import java.util.Map;
 import java.util.WeakHashMap;
 /* loaded from: classes.dex */
 public final class ky2 extends Fragment implements pj0 {
-    public static final WeakHashMap s = new WeakHashMap();
-    public final Map p = Collections.synchronizedMap(new g6());
-    public int q = 0;
-    public Bundle r;
 
-    public static ky2 d(Activity activity) {
+    /* renamed from: s */
+    public static final WeakHashMap f16845s = new WeakHashMap();
+
+    /* renamed from: p */
+    public final Map f16846p = Collections.synchronizedMap(new C1370g6());
+
+    /* renamed from: q */
+    public int f16847q = 0;
+
+    /* renamed from: r */
+    public Bundle f16848r;
+
+    /* renamed from: d */
+    public static ky2 m17348d(Activity activity) {
         ky2 ky2Var;
-        WeakHashMap weakHashMap = s;
+        WeakHashMap weakHashMap = f16845s;
         WeakReference weakReference = (WeakReference) weakHashMap.get(activity);
         if (weakReference == null || (ky2Var = (ky2) weakReference.get()) == null) {
             try {
@@ -40,12 +49,13 @@ public final class ky2 extends Fragment implements pj0 {
     }
 
     @Override // com.daaw.pj0
-    public final void b(String str, LifecycleCallback lifecycleCallback) {
-        if (this.p.containsKey(str)) {
+    /* renamed from: b */
+    public final void mo13333b(String str, LifecycleCallback lifecycleCallback) {
+        if (this.f16846p.containsKey(str)) {
             throw new IllegalArgumentException("LifecycleCallback with tag " + str + " already added to this fragment.");
         }
-        this.p.put(str, lifecycleCallback);
-        if (this.q > 0) {
+        this.f16846p.put(str, lifecycleCallback);
+        if (this.f16847q > 0) {
             new a38(Looper.getMainLooper()).post(new l32(this, lifecycleCallback, str));
         }
     }
@@ -53,54 +63,56 @@ public final class ky2 extends Fragment implements pj0 {
     @Override // android.app.Fragment
     public final void dump(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         super.dump(str, fileDescriptor, printWriter, strArr);
-        for (LifecycleCallback lifecycleCallback : this.p.values()) {
-            lifecycleCallback.a(str, fileDescriptor, printWriter, strArr);
+        for (LifecycleCallback lifecycleCallback : this.f16846p.values()) {
+            lifecycleCallback.m1183a(str, fileDescriptor, printWriter, strArr);
         }
     }
 
     @Override // com.daaw.pj0
-    public final <T extends LifecycleCallback> T e(String str, Class<T> cls) {
-        return cls.cast(this.p.get(str));
+    /* renamed from: e */
+    public final <T extends LifecycleCallback> T mo13332e(String str, Class<T> cls) {
+        return cls.cast(this.f16846p.get(str));
     }
 
     @Override // com.daaw.pj0
-    public final Activity f() {
+    /* renamed from: f */
+    public final Activity mo13331f() {
         return getActivity();
     }
 
     @Override // android.app.Fragment
     public final void onActivityResult(int i, int i2, Intent intent) {
         super.onActivityResult(i, i2, intent);
-        for (LifecycleCallback lifecycleCallback : this.p.values()) {
-            lifecycleCallback.e(i, i2, intent);
+        for (LifecycleCallback lifecycleCallback : this.f16846p.values()) {
+            lifecycleCallback.mo1179e(i, i2, intent);
         }
     }
 
     @Override // android.app.Fragment
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.q = 1;
-        this.r = bundle;
-        for (Map.Entry entry : this.p.entrySet()) {
-            ((LifecycleCallback) entry.getValue()).f(bundle != null ? bundle.getBundle((String) entry.getKey()) : null);
+        this.f16847q = 1;
+        this.f16848r = bundle;
+        for (Map.Entry entry : this.f16846p.entrySet()) {
+            ((LifecycleCallback) entry.getValue()).mo1178f(bundle != null ? bundle.getBundle((String) entry.getKey()) : null);
         }
     }
 
     @Override // android.app.Fragment
     public final void onDestroy() {
         super.onDestroy();
-        this.q = 5;
-        for (LifecycleCallback lifecycleCallback : this.p.values()) {
-            lifecycleCallback.g();
+        this.f16847q = 5;
+        for (LifecycleCallback lifecycleCallback : this.f16846p.values()) {
+            lifecycleCallback.m1177g();
         }
     }
 
     @Override // android.app.Fragment
     public final void onResume() {
         super.onResume();
-        this.q = 3;
-        for (LifecycleCallback lifecycleCallback : this.p.values()) {
-            lifecycleCallback.h();
+        this.f16847q = 3;
+        for (LifecycleCallback lifecycleCallback : this.f16846p.values()) {
+            lifecycleCallback.mo1176h();
         }
     }
 
@@ -110,9 +122,9 @@ public final class ky2 extends Fragment implements pj0 {
         if (bundle == null) {
             return;
         }
-        for (Map.Entry entry : this.p.entrySet()) {
+        for (Map.Entry entry : this.f16846p.entrySet()) {
             Bundle bundle2 = new Bundle();
-            ((LifecycleCallback) entry.getValue()).i(bundle2);
+            ((LifecycleCallback) entry.getValue()).mo1175i(bundle2);
             bundle.putBundle((String) entry.getKey(), bundle2);
         }
     }
@@ -120,18 +132,18 @@ public final class ky2 extends Fragment implements pj0 {
     @Override // android.app.Fragment
     public final void onStart() {
         super.onStart();
-        this.q = 2;
-        for (LifecycleCallback lifecycleCallback : this.p.values()) {
-            lifecycleCallback.j();
+        this.f16847q = 2;
+        for (LifecycleCallback lifecycleCallback : this.f16846p.values()) {
+            lifecycleCallback.mo1174j();
         }
     }
 
     @Override // android.app.Fragment
     public final void onStop() {
         super.onStop();
-        this.q = 4;
-        for (LifecycleCallback lifecycleCallback : this.p.values()) {
-            lifecycleCallback.k();
+        this.f16847q = 4;
+        for (LifecycleCallback lifecycleCallback : this.f16846p.values()) {
+            lifecycleCallback.mo1173k();
         }
     }
 }

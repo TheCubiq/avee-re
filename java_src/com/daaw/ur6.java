@@ -9,17 +9,19 @@ public final class ur6 extends qr6 {
     }
 
     @Override // com.daaw.rr6
-    public final void a(String str) {
-        c(str);
+    /* renamed from: a */
+    public final void mo6835a(String str) {
+        m7772c(str);
         super.onPostExecute(str);
     }
 
-    public final void c(String str) {
-        lq6 a = lq6.a();
-        if (a != null) {
-            for (xp6 xp6Var : a.c()) {
-                if (this.c.contains(xp6Var.h())) {
-                    xp6Var.g().d(str, this.e);
+    /* renamed from: c */
+    public final void m7772c(String str) {
+        lq6 m16667a = lq6.m16667a();
+        if (m16667a != null) {
+            for (xp6 xp6Var : m16667a.m16665c()) {
+                if (this.f24287c.contains(xp6Var.m4830h())) {
+                    xp6Var.m4831g().m4808d(str, this.f24289e);
                 }
             }
         }
@@ -27,13 +29,13 @@ public final class ur6 extends qr6 {
 
     @Override // android.os.AsyncTask
     public final /* synthetic */ Object doInBackground(Object[] objArr) {
-        return this.d.toString();
+        return this.f24288d.toString();
     }
 
     @Override // com.daaw.rr6, android.os.AsyncTask
     public final /* synthetic */ void onPostExecute(Object obj) {
         String str = (String) obj;
-        c(str);
+        m7772c(str);
         super.onPostExecute(str);
     }
 }

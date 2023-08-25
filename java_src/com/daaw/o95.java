@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class o95 implements rp4 {
-    public abstract nq4 a();
+    /* renamed from: a */
+    public abstract nq4 mo14354a();
 
-    public abstract k95 b(rm4 rm4Var, l95 l95Var);
+    /* renamed from: b */
+    public abstract k95 mo14353b(rm4 rm4Var, l95 l95Var);
 
     @Override // com.daaw.rp4
     public abstract jn4 zzb();

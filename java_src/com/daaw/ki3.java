@@ -4,20 +4,22 @@ import android.content.Context;
 import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Looper;
-import com.daaw.pa;
+import com.daaw.AbstractC2527pa;
 import com.google.android.gms.ads.internal.zzc;
 /* loaded from: classes.dex */
 public final class ki3 extends zzc {
-    public ki3(Context context, Looper looper, pa.a aVar, pa.b bVar) {
-        super(av3.a(context), looper, 166, aVar, bVar, null);
+    public ki3(Context context, Looper looper, AbstractC2527pa.InterfaceC2528a interfaceC2528a, AbstractC2527pa.InterfaceC2529b interfaceC2529b) {
+        super(av3.m26956a(context), looper, 166, interfaceC2528a, interfaceC2529b, null);
     }
 
-    public final pi3 J() {
+    /* renamed from: J */
+    public final pi3 m17717J() {
         return (pi3) super.getService();
     }
 
-    @Override // com.daaw.pa
-    public final /* synthetic */ IInterface e(IBinder iBinder) {
+    @Override // com.daaw.AbstractC2527pa
+    /* renamed from: e */
+    public final /* synthetic */ IInterface mo6177e(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -25,13 +27,15 @@ public final class ki3 extends zzc {
         return queryLocalInterface instanceof pi3 ? (pi3) queryLocalInterface : new pi3(iBinder);
     }
 
-    @Override // com.daaw.pa
-    public final String k() {
+    @Override // com.daaw.AbstractC2527pa
+    /* renamed from: k */
+    public final String mo6175k() {
         return "com.google.android.gms.ads.internal.httpcache.IHttpAssetsCacheService";
     }
 
-    @Override // com.daaw.pa
-    public final String l() {
+    @Override // com.daaw.AbstractC2527pa
+    /* renamed from: l */
+    public final String mo6174l() {
         return "com.google.android.gms.ads.service.HTTP";
     }
 }

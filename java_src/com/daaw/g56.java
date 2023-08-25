@@ -3,14 +3,17 @@ package com.daaw;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class g56 implements h76 {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f10291a;
 
     public g56(String str) {
-        this.a = str;
+        this.f10291a = str;
     }
 
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
-        cj6.c((Bundle) obj, "omid_v", this.a);
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
+        cj6.m25316c((Bundle) obj, "omid_v", this.f10291a);
     }
 }

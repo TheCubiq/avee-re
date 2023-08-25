@@ -4,14 +4,20 @@ import android.os.RemoteException;
 import com.google.android.gms.measurement.internal.zzq;
 /* loaded from: classes2.dex */
 public final class i58 implements Runnable {
-    public final /* synthetic */ zzq p;
-    public final /* synthetic */ ox3 q;
-    public final /* synthetic */ x78 r;
+
+    /* renamed from: p */
+    public final /* synthetic */ zzq f13285p;
+
+    /* renamed from: q */
+    public final /* synthetic */ ox3 f13286q;
+
+    /* renamed from: r */
+    public final /* synthetic */ x78 f13287r;
 
     public i58(x78 x78Var, zzq zzqVar, ox3 ox3Var) {
-        this.r = x78Var;
-        this.p = zzqVar;
-        this.q = ox3Var;
+        this.f13287r = x78Var;
+        this.f13285p = zzqVar;
+        this.f13286q = ox3Var;
     }
 
     @Override // java.lang.Runnable
@@ -20,30 +26,30 @@ public final class i58 implements Runnable {
         String str = null;
         try {
             try {
-                if (this.r.a.F().p().i(vb2.ANALYTICS_STORAGE)) {
-                    x78 x78Var = this.r;
-                    ua5Var = x78Var.d;
+                if (this.f13287r.f25143a.m24053F().m17174p().m25423i(vb2.ANALYTICS_STORAGE)) {
+                    x78 x78Var = this.f13287r;
+                    ua5Var = x78Var.f32173d;
                     if (ua5Var == null) {
-                        x78Var.a.i().q().a("Failed to get app instance id");
+                        x78Var.f25143a.mo3895i().m14160q().m20653a("Failed to get app instance id");
                     } else {
-                        ry0.j(this.p);
-                        str = ua5Var.w0(this.p);
+                        ry0.m10830j(this.f13285p);
+                        str = ua5Var.mo8363w0(this.f13285p);
                         if (str != null) {
-                            this.r.a.I().C(str);
-                            this.r.a.F().g.b(str);
+                            this.f13287r.f25143a.m24050I().m13719C(str);
+                            this.f13287r.f25143a.m24053F().f17005g.m20166b(str);
                         }
-                        this.r.E();
+                        this.f13287r.m5479E();
                     }
                 } else {
-                    this.r.a.i().x().a("Analytics storage consent denied; will not get app instance id");
-                    this.r.a.I().C(null);
-                    this.r.a.F().g.b(null);
+                    this.f13287r.f25143a.mo3895i().m14154x().m20653a("Analytics storage consent denied; will not get app instance id");
+                    this.f13287r.f25143a.m24050I().m13719C(null);
+                    this.f13287r.f25143a.m24053F().f17005g.m20166b(null);
                 }
             } catch (RemoteException e) {
-                this.r.a.i().q().b("Failed to get app instance id", e);
+                this.f13287r.f25143a.mo3895i().m14160q().m20652b("Failed to get app instance id", e);
             }
         } finally {
-            this.r.a.N().J(this.q, null);
+            this.f13287r.f25143a.m24045N().m24505J(this.f13286q, null);
         }
     }
 }

@@ -6,9 +6,11 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface nd3 extends IInterface {
-    void H(Bundle bundle);
+    /* renamed from: H */
+    void mo8454H(Bundle bundle);
 
-    boolean N1(Bundle bundle);
+    /* renamed from: N1 */
+    boolean mo8453N1(Bundle bundle);
 
     double zzb();
 

@@ -4,28 +4,37 @@ import android.util.Log;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public final class cg2 {
-    public static final boolean a = Log.isLoggable("Volley", 2);
-    public static final String b = cg2.class.getName();
 
-    public static void a(String str, Object... objArr) {
-        e(str, objArr);
+    /* renamed from: a */
+    public static final boolean f5792a = Log.isLoggable("Volley", 2);
+
+    /* renamed from: b */
+    public static final String f5793b = cg2.class.getName();
+
+    /* renamed from: a */
+    public static void m25392a(String str, Object... objArr) {
+        m25388e(str, objArr);
     }
 
-    public static void b(String str, Object... objArr) {
-        e(str, objArr);
+    /* renamed from: b */
+    public static void m25391b(String str, Object... objArr) {
+        m25388e(str, objArr);
     }
 
-    public static void c(Throwable th, String str, Object... objArr) {
-        e(str, objArr);
+    /* renamed from: c */
+    public static void m25390c(Throwable th, String str, Object... objArr) {
+        m25388e(str, objArr);
     }
 
-    public static void d(String str, Object... objArr) {
-        if (a) {
-            e(str, objArr);
+    /* renamed from: d */
+    public static void m25389d(String str, Object... objArr) {
+        if (f5792a) {
+            m25388e(str, objArr);
         }
     }
 
-    public static String e(String str, Object... objArr) {
+    /* renamed from: e */
+    public static String m25388e(String str, Object... objArr) {
         String str2;
         String format = String.format(Locale.US, str, objArr);
         StackTraceElement[] stackTrace = new Throwable().fillInStackTrace().getStackTrace();
@@ -34,7 +43,7 @@ public final class cg2 {
             if (i >= stackTrace.length) {
                 str2 = "<unknown>";
                 break;
-            } else if (!stackTrace[i].getClassName().equals(b)) {
+            } else if (!stackTrace[i].getClassName().equals(f5793b)) {
                 String className = stackTrace[i].getClassName();
                 String substring = className.substring(className.lastIndexOf(46) + 1);
                 str2 = substring.substring(substring.lastIndexOf(36) + 1) + "." + stackTrace[i].getMethodName();

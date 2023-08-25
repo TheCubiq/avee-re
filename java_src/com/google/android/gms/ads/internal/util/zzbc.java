@@ -20,16 +20,16 @@ public final class zzbc {
     public final boolean equals(Object obj) {
         if (obj instanceof zzbc) {
             zzbc zzbcVar = (zzbc) obj;
-            return ot0.a(this.zza, zzbcVar.zza) && this.zzb == zzbcVar.zzb && this.zzc == zzbcVar.zzc && this.zze == zzbcVar.zze && Double.compare(this.zzd, zzbcVar.zzd) == 0;
+            return ot0.m13981a(this.zza, zzbcVar.zza) && this.zzb == zzbcVar.zzb && this.zzc == zzbcVar.zzc && this.zze == zzbcVar.zze && Double.compare(this.zzd, zzbcVar.zzd) == 0;
         }
         return false;
     }
 
     public final int hashCode() {
-        return ot0.b(this.zza, Double.valueOf(this.zzb), Double.valueOf(this.zzc), Double.valueOf(this.zzd), Integer.valueOf(this.zze));
+        return ot0.m13980b(this.zza, Double.valueOf(this.zzb), Double.valueOf(this.zzc), Double.valueOf(this.zzd), Integer.valueOf(this.zze));
     }
 
     public final String toString() {
-        return ot0.c(this).a("name", this.zza).a("minBound", Double.valueOf(this.zzc)).a("maxBound", Double.valueOf(this.zzb)).a("percent", Double.valueOf(this.zzd)).a("count", Integer.valueOf(this.zze)).toString();
+        return ot0.m13979c(this).m13978a("name", this.zza).m13978a("minBound", Double.valueOf(this.zzc)).m13978a("maxBound", Double.valueOf(this.zzb)).m13978a("percent", Double.valueOf(this.zzd)).m13978a("count", Integer.valueOf(this.zze)).toString();
     }
 }

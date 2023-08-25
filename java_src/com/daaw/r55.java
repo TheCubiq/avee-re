@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class r55 implements wz7 {
-    public final p55 a;
+
+    /* renamed from: a */
+    public final p55 f24865a;
 
     public r55(p55 p55Var) {
-        this.a = p55Var;
+        this.f24865a = p55Var;
     }
 
-    public final on3 a() {
-        return this.a.b();
+    /* renamed from: a */
+    public final on3 m11731a() {
+        return this.f24865a.m13620b();
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return this.a.b();
+        return this.f24865a.m13620b();
     }
 }

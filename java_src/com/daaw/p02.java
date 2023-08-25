@@ -6,31 +6,37 @@ import android.content.Intent;
 import android.net.Uri;
 /* loaded from: classes.dex */
 public final class p02 extends BroadcastReceiver {
-    public Context a;
-    public final o02 b;
+
+    /* renamed from: a */
+    public Context f22174a;
+
+    /* renamed from: b */
+    public final o02 f22175b;
 
     public p02(o02 o02Var) {
-        this.b = o02Var;
+        this.f22175b = o02Var;
     }
 
-    public final void a(Context context) {
-        this.a = context;
+    /* renamed from: a */
+    public final void m13774a(Context context) {
+        this.f22174a = context;
     }
 
-    public final synchronized void b() {
-        Context context = this.a;
+    /* renamed from: b */
+    public final synchronized void m13773b() {
+        Context context = this.f22174a;
         if (context != null) {
             context.unregisterReceiver(this);
         }
-        this.a = null;
+        this.f22174a = null;
     }
 
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
         Uri data = intent.getData();
         if ("com.google.android.gms".equals(data != null ? data.getSchemeSpecificPart() : null)) {
-            this.b.a();
-            b();
+            this.f22175b.mo14658a();
+            m13773b();
         }
     }
 }

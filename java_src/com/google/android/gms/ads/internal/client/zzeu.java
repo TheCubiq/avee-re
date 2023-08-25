@@ -14,10 +14,13 @@ import com.google.android.gms.internal.ads.zzblz;
 import com.google.android.gms.internal.ads.zzbsl;
 /* loaded from: classes.dex */
 public final class zzeu extends zzbp {
-    public zzbh p;
 
-    public static /* bridge */ /* synthetic */ zzbh g3(zzeu zzeuVar) {
-        return zzeuVar.p;
+    /* renamed from: p */
+    public zzbh f36182p;
+
+    /* renamed from: g3 */
+    public static /* bridge */ /* synthetic */ zzbh m1394g3(zzeu zzeuVar) {
+        return zzeuVar.f36182p;
     }
 
     public final zzbn zzc() {
@@ -55,7 +58,7 @@ public final class zzeu extends zzbp {
 
     @Override // com.google.android.gms.ads.internal.client.zzbq
     public final void zzl(zzbh zzbhVar) {
-        this.p = zzbhVar;
+        this.f36182p = zzbhVar;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbq

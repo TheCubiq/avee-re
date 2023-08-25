@@ -11,8 +11,9 @@ public abstract class hq7<MessageType extends hq7<MessageType, BuilderType>, Bui
     public int zza = 0;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static void g(Iterable iterable, List list) {
-        vs7.e(iterable);
+    /* renamed from: g */
+    public static void m20483g(Iterable iterable, List list) {
+        vs7.m6816e(iterable);
         if (list instanceof ArrayList) {
             ((ArrayList) list).ensureCapacity(list.size() + iterable.size());
         }
@@ -36,12 +37,13 @@ public abstract class hq7<MessageType extends hq7<MessageType, BuilderType>, Bui
     }
 
     @Override // com.daaw.xt7
-    public final byte[] a() {
+    /* renamed from: a */
+    public final byte[] mo4516a() {
         try {
-            byte[] bArr = new byte[i()];
-            qr7 h = qr7.h(bArr);
-            e(h);
-            h.j();
+            byte[] bArr = new byte[mo4512i()];
+            qr7 m12254h = qr7.m12254h(bArr);
+            mo4513e(m12254h);
+            m12254h.m12252j();
             return bArr;
         } catch (IOException e) {
             String name = getClass().getName();
@@ -50,14 +52,15 @@ public abstract class hq7<MessageType extends hq7<MessageType, BuilderType>, Bui
     }
 
     @Override // com.daaw.xt7
-    public final yq7 d() {
+    /* renamed from: d */
+    public final yq7 mo4514d() {
         try {
-            int i = i();
-            yq7 yq7Var = yq7.q;
-            byte[] bArr = new byte[i];
-            qr7 h = qr7.h(bArr);
-            e(h);
-            h.j();
+            int mo4512i = mo4512i();
+            yq7 yq7Var = yq7.f33966q;
+            byte[] bArr = new byte[mo4512i];
+            qr7 m12254h = qr7.m12254h(bArr);
+            mo4513e(m12254h);
+            m12254h.m12252j();
             return new uq7(bArr);
         } catch (IOException e) {
             String name = getClass().getName();
@@ -65,13 +68,15 @@ public abstract class hq7<MessageType extends hq7<MessageType, BuilderType>, Bui
         }
     }
 
-    public int f(cv7 cv7Var) {
+    /* renamed from: f */
+    public int mo16589f(cv7 cv7Var) {
         throw null;
     }
 
-    public final void h(OutputStream outputStream) {
-        qr7 i = qr7.i(outputStream, qr7.c(i()));
-        e(i);
-        i.m();
+    /* renamed from: h */
+    public final void m20482h(OutputStream outputStream) {
+        qr7 m12253i = qr7.m12253i(outputStream, qr7.m12259c(mo4512i()));
+        mo4513e(m12253i);
+        m12253i.mo12249m();
     }
 }

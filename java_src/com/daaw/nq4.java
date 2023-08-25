@@ -9,11 +9,12 @@ public final class nq4 extends kw4 implements oq4 {
     }
 
     @Override // com.daaw.oq4
-    public final void b(final zze zzeVar) {
-        B0(new jw4() { // from class: com.daaw.mq4
+    /* renamed from: b */
+    public final void mo2194b(final zze zzeVar) {
+        m17378B0(new jw4() { // from class: com.daaw.mq4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((oq4) obj).b(zze.this);
+                ((oq4) obj).mo2194b(zze.this);
             }
         });
     }

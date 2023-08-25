@@ -5,19 +5,24 @@ import android.os.IInterface;
 import android.os.Parcel;
 /* loaded from: classes2.dex */
 public class z22 implements IInterface {
-    public final IBinder p;
-    public final String q;
+
+    /* renamed from: p */
+    public final IBinder f34361p;
+
+    /* renamed from: q */
+    public final String f34362q;
 
     public z22(IBinder iBinder, String str) {
-        this.p = iBinder;
-        this.q = str;
+        this.f34361p = iBinder;
+        this.f34362q = str;
     }
 
-    public final Parcel D(int i, Parcel parcel) {
+    /* renamed from: D */
+    public final Parcel m2966D(int i, Parcel parcel) {
         Parcel obtain = Parcel.obtain();
         try {
             try {
-                this.p.transact(i, parcel, obtain, 0);
+                this.f34361p.transact(i, parcel, obtain, 0);
                 obtain.readException();
                 return obtain;
             } catch (RuntimeException e) {
@@ -29,14 +34,15 @@ public class z22 implements IInterface {
         }
     }
 
-    public final Parcel I() {
+    /* renamed from: I */
+    public final Parcel m2965I() {
         Parcel obtain = Parcel.obtain();
-        obtain.writeInterfaceToken(this.q);
+        obtain.writeInterfaceToken(this.f34362q);
         return obtain;
     }
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.p;
+        return this.f34361p;
     }
 }

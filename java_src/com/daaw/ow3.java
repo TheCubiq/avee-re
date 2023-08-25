@@ -6,18 +6,20 @@ import com.google.android.gms.ads.mediation.MediationRewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardItem;
 /* loaded from: classes.dex */
 public final class ow3 implements MediationRewardedAdCallback {
-    public final gn3 a;
+
+    /* renamed from: a */
+    public final gn3 f22042a;
 
     public ow3(gn3 gn3Var) {
-        this.a = gn3Var;
+        this.f22042a = gn3Var;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void onAdClosed() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdClosed.");
         try {
-            this.a.zzf();
+            this.f22042a.zzf();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -25,14 +27,14 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onAdFailedToShow(AdError adError) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdFailedToShow.");
         int code = adError.getCode();
         String message = adError.getMessage();
         String domain = adError.getDomain();
         k04.zzj("Mediation ad failed to show: Error Code = " + code + ". Error Message = " + message + " Error Domain = " + domain);
         try {
-            this.a.A(adError.zza());
+            this.f22042a.mo3338A(adError.zza());
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -40,11 +42,11 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onAdFailedToShow(String str) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdFailedToShow.");
         k04.zzj("Mediation ad failed to show: ".concat(String.valueOf(str)));
         try {
-            this.a.n(str);
+            this.f22042a.mo3327n(str);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -52,10 +54,10 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void onAdOpened() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdOpened.");
         try {
-            this.a.zzp();
+            this.f22042a.zzp();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -63,10 +65,10 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onUserEarnedReward(RewardItem rewardItem) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onUserEarnedReward.");
         try {
-            this.a.S0(new pw3(rewardItem));
+            this.f22042a.mo3336S0(new pw3(rewardItem));
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -74,10 +76,10 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onVideoComplete() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onVideoComplete.");
         try {
-            this.a.b();
+            this.f22042a.mo3334b();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -85,10 +87,10 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationRewardedAdCallback
     public final void onVideoStart() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onVideoStart.");
         try {
-            this.a.e();
+            this.f22042a.mo3332e();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -96,10 +98,10 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void reportAdClicked() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called reportAdClicked.");
         try {
-            this.a.zze();
+            this.f22042a.zze();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -107,10 +109,10 @@ public final class ow3 implements MediationRewardedAdCallback {
 
     @Override // com.google.android.gms.ads.mediation.MediationAdCallback
     public final void reportAdImpression() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called reportAdImpression.");
         try {
-            this.a.zzm();
+            this.f22042a.zzm();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }

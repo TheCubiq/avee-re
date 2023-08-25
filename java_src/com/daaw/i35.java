@@ -7,15 +7,21 @@ import com.google.android.gms.ads.internal.client.zzdt;
 import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public final class i35 extends zzdp {
-    public final Object p = new Object();
+
+    /* renamed from: p */
+    public final Object f13221p = new Object();
     @Nullable
-    public final zzdq q;
+
+    /* renamed from: q */
+    public final zzdq f13222q;
     @Nullable
-    public final sn3 r;
+
+    /* renamed from: r */
+    public final sn3 f13223r;
 
     public i35(@Nullable zzdq zzdqVar, @Nullable sn3 sn3Var) {
-        this.q = zzdqVar;
-        this.r = sn3Var;
+        this.f13222q = zzdqVar;
+        this.f13223r = sn3Var;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdq
@@ -25,7 +31,7 @@ public final class i35 extends zzdp {
 
     @Override // com.google.android.gms.ads.internal.client.zzdq
     public final float zzf() {
-        sn3 sn3Var = this.r;
+        sn3 sn3Var = this.f13223r;
         if (sn3Var != null) {
             return sn3Var.zzg();
         }
@@ -34,7 +40,7 @@ public final class i35 extends zzdp {
 
     @Override // com.google.android.gms.ads.internal.client.zzdq
     public final float zzg() {
-        sn3 sn3Var = this.r;
+        sn3 sn3Var = this.f13223r;
         if (sn3Var != null) {
             return sn3Var.zzh();
         }
@@ -49,8 +55,8 @@ public final class i35 extends zzdp {
     @Override // com.google.android.gms.ads.internal.client.zzdq
     @Nullable
     public final zzdt zzi() {
-        synchronized (this.p) {
-            zzdq zzdqVar = this.q;
+        synchronized (this.f13221p) {
+            zzdq zzdqVar = this.f13222q;
             if (zzdqVar != null) {
                 return zzdqVar.zzi();
             }
@@ -75,8 +81,8 @@ public final class i35 extends zzdp {
 
     @Override // com.google.android.gms.ads.internal.client.zzdq
     public final void zzm(@Nullable zzdt zzdtVar) {
-        synchronized (this.p) {
-            zzdq zzdqVar = this.q;
+        synchronized (this.f13221p) {
+            zzdq zzdqVar = this.f13222q;
             if (zzdqVar != null) {
                 zzdqVar.zzm(zzdtVar);
             }

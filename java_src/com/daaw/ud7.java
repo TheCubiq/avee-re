@@ -1,45 +1,53 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public abstract class ud7 extends rc7 {
-    public boolean b;
+
+    /* renamed from: b */
+    public boolean f28990b;
 
     public ud7(dr6 dr6Var) {
         super(dr6Var);
-        this.a.g();
+        this.f25143a.m24037g();
     }
 
-    public void g() {
+    /* renamed from: g */
+    public void mo8311g() {
     }
 
-    public abstract boolean h();
+    /* renamed from: h */
+    public abstract boolean mo6990h();
 
-    public final void j() {
-        if (!m()) {
+    /* renamed from: j */
+    public final void m8310j() {
+        if (!m8307m()) {
             throw new IllegalStateException("Not initialized");
         }
     }
 
-    public final void k() {
-        if (this.b) {
+    /* renamed from: k */
+    public final void m8309k() {
+        if (this.f28990b) {
             throw new IllegalStateException("Can't initialize twice");
         }
-        if (h()) {
+        if (mo6990h()) {
             return;
         }
-        this.a.e();
-        this.b = true;
+        this.f25143a.m24039e();
+        this.f28990b = true;
     }
 
-    public final void l() {
-        if (this.b) {
+    /* renamed from: l */
+    public final void m8308l() {
+        if (this.f28990b) {
             throw new IllegalStateException("Can't initialize twice");
         }
-        g();
-        this.a.e();
-        this.b = true;
+        mo8311g();
+        this.f25143a.m24039e();
+        this.f28990b = true;
     }
 
-    public final boolean m() {
-        return this.b;
+    /* renamed from: m */
+    public final boolean m8307m() {
+        return this.f28990b;
     }
 }

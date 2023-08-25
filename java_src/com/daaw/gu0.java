@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface gu0 {
-    void c(Exception exc);
+    /* renamed from: c */
+    void mo5820c(Exception exc);
 }

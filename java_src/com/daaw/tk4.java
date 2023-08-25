@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes2.dex */
 public abstract class tk4 extends c38 implements oe5 {
-    public static oe5 D(IBinder iBinder) {
+    /* renamed from: D */
+    public static oe5 m9045D(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

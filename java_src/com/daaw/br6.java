@@ -10,32 +10,41 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class br6 {
-    public static WindowManager a;
-    public static final String[] b = {"x", "y", "width", "height"};
-    public static float c = Resources.getSystem().getDisplayMetrics().density;
 
-    public static JSONObject a(int i, int i2, int i3, int i4) {
+    /* renamed from: a */
+    public static WindowManager f5078a;
+
+    /* renamed from: b */
+    public static final String[] f5079b = {"x", "y", "width", "height"};
+
+    /* renamed from: c */
+    public static float f5080c = Resources.getSystem().getDisplayMetrics().density;
+
+    /* renamed from: a */
+    public static JSONObject m25882a(int i, int i2, int i3, int i4) {
         JSONObject jSONObject = new JSONObject();
         try {
-            jSONObject.put("x", i / c);
-            jSONObject.put("y", i2 / c);
-            jSONObject.put("width", i3 / c);
-            jSONObject.put("height", i4 / c);
+            jSONObject.put("x", i / f5080c);
+            jSONObject.put("y", i2 / f5080c);
+            jSONObject.put("width", i3 / f5080c);
+            jSONObject.put("height", i4 / f5080c);
         } catch (JSONException e) {
-            cr6.a("Error with creating viewStateObject", e);
+            cr6.m25051a("Error with creating viewStateObject", e);
         }
         return jSONObject;
     }
 
-    public static void b(JSONObject jSONObject, String str) {
+    /* renamed from: b */
+    public static void m25881b(JSONObject jSONObject, String str) {
         try {
             jSONObject.put("adSessionId", str);
         } catch (JSONException e) {
-            cr6.a("Error with setting ad session id", e);
+            cr6.m25051a("Error with setting ad session id", e);
         }
     }
 
-    public static void c(JSONObject jSONObject, JSONObject jSONObject2) {
+    /* renamed from: c */
+    public static void m25880c(JSONObject jSONObject, JSONObject jSONObject2) {
         try {
             JSONArray optJSONArray = jSONObject.optJSONArray("childViews");
             if (optJSONArray == null) {
@@ -48,62 +57,68 @@ public final class br6 {
         }
     }
 
-    public static void d(JSONObject jSONObject, hr6 hr6Var) {
-        nq6 a2 = hr6Var.a();
+    /* renamed from: d */
+    public static void m25879d(JSONObject jSONObject, hr6 hr6Var) {
+        nq6 m20460a = hr6Var.m20460a();
         JSONArray jSONArray = new JSONArray();
-        ArrayList b2 = hr6Var.b();
-        int size = b2.size();
+        ArrayList m20459b = hr6Var.m20459b();
+        int size = m20459b.size();
         for (int i = 0; i < size; i++) {
-            jSONArray.put((String) b2.get(i));
+            jSONArray.put((String) m20459b.get(i));
         }
         try {
             jSONObject.put("isFriendlyObstructionFor", jSONArray);
-            jSONObject.put("friendlyObstructionClass", a2.d());
-            jSONObject.put("friendlyObstructionPurpose", a2.a());
-            jSONObject.put("friendlyObstructionReason", a2.c());
+            jSONObject.put("friendlyObstructionClass", m20460a.m14872d());
+            jSONObject.put("friendlyObstructionPurpose", m20460a.m14875a());
+            jSONObject.put("friendlyObstructionReason", m20460a.m14873c());
         } catch (JSONException e) {
-            cr6.a("Error with setting friendly obstruction", e);
+            cr6.m25051a("Error with setting friendly obstruction", e);
         }
     }
 
-    public static void e(JSONObject jSONObject, Boolean bool) {
+    /* renamed from: e */
+    public static void m25878e(JSONObject jSONObject, Boolean bool) {
         try {
             jSONObject.put("hasWindowFocus", bool);
         } catch (JSONException e) {
-            cr6.a("Error with setting not visible reason", e);
+            cr6.m25051a("Error with setting not visible reason", e);
         }
     }
 
-    public static void f(JSONObject jSONObject, String str) {
+    /* renamed from: f */
+    public static void m25877f(JSONObject jSONObject, String str) {
         try {
             jSONObject.put("notVisibleReason", str);
         } catch (JSONException e) {
-            cr6.a("Error with setting not visible reason", e);
+            cr6.m25051a("Error with setting not visible reason", e);
         }
     }
 
-    public static void g(Context context) {
+    /* renamed from: g */
+    public static void m25876g(Context context) {
         if (context != null) {
-            c = context.getResources().getDisplayMetrics().density;
-            a = (WindowManager) context.getSystemService("window");
+            f5080c = context.getResources().getDisplayMetrics().density;
+            f5078a = (WindowManager) context.getSystemService("window");
         }
     }
 
-    public static void h(JSONObject jSONObject, String str, Object obj) {
+    /* renamed from: h */
+    public static void m25875h(JSONObject jSONObject, String str, Object obj) {
         try {
             jSONObject.put(str, obj);
         } catch (NullPointerException | JSONException e) {
-            cr6.a("JSONException during JSONObject.put for name [" + str + "]", e);
+            cr6.m25051a("JSONException during JSONObject.put for name [" + str + "]", e);
         }
     }
 
-    public static void i(JSONObject jSONObject) {
+    /* renamed from: i */
+    public static void m25874i(JSONObject jSONObject) {
         float f;
         float f2 = 0.0f;
-        if (a != null) {
+        if (f5078a != null) {
             Point point = new Point(0, 0);
-            a.getDefaultDisplay().getRealSize(point);
-            float f3 = c;
+            f5078a.getDefaultDisplay().getRealSize(point);
+            float f3 = f5080c;
             f2 = point.x / f3;
             f = point.y / f3;
         } else {
@@ -117,12 +132,13 @@ public final class br6 {
         }
     }
 
-    public static boolean j(JSONObject jSONObject, JSONObject jSONObject2) {
+    /* renamed from: j */
+    public static boolean m25873j(JSONObject jSONObject, JSONObject jSONObject2) {
         if (jSONObject == null && jSONObject2 == null) {
             return true;
         }
         if (jSONObject != null && jSONObject2 != null) {
-            String[] strArr = b;
+            String[] strArr = f5079b;
             int i = 0;
             while (true) {
                 if (i < 4) {
@@ -135,7 +151,7 @@ public final class br6 {
                     JSONArray optJSONArray = jSONObject.optJSONArray("isFriendlyObstructionFor");
                     JSONArray optJSONArray2 = jSONObject2.optJSONArray("isFriendlyObstructionFor");
                     if (optJSONArray != null || optJSONArray2 != null) {
-                        if (k(optJSONArray, optJSONArray2)) {
+                        if (m25872k(optJSONArray, optJSONArray2)) {
                             for (int i2 = 0; i2 < optJSONArray.length(); i2++) {
                                 if (!optJSONArray.optString(i2, "").equals(optJSONArray2.optString(i2, ""))) {
                                     break;
@@ -146,9 +162,9 @@ public final class br6 {
                     JSONArray optJSONArray3 = jSONObject.optJSONArray("childViews");
                     JSONArray optJSONArray4 = jSONObject2.optJSONArray("childViews");
                     if (optJSONArray3 != null || optJSONArray4 != null) {
-                        if (k(optJSONArray3, optJSONArray4)) {
+                        if (m25872k(optJSONArray3, optJSONArray4)) {
                             for (int i3 = 0; i3 < optJSONArray3.length(); i3++) {
-                                if (j(optJSONArray3.optJSONObject(i3), optJSONArray4.optJSONObject(i3))) {
+                                if (m25873j(optJSONArray3.optJSONObject(i3), optJSONArray4.optJSONObject(i3))) {
                                 }
                             }
                         }
@@ -160,7 +176,8 @@ public final class br6 {
         return false;
     }
 
-    public static boolean k(JSONArray jSONArray, JSONArray jSONArray2) {
+    /* renamed from: k */
+    public static boolean m25872k(JSONArray jSONArray, JSONArray jSONArray2) {
         if (jSONArray == null && jSONArray2 == null) {
             return true;
         }

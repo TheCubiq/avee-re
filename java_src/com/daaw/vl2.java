@@ -5,23 +5,25 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 /* loaded from: classes.dex */
 public final class vl2 extends ConnectivityManager.NetworkCallback {
-    public final /* synthetic */ wl2 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ wl2 f30298a;
 
     public vl2(wl2 wl2Var) {
-        this.a = wl2Var;
+        this.f30298a = wl2Var;
     }
 
     @Override // android.net.ConnectivityManager.NetworkCallback
     public final void onCapabilitiesChanged(Network network, NetworkCapabilities networkCapabilities) {
         synchronized (wl2.class) {
-            this.a.a = networkCapabilities;
+            this.f30298a.f31317a = networkCapabilities;
         }
     }
 
     @Override // android.net.ConnectivityManager.NetworkCallback
     public final void onLost(Network network) {
         synchronized (wl2.class) {
-            this.a.a = null;
+            this.f30298a.f31317a = null;
         }
     }
 }

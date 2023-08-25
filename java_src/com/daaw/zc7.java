@@ -8,47 +8,65 @@ import javax.annotation.concurrent.ThreadSafe;
 @ThreadSafe
 /* loaded from: classes.dex */
 public final class zc7 {
-    public static final byte[] g = new byte[0];
-    public final yc7 a;
-    public final BigInteger b;
-    public final byte[] c;
-    public final byte[] d;
-    public final byte[] e;
+
+    /* renamed from: g */
+    public static final byte[] f34946g = new byte[0];
+
+    /* renamed from: a */
+    public final yc7 f34947a;
+
+    /* renamed from: b */
+    public final BigInteger f34948b;
+
+    /* renamed from: c */
+    public final byte[] f34949c;
+
+    /* renamed from: d */
+    public final byte[] f34950d;
+
+    /* renamed from: e */
+    public final byte[] f34951e;
     @GuardedBy("this")
-    public BigInteger f = BigInteger.ZERO;
+
+    /* renamed from: f */
+    public BigInteger f34952f = BigInteger.ZERO;
 
     public zc7(byte[] bArr, byte[] bArr2, byte[] bArr3, BigInteger bigInteger, yc7 yc7Var) {
-        this.e = bArr;
-        this.c = bArr2;
-        this.d = bArr3;
-        this.b = bigInteger;
-        this.a = yc7Var;
+        this.f34951e = bArr;
+        this.f34949c = bArr2;
+        this.f34950d = bArr3;
+        this.f34948b = bigInteger;
+        this.f34947a = yc7Var;
     }
 
-    public static zc7 c(byte[] bArr, byte[] bArr2, cd7 cd7Var, xc7 xc7Var, yc7 yc7Var, byte[] bArr3) {
-        byte[] b = ld7.b(cd7Var.zzb(), xc7Var.c(), yc7Var.zzb());
-        byte[] bArr4 = ld7.l;
-        byte[] bArr5 = g;
-        byte[] b2 = qo7.b(ld7.a, xc7Var.e(bArr4, bArr5, "psk_id_hash", b), xc7Var.e(bArr4, bArr3, "info_hash", b));
-        byte[] e = xc7Var.e(bArr2, bArr5, "secret", b);
-        byte[] d = xc7Var.d(e, b2, "key", b, yc7Var.zza());
-        byte[] d2 = xc7Var.d(e, b2, "base_nonce", b, 12);
+    /* renamed from: c */
+    public static zc7 m2485c(byte[] bArr, byte[] bArr2, cd7 cd7Var, xc7 xc7Var, yc7 yc7Var, byte[] bArr3) {
+        byte[] m17038b = ld7.m17038b(cd7Var.zzb(), xc7Var.m5236c(), yc7Var.zzb());
+        byte[] bArr4 = ld7.f17303l;
+        byte[] bArr5 = f34946g;
+        byte[] m12307b = qo7.m12307b(ld7.f17292a, xc7Var.m5234e(bArr4, bArr5, "psk_id_hash", m17038b), xc7Var.m5234e(bArr4, bArr3, "info_hash", m17038b));
+        byte[] m5234e = xc7Var.m5234e(bArr2, bArr5, "secret", m17038b);
+        byte[] m5235d = xc7Var.m5235d(m5234e, m12307b, "key", m17038b, yc7Var.zza());
+        byte[] m5235d2 = xc7Var.m5235d(m5234e, m12307b, "base_nonce", m17038b, 12);
         BigInteger bigInteger = BigInteger.ONE;
-        return new zc7(bArr, d, d2, bigInteger.shiftLeft(96).subtract(bigInteger), yc7Var);
+        return new zc7(bArr, m5235d, m5235d2, bigInteger.shiftLeft(96).subtract(bigInteger), yc7Var);
     }
 
-    public final byte[] a() {
-        return this.e;
+    /* renamed from: a */
+    public final byte[] m2487a() {
+        return this.f34951e;
     }
 
-    public final byte[] b(byte[] bArr, byte[] bArr2) {
-        return this.a.a(this.c, d(), bArr, bArr2);
+    /* renamed from: b */
+    public final byte[] m2486b(byte[] bArr, byte[] bArr2) {
+        return this.f34947a.mo3861a(this.f34949c, m2484d(), bArr, bArr2);
     }
 
-    public final synchronized byte[] d() {
-        byte[] c;
-        byte[] bArr = this.d;
-        byte[] byteArray = this.f.toByteArray();
+    /* renamed from: d */
+    public final synchronized byte[] m2484d() {
+        byte[] m12306c;
+        byte[] bArr = this.f34950d;
+        byte[] byteArray = this.f34952f.toByteArray();
         int length = byteArray.length;
         if (length != 12) {
             if (length > 13) {
@@ -64,11 +82,11 @@ public final class zc7 {
                 byteArray = Arrays.copyOfRange(byteArray, 1, 13);
             }
         }
-        c = qo7.c(bArr, byteArray);
-        if (this.f.compareTo(this.b) >= 0) {
+        m12306c = qo7.m12306c(bArr, byteArray);
+        if (this.f34952f.compareTo(this.f34948b) >= 0) {
             throw new GeneralSecurityException("message limit reached");
         }
-        this.f = this.f.add(BigInteger.ONE);
-        return c;
+        this.f34952f = this.f34952f.add(BigInteger.ONE);
+        return m12306c;
     }
 }

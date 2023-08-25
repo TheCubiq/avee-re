@@ -1,14 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class p35 implements wz7 {
-    public final m08 a;
+
+    /* renamed from: a */
+    public final m08 f22574a;
 
     public p35(m08 m08Var) {
-        this.a = m08Var;
+        this.f22574a = m08Var;
     }
 
     @Override // com.daaw.m08
     public final /* bridge */ /* synthetic */ Object zzb() {
-        return new o35(((sm4) this.a).a());
+        return new o35(((sm4) this.f22574a).m10155a());
     }
 }

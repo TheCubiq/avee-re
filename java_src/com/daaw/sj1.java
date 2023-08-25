@@ -1,75 +1,100 @@
 package com.daaw;
 
-import com.daaw.k3;
-import com.daaw.k3.b;
+import com.daaw.C1897k3;
+import com.daaw.C1897k3.InterfaceC1899b;
 import com.google.android.gms.common.Feature;
 /* loaded from: classes.dex */
-public abstract class sj1<A extends k3.b, ResultT> {
-    public final Feature[] a;
-    public final boolean b;
-    public final int c;
+public abstract class sj1<A extends C1897k3.InterfaceC1899b, ResultT> {
 
+    /* renamed from: a */
+    public final Feature[] f26300a;
+
+    /* renamed from: b */
+    public final boolean f26301b;
+
+    /* renamed from: c */
+    public final int f26302c;
+
+    /* renamed from: com.daaw.sj1$a */
     /* loaded from: classes.dex */
-    public static class a<A extends k3.b, ResultT> {
-        public q31<A, tj1<ResultT>> a;
-        public Feature[] c;
-        public boolean b = true;
-        public int d = 0;
+    public static class C2945a<A extends C1897k3.InterfaceC1899b, ResultT> {
 
-        public /* synthetic */ a(h12 h12Var) {
+        /* renamed from: a */
+        public q31<A, tj1<ResultT>> f26303a;
+
+        /* renamed from: c */
+        public Feature[] f26305c;
+
+        /* renamed from: b */
+        public boolean f26304b = true;
+
+        /* renamed from: d */
+        public int f26306d = 0;
+
+        public /* synthetic */ C2945a(h12 h12Var) {
         }
 
-        public sj1<A, ResultT> a() {
-            ry0.b(this.a != null, "execute parameter required");
-            return new g12(this, this.c, this.b, this.d);
+        /* renamed from: a */
+        public sj1<A, ResultT> m10299a() {
+            ry0.m10838b(this.f26303a != null, "execute parameter required");
+            return new g12(this, this.f26305c, this.f26304b, this.f26306d);
         }
 
-        public a<A, ResultT> b(q31<A, tj1<ResultT>> q31Var) {
-            this.a = q31Var;
+        /* renamed from: b */
+        public C2945a<A, ResultT> m10298b(q31<A, tj1<ResultT>> q31Var) {
+            this.f26303a = q31Var;
             return this;
         }
 
-        public a<A, ResultT> c(boolean z) {
-            this.b = z;
+        /* renamed from: c */
+        public C2945a<A, ResultT> m10297c(boolean z) {
+            this.f26304b = z;
             return this;
         }
 
-        public a<A, ResultT> d(Feature... featureArr) {
-            this.c = featureArr;
+        /* renamed from: d */
+        public C2945a<A, ResultT> m10296d(Feature... featureArr) {
+            this.f26305c = featureArr;
             return this;
         }
 
-        public a<A, ResultT> e(int i) {
-            this.d = i;
+        /* renamed from: e */
+        public C2945a<A, ResultT> m10295e(int i) {
+            this.f26306d = i;
             return this;
         }
     }
 
     public sj1(Feature[] featureArr, boolean z, int i) {
-        this.a = featureArr;
+        this.f26300a = featureArr;
         boolean z2 = false;
         if (featureArr != null && z) {
             z2 = true;
         }
-        this.b = z2;
-        this.c = i;
+        this.f26301b = z2;
+        this.f26302c = i;
     }
 
-    public static <A extends k3.b, ResultT> a<A, ResultT> a() {
-        return new a<>(null);
+    /* renamed from: a */
+    public static <A extends C1897k3.InterfaceC1899b, ResultT> C2945a<A, ResultT> m10304a() {
+        return new C2945a<>(null);
     }
 
-    public abstract void b(A a2, tj1<ResultT> tj1Var);
+    /* renamed from: b */
+    public abstract void mo10303b(A a, tj1<ResultT> tj1Var);
 
-    public boolean c() {
-        return this.b;
+    /* renamed from: c */
+    public boolean m10302c() {
+        return this.f26301b;
     }
 
-    public final int d() {
-        return this.c;
+    /* renamed from: d */
+    public final int m10301d() {
+        return this.f26302c;
     }
 
-    public final Feature[] e() {
-        return this.a;
+    /* renamed from: e */
+    public final Feature[] m10300e() {
+        return this.f26300a;
     }
 }

@@ -3,22 +3,27 @@ package com.daaw;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class o26 implements h76 {
-    public final double a;
-    public final boolean b;
+
+    /* renamed from: a */
+    public final double f20967a;
+
+    /* renamed from: b */
+    public final boolean f20968b;
 
     public o26(double d, boolean z) {
-        this.a = d;
-        this.b = z;
+        this.f20967a = d;
+        this.f20968b = z;
     }
 
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
         Bundle bundle = (Bundle) obj;
-        Bundle a = cj6.a(bundle, "device");
-        bundle.putBundle("device", a);
-        Bundle a2 = cj6.a(a, "battery");
-        a.putBundle("battery", a2);
-        a2.putBoolean("is_charging", this.b);
-        a2.putDouble("battery_level", this.a);
+        Bundle m25318a = cj6.m25318a(bundle, "device");
+        bundle.putBundle("device", m25318a);
+        Bundle m25318a2 = cj6.m25318a(m25318a, "battery");
+        m25318a.putBundle("battery", m25318a2);
+        m25318a2.putBoolean("is_charging", this.f20968b);
+        m25318a2.putDouble("battery_level", this.f20967a);
     }
 }

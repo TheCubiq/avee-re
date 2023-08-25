@@ -4,104 +4,124 @@ import android.annotation.TargetApi;
 import android.media.AudioTrack;
 /* loaded from: classes.dex */
 public final class vj8 {
-    public final tj8 a;
-    public int b;
-    public long c;
-    public long d;
-    public long e;
-    public long f;
+
+    /* renamed from: a */
+    public final tj8 f30272a;
+
+    /* renamed from: b */
+    public int f30273b;
+
+    /* renamed from: c */
+    public long f30274c;
+
+    /* renamed from: d */
+    public long f30275d;
+
+    /* renamed from: e */
+    public long f30276e;
+
+    /* renamed from: f */
+    public long f30277f;
 
     public vj8(AudioTrack audioTrack) {
-        int i = it5.a;
-        this.a = new tj8(audioTrack);
-        h(0);
+        int i = it5.f13991a;
+        this.f30272a = new tj8(audioTrack);
+        m7101h(0);
     }
 
     @TargetApi(19)
-    public final long a() {
-        return this.a.a();
+    /* renamed from: a */
+    public final long m7108a() {
+        return this.f30272a.m9070a();
     }
 
     @TargetApi(19)
-    public final long b() {
-        return this.a.b();
+    /* renamed from: b */
+    public final long m7107b() {
+        return this.f30272a.m9069b();
     }
 
-    public final void c() {
-        if (this.b == 4) {
-            h(0);
+    /* renamed from: c */
+    public final void m7106c() {
+        if (this.f30273b == 4) {
+            m7101h(0);
         }
     }
 
-    public final void d() {
-        h(4);
+    /* renamed from: d */
+    public final void m7105d() {
+        m7101h(4);
     }
 
-    public final void e() {
-        h(0);
+    /* renamed from: e */
+    public final void m7104e() {
+        m7101h(0);
     }
 
-    public final boolean f() {
-        return this.b == 2;
+    /* renamed from: f */
+    public final boolean m7103f() {
+        return this.f30273b == 2;
     }
 
     @TargetApi(19)
-    public final boolean g(long j) {
-        tj8 tj8Var = this.a;
-        if (j - this.e < this.d) {
+    /* renamed from: g */
+    public final boolean m7102g(long j) {
+        tj8 tj8Var = this.f30272a;
+        if (j - this.f30276e < this.f30275d) {
             return false;
         }
-        this.e = j;
-        boolean c = tj8Var.c();
-        int i = this.b;
+        this.f30276e = j;
+        boolean m9068c = tj8Var.m9068c();
+        int i = this.f30273b;
         if (i != 0) {
             if (i != 1) {
                 if (i == 2) {
-                    if (c) {
+                    if (m9068c) {
                         return true;
                     }
-                    h(0);
+                    m7101h(0);
                     return false;
                 } else if (i == 3) {
-                    if (c) {
-                        h(0);
+                    if (m9068c) {
+                        m7101h(0);
                         return true;
                     }
                     return false;
                 }
-            } else if (!c) {
-                h(0);
-            } else if (this.a.a() > this.f) {
-                h(2);
+            } else if (!m9068c) {
+                m7101h(0);
+            } else if (this.f30272a.m9070a() > this.f30277f) {
+                m7101h(2);
                 return true;
             }
-        } else if (c) {
-            if (this.a.b() < this.c) {
+        } else if (m9068c) {
+            if (this.f30272a.m9069b() < this.f30274c) {
                 return false;
             }
-            this.f = this.a.a();
-            h(1);
+            this.f30277f = this.f30272a.m9070a();
+            m7101h(1);
             return true;
-        } else if (j - this.c > 500000) {
-            h(3);
+        } else if (j - this.f30274c > 500000) {
+            m7101h(3);
             return false;
         }
-        return c;
+        return m9068c;
     }
 
-    public final void h(int i) {
-        this.b = i;
+    /* renamed from: h */
+    public final void m7101h(int i) {
+        this.f30273b = i;
         long j = 10000;
         if (i == 0) {
-            this.e = 0L;
-            this.f = -1L;
-            this.c = System.nanoTime() / 1000;
+            this.f30276e = 0L;
+            this.f30277f = -1L;
+            this.f30274c = System.nanoTime() / 1000;
         } else if (i == 1) {
-            this.d = 10000L;
+            this.f30275d = 10000L;
             return;
         } else {
             j = (i == 2 || i == 3) ? 10000000L : 500000L;
         }
-        this.d = j;
+        this.f30275d = j;
     }
 }

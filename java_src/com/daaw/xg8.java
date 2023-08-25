@@ -1,141 +1,121 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class xg8 {
-    public final String a;
-    public int b;
-    public long c;
-    public pr8 d;
-    public boolean e;
-    public boolean f;
-    public final /* synthetic */ zg8 g;
+
+    /* renamed from: a */
+    public final String f32708a;
+
+    /* renamed from: b */
+    public int f32709b;
+
+    /* renamed from: c */
+    public long f32710c;
+
+    /* renamed from: d */
+    public pr8 f32711d;
+
+    /* renamed from: e */
+    public boolean f32712e;
+
+    /* renamed from: f */
+    public boolean f32713f;
+
+    /* renamed from: g */
+    public final /* synthetic */ zg8 f32714g;
 
     public xg8(zg8 zg8Var, String str, int i, pr8 pr8Var) {
-        this.g = zg8Var;
-        this.a = str;
-        this.b = i;
-        this.c = pr8Var == null ? -1L : pr8Var.d;
-        if (pr8Var == null || !pr8Var.b()) {
+        this.f32714g = zg8Var;
+        this.f32708a = str;
+        this.f32709b = i;
+        this.f32710c = pr8Var == null ? -1L : pr8Var.f18808d;
+        if (pr8Var == null || !pr8Var.m16079b()) {
             return;
         }
-        this.d = pr8Var;
+        this.f32711d = pr8Var;
     }
 
-    public final void g(int i, pr8 pr8Var) {
-        if (this.c == -1 && i == this.b && pr8Var != null) {
-            this.c = pr8Var.d;
+    /* renamed from: g */
+    public final void m5123g(int i, pr8 pr8Var) {
+        if (this.f32710c == -1 && i == this.f32709b && pr8Var != null) {
+            this.f32710c = pr8Var.f18808d;
         }
     }
 
-    public final boolean j(int i, pr8 pr8Var) {
+    /* renamed from: j */
+    public final boolean m5120j(int i, pr8 pr8Var) {
         if (pr8Var == null) {
-            return i == this.b;
+            return i == this.f32709b;
         }
-        pr8 pr8Var2 = this.d;
-        return pr8Var2 == null ? !pr8Var.b() && pr8Var.d == this.c : pr8Var.d == pr8Var2.d && pr8Var.b == pr8Var2.b && pr8Var.c == pr8Var2.c;
+        pr8 pr8Var2 = this.f32711d;
+        return pr8Var2 == null ? !pr8Var.m16079b() && pr8Var.f18808d == this.f32710c : pr8Var.f18808d == pr8Var2.f18808d && pr8Var.f18806b == pr8Var2.f18806b && pr8Var.f18807c == pr8Var2.f18807c;
     }
 
-    public final boolean k(ib8 ib8Var) {
-        pr8 pr8Var = ib8Var.d;
+    /* renamed from: k */
+    public final boolean m5119k(ib8 ib8Var) {
+        pr8 pr8Var = ib8Var.f13444d;
         if (pr8Var == null) {
-            return this.b != ib8Var.c;
+            return this.f32709b != ib8Var.f13443c;
         }
-        long j = this.c;
+        long j = this.f32710c;
         if (j == -1) {
             return false;
         }
-        if (pr8Var.d > j) {
+        if (pr8Var.f18808d > j) {
             return true;
         }
-        if (this.d == null) {
+        if (this.f32711d == null) {
             return false;
         }
-        int a = ib8Var.b.a(pr8Var.a);
-        int a2 = ib8Var.b.a(this.d.a);
-        pr8 pr8Var2 = ib8Var.d;
-        if (pr8Var2.d < this.d.d || a < a2) {
+        int mo4511a = ib8Var.f13442b.mo4511a(pr8Var.f18805a);
+        int mo4511a2 = ib8Var.f13442b.mo4511a(this.f32711d.f18805a);
+        pr8 pr8Var2 = ib8Var.f13444d;
+        if (pr8Var2.f18808d < this.f32711d.f18808d || mo4511a < mo4511a2) {
             return false;
         }
-        if (a > a2) {
+        if (mo4511a > mo4511a2) {
             return true;
         }
-        boolean b = pr8Var2.b();
-        pr8 pr8Var3 = ib8Var.d;
-        if (!b) {
-            int i = pr8Var3.e;
-            return i == -1 || i > this.d.b;
+        boolean m16079b = pr8Var2.m16079b();
+        pr8 pr8Var3 = ib8Var.f13444d;
+        if (!m16079b) {
+            int i = pr8Var3.f18809e;
+            return i == -1 || i > this.f32711d.f18806b;
         }
-        int i2 = pr8Var3.b;
-        int i3 = pr8Var3.c;
-        pr8 pr8Var4 = this.d;
-        int i4 = pr8Var4.b;
+        int i2 = pr8Var3.f18806b;
+        int i3 = pr8Var3.f18807c;
+        pr8 pr8Var4 = this.f32711d;
+        int i4 = pr8Var4.f18806b;
         if (i2 <= i4) {
-            return i2 == i4 && i3 > pr8Var4.c;
+            return i2 == i4 && i3 > pr8Var4.f18807c;
         }
         return true;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:5:0x000e, code lost:
-        if (r0 < r8.c()) goto L6;
+        if (r0 < r8.mo4509c()) goto L6;
      */
+    /* renamed from: l */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final boolean l(com.daaw.l64 r7, com.daaw.l64 r8) {
-        /*
-            r6 = this;
-            int r0 = r6.b
-            int r1 = r7.c()
-            r2 = 0
-            r3 = -1
-            if (r0 < r1) goto L13
-            int r7 = r8.c()
-            if (r0 >= r7) goto L11
-            goto L4a
-        L11:
-            r0 = -1
-            goto L4a
-        L13:
-            com.daaw.zg8 r1 = r6.g
-            com.daaw.i54 r1 = com.daaw.zg8.h(r1)
-            r4 = 0
-            r7.e(r0, r1, r4)
-            com.daaw.zg8 r0 = r6.g
-            com.daaw.i54 r0 = com.daaw.zg8.h(r0)
-            int r0 = r0.m
-        L26:
-            com.daaw.zg8 r1 = r6.g
-            com.daaw.i54 r1 = com.daaw.zg8.h(r1)
-            int r1 = r1.n
-            if (r0 > r1) goto L11
-            java.lang.Object r1 = r7.f(r0)
-            int r1 = r8.a(r1)
-            if (r1 == r3) goto L47
-            com.daaw.zg8 r7 = r6.g
-            com.daaw.d34 r7 = com.daaw.zg8.g(r7)
-            com.daaw.d34 r7 = r8.d(r1, r7, r2)
-            int r0 = r7.c
-            goto L4a
-        L47:
-            int r0 = r0 + 1
-            goto L26
-        L4a:
-            r6.b = r0
-            if (r0 != r3) goto L4f
-            return r2
-        L4f:
-            com.daaw.pr8 r7 = r6.d
-            r0 = 1
-            if (r7 != 0) goto L55
-            return r0
-        L55:
-            java.lang.Object r7 = r7.a
-            int r7 = r8.a(r7)
-            if (r7 == r3) goto L5e
-            return r0
-        L5e:
-            return r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.xg8.l(com.daaw.l64, com.daaw.l64):boolean");
+    public final boolean m5118l(l64 l64Var, l64 l64Var2) {
+        int i = this.f32709b;
+        if (i < l64Var.mo4509c()) {
+            l64Var.mo1923e(i, zg8.m2332h(this.f32714g), 0L);
+            for (int i2 = zg8.m2332h(this.f32714g).f13279m; i2 <= zg8.m2332h(this.f32714g).f13280n; i2++) {
+                int mo4511a = l64Var2.mo4511a(l64Var.mo4508f(i2));
+                if (mo4511a != -1) {
+                    i = l64Var2.mo1924d(mo4511a, zg8.m2333g(this.f32714g), false).f6450c;
+                    break;
+                }
+            }
+            i = -1;
+        }
+        this.f32709b = i;
+        if (i == -1) {
+            return false;
+        }
+        pr8 pr8Var = this.f32711d;
+        return pr8Var == null || l64Var2.mo4511a(pr8Var.f18805a) != -1;
     }
 }

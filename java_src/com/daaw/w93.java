@@ -6,24 +6,30 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class w93 extends ba3 {
-    public final zzf p;
-    public final String q;
-    public final String r;
+
+    /* renamed from: p */
+    public final zzf f31072p;
+
+    /* renamed from: q */
+    public final String f31073q;
+
+    /* renamed from: r */
+    public final String f31074r;
 
     public w93(zzf zzfVar, String str, String str2) {
-        this.p = zzfVar;
-        this.q = str;
-        this.r = str2;
+        this.f31072p = zzfVar;
+        this.f31073q = str;
+        this.f31074r = str2;
     }
 
     @Override // com.daaw.ca3
     public final String zzb() {
-        return this.q;
+        return this.f31073q;
     }
 
     @Override // com.daaw.ca3
     public final String zzc() {
-        return this.r;
+        return this.f31074r;
     }
 
     @Override // com.daaw.ca3
@@ -31,16 +37,16 @@ public final class w93 extends ba3 {
         if (yd0Var == null) {
             return;
         }
-        this.p.zza((View) nt0.M(yd0Var));
+        this.f31072p.zza((View) nt0.m14831M(yd0Var));
     }
 
     @Override // com.daaw.ca3
     public final void zze() {
-        this.p.zzb();
+        this.f31072p.zzb();
     }
 
     @Override // com.daaw.ca3
     public final void zzf() {
-        this.p.zzc();
+        this.f31072p.zzc();
     }
 }

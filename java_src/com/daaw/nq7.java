@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class nq7 {
-    public abstract void a(byte[] bArr, int i, int i2);
+    /* renamed from: a */
+    public abstract void mo12261a(byte[] bArr, int i, int i2);
 }

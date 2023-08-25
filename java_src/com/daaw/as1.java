@@ -3,57 +3,64 @@ package com.daaw;
 import com.daaw.da1;
 import com.daaw.tq0;
 /* loaded from: classes.dex */
-public final class as1 implements tq0.b {
-    public final long[] a;
-    public final long[] b;
-    public final long c;
+public final class as1 implements tq0.InterfaceC3111b {
+
+    /* renamed from: a */
+    public final long[] f3515a;
+
+    /* renamed from: b */
+    public final long[] f3516b;
+
+    /* renamed from: c */
+    public final long f3517c;
 
     public as1(long[] jArr, long[] jArr2, long j) {
-        this.a = jArr;
-        this.b = jArr2;
-        this.c = j;
+        this.f3515a = jArr;
+        this.f3516b = jArr2;
+        this.f3517c = j;
     }
 
-    public static as1 a(long j, long j2, yq0 yq0Var, rv0 rv0Var) {
-        int x;
-        rv0Var.K(10);
-        int i = rv0Var.i();
-        if (i <= 0) {
+    /* renamed from: a */
+    public static as1 m27101a(long j, long j2, yq0 yq0Var, rv0 rv0Var) {
+        int m10896x;
+        rv0Var.m10920K(10);
+        int m10911i = rv0Var.m10911i();
+        if (m10911i <= 0) {
             return null;
         }
-        int i2 = yq0Var.d;
-        long T = sq1.T(i, 1000000 * (i2 >= 32000 ? 1152 : 576), i2);
-        int D = rv0Var.D();
-        int D2 = rv0Var.D();
-        int D3 = rv0Var.D();
-        rv0Var.K(2);
-        long j3 = j2 + yq0Var.c;
-        long[] jArr = new long[D];
-        long[] jArr2 = new long[D];
+        int i = yq0Var.f33948d;
+        long m10025T = sq1.m10025T(m10911i, 1000000 * (i >= 32000 ? 1152 : 576), i);
+        int m10927D = rv0Var.m10927D();
+        int m10927D2 = rv0Var.m10927D();
+        int m10927D3 = rv0Var.m10927D();
+        rv0Var.m10920K(2);
+        long j3 = j2 + yq0Var.f33947c;
+        long[] jArr = new long[m10927D];
+        long[] jArr2 = new long[m10927D];
         long j4 = j2;
-        int i3 = 0;
-        while (i3 < D) {
+        int i2 = 0;
+        while (i2 < m10927D) {
             long j5 = j3;
-            long j6 = T;
-            jArr[i3] = (i3 * T) / D;
-            jArr2[i3] = Math.max(j4, j5);
-            if (D3 == 1) {
-                x = rv0Var.x();
-            } else if (D3 == 2) {
-                x = rv0Var.D();
-            } else if (D3 == 3) {
-                x = rv0Var.A();
-            } else if (D3 != 4) {
+            long j6 = m10025T;
+            jArr[i2] = (i2 * m10025T) / m10927D;
+            jArr2[i2] = Math.max(j4, j5);
+            if (m10927D3 == 1) {
+                m10896x = rv0Var.m10896x();
+            } else if (m10927D3 == 2) {
+                m10896x = rv0Var.m10927D();
+            } else if (m10927D3 == 3) {
+                m10896x = rv0Var.m10930A();
+            } else if (m10927D3 != 4) {
                 return null;
             } else {
-                x = rv0Var.B();
+                m10896x = rv0Var.m10929B();
             }
-            j4 += x * D2;
-            i3++;
+            j4 += m10896x * m10927D2;
+            i2++;
             j3 = j5;
-            T = j6;
+            m10025T = j6;
         }
-        long j7 = T;
+        long j7 = m10025T;
         if (j != -1 && j != j4) {
             StringBuilder sb = new StringBuilder();
             sb.append("VBRI data size mismatch: ");
@@ -64,29 +71,33 @@ public final class as1 implements tq0.b {
         return new as1(jArr, jArr2, j7);
     }
 
-    @Override // com.daaw.tq0.b
-    public long b(long j) {
-        return this.a[sq1.e(this.b, j, true, true)];
+    @Override // com.daaw.tq0.InterfaceC3111b
+    /* renamed from: b */
+    public long mo8871b(long j) {
+        return this.f3515a[sq1.m10011e(this.f3516b, j, true, true)];
     }
 
     @Override // com.daaw.da1
-    public boolean e() {
+    /* renamed from: e */
+    public boolean mo6932e() {
         return true;
     }
 
     @Override // com.daaw.da1
-    public da1.a g(long j) {
-        int e = sq1.e(this.a, j, true, true);
-        fa1 fa1Var = new fa1(this.a[e], this.b[e]);
-        if (fa1Var.a >= j || e == this.a.length - 1) {
-            return new da1.a(fa1Var);
+    /* renamed from: g */
+    public da1.C1068a mo6931g(long j) {
+        int m10011e = sq1.m10011e(this.f3515a, j, true, true);
+        fa1 fa1Var = new fa1(this.f3515a[m10011e], this.f3516b[m10011e]);
+        if (fa1Var.f9302a >= j || m10011e == this.f3515a.length - 1) {
+            return new da1.C1068a(fa1Var);
         }
-        int i = e + 1;
-        return new da1.a(fa1Var, new fa1(this.a[i], this.b[i]));
+        int i = m10011e + 1;
+        return new da1.C1068a(fa1Var, new fa1(this.f3515a[i], this.f3516b[i]));
     }
 
     @Override // com.daaw.da1
-    public long h() {
-        return this.c;
+    /* renamed from: h */
+    public long mo6930h() {
+        return this.f3517c;
     }
 }

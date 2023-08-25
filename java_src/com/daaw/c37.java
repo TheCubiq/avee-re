@@ -3,9 +3,11 @@ package com.daaw;
 import java.util.Map;
 /* loaded from: classes.dex */
 public abstract class c37 {
-    public abstract Map a();
+    /* renamed from: a */
+    public abstract Map mo4233a();
 
-    public final a37 b(int i) {
+    /* renamed from: b */
+    public final a37 m25643b(int i) {
         return new b37(this, 2);
     }
 }

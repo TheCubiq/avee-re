@@ -12,7 +12,8 @@ public final class er3 extends r31 {
     }
 
     @Override // com.daaw.r31
-    public final /* synthetic */ Object a(IBinder iBinder) {
+    /* renamed from: a */
+    public final /* synthetic */ Object mo1391a(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -20,9 +21,10 @@ public final class er3 extends r31 {
         return queryLocalInterface instanceof kr3 ? (kr3) queryLocalInterface : new ir3(iBinder);
     }
 
-    public final hr3 c(Activity activity) {
+    /* renamed from: c */
+    public final hr3 m23243c(Activity activity) {
         try {
-            IBinder zze = ((kr3) b(activity)).zze(nt0.g3(activity));
+            IBinder zze = ((kr3) m11808b(activity)).zze(nt0.m14830g3(activity));
             if (zze == null) {
                 return null;
             }
@@ -31,7 +33,7 @@ public final class er3 extends r31 {
         } catch (RemoteException e) {
             k04.zzk("Could not create remote AdOverlay.", e);
             return null;
-        } catch (r31.a e2) {
+        } catch (r31.C2817a e2) {
             k04.zzk("Could not create remote AdOverlay.", e2);
             return null;
         }

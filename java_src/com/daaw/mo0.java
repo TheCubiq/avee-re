@@ -7,9 +7,10 @@ import android.content.Intent;
 import android.os.Build;
 /* loaded from: classes.dex */
 public class mo0 extends BroadcastReceiver {
-    public void a(Context context, String str) {
+    /* renamed from: a */
+    public void m15888a(Context context, String str) {
         Intent intent = new Intent(str);
-        intent.setComponent(new ComponentName(context, zo0.e));
+        intent.setComponent(new ComponentName(context, zo0.f35300e));
         if (Build.VERSION.SDK_INT >= 26) {
             context.startForegroundService(intent);
         } else {
@@ -28,6 +29,6 @@ public class mo0 extends BroadcastReceiver {
         } else {
             str = "ACTION_HEADSET_PLUGGED_IN";
         }
-        a(context, str);
+        m15888a(context, str);
     }
 }

@@ -6,11 +6,14 @@ import com.google.android.material.datepicker.CalendarConstraints;
 import java.util.Arrays;
 /* loaded from: classes2.dex */
 public class DateValidatorPointForward implements CalendarConstraints.DateValidator {
-    public static final Parcelable.Creator<DateValidatorPointForward> CREATOR = new a();
-    public final long p;
+    public static final Parcelable.Creator<DateValidatorPointForward> CREATOR = new C4056a();
 
+    /* renamed from: p */
+    public final long f37432p;
+
+    /* renamed from: com.google.android.material.datepicker.DateValidatorPointForward$a */
     /* loaded from: classes2.dex */
-    public static class a implements Parcelable.Creator<DateValidatorPointForward> {
+    public static class C4056a implements Parcelable.Creator<DateValidatorPointForward> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public DateValidatorPointForward createFromParcel(Parcel parcel) {
@@ -25,14 +28,15 @@ public class DateValidatorPointForward implements CalendarConstraints.DateValida
     }
 
     public DateValidatorPointForward(long j) {
-        this.p = j;
+        this.f37432p = j;
     }
 
-    public /* synthetic */ DateValidatorPointForward(long j, a aVar) {
+    public /* synthetic */ DateValidatorPointForward(long j, C4056a c4056a) {
         this(j);
     }
 
-    public static DateValidatorPointForward a(long j) {
+    /* renamed from: a */
+    public static DateValidatorPointForward m596a(long j) {
         return new DateValidatorPointForward(j);
     }
 
@@ -45,20 +49,21 @@ public class DateValidatorPointForward implements CalendarConstraints.DateValida
         if (this == obj) {
             return true;
         }
-        return (obj instanceof DateValidatorPointForward) && this.p == ((DateValidatorPointForward) obj).p;
+        return (obj instanceof DateValidatorPointForward) && this.f37432p == ((DateValidatorPointForward) obj).f37432p;
     }
 
     public int hashCode() {
-        return Arrays.hashCode(new Object[]{Long.valueOf(this.p)});
+        return Arrays.hashCode(new Object[]{Long.valueOf(this.f37432p)});
     }
 
     @Override // com.google.android.material.datepicker.CalendarConstraints.DateValidator
-    public boolean k(long j) {
-        return j >= this.p;
+    /* renamed from: k */
+    public boolean mo595k(long j) {
+        return j >= this.f37432p;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeLong(this.p);
+        parcel.writeLong(this.f37432p);
     }
 }

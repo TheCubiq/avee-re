@@ -9,38 +9,56 @@ import java.util.concurrent.Executors;
 import java.util.regex.Pattern;
 /* loaded from: classes.dex */
 public final class pz2 {
-    public static final int a;
-    public static final String b;
-    public static final String c;
-    public static final String d;
-    public static final String e;
-    public static final Pattern f;
-    public static final Pattern g;
-    public static final Pattern h;
+
+    /* renamed from: a */
+    public static final int f23547a;
+
+    /* renamed from: b */
+    public static final String f23548b;
+
+    /* renamed from: c */
+    public static final String f23549c;
+
+    /* renamed from: d */
+    public static final String f23550d;
+
+    /* renamed from: e */
+    public static final String f23551e;
+
+    /* renamed from: f */
+    public static final Pattern f23552f;
+
+    /* renamed from: g */
+    public static final Pattern f23553g;
+
+    /* renamed from: h */
+    public static final Pattern f23554h;
 
     static {
         int i = Build.VERSION.SDK_INT;
         if (i == 25 && Build.VERSION.CODENAME.charAt(0) == 'O') {
             i = 26;
         }
-        a = i;
+        f23547a = i;
         String str = Build.DEVICE;
-        b = str;
+        f23548b = str;
         String str2 = Build.MANUFACTURER;
-        c = str2;
+        f23549c = str2;
         String str3 = Build.MODEL;
-        d = str3;
-        e = str + ", " + str3 + ", " + str2 + ", " + i;
-        f = Pattern.compile("(\\d\\d\\d\\d)\\-(\\d\\d)\\-(\\d\\d)[Tt](\\d\\d):(\\d\\d):(\\d\\d)([\\.,](\\d+))?([Zz]|((\\+|\\-)(\\d?\\d):?(\\d\\d)))?");
-        g = Pattern.compile("^(-)?P(([0-9]*)Y)?(([0-9]*)M)?(([0-9]*)D)?(T(([0-9]*)H)?(([0-9]*)M)?(([0-9.]*)S)?)?$");
-        h = Pattern.compile("%([A-Fa-f0-9]{2})");
+        f23550d = str3;
+        f23551e = str + ", " + str3 + ", " + str2 + ", " + i;
+        f23552f = Pattern.compile("(\\d\\d\\d\\d)\\-(\\d\\d)\\-(\\d\\d)[Tt](\\d\\d):(\\d\\d):(\\d\\d)([\\.,](\\d+))?([Zz]|((\\+|\\-)(\\d?\\d):?(\\d\\d)))?");
+        f23553g = Pattern.compile("^(-)?P(([0-9]*)Y)?(([0-9]*)M)?(([0-9]*)D)?(T(([0-9]*)H)?(([0-9]*)M)?(([0-9.]*)S)?)?$");
+        f23554h = Pattern.compile("%([A-Fa-f0-9]{2})");
     }
 
-    public static float a(float f2, float f3, float f4) {
-        return Math.max(0.1f, Math.min(f2, 8.0f));
+    /* renamed from: a */
+    public static float m12849a(float f, float f2, float f3) {
+        return Math.max(0.1f, Math.min(f, 8.0f));
     }
 
-    public static int b(long[] jArr, long j, boolean z, boolean z2) {
+    /* renamed from: b */
+    public static int m12848b(long[] jArr, long j, boolean z, boolean z2) {
         int i;
         int binarySearch = Arrays.binarySearch(jArr, j);
         if (binarySearch < 0) {
@@ -57,7 +75,8 @@ public final class pz2 {
         return z2 ? Math.min(jArr.length - 1, i) : i;
     }
 
-    public static int c(long[] jArr, long j, boolean z, boolean z2) {
+    /* renamed from: c */
+    public static int m12847c(long[] jArr, long j, boolean z, boolean z2) {
         int i;
         int binarySearch = Arrays.binarySearch(jArr, j);
         if (binarySearch < 0) {
@@ -74,21 +93,25 @@ public final class pz2 {
         return z2 ? Math.max(0, i) : i;
     }
 
-    public static int d(int i, int i2) {
+    /* renamed from: d */
+    public static int m12846d(int i, int i2) {
         return ((i + i2) - 1) / i2;
     }
 
-    public static int e(int i, int i2, int i3) {
+    /* renamed from: e */
+    public static int m12845e(int i, int i2, int i3) {
         return Math.max(i2, Math.min(i, i3));
     }
 
-    public static int f(int i) {
+    /* renamed from: f */
+    public static int m12844f(int i) {
         return i != 1 ? 13107200 : 3538944;
     }
 
-    public static int g(String str) {
+    /* renamed from: g */
+    public static int m12843g(String str) {
         int length = str.length();
-        az2.c(length <= 4);
+        az2.m26585c(length <= 4);
         int i = 0;
         for (int i2 = 0; i2 < length; i2++) {
             i = (i << 8) | str.charAt(i2);
@@ -96,7 +119,8 @@ public final class pz2 {
         return i;
     }
 
-    public static int h(int i) {
+    /* renamed from: h */
+    public static int m12842h(int i) {
         if (i != 8) {
             if (i != 16) {
                 if (i != 24) {
@@ -109,7 +133,8 @@ public final class pz2 {
         return 3;
     }
 
-    public static int i(int i, int i2) {
+    /* renamed from: i */
+    public static int m12841i(int i, int i2) {
         if (i != Integer.MIN_VALUE) {
             if (i != 1073741824) {
                 if (i != 2) {
@@ -125,23 +150,25 @@ public final class pz2 {
         return i2 * 3;
     }
 
-    public static long j(long j, long j2, long j3) {
+    /* renamed from: j */
+    public static long m12840j(long j, long j2, long j3) {
         if (j3 < j2 || j3 % j2 != 0) {
             if (j3 >= j2 || j2 % j3 != 0) {
-                double d2 = j;
-                double d3 = j2;
-                double d4 = j3;
-                Double.isNaN(d3);
-                Double.isNaN(d4);
+                double d = j;
+                double d2 = j2;
+                double d3 = j3;
                 Double.isNaN(d2);
-                return (long) (d2 * (d3 / d4));
+                Double.isNaN(d3);
+                Double.isNaN(d);
+                return (long) (d * (d2 / d3));
             }
             return j * (j2 / j3);
         }
         return j / (j3 / j2);
     }
 
-    public static String k(Object[] objArr) {
+    /* renamed from: k */
+    public static String m12839k(Object[] objArr) {
         StringBuilder sb = new StringBuilder();
         int i = 0;
         while (true) {
@@ -157,11 +184,13 @@ public final class pz2 {
         }
     }
 
-    public static ExecutorService l(String str) {
+    /* renamed from: l */
+    public static ExecutorService m12838l(String str) {
         return Executors.newSingleThreadExecutor(new oz2("Loader:ExtractorMediaPeriod"));
     }
 
-    public static void m(kx2 kx2Var) {
+    /* renamed from: m */
+    public static void m12837m(kx2 kx2Var) {
         if (kx2Var != null) {
             try {
                 kx2Var.zzd();
@@ -170,7 +199,8 @@ public final class pz2 {
         }
     }
 
-    public static void n(long[] jArr, long j, long j2) {
+    /* renamed from: n */
+    public static void m12836n(long[] jArr, long j, long j2) {
         int i = 0;
         if (j2 >= 1000000 && j2 % 1000000 == 0) {
             long j3 = j2 / 1000000;
@@ -185,23 +215,25 @@ public final class pz2 {
                 i++;
             }
         } else {
-            double d2 = j2;
-            Double.isNaN(d2);
-            double d3 = 1000000.0d / d2;
+            double d = j2;
+            Double.isNaN(d);
+            double d2 = 1000000.0d / d;
             while (i < jArr.length) {
-                double d4 = jArr[i];
-                Double.isNaN(d4);
-                jArr[i] = (long) (d4 * d3);
+                double d3 = jArr[i];
+                Double.isNaN(d3);
+                jArr[i] = (long) (d3 * d2);
                 i++;
             }
         }
     }
 
-    public static boolean o(Object obj, Object obj2) {
+    /* renamed from: o */
+    public static boolean m12835o(Object obj, Object obj2) {
         return obj == null ? obj2 == null : obj.equals(obj2);
     }
 
-    public static byte[] p(String str) {
+    /* renamed from: p */
+    public static byte[] m12834p(String str) {
         byte[] bArr = new byte[38];
         for (int i = 0; i < 38; i++) {
             int i2 = i + i;
@@ -210,7 +242,8 @@ public final class pz2 {
         return bArr;
     }
 
-    public static byte[] q(String str) {
+    /* renamed from: q */
+    public static byte[] m12833q(String str) {
         return str.getBytes(Charset.defaultCharset());
     }
 }

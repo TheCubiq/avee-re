@@ -7,34 +7,44 @@ import android.util.Log;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class ma2 {
-    public static final Object a = new Object();
-    @GuardedBy("sLock")
-    public static boolean b;
-    public static String c;
-    public static int d;
 
-    public static int a(Context context) {
-        b(context);
-        return d;
+    /* renamed from: a */
+    public static final Object f18689a = new Object();
+    @GuardedBy("sLock")
+
+    /* renamed from: b */
+    public static boolean f18690b;
+
+    /* renamed from: c */
+    public static String f18691c;
+
+    /* renamed from: d */
+    public static int f18692d;
+
+    /* renamed from: a */
+    public static int m16143a(Context context) {
+        m16142b(context);
+        return f18692d;
     }
 
-    public static void b(Context context) {
+    /* renamed from: b */
+    public static void m16142b(Context context) {
         Bundle bundle;
-        synchronized (a) {
-            if (b) {
+        synchronized (f18689a) {
+            if (f18690b) {
                 return;
             }
-            b = true;
+            f18690b = true;
             try {
-                bundle = ez1.a(context).c(context.getPackageName(), 128).metaData;
+                bundle = ez1.m22979a(context).m19344c(context.getPackageName(), 128).metaData;
             } catch (PackageManager.NameNotFoundException e) {
                 Log.wtf("MetadataValueReader", "This should never happen.", e);
             }
             if (bundle == null) {
                 return;
             }
-            c = bundle.getString("com.google.app.id");
-            d = bundle.getInt("com.google.android.gms.version");
+            f18691c = bundle.getString("com.google.app.id");
+            f18692d = bundle.getInt("com.google.android.gms.version");
         }
     }
 }

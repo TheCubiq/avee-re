@@ -4,17 +4,20 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class gm4 {
-    public final List a;
+
+    /* renamed from: a */
+    public final List f11442a;
 
     public gm4(zl4 zl4Var) {
-        this.a = Collections.singletonList(s67.i(zl4Var));
+        this.f11442a = Collections.singletonList(s67.m10634i(zl4Var));
     }
 
     public gm4(List list) {
-        this.a = list;
+        this.f11442a = list;
     }
 
-    public static qq5 a(qq5 qq5Var) {
+    /* renamed from: a */
+    public static qq5 m21490a(qq5 qq5Var) {
         return new rq5(qq5Var, new ey6() { // from class: com.daaw.fm4
             @Override // com.daaw.ey6
             public final Object apply(Object obj) {

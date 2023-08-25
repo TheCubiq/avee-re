@@ -11,215 +11,258 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 /* loaded from: classes.dex */
 public class z20 {
-    public static final wl0<String, Typeface> a = new wl0<>(16);
-    public static final ExecutorService b = n41.a("fonts-androidx", 10, 10000);
-    public static final Object c = new Object();
-    public static final cd1<String, ArrayList<uj<e>>> d = new cd1<>();
 
+    /* renamed from: a */
+    public static final wl0<String, Typeface> f34343a = new wl0<>(16);
+
+    /* renamed from: b */
+    public static final ExecutorService f34344b = n41.m15535a("fonts-androidx", 10, 10000);
+
+    /* renamed from: c */
+    public static final Object f34345c = new Object();
+
+    /* renamed from: d */
+    public static final cd1<String, ArrayList<InterfaceC3222uj<C3798e>>> f34346d = new cd1<>();
+
+    /* renamed from: com.daaw.z20$a */
     /* loaded from: classes.dex */
-    public class a implements Callable<e> {
-        public final /* synthetic */ String a;
-        public final /* synthetic */ Context b;
-        public final /* synthetic */ x20 c;
-        public final /* synthetic */ int d;
+    public class CallableC3794a implements Callable<C3798e> {
 
-        public a(String str, Context context, x20 x20Var, int i) {
-            this.a = str;
-            this.b = context;
-            this.c = x20Var;
-            this.d = i;
-        }
-
-        @Override // java.util.concurrent.Callable
         /* renamed from: a */
-        public e call() {
-            return z20.c(this.a, this.b, this.c, this.d);
-        }
-    }
+        public final /* synthetic */ String f34347a;
 
-    /* loaded from: classes.dex */
-    public class b implements uj<e> {
-        public final /* synthetic */ ld a;
-
-        public b(ld ldVar) {
-            this.a = ldVar;
-        }
-
-        @Override // com.daaw.uj
         /* renamed from: b */
-        public void a(e eVar) {
-            if (eVar == null) {
-                eVar = new e(-3);
-            }
-            this.a.b(eVar);
-        }
-    }
+        public final /* synthetic */ Context f34348b;
 
-    /* loaded from: classes.dex */
-    public class c implements Callable<e> {
-        public final /* synthetic */ String a;
-        public final /* synthetic */ Context b;
-        public final /* synthetic */ x20 c;
-        public final /* synthetic */ int d;
+        /* renamed from: c */
+        public final /* synthetic */ x20 f34349c;
 
-        public c(String str, Context context, x20 x20Var, int i) {
-            this.a = str;
-            this.b = context;
-            this.c = x20Var;
-            this.d = i;
+        /* renamed from: d */
+        public final /* synthetic */ int f34350d;
+
+        public CallableC3794a(String str, Context context, x20 x20Var, int i) {
+            this.f34347a = str;
+            this.f34348b = context;
+            this.f34349c = x20Var;
+            this.f34350d = i;
         }
 
         @Override // java.util.concurrent.Callable
         /* renamed from: a */
-        public e call() {
+        public C3798e call() {
+            return z20.m2977c(this.f34347a, this.f34348b, this.f34349c, this.f34350d);
+        }
+    }
+
+    /* renamed from: com.daaw.z20$b */
+    /* loaded from: classes.dex */
+    public class C3795b implements InterfaceC3222uj<C3798e> {
+
+        /* renamed from: a */
+        public final /* synthetic */ C2027ld f34351a;
+
+        public C3795b(C2027ld c2027ld) {
+            this.f34351a = c2027ld;
+        }
+
+        @Override // com.daaw.InterfaceC3222uj
+        /* renamed from: b */
+        public void mo2971a(C3798e c3798e) {
+            if (c3798e == null) {
+                c3798e = new C3798e(-3);
+            }
+            this.f34351a.m17048b(c3798e);
+        }
+    }
+
+    /* renamed from: com.daaw.z20$c */
+    /* loaded from: classes.dex */
+    public class CallableC3796c implements Callable<C3798e> {
+
+        /* renamed from: a */
+        public final /* synthetic */ String f34352a;
+
+        /* renamed from: b */
+        public final /* synthetic */ Context f34353b;
+
+        /* renamed from: c */
+        public final /* synthetic */ x20 f34354c;
+
+        /* renamed from: d */
+        public final /* synthetic */ int f34355d;
+
+        public CallableC3796c(String str, Context context, x20 x20Var, int i) {
+            this.f34352a = str;
+            this.f34353b = context;
+            this.f34354c = x20Var;
+            this.f34355d = i;
+        }
+
+        @Override // java.util.concurrent.Callable
+        /* renamed from: a */
+        public C3798e call() {
             try {
-                return z20.c(this.a, this.b, this.c, this.d);
+                return z20.m2977c(this.f34352a, this.f34353b, this.f34354c, this.f34355d);
             } catch (Throwable unused) {
-                return new e(-3);
+                return new C3798e(-3);
             }
         }
     }
 
+    /* renamed from: com.daaw.z20$d */
     /* loaded from: classes.dex */
-    public class d implements uj<e> {
-        public final /* synthetic */ String a;
+    public class C3797d implements InterfaceC3222uj<C3798e> {
 
-        public d(String str) {
-            this.a = str;
+        /* renamed from: a */
+        public final /* synthetic */ String f34356a;
+
+        public C3797d(String str) {
+            this.f34356a = str;
         }
 
-        @Override // com.daaw.uj
+        @Override // com.daaw.InterfaceC3222uj
         /* renamed from: b */
-        public void a(e eVar) {
-            synchronized (z20.c) {
-                cd1<String, ArrayList<uj<e>>> cd1Var = z20.d;
-                ArrayList<uj<e>> arrayList = cd1Var.get(this.a);
+        public void mo2971a(C3798e c3798e) {
+            synchronized (z20.f34345c) {
+                cd1<String, ArrayList<InterfaceC3222uj<C3798e>>> cd1Var = z20.f34346d;
+                ArrayList<InterfaceC3222uj<C3798e>> arrayList = cd1Var.get(this.f34356a);
                 if (arrayList == null) {
                     return;
                 }
-                cd1Var.remove(this.a);
+                cd1Var.remove(this.f34356a);
                 for (int i = 0; i < arrayList.size(); i++) {
-                    arrayList.get(i).a(eVar);
+                    arrayList.get(i).mo2971a(c3798e);
                 }
             }
         }
     }
 
+    /* renamed from: com.daaw.z20$e */
     /* loaded from: classes.dex */
-    public static final class e {
-        public final Typeface a;
-        public final int b;
+    public static final class C3798e {
 
-        public e(int i) {
-            this.a = null;
-            this.b = i;
+        /* renamed from: a */
+        public final Typeface f34357a;
+
+        /* renamed from: b */
+        public final int f34358b;
+
+        public C3798e(int i) {
+            this.f34357a = null;
+            this.f34358b = i;
         }
 
         @SuppressLint({"WrongConstant"})
-        public e(Typeface typeface) {
-            this.a = typeface;
-            this.b = 0;
+        public C3798e(Typeface typeface) {
+            this.f34357a = typeface;
+            this.f34358b = 0;
         }
 
         @SuppressLint({"WrongConstant"})
-        public boolean a() {
-            return this.b == 0;
+        /* renamed from: a */
+        public boolean m2969a() {
+            return this.f34358b == 0;
         }
     }
 
-    public static String a(x20 x20Var, int i) {
-        return x20Var.d() + "-" + i;
+    /* renamed from: a */
+    public static String m2979a(x20 x20Var, int i) {
+        return x20Var.m5612d() + "-" + i;
     }
 
     @SuppressLint({"WrongConstant"})
-    public static int b(b30.a aVar) {
+    /* renamed from: b */
+    public static int m2978b(b30.C0804a c0804a) {
         int i = 1;
-        if (aVar.c() != 0) {
-            return aVar.c() != 1 ? -3 : -2;
+        if (c0804a.m26508c() != 0) {
+            return c0804a.m26508c() != 1 ? -3 : -2;
         }
-        b30.b[] b2 = aVar.b();
-        if (b2 != null && b2.length != 0) {
+        b30.C0805b[] m26509b = c0804a.m26509b();
+        if (m26509b != null && m26509b.length != 0) {
             i = 0;
-            for (b30.b bVar : b2) {
-                int b3 = bVar.b();
-                if (b3 != 0) {
-                    if (b3 < 0) {
+            for (b30.C0805b c0805b : m26509b) {
+                int m26506b = c0805b.m26506b();
+                if (m26506b != 0) {
+                    if (m26506b < 0) {
                         return -3;
                     }
-                    return b3;
+                    return m26506b;
                 }
             }
         }
         return i;
     }
 
-    public static e c(String str, Context context, x20 x20Var, int i) {
-        wl0<String, Typeface> wl0Var = a;
-        Typeface c2 = wl0Var.c(str);
-        if (c2 != null) {
-            return new e(c2);
+    /* renamed from: c */
+    public static C3798e m2977c(String str, Context context, x20 x20Var, int i) {
+        wl0<String, Typeface> wl0Var = f34343a;
+        Typeface m6023c = wl0Var.m6023c(str);
+        if (m6023c != null) {
+            return new C3798e(m6023c);
         }
         try {
-            b30.a e2 = w20.e(context, x20Var, null);
-            int b2 = b(e2);
-            if (b2 != 0) {
-                return new e(b2);
+            b30.C0804a m6584e = w20.m6584e(context, x20Var, null);
+            int m2978b = m2978b(m6584e);
+            if (m2978b != 0) {
+                return new C3798e(m2978b);
             }
-            Typeface b3 = to1.b(context, null, e2.b(), i);
-            if (b3 != null) {
-                wl0Var.d(str, b3);
-                return new e(b3);
+            Typeface m8915b = to1.m8915b(context, null, m6584e.m26509b(), i);
+            if (m8915b != null) {
+                wl0Var.m6022d(str, m8915b);
+                return new C3798e(m8915b);
             }
-            return new e(-3);
+            return new C3798e(-3);
         } catch (PackageManager.NameNotFoundException unused) {
-            return new e(-1);
+            return new C3798e(-1);
         }
     }
 
-    public static Typeface d(Context context, x20 x20Var, int i, Executor executor, ld ldVar) {
-        String a2 = a(x20Var, i);
-        Typeface c2 = a.c(a2);
-        if (c2 != null) {
-            ldVar.b(new e(c2));
-            return c2;
+    /* renamed from: d */
+    public static Typeface m2976d(Context context, x20 x20Var, int i, Executor executor, C2027ld c2027ld) {
+        String m2979a = m2979a(x20Var, i);
+        Typeface m6023c = f34343a.m6023c(m2979a);
+        if (m6023c != null) {
+            c2027ld.m17048b(new C3798e(m6023c));
+            return m6023c;
         }
-        b bVar = new b(ldVar);
-        synchronized (c) {
-            cd1<String, ArrayList<uj<e>>> cd1Var = d;
-            ArrayList<uj<e>> arrayList = cd1Var.get(a2);
+        C3795b c3795b = new C3795b(c2027ld);
+        synchronized (f34345c) {
+            cd1<String, ArrayList<InterfaceC3222uj<C3798e>>> cd1Var = f34346d;
+            ArrayList<InterfaceC3222uj<C3798e>> arrayList = cd1Var.get(m2979a);
             if (arrayList != null) {
-                arrayList.add(bVar);
+                arrayList.add(c3795b);
                 return null;
             }
-            ArrayList<uj<e>> arrayList2 = new ArrayList<>();
-            arrayList2.add(bVar);
-            cd1Var.put(a2, arrayList2);
-            c cVar = new c(a2, context, x20Var, i);
+            ArrayList<InterfaceC3222uj<C3798e>> arrayList2 = new ArrayList<>();
+            arrayList2.add(c3795b);
+            cd1Var.put(m2979a, arrayList2);
+            CallableC3796c callableC3796c = new CallableC3796c(m2979a, context, x20Var, i);
             if (executor == null) {
-                executor = b;
+                executor = f34344b;
             }
-            n41.b(executor, cVar, new d(a2));
+            n41.m15534b(executor, callableC3796c, new C3797d(m2979a));
             return null;
         }
     }
 
-    public static Typeface e(Context context, x20 x20Var, ld ldVar, int i, int i2) {
-        String a2 = a(x20Var, i);
-        Typeface c2 = a.c(a2);
-        if (c2 != null) {
-            ldVar.b(new e(c2));
-            return c2;
+    /* renamed from: e */
+    public static Typeface m2975e(Context context, x20 x20Var, C2027ld c2027ld, int i, int i2) {
+        String m2979a = m2979a(x20Var, i);
+        Typeface m6023c = f34343a.m6023c(m2979a);
+        if (m6023c != null) {
+            c2027ld.m17048b(new C3798e(m6023c));
+            return m6023c;
         } else if (i2 == -1) {
-            e c3 = c(a2, context, x20Var, i);
-            ldVar.b(c3);
-            return c3.a;
+            C3798e m2977c = m2977c(m2979a, context, x20Var, i);
+            c2027ld.m17048b(m2977c);
+            return m2977c.f34357a;
         } else {
             try {
-                e eVar = (e) n41.c(b, new a(a2, context, x20Var, i), i2);
-                ldVar.b(eVar);
-                return eVar.a;
+                C3798e c3798e = (C3798e) n41.m15533c(f34344b, new CallableC3794a(m2979a, context, x20Var, i), i2);
+                c2027ld.m17048b(c3798e);
+                return c3798e.f34357a;
             } catch (InterruptedException unused) {
-                ldVar.b(new e(-3));
+                c2027ld.m17048b(new C3798e(-3));
                 return null;
             }
         }

@@ -4,7 +4,8 @@ import android.view.MotionEvent;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public interface ec3 {
-    void a(MotionEvent motionEvent);
+    /* renamed from: a */
+    void mo4031a(MotionEvent motionEvent);
 
     JSONObject zza();
 

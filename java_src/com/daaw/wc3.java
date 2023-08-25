@@ -2,15 +2,28 @@ package com.daaw;
 
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.RemoteException;
 import com.google.android.gms.ads.formats.NativeAd;
 /* loaded from: classes.dex */
 public final class wc3 extends NativeAd.Image {
-    public final vc3 a;
-    public final Drawable b;
-    public final Uri c;
-    public final double d;
-    public final int e;
-    public final int f;
+
+    /* renamed from: a */
+    public final vc3 f31161a;
+
+    /* renamed from: b */
+    public final Drawable f31162b;
+
+    /* renamed from: c */
+    public final Uri f31163c;
+
+    /* renamed from: d */
+    public final double f31164d;
+
+    /* renamed from: e */
+    public final int f31165e;
+
+    /* renamed from: f */
+    public final int f31166f;
 
     /* JADX WARN: Can't wrap try/catch for region: R(18:1|(2:2|3)|(15:5|6|7|8|9|10|11|12|13|14|15|16|17|18|19)|34|6|7|8|9|10|11|12|13|14|15|16|17|18|19) */
     /* JADX WARN: Code restructure failed: missing block: B:13:0x0023, code lost:
@@ -41,89 +54,65 @@ public final class wc3 extends NativeAd.Image {
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public wc3(com.daaw.vc3 r4) {
-        /*
-            r3 = this;
-            java.lang.String r0 = ""
-            r3.<init>()
-            r3.a = r4
-            r1 = 0
-            com.daaw.yd0 r4 = r4.zzf()     // Catch: android.os.RemoteException -> L15
-            if (r4 == 0) goto L19
-            java.lang.Object r4 = com.daaw.nt0.M(r4)     // Catch: android.os.RemoteException -> L15
-            android.graphics.drawable.Drawable r4 = (android.graphics.drawable.Drawable) r4     // Catch: android.os.RemoteException -> L15
-            goto L1a
-        L15:
-            r4 = move-exception
-            com.daaw.k04.zzh(r0, r4)
-        L19:
-            r4 = r1
-        L1a:
-            r3.b = r4
-            com.daaw.vc3 r4 = r3.a     // Catch: android.os.RemoteException -> L23
-            android.net.Uri r1 = r4.zze()     // Catch: android.os.RemoteException -> L23
-            goto L27
-        L23:
-            r4 = move-exception
-            com.daaw.k04.zzh(r0, r4)
-        L27:
-            r3.c = r1
-            com.daaw.vc3 r4 = r3.a     // Catch: android.os.RemoteException -> L30
-            double r1 = r4.zzb()     // Catch: android.os.RemoteException -> L30
-            goto L36
-        L30:
-            r4 = move-exception
-            com.daaw.k04.zzh(r0, r4)
-            r1 = 4607182418800017408(0x3ff0000000000000, double:1.0)
-        L36:
-            r3.d = r1
-            r4 = -1
-            com.daaw.vc3 r1 = r3.a     // Catch: android.os.RemoteException -> L40
-            int r1 = r1.zzd()     // Catch: android.os.RemoteException -> L40
-            goto L45
-        L40:
-            r1 = move-exception
-            com.daaw.k04.zzh(r0, r1)
-            r1 = -1
-        L45:
-            r3.e = r1
-            com.daaw.vc3 r1 = r3.a     // Catch: android.os.RemoteException -> L4e
-            int r4 = r1.zzc()     // Catch: android.os.RemoteException -> L4e
-            goto L52
-        L4e:
-            r1 = move-exception
-            com.daaw.k04.zzh(r0, r1)
-        L52:
-            r3.f = r4
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.wc3.<init>(com.daaw.vc3):void");
+    public wc3(vc3 vc3Var) {
+        Drawable drawable;
+        yd0 zzf;
+        this.f31161a = vc3Var;
+        Uri uri = null;
+        try {
+            zzf = vc3Var.zzf();
+        } catch (RemoteException e) {
+            k04.zzh("", e);
+        }
+        if (zzf != null) {
+            drawable = (Drawable) nt0.m14831M(zzf);
+            this.f31162b = drawable;
+            uri = this.f31161a.zze();
+            this.f31163c = uri;
+            double d = this.f31161a.zzb();
+            this.f31164d = d;
+            int i = -1;
+            int i2 = this.f31161a.zzd();
+            this.f31165e = i2;
+            i = this.f31161a.zzc();
+            this.f31166f = i;
+        }
+        drawable = null;
+        this.f31162b = drawable;
+        uri = this.f31161a.zze();
+        this.f31163c = uri;
+        double d2 = this.f31161a.zzb();
+        this.f31164d = d2;
+        int i3 = -1;
+        int i22 = this.f31161a.zzd();
+        this.f31165e = i22;
+        i3 = this.f31161a.zzc();
+        this.f31166f = i3;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeAd.Image
     public final Drawable getDrawable() {
-        return this.b;
+        return this.f31162b;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeAd.Image
     public final double getScale() {
-        return this.d;
+        return this.f31164d;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeAd.Image
     public final Uri getUri() {
-        return this.c;
+        return this.f31163c;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeAd.Image
     public final int zza() {
-        return this.f;
+        return this.f31166f;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeAd.Image
     public final int zzb() {
-        return this.e;
+        return this.f31165e;
     }
 }

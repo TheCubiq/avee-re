@@ -17,8 +17,8 @@ public final class zzw extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 2, this.zza);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 2, this.zza);
+        z71.m2732b(parcel, m2733a);
     }
 }

@@ -3,61 +3,69 @@ package com.daaw;
 import android.opengl.GLES20;
 /* loaded from: classes.dex */
 public class or1 extends e40 {
-    public vp d;
+
+    /* renamed from: d */
+    public C3358vp f21852d;
 
     public or1(vr1 vr1Var, boolean z) {
         super(vr1Var, z);
-        this.d = new vp();
+        this.f21852d = new C3358vp();
     }
 
-    public static or1 g(int i, int i2, int i3, int i4, boolean z) {
-        vr1 m = new vr1(i, i2, i3, i4, z).m();
-        if (m == null) {
+    /* renamed from: g */
+    public static or1 m14054g(int i, int i2, int i3, int i4, boolean z) {
+        vr1 m6846m = new vr1(i, i2, i3, i4, z).m6846m();
+        if (m6846m == null) {
             return null;
         }
         try {
-            return new or1(m, true);
+            return new or1(m6846m, true);
         } catch (Exception e) {
-            lz1.c("exception " + e.getMessage());
+            lz1.m16363c("exception " + e.getMessage());
             return null;
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ Boolean i() {
-        return Boolean.valueOf(!h());
+    /* renamed from: i */
+    public /* synthetic */ Boolean m14052i() {
+        return Boolean.valueOf(!m14053h());
     }
 
     @Override // com.daaw.e40
-    public void c() {
-        if (h()) {
+    /* renamed from: c */
+    public void mo14057c() {
+        if (m14053h()) {
             GLES20.glViewport(0, 0, getWidth(), getHeight());
-            GLES20.glBindFramebuffer(36160, this.a);
+            GLES20.glBindFramebuffer(36160, this.f8110a);
         }
     }
 
-    public or1 f() {
-        if (h()) {
+    /* renamed from: f */
+    public or1 m14055f() {
+        if (m14053h()) {
             return this;
         }
-        a();
-        lz1.c("FrameBuffer is not valid");
+        mo7096a();
+        lz1.m16363c("FrameBuffer is not valid");
         return null;
     }
 
     public void finalize() {
         super.finalize();
-        this.d.a(new w40() { // from class: com.daaw.nr1
+        this.f21852d.m6959a(new w40() { // from class: com.daaw.nr1
             @Override // com.daaw.w40
-            public final Object a() {
-                Boolean i;
-                i = or1.this.i();
-                return i;
+            /* renamed from: a */
+            public final Object mo3478a() {
+                Boolean m14052i;
+                m14052i = or1.this.m14052i();
+                return m14052i;
             }
         });
     }
 
-    public boolean h() {
-        return this.a != 0;
+    /* renamed from: h */
+    public boolean m14053h() {
+        return this.f8110a != 0;
     }
 }

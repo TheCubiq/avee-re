@@ -9,10 +9,11 @@ public abstract class ni3 extends cp2 implements oi3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
-            dp2.c(parcel);
-            S((ParcelFileDescriptor) dp2.a(parcel, ParcelFileDescriptor.CREATOR));
+            dp2.m24105c(parcel);
+            mo12474S((ParcelFileDescriptor) dp2.m24107a(parcel, ParcelFileDescriptor.CREATOR));
             return true;
         }
         return false;

@@ -8,28 +8,35 @@ import android.view.ViewParent;
 /* loaded from: classes2.dex */
 public class fu1 {
 
+    /* renamed from: com.daaw.fu1$a */
     /* loaded from: classes2.dex */
-    public static class a implements vt0 {
-        public final /* synthetic */ c a;
-        public final /* synthetic */ d b;
+    public static class C1328a implements vt0 {
 
-        public a(c cVar, d dVar) {
-            this.a = cVar;
-            this.b = dVar;
+        /* renamed from: a */
+        public final /* synthetic */ InterfaceC1330c f9959a;
+
+        /* renamed from: b */
+        public final /* synthetic */ C1331d f9960b;
+
+        public C1328a(InterfaceC1330c interfaceC1330c, C1331d c1331d) {
+            this.f9959a = interfaceC1330c;
+            this.f9960b = c1331d;
         }
 
         @Override // com.daaw.vt0
-        public px1 a(View view, px1 px1Var) {
-            return this.a.a(view, px1Var, new d(this.b));
+        /* renamed from: a */
+        public px1 mo6806a(View view, px1 px1Var) {
+            return this.f9959a.mo873a(view, px1Var, new C1331d(this.f9960b));
         }
     }
 
+    /* renamed from: com.daaw.fu1$b */
     /* loaded from: classes2.dex */
-    public static class b implements View.OnAttachStateChangeListener {
+    public static class View$OnAttachStateChangeListenerC1329b implements View.OnAttachStateChangeListener {
         @Override // android.view.View.OnAttachStateChangeListener
         public void onViewAttachedToWindow(View view) {
             view.removeOnAttachStateChangeListener(this);
-            xs1.o0(view);
+            xs1.m4708o0(view);
         }
 
         @Override // android.view.View.OnAttachStateChangeListener
@@ -37,55 +44,71 @@ public class fu1 {
         }
     }
 
+    /* renamed from: com.daaw.fu1$c */
     /* loaded from: classes2.dex */
-    public interface c {
-        px1 a(View view, px1 px1Var, d dVar);
+    public interface InterfaceC1330c {
+        /* renamed from: a */
+        px1 mo873a(View view, px1 px1Var, C1331d c1331d);
     }
 
+    /* renamed from: com.daaw.fu1$d */
     /* loaded from: classes2.dex */
-    public static class d {
-        public int a;
-        public int b;
-        public int c;
-        public int d;
+    public static class C1331d {
 
-        public d(int i, int i2, int i3, int i4) {
-            this.a = i;
-            this.b = i2;
-            this.c = i3;
-            this.d = i4;
+        /* renamed from: a */
+        public int f9961a;
+
+        /* renamed from: b */
+        public int f9962b;
+
+        /* renamed from: c */
+        public int f9963c;
+
+        /* renamed from: d */
+        public int f9964d;
+
+        public C1331d(int i, int i2, int i3, int i4) {
+            this.f9961a = i;
+            this.f9962b = i2;
+            this.f9963c = i3;
+            this.f9964d = i4;
         }
 
-        public d(d dVar) {
-            this.a = dVar.a;
-            this.b = dVar.b;
-            this.c = dVar.c;
-            this.d = dVar.d;
+        public C1331d(C1331d c1331d) {
+            this.f9961a = c1331d.f9961a;
+            this.f9962b = c1331d.f9962b;
+            this.f9963c = c1331d.f9963c;
+            this.f9964d = c1331d.f9964d;
         }
     }
 
-    public static void a(View view, c cVar) {
-        xs1.D0(view, new a(cVar, new d(xs1.J(view), view.getPaddingTop(), xs1.I(view), view.getPaddingBottom())));
-        f(view);
+    /* renamed from: a */
+    public static void m22262a(View view, InterfaceC1330c interfaceC1330c) {
+        xs1.m4769D0(view, new C1328a(interfaceC1330c, new C1331d(xs1.m4758J(view), view.getPaddingTop(), xs1.m4760I(view), view.getPaddingBottom())));
+        m22257f(view);
     }
 
-    public static float b(Context context, int i) {
+    /* renamed from: b */
+    public static float m22261b(Context context, int i) {
         return TypedValue.applyDimension(1, i, context.getResources().getDisplayMetrics());
     }
 
-    public static float c(View view) {
+    /* renamed from: c */
+    public static float m22260c(View view) {
         float f = 0.0f;
         for (ViewParent parent = view.getParent(); parent instanceof View; parent = parent.getParent()) {
-            f += xs1.y((View) parent);
+            f += xs1.m4689y((View) parent);
         }
         return f;
     }
 
-    public static boolean d(View view) {
-        return xs1.E(view) == 1;
+    /* renamed from: d */
+    public static boolean m22259d(View view) {
+        return xs1.m4768E(view) == 1;
     }
 
-    public static PorterDuff.Mode e(int i, PorterDuff.Mode mode) {
+    /* renamed from: e */
+    public static PorterDuff.Mode m22258e(int i, PorterDuff.Mode mode) {
         if (i != 3) {
             if (i != 5) {
                 if (i != 9) {
@@ -107,11 +130,12 @@ public class fu1 {
         return PorterDuff.Mode.SRC_OVER;
     }
 
-    public static void f(View view) {
-        if (xs1.U(view)) {
-            xs1.o0(view);
+    /* renamed from: f */
+    public static void m22257f(View view) {
+        if (xs1.m4743U(view)) {
+            xs1.m4708o0(view);
         } else {
-            view.addOnAttachStateChangeListener(new b());
+            view.addOnAttachStateChangeListener(new View$OnAttachStateChangeListenerC1329b());
         }
     }
 }

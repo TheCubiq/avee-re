@@ -18,23 +18,28 @@ import java.util.Comparator;
 import java.util.List;
 /* loaded from: classes.dex */
 public class w20 {
-    public static final Comparator<byte[]> a = new Comparator() { // from class: com.daaw.v20
+
+    /* renamed from: a */
+    public static final Comparator<byte[]> f30798a = new Comparator() { // from class: com.daaw.v20
         @Override // java.util.Comparator
         public final int compare(Object obj, Object obj2) {
-            int g;
-            g = w20.g((byte[]) obj, (byte[]) obj2);
-            return g;
+            int m6582g;
+            m6582g = w20.m6582g((byte[]) obj, (byte[]) obj2);
+            return m6582g;
         }
     };
 
+    /* renamed from: com.daaw.w20$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static Cursor a(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2, Object obj) {
+    public static class C3395a {
+        /* renamed from: a */
+        public static Cursor m6580a(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2, Object obj) {
             return contentResolver.query(uri, strArr, str, strArr2, str2, (CancellationSignal) obj);
         }
     }
 
-    public static List<byte[]> b(Signature[] signatureArr) {
+    /* renamed from: b */
+    public static List<byte[]> m6587b(Signature[] signatureArr) {
         ArrayList arrayList = new ArrayList();
         for (Signature signature : signatureArr) {
             arrayList.add(signature.toByteArray());
@@ -42,7 +47,8 @@ public class w20 {
         return arrayList;
     }
 
-    public static boolean c(List<byte[]> list, List<byte[]> list2) {
+    /* renamed from: c */
+    public static boolean m6586c(List<byte[]> list, List<byte[]> list2) {
         if (list.size() != list2.size()) {
             return false;
         }
@@ -54,30 +60,33 @@ public class w20 {
         return true;
     }
 
-    public static List<List<byte[]>> d(x20 x20Var, Resources resources) {
-        return x20Var.b() != null ? x20Var.b() : a30.c(resources, x20Var.c());
+    /* renamed from: d */
+    public static List<List<byte[]>> m6585d(x20 x20Var, Resources resources) {
+        return x20Var.m5614b() != null ? x20Var.m5614b() : a30.m27742c(resources, x20Var.m5613c());
     }
 
-    public static b30.a e(Context context, x20 x20Var, CancellationSignal cancellationSignal) {
-        ProviderInfo f = f(context.getPackageManager(), x20Var, context.getResources());
-        return f == null ? b30.a.a(1, null) : b30.a.a(0, h(context, x20Var, f.authority, cancellationSignal));
+    /* renamed from: e */
+    public static b30.C0804a m6584e(Context context, x20 x20Var, CancellationSignal cancellationSignal) {
+        ProviderInfo m6583f = m6583f(context.getPackageManager(), x20Var, context.getResources());
+        return m6583f == null ? b30.C0804a.m26510a(1, null) : b30.C0804a.m26510a(0, m6581h(context, x20Var, m6583f.authority, cancellationSignal));
     }
 
-    public static ProviderInfo f(PackageManager packageManager, x20 x20Var, Resources resources) {
-        String e = x20Var.e();
-        ProviderInfo resolveContentProvider = packageManager.resolveContentProvider(e, 0);
+    /* renamed from: f */
+    public static ProviderInfo m6583f(PackageManager packageManager, x20 x20Var, Resources resources) {
+        String m5611e = x20Var.m5611e();
+        ProviderInfo resolveContentProvider = packageManager.resolveContentProvider(m5611e, 0);
         if (resolveContentProvider == null) {
-            throw new PackageManager.NameNotFoundException("No package found for authority: " + e);
-        } else if (!resolveContentProvider.packageName.equals(x20Var.f())) {
-            throw new PackageManager.NameNotFoundException("Found content provider " + e + ", but package was not " + x20Var.f());
+            throw new PackageManager.NameNotFoundException("No package found for authority: " + m5611e);
+        } else if (!resolveContentProvider.packageName.equals(x20Var.m5610f())) {
+            throw new PackageManager.NameNotFoundException("Found content provider " + m5611e + ", but package was not " + x20Var.m5610f());
         } else {
-            List<byte[]> b = b(packageManager.getPackageInfo(resolveContentProvider.packageName, 64).signatures);
-            Collections.sort(b, a);
-            List<List<byte[]>> d = d(x20Var, resources);
-            for (int i = 0; i < d.size(); i++) {
-                ArrayList arrayList = new ArrayList(d.get(i));
-                Collections.sort(arrayList, a);
-                if (c(b, arrayList)) {
+            List<byte[]> m6587b = m6587b(packageManager.getPackageInfo(resolveContentProvider.packageName, 64).signatures);
+            Collections.sort(m6587b, f30798a);
+            List<List<byte[]>> m6585d = m6585d(x20Var, resources);
+            for (int i = 0; i < m6585d.size(); i++) {
+                ArrayList arrayList = new ArrayList(m6585d.get(i));
+                Collections.sort(arrayList, f30798a);
+                if (m6586c(m6587b, arrayList)) {
                     return resolveContentProvider;
                 }
             }
@@ -86,7 +95,8 @@ public class w20 {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static /* synthetic */ int g(byte[] bArr, byte[] bArr2) {
+    /* renamed from: g */
+    public static /* synthetic */ int m6582g(byte[] bArr, byte[] bArr2) {
         int i;
         int i2;
         if (bArr.length == bArr2.length) {
@@ -103,7 +113,8 @@ public class w20 {
         return i - i2;
     }
 
-    public static b30.b[] h(Context context, x20 x20Var, String str, CancellationSignal cancellationSignal) {
+    /* renamed from: h */
+    public static b30.C0805b[] m6581h(Context context, x20 x20Var, String str, CancellationSignal cancellationSignal) {
         int i;
         boolean z;
         ArrayList arrayList = new ArrayList();
@@ -111,7 +122,7 @@ public class w20 {
         Uri build2 = new Uri.Builder().scheme("content").authority(str).appendPath("file").build();
         Cursor cursor = null;
         try {
-            cursor = a.a(context.getContentResolver(), build, new String[]{"_id", "file_id", "font_ttc_index", "font_variation_settings", "font_weight", "font_italic", "result_code"}, "query = ?", new String[]{x20Var.g()}, null, cancellationSignal);
+            cursor = C3395a.m6580a(context.getContentResolver(), build, new String[]{"_id", "file_id", "font_ttc_index", "font_variation_settings", "font_weight", "font_italic", "result_code"}, "query = ?", new String[]{x20Var.m5609g()}, null, cancellationSignal);
             if (cursor != null && cursor.getCount() > 0) {
                 int columnIndex = cursor.getColumnIndex("result_code");
                 ArrayList arrayList2 = new ArrayList();
@@ -133,11 +144,11 @@ public class w20 {
                         i = i4;
                         z = true;
                     }
-                    arrayList2.add(b30.b.a(withAppendedId, i3, i5, z, i));
+                    arrayList2.add(b30.C0805b.m26507a(withAppendedId, i3, i5, z, i));
                 }
                 arrayList = arrayList2;
             }
-            return (b30.b[]) arrayList.toArray(new b30.b[0]);
+            return (b30.C0805b[]) arrayList.toArray(new b30.C0805b[0]);
         } finally {
             if (cursor != null) {
                 cursor.close();

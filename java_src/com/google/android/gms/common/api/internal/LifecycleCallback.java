@@ -13,22 +13,26 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 /* loaded from: classes.dex */
 public class LifecycleCallback {
-    public final pj0 p;
+
+    /* renamed from: p */
+    public final pj0 f36613p;
 
     public LifecycleCallback(pj0 pj0Var) {
-        this.p = pj0Var;
+        this.f36613p = pj0Var;
     }
 
-    public static pj0 c(Activity activity) {
-        return d(new nj0(activity));
+    /* renamed from: c */
+    public static pj0 m1181c(Activity activity) {
+        return m1180d(new nj0(activity));
     }
 
-    public static pj0 d(nj0 nj0Var) {
-        if (nj0Var.d()) {
-            return cl4.I1(nj0Var.b());
+    /* renamed from: d */
+    public static pj0 m1180d(nj0 nj0Var) {
+        if (nj0Var.m15151d()) {
+            return cl4.m25246I1(nj0Var.m15153b());
         }
-        if (nj0Var.c()) {
-            return ky2.d(nj0Var.a());
+        if (nj0Var.m15152c()) {
+            return ky2.m17348d(nj0Var.m15154a());
         }
         throw new IllegalArgumentException("Can't get fragment for unexpected activity.");
     }
@@ -38,33 +42,42 @@ public class LifecycleCallback {
         throw new IllegalStateException("Method not available in SDK.");
     }
 
-    public void a(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+    /* renamed from: a */
+    public void m1183a(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
     }
 
-    public Activity b() {
-        Activity f = this.p.f();
-        ry0.j(f);
-        return f;
+    /* renamed from: b */
+    public Activity m1182b() {
+        Activity mo13331f = this.f36613p.mo13331f();
+        ry0.m10830j(mo13331f);
+        return mo13331f;
     }
 
-    public void e(int i, int i2, Intent intent) {
+    /* renamed from: e */
+    public void mo1179e(int i, int i2, Intent intent) {
     }
 
-    public void f(Bundle bundle) {
+    /* renamed from: f */
+    public void mo1178f(Bundle bundle) {
     }
 
-    public void g() {
+    /* renamed from: g */
+    public void m1177g() {
     }
 
-    public void h() {
+    /* renamed from: h */
+    public void mo1176h() {
     }
 
-    public void i(Bundle bundle) {
+    /* renamed from: i */
+    public void mo1175i(Bundle bundle) {
     }
 
-    public void j() {
+    /* renamed from: j */
+    public void mo1174j() {
     }
 
-    public void k() {
+    /* renamed from: k */
+    public void mo1173k() {
     }
 }

@@ -1,27 +1,39 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class ad1 {
-    public int[] a;
-    public float[] b;
-    public float c;
-    public float d;
-    public int e;
-    public int f;
+
+    /* renamed from: a */
+    public int[] f3091a;
+
+    /* renamed from: b */
+    public float[] f3092b;
+
+    /* renamed from: c */
+    public float f3093c;
+
+    /* renamed from: d */
+    public float f3094d;
+
+    /* renamed from: e */
+    public int f3095e;
+
+    /* renamed from: f */
+    public int f3096f;
 
     public ad1(float[] fArr, float f, int i, int i2) {
         int i3 = 0;
-        this.a = new int[0];
-        this.b = new float[0];
-        this.c = 1.0f;
-        this.e = i2;
+        this.f3091a = new int[0];
+        this.f3092b = new float[0];
+        this.f3093c = 1.0f;
+        this.f3095e = i2;
         int length = fArr.length;
-        this.f = length;
-        this.b = fArr;
-        this.c = f;
-        this.a = new int[fArr.length];
+        this.f3096f = length;
+        this.f3092b = fArr;
+        this.f3093c = f;
+        this.f3091a = new int[fArr.length];
         int i4 = (length - 1) / 2;
         while (true) {
-            int[] iArr = this.a;
+            int[] iArr = this.f3091a;
             if (i3 >= iArr.length) {
                 return;
             }
@@ -30,7 +42,8 @@ public class ad1 {
         }
     }
 
-    public static ad1 b(int i) {
+    /* renamed from: b */
+    public static ad1 m27525b(int i) {
         double d = i;
         Double.isNaN(d);
         int ceil = (int) Math.ceil(d * 2.57d);
@@ -47,7 +60,8 @@ public class ad1 {
         return new ad1(fArr, f, i2, i);
     }
 
-    public static ad1 c(int i) {
+    /* renamed from: c */
+    public static ad1 m27524c(int i) {
         double d = i;
         Double.isNaN(d);
         int ceil = (int) Math.ceil(2.57d * d);
@@ -71,67 +85,72 @@ public class ad1 {
         return new ad1(fArr, f, i2, i);
     }
 
-    public static ad1 e(int i, float f) {
+    /* renamed from: e */
+    public static ad1 m27522e(int i, float f) {
         int i2 = 0;
         if (i < 1) {
             return new ad1(new float[]{1.0f}, 1.0f, 1, 0);
         }
-        ad1 b = b(i);
-        ad1 b2 = b(i);
-        b2.d(c(i));
-        b2.d = f;
+        ad1 m27525b = m27525b(i);
+        ad1 m27525b2 = m27525b(i);
+        m27525b2.m27523d(m27524c(i));
+        m27525b2.f3094d = f;
         float f2 = 1.0f - f;
         while (true) {
-            float[] fArr = b2.b;
+            float[] fArr = m27525b2.f3092b;
             if (i2 >= fArr.length) {
-                b2.a();
-                return b2;
+                m27525b2.m27526a();
+                return m27525b2;
             }
-            fArr[i2] = (fArr[i2] * f) + (b.b[i2] * f2);
+            fArr[i2] = (fArr[i2] * f) + (m27525b.f3092b[i2] * f2);
             i2++;
         }
     }
 
-    public void a() {
+    /* renamed from: a */
+    public void m27526a() {
         float f = 0.0f;
-        for (int i = 0; i < this.a.length; i++) {
-            f += Math.abs(this.b[i]);
+        for (int i = 0; i < this.f3091a.length; i++) {
+            f += Math.abs(this.f3092b[i]);
         }
-        this.c = f;
+        this.f3093c = f;
     }
 
-    public void d(ad1 ad1Var) {
-        int i = (this.f - ad1Var.f) / 2;
-        for (int i2 = 0; i2 < this.a.length; i2++) {
+    /* renamed from: d */
+    public void m27523d(ad1 ad1Var) {
+        int i = (this.f3096f - ad1Var.f3096f) / 2;
+        for (int i2 = 0; i2 < this.f3091a.length; i2++) {
             int i3 = i2 - i;
-            if (i3 >= 0 && i3 < ad1Var.f) {
-                float[] fArr = this.b;
-                fArr[i2] = fArr[i2] - (ad1Var.b[i3] * (this.c / ad1Var.c));
+            if (i3 >= 0 && i3 < ad1Var.f3096f) {
+                float[] fArr = this.f3092b;
+                fArr[i2] = fArr[i2] - (ad1Var.f3092b[i3] * (this.f3093c / ad1Var.f3093c));
             }
         }
     }
 
-    public int f() {
-        int[] iArr = this.a;
+    /* renamed from: f */
+    public int m27521f() {
+        int[] iArr = this.f3091a;
         if (iArr == null || iArr.length < 2) {
             return 0;
         }
-        return this.e;
+        return this.f3095e;
     }
 
-    public double g(int i, ie0 ie0Var) {
+    /* renamed from: g */
+    public double m27520g(int i, ie0 ie0Var) {
         float f = 0.0f;
         int i2 = 0;
         while (true) {
-            int[] iArr = this.a;
+            int[] iArr = this.f3091a;
             if (i2 >= iArr.length) {
-                return f / this.c;
+                return f / this.f3093c;
             }
             int i3 = iArr[i2] + i;
             if (i3 >= 0 && i3 < ie0Var.size()) {
                 double d = f;
                 double d2 = ie0Var.get(i3);
-                double d3 = this.b[i2];
+                double d3 = this.f3092b[i2];
                 Double.isNaN(d3);
                 Double.isNaN(d);
                 f = (float) (d + (d2 * d3));
@@ -140,7 +159,8 @@ public class ad1 {
         }
     }
 
-    public float h() {
-        return this.d;
+    /* renamed from: h */
+    public float m27519h() {
+        return this.f3094d;
     }
 }

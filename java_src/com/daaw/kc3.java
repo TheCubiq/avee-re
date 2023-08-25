@@ -8,7 +8,7 @@ import com.google.android.gms.internal.ads.zzblz;
 public final class kc3 implements Parcelable.Creator {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         zzfl zzflVar = null;
         int i = 0;
         boolean z = false;
@@ -19,45 +19,45 @@ public final class kc3 implements Parcelable.Creator {
         int i4 = 0;
         int i5 = 0;
         boolean z4 = false;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            switch (y71.l(r)) {
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            switch (y71.m4047l(m4041r)) {
                 case 1:
-                    i = y71.t(parcel, r);
+                    i = y71.m4039t(parcel, m4041r);
                     break;
                 case 2:
-                    z = y71.m(parcel, r);
+                    z = y71.m4046m(parcel, m4041r);
                     break;
                 case 3:
-                    i2 = y71.t(parcel, r);
+                    i2 = y71.m4039t(parcel, m4041r);
                     break;
                 case 4:
-                    z2 = y71.m(parcel, r);
+                    z2 = y71.m4046m(parcel, m4041r);
                     break;
                 case 5:
-                    i3 = y71.t(parcel, r);
+                    i3 = y71.m4039t(parcel, m4041r);
                     break;
                 case 6:
-                    zzflVar = (zzfl) y71.e(parcel, r, zzfl.CREATOR);
+                    zzflVar = (zzfl) y71.m4054e(parcel, m4041r, zzfl.CREATOR);
                     break;
                 case 7:
-                    z3 = y71.m(parcel, r);
+                    z3 = y71.m4046m(parcel, m4041r);
                     break;
                 case 8:
-                    i4 = y71.t(parcel, r);
+                    i4 = y71.m4039t(parcel, m4041r);
                     break;
                 case 9:
-                    i5 = y71.t(parcel, r);
+                    i5 = y71.m4039t(parcel, m4041r);
                     break;
                 case 10:
-                    z4 = y71.m(parcel, r);
+                    z4 = y71.m4046m(parcel, m4041r);
                     break;
                 default:
-                    y71.x(parcel, r);
+                    y71.m4035x(parcel, m4041r);
                     break;
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzblz(i, z, i2, z2, i3, zzflVar, z3, i4, i5, z4);
     }
 

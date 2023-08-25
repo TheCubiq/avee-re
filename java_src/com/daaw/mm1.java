@@ -4,25 +4,29 @@ import android.annotation.TargetApi;
 import android.os.Trace;
 /* loaded from: classes.dex */
 public final class mm1 {
-    public static void a(String str) {
-        if (sq1.a >= 18) {
-            b(str);
+    /* renamed from: a */
+    public static void m15937a(String str) {
+        if (sq1.f26525a >= 18) {
+            m15936b(str);
         }
     }
 
     @TargetApi(18)
-    public static void b(String str) {
+    /* renamed from: b */
+    public static void m15936b(String str) {
         Trace.beginSection(str);
     }
 
-    public static void c() {
-        if (sq1.a >= 18) {
-            d();
+    /* renamed from: c */
+    public static void m15935c() {
+        if (sq1.f26525a >= 18) {
+            m15934d();
         }
     }
 
     @TargetApi(18)
-    public static void d() {
+    /* renamed from: d */
+    public static void m15934d() {
         Trace.endSection();
     }
 }

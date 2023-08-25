@@ -12,7 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class ih3 {
-    public static final Intent a(Uri uri, Context context, sl2 sl2Var, View view) {
+    /* renamed from: a */
+    public static final Intent m19821a(Uri uri, Context context, sl2 sl2Var, View view) {
         if (uri == null) {
             return null;
         }
@@ -23,24 +24,27 @@ public final class ih3 {
         return intent;
     }
 
-    public static final Intent b(Intent intent, ResolveInfo resolveInfo, Context context, sl2 sl2Var, View view) {
+    /* renamed from: b */
+    public static final Intent m19820b(Intent intent, ResolveInfo resolveInfo, Context context, sl2 sl2Var, View view) {
         Intent intent2 = new Intent(intent);
         ActivityInfo activityInfo = resolveInfo.activityInfo;
         intent2.setClassName(activityInfo.packageName, activityInfo.name);
         return intent2;
     }
 
-    public static final ResolveInfo c(Intent intent, Context context, sl2 sl2Var, View view) {
-        return d(intent, new ArrayList(), context, sl2Var, view);
+    /* renamed from: c */
+    public static final ResolveInfo m19819c(Intent intent, Context context, sl2 sl2Var, View view) {
+        return m19818d(intent, new ArrayList(), context, sl2Var, view);
     }
 
-    public static final ResolveInfo d(Intent intent, ArrayList arrayList, Context context, sl2 sl2Var, View view) {
+    /* renamed from: d */
+    public static final ResolveInfo m19818d(Intent intent, ArrayList arrayList, Context context, sl2 sl2Var, View view) {
         PackageManager packageManager;
         ResolveInfo resolveInfo = null;
         try {
             packageManager = context.getPackageManager();
         } catch (Throwable th) {
-            zzt.zzo().u(th, "OpenSystemBrowserHandler.getDefaultBrowserResolverForIntent");
+            zzt.zzo().m11902u(th, "OpenSystemBrowserHandler.getDefaultBrowserResolverForIntent");
         }
         if (packageManager == null) {
             return null;

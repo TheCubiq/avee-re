@@ -9,25 +9,29 @@ public final class k83 extends ls7 implements yt7 {
     static {
         k83 k83Var = new k83();
         zzb = k83Var;
-        ls7.C(k83.class, k83Var);
+        ls7.m16597C(k83.class, k83Var);
     }
 
-    public static j83 L() {
-        return (j83) zzb.H();
+    /* renamed from: L */
+    public static j83 m17963L() {
+        return (j83) zzb.m16592H();
     }
 
-    public static /* synthetic */ void N(k83 k83Var, boolean z) {
+    /* renamed from: N */
+    public static /* synthetic */ void m17961N(k83 k83Var, boolean z) {
         k83Var.zzd |= 1;
         k83Var.zze = z;
     }
 
-    public static /* synthetic */ void O(k83 k83Var, int i) {
+    /* renamed from: O */
+    public static /* synthetic */ void m17960O(k83 k83Var, int i) {
         k83Var.zzd |= 2;
         k83Var.zzf = i;
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -42,12 +46,13 @@ public final class k83 extends ls7 implements yt7 {
                 }
                 return new k83();
             }
-            return ls7.z(zzb, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဇ\u0000\u0002င\u0001", new Object[]{"zzd", "zze", "zzf"});
+            return ls7.m16573z(zzb, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဇ\u0000\u0002င\u0001", new Object[]{"zzd", "zze", "zzf"});
         }
         return (byte) 1;
     }
 
-    public final boolean P() {
+    /* renamed from: P */
+    public final boolean m17959P() {
         return this.zze;
     }
 }

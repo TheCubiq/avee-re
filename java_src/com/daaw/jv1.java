@@ -2,9 +2,9 @@ package com.daaw;
 
 import android.app.FragmentManager;
 import android.content.Context;
+import com.daaw.DialogFragmentC1593ho;
 import com.daaw.avee.R;
 import com.daaw.avee.comp.Visualizer.VisualizerViewCore;
-import com.daaw.ho;
 import com.daaw.qw1;
 import com.daaw.sw1;
 import com.daaw.tw1;
@@ -13,234 +13,253 @@ import com.daaw.ww1;
 import com.daaw.yw1;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
-public class jv1 extends kt {
-    public WeakReference<VisualizerViewCore> b = new WeakReference<>(null);
+public class jv1 extends C1983kt {
 
+    /* renamed from: b */
+    public WeakReference<VisualizerViewCore> f15441b = new WeakReference<>(null);
+
+    /* renamed from: com.daaw.jv1$a */
     /* loaded from: classes.dex */
-    public class a implements ww1.a<ho, Boolean> {
-        public a() {
+    public class C1872a implements ww1.InterfaceC3477a<DialogFragmentC1593ho, Boolean> {
+        public C1872a() {
         }
 
-        @Override // com.daaw.ww1.a
+        @Override // com.daaw.ww1.InterfaceC3477a
         /* renamed from: a */
-        public Boolean b(ho hoVar) {
-            if (hoVar == null || (!hoVar.i() && !hoVar.m(0))) {
+        public Boolean mo5751b(DialogFragmentC1593ho dialogFragmentC1593ho) {
+            if (dialogFragmentC1593ho == null || (!dialogFragmentC1593ho.m20597i() && !dialogFragmentC1593ho.m20593m(0))) {
                 return Boolean.FALSE;
             }
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.jv1$b */
     /* loaded from: classes.dex */
-    public class b implements e0<VisualizerViewCore> {
-        public final /* synthetic */ boolean a;
-        public final /* synthetic */ int b;
+    public class C1873b implements InterfaceC1153e0<VisualizerViewCore> {
 
-        public b(boolean z, int i) {
-            this.a = z;
-            this.b = i;
+        /* renamed from: a */
+        public final /* synthetic */ boolean f15443a;
+
+        /* renamed from: b */
+        public final /* synthetic */ int f15444b;
+
+        public C1873b(boolean z, int i) {
+            this.f15443a = z;
+            this.f15444b = i;
         }
 
-        @Override // com.daaw.e0
+        @Override // com.daaw.InterfaceC1153e0
         /* renamed from: b */
-        public void a(VisualizerViewCore visualizerViewCore) {
-            pv1.b0(visualizerViewCore, this.a, this.b);
+        public void mo7884a(VisualizerViewCore visualizerViewCore) {
+            pv1.m13087b0(visualizerViewCore, this.f15443a, this.f15444b);
         }
     }
 
+    /* renamed from: com.daaw.jv1$c */
     /* loaded from: classes.dex */
-    public class c implements ww1.a<String, Boolean> {
-        public c() {
+    public class C1874c implements ww1.InterfaceC3477a<String, Boolean> {
+        public C1874c() {
         }
 
-        @Override // com.daaw.ww1.a
+        @Override // com.daaw.ww1.InterfaceC3477a
         /* renamed from: a */
-        public Boolean b(String str) {
+        public Boolean mo5751b(String str) {
             return Boolean.valueOf(!"Composition".equals(str));
         }
     }
 
+    /* renamed from: com.daaw.jv1$d */
     /* loaded from: classes.dex */
-    public class d implements qw1.a<VisualizerViewCore> {
-        public d() {
+    public class C1875d implements qw1.InterfaceC2788a<VisualizerViewCore> {
+        public C1875d() {
         }
 
-        @Override // com.daaw.qw1.a
+        @Override // com.daaw.qw1.InterfaceC2788a
         /* renamed from: a */
-        public void b(VisualizerViewCore visualizerViewCore) {
-            jv1.this.b = new WeakReference(visualizerViewCore);
+        public void mo3122b(VisualizerViewCore visualizerViewCore) {
+            jv1.this.f15441b = new WeakReference(visualizerViewCore);
         }
     }
 
+    /* renamed from: com.daaw.jv1$e */
     /* loaded from: classes.dex */
-    public class e implements uw1.a<al, Integer, Integer, vn, String> {
-        public e() {
+    public class C1876e implements uw1.InterfaceC3263a<C0645al, Integer, Integer, C3355vn, String> {
+        public C1876e() {
         }
 
-        @Override // com.daaw.uw1.a
+        @Override // com.daaw.uw1.InterfaceC3263a
         /* renamed from: b */
-        public void a(al alVar, Integer num, Integer num2, vn vnVar, String str) {
-            jv1.this.c(vnVar, str);
-            jv1.this.d(vnVar, true, -1);
+        public void mo3116a(C0645al c0645al, Integer num, Integer num2, C3355vn c3355vn, String str) {
+            jv1.this.m18232c(c3355vn, str);
+            jv1.this.m18231d(c3355vn, true, -1);
         }
     }
 
+    /* renamed from: com.daaw.jv1$f */
     /* loaded from: classes.dex */
-    public class f implements sw1.a<Context, Integer, vn> {
-        public f() {
+    public class C1877f implements sw1.InterfaceC2987a<Context, Integer, C3355vn> {
+        public C1877f() {
         }
 
-        @Override // com.daaw.sw1.a
+        @Override // com.daaw.sw1.InterfaceC2987a
         /* renamed from: b */
-        public void a(Context context, Integer num, vn vnVar) {
-            un b;
-            un l;
-            ho k = ho.k();
-            if (k == null) {
+        public void mo3118a(Context context, Integer num, C3355vn c3355vn) {
+            C3239un m20572b;
+            C3239un m7959l;
+            DialogFragmentC1593ho m20595k = DialogFragmentC1593ho.m20595k();
+            if (m20595k == null) {
                 return;
             }
-            ho.i l2 = k.l(num.intValue());
-            if (l2.a() == null && (b = l2.b()) != null && (l = b.l()) != null && (l instanceof rn)) {
-                rn rnVar = (rn) l;
-                rnVar.x0(b);
-                jv1.this.d(vnVar, false, rnVar.u0());
+            DialogFragmentC1593ho.C1602i m20594l = m20595k.m20594l(num.intValue());
+            if (m20594l.m20573a() == null && (m20572b = m20594l.m20572b()) != null && (m7959l = m20572b.m7959l()) != null && (m7959l instanceof C2872rn)) {
+                C2872rn c2872rn = (C2872rn) m7959l;
+                c2872rn.m11163x0(m20572b);
+                jv1.this.m18231d(c3355vn, false, c2872rn.m11166u0());
             }
         }
     }
 
+    /* renamed from: com.daaw.jv1$g */
     /* loaded from: classes.dex */
-    public class g implements sw1.a<Context, Integer, vn> {
-        public g() {
+    public class C1878g implements sw1.InterfaceC2987a<Context, Integer, C3355vn> {
+        public C1878g() {
         }
 
-        @Override // com.daaw.sw1.a
+        @Override // com.daaw.sw1.InterfaceC2987a
         /* renamed from: b */
-        public void a(Context context, Integer num, vn vnVar) {
-            ho k = ho.k();
-            if (k != null) {
-                k.z(num.intValue());
+        public void mo3118a(Context context, Integer num, C3355vn c3355vn) {
+            DialogFragmentC1593ho m20595k = DialogFragmentC1593ho.m20595k();
+            if (m20595k != null) {
+                m20595k.m20580z(num.intValue());
             }
         }
     }
 
+    /* renamed from: com.daaw.jv1$h */
     /* loaded from: classes.dex */
-    public class h implements sw1.a<ho, String, String> {
-        public h() {
+    public class C1879h implements sw1.InterfaceC2987a<DialogFragmentC1593ho, String, String> {
+        public C1879h() {
         }
 
-        @Override // com.daaw.sw1.a
+        @Override // com.daaw.sw1.InterfaceC2987a
         /* renamed from: b */
-        public void a(ho hoVar, String str, String str2) {
+        public void mo3118a(DialogFragmentC1593ho dialogFragmentC1593ho, String str, String str2) {
             FragmentManager fragmentManager;
             int i;
             if ("AppLogo".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_app_logo;
             } else if ("AudioProvider".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_audio_provider;
             } else if ("BlurEffect".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_blur_effect;
             } else if ("Composition".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_composition;
             } else if ("Image".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_image;
             } else if ("MirrorEffect".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_mirror_effect;
             } else if ("MotionBlurEffect".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_motion_blur_effect;
             } else if ("Particles".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_particles_element;
             } else if ("RgbSplitEffect".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_rgb_split_effect;
             } else if ("Bars".equals(str)) {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_segment_bars;
             } else if (!"Text".equals(str)) {
                 return;
             } else {
-                fragmentManager = hoVar.getFragmentManager();
+                fragmentManager = dialogFragmentC1593ho.getFragmentManager();
                 i = R.raw.element_text;
             }
-            lj0.e(fragmentManager, true, i, 0, "");
+            lj0.m16915e(fragmentManager, true, i, 0, "");
         }
     }
 
+    /* renamed from: com.daaw.jv1$i */
     /* loaded from: classes.dex */
-    public class i implements tw1.a<ho, vn, un, String> {
-        public i() {
+    public class C1880i implements tw1.InterfaceC3140a<DialogFragmentC1593ho, C3355vn, C3239un, String> {
+        public C1880i() {
         }
 
-        @Override // com.daaw.tw1.a
+        @Override // com.daaw.tw1.InterfaceC3140a
         /* renamed from: b */
-        public void a(ho hoVar, vn vnVar, un unVar, String str) {
-            if (vnVar == null || unVar == null) {
+        public void mo3114a(DialogFragmentC1593ho dialogFragmentC1593ho, C3355vn c3355vn, C3239un c3239un, String str) {
+            if (c3355vn == null || c3239un == null) {
                 return;
             }
-            unVar.g(unVar.B(), unVar.D());
-            Context e = dx0.e();
-            if (e != null) {
-                vy.a.a(e.getString(R.string.vis_customization_element_reset));
+            c3239un.m7969g(c3239un.m8003B(), c3239un.m8001D());
+            Context m23837e = dx0.m23837e();
+            if (m23837e != null) {
+                C3385vy.f30703a.m12018a(m23837e.getString(R.string.vis_customization_element_reset));
             }
-            jv1.this.d(vnVar, false, -1);
+            jv1.this.m18231d(c3355vn, false, -1);
         }
     }
 
+    /* renamed from: com.daaw.jv1$j */
     /* loaded from: classes.dex */
-    public class j implements ww1.a<String, Integer> {
-        public j() {
+    public class C1881j implements ww1.InterfaceC3477a<String, Integer> {
+        public C1881j() {
         }
 
-        @Override // com.daaw.ww1.a
+        @Override // com.daaw.ww1.InterfaceC3477a
         /* renamed from: a */
-        public Integer b(String str) {
+        public Integer mo5751b(String str) {
             return Integer.valueOf("customization_general".equals(str) ? R.raw.customization_general : "customization_segment_renderers".equals(str) ? R.raw.customization_segment_renderers : 0);
         }
     }
 
+    /* renamed from: com.daaw.jv1$k */
     /* loaded from: classes.dex */
-    public class k implements yw1.a<ho, String, String, lo1<String[], String>> {
-        public k() {
+    public class C1882k implements yw1.InterfaceC3757a<DialogFragmentC1593ho, String, String, lo1<String[], String>> {
+        public C1882k() {
         }
 
-        @Override // com.daaw.yw1.a
+        @Override // com.daaw.yw1.InterfaceC3757a
         /* renamed from: b */
-        public lo1<String[], String> a(ho hoVar, String str, String str2) {
+        public lo1<String[], String> mo3153a(DialogFragmentC1593ho dialogFragmentC1593ho, String str, String str2) {
             return new lo1<>(new String[]{"10"}, "10");
         }
     }
 
     public jv1() {
-        ho.T.b(new c(), this.a);
-        o30.w.b(new d(), this.a);
-        ho.F.b(new e(), this.a);
-        ho.R.b(new f(), this.a);
-        ho.Q.b(new g(), this.a);
-        ho.N.b(new h(), this.a);
-        ho.S.b(new i(), this.a);
-        lj0.u.b(new j(), this.a);
-        ho.O.b(new k(), this.a);
-        ho.P.b(new a(), this.a);
+        DialogFragmentC1593ho.f12712T.m5752b(new C1874c(), this.f16736a);
+        o30.f20983w.m12017b(new C1875d(), this.f16736a);
+        DialogFragmentC1593ho.f12698F.m7666b(new C1876e(), this.f16736a);
+        DialogFragmentC1593ho.f12710R.m9794b(new C1877f(), this.f16736a);
+        DialogFragmentC1593ho.f12709Q.m9794b(new C1878g(), this.f16736a);
+        DialogFragmentC1593ho.f12706N.m9794b(new C1879h(), this.f16736a);
+        DialogFragmentC1593ho.f12711S.m8755b(new C1880i(), this.f16736a);
+        lj0.f17448u.m5752b(new C1881j(), this.f16736a);
+        DialogFragmentC1593ho.f12707O.m3154b(new C1882k(), this.f16736a);
+        DialogFragmentC1593ho.f12708P.m5752b(new C1872a(), this.f16736a);
     }
 
-    public void c(vn vnVar, String str) {
-        un b2 = "Composition".equals(str) ? vnVar.b() : vnVar.c() > 0 ? vnVar.a(vnVar.c() - 1).b() : null;
-        if (b2 != null) {
-            b2.E(str);
+    /* renamed from: c */
+    public void m18232c(C3355vn c3355vn, String str) {
+        C3239un mo7018b = "Composition".equals(str) ? c3355vn.mo7018b() : c3355vn.mo7017c() > 0 ? c3355vn.mo7019a(c3355vn.mo7017c() - 1).mo7018b() : null;
+        if (mo7018b != null) {
+            mo7018b.m8000E(str);
         }
     }
 
-    public final void d(vn vnVar, boolean z, int i2) {
-        VisualizerViewCore visualizerViewCore = this.b.get();
+    /* renamed from: d */
+    public final void m18231d(C3355vn c3355vn, boolean z, int i) {
+        VisualizerViewCore visualizerViewCore = this.f15441b.get();
         if (visualizerViewCore != null) {
-            visualizerViewCore.o(vnVar, new b(z, i2));
+            visualizerViewCore.m26839o(c3355vn, new C1873b(z, i));
         }
     }
 }

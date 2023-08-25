@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class xj1 {
-    public abstract void a(Runnable runnable);
+    /* renamed from: a */
+    public abstract void mo1977a(Runnable runnable);
 
-    public abstract boolean b();
+    /* renamed from: b */
+    public abstract boolean mo1976b();
 
-    public abstract void c(Runnable runnable);
+    /* renamed from: c */
+    public abstract void mo1975c(Runnable runnable);
 }

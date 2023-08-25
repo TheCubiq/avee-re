@@ -1,12 +1,15 @@
 package com.daaw;
 
-import com.daaw.lm;
+import com.daaw.AbstractC2057lm;
 import java.io.InputStream;
 /* loaded from: classes2.dex */
 public interface wr0 {
-    InputStream b();
+    /* renamed from: b */
+    InputStream mo5841b();
 
-    String c();
+    /* renamed from: c */
+    String mo5840c();
 
-    lm.d.b d();
+    /* renamed from: d */
+    AbstractC2057lm.AbstractC2063d.AbstractC2065b mo5839d();
 }

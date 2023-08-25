@@ -5,47 +5,63 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 /* loaded from: classes2.dex */
 public final class ar1 {
-    public static final long b = TimeUnit.HOURS.toSeconds(1);
-    public static final Pattern c = Pattern.compile("\\AA[\\w-]{38}\\z");
-    public static ar1 d;
-    public final bg a;
 
-    public ar1(bg bgVar) {
-        this.a = bgVar;
+    /* renamed from: b */
+    public static final long f3493b = TimeUnit.HOURS.toSeconds(1);
+
+    /* renamed from: c */
+    public static final Pattern f3494c = Pattern.compile("\\AA[\\w-]{38}\\z");
+
+    /* renamed from: d */
+    public static ar1 f3495d;
+
+    /* renamed from: a */
+    public final InterfaceC0837bg f3496a;
+
+    public ar1(InterfaceC0837bg interfaceC0837bg) {
+        this.f3496a = interfaceC0837bg;
     }
 
-    public static ar1 c() {
-        return d(ui1.b());
+    /* renamed from: c */
+    public static ar1 m27138c() {
+        return m27137d(ui1.m8116b());
     }
 
-    public static ar1 d(bg bgVar) {
-        if (d == null) {
-            d = new ar1(bgVar);
+    /* renamed from: d */
+    public static ar1 m27137d(InterfaceC0837bg interfaceC0837bg) {
+        if (f3495d == null) {
+            f3495d = new ar1(interfaceC0837bg);
         }
-        return d;
+        return f3495d;
     }
 
-    public static boolean g(String str) {
-        return c.matcher(str).matches();
+    /* renamed from: g */
+    public static boolean m27134g(String str) {
+        return f3494c.matcher(str).matches();
     }
 
-    public static boolean h(String str) {
+    /* renamed from: h */
+    public static boolean m27133h(String str) {
         return str.contains(":");
     }
 
-    public long a() {
-        return this.a.a();
+    /* renamed from: a */
+    public long m27140a() {
+        return this.f3496a.mo8117a();
     }
 
-    public long b() {
-        return TimeUnit.MILLISECONDS.toSeconds(a());
+    /* renamed from: b */
+    public long m27139b() {
+        return TimeUnit.MILLISECONDS.toSeconds(m27140a());
     }
 
-    public long e() {
+    /* renamed from: e */
+    public long m27136e() {
         return (long) (Math.random() * 1000.0d);
     }
 
-    public boolean f(kw0 kw0Var) {
-        return TextUtils.isEmpty(kw0Var.b()) || kw0Var.h() + kw0Var.c() < b() + b;
+    /* renamed from: f */
+    public boolean m27135f(kw0 kw0Var) {
+        return TextUtils.isEmpty(kw0Var.mo16163b()) || kw0Var.mo16157h() + kw0Var.mo16162c() < m27139b() + f3493b;
     }
 }

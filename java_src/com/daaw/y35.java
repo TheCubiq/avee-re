@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class y35 implements wz7 {
-    public static y35 a() {
+    /* renamed from: a */
+    public static y35 m4146a() {
         y35 y35Var;
-        y35Var = x35.a;
+        y35Var = x35.f32074a;
         return y35Var;
     }
 

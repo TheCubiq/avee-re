@@ -4,80 +4,106 @@ import android.media.AudioTrack;
 import android.os.SystemClock;
 /* loaded from: classes.dex */
 public class gr2 {
-    public AudioTrack a;
-    public boolean b;
-    public int c;
-    public long d;
-    public long e;
-    public long f;
-    public long g;
-    public long h;
-    public long i;
+
+    /* renamed from: a */
+    public AudioTrack f11616a;
+
+    /* renamed from: b */
+    public boolean f11617b;
+
+    /* renamed from: c */
+    public int f11618c;
+
+    /* renamed from: d */
+    public long f11619d;
+
+    /* renamed from: e */
+    public long f11620e;
+
+    /* renamed from: f */
+    public long f11621f;
+
+    /* renamed from: g */
+    public long f11622g;
+
+    /* renamed from: h */
+    public long f11623h;
+
+    /* renamed from: i */
+    public long f11624i;
 
     public /* synthetic */ gr2(fr2 fr2Var) {
     }
 
-    public final long a() {
-        if (this.g != -9223372036854775807L) {
-            return Math.min(this.i, this.h + ((((SystemClock.elapsedRealtime() * 1000) - this.g) * this.c) / 1000000));
+    /* renamed from: a */
+    public final long m21310a() {
+        if (this.f11622g != -9223372036854775807L) {
+            return Math.min(this.f11624i, this.f11623h + ((((SystemClock.elapsedRealtime() * 1000) - this.f11622g) * this.f11618c) / 1000000));
         }
-        int playState = this.a.getPlayState();
+        int playState = this.f11616a.getPlayState();
         if (playState == 1) {
             return 0L;
         }
-        long playbackHeadPosition = this.a.getPlaybackHeadPosition() & 4294967295L;
-        if (this.b) {
+        long playbackHeadPosition = this.f11616a.getPlaybackHeadPosition() & 4294967295L;
+        if (this.f11617b) {
             if (playState == 2 && playbackHeadPosition == 0) {
-                this.f = this.d;
+                this.f11621f = this.f11619d;
             }
-            playbackHeadPosition += this.f;
+            playbackHeadPosition += this.f11621f;
         }
-        if (this.d > playbackHeadPosition) {
-            this.e++;
+        if (this.f11619d > playbackHeadPosition) {
+            this.f11620e++;
         }
-        this.d = playbackHeadPosition;
-        return playbackHeadPosition + (this.e << 32);
+        this.f11619d = playbackHeadPosition;
+        return playbackHeadPosition + (this.f11620e << 32);
     }
 
-    public final long b() {
-        return (a() * 1000000) / this.c;
+    /* renamed from: b */
+    public final long m21309b() {
+        return (m21310a() * 1000000) / this.f11618c;
     }
 
-    public long c() {
+    /* renamed from: c */
+    public long mo20464c() {
         throw new UnsupportedOperationException();
     }
 
-    public long d() {
+    /* renamed from: d */
+    public long mo20463d() {
         throw new UnsupportedOperationException();
     }
 
-    public final void e(long j) {
-        this.h = a();
-        this.g = SystemClock.elapsedRealtime() * 1000;
-        this.i = j;
-        this.a.stop();
+    /* renamed from: e */
+    public final void m21308e(long j) {
+        this.f11623h = m21310a();
+        this.f11622g = SystemClock.elapsedRealtime() * 1000;
+        this.f11624i = j;
+        this.f11616a.stop();
     }
 
-    public final void f() {
-        if (this.g != -9223372036854775807L) {
+    /* renamed from: f */
+    public final void m21307f() {
+        if (this.f11622g != -9223372036854775807L) {
             return;
         }
-        this.a.pause();
+        this.f11616a.pause();
     }
 
-    public void g(AudioTrack audioTrack, boolean z) {
-        this.a = audioTrack;
-        this.b = z;
-        this.g = -9223372036854775807L;
-        this.d = 0L;
-        this.e = 0L;
-        this.f = 0L;
+    /* renamed from: g */
+    public void mo20462g(AudioTrack audioTrack, boolean z) {
+        this.f11616a = audioTrack;
+        this.f11617b = z;
+        this.f11622g = -9223372036854775807L;
+        this.f11619d = 0L;
+        this.f11620e = 0L;
+        this.f11621f = 0L;
         if (audioTrack != null) {
-            this.c = audioTrack.getSampleRate();
+            this.f11618c = audioTrack.getSampleRate();
         }
     }
 
-    public boolean h() {
+    /* renamed from: h */
+    public boolean mo20461h() {
         return false;
     }
 }

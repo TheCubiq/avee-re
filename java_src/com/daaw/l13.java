@@ -14,56 +14,82 @@ import java.util.List;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class l13 implements Application.ActivityLifecycleCallbacks {
-    public Activity p;
-    public Context q;
-    public Runnable w;
-    public long y;
-    public final Object r = new Object();
-    public boolean s = true;
-    public boolean t = false;
-    @GuardedBy("lock")
-    public final List u = new ArrayList();
-    @GuardedBy("lock")
-    public final List v = new ArrayList();
-    public boolean x = false;
 
-    public final Activity a() {
-        return this.p;
+    /* renamed from: p */
+    public Activity f16948p;
+
+    /* renamed from: q */
+    public Context f16949q;
+
+    /* renamed from: w */
+    public Runnable f16955w;
+
+    /* renamed from: y */
+    public long f16957y;
+
+    /* renamed from: r */
+    public final Object f16950r = new Object();
+
+    /* renamed from: s */
+    public boolean f16951s = true;
+
+    /* renamed from: t */
+    public boolean f16952t = false;
+    @GuardedBy("lock")
+
+    /* renamed from: u */
+    public final List f16953u = new ArrayList();
+    @GuardedBy("lock")
+
+    /* renamed from: v */
+    public final List f16954v = new ArrayList();
+
+    /* renamed from: x */
+    public boolean f16956x = false;
+
+    /* renamed from: a */
+    public final Activity m17221a() {
+        return this.f16948p;
     }
 
-    public final Context b() {
-        return this.q;
+    /* renamed from: b */
+    public final Context m17220b() {
+        return this.f16949q;
     }
 
-    public final void f(m13 m13Var) {
-        synchronized (this.r) {
-            this.u.add(m13Var);
+    /* renamed from: f */
+    public final void m17216f(m13 m13Var) {
+        synchronized (this.f16950r) {
+            this.f16953u.add(m13Var);
         }
     }
 
-    public final void g(Application application, Context context) {
-        if (this.x) {
+    /* renamed from: g */
+    public final void m17215g(Application application, Context context) {
+        if (this.f16956x) {
             return;
         }
         application.registerActivityLifecycleCallbacks(this);
         if (context instanceof Activity) {
-            k((Activity) context);
+            m17211k((Activity) context);
         }
-        this.q = application;
-        this.y = ((Long) zzba.zzc().b(g93.M0)).longValue();
-        this.x = true;
+        this.f16949q = application;
+        this.f16957y = ((Long) zzba.zzc().m23658b(g93.f10482M0)).longValue();
+        this.f16956x = true;
     }
 
-    public final void h(m13 m13Var) {
-        synchronized (this.r) {
-            this.u.remove(m13Var);
+    /* renamed from: h */
+    public final void m17214h(m13 m13Var) {
+        synchronized (this.f16950r) {
+            this.f16953u.remove(m13Var);
         }
     }
 
-    public final void k(Activity activity) {
-        synchronized (this.r) {
+    /* renamed from: k */
+    public final void m17211k(Activity activity) {
+        synchronized (this.f16950r) {
             if (!activity.getClass().getName().startsWith(MobileAds.ERROR_DOMAIN)) {
-                this.p = activity;
+                this.f16948p = activity;
             }
         }
     }
@@ -74,20 +100,20 @@ public final class l13 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityDestroyed(Activity activity) {
-        synchronized (this.r) {
-            Activity activity2 = this.p;
+        synchronized (this.f16950r) {
+            Activity activity2 = this.f16948p;
             if (activity2 != null) {
                 if (activity2.equals(activity)) {
-                    this.p = null;
+                    this.f16948p = null;
                 }
-                Iterator it = this.v.iterator();
+                Iterator it = this.f16954v.iterator();
                 while (it.hasNext()) {
                     try {
                         if (((d23) it.next()).zza()) {
                             it.remove();
                         }
                     } catch (Exception e) {
-                        zzt.zzo().u(e, "AppActivityTracker.ActivityListener.onActivityDestroyed");
+                        zzt.zzo().m11902u(e, "AppActivityTracker.ActivityListener.onActivityDestroyed");
                         k04.zzh("", e);
                     }
                 }
@@ -97,49 +123,49 @@ public final class l13 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityPaused(Activity activity) {
-        k(activity);
-        synchronized (this.r) {
-            for (d23 d23Var : this.v) {
+        m17211k(activity);
+        synchronized (this.f16950r) {
+            for (d23 d23Var : this.f16954v) {
                 try {
                     d23Var.zzb();
                 } catch (Exception e) {
-                    zzt.zzo().u(e, "AppActivityTracker.ActivityListener.onActivityPaused");
+                    zzt.zzo().m11902u(e, "AppActivityTracker.ActivityListener.onActivityPaused");
                     k04.zzh("", e);
                 }
             }
         }
-        this.t = true;
-        Runnable runnable = this.w;
+        this.f16952t = true;
+        Runnable runnable = this.f16955w;
         if (runnable != null) {
             zzs.zza.removeCallbacks(runnable);
         }
         gv6 gv6Var = zzs.zza;
         k13 k13Var = new k13(this);
-        this.w = k13Var;
-        gv6Var.postDelayed(k13Var, this.y);
+        this.f16955w = k13Var;
+        gv6Var.postDelayed(k13Var, this.f16957y);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityResumed(Activity activity) {
-        k(activity);
-        this.t = false;
-        boolean z = !this.s;
-        this.s = true;
-        Runnable runnable = this.w;
+        m17211k(activity);
+        this.f16952t = false;
+        boolean z = !this.f16951s;
+        this.f16951s = true;
+        Runnable runnable = this.f16955w;
         if (runnable != null) {
             zzs.zza.removeCallbacks(runnable);
         }
-        synchronized (this.r) {
-            for (d23 d23Var : this.v) {
+        synchronized (this.f16950r) {
+            for (d23 d23Var : this.f16954v) {
                 try {
                     d23Var.zzc();
                 } catch (Exception e) {
-                    zzt.zzo().u(e, "AppActivityTracker.ActivityListener.onActivityResumed");
+                    zzt.zzo().m11902u(e, "AppActivityTracker.ActivityListener.onActivityResumed");
                     k04.zzh("", e);
                 }
             }
             if (z) {
-                for (m13 m13Var : this.u) {
+                for (m13 m13Var : this.f16953u) {
                     try {
                         m13Var.zza(true);
                     } catch (Exception e2) {
@@ -158,7 +184,7 @@ public final class l13 implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityStarted(Activity activity) {
-        k(activity);
+        m17211k(activity);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks

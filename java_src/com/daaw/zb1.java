@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface zb1 {
-    rj1<tb1> a();
+    /* renamed from: a */
+    rj1<tb1> mo2555a();
 
-    tb1 b();
+    /* renamed from: b */
+    tb1 mo2554b();
 }

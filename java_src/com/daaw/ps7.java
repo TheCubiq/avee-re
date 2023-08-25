@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ps7 {
-    boolean a(int i);
+    /* renamed from: a */
+    boolean mo3065a(int i);
 }

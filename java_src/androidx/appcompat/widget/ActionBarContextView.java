@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.appcompat.view.menu.C0082e;
+import com.daaw.AbstractC0783b;
+import com.daaw.AbstractC2228n0;
 import com.daaw.c21;
 import com.daaw.hu1;
-import com.daaw.n0;
 import com.daaw.o11;
 import com.daaw.ul1;
 import com.daaw.ut1;
@@ -19,31 +21,58 @@ import com.daaw.x01;
 import com.daaw.x21;
 import com.daaw.xs1;
 /* loaded from: classes.dex */
-public class ActionBarContextView extends com.daaw.b {
-    public View A;
-    public View B;
-    public LinearLayout C;
-    public TextView D;
-    public TextView E;
-    public int F;
-    public int G;
-    public boolean H;
-    public int I;
-    public CharSequence x;
-    public CharSequence y;
-    public View z;
+public class ActionBarContextView extends AbstractC0783b {
 
+    /* renamed from: A */
+    public View f475A;
+
+    /* renamed from: B */
+    public View f476B;
+
+    /* renamed from: C */
+    public LinearLayout f477C;
+
+    /* renamed from: D */
+    public TextView f478D;
+
+    /* renamed from: E */
+    public TextView f479E;
+
+    /* renamed from: F */
+    public int f480F;
+
+    /* renamed from: G */
+    public int f481G;
+
+    /* renamed from: H */
+    public boolean f482H;
+
+    /* renamed from: I */
+    public int f483I;
+
+    /* renamed from: x */
+    public CharSequence f484x;
+
+    /* renamed from: y */
+    public CharSequence f485y;
+
+    /* renamed from: z */
+    public View f486z;
+
+    /* renamed from: androidx.appcompat.widget.ActionBarContextView$a */
     /* loaded from: classes.dex */
-    public class a implements View.OnClickListener {
-        public final /* synthetic */ n0 p;
+    public class View$OnClickListenerC0100a implements View.OnClickListener {
 
-        public a(n0 n0Var) {
-            this.p = n0Var;
+        /* renamed from: p */
+        public final /* synthetic */ AbstractC2228n0 f487p;
+
+        public View$OnClickListenerC0100a(AbstractC2228n0 abstractC2228n0) {
+            this.f487p = abstractC2228n0;
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            this.p.c();
+            this.f487p.mo15648c();
         }
     }
 
@@ -57,23 +86,25 @@ public class ActionBarContextView extends com.daaw.b {
 
     public ActionBarContextView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        ul1 v = ul1.v(context, attributeSet, x21.y, i, 0);
-        xs1.v0(this, v.g(x21.z));
-        this.F = v.n(x21.D, 0);
-        this.G = v.n(x21.C, 0);
-        this.t = v.m(x21.B, 0);
-        this.I = v.n(x21.A, c21.abc_action_mode_close_item_material);
-        v.w();
+        ul1 m8037v = ul1.m8037v(context, attributeSet, x21.f32002y, i, 0);
+        xs1.m4694v0(this, m8037v.m8052g(x21.f32007z));
+        this.f480F = m8037v.m8045n(x21.f31773D, 0);
+        this.f481G = m8037v.m8045n(x21.f31768C, 0);
+        this.f4141t = m8037v.m8046m(x21.f31763B, 0);
+        this.f483I = m8037v.m8045n(x21.f31758A, c21.abc_action_mode_close_item_material);
+        m8037v.m8036w();
     }
 
-    @Override // com.daaw.b
-    public /* bridge */ /* synthetic */ ut1 f(int i, long j) {
-        return super.f(i, j);
+    @Override // com.daaw.AbstractC0783b
+    /* renamed from: f */
+    public /* bridge */ /* synthetic */ ut1 mo26566f(int i, long j) {
+        return super.mo26566f(i, j);
     }
 
-    public void g() {
-        if (this.z == null) {
-            k();
+    /* renamed from: g */
+    public void m30160g() {
+        if (this.f486z == null) {
+            m30156k();
         }
     }
 
@@ -87,137 +118,129 @@ public class ActionBarContextView extends com.daaw.b {
         return new ViewGroup.MarginLayoutParams(getContext(), attributeSet);
     }
 
-    @Override // com.daaw.b
+    @Override // com.daaw.AbstractC0783b
     public /* bridge */ /* synthetic */ int getAnimatedVisibility() {
         return super.getAnimatedVisibility();
     }
 
-    @Override // com.daaw.b
+    @Override // com.daaw.AbstractC0783b
     public /* bridge */ /* synthetic */ int getContentHeight() {
         return super.getContentHeight();
     }
 
     public CharSequence getSubtitle() {
-        return this.y;
+        return this.f485y;
     }
 
     public CharSequence getTitle() {
-        return this.x;
+        return this.f484x;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:11:0x003e  */
+    /* renamed from: h */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void h(com.daaw.n0 r4) {
-        /*
-            r3 = this;
-            android.view.View r0 = r3.z
-            if (r0 != 0) goto L19
-            android.content.Context r0 = r3.getContext()
-            android.view.LayoutInflater r0 = android.view.LayoutInflater.from(r0)
-            int r1 = r3.I
-            r2 = 0
-            android.view.View r0 = r0.inflate(r1, r3, r2)
-            r3.z = r0
-        L15:
-            r3.addView(r0)
-            goto L22
-        L19:
-            android.view.ViewParent r0 = r0.getParent()
-            if (r0 != 0) goto L22
-            android.view.View r0 = r3.z
-            goto L15
-        L22:
-            android.view.View r0 = r3.z
-            int r1 = com.daaw.o11.action_mode_close_button
-            android.view.View r0 = r0.findViewById(r1)
-            r3.A = r0
-            androidx.appcompat.widget.ActionBarContextView$a r1 = new androidx.appcompat.widget.ActionBarContextView$a
-            r1.<init>(r4)
-            r0.setOnClickListener(r1)
-            android.view.Menu r4 = r4.e()
-            androidx.appcompat.view.menu.e r4 = (androidx.appcompat.view.menu.e) r4
-            androidx.appcompat.widget.ActionMenuPresenter r0 = r3.s
-            if (r0 == 0) goto L41
-            r0.A()
-        L41:
-            androidx.appcompat.widget.ActionMenuPresenter r0 = new androidx.appcompat.widget.ActionMenuPresenter
-            android.content.Context r1 = r3.getContext()
-            r0.<init>(r1)
-            r3.s = r0
-            r1 = 1
-            r0.L(r1)
-            android.view.ViewGroup$LayoutParams r0 = new android.view.ViewGroup$LayoutParams
-            r1 = -2
-            r2 = -1
-            r0.<init>(r1, r2)
-            androidx.appcompat.widget.ActionMenuPresenter r1 = r3.s
-            android.content.Context r2 = r3.q
-            r4.c(r1, r2)
-            androidx.appcompat.widget.ActionMenuPresenter r4 = r3.s
-            androidx.appcompat.view.menu.j r4 = r4.q(r3)
-            androidx.appcompat.widget.ActionMenuView r4 = (androidx.appcompat.widget.ActionMenuView) r4
-            r3.r = r4
-            r1 = 0
-            com.daaw.xs1.v0(r4, r1)
-            androidx.appcompat.widget.ActionMenuView r4 = r3.r
-            r3.addView(r4, r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.appcompat.widget.ActionBarContextView.h(com.daaw.n0):void");
+    public void m30159h(AbstractC2228n0 abstractC2228n0) {
+        View view;
+        ActionMenuPresenter actionMenuPresenter;
+        View view2 = this.f486z;
+        if (view2 != null) {
+            if (view2.getParent() == null) {
+                view = this.f486z;
+            }
+            View findViewById = this.f486z.findViewById(o11.action_mode_close_button);
+            this.f475A = findViewById;
+            findViewById.setOnClickListener(new View$OnClickListenerC0100a(abstractC2228n0));
+            C0082e c0082e = (C0082e) abstractC2228n0.mo15646e();
+            actionMenuPresenter = this.f4140s;
+            if (actionMenuPresenter != null) {
+                actionMenuPresenter.m30141A();
+            }
+            ActionMenuPresenter actionMenuPresenter2 = new ActionMenuPresenter(getContext());
+            this.f4140s = actionMenuPresenter2;
+            actionMenuPresenter2.m30130L(true);
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(-2, -1);
+            c0082e.m30243c(this.f4140s, this.f4138q);
+            ActionMenuView actionMenuView = (ActionMenuView) this.f4140s.mo30125q(this);
+            this.f4139r = actionMenuView;
+            xs1.m4694v0(actionMenuView, null);
+            addView(this.f4139r, layoutParams);
+        }
+        view = LayoutInflater.from(getContext()).inflate(this.f483I, (ViewGroup) this, false);
+        this.f486z = view;
+        addView(view);
+        View findViewById2 = this.f486z.findViewById(o11.action_mode_close_button);
+        this.f475A = findViewById2;
+        findViewById2.setOnClickListener(new View$OnClickListenerC0100a(abstractC2228n0));
+        C0082e c0082e2 = (C0082e) abstractC2228n0.mo15646e();
+        actionMenuPresenter = this.f4140s;
+        if (actionMenuPresenter != null) {
+        }
+        ActionMenuPresenter actionMenuPresenter22 = new ActionMenuPresenter(getContext());
+        this.f4140s = actionMenuPresenter22;
+        actionMenuPresenter22.m30130L(true);
+        ViewGroup.LayoutParams layoutParams2 = new ViewGroup.LayoutParams(-2, -1);
+        c0082e2.m30243c(this.f4140s, this.f4138q);
+        ActionMenuView actionMenuView2 = (ActionMenuView) this.f4140s.mo30125q(this);
+        this.f4139r = actionMenuView2;
+        xs1.m4694v0(actionMenuView2, null);
+        addView(this.f4139r, layoutParams2);
     }
 
-    public final void i() {
-        if (this.C == null) {
+    /* renamed from: i */
+    public final void m30158i() {
+        if (this.f477C == null) {
             LayoutInflater.from(getContext()).inflate(c21.abc_action_bar_title_item, this);
             LinearLayout linearLayout = (LinearLayout) getChildAt(getChildCount() - 1);
-            this.C = linearLayout;
-            this.D = (TextView) linearLayout.findViewById(o11.action_bar_title);
-            this.E = (TextView) this.C.findViewById(o11.action_bar_subtitle);
-            if (this.F != 0) {
-                this.D.setTextAppearance(getContext(), this.F);
+            this.f477C = linearLayout;
+            this.f478D = (TextView) linearLayout.findViewById(o11.action_bar_title);
+            this.f479E = (TextView) this.f477C.findViewById(o11.action_bar_subtitle);
+            if (this.f480F != 0) {
+                this.f478D.setTextAppearance(getContext(), this.f480F);
             }
-            if (this.G != 0) {
-                this.E.setTextAppearance(getContext(), this.G);
+            if (this.f481G != 0) {
+                this.f479E.setTextAppearance(getContext(), this.f481G);
             }
         }
-        this.D.setText(this.x);
-        this.E.setText(this.y);
-        boolean z = !TextUtils.isEmpty(this.x);
-        boolean z2 = !TextUtils.isEmpty(this.y);
+        this.f478D.setText(this.f484x);
+        this.f479E.setText(this.f485y);
+        boolean z = !TextUtils.isEmpty(this.f484x);
+        boolean z2 = !TextUtils.isEmpty(this.f485y);
         int i = 0;
-        this.E.setVisibility(z2 ? 0 : 8);
-        LinearLayout linearLayout2 = this.C;
+        this.f479E.setVisibility(z2 ? 0 : 8);
+        LinearLayout linearLayout2 = this.f477C;
         if (!z && !z2) {
             i = 8;
         }
         linearLayout2.setVisibility(i);
-        if (this.C.getParent() == null) {
-            addView(this.C);
+        if (this.f477C.getParent() == null) {
+            addView(this.f477C);
         }
     }
 
-    public boolean j() {
-        return this.H;
+    /* renamed from: j */
+    public boolean m30157j() {
+        return this.f482H;
     }
 
-    public void k() {
+    /* renamed from: k */
+    public void m30156k() {
         removeAllViews();
-        this.B = null;
-        this.r = null;
-        this.s = null;
-        View view = this.A;
+        this.f476B = null;
+        this.f4139r = null;
+        this.f4140s = null;
+        View view = this.f475A;
         if (view != null) {
             view.setOnClickListener(null);
         }
     }
 
-    public boolean l() {
-        ActionMenuPresenter actionMenuPresenter = this.s;
+    /* renamed from: l */
+    public boolean m30155l() {
+        ActionMenuPresenter actionMenuPresenter = this.f4140s;
         if (actionMenuPresenter != null) {
-            return actionMenuPresenter.M();
+            return actionMenuPresenter.m30129M();
         }
         return false;
     }
@@ -225,46 +248,46 @@ public class ActionBarContextView extends com.daaw.b {
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        ActionMenuPresenter actionMenuPresenter = this.s;
+        ActionMenuPresenter actionMenuPresenter = this.f4140s;
         if (actionMenuPresenter != null) {
-            actionMenuPresenter.D();
-            this.s.E();
+            actionMenuPresenter.m30138D();
+            this.f4140s.m30137E();
         }
     }
 
-    @Override // com.daaw.b, android.view.View
+    @Override // com.daaw.AbstractC0783b, android.view.View
     public /* bridge */ /* synthetic */ boolean onHoverEvent(MotionEvent motionEvent) {
         return super.onHoverEvent(motionEvent);
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
-        boolean b = hu1.b(this);
-        int paddingRight = b ? (i3 - i) - getPaddingRight() : getPaddingLeft();
+        boolean m20417b = hu1.m20417b(this);
+        int paddingRight = m20417b ? (i3 - i) - getPaddingRight() : getPaddingLeft();
         int paddingTop = getPaddingTop();
         int paddingTop2 = ((i4 - i2) - getPaddingTop()) - getPaddingBottom();
-        View view = this.z;
+        View view = this.f486z;
         if (view != null && view.getVisibility() != 8) {
-            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) this.z.getLayoutParams();
-            int i5 = b ? marginLayoutParams.rightMargin : marginLayoutParams.leftMargin;
-            int i6 = b ? marginLayoutParams.leftMargin : marginLayoutParams.rightMargin;
-            int d = com.daaw.b.d(paddingRight, i5, b);
-            paddingRight = com.daaw.b.d(d + e(this.z, d, paddingTop, paddingTop2, b), i6, b);
+            ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) this.f486z.getLayoutParams();
+            int i5 = m20417b ? marginLayoutParams.rightMargin : marginLayoutParams.leftMargin;
+            int i6 = m20417b ? marginLayoutParams.leftMargin : marginLayoutParams.rightMargin;
+            int m26568d = AbstractC0783b.m26568d(paddingRight, i5, m20417b);
+            paddingRight = AbstractC0783b.m26568d(m26568d + m26567e(this.f486z, m26568d, paddingTop, paddingTop2, m20417b), i6, m20417b);
         }
         int i7 = paddingRight;
-        LinearLayout linearLayout = this.C;
-        if (linearLayout != null && this.B == null && linearLayout.getVisibility() != 8) {
-            i7 += e(this.C, i7, paddingTop, paddingTop2, b);
+        LinearLayout linearLayout = this.f477C;
+        if (linearLayout != null && this.f476B == null && linearLayout.getVisibility() != 8) {
+            i7 += m26567e(this.f477C, i7, paddingTop, paddingTop2, m20417b);
         }
         int i8 = i7;
-        View view2 = this.B;
+        View view2 = this.f476B;
         if (view2 != null) {
-            e(view2, i8, paddingTop, paddingTop2, b);
+            m26567e(view2, i8, paddingTop, paddingTop2, m20417b);
         }
-        int paddingLeft = b ? getPaddingLeft() : (i3 - i) - getPaddingRight();
-        ActionMenuView actionMenuView = this.r;
+        int paddingLeft = m20417b ? getPaddingLeft() : (i3 - i) - getPaddingRight();
+        ActionMenuView actionMenuView = this.f4139r;
         if (actionMenuView != null) {
-            e(actionMenuView, paddingLeft, paddingTop, paddingTop2, !b);
+            m26567e(actionMenuView, paddingLeft, paddingTop, paddingTop2, !m20417b);
         }
     }
 
@@ -276,7 +299,7 @@ public class ActionBarContextView extends com.daaw.b {
             throw new IllegalStateException(getClass().getSimpleName() + " can only be used with android:layout_height=\"wrap_content\"");
         } else {
             int size = View.MeasureSpec.getSize(i);
-            int i3 = this.t;
+            int i3 = this.f4141t;
             if (i3 <= 0) {
                 i3 = View.MeasureSpec.getSize(i2);
             }
@@ -284,31 +307,31 @@ public class ActionBarContextView extends com.daaw.b {
             int paddingLeft = (size - getPaddingLeft()) - getPaddingRight();
             int i4 = i3 - paddingTop;
             int makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(i4, Integer.MIN_VALUE);
-            View view = this.z;
+            View view = this.f486z;
             if (view != null) {
-                int c = c(view, paddingLeft, makeMeasureSpec, 0);
-                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) this.z.getLayoutParams();
-                paddingLeft = c - (marginLayoutParams.leftMargin + marginLayoutParams.rightMargin);
+                int m26569c = m26569c(view, paddingLeft, makeMeasureSpec, 0);
+                ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) this.f486z.getLayoutParams();
+                paddingLeft = m26569c - (marginLayoutParams.leftMargin + marginLayoutParams.rightMargin);
             }
-            ActionMenuView actionMenuView = this.r;
+            ActionMenuView actionMenuView = this.f4139r;
             if (actionMenuView != null && actionMenuView.getParent() == this) {
-                paddingLeft = c(this.r, paddingLeft, makeMeasureSpec, 0);
+                paddingLeft = m26569c(this.f4139r, paddingLeft, makeMeasureSpec, 0);
             }
-            LinearLayout linearLayout = this.C;
-            if (linearLayout != null && this.B == null) {
-                if (this.H) {
-                    this.C.measure(View.MeasureSpec.makeMeasureSpec(0, 0), makeMeasureSpec);
-                    int measuredWidth = this.C.getMeasuredWidth();
+            LinearLayout linearLayout = this.f477C;
+            if (linearLayout != null && this.f476B == null) {
+                if (this.f482H) {
+                    this.f477C.measure(View.MeasureSpec.makeMeasureSpec(0, 0), makeMeasureSpec);
+                    int measuredWidth = this.f477C.getMeasuredWidth();
                     boolean z = measuredWidth <= paddingLeft;
                     if (z) {
                         paddingLeft -= measuredWidth;
                     }
-                    this.C.setVisibility(z ? 0 : 8);
+                    this.f477C.setVisibility(z ? 0 : 8);
                 } else {
-                    paddingLeft = c(linearLayout, paddingLeft, makeMeasureSpec, 0);
+                    paddingLeft = m26569c(linearLayout, paddingLeft, makeMeasureSpec, 0);
                 }
             }
-            View view2 = this.B;
+            View view2 = this.f476B;
             if (view2 != null) {
                 ViewGroup.LayoutParams layoutParams = view2.getLayoutParams();
                 int i5 = layoutParams.width;
@@ -321,9 +344,9 @@ public class ActionBarContextView extends com.daaw.b {
                 if (i7 >= 0) {
                     i4 = Math.min(i7, i4);
                 }
-                this.B.measure(View.MeasureSpec.makeMeasureSpec(paddingLeft, i6), View.MeasureSpec.makeMeasureSpec(i4, i8));
+                this.f476B.measure(View.MeasureSpec.makeMeasureSpec(paddingLeft, i6), View.MeasureSpec.makeMeasureSpec(i4, i8));
             }
-            if (this.t > 0) {
+            if (this.f4141t > 0) {
                 setMeasuredDimension(size, i3);
                 return;
             }
@@ -339,26 +362,26 @@ public class ActionBarContextView extends com.daaw.b {
         }
     }
 
-    @Override // com.daaw.b, android.view.View
+    @Override // com.daaw.AbstractC0783b, android.view.View
     public /* bridge */ /* synthetic */ boolean onTouchEvent(MotionEvent motionEvent) {
         return super.onTouchEvent(motionEvent);
     }
 
-    @Override // com.daaw.b
+    @Override // com.daaw.AbstractC0783b
     public void setContentHeight(int i) {
-        this.t = i;
+        this.f4141t = i;
     }
 
     public void setCustomView(View view) {
         LinearLayout linearLayout;
-        View view2 = this.B;
+        View view2 = this.f476B;
         if (view2 != null) {
             removeView(view2);
         }
-        this.B = view;
-        if (view != null && (linearLayout = this.C) != null) {
+        this.f476B = view;
+        if (view != null && (linearLayout = this.f477C) != null) {
             removeView(linearLayout);
-            this.C = null;
+            this.f477C = null;
         }
         if (view != null) {
             addView(view);
@@ -367,24 +390,24 @@ public class ActionBarContextView extends com.daaw.b {
     }
 
     public void setSubtitle(CharSequence charSequence) {
-        this.y = charSequence;
-        i();
+        this.f485y = charSequence;
+        m30158i();
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.x = charSequence;
-        i();
-        xs1.u0(this, charSequence);
+        this.f484x = charSequence;
+        m30158i();
+        xs1.m4696u0(this, charSequence);
     }
 
     public void setTitleOptional(boolean z) {
-        if (z != this.H) {
+        if (z != this.f482H) {
             requestLayout();
         }
-        this.H = z;
+        this.f482H = z;
     }
 
-    @Override // com.daaw.b, android.view.View
+    @Override // com.daaw.AbstractC0783b, android.view.View
     public /* bridge */ /* synthetic */ void setVisibility(int i) {
         super.setVisibility(i);
     }

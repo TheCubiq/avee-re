@@ -11,14 +11,15 @@ public abstract class lj3 extends cp2 implements mj3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         IInterface zzb;
         pj3 nj3Var;
         if (i != 3) {
             if (i == 4) {
                 zzd();
             } else if (i == 5) {
-                yd0 I = yd0.a.I(parcel.readStrongBinder());
+                yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
                 IBinder readStrongBinder = parcel.readStrongBinder();
                 if (readStrongBinder == null) {
                     nj3Var = null;
@@ -26,12 +27,12 @@ public abstract class lj3 extends cp2 implements mj3 {
                     IInterface queryLocalInterface = readStrongBinder.queryLocalInterface("com.google.android.gms.ads.internal.instream.client.IInstreamAdCallback");
                     nj3Var = queryLocalInterface instanceof pj3 ? (pj3) queryLocalInterface : new nj3(readStrongBinder);
                 }
-                dp2.c(parcel);
-                R(I, nj3Var);
+                dp2.m24105c(parcel);
+                mo10595R(m3857I, nj3Var);
             } else if (i == 6) {
-                yd0 I2 = yd0.a.I(parcel.readStrongBinder());
-                dp2.c(parcel);
-                zze(I2);
+                yd0 m3857I2 = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
+                dp2.m24105c(parcel);
+                zze(m3857I2);
             } else if (i != 7) {
                 return false;
             } else {
@@ -42,7 +43,7 @@ public abstract class lj3 extends cp2 implements mj3 {
         }
         zzb = zzb();
         parcel2.writeNoException();
-        dp2.g(parcel2, zzb);
+        dp2.m24101g(parcel2, zzb);
         return true;
     }
 }

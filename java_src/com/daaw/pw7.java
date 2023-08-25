@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class pw7 implements ps7 {
-    public static final ps7 a = new pw7();
+
+    /* renamed from: a */
+    public static final ps7 f23468a = new pw7();
 
     @Override // com.daaw.ps7
-    public final boolean a(int i) {
+    /* renamed from: a */
+    public final boolean mo3065a(int i) {
         if (i != 0 && i != 1 && i != 2 && i != 1999) {
             switch (i) {
                 case 1000:

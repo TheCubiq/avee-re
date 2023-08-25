@@ -4,67 +4,86 @@ import java.util.concurrent.ExecutionException;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes2.dex */
 public final class j92<T> implements c82<T> {
-    public final Object a = new Object();
-    public final int b;
-    public final dw8 c;
+
+    /* renamed from: a */
+    public final Object f14539a = new Object();
+
+    /* renamed from: b */
+    public final int f14540b;
+
+    /* renamed from: c */
+    public final dw8 f14541c;
     @GuardedBy("mLock")
-    public int d;
+
+    /* renamed from: d */
+    public int f14542d;
     @GuardedBy("mLock")
-    public int e;
+
+    /* renamed from: e */
+    public int f14543e;
     @GuardedBy("mLock")
-    public int f;
+
+    /* renamed from: f */
+    public int f14544f;
     @GuardedBy("mLock")
-    public Exception g;
+
+    /* renamed from: g */
+    public Exception f14545g;
     @GuardedBy("mLock")
-    public boolean h;
+
+    /* renamed from: h */
+    public boolean f14546h;
 
     public j92(int i, dw8 dw8Var) {
-        this.b = i;
-        this.c = dw8Var;
+        this.f14540b = i;
+        this.f14541c = dw8Var;
     }
 
     @GuardedBy("mLock")
-    public final void a() {
-        if (this.d + this.e + this.f == this.b) {
-            if (this.g == null) {
-                if (this.h) {
-                    this.c.s();
+    /* renamed from: a */
+    public final void m18714a() {
+        if (this.f14542d + this.f14543e + this.f14544f == this.f14540b) {
+            if (this.f14545g == null) {
+                if (this.f14546h) {
+                    this.f14541c.m23854s();
                     return;
                 } else {
-                    this.c.r(null);
+                    this.f14541c.m23855r(null);
                     return;
                 }
             }
-            dw8 dw8Var = this.c;
-            int i = this.e;
-            int i2 = this.b;
-            dw8Var.q(new ExecutionException(i + " out of " + i2 + " underlying tasks failed", this.g));
+            dw8 dw8Var = this.f14541c;
+            int i = this.f14543e;
+            int i2 = this.f14540b;
+            dw8Var.m23856q(new ExecutionException(i + " out of " + i2 + " underlying tasks failed", this.f14545g));
         }
     }
 
     @Override // com.daaw.zt0
-    public final void b() {
-        synchronized (this.a) {
-            this.f++;
-            this.h = true;
-            a();
+    /* renamed from: b */
+    public final void mo1920b() {
+        synchronized (this.f14539a) {
+            this.f14544f++;
+            this.f14546h = true;
+            m18714a();
         }
     }
 
     @Override // com.daaw.gu0
-    public final void c(Exception exc) {
-        synchronized (this.a) {
-            this.e++;
-            this.g = exc;
-            a();
+    /* renamed from: c */
+    public final void mo5820c(Exception exc) {
+        synchronized (this.f14539a) {
+            this.f14543e++;
+            this.f14545g = exc;
+            m18714a();
         }
     }
 
     @Override // com.daaw.ku0
     public final void onSuccess(T t) {
-        synchronized (this.a) {
-            this.d++;
-            a();
+        synchronized (this.f14539a) {
+            this.f14542d++;
+            m18714a();
         }
     }
 }

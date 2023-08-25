@@ -5,20 +5,24 @@ import android.content.res.TypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.R;
+import com.google.android.gms.ads.C3982R;
 /* loaded from: classes.dex */
 public final class zzy {
-    public final AdSize[] a;
-    public final String b;
+
+    /* renamed from: a */
+    public final AdSize[] f36204a;
+
+    /* renamed from: b */
+    public final String f36205b;
 
     public zzy(Context context, AttributeSet attributeSet) {
-        TypedArray obtainAttributes = context.getResources().obtainAttributes(attributeSet, R.styleable.AdsAttrs);
-        String string = obtainAttributes.getString(R.styleable.AdsAttrs_adSize);
-        String string2 = obtainAttributes.getString(R.styleable.AdsAttrs_adSizes);
+        TypedArray obtainAttributes = context.getResources().obtainAttributes(attributeSet, C3982R.styleable.AdsAttrs);
+        String string = obtainAttributes.getString(C3982R.styleable.AdsAttrs_adSize);
+        String string2 = obtainAttributes.getString(C3982R.styleable.AdsAttrs_adSizes);
         boolean z = !TextUtils.isEmpty(string);
         boolean z2 = !TextUtils.isEmpty(string2);
         if (z && !z2) {
-            this.a = a(string);
+            this.f36204a = m1389a(string);
         } else if (z || !z2) {
             obtainAttributes.recycle();
             if (!z) {
@@ -26,17 +30,18 @@ public final class zzy {
             }
             throw new IllegalArgumentException("Either XML attribute \"adSize\" or XML attribute \"supportedAdSizes\" should be specified, but not both.");
         } else {
-            this.a = a(string2);
+            this.f36204a = m1389a(string2);
         }
-        String string3 = obtainAttributes.getString(R.styleable.AdsAttrs_adUnitId);
-        this.b = string3;
+        String string3 = obtainAttributes.getString(C3982R.styleable.AdsAttrs_adUnitId);
+        this.f36205b = string3;
         obtainAttributes.recycle();
         if (TextUtils.isEmpty(string3)) {
             throw new IllegalArgumentException("Required XML attribute \"adUnitId\" was missing.");
         }
     }
 
-    public static AdSize[] a(String str) {
+    /* renamed from: a */
+    public static AdSize[] m1389a(String str) {
         String[] split = str.split("\\s*,\\s*");
         int length = split.length;
         AdSize[] adSizeArr = new AdSize[length];
@@ -80,12 +85,12 @@ public final class zzy {
     }
 
     public final String zza() {
-        return this.b;
+        return this.f36205b;
     }
 
     public final AdSize[] zzb(boolean z) {
-        if (z || this.a.length == 1) {
-            return this.a;
+        if (z || this.f36204a.length == 1) {
+            return this.f36204a;
         }
         throw new IllegalArgumentException("The adSizes XML attribute is only allowed on PublisherAdViews.");
     }

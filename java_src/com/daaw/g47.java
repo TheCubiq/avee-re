@@ -6,15 +6,17 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 /* loaded from: classes.dex */
 public final class g47 implements FilenameFilter {
-    public final Pattern a;
+
+    /* renamed from: a */
+    public final Pattern f10262a;
 
     public g47(Pattern pattern) {
         Objects.requireNonNull(pattern);
-        this.a = pattern;
+        this.f10262a = pattern;
     }
 
     @Override // java.io.FilenameFilter
     public final boolean accept(File file, String str) {
-        return this.a.matcher(str).matches();
+        return this.f10262a.matcher(str).matches();
     }
 }

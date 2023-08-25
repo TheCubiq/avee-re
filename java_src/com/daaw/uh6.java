@@ -5,17 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class uh6 {
-    public final int a;
-    public final int b;
-    public final boolean c;
+
+    /* renamed from: a */
+    public final int f29083a;
+
+    /* renamed from: b */
+    public final int f29084b;
+
+    /* renamed from: c */
+    public final boolean f29085c;
 
     public uh6(int i, int i2, boolean z) {
-        this.a = i;
-        this.b = i2;
-        this.c = z;
+        this.f29083a = i;
+        this.f29084b = i2;
+        this.f29085c = z;
     }
 
-    public static List a(JsonReader jsonReader) {
+    /* renamed from: a */
+    public static List m8134a(JsonReader jsonReader) {
         ArrayList arrayList = new ArrayList();
         jsonReader.beginArray();
         while (jsonReader.hasNext()) {

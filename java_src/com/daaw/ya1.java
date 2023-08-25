@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class ya1 {
-    public static final String[] a = {"None", "Bars", "Line", "SharpBars", "RoundBars"};
 
-    public static he0 a(String str, he0 he0Var) {
-        if (b(he0Var).equals(str)) {
+    /* renamed from: a */
+    public static final String[] f33444a = {"None", "Bars", "Line", "SharpBars", "RoundBars"};
+
+    /* renamed from: a */
+    public static he0 m3959a(String str, he0 he0Var) {
+        if (m3958b(he0Var).equals(str)) {
             return he0Var;
         }
         str.hashCode();
@@ -53,12 +56,13 @@ public class ya1 {
             case 4:
                 return new ab1();
             default:
-                lz1.c("unknown typeName: " + str);
+                lz1.m16363c("unknown typeName: " + str);
                 return he0Var;
         }
     }
 
-    public static String b(he0 he0Var) {
+    /* renamed from: b */
+    public static String m3958b(he0 he0Var) {
         if (he0Var == null) {
             return "None";
         }
@@ -74,7 +78,7 @@ public class ya1 {
         if (he0Var instanceof ab1) {
             return "RoundBars";
         }
-        lz1.c("unknown instance type");
+        lz1.m16363c("unknown instance type");
         return "unk";
     }
 }

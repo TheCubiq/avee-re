@@ -10,312 +10,395 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /* loaded from: classes.dex */
 public interface cp0 {
 
+    /* renamed from: com.daaw.cp0$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final int a;
-        public final bp0.a b;
-        public final CopyOnWriteArrayList<j> c;
-        public final long d;
+    public static final class C0975a {
 
-        /* renamed from: com.daaw.cp0$a$a  reason: collision with other inner class name */
+        /* renamed from: a */
+        public final int f6018a;
+
+        /* renamed from: b */
+        public final bp0.C0880a f6019b;
+
+        /* renamed from: c */
+        public final CopyOnWriteArrayList<C0985j> f6020c;
+
+        /* renamed from: d */
+        public final long f6021d;
+
+        /* renamed from: com.daaw.cp0$a$a */
         /* loaded from: classes.dex */
-        public class RunnableC0046a implements Runnable {
-            public final /* synthetic */ cp0 p;
+        public class RunnableC0976a implements Runnable {
 
-            public RunnableC0046a(cp0 cp0Var) {
-                this.p = cp0Var;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6022p;
+
+            public RunnableC0976a(cp0 cp0Var) {
+                this.f6022p = cp0Var;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.r(aVar.a, aVar.b);
+                cp0 cp0Var = this.f6022p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14624r(c0975a.f6018a, c0975a.f6019b);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$b */
         /* loaded from: classes.dex */
-        public class b implements Runnable {
-            public final /* synthetic */ cp0 p;
+        public class RunnableC0977b implements Runnable {
 
-            public b(cp0 cp0Var) {
-                this.p = cp0Var;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6024p;
+
+            public RunnableC0977b(cp0 cp0Var) {
+                this.f6024p = cp0Var;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.h(aVar.a, aVar.b);
+                cp0 cp0Var = this.f6024p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14630h(c0975a.f6018a, c0975a.f6019b);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$c */
         /* loaded from: classes.dex */
-        public class c implements Runnable {
-            public final /* synthetic */ cp0 p;
-            public final /* synthetic */ b q;
-            public final /* synthetic */ c r;
+        public class RunnableC0978c implements Runnable {
 
-            public c(cp0 cp0Var, b bVar, c cVar) {
-                this.p = cp0Var;
-                this.q = bVar;
-                this.r = cVar;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6026p;
+
+            /* renamed from: q */
+            public final /* synthetic */ C0986b f6027q;
+
+            /* renamed from: r */
+            public final /* synthetic */ C0987c f6028r;
+
+            public RunnableC0978c(cp0 cp0Var, C0986b c0986b, C0987c c0987c) {
+                this.f6026p = cp0Var;
+                this.f6027q = c0986b;
+                this.f6028r = c0987c;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.w(aVar.a, aVar.b, this.q, this.r);
+                cp0 cp0Var = this.f6026p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14622w(c0975a.f6018a, c0975a.f6019b, this.f6027q, this.f6028r);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$d */
         /* loaded from: classes.dex */
-        public class d implements Runnable {
-            public final /* synthetic */ cp0 p;
-            public final /* synthetic */ b q;
-            public final /* synthetic */ c r;
+        public class RunnableC0979d implements Runnable {
 
-            public d(cp0 cp0Var, b bVar, c cVar) {
-                this.p = cp0Var;
-                this.q = bVar;
-                this.r = cVar;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6030p;
+
+            /* renamed from: q */
+            public final /* synthetic */ C0986b f6031q;
+
+            /* renamed from: r */
+            public final /* synthetic */ C0987c f6032r;
+
+            public RunnableC0979d(cp0 cp0Var, C0986b c0986b, C0987c c0987c) {
+                this.f6030p = cp0Var;
+                this.f6031q = c0986b;
+                this.f6032r = c0987c;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.l(aVar.a, aVar.b, this.q, this.r);
+                cp0 cp0Var = this.f6030p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14627l(c0975a.f6018a, c0975a.f6019b, this.f6031q, this.f6032r);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$e */
         /* loaded from: classes.dex */
-        public class e implements Runnable {
-            public final /* synthetic */ cp0 p;
-            public final /* synthetic */ b q;
-            public final /* synthetic */ c r;
+        public class RunnableC0980e implements Runnable {
 
-            public e(cp0 cp0Var, b bVar, c cVar) {
-                this.p = cp0Var;
-                this.q = bVar;
-                this.r = cVar;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6034p;
+
+            /* renamed from: q */
+            public final /* synthetic */ C0986b f6035q;
+
+            /* renamed from: r */
+            public final /* synthetic */ C0987c f6036r;
+
+            public RunnableC0980e(cp0 cp0Var, C0986b c0986b, C0987c c0987c) {
+                this.f6034p = cp0Var;
+                this.f6035q = c0986b;
+                this.f6036r = c0987c;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.E(aVar.a, aVar.b, this.q, this.r);
+                cp0 cp0Var = this.f6034p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14642E(c0975a.f6018a, c0975a.f6019b, this.f6035q, this.f6036r);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$f */
         /* loaded from: classes.dex */
-        public class f implements Runnable {
-            public final /* synthetic */ cp0 p;
-            public final /* synthetic */ b q;
-            public final /* synthetic */ c r;
-            public final /* synthetic */ IOException s;
-            public final /* synthetic */ boolean t;
+        public class RunnableC0981f implements Runnable {
 
-            public f(cp0 cp0Var, b bVar, c cVar, IOException iOException, boolean z) {
-                this.p = cp0Var;
-                this.q = bVar;
-                this.r = cVar;
-                this.s = iOException;
-                this.t = z;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6038p;
+
+            /* renamed from: q */
+            public final /* synthetic */ C0986b f6039q;
+
+            /* renamed from: r */
+            public final /* synthetic */ C0987c f6040r;
+
+            /* renamed from: s */
+            public final /* synthetic */ IOException f6041s;
+
+            /* renamed from: t */
+            public final /* synthetic */ boolean f6042t;
+
+            public RunnableC0981f(cp0 cp0Var, C0986b c0986b, C0987c c0987c, IOException iOException, boolean z) {
+                this.f6038p = cp0Var;
+                this.f6039q = c0986b;
+                this.f6040r = c0987c;
+                this.f6041s = iOException;
+                this.f6042t = z;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.F(aVar.a, aVar.b, this.q, this.r, this.s, this.t);
+                cp0 cp0Var = this.f6038p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14641F(c0975a.f6018a, c0975a.f6019b, this.f6039q, this.f6040r, this.f6041s, this.f6042t);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$g */
         /* loaded from: classes.dex */
-        public class g implements Runnable {
-            public final /* synthetic */ cp0 p;
+        public class RunnableC0982g implements Runnable {
 
-            public g(cp0 cp0Var) {
-                this.p = cp0Var;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6044p;
+
+            public RunnableC0982g(cp0 cp0Var) {
+                this.f6044p = cp0Var;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.t(aVar.a, aVar.b);
+                cp0 cp0Var = this.f6044p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14623t(c0975a.f6018a, c0975a.f6019b);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$h */
         /* loaded from: classes.dex */
-        public class h implements Runnable {
-            public final /* synthetic */ cp0 p;
-            public final /* synthetic */ c q;
+        public class RunnableC0983h implements Runnable {
 
-            public h(cp0 cp0Var, c cVar) {
-                this.p = cp0Var;
-                this.q = cVar;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6046p;
+
+            /* renamed from: q */
+            public final /* synthetic */ C0987c f6047q;
+
+            public RunnableC0983h(cp0 cp0Var, C0987c c0987c) {
+                this.f6046p = cp0Var;
+                this.f6047q = c0987c;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.o(aVar.a, aVar.b, this.q);
+                cp0 cp0Var = this.f6046p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14625o(c0975a.f6018a, c0975a.f6019b, this.f6047q);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$i */
         /* loaded from: classes.dex */
-        public class i implements Runnable {
-            public final /* synthetic */ cp0 p;
-            public final /* synthetic */ c q;
+        public class RunnableC0984i implements Runnable {
 
-            public i(cp0 cp0Var, c cVar) {
-                this.p = cp0Var;
-                this.q = cVar;
+            /* renamed from: p */
+            public final /* synthetic */ cp0 f6049p;
+
+            /* renamed from: q */
+            public final /* synthetic */ C0987c f6050q;
+
+            public RunnableC0984i(cp0 cp0Var, C0987c c0987c) {
+                this.f6049p = cp0Var;
+                this.f6050q = c0987c;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                cp0 cp0Var = this.p;
-                a aVar = a.this;
-                cp0Var.C(aVar.a, aVar.b, this.q);
+                cp0 cp0Var = this.f6049p;
+                C0975a c0975a = C0975a.this;
+                cp0Var.mo14644C(c0975a.f6018a, c0975a.f6019b, this.f6050q);
             }
         }
 
+        /* renamed from: com.daaw.cp0$a$j */
         /* loaded from: classes.dex */
-        public static final class j {
-            public final Handler a;
-            public final cp0 b;
+        public static final class C0985j {
 
-            public j(Handler handler, cp0 cp0Var) {
-                this.a = handler;
-                this.b = cp0Var;
+            /* renamed from: a */
+            public final Handler f6052a;
+
+            /* renamed from: b */
+            public final cp0 f6053b;
+
+            public C0985j(Handler handler, cp0 cp0Var) {
+                this.f6052a = handler;
+                this.f6053b = cp0Var;
             }
         }
 
-        public a() {
+        public C0975a() {
             this(new CopyOnWriteArrayList(), 0, null, 0L);
         }
 
-        public a(CopyOnWriteArrayList<j> copyOnWriteArrayList, int i2, bp0.a aVar, long j2) {
-            this.c = copyOnWriteArrayList;
-            this.a = i2;
-            this.b = aVar;
-            this.d = j2;
+        public C0975a(CopyOnWriteArrayList<C0985j> copyOnWriteArrayList, int i, bp0.C0880a c0880a, long j) {
+            this.f6020c = copyOnWriteArrayList;
+            this.f6018a = i;
+            this.f6019b = c0880a;
+            this.f6021d = j;
         }
 
-        public void a(Handler handler, cp0 cp0Var) {
-            s6.a((handler == null || cp0Var == null) ? false : true);
-            this.c.add(new j(handler, cp0Var));
+        /* renamed from: a */
+        public void m25167a(Handler handler, cp0 cp0Var) {
+            C2914s6.m10690a((handler == null || cp0Var == null) ? false : true);
+            this.f6020c.add(new C0985j(handler, cp0Var));
         }
 
-        public final long b(long j2) {
-            long b2 = dd.b(j2);
-            if (b2 == -9223372036854775807L) {
+        /* renamed from: b */
+        public final long m25166b(long j) {
+            long m24526b = C1075dd.m24526b(j);
+            if (m24526b == -9223372036854775807L) {
                 return -9223372036854775807L;
             }
-            return this.d + b2;
+            return this.f6021d + m24526b;
         }
 
-        public void c(int i2, Format format, int i3, Object obj, long j2) {
-            d(new c(1, i2, format, i3, obj, b(j2), -9223372036854775807L));
+        /* renamed from: c */
+        public void m25165c(int i, Format format, int i2, Object obj, long j) {
+            m25164d(new C0987c(1, i, format, i2, obj, m25166b(j), -9223372036854775807L));
         }
 
-        public void d(c cVar) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: d */
+        public void m25164d(C0987c c0987c) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new i(next.b, cVar));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0984i(next.f6053b, c0987c));
             }
         }
 
-        public void e(pp ppVar, int i2, int i3, Format format, int i4, Object obj, long j2, long j3, long j4, long j5, long j6) {
-            g(new b(ppVar, j4, j5, j6), new c(i2, i3, format, i4, obj, b(j2), b(j3)));
+        /* renamed from: e */
+        public void m25163e(C2570pp c2570pp, int i, int i2, Format format, int i3, Object obj, long j, long j2, long j3, long j4, long j5) {
+            m25161g(new C0986b(c2570pp, j3, j4, j5), new C0987c(i, i2, format, i3, obj, m25166b(j), m25166b(j2)));
         }
 
-        public void f(pp ppVar, int i2, long j2, long j3, long j4) {
-            e(ppVar, i2, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j2, j3, j4);
+        /* renamed from: f */
+        public void m25162f(C2570pp c2570pp, int i, long j, long j2, long j3) {
+            m25163e(c2570pp, i, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j, j2, j3);
         }
 
-        public void g(b bVar, c cVar) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: g */
+        public void m25161g(C0986b c0986b, C0987c c0987c) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new e(next.b, bVar, cVar));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0980e(next.f6053b, c0986b, c0987c));
             }
         }
 
-        public void h(pp ppVar, int i2, int i3, Format format, int i4, Object obj, long j2, long j3, long j4, long j5, long j6) {
-            j(new b(ppVar, j4, j5, j6), new c(i2, i3, format, i4, obj, b(j2), b(j3)));
+        /* renamed from: h */
+        public void m25160h(C2570pp c2570pp, int i, int i2, Format format, int i3, Object obj, long j, long j2, long j3, long j4, long j5) {
+            m25158j(new C0986b(c2570pp, j3, j4, j5), new C0987c(i, i2, format, i3, obj, m25166b(j), m25166b(j2)));
         }
 
-        public void i(pp ppVar, int i2, long j2, long j3, long j4) {
-            h(ppVar, i2, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j2, j3, j4);
+        /* renamed from: i */
+        public void m25159i(C2570pp c2570pp, int i, long j, long j2, long j3) {
+            m25160h(c2570pp, i, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j, j2, j3);
         }
 
-        public void j(b bVar, c cVar) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: j */
+        public void m25158j(C0986b c0986b, C0987c c0987c) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new d(next.b, bVar, cVar));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0979d(next.f6053b, c0986b, c0987c));
             }
         }
 
-        public void k(pp ppVar, int i2, int i3, Format format, int i4, Object obj, long j2, long j3, long j4, long j5, long j6, IOException iOException, boolean z) {
-            m(new b(ppVar, j4, j5, j6), new c(i2, i3, format, i4, obj, b(j2), b(j3)), iOException, z);
+        /* renamed from: k */
+        public void m25157k(C2570pp c2570pp, int i, int i2, Format format, int i3, Object obj, long j, long j2, long j3, long j4, long j5, IOException iOException, boolean z) {
+            m25155m(new C0986b(c2570pp, j3, j4, j5), new C0987c(i, i2, format, i3, obj, m25166b(j), m25166b(j2)), iOException, z);
         }
 
-        public void l(pp ppVar, int i2, long j2, long j3, long j4, IOException iOException, boolean z) {
-            k(ppVar, i2, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j2, j3, j4, iOException, z);
+        /* renamed from: l */
+        public void m25156l(C2570pp c2570pp, int i, long j, long j2, long j3, IOException iOException, boolean z) {
+            m25157k(c2570pp, i, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j, j2, j3, iOException, z);
         }
 
-        public void m(b bVar, c cVar, IOException iOException, boolean z) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: m */
+        public void m25155m(C0986b c0986b, C0987c c0987c, IOException iOException, boolean z) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new f(next.b, bVar, cVar, iOException, z));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0981f(next.f6053b, c0986b, c0987c, iOException, z));
             }
         }
 
-        public void n(pp ppVar, int i2, int i3, Format format, int i4, Object obj, long j2, long j3, long j4) {
-            p(new b(ppVar, j4, 0L, 0L), new c(i2, i3, format, i4, obj, b(j2), b(j3)));
+        /* renamed from: n */
+        public void m25154n(C2570pp c2570pp, int i, int i2, Format format, int i3, Object obj, long j, long j2, long j3) {
+            m25152p(new C0986b(c2570pp, j3, 0L, 0L), new C0987c(i, i2, format, i3, obj, m25166b(j), m25166b(j2)));
         }
 
-        public void o(pp ppVar, int i2, long j2) {
-            n(ppVar, i2, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j2);
+        /* renamed from: o */
+        public void m25153o(C2570pp c2570pp, int i, long j) {
+            m25154n(c2570pp, i, -1, null, 0, null, -9223372036854775807L, -9223372036854775807L, j);
         }
 
-        public void p(b bVar, c cVar) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: p */
+        public void m25152p(C0986b c0986b, C0987c c0987c) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new c(next.b, bVar, cVar));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0978c(next.f6053b, c0986b, c0987c));
             }
         }
 
-        public void q() {
-            s6.f(this.b != null);
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: q */
+        public void m25151q() {
+            C2914s6.m10685f(this.f6019b != null);
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new RunnableC0046a(next.b));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0976a(next.f6053b));
             }
         }
 
-        public void r() {
-            s6.f(this.b != null);
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: r */
+        public void m25150r() {
+            C2914s6.m10685f(this.f6019b != null);
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new b(next.b));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0977b(next.f6053b));
             }
         }
 
-        public final void s(Handler handler, Runnable runnable) {
+        /* renamed from: s */
+        public final void m25149s(Handler handler, Runnable runnable) {
             if (handler.getLooper() == Looper.myLooper()) {
                 runnable.run();
             } else {
@@ -323,93 +406,131 @@ public interface cp0 {
             }
         }
 
-        public void t() {
-            s6.f(this.b != null);
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: t */
+        public void m25148t() {
+            C2914s6.m10685f(this.f6019b != null);
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new g(next.b));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0982g(next.f6053b));
             }
         }
 
-        public void u(cp0 cp0Var) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: u */
+        public void m25147u(cp0 cp0Var) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                if (next.b == cp0Var) {
-                    this.c.remove(next);
+                C0985j next = it.next();
+                if (next.f6053b == cp0Var) {
+                    this.f6020c.remove(next);
                 }
             }
         }
 
-        public void v(int i2, long j2, long j3) {
-            w(new c(1, i2, null, 3, null, b(j2), b(j3)));
+        /* renamed from: v */
+        public void m25146v(int i, long j, long j2) {
+            m25145w(new C0987c(1, i, null, 3, null, m25166b(j), m25166b(j2)));
         }
 
-        public void w(c cVar) {
-            Iterator<j> it = this.c.iterator();
+        /* renamed from: w */
+        public void m25145w(C0987c c0987c) {
+            Iterator<C0985j> it = this.f6020c.iterator();
             while (it.hasNext()) {
-                j next = it.next();
-                s(next.a, new h(next.b, cVar));
+                C0985j next = it.next();
+                m25149s(next.f6052a, new RunnableC0983h(next.f6053b, c0987c));
             }
         }
 
-        public a x(int i2, bp0.a aVar, long j2) {
-            return new a(this.c, i2, aVar, j2);
+        /* renamed from: x */
+        public C0975a m25144x(int i, bp0.C0880a c0880a, long j) {
+            return new C0975a(this.f6020c, i, c0880a, j);
         }
     }
 
+    /* renamed from: com.daaw.cp0$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final pp a;
-        public final long b;
-        public final long c;
-        public final long d;
+    public static final class C0986b {
 
-        public b(pp ppVar, long j, long j2, long j3) {
-            this.a = ppVar;
-            this.b = j;
-            this.c = j2;
-            this.d = j3;
+        /* renamed from: a */
+        public final C2570pp f6054a;
+
+        /* renamed from: b */
+        public final long f6055b;
+
+        /* renamed from: c */
+        public final long f6056c;
+
+        /* renamed from: d */
+        public final long f6057d;
+
+        public C0986b(C2570pp c2570pp, long j, long j2, long j3) {
+            this.f6054a = c2570pp;
+            this.f6055b = j;
+            this.f6056c = j2;
+            this.f6057d = j3;
         }
     }
 
+    /* renamed from: com.daaw.cp0$c */
     /* loaded from: classes.dex */
-    public static final class c {
-        public final int a;
-        public final int b;
-        public final Format c;
-        public final int d;
-        public final Object e;
-        public final long f;
-        public final long g;
+    public static final class C0987c {
 
-        public c(int i, int i2, Format format, int i3, Object obj, long j, long j2) {
-            this.a = i;
-            this.b = i2;
-            this.c = format;
-            this.d = i3;
-            this.e = obj;
-            this.f = j;
-            this.g = j2;
+        /* renamed from: a */
+        public final int f6058a;
+
+        /* renamed from: b */
+        public final int f6059b;
+
+        /* renamed from: c */
+        public final Format f6060c;
+
+        /* renamed from: d */
+        public final int f6061d;
+
+        /* renamed from: e */
+        public final Object f6062e;
+
+        /* renamed from: f */
+        public final long f6063f;
+
+        /* renamed from: g */
+        public final long f6064g;
+
+        public C0987c(int i, int i2, Format format, int i3, Object obj, long j, long j2) {
+            this.f6058a = i;
+            this.f6059b = i2;
+            this.f6060c = format;
+            this.f6061d = i3;
+            this.f6062e = obj;
+            this.f6063f = j;
+            this.f6064g = j2;
         }
     }
 
-    void C(int i, bp0.a aVar, c cVar);
+    /* renamed from: C */
+    void mo14644C(int i, bp0.C0880a c0880a, C0987c c0987c);
 
-    void E(int i, bp0.a aVar, b bVar, c cVar);
+    /* renamed from: E */
+    void mo14642E(int i, bp0.C0880a c0880a, C0986b c0986b, C0987c c0987c);
 
-    void F(int i, bp0.a aVar, b bVar, c cVar, IOException iOException, boolean z);
+    /* renamed from: F */
+    void mo14641F(int i, bp0.C0880a c0880a, C0986b c0986b, C0987c c0987c, IOException iOException, boolean z);
 
-    void h(int i, bp0.a aVar);
+    /* renamed from: h */
+    void mo14630h(int i, bp0.C0880a c0880a);
 
-    void l(int i, bp0.a aVar, b bVar, c cVar);
+    /* renamed from: l */
+    void mo14627l(int i, bp0.C0880a c0880a, C0986b c0986b, C0987c c0987c);
 
-    void o(int i, bp0.a aVar, c cVar);
+    /* renamed from: o */
+    void mo14625o(int i, bp0.C0880a c0880a, C0987c c0987c);
 
-    void r(int i, bp0.a aVar);
+    /* renamed from: r */
+    void mo14624r(int i, bp0.C0880a c0880a);
 
-    void t(int i, bp0.a aVar);
+    /* renamed from: t */
+    void mo14623t(int i, bp0.C0880a c0880a);
 
-    void w(int i, bp0.a aVar, b bVar, c cVar);
+    /* renamed from: w */
+    void mo14622w(int i, bp0.C0880a c0880a, C0986b c0986b, C0987c c0987c);
 }

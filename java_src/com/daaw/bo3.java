@@ -6,27 +6,31 @@ import com.google.android.gms.ads.mediation.MediationAdLoadCallback;
 import com.google.android.gms.ads.mediation.MediationRewardedAd;
 /* loaded from: classes.dex */
 public final class bo3 implements MediationAdLoadCallback {
-    public final /* synthetic */ gn3 a;
-    public final /* synthetic */ do3 b;
+
+    /* renamed from: a */
+    public final /* synthetic */ gn3 f5010a;
+
+    /* renamed from: b */
+    public final /* synthetic */ do3 f5011b;
 
     public bo3(do3 do3Var, gn3 gn3Var) {
-        this.b = do3Var;
-        this.a = gn3Var;
+        this.f5011b = do3Var;
+        this.f5010a = gn3Var;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdLoadCallback
     public final void onFailure(AdError adError) {
         Object obj;
         try {
-            obj = this.b.p;
+            obj = this.f5011b.f7575p;
             String canonicalName = obj.getClass().getCanonicalName();
             int code = adError.getCode();
             String message = adError.getMessage();
             String domain = adError.getDomain();
             k04.zze(canonicalName + "failed to load mediation ad: ErrorCode = " + code + ". ErrorMessage = " + message + ". ErrorDomain = " + domain);
-            this.a.q0(adError.zza());
-            this.a.j0(adError.getCode(), adError.getMessage());
-            this.a.c(adError.getCode());
+            this.f5010a.mo3325q0(adError.zza());
+            this.f5010a.mo3330j0(adError.getCode(), adError.getMessage());
+            this.f5010a.mo3333c(adError.getCode());
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -36,11 +40,11 @@ public final class bo3 implements MediationAdLoadCallback {
     public final void onFailure(String str) {
         Object obj;
         try {
-            obj = this.b.p;
+            obj = this.f5011b.f7575p;
             String canonicalName = obj.getClass().getCanonicalName();
             k04.zze(canonicalName + "failed to loaded mediation ad: " + str);
-            this.a.j0(0, str);
-            this.a.c(0);
+            this.f5010a.mo3330j0(0, str);
+            this.f5010a.mo3333c(0);
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -49,11 +53,11 @@ public final class bo3 implements MediationAdLoadCallback {
     @Override // com.google.android.gms.ads.mediation.MediationAdLoadCallback
     public final /* bridge */ /* synthetic */ Object onSuccess(Object obj) {
         try {
-            this.b.w = (MediationRewardedAd) obj;
-            this.a.zzo();
+            this.f5011b.f7582w = (MediationRewardedAd) obj;
+            this.f5010a.zzo();
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
-        return new ow3(this.a);
+        return new ow3(this.f5010a);
     }
 }

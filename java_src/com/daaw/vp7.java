@@ -3,11 +3,14 @@ package com.daaw;
 import java.security.SecureRandom;
 /* loaded from: classes.dex */
 public final class vp7 {
-    public static final ThreadLocal a = new up7();
 
-    public static byte[] a(int i) {
+    /* renamed from: a */
+    public static final ThreadLocal f30427a = new up7();
+
+    /* renamed from: a */
+    public static byte[] m6942a(int i) {
         byte[] bArr = new byte[i];
-        ((SecureRandom) a.get()).nextBytes(bArr);
+        ((SecureRandom) f30427a.get()).nextBytes(bArr);
         return bArr;
     }
 }

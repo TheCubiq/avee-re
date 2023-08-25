@@ -3,37 +3,46 @@ package com.daaw;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public class o35 {
-    public final th6 a;
+
+    /* renamed from: a */
+    public final th6 f21011a;
 
     public o35(th6 th6Var) {
-        this.a = th6Var;
+        this.f21011a = th6Var;
     }
 
-    public ui6 a() {
-        return this.a.W;
+    /* renamed from: a */
+    public ui6 mo14582a() {
+        return this.f21011a.f27676W;
     }
 
-    public String b() {
+    /* renamed from: b */
+    public String mo14581b() {
         return "";
     }
 
-    public JSONObject c() {
+    /* renamed from: c */
+    public JSONObject mo14580c() {
         throw null;
     }
 
-    public boolean d() {
-        return this.a.U;
+    /* renamed from: d */
+    public boolean mo14579d() {
+        return this.f21011a.f27674U;
     }
 
-    public boolean e() {
-        return this.a.L;
+    /* renamed from: e */
+    public boolean mo14578e() {
+        return this.f21011a.f27665L;
     }
 
-    public boolean f() {
-        return this.a.K;
+    /* renamed from: f */
+    public boolean mo14577f() {
+        return this.f21011a.f27664K;
     }
 
-    public boolean g() {
+    /* renamed from: g */
+    public boolean mo14576g() {
         return false;
     }
 }

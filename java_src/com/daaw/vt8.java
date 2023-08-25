@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface vt8 {
-    boolean c(long j);
+    /* renamed from: c */
+    boolean mo3303c(long j);
 
-    void j(long j);
+    /* renamed from: j */
+    void mo3296j(long j);
 
     long zzb();
 

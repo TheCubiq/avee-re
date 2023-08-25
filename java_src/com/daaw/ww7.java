@@ -5,16 +5,17 @@ public final class ww7 extends ls7 implements yt7 {
     private int zzd;
     private int zze;
     private long zzf;
-    private yq7 zzg = yq7.q;
+    private yq7 zzg = yq7.f33966q;
 
     static {
         ww7 ww7Var = new ww7();
         zzb = ww7Var;
-        ls7.C(ww7.class, ww7Var);
+        ls7.m16597C(ww7.class, ww7Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -29,7 +30,7 @@ public final class ww7 extends ls7 implements yt7 {
                 }
                 return new ww7();
             }
-            return ls7.z(zzb, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001ဌ\u0000\u0002ဂ\u0001\u0003ည\u0002", new Object[]{"zzd", "zze", vw7.a, "zzf", "zzg"});
+            return ls7.m16573z(zzb, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001ဌ\u0000\u0002ဂ\u0001\u0003ည\u0002", new Object[]{"zzd", "zze", vw7.f30683a, "zzf", "zzg"});
         }
         return (byte) 1;
     }

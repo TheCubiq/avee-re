@@ -15,10 +15,18 @@ import java.nio.ByteBuffer;
 import java.util.List;
 /* loaded from: classes.dex */
 public class vo1 extends zo1 {
-    public static final Class<?> b;
-    public static final Constructor<?> c;
-    public static final Method d;
-    public static final Method e;
+
+    /* renamed from: b */
+    public static final Class<?> f30387b;
+
+    /* renamed from: c */
+    public static final Constructor<?> f30388c;
+
+    /* renamed from: d */
+    public static final Method f30389d;
+
+    /* renamed from: e */
+    public static final Method f30390e;
 
     static {
         Class<?> cls;
@@ -37,80 +45,86 @@ public class vo1 extends zo1 {
             method = null;
             method2 = null;
         }
-        c = constructor;
-        b = cls;
-        d = method2;
-        e = method;
+        f30388c = constructor;
+        f30387b = cls;
+        f30389d = method2;
+        f30390e = method;
     }
 
-    public static boolean k(Object obj, ByteBuffer byteBuffer, int i, int i2, boolean z) {
+    /* renamed from: k */
+    public static boolean m6974k(Object obj, ByteBuffer byteBuffer, int i, int i2, boolean z) {
         try {
-            return ((Boolean) d.invoke(obj, byteBuffer, Integer.valueOf(i), null, Integer.valueOf(i2), Boolean.valueOf(z))).booleanValue();
+            return ((Boolean) f30389d.invoke(obj, byteBuffer, Integer.valueOf(i), null, Integer.valueOf(i2), Boolean.valueOf(z))).booleanValue();
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return false;
         }
     }
 
-    public static Typeface l(Object obj) {
+    /* renamed from: l */
+    public static Typeface m6973l(Object obj) {
         try {
-            Object newInstance = Array.newInstance(b, 1);
+            Object newInstance = Array.newInstance(f30387b, 1);
             Array.set(newInstance, 0, obj);
-            return (Typeface) e.invoke(null, newInstance);
+            return (Typeface) f30390e.invoke(null, newInstance);
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return null;
         }
     }
 
-    public static boolean m() {
-        return d != null;
+    /* renamed from: m */
+    public static boolean m6972m() {
+        return f30389d != null;
     }
 
-    public static Object n() {
+    /* renamed from: n */
+    public static Object m6971n() {
         try {
-            return c.newInstance(new Object[0]);
+            return f30388c.newInstance(new Object[0]);
         } catch (IllegalAccessException | InstantiationException | InvocationTargetException unused) {
             return null;
         }
     }
 
     @Override // com.daaw.zo1
-    public Typeface b(Context context, a30.c cVar, Resources resources, int i) {
-        a30.d[] a;
-        Object n = n();
-        if (n == null) {
+    /* renamed from: b */
+    public Typeface mo2059b(Context context, a30.C0570c c0570c, Resources resources, int i) {
+        a30.C0571d[] m27735a;
+        Object m6971n = m6971n();
+        if (m6971n == null) {
             return null;
         }
-        for (a30.d dVar : cVar.a()) {
-            ByteBuffer b2 = ap1.b(context, resources, dVar.b());
-            if (b2 == null || !k(n, b2, dVar.c(), dVar.e(), dVar.f())) {
+        for (a30.C0571d c0571d : c0570c.m27735a()) {
+            ByteBuffer m27273b = ap1.m27273b(context, resources, c0571d.m27733b());
+            if (m27273b == null || !m6974k(m6971n, m27273b, c0571d.m27732c(), c0571d.m27730e(), c0571d.m27729f())) {
                 return null;
             }
         }
-        return l(n);
+        return m6973l(m6971n);
     }
 
     @Override // com.daaw.zo1
-    public Typeface c(Context context, CancellationSignal cancellationSignal, b30.b[] bVarArr, int i) {
-        Object n = n();
-        if (n == null) {
+    /* renamed from: c */
+    public Typeface mo2058c(Context context, CancellationSignal cancellationSignal, b30.C0805b[] c0805bArr, int i) {
+        Object m6971n = m6971n();
+        if (m6971n == null) {
             return null;
         }
         cd1 cd1Var = new cd1();
-        for (b30.b bVar : bVarArr) {
-            Uri d2 = bVar.d();
-            ByteBuffer byteBuffer = (ByteBuffer) cd1Var.get(d2);
+        for (b30.C0805b c0805b : c0805bArr) {
+            Uri m26504d = c0805b.m26504d();
+            ByteBuffer byteBuffer = (ByteBuffer) cd1Var.get(m26504d);
             if (byteBuffer == null) {
-                byteBuffer = ap1.f(context, cancellationSignal, d2);
-                cd1Var.put(d2, byteBuffer);
+                byteBuffer = ap1.m27269f(context, cancellationSignal, m26504d);
+                cd1Var.put(m26504d, byteBuffer);
             }
-            if (byteBuffer == null || !k(n, byteBuffer, bVar.c(), bVar.e(), bVar.f())) {
+            if (byteBuffer == null || !m6974k(m6971n, byteBuffer, c0805b.m26505c(), c0805b.m26503e(), c0805b.m26502f())) {
                 return null;
             }
         }
-        Typeface l = l(n);
-        if (l == null) {
+        Typeface m6973l = m6973l(m6971n);
+        if (m6973l == null) {
             return null;
         }
-        return Typeface.create(l, i);
+        return Typeface.create(m6973l, i);
     }
 }

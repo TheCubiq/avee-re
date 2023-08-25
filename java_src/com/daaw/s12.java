@@ -9,10 +9,11 @@ public final class s12 extends mz1 {
         super(iBinder, "com.google.android.gms.signin.internal.ISignInService");
     }
 
-    public final void g3(zai zaiVar, p12 p12Var) {
-        Parcel D = D();
-        s02.b(D, zaiVar);
-        s02.c(D, p12Var);
-        I(12, D);
+    /* renamed from: g3 */
+    public final void m10764g3(zai zaiVar, p12 p12Var) {
+        Parcel m15654D = m15654D();
+        s02.m10802b(m15654D, zaiVar);
+        s02.m10801c(m15654D, p12Var);
+        m15653I(12, m15654D);
     }
 }

@@ -7,19 +7,23 @@ import com.daaw.pz2;
 /* loaded from: classes.dex */
 public final class zzaxw extends zzaxu {
     public static final Parcelable.Creator<zzaxw> CREATOR = new fv2();
-    public final String q;
-    public final String r;
+
+    /* renamed from: q */
+    public final String f36817q;
+
+    /* renamed from: r */
+    public final String f36818r;
 
     public zzaxw(Parcel parcel) {
         super(parcel.readString());
-        this.q = parcel.readString();
-        this.r = parcel.readString();
+        this.f36817q = parcel.readString();
+        this.f36818r = parcel.readString();
     }
 
     public zzaxw(String str, String str2, String str3) {
         super(str);
-        this.q = null;
-        this.r = str3;
+        this.f36817q = null;
+        this.f36818r = str3;
     }
 
     public final boolean equals(Object obj) {
@@ -28,7 +32,7 @@ public final class zzaxw extends zzaxu {
         }
         if (obj != null && zzaxw.class == obj.getClass()) {
             zzaxw zzaxwVar = (zzaxw) obj;
-            if (this.p.equals(zzaxwVar.p) && pz2.o(this.q, zzaxwVar.q) && pz2.o(this.r, zzaxwVar.r)) {
+            if (this.f36816p.equals(zzaxwVar.f36816p) && pz2.m12835o(this.f36817q, zzaxwVar.f36817q) && pz2.m12835o(this.f36818r, zzaxwVar.f36818r)) {
                 return true;
             }
         }
@@ -36,17 +40,17 @@ public final class zzaxw extends zzaxu {
     }
 
     public final int hashCode() {
-        int hashCode = (this.p.hashCode() + 527) * 31;
-        String str = this.q;
+        int hashCode = (this.f36816p.hashCode() + 527) * 31;
+        String str = this.f36817q;
         int hashCode2 = (hashCode + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
+        String str2 = this.f36818r;
         return hashCode2 + (str2 != null ? str2.hashCode() : 0);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
+        parcel.writeString(this.f36816p);
+        parcel.writeString(this.f36817q);
+        parcel.writeString(this.f36818r);
     }
 }

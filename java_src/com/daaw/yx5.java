@@ -27,36 +27,46 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.Collections;
 /* loaded from: classes.dex */
 public final class yx5 extends zzbt {
-    public final Context p;
-    public final zzbh q;
-    public final ri6 r;
-    public final zi4 s;
-    public final ViewGroup t;
+
+    /* renamed from: p */
+    public final Context f34245p;
+
+    /* renamed from: q */
+    public final zzbh f34246q;
+
+    /* renamed from: r */
+    public final ri6 f34247r;
+
+    /* renamed from: s */
+    public final zi4 f34248s;
+
+    /* renamed from: t */
+    public final ViewGroup f34249t;
 
     public yx5(Context context, zzbh zzbhVar, ri6 ri6Var, zi4 zi4Var) {
-        this.p = context;
-        this.q = zzbhVar;
-        this.r = ri6Var;
-        this.s = zi4Var;
+        this.f34245p = context;
+        this.f34246q = zzbhVar;
+        this.f34247r = ri6Var;
+        this.f34248s = zi4Var;
         FrameLayout frameLayout = new FrameLayout(context);
         frameLayout.removeAllViews();
-        View i = zi4Var.i();
+        View mo2274i = zi4Var.mo2274i();
         zzt.zzp();
-        frameLayout.addView(i, zzs.zzn());
+        frameLayout.addView(mo2274i, zzs.zzn());
         frameLayout.setMinimumHeight(zzg().zzc);
         frameLayout.setMinimumWidth(zzg().zzf);
-        this.t = frameLayout;
+        this.f34249t = frameLayout;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzA() {
-        this.s.m();
+        this.f34248s.mo2270m();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzB() {
-        ry0.e("destroy must be called on the main UI thread.");
-        this.s.d().E0(null);
+        ry0.m10835e("destroy must be called on the main UI thread.");
+        this.f34248s.m2129d().m14851E0(null);
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -76,18 +86,18 @@ public final class yx5 extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzF(zzq zzqVar) {
-        ry0.e("setAdSize must be called on the main UI thread.");
-        zi4 zi4Var = this.s;
+        ry0.m10835e("setAdSize must be called on the main UI thread.");
+        zi4 zi4Var = this.f34248s;
         if (zi4Var != null) {
-            zi4Var.n(this.t, zzqVar);
+            zi4Var.mo2269n(this.f34249t, zzqVar);
         }
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzG(zzcb zzcbVar) {
-        az5 az5Var = this.r.c;
+        az5 az5Var = this.f34247r.f25343c;
         if (az5Var != null) {
-            az5Var.W(zzcbVar);
+            az5Var.m26579W(zzcbVar);
         }
     }
 
@@ -127,13 +137,13 @@ public final class yx5 extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzP(zzdg zzdgVar) {
-        if (!((Boolean) zzba.zzc().b(g93.A9)).booleanValue()) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10369A9)).booleanValue()) {
             k04.zzi("setOnPaidEventListener is not supported in Ad Manager AdView returned by AdLoader.");
             return;
         }
-        az5 az5Var = this.r.c;
+        az5 az5Var = this.f34247r.f25343c;
         if (az5Var != null) {
-            az5Var.S(zzdgVar);
+            az5Var.m26580S(zzdgVar);
         }
     }
 
@@ -195,60 +205,60 @@ public final class yx5 extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final zzq zzg() {
-        ry0.e("getAdSize must be called on the main UI thread.");
-        return vi6.a(this.p, Collections.singletonList(this.s.k()));
+        ry0.m10835e("getAdSize must be called on the main UI thread.");
+        return vi6.m7131a(this.f34245p, Collections.singletonList(this.f34248s.mo2272k()));
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final zzbh zzi() {
-        return this.q;
+        return this.f34246q;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final zzcb zzj() {
-        return this.r.n;
+        return this.f34247r.f25354n;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final zzdn zzk() {
-        return this.s.c();
+        return this.f34248s.m2130c();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final zzdq zzl() {
-        return this.s.j();
+        return this.f34248s.mo2273j();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final yd0 zzn() {
-        return nt0.g3(this.t);
+        return nt0.m14830g3(this.f34249t);
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final String zzr() {
-        return this.r.f;
+        return this.f34247r.f25346f;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final String zzs() {
-        if (this.s.c() != null) {
-            return this.s.c().zzg();
+        if (this.f34248s.m2130c() != null) {
+            return this.f34248s.m2130c().zzg();
         }
         return null;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final String zzt() {
-        if (this.s.c() != null) {
-            return this.s.c().zzg();
+        if (this.f34248s.m2130c() != null) {
+            return this.f34248s.m2130c().zzg();
         }
         return null;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzx() {
-        ry0.e("destroy must be called on the main UI thread.");
-        this.s.a();
+        ry0.m10835e("destroy must be called on the main UI thread.");
+        this.f34248s.mo2132a();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
@@ -257,7 +267,7 @@ public final class yx5 extends zzbt {
 
     @Override // com.google.android.gms.ads.internal.client.zzbu
     public final void zzz() {
-        ry0.e("destroy must be called on the main UI thread.");
-        this.s.d().D0(null);
+        ry0.m10835e("destroy must be called on the main UI thread.");
+        this.f34248s.m2129d().m14852D0(null);
     }
 }

@@ -24,9 +24,9 @@ final class OpenSSLX509CertPath extends CertPath {
     private static final long serialVersionUID = -3249106005255170761L;
     private final List<? extends X509Certificate> mCertificates;
 
-    /* renamed from: org.conscrypt.OpenSSLX509CertPath$1  reason: invalid class name */
+    /* renamed from: org.conscrypt.OpenSSLX509CertPath$1 */
     /* loaded from: classes2.dex */
-    public static /* synthetic */ class AnonymousClass1 {
+    public static /* synthetic */ class C42121 {
         public static final /* synthetic */ int[] $SwitchMap$org$conscrypt$OpenSSLX509CertPath$Encoding;
 
         static {
@@ -95,7 +95,7 @@ final class OpenSSLX509CertPath extends CertPath {
     }
 
     private static CertPath fromEncoding(InputStream inputStream, Encoding encoding) {
-        int i = AnonymousClass1.$SwitchMap$org$conscrypt$OpenSSLX509CertPath$Encoding[encoding.ordinal()];
+        int i = C42121.$SwitchMap$org$conscrypt$OpenSSLX509CertPath$Encoding[encoding.ordinal()];
         if (i != 1) {
             if (i == 2) {
                 return fromPkcs7Encoding(inputStream);
@@ -192,7 +192,7 @@ final class OpenSSLX509CertPath extends CertPath {
             jArr[i2] = openSSLX509CertificateArr[i2].getContext();
             i++;
         }
-        int i3 = AnonymousClass1.$SwitchMap$org$conscrypt$OpenSSLX509CertPath$Encoding[encoding.ordinal()];
+        int i3 = C42121.$SwitchMap$org$conscrypt$OpenSSLX509CertPath$Encoding[encoding.ordinal()];
         if (i3 != 1) {
             if (i3 == 2) {
                 return NativeCrypto.i2d_PKCS7(jArr);

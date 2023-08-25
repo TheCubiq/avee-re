@@ -11,104 +11,131 @@ import android.widget.TextView;
 import com.daaw.avee.R;
 /* loaded from: classes.dex */
 public class gl1 extends PopupWindow {
-    public Handler a;
-    public ImageView b;
-    public ImageView c;
-    public ImageView d;
-    public ImageView e;
-    public ImageView f;
-    public ImageView g;
-    public TextView[] h;
-    public ImageView[] i;
-    public int j;
 
+    /* renamed from: a */
+    public Handler f11403a;
+
+    /* renamed from: b */
+    public ImageView f11404b;
+
+    /* renamed from: c */
+    public ImageView f11405c;
+
+    /* renamed from: d */
+    public ImageView f11406d;
+
+    /* renamed from: e */
+    public ImageView f11407e;
+
+    /* renamed from: f */
+    public ImageView f11408f;
+
+    /* renamed from: g */
+    public ImageView f11409g;
+
+    /* renamed from: h */
+    public TextView[] f11410h;
+
+    /* renamed from: i */
+    public ImageView[] f11411i;
+
+    /* renamed from: j */
+    public int f11412j;
+
+    /* renamed from: com.daaw.gl1$a */
     /* loaded from: classes.dex */
-    public class a implements Handler.Callback {
-        public a() {
+    public class C1440a implements Handler.Callback {
+        public C1440a() {
         }
 
         @Override // android.os.Handler.Callback
         public boolean handleMessage(Message message) {
             if (message.what == 0) {
-                gr1.k(gl1.this);
+                gr1.m21324k(gl1.this);
                 return false;
             }
             return false;
         }
     }
 
+    /* renamed from: com.daaw.gl1$b */
     /* loaded from: classes.dex */
-    public class b implements View.OnClickListener {
-        public b() {
+    public class View$OnClickListenerC1441b implements View.OnClickListener {
+        public View$OnClickListenerC1441b() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.g0.a(0);
+            ko0.f16527g0.m12018a(0);
         }
     }
 
+    /* renamed from: com.daaw.gl1$c */
     /* loaded from: classes.dex */
-    public class c implements View.OnClickListener {
-        public c() {
+    public class View$OnClickListenerC1442c implements View.OnClickListener {
+        public View$OnClickListenerC1442c() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.g0.a(1);
+            ko0.f16527g0.m12018a(1);
         }
     }
 
+    /* renamed from: com.daaw.gl1$d */
     /* loaded from: classes.dex */
-    public class d implements View.OnClickListener {
-        public d() {
+    public class View$OnClickListenerC1443d implements View.OnClickListener {
+        public View$OnClickListenerC1443d() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.j0.a();
+            ko0.f16530j0.m12990a();
         }
     }
 
+    /* renamed from: com.daaw.gl1$e */
     /* loaded from: classes.dex */
-    public class e implements View.OnClickListener {
-        public e() {
+    public class View$OnClickListenerC1444e implements View.OnClickListener {
+        public View$OnClickListenerC1444e() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.k0.a();
+            ko0.f16531k0.m12990a();
         }
     }
 
+    /* renamed from: com.daaw.gl1$f */
     /* loaded from: classes.dex */
-    public class f implements View.OnClickListener {
-        public f() {
+    public class View$OnClickListenerC1445f implements View.OnClickListener {
+        public View$OnClickListenerC1445f() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.e0.a(Integer.valueOf(ko0.d0.a(0).intValue() != 1 ? 1 : 0));
+            ko0.f16525e0.m12018a(Integer.valueOf(ko0.f16524d0.m6692a(0).intValue() != 1 ? 1 : 0));
         }
     }
 
+    /* renamed from: com.daaw.gl1$g */
     /* loaded from: classes.dex */
-    public class g implements View.OnClickListener {
-        public g() {
+    public class View$OnClickListenerC1446g implements View.OnClickListener {
+        public View$OnClickListenerC1446g() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            ko0.e0.a(Integer.valueOf(ko0.d0.a(0).intValue() != 2 ? 2 : 0));
+            ko0.f16525e0.m12018a(Integer.valueOf(ko0.f16524d0.m6692a(0).intValue() != 2 ? 2 : 0));
         }
     }
 
     public gl1(View view) {
         super(view.getContext(), (AttributeSet) null, 0, (int) R.style.MyListPopupWindowDarkStyle);
-        this.h = new TextView[7];
-        this.i = new ImageView[7];
-        this.a = new Handler(new a());
-        this.j = gr1.n(view, R.attr.mediaControlsFG);
+        this.f11410h = new TextView[7];
+        this.f11411i = new ImageView[7];
+        this.f11403a = new Handler(new C1440a());
+        this.f11412j = gr1.m21321n(view, R.attr.mediaControlsFG);
         View inflate = View.inflate(view.getContext(), R.layout.popup_media_controls_overflow, null);
         View[] viewArr = new View[7];
         viewArr[0] = inflate.findViewById(R.id.groupPlaybackEngine0);
@@ -117,28 +144,28 @@ public class gl1 extends PopupWindow {
         viewArr[3] = inflate.findViewById(R.id.groupSwitchScreen);
         viewArr[4] = inflate.findViewById(R.id.groupRepeatOnce);
         viewArr[5] = inflate.findViewById(R.id.groupRepeatAll);
-        this.d = (ImageView) inflate.findViewById(R.id.btnPlaybackEngine0);
-        viewArr[0].setOnClickListener(new b());
-        this.e = (ImageView) inflate.findViewById(R.id.btnPlaybackEngine1);
-        viewArr[1].setOnClickListener(new c());
-        this.f = (ImageView) inflate.findViewById(R.id.btnVideoFit);
-        viewArr[2].setOnClickListener(new d());
-        this.g = (ImageView) inflate.findViewById(R.id.btnSwitchScreen);
-        viewArr[3].setOnClickListener(new e());
-        this.b = (ImageView) inflate.findViewById(R.id.btnRepeatOnce);
-        viewArr[4].setOnClickListener(new f());
-        this.c = (ImageView) inflate.findViewById(R.id.btnRepeatAll);
-        viewArr[5].setOnClickListener(new g());
+        this.f11406d = (ImageView) inflate.findViewById(R.id.btnPlaybackEngine0);
+        viewArr[0].setOnClickListener(new View$OnClickListenerC1441b());
+        this.f11407e = (ImageView) inflate.findViewById(R.id.btnPlaybackEngine1);
+        viewArr[1].setOnClickListener(new View$OnClickListenerC1442c());
+        this.f11408f = (ImageView) inflate.findViewById(R.id.btnVideoFit);
+        viewArr[2].setOnClickListener(new View$OnClickListenerC1443d());
+        this.f11409g = (ImageView) inflate.findViewById(R.id.btnSwitchScreen);
+        viewArr[3].setOnClickListener(new View$OnClickListenerC1444e());
+        this.f11404b = (ImageView) inflate.findViewById(R.id.btnRepeatOnce);
+        viewArr[4].setOnClickListener(new View$OnClickListenerC1445f());
+        this.f11405c = (ImageView) inflate.findViewById(R.id.btnRepeatAll);
+        viewArr[5].setOnClickListener(new View$OnClickListenerC1446g());
         setContentView(inflate);
         setHeight(-2);
         setWidth(-2);
         setOutsideTouchable(true);
         setFocusable(true);
-        this.g.setColorFilter(this.j);
-        d(ko0.i0.a(0).intValue());
-        a(ko0.f0.a(-1).intValue());
-        b(ko0.d0.a(0).intValue());
-        c(ko0.b0.a(0).intValue());
+        this.f11409g.setColorFilter(this.f11412j);
+        m21493d(ko0.f16529i0.m6692a(0).intValue());
+        m21496a(ko0.f16526f0.m6692a(-1).intValue());
+        m21495b(ko0.f16524d0.m6692a(0).intValue());
+        m21494c(ko0.f16522b0.m6692a(0).intValue());
         Point point = new Point();
         view.getLocationInWindow(r0);
         view.getDisplay().getRealSize(point);
@@ -146,66 +173,70 @@ public class gl1 extends PopupWindow {
         showAtLocation(view, 8388691, iArr[0], iArr[1]);
     }
 
-    public void a(int i) {
+    /* renamed from: a */
+    public void m21496a(int i) {
         ImageView imageView;
-        int n;
+        int m21321n;
         if (i == 0) {
-            ImageView imageView2 = this.d;
-            imageView2.setColorFilter(gr1.n(imageView2, R.attr.mediaControlsHighLight));
-            imageView = this.e;
-            n = gr1.n(imageView, R.attr.mediaControlsFG);
+            ImageView imageView2 = this.f11406d;
+            imageView2.setColorFilter(gr1.m21321n(imageView2, R.attr.mediaControlsHighLight));
+            imageView = this.f11407e;
+            m21321n = gr1.m21321n(imageView, R.attr.mediaControlsFG);
         } else {
-            ImageView imageView3 = this.d;
-            imageView3.setColorFilter(gr1.n(imageView3, R.attr.mediaControlsFG));
-            imageView = this.e;
-            n = gr1.n(imageView, R.attr.mediaControlsHighLight);
+            ImageView imageView3 = this.f11406d;
+            imageView3.setColorFilter(gr1.m21321n(imageView3, R.attr.mediaControlsFG));
+            imageView = this.f11407e;
+            m21321n = gr1.m21321n(imageView, R.attr.mediaControlsHighLight);
         }
-        imageView.setColorFilter(n);
+        imageView.setColorFilter(m21321n);
     }
 
-    public void b(int i) {
+    /* renamed from: b */
+    public void m21495b(int i) {
         ImageView imageView;
         int i2;
         ImageView imageView2;
-        int n;
+        int m21321n;
         if (i == 1) {
-            imageView = this.b;
-            i2 = gr1.n(imageView, R.attr.mediaControlsHighLight);
+            imageView = this.f11404b;
+            i2 = gr1.m21321n(imageView, R.attr.mediaControlsHighLight);
         } else if (i == 2) {
-            this.b.setColorFilter(this.j);
-            imageView2 = this.c;
-            n = gr1.n(imageView2, R.attr.mediaControlsHighLight);
-            imageView2.setColorFilter(n);
+            this.f11404b.setColorFilter(this.f11412j);
+            imageView2 = this.f11405c;
+            m21321n = gr1.m21321n(imageView2, R.attr.mediaControlsHighLight);
+            imageView2.setColorFilter(m21321n);
         } else {
-            imageView = this.b;
-            i2 = this.j;
+            imageView = this.f11404b;
+            i2 = this.f11412j;
         }
         imageView.setColorFilter(i2);
-        imageView2 = this.c;
-        n = this.j;
-        imageView2.setColorFilter(n);
+        imageView2 = this.f11405c;
+        m21321n = this.f11412j;
+        imageView2.setColorFilter(m21321n);
     }
 
-    public void c(int i) {
+    /* renamed from: c */
+    public void m21494c(int i) {
     }
 
-    public void d(int i) {
+    /* renamed from: d */
+    public void m21493d(int i) {
         ImageView imageView;
         int i2;
         if (i == 1) {
-            imageView = this.f;
+            imageView = this.f11408f;
             i2 = R.drawable.ic_vis_fit3;
         } else if (i != 2) {
             if (i == 3) {
-                imageView = this.f;
+                imageView = this.f11408f;
                 i2 = R.drawable.ic_vis_stretch3;
             }
-            this.f.setColorFilter(this.j);
+            this.f11408f.setColorFilter(this.f11412j);
         } else {
-            imageView = this.f;
+            imageView = this.f11408f;
             i2 = R.drawable.ic_vis_fit_crop3;
         }
         imageView.setImageResource(i2);
-        this.f.setColorFilter(this.j);
+        this.f11408f.setColorFilter(this.f11412j);
     }
 }

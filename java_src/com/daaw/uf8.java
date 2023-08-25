@@ -3,27 +3,35 @@ package com.daaw;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class uf8 implements Map.Entry, Comparable {
-    public final Comparable p;
-    public Object q;
-    public final /* synthetic */ gg8 r;
+
+    /* renamed from: p */
+    public final Comparable f29031p;
+
+    /* renamed from: q */
+    public Object f29032q;
+
+    /* renamed from: r */
+    public final /* synthetic */ gg8 f29033r;
 
     public uf8(gg8 gg8Var, Comparable comparable, Object obj) {
-        this.r = gg8Var;
-        this.p = comparable;
-        this.q = obj;
+        this.f29033r = gg8Var;
+        this.f29031p = comparable;
+        this.f29032q = obj;
     }
 
-    public static final boolean b(Object obj, Object obj2) {
+    /* renamed from: b */
+    public static final boolean m8274b(Object obj, Object obj2) {
         return obj == null ? obj2 == null : obj.equals(obj2);
     }
 
-    public final Comparable a() {
-        return this.p;
+    /* renamed from: a */
+    public final Comparable m8275a() {
+        return this.f29031p;
     }
 
     @Override // java.lang.Comparable
     public final /* bridge */ /* synthetic */ int compareTo(Object obj) {
-        return this.p.compareTo(((uf8) obj).p);
+        return this.f29031p.compareTo(((uf8) obj).f29031p);
     }
 
     @Override // java.util.Map.Entry
@@ -33,40 +41,40 @@ public final class uf8 implements Map.Entry, Comparable {
         }
         if (obj instanceof Map.Entry) {
             Map.Entry entry = (Map.Entry) obj;
-            return b(this.p, entry.getKey()) && b(this.q, entry.getValue());
+            return m8274b(this.f29031p, entry.getKey()) && m8274b(this.f29032q, entry.getValue());
         }
         return false;
     }
 
     @Override // java.util.Map.Entry
     public final /* synthetic */ Object getKey() {
-        return this.p;
+        return this.f29031p;
     }
 
     @Override // java.util.Map.Entry
     public final Object getValue() {
-        return this.q;
+        return this.f29032q;
     }
 
     @Override // java.util.Map.Entry
     public final int hashCode() {
-        Comparable comparable = this.p;
+        Comparable comparable = this.f29031p;
         int hashCode = comparable == null ? 0 : comparable.hashCode();
-        Object obj = this.q;
+        Object obj = this.f29032q;
         return hashCode ^ (obj != null ? obj.hashCode() : 0);
     }
 
     @Override // java.util.Map.Entry
     public final Object setValue(Object obj) {
-        this.r.n();
-        Object obj2 = this.q;
-        this.q = obj;
+        this.f29033r.m21643n();
+        Object obj2 = this.f29032q;
+        this.f29032q = obj;
         return obj2;
     }
 
     public final String toString() {
-        String valueOf = String.valueOf(this.p);
-        String valueOf2 = String.valueOf(this.q);
+        String valueOf = String.valueOf(this.f29031p);
+        String valueOf2 = String.valueOf(this.f29032q);
         return valueOf + "=" + valueOf2;
     }
 }

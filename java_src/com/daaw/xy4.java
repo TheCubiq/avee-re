@@ -8,10 +8,10 @@ public final class xy4 extends kw4 {
     }
 
     public final synchronized void zza() {
-        B0(new jw4() { // from class: com.daaw.wy4
+        m17378B0(new jw4() { // from class: com.daaw.wy4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((zy4) obj).a();
+                ((zy4) obj).m1770a();
             }
         });
     }

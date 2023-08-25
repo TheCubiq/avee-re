@@ -1,7 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class hb3 {
-    public static final ma3 a = ma3.d("gads:lite_sdk_retriever:adapter:enable", false);
-    public static final ma3 b = ma3.b("gads:lite_sdk_retriever:dynamite_version", 0);
-    public static final ma3 c = ma3.d("gads:lite_sdk_retriever:version_number:enable", false);
+
+    /* renamed from: a */
+    public static final ma3 f12351a = ma3.m16138d("gads:lite_sdk_retriever:adapter:enable", false);
+
+    /* renamed from: b */
+    public static final ma3 f12352b = ma3.m16140b("gads:lite_sdk_retriever:dynamite_version", 0);
+
+    /* renamed from: c */
+    public static final ma3 f12353c = ma3.m16138d("gads:lite_sdk_retriever:version_number:enable", false);
 }

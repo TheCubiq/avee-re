@@ -12,7 +12,7 @@ public final class ht7 extends ContentObserver {
     @Override // android.database.ContentObserver
     public final void onChange(boolean z) {
         AtomicBoolean atomicBoolean;
-        atomicBoolean = tu7.e;
+        atomicBoolean = tu7.f28083e;
         atomicBoolean.set(true);
     }
 }

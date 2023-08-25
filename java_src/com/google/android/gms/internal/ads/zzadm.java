@@ -10,36 +10,33 @@ import java.util.List;
 /* loaded from: classes.dex */
 public final class zzadm extends zzade {
     public static final Parcelable.Creator<zzadm> CREATOR = new o72();
-    public final String q;
-    public final String r;
+
+    /* renamed from: q */
+    public final String f36758q;
+
+    /* renamed from: r */
+    public final String f36759r;
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public zzadm(android.os.Parcel r3) {
-        /*
-            r2 = this;
-            java.lang.String r0 = r3.readString()
-            int r1 = com.daaw.it5.a
-            r2.<init>(r0)
-            java.lang.String r0 = r3.readString()
-            r2.q = r0
-            java.lang.String r3 = r3.readString()
-            r2.r = r3
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.internal.ads.zzadm.<init>(android.os.Parcel):void");
+    public zzadm(Parcel parcel) {
+        super(r0);
+        String readString = parcel.readString();
+        int i = it5.f13991a;
+        this.f36758q = parcel.readString();
+        this.f36759r = parcel.readString();
     }
 
     public zzadm(String str, String str2, String str3) {
         super(str);
-        this.q = str2;
-        this.r = str3;
+        this.f36758q = str2;
+        this.f36759r = str3;
     }
 
-    public static List a(String str) {
+    /* renamed from: a */
+    public static List m1133a(String str) {
         int parseInt;
         ArrayList arrayList = new ArrayList();
         try {
@@ -69,7 +66,7 @@ public final class zzadm extends zzade {
         }
         if (obj != null && zzadm.class == obj.getClass()) {
             zzadm zzadmVar = (zzadm) obj;
-            if (it5.t(this.p, zzadmVar.p) && it5.t(this.q, zzadmVar.q) && it5.t(this.r, zzadmVar.r)) {
+            if (it5.m19376t(this.f36747p, zzadmVar.f36747p) && it5.m19376t(this.f36758q, zzadmVar.f36758q) && it5.m19376t(this.f36759r, zzadmVar.f36759r)) {
                 return true;
             }
         }
@@ -78,9 +75,10 @@ public final class zzadm extends zzade {
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     @Override // com.google.android.gms.internal.ads.zzade, com.google.android.gms.internal.ads.zzbp
-    public final void f(x93 x93Var) {
+    /* renamed from: f */
+    public final void mo1104f(x93 x93Var) {
         char c;
-        String str = this.p;
+        String str = this.f36747p;
         switch (str.hashCode()) {
             case 82815:
                 if (str.equals("TAL")) {
@@ -243,28 +241,28 @@ public final class zzadm extends zzade {
         switch (c) {
             case 0:
             case 1:
-                x93Var.H(this.r);
+                x93Var.m5407H(this.f36759r);
                 return;
             case 2:
             case 3:
-                x93Var.u(this.r);
+                x93Var.m5378u(this.f36759r);
                 return;
             case 4:
             case 5:
-                x93Var.s(this.r);
+                x93Var.m5380s(this.f36759r);
                 return;
             case 6:
             case 7:
-                x93Var.t(this.r);
+                x93Var.m5379t(this.f36759r);
                 return;
             case '\b':
             case '\t':
-                String[] H = it5.H(this.r, "/");
+                String[] m19424H = it5.m19424H(this.f36759r, "/");
                 try {
-                    int parseInt = Integer.parseInt(H[0]);
-                    Integer valueOf = H.length > 1 ? Integer.valueOf(Integer.parseInt(H[1])) : null;
-                    x93Var.J(Integer.valueOf(parseInt));
-                    x93Var.I(valueOf);
+                    int parseInt = Integer.parseInt(m19424H[0]);
+                    Integer valueOf = m19424H.length > 1 ? Integer.valueOf(Integer.parseInt(m19424H[1])) : null;
+                    x93Var.m5405J(Integer.valueOf(parseInt));
+                    x93Var.m5406I(valueOf);
                     return;
                 } catch (NumberFormatException unused) {
                     return;
@@ -272,7 +270,7 @@ public final class zzadm extends zzade {
             case '\n':
             case 11:
                 try {
-                    x93Var.C(Integer.valueOf(Integer.parseInt(this.r)));
+                    x93Var.m5412C(Integer.valueOf(Integer.parseInt(this.f36759r)));
                     return;
                 } catch (NumberFormatException unused2) {
                     return;
@@ -280,53 +278,53 @@ public final class zzadm extends zzade {
             case '\f':
             case '\r':
                 try {
-                    int parseInt2 = Integer.parseInt(this.r.substring(2, 4));
-                    int parseInt3 = Integer.parseInt(this.r.substring(0, 2));
-                    x93Var.B(Integer.valueOf(parseInt2));
-                    x93Var.A(Integer.valueOf(parseInt3));
+                    int parseInt2 = Integer.parseInt(this.f36759r.substring(2, 4));
+                    int parseInt3 = Integer.parseInt(this.f36759r.substring(0, 2));
+                    x93Var.m5413B(Integer.valueOf(parseInt2));
+                    x93Var.m5414A(Integer.valueOf(parseInt3));
                     return;
                 } catch (NumberFormatException | StringIndexOutOfBoundsException unused3) {
                     return;
                 }
             case 14:
-                List a = a(this.r);
-                int size = a.size();
+                List m1133a = m1133a(this.f36759r);
+                int size = m1133a.size();
                 if (size != 1) {
                     if (size != 2) {
                         if (size != 3) {
                             return;
                         }
-                        x93Var.A((Integer) a.get(2));
+                        x93Var.m5414A((Integer) m1133a.get(2));
                     }
-                    x93Var.B((Integer) a.get(1));
+                    x93Var.m5413B((Integer) m1133a.get(1));
                 }
-                x93Var.C((Integer) a.get(0));
+                x93Var.m5412C((Integer) m1133a.get(0));
                 return;
             case 15:
-                List a2 = a(this.r);
-                int size2 = a2.size();
+                List m1133a2 = m1133a(this.f36759r);
+                int size2 = m1133a2.size();
                 if (size2 != 1) {
                     if (size2 != 2) {
                         if (size2 != 3) {
                             return;
                         }
-                        x93Var.D((Integer) a2.get(2));
+                        x93Var.m5411D((Integer) m1133a2.get(2));
                     }
-                    x93Var.E((Integer) a2.get(1));
+                    x93Var.m5410E((Integer) m1133a2.get(1));
                 }
-                x93Var.F((Integer) a2.get(0));
+                x93Var.m5409F((Integer) m1133a2.get(0));
                 return;
             case 16:
             case 17:
-                x93Var.w(this.r);
+                x93Var.m5376w(this.f36759r);
                 return;
             case 18:
             case 19:
-                x93Var.x(this.r);
+                x93Var.m5375x(this.f36759r);
                 return;
             case 20:
             case 21:
-                x93Var.K(this.r);
+                x93Var.m5404K(this.f36759r);
                 return;
             default:
                 return;
@@ -334,25 +332,25 @@ public final class zzadm extends zzade {
     }
 
     public final int hashCode() {
-        int hashCode = (this.p.hashCode() + 527) * 31;
-        String str = this.q;
+        int hashCode = (this.f36747p.hashCode() + 527) * 31;
+        String str = this.f36758q;
         int hashCode2 = (hashCode + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
+        String str2 = this.f36759r;
         return hashCode2 + (str2 != null ? str2.hashCode() : 0);
     }
 
     @Override // com.google.android.gms.internal.ads.zzade
     public final String toString() {
-        String str = this.p;
-        String str2 = this.q;
-        String str3 = this.r;
+        String str = this.f36747p;
+        String str2 = this.f36758q;
+        String str3 = this.f36759r;
         return str + ": description=" + str2 + ": value=" + str3;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
+        parcel.writeString(this.f36747p);
+        parcel.writeString(this.f36758q);
+        parcel.writeString(this.f36759r);
     }
 }

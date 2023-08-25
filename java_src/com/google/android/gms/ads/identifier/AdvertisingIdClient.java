@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.RemoteException;
 import android.os.SystemClock;
+import com.daaw.C1291fj;
+import com.daaw.ServiceConnectionC1819jc;
 import com.daaw.a80;
 import com.daaw.c80;
 import com.daaw.ey2;
-import com.daaw.fj;
-import com.daaw.jc;
 import com.daaw.le5;
 import com.daaw.ry0;
 import com.daaw.x70;
@@ -23,40 +23,58 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public class AdvertisingIdClient {
     @GuardedBy("this")
-    public jc a;
+
+    /* renamed from: a */
+    public ServiceConnectionC1819jc f36075a;
     @GuardedBy("this")
-    public z76 b;
+
+    /* renamed from: b */
+    public z76 f36076b;
     @GuardedBy("this")
-    public boolean c;
-    public final Object d;
+
+    /* renamed from: c */
+    public boolean f36077c;
+
+    /* renamed from: d */
+    public final Object f36078d;
     @GuardedBy("mAutoDisconnectTaskLock")
-    public ey2 e;
+
+    /* renamed from: e */
+    public ey2 f36079e;
     @GuardedBy("this")
-    public final Context f;
-    public final long g;
+
+    /* renamed from: f */
+    public final Context f36080f;
+
+    /* renamed from: g */
+    public final long f36081g;
 
     /* loaded from: classes.dex */
     public static final class Info {
-        public final String a;
-        public final boolean b;
+
+        /* renamed from: a */
+        public final String f36082a;
+
+        /* renamed from: b */
+        public final boolean f36083b;
 
         @Deprecated
         public Info(String str, boolean z) {
-            this.a = str;
-            this.b = z;
+            this.f36082a = str;
+            this.f36083b = z;
         }
 
         public String getId() {
-            return this.a;
+            return this.f36082a;
         }
 
         public boolean isLimitAdTrackingEnabled() {
-            return this.b;
+            return this.f36083b;
         }
 
         public String toString() {
-            String str = this.a;
-            boolean z = this.b;
+            String str = this.f36082a;
+            boolean z = this.f36083b;
             StringBuilder sb = new StringBuilder(String.valueOf(str).length() + 7);
             sb.append("{");
             sb.append(str);
@@ -72,24 +90,24 @@ public class AdvertisingIdClient {
 
     public AdvertisingIdClient(Context context, long j, boolean z, boolean z2) {
         Context applicationContext;
-        this.d = new Object();
-        ry0.j(context);
+        this.f36078d = new Object();
+        ry0.m10830j(context);
         if (z && (applicationContext = context.getApplicationContext()) != null) {
             context = applicationContext;
         }
-        this.f = context;
-        this.c = false;
-        this.g = j;
+        this.f36080f = context;
+        this.f36077c = false;
+        this.f36081g = j;
     }
 
     public static Info getAdvertisingIdInfo(Context context) {
         AdvertisingIdClient advertisingIdClient = new AdvertisingIdClient(context, -1L, true, false);
         try {
             long elapsedRealtime = SystemClock.elapsedRealtime();
-            advertisingIdClient.a(false);
-            Info c = advertisingIdClient.c(-1);
-            advertisingIdClient.b(c, true, 0.0f, SystemClock.elapsedRealtime() - elapsedRealtime, "", null);
-            return c;
+            advertisingIdClient.m1441a(false);
+            Info m1439c = advertisingIdClient.m1439c(-1);
+            advertisingIdClient.m1440b(m1439c, true, 0.0f, SystemClock.elapsedRealtime() - elapsedRealtime, "", null);
+            return m1439c;
         } finally {
         }
     }
@@ -98,34 +116,34 @@ public class AdvertisingIdClient {
         boolean zzd;
         AdvertisingIdClient advertisingIdClient = new AdvertisingIdClient(context, -1L, false, false);
         try {
-            advertisingIdClient.a(false);
-            ry0.i("Calling this from your main thread can lead to deadlock");
+            advertisingIdClient.m1441a(false);
+            ry0.m10831i("Calling this from your main thread can lead to deadlock");
             synchronized (advertisingIdClient) {
-                if (!advertisingIdClient.c) {
-                    synchronized (advertisingIdClient.d) {
-                        ey2 ey2Var = advertisingIdClient.e;
-                        if (ey2Var == null || !ey2Var.s) {
+                if (!advertisingIdClient.f36077c) {
+                    synchronized (advertisingIdClient.f36078d) {
+                        ey2 ey2Var = advertisingIdClient.f36079e;
+                        if (ey2Var == null || !ey2Var.f8951s) {
                             throw new IOException("AdvertisingIdClient is not connected.");
                         }
                     }
                     try {
-                        advertisingIdClient.a(false);
-                        if (!advertisingIdClient.c) {
+                        advertisingIdClient.m1441a(false);
+                        if (!advertisingIdClient.f36077c) {
                             throw new IOException("AdvertisingIdClient cannot reconnect.");
                         }
                     } catch (Exception e) {
                         throw new IOException("AdvertisingIdClient cannot reconnect.", e);
                     }
                 }
-                ry0.j(advertisingIdClient.a);
-                ry0.j(advertisingIdClient.b);
+                ry0.m10830j(advertisingIdClient.f36075a);
+                ry0.m10830j(advertisingIdClient.f36076b);
                 try {
-                    zzd = advertisingIdClient.b.zzd();
+                    zzd = advertisingIdClient.f36076b.zzd();
                 } catch (RemoteException unused) {
                     throw new IOException("Remote exception");
                 }
             }
-            advertisingIdClient.d();
+            advertisingIdClient.m1438d();
             return zzd;
         } finally {
             advertisingIdClient.zza();
@@ -135,31 +153,32 @@ public class AdvertisingIdClient {
     public static void setShouldSkipGmsCoreVersionCheck(boolean z) {
     }
 
-    public final void a(boolean z) {
-        ry0.i("Calling this from your main thread can lead to deadlock");
+    /* renamed from: a */
+    public final void m1441a(boolean z) {
+        ry0.m10831i("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
-            if (this.c) {
+            if (this.f36077c) {
                 zza();
             }
-            Context context = this.f;
+            Context context = this.f36080f;
             try {
                 context.getPackageManager().getPackageInfo("com.android.vending", 0);
-                int h = x70.f().h(context, c80.a);
-                if (h != 0 && h != 2) {
+                int mo5490h = x70.m5492f().mo5490h(context, c80.f5613a);
+                if (mo5490h != 0 && mo5490h != 2) {
                     throw new IOException("Google Play services not available");
                 }
-                jc jcVar = new jc();
+                ServiceConnectionC1819jc serviceConnectionC1819jc = new ServiceConnectionC1819jc();
                 Intent intent = new Intent("com.google.android.gms.ads.identifier.service.START");
                 intent.setPackage("com.google.android.gms");
-                if (!fj.b().a(context, intent, jcVar, 1)) {
+                if (!C1291fj.m22614b().m22615a(context, intent, serviceConnectionC1819jc, 1)) {
                     throw new IOException("Connection failure");
                 }
-                this.a = jcVar;
+                this.f36075a = serviceConnectionC1819jc;
                 try {
-                    this.b = le5.D(jcVar.a(10000L, TimeUnit.MILLISECONDS));
-                    this.c = true;
+                    this.f36076b = le5.m16984D(serviceConnectionC1819jc.m18607a(10000L, TimeUnit.MILLISECONDS));
+                    this.f36077c = true;
                     if (z) {
-                        d();
+                        m1438d();
                     }
                 } catch (InterruptedException unused) {
                     throw new IOException("Interrupted exception");
@@ -172,7 +191,8 @@ public class AdvertisingIdClient {
         }
     }
 
-    public final boolean b(Info info, boolean z, float f, long j, String str, Throwable th) {
+    /* renamed from: b */
+    public final boolean m1440b(Info info, boolean z, float f, long j, String str, Throwable th) {
         if (Math.random() <= 0.0d) {
             HashMap hashMap = new HashMap();
             hashMap.put("app_context", "1");
@@ -188,57 +208,59 @@ public class AdvertisingIdClient {
             }
             hashMap.put("tag", "AdvertisingIdClient");
             hashMap.put("time_spent", Long.toString(j));
-            new a(this, hashMap).start();
+            new C3984a(this, hashMap).start();
             return true;
         }
         return false;
     }
 
-    public final Info c(int i) {
+    /* renamed from: c */
+    public final Info m1439c(int i) {
         Info info;
-        ry0.i("Calling this from your main thread can lead to deadlock");
+        ry0.m10831i("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
-            if (!this.c) {
-                synchronized (this.d) {
-                    ey2 ey2Var = this.e;
-                    if (ey2Var == null || !ey2Var.s) {
+            if (!this.f36077c) {
+                synchronized (this.f36078d) {
+                    ey2 ey2Var = this.f36079e;
+                    if (ey2Var == null || !ey2Var.f8951s) {
                         throw new IOException("AdvertisingIdClient is not connected.");
                     }
                 }
                 try {
-                    a(false);
-                    if (!this.c) {
+                    m1441a(false);
+                    if (!this.f36077c) {
                         throw new IOException("AdvertisingIdClient cannot reconnect.");
                     }
                 } catch (Exception e) {
                     throw new IOException("AdvertisingIdClient cannot reconnect.", e);
                 }
             }
-            ry0.j(this.a);
-            ry0.j(this.b);
+            ry0.m10830j(this.f36075a);
+            ry0.m10830j(this.f36076b);
             try {
-                info = new Info(this.b.zzc(), this.b.t(true));
+                info = new Info(this.f36076b.zzc(), this.f36076b.mo2680t(true));
             } catch (RemoteException unused) {
                 throw new IOException("Remote exception");
             }
         }
-        d();
+        m1438d();
         return info;
     }
 
-    public final void d() {
-        synchronized (this.d) {
-            ey2 ey2Var = this.e;
+    /* renamed from: d */
+    public final void m1438d() {
+        synchronized (this.f36078d) {
+            ey2 ey2Var = this.f36079e;
             if (ey2Var != null) {
-                ey2Var.r.countDown();
+                ey2Var.f8950r.countDown();
                 try {
-                    this.e.join();
+                    this.f36079e.join();
                 } catch (InterruptedException unused) {
                 }
             }
-            long j = this.g;
+            long j = this.f36081g;
             if (j > 0) {
-                this.e = new ey2(this, j);
+                this.f36079e = new ey2(this, j);
             }
         }
     }
@@ -249,28 +271,28 @@ public class AdvertisingIdClient {
     }
 
     public Info getInfo() {
-        return c(-1);
+        return m1439c(-1);
     }
 
     public void start() {
-        a(true);
+        m1441a(true);
     }
 
     public final void zza() {
-        ry0.i("Calling this from your main thread can lead to deadlock");
+        ry0.m10831i("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
-            if (this.f == null || this.a == null) {
+            if (this.f36080f == null || this.f36075a == null) {
                 return;
             }
             try {
-                if (this.c) {
-                    fj.b().c(this.f, this.a);
+                if (this.f36077c) {
+                    C1291fj.m22614b().m22613c(this.f36080f, this.f36075a);
                 }
             } catch (Throwable unused) {
             }
-            this.c = false;
-            this.b = null;
-            this.a = null;
+            this.f36077c = false;
+            this.f36076b = null;
+            this.f36075a = null;
         }
     }
 }

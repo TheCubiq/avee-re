@@ -10,18 +10,19 @@ public final class uy3 extends bp2 implements wy3 {
     }
 
     @Override // com.daaw.wy3
-    public final void B0(String str, String str2, Bundle bundle) {
-        Parcel D = D();
-        D.writeString(str);
-        D.writeString(str2);
-        dp2.e(D, bundle);
-        M(3, D);
+    /* renamed from: B0 */
+    public final void mo5712B0(String str, String str2, Bundle bundle) {
+        Parcel m25952D = m25952D();
+        m25952D.writeString(str);
+        m25952D.writeString(str2);
+        dp2.m24103e(m25952D, bundle);
+        m25950M(3, m25952D);
     }
 
     @Override // com.daaw.wy3
     public final void zzb(String str) {
-        Parcel D = D();
-        D.writeString(str);
-        M(2, D);
+        Parcel m25952D = m25952D();
+        m25952D.writeString(str);
+        m25950M(2, m25952D);
     }
 }

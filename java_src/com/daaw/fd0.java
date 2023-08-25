@@ -6,9 +6,10 @@ public class fd0 extends id0 {
     }
 
     @Override // com.daaw.id0
-    public void e(byte[] bArr, int i) {
+    /* renamed from: e */
+    public void mo17786e(byte[] bArr, int i) {
         int i2 = i + 4;
-        this.b = wc.m(bArr[i2], bArr[i2 + 1], bArr[i2 + 2], bArr[i2 + 3]);
+        this.f13503b = C3419wc.m6191m(bArr[i2], bArr[i2 + 1], bArr[i2 + 2], bArr[i2 + 3]);
     }
 
     @Override // com.daaw.id0

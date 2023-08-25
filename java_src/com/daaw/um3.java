@@ -10,76 +10,120 @@ import org.json.JSONObject;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class um3 {
-    public final String a;
-    public final String b;
-    public final List c;
-    public final String d;
-    public final String e;
-    public final List f;
-    public final List g;
-    public final List h;
-    public final List i;
-    public final List j;
-    public final String k;
-    public final List l;
-    public final List m;
-    public final List n;
-    public final String o;
-    public final String p;
-    public final String q;
-    public final String r;
-    public final String s;
-    public final List t;
-    public final String u;
-    public final String v;
+
+    /* renamed from: a */
+    public final String f29189a;
+
+    /* renamed from: b */
+    public final String f29190b;
+
+    /* renamed from: c */
+    public final List f29191c;
+
+    /* renamed from: d */
+    public final String f29192d;
+
+    /* renamed from: e */
+    public final String f29193e;
+
+    /* renamed from: f */
+    public final List f29194f;
+
+    /* renamed from: g */
+    public final List f29195g;
+
+    /* renamed from: h */
+    public final List f29196h;
+
+    /* renamed from: i */
+    public final List f29197i;
+
+    /* renamed from: j */
+    public final List f29198j;
+
+    /* renamed from: k */
+    public final String f29199k;
+
+    /* renamed from: l */
+    public final List f29200l;
+
+    /* renamed from: m */
+    public final List f29201m;
+
+    /* renamed from: n */
+    public final List f29202n;
+
+    /* renamed from: o */
+    public final String f29203o;
+
+    /* renamed from: p */
+    public final String f29204p;
+
+    /* renamed from: q */
+    public final String f29205q;
+
+    /* renamed from: r */
+    public final String f29206r;
+
+    /* renamed from: s */
+    public final String f29207s;
+
+    /* renamed from: t */
+    public final List f29208t;
+
+    /* renamed from: u */
+    public final String f29209u;
+
+    /* renamed from: v */
+    public final String f29210v;
 
     public um3(JSONObject jSONObject) {
         List list;
-        this.b = jSONObject.optString("id");
+        this.f29190b = jSONObject.optString("id");
         JSONArray jSONArray = jSONObject.getJSONArray("adapters");
         ArrayList arrayList = new ArrayList(jSONArray.length());
         for (int i = 0; i < jSONArray.length(); i++) {
             arrayList.add(jSONArray.getString(i));
         }
-        this.c = Collections.unmodifiableList(arrayList);
-        this.d = jSONObject.optString("allocation_id", null);
+        this.f29191c = Collections.unmodifiableList(arrayList);
+        this.f29192d = jSONObject.optString("allocation_id", null);
         zzt.zzg();
-        this.f = wm3.a(jSONObject, "clickurl");
+        this.f29194f = wm3.m5979a(jSONObject, "clickurl");
         zzt.zzg();
-        this.g = wm3.a(jSONObject, "imp_urls");
+        this.f29195g = wm3.m5979a(jSONObject, "imp_urls");
         zzt.zzg();
-        this.h = wm3.a(jSONObject, "downloaded_imp_urls");
+        this.f29196h = wm3.m5979a(jSONObject, "downloaded_imp_urls");
         zzt.zzg();
-        this.j = wm3.a(jSONObject, "fill_urls");
+        this.f29198j = wm3.m5979a(jSONObject, "fill_urls");
         zzt.zzg();
-        this.l = wm3.a(jSONObject, "video_start_urls");
+        this.f29200l = wm3.m5979a(jSONObject, "video_start_urls");
         zzt.zzg();
-        this.n = wm3.a(jSONObject, "video_complete_urls");
+        this.f29202n = wm3.m5979a(jSONObject, "video_complete_urls");
         zzt.zzg();
-        this.m = wm3.a(jSONObject, "video_reward_urls");
-        this.o = jSONObject.optString("transaction_id");
-        this.p = jSONObject.optString("valid_from_timestamp");
+        this.f29201m = wm3.m5979a(jSONObject, "video_reward_urls");
+        this.f29203o = jSONObject.optString("transaction_id");
+        this.f29204p = jSONObject.optString("valid_from_timestamp");
         JSONObject optJSONObject = jSONObject.optJSONObject("ad");
         if (optJSONObject != null) {
             zzt.zzg();
-            list = wm3.a(optJSONObject, "manual_impression_urls");
+            list = wm3.m5979a(optJSONObject, "manual_impression_urls");
         } else {
             list = null;
         }
-        this.i = list;
-        this.a = optJSONObject != null ? optJSONObject.toString() : null;
+        this.f29197i = list;
+        this.f29189a = optJSONObject != null ? optJSONObject.toString() : null;
         JSONObject optJSONObject2 = jSONObject.optJSONObject("data");
-        this.k = optJSONObject2 != null ? optJSONObject2.toString() : null;
-        this.e = optJSONObject2 != null ? optJSONObject2.optString("class_name") : null;
-        this.q = jSONObject.optString("html_template", null);
-        this.r = jSONObject.optString("ad_base_url", null);
+        this.f29199k = optJSONObject2 != null ? optJSONObject2.toString() : null;
+        this.f29193e = optJSONObject2 != null ? optJSONObject2.optString("class_name") : null;
+        this.f29205q = jSONObject.optString("html_template", null);
+        this.f29206r = jSONObject.optString("ad_base_url", null);
         JSONObject optJSONObject3 = jSONObject.optJSONObject("assets");
-        this.s = optJSONObject3 != null ? optJSONObject3.toString() : null;
+        this.f29207s = optJSONObject3 != null ? optJSONObject3.toString() : null;
         zzt.zzg();
-        this.t = wm3.a(jSONObject, "template_ids");
+        this.f29208t = wm3.m5979a(jSONObject, "template_ids");
         JSONObject optJSONObject4 = jSONObject.optJSONObject("ad_loader_options");
-        this.u = optJSONObject4 != null ? optJSONObject4.toString() : null;
-        this.v = jSONObject.optString("response_type", null);
+        this.f29209u = optJSONObject4 != null ? optJSONObject4.toString() : null;
+        this.f29210v = jSONObject.optString("response_type", null);
         jSONObject.optLong("ad_network_timeout_millis", -1L);
     }
 }

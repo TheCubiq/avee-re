@@ -3,53 +3,69 @@ package com.daaw;
 import com.google.android.gms.ads.internal.client.zzq;
 /* loaded from: classes.dex */
 public final class v84 {
-    public final int a;
-    public final int b;
-    public final int c;
+
+    /* renamed from: a */
+    public final int f30026a;
+
+    /* renamed from: b */
+    public final int f30027b;
+
+    /* renamed from: c */
+    public final int f30028c;
 
     public v84(int i, int i2, int i3) {
-        this.a = i;
-        this.c = i2;
-        this.b = i3;
+        this.f30026a = i;
+        this.f30028c = i2;
+        this.f30027b = i3;
     }
 
-    public static v84 a() {
+    /* renamed from: a */
+    public static v84 m7337a() {
         return new v84(0, 0, 0);
     }
 
-    public static v84 b(int i, int i2) {
+    /* renamed from: b */
+    public static v84 m7336b(int i, int i2) {
         return new v84(1, i, i2);
     }
 
-    public static v84 c(zzq zzqVar) {
-        return zzqVar.zzd ? new v84(3, 0, 0) : zzqVar.zzi ? new v84(2, 0, 0) : zzqVar.zzh ? a() : b(zzqVar.zzf, zzqVar.zzc);
+    /* renamed from: c */
+    public static v84 m7335c(zzq zzqVar) {
+        return zzqVar.zzd ? new v84(3, 0, 0) : zzqVar.zzi ? new v84(2, 0, 0) : zzqVar.zzh ? m7337a() : m7336b(zzqVar.zzf, zzqVar.zzc);
     }
 
-    public static v84 d() {
+    /* renamed from: d */
+    public static v84 m7334d() {
         return new v84(5, 0, 0);
     }
 
-    public static v84 e() {
+    /* renamed from: e */
+    public static v84 m7333e() {
         return new v84(4, 0, 0);
     }
 
-    public final boolean f() {
-        return this.a == 0;
+    /* renamed from: f */
+    public final boolean m7332f() {
+        return this.f30026a == 0;
     }
 
-    public final boolean g() {
-        return this.a == 2;
+    /* renamed from: g */
+    public final boolean m7331g() {
+        return this.f30026a == 2;
     }
 
-    public final boolean h() {
-        return this.a == 5;
+    /* renamed from: h */
+    public final boolean m7330h() {
+        return this.f30026a == 5;
     }
 
-    public final boolean i() {
-        return this.a == 3;
+    /* renamed from: i */
+    public final boolean m7329i() {
+        return this.f30026a == 3;
     }
 
-    public final boolean j() {
-        return this.a == 4;
+    /* renamed from: j */
+    public final boolean m7328j() {
+        return this.f30026a == 4;
     }
 }

@@ -7,19 +7,23 @@ import com.google.android.gms.ads.internal.zzt;
 import com.google.android.gms.internal.ads.zzbyi;
 /* loaded from: classes.dex */
 public final class wp3 implements Runnable {
-    public final /* synthetic */ AdOverlayInfoParcel p;
-    public final /* synthetic */ zzbyi q;
+
+    /* renamed from: p */
+    public final /* synthetic */ AdOverlayInfoParcel f31436p;
+
+    /* renamed from: q */
+    public final /* synthetic */ zzbyi f31437q;
 
     public wp3(zzbyi zzbyiVar, AdOverlayInfoParcel adOverlayInfoParcel) {
-        this.q = zzbyiVar;
-        this.p = adOverlayInfoParcel;
+        this.f31437q = zzbyiVar;
+        this.f31436p = adOverlayInfoParcel;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         Activity activity;
         zzt.zzi();
-        activity = this.q.a;
-        zzm.zza(activity, this.p, true);
+        activity = this.f31437q.f36879a;
+        zzm.zza(activity, this.f31436p, true);
     }
 }

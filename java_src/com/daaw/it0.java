@@ -2,19 +2,23 @@ package com.daaw;
 
 import java.io.OutputStream;
 /* loaded from: classes.dex */
-public class it0<T> implements zw<T> {
-    public static final it0<?> a = new it0<>();
+public class it0<T> implements InterfaceC3911zw<T> {
 
-    public static <T> zw<T> b() {
-        return a;
+    /* renamed from: a */
+    public static final it0<?> f13986a = new it0<>();
+
+    /* renamed from: b */
+    public static <T> InterfaceC3911zw<T> m19435b() {
+        return f13986a;
     }
 
-    @Override // com.daaw.zw
-    public boolean a(T t, OutputStream outputStream) {
+    @Override // com.daaw.InterfaceC3911zw
+    /* renamed from: a */
+    public boolean mo1827a(T t, OutputStream outputStream) {
         return false;
     }
 
-    @Override // com.daaw.zw
+    @Override // com.daaw.InterfaceC3911zw
     public String getId() {
         return "";
     }

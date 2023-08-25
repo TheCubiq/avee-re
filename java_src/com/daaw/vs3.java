@@ -5,19 +5,23 @@ import com.google.android.gms.ads.query.UpdateClickUrlCallback;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class vs3 extends qs3 {
-    public final /* synthetic */ UpdateClickUrlCallback p;
+
+    /* renamed from: p */
+    public final /* synthetic */ UpdateClickUrlCallback f30553p;
 
     public vs3(zs3 zs3Var, UpdateClickUrlCallback updateClickUrlCallback) {
-        this.p = updateClickUrlCallback;
+        this.f30553p = updateClickUrlCallback;
     }
 
     @Override // com.daaw.rs3
-    public final void a(String str) {
-        this.p.onFailure(str);
+    /* renamed from: a */
+    public final void mo4546a(String str) {
+        this.f30553p.onFailure(str);
     }
 
     @Override // com.daaw.rs3
-    public final void x0(List list) {
-        this.p.onSuccess((Uri) list.get(0));
+    /* renamed from: x0 */
+    public final void mo4545x0(List list) {
+        this.f30553p.onSuccess((Uri) list.get(0));
     }
 }

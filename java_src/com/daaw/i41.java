@@ -9,157 +9,194 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes2.dex */
 public final class i41 {
-    public final double a;
-    public final double b;
-    public final long c;
-    public final int d;
-    public final BlockingQueue<Runnable> e;
-    public final ThreadPoolExecutor f;
-    public final qn1<lm> g;
-    public final fu0 h;
-    public int i;
-    public long j;
 
+    /* renamed from: a */
+    public final double f13233a;
+
+    /* renamed from: b */
+    public final double f13234b;
+
+    /* renamed from: c */
+    public final long f13235c;
+
+    /* renamed from: d */
+    public final int f13236d;
+
+    /* renamed from: e */
+    public final BlockingQueue<Runnable> f13237e;
+
+    /* renamed from: f */
+    public final ThreadPoolExecutor f13238f;
+
+    /* renamed from: g */
+    public final qn1<AbstractC2057lm> f13239g;
+
+    /* renamed from: h */
+    public final fu0 f13240h;
+
+    /* renamed from: i */
+    public int f13241i;
+
+    /* renamed from: j */
+    public long f13242j;
+
+    /* renamed from: com.daaw.i41$b */
     /* loaded from: classes2.dex */
-    public final class b implements Runnable {
-        public final zm p;
-        public final tj1<zm> q;
+    public final class RunnableC1657b implements Runnable {
 
-        public b(zm zmVar, tj1<zm> tj1Var) {
-            this.p = zmVar;
-            this.q = tj1Var;
+        /* renamed from: p */
+        public final AbstractC3878zm f13243p;
+
+        /* renamed from: q */
+        public final tj1<AbstractC3878zm> f13244q;
+
+        public RunnableC1657b(AbstractC3878zm abstractC3878zm, tj1<AbstractC3878zm> tj1Var) {
+            this.f13243p = abstractC3878zm;
+            this.f13244q = tj1Var;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            i41.this.p(this.p, this.q);
-            i41.this.h.c();
-            double g = i41.this.g();
-            ml0 f = ml0.f();
-            f.b("Delay for: " + String.format(Locale.US, "%.2f", Double.valueOf(g / 1000.0d)) + " s for report: " + this.p.d());
-            i41.q(g);
+            i41.this.m20128p(this.f13243p, this.f13244q);
+            i41.this.f13240h.m22263c();
+            double m20137g = i41.this.m20137g();
+            ml0 m15976f = ml0.m15976f();
+            m15976f.m15980b("Delay for: " + String.format(Locale.US, "%.2f", Double.valueOf(m20137g / 1000.0d)) + " s for report: " + this.f13243p.mo2116d());
+            i41.m20127q(m20137g);
         }
     }
 
     @SuppressLint({"ThreadPoolCreation"})
-    public i41(double d, double d2, long j, qn1<lm> qn1Var, fu0 fu0Var) {
-        this.a = d;
-        this.b = d2;
-        this.c = j;
-        this.g = qn1Var;
-        this.h = fu0Var;
+    public i41(double d, double d2, long j, qn1<AbstractC2057lm> qn1Var, fu0 fu0Var) {
+        this.f13233a = d;
+        this.f13234b = d2;
+        this.f13235c = j;
+        this.f13239g = qn1Var;
+        this.f13240h = fu0Var;
         int i = (int) d;
-        this.d = i;
+        this.f13236d = i;
         ArrayBlockingQueue arrayBlockingQueue = new ArrayBlockingQueue(i);
-        this.e = arrayBlockingQueue;
-        this.f = new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, arrayBlockingQueue);
-        this.i = 0;
-        this.j = 0L;
+        this.f13237e = arrayBlockingQueue;
+        this.f13238f = new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, arrayBlockingQueue);
+        this.f13241i = 0;
+        this.f13242j = 0L;
     }
 
-    public i41(qn1<lm> qn1Var, tb1 tb1Var, fu0 fu0Var) {
-        this(tb1Var.f, tb1Var.g, tb1Var.h * 1000, qn1Var, fu0Var);
+    public i41(qn1<AbstractC2057lm> qn1Var, tb1 tb1Var, fu0 fu0Var) {
+        this(tb1Var.f27204f, tb1Var.f27205g, tb1Var.f27206h * 1000, qn1Var, fu0Var);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void m(CountDownLatch countDownLatch) {
-        f30.b(this.g, cz0.HIGHEST);
+    /* renamed from: m */
+    public /* synthetic */ void m20131m(CountDownLatch countDownLatch) {
+        f30.m22949b(this.f13239g, cz0.HIGHEST);
         countDownLatch.countDown();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void n(tj1 tj1Var, zm zmVar, Exception exc) {
+    /* renamed from: n */
+    public /* synthetic */ void m20130n(tj1 tj1Var, AbstractC3878zm abstractC3878zm, Exception exc) {
         if (exc != null) {
-            tj1Var.d(exc);
+            tj1Var.m9079d(exc);
             return;
         }
-        j();
-        tj1Var.e(zmVar);
+        m20134j();
+        tj1Var.m9078e(abstractC3878zm);
     }
 
-    public static void q(double d) {
+    /* renamed from: q */
+    public static void m20127q(double d) {
         try {
             Thread.sleep((long) d);
         } catch (InterruptedException unused) {
         }
     }
 
-    public final double g() {
-        return Math.min(3600000.0d, (60000.0d / this.a) * Math.pow(this.b, h()));
+    /* renamed from: g */
+    public final double m20137g() {
+        return Math.min(3600000.0d, (60000.0d / this.f13233a) * Math.pow(this.f13234b, m20136h()));
     }
 
-    public final int h() {
-        if (this.j == 0) {
-            this.j = o();
+    /* renamed from: h */
+    public final int m20136h() {
+        if (this.f13242j == 0) {
+            this.f13242j = m20129o();
         }
-        int o = (int) ((o() - this.j) / this.c);
-        int min = l() ? Math.min(100, this.i + o) : Math.max(0, this.i - o);
-        if (this.i != min) {
-            this.i = min;
-            this.j = o();
+        int m20129o = (int) ((m20129o() - this.f13242j) / this.f13235c);
+        int min = m20132l() ? Math.min(100, this.f13241i + m20129o) : Math.max(0, this.f13241i - m20129o);
+        if (this.f13241i != min) {
+            this.f13241i = min;
+            this.f13242j = m20129o();
         }
         return min;
     }
 
-    public tj1<zm> i(zm zmVar, boolean z) {
-        synchronized (this.e) {
-            tj1<zm> tj1Var = new tj1<>();
+    /* renamed from: i */
+    public tj1<AbstractC3878zm> m20135i(AbstractC3878zm abstractC3878zm, boolean z) {
+        synchronized (this.f13237e) {
+            tj1<AbstractC3878zm> tj1Var = new tj1<>();
             if (!z) {
-                p(zmVar, tj1Var);
+                m20128p(abstractC3878zm, tj1Var);
                 return tj1Var;
             }
-            this.h.b();
-            if (!k()) {
-                h();
-                ml0 f = ml0.f();
-                f.b("Dropping report due to queue being full: " + zmVar.d());
-                this.h.a();
-                tj1Var.e(zmVar);
+            this.f13240h.m22264b();
+            if (!m20133k()) {
+                m20136h();
+                ml0 m15976f = ml0.m15976f();
+                m15976f.m15980b("Dropping report due to queue being full: " + abstractC3878zm.mo2116d());
+                this.f13240h.m22265a();
+                tj1Var.m9078e(abstractC3878zm);
                 return tj1Var;
             }
-            ml0 f2 = ml0.f();
-            f2.b("Enqueueing report: " + zmVar.d());
-            ml0 f3 = ml0.f();
-            f3.b("Queue size: " + this.e.size());
-            this.f.execute(new b(zmVar, tj1Var));
-            ml0 f4 = ml0.f();
-            f4.b("Closing task for report: " + zmVar.d());
-            tj1Var.e(zmVar);
+            ml0 m15976f2 = ml0.m15976f();
+            m15976f2.m15980b("Enqueueing report: " + abstractC3878zm.mo2116d());
+            ml0 m15976f3 = ml0.m15976f();
+            m15976f3.m15980b("Queue size: " + this.f13237e.size());
+            this.f13238f.execute(new RunnableC1657b(abstractC3878zm, tj1Var));
+            ml0 m15976f4 = ml0.m15976f();
+            m15976f4.m15980b("Closing task for report: " + abstractC3878zm.mo2116d());
+            tj1Var.m9078e(abstractC3878zm);
             return tj1Var;
         }
     }
 
     @SuppressLint({"DiscouragedApi", "ThreadPoolCreation"})
-    public void j() {
+    /* renamed from: j */
+    public void m20134j() {
         final CountDownLatch countDownLatch = new CountDownLatch(1);
         new Thread(new Runnable() { // from class: com.daaw.h41
             @Override // java.lang.Runnable
             public final void run() {
-                i41.this.m(countDownLatch);
+                i41.this.m20131m(countDownLatch);
             }
         }).start();
-        yq1.e(countDownLatch, 2L, TimeUnit.SECONDS);
+        yq1.m3443e(countDownLatch, 2L, TimeUnit.SECONDS);
     }
 
-    public final boolean k() {
-        return this.e.size() < this.d;
+    /* renamed from: k */
+    public final boolean m20133k() {
+        return this.f13237e.size() < this.f13236d;
     }
 
-    public final boolean l() {
-        return this.e.size() == this.d;
+    /* renamed from: l */
+    public final boolean m20132l() {
+        return this.f13237e.size() == this.f13236d;
     }
 
-    public final long o() {
+    /* renamed from: o */
+    public final long m20129o() {
         return System.currentTimeMillis();
     }
 
-    public final void p(final zm zmVar, final tj1<zm> tj1Var) {
-        ml0 f = ml0.f();
-        f.b("Sending report through Google DataTransport: " + zmVar.d());
-        this.g.a(xx.d(zmVar.b()), new ao1() { // from class: com.daaw.g41
+    /* renamed from: p */
+    public final void m20128p(final AbstractC3878zm abstractC3878zm, final tj1<AbstractC3878zm> tj1Var) {
+        ml0 m15976f = ml0.m15976f();
+        m15976f.m15980b("Sending report through Google DataTransport: " + abstractC3878zm.mo2116d());
+        this.f13239g.mo6999a(AbstractC3649xx.m4416d(abstractC3878zm.mo2118b()), new ao1() { // from class: com.daaw.g41
             @Override // com.daaw.ao1
-            public final void a(Exception exc) {
-                i41.this.n(tj1Var, zmVar, exc);
+            /* renamed from: a */
+            public final void mo21970a(Exception exc) {
+                i41.this.m20130n(tj1Var, abstractC3878zm, exc);
             }
         });
     }

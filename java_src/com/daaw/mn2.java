@@ -6,16 +6,17 @@ public final class mn2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        this.e.k0(-1L);
-        this.e.j0(-1L);
-        int[] iArr = (int[]) this.f.invoke(null, this.b.b());
-        synchronized (this.e) {
-            this.e.k0(iArr[0]);
-            this.e.j0(iArr[1]);
+    /* renamed from: a */
+    public final void mo2099a() {
+        this.f20528e.m20755k0(-1L);
+        this.f20528e.m20756j0(-1L);
+        int[] iArr = (int[]) this.f20529f.invoke(null, this.f20525b.m6004b());
+        synchronized (this.f20528e) {
+            this.f20528e.m20755k0(iArr[0]);
+            this.f20528e.m20756j0(iArr[1]);
             int i = iArr[2];
             if (i != Integer.MIN_VALUE) {
-                this.e.i0(i);
+                this.f20528e.m20757i0(i);
             }
         }
     }

@@ -5,14 +5,16 @@ public enum oq5 {
     NATIVE_DISPLAY("nativeDisplay"),
     VIDEO("video");
     
-    public final String p;
+
+    /* renamed from: p */
+    public final String f21834p;
 
     oq5(String str) {
-        this.p = str;
+        this.f21834p = str;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return this.p;
+        return this.f21834p;
     }
 }

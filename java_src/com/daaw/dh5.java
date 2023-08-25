@@ -17,144 +17,188 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class dh5 implements ei5, lg5 {
-    public final lh5 a;
-    public final fi5 b;
-    public final mg5 c;
-    public final vg5 d;
-    public final kg5 e;
-    public final xh5 f;
-    public final String g;
-    public boolean p;
-    public int q;
-    public boolean r;
-    public final Map i = new HashMap();
-    public final Map j = new HashMap();
-    public final Map k = new HashMap();
-    public String l = "{}";
-    public String m = "";
-    public long n = Long.MAX_VALUE;
-    public zg5 o = zg5.NONE;
-    public ch5 s = ch5.UNKNOWN;
-    public final String h = "afma-sdk-a-v21.5.0";
+
+    /* renamed from: a */
+    public final lh5 f7063a;
+
+    /* renamed from: b */
+    public final fi5 f7064b;
+
+    /* renamed from: c */
+    public final mg5 f7065c;
+
+    /* renamed from: d */
+    public final vg5 f7066d;
+
+    /* renamed from: e */
+    public final kg5 f7067e;
+
+    /* renamed from: f */
+    public final xh5 f7068f;
+
+    /* renamed from: g */
+    public final String f7069g;
+
+    /* renamed from: p */
+    public boolean f7078p;
+
+    /* renamed from: q */
+    public int f7079q;
+
+    /* renamed from: r */
+    public boolean f7080r;
+
+    /* renamed from: i */
+    public final Map f7071i = new HashMap();
+
+    /* renamed from: j */
+    public final Map f7072j = new HashMap();
+
+    /* renamed from: k */
+    public final Map f7073k = new HashMap();
+
+    /* renamed from: l */
+    public String f7074l = "{}";
+
+    /* renamed from: m */
+    public String f7075m = "";
+
+    /* renamed from: n */
+    public long f7076n = Long.MAX_VALUE;
+
+    /* renamed from: o */
+    public zg5 f7077o = zg5.NONE;
+
+    /* renamed from: s */
+    public ch5 f7081s = ch5.UNKNOWN;
+
+    /* renamed from: h */
+    public final String f7070h = "afma-sdk-a-v21.5.0";
 
     public dh5(lh5 lh5Var, fi5 fi5Var, mg5 mg5Var, Context context, zzchu zzchuVar, vg5 vg5Var, xh5 xh5Var) {
-        this.a = lh5Var;
-        this.b = fi5Var;
-        this.c = mg5Var;
-        this.e = new kg5(context);
-        this.g = zzchuVar.p;
-        this.d = vg5Var;
-        this.f = xh5Var;
+        this.f7063a = lh5Var;
+        this.f7064b = fi5Var;
+        this.f7065c = mg5Var;
+        this.f7067e = new kg5(context);
+        this.f7069g = zzchuVar.f36993p;
+        this.f7066d = vg5Var;
+        this.f7068f = xh5Var;
         zzt.zzs().zzg(this);
     }
 
-    public final zg5 a() {
-        return this.o;
+    /* renamed from: a */
+    public final zg5 m24410a() {
+        return this.f7077o;
     }
 
-    public final synchronized f77 b(String str) {
+    /* renamed from: b */
+    public final synchronized f77 m24409b(String str) {
         e14 e14Var;
         e14Var = new e14();
-        if (this.j.containsKey(str)) {
-            e14Var.b((og5) this.j.get(str));
+        if (this.f7072j.containsKey(str)) {
+            e14Var.m23797b((og5) this.f7072j.get(str));
         } else {
-            if (!this.k.containsKey(str)) {
-                this.k.put(str, new ArrayList());
+            if (!this.f7073k.containsKey(str)) {
+                this.f7073k.put(str, new ArrayList());
             }
-            ((List) this.k.get(str)).add(e14Var);
+            ((List) this.f7073k.get(str)).add(e14Var);
         }
         return e14Var;
     }
 
-    public final synchronized String c() {
-        if (((Boolean) zzba.zzc().b(g93.X7)).booleanValue() && n()) {
-            if (this.n < zzt.zzB().a() / 1000) {
-                this.l = "{}";
-                this.n = Long.MAX_VALUE;
+    /* renamed from: c */
+    public final synchronized String m24408c() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10599X7)).booleanValue() && m24397n()) {
+            if (this.f7076n < zzt.zzB().mo15860a() / 1000) {
+                this.f7074l = "{}";
+                this.f7076n = Long.MAX_VALUE;
                 return "";
-            } else if (this.l.equals("{}")) {
+            } else if (this.f7074l.equals("{}")) {
                 return "";
             } else {
-                return this.l;
+                return this.f7074l;
             }
         }
         return "";
     }
 
-    public final synchronized String d() {
+    /* renamed from: d */
+    public final synchronized String m24407d() {
         JSONObject jSONObject;
         jSONObject = new JSONObject();
         try {
-            jSONObject.put("isTestMode", this.p);
-            jSONObject.put("gesture", this.o);
-            if (this.n > zzt.zzB().a() / 1000) {
-                jSONObject.put("networkExtras", this.l);
-                jSONObject.put("networkExtrasExpirationSecs", this.n);
+            jSONObject.put("isTestMode", this.f7078p);
+            jSONObject.put("gesture", this.f7077o);
+            if (this.f7076n > zzt.zzB().mo15860a() / 1000) {
+                jSONObject.put("networkExtras", this.f7074l);
+                jSONObject.put("networkExtrasExpirationSecs", this.f7076n);
             }
         } catch (JSONException unused) {
         }
         return jSONObject.toString();
     }
 
-    public final synchronized JSONObject e() {
+    /* renamed from: e */
+    public final synchronized JSONObject m24406e() {
         JSONObject jSONObject;
         jSONObject = new JSONObject();
         try {
             jSONObject.put("platform", "ANDROID");
-            jSONObject.put("sdkVersion", this.h);
-            jSONObject.put("internalSdkVersion", this.g);
+            jSONObject.put("sdkVersion", this.f7070h);
+            jSONObject.put("internalSdkVersion", this.f7069g);
             jSONObject.put("osVersion", Build.VERSION.RELEASE);
-            jSONObject.put("adapters", this.d.a());
-            if (((Boolean) zzba.zzc().b(g93.v8)).booleanValue()) {
-                String m = zzt.zzo().m();
-                if (!TextUtils.isEmpty(m)) {
-                    jSONObject.put("plugin", m);
+            jSONObject.put("adapters", this.f7066d.m7181a());
+            if (((Boolean) zzba.zzc().m23658b(g93.f10861v8)).booleanValue()) {
+                String m11910m = zzt.zzo().m11910m();
+                if (!TextUtils.isEmpty(m11910m)) {
+                    jSONObject.put("plugin", m11910m);
                 }
             }
-            if (this.n < zzt.zzB().a() / 1000) {
-                this.l = "{}";
+            if (this.f7076n < zzt.zzB().mo15860a() / 1000) {
+                this.f7074l = "{}";
             }
-            jSONObject.put("networkExtras", this.l);
-            jSONObject.put("adSlots", p());
-            jSONObject.put("appInfo", this.e.a());
-            String c = zzt.zzo().h().zzh().c();
-            if (!TextUtils.isEmpty(c)) {
-                jSONObject.put("cld", new JSONObject(c));
+            jSONObject.put("networkExtras", this.f7074l);
+            jSONObject.put("adSlots", m24395p());
+            jSONObject.put("appInfo", this.f7067e.m17754a());
+            String m17294c = zzt.zzo().m11915h().zzh().m17294c();
+            if (!TextUtils.isEmpty(m17294c)) {
+                jSONObject.put("cld", new JSONObject(m17294c));
             }
-            if (((Boolean) zzba.zzc().b(g93.n8)).booleanValue() && !TextUtils.isEmpty(this.m)) {
-                String str = this.m;
+            if (((Boolean) zzba.zzc().m23658b(g93.f10773n8)).booleanValue() && !TextUtils.isEmpty(this.f7075m)) {
+                String str = this.f7075m;
                 k04.zze("Policy violation data: " + str);
-                jSONObject.put("policyViolations", new JSONObject(this.m));
+                jSONObject.put("policyViolations", new JSONObject(this.f7075m));
             }
-            if (((Boolean) zzba.zzc().b(g93.m8)).booleanValue()) {
-                jSONObject.put("openAction", this.s);
-                jSONObject.put("gesture", this.o);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+                jSONObject.put("openAction", this.f7081s);
+                jSONObject.put("gesture", this.f7077o);
             }
         } catch (JSONException e) {
-            zzt.zzo().t(e, "Inspector.toJson");
+            zzt.zzo().m11903t(e, "Inspector.toJson");
             k04.zzk("Ad inspector encountered an error", e);
         }
         return jSONObject;
     }
 
-    public final synchronized void f(String str, og5 og5Var) {
-        if (((Boolean) zzba.zzc().b(g93.X7)).booleanValue() && n()) {
-            if (this.q >= ((Integer) zzba.zzc().b(g93.Z7)).intValue()) {
+    /* renamed from: f */
+    public final synchronized void m24405f(String str, og5 og5Var) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10599X7)).booleanValue() && m24397n()) {
+            if (this.f7079q >= ((Integer) zzba.zzc().m23658b(g93.f10619Z7)).intValue()) {
                 k04.zzj("Maximum number of ad requests stored reached. Dropping the current request.");
                 return;
             }
-            if (!this.i.containsKey(str)) {
-                this.i.put(str, new ArrayList());
+            if (!this.f7071i.containsKey(str)) {
+                this.f7071i.put(str, new ArrayList());
             }
-            this.q++;
-            ((List) this.i.get(str)).add(og5Var);
-            if (((Boolean) zzba.zzc().b(g93.t8)).booleanValue()) {
-                String a = og5Var.a();
-                this.j.put(a, og5Var);
-                if (this.k.containsKey(a)) {
-                    List<e14> list = (List) this.k.get(a);
+            this.f7079q++;
+            ((List) this.f7071i.get(str)).add(og5Var);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10839t8)).booleanValue()) {
+                String m14309a = og5Var.m14309a();
+                this.f7072j.put(m14309a, og5Var);
+                if (this.f7073k.containsKey(m14309a)) {
+                    List<e14> list = (List) this.f7073k.get(m14309a);
                     for (e14 e14Var : list) {
-                        e14Var.b(og5Var);
+                        e14Var.m23797b(og5Var);
                     }
                     list.clear();
                 }
@@ -162,42 +206,44 @@ public final class dh5 implements ei5, lg5 {
         }
     }
 
-    public final void g() {
-        if (((Boolean) zzba.zzc().b(g93.X7)).booleanValue()) {
-            if (((Boolean) zzba.zzc().b(g93.m8)).booleanValue() && zzt.zzo().h().zzO()) {
-                q();
+    /* renamed from: g */
+    public final void m24404g() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10599X7)).booleanValue()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10762m8)).booleanValue() && zzt.zzo().m11915h().zzO()) {
+                m24394q();
                 return;
             }
-            String zzo = zzt.zzo().h().zzo();
+            String zzo = zzt.zzo().m11915h().zzo();
             if (TextUtils.isEmpty(zzo)) {
                 return;
             }
             try {
                 if (new JSONObject(zzo).optBoolean("isTestMode", false)) {
-                    q();
+                    m24394q();
                 }
             } catch (JSONException unused) {
             }
         }
     }
 
-    public final synchronized void h(zzda zzdaVar, ch5 ch5Var) {
-        if (!n()) {
+    /* renamed from: h */
+    public final synchronized void m24403h(zzda zzdaVar, ch5 ch5Var) {
+        if (!m24397n()) {
             try {
-                zzdaVar.zze(tj6.d(18, null, null));
+                zzdaVar.zze(tj6.m9071d(18, null, null));
                 return;
             } catch (RemoteException unused) {
                 k04.zzj("Ad inspector cannot be opened because the device is not in test mode. See https://developers.google.com/admob/android/test-ads#enable_test_devices for more information.");
                 return;
             }
         }
-        if (((Boolean) zzba.zzc().b(g93.X7)).booleanValue()) {
-            this.s = ch5Var;
-            this.a.d(zzdaVar, new rh3(this), new kh3(this.f));
+        if (((Boolean) zzba.zzc().m23658b(g93.f10599X7)).booleanValue()) {
+            this.f7081s = ch5Var;
+            this.f7063a.m16950d(zzdaVar, new rh3(this), new kh3(this.f7068f));
             return;
         }
         try {
-            zzdaVar.zze(tj6.d(1, null, null));
+            zzdaVar.zze(tj6.m9071d(1, null, null));
             return;
         } catch (RemoteException unused2) {
             k04.zzj("Ad inspector had an internal error.");
@@ -205,80 +251,76 @@ public final class dh5 implements ei5, lg5 {
         }
     }
 
-    public final synchronized void i(String str, long j) {
-        this.l = str;
-        this.n = j;
-        r();
+    /* renamed from: i */
+    public final synchronized void m24402i(String str, long j) {
+        this.f7074l = str;
+        this.f7076n = j;
+        m24393r();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:6:0x000a, code lost:
         if (r2 != false) goto L5;
      */
+    /* renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void j(boolean r2) {
-        /*
-            r1 = this;
-            boolean r0 = r1.r
-            if (r0 != 0) goto La
-            if (r2 == 0) goto L15
-            r1.q()
-            goto Lc
-        La:
-            if (r2 == 0) goto L15
-        Lc:
-            boolean r2 = r1.p
-            if (r2 == 0) goto L11
-            goto L15
-        L11:
-            r1.v()
-            return
-        L15:
-            boolean r2 = r1.n()
-            if (r2 != 0) goto L1e
-            r1.u()
-        L1e:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.dh5.j(boolean):void");
-    }
-
-    public final void k(zg5 zg5Var) {
-        s(zg5Var, true);
-    }
-
-    public final synchronized void l(String str) {
-        this.m = str;
-    }
-
-    public final void m(boolean z) {
-        if (!this.r && z) {
-            q();
+    public final void m24401j(boolean z) {
+        if (!this.f7080r) {
+            if (z) {
+                m24394q();
+                if (!this.f7078p) {
+                    m24389v();
+                    return;
+                }
+            }
+            if (m24397n()) {
+                return;
+            }
+            m24390u();
         }
-        t(z, true);
     }
 
-    public final synchronized boolean n() {
-        if (((Boolean) zzba.zzc().b(g93.m8)).booleanValue()) {
-            return this.p || zzt.zzs().zzl();
+    /* renamed from: k */
+    public final void m24400k(zg5 zg5Var) {
+        m24392s(zg5Var, true);
+    }
+
+    /* renamed from: l */
+    public final synchronized void m24399l(String str) {
+        this.f7075m = str;
+    }
+
+    /* renamed from: m */
+    public final void m24398m(boolean z) {
+        if (!this.f7080r && z) {
+            m24394q();
         }
-        return this.p;
+        m24391t(z, true);
     }
 
-    public final synchronized boolean o() {
-        return this.p;
+    /* renamed from: n */
+    public final synchronized boolean m24397n() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10762m8)).booleanValue()) {
+            return this.f7078p || zzt.zzs().zzl();
+        }
+        return this.f7078p;
     }
 
-    public final synchronized JSONObject p() {
+    /* renamed from: o */
+    public final synchronized boolean m24396o() {
+        return this.f7078p;
+    }
+
+    /* renamed from: p */
+    public final synchronized JSONObject m24395p() {
         JSONObject jSONObject;
         jSONObject = new JSONObject();
-        for (Map.Entry entry : this.i.entrySet()) {
+        for (Map.Entry entry : this.f7071i.entrySet()) {
             JSONArray jSONArray = new JSONArray();
             for (og5 og5Var : (List) entry.getValue()) {
-                if (og5Var.h()) {
-                    jSONArray.put(og5Var.c());
+                if (og5Var.m14304h()) {
+                    jSONArray.put(og5Var.m14308c());
                 }
             }
             if (jSONArray.length() > 0) {
@@ -288,117 +330,102 @@ public final class dh5 implements ei5, lg5 {
         return jSONObject;
     }
 
-    public final void q() {
-        this.r = true;
-        this.d.c();
-        this.a.b(this);
-        this.b.c(this);
-        this.c.c(this);
-        this.f.j3(this);
-        w(zzt.zzo().h().zzo());
+    /* renamed from: q */
+    public final void m24394q() {
+        this.f7080r = true;
+        this.f7066d.m7179c();
+        this.f7063a.m16952b(this);
+        this.f7064b.m22620c(this);
+        this.f7065c.m16035c(this);
+        this.f7068f.m5102j3(this);
+        m24388w(zzt.zzo().m11915h().zzo());
     }
 
-    public final void r() {
-        zzt.zzo().h().zzG(d());
+    /* renamed from: r */
+    public final void m24393r() {
+        zzt.zzo().m11915h().zzG(m24407d());
     }
 
-    public final synchronized void s(zg5 zg5Var, boolean z) {
-        if (this.o == zg5Var) {
+    /* renamed from: s */
+    public final synchronized void m24392s(zg5 zg5Var, boolean z) {
+        if (this.f7077o == zg5Var) {
             return;
         }
-        if (n()) {
-            u();
+        if (m24397n()) {
+            m24390u();
         }
-        this.o = zg5Var;
-        if (n()) {
-            v();
+        this.f7077o = zg5Var;
+        if (m24397n()) {
+            m24389v();
         }
         if (z) {
-            r();
+            m24393r();
         }
     }
 
     /* JADX WARN: Removed duplicated region for block: B:18:0x0036 A[Catch: all -> 0x003d, TRY_LEAVE, TryCatch #0 {, blocks: (B:3:0x0001, B:7:0x0007, B:9:0x000b, B:11:0x001d, B:13:0x0027, B:18:0x0036, B:14:0x002b, B:16:0x0031), top: B:26:0x0001 }] */
     /* JADX WARN: Removed duplicated region for block: B:21:0x003b A[DONT_GENERATE] */
+    /* renamed from: t */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final synchronized void t(boolean r2, boolean r3) {
-        /*
-            r1 = this;
-            monitor-enter(r1)
-            boolean r0 = r1.p     // Catch: java.lang.Throwable -> L3d
-            if (r0 != r2) goto L7
-            monitor-exit(r1)
-            return
-        L7:
-            r1.p = r2     // Catch: java.lang.Throwable -> L3d
-            if (r2 == 0) goto L2b
-            com.daaw.y83 r2 = com.daaw.g93.m8     // Catch: java.lang.Throwable -> L3d
-            com.daaw.e93 r0 = com.google.android.gms.ads.internal.client.zzba.zzc()     // Catch: java.lang.Throwable -> L3d
-            java.lang.Object r2 = r0.b(r2)     // Catch: java.lang.Throwable -> L3d
-            java.lang.Boolean r2 = (java.lang.Boolean) r2     // Catch: java.lang.Throwable -> L3d
-            boolean r2 = r2.booleanValue()     // Catch: java.lang.Throwable -> L3d
-            if (r2 == 0) goto L27
-            com.google.android.gms.ads.internal.util.zzaw r2 = com.google.android.gms.ads.internal.zzt.zzs()     // Catch: java.lang.Throwable -> L3d
-            boolean r2 = r2.zzl()     // Catch: java.lang.Throwable -> L3d
-            if (r2 != 0) goto L2b
-        L27:
-            r1.v()     // Catch: java.lang.Throwable -> L3d
-            goto L34
-        L2b:
-            boolean r2 = r1.n()     // Catch: java.lang.Throwable -> L3d
-            if (r2 != 0) goto L34
-            r1.u()     // Catch: java.lang.Throwable -> L3d
-        L34:
-            if (r3 == 0) goto L3b
-            r1.r()     // Catch: java.lang.Throwable -> L3d
-            monitor-exit(r1)
-            return
-        L3b:
-            monitor-exit(r1)
-            return
-        L3d:
-            r2 = move-exception
-            monitor-exit(r1)
-            throw r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.dh5.t(boolean, boolean):void");
-    }
-
-    public final synchronized void u() {
-        zg5 zg5Var = zg5.NONE;
-        int ordinal = this.o.ordinal();
-        if (ordinal == 1) {
-            this.b.a();
-        } else if (ordinal != 2) {
-        } else {
-            this.c.a();
+    public final synchronized void m24391t(boolean z, boolean z2) {
+        if (this.f7078p == z) {
+            return;
+        }
+        this.f7078p = z;
+        if (z) {
+            if (!((Boolean) zzba.zzc().m23658b(g93.f10762m8)).booleanValue() || !zzt.zzs().zzl()) {
+                m24389v();
+                if (z2) {
+                    return;
+                }
+                m24393r();
+                return;
+            }
+        }
+        if (!m24397n()) {
+            m24390u();
+        }
+        if (z2) {
         }
     }
 
-    public final synchronized void v() {
+    /* renamed from: u */
+    public final synchronized void m24390u() {
         zg5 zg5Var = zg5.NONE;
-        int ordinal = this.o.ordinal();
+        int ordinal = this.f7077o.ordinal();
         if (ordinal == 1) {
-            this.b.b();
+            this.f7064b.m22622a();
         } else if (ordinal != 2) {
         } else {
-            this.c.b();
+            this.f7065c.m16037a();
         }
     }
 
-    public final synchronized void w(String str) {
+    /* renamed from: v */
+    public final synchronized void m24389v() {
+        zg5 zg5Var = zg5.NONE;
+        int ordinal = this.f7077o.ordinal();
+        if (ordinal == 1) {
+            this.f7064b.m22621b();
+        } else if (ordinal != 2) {
+        } else {
+            this.f7065c.m16036b();
+        }
+    }
+
+    /* renamed from: w */
+    public final synchronized void m24388w(String str) {
         if (TextUtils.isEmpty(str)) {
             return;
         }
         try {
             JSONObject jSONObject = new JSONObject(str);
-            t(jSONObject.optBoolean("isTestMode", false), false);
-            s(zg5.a(jSONObject.optString("gesture", "NONE")), false);
-            this.l = jSONObject.optString("networkExtras", "{}");
-            this.n = jSONObject.optLong("networkExtrasExpirationSecs", Long.MAX_VALUE);
+            m24391t(jSONObject.optBoolean("isTestMode", false), false);
+            m24392s(zg5.m2340a(jSONObject.optString("gesture", "NONE")), false);
+            this.f7074l = jSONObject.optString("networkExtras", "{}");
+            this.f7076n = jSONObject.optLong("networkExtrasExpirationSecs", Long.MAX_VALUE);
         } catch (JSONException unused) {
         }
     }

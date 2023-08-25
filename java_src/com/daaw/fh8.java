@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface fh8 {
-    void a(ib8 ib8Var, String str, boolean z);
+    /* renamed from: a */
+    void mo22635a(ib8 ib8Var, String str, boolean z);
 
-    void c(ib8 ib8Var, String str);
+    /* renamed from: c */
+    void mo22634c(ib8 ib8Var, String str);
 }

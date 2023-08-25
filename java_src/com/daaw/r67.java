@@ -4,15 +4,20 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public final class r67 {
-    public final boolean a;
-    public final y17 b;
+
+    /* renamed from: a */
+    public final boolean f24900a;
+
+    /* renamed from: b */
+    public final y17 f24901b;
 
     public /* synthetic */ r67(boolean z, y17 y17Var, q67 q67Var) {
-        this.a = z;
-        this.b = y17Var;
+        this.f24900a = z;
+        this.f24901b = y17Var;
     }
 
-    public final f77 a(Callable callable, Executor executor) {
-        return new f67(this.b, this.a, executor, callable);
+    /* renamed from: a */
+    public final f77 m11710a(Callable callable, Executor executor) {
+        return new f67(this.f24901b, this.f24900a, executor, callable);
     }
 }

@@ -6,27 +6,31 @@ import com.google.android.gms.ads.mediation.MediationAdLoadCallback;
 import com.google.android.gms.ads.mediation.MediationInterstitialAd;
 /* loaded from: classes.dex */
 public final class zn3 implements MediationAdLoadCallback {
-    public final /* synthetic */ gn3 a;
-    public final /* synthetic */ do3 b;
+
+    /* renamed from: a */
+    public final /* synthetic */ gn3 f35256a;
+
+    /* renamed from: b */
+    public final /* synthetic */ do3 f35257b;
 
     public zn3(do3 do3Var, gn3 gn3Var) {
-        this.b = do3Var;
-        this.a = gn3Var;
+        this.f35257b = do3Var;
+        this.f35256a = gn3Var;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationAdLoadCallback
     public final void onFailure(AdError adError) {
         Object obj;
         try {
-            obj = this.b.p;
+            obj = this.f35257b.f7575p;
             String canonicalName = obj.getClass().getCanonicalName();
             int code = adError.getCode();
             String message = adError.getMessage();
             String domain = adError.getDomain();
             k04.zze(canonicalName + "failed to loaded mediation ad: ErrorCode = " + code + ". ErrorMessage = " + message + ". ErrorDomain = " + domain);
-            this.a.q0(adError.zza());
-            this.a.j0(adError.getCode(), adError.getMessage());
-            this.a.c(adError.getCode());
+            this.f35256a.mo3325q0(adError.zza());
+            this.f35256a.mo3330j0(adError.getCode(), adError.getMessage());
+            this.f35256a.mo3333c(adError.getCode());
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -40,11 +44,11 @@ public final class zn3 implements MediationAdLoadCallback {
     @Override // com.google.android.gms.ads.mediation.MediationAdLoadCallback
     public final /* bridge */ /* synthetic */ Object onSuccess(Object obj) {
         try {
-            this.b.u = (MediationInterstitialAd) obj;
-            this.a.zzo();
+            this.f35257b.f7580u = (MediationInterstitialAd) obj;
+            this.f35256a.zzo();
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
-        return new un3(this.a);
+        return new un3(this.f35256a);
     }
 }

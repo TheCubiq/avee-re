@@ -10,17 +10,25 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class td3 implements NativeCustomTemplateAd {
-    public final sd3 a;
-    public final MediaView b;
-    public final VideoController c = new VideoController();
-    public NativeCustomTemplateAd.DisplayOpenMeasurement d;
+
+    /* renamed from: a */
+    public final sd3 f27508a;
+
+    /* renamed from: b */
+    public final MediaView f27509b;
+
+    /* renamed from: c */
+    public final VideoController f27510c = new VideoController();
+
+    /* renamed from: d */
+    public NativeCustomTemplateAd.DisplayOpenMeasurement f27511d;
 
     public td3(sd3 sd3Var) {
         Context context;
-        this.a = sd3Var;
+        this.f27508a = sd3Var;
         MediaView mediaView = null;
         try {
-            context = (Context) nt0.M(sd3Var.zzh());
+            context = (Context) nt0.m14831M(sd3Var.zzh());
         } catch (RemoteException | NullPointerException e) {
             k04.zzh("", e);
             context = null;
@@ -28,24 +36,25 @@ public final class td3 implements NativeCustomTemplateAd {
         if (context != null) {
             MediaView mediaView2 = new MediaView(context);
             try {
-                if (true == this.a.q(nt0.g3(mediaView2))) {
+                if (true == this.f27508a.mo2682q(nt0.m14830g3(mediaView2))) {
                     mediaView = mediaView2;
                 }
             } catch (RemoteException e2) {
                 k04.zzh("", e2);
             }
         }
-        this.b = mediaView;
+        this.f27509b = mediaView;
     }
 
-    public final sd3 a() {
-        return this.a;
+    /* renamed from: a */
+    public final sd3 m9280a() {
+        return this.f27508a;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final void destroy() {
         try {
-            this.a.zzl();
+            this.f27508a.zzl();
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -54,7 +63,7 @@ public final class td3 implements NativeCustomTemplateAd {
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final List<String> getAvailableAssetNames() {
         try {
-            return this.a.zzk();
+            return this.f27508a.zzk();
         } catch (RemoteException e) {
             k04.zzh("", e);
             return null;
@@ -64,7 +73,7 @@ public final class td3 implements NativeCustomTemplateAd {
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final String getCustomTemplateId() {
         try {
-            return this.a.zzi();
+            return this.f27508a.zzi();
         } catch (RemoteException e) {
             k04.zzh("", e);
             return null;
@@ -74,21 +83,21 @@ public final class td3 implements NativeCustomTemplateAd {
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final NativeCustomTemplateAd.DisplayOpenMeasurement getDisplayOpenMeasurement() {
         try {
-            if (this.d == null && this.a.zzq()) {
-                this.d = new pc3(this.a);
+            if (this.f27511d == null && this.f27508a.zzq()) {
+                this.f27511d = new pc3(this.f27508a);
             }
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
-        return this.d;
+        return this.f27511d;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final NativeAd.Image getImage(String str) {
         try {
-            vc3 s = this.a.s(str);
-            if (s != null) {
-                return new wc3(s);
+            vc3 mo2681s = this.f27508a.mo2681s(str);
+            if (mo2681s != null) {
+                return new wc3(mo2681s);
             }
             return null;
         } catch (RemoteException e) {
@@ -100,7 +109,7 @@ public final class td3 implements NativeCustomTemplateAd {
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final CharSequence getText(String str) {
         try {
-            return this.a.F2(str);
+            return this.f27508a.mo2685F2(str);
         } catch (RemoteException e) {
             k04.zzh("", e);
             return null;
@@ -110,25 +119,25 @@ public final class td3 implements NativeCustomTemplateAd {
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final VideoController getVideoController() {
         try {
-            zzdq zze = this.a.zze();
+            zzdq zze = this.f27508a.zze();
             if (zze != null) {
-                this.c.zzb(zze);
+                this.f27510c.zzb(zze);
             }
         } catch (RemoteException e) {
             k04.zzh("Exception occurred while getting video controller", e);
         }
-        return this.c;
+        return this.f27510c;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final MediaView getVideoMediaView() {
-        return this.b;
+        return this.f27509b;
     }
 
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final void performClick(String str) {
         try {
-            this.a.zzn(str);
+            this.f27508a.zzn(str);
         } catch (RemoteException e) {
             k04.zzh("", e);
         }
@@ -137,7 +146,7 @@ public final class td3 implements NativeCustomTemplateAd {
     @Override // com.google.android.gms.ads.formats.NativeCustomTemplateAd
     public final void recordImpression() {
         try {
-            this.a.zzo();
+            this.f27508a.zzo();
         } catch (RemoteException e) {
             k04.zzh("", e);
         }

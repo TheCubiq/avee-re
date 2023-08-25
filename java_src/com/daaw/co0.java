@@ -7,30 +7,45 @@ import android.util.Pair;
 @TargetApi(16)
 /* loaded from: classes.dex */
 public final class co0 {
-    public final String a;
-    public final String b;
-    public final MediaCodecInfo.CodecCapabilities c;
-    public final boolean d;
-    public final boolean e;
-    public final boolean f;
-    public final boolean g;
+
+    /* renamed from: a */
+    public final String f5990a;
+
+    /* renamed from: b */
+    public final String f5991b;
+
+    /* renamed from: c */
+    public final MediaCodecInfo.CodecCapabilities f5992c;
+
+    /* renamed from: d */
+    public final boolean f5993d;
+
+    /* renamed from: e */
+    public final boolean f5994e;
+
+    /* renamed from: f */
+    public final boolean f5995f;
+
+    /* renamed from: g */
+    public final boolean f5996g;
 
     public co0(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities, boolean z, boolean z2, boolean z3) {
-        this.a = (String) s6.e(str);
-        this.b = str2;
-        this.c = codecCapabilities;
-        this.g = z;
+        this.f5990a = (String) C2914s6.m10686e(str);
+        this.f5991b = str2;
+        this.f5992c = codecCapabilities;
+        this.f5996g = z;
         boolean z4 = true;
-        this.d = (z2 || codecCapabilities == null || !e(codecCapabilities)) ? false : true;
-        this.e = codecCapabilities != null && l(codecCapabilities);
-        if (!z3 && (codecCapabilities == null || !j(codecCapabilities))) {
+        this.f5993d = (z2 || codecCapabilities == null || !m25186e(codecCapabilities)) ? false : true;
+        this.f5994e = codecCapabilities != null && m25179l(codecCapabilities);
+        if (!z3 && (codecCapabilities == null || !m25181j(codecCapabilities))) {
             z4 = false;
         }
-        this.f = z4;
+        this.f5995f = z4;
     }
 
-    public static int a(String str, String str2, int i) {
-        if (i > 1 || ((sq1.a >= 26 && i > 0) || "audio/mpeg".equals(str2) || "audio/3gpp".equals(str2) || "audio/amr-wb".equals(str2) || "audio/mp4a-latm".equals(str2) || "audio/vorbis".equals(str2) || "audio/opus".equals(str2) || "audio/raw".equals(str2) || "audio/flac".equals(str2) || "audio/g711-alaw".equals(str2) || "audio/g711-mlaw".equals(str2) || "audio/gsm".equals(str2))) {
+    /* renamed from: a */
+    public static int m25190a(String str, String str2, int i) {
+        if (i > 1 || ((sq1.f26525a >= 26 && i > 0) || "audio/mpeg".equals(str2) || "audio/3gpp".equals(str2) || "audio/amr-wb".equals(str2) || "audio/mp4a-latm".equals(str2) || "audio/vorbis".equals(str2) || "audio/opus".equals(str2) || "audio/raw".equals(str2) || "audio/flac".equals(str2) || "audio/g711-alaw".equals(str2) || "audio/g711-mlaw".equals(str2) || "audio/gsm".equals(str2))) {
             return i;
         }
         int i2 = "audio/ac3".equals(str2) ? 6 : "audio/eac3".equals(str2) ? 16 : 30;
@@ -46,49 +61,59 @@ public final class co0 {
     }
 
     @TargetApi(21)
-    public static boolean c(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
+    /* renamed from: c */
+    public static boolean m25188c(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
         return (d == -1.0d || d <= 0.0d) ? videoCapabilities.isSizeSupported(i, i2) : videoCapabilities.areSizeAndRateSupported(i, i2, d);
     }
 
-    public static boolean e(MediaCodecInfo.CodecCapabilities codecCapabilities) {
-        return sq1.a >= 19 && f(codecCapabilities);
+    /* renamed from: e */
+    public static boolean m25186e(MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        return sq1.f26525a >= 19 && m25185f(codecCapabilities);
     }
 
     @TargetApi(19)
-    public static boolean f(MediaCodecInfo.CodecCapabilities codecCapabilities) {
+    /* renamed from: f */
+    public static boolean m25185f(MediaCodecInfo.CodecCapabilities codecCapabilities) {
         return codecCapabilities.isFeatureSupported("adaptive-playback");
     }
 
-    public static boolean j(MediaCodecInfo.CodecCapabilities codecCapabilities) {
-        return sq1.a >= 21 && k(codecCapabilities);
+    /* renamed from: j */
+    public static boolean m25181j(MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        return sq1.f26525a >= 21 && m25180k(codecCapabilities);
     }
 
     @TargetApi(21)
-    public static boolean k(MediaCodecInfo.CodecCapabilities codecCapabilities) {
+    /* renamed from: k */
+    public static boolean m25180k(MediaCodecInfo.CodecCapabilities codecCapabilities) {
         return codecCapabilities.isFeatureSupported("secure-playback");
     }
 
-    public static boolean l(MediaCodecInfo.CodecCapabilities codecCapabilities) {
-        return sq1.a >= 21 && m(codecCapabilities);
+    /* renamed from: l */
+    public static boolean m25179l(MediaCodecInfo.CodecCapabilities codecCapabilities) {
+        return sq1.f26525a >= 21 && m25178m(codecCapabilities);
     }
 
     @TargetApi(21)
-    public static boolean m(MediaCodecInfo.CodecCapabilities codecCapabilities) {
+    /* renamed from: m */
+    public static boolean m25178m(MediaCodecInfo.CodecCapabilities codecCapabilities) {
         return codecCapabilities.isFeatureSupported("tunneled-playback");
     }
 
-    public static co0 q(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities, boolean z, boolean z2) {
+    /* renamed from: q */
+    public static co0 m25174q(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities, boolean z, boolean z2) {
         return new co0(str, str2, codecCapabilities, false, z, z2);
     }
 
-    public static co0 r(String str) {
+    /* renamed from: r */
+    public static co0 m25173r(String str) {
         return new co0(str, null, null, true, false, false);
     }
 
     @TargetApi(21)
-    public Point b(int i, int i2) {
+    /* renamed from: b */
+    public Point m25189b(int i, int i2) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.c;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f5992c;
         if (codecCapabilities == null) {
             str = "align.caps";
         } else {
@@ -96,44 +121,47 @@ public final class co0 {
             if (videoCapabilities != null) {
                 int widthAlignment = videoCapabilities.getWidthAlignment();
                 int heightAlignment = videoCapabilities.getHeightAlignment();
-                return new Point(sq1.f(i, widthAlignment) * widthAlignment, sq1.f(i2, heightAlignment) * heightAlignment);
+                return new Point(sq1.m10010f(i, widthAlignment) * widthAlignment, sq1.m10010f(i2, heightAlignment) * heightAlignment);
             }
             str = "align.vCaps";
         }
-        p(str);
+        m25175p(str);
         return null;
     }
 
-    public MediaCodecInfo.CodecProfileLevel[] d() {
+    /* renamed from: d */
+    public MediaCodecInfo.CodecProfileLevel[] m25187d() {
         MediaCodecInfo.CodecProfileLevel[] codecProfileLevelArr;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.c;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f5992c;
         return (codecCapabilities == null || (codecProfileLevelArr = codecCapabilities.profileLevels) == null) ? new MediaCodecInfo.CodecProfileLevel[0] : codecProfileLevelArr;
     }
 
     @TargetApi(21)
-    public boolean g(int i) {
+    /* renamed from: g */
+    public boolean m25184g(int i) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.c;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f5992c;
         if (codecCapabilities == null) {
             str = "channelCount.caps";
         } else {
             MediaCodecInfo.AudioCapabilities audioCapabilities = codecCapabilities.getAudioCapabilities();
             if (audioCapabilities == null) {
                 str = "channelCount.aCaps";
-            } else if (a(this.a, this.b, audioCapabilities.getMaxInputChannelCount()) >= i) {
+            } else if (m25190a(this.f5990a, this.f5991b, audioCapabilities.getMaxInputChannelCount()) >= i) {
                 return true;
             } else {
                 str = "channelCount.support, " + i;
             }
         }
-        p(str);
+        m25175p(str);
         return false;
     }
 
     @TargetApi(21)
-    public boolean h(int i) {
+    /* renamed from: h */
+    public boolean m25183h(int i) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.c;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f5992c;
         if (codecCapabilities == null) {
             str = "sampleRate.caps";
         } else {
@@ -146,25 +174,26 @@ public final class co0 {
                 str = "sampleRate.support, " + i;
             }
         }
-        p(str);
+        m25175p(str);
         return false;
     }
 
-    public boolean i(String str) {
-        String d;
-        MediaCodecInfo.CodecProfileLevel[] d2;
+    /* renamed from: i */
+    public boolean m25182i(String str) {
+        String m20501d;
+        MediaCodecInfo.CodecProfileLevel[] m25187d;
         StringBuilder sb;
         String str2;
-        if (str == null || this.b == null || (d = hq0.d(str)) == null) {
+        if (str == null || this.f5991b == null || (m20501d = hq0.m20501d(str)) == null) {
             return true;
         }
-        if (this.b.equals(d)) {
-            Pair<Integer, Integer> e = fo0.e(str);
-            if (e == null) {
+        if (this.f5991b.equals(m20501d)) {
+            Pair<Integer, Integer> m22470e = fo0.m22470e(str);
+            if (m22470e == null) {
                 return true;
             }
-            for (MediaCodecInfo.CodecProfileLevel codecProfileLevel : d()) {
-                if (codecProfileLevel.profile == ((Integer) e.first).intValue() && codecProfileLevel.level >= ((Integer) e.second).intValue()) {
+            for (MediaCodecInfo.CodecProfileLevel codecProfileLevel : m25187d()) {
+                if (codecProfileLevel.profile == ((Integer) m22470e.first).intValue() && codecProfileLevel.level >= ((Integer) m22470e.second).intValue()) {
                     return true;
                 }
             }
@@ -177,58 +206,61 @@ public final class co0 {
         sb.append(str2);
         sb.append(str);
         sb.append(", ");
-        sb.append(d);
-        p(sb.toString());
+        sb.append(m20501d);
+        m25175p(sb.toString());
         return false;
     }
 
     @TargetApi(21)
-    public boolean n(int i, int i2, double d) {
+    /* renamed from: n */
+    public boolean m25177n(int i, int i2, double d) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.c;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f5992c;
         if (codecCapabilities == null) {
             str = "sizeAndRate.caps";
         } else {
             MediaCodecInfo.VideoCapabilities videoCapabilities = codecCapabilities.getVideoCapabilities();
             if (videoCapabilities == null) {
                 str = "sizeAndRate.vCaps";
-            } else if (c(videoCapabilities, i, i2, d)) {
+            } else if (m25188c(videoCapabilities, i, i2, d)) {
                 return true;
             } else {
-                if (i < i2 && c(videoCapabilities, i2, i, d)) {
-                    o("sizeAndRate.rotated, " + i + "x" + i2 + "x" + d);
+                if (i < i2 && m25188c(videoCapabilities, i2, i, d)) {
+                    m25176o("sizeAndRate.rotated, " + i + "x" + i2 + "x" + d);
                     return true;
                 }
                 str = "sizeAndRate.support, " + i + "x" + i2 + "x" + d;
             }
         }
-        p(str);
+        m25175p(str);
         return false;
     }
 
-    public final void o(String str) {
+    /* renamed from: o */
+    public final void m25176o(String str) {
         StringBuilder sb = new StringBuilder();
         sb.append("AssumedSupport [");
         sb.append(str);
         sb.append("] [");
-        sb.append(this.a);
+        sb.append(this.f5990a);
         sb.append(", ");
-        sb.append(this.b);
+        sb.append(this.f5991b);
         sb.append("] [");
-        sb.append(sq1.e);
+        sb.append(sq1.f26529e);
         sb.append("]");
     }
 
-    public final void p(String str) {
+    /* renamed from: p */
+    public final void m25175p(String str) {
         StringBuilder sb = new StringBuilder();
         sb.append("NoSupport [");
         sb.append(str);
         sb.append("] [");
-        sb.append(this.a);
+        sb.append(this.f5990a);
         sb.append(", ");
-        sb.append(this.b);
+        sb.append(this.f5991b);
         sb.append("] [");
-        sb.append(sq1.e);
+        sb.append(sq1.f26529e);
         sb.append("]");
     }
 }

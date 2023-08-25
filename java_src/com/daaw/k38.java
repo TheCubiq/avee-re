@@ -6,7 +6,8 @@ public final class k38 extends ud7 {
     }
 
     @Override // com.daaw.ud7
-    public final boolean h() {
+    /* renamed from: h */
+    public final boolean mo6990h() {
         return false;
     }
 }

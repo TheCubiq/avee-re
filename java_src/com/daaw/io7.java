@@ -7,19 +7,22 @@ public final class io7 extends ls7 implements yt7 {
     static {
         io7 io7Var = new io7();
         zzb = io7Var;
-        ls7.C(io7.class, io7Var);
+        ls7.m16597C(io7.class, io7Var);
     }
 
-    public static io7 M() {
+    /* renamed from: M */
+    public static io7 m19547M() {
         return zzb;
     }
 
-    public static io7 N(yq7 yq7Var, vr7 vr7Var) {
-        return (io7) ls7.q(zzb, yq7Var, vr7Var);
+    /* renamed from: N */
+    public static io7 m19546N(yq7 yq7Var, vr7 vr7Var) {
+        return (io7) ls7.m16582q(zzb, yq7Var, vr7Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -34,7 +37,7 @@ public final class io7 extends ls7 implements yt7 {
                 }
                 return new io7();
             }
-            return ls7.z(zzb, "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u000b", new Object[]{"zzd"});
+            return ls7.m16573z(zzb, "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u000b", new Object[]{"zzd"});
         }
         return (byte) 1;
     }

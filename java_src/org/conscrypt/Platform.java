@@ -38,8 +38,8 @@ import javax.net.ssl.SSLParameters;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
-import org.conscrypt.ct.CTLogStore;
-import org.conscrypt.ct.CTPolicy;
+import org.conscrypt.p004ct.CTLogStore;
+import org.conscrypt.p004ct.CTPolicy;
 /* JADX INFO: Access modifiers changed from: package-private */
 /* loaded from: classes2.dex */
 public final class Platform {

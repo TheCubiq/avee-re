@@ -11,66 +11,94 @@ import java.util.concurrent.TimeUnit;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class pr6 implements sq6 {
-    public static final pr6 i = new pr6();
-    public static final Handler j = new Handler(Looper.getMainLooper());
-    public static Handler k = null;
-    public static final Runnable l = new lr6();
-    public static final Runnable m = new mr6();
-    public int b;
-    public long h;
-    public final List a = new ArrayList();
-    public boolean c = false;
-    public final List d = new ArrayList();
-    public final ir6 f = new ir6();
-    public final uq6 e = new uq6();
-    public final jr6 g = new jr6(new sr6());
 
-    public static pr6 d() {
-        return i;
+    /* renamed from: i */
+    public static final pr6 f23209i = new pr6();
+
+    /* renamed from: j */
+    public static final Handler f23210j = new Handler(Looper.getMainLooper());
+
+    /* renamed from: k */
+    public static Handler f23211k = null;
+
+    /* renamed from: l */
+    public static final Runnable f23212l = new lr6();
+
+    /* renamed from: m */
+    public static final Runnable f23213m = new mr6();
+
+    /* renamed from: b */
+    public int f23215b;
+
+    /* renamed from: h */
+    public long f23221h;
+
+    /* renamed from: a */
+    public final List f23214a = new ArrayList();
+
+    /* renamed from: c */
+    public boolean f23216c = false;
+
+    /* renamed from: d */
+    public final List f23217d = new ArrayList();
+
+    /* renamed from: f */
+    public final ir6 f23219f = new ir6();
+
+    /* renamed from: e */
+    public final uq6 f23218e = new uq6();
+
+    /* renamed from: g */
+    public final jr6 f23220g = new jr6(new sr6());
+
+    /* renamed from: d */
+    public static pr6 m13193d() {
+        return f23209i;
     }
 
-    public static /* bridge */ /* synthetic */ void g(pr6 pr6Var) {
-        pr6Var.b = 0;
-        pr6Var.d.clear();
-        pr6Var.c = false;
-        for (xp6 xp6Var : lq6.a().b()) {
+    /* renamed from: g */
+    public static /* bridge */ /* synthetic */ void m13190g(pr6 pr6Var) {
+        pr6Var.f23215b = 0;
+        pr6Var.f23217d.clear();
+        pr6Var.f23216c = false;
+        for (xp6 xp6Var : lq6.m16667a().m16666b()) {
         }
-        pr6Var.h = System.nanoTime();
-        pr6Var.f.i();
+        pr6Var.f23221h = System.nanoTime();
+        pr6Var.f23219f.m19478i();
         long nanoTime = System.nanoTime();
-        tq6 a = pr6Var.e.a();
-        if (pr6Var.f.e().size() > 0) {
-            Iterator it = pr6Var.f.e().iterator();
+        tq6 m7802a = pr6Var.f23218e.m7802a();
+        if (pr6Var.f23219f.m19482e().size() > 0) {
+            Iterator it = pr6Var.f23219f.m19482e().iterator();
             while (it.hasNext()) {
                 String str = (String) it.next();
-                JSONObject a2 = br6.a(0, 0, 0, 0);
-                View a3 = pr6Var.f.a(str);
-                tq6 b = pr6Var.e.b();
-                String c = pr6Var.f.c(str);
-                if (c != null) {
-                    JSONObject zza = b.zza(a3);
-                    br6.b(zza, str);
-                    br6.f(zza, c);
-                    br6.c(a2, zza);
+                JSONObject m25882a = br6.m25882a(0, 0, 0, 0);
+                View m19486a = pr6Var.f23219f.m19486a(str);
+                tq6 m7801b = pr6Var.f23218e.m7801b();
+                String m19484c = pr6Var.f23219f.m19484c(str);
+                if (m19484c != null) {
+                    JSONObject zza = m7801b.zza(m19486a);
+                    br6.m25881b(zza, str);
+                    br6.m25877f(zza, m19484c);
+                    br6.m25880c(m25882a, zza);
                 }
-                br6.i(a2);
+                br6.m25874i(m25882a);
                 HashSet hashSet = new HashSet();
                 hashSet.add(str);
-                pr6Var.g.c(a2, hashSet, nanoTime);
+                pr6Var.f23220g.m18310c(m25882a, hashSet, nanoTime);
             }
         }
-        if (pr6Var.f.f().size() > 0) {
-            JSONObject a4 = br6.a(0, 0, 0, 0);
-            pr6Var.k(null, a, a4, 1, false);
-            br6.i(a4);
-            pr6Var.g.d(a4, pr6Var.f.f(), nanoTime);
+        if (pr6Var.f23219f.m19481f().size() > 0) {
+            JSONObject m25882a2 = br6.m25882a(0, 0, 0, 0);
+            pr6Var.m13186k(null, m7802a, m25882a2, 1, false);
+            br6.m25874i(m25882a2);
+            pr6Var.f23220g.m18309d(m25882a2, pr6Var.f23219f.m19481f(), nanoTime);
         } else {
-            pr6Var.g.b();
+            pr6Var.f23220g.m18311b();
         }
-        pr6Var.f.g();
-        long nanoTime2 = System.nanoTime() - pr6Var.h;
-        if (pr6Var.a.size() > 0) {
-            for (or6 or6Var : pr6Var.a) {
+        pr6Var.f23219f.m19480g();
+        long nanoTime2 = System.nanoTime() - pr6Var.f23221h;
+        if (pr6Var.f23214a.size() > 0) {
+            for (or6 or6Var : pr6Var.f23214a) {
                 TimeUnit.NANOSECONDS.toMillis(nanoTime2);
                 or6Var.zzb();
                 if (or6Var instanceof nr6) {
@@ -80,61 +108,67 @@ public final class pr6 implements sq6 {
         }
     }
 
-    public static final void l() {
-        Handler handler = k;
+    /* renamed from: l */
+    public static final void m13185l() {
+        Handler handler = f23211k;
         if (handler != null) {
-            handler.removeCallbacks(m);
-            k = null;
+            handler.removeCallbacks(f23213m);
+            f23211k = null;
         }
     }
 
     @Override // com.daaw.sq6
-    public final void a(View view, tq6 tq6Var, JSONObject jSONObject, boolean z) {
-        int k2;
+    /* renamed from: a */
+    public final void mo9989a(View view, tq6 tq6Var, JSONObject jSONObject, boolean z) {
+        int m19476k;
         boolean z2;
-        if (gr6.b(view) != null || (k2 = this.f.k(view)) == 3) {
+        if (gr6.m21305b(view) != null || (m19476k = this.f23219f.m19476k(view)) == 3) {
             return;
         }
         JSONObject zza = tq6Var.zza(view);
-        br6.c(jSONObject, zza);
-        String d = this.f.d(view);
-        if (d != null) {
-            br6.b(zza, d);
-            br6.e(zza, Boolean.valueOf(this.f.j(view)));
-            this.f.h();
+        br6.m25880c(jSONObject, zza);
+        String m19483d = this.f23219f.m19483d(view);
+        if (m19483d != null) {
+            br6.m25881b(zza, m19483d);
+            br6.m25878e(zza, Boolean.valueOf(this.f23219f.m19477j(view)));
+            this.f23219f.m19479h();
         } else {
-            hr6 b = this.f.b(view);
-            if (b != null) {
-                br6.d(zza, b);
+            hr6 m19485b = this.f23219f.m19485b(view);
+            if (m19485b != null) {
+                br6.m25879d(zza, m19485b);
                 z2 = true;
             } else {
                 z2 = false;
             }
-            k(view, tq6Var, zza, k2, z || z2);
+            m13186k(view, tq6Var, zza, m19476k, z || z2);
         }
-        this.b++;
+        this.f23215b++;
     }
 
-    public final void h() {
-        l();
+    /* renamed from: h */
+    public final void m13189h() {
+        m13185l();
     }
 
-    public final void i() {
-        if (k == null) {
+    /* renamed from: i */
+    public final void m13188i() {
+        if (f23211k == null) {
             Handler handler = new Handler(Looper.getMainLooper());
-            k = handler;
-            handler.post(l);
-            k.postDelayed(m, 200L);
+            f23211k = handler;
+            handler.post(f23212l);
+            f23211k.postDelayed(f23213m, 200L);
         }
     }
 
-    public final void j() {
-        l();
-        this.a.clear();
-        j.post(new kr6(this));
+    /* renamed from: j */
+    public final void m13187j() {
+        m13185l();
+        this.f23214a.clear();
+        f23210j.post(new kr6(this));
     }
 
-    public final void k(View view, tq6 tq6Var, JSONObject jSONObject, int i2, boolean z) {
-        tq6Var.a(view, jSONObject, this, i2 == 1, z);
+    /* renamed from: k */
+    public final void m13186k(View view, tq6 tq6Var, JSONObject jSONObject, int i, boolean z) {
+        tq6Var.mo5843a(view, jSONObject, this, i == 1, z);
     }
 }

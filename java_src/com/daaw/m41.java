@@ -1,11 +1,15 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface m41 {
-    boolean a();
+    /* renamed from: a */
+    boolean mo16227a();
 
-    boolean d(l41 l41Var);
+    /* renamed from: d */
+    boolean mo16226d(l41 l41Var);
 
-    void f(l41 l41Var);
+    /* renamed from: f */
+    void mo16225f(l41 l41Var);
 
-    boolean h(l41 l41Var);
+    /* renamed from: h */
+    boolean mo16224h(l41 l41Var);
 }

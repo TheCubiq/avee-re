@@ -19,51 +19,72 @@ import javax.annotation.concurrent.GuardedBy;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class cn5 extends wt3 {
-    public final Context p;
-    public final Executor q;
-    public final g77 r;
-    public final yn5 s;
-    public final hf4 t;
+
+    /* renamed from: p */
+    public final Context f5964p;
+
+    /* renamed from: q */
+    public final Executor f5965q;
+
+    /* renamed from: r */
+    public final g77 f5966r;
+
+    /* renamed from: s */
+    public final yn5 f5967s;
+
+    /* renamed from: t */
+    public final hf4 f5968t;
     @GuardedBy("this")
-    public final ArrayDeque u;
-    public final vo6 v;
-    public final yu3 w;
-    public final vn5 x;
+
+    /* renamed from: u */
+    public final ArrayDeque f5969u;
+
+    /* renamed from: v */
+    public final vo6 f5970v;
+
+    /* renamed from: w */
+    public final yu3 f5971w;
+
+    /* renamed from: x */
+    public final vn5 f5972x;
 
     public cn5(Context context, Executor executor, g77 g77Var, yu3 yu3Var, hf4 hf4Var, yn5 yn5Var, ArrayDeque arrayDeque, vn5 vn5Var, vo6 vo6Var, byte[] bArr) {
-        g93.c(context);
-        this.p = context;
-        this.q = executor;
-        this.r = g77Var;
-        this.w = yu3Var;
-        this.s = yn5Var;
-        this.t = hf4Var;
-        this.u = arrayDeque;
-        this.x = vn5Var;
-        this.v = vo6Var;
+        g93.m21879c(context);
+        this.f5964p = context;
+        this.f5965q = executor;
+        this.f5966r = g77Var;
+        this.f5971w = yu3Var;
+        this.f5967s = yn5Var;
+        this.f5968t = hf4Var;
+        this.f5969u = arrayDeque;
+        this.f5972x = vn5Var;
+        this.f5970v = vo6Var;
     }
 
-    public static f77 m3(f77 f77Var, en6 en6Var, xl3 xl3Var, to6 to6Var, io6 io6Var) {
-        nl3 a = xl3Var.a("AFMA_getAdDictionary", ul3.b, new pl3() { // from class: com.daaw.tm5
+    /* renamed from: m3 */
+    public static f77 m25209m3(f77 f77Var, en6 en6Var, xl3 xl3Var, to6 to6Var, io6 io6Var) {
+        nl3 m5010a = xl3Var.m5010a("AFMA_getAdDictionary", ul3.f29176b, new pl3() { // from class: com.daaw.tm5
             @Override // com.daaw.pl3
-            public final Object b(JSONObject jSONObject) {
+            /* renamed from: b */
+            public final Object mo8081b(JSONObject jSONObject) {
                 return new pu3(jSONObject);
             }
         });
-        so6.d(f77Var, io6Var);
-        gm6 a2 = en6Var.b(ym6.BUILD_URL, f77Var).f(a).a();
-        so6.c(a2, to6Var, io6Var);
-        return a2;
+        so6.m10111d(f77Var, io6Var);
+        gm6 m7037a = en6Var.m5975b(ym6.BUILD_URL, f77Var).m7032f(m5010a).m7037a();
+        so6.m10112c(m7037a, to6Var, io6Var);
+        return m7037a;
     }
 
-    public static f77 n3(zzccb zzccbVar, en6 en6Var, final o86 o86Var) {
+    /* renamed from: n3 */
+    public static f77 m25208n3(zzccb zzccbVar, en6 en6Var, final o86 o86Var) {
         w57 w57Var = new w57() { // from class: com.daaw.km5
             @Override // com.daaw.w57
             public final f77 zza(Object obj) {
-                return o86.this.b().a(zzay.zzb().n((Bundle) obj));
+                return o86.this.mo14447b().m17110a(zzay.zzb().m24818n((Bundle) obj));
             }
         };
-        return en6Var.b(ym6.GMS_SIGNALS, s67.i(zzccbVar.p)).f(w57Var).e(new em6() { // from class: com.daaw.lm5
+        return en6Var.m5975b(ym6.GMS_SIGNALS, s67.m10634i(zzccbVar.f36964p)).m7032f(w57Var).m7033e(new em6() { // from class: com.daaw.lm5
             @Override // com.daaw.em6
             public final Object zza(Object obj) {
                 JSONObject jSONObject = (JSONObject) obj;
@@ -71,198 +92,208 @@ public final class cn5 extends wt3 {
                 zze.zza(jSONObject.toString(2));
                 return jSONObject;
             }
-        }).a();
+        }).m7037a();
     }
 
     @Override // com.daaw.xt3
-    public final void A1(zzccb zzccbVar, hu3 hu3Var) {
-        p3(i3(zzccbVar, Binder.getCallingUid()), hu3Var);
+    /* renamed from: A1 */
+    public final void mo4525A1(zzccb zzccbVar, hu3 hu3Var) {
+        m25206p3(m25213i3(zzccbVar, Binder.getCallingUid()), hu3Var);
     }
 
     @Override // com.daaw.xt3
-    public final void L2(zzccb zzccbVar, hu3 hu3Var) {
+    /* renamed from: L2 */
+    public final void mo4524L2(zzccb zzccbVar, hu3 hu3Var) {
         mm5 mm5Var;
         Executor executor;
-        f77 h3 = h3(zzccbVar, Binder.getCallingUid());
-        p3(h3, hu3Var);
-        if (((Boolean) ab3.c.e()).booleanValue()) {
-            if (((Boolean) ya3.j.e()).booleanValue()) {
-                yn5 yn5Var = this.s;
+        f77 m25214h3 = m25214h3(zzccbVar, Binder.getCallingUid());
+        m25206p3(m25214h3, hu3Var);
+        if (((Boolean) ab3.f3049c.m16137e()).booleanValue()) {
+            if (((Boolean) ya3.f33458j.m16137e()).booleanValue()) {
+                yn5 yn5Var = this.f5967s;
                 yn5Var.getClass();
                 mm5Var = new mm5(yn5Var);
-                executor = this.r;
+                executor = this.f5966r;
             } else {
-                yn5 yn5Var2 = this.s;
+                yn5 yn5Var2 = this.f5967s;
                 yn5Var2.getClass();
                 mm5Var = new mm5(yn5Var2);
-                executor = this.q;
+                executor = this.f5965q;
             }
-            h3.f(mm5Var, executor);
+            m25214h3.mo6515f(mm5Var, executor);
         }
     }
 
     @Override // com.daaw.xt3
-    public final void b2(zzccb zzccbVar, hu3 hu3Var) {
-        p3(g3(zzccbVar, Binder.getCallingUid()), hu3Var);
+    /* renamed from: b2 */
+    public final void mo4523b2(zzccb zzccbVar, hu3 hu3Var) {
+        m25206p3(m25215g3(zzccbVar, Binder.getCallingUid()), hu3Var);
     }
 
-    public final f77 g3(final zzccb zzccbVar, int i) {
-        if (((Boolean) lb3.a.e()).booleanValue()) {
-            zzfkz zzfkzVar = zzccbVar.x;
+    /* renamed from: g3 */
+    public final f77 m25215g3(final zzccb zzccbVar, int i) {
+        if (((Boolean) lb3.f17221a.m16137e()).booleanValue()) {
+            zzfkz zzfkzVar = zzccbVar.f36972x;
             if (zzfkzVar == null) {
-                return s67.h(new Exception("Pool configuration missing from request."));
+                return s67.m10635h(new Exception("Pool configuration missing from request."));
             }
-            if (zzfkzVar.t == 0 || zzfkzVar.u == 0) {
-                return s67.h(new Exception("Caching is disabled."));
+            if (zzfkzVar.f37004t == 0 || zzfkzVar.f37005u == 0) {
+                return s67.m10635h(new Exception("Caching is disabled."));
             }
-            xl3 b = zzt.zzf().b(this.p, zzchu.h(), this.v);
-            o86 a = this.t.a(zzccbVar, i);
-            en6 c = a.c();
-            final f77 n3 = n3(zzccbVar, c, a);
-            to6 d = a.d();
-            final io6 a2 = ho6.a(this.p, 9);
-            final f77 m3 = m3(n3, c, b, d, a2);
-            return c.a(ym6.GET_URL_AND_CACHE_KEY, n3, m3).a(new Callable() { // from class: com.daaw.sm5
+            xl3 m14177b = zzt.zzf().m14177b(this.f5964p, zzchu.m1093h(), this.f5970v);
+            o86 mo20830a = this.f5968t.mo20830a(zzccbVar, i);
+            en6 mo14446c = mo20830a.mo14446c();
+            final f77 m25208n3 = m25208n3(zzccbVar, mo14446c, mo20830a);
+            to6 mo14445d = mo20830a.mo14445d();
+            final io6 m20568a = ho6.m20568a(this.f5964p, 9);
+            final f77 m25209m3 = m25209m3(m25208n3, mo14446c, m14177b, mo14445d, m20568a);
+            return mo14446c.m5976a(ym6.GET_URL_AND_CACHE_KEY, m25208n3, m25209m3).m18406a(new Callable() { // from class: com.daaw.sm5
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
-                    return cn5.this.k3(m3, n3, zzccbVar, a2);
+                    return cn5.this.m25211k3(m25209m3, m25208n3, zzccbVar, m20568a);
                 }
-            }).a();
+            }).m7037a();
         }
-        return s67.h(new Exception("Split request is disabled."));
+        return s67.m10635h(new Exception("Split request is disabled."));
     }
 
-    public final f77 h3(zzccb zzccbVar, int i) {
+    /* renamed from: h3 */
+    public final f77 m25214h3(zzccb zzccbVar, int i) {
         String str;
-        jm6 a;
+        jm6 m5976a;
         Callable callable;
-        xl3 b = zzt.zzf().b(this.p, zzchu.h(), this.v);
-        o86 a2 = this.t.a(zzccbVar, i);
-        nl3 a3 = b.a("google.afma.response.normalize", bn5.d, ul3.c);
+        xl3 m14177b = zzt.zzf().m14177b(this.f5964p, zzchu.m1093h(), this.f5970v);
+        o86 mo20830a = this.f5968t.mo20830a(zzccbVar, i);
+        nl3 m5010a = m14177b.m5010a("google.afma.response.normalize", bn5.f4981d, ul3.f29177c);
         zm5 zm5Var = null;
-        if (((Boolean) lb3.a.e()).booleanValue()) {
-            zm5Var = l3(zzccbVar.w);
+        if (((Boolean) lb3.f17221a.m16137e()).booleanValue()) {
+            zm5Var = m25210l3(zzccbVar.f36971w);
             if (zm5Var == null) {
                 str = "Request contained a PoolKey but no matching parameters were found.";
                 zze.zza(str);
             }
         } else {
-            String str2 = zzccbVar.y;
+            String str2 = zzccbVar.f36973y;
             if (str2 != null && !str2.isEmpty()) {
                 str = "Request contained a PoolKey but split request is disabled.";
                 zze.zza(str);
             }
         }
         zm5 zm5Var2 = zm5Var;
-        io6 a4 = zm5Var2 == null ? ho6.a(this.p, 9) : zm5Var2.e;
-        to6 d = a2.d();
-        d.d(zzccbVar.p.getStringArrayList("ad_types"));
-        xn5 xn5Var = new xn5(zzccbVar.v, d, a4);
-        un5 un5Var = new un5(this.p, zzccbVar.q.p, this.w, i, null);
-        en6 c = a2.c();
-        io6 a5 = ho6.a(this.p, 11);
+        io6 m20568a = zm5Var2 == null ? ho6.m20568a(this.f5964p, 9) : zm5Var2.f35238e;
+        to6 mo14445d = mo20830a.mo14445d();
+        mo14445d.m8899d(zzccbVar.f36964p.getStringArrayList("ad_types"));
+        xn5 xn5Var = new xn5(zzccbVar.f36970v, mo14445d, m20568a);
+        un5 un5Var = new un5(this.f5964p, zzccbVar.f36965q.f36993p, this.f5971w, i, null);
+        en6 mo14446c = mo20830a.mo14446c();
+        io6 m20568a2 = ho6.m20568a(this.f5964p, 11);
         if (zm5Var2 == null) {
-            final f77 n3 = n3(zzccbVar, c, a2);
-            final f77 m3 = m3(n3, c, b, d, a4);
-            io6 a6 = ho6.a(this.p, 10);
-            final gm6 a7 = c.a(ym6.HTTP, m3, n3).a(new Callable() { // from class: com.daaw.qm5
+            final f77 m25208n3 = m25208n3(zzccbVar, mo14446c, mo20830a);
+            final f77 m25209m3 = m25209m3(m25208n3, mo14446c, m14177b, mo14445d, m20568a);
+            io6 m20568a3 = ho6.m20568a(this.f5964p, 10);
+            final gm6 m7037a = mo14446c.m5976a(ym6.HTTP, m25209m3, m25208n3).m18406a(new Callable() { // from class: com.daaw.qm5
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
-                    return new wn5((JSONObject) f77.this.get(), (pu3) m3.get());
+                    return new wn5((JSONObject) f77.this.get(), (pu3) m25209m3.get());
                 }
-            }).e(xn5Var).e(new oo6(a6)).e(un5Var).a();
-            so6.a(a7, d, a6);
-            so6.d(a7, a5);
-            a = c.a(ym6.PRE_PROCESS, n3, m3, a7);
+            }).m7033e(xn5Var).m7033e(new oo6(m20568a3)).m7033e(un5Var).m7037a();
+            so6.m10114a(m7037a, mo14445d, m20568a3);
+            so6.m10111d(m7037a, m20568a2);
+            m5976a = mo14446c.m5976a(ym6.PRE_PROCESS, m25208n3, m25209m3, m7037a);
             callable = new Callable() { // from class: com.daaw.rm5
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
-                    return new bn5((pn5) f77.this.get(), (JSONObject) n3.get(), (pu3) m3.get());
+                    return new bn5((pn5) f77.this.get(), (JSONObject) m25208n3.get(), (pu3) m25209m3.get());
                 }
             };
         } else {
-            wn5 wn5Var = new wn5(zm5Var2.b, zm5Var2.a);
-            io6 a8 = ho6.a(this.p, 10);
-            final gm6 a9 = c.b(ym6.HTTP, s67.i(wn5Var)).e(xn5Var).e(new oo6(a8)).e(un5Var).a();
-            so6.a(a9, d, a8);
-            final f77 i2 = s67.i(zm5Var2);
-            so6.d(a9, a5);
-            a = c.a(ym6.PRE_PROCESS, a9, i2);
+            wn5 wn5Var = new wn5(zm5Var2.f35235b, zm5Var2.f35234a);
+            io6 m20568a4 = ho6.m20568a(this.f5964p, 10);
+            final gm6 m7037a2 = mo14446c.m5975b(ym6.HTTP, s67.m10634i(wn5Var)).m7033e(xn5Var).m7033e(new oo6(m20568a4)).m7033e(un5Var).m7037a();
+            so6.m10114a(m7037a2, mo14445d, m20568a4);
+            final f77 m10634i = s67.m10634i(zm5Var2);
+            so6.m10111d(m7037a2, m20568a2);
+            m5976a = mo14446c.m5976a(ym6.PRE_PROCESS, m7037a2, m10634i);
             callable = new Callable() { // from class: com.daaw.vm5
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
                     f77 f77Var = f77.this;
-                    f77 f77Var2 = i2;
-                    return new bn5((pn5) f77Var.get(), ((zm5) f77Var2.get()).b, ((zm5) f77Var2.get()).a);
+                    f77 f77Var2 = m10634i;
+                    return new bn5((pn5) f77Var.get(), ((zm5) f77Var2.get()).f35235b, ((zm5) f77Var2.get()).f35234a);
                 }
             };
         }
-        gm6 a10 = a.a(callable).f(a3).a();
-        so6.a(a10, d, a5);
-        return a10;
+        gm6 m7037a3 = m5976a.m18406a(callable).m7032f(m5010a).m7037a();
+        so6.m10114a(m7037a3, mo14445d, m20568a2);
+        return m7037a3;
     }
 
-    public final f77 i3(zzccb zzccbVar, int i) {
+    /* renamed from: i3 */
+    public final f77 m25213i3(zzccb zzccbVar, int i) {
         mm5 mm5Var;
         Executor executor;
-        xl3 b = zzt.zzf().b(this.p, zzchu.h(), this.v);
-        if (((Boolean) qb3.a.e()).booleanValue()) {
-            o86 a = this.t.a(zzccbVar, i);
-            final l76 a2 = a.a();
-            nl3 a3 = b.a("google.afma.request.getSignals", ul3.b, ul3.c);
-            io6 a4 = ho6.a(this.p, 22);
-            gm6 a5 = a.c().b(ym6.GET_SIGNALS, s67.i(zzccbVar.p)).e(new oo6(a4)).f(new w57() { // from class: com.daaw.um5
+        xl3 m14177b = zzt.zzf().m14177b(this.f5964p, zzchu.m1093h(), this.f5970v);
+        if (((Boolean) qb3.f23844a.m16137e()).booleanValue()) {
+            o86 mo20830a = this.f5968t.mo20830a(zzccbVar, i);
+            final l76 mo14448a = mo20830a.mo14448a();
+            nl3 m5010a = m14177b.m5010a("google.afma.request.getSignals", ul3.f29176b, ul3.f29177c);
+            io6 m20568a = ho6.m20568a(this.f5964p, 22);
+            gm6 m7037a = mo20830a.mo14446c().m5975b(ym6.GET_SIGNALS, s67.m10634i(zzccbVar.f36964p)).m7033e(new oo6(m20568a)).m7032f(new w57() { // from class: com.daaw.um5
                 @Override // com.daaw.w57
                 public final f77 zza(Object obj) {
-                    return l76.this.a(zzay.zzb().n((Bundle) obj));
+                    return l76.this.m17110a(zzay.zzb().m24818n((Bundle) obj));
                 }
-            }).b(ym6.JS_SIGNALS).f(a3).a();
-            to6 d = a.d();
-            d.d(zzccbVar.p.getStringArrayList("ad_types"));
-            so6.b(a5, d, a4);
-            if (((Boolean) ab3.e.e()).booleanValue()) {
-                if (((Boolean) ya3.j.e()).booleanValue()) {
-                    yn5 yn5Var = this.s;
+            }).m7036b(ym6.JS_SIGNALS).m7032f(m5010a).m7037a();
+            to6 mo14445d = mo20830a.mo14445d();
+            mo14445d.m8899d(zzccbVar.f36964p.getStringArrayList("ad_types"));
+            so6.m10113b(m7037a, mo14445d, m20568a);
+            if (((Boolean) ab3.f3051e.m16137e()).booleanValue()) {
+                if (((Boolean) ya3.f33458j.m16137e()).booleanValue()) {
+                    yn5 yn5Var = this.f5967s;
                     yn5Var.getClass();
                     mm5Var = new mm5(yn5Var);
-                    executor = this.r;
+                    executor = this.f5966r;
                 } else {
-                    yn5 yn5Var2 = this.s;
+                    yn5 yn5Var2 = this.f5967s;
                     yn5Var2.getClass();
                     mm5Var = new mm5(yn5Var2);
-                    executor = this.q;
+                    executor = this.f5965q;
                 }
-                a5.f(mm5Var, executor);
+                m7037a.mo6515f(mm5Var, executor);
             }
-            return a5;
+            return m7037a;
         }
-        return s67.h(new Exception("Signal collection disabled."));
+        return s67.m10635h(new Exception("Signal collection disabled."));
     }
 
     @Override // com.daaw.xt3
-    public final void j1(String str, hu3 hu3Var) {
-        p3(j3(str), hu3Var);
+    /* renamed from: j1 */
+    public final void mo4522j1(String str, hu3 hu3Var) {
+        m25206p3(m25212j3(str), hu3Var);
     }
 
-    public final f77 j3(String str) {
-        if (((Boolean) lb3.a.e()).booleanValue()) {
-            return l3(str) == null ? s67.h(new Exception("URL to be removed not found for cache key: ".concat(String.valueOf(str)))) : s67.i(new xm5(this));
+    /* renamed from: j3 */
+    public final f77 m25212j3(String str) {
+        if (((Boolean) lb3.f17221a.m16137e()).booleanValue()) {
+            return m25210l3(str) == null ? s67.m10635h(new Exception("URL to be removed not found for cache key: ".concat(String.valueOf(str)))) : s67.m10634i(new xm5(this));
         }
-        return s67.h(new Exception("Split request is disabled."));
+        return s67.m10635h(new Exception("Split request is disabled."));
     }
 
-    public final /* synthetic */ InputStream k3(f77 f77Var, f77 f77Var2, zzccb zzccbVar, io6 io6Var) {
-        String c = ((pu3) f77Var.get()).c();
-        String str = zzccbVar.w;
-        o3(new zm5((pu3) f77Var.get(), (JSONObject) f77Var2.get(), str, c, io6Var));
-        return new ByteArrayInputStream(c.getBytes(cy6.c));
+    /* renamed from: k3 */
+    public final /* synthetic */ InputStream m25211k3(f77 f77Var, f77 f77Var2, zzccb zzccbVar, io6 io6Var) {
+        String m13128c = ((pu3) f77Var.get()).m13128c();
+        String str = zzccbVar.f36971w;
+        m25207o3(new zm5((pu3) f77Var.get(), (JSONObject) f77Var2.get(), str, m13128c, io6Var));
+        return new ByteArrayInputStream(m13128c.getBytes(cy6.f6275c));
     }
 
-    public final synchronized zm5 l3(String str) {
-        Iterator it = this.u.iterator();
+    /* renamed from: l3 */
+    public final synchronized zm5 m25210l3(String str) {
+        Iterator it = this.f5969u.iterator();
         while (it.hasNext()) {
             zm5 zm5Var = (zm5) it.next();
-            if (zm5Var.c.equals(str)) {
+            if (zm5Var.f35236c.equals(str)) {
                 it.remove();
                 return zm5Var;
             }
@@ -270,24 +301,26 @@ public final class cn5 extends wt3 {
         return null;
     }
 
-    public final synchronized void o3(zm5 zm5Var) {
+    /* renamed from: o3 */
+    public final synchronized void m25207o3(zm5 zm5Var) {
         zzo();
-        this.u.addLast(zm5Var);
+        this.f5969u.addLast(zm5Var);
     }
 
-    public final void p3(f77 f77Var, hu3 hu3Var) {
-        s67.r(s67.n(f77Var, new w57() { // from class: com.daaw.wm5
+    /* renamed from: p3 */
+    public final void m25206p3(f77 f77Var, hu3 hu3Var) {
+        s67.m10625r(s67.m10629n(f77Var, new w57() { // from class: com.daaw.wm5
             @Override // com.daaw.w57
             public final f77 zza(Object obj) {
-                return s67.i(sj6.a((InputStream) obj));
+                return s67.m10634i(sj6.m10282a((InputStream) obj));
             }
-        }, z04.a), new ym5(this, hu3Var), z04.f);
+        }, z04.f34305a), new ym5(this, hu3Var), z04.f34310f);
     }
 
     public final synchronized void zzo() {
-        int intValue = ((Long) lb3.d.e()).intValue();
-        while (this.u.size() >= intValue) {
-            this.u.removeFirst();
+        int intValue = ((Long) lb3.f17224d.m16137e()).intValue();
+        while (this.f5969u.size() >= intValue) {
+            this.f5969u.removeFirst();
         }
     }
 }

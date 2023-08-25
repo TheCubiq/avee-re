@@ -3,5 +3,6 @@ package com.daaw;
 import com.google.android.gms.internal.ads.zzccb;
 /* loaded from: classes.dex */
 public interface zk5 {
-    f77 a(zzccb zzccbVar);
+    /* renamed from: a */
+    f77 mo2152a(zzccb zzccbVar);
 }

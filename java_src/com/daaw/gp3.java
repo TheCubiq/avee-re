@@ -4,9 +4,12 @@ import android.os.IInterface;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public interface gp3 extends IInterface {
-    void Z(zze zzeVar);
+    /* renamed from: Z */
+    void mo5731Z(zze zzeVar);
 
-    void a(String str);
+    /* renamed from: a */
+    void mo5730a(String str);
 
-    void f(String str);
+    /* renamed from: f */
+    void mo5729f(String str);
 }

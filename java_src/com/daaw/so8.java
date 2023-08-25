@@ -3,113 +3,107 @@ package com.daaw;
 import android.media.MediaCodec;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Message;
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes.dex */
 public final class so8 {
-    public static final ArrayDeque g = new ArrayDeque();
-    public static final Object h = new Object();
-    public final MediaCodec a;
-    public final HandlerThread b;
-    public Handler c;
-    public final AtomicReference d;
-    public final ds4 e;
-    public boolean f;
+
+    /* renamed from: g */
+    public static final ArrayDeque f26456g = new ArrayDeque();
+
+    /* renamed from: h */
+    public static final Object f26457h = new Object();
+
+    /* renamed from: a */
+    public final MediaCodec f26458a;
+
+    /* renamed from: b */
+    public final HandlerThread f26459b;
+
+    /* renamed from: c */
+    public Handler f26460c;
+
+    /* renamed from: d */
+    public final AtomicReference f26461d;
+
+    /* renamed from: e */
+    public final ds4 f26462e;
+
+    /* renamed from: f */
+    public boolean f26463f;
 
     public so8(MediaCodec mediaCodec, HandlerThread handlerThread) {
-        ds4 ds4Var = new ds4(xp4.a);
-        this.a = mediaCodec;
-        this.b = handlerThread;
-        this.e = ds4Var;
-        this.d = new AtomicReference();
+        ds4 ds4Var = new ds4(xp4.f32865a);
+        this.f26458a = mediaCodec;
+        this.f26459b = handlerThread;
+        this.f26462e = ds4Var;
+        this.f26461d = new AtomicReference();
     }
 
     /* JADX WARN: Removed duplicated region for block: B:28:0x005a  */
     /* JADX WARN: Removed duplicated region for block: B:36:0x0065 A[RETURN] */
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static /* bridge */ /* synthetic */ void a(com.daaw.so8 r9, android.os.Message r10) {
-        /*
-            int r0 = r10.what
-            r1 = 0
-            if (r0 == 0) goto L3e
-            r2 = 1
-            if (r0 == r2) goto L22
-            r2 = 2
-            if (r0 == r2) goto L1c
-            java.util.concurrent.atomic.AtomicReference r9 = r9.d
-            java.lang.IllegalStateException r0 = new java.lang.IllegalStateException
-            int r10 = r10.what
-            java.lang.String r10 = java.lang.String.valueOf(r10)
-            r0.<init>(r10)
-            com.daaw.ho8.a(r9, r1, r0)
-            goto L58
-        L1c:
-            com.daaw.ds4 r9 = r9.e
-            r9.e()
-            goto L58
-        L22:
-            java.lang.Object r10 = r10.obj
-            com.daaw.jo8 r10 = (com.daaw.jo8) r10
-            int r3 = r10.a
-            android.media.MediaCodec$CryptoInfo r5 = r10.d
-            long r6 = r10.e
-            int r8 = r10.f
-            java.lang.Object r0 = com.daaw.so8.h     // Catch: java.lang.RuntimeException -> L3c
-            monitor-enter(r0)     // Catch: java.lang.RuntimeException -> L3c
-            android.media.MediaCodec r2 = r9.a     // Catch: java.lang.Throwable -> L39
-            r4 = 0
-            r2.queueSecureInputBuffer(r3, r4, r5, r6, r8)     // Catch: java.lang.Throwable -> L39
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L39
-            goto L57
-        L39:
-            r2 = move-exception
-            monitor-exit(r0)     // Catch: java.lang.Throwable -> L39
-            throw r2     // Catch: java.lang.RuntimeException -> L3c
-        L3c:
-            r0 = move-exception
-            goto L52
-        L3e:
-            java.lang.Object r10 = r10.obj
-            com.daaw.jo8 r10 = (com.daaw.jo8) r10
-            int r3 = r10.a
-            int r5 = r10.c
-            long r6 = r10.e
-            int r8 = r10.f
-            android.media.MediaCodec r2 = r9.a     // Catch: java.lang.RuntimeException -> L51
-            r4 = 0
-            r2.queueInputBuffer(r3, r4, r5, r6, r8)     // Catch: java.lang.RuntimeException -> L51
-            goto L57
-        L51:
-            r0 = move-exception
-        L52:
-            java.util.concurrent.atomic.AtomicReference r9 = r9.d
-            com.daaw.ho8.a(r9, r1, r0)
-        L57:
-            r1 = r10
-        L58:
-            if (r1 == 0) goto L65
-            java.util.ArrayDeque r9 = com.daaw.so8.g
-            monitor-enter(r9)
-            r9.add(r1)     // Catch: java.lang.Throwable -> L62
-            monitor-exit(r9)     // Catch: java.lang.Throwable -> L62
-            return
-        L62:
-            r10 = move-exception
-            monitor-exit(r9)     // Catch: java.lang.Throwable -> L62
-            throw r10
-        L65:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.so8.a(com.daaw.so8, android.os.Message):void");
+    public static /* bridge */ /* synthetic */ void m10106a(so8 so8Var, Message message) {
+        jo8 jo8Var;
+        int i = message.what;
+        jo8 jo8Var2 = null;
+        if (i == 0) {
+            jo8Var = (jo8) message.obj;
+            try {
+                so8Var.f26458a.queueInputBuffer(jo8Var.f15287a, 0, jo8Var.f15289c, jo8Var.f15291e, jo8Var.f15292f);
+            } catch (RuntimeException e) {
+                e = e;
+                ho8.m20566a(so8Var.f26461d, null, e);
+                jo8Var2 = jo8Var;
+                if (jo8Var2 == null) {
+                }
+            }
+        } else if (i != 1) {
+            if (i != 2) {
+                ho8.m20566a(so8Var.f26461d, null, new IllegalStateException(String.valueOf(message.what)));
+            } else {
+                so8Var.f26462e.m24006e();
+            }
+            if (jo8Var2 == null) {
+                ArrayDeque arrayDeque = f26456g;
+                synchronized (arrayDeque) {
+                    arrayDeque.add(jo8Var2);
+                }
+                return;
+            }
+            return;
+        } else {
+            jo8Var = (jo8) message.obj;
+            int i2 = jo8Var.f15287a;
+            MediaCodec.CryptoInfo cryptoInfo = jo8Var.f15290d;
+            long j = jo8Var.f15291e;
+            int i3 = jo8Var.f15292f;
+            try {
+                synchronized (f26457h) {
+                    so8Var.f26458a.queueSecureInputBuffer(i2, 0, cryptoInfo, j, i3);
+                }
+            } catch (RuntimeException e2) {
+                e = e2;
+                ho8.m20566a(so8Var.f26461d, null, e);
+                jo8Var2 = jo8Var;
+                if (jo8Var2 == null) {
+                }
+            }
+        }
+        jo8Var2 = jo8Var;
+        if (jo8Var2 == null) {
+        }
     }
 
-    public static jo8 g() {
-        ArrayDeque arrayDeque = g;
+    /* renamed from: g */
+    public static jo8 m10100g() {
+        ArrayDeque arrayDeque = f26456g;
         synchronized (arrayDeque) {
             if (arrayDeque.isEmpty()) {
                 return new jo8();
@@ -118,7 +112,8 @@ public final class so8 {
         }
     }
 
-    public static byte[] i(byte[] bArr, byte[] bArr2) {
+    /* renamed from: i */
+    public static byte[] m10098i(byte[] bArr, byte[] bArr2) {
         if (bArr == null) {
             return bArr2;
         }
@@ -133,7 +128,8 @@ public final class so8 {
         return Arrays.copyOf(bArr, bArr.length);
     }
 
-    public static int[] j(int[] iArr, int[] iArr2) {
+    /* renamed from: j */
+    public static int[] m10097j(int[] iArr, int[] iArr2) {
         if (iArr == null) {
             return iArr2;
         }
@@ -148,17 +144,18 @@ public final class so8 {
         return Arrays.copyOf(iArr, iArr.length);
     }
 
-    public final void b() {
-        if (this.f) {
+    /* renamed from: b */
+    public final void m10105b() {
+        if (this.f26463f) {
             try {
-                Handler handler = this.c;
+                Handler handler = this.f26460c;
                 Objects.requireNonNull(handler);
                 handler.removeCallbacksAndMessages(null);
-                this.e.c();
-                Handler handler2 = this.c;
+                this.f26462e.m24008c();
+                Handler handler2 = this.f26460c;
                 Objects.requireNonNull(handler2);
                 handler2.obtainMessage(2).sendToTarget();
-                this.e.a();
+                this.f26462e.m24010a();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 throw new IllegalStateException(e);
@@ -166,55 +163,60 @@ public final class so8 {
         }
     }
 
-    public final void c(int i, int i2, int i3, long j, int i4) {
-        h();
-        jo8 g2 = g();
-        g2.a(i, 0, i3, j, i4);
-        Handler handler = this.c;
-        int i5 = it5.a;
-        handler.obtainMessage(0, g2).sendToTarget();
+    /* renamed from: c */
+    public final void m10104c(int i, int i2, int i3, long j, int i4) {
+        m10099h();
+        jo8 m10100g = m10100g();
+        m10100g.m18350a(i, 0, i3, j, i4);
+        Handler handler = this.f26460c;
+        int i5 = it5.f13991a;
+        handler.obtainMessage(0, m10100g).sendToTarget();
     }
 
-    public final void d(int i, int i2, d77 d77Var, long j, int i3) {
-        h();
-        jo8 g2 = g();
-        g2.a(i, 0, 0, j, 0);
-        MediaCodec.CryptoInfo cryptoInfo = g2.d;
-        cryptoInfo.numSubSamples = d77Var.f;
-        cryptoInfo.numBytesOfClearData = j(d77Var.d, cryptoInfo.numBytesOfClearData);
-        cryptoInfo.numBytesOfEncryptedData = j(d77Var.e, cryptoInfo.numBytesOfEncryptedData);
-        byte[] i4 = i(d77Var.b, cryptoInfo.key);
-        Objects.requireNonNull(i4);
-        cryptoInfo.key = i4;
-        byte[] i5 = i(d77Var.a, cryptoInfo.iv);
-        Objects.requireNonNull(i5);
-        cryptoInfo.iv = i5;
-        cryptoInfo.mode = d77Var.c;
-        if (it5.a >= 24) {
-            cryptoInfo.setPattern(new MediaCodec.CryptoInfo.Pattern(d77Var.g, d77Var.h));
+    /* renamed from: d */
+    public final void m10103d(int i, int i2, d77 d77Var, long j, int i3) {
+        m10099h();
+        jo8 m10100g = m10100g();
+        m10100g.m18350a(i, 0, 0, j, 0);
+        MediaCodec.CryptoInfo cryptoInfo = m10100g.f15290d;
+        cryptoInfo.numSubSamples = d77Var.f6592f;
+        cryptoInfo.numBytesOfClearData = m10097j(d77Var.f6590d, cryptoInfo.numBytesOfClearData);
+        cryptoInfo.numBytesOfEncryptedData = m10097j(d77Var.f6591e, cryptoInfo.numBytesOfEncryptedData);
+        byte[] m10098i = m10098i(d77Var.f6588b, cryptoInfo.key);
+        Objects.requireNonNull(m10098i);
+        cryptoInfo.key = m10098i;
+        byte[] m10098i2 = m10098i(d77Var.f6587a, cryptoInfo.iv);
+        Objects.requireNonNull(m10098i2);
+        cryptoInfo.iv = m10098i2;
+        cryptoInfo.mode = d77Var.f6589c;
+        if (it5.f13991a >= 24) {
+            cryptoInfo.setPattern(new MediaCodec.CryptoInfo.Pattern(d77Var.f6593g, d77Var.f6594h));
         }
-        this.c.obtainMessage(1, g2).sendToTarget();
+        this.f26460c.obtainMessage(1, m10100g).sendToTarget();
     }
 
-    public final void e() {
-        if (this.f) {
-            b();
-            this.b.quit();
+    /* renamed from: e */
+    public final void m10102e() {
+        if (this.f26463f) {
+            m10105b();
+            this.f26459b.quit();
         }
-        this.f = false;
+        this.f26463f = false;
     }
 
-    public final void f() {
-        if (this.f) {
+    /* renamed from: f */
+    public final void m10101f() {
+        if (this.f26463f) {
             return;
         }
-        this.b.start();
-        this.c = new io8(this, this.b.getLooper());
-        this.f = true;
+        this.f26459b.start();
+        this.f26460c = new io8(this, this.f26459b.getLooper());
+        this.f26463f = true;
     }
 
-    public final void h() {
-        RuntimeException runtimeException = (RuntimeException) this.d.getAndSet(null);
+    /* renamed from: h */
+    public final void m10099h() {
+        RuntimeException runtimeException = (RuntimeException) this.f26461d.getAndSet(null);
         if (runtimeException != null) {
             throw runtimeException;
         }

@@ -4,7 +4,8 @@ import android.media.MediaCodecInfo;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class dp8 {
-    public static int a(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
+    /* renamed from: a */
+    public static int m24096a(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
         List<MediaCodecInfo.VideoCapabilities.PerformancePoint> supportedPerformancePoints = videoCapabilities.getSupportedPerformancePoints();
         if (supportedPerformancePoints == null || supportedPerformancePoints.isEmpty()) {
             return 0;

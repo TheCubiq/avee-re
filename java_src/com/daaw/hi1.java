@@ -6,9 +6,11 @@ import android.view.MenuItem;
 import android.view.View;
 /* loaded from: classes.dex */
 public interface hi1 extends MenuItem {
-    o0 a();
+    /* renamed from: a */
+    AbstractC2388o0 mo16345a();
 
-    hi1 b(o0 o0Var);
+    /* renamed from: b */
+    hi1 mo16344b(AbstractC2388o0 abstractC2388o0);
 
     @Override // android.view.MenuItem
     boolean collapseActionView();

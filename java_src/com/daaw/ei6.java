@@ -12,9 +12,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class ei6 {
-    public final List a;
-    public final wh6 b;
-    public final List c;
+
+    /* renamed from: a */
+    public final List f8507a;
+
+    /* renamed from: b */
+    public final wh6 f8508b;
+
+    /* renamed from: c */
+    public final List f8509c;
 
     public ei6(JsonReader jsonReader) {
         List emptyList = Collections.emptyList();
@@ -66,17 +72,18 @@ public final class ei6 {
             }
             jsonReader.endArray();
         }
-        this.c = arrayList;
-        this.a = emptyList;
-        this.b = wh6Var == null ? new wh6(new JsonReader(new StringReader("{}"))) : wh6Var;
+        this.f8509c = arrayList;
+        this.f8507a = emptyList;
+        this.f8508b = wh6Var == null ? new wh6(new JsonReader(new StringReader("{}"))) : wh6Var;
     }
 
-    public static ei6 a(Reader reader) {
+    /* renamed from: a */
+    public static ei6 m23453a(Reader reader) {
         try {
             try {
                 return new ei6(new JsonReader(reader));
             } finally {
-                xd0.a(reader);
+                xd0.m5227a(reader);
             }
         } catch (IOException | AssertionError | IllegalStateException | NumberFormatException | JSONException e) {
             throw new xh6("unable to parse ServerResponse", e);

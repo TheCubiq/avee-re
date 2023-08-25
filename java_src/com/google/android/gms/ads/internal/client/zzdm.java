@@ -22,7 +22,8 @@ public abstract class zzdm extends cp2 implements zzdn {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         String zzg;
         Parcelable zzf;
         switch (i) {
@@ -44,12 +45,12 @@ public abstract class zzdm extends cp2 implements zzdn {
             case 4:
                 zzf = zzf();
                 parcel2.writeNoException();
-                dp2.f(parcel2, zzf);
+                dp2.m24102f(parcel2, zzf);
                 return true;
             case 5:
                 zzf = zze();
                 parcel2.writeNoException();
-                dp2.f(parcel2, zzf);
+                dp2.m24102f(parcel2, zzf);
                 return true;
             case 6:
                 zzg = zzh();

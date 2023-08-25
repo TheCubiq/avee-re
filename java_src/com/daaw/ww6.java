@@ -1,11 +1,14 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class ww6 {
-    public static vw6 c() {
+    /* renamed from: c */
+    public static vw6 m5747c() {
         return new zv6();
     }
 
-    public abstract String a();
+    /* renamed from: a */
+    public abstract String mo5749a();
 
-    public abstract String b();
+    /* renamed from: b */
+    public abstract String mo5748b();
 }

@@ -6,19 +6,22 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import com.google.android.gms.ads.internal.client.zzdt;
 /* loaded from: classes.dex */
 public final class e95 extends VideoController.VideoLifecycleCallbacks {
-    public final j35 a;
+
+    /* renamed from: a */
+    public final j35 f8274a;
 
     public e95(j35 j35Var) {
-        this.a = j35Var;
+        this.f8274a = j35Var;
     }
 
-    public static zzdt a(j35 j35Var) {
-        zzdq R = j35Var.R();
-        if (R == null) {
+    /* renamed from: a */
+    public static zzdt m23647a(j35 j35Var) {
+        zzdq m19138R = j35Var.m19138R();
+        if (m19138R == null) {
             return null;
         }
         try {
-            return R.zzi();
+            return m19138R.zzi();
         } catch (RemoteException unused) {
             return null;
         }
@@ -26,12 +29,12 @@ public final class e95 extends VideoController.VideoLifecycleCallbacks {
 
     @Override // com.google.android.gms.ads.VideoController.VideoLifecycleCallbacks
     public final void onVideoEnd() {
-        zzdt a = a(this.a);
-        if (a == null) {
+        zzdt m23647a = m23647a(this.f8274a);
+        if (m23647a == null) {
             return;
         }
         try {
-            a.zze();
+            m23647a.zze();
         } catch (RemoteException e) {
             k04.zzk("Unable to call onVideoEnd()", e);
         }
@@ -39,12 +42,12 @@ public final class e95 extends VideoController.VideoLifecycleCallbacks {
 
     @Override // com.google.android.gms.ads.VideoController.VideoLifecycleCallbacks
     public final void onVideoPause() {
-        zzdt a = a(this.a);
-        if (a == null) {
+        zzdt m23647a = m23647a(this.f8274a);
+        if (m23647a == null) {
             return;
         }
         try {
-            a.zzg();
+            m23647a.zzg();
         } catch (RemoteException e) {
             k04.zzk("Unable to call onVideoEnd()", e);
         }
@@ -52,12 +55,12 @@ public final class e95 extends VideoController.VideoLifecycleCallbacks {
 
     @Override // com.google.android.gms.ads.VideoController.VideoLifecycleCallbacks
     public final void onVideoStart() {
-        zzdt a = a(this.a);
-        if (a == null) {
+        zzdt m23647a = m23647a(this.f8274a);
+        if (m23647a == null) {
             return;
         }
         try {
-            a.zzi();
+            m23647a.zzi();
         } catch (RemoteException e) {
             k04.zzk("Unable to call onVideoEnd()", e);
         }

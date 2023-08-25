@@ -6,54 +6,73 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 /* loaded from: classes.dex */
 public class s91<T1> extends AsyncTask<String, Object, Void> {
-    public List<T1> a;
-    public m10<T1> b;
-    public WeakReference<b<T1>> c;
-    public int d = 0;
-    public c<T1> e = new a();
 
+    /* renamed from: a */
+    public List<T1> f26013a;
+
+    /* renamed from: b */
+    public m10<T1> f26014b;
+
+    /* renamed from: c */
+    public WeakReference<InterfaceC2926b<T1>> f26015c;
+
+    /* renamed from: d */
+    public int f26016d = 0;
+
+    /* renamed from: e */
+    public InterfaceC2927c<T1> f26017e = new C2925a();
+
+    /* renamed from: com.daaw.s91$a */
     /* loaded from: classes.dex */
-    public class a implements c<T1> {
-        public a() {
+    public class C2925a implements InterfaceC2927c<T1> {
+        public C2925a() {
         }
 
-        @Override // com.daaw.s91.c
-        public void a(T1 t1) {
-            s91.a(s91.this);
+        @Override // com.daaw.s91.InterfaceC2927c
+        /* renamed from: a */
+        public void mo10501a(T1 t1) {
+            s91.m10509a(s91.this);
             s91.this.publishProgress(t1);
         }
 
-        @Override // com.daaw.s91.c
+        @Override // com.daaw.s91.InterfaceC2927c
         public boolean isCancelled() {
             return s91.this.isCancelled();
         }
     }
 
+    /* renamed from: com.daaw.s91$b */
     /* loaded from: classes.dex */
-    public interface b<T1> {
-        void a(AsyncTask asyncTask, boolean z);
+    public interface InterfaceC2926b<T1> {
+        /* renamed from: a */
+        void mo10504a(AsyncTask asyncTask, boolean z);
 
-        void b(AsyncTask asyncTask);
+        /* renamed from: b */
+        void mo10503b(AsyncTask asyncTask);
 
-        void c(AsyncTask asyncTask, T1 t1);
+        /* renamed from: c */
+        void mo10502c(AsyncTask asyncTask, T1 t1);
     }
 
+    /* renamed from: com.daaw.s91$c */
     /* loaded from: classes.dex */
-    public interface c<T1> {
-        void a(T1 t1);
+    public interface InterfaceC2927c<T1> {
+        /* renamed from: a */
+        void mo10501a(T1 t1);
 
         boolean isCancelled();
     }
 
-    public s91(Context context, List<T1> list, m10<T1> m10Var, WeakReference<b<T1>> weakReference) {
-        this.a = list;
-        this.b = m10Var;
-        this.c = weakReference;
+    public s91(Context context, List<T1> list, m10<T1> m10Var, WeakReference<InterfaceC2926b<T1>> weakReference) {
+        this.f26013a = list;
+        this.f26014b = m10Var;
+        this.f26015c = weakReference;
     }
 
-    public static /* synthetic */ int a(s91 s91Var) {
-        int i = s91Var.d;
-        s91Var.d = i + 1;
+    /* renamed from: a */
+    public static /* synthetic */ int m10509a(s91 s91Var) {
+        int i = s91Var.f26016d;
+        s91Var.f26016d = i + 1;
         return i;
     }
 
@@ -63,106 +82,75 @@ public class s91<T1> extends AsyncTask<String, Object, Void> {
     /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public java.lang.Void doInBackground(java.lang.String... r5) {
-        /*
-            r4 = this;
-            r0 = 0
-            r5 = r5[r0]
-            com.daaw.m10<T1> r0 = r4.b
-            r1 = 0
-            if (r0 != 0) goto L9
-            return r1
-        L9:
-            if (r5 == 0) goto L18
-            boolean r0 = r5.isEmpty()     // Catch: java.lang.Exception -> L5f
-            if (r0 != 0) goto L18
-            com.daaw.m10<T1> r0 = r4.b     // Catch: java.lang.Exception -> L5f
-            java.lang.String r5 = r0.a(r5)     // Catch: java.lang.Exception -> L5f
-            goto L19
-        L18:
-            r5 = r1
-        L19:
-            java.util.List<T1> r0 = r4.a     // Catch: java.lang.Exception -> L5f
-            java.util.Iterator r0 = r0.iterator()     // Catch: java.lang.Exception -> L5f
-        L1f:
-            boolean r2 = r0.hasNext()     // Catch: java.lang.Exception -> L5f
-            if (r2 == 0) goto L38
-            java.lang.Object r2 = r0.next()     // Catch: java.lang.Exception -> L5f
-            com.daaw.s91$c<T1> r3 = r4.e     // Catch: java.lang.Exception -> L5f
-            boolean r3 = r3.isCancelled()     // Catch: java.lang.Exception -> L5f
-            if (r3 == 0) goto L32
-            goto L38
-        L32:
-            com.daaw.m10<T1> r3 = r4.b     // Catch: java.lang.Exception -> L5f
-            r3.c(r2)     // Catch: java.lang.Exception -> L5f
-            goto L1f
-        L38:
-            java.util.List<T1> r0 = r4.a     // Catch: java.lang.Exception -> L5f
-            java.util.Iterator r0 = r0.iterator()     // Catch: java.lang.Exception -> L5f
-        L3e:
-            boolean r2 = r0.hasNext()     // Catch: java.lang.Exception -> L5f
-            if (r2 == 0) goto L78
-            java.lang.Object r2 = r0.next()     // Catch: java.lang.Exception -> L5f
-            com.daaw.s91$c<T1> r3 = r4.e     // Catch: java.lang.Exception -> L5f
-            boolean r3 = r3.isCancelled()     // Catch: java.lang.Exception -> L5f
-            if (r3 == 0) goto L51
-            goto L78
-        L51:
-            com.daaw.m10<T1> r3 = r4.b     // Catch: java.lang.Exception -> L5f
-            boolean r3 = r3.b(r5, r2)     // Catch: java.lang.Exception -> L5f
-            if (r3 == 0) goto L3e
-            com.daaw.s91$c<T1> r3 = r4.e     // Catch: java.lang.Exception -> L5f
-            r3.a(r2)     // Catch: java.lang.Exception -> L5f
-            goto L3e
-        L5f:
-            r5 = move-exception
-            java.lang.StringBuilder r0 = new java.lang.StringBuilder
-            r0.<init>()
-            java.lang.String r2 = "doInBackground Exception: "
-            r0.append(r2)
-            java.lang.String r5 = r5.getMessage()
-            r0.append(r5)
-            java.lang.String r5 = r0.toString()
-            com.daaw.lz1.c(r5)
-        L78:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.s91.doInBackground(java.lang.String[]):java.lang.Void");
+    public Void doInBackground(String... strArr) {
+        String mo11570a;
+        String str = strArr[0];
+        if (this.f26014b == null) {
+            return null;
+        }
+        if (str != null) {
+            try {
+            } catch (Exception e) {
+                lz1.m16363c("doInBackground Exception: " + e.getMessage());
+            }
+            if (!str.isEmpty()) {
+                mo11570a = this.f26014b.mo11570a(str);
+                for (T1 t1 : this.f26013a) {
+                    if (this.f26017e.isCancelled()) {
+                        break;
+                    }
+                    this.f26014b.mo11568c(t1);
+                }
+                for (T1 t12 : this.f26013a) {
+                    if (this.f26017e.isCancelled()) {
+                        break;
+                    } else if (this.f26014b.mo11569b(mo11570a, t12)) {
+                        this.f26017e.mo10501a(t12);
+                    }
+                }
+                return null;
+            }
+        }
+        mo11570a = null;
+        while (r0.hasNext()) {
+        }
+        while (r0.hasNext()) {
+        }
+        return null;
     }
 
     @Override // android.os.AsyncTask
     /* renamed from: d */
     public void onCancelled(Void r2) {
-        b<T1> bVar = this.c.get();
-        if (bVar != null) {
-            bVar.a(this, false);
+        InterfaceC2926b<T1> interfaceC2926b = this.f26015c.get();
+        if (interfaceC2926b != null) {
+            interfaceC2926b.mo10504a(this, false);
         }
     }
 
     @Override // android.os.AsyncTask
     /* renamed from: e */
     public void onPostExecute(Void r2) {
-        b<T1> bVar = this.c.get();
-        if (bVar != null) {
-            bVar.a(this, true);
+        InterfaceC2926b<T1> interfaceC2926b = this.f26015c.get();
+        if (interfaceC2926b != null) {
+            interfaceC2926b.mo10504a(this, true);
         }
     }
 
     @Override // android.os.AsyncTask
     public void onPreExecute() {
-        b<T1> bVar = this.c.get();
-        if (bVar != null) {
-            bVar.b(this);
+        InterfaceC2926b<T1> interfaceC2926b = this.f26015c.get();
+        if (interfaceC2926b != null) {
+            interfaceC2926b.mo10503b(this);
         }
     }
 
     @Override // android.os.AsyncTask
     public void onProgressUpdate(Object... objArr) {
-        b<T1> bVar = this.c.get();
-        if (bVar != null) {
-            bVar.c(this, objArr[0]);
+        InterfaceC2926b<T1> interfaceC2926b = this.f26015c.get();
+        if (interfaceC2926b != null) {
+            interfaceC2926b.mo10502c(this, objArr[0]);
         }
     }
 }

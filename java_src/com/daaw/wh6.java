@@ -11,18 +11,42 @@ import java.util.List;
 import org.json.JSONException;
 /* loaded from: classes.dex */
 public final class wh6 {
-    public final List a;
-    public final String b;
-    public final int c;
-    public final String d;
-    public final int e;
-    public final long f;
-    public final boolean g;
-    public final String h;
-    public final vh6 i;
-    public final Bundle j;
-    public final String k;
-    public final String l;
+
+    /* renamed from: a */
+    public final List f31251a;
+
+    /* renamed from: b */
+    public final String f31252b;
+
+    /* renamed from: c */
+    public final int f31253c;
+
+    /* renamed from: d */
+    public final String f31254d;
+
+    /* renamed from: e */
+    public final int f31255e;
+
+    /* renamed from: f */
+    public final long f31256f;
+
+    /* renamed from: g */
+    public final boolean f31257g;
+
+    /* renamed from: h */
+    public final String f31258h;
+
+    /* renamed from: i */
+    public final vh6 f31259i;
+
+    /* renamed from: j */
+    public final Bundle f31260j;
+
+    /* renamed from: k */
+    public final String f31261k;
+
+    /* renamed from: l */
+    public final String f31262l;
 
     public wh6(JsonReader jsonReader) {
         List emptyList = Collections.emptyList();
@@ -56,12 +80,12 @@ public final class wh6 {
                 j = jsonReader.nextLong();
             } else {
                 String str6 = str3;
-                if (((Boolean) zzba.zzc().b(g93.x7)).booleanValue() && "public_error".equals(nextName) && jsonReader.peek() == JsonToken.BEGIN_OBJECT) {
+                if (((Boolean) zzba.zzc().m23658b(g93.f10882x7)).booleanValue() && "public_error".equals(nextName) && jsonReader.peek() == JsonToken.BEGIN_OBJECT) {
                     vh6Var = new vh6(jsonReader);
                 } else if ("bidding_data".equals(nextName)) {
                     str = jsonReader.nextString();
                 } else if ("response_info_extras".equals(nextName)) {
-                    if (((Boolean) zzba.zzc().b(g93.l6)).booleanValue()) {
+                    if (((Boolean) zzba.zzc().m23658b(g93.f10749l6)).booleanValue()) {
                         try {
                             Bundle zza = zzbu.zza(zzbu.zzh(jsonReader));
                             if (zza != null) {
@@ -74,11 +98,11 @@ public final class wh6 {
                     jsonReader.skipValue();
                 } else {
                     if ("adRequestPostBody".equals(nextName)) {
-                        if (((Boolean) zzba.zzc().b(g93.q8)).booleanValue()) {
+                        if (((Boolean) zzba.zzc().m23658b(g93.f10806q8)).booleanValue()) {
                             str3 = jsonReader.nextString();
                         }
                     } else if ("adRequestUrl".equals(nextName)) {
-                        if (((Boolean) zzba.zzc().b(g93.q8)).booleanValue()) {
+                        if (((Boolean) zzba.zzc().m23658b(g93.f10806q8)).booleanValue()) {
                             str2 = jsonReader.nextString();
                         }
                     }
@@ -88,17 +112,17 @@ public final class wh6 {
             }
         }
         jsonReader.endObject();
-        this.a = emptyList;
-        this.c = i;
-        this.b = str4;
-        this.d = str5;
-        this.e = i2;
-        this.f = j;
-        this.i = vh6Var;
-        this.g = z;
-        this.h = str;
-        this.j = bundle;
-        this.k = str2;
-        this.l = str3;
+        this.f31251a = emptyList;
+        this.f31253c = i;
+        this.f31252b = str4;
+        this.f31254d = str5;
+        this.f31255e = i2;
+        this.f31256f = j;
+        this.f31259i = vh6Var;
+        this.f31257g = z;
+        this.f31258h = str;
+        this.f31260j = bundle;
+        this.f31261k = str2;
+        this.f31262l = str3;
     }
 }

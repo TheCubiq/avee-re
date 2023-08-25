@@ -7,10 +7,12 @@ import com.google.android.gms.ads.internal.util.zzq;
 import com.google.android.gms.ads.internal.util.zzs;
 /* loaded from: classes.dex */
 public final class tp8 extends BroadcastReceiver {
-    public final /* synthetic */ zzs a;
+
+    /* renamed from: a */
+    public final /* synthetic */ zzs f27951a;
 
     public /* synthetic */ tp8(zzs zzsVar, zzq zzqVar) {
-        this.a = zzsVar;
+        this.f27951a = zzsVar;
     }
 
     @Override // android.content.BroadcastReceiver
@@ -18,14 +20,14 @@ public final class tp8 extends BroadcastReceiver {
         zzs zzsVar;
         boolean z;
         if ("android.intent.action.USER_PRESENT".equals(intent.getAction())) {
-            zzsVar = this.a;
+            zzsVar = this.f27951a;
             z = true;
         } else if (!"android.intent.action.SCREEN_OFF".equals(intent.getAction())) {
             return;
         } else {
-            zzsVar = this.a;
+            zzsVar = this.f27951a;
             z = false;
         }
-        zzs.f(zzsVar, z);
+        zzs.m1326f(zzsVar, z);
     }
 }

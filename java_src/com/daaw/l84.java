@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface l84 {
-    sl2 a();
+    /* renamed from: a */
+    sl2 mo6425a();
 }

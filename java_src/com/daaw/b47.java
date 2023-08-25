@@ -14,22 +14,22 @@ public abstract class b47 extends a47 implements ListIterator {
 
     @Override // java.util.ListIterator
     public final boolean hasPrevious() {
-        return ((ListIterator) this.p).hasPrevious();
+        return ((ListIterator) this.f2884p).hasPrevious();
     }
 
     @Override // java.util.ListIterator
     public final int nextIndex() {
-        return ((ListIterator) this.p).nextIndex();
+        return ((ListIterator) this.f2884p).nextIndex();
     }
 
     @Override // java.util.ListIterator
     public final Object previous() {
-        return a(((ListIterator) this.p).previous());
+        return mo12795a(((ListIterator) this.f2884p).previous());
     }
 
     @Override // java.util.ListIterator
     public final int previousIndex() {
-        return ((ListIterator) this.p).previousIndex();
+        return ((ListIterator) this.f2884p).previousIndex();
     }
 
     @Override // java.util.ListIterator

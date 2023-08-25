@@ -3,10 +3,12 @@ package com.daaw;
 import android.net.Uri;
 /* loaded from: classes.dex */
 public final class bu8 extends dl3 {
-    public final Uri r;
+
+    /* renamed from: r */
+    public final Uri f5198r;
 
     public bu8(String str, Uri uri) {
         super(str, null, false, 1);
-        this.r = uri;
+        this.f5198r = uri;
     }
 }

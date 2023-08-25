@@ -1,21 +1,55 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class o21 {
-    public static final int b = 0;
-    public static final int c = 1;
-    public static final int d = 2;
-    public static final int e = 3;
-    public static final int f = 4;
-    public static final int g = 5;
-    public static final int i = 0;
-    public static final int j = 1;
-    public static final int l = 0;
-    public static final int m = 1;
-    public static final int n = 2;
-    public static final int o = 3;
-    public static final int[] a = {16843036, 16843156, 16843157, 16843158, 16843532, 16843533};
-    public static final int[] h = {16842960, 16843161};
-    public static final int[] k = {16843161, 16843849, 16843850, 16843851};
-    public static final int[] p = {16843036, 16843156, 16843157, 16843158, 16843532, 16843533};
-    public static final int[] q = {16843161};
+
+    /* renamed from: b */
+    public static final int f20948b = 0;
+
+    /* renamed from: c */
+    public static final int f20949c = 1;
+
+    /* renamed from: d */
+    public static final int f20950d = 2;
+
+    /* renamed from: e */
+    public static final int f20951e = 3;
+
+    /* renamed from: f */
+    public static final int f20952f = 4;
+
+    /* renamed from: g */
+    public static final int f20953g = 5;
+
+    /* renamed from: i */
+    public static final int f20955i = 0;
+
+    /* renamed from: j */
+    public static final int f20956j = 1;
+
+    /* renamed from: l */
+    public static final int f20958l = 0;
+
+    /* renamed from: m */
+    public static final int f20959m = 1;
+
+    /* renamed from: n */
+    public static final int f20960n = 2;
+
+    /* renamed from: o */
+    public static final int f20961o = 3;
+
+    /* renamed from: a */
+    public static final int[] f20947a = {16843036, 16843156, 16843157, 16843158, 16843532, 16843533};
+
+    /* renamed from: h */
+    public static final int[] f20954h = {16842960, 16843161};
+
+    /* renamed from: k */
+    public static final int[] f20957k = {16843161, 16843849, 16843850, 16843851};
+
+    /* renamed from: p */
+    public static final int[] f20962p = {16843036, 16843156, 16843157, 16843158, 16843532, 16843533};
+
+    /* renamed from: q */
+    public static final int[] f20963q = {16843161};
 }

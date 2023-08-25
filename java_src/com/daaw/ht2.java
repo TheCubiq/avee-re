@@ -1,21 +1,35 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ht2 {
-    public static final ht2 f = new ht2(new ar2());
-    public static final th8 g = new th8() { // from class: com.daaw.vp2
+
+    /* renamed from: f */
+    public static final ht2 f12917f = new ht2(new ar2());
+
+    /* renamed from: g */
+    public static final th8 f12918g = new th8() { // from class: com.daaw.vp2
     };
-    public final long a;
-    public final long b;
-    public final long c;
-    public final float d;
-    public final float e;
+
+    /* renamed from: a */
+    public final long f12919a;
+
+    /* renamed from: b */
+    public final long f12920b;
+
+    /* renamed from: c */
+    public final long f12921c;
+
+    /* renamed from: d */
+    public final float f12922d;
+
+    /* renamed from: e */
+    public final float f12923e;
 
     public ht2(ar2 ar2Var) {
-        this.a = -9223372036854775807L;
-        this.b = -9223372036854775807L;
-        this.c = -9223372036854775807L;
-        this.d = -3.4028235E38f;
-        this.e = -3.4028235E38f;
+        this.f12919a = -9223372036854775807L;
+        this.f12920b = -9223372036854775807L;
+        this.f12921c = -9223372036854775807L;
+        this.f12922d = -3.4028235E38f;
+        this.f12923e = -3.4028235E38f;
     }
 
     public final boolean equals(Object obj) {
@@ -23,7 +37,7 @@ public final class ht2 {
             return true;
         }
         if (obj instanceof ht2) {
-            long j = ((ht2) obj).a;
+            long j = ((ht2) obj).f12919a;
             return true;
         }
         return false;

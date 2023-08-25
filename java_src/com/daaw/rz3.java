@@ -12,49 +12,70 @@ import com.google.android.gms.ads.internal.zzt;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class rz3 {
-    public final String g;
-    public final zzg h;
-    public long a = -1;
-    public long b = -1;
+
+    /* renamed from: g */
+    public final String f25723g;
+
+    /* renamed from: h */
+    public final zzg f25724h;
+
+    /* renamed from: a */
+    public long f25717a = -1;
+
+    /* renamed from: b */
+    public long f25718b = -1;
     @GuardedBy("lock")
-    public int c = -1;
-    public int d = -1;
-    public long e = 0;
-    public final Object f = new Object();
+
+    /* renamed from: c */
+    public int f25719c = -1;
+
+    /* renamed from: d */
+    public int f25720d = -1;
+
+    /* renamed from: e */
+    public long f25721e = 0;
+
+    /* renamed from: f */
+    public final Object f25722f = new Object();
     @GuardedBy("lock")
-    public int i = 0;
+
+    /* renamed from: i */
+    public int f25725i = 0;
     @GuardedBy("lock")
-    public int j = 0;
+
+    /* renamed from: j */
+    public int f25726j = 0;
 
     public rz3(String str, zzg zzgVar) {
-        this.g = str;
-        this.h = zzgVar;
+        this.f25723g = str;
+        this.f25724h = zzgVar;
     }
 
-    public final Bundle a(Context context, String str) {
+    /* renamed from: a */
+    public final Bundle m10821a(Context context, String str) {
         Bundle bundle;
         String str2;
-        synchronized (this.f) {
+        synchronized (this.f25722f) {
             bundle = new Bundle();
-            if (!this.h.zzP()) {
-                bundle.putString("session_id", this.g);
+            if (!this.f25724h.zzP()) {
+                bundle.putString("session_id", this.f25723g);
             }
-            bundle.putLong("basets", this.b);
-            bundle.putLong("currts", this.a);
+            bundle.putLong("basets", this.f25718b);
+            bundle.putLong("currts", this.f25717a);
             bundle.putString("seq_num", str);
-            bundle.putInt("preqs", this.c);
-            bundle.putInt("preqs_in_session", this.d);
-            bundle.putLong("time_in_session", this.e);
-            bundle.putInt("pclick", this.i);
-            bundle.putInt("pimp", this.j);
-            Context a = av3.a(context);
-            int identifier = a.getResources().getIdentifier("Theme.Translucent", "style", "android");
+            bundle.putInt("preqs", this.f25719c);
+            bundle.putInt("preqs_in_session", this.f25720d);
+            bundle.putLong("time_in_session", this.f25721e);
+            bundle.putInt("pclick", this.f25725i);
+            bundle.putInt("pimp", this.f25726j);
+            Context m26956a = av3.m26956a(context);
+            int identifier = m26956a.getResources().getIdentifier("Theme.Translucent", "style", "android");
             boolean z = false;
             if (identifier == 0) {
                 str2 = "Please set theme of AdActivity to @android:style/Theme.Translucent to enable transparent background interstitial ad.";
             } else {
                 try {
-                    if (identifier == a.getPackageManager().getActivityInfo(new ComponentName(a.getPackageName(), AdActivity.CLASS_NAME), 0).theme) {
+                    if (identifier == m26956a.getPackageManager().getActivityInfo(new ComponentName(m26956a.getPackageName(), AdActivity.CLASS_NAME), 0).theme) {
                         z = true;
                     } else {
                         k04.zzi("Please set theme of AdActivity to @android:style/Theme.Translucent to enable transparent background interstitial ad.");
@@ -71,60 +92,66 @@ public final class rz3 {
         return bundle;
     }
 
-    public final void b() {
-        synchronized (this.f) {
-            this.i++;
+    /* renamed from: b */
+    public final void m10820b() {
+        synchronized (this.f25722f) {
+            this.f25725i++;
         }
     }
 
-    public final void c() {
-        synchronized (this.f) {
-            this.j++;
+    /* renamed from: c */
+    public final void m10819c() {
+        synchronized (this.f25722f) {
+            this.f25726j++;
         }
     }
 
-    public final void d() {
-        g();
+    /* renamed from: d */
+    public final void m10818d() {
+        m10815g();
     }
 
-    public final void e() {
-        g();
+    /* renamed from: e */
+    public final void m10817e() {
+        m10815g();
     }
 
-    public final void f(zzl zzlVar, long j) {
-        synchronized (this.f) {
-            long zzd = this.h.zzd();
-            long a = zzt.zzB().a();
-            if (this.b == -1) {
-                if (a - zzd > ((Long) zzba.zzc().b(g93.N0)).longValue()) {
-                    this.d = -1;
+    /* renamed from: f */
+    public final void m10816f(zzl zzlVar, long j) {
+        synchronized (this.f25722f) {
+            long zzd = this.f25724h.zzd();
+            long mo15860a = zzt.zzB().mo15860a();
+            if (this.f25718b == -1) {
+                if (mo15860a - zzd > ((Long) zzba.zzc().m23658b(g93.f10492N0)).longValue()) {
+                    this.f25720d = -1;
                 } else {
-                    this.d = this.h.zzc();
+                    this.f25720d = this.f25724h.zzc();
                 }
-                this.b = j;
+                this.f25718b = j;
             }
-            this.a = j;
+            this.f25717a = j;
             Bundle bundle = zzlVar.zzc;
             if (bundle != null && bundle.getInt("gw", 2) == 1) {
                 return;
             }
-            this.c++;
-            int i = this.d + 1;
-            this.d = i;
+            this.f25719c++;
+            int i = this.f25720d + 1;
+            this.f25720d = i;
             if (i == 0) {
-                this.e = 0L;
-                this.h.zzD(a);
+                this.f25721e = 0L;
+                this.f25724h.zzD(mo15860a);
             } else {
-                this.e = a - this.h.zze();
+                this.f25721e = mo15860a - this.f25724h.zze();
             }
         }
     }
 
-    public final void g() {
-        if (((Boolean) lb3.a.e()).booleanValue()) {
-            synchronized (this.f) {
-                this.c--;
-                this.d--;
+    /* renamed from: g */
+    public final void m10815g() {
+        if (((Boolean) lb3.f17221a.m16137e()).booleanValue()) {
+            synchronized (this.f25722f) {
+                this.f25719c--;
+                this.f25720d--;
             }
         }
     }

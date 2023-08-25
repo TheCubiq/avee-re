@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class p17 {
-    public abstract Object a();
+    /* renamed from: a */
+    public abstract Object mo13759a();
 
     public final String toString() {
-        return a().toString();
+        return mo13759a().toString();
     }
 }

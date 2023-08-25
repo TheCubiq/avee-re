@@ -1,19 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface zd0 {
-    float[] a();
+    /* renamed from: a */
+    float[] mo2476a();
 
-    float b();
+    /* renamed from: b */
+    float mo2475b();
 
-    float c();
+    /* renamed from: c */
+    float mo2474c();
 
-    boolean d(float f, float f2, bs1 bs1Var, bs1 bs1Var2, float f3, float f4, bs1 bs1Var3, float f5, float f6, bs1 bs1Var4, pr1 pr1Var, float f7);
+    /* renamed from: d */
+    boolean mo2473d(float f, float f2, bs1 bs1Var, bs1 bs1Var2, float f3, float f4, bs1 bs1Var3, float f5, float f6, bs1 bs1Var4, pr1 pr1Var, float f7);
 
-    boolean e();
+    /* renamed from: e */
+    boolean mo2472e();
 
-    void f(float f);
+    /* renamed from: f */
+    void mo2471f(float f);
 
-    float g();
+    /* renamed from: g */
+    float mo2470g();
 
     ds1 getPosition();
 

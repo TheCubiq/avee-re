@@ -4,41 +4,55 @@ import android.view.View;
 import android.view.ViewParent;
 /* loaded from: classes.dex */
 public class fs0 {
-    public ViewParent a;
-    public ViewParent b;
-    public final View c;
-    public boolean d;
-    public int[] e;
+
+    /* renamed from: a */
+    public ViewParent f9843a;
+
+    /* renamed from: b */
+    public ViewParent f9844b;
+
+    /* renamed from: c */
+    public final View f9845c;
+
+    /* renamed from: d */
+    public boolean f9846d;
+
+    /* renamed from: e */
+    public int[] f9847e;
 
     public fs0(View view) {
-        this.c = view;
+        this.f9845c = view;
     }
 
-    public boolean a(float f, float f2, boolean z) {
-        ViewParent h;
-        if (!l() || (h = h(0)) == null) {
+    /* renamed from: a */
+    public boolean m22354a(float f, float f2, boolean z) {
+        ViewParent m22347h;
+        if (!m22343l() || (m22347h = m22347h(0)) == null) {
             return false;
         }
-        return st1.a(h, this.c, f, f2, z);
+        return st1.m9901a(m22347h, this.f9845c, f, f2, z);
     }
 
-    public boolean b(float f, float f2) {
-        ViewParent h;
-        if (!l() || (h = h(0)) == null) {
+    /* renamed from: b */
+    public boolean m22353b(float f, float f2) {
+        ViewParent m22347h;
+        if (!m22343l() || (m22347h = m22347h(0)) == null) {
             return false;
         }
-        return st1.b(h, this.c, f, f2);
+        return st1.m9900b(m22347h, this.f9845c, f, f2);
     }
 
-    public boolean c(int i, int i2, int[] iArr, int[] iArr2) {
-        return d(i, i2, iArr, iArr2, 0);
+    /* renamed from: c */
+    public boolean m22352c(int i, int i2, int[] iArr, int[] iArr2) {
+        return m22351d(i, i2, iArr, iArr2, 0);
     }
 
-    public boolean d(int i, int i2, int[] iArr, int[] iArr2, int i3) {
-        ViewParent h;
+    /* renamed from: d */
+    public boolean m22351d(int i, int i2, int[] iArr, int[] iArr2, int i3) {
+        ViewParent m22347h;
         int i4;
         int i5;
-        if (!l() || (h = h(i3)) == null) {
+        if (!m22343l() || (m22347h = m22347h(i3)) == null) {
             return false;
         }
         if (i == 0 && i2 == 0) {
@@ -50,7 +64,7 @@ public class fs0 {
             return false;
         }
         if (iArr2 != null) {
-            this.c.getLocationInWindow(iArr2);
+            this.f9845c.getLocationInWindow(iArr2);
             i4 = iArr2[0];
             i5 = iArr2[1];
         } else {
@@ -58,33 +72,36 @@ public class fs0 {
             i5 = 0;
         }
         if (iArr == null) {
-            iArr = i();
+            iArr = m22346i();
         }
         iArr[0] = 0;
         iArr[1] = 0;
-        st1.c(h, this.c, i, i2, iArr, i3);
+        st1.m9899c(m22347h, this.f9845c, i, i2, iArr, i3);
         if (iArr2 != null) {
-            this.c.getLocationInWindow(iArr2);
+            this.f9845c.getLocationInWindow(iArr2);
             iArr2[0] = iArr2[0] - i4;
             iArr2[1] = iArr2[1] - i5;
         }
         return (iArr[0] == 0 && iArr[1] == 0) ? false : true;
     }
 
-    public void e(int i, int i2, int i3, int i4, int[] iArr, int i5, int[] iArr2) {
-        g(i, i2, i3, i4, iArr, i5, iArr2);
+    /* renamed from: e */
+    public void m22350e(int i, int i2, int i3, int i4, int[] iArr, int i5, int[] iArr2) {
+        m22348g(i, i2, i3, i4, iArr, i5, iArr2);
     }
 
-    public boolean f(int i, int i2, int i3, int i4, int[] iArr) {
-        return g(i, i2, i3, i4, iArr, 0, null);
+    /* renamed from: f */
+    public boolean m22349f(int i, int i2, int i3, int i4, int[] iArr) {
+        return m22348g(i, i2, i3, i4, iArr, 0, null);
     }
 
-    public final boolean g(int i, int i2, int i3, int i4, int[] iArr, int i5, int[] iArr2) {
-        ViewParent h;
+    /* renamed from: g */
+    public final boolean m22348g(int i, int i2, int i3, int i4, int[] iArr, int i5, int[] iArr2) {
+        ViewParent m22347h;
         int i6;
         int i7;
         int[] iArr3;
-        if (!l() || (h = h(i5)) == null) {
+        if (!m22343l() || (m22347h = m22347h(i5)) == null) {
             return false;
         }
         if (i == 0 && i2 == 0 && i3 == 0 && i4 == 0) {
@@ -95,7 +112,7 @@ public class fs0 {
             return false;
         }
         if (iArr != null) {
-            this.c.getLocationInWindow(iArr);
+            this.f9845c.getLocationInWindow(iArr);
             i6 = iArr[0];
             i7 = iArr[1];
         } else {
@@ -103,81 +120,90 @@ public class fs0 {
             i7 = 0;
         }
         if (iArr2 == null) {
-            int[] i8 = i();
-            i8[0] = 0;
-            i8[1] = 0;
-            iArr3 = i8;
+            int[] m22346i = m22346i();
+            m22346i[0] = 0;
+            m22346i[1] = 0;
+            iArr3 = m22346i;
         } else {
             iArr3 = iArr2;
         }
-        st1.d(h, this.c, i, i2, i3, i4, i5, iArr3);
+        st1.m9898d(m22347h, this.f9845c, i, i2, i3, i4, i5, iArr3);
         if (iArr != null) {
-            this.c.getLocationInWindow(iArr);
+            this.f9845c.getLocationInWindow(iArr);
             iArr[0] = iArr[0] - i6;
             iArr[1] = iArr[1] - i7;
         }
         return true;
     }
 
-    public final ViewParent h(int i) {
+    /* renamed from: h */
+    public final ViewParent m22347h(int i) {
         if (i != 0) {
             if (i != 1) {
                 return null;
             }
-            return this.b;
+            return this.f9844b;
         }
-        return this.a;
+        return this.f9843a;
     }
 
-    public final int[] i() {
-        if (this.e == null) {
-            this.e = new int[2];
+    /* renamed from: i */
+    public final int[] m22346i() {
+        if (this.f9847e == null) {
+            this.f9847e = new int[2];
         }
-        return this.e;
+        return this.f9847e;
     }
 
-    public boolean j() {
-        return k(0);
+    /* renamed from: j */
+    public boolean m22345j() {
+        return m22344k(0);
     }
 
-    public boolean k(int i) {
-        return h(i) != null;
+    /* renamed from: k */
+    public boolean m22344k(int i) {
+        return m22347h(i) != null;
     }
 
-    public boolean l() {
-        return this.d;
+    /* renamed from: l */
+    public boolean m22343l() {
+        return this.f9846d;
     }
 
-    public void m(boolean z) {
-        if (this.d) {
-            xs1.L0(this.c);
+    /* renamed from: m */
+    public void m22342m(boolean z) {
+        if (this.f9846d) {
+            xs1.m4753L0(this.f9845c);
         }
-        this.d = z;
+        this.f9846d = z;
     }
 
-    public final void n(int i, ViewParent viewParent) {
+    /* renamed from: n */
+    public final void m22341n(int i, ViewParent viewParent) {
         if (i == 0) {
-            this.a = viewParent;
+            this.f9843a = viewParent;
         } else if (i != 1) {
         } else {
-            this.b = viewParent;
+            this.f9844b = viewParent;
         }
     }
 
-    public boolean o(int i) {
-        return p(i, 0);
+    /* renamed from: o */
+    public boolean m22340o(int i) {
+        return m22339p(i, 0);
     }
 
-    public boolean p(int i, int i2) {
-        if (k(i2)) {
+    /* renamed from: p */
+    public boolean m22339p(int i, int i2) {
+        if (m22344k(i2)) {
             return true;
         }
-        if (l()) {
-            View view = this.c;
-            for (ViewParent parent = this.c.getParent(); parent != null; parent = parent.getParent()) {
-                if (st1.f(parent, view, this.c, i, i2)) {
-                    n(i2, parent);
-                    st1.e(parent, view, this.c, i, i2);
+        if (m22343l()) {
+            View view = this.f9845c;
+            for (ViewParent parent = this.f9845c.getParent(); parent != null; parent = parent.getParent()) {
+                if (st1.m9896f(parent, view, this.f9845c, i, i2)) {
+                    m22341n(i2, parent);
+                    st1.m9897e(parent, view, this.f9845c, i, i2);
                     return true;
                 }
                 if (parent instanceof View) {
@@ -189,15 +215,17 @@ public class fs0 {
         return false;
     }
 
-    public void q() {
-        r(0);
+    /* renamed from: q */
+    public void m22338q() {
+        m22337r(0);
     }
 
-    public void r(int i) {
-        ViewParent h = h(i);
-        if (h != null) {
-            st1.g(h, this.c, i);
-            n(i, null);
+    /* renamed from: r */
+    public void m22337r(int i) {
+        ViewParent m22347h = m22347h(i);
+        if (m22347h != null) {
+            st1.m9895g(m22347h, this.f9845c, i);
+            m22341n(i, null);
         }
     }
 }

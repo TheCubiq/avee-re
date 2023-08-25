@@ -4,131 +4,149 @@ import com.daaw.ce0;
 import java.util.List;
 /* loaded from: classes.dex */
 public class o01 implements ce0 {
-    public ce0.a b = null;
-    public int a = 0;
+
+    /* renamed from: b */
+    public ce0.InterfaceC0949a f20907b = null;
+
+    /* renamed from: a */
+    public int f20906a = 0;
 
     @Override // com.daaw.ce0
-    public int a() {
-        return this.a;
+    /* renamed from: a */
+    public int mo13787a() {
+        return this.f20906a;
     }
 
     @Override // com.daaw.ce0
-    public void b(int i) {
-        this.a = i;
+    /* renamed from: b */
+    public void mo13786b(int i) {
+        this.f20906a = i;
     }
 
     @Override // com.daaw.ce0
-    public boolean c(List<Integer> list, int i, int i2, boolean z, int i3) {
+    /* renamed from: c */
+    public boolean mo13785c(List<Integer> list, int i, int i2, boolean z, int i3) {
         boolean z2;
-        int f = l01.f(this.a, list, i, i2, z);
-        this.a = f;
-        if (f < 0) {
-            this.a = l01.i(f, list, i2);
+        int m17246f = l01.m17246f(this.f20906a, list, i, i2, z);
+        this.f20906a = m17246f;
+        if (m17246f < 0) {
+            this.f20906a = l01.m17243i(m17246f, list, i2);
             z2 = true;
         } else {
             z2 = false;
         }
-        if (this.a < 0) {
-            this.a = 0;
+        if (this.f20906a < 0) {
+            this.f20906a = 0;
             z2 = true;
         }
-        if (this.a >= i3) {
-            this.a = i3 - 1;
+        if (this.f20906a >= i3) {
+            this.f20906a = i3 - 1;
             z2 = true;
         }
-        ce0.a aVar = this.b;
-        if (aVar != null) {
-            aVar.a(this, true, z2);
+        ce0.InterfaceC0949a interfaceC0949a = this.f20907b;
+        if (interfaceC0949a != null) {
+            interfaceC0949a.mo17251a(this, true, z2);
         }
         return z2;
     }
 
     @Override // com.daaw.ce0
-    public int d(int i) {
+    /* renamed from: d */
+    public int mo13784d(int i) {
         return i;
     }
 
     @Override // com.daaw.ce0
-    public boolean e(int i) {
-        int h = h(false);
-        this.a = h;
-        if (h >= i) {
-            this.a = i - 1;
+    /* renamed from: e */
+    public boolean mo13783e(int i) {
+        int mo13780h = mo13780h(false);
+        this.f20906a = mo13780h;
+        if (mo13780h >= i) {
+            this.f20906a = i - 1;
             return true;
         }
         return false;
     }
 
     @Override // com.daaw.ce0
-    public int f(int i, int i2) {
+    /* renamed from: f */
+    public int mo13782f(int i, int i2) {
         return i;
     }
 
     @Override // com.daaw.ce0
-    public void g() {
-        int m = m(false);
-        this.a = m;
-        if (m < 0) {
-            this.a = 0;
+    /* renamed from: g */
+    public void mo13781g() {
+        int m14660m = m14660m(false);
+        this.f20906a = m14660m;
+        if (m14660m < 0) {
+            this.f20906a = 0;
         }
     }
 
     @Override // com.daaw.ce0
-    public int h(boolean z) {
-        return this.a + 1;
+    /* renamed from: h */
+    public int mo13780h(boolean z) {
+        return this.f20906a + 1;
     }
 
     @Override // com.daaw.ce0
-    public int i(boolean z) {
-        return this.a;
+    /* renamed from: i */
+    public int mo13779i(boolean z) {
+        return this.f20906a;
     }
 
     @Override // com.daaw.ce0
-    public void j() {
-        this.a = 0;
+    /* renamed from: j */
+    public void mo13778j() {
+        this.f20906a = 0;
     }
 
     @Override // com.daaw.ce0
-    public boolean k(int i, int i2, int i3, boolean z, int i4) {
+    /* renamed from: k */
+    public boolean mo13777k(int i, int i2, int i3, boolean z, int i4) {
         boolean z2;
-        int h = l01.h(this.a, i, i2, i3, z);
-        this.a = h;
-        if (h < 0) {
-            this.a = i - 1;
+        int m17244h = l01.m17244h(this.f20906a, i, i2, i3, z);
+        this.f20906a = m17244h;
+        if (m17244h < 0) {
+            this.f20906a = i - 1;
             z2 = true;
         } else {
             z2 = false;
         }
-        if (this.a < 0) {
-            this.a = 0;
+        if (this.f20906a < 0) {
+            this.f20906a = 0;
             z2 = true;
         }
-        if (this.a >= i4) {
-            this.a = i4 - 1;
+        if (this.f20906a >= i4) {
+            this.f20906a = i4 - 1;
             z2 = true;
         }
-        ce0.a aVar = this.b;
-        if (aVar != null) {
-            aVar.a(this, true, z2);
+        ce0.InterfaceC0949a interfaceC0949a = this.f20907b;
+        if (interfaceC0949a != null) {
+            interfaceC0949a.mo17251a(this, true, z2);
         }
         return z2;
     }
 
     @Override // com.daaw.ce0
-    public void l(int i) {
-        this.a = i;
+    /* renamed from: l */
+    public void mo13776l(int i) {
+        this.f20906a = i;
     }
 
-    public int m(boolean z) {
-        return this.a - 1;
+    /* renamed from: m */
+    public int m14660m(boolean z) {
+        return this.f20906a - 1;
     }
 
-    public void n(int i, ce0.a aVar) {
-        this.b = aVar;
-        this.a = 0;
-        b(i);
-        if (aVar != null) {
-            aVar.a(this, false, true);
+    /* renamed from: n */
+    public void m14659n(int i, ce0.InterfaceC0949a interfaceC0949a) {
+        this.f20907b = interfaceC0949a;
+        this.f20906a = 0;
+        mo13786b(i);
+        if (interfaceC0949a != null) {
+            interfaceC0949a.mo17251a(this, false, true);
         }
     }
 }

@@ -9,145 +9,173 @@ import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class vc6 implements p46 {
-    public final Context a;
-    public final List b = new ArrayList();
-    public final p46 c;
-    public p46 d;
-    public p46 e;
-    public p46 f;
-    public p46 g;
-    public p46 h;
-    public p46 i;
-    public p46 j;
-    public p46 k;
+
+    /* renamed from: a */
+    public final Context f30142a;
+
+    /* renamed from: b */
+    public final List f30143b = new ArrayList();
+
+    /* renamed from: c */
+    public final p46 f30144c;
+
+    /* renamed from: d */
+    public p46 f30145d;
+
+    /* renamed from: e */
+    public p46 f30146e;
+
+    /* renamed from: f */
+    public p46 f30147f;
+
+    /* renamed from: g */
+    public p46 f30148g;
+
+    /* renamed from: h */
+    public p46 f30149h;
+
+    /* renamed from: i */
+    public p46 f30150i;
+
+    /* renamed from: j */
+    public p46 f30151j;
+
+    /* renamed from: k */
+    public p46 f30152k;
 
     public vc6(Context context, p46 p46Var) {
-        this.a = context.getApplicationContext();
-        this.c = p46Var;
+        this.f30142a = context.getApplicationContext();
+        this.f30144c = p46Var;
     }
 
-    public static final void m(p46 p46Var, qz6 qz6Var) {
+    /* renamed from: m */
+    public static final void m7269m(p46 p46Var, qz6 qz6Var) {
         if (p46Var != null) {
-            p46Var.d(qz6Var);
+            p46Var.mo1979d(qz6Var);
         }
     }
 
     @Override // com.daaw.xp8
-    public final int a(byte[] bArr, int i, int i2) {
-        p46 p46Var = this.k;
+    /* renamed from: a */
+    public final int mo1980a(byte[] bArr, int i, int i2) {
+        p46 p46Var = this.f30152k;
         Objects.requireNonNull(p46Var);
-        return p46Var.a(bArr, i, i2);
+        return p46Var.mo1980a(bArr, i, i2);
     }
 
     @Override // com.daaw.p46
-    public final void d(qz6 qz6Var) {
+    /* renamed from: d */
+    public final void mo1979d(qz6 qz6Var) {
         Objects.requireNonNull(qz6Var);
-        this.c.d(qz6Var);
-        this.b.add(qz6Var);
-        m(this.d, qz6Var);
-        m(this.e, qz6Var);
-        m(this.f, qz6Var);
-        m(this.g, qz6Var);
-        m(this.h, qz6Var);
-        m(this.i, qz6Var);
-        m(this.j, qz6Var);
+        this.f30144c.mo1979d(qz6Var);
+        this.f30143b.add(qz6Var);
+        m7269m(this.f30145d, qz6Var);
+        m7269m(this.f30146e, qz6Var);
+        m7269m(this.f30147f, qz6Var);
+        m7269m(this.f30148g, qz6Var);
+        m7269m(this.f30149h, qz6Var);
+        m7269m(this.f30150i, qz6Var);
+        m7269m(this.f30151j, qz6Var);
     }
 
     @Override // com.daaw.p46
-    public final long g(pa6 pa6Var) {
+    /* renamed from: g */
+    public final long mo1978g(pa6 pa6Var) {
         p46 p46Var;
-        uo4.f(this.k == null);
-        String scheme = pa6Var.a.getScheme();
-        if (it5.w(pa6Var.a)) {
-            String path = pa6Var.a.getPath();
+        uo4.m7872f(this.f30152k == null);
+        String scheme = pa6Var.f22769a.getScheme();
+        if (it5.m19373w(pa6Var.f22769a)) {
+            String path = pa6Var.f22769a.getPath();
             if (path == null || !path.startsWith("/android_asset/")) {
-                if (this.d == null) {
+                if (this.f30145d == null) {
                     um6 um6Var = new um6();
-                    this.d = um6Var;
-                    l(um6Var);
+                    this.f30145d = um6Var;
+                    m7270l(um6Var);
                 }
-                p46Var = this.d;
-                this.k = p46Var;
-                return this.k.g(pa6Var);
+                p46Var = this.f30145d;
+                this.f30152k = p46Var;
+                return this.f30152k.mo1978g(pa6Var);
             }
-            p46Var = k();
-            this.k = p46Var;
-            return this.k.g(pa6Var);
+            p46Var = m7271k();
+            this.f30152k = p46Var;
+            return this.f30152k.mo1978g(pa6Var);
         }
         if (!"asset".equals(scheme)) {
             if ("content".equals(scheme)) {
-                if (this.f == null) {
-                    f16 f16Var = new f16(this.a);
-                    this.f = f16Var;
-                    l(f16Var);
+                if (this.f30147f == null) {
+                    f16 f16Var = new f16(this.f30142a);
+                    this.f30147f = f16Var;
+                    m7270l(f16Var);
                 }
-                p46Var = this.f;
+                p46Var = this.f30147f;
             } else if ("rtmp".equals(scheme)) {
-                if (this.g == null) {
+                if (this.f30148g == null) {
                     try {
                         p46 p46Var2 = (p46) Class.forName("androidx.media3.datasource.rtmp.RtmpDataSource").getConstructor(new Class[0]).newInstance(new Object[0]);
-                        this.g = p46Var2;
-                        l(p46Var2);
+                        this.f30148g = p46Var2;
+                        m7270l(p46Var2);
                     } catch (ClassNotFoundException unused) {
-                        s95.e("DefaultDataSource", "Attempting to play RTMP stream without depending on the RTMP extension");
+                        s95.m10493e("DefaultDataSource", "Attempting to play RTMP stream without depending on the RTMP extension");
                     } catch (Exception e) {
                         throw new RuntimeException("Error instantiating RTMP extension", e);
                     }
-                    if (this.g == null) {
-                        this.g = this.c;
+                    if (this.f30148g == null) {
+                        this.f30148g = this.f30144c;
                     }
                 }
-                p46Var = this.g;
+                p46Var = this.f30148g;
             } else if ("udp".equals(scheme)) {
-                if (this.h == null) {
+                if (this.f30149h == null) {
                     g27 g27Var = new g27(2000);
-                    this.h = g27Var;
-                    l(g27Var);
+                    this.f30149h = g27Var;
+                    m7270l(g27Var);
                 }
-                p46Var = this.h;
+                p46Var = this.f30149h;
             } else if ("data".equals(scheme)) {
-                if (this.i == null) {
+                if (this.f30150i == null) {
                     g26 g26Var = new g26();
-                    this.i = g26Var;
-                    l(g26Var);
+                    this.f30150i = g26Var;
+                    m7270l(g26Var);
                 }
-                p46Var = this.i;
+                p46Var = this.f30150i;
             } else if ("rawresource".equals(scheme) || "android.resource".equals(scheme)) {
-                if (this.j == null) {
-                    kx6 kx6Var = new kx6(this.a);
-                    this.j = kx6Var;
-                    l(kx6Var);
+                if (this.f30151j == null) {
+                    kx6 kx6Var = new kx6(this.f30142a);
+                    this.f30151j = kx6Var;
+                    m7270l(kx6Var);
                 }
-                p46Var = this.j;
+                p46Var = this.f30151j;
             } else {
-                p46Var = this.c;
+                p46Var = this.f30144c;
             }
-            this.k = p46Var;
-            return this.k.g(pa6Var);
+            this.f30152k = p46Var;
+            return this.f30152k.mo1978g(pa6Var);
         }
-        p46Var = k();
-        this.k = p46Var;
-        return this.k.g(pa6Var);
+        p46Var = m7271k();
+        this.f30152k = p46Var;
+        return this.f30152k.mo1978g(pa6Var);
     }
 
-    public final p46 k() {
-        if (this.e == null) {
-            rw5 rw5Var = new rw5(this.a);
-            this.e = rw5Var;
-            l(rw5Var);
+    /* renamed from: k */
+    public final p46 m7271k() {
+        if (this.f30146e == null) {
+            rw5 rw5Var = new rw5(this.f30142a);
+            this.f30146e = rw5Var;
+            m7270l(rw5Var);
         }
-        return this.e;
+        return this.f30146e;
     }
 
-    public final void l(p46 p46Var) {
-        for (int i = 0; i < this.b.size(); i++) {
-            p46Var.d((qz6) this.b.get(i));
+    /* renamed from: l */
+    public final void m7270l(p46 p46Var) {
+        for (int i = 0; i < this.f30143b.size(); i++) {
+            p46Var.mo1979d((qz6) this.f30143b.get(i));
         }
     }
 
     @Override // com.daaw.p46
     public final Uri zzc() {
-        p46 p46Var = this.k;
+        p46 p46Var = this.f30152k;
         if (p46Var == null) {
             return null;
         }
@@ -156,19 +184,19 @@ public final class vc6 implements p46 {
 
     @Override // com.daaw.p46
     public final void zzd() {
-        p46 p46Var = this.k;
+        p46 p46Var = this.f30152k;
         if (p46Var != null) {
             try {
                 p46Var.zzd();
             } finally {
-                this.k = null;
+                this.f30152k = null;
             }
         }
     }
 
     @Override // com.daaw.p46
     public final Map zze() {
-        p46 p46Var = this.k;
+        p46 p46Var = this.f30152k;
         return p46Var == null ? Collections.emptyMap() : p46Var.zze();
     }
 }

@@ -8,90 +8,122 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 /* loaded from: classes.dex */
 public class o41<T, R> implements x50<R>, Runnable {
-    public static final a A = new a();
-    public final Handler p;
-    public final int q;
-    public final int r;
-    public final boolean s;
-    public final a t;
-    public R u;
-    public l41 v;
-    public boolean w;
-    public Exception x;
-    public boolean y;
-    public boolean z;
 
+    /* renamed from: A */
+    public static final C2406a f21022A = new C2406a();
+
+    /* renamed from: p */
+    public final Handler f21023p;
+
+    /* renamed from: q */
+    public final int f21024q;
+
+    /* renamed from: r */
+    public final int f21025r;
+
+    /* renamed from: s */
+    public final boolean f21026s;
+
+    /* renamed from: t */
+    public final C2406a f21027t;
+
+    /* renamed from: u */
+    public R f21028u;
+
+    /* renamed from: v */
+    public l41 f21029v;
+
+    /* renamed from: w */
+    public boolean f21030w;
+
+    /* renamed from: x */
+    public Exception f21031x;
+
+    /* renamed from: y */
+    public boolean f21032y;
+
+    /* renamed from: z */
+    public boolean f21033z;
+
+    /* renamed from: com.daaw.o41$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public void a(Object obj) {
+    public static class C2406a {
+        /* renamed from: a */
+        public void m14565a(Object obj) {
             obj.notifyAll();
         }
 
-        public void b(Object obj, long j) {
+        /* renamed from: b */
+        public void m14564b(Object obj, long j) {
             obj.wait(j);
         }
     }
 
     public o41(Handler handler, int i, int i2) {
-        this(handler, i, i2, true, A);
+        this(handler, i, i2, true, f21022A);
     }
 
-    public o41(Handler handler, int i, int i2, boolean z, a aVar) {
-        this.p = handler;
-        this.q = i;
-        this.r = i2;
-        this.s = z;
-        this.t = aVar;
+    public o41(Handler handler, int i, int i2, boolean z, C2406a c2406a) {
+        this.f21023p = handler;
+        this.f21024q = i;
+        this.f21025r = i2;
+        this.f21026s = z;
+        this.f21027t = c2406a;
     }
 
     @Override // com.daaw.qj0
-    public void a() {
+    /* renamed from: a */
+    public void mo3969a() {
     }
 
     @Override // com.daaw.pj1
-    public void b(l41 l41Var) {
-        this.v = l41Var;
+    /* renamed from: b */
+    public void mo3968b(l41 l41Var) {
+        this.f21029v = l41Var;
     }
 
     @Override // com.daaw.pj1
-    public synchronized void c(R r, f70<? super R> f70Var) {
-        this.y = true;
-        this.u = r;
-        this.t.a(this);
+    /* renamed from: c */
+    public synchronized void mo5506c(R r, f70<? super R> f70Var) {
+        this.f21032y = true;
+        this.f21028u = r;
+        this.f21027t.m14565a(this);
     }
 
     @Override // java.util.concurrent.Future
     public synchronized boolean cancel(boolean z) {
-        if (this.w) {
+        if (this.f21030w) {
             return true;
         }
         boolean z2 = !isDone();
         if (z2) {
-            this.w = true;
+            this.f21030w = true;
             if (z) {
-                l();
+                m14567l();
             }
-            this.t.a(this);
+            this.f21027t.m14565a(this);
         }
         return z2;
     }
 
     @Override // com.daaw.pj1
-    public void e(sd1 sd1Var) {
-        sd1Var.f(this.q, this.r);
+    /* renamed from: e */
+    public void mo13330e(sd1 sd1Var) {
+        sd1Var.mo10453f(this.f21024q, this.f21025r);
     }
 
     @Override // com.daaw.pj1
-    public synchronized void g(Exception exc, Drawable drawable) {
-        this.z = true;
-        this.x = exc;
-        this.t.a(this);
+    /* renamed from: g */
+    public synchronized void mo3967g(Exception exc, Drawable drawable) {
+        this.f21033z = true;
+        this.f21031x = exc;
+        this.f21027t.m14565a(this);
     }
 
     @Override // java.util.concurrent.Future
     public R get() {
         try {
-            return m(null);
+            return m14566m(null);
         } catch (TimeoutException e) {
             throw new AssertionError(e);
         }
@@ -99,73 +131,79 @@ public class o41<T, R> implements x50<R>, Runnable {
 
     @Override // java.util.concurrent.Future
     public R get(long j, TimeUnit timeUnit) {
-        return m(Long.valueOf(timeUnit.toMillis(j)));
+        return m14566m(Long.valueOf(timeUnit.toMillis(j)));
     }
 
     @Override // com.daaw.qj0
-    public void h() {
+    /* renamed from: h */
+    public void mo3966h() {
     }
 
     @Override // com.daaw.pj1
-    public void i(Drawable drawable) {
+    /* renamed from: i */
+    public void mo3965i(Drawable drawable) {
     }
 
     @Override // java.util.concurrent.Future
     public synchronized boolean isCancelled() {
-        return this.w;
+        return this.f21030w;
     }
 
     @Override // java.util.concurrent.Future
     public synchronized boolean isDone() {
         boolean z;
-        if (!this.w) {
-            z = this.y;
+        if (!this.f21030w) {
+            z = this.f21032y;
         }
         return z;
     }
 
     @Override // com.daaw.pj1
-    public l41 j() {
-        return this.v;
+    /* renamed from: j */
+    public l41 mo3964j() {
+        return this.f21029v;
     }
 
     @Override // com.daaw.pj1
-    public void k(Drawable drawable) {
+    /* renamed from: k */
+    public void mo3963k(Drawable drawable) {
     }
 
-    public void l() {
-        this.p.post(this);
+    /* renamed from: l */
+    public void m14567l() {
+        this.f21023p.post(this);
     }
 
-    public final synchronized R m(Long l) {
-        if (this.s) {
-            tq1.a();
+    /* renamed from: m */
+    public final synchronized R m14566m(Long l) {
+        if (this.f21026s) {
+            tq1.m8870a();
         }
-        if (this.w) {
+        if (this.f21030w) {
             throw new CancellationException();
         }
-        if (this.z) {
-            throw new ExecutionException(this.x);
+        if (this.f21033z) {
+            throw new ExecutionException(this.f21031x);
         }
-        if (this.y) {
-            return this.u;
+        if (this.f21032y) {
+            return this.f21028u;
         }
         if (l == null) {
-            this.t.b(this, 0L);
+            this.f21027t.m14564b(this, 0L);
         } else if (l.longValue() > 0) {
-            this.t.b(this, l.longValue());
+            this.f21027t.m14564b(this, l.longValue());
         }
         if (Thread.interrupted()) {
             throw new InterruptedException();
         }
-        if (this.z) {
-            throw new ExecutionException(this.x);
+        if (this.f21033z) {
+            throw new ExecutionException(this.f21031x);
         }
-        if (this.w) {
+        if (this.f21030w) {
             throw new CancellationException();
         }
-        if (this.y) {
-            return this.u;
+        if (this.f21032y) {
+            return this.f21028u;
         }
         throw new TimeoutException();
     }
@@ -176,7 +214,7 @@ public class o41<T, R> implements x50<R>, Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        l41 l41Var = this.v;
+        l41 l41Var = this.f21029v;
         if (l41Var != null) {
             l41Var.clear();
             cancel(false);

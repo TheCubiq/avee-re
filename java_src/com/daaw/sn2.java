@@ -9,41 +9,44 @@ public final class sn2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        if (this.b.q()) {
-            c();
+    /* renamed from: a */
+    public final void mo2099a() {
+        if (this.f20525b.m5989q()) {
+            m10147c();
             return;
         }
-        synchronized (this.e) {
-            this.e.q0((String) this.f.invoke(null, this.b.b()));
+        synchronized (this.f20528e) {
+            this.f20528e.m20749q0((String) this.f20529f.invoke(null, this.f20525b.m6004b()));
         }
     }
 
     @Override // com.daaw.no2
-    public final Void b() {
-        if (this.b.r()) {
-            super.b();
+    /* renamed from: b */
+    public final Void mo10148b() {
+        if (this.f20525b.m5988r()) {
+            super.mo10148b();
             return null;
         }
-        if (this.b.q()) {
-            c();
+        if (this.f20525b.m5989q()) {
+            m10147c();
         }
         return null;
     }
 
-    public final void c() {
-        AdvertisingIdClient h = this.b.h();
-        if (h == null) {
+    /* renamed from: c */
+    public final void m10147c() {
+        AdvertisingIdClient m5998h = this.f20525b.m5998h();
+        if (m5998h == null) {
             return;
         }
         try {
-            AdvertisingIdClient.Info info = h.getInfo();
-            String d = an2.d(info.getId());
-            if (d != null) {
-                synchronized (this.e) {
-                    this.e.q0(d);
-                    this.e.p0(info.isLimitAdTrackingEnabled());
-                    this.e.U(6);
+            AdvertisingIdClient.Info info = m5998h.getInfo();
+            String m27327d = an2.m27327d(info.getId());
+            if (m27327d != null) {
+                synchronized (this.f20528e) {
+                    this.f20528e.m20749q0(m27327d);
+                    this.f20528e.m20750p0(info.isLimitAdTrackingEnabled());
+                    this.f20528e.m20771U(6);
                 }
             }
         } catch (IOException unused) {
@@ -52,7 +55,7 @@ public final class sn2 extends no2 {
 
     @Override // com.daaw.no2, java.util.concurrent.Callable
     public final /* bridge */ /* synthetic */ Object call() {
-        b();
+        mo10148b();
         return null;
     }
 }

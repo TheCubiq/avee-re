@@ -9,65 +9,89 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /* loaded from: classes.dex */
 public final class ep7 {
-    public static final Logger b = Logger.getLogger(ep7.class.getName());
-    public static final List c;
-    public static final boolean d;
-    public static final ep7 e;
-    public static final ep7 f;
-    public static final ep7 g;
-    public static final ep7 h;
-    public static final ep7 i;
-    public static final ep7 j;
-    public static final ep7 k;
-    public final mp7 a;
+
+    /* renamed from: b */
+    public static final Logger f8655b = Logger.getLogger(ep7.class.getName());
+
+    /* renamed from: c */
+    public static final List f8656c;
+
+    /* renamed from: d */
+    public static final boolean f8657d;
+
+    /* renamed from: e */
+    public static final ep7 f8658e;
+
+    /* renamed from: f */
+    public static final ep7 f8659f;
+
+    /* renamed from: g */
+    public static final ep7 f8660g;
+
+    /* renamed from: h */
+    public static final ep7 f8661h;
+
+    /* renamed from: i */
+    public static final ep7 f8662i;
+
+    /* renamed from: j */
+    public static final ep7 f8663j;
+
+    /* renamed from: k */
+    public static final ep7 f8664k;
+
+    /* renamed from: a */
+    public final mp7 f8665a;
 
     static {
-        if (yb7.b()) {
-            c = b("GmsCore_OpenSSL", "AndroidOpenSSL", "Conscrypt");
-            d = false;
+        if (yb7.m3938b()) {
+            f8656c = m23313b("GmsCore_OpenSSL", "AndroidOpenSSL", "Conscrypt");
+            f8657d = false;
         } else {
-            c = wp7.a() ? b("GmsCore_OpenSSL", "AndroidOpenSSL") : new ArrayList();
-            d = true;
+            f8656c = wp7.m5869a() ? m23313b("GmsCore_OpenSSL", "AndroidOpenSSL") : new ArrayList();
+            f8657d = true;
         }
-        e = new ep7(new fp7());
-        f = new ep7(new jp7());
-        g = new ep7(new lp7());
-        h = new ep7(new kp7());
-        i = new ep7(new gp7());
-        j = new ep7(new ip7());
-        k = new ep7(new hp7());
+        f8658e = new ep7(new fp7());
+        f8659f = new ep7(new jp7());
+        f8660g = new ep7(new lp7());
+        f8661h = new ep7(new kp7());
+        f8662i = new ep7(new gp7());
+        f8663j = new ep7(new ip7());
+        f8664k = new ep7(new hp7());
     }
 
     public ep7(mp7 mp7Var) {
-        this.a = mp7Var;
+        this.f8665a = mp7Var;
     }
 
-    public static List b(String... strArr) {
+    /* renamed from: b */
+    public static List m23313b(String... strArr) {
         ArrayList arrayList = new ArrayList();
         for (String str : strArr) {
             Provider provider = Security.getProvider(str);
             if (provider != null) {
                 arrayList.add(provider);
             } else {
-                b.logp(Level.INFO, "com.google.crypto.tink.subtle.EngineFactory", "toProviderList", String.format("Provider %s not available", str));
+                f8655b.logp(Level.INFO, "com.google.crypto.tink.subtle.EngineFactory", "toProviderList", String.format("Provider %s not available", str));
             }
         }
         return arrayList;
     }
 
-    public final Object a(String str) {
+    /* renamed from: a */
+    public final Object m23314a(String str) {
         Exception exc = null;
-        for (Provider provider : c) {
+        for (Provider provider : f8656c) {
             try {
-                return this.a.a(str, provider);
-            } catch (Exception e2) {
+                return this.f8665a.mo15861a(str, provider);
+            } catch (Exception e) {
                 if (exc == null) {
-                    exc = e2;
+                    exc = e;
                 }
             }
         }
-        if (d) {
-            return this.a.a(str, null);
+        if (f8657d) {
+            return this.f8665a.mo15861a(str, null);
         }
         throw new GeneralSecurityException("No good Provider found.", exc);
     }

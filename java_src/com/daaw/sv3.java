@@ -9,7 +9,8 @@ public abstract class sv3 extends cp2 implements tv3 {
         super("com.google.android.gms.ads.internal.rewarded.client.IRewardItem");
     }
 
-    public static tv3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static tv3 m9801g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -18,7 +19,8 @@ public abstract class sv3 extends cp2 implements tv3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             String zzf = zzf();
             parcel2.writeNoException();

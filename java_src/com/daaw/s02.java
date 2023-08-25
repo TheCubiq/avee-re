@@ -5,16 +5,20 @@ import android.os.Parcel;
 import android.os.Parcelable;
 /* loaded from: classes2.dex */
 public final class s02 {
-    public static final ClassLoader a = s02.class.getClassLoader();
 
-    public static <T extends Parcelable> T a(Parcel parcel, Parcelable.Creator<T> creator) {
+    /* renamed from: a */
+    public static final ClassLoader f25750a = s02.class.getClassLoader();
+
+    /* renamed from: a */
+    public static <T extends Parcelable> T m10803a(Parcel parcel, Parcelable.Creator<T> creator) {
         if (parcel.readInt() == 0) {
             return null;
         }
         return creator.createFromParcel(parcel);
     }
 
-    public static void b(Parcel parcel, Parcelable parcelable) {
+    /* renamed from: b */
+    public static void m10802b(Parcel parcel, Parcelable parcelable) {
         if (parcelable == null) {
             parcel.writeInt(0);
             return;
@@ -23,7 +27,8 @@ public final class s02 {
         parcelable.writeToParcel(parcel, 0);
     }
 
-    public static void c(Parcel parcel, IInterface iInterface) {
+    /* renamed from: c */
+    public static void m10801c(Parcel parcel, IInterface iInterface) {
         parcel.writeStrongBinder(iInterface == null ? null : iInterface.asBinder());
     }
 }

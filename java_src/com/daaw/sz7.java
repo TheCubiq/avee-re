@@ -4,13 +4,16 @@ import java.util.Collections;
 import java.util.Map;
 /* loaded from: classes.dex */
 public abstract class sz7 implements wz7 {
-    public final Map a;
+
+    /* renamed from: a */
+    public final Map f26824a;
 
     public sz7(Map map) {
-        this.a = Collections.unmodifiableMap(map);
+        this.f26824a = Collections.unmodifiableMap(map);
     }
 
-    public final Map a() {
-        return this.a;
+    /* renamed from: a */
+    public final Map m9680a() {
+        return this.f26824a;
     }
 }

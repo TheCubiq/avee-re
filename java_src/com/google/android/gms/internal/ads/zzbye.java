@@ -12,24 +12,31 @@ import javax.annotation.ParametersAreNonnullByDefault;
 /* loaded from: classes.dex */
 public final class zzbye extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbye> CREATOR = new up3();
-    public final int p;
-    public final int q;
-    public final int r;
+
+    /* renamed from: p */
+    public final int f36876p;
+
+    /* renamed from: q */
+    public final int f36877q;
+
+    /* renamed from: r */
+    public final int f36878r;
 
     public zzbye(int i, int i2, int i3) {
-        this.p = i;
-        this.q = i2;
-        this.r = i3;
+        this.f36876p = i;
+        this.f36877q = i2;
+        this.f36878r = i3;
     }
 
-    public static zzbye h(VersionInfo versionInfo) {
+    /* renamed from: h */
+    public static zzbye m1099h(VersionInfo versionInfo) {
         return new zzbye(versionInfo.getMajorVersion(), versionInfo.getMinorVersion(), versionInfo.getMicroVersion());
     }
 
     public final boolean equals(Object obj) {
         if (obj != null && (obj instanceof zzbye)) {
             zzbye zzbyeVar = (zzbye) obj;
-            if (zzbyeVar.r == this.r && zzbyeVar.q == this.q && zzbyeVar.p == this.p) {
+            if (zzbyeVar.f36878r == this.f36878r && zzbyeVar.f36877q == this.f36877q && zzbyeVar.f36876p == this.f36876p) {
                 return true;
             }
         }
@@ -37,22 +44,22 @@ public final class zzbye extends AbstractSafeParcelable {
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new int[]{this.p, this.q, this.r});
+        return Arrays.hashCode(new int[]{this.f36876p, this.f36877q, this.f36878r});
     }
 
     public final String toString() {
-        int i = this.p;
-        int i2 = this.q;
-        int i3 = this.r;
+        int i = this.f36876p;
+        int i2 = this.f36877q;
+        int i3 = this.f36878r;
         return i + "." + i2 + "." + i3;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.p);
-        z71.k(parcel, 2, this.q);
-        z71.k(parcel, 3, this.r);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f36876p);
+        z71.m2723k(parcel, 2, this.f36877q);
+        z71.m2723k(parcel, 3, this.f36878r);
+        z71.m2732b(parcel, m2733a);
     }
 }

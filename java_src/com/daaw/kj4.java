@@ -1,22 +1,25 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class kj4 implements wz7 {
-    public final gj4 a;
+
+    /* renamed from: a */
+    public final gj4 f16414a;
 
     public kj4(gj4 gj4Var) {
-        this.a = gj4Var;
+        this.f16414a = gj4Var;
     }
 
-    public final xl4 a() {
-        xl4 c = this.a.c();
-        e08.b(c);
-        return c;
+    /* renamed from: a */
+    public final xl4 m17700a() {
+        xl4 m21563c = this.f16414a.m21563c();
+        e08.m23801b(m21563c);
+        return m21563c;
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        xl4 c = this.a.c();
-        e08.b(c);
-        return c;
+        xl4 m21563c = this.f16414a.m21563c();
+        e08.m23801b(m21563c);
+        return m21563c;
     }
 }

@@ -5,21 +5,28 @@ import com.google.android.gms.ads.internal.client.zzbh;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public final class nz5 {
-    public final u35 a;
-    public final az5 b;
-    public final oq4 c;
+
+    /* renamed from: a */
+    public final u35 f20865a;
+
+    /* renamed from: b */
+    public final az5 f20866b;
+
+    /* renamed from: c */
+    public final oq4 f20867c;
 
     public nz5(u35 u35Var, on6 on6Var) {
-        this.a = u35Var;
+        this.f20865a = u35Var;
         final az5 az5Var = new az5(on6Var);
-        this.b = az5Var;
-        final sj3 g = u35Var.g();
-        this.c = new oq4() { // from class: com.daaw.mz5
+        this.f20866b = az5Var;
+        final sj3 m8596g = u35Var.m8596g();
+        this.f20867c = new oq4() { // from class: com.daaw.mz5
             @Override // com.daaw.oq4
-            public final void b(zze zzeVar) {
+            /* renamed from: b */
+            public final void mo2194b(zze zzeVar) {
                 az5 az5Var2 = az5.this;
-                sj3 sj3Var = g;
-                az5Var2.b(zzeVar);
+                sj3 sj3Var = m8596g;
+                az5Var2.mo2194b(zzeVar);
                 if (sj3Var != null) {
                     try {
                         sj3Var.zzf(zzeVar);
@@ -38,23 +45,28 @@ public final class nz5 {
         };
     }
 
-    public final oq4 a() {
-        return this.c;
+    /* renamed from: a */
+    public final oq4 m14708a() {
+        return this.f20867c;
     }
 
-    public final fs4 b() {
-        return this.b;
+    /* renamed from: b */
+    public final fs4 m14707b() {
+        return this.f20866b;
     }
 
-    public final l15 c() {
-        return new l15(this.a, this.b.k());
+    /* renamed from: c */
+    public final l15 m14706c() {
+        return new l15(this.f20865a, this.f20866b.m26576k());
     }
 
-    public final az5 d() {
-        return this.b;
+    /* renamed from: d */
+    public final az5 m14705d() {
+        return this.f20866b;
     }
 
-    public final void e(zzbh zzbhVar) {
-        this.b.s(zzbhVar);
+    /* renamed from: e */
+    public final void m14704e(zzbh zzbhVar) {
+        this.f20866b.m26574s(zzbhVar);
     }
 }

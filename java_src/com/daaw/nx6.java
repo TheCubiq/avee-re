@@ -1,16 +1,19 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class nx6 extends dx6 {
-    public final /* synthetic */ px6 q;
+
+    /* renamed from: q */
+    public final /* synthetic */ px6 f20835q;
 
     public nx6(px6 px6Var) {
-        this.q = px6Var;
+        this.f20835q = px6Var;
     }
 
     @Override // com.daaw.dx6
-    public final void a() {
-        qx6.o(this.q.a);
-        this.q.a.m = null;
-        this.q.a.g = false;
+    /* renamed from: a */
+    public final void mo14744a() {
+        qx6.m11956o(this.f20835q.f23516a);
+        this.f20835q.f23516a.f24619m = null;
+        this.f20835q.f23516a.f24613g = false;
     }
 }

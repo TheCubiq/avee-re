@@ -9,23 +9,24 @@ public final class yx7 extends ls7 implements yt7 {
     private int zzi;
     private yq7 zzj;
     private byte zzk = 2;
-    private us7 zzf = ls7.w();
+    private us7 zzf = ls7.m16576w();
 
     static {
         yx7 yx7Var = new yx7();
         zzb = yx7Var;
-        ls7.C(yx7.class, yx7Var);
+        ls7.m16597C(yx7.class, yx7Var);
     }
 
     public yx7() {
-        yq7 yq7Var = yq7.q;
+        yq7 yq7Var = yq7.f33966q;
         this.zzg = yq7Var;
         this.zzh = yq7Var;
         this.zzj = yq7Var;
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -41,7 +42,7 @@ public final class yx7 extends ls7 implements yt7 {
                 }
                 return new yx7();
             }
-            return ls7.z(zzb, "\u0001\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0001\u0001ဉ\u0000\u0002Л\u0003ည\u0001\u0004ည\u0002\u0005င\u0003\u0006ည\u0004", new Object[]{"zzd", "zze", "zzf", qx7.class, "zzg", "zzh", "zzi", "zzj"});
+            return ls7.m16573z(zzb, "\u0001\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0001\u0001ဉ\u0000\u0002Л\u0003ည\u0001\u0004ည\u0002\u0005င\u0003\u0006ည\u0004", new Object[]{"zzd", "zze", "zzf", qx7.class, "zzg", "zzh", "zzi", "zzj"});
         }
         return Byte.valueOf(this.zzk);
     }

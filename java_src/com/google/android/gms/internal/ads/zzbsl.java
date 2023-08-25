@@ -10,25 +10,33 @@ import javax.annotation.ParametersAreNonnullByDefault;
 /* loaded from: classes.dex */
 public final class zzbsl extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbsl> CREATOR = new kj3();
-    public final int p;
-    public final int q;
-    public final String r;
-    public final int s;
+
+    /* renamed from: p */
+    public final int f36872p;
+
+    /* renamed from: q */
+    public final int f36873q;
+
+    /* renamed from: r */
+    public final String f36874r;
+
+    /* renamed from: s */
+    public final int f36875s;
 
     public zzbsl(int i, int i2, String str, int i3) {
-        this.p = i;
-        this.q = i2;
-        this.r = str;
-        this.s = i3;
+        this.f36872p = i;
+        this.f36873q = i2;
+        this.f36874r = str;
+        this.f36875s = i3;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.q);
-        z71.q(parcel, 2, this.r, false);
-        z71.k(parcel, 3, this.s);
-        z71.k(parcel, 1000, this.p);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f36873q);
+        z71.m2717q(parcel, 2, this.f36874r, false);
+        z71.m2723k(parcel, 3, this.f36875s);
+        z71.m2723k(parcel, 1000, this.f36872p);
+        z71.m2732b(parcel, m2733a);
     }
 }

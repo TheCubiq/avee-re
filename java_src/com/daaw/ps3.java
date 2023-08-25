@@ -10,16 +10,18 @@ public final class ps3 extends bp2 implements rs3 {
     }
 
     @Override // com.daaw.rs3
-    public final void a(String str) {
-        Parcel D = D();
-        D.writeString(str);
-        M(2, D);
+    /* renamed from: a */
+    public final void mo4546a(String str) {
+        Parcel m25952D = m25952D();
+        m25952D.writeString(str);
+        m25950M(2, m25952D);
     }
 
     @Override // com.daaw.rs3
-    public final void x0(List list) {
-        Parcel D = D();
-        D.writeTypedList(list);
-        M(1, D);
+    /* renamed from: x0 */
+    public final void mo4545x0(List list) {
+        Parcel m25952D = m25952D();
+        m25952D.writeTypedList(list);
+        m25950M(1, m25952D);
     }
 }

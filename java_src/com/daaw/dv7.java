@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface dv7 {
-    cv7 a(Class cls);
+    /* renamed from: a */
+    cv7 mo13148a(Class cls);
 }

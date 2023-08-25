@@ -3,13 +3,18 @@ package com.daaw;
 import java.io.Closeable;
 /* loaded from: classes.dex */
 public interface li1 extends Closeable {
-    void F(int i);
+    /* renamed from: F */
+    void mo16232F(int i);
 
-    void i(int i, String str);
+    /* renamed from: i */
+    void mo16231i(int i, String str);
 
-    void m(int i, double d);
+    /* renamed from: m */
+    void mo16230m(int i, double d);
 
-    void r(int i, long j);
+    /* renamed from: r */
+    void mo16229r(int i, long j);
 
-    void x(int i, byte[] bArr);
+    /* renamed from: x */
+    void mo16228x(int i, byte[] bArr);
 }

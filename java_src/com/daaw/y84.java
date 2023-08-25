@@ -9,10 +9,11 @@ public final class y84 extends bp2 implements a94 {
     }
 
     @Override // com.daaw.a94
-    public final void K0(yd0 yd0Var, x84 x84Var) {
-        Parcel D = D();
-        dp2.g(D, yd0Var);
-        dp2.g(D, x84Var);
-        M(2, D);
+    /* renamed from: K0 */
+    public final void mo4001K0(yd0 yd0Var, x84 x84Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, yd0Var);
+        dp2.m24101g(m25952D, x84Var);
+        m25950M(2, m25952D);
     }
 }

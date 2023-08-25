@@ -16,13 +16,17 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class bc3 extends RelativeLayout {
-    public static final float[] q = {5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f};
-    public AnimationDrawable p;
+
+    /* renamed from: q */
+    public static final float[] f4694q = {5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f, 5.0f};
+
+    /* renamed from: p */
+    public AnimationDrawable f4695p;
 
     public bc3(Context context, ac3 ac3Var, RelativeLayout.LayoutParams layoutParams) {
         super(context);
-        ry0.j(ac3Var);
-        ShapeDrawable shapeDrawable = new ShapeDrawable(new RoundRectShape(q, null, null));
+        ry0.m10830j(ac3Var);
+        ShapeDrawable shapeDrawable = new ShapeDrawable(new RoundRectShape(f4694q, null, null));
         shapeDrawable.getPaint().setColor(ac3Var.zzd());
         setLayoutParams(layoutParams);
         setBackground(shapeDrawable);
@@ -35,31 +39,31 @@ public final class bc3 extends RelativeLayout {
             textView.setTypeface(Typeface.DEFAULT);
             textView.setText(ac3Var.zzg());
             textView.setTextColor(ac3Var.zze());
-            textView.setTextSize(ac3Var.h3());
+            textView.setTextSize(ac3Var.m27535h3());
             zzay.zzb();
-            int D = d04.D(context, 4);
+            int m24833D = d04.m24833D(context, 4);
             zzay.zzb();
-            textView.setPadding(D, 0, d04.D(context, 4), 0);
+            textView.setPadding(m24833D, 0, d04.m24833D(context, 4), 0);
             addView(textView);
             layoutParams2.addRule(1, textView.getId());
         }
         ImageView imageView = new ImageView(context);
         imageView.setLayoutParams(layoutParams2);
         imageView.setId(1195835394);
-        List<dc3> i3 = ac3Var.i3();
-        if (i3 != null && i3.size() > 1) {
-            this.p = new AnimationDrawable();
-            for (dc3 dc3Var : i3) {
+        List<dc3> m27534i3 = ac3Var.m27534i3();
+        if (m27534i3 != null && m27534i3.size() > 1) {
+            this.f4695p = new AnimationDrawable();
+            for (dc3 dc3Var : m27534i3) {
                 try {
-                    this.p.addFrame((Drawable) nt0.M(dc3Var.zzf()), ac3Var.zzb());
+                    this.f4695p.addFrame((Drawable) nt0.m14831M(dc3Var.zzf()), ac3Var.zzb());
                 } catch (Exception e) {
                     k04.zzh("Error while getting drawable.", e);
                 }
             }
-            imageView.setBackground(this.p);
-        } else if (i3.size() == 1) {
+            imageView.setBackground(this.f4695p);
+        } else if (m27534i3.size() == 1) {
             try {
-                imageView.setImageDrawable((Drawable) nt0.M(((dc3) i3.get(0)).zzf()));
+                imageView.setImageDrawable((Drawable) nt0.m14831M(((dc3) m27534i3.get(0)).zzf()));
             } catch (Exception e2) {
                 k04.zzh("Error while getting drawable.", e2);
             }
@@ -69,7 +73,7 @@ public final class bc3 extends RelativeLayout {
 
     @Override // android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
-        AnimationDrawable animationDrawable = this.p;
+        AnimationDrawable animationDrawable = this.f4695p;
         if (animationDrawable != null) {
             animationDrawable.start();
         }

@@ -16,381 +16,484 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
-import androidx.appcompat.view.menu.e;
+import androidx.appcompat.view.menu.C0082e;
 import androidx.appcompat.widget.ActionBarContainer;
 import androidx.appcompat.widget.ActionBarContextView;
 import androidx.appcompat.widget.ActionBarOverlayLayout;
+import androidx.appcompat.widget.C0166c;
 import androidx.appcompat.widget.Toolbar;
-import com.daaw.i0;
-import com.daaw.n0;
+import com.daaw.AbstractC1643i0;
+import com.daaw.AbstractC2228n0;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
-public class mx1 extends i0 implements ActionBarOverlayLayout.d {
-    public static final Interpolator E = new AccelerateInterpolator();
-    public static final Interpolator F = new DecelerateInterpolator();
-    public boolean A;
-    public Context a;
-    public Context b;
-    public Activity c;
-    public ActionBarOverlayLayout d;
-    public ActionBarContainer e;
-    public iq f;
-    public ActionBarContextView g;
-    public View h;
-    public androidx.appcompat.widget.c i;
-    public boolean l;
-    public d m;
-    public n0 n;
-    public n0.a o;
-    public boolean p;
-    public boolean r;
-    public boolean u;
-    public boolean v;
-    public boolean w;
-    public vt1 y;
-    public boolean z;
-    public ArrayList<Object> j = new ArrayList<>();
-    public int k = -1;
-    public ArrayList<i0.b> q = new ArrayList<>();
-    public int s = 0;
-    public boolean t = true;
-    public boolean x = true;
-    public final wt1 B = new a();
-    public final wt1 C = new b();
-    public final yt1 D = new c();
+public class mx1 extends AbstractC1643i0 implements ActionBarOverlayLayout.InterfaceC0104d {
 
+    /* renamed from: E */
+    public static final Interpolator f19223E = new AccelerateInterpolator();
+
+    /* renamed from: F */
+    public static final Interpolator f19224F = new DecelerateInterpolator();
+
+    /* renamed from: A */
+    public boolean f19225A;
+
+    /* renamed from: a */
+    public Context f19229a;
+
+    /* renamed from: b */
+    public Context f19230b;
+
+    /* renamed from: c */
+    public Activity f19231c;
+
+    /* renamed from: d */
+    public ActionBarOverlayLayout f19232d;
+
+    /* renamed from: e */
+    public ActionBarContainer f19233e;
+
+    /* renamed from: f */
+    public InterfaceC1745iq f19234f;
+
+    /* renamed from: g */
+    public ActionBarContextView f19235g;
+
+    /* renamed from: h */
+    public View f19236h;
+
+    /* renamed from: i */
+    public C0166c f19237i;
+
+    /* renamed from: l */
+    public boolean f19240l;
+
+    /* renamed from: m */
+    public C2222d f19241m;
+
+    /* renamed from: n */
+    public AbstractC2228n0 f19242n;
+
+    /* renamed from: o */
+    public AbstractC2228n0.InterfaceC2229a f19243o;
+
+    /* renamed from: p */
+    public boolean f19244p;
+
+    /* renamed from: r */
+    public boolean f19246r;
+
+    /* renamed from: u */
+    public boolean f19249u;
+
+    /* renamed from: v */
+    public boolean f19250v;
+
+    /* renamed from: w */
+    public boolean f19251w;
+
+    /* renamed from: y */
+    public vt1 f19253y;
+
+    /* renamed from: z */
+    public boolean f19254z;
+
+    /* renamed from: j */
+    public ArrayList<Object> f19238j = new ArrayList<>();
+
+    /* renamed from: k */
+    public int f19239k = -1;
+
+    /* renamed from: q */
+    public ArrayList<AbstractC1643i0.InterfaceC1645b> f19245q = new ArrayList<>();
+
+    /* renamed from: s */
+    public int f19247s = 0;
+
+    /* renamed from: t */
+    public boolean f19248t = true;
+
+    /* renamed from: x */
+    public boolean f19252x = true;
+
+    /* renamed from: B */
+    public final wt1 f19226B = new C2219a();
+
+    /* renamed from: C */
+    public final wt1 f19227C = new C2220b();
+
+    /* renamed from: D */
+    public final yt1 f19228D = new C2221c();
+
+    /* renamed from: com.daaw.mx1$a */
     /* loaded from: classes.dex */
-    public class a extends xt1 {
-        public a() {
+    public class C2219a extends xt1 {
+        public C2219a() {
         }
 
         @Override // com.daaw.wt1
-        public void b(View view) {
+        /* renamed from: b */
+        public void mo5810b(View view) {
             View view2;
             mx1 mx1Var = mx1.this;
-            if (mx1Var.t && (view2 = mx1Var.h) != null) {
+            if (mx1Var.f19248t && (view2 = mx1Var.f19236h) != null) {
                 view2.setTranslationY(0.0f);
-                mx1.this.e.setTranslationY(0.0f);
+                mx1.this.f19233e.setTranslationY(0.0f);
             }
-            mx1.this.e.setVisibility(8);
-            mx1.this.e.setTransitioning(false);
+            mx1.this.f19233e.setVisibility(8);
+            mx1.this.f19233e.setTransitioning(false);
             mx1 mx1Var2 = mx1.this;
-            mx1Var2.y = null;
-            mx1Var2.C();
-            ActionBarOverlayLayout actionBarOverlayLayout = mx1.this.d;
+            mx1Var2.f19253y = null;
+            mx1Var2.m15720C();
+            ActionBarOverlayLayout actionBarOverlayLayout = mx1.this.f19232d;
             if (actionBarOverlayLayout != null) {
-                xs1.o0(actionBarOverlayLayout);
+                xs1.m4708o0(actionBarOverlayLayout);
             }
         }
     }
 
+    /* renamed from: com.daaw.mx1$b */
     /* loaded from: classes.dex */
-    public class b extends xt1 {
-        public b() {
+    public class C2220b extends xt1 {
+        public C2220b() {
         }
 
         @Override // com.daaw.wt1
-        public void b(View view) {
+        /* renamed from: b */
+        public void mo5810b(View view) {
             mx1 mx1Var = mx1.this;
-            mx1Var.y = null;
-            mx1Var.e.requestLayout();
+            mx1Var.f19253y = null;
+            mx1Var.f19233e.requestLayout();
         }
     }
 
+    /* renamed from: com.daaw.mx1$c */
     /* loaded from: classes.dex */
-    public class c implements yt1 {
-        public c() {
+    public class C2221c implements yt1 {
+        public C2221c() {
         }
 
         @Override // com.daaw.yt1
-        public void a(View view) {
-            ((View) mx1.this.e.getParent()).invalidate();
+        /* renamed from: a */
+        public void mo3232a(View view) {
+            ((View) mx1.this.f19233e.getParent()).invalidate();
         }
     }
 
+    /* renamed from: com.daaw.mx1$d */
     /* loaded from: classes.dex */
-    public class d extends n0 implements e.a {
-        public final Context r;
-        public final androidx.appcompat.view.menu.e s;
-        public n0.a t;
-        public WeakReference<View> u;
+    public class C2222d extends AbstractC2228n0 implements C0082e.InterfaceC0083a {
 
-        public d(Context context, n0.a aVar) {
-            this.r = context;
-            this.t = aVar;
-            androidx.appcompat.view.menu.e W = new androidx.appcompat.view.menu.e(context).W(1);
-            this.s = W;
-            W.V(this);
+        /* renamed from: r */
+        public final Context f19258r;
+
+        /* renamed from: s */
+        public final C0082e f19259s;
+
+        /* renamed from: t */
+        public AbstractC2228n0.InterfaceC2229a f19260t;
+
+        /* renamed from: u */
+        public WeakReference<View> f19261u;
+
+        public C2222d(Context context, AbstractC2228n0.InterfaceC2229a interfaceC2229a) {
+            this.f19258r = context;
+            this.f19260t = interfaceC2229a;
+            C0082e m30251W = new C0082e(context).m30251W(1);
+            this.f19259s = m30251W;
+            m30251W.mo30169V(this);
         }
 
-        @Override // androidx.appcompat.view.menu.e.a
-        public boolean a(androidx.appcompat.view.menu.e eVar, MenuItem menuItem) {
-            n0.a aVar = this.t;
-            if (aVar != null) {
-                return aVar.d(this, menuItem);
+        @Override // androidx.appcompat.view.menu.C0082e.InterfaceC0083a
+        /* renamed from: a */
+        public boolean mo330a(C0082e c0082e, MenuItem menuItem) {
+            AbstractC2228n0.InterfaceC2229a interfaceC2229a = this.f19260t;
+            if (interfaceC2229a != null) {
+                return interfaceC2229a.mo15628d(this, menuItem);
             }
             return false;
         }
 
-        @Override // androidx.appcompat.view.menu.e.a
-        public void b(androidx.appcompat.view.menu.e eVar) {
-            if (this.t == null) {
+        @Override // androidx.appcompat.view.menu.C0082e.InterfaceC0083a
+        /* renamed from: b */
+        public void mo329b(C0082e c0082e) {
+            if (this.f19260t == null) {
                 return;
             }
-            k();
-            mx1.this.g.l();
+            mo15640k();
+            mx1.this.f19235g.m30155l();
         }
 
-        @Override // com.daaw.n0
-        public void c() {
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: c */
+        public void mo15648c() {
             mx1 mx1Var = mx1.this;
-            if (mx1Var.m != this) {
+            if (mx1Var.f19241m != this) {
                 return;
             }
-            if (mx1.B(mx1Var.u, mx1Var.v, false)) {
-                this.t.c(this);
+            if (mx1.m15721B(mx1Var.f19249u, mx1Var.f19250v, false)) {
+                this.f19260t.mo15629c(this);
             } else {
                 mx1 mx1Var2 = mx1.this;
-                mx1Var2.n = this;
-                mx1Var2.o = this.t;
+                mx1Var2.f19242n = this;
+                mx1Var2.f19243o = this.f19260t;
             }
-            this.t = null;
-            mx1.this.A(false);
-            mx1.this.g.g();
+            this.f19260t = null;
+            mx1.this.m15722A(false);
+            mx1.this.f19235g.m30160g();
             mx1 mx1Var3 = mx1.this;
-            mx1Var3.d.setHideOnContentScrollEnabled(mx1Var3.A);
-            mx1.this.m = null;
+            mx1Var3.f19232d.setHideOnContentScrollEnabled(mx1Var3.f19225A);
+            mx1.this.f19241m = null;
         }
 
-        @Override // com.daaw.n0
-        public View d() {
-            WeakReference<View> weakReference = this.u;
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: d */
+        public View mo15647d() {
+            WeakReference<View> weakReference = this.f19261u;
             if (weakReference != null) {
                 return weakReference.get();
             }
             return null;
         }
 
-        @Override // com.daaw.n0
-        public Menu e() {
-            return this.s;
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: e */
+        public Menu mo15646e() {
+            return this.f19259s;
         }
 
-        @Override // com.daaw.n0
-        public MenuInflater f() {
-            return new gi1(this.r);
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: f */
+        public MenuInflater mo15645f() {
+            return new gi1(this.f19258r);
         }
 
-        @Override // com.daaw.n0
-        public CharSequence g() {
-            return mx1.this.g.getSubtitle();
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: g */
+        public CharSequence mo15644g() {
+            return mx1.this.f19235g.getSubtitle();
         }
 
-        @Override // com.daaw.n0
-        public CharSequence i() {
-            return mx1.this.g.getTitle();
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: i */
+        public CharSequence mo15642i() {
+            return mx1.this.f19235g.getTitle();
         }
 
-        @Override // com.daaw.n0
-        public void k() {
-            if (mx1.this.m != this) {
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: k */
+        public void mo15640k() {
+            if (mx1.this.f19241m != this) {
                 return;
             }
-            this.s.h0();
+            this.f19259s.m30234h0();
             try {
-                this.t.a(this, this.s);
+                this.f19260t.mo15631a(this, this.f19259s);
             } finally {
-                this.s.g0();
+                this.f19259s.m30235g0();
             }
         }
 
-        @Override // com.daaw.n0
-        public boolean l() {
-            return mx1.this.g.j();
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: l */
+        public boolean mo15639l() {
+            return mx1.this.f19235g.m30157j();
         }
 
-        @Override // com.daaw.n0
-        public void m(View view) {
-            mx1.this.g.setCustomView(view);
-            this.u = new WeakReference<>(view);
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: m */
+        public void mo15638m(View view) {
+            mx1.this.f19235g.setCustomView(view);
+            this.f19261u = new WeakReference<>(view);
         }
 
-        @Override // com.daaw.n0
-        public void n(int i) {
-            o(mx1.this.a.getResources().getString(i));
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: n */
+        public void mo15637n(int i) {
+            mo15636o(mx1.this.f19229a.getResources().getString(i));
         }
 
-        @Override // com.daaw.n0
-        public void o(CharSequence charSequence) {
-            mx1.this.g.setSubtitle(charSequence);
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: o */
+        public void mo15636o(CharSequence charSequence) {
+            mx1.this.f19235g.setSubtitle(charSequence);
         }
 
-        @Override // com.daaw.n0
-        public void q(int i) {
-            r(mx1.this.a.getResources().getString(i));
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: q */
+        public void mo15634q(int i) {
+            mo15633r(mx1.this.f19229a.getResources().getString(i));
         }
 
-        @Override // com.daaw.n0
-        public void r(CharSequence charSequence) {
-            mx1.this.g.setTitle(charSequence);
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: r */
+        public void mo15633r(CharSequence charSequence) {
+            mx1.this.f19235g.setTitle(charSequence);
         }
 
-        @Override // com.daaw.n0
-        public void s(boolean z) {
-            super.s(z);
-            mx1.this.g.setTitleOptional(z);
+        @Override // com.daaw.AbstractC2228n0
+        /* renamed from: s */
+        public void mo15632s(boolean z) {
+            super.mo15632s(z);
+            mx1.this.f19235g.setTitleOptional(z);
         }
 
-        public boolean t() {
-            this.s.h0();
+        /* renamed from: t */
+        public boolean m15682t() {
+            this.f19259s.m30234h0();
             try {
-                return this.t.b(this, this.s);
+                return this.f19260t.mo15630b(this, this.f19259s);
             } finally {
-                this.s.g0();
+                this.f19259s.m30235g0();
             }
         }
     }
 
     public mx1(Activity activity, boolean z) {
-        this.c = activity;
+        this.f19231c = activity;
         View decorView = activity.getWindow().getDecorView();
-        K(decorView);
+        m15712K(decorView);
         if (z) {
             return;
         }
-        this.h = decorView.findViewById(16908290);
+        this.f19236h = decorView.findViewById(16908290);
     }
 
     public mx1(Dialog dialog) {
-        K(dialog.getWindow().getDecorView());
+        m15712K(dialog.getWindow().getDecorView());
     }
 
-    public static boolean B(boolean z, boolean z2, boolean z3) {
+    /* renamed from: B */
+    public static boolean m15721B(boolean z, boolean z2, boolean z3) {
         if (z3) {
             return true;
         }
         return (z || z2) ? false : true;
     }
 
-    public void A(boolean z) {
-        ut1 q;
-        ut1 f;
+    /* renamed from: A */
+    public void m15722A(boolean z) {
+        ut1 mo19512q;
+        ut1 mo26566f;
         if (z) {
-            R();
+            m15705R();
         } else {
-            J();
+            m15713J();
         }
-        if (!Q()) {
+        if (!m15706Q()) {
             if (z) {
-                this.f.s(4);
-                this.g.setVisibility(0);
+                this.f19234f.mo19510s(4);
+                this.f19235g.setVisibility(0);
                 return;
             }
-            this.f.s(0);
-            this.g.setVisibility(8);
+            this.f19234f.mo19510s(0);
+            this.f19235g.setVisibility(8);
             return;
         }
         if (z) {
-            f = this.f.q(4, 100L);
-            q = this.g.f(0, 200L);
+            mo26566f = this.f19234f.mo19512q(4, 100L);
+            mo19512q = this.f19235g.mo26566f(0, 200L);
         } else {
-            q = this.f.q(0, 200L);
-            f = this.g.f(8, 100L);
+            mo19512q = this.f19234f.mo19512q(0, 200L);
+            mo26566f = this.f19235g.mo26566f(8, 100L);
         }
         vt1 vt1Var = new vt1();
-        vt1Var.d(f, q);
-        vt1Var.h();
+        vt1Var.m6802d(mo26566f, mo19512q);
+        vt1Var.m6798h();
     }
 
-    public void C() {
-        n0.a aVar = this.o;
-        if (aVar != null) {
-            aVar.c(this.n);
-            this.n = null;
-            this.o = null;
+    /* renamed from: C */
+    public void m15720C() {
+        AbstractC2228n0.InterfaceC2229a interfaceC2229a = this.f19243o;
+        if (interfaceC2229a != null) {
+            interfaceC2229a.mo15629c(this.f19242n);
+            this.f19242n = null;
+            this.f19243o = null;
         }
     }
 
-    public void D(boolean z) {
+    /* renamed from: D */
+    public void m15719D(boolean z) {
         View view;
         int[] iArr;
-        vt1 vt1Var = this.y;
+        vt1 vt1Var = this.f19253y;
         if (vt1Var != null) {
-            vt1Var.a();
+            vt1Var.m6805a();
         }
-        if (this.s != 0 || (!this.z && !z)) {
-            this.B.b(null);
+        if (this.f19247s != 0 || (!this.f19254z && !z)) {
+            this.f19226B.mo5810b(null);
             return;
         }
-        this.e.setAlpha(1.0f);
-        this.e.setTransitioning(true);
+        this.f19233e.setAlpha(1.0f);
+        this.f19233e.setTransitioning(true);
         vt1 vt1Var2 = new vt1();
-        float f = -this.e.getHeight();
+        float f = -this.f19233e.getHeight();
         if (z) {
-            this.e.getLocationInWindow(new int[]{0, 0});
+            this.f19233e.getLocationInWindow(new int[]{0, 0});
             f -= iArr[1];
         }
-        ut1 m = xs1.e(this.e).m(f);
-        m.k(this.D);
-        vt1Var2.c(m);
-        if (this.t && (view = this.h) != null) {
-            vt1Var2.c(xs1.e(view).m(f));
+        ut1 m7723m = xs1.m4729e(this.f19233e).m7723m(f);
+        m7723m.m7725k(this.f19228D);
+        vt1Var2.m6803c(m7723m);
+        if (this.f19248t && (view = this.f19236h) != null) {
+            vt1Var2.m6803c(xs1.m4729e(view).m7723m(f));
         }
-        vt1Var2.f(E);
-        vt1Var2.e(250L);
-        vt1Var2.g(this.B);
-        this.y = vt1Var2;
-        vt1Var2.h();
+        vt1Var2.m6800f(f19223E);
+        vt1Var2.m6801e(250L);
+        vt1Var2.m6799g(this.f19226B);
+        this.f19253y = vt1Var2;
+        vt1Var2.m6798h();
     }
 
-    public void E(boolean z) {
+    /* renamed from: E */
+    public void m15718E(boolean z) {
         View view;
         View view2;
         int[] iArr;
-        vt1 vt1Var = this.y;
+        vt1 vt1Var = this.f19253y;
         if (vt1Var != null) {
-            vt1Var.a();
+            vt1Var.m6805a();
         }
-        this.e.setVisibility(0);
-        if (this.s == 0 && (this.z || z)) {
-            this.e.setTranslationY(0.0f);
-            float f = -this.e.getHeight();
+        this.f19233e.setVisibility(0);
+        if (this.f19247s == 0 && (this.f19254z || z)) {
+            this.f19233e.setTranslationY(0.0f);
+            float f = -this.f19233e.getHeight();
             if (z) {
-                this.e.getLocationInWindow(new int[]{0, 0});
+                this.f19233e.getLocationInWindow(new int[]{0, 0});
                 f -= iArr[1];
             }
-            this.e.setTranslationY(f);
+            this.f19233e.setTranslationY(f);
             vt1 vt1Var2 = new vt1();
-            ut1 m = xs1.e(this.e).m(0.0f);
-            m.k(this.D);
-            vt1Var2.c(m);
-            if (this.t && (view2 = this.h) != null) {
+            ut1 m7723m = xs1.m4729e(this.f19233e).m7723m(0.0f);
+            m7723m.m7725k(this.f19228D);
+            vt1Var2.m6803c(m7723m);
+            if (this.f19248t && (view2 = this.f19236h) != null) {
                 view2.setTranslationY(f);
-                vt1Var2.c(xs1.e(this.h).m(0.0f));
+                vt1Var2.m6803c(xs1.m4729e(this.f19236h).m7723m(0.0f));
             }
-            vt1Var2.f(F);
-            vt1Var2.e(250L);
-            vt1Var2.g(this.C);
-            this.y = vt1Var2;
-            vt1Var2.h();
+            vt1Var2.m6800f(f19224F);
+            vt1Var2.m6801e(250L);
+            vt1Var2.m6799g(this.f19227C);
+            this.f19253y = vt1Var2;
+            vt1Var2.m6798h();
         } else {
-            this.e.setAlpha(1.0f);
-            this.e.setTranslationY(0.0f);
-            if (this.t && (view = this.h) != null) {
+            this.f19233e.setAlpha(1.0f);
+            this.f19233e.setTranslationY(0.0f);
+            if (this.f19248t && (view = this.f19236h) != null) {
                 view.setTranslationY(0.0f);
             }
-            this.C.b(null);
+            this.f19227C.mo5810b(null);
         }
-        ActionBarOverlayLayout actionBarOverlayLayout = this.d;
+        ActionBarOverlayLayout actionBarOverlayLayout = this.f19232d;
         if (actionBarOverlayLayout != null) {
-            xs1.o0(actionBarOverlayLayout);
+            xs1.m4708o0(actionBarOverlayLayout);
         }
     }
 
-    public final iq F(View view) {
-        if (view instanceof iq) {
-            return (iq) view;
+    /* renamed from: F */
+    public final InterfaceC1745iq m15717F(View view) {
+        if (view instanceof InterfaceC1745iq) {
+            return (InterfaceC1745iq) view;
         }
         if (view instanceof Toolbar) {
             return ((Toolbar) view).getWrapper();
@@ -401,309 +504,343 @@ public class mx1 extends i0 implements ActionBarOverlayLayout.d {
         throw new IllegalStateException(sb.toString());
     }
 
-    public int G() {
-        return this.e.getHeight();
+    /* renamed from: G */
+    public int m15716G() {
+        return this.f19233e.getHeight();
     }
 
-    public int H() {
-        return this.d.getActionBarHideOffset();
+    /* renamed from: H */
+    public int m15715H() {
+        return this.f19232d.getActionBarHideOffset();
     }
 
-    public int I() {
-        return this.f.p();
+    /* renamed from: I */
+    public int m15714I() {
+        return this.f19234f.mo19513p();
     }
 
-    public final void J() {
-        if (this.w) {
-            this.w = false;
-            ActionBarOverlayLayout actionBarOverlayLayout = this.d;
+    /* renamed from: J */
+    public final void m15713J() {
+        if (this.f19251w) {
+            this.f19251w = false;
+            ActionBarOverlayLayout actionBarOverlayLayout = this.f19232d;
             if (actionBarOverlayLayout != null) {
                 actionBarOverlayLayout.setShowingForActionMode(false);
             }
-            S(false);
+            m15704S(false);
         }
     }
 
-    public final void K(View view) {
+    /* renamed from: K */
+    public final void m15712K(View view) {
         ActionBarOverlayLayout actionBarOverlayLayout = (ActionBarOverlayLayout) view.findViewById(o11.decor_content_parent);
-        this.d = actionBarOverlayLayout;
+        this.f19232d = actionBarOverlayLayout;
         if (actionBarOverlayLayout != null) {
             actionBarOverlayLayout.setActionBarVisibilityCallback(this);
         }
-        this.f = F(view.findViewById(o11.action_bar));
-        this.g = (ActionBarContextView) view.findViewById(o11.action_context_bar);
+        this.f19234f = m15717F(view.findViewById(o11.action_bar));
+        this.f19235g = (ActionBarContextView) view.findViewById(o11.action_context_bar);
         ActionBarContainer actionBarContainer = (ActionBarContainer) view.findViewById(o11.action_bar_container);
-        this.e = actionBarContainer;
-        iq iqVar = this.f;
-        if (iqVar == null || this.g == null || actionBarContainer == null) {
+        this.f19233e = actionBarContainer;
+        InterfaceC1745iq interfaceC1745iq = this.f19234f;
+        if (interfaceC1745iq == null || this.f19235g == null || actionBarContainer == null) {
             throw new IllegalStateException(getClass().getSimpleName() + " can only be used with a compatible window decor layout");
         }
-        this.a = iqVar.getContext();
-        boolean z = (this.f.v() & 4) != 0;
+        this.f19229a = interfaceC1745iq.getContext();
+        boolean z = (this.f19234f.mo19507v() & 4) != 0;
         if (z) {
-            this.l = true;
+            this.f19240l = true;
         }
-        k0 b2 = k0.b(this.a);
-        P(b2.a() || z);
-        N(b2.g());
-        TypedArray obtainStyledAttributes = this.a.obtainStyledAttributes(null, x21.a, x01.actionBarStyle, 0);
-        if (obtainStyledAttributes.getBoolean(x21.k, false)) {
-            O(true);
+        C1893k0 m18112b = C1893k0.m18112b(this.f19229a);
+        m15707P(m18112b.m18113a() || z);
+        m15709N(m18112b.m18107g());
+        TypedArray obtainStyledAttributes = this.f19229a.obtainStyledAttributes(null, x21.f31882a, x01.actionBarStyle, 0);
+        if (obtainStyledAttributes.getBoolean(x21.f31932k, false)) {
+            m15708O(true);
         }
-        int dimensionPixelSize = obtainStyledAttributes.getDimensionPixelSize(x21.i, 0);
+        int dimensionPixelSize = obtainStyledAttributes.getDimensionPixelSize(x21.f31922i, 0);
         if (dimensionPixelSize != 0) {
-            M(dimensionPixelSize);
+            m15710M(dimensionPixelSize);
         }
         obtainStyledAttributes.recycle();
     }
 
-    public void L(int i, int i2) {
-        int v = this.f.v();
+    /* renamed from: L */
+    public void m15711L(int i, int i2) {
+        int mo19507v = this.f19234f.mo19507v();
         if ((i2 & 4) != 0) {
-            this.l = true;
+            this.f19240l = true;
         }
-        this.f.l((i & i2) | ((i2 ^ (-1)) & v));
+        this.f19234f.mo19517l((i & i2) | ((i2 ^ (-1)) & mo19507v));
     }
 
-    public void M(float f) {
-        xs1.z0(this.e, f);
+    /* renamed from: M */
+    public void m15710M(float f) {
+        xs1.m4686z0(this.f19233e, f);
     }
 
-    public final void N(boolean z) {
-        this.r = z;
+    /* renamed from: N */
+    public final void m15709N(boolean z) {
+        this.f19246r = z;
         if (z) {
-            this.e.setTabContainer(null);
-            this.f.i(this.i);
+            this.f19233e.setTabContainer(null);
+            this.f19234f.mo19520i(this.f19237i);
         } else {
-            this.f.i(null);
-            this.e.setTabContainer(this.i);
+            this.f19234f.mo19520i(null);
+            this.f19233e.setTabContainer(this.f19237i);
         }
         boolean z2 = true;
-        boolean z3 = I() == 2;
-        androidx.appcompat.widget.c cVar = this.i;
-        if (cVar != null) {
+        boolean z3 = m15714I() == 2;
+        C0166c c0166c = this.f19237i;
+        if (c0166c != null) {
             if (z3) {
-                cVar.setVisibility(0);
-                ActionBarOverlayLayout actionBarOverlayLayout = this.d;
+                c0166c.setVisibility(0);
+                ActionBarOverlayLayout actionBarOverlayLayout = this.f19232d;
                 if (actionBarOverlayLayout != null) {
-                    xs1.o0(actionBarOverlayLayout);
+                    xs1.m4708o0(actionBarOverlayLayout);
                 }
             } else {
-                cVar.setVisibility(8);
+                c0166c.setVisibility(8);
             }
         }
-        this.f.y(!this.r && z3);
-        this.d.setHasNonEmbeddedTabs((this.r || !z3) ? false : false);
+        this.f19234f.mo19504y(!this.f19246r && z3);
+        this.f19232d.setHasNonEmbeddedTabs((this.f19246r || !z3) ? false : false);
     }
 
-    public void O(boolean z) {
-        if (z && !this.d.w()) {
+    /* renamed from: O */
+    public void m15708O(boolean z) {
+        if (z && !this.f19232d.m30145w()) {
             throw new IllegalStateException("Action bar must be in overlay mode (Window.FEATURE_OVERLAY_ACTION_BAR) to enable hide on content scroll");
         }
-        this.A = z;
-        this.d.setHideOnContentScrollEnabled(z);
+        this.f19225A = z;
+        this.f19232d.setHideOnContentScrollEnabled(z);
     }
 
-    public void P(boolean z) {
-        this.f.u(z);
+    /* renamed from: P */
+    public void m15707P(boolean z) {
+        this.f19234f.mo19508u(z);
     }
 
-    public final boolean Q() {
-        return xs1.V(this.e);
+    /* renamed from: Q */
+    public final boolean m15706Q() {
+        return xs1.m4742V(this.f19233e);
     }
 
-    public final void R() {
-        if (this.w) {
+    /* renamed from: R */
+    public final void m15705R() {
+        if (this.f19251w) {
             return;
         }
-        this.w = true;
-        ActionBarOverlayLayout actionBarOverlayLayout = this.d;
+        this.f19251w = true;
+        ActionBarOverlayLayout actionBarOverlayLayout = this.f19232d;
         if (actionBarOverlayLayout != null) {
             actionBarOverlayLayout.setShowingForActionMode(true);
         }
-        S(false);
+        m15704S(false);
     }
 
-    public final void S(boolean z) {
-        if (B(this.u, this.v, this.w)) {
-            if (this.x) {
+    /* renamed from: S */
+    public final void m15704S(boolean z) {
+        if (m15721B(this.f19249u, this.f19250v, this.f19251w)) {
+            if (this.f19252x) {
                 return;
             }
-            this.x = true;
-            E(z);
-        } else if (this.x) {
-            this.x = false;
-            D(z);
+            this.f19252x = true;
+            m15718E(z);
+        } else if (this.f19252x) {
+            this.f19252x = false;
+            m15719D(z);
         }
     }
 
-    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.d
-    public void a() {
-        if (this.v) {
-            this.v = false;
-            S(true);
+    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.InterfaceC0104d
+    /* renamed from: a */
+    public void mo15703a() {
+        if (this.f19250v) {
+            this.f19250v = false;
+            m15704S(true);
         }
     }
 
-    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.d
-    public void b() {
+    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.InterfaceC0104d
+    /* renamed from: b */
+    public void mo15702b() {
     }
 
-    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.d
-    public void c(boolean z) {
-        this.t = z;
+    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.InterfaceC0104d
+    /* renamed from: c */
+    public void mo15701c(boolean z) {
+        this.f19248t = z;
     }
 
-    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.d
-    public void d() {
-        if (this.v) {
+    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.InterfaceC0104d
+    /* renamed from: d */
+    public void mo15700d() {
+        if (this.f19250v) {
             return;
         }
-        this.v = true;
-        S(true);
+        this.f19250v = true;
+        m15704S(true);
     }
 
-    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.d
-    public void e() {
-        vt1 vt1Var = this.y;
+    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.InterfaceC0104d
+    /* renamed from: e */
+    public void mo15699e() {
+        vt1 vt1Var = this.f19253y;
         if (vt1Var != null) {
-            vt1Var.a();
-            this.y = null;
+            vt1Var.m6805a();
+            this.f19253y = null;
         }
     }
 
-    @Override // com.daaw.i0
-    public boolean g() {
-        iq iqVar = this.f;
-        if (iqVar == null || !iqVar.k()) {
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: g */
+    public boolean mo15698g() {
+        InterfaceC1745iq interfaceC1745iq = this.f19234f;
+        if (interfaceC1745iq == null || !interfaceC1745iq.mo19518k()) {
             return false;
         }
-        this.f.collapseActionView();
+        this.f19234f.collapseActionView();
         return true;
     }
 
-    @Override // com.daaw.i0
-    public void h(boolean z) {
-        if (z == this.p) {
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: h */
+    public void mo15697h(boolean z) {
+        if (z == this.f19244p) {
             return;
         }
-        this.p = z;
-        int size = this.q.size();
+        this.f19244p = z;
+        int size = this.f19245q.size();
         for (int i = 0; i < size; i++) {
-            this.q.get(i).a(z);
+            this.f19245q.get(i).m20279a(z);
         }
     }
 
-    @Override // com.daaw.i0
-    public int i() {
-        return this.f.v();
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: i */
+    public int mo15696i() {
+        return this.f19234f.mo19507v();
     }
 
-    @Override // com.daaw.i0
-    public Context j() {
-        if (this.b == null) {
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: j */
+    public Context mo15695j() {
+        if (this.f19230b == null) {
             TypedValue typedValue = new TypedValue();
-            this.a.getTheme().resolveAttribute(x01.actionBarWidgetTheme, typedValue, true);
+            this.f19229a.getTheme().resolveAttribute(x01.actionBarWidgetTheme, typedValue, true);
             int i = typedValue.resourceId;
             if (i != 0) {
-                this.b = new ContextThemeWrapper(this.a, i);
+                this.f19230b = new ContextThemeWrapper(this.f19229a, i);
             } else {
-                this.b = this.a;
+                this.f19230b = this.f19229a;
             }
         }
-        return this.b;
+        return this.f19230b;
     }
 
-    @Override // com.daaw.i0
-    public boolean l() {
-        int G = G();
-        return this.x && (G == 0 || H() < G);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: l */
+    public boolean mo15694l() {
+        int m15716G = m15716G();
+        return this.f19252x && (m15716G == 0 || m15715H() < m15716G);
     }
 
-    @Override // com.daaw.i0
-    public void m(Configuration configuration) {
-        N(k0.b(this.a).g());
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: m */
+    public void mo15693m(Configuration configuration) {
+        m15709N(C1893k0.m18112b(this.f19229a).m18107g());
     }
 
-    @Override // com.daaw.i0
-    public boolean o(int i, KeyEvent keyEvent) {
-        Menu e;
-        d dVar = this.m;
-        if (dVar == null || (e = dVar.e()) == null) {
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: o */
+    public boolean mo15692o(int i, KeyEvent keyEvent) {
+        Menu mo15646e;
+        C2222d c2222d = this.f19241m;
+        if (c2222d == null || (mo15646e = c2222d.mo15646e()) == null) {
             return false;
         }
-        e.setQwertyMode(KeyCharacterMap.load(keyEvent != null ? keyEvent.getDeviceId() : -1).getKeyboardType() != 1);
-        return e.performShortcut(i, keyEvent, 0);
+        mo15646e.setQwertyMode(KeyCharacterMap.load(keyEvent != null ? keyEvent.getDeviceId() : -1).getKeyboardType() != 1);
+        return mo15646e.performShortcut(i, keyEvent, 0);
     }
 
-    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.d
+    @Override // androidx.appcompat.widget.ActionBarOverlayLayout.InterfaceC0104d
     public void onWindowVisibilityChanged(int i) {
-        this.s = i;
+        this.f19247s = i;
     }
 
-    @Override // com.daaw.i0
-    public void r(boolean z) {
-        if (this.l) {
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: r */
+    public void mo15691r(boolean z) {
+        if (this.f19240l) {
             return;
         }
-        s(z);
+        mo15690s(z);
     }
 
-    @Override // com.daaw.i0
-    public void s(boolean z) {
-        L(z ? 4 : 0, 4);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: s */
+    public void mo15690s(boolean z) {
+        m15711L(z ? 4 : 0, 4);
     }
 
-    @Override // com.daaw.i0
-    public void t(boolean z) {
-        L(z ? 2 : 0, 2);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: t */
+    public void mo15689t(boolean z) {
+        m15711L(z ? 2 : 0, 2);
     }
 
-    @Override // com.daaw.i0
-    public void u(boolean z) {
-        L(z ? 8 : 0, 8);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: u */
+    public void mo15688u(boolean z) {
+        m15711L(z ? 8 : 0, 8);
     }
 
-    @Override // com.daaw.i0
-    public void v(boolean z) {
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: v */
+    public void mo15687v(boolean z) {
         vt1 vt1Var;
-        this.z = z;
-        if (z || (vt1Var = this.y) == null) {
+        this.f19254z = z;
+        if (z || (vt1Var = this.f19253y) == null) {
             return;
         }
-        vt1Var.a();
+        vt1Var.m6805a();
     }
 
-    @Override // com.daaw.i0
-    public void w(CharSequence charSequence) {
-        this.f.m(charSequence);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: w */
+    public void mo15686w(CharSequence charSequence) {
+        this.f19234f.mo19516m(charSequence);
     }
 
-    @Override // com.daaw.i0
-    public void x(CharSequence charSequence) {
-        this.f.setTitle(charSequence);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: x */
+    public void mo15685x(CharSequence charSequence) {
+        this.f19234f.setTitle(charSequence);
     }
 
-    @Override // com.daaw.i0
-    public void y(CharSequence charSequence) {
-        this.f.setWindowTitle(charSequence);
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: y */
+    public void mo15684y(CharSequence charSequence) {
+        this.f19234f.setWindowTitle(charSequence);
     }
 
-    @Override // com.daaw.i0
-    public n0 z(n0.a aVar) {
-        d dVar = this.m;
-        if (dVar != null) {
-            dVar.c();
+    @Override // com.daaw.AbstractC1643i0
+    /* renamed from: z */
+    public AbstractC2228n0 mo15683z(AbstractC2228n0.InterfaceC2229a interfaceC2229a) {
+        C2222d c2222d = this.f19241m;
+        if (c2222d != null) {
+            c2222d.mo15648c();
         }
-        this.d.setHideOnContentScrollEnabled(false);
-        this.g.k();
-        d dVar2 = new d(this.g.getContext(), aVar);
-        if (dVar2.t()) {
-            this.m = dVar2;
-            dVar2.k();
-            this.g.h(dVar2);
-            A(true);
-            return dVar2;
+        this.f19232d.setHideOnContentScrollEnabled(false);
+        this.f19235g.m30156k();
+        C2222d c2222d2 = new C2222d(this.f19235g.getContext(), interfaceC2229a);
+        if (c2222d2.m15682t()) {
+            this.f19241m = c2222d2;
+            c2222d2.mo15640k();
+            this.f19235g.m30159h(c2222d2);
+            m15722A(true);
+            return c2222d2;
         }
         return null;
     }

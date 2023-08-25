@@ -4,10 +4,12 @@ import com.google.android.gms.common.annotation.KeepName;
 @KeepName
 /* loaded from: classes.dex */
 public class GooglePlayServicesManifestException extends IllegalStateException {
-    public final int p;
+
+    /* renamed from: p */
+    public final int f36580p;
 
     public GooglePlayServicesManifestException(int i, String str) {
         super(str);
-        this.p = i;
+        this.f36580p = i;
     }
 }

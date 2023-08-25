@@ -9,24 +9,24 @@ import com.google.android.gms.signin.internal.zak;
 public final class f22 implements Parcelable.Creator<zak> {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ zak createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         ConnectionResult connectionResult = null;
         zav zavVar = null;
         int i = 0;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            int l = y71.l(r);
-            if (l == 1) {
-                i = y71.t(parcel, r);
-            } else if (l == 2) {
-                connectionResult = (ConnectionResult) y71.e(parcel, r, ConnectionResult.CREATOR);
-            } else if (l != 3) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            int m4047l = y71.m4047l(m4041r);
+            if (m4047l == 1) {
+                i = y71.m4039t(parcel, m4041r);
+            } else if (m4047l == 2) {
+                connectionResult = (ConnectionResult) y71.m4054e(parcel, m4041r, ConnectionResult.CREATOR);
+            } else if (m4047l != 3) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                zavVar = (zav) y71.e(parcel, r, zav.CREATOR);
+                zavVar = (zav) y71.m4054e(parcel, m4041r, zav.CREATOR);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zak(i, connectionResult, zavVar);
     }
 

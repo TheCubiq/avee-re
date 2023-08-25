@@ -5,17 +5,20 @@ import android.os.IInterface;
 import android.os.RemoteException;
 /* loaded from: classes.dex */
 public final class yb3 {
-    public final Context a;
+
+    /* renamed from: a */
+    public final Context f33480a;
 
     public yb3(Context context) {
-        this.a = context;
+        this.f33480a = context;
     }
 
-    public final void a(ot3 ot3Var) {
+    /* renamed from: a */
+    public final void m3942a(ot3 ot3Var) {
         String valueOf;
         String str;
         try {
-            ((zb3) o04.b(this.a, "com.google.android.gms.ads.flags.FlagRetrieverSupplierProxy", new m04() { // from class: com.daaw.xb3
+            ((zb3) o04.m14656b(this.f33480a, "com.google.android.gms.ads.flags.FlagRetrieverSupplierProxy", new m04() { // from class: com.daaw.xb3
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // com.daaw.m04
                 public final Object zza(Object obj) {
@@ -25,7 +28,7 @@ public final class yb3 {
                     IInterface queryLocalInterface = obj.queryLocalInterface("com.google.android.gms.ads.internal.flags.IFlagRetrieverSupplierProxy");
                     return queryLocalInterface instanceof zb3 ? (zb3) queryLocalInterface : new zb3(obj);
                 }
-            })).h3(ot3Var);
+            })).m2549h3(ot3Var);
         } catch (RemoteException e) {
             valueOf = String.valueOf(e.getMessage());
             str = "Error calling setFlagsAccessedBeforeInitializedListener: ";

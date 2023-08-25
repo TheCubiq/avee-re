@@ -3,41 +3,50 @@ package com.daaw;
 import android.content.Context;
 import android.os.RemoteException;
 import com.daaw.ei3;
-import com.google.android.gms.ads.h5.OnH5AdsEventListener;
 import com.google.android.gms.ads.internal.client.zzaw;
 import com.google.android.gms.ads.internal.client.zzce;
+import com.google.android.gms.ads.p003h5.OnH5AdsEventListener;
 /* loaded from: classes.dex */
 public final class xc2 extends ku2 {
-    public final /* synthetic */ Context b;
-    public final /* synthetic */ an3 c;
-    public final /* synthetic */ OnH5AdsEventListener d;
+
+    /* renamed from: b */
+    public final /* synthetic */ Context f32356b;
+
+    /* renamed from: c */
+    public final /* synthetic */ an3 f32357c;
+
+    /* renamed from: d */
+    public final /* synthetic */ OnH5AdsEventListener f32358d;
 
     public xc2(zzaw zzawVar, Context context, an3 an3Var, OnH5AdsEventListener onH5AdsEventListener) {
-        this.b = context;
-        this.c = an3Var;
-        this.d = onH5AdsEventListener;
+        this.f32356b = context;
+        this.f32357c = an3Var;
+        this.f32358d = onH5AdsEventListener;
     }
 
     @Override // com.daaw.ku2
-    public final /* synthetic */ Object a() {
+    /* renamed from: a */
+    public final /* synthetic */ Object mo3435a() {
         return new ji3();
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object b(zzce zzceVar) {
-        return zzceVar.zzk(nt0.g3(this.b), this.c, 224400000, new th3(this.d));
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ Object mo3434b(zzce zzceVar) {
+        return zzceVar.zzk(nt0.m14830g3(this.f32356b), this.f32357c, 224400000, new th3(this.f32358d));
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object c() {
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo3433c() {
         try {
-            return ((fi3) o04.b(this.b, "com.google.android.gms.ads.DynamiteH5AdsManagerCreatorImpl", new m04() { // from class: com.google.android.gms.ads.internal.client.zzah
+            return ((fi3) o04.m14656b(this.f32356b, "com.google.android.gms.ads.DynamiteH5AdsManagerCreatorImpl", new m04() { // from class: com.google.android.gms.ads.internal.client.zzah
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // com.daaw.m04
                 public final Object zza(Object obj) {
-                    return ei3.g3(obj);
+                    return ei3.m23465g3(obj);
                 }
-            })).O2(nt0.g3(this.b), this.c, 224400000, new th3(this.d));
+            })).mo22624O2(nt0.m14830g3(this.f32356b), this.f32357c, 224400000, new th3(this.f32358d));
         } catch (RemoteException | n04 | NullPointerException unused) {
             return null;
         }

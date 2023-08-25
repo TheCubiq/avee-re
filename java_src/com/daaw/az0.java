@@ -3,29 +3,35 @@ package com.daaw;
 import android.content.Context;
 /* loaded from: classes.dex */
 public final class az0 {
-    public final boolean a() {
-        return b().K(c(), "pref_alwaysHideAppLogo", false);
+    /* renamed from: a */
+    public final boolean m26593a() {
+        return m26592b().m18952K(m26591c(), "pref_alwaysHideAppLogo", false);
     }
 
-    public final j5 b() {
-        j5 e = j5.e();
-        ug0.e(e, "createOrGetInstance()");
-        return e;
+    /* renamed from: b */
+    public final SharedPreferences$OnSharedPreferenceChangeListenerC1788j5 m26592b() {
+        SharedPreferences$OnSharedPreferenceChangeListenerC1788j5 m18928e = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e();
+        ug0.m8269e(m18928e, "createOrGetInstance()");
+        return m18928e;
     }
 
-    public final Context c() {
-        return dx0.e();
+    /* renamed from: c */
+    public final Context m26591c() {
+        return dx0.m23837e();
     }
 
-    public final boolean d() {
-        return b().K(c(), "pref_disableHeaderAds", true);
+    /* renamed from: d */
+    public final boolean m26590d() {
+        return m26592b().m18952K(m26591c(), "pref_disableHeaderAds", true);
     }
 
-    public final boolean e() {
-        return b().K(c(), "pref_showLegacyPremiumInfo", true);
+    /* renamed from: e */
+    public final boolean m26589e() {
+        return m26592b().m18952K(m26591c(), "pref_showLegacyPremiumInfo", true);
     }
 
-    public final void f(boolean z) {
-        b().Q(c(), "pref_showLegacyPremiumInfo", z);
+    /* renamed from: f */
+    public final void m26588f(boolean z) {
+        m26592b().m18946Q(m26591c(), "pref_showLegacyPremiumInfo", z);
     }
 }

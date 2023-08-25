@@ -3,112 +3,130 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class uv7 {
-    public static final uv7 f = new uv7(0, new int[0], new Object[0], false);
-    public int a;
-    public int[] b;
-    public Object[] c;
-    public int d;
-    public boolean e;
+
+    /* renamed from: f */
+    public static final uv7 f29574f = new uv7(0, new int[0], new Object[0], false);
+
+    /* renamed from: a */
+    public int f29575a;
+
+    /* renamed from: b */
+    public int[] f29576b;
+
+    /* renamed from: c */
+    public Object[] f29577c;
+
+    /* renamed from: d */
+    public int f29578d;
+
+    /* renamed from: e */
+    public boolean f29579e;
 
     public uv7() {
         this(0, new int[8], new Object[8], true);
     }
 
     public uv7(int i, int[] iArr, Object[] objArr, boolean z) {
-        this.d = -1;
-        this.a = i;
-        this.b = iArr;
-        this.c = objArr;
-        this.e = z;
+        this.f29578d = -1;
+        this.f29575a = i;
+        this.f29576b = iArr;
+        this.f29577c = objArr;
+        this.f29579e = z;
     }
 
-    public static uv7 c() {
-        return f;
+    /* renamed from: c */
+    public static uv7 m7679c() {
+        return f29574f;
     }
 
-    public static uv7 e(uv7 uv7Var, uv7 uv7Var2) {
-        int i = uv7Var.a + uv7Var2.a;
-        int[] copyOf = Arrays.copyOf(uv7Var.b, i);
-        System.arraycopy(uv7Var2.b, 0, copyOf, uv7Var.a, uv7Var2.a);
-        Object[] copyOf2 = Arrays.copyOf(uv7Var.c, i);
-        System.arraycopy(uv7Var2.c, 0, copyOf2, uv7Var.a, uv7Var2.a);
+    /* renamed from: e */
+    public static uv7 m7677e(uv7 uv7Var, uv7 uv7Var2) {
+        int i = uv7Var.f29575a + uv7Var2.f29575a;
+        int[] copyOf = Arrays.copyOf(uv7Var.f29576b, i);
+        System.arraycopy(uv7Var2.f29576b, 0, copyOf, uv7Var.f29575a, uv7Var2.f29575a);
+        Object[] copyOf2 = Arrays.copyOf(uv7Var.f29577c, i);
+        System.arraycopy(uv7Var2.f29577c, 0, copyOf2, uv7Var.f29575a, uv7Var2.f29575a);
         return new uv7(i, copyOf, copyOf2, true);
     }
 
-    public static uv7 f() {
+    /* renamed from: f */
+    public static uv7 m7676f() {
         return new uv7(0, new int[8], new Object[8], true);
     }
 
-    public final int a() {
-        int f2;
-        int g;
+    /* renamed from: a */
+    public final int m7681a() {
+        int m12256f;
+        int m12255g;
         int i;
-        int i2 = this.d;
+        int i2 = this.f29578d;
         if (i2 == -1) {
             int i3 = 0;
-            for (int i4 = 0; i4 < this.a; i4++) {
-                int i5 = this.b[i4];
+            for (int i4 = 0; i4 < this.f29575a; i4++) {
+                int i5 = this.f29576b[i4];
                 int i6 = i5 >>> 3;
                 int i7 = i5 & 7;
                 if (i7 != 0) {
                     if (i7 == 1) {
-                        ((Long) this.c[i4]).longValue();
-                        i = qr7.f(i6 << 3) + 8;
+                        ((Long) this.f29577c[i4]).longValue();
+                        i = qr7.m12256f(i6 << 3) + 8;
                     } else if (i7 == 2) {
-                        int f3 = qr7.f(i6 << 3);
-                        int o = ((yq7) this.c[i4]).o();
-                        i3 += f3 + qr7.f(o) + o;
+                        int m12256f2 = qr7.m12256f(i6 << 3);
+                        int mo3411o = ((yq7) this.f29577c[i4]).mo3411o();
+                        i3 += m12256f2 + qr7.m12256f(mo3411o) + mo3411o;
                     } else if (i7 == 3) {
-                        int e = qr7.e(i6);
-                        f2 = e + e;
-                        g = ((uv7) this.c[i4]).a();
+                        int m12257e = qr7.m12257e(i6);
+                        m12256f = m12257e + m12257e;
+                        m12255g = ((uv7) this.f29577c[i4]).m7681a();
                     } else if (i7 != 5) {
-                        throw new IllegalStateException(xs7.a());
+                        throw new IllegalStateException(xs7.m4543a());
                     } else {
-                        ((Integer) this.c[i4]).intValue();
-                        i = qr7.f(i6 << 3) + 4;
+                        ((Integer) this.f29577c[i4]).intValue();
+                        i = qr7.m12256f(i6 << 3) + 4;
                     }
                     i3 += i;
                 } else {
-                    long longValue = ((Long) this.c[i4]).longValue();
-                    f2 = qr7.f(i6 << 3);
-                    g = qr7.g(longValue);
+                    long longValue = ((Long) this.f29577c[i4]).longValue();
+                    m12256f = qr7.m12256f(i6 << 3);
+                    m12255g = qr7.m12255g(longValue);
                 }
-                i = f2 + g;
+                i = m12256f + m12255g;
                 i3 += i;
             }
-            this.d = i3;
+            this.f29578d = i3;
             return i3;
         }
         return i2;
     }
 
-    public final int b() {
-        int i = this.d;
+    /* renamed from: b */
+    public final int m7680b() {
+        int i = this.f29578d;
         if (i == -1) {
             int i2 = 0;
-            for (int i3 = 0; i3 < this.a; i3++) {
-                int i4 = this.b[i3];
-                int f2 = qr7.f(8);
-                int o = ((yq7) this.c[i3]).o();
-                i2 += f2 + f2 + qr7.f(16) + qr7.f(i4 >>> 3) + qr7.f(24) + qr7.f(o) + o;
+            for (int i3 = 0; i3 < this.f29575a; i3++) {
+                int i4 = this.f29576b[i3];
+                int m12256f = qr7.m12256f(8);
+                int mo3411o = ((yq7) this.f29577c[i3]).mo3411o();
+                i2 += m12256f + m12256f + qr7.m12256f(16) + qr7.m12256f(i4 >>> 3) + qr7.m12256f(24) + qr7.m12256f(mo3411o) + mo3411o;
             }
-            this.d = i2;
+            this.f29578d = i2;
             return i2;
         }
         return i;
     }
 
-    public final uv7 d(uv7 uv7Var) {
-        if (uv7Var.equals(f)) {
+    /* renamed from: d */
+    public final uv7 m7678d(uv7 uv7Var) {
+        if (uv7Var.equals(f29574f)) {
             return this;
         }
-        g();
-        int i = this.a + uv7Var.a;
-        l(i);
-        System.arraycopy(uv7Var.b, 0, this.b, this.a, uv7Var.a);
-        System.arraycopy(uv7Var.c, 0, this.c, this.a, uv7Var.a);
-        this.a = i;
+        m7675g();
+        int i = this.f29575a + uv7Var.f29575a;
+        m7670l(i);
+        System.arraycopy(uv7Var.f29576b, 0, this.f29576b, this.f29575a, uv7Var.f29575a);
+        System.arraycopy(uv7Var.f29577c, 0, this.f29577c, this.f29575a, uv7Var.f29575a);
+        this.f29575a = i;
         return this;
     }
 
@@ -118,16 +136,16 @@ public final class uv7 {
         }
         if (obj != null && (obj instanceof uv7)) {
             uv7 uv7Var = (uv7) obj;
-            int i = this.a;
-            if (i == uv7Var.a) {
-                int[] iArr = this.b;
-                int[] iArr2 = uv7Var.b;
+            int i = this.f29575a;
+            if (i == uv7Var.f29575a) {
+                int[] iArr = this.f29576b;
+                int[] iArr2 = uv7Var.f29576b;
                 int i2 = 0;
                 while (true) {
                     if (i2 >= i) {
-                        Object[] objArr = this.c;
-                        Object[] objArr2 = uv7Var.c;
-                        int i3 = this.a;
+                        Object[] objArr = this.f29577c;
+                        Object[] objArr2 = uv7Var.f29577c;
+                        int i3 = this.f29575a;
                         for (int i4 = 0; i4 < i3; i4++) {
                             if (objArr[i4].equals(objArr2[i4])) {
                             }
@@ -145,80 +163,86 @@ public final class uv7 {
         return false;
     }
 
-    public final void g() {
-        if (!this.e) {
+    /* renamed from: g */
+    public final void m7675g() {
+        if (!this.f29579e) {
             throw new UnsupportedOperationException();
         }
     }
 
-    public final void h() {
-        this.e = false;
+    /* renamed from: h */
+    public final void m7674h() {
+        this.f29579e = false;
     }
 
     public final int hashCode() {
-        int i = this.a;
+        int i = this.f29575a;
         int i2 = (i + 527) * 31;
-        int[] iArr = this.b;
+        int[] iArr = this.f29576b;
         int i3 = 17;
         int i4 = 17;
         for (int i5 = 0; i5 < i; i5++) {
             i4 = (i4 * 31) + iArr[i5];
         }
         int i6 = (i2 + i4) * 31;
-        Object[] objArr = this.c;
-        int i7 = this.a;
+        Object[] objArr = this.f29577c;
+        int i7 = this.f29575a;
         for (int i8 = 0; i8 < i7; i8++) {
             i3 = (i3 * 31) + objArr[i8].hashCode();
         }
         return i6 + i3;
     }
 
-    public final void i(StringBuilder sb, int i) {
-        for (int i2 = 0; i2 < this.a; i2++) {
-            zt7.b(sb, i, String.valueOf(this.b[i2] >>> 3), this.c[i2]);
+    /* renamed from: i */
+    public final void m7673i(StringBuilder sb, int i) {
+        for (int i2 = 0; i2 < this.f29575a; i2++) {
+            zt7.m1897b(sb, i, String.valueOf(this.f29576b[i2] >>> 3), this.f29577c[i2]);
         }
     }
 
-    public final void j(int i, Object obj) {
-        g();
-        l(this.a + 1);
-        int[] iArr = this.b;
-        int i2 = this.a;
+    /* renamed from: j */
+    public final void m7672j(int i, Object obj) {
+        m7675g();
+        m7670l(this.f29575a + 1);
+        int[] iArr = this.f29576b;
+        int i2 = this.f29575a;
         iArr[i2] = i;
-        this.c[i2] = obj;
-        this.a = i2 + 1;
+        this.f29577c[i2] = obj;
+        this.f29575a = i2 + 1;
     }
 
-    public final void k(rr7 rr7Var) {
-        if (this.a != 0) {
-            for (int i = 0; i < this.a; i++) {
-                int i2 = this.b[i];
-                Object obj = this.c[i];
+    /* renamed from: k */
+    public final void m7671k(rr7 rr7Var) {
+        if (this.f29575a != 0) {
+            for (int i = 0; i < this.f29575a; i++) {
+                int i2 = this.f29576b[i];
+                Object obj = this.f29577c[i];
                 int i3 = i2 >>> 3;
                 int i4 = i2 & 7;
                 if (i4 == 0) {
-                    rr7Var.E(i3, ((Long) obj).longValue());
+                    rr7Var.m11041E(i3, ((Long) obj).longValue());
                 } else if (i4 == 1) {
-                    rr7Var.x(i3, ((Long) obj).longValue());
+                    rr7Var.m11011x(i3, ((Long) obj).longValue());
                 } else if (i4 == 2) {
-                    rr7Var.o(i3, (yq7) obj);
+                    rr7Var.m11020o(i3, (yq7) obj);
                 } else if (i4 == 3) {
-                    rr7Var.e(i3);
-                    ((uv7) obj).k(rr7Var);
-                    rr7Var.s(i3);
+                    rr7Var.m11030e(i3);
+                    ((uv7) obj).m7671k(rr7Var);
+                    rr7Var.m11016s(i3);
                 } else if (i4 != 5) {
-                    throw new RuntimeException(xs7.a());
+                    throw new RuntimeException(xs7.m4543a());
                 } else {
-                    rr7Var.v(i3, ((Integer) obj).intValue());
+                    rr7Var.m11013v(i3, ((Integer) obj).intValue());
                 }
             }
         }
     }
 
-    public final void l(int i) {
-        int[] iArr = this.b;
+    /* renamed from: l */
+    public final void m7670l(int i) {
+        int[] iArr = this.f29576b;
         if (i > iArr.length) {
-            int i2 = this.a;
+            int i2 = this.f29575a;
             int i3 = i2 + (i2 / 2);
             if (i3 >= i) {
                 i = i3;
@@ -226,8 +250,8 @@ public final class uv7 {
             if (i < 8) {
                 i = 8;
             }
-            this.b = Arrays.copyOf(iArr, i);
-            this.c = Arrays.copyOf(this.c, i);
+            this.f29576b = Arrays.copyOf(iArr, i);
+            this.f29577c = Arrays.copyOf(this.f29577c, i);
         }
     }
 }

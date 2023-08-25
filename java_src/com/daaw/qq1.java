@@ -1,12 +1,15 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class qq1 {
-    public static qq1 a;
 
-    public static qq1 a() {
-        if (a == null) {
-            a = new rq1();
+    /* renamed from: a */
+    public static qq1 f24259a;
+
+    /* renamed from: a */
+    public static qq1 m12284a() {
+        if (f24259a == null) {
+            f24259a = new rq1();
         }
-        return a;
+        return f24259a;
     }
 }

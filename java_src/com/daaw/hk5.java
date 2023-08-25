@@ -1,31 +1,43 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class hk5 {
-    public final int a;
-    public final boolean b;
-    public final boolean c;
-    public final /* synthetic */ om5 d;
+
+    /* renamed from: a */
+    public final int f12630a;
+
+    /* renamed from: b */
+    public final boolean f12631b;
+
+    /* renamed from: c */
+    public final boolean f12632c;
+
+    /* renamed from: d */
+    public final /* synthetic */ om5 f12633d;
 
     public hk5(om5 om5Var, int i, boolean z, boolean z2) {
-        this.d = om5Var;
-        this.a = i;
-        this.b = z;
-        this.c = z2;
+        this.f12633d = om5Var;
+        this.f12630a = i;
+        this.f12631b = z;
+        this.f12632c = z2;
     }
 
-    public final void a(String str) {
-        this.d.F(this.a, this.b, this.c, str, null, null, null);
+    /* renamed from: a */
+    public final void m20653a(String str) {
+        this.f12633d.m14165F(this.f12630a, this.f12631b, this.f12632c, str, null, null, null);
     }
 
-    public final void b(String str, Object obj) {
-        this.d.F(this.a, this.b, this.c, str, obj, null, null);
+    /* renamed from: b */
+    public final void m20652b(String str, Object obj) {
+        this.f12633d.m14165F(this.f12630a, this.f12631b, this.f12632c, str, obj, null, null);
     }
 
-    public final void c(String str, Object obj, Object obj2) {
-        this.d.F(this.a, this.b, this.c, str, obj, obj2, null);
+    /* renamed from: c */
+    public final void m20651c(String str, Object obj, Object obj2) {
+        this.f12633d.m14165F(this.f12630a, this.f12631b, this.f12632c, str, obj, obj2, null);
     }
 
-    public final void d(String str, Object obj, Object obj2, Object obj3) {
-        this.d.F(this.a, this.b, this.c, str, obj, obj2, obj3);
+    /* renamed from: d */
+    public final void m20650d(String str, Object obj, Object obj2, Object obj3) {
+        this.f12633d.m14165F(this.f12630a, this.f12631b, this.f12632c, str, obj, obj2, obj3);
     }
 }

@@ -5,90 +5,115 @@ import java.util.Timer;
 import java.util.TimerTask;
 /* loaded from: classes.dex */
 public class td1 {
-    public static sw1<Boolean, Integer, Boolean> f = new sw1<>();
-    public static pw1 g = new pw1();
-    public static final Object h = new Object();
-    public static td1 i = null;
-    public boolean a = false;
-    public int b = 0;
-    public Date c = new Date();
-    public boolean d = false;
-    public Timer e = null;
 
+    /* renamed from: f */
+    public static sw1<Boolean, Integer, Boolean> f27493f = new sw1<>();
+
+    /* renamed from: g */
+    public static pw1 f27494g = new pw1();
+
+    /* renamed from: h */
+    public static final Object f27495h = new Object();
+
+    /* renamed from: i */
+    public static td1 f27496i = null;
+
+    /* renamed from: a */
+    public boolean f27497a = false;
+
+    /* renamed from: b */
+    public int f27498b = 0;
+
+    /* renamed from: c */
+    public Date f27499c = new Date();
+
+    /* renamed from: d */
+    public boolean f27500d = false;
+
+    /* renamed from: e */
+    public Timer f27501e = null;
+
+    /* renamed from: com.daaw.td1$a */
     /* loaded from: classes.dex */
-    public class a extends TimerTask {
-        public a() {
+    public class C3058a extends TimerTask {
+        public C3058a() {
         }
 
         @Override // java.util.TimerTask, java.lang.Runnable
         public void run() {
-            td1.this.d();
+            td1.this.m9288d();
         }
     }
 
     public td1() {
-        f.a(Boolean.valueOf(this.a), Integer.valueOf(this.b), Boolean.valueOf(this.d));
+        f27493f.m9795a(Boolean.valueOf(this.f27497a), Integer.valueOf(this.f27498b), Boolean.valueOf(this.f27500d));
     }
 
-    public static td1 c() {
+    /* renamed from: c */
+    public static td1 m9289c() {
         td1 td1Var;
-        td1 td1Var2 = i;
+        td1 td1Var2 = f27496i;
         if (td1Var2 != null) {
             return td1Var2;
         }
-        synchronized (h) {
-            if (i == null) {
-                i = new td1();
+        synchronized (f27495h) {
+            if (f27496i == null) {
+                f27496i = new td1();
             }
-            td1Var = i;
+            td1Var = f27496i;
         }
         return td1Var;
     }
 
-    public void b(boolean z, int i2, Date date, boolean z2) {
-        if (i2 < 0) {
+    /* renamed from: b */
+    public void m9290b(boolean z, int i, Date date, boolean z2) {
+        if (i < 0) {
             z = false;
         }
-        this.a = z;
-        this.b = i2;
-        this.c = date;
-        this.d = z2;
+        this.f27497a = z;
+        this.f27498b = i;
+        this.f27499c = date;
+        this.f27500d = z2;
         if (z) {
-            Timer timer = this.e;
+            Timer timer = this.f27501e;
             if (timer != null) {
                 timer.cancel();
             }
             Timer timer2 = new Timer();
-            this.e = timer2;
-            timer2.schedule(new a(), date);
+            this.f27501e = timer2;
+            timer2.schedule(new C3058a(), date);
         } else {
-            Timer timer3 = this.e;
+            Timer timer3 = this.f27501e;
             if (timer3 != null) {
                 timer3.cancel();
             }
-            this.e = null;
+            this.f27501e = null;
         }
-        f.a(Boolean.valueOf(z), Integer.valueOf(i2), Boolean.valueOf(z2));
+        f27493f.m9795a(Boolean.valueOf(z), Integer.valueOf(i), Boolean.valueOf(z2));
     }
 
-    public final void d() {
-        b(false, this.b, this.c, this.d);
-        g.a();
+    /* renamed from: d */
+    public final void m9288d() {
+        m9290b(false, this.f27498b, this.f27499c, this.f27500d);
+        f27494g.m12990a();
     }
 
-    public ud1 e() {
+    /* renamed from: e */
+    public ud1 m9287e() {
         ud1 ud1Var = new ud1();
-        ud1Var.a = this.a;
-        ud1Var.b = this.b;
-        ud1Var.c = this.d;
+        ud1Var.f28893a = this.f27497a;
+        ud1Var.f28894b = this.f27498b;
+        ud1Var.f28895c = this.f27500d;
         return ud1Var;
     }
 
-    public int f() {
-        return ((int) (this.c.getTime() - new Date().getTime())) / 1000;
+    /* renamed from: f */
+    public int m9286f() {
+        return ((int) (this.f27499c.getTime() - new Date().getTime())) / 1000;
     }
 
-    public Date g() {
-        return this.c;
+    /* renamed from: g */
+    public Date m9285g() {
+        return this.f27499c;
     }
 }

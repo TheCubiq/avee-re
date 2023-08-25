@@ -3,18 +3,23 @@ package com.daaw;
 import android.view.View;
 /* loaded from: classes.dex */
 public abstract class tp6 {
-    public static tp6 a(up6 up6Var, vp6 vp6Var) {
-        if (rp6.b()) {
+    /* renamed from: a */
+    public static tp6 m8889a(up6 up6Var, vp6 vp6Var) {
+        if (rp6.m11081b()) {
             return new xp6(up6Var, vp6Var);
         }
         throw new IllegalStateException("Method called before OM SDK activation");
     }
 
-    public abstract void b(View view, zp6 zp6Var, String str);
+    /* renamed from: b */
+    public abstract void mo4836b(View view, zp6 zp6Var, String str);
 
-    public abstract void c();
+    /* renamed from: c */
+    public abstract void mo4835c();
 
-    public abstract void d(View view);
+    /* renamed from: d */
+    public abstract void mo4834d(View view);
 
-    public abstract void e();
+    /* renamed from: e */
+    public abstract void mo4833e();
 }

@@ -9,19 +9,37 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Checkable;
 import android.widget.FrameLayout;
 /* loaded from: classes2.dex */
-public class hn0 extends ae implements Checkable, jc1 {
-    public static final int[] B = {16842911};
-    public static final int[] C = {16842912};
-    public static final int[] D = {w01.state_dragged};
-    public static final int E = k21.Widget_MaterialComponents_CardView;
-    public a A;
-    public boolean x;
-    public boolean y;
-    public boolean z;
+public class hn0 extends C0616ae implements Checkable, jc1 {
 
+    /* renamed from: B */
+    public static final int[] f12682B = {16842911};
+
+    /* renamed from: C */
+    public static final int[] f12683C = {16842912};
+
+    /* renamed from: D */
+    public static final int[] f12684D = {w01.state_dragged};
+
+    /* renamed from: E */
+    public static final int f12685E = k21.Widget_MaterialComponents_CardView;
+
+    /* renamed from: A */
+    public InterfaceC1592a f12686A;
+
+    /* renamed from: x */
+    public boolean f12687x;
+
+    /* renamed from: y */
+    public boolean f12688y;
+
+    /* renamed from: z */
+    public boolean f12689z;
+
+    /* renamed from: com.daaw.hn0$a */
     /* loaded from: classes2.dex */
-    public interface a {
-        void a(hn0 hn0Var, boolean z);
+    public interface InterfaceC1592a {
+        /* renamed from: a */
+        void m20614a(hn0 hn0Var, boolean z);
     }
 
     private RectF getBoundsAsRectF() {
@@ -29,21 +47,24 @@ public class hn0 extends ae implements Checkable, jc1 {
         throw null;
     }
 
-    public final void d() {
+    /* renamed from: d */
+    public final void m20617d() {
         if (Build.VERSION.SDK_INT > 26) {
             throw null;
         }
     }
 
-    public boolean e() {
+    /* renamed from: e */
+    public boolean m20616e() {
         return false;
     }
 
-    public boolean f() {
-        return this.z;
+    /* renamed from: f */
+    public boolean m20615f() {
+        return this.f12689z;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public ColorStateList getCardBackgroundColor() {
         throw null;
     }
@@ -72,22 +93,22 @@ public class hn0 extends ae implements Checkable, jc1 {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public int getContentPaddingBottom() {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public int getContentPaddingLeft() {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public int getContentPaddingRight() {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public int getContentPaddingTop() {
         throw null;
     }
@@ -96,7 +117,7 @@ public class hn0 extends ae implements Checkable, jc1 {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public float getRadius() {
         throw null;
     }
@@ -124,7 +145,7 @@ public class hn0 extends ae implements Checkable, jc1 {
 
     @Override // android.widget.Checkable
     public boolean isChecked() {
-        return this.y;
+        return this.f12688y;
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -136,14 +157,14 @@ public class hn0 extends ae implements Checkable, jc1 {
     @Override // android.view.ViewGroup, android.view.View
     public int[] onCreateDrawableState(int i) {
         int[] onCreateDrawableState = super.onCreateDrawableState(i + 3);
-        if (e()) {
-            FrameLayout.mergeDrawableStates(onCreateDrawableState, B);
+        if (m20616e()) {
+            FrameLayout.mergeDrawableStates(onCreateDrawableState, f12682B);
         }
         if (isChecked()) {
-            FrameLayout.mergeDrawableStates(onCreateDrawableState, C);
+            FrameLayout.mergeDrawableStates(onCreateDrawableState, f12683C);
         }
-        if (f()) {
-            FrameLayout.mergeDrawableStates(onCreateDrawableState, D);
+        if (m20615f()) {
+            FrameLayout.mergeDrawableStates(onCreateDrawableState, f12684D);
         }
         return onCreateDrawableState;
     }
@@ -159,12 +180,12 @@ public class hn0 extends ae implements Checkable, jc1 {
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
         accessibilityNodeInfo.setClassName("androidx.cardview.widget.CardView");
-        accessibilityNodeInfo.setCheckable(e());
+        accessibilityNodeInfo.setCheckable(m20616e());
         accessibilityNodeInfo.setClickable(isClickable());
         accessibilityNodeInfo.setChecked(isChecked());
     }
 
-    @Override // com.daaw.ae, android.widget.FrameLayout, android.view.View
+    @Override // com.daaw.C0616ae, android.widget.FrameLayout, android.view.View
     public void onMeasure(int i, int i2) {
         super.onMeasure(i, i2);
         getMeasuredWidth();
@@ -179,7 +200,7 @@ public class hn0 extends ae implements Checkable, jc1 {
 
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
-        if (this.x) {
+        if (this.f12687x) {
             throw null;
         }
     }
@@ -188,18 +209,18 @@ public class hn0 extends ae implements Checkable, jc1 {
         super.setBackgroundDrawable(drawable);
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setCardBackgroundColor(int i) {
         ColorStateList.valueOf(i);
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setCardBackgroundColor(ColorStateList colorStateList) {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setCardElevation(float f) {
         super.setCardElevation(f);
         throw null;
@@ -215,7 +236,7 @@ public class hn0 extends ae implements Checkable, jc1 {
 
     @Override // android.widget.Checkable
     public void setChecked(boolean z) {
-        if (this.y != z) {
+        if (this.f12688y != z) {
             toggle();
         }
     }
@@ -237,7 +258,7 @@ public class hn0 extends ae implements Checkable, jc1 {
     }
 
     public void setCheckedIconResource(int i) {
-        r4.b(getContext(), i);
+        C2818r4.m11783b(getContext(), i);
         throw null;
     }
 
@@ -263,25 +284,25 @@ public class hn0 extends ae implements Checkable, jc1 {
     }
 
     public void setDragged(boolean z) {
-        if (this.z != z) {
-            this.z = z;
+        if (this.f12689z != z) {
+            this.f12689z = z;
             refreshDrawableState();
-            d();
+            m20617d();
             invalidate();
         }
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setMaxCardElevation(float f) {
         super.setMaxCardElevation(f);
         throw null;
     }
 
-    public void setOnCheckedChangeListener(a aVar) {
-        this.A = aVar;
+    public void setOnCheckedChangeListener(InterfaceC1592a interfaceC1592a) {
+        this.f12686A = interfaceC1592a;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setPreventCornerOverlap(boolean z) {
         super.setPreventCornerOverlap(z);
         throw null;
@@ -291,7 +312,7 @@ public class hn0 extends ae implements Checkable, jc1 {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setRadius(float f) {
         super.setRadius(f);
         throw null;
@@ -302,14 +323,14 @@ public class hn0 extends ae implements Checkable, jc1 {
     }
 
     public void setRippleColorResource(int i) {
-        r4.a(getContext(), i);
+        C2818r4.m11784a(getContext(), i);
         throw null;
     }
 
     @Override // com.daaw.jc1
     public void setShapeAppearanceModel(gc1 gc1Var) {
         if (Build.VERSION.SDK_INT >= 21) {
-            setClipToOutline(gc1Var.u(getBoundsAsRectF()));
+            setClipToOutline(gc1Var.m21792u(getBoundsAsRectF()));
         }
         throw null;
     }
@@ -327,7 +348,7 @@ public class hn0 extends ae implements Checkable, jc1 {
         throw null;
     }
 
-    @Override // com.daaw.ae
+    @Override // com.daaw.C0616ae
     public void setUseCompatPadding(boolean z) {
         super.setUseCompatPadding(z);
         throw null;
@@ -335,13 +356,13 @@ public class hn0 extends ae implements Checkable, jc1 {
 
     @Override // android.widget.Checkable
     public void toggle() {
-        if (e() && isEnabled()) {
-            this.y = !this.y;
+        if (m20616e() && isEnabled()) {
+            this.f12688y = !this.f12688y;
             refreshDrawableState();
-            d();
-            a aVar = this.A;
-            if (aVar != null) {
-                aVar.a(this, this.y);
+            m20617d();
+            InterfaceC1592a interfaceC1592a = this.f12686A;
+            if (interfaceC1592a != null) {
+                interfaceC1592a.m20614a(this, this.f12688y);
             }
         }
     }

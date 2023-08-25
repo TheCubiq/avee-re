@@ -3,11 +3,15 @@ package com.daaw;
 import com.google.android.gms.internal.ads.zzatd;
 /* loaded from: classes.dex */
 public interface ws2 {
-    void a(zzatd zzatdVar);
+    /* renamed from: a */
+    void mo5828a(zzatd zzatdVar);
 
-    int b(ms2 ms2Var, int i, boolean z);
+    /* renamed from: b */
+    int mo5827b(ms2 ms2Var, int i, boolean z);
 
-    void c(iz2 iz2Var, int i);
+    /* renamed from: c */
+    void mo5826c(iz2 iz2Var, int i);
 
-    void d(long j, int i, int i2, int i3, vs2 vs2Var);
+    /* renamed from: d */
+    void mo5825d(long j, int i, int i2, int i3, vs2 vs2Var);
 }

@@ -10,11 +10,12 @@ public final class oz6 extends ja8 implements be8 {
     static {
         oz6 oz6Var = new oz6();
         zza = oz6Var;
-        ja8.v(oz6.class, oz6Var);
+        ja8.m18661v(oz6.class, oz6Var);
     }
 
     @Override // com.daaw.ja8
-    public final Object C(int i, Object obj, Object obj2) {
+    /* renamed from: C */
+    public final Object mo4853C(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -29,7 +30,7 @@ public final class oz6 extends ja8 implements be8 {
                 }
                 return new oz6();
             }
-            return ja8.s(zza, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001ဈ\u0000\u0002ဈ\u0001\u0003ဉ\u0002", new Object[]{"zzd", "zze", "zzf", "zzg"});
+            return ja8.m18664s(zza, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001ဈ\u0000\u0002ဈ\u0001\u0003ဉ\u0002", new Object[]{"zzd", "zze", "zzf", "zzg"});
         }
         return (byte) 1;
     }

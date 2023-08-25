@@ -7,47 +7,67 @@ import java.lang.reflect.Field;
 import java.util.Map;
 /* loaded from: classes.dex */
 public class m51 {
-    public static Field a;
-    public static boolean b;
-    public static Class<?> c;
-    public static boolean d;
-    public static Field e;
-    public static boolean f;
-    public static Field g;
-    public static boolean h;
 
+    /* renamed from: a */
+    public static Field f18451a;
+
+    /* renamed from: b */
+    public static boolean f18452b;
+
+    /* renamed from: c */
+    public static Class<?> f18453c;
+
+    /* renamed from: d */
+    public static boolean f18454d;
+
+    /* renamed from: e */
+    public static Field f18455e;
+
+    /* renamed from: f */
+    public static boolean f18456f;
+
+    /* renamed from: g */
+    public static Field f18457g;
+
+    /* renamed from: h */
+    public static boolean f18458h;
+
+    /* renamed from: com.daaw.m51$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static void a(LongSparseArray longSparseArray) {
+    public static class C2152a {
+        /* renamed from: a */
+        public static void m16204a(LongSparseArray longSparseArray) {
             longSparseArray.clear();
         }
     }
 
-    public static void a(Resources resources) {
+    /* renamed from: a */
+    public static void m16209a(Resources resources) {
         int i = Build.VERSION.SDK_INT;
         if (i >= 28) {
             return;
         }
         if (i >= 24) {
-            d(resources);
+            m16206d(resources);
         } else if (i >= 23) {
-            c(resources);
+            m16207c(resources);
         } else if (i >= 21) {
-            b(resources);
+            m16208b(resources);
         }
     }
 
-    public static void b(Resources resources) {
-        if (!b) {
+    /* renamed from: b */
+    public static void m16208b(Resources resources) {
+        if (!f18452b) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
-                a = declaredField;
+                f18451a = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused) {
             }
-            b = true;
+            f18452b = true;
         }
-        Field field = a;
+        Field field = f18451a;
         if (field != null) {
             Map map = null;
             try {
@@ -60,18 +80,19 @@ public class m51 {
         }
     }
 
-    public static void c(Resources resources) {
-        if (!b) {
+    /* renamed from: c */
+    public static void m16207c(Resources resources) {
+        if (!f18452b) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mDrawableCache");
-                a = declaredField;
+                f18451a = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused) {
             }
-            b = true;
+            f18452b = true;
         }
         Object obj = null;
-        Field field = a;
+        Field field = f18451a;
         if (field != null) {
             try {
                 obj = field.get(resources);
@@ -81,21 +102,22 @@ public class m51 {
         if (obj == null) {
             return;
         }
-        e(obj);
+        m16205e(obj);
     }
 
-    public static void d(Resources resources) {
+    /* renamed from: d */
+    public static void m16206d(Resources resources) {
         Object obj;
-        if (!h) {
+        if (!f18458h) {
             try {
                 Field declaredField = Resources.class.getDeclaredField("mResourcesImpl");
-                g = declaredField;
+                f18457g = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused) {
             }
-            h = true;
+            f18458h = true;
         }
-        Field field = g;
+        Field field = f18457g;
         if (field == null) {
             return;
         }
@@ -108,16 +130,16 @@ public class m51 {
         if (obj == null) {
             return;
         }
-        if (!b) {
+        if (!f18452b) {
             try {
                 Field declaredField2 = obj.getClass().getDeclaredField("mDrawableCache");
-                a = declaredField2;
+                f18451a = declaredField2;
                 declaredField2.setAccessible(true);
             } catch (NoSuchFieldException unused3) {
             }
-            b = true;
+            f18452b = true;
         }
-        Field field2 = a;
+        Field field2 = f18451a;
         if (field2 != null) {
             try {
                 obj2 = field2.get(obj);
@@ -125,32 +147,33 @@ public class m51 {
             }
         }
         if (obj2 != null) {
-            e(obj2);
+            m16205e(obj2);
         }
     }
 
-    public static void e(Object obj) {
-        if (!d) {
+    /* renamed from: e */
+    public static void m16205e(Object obj) {
+        if (!f18454d) {
             try {
-                c = Class.forName("android.content.res.ThemedResourceCache");
+                f18453c = Class.forName("android.content.res.ThemedResourceCache");
             } catch (ClassNotFoundException unused) {
             }
-            d = true;
+            f18454d = true;
         }
-        Class<?> cls = c;
+        Class<?> cls = f18453c;
         if (cls == null) {
             return;
         }
-        if (!f) {
+        if (!f18456f) {
             try {
                 Field declaredField = cls.getDeclaredField("mUnthemedEntries");
-                e = declaredField;
+                f18455e = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused2) {
             }
-            f = true;
+            f18456f = true;
         }
-        Field field = e;
+        Field field = f18455e;
         if (field == null) {
             return;
         }
@@ -160,7 +183,7 @@ public class m51 {
         } catch (IllegalAccessException unused3) {
         }
         if (longSparseArray != null) {
-            a.a(longSparseArray);
+            C2152a.m16204a(longSparseArray);
         }
     }
 }

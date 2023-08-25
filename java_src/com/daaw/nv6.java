@@ -1,30 +1,36 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class nv6 extends c57 {
-    public Object w;
+
+    /* renamed from: w */
+    public Object f20759w;
 
     public nv6(Object obj) {
-        this.w = obj;
+        this.f20759w = obj;
     }
 
     @Override // com.daaw.c57
-    public final String e() {
-        Object obj = this.w;
+    /* renamed from: e */
+    public final String mo7361e() {
+        Object obj = this.f20759w;
         return obj == null ? "" : obj.toString();
     }
 
     @Override // com.daaw.c57
-    public final void g() {
-        this.w = null;
+    /* renamed from: g */
+    public final void mo7360g() {
+        this.f20759w = null;
     }
 
     @Override // com.daaw.c57
-    public final boolean h(Object obj) {
-        return super.h(obj);
+    /* renamed from: h */
+    public final boolean mo14486h(Object obj) {
+        return super.mo14486h(obj);
     }
 
     @Override // com.daaw.c57
-    public final boolean i(Throwable th) {
-        return super.i(th);
+    /* renamed from: i */
+    public final boolean mo14485i(Throwable th) {
+        return super.mo14485i(th);
     }
 }

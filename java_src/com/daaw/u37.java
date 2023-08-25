@@ -5,20 +5,23 @@ import java.util.Objects;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class u37 extends l37 implements Serializable {
-    public final l37 p;
+
+    /* renamed from: p */
+    public final l37 f28520p;
 
     public u37(l37 l37Var) {
-        this.p = l37Var;
+        this.f28520p = l37Var;
     }
 
     @Override // com.daaw.l37
-    public final l37 a() {
-        return this.p;
+    /* renamed from: a */
+    public final l37 mo8593a() {
+        return this.f28520p;
     }
 
     @Override // com.daaw.l37, java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        return this.p.compare(obj2, obj);
+        return this.f28520p.compare(obj2, obj);
     }
 
     @Override // java.util.Comparator
@@ -27,17 +30,17 @@ public final class u37 extends l37 implements Serializable {
             return true;
         }
         if (obj instanceof u37) {
-            return this.p.equals(((u37) obj).p);
+            return this.f28520p.equals(((u37) obj).f28520p);
         }
         return false;
     }
 
     public final int hashCode() {
-        return -this.p.hashCode();
+        return -this.f28520p.hashCode();
     }
 
     public final String toString() {
-        l37 l37Var = this.p;
+        l37 l37Var = this.f28520p;
         Objects.toString(l37Var);
         return l37Var.toString().concat(".reverse()");
     }

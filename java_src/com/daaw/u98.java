@@ -15,21 +15,23 @@ import com.google.android.gms.ads.internal.util.zzs;
 import com.google.android.gms.ads.internal.zzt;
 /* loaded from: classes.dex */
 public final class u98 extends zzb {
-    public final /* synthetic */ zzl c;
+
+    /* renamed from: c */
+    public final /* synthetic */ zzl f28814c;
 
     public /* synthetic */ u98(zzl zzlVar, zzj zzjVar) {
-        this.c = zzlVar;
+        this.f28814c = zzlVar;
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzb
     public final void zza() {
         final BitmapDrawable bitmapDrawable;
-        Bitmap zza = zzt.zzu().zza(Integer.valueOf(this.c.q.zzo.zzf));
+        Bitmap zza = zzt.zzu().zza(Integer.valueOf(this.f28814c.f36219q.zzo.zzf));
         if (zza != null) {
             zzt.zzp();
-            zzl zzlVar = this.c;
-            Activity activity = zzlVar.p;
-            com.google.android.gms.ads.internal.zzj zzjVar = zzlVar.q.zzo;
+            zzl zzlVar = this.f28814c;
+            Activity activity = zzlVar.f36218p;
+            com.google.android.gms.ads.internal.zzj zzjVar = zzlVar.f36219q.zzo;
             boolean z = zzjVar.zzd;
             float f = zzjVar.zze;
             if (!z || f <= 0.0f || f > 25.0f) {
@@ -55,7 +57,7 @@ public final class u98 extends zzb {
                 @Override // java.lang.Runnable
                 public final void run() {
                     u98 u98Var = u98.this;
-                    u98Var.c.p.getWindow().setBackgroundDrawable(bitmapDrawable);
+                    u98Var.f28814c.f36218p.getWindow().setBackgroundDrawable(bitmapDrawable);
                 }
             });
         }

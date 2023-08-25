@@ -1,22 +1,28 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ds4 {
-    public final xp4 a;
-    public boolean b;
+
+    /* renamed from: a */
+    public final xp4 f7706a;
+
+    /* renamed from: b */
+    public boolean f7707b;
 
     public ds4(xp4 xp4Var) {
-        this.a = xp4Var;
+        this.f7706a = xp4Var;
     }
 
-    public final synchronized void a() {
-        while (!this.b) {
+    /* renamed from: a */
+    public final synchronized void m24010a() {
+        while (!this.f7707b) {
             wait();
         }
     }
 
-    public final synchronized void b() {
+    /* renamed from: b */
+    public final synchronized void m24009b() {
         boolean z = false;
-        while (!this.b) {
+        while (!this.f7707b) {
             try {
                 wait();
             } catch (InterruptedException unused) {
@@ -28,22 +34,25 @@ public final class ds4 {
         }
     }
 
-    public final synchronized boolean c() {
+    /* renamed from: c */
+    public final synchronized boolean m24008c() {
         boolean z;
-        z = this.b;
-        this.b = false;
+        z = this.f7707b;
+        this.f7707b = false;
         return z;
     }
 
-    public final synchronized boolean d() {
-        return this.b;
+    /* renamed from: d */
+    public final synchronized boolean m24007d() {
+        return this.f7707b;
     }
 
-    public final synchronized boolean e() {
-        if (this.b) {
+    /* renamed from: e */
+    public final synchronized boolean m24006e() {
+        if (this.f7707b) {
             return false;
         }
-        this.b = true;
+        this.f7707b = true;
         notifyAll();
         return true;
     }

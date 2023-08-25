@@ -12,15 +12,19 @@ import java.util.List;
 /* loaded from: classes.dex */
 public interface ki1 extends Closeable {
 
+    /* renamed from: com.daaw.ki1$a */
     /* loaded from: classes.dex */
-    public static abstract class a {
-        public final int a;
+    public static abstract class AbstractC1949a {
 
-        public a(int i) {
-            this.a = i;
+        /* renamed from: a */
+        public final int f16393a;
+
+        public AbstractC1949a(int i) {
+            this.f16393a = i;
         }
 
-        public final void a(String str) {
+        /* renamed from: a */
+        public final void m17730a(String str) {
             if (str.equalsIgnoreCase(":memory:") || str.trim().length() == 0) {
                 return;
             }
@@ -33,21 +37,23 @@ public interface ki1 extends Closeable {
             }
         }
 
-        public void b(ji1 ji1Var) {
+        /* renamed from: b */
+        public void mo17729b(ji1 ji1Var) {
         }
 
-        public void c(ji1 ji1Var) {
+        /* renamed from: c */
+        public void m17728c(ji1 ji1Var) {
             StringBuilder sb = new StringBuilder();
             sb.append("Corruption reported by sqlite on database: ");
-            sb.append(ji1Var.G());
-            if (!ji1Var.f()) {
-                a(ji1Var.G());
+            sb.append(ji1Var.mo18502G());
+            if (!ji1Var.mo18498f()) {
+                m17730a(ji1Var.mo18502G());
                 return;
             }
             List<Pair<String, String>> list = null;
             try {
                 try {
-                    list = ji1Var.g();
+                    list = ji1Var.mo18497g();
                 } catch (SQLiteException unused) {
                 }
                 try {
@@ -57,89 +63,119 @@ public interface ki1 extends Closeable {
             } finally {
                 if (list != null) {
                     for (Pair<String, String> next : list) {
-                        a((String) next.second);
+                        m17730a((String) next.second);
                     }
                 } else {
-                    a(ji1Var.G());
+                    m17730a(ji1Var.mo18502G());
                 }
             }
         }
 
-        public abstract void d(ji1 ji1Var);
+        /* renamed from: d */
+        public abstract void mo17727d(ji1 ji1Var);
 
-        public abstract void e(ji1 ji1Var, int i, int i2);
+        /* renamed from: e */
+        public abstract void mo17726e(ji1 ji1Var, int i, int i2);
 
-        public void f(ji1 ji1Var) {
+        /* renamed from: f */
+        public void mo17725f(ji1 ji1Var) {
         }
 
-        public abstract void g(ji1 ji1Var, int i, int i2);
+        /* renamed from: g */
+        public abstract void mo17724g(ji1 ji1Var, int i, int i2);
     }
 
+    /* renamed from: com.daaw.ki1$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public final Context a;
-        public final String b;
-        public final a c;
-        public final boolean d;
+    public static class C1950b {
 
+        /* renamed from: a */
+        public final Context f16394a;
+
+        /* renamed from: b */
+        public final String f16395b;
+
+        /* renamed from: c */
+        public final AbstractC1949a f16396c;
+
+        /* renamed from: d */
+        public final boolean f16397d;
+
+        /* renamed from: com.daaw.ki1$b$a */
         /* loaded from: classes.dex */
-        public static class a {
-            public Context a;
-            public String b;
-            public a c;
-            public boolean d;
+        public static class C1951a {
 
-            public a(Context context) {
-                this.a = context;
+            /* renamed from: a */
+            public Context f16398a;
+
+            /* renamed from: b */
+            public String f16399b;
+
+            /* renamed from: c */
+            public AbstractC1949a f16400c;
+
+            /* renamed from: d */
+            public boolean f16401d;
+
+            public C1951a(Context context) {
+                this.f16398a = context;
             }
 
-            public b a() {
-                if (this.c != null) {
-                    if (this.a != null) {
-                        if (this.d && TextUtils.isEmpty(this.b)) {
+            /* renamed from: a */
+            public C1950b m17722a() {
+                if (this.f16400c != null) {
+                    if (this.f16398a != null) {
+                        if (this.f16401d && TextUtils.isEmpty(this.f16399b)) {
                             throw new IllegalArgumentException("Must set a non-null database name to a configuration that uses the no backup directory.");
                         }
-                        return new b(this.a, this.b, this.c, this.d);
+                        return new C1950b(this.f16398a, this.f16399b, this.f16400c, this.f16401d);
                     }
                     throw new IllegalArgumentException("Must set a non-null context to create the configuration.");
                 }
                 throw new IllegalArgumentException("Must set a callback to create the configuration.");
             }
 
-            public a b(a aVar) {
-                this.c = aVar;
+            /* renamed from: b */
+            public C1951a m17721b(AbstractC1949a abstractC1949a) {
+                this.f16400c = abstractC1949a;
                 return this;
             }
 
-            public a c(String str) {
-                this.b = str;
+            /* renamed from: c */
+            public C1951a m17720c(String str) {
+                this.f16399b = str;
                 return this;
             }
 
-            public a d(boolean z) {
-                this.d = z;
+            /* renamed from: d */
+            public C1951a m17719d(boolean z) {
+                this.f16401d = z;
                 return this;
             }
         }
 
-        public b(Context context, String str, a aVar, boolean z) {
-            this.a = context;
-            this.b = str;
-            this.c = aVar;
-            this.d = z;
+        public C1950b(Context context, String str, AbstractC1949a abstractC1949a, boolean z) {
+            this.f16394a = context;
+            this.f16395b = str;
+            this.f16396c = abstractC1949a;
+            this.f16397d = z;
         }
 
-        public static a a(Context context) {
-            return new a(context);
+        /* renamed from: a */
+        public static C1951a m17723a(Context context) {
+            return new C1951a(context);
         }
     }
 
+    /* renamed from: com.daaw.ki1$c */
     /* loaded from: classes.dex */
-    public interface c {
-        ki1 a(b bVar);
+    public interface InterfaceC1952c {
+        /* renamed from: a */
+        ki1 mo13616a(C1950b c1950b);
     }
 
-    ji1 A();
+    /* renamed from: A */
+    ji1 mo14533A();
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     void close();

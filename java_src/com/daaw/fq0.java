@@ -1,16 +1,19 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public class fq0 implements ef1 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f9771a;
 
     public fq0(int i) {
-        this.a = i;
+        this.f9771a = i;
     }
 
     @Override // com.daaw.ef1
-    public StackTraceElement[] a(StackTraceElement[] stackTraceElementArr) {
+    /* renamed from: a */
+    public StackTraceElement[] mo9614a(StackTraceElement[] stackTraceElementArr) {
         int length = stackTraceElementArr.length;
-        int i = this.a;
+        int i = this.f9771a;
         if (length <= i) {
             return stackTraceElementArr;
         }

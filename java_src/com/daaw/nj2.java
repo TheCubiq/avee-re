@@ -4,15 +4,10 @@ public final class nj2 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ nj2(com.daaw.gi2 r1) {
-        /*
-            r0 = this;
-            com.daaw.oj2 r1 = com.daaw.oj2.M()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.nj2.<init>(com.daaw.gi2):void");
+    public /* synthetic */ nj2(gi2 gi2Var) {
+        super(r1);
+        oj2 oj2Var;
+        oj2Var = oj2.zzb;
     }
 }

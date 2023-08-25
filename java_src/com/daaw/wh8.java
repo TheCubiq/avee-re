@@ -5,7 +5,8 @@ import java.util.logging.Logger;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class wh8 {
-    public static String a(@CheckForNull String str, @CheckForNull Object... objArr) {
+    /* renamed from: a */
+    public static String m6061a(@CheckForNull String str, @CheckForNull Object... objArr) {
         int length;
         int length2;
         int indexOf;

@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class d95 implements wz7 {
-    public static d95 a() {
+    /* renamed from: a */
+    public static d95 m24592a() {
         d95 d95Var;
-        d95Var = c95.a;
+        d95Var = c95.f5646a;
         return d95Var;
     }
 

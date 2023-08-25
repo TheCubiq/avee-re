@@ -7,18 +7,27 @@ import java.util.Iterator;
 import java.util.Locale;
 /* loaded from: classes2.dex */
 public abstract class y68 implements Iterable, Serializable {
-    public static final y68 q = new p68(gb8.d);
-    public static final Comparator r;
-    public static final v68 s;
-    public int p = 0;
+
+    /* renamed from: q */
+    public static final y68 f33399q = new p68(gb8.f11019d);
+
+    /* renamed from: r */
+    public static final Comparator f33400r;
+
+    /* renamed from: s */
+    public static final v68 f33401s;
+
+    /* renamed from: p */
+    public int f33402p = 0;
 
     static {
-        int i = b58.a;
-        s = new v68(null);
-        r = new t58();
+        int i = b58.f4320a;
+        f33401s = new v68(null);
+        f33400r = new t58();
     }
 
-    public static int o(int i, int i2, int i3) {
+    /* renamed from: o */
+    public static int m4065o(int i, int i2, int i3) {
         int i4 = i2 - i;
         if ((i | i2 | i4 | (i3 - i2)) < 0) {
             if (i < 0) {
@@ -32,36 +41,42 @@ public abstract class y68 implements Iterable, Serializable {
         return i4;
     }
 
-    public static y68 q(byte[] bArr, int i, int i2) {
-        o(i, i + i2, bArr.length);
+    /* renamed from: q */
+    public static y68 m4063q(byte[] bArr, int i, int i2) {
+        m4065o(i, i + i2, bArr.length);
         byte[] bArr2 = new byte[i2];
         System.arraycopy(bArr, i, bArr2, 0, i2);
         return new p68(bArr2);
     }
 
-    public static y68 r(String str) {
-        return new p68(str.getBytes(gb8.b));
+    /* renamed from: r */
+    public static y68 m4062r(String str) {
+        return new p68(str.getBytes(gb8.f11017b));
     }
 
-    public abstract byte d(int i);
+    /* renamed from: d */
+    public abstract byte mo2807d(int i);
 
-    public abstract byte e(int i);
+    /* renamed from: e */
+    public abstract byte mo2806e(int i);
 
     public abstract boolean equals(Object obj);
 
-    public abstract int f();
+    /* renamed from: f */
+    public abstract int mo2805f();
 
-    public abstract int h(int i, int i2, int i3);
+    /* renamed from: h */
+    public abstract int mo4070h(int i, int i2, int i3);
 
     public final int hashCode() {
-        int i = this.p;
+        int i = this.f33402p;
         if (i == 0) {
-            int f = f();
-            i = h(f, 0, f);
+            int mo2805f = mo2805f();
+            i = mo4070h(mo2805f, 0, mo2805f);
             if (i == 0) {
                 i = 1;
             }
-            this.p = i;
+            this.f33402p = i;
         }
         return i;
     }
@@ -71,28 +86,34 @@ public abstract class y68 implements Iterable, Serializable {
         return new q58(this);
     }
 
-    public abstract y68 j(int i, int i2);
+    /* renamed from: j */
+    public abstract y68 mo4069j(int i, int i2);
 
-    public abstract String k(Charset charset);
+    /* renamed from: k */
+    public abstract String mo4068k(Charset charset);
 
-    public abstract void m(n58 n58Var);
+    /* renamed from: m */
+    public abstract void mo4067m(n58 n58Var);
 
-    public abstract boolean n();
+    /* renamed from: n */
+    public abstract boolean mo4066n();
 
-    public final int p() {
-        return this.p;
+    /* renamed from: p */
+    public final int m4064p() {
+        return this.f33402p;
     }
 
-    public final String s(Charset charset) {
-        return f() == 0 ? "" : k(charset);
+    /* renamed from: s */
+    public final String m4061s(Charset charset) {
+        return mo2805f() == 0 ? "" : mo4068k(charset);
     }
 
     public final String toString() {
         Locale locale = Locale.ROOT;
         Object[] objArr = new Object[3];
         objArr[0] = Integer.toHexString(System.identityHashCode(this));
-        objArr[1] = Integer.valueOf(f());
-        objArr[2] = f() <= 50 ? kg8.a(this) : kg8.a(j(0, 47)).concat("...");
+        objArr[1] = Integer.valueOf(mo2805f());
+        objArr[2] = mo2805f() <= 50 ? kg8.m17753a(this) : kg8.m17753a(mo4069j(0, 47)).concat("...");
         return String.format(locale, "<ByteString@%s size=%d contents=\"%s\">", objArr);
     }
 }

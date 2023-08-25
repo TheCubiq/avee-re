@@ -3,14 +3,16 @@ package com.google.android.gms.ads.nonagon.signalgeneration;
 import com.daaw.wz7;
 /* loaded from: classes.dex */
 public final class zzaj implements wz7 {
-    public final zzag a;
+
+    /* renamed from: a */
+    public final zzag f36519a;
 
     public zzaj(zzag zzagVar) {
-        this.a = zzagVar;
+        this.f36519a = zzagVar;
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return this.a.zzc();
+        return this.f36519a.zzc();
     }
 }

@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class ch1 {
-    public static final String[] a = new String[0];
 
-    public static void a(StringBuilder sb, int i) {
+    /* renamed from: a */
+    public static final String[] f5810a = new String[0];
+
+    /* renamed from: a */
+    public static void m25379a(StringBuilder sb, int i) {
         for (int i2 = 0; i2 < i; i2++) {
             sb.append("?");
             if (i2 < i - 1) {
@@ -12,7 +15,8 @@ public class ch1 {
         }
     }
 
-    public static StringBuilder b() {
+    /* renamed from: b */
+    public static StringBuilder m25378b() {
         return new StringBuilder();
     }
 }

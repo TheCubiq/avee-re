@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class dq4 implements wz7 {
-    public final up4 a;
+
+    /* renamed from: a */
+    public final up4 f7627a;
 
     public dq4(up4 up4Var) {
-        this.a = up4Var;
+        this.f7627a = up4Var;
     }
 
-    public final sp4 a() {
-        return this.a.c();
+    /* renamed from: a */
+    public final sp4 m24080a() {
+        return this.f7627a.m7841c();
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return this.a.c();
+        return this.f7627a.m7841c();
     }
 }

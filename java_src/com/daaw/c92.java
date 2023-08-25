@@ -1,17 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class c92 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f5641a;
 
     public c92(int i) {
-        this.a = i;
+        this.f5641a = i;
     }
 
-    public static int a(int i) {
+    /* renamed from: a */
+    public static int m25488a(int i) {
         return (i >> 24) & 255;
     }
 
-    public static String b(int i) {
+    /* renamed from: b */
+    public static String m25487b(int i) {
         StringBuilder sb = new StringBuilder();
         sb.append((char) ((i >> 24) & 255));
         sb.append((char) ((i >> 16) & 255));
@@ -21,6 +25,6 @@ public class c92 {
     }
 
     public String toString() {
-        return b(this.a);
+        return m25487b(this.f5641a);
     }
 }

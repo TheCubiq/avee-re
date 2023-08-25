@@ -3,22 +3,28 @@ package com.daaw;
 import java.util.HashSet;
 /* loaded from: classes.dex */
 public final class k63 {
-    public static final HashSet a = new HashSet();
-    public static String b = "media3.common";
 
-    public static synchronized String a() {
+    /* renamed from: a */
+    public static final HashSet f15705a = new HashSet();
+
+    /* renamed from: b */
+    public static String f15706b = "media3.common";
+
+    /* renamed from: a */
+    public static synchronized String m18025a() {
         String str;
         synchronized (k63.class) {
-            str = b;
+            str = f15706b;
         }
         return str;
     }
 
-    public static synchronized void b(String str) {
+    /* renamed from: b */
+    public static synchronized void m18024b(String str) {
         synchronized (k63.class) {
-            if (a.add(str)) {
-                String str2 = b;
-                b = str2 + ", " + str;
+            if (f15705a.add(str)) {
+                String str2 = f15706b;
+                f15706b = str2 + ", " + str;
             }
         }
     }

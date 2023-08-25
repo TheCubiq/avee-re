@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface h76 {
-    void b(Object obj);
+    /* renamed from: b */
+    void mo2851b(Object obj);
 }

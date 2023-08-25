@@ -11,41 +11,57 @@ import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class zzacg implements zzbp {
     public static final Parcelable.Creator<zzacg> CREATOR;
-    public static final f92 v;
-    public static final f92 w;
-    public final String p;
-    public final String q;
-    public final long r;
-    public final long s;
-    public final byte[] t;
-    public int u;
+
+    /* renamed from: v */
+    public static final f92 f36700v;
+
+    /* renamed from: w */
+    public static final f92 f36701w;
+
+    /* renamed from: p */
+    public final String f36702p;
+
+    /* renamed from: q */
+    public final String f36703q;
+
+    /* renamed from: r */
+    public final long f36704r;
+
+    /* renamed from: s */
+    public final long f36705s;
+
+    /* renamed from: t */
+    public final byte[] f36706t;
+
+    /* renamed from: u */
+    public int f36707u;
 
     static {
         b72 b72Var = new b72();
-        b72Var.s("application/id3");
-        v = b72Var.y();
+        b72Var.m26372s("application/id3");
+        f36700v = b72Var.m26366y();
         b72 b72Var2 = new b72();
-        b72Var2.s("application/x-scte35");
-        w = b72Var2.y();
+        b72Var2.m26372s("application/x-scte35");
+        f36701w = b72Var2.m26366y();
         CREATOR = new p62();
     }
 
     public zzacg(Parcel parcel) {
         String readString = parcel.readString();
-        int i = it5.a;
-        this.p = readString;
-        this.q = parcel.readString();
-        this.r = parcel.readLong();
-        this.s = parcel.readLong();
-        this.t = (byte[]) it5.h(parcel.createByteArray());
+        int i = it5.f13991a;
+        this.f36702p = readString;
+        this.f36703q = parcel.readString();
+        this.f36704r = parcel.readLong();
+        this.f36705s = parcel.readLong();
+        this.f36706t = (byte[]) it5.m19391h(parcel.createByteArray());
     }
 
     public zzacg(String str, String str2, long j, long j2, byte[] bArr) {
-        this.p = str;
-        this.q = str2;
-        this.r = j;
-        this.s = j2;
-        this.t = bArr;
+        this.f36702p = str;
+        this.f36703q = str2;
+        this.f36704r = j;
+        this.f36705s = j2;
+        this.f36706t = bArr;
     }
 
     @Override // android.os.Parcelable
@@ -59,7 +75,7 @@ public final class zzacg implements zzbp {
         }
         if (obj != null && zzacg.class == obj.getClass()) {
             zzacg zzacgVar = (zzacg) obj;
-            if (this.r == zzacgVar.r && this.s == zzacgVar.s && it5.t(this.p, zzacgVar.p) && it5.t(this.q, zzacgVar.q) && Arrays.equals(this.t, zzacgVar.t)) {
+            if (this.f36704r == zzacgVar.f36704r && this.f36705s == zzacgVar.f36705s && it5.m19376t(this.f36702p, zzacgVar.f36702p) && it5.m19376t(this.f36703q, zzacgVar.f36703q) && Arrays.equals(this.f36706t, zzacgVar.f36706t)) {
                 return true;
             }
         }
@@ -67,39 +83,40 @@ public final class zzacg implements zzbp {
     }
 
     @Override // com.google.android.gms.internal.ads.zzbp
-    public final /* synthetic */ void f(x93 x93Var) {
+    /* renamed from: f */
+    public final /* synthetic */ void mo1104f(x93 x93Var) {
     }
 
     public final int hashCode() {
-        int i = this.u;
+        int i = this.f36707u;
         if (i == 0) {
-            String str = this.p;
+            String str = this.f36702p;
             int hashCode = ((str != null ? str.hashCode() : 0) + 527) * 31;
-            String str2 = this.q;
+            String str2 = this.f36703q;
             int hashCode2 = str2 != null ? str2.hashCode() : 0;
-            long j = this.r;
-            long j2 = this.s;
-            int hashCode3 = ((((((hashCode + hashCode2) * 31) + ((int) (j ^ (j >>> 32)))) * 31) + ((int) ((j2 >>> 32) ^ j2))) * 31) + Arrays.hashCode(this.t);
-            this.u = hashCode3;
+            long j = this.f36704r;
+            long j2 = this.f36705s;
+            int hashCode3 = ((((((hashCode + hashCode2) * 31) + ((int) (j ^ (j >>> 32)))) * 31) + ((int) ((j2 >>> 32) ^ j2))) * 31) + Arrays.hashCode(this.f36706t);
+            this.f36707u = hashCode3;
             return hashCode3;
         }
         return i;
     }
 
     public final String toString() {
-        String str = this.p;
-        long j = this.s;
-        long j2 = this.r;
-        String str2 = this.q;
+        String str = this.f36702p;
+        long j = this.f36705s;
+        long j2 = this.f36704r;
+        String str2 = this.f36703q;
         return "EMSG: scheme=" + str + ", id=" + j + ", durationMs=" + j2 + ", value=" + str2;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
-        parcel.writeLong(this.r);
-        parcel.writeLong(this.s);
-        parcel.writeByteArray(this.t);
+        parcel.writeString(this.f36702p);
+        parcel.writeString(this.f36703q);
+        parcel.writeLong(this.f36704r);
+        parcel.writeLong(this.f36705s);
+        parcel.writeByteArray(this.f36706t);
     }
 }

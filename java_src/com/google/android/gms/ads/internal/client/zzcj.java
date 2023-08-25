@@ -14,17 +14,17 @@ public final class zzcj extends bp2 implements zzcl {
 
     @Override // com.google.android.gms.ads.internal.client.zzcl
     public final an3 getAdapterCreator() {
-        Parcel I = I(2, D());
-        an3 g3 = zm3.g3(I.readStrongBinder());
-        I.recycle();
-        return g3;
+        Parcel m25951I = m25951I(2, m25952D());
+        an3 m2113g3 = zm3.m2113g3(m25951I.readStrongBinder());
+        m25951I.recycle();
+        return m2113g3;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzcl
     public final zzen getLiteSdkVersion() {
-        Parcel I = I(1, D());
-        zzen zzenVar = (zzen) dp2.a(I, zzen.CREATOR);
-        I.recycle();
+        Parcel m25951I = m25951I(1, m25952D());
+        zzen zzenVar = (zzen) dp2.m24107a(m25951I, zzen.CREATOR);
+        m25951I.recycle();
         return zzenVar;
     }
 }

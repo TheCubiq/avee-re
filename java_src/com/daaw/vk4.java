@@ -4,128 +4,142 @@ import android.os.Bundle;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class vk4 extends de5 {
-    public final Map b;
-    public final Map c;
-    public long d;
+
+    /* renamed from: b */
+    public final Map f30286b;
+
+    /* renamed from: c */
+    public final Map f30287c;
+
+    /* renamed from: d */
+    public long f30288d;
 
     public vk4(dr6 dr6Var) {
         super(dr6Var);
-        this.c = new g6();
-        this.b = new g6();
+        this.f30287c = new C1370g6();
+        this.f30286b = new C1370g6();
     }
 
-    public static /* synthetic */ void g(vk4 vk4Var, String str, long j) {
-        vk4Var.f();
-        ry0.f(str);
-        if (vk4Var.c.isEmpty()) {
-            vk4Var.d = j;
+    /* renamed from: g */
+    public static /* synthetic */ void m7085g(vk4 vk4Var, String str, long j) {
+        vk4Var.mo6991f();
+        ry0.m10834f(str);
+        if (vk4Var.f30287c.isEmpty()) {
+            vk4Var.f30288d = j;
         }
-        Integer num = (Integer) vk4Var.c.get(str);
+        Integer num = (Integer) vk4Var.f30287c.get(str);
         if (num != null) {
-            vk4Var.c.put(str, Integer.valueOf(num.intValue() + 1));
-        } else if (vk4Var.c.size() >= 100) {
-            vk4Var.a.i().w().a("Too many ads visible");
+            vk4Var.f30287c.put(str, Integer.valueOf(num.intValue() + 1));
+        } else if (vk4Var.f30287c.size() >= 100) {
+            vk4Var.f25143a.mo3895i().m14155w().m20653a("Too many ads visible");
         } else {
-            vk4Var.c.put(str, 1);
-            vk4Var.b.put(str, Long.valueOf(j));
+            vk4Var.f30287c.put(str, 1);
+            vk4Var.f30286b.put(str, Long.valueOf(j));
         }
     }
 
-    public static /* synthetic */ void h(vk4 vk4Var, String str, long j) {
-        vk4Var.f();
-        ry0.f(str);
-        Integer num = (Integer) vk4Var.c.get(str);
+    /* renamed from: h */
+    public static /* synthetic */ void m7084h(vk4 vk4Var, String str, long j) {
+        vk4Var.mo6991f();
+        ry0.m10834f(str);
+        Integer num = (Integer) vk4Var.f30287c.get(str);
         if (num == null) {
-            vk4Var.a.i().q().b("Call to endAdUnitExposure for unknown ad unit id", str);
+            vk4Var.f25143a.mo3895i().m14160q().m20652b("Call to endAdUnitExposure for unknown ad unit id", str);
             return;
         }
-        t38 s = vk4Var.a.K().s(false);
+        t38 m11742s = vk4Var.f25143a.m24048K().m11742s(false);
         int intValue = num.intValue() - 1;
         if (intValue != 0) {
-            vk4Var.c.put(str, Integer.valueOf(intValue));
+            vk4Var.f30287c.put(str, Integer.valueOf(intValue));
             return;
         }
-        vk4Var.c.remove(str);
-        Long l = (Long) vk4Var.b.get(str);
+        vk4Var.f30287c.remove(str);
+        Long l = (Long) vk4Var.f30286b.get(str);
         if (l == null) {
-            vk4Var.a.i().q().a("First ad unit exposure time was never set");
+            vk4Var.f25143a.mo3895i().m14160q().m20653a("First ad unit exposure time was never set");
         } else {
             long longValue = l.longValue();
-            vk4Var.b.remove(str);
-            vk4Var.o(str, j - longValue, s);
+            vk4Var.f30286b.remove(str);
+            vk4Var.m7078o(str, j - longValue, m11742s);
         }
-        if (vk4Var.c.isEmpty()) {
-            long j2 = vk4Var.d;
+        if (vk4Var.f30287c.isEmpty()) {
+            long j2 = vk4Var.f30288d;
             if (j2 == 0) {
-                vk4Var.a.i().q().a("First ad exposure time was never set");
+                vk4Var.f25143a.mo3895i().m14160q().m20653a("First ad exposure time was never set");
                 return;
             }
-            vk4Var.n(j - j2, s);
-            vk4Var.d = 0L;
+            vk4Var.m7079n(j - j2, m11742s);
+            vk4Var.f30288d = 0L;
         }
     }
 
-    public final void k(String str, long j) {
+    /* renamed from: k */
+    public final void m7082k(String str, long j) {
         if (str == null || str.length() == 0) {
-            this.a.i().q().a("Ad unit id must be a non-empty string");
+            this.f25143a.mo3895i().m14160q().m20653a("Ad unit id must be a non-empty string");
         } else {
-            this.a.r().z(new e32(this, str, j));
+            this.f25143a.mo3882r().m6978z(new e32(this, str, j));
         }
     }
 
-    public final void l(String str, long j) {
+    /* renamed from: l */
+    public final void m7081l(String str, long j) {
         if (str == null || str.length() == 0) {
-            this.a.i().q().a("Ad unit id must be a non-empty string");
+            this.f25143a.mo3895i().m14160q().m20653a("Ad unit id must be a non-empty string");
         } else {
-            this.a.r().z(new by2(this, str, j));
+            this.f25143a.mo3882r().m6978z(new by2(this, str, j));
         }
     }
 
-    public final void m(long j) {
-        t38 s = this.a.K().s(false);
-        for (String str : this.b.keySet()) {
-            o(str, j - ((Long) this.b.get(str)).longValue(), s);
+    /* renamed from: m */
+    public final void m7080m(long j) {
+        t38 m11742s = this.f25143a.m24048K().m11742s(false);
+        for (String str : this.f30286b.keySet()) {
+            m7078o(str, j - ((Long) this.f30286b.get(str)).longValue(), m11742s);
         }
-        if (!this.b.isEmpty()) {
-            n(j - this.d, s);
+        if (!this.f30286b.isEmpty()) {
+            m7079n(j - this.f30288d, m11742s);
         }
-        p(j);
+        m7077p(j);
     }
 
-    public final void n(long j, t38 t38Var) {
+    /* renamed from: n */
+    public final void m7079n(long j, t38 t38Var) {
         if (t38Var == null) {
-            this.a.i().v().a("Not logging ad exposure. No active activity");
+            this.f25143a.mo3895i().m14156v().m20653a("Not logging ad exposure. No active activity");
         } else if (j < 1000) {
-            this.a.i().v().b("Not logging ad exposure. Less than 1000 ms. exposure", Long.valueOf(j));
+            this.f25143a.mo3895i().m14156v().m20652b("Not logging ad exposure. Less than 1000 ms. exposure", Long.valueOf(j));
         } else {
             Bundle bundle = new Bundle();
             bundle.putLong("_xt", j);
-            dd8.y(t38Var, bundle, true);
-            this.a.I().u("am", "_xa", bundle);
+            dd8.m24455y(t38Var, bundle, true);
+            this.f25143a.m24050I().m13683u("am", "_xa", bundle);
         }
     }
 
-    public final void o(String str, long j, t38 t38Var) {
+    /* renamed from: o */
+    public final void m7078o(String str, long j, t38 t38Var) {
         if (t38Var == null) {
-            this.a.i().v().a("Not logging ad unit exposure. No active activity");
+            this.f25143a.mo3895i().m14156v().m20653a("Not logging ad unit exposure. No active activity");
         } else if (j < 1000) {
-            this.a.i().v().b("Not logging ad unit exposure. Less than 1000 ms. exposure", Long.valueOf(j));
+            this.f25143a.mo3895i().m14156v().m20652b("Not logging ad unit exposure. Less than 1000 ms. exposure", Long.valueOf(j));
         } else {
             Bundle bundle = new Bundle();
             bundle.putString("_ai", str);
             bundle.putLong("_xt", j);
-            dd8.y(t38Var, bundle, true);
-            this.a.I().u("am", "_xu", bundle);
+            dd8.m24455y(t38Var, bundle, true);
+            this.f25143a.m24050I().m13683u("am", "_xu", bundle);
         }
     }
 
-    public final void p(long j) {
-        for (String str : this.b.keySet()) {
-            this.b.put(str, Long.valueOf(j));
+    /* renamed from: p */
+    public final void m7077p(long j) {
+        for (String str : this.f30286b.keySet()) {
+            this.f30286b.put(str, Long.valueOf(j));
         }
-        if (this.b.isEmpty()) {
+        if (this.f30286b.isEmpty()) {
             return;
         }
-        this.d = j;
+        this.f30288d = j;
     }
 }

@@ -10,33 +10,44 @@ import java.util.Map;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class py3 {
-    public final Map a = new HashMap();
-    public final List b = new ArrayList();
-    public final Context c;
-    public final ix3 d;
+
+    /* renamed from: a */
+    public final Map f23532a = new HashMap();
+
+    /* renamed from: b */
+    public final List f23533b = new ArrayList();
+
+    /* renamed from: c */
+    public final Context f23534c;
+
+    /* renamed from: d */
+    public final ix3 f23535d;
 
     public py3(Context context, ix3 ix3Var) {
-        this.c = context;
-        this.d = ix3Var;
+        this.f23534c = context;
+        this.f23535d = ix3Var;
     }
 
-    public final /* synthetic */ void b(Map map, SharedPreferences sharedPreferences, String str, String str2) {
+    /* renamed from: b */
+    public final /* synthetic */ void m12869b(Map map, SharedPreferences sharedPreferences, String str, String str2) {
         if (map.containsKey(str) && ((Set) map.get(str)).contains(str2)) {
-            this.d.e();
+            this.f23535d.m19294e();
         }
     }
 
-    public final synchronized void c(String str) {
-        if (this.a.containsKey(str)) {
+    /* renamed from: c */
+    public final synchronized void m12868c(String str) {
+        if (this.f23532a.containsKey(str)) {
             return;
         }
-        SharedPreferences defaultSharedPreferences = "__default__".equals(str) ? PreferenceManager.getDefaultSharedPreferences(this.c) : this.c.getSharedPreferences(str, 0);
+        SharedPreferences defaultSharedPreferences = "__default__".equals(str) ? PreferenceManager.getDefaultSharedPreferences(this.f23534c) : this.f23534c.getSharedPreferences(str, 0);
         oy3 oy3Var = new oy3(this, str);
-        this.a.put(str, oy3Var);
+        this.f23532a.put(str, oy3Var);
         defaultSharedPreferences.registerOnSharedPreferenceChangeListener(oy3Var);
     }
 
-    public final synchronized void d(ny3 ny3Var) {
-        this.b.add(ny3Var);
+    /* renamed from: d */
+    public final synchronized void m12867d(ny3 ny3Var) {
+        this.f23533b.add(ny3Var);
     }
 }

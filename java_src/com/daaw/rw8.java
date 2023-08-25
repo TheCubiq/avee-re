@@ -4,7 +4,8 @@ public final class rw8 {
     public rw8(int i) {
     }
 
-    public static final int a(int i) {
+    /* renamed from: a */
+    public static final int m10856a(int i) {
         return i == 7 ? 6 : 3;
     }
 }

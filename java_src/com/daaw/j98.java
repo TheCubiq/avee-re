@@ -10,14 +10,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /* loaded from: classes2.dex */
 public abstract class j98 {
-    public static final Logger a = Logger.getLogger(w78.class.getName());
-    public static final String b = "com.google.protobuf.BlazeGeneratedExtensionRegistryLiteLoader";
 
-    public static l88 b(Class cls) {
+    /* renamed from: a */
+    public static final Logger f14567a = Logger.getLogger(w78.class.getName());
+
+    /* renamed from: b */
+    public static final String f14568b = "com.google.protobuf.BlazeGeneratedExtensionRegistryLiteLoader";
+
+    /* renamed from: b */
+    public static l88 m18700b(Class cls) {
         String format;
         ClassLoader classLoader = j98.class.getClassLoader();
         if (cls.equals(l88.class)) {
-            format = b;
+            format = f14568b;
         } else if (!cls.getPackage().equals(j98.class.getPackage())) {
             throw new IllegalArgumentException(cls.getName());
         } else {
@@ -27,7 +32,7 @@ public abstract class j98 {
             try {
                 try {
                     try {
-                        return (l88) cls.cast(((j98) Class.forName(format, true, classLoader).getConstructor(new Class[0]).newInstance(new Object[0])).a());
+                        return (l88) cls.cast(((j98) Class.forName(format, true, classLoader).getConstructor(new Class[0]).newInstance(new Object[0])).m18701a());
                     } catch (IllegalAccessException e) {
                         throw new IllegalStateException(e);
                     }
@@ -44,9 +49,9 @@ public abstract class j98 {
             ArrayList arrayList = new ArrayList();
             while (it.hasNext()) {
                 try {
-                    arrayList.add((l88) cls.cast(((j98) it.next()).a()));
+                    arrayList.add((l88) cls.cast(((j98) it.next()).m18701a()));
                 } catch (ServiceConfigurationError e5) {
-                    a.logp(Level.SEVERE, "com.google.protobuf.GeneratedExtensionRegistryLoader", "load", "Unable to load ".concat(cls.getSimpleName()), (Throwable) e5);
+                    f14567a.logp(Level.SEVERE, "com.google.protobuf.GeneratedExtensionRegistryLoader", "load", "Unable to load ".concat(cls.getSimpleName()), (Throwable) e5);
                 }
             }
             if (arrayList.size() == 1) {
@@ -67,5 +72,6 @@ public abstract class j98 {
         }
     }
 
-    public abstract l88 a();
+    /* renamed from: a */
+    public abstract l88 m18701a();
 }

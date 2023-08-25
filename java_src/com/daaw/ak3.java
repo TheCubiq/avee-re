@@ -7,13 +7,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /* loaded from: classes.dex */
 public final class ak3 {
-    public static final ArrayList a = new ArrayList();
-    public static final Pattern b = Pattern.compile("^mp4a\\.([a-zA-Z0-9]{2})(?:\\.([0-9]{1,2}))?$");
+
+    /* renamed from: a */
+    public static final ArrayList f3273a = new ArrayList();
+
+    /* renamed from: b */
+    public static final Pattern f3274b = Pattern.compile("^mp4a\\.([a-zA-Z0-9]{2})(?:\\.([0-9]{1,2}))?$");
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    public static int a(String str, String str2) {
+    /* renamed from: a */
+    public static int m27389a(String str, String str2) {
         char c;
-        wi3 c2;
+        wi3 m27387c;
         switch (str.hashCode()) {
             case -2123537834:
                 if (str.equals("audio/eac3-joc")) {
@@ -86,10 +91,10 @@ public final class ak3 {
             case 0:
                 return 9;
             case 1:
-                if (str2 == null || (c2 = c(str2)) == null) {
+                if (str2 == null || (m27387c = m27387c(str2)) == null) {
                     return 0;
                 }
-                return c2.a();
+                return m27387c.m6058a();
             case 2:
                 return 5;
             case 3:
@@ -109,20 +114,21 @@ public final class ak3 {
         }
     }
 
-    public static int b(String str) {
+    /* renamed from: b */
+    public static int m27388b(String str) {
         if (TextUtils.isEmpty(str)) {
             return -1;
         }
-        if (g(str)) {
+        if (m27383g(str)) {
             return 1;
         }
-        if (h(str)) {
+        if (m27382h(str)) {
             return 2;
         }
-        if ("text".equals(i(str)) || "application/cea-608".equals(str) || "application/cea-708".equals(str) || "application/x-mp4-cea-608".equals(str) || "application/x-subrip".equals(str) || "application/ttml+xml".equals(str) || "application/x-quicktime-tx3g".equals(str) || "application/x-mp4-vtt".equals(str) || "application/x-rawcc".equals(str) || "application/vobsub".equals(str) || "application/pgs".equals(str) || "application/dvbsubs".equals(str)) {
+        if ("text".equals(m27381i(str)) || "application/cea-608".equals(str) || "application/cea-708".equals(str) || "application/x-mp4-cea-608".equals(str) || "application/x-subrip".equals(str) || "application/ttml+xml".equals(str) || "application/x-quicktime-tx3g".equals(str) || "application/x-mp4-vtt".equals(str) || "application/x-rawcc".equals(str) || "application/vobsub".equals(str) || "application/pgs".equals(str) || "application/dvbsubs".equals(str)) {
             return 3;
         }
-        if ("image".equals(i(str))) {
+        if ("image".equals(m27381i(str))) {
             return 4;
         }
         if ("application/id3".equals(str) || "application/x-emsg".equals(str) || "application/x-scte35".equals(str)) {
@@ -131,9 +137,9 @@ public final class ak3 {
         if ("application/x-camera-motion".equals(str)) {
             return 6;
         }
-        int size = a.size();
+        int size = f3273a.size();
         for (int i = 0; i < size; i++) {
-            String str2 = ((yh3) a.get(i)).a;
+            String str2 = ((yh3) f3273a.get(i)).f33680a;
             if (str.equals(null)) {
                 return 0;
             }
@@ -141,8 +147,9 @@ public final class ak3 {
         return -1;
     }
 
-    public static wi3 c(String str) {
-        Matcher matcher = b.matcher(str);
+    /* renamed from: c */
+    public static wi3 m27387c(String str) {
+        Matcher matcher = f3274b.matcher(str);
         if (matcher.matches()) {
             String group = matcher.group(1);
             Objects.requireNonNull(group);
@@ -156,7 +163,8 @@ public final class ak3 {
         return null;
     }
 
-    public static String d(int i) {
+    /* renamed from: d */
+    public static String m27386d(int i) {
         if (i != 32) {
             if (i != 33) {
                 if (i != 35) {
@@ -166,21 +174,21 @@ public final class ak3 {
                                 if (i != 165) {
                                     if (i != 166) {
                                         switch (i) {
-                                            case p21.O0 /* 96 */:
-                                            case p21.P0 /* 97 */:
-                                            case p21.Q0 /* 98 */:
-                                            case p21.R0 /* 99 */:
-                                            case p21.S0 /* 100 */:
-                                            case p21.T0 /* 101 */:
+                                            case p21.f22298O0 /* 96 */:
+                                            case p21.f22304P0 /* 97 */:
+                                            case p21.f22310Q0 /* 98 */:
+                                            case p21.f22316R0 /* 99 */:
+                                            case p21.f22322S0 /* 100 */:
+                                            case p21.f22328T0 /* 101 */:
                                                 return "video/mpeg2";
-                                            case p21.U0 /* 102 */:
-                                            case p21.V0 /* 103 */:
-                                            case p21.W0 /* 104 */:
+                                            case p21.f22334U0 /* 102 */:
+                                            case p21.f22340V0 /* 103 */:
+                                            case p21.f22346W0 /* 104 */:
                                                 return "audio/mp4a-latm";
                                             case 105:
-                                            case p21.Y0 /* 107 */:
+                                            case p21.f22358Y0 /* 107 */:
                                                 return "audio/mpeg";
-                                            case p21.X0 /* 106 */:
+                                            case p21.f22352X0 /* 106 */:
                                                 return "video/mpeg";
                                             default:
                                                 switch (i) {
@@ -216,7 +224,8 @@ public final class ak3 {
         return "video/mp4v-es";
     }
 
-    public static String e(String str) {
+    /* renamed from: e */
+    public static String m27385e(String str) {
         char c;
         int hashCode = str.hashCode();
         if (hashCode == -1007807498) {
@@ -239,10 +248,11 @@ public final class ak3 {
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    public static boolean f(String str, String str2) {
+    /* renamed from: f */
+    public static boolean m27384f(String str, String str2) {
         char c;
-        wi3 c2;
-        int a2;
+        wi3 m27387c;
+        int m6058a;
         if (str == null) {
             return false;
         }
@@ -341,21 +351,24 @@ public final class ak3 {
             case '\t':
                 return true;
             case '\n':
-                return (str2 == null || (c2 = c(str2)) == null || (a2 = c2.a()) == 0 || a2 == 16) ? false : true;
+                return (str2 == null || (m27387c = m27387c(str2)) == null || (m6058a = m27387c.m6058a()) == 0 || m6058a == 16) ? false : true;
             default:
                 return false;
         }
     }
 
-    public static boolean g(String str) {
-        return "audio".equals(i(str));
+    /* renamed from: g */
+    public static boolean m27383g(String str) {
+        return "audio".equals(m27381i(str));
     }
 
-    public static boolean h(String str) {
-        return "video".equals(i(str));
+    /* renamed from: h */
+    public static boolean m27382h(String str) {
+        return "video".equals(m27381i(str));
     }
 
-    public static String i(String str) {
+    /* renamed from: i */
+    public static String m27381i(String str) {
         int indexOf;
         if (str == null || (indexOf = str.indexOf(47)) == -1) {
             return null;

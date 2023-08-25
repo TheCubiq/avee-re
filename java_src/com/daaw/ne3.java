@@ -7,20 +7,25 @@ import android.os.Parcelable;
 import java.util.HashMap;
 /* loaded from: classes2.dex */
 public final class ne3 {
-    public static final ClassLoader a = ne3.class.getClassLoader();
 
-    public static Parcelable a(Parcel parcel, Parcelable.Creator creator) {
+    /* renamed from: a */
+    public static final ClassLoader f20071a = ne3.class.getClassLoader();
+
+    /* renamed from: a */
+    public static Parcelable m15209a(Parcel parcel, Parcelable.Creator creator) {
         if (parcel.readInt() == 0) {
             return null;
         }
         return (Parcelable) creator.createFromParcel(parcel);
     }
 
-    public static HashMap b(Parcel parcel) {
-        return parcel.readHashMap(a);
+    /* renamed from: b */
+    public static HashMap m15208b(Parcel parcel) {
+        return parcel.readHashMap(f20071a);
     }
 
-    public static void c(Parcel parcel) {
+    /* renamed from: c */
+    public static void m15207c(Parcel parcel) {
         int dataAvail = parcel.dataAvail();
         if (dataAvail <= 0) {
             return;
@@ -28,11 +33,13 @@ public final class ne3 {
         throw new BadParcelableException("Parcel data not fully consumed, unread size: " + dataAvail);
     }
 
-    public static void d(Parcel parcel, boolean z) {
+    /* renamed from: d */
+    public static void m15206d(Parcel parcel, boolean z) {
         parcel.writeInt(z ? 1 : 0);
     }
 
-    public static void e(Parcel parcel, Parcelable parcelable) {
+    /* renamed from: e */
+    public static void m15205e(Parcel parcel, Parcelable parcelable) {
         if (parcelable == null) {
             parcel.writeInt(0);
             return;
@@ -41,11 +48,13 @@ public final class ne3 {
         parcelable.writeToParcel(parcel, 0);
     }
 
-    public static void f(Parcel parcel, IInterface iInterface) {
+    /* renamed from: f */
+    public static void m15204f(Parcel parcel, IInterface iInterface) {
         parcel.writeStrongBinder(iInterface == null ? null : iInterface.asBinder());
     }
 
-    public static boolean g(Parcel parcel) {
+    /* renamed from: g */
+    public static boolean m15203g(Parcel parcel) {
         return parcel.readInt() != 0;
     }
 }

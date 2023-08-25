@@ -8,19 +8,22 @@ public final class xn7 extends ls7 implements yt7 {
     static {
         xn7 xn7Var = new xn7();
         zzb = xn7Var;
-        ls7.C(xn7.class, xn7Var);
+        ls7.m16597C(xn7.class, xn7Var);
     }
 
-    public static xn7 N() {
+    /* renamed from: N */
+    public static xn7 m4942N() {
         return zzb;
     }
 
-    public static xn7 O(yq7 yq7Var, vr7 vr7Var) {
-        return (xn7) ls7.q(zzb, yq7Var, vr7Var);
+    /* renamed from: O */
+    public static xn7 m4941O(yq7 yq7Var, vr7 vr7Var) {
+        return (xn7) ls7.m16582q(zzb, yq7Var, vr7Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -35,21 +38,24 @@ public final class xn7 extends ls7 implements yt7 {
                 }
                 return new xn7();
             }
-            return ls7.z(zzb, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001Ȉ\u0002\t", new Object[]{"zzd", "zze"});
+            return ls7.m16573z(zzb, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001Ȉ\u0002\t", new Object[]{"zzd", "zze"});
         }
         return (byte) 1;
     }
 
-    public final vm7 L() {
+    /* renamed from: L */
+    public final vm7 m4944L() {
         vm7 vm7Var = this.zze;
-        return vm7Var == null ? vm7.N() : vm7Var;
+        return vm7Var == null ? vm7.m7026N() : vm7Var;
     }
 
-    public final String P() {
+    /* renamed from: P */
+    public final String m4940P() {
         return this.zzd;
     }
 
-    public final boolean Q() {
+    /* renamed from: Q */
+    public final boolean m4939Q() {
         return this.zze != null;
     }
 }

@@ -13,29 +13,33 @@ import java.util.concurrent.Executor;
 import org.json.JSONException;
 /* loaded from: classes.dex */
 public final class zzam implements w57 {
-    public final Executor a;
-    public final ij5 b;
+
+    /* renamed from: a */
+    public final Executor f36523a;
+
+    /* renamed from: b */
+    public final ij5 f36524b;
 
     public zzam(Executor executor, ij5 ij5Var) {
-        this.a = executor;
-        this.b = ij5Var;
+        this.f36523a = executor;
+        this.f36524b = ij5Var;
     }
 
     @Override // com.daaw.w57
     public final /* bridge */ /* synthetic */ f77 zza(Object obj) {
         final zzccb zzccbVar = (zzccb) obj;
-        return s67.n(this.b.b(zzccbVar), new w57() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzal
+        return s67.m10629n(this.f36524b.m19746b(zzccbVar), new w57() { // from class: com.google.android.gms.ads.nonagon.signalgeneration.zzal
             @Override // com.daaw.w57
             public final f77 zza(Object obj2) {
                 zzccb zzccbVar2 = zzccb.this;
                 zzao zzaoVar = new zzao(new JsonReader(new InputStreamReader((InputStream) obj2)));
                 try {
-                    zzaoVar.zzb = zzay.zzb().n(zzccbVar2.p).toString();
+                    zzaoVar.zzb = zzay.zzb().m24818n(zzccbVar2.f36964p).toString();
                 } catch (JSONException unused) {
                     zzaoVar.zzb = "{}";
                 }
-                return s67.i(zzaoVar);
+                return s67.m10634i(zzaoVar);
             }
-        }, this.a);
+        }, this.f36523a);
     }
 }

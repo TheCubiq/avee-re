@@ -8,35 +8,48 @@ import com.google.android.gms.ads.internal.client.zzk;
 import com.google.android.gms.ads.internal.client.zzq;
 /* loaded from: classes.dex */
 public final class he2 extends ku2 {
-    public final /* synthetic */ Context b;
-    public final /* synthetic */ zzq c;
-    public final /* synthetic */ String d;
-    public final /* synthetic */ an3 e;
-    public final /* synthetic */ zzaw f;
+
+    /* renamed from: b */
+    public final /* synthetic */ Context f12469b;
+
+    /* renamed from: c */
+    public final /* synthetic */ zzq f12470c;
+
+    /* renamed from: d */
+    public final /* synthetic */ String f12471d;
+
+    /* renamed from: e */
+    public final /* synthetic */ an3 f12472e;
+
+    /* renamed from: f */
+    public final /* synthetic */ zzaw f12473f;
 
     public he2(zzaw zzawVar, Context context, zzq zzqVar, String str, an3 an3Var) {
-        this.f = zzawVar;
-        this.b = context;
-        this.c = zzqVar;
-        this.d = str;
-        this.e = an3Var;
+        this.f12473f = zzawVar;
+        this.f12469b = context;
+        this.f12470c = zzqVar;
+        this.f12471d = str;
+        this.f12472e = an3Var;
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object a() {
-        zzaw.i(this.b, "banner");
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo3435a() {
+        zzaw.m1429i(this.f12469b, "banner");
         return new zzew();
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object b(zzce zzceVar) {
-        return zzceVar.zzd(nt0.g3(this.b), this.c, this.d, this.e, 224400000);
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ Object mo3434b(zzce zzceVar) {
+        return zzceVar.zzd(nt0.m14830g3(this.f12469b), this.f12470c, this.f12471d, this.f12472e, 224400000);
     }
 
     @Override // com.daaw.ku2
-    public final /* bridge */ /* synthetic */ Object c() {
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo3433c() {
         zzk zzkVar;
-        zzkVar = this.f.a;
-        return zzkVar.zza(this.b, this.c, this.d, this.e, 1);
+        zzkVar = this.f12473f.f36086a;
+        return zzkVar.zza(this.f12469b, this.f12470c, this.f12471d, this.f12472e, 1);
     }
 }

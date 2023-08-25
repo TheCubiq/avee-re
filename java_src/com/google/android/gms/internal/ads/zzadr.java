@@ -10,25 +10,33 @@ import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class zzadr implements zzbp {
     public static final Parcelable.Creator<zzadr> CREATOR = new q72();
-    public final String p;
-    public final byte[] q;
-    public final int r;
-    public final int s;
+
+    /* renamed from: p */
+    public final String f36762p;
+
+    /* renamed from: q */
+    public final byte[] f36763q;
+
+    /* renamed from: r */
+    public final int f36764r;
+
+    /* renamed from: s */
+    public final int f36765s;
 
     public /* synthetic */ zzadr(Parcel parcel, r72 r72Var) {
         String readString = parcel.readString();
-        int i = it5.a;
-        this.p = readString;
-        this.q = (byte[]) it5.h(parcel.createByteArray());
-        this.r = parcel.readInt();
-        this.s = parcel.readInt();
+        int i = it5.f13991a;
+        this.f36762p = readString;
+        this.f36763q = (byte[]) it5.m19391h(parcel.createByteArray());
+        this.f36764r = parcel.readInt();
+        this.f36765s = parcel.readInt();
     }
 
     public zzadr(String str, byte[] bArr, int i, int i2) {
-        this.p = str;
-        this.q = bArr;
-        this.r = i;
-        this.s = i2;
+        this.f36762p = str;
+        this.f36763q = bArr;
+        this.f36764r = i;
+        this.f36765s = i2;
     }
 
     @Override // android.os.Parcelable
@@ -42,7 +50,7 @@ public final class zzadr implements zzbp {
         }
         if (obj != null && zzadr.class == obj.getClass()) {
             zzadr zzadrVar = (zzadr) obj;
-            if (this.p.equals(zzadrVar.p) && Arrays.equals(this.q, zzadrVar.q) && this.r == zzadrVar.r && this.s == zzadrVar.s) {
+            if (this.f36762p.equals(zzadrVar.f36762p) && Arrays.equals(this.f36763q, zzadrVar.f36763q) && this.f36764r == zzadrVar.f36764r && this.f36765s == zzadrVar.f36765s) {
                 return true;
             }
         }
@@ -50,22 +58,23 @@ public final class zzadr implements zzbp {
     }
 
     @Override // com.google.android.gms.internal.ads.zzbp
-    public final /* synthetic */ void f(x93 x93Var) {
+    /* renamed from: f */
+    public final /* synthetic */ void mo1104f(x93 x93Var) {
     }
 
     public final int hashCode() {
-        return ((((((this.p.hashCode() + 527) * 31) + Arrays.hashCode(this.q)) * 31) + this.r) * 31) + this.s;
+        return ((((((this.f36762p.hashCode() + 527) * 31) + Arrays.hashCode(this.f36763q)) * 31) + this.f36764r) * 31) + this.f36765s;
     }
 
     public final String toString() {
-        return "mdta: key=".concat(String.valueOf(this.p));
+        return "mdta: key=".concat(String.valueOf(this.f36762p));
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeByteArray(this.q);
-        parcel.writeInt(this.r);
-        parcel.writeInt(this.s);
+        parcel.writeString(this.f36762p);
+        parcel.writeByteArray(this.f36763q);
+        parcel.writeInt(this.f36764r);
+        parcel.writeInt(this.f36765s);
     }
 }

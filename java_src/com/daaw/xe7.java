@@ -3,13 +3,18 @@ package com.daaw;
 import android.content.Context;
 /* loaded from: classes2.dex */
 public interface xe7 {
-    b52 a();
+    /* renamed from: a */
+    b52 mo3911a();
 
-    ag b();
+    /* renamed from: b */
+    InterfaceC0623ag mo3909b();
 
-    Context d();
+    /* renamed from: d */
+    Context mo3905d();
 
-    om5 i();
+    /* renamed from: i */
+    om5 mo3895i();
 
-    vn6 r();
+    /* renamed from: r */
+    vn6 mo3882r();
 }

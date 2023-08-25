@@ -4,21 +4,26 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class lm3 implements mh3 {
-    public final e14 a;
-    public final /* synthetic */ mm3 b;
+
+    /* renamed from: a */
+    public final e14 f17539a;
+
+    /* renamed from: b */
+    public final /* synthetic */ mm3 f17540b;
 
     public lm3(mm3 mm3Var, e14 e14Var) {
-        this.b = mm3Var;
-        this.a = e14Var;
+        this.f17540b = mm3Var;
+        this.f17539a = e14Var;
     }
 
     @Override // com.daaw.mh3
-    public final void a(JSONObject jSONObject) {
+    /* renamed from: a */
+    public final void mo16027a(JSONObject jSONObject) {
         try {
-            this.a.b(jSONObject);
+            this.f17539a.m23797b(jSONObject);
         } catch (IllegalStateException unused) {
         } catch (JSONException e) {
-            this.a.c(e);
+            this.f17539a.m23796c(e);
         }
     }
 
@@ -26,9 +31,9 @@ public final class lm3 implements mh3 {
     public final void zza(String str) {
         try {
             if (str == null) {
-                this.a.c(new ml3());
+                this.f17539a.m23796c(new ml3());
             } else {
-                this.a.c(new ml3(str));
+                this.f17539a.m23796c(new ml3(str));
             }
         } catch (IllegalStateException unused) {
         }

@@ -36,27 +36,46 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class zzej {
     @GuardedBy("InternalMobileAds.class")
-    public static zzej i;
-    @GuardedBy("settingManagerLock")
-    public zzco f;
-    public final Object a = new Object();
-    @GuardedBy("stateLock")
-    public boolean c = false;
-    @GuardedBy("stateLock")
-    public boolean d = false;
-    public final Object e = new Object();
-    @Nullable
-    public OnAdInspectorClosedListener g = null;
-    public RequestConfiguration h = new RequestConfiguration.Builder().build();
-    @GuardedBy("stateLock")
-    public final ArrayList b = new ArrayList();
 
-    public static InitializationStatus k(List list) {
+    /* renamed from: i */
+    public static zzej f36162i;
+    @GuardedBy("settingManagerLock")
+
+    /* renamed from: f */
+    public zzco f36168f;
+
+    /* renamed from: a */
+    public final Object f36163a = new Object();
+    @GuardedBy("stateLock")
+
+    /* renamed from: c */
+    public boolean f36165c = false;
+    @GuardedBy("stateLock")
+
+    /* renamed from: d */
+    public boolean f36166d = false;
+
+    /* renamed from: e */
+    public final Object f36167e = new Object();
+    @Nullable
+
+    /* renamed from: g */
+    public OnAdInspectorClosedListener f36169g = null;
+
+    /* renamed from: h */
+    public RequestConfiguration f36170h = new RequestConfiguration.Builder().build();
+    @GuardedBy("stateLock")
+
+    /* renamed from: b */
+    public final ArrayList f36164b = new ArrayList();
+
+    /* renamed from: k */
+    public static InitializationStatus m1397k(List list) {
         HashMap hashMap = new HashMap();
         Iterator it = list.iterator();
         while (it.hasNext()) {
             zzbrz zzbrzVar = (zzbrz) it.next();
-            hashMap.put(zzbrzVar.p, new hj3(zzbrzVar.q ? AdapterStatus.State.READY : AdapterStatus.State.NOT_READY, zzbrzVar.s, zzbrzVar.r));
+            hashMap.put(zzbrzVar.f36866p, new hj3(zzbrzVar.f36867q ? AdapterStatus.State.READY : AdapterStatus.State.NOT_READY, zzbrzVar.f36869s, zzbrzVar.f36868r));
         }
         return new ij3(hashMap);
     }
@@ -64,56 +83,61 @@ public final class zzej {
     public static zzej zzf() {
         zzej zzejVar;
         synchronized (zzej.class) {
-            if (i == null) {
-                i = new zzej();
+            if (f36162i == null) {
+                f36162i = new zzej();
             }
-            zzejVar = i;
+            zzejVar = f36162i;
         }
         return zzejVar;
     }
 
     @GuardedBy("settingManagerLock")
-    public final void a(Context context) {
-        if (this.f == null) {
-            this.f = (zzco) new mm2(zzay.zza(), context).d(context, false);
+    /* renamed from: a */
+    public final void m1407a(Context context) {
+        if (this.f36168f == null) {
+            this.f36168f = (zzco) new mm2(zzay.zza(), context).m17432d(context, false);
         }
     }
 
     @GuardedBy("settingManagerLock")
-    public final void b(RequestConfiguration requestConfiguration) {
+    /* renamed from: b */
+    public final void m1406b(RequestConfiguration requestConfiguration) {
         try {
-            this.f.zzu(new zzff(requestConfiguration));
+            this.f36168f.zzu(new zzff(requestConfiguration));
         } catch (RemoteException e) {
             k04.zzh("Unable to set request configuration parcel.", e);
         }
     }
 
-    public final /* synthetic */ void i(Context context, String str) {
-        synchronized (this.e) {
-            l(context, null);
+    /* renamed from: i */
+    public final /* synthetic */ void m1399i(Context context, String str) {
+        synchronized (this.f36167e) {
+            m1396l(context, null);
         }
     }
 
-    public final /* synthetic */ void j(Context context, String str) {
-        synchronized (this.e) {
-            l(context, null);
+    /* renamed from: j */
+    public final /* synthetic */ void m1398j(Context context, String str) {
+        synchronized (this.f36167e) {
+            m1396l(context, null);
         }
     }
 
     @GuardedBy("settingManagerLock")
-    public final void l(Context context, @Nullable String str) {
+    /* renamed from: l */
+    public final void m1396l(Context context, @Nullable String str) {
         try {
-            tm3.a().b(context, null);
-            this.f.zzk();
-            this.f.zzl(null, nt0.g3(null));
+            tm3.m8966a().m8965b(context, null);
+            this.f36168f.zzk();
+            this.f36168f.zzl(null, nt0.m14830g3(null));
         } catch (RemoteException e) {
             k04.zzk("MobileAdsSettingManager initialization failed", e);
         }
     }
 
     public final float zza() {
-        synchronized (this.e) {
-            zzco zzcoVar = this.f;
+        synchronized (this.f36167e) {
+            zzco zzcoVar = this.f36168f;
             float f = 1.0f;
             if (zzcoVar == null) {
                 return 1.0f;
@@ -128,15 +152,15 @@ public final class zzej {
     }
 
     public final RequestConfiguration zzc() {
-        return this.h;
+        return this.f36170h;
     }
 
     public final InitializationStatus zze() {
-        InitializationStatus k;
-        synchronized (this.e) {
-            ry0.n(this.f != null, "MobileAds.initialize() must be called prior to getting initialization status.");
+        InitializationStatus m1397k;
+        synchronized (this.f36167e) {
+            ry0.m10826n(this.f36168f != null, "MobileAds.initialize() must be called prior to getting initialization status.");
             try {
-                k = k(this.f.zzg());
+                m1397k = m1397k(this.f36168f.zzg());
             } catch (RemoteException unused) {
                 k04.zzg("Unable to get Initialization status.");
                 return new InitializationStatus() { // from class: com.google.android.gms.ads.internal.client.zzeb
@@ -150,29 +174,29 @@ public final class zzej {
                 };
             }
         }
-        return k;
+        return m1397k;
     }
 
     @Deprecated
     public final String zzh() {
-        String c;
-        synchronized (this.e) {
-            ry0.n(this.f != null, "MobileAds.initialize() must be called prior to getting version string.");
+        String m20316c;
+        synchronized (this.f36167e) {
+            ry0.m10826n(this.f36168f != null, "MobileAds.initialize() must be called prior to getting version string.");
             try {
-                c = hz6.c(this.f.zzf());
+                m20316c = hz6.m20316c(this.f36168f.zzf());
             } catch (RemoteException e) {
                 k04.zzh("Unable to get version string.", e);
                 return "";
             }
         }
-        return c;
+        return m20316c;
     }
 
     public final void zzl(Context context) {
-        synchronized (this.e) {
-            a(context);
+        synchronized (this.f36167e) {
+            m1407a(context);
             try {
-                this.f.zzi();
+                this.f36168f.zzi();
             } catch (RemoteException unused) {
                 k04.zzg("Unable to disable mediation adapter initialization.");
             }
@@ -180,10 +204,10 @@ public final class zzej {
     }
 
     public final void zzm(boolean z) {
-        synchronized (this.e) {
-            ry0.n(this.f != null, "MobileAds.initialize() must be called prior to enable/disable Same App Key.");
+        synchronized (this.f36167e) {
+            ry0.m10826n(this.f36168f != null, "MobileAds.initialize() must be called prior to enable/disable Same App Key.");
             try {
-                this.f.zzj(z);
+                this.f36168f.zzj(z);
             } catch (RemoteException e) {
                 String str = z ? "enable" : "disable";
                 k04.zzh("Unable to " + str + " Same App Key.", e);
@@ -195,73 +219,73 @@ public final class zzej {
     }
 
     public final void zzn(Context context, @Nullable String str, @Nullable OnInitializationCompleteListener onInitializationCompleteListener) {
-        synchronized (this.a) {
-            if (this.c) {
+        synchronized (this.f36163a) {
+            if (this.f36165c) {
                 if (onInitializationCompleteListener != null) {
-                    this.b.add(onInitializationCompleteListener);
+                    this.f36164b.add(onInitializationCompleteListener);
                 }
-            } else if (this.d) {
+            } else if (this.f36166d) {
                 if (onInitializationCompleteListener != null) {
                     onInitializationCompleteListener.onInitializationComplete(zze());
                 }
             } else {
-                this.c = true;
+                this.f36165c = true;
                 if (onInitializationCompleteListener != null) {
-                    this.b.add(onInitializationCompleteListener);
+                    this.f36164b.add(onInitializationCompleteListener);
                 }
                 if (context == null) {
                     throw new IllegalArgumentException("Context cannot be null.");
                 }
-                synchronized (this.e) {
+                synchronized (this.f36167e) {
                     try {
-                        a(context);
-                        this.f.zzs(new tn5(this, null));
-                        this.f.zzo(new xm3());
-                        if (this.h.getTagForChildDirectedTreatment() != -1 || this.h.getTagForUnderAgeOfConsent() != -1) {
-                            b(this.h);
+                        m1407a(context);
+                        this.f36168f.zzs(new tn5(this, null));
+                        this.f36168f.zzo(new xm3());
+                        if (this.f36170h.getTagForChildDirectedTreatment() != -1 || this.f36170h.getTagForUnderAgeOfConsent() != -1) {
+                            m1406b(this.f36170h);
                         }
                     } catch (RemoteException e) {
                         k04.zzk("MobileAdsSettingManager initialization failed", e);
                     }
-                    g93.c(context);
-                    if (((Boolean) ya3.a.e()).booleanValue()) {
-                        if (((Boolean) zzba.zzc().b(g93.m9)).booleanValue()) {
+                    g93.m21879c(context);
+                    if (((Boolean) ya3.f33449a.m16137e()).booleanValue()) {
+                        if (((Boolean) zzba.zzc().m23658b(g93.f10763m9)).booleanValue()) {
                             k04.zze("Initializing on bg thread");
-                            zz3.a.execute(new Runnable(context, null) { // from class: com.google.android.gms.ads.internal.client.zzec
+                            zz3.f35692a.execute(new Runnable(context, null) { // from class: com.google.android.gms.ads.internal.client.zzec
                                 public final /* synthetic */ Context zzb;
 
                                 @Override // java.lang.Runnable
                                 public final void run() {
-                                    zzej.this.i(this.zzb, null);
+                                    zzej.this.m1399i(this.zzb, null);
                                 }
                             });
                         }
                     }
-                    if (((Boolean) ya3.b.e()).booleanValue()) {
-                        if (((Boolean) zzba.zzc().b(g93.m9)).booleanValue()) {
-                            zz3.b.execute(new Runnable(context, null) { // from class: com.google.android.gms.ads.internal.client.zzed
+                    if (((Boolean) ya3.f33450b.m16137e()).booleanValue()) {
+                        if (((Boolean) zzba.zzc().m23658b(g93.f10763m9)).booleanValue()) {
+                            zz3.f35693b.execute(new Runnable(context, null) { // from class: com.google.android.gms.ads.internal.client.zzed
                                 public final /* synthetic */ Context zzb;
 
                                 @Override // java.lang.Runnable
                                 public final void run() {
-                                    zzej.this.j(this.zzb, null);
+                                    zzej.this.m1398j(this.zzb, null);
                                 }
                             });
                         }
                     }
                     k04.zze("Initializing on calling thread");
-                    l(context, null);
+                    m1396l(context, null);
                 }
             }
         }
     }
 
     public final void zzq(Context context, OnAdInspectorClosedListener onAdInspectorClosedListener) {
-        synchronized (this.e) {
-            a(context);
-            this.g = onAdInspectorClosedListener;
+        synchronized (this.f36167e) {
+            m1407a(context);
+            this.f36169g = onAdInspectorClosedListener;
             try {
-                this.f.zzm(new ml5(null));
+                this.f36168f.zzm(new ml5(null));
             } catch (RemoteException unused) {
                 k04.zzg("Unable to open the ad inspector.");
                 if (onAdInspectorClosedListener != null) {
@@ -272,10 +296,10 @@ public final class zzej {
     }
 
     public final void zzr(Context context, String str) {
-        synchronized (this.e) {
-            ry0.n(this.f != null, "MobileAds.initialize() must be called prior to opening debug menu.");
+        synchronized (this.f36167e) {
+            ry0.m10826n(this.f36168f != null, "MobileAds.initialize() must be called prior to opening debug menu.");
             try {
-                this.f.zzn(nt0.g3(context), str);
+                this.f36168f.zzn(nt0.m14830g3(context), str);
             } catch (RemoteException e) {
                 k04.zzh("Unable to open debug menu.", e);
             }
@@ -283,9 +307,9 @@ public final class zzej {
     }
 
     public final void zzs(Class cls) {
-        synchronized (this.e) {
+        synchronized (this.f36167e) {
             try {
-                this.f.zzh(cls.getCanonicalName());
+                this.f36168f.zzh(cls.getCanonicalName());
             } catch (RemoteException e) {
                 k04.zzh("Unable to register RtbAdapter", e);
             }
@@ -293,10 +317,10 @@ public final class zzej {
     }
 
     public final void zzt(boolean z) {
-        synchronized (this.e) {
-            ry0.n(this.f != null, "MobileAds.initialize() must be called prior to setting app muted state.");
+        synchronized (this.f36167e) {
+            ry0.m10826n(this.f36168f != null, "MobileAds.initialize() must be called prior to setting app muted state.");
             try {
-                this.f.zzp(z);
+                this.f36168f.zzp(z);
             } catch (RemoteException e) {
                 k04.zzh("Unable to set app mute state.", e);
             }
@@ -305,14 +329,14 @@ public final class zzej {
 
     public final void zzu(float f) {
         boolean z = true;
-        ry0.b(f >= 0.0f && f <= 1.0f, "The app volume must be a value between 0 and 1 inclusive.");
-        synchronized (this.e) {
-            if (this.f == null) {
+        ry0.m10838b(f >= 0.0f && f <= 1.0f, "The app volume must be a value between 0 and 1 inclusive.");
+        synchronized (this.f36167e) {
+            if (this.f36168f == null) {
                 z = false;
             }
-            ry0.n(z, "MobileAds.initialize() must be called prior to setting the app volume.");
+            ry0.m10826n(z, "MobileAds.initialize() must be called prior to setting the app volume.");
             try {
-                this.f.zzq(f);
+                this.f36168f.zzq(f);
             } catch (RemoteException e) {
                 k04.zzh("Unable to set app volume.", e);
             }
@@ -320,10 +344,10 @@ public final class zzej {
     }
 
     public final void zzv(String str) {
-        synchronized (this.e) {
-            ry0.n(this.f != null, "MobileAds.initialize() must be called prior to setting the plugin.");
+        synchronized (this.f36167e) {
+            ry0.m10826n(this.f36168f != null, "MobileAds.initialize() must be called prior to setting the plugin.");
             try {
-                this.f.zzt(str);
+                this.f36168f.zzt(str);
             } catch (RemoteException e) {
                 k04.zzh("Unable to set plugin.", e);
             }
@@ -331,22 +355,22 @@ public final class zzej {
     }
 
     public final void zzw(RequestConfiguration requestConfiguration) {
-        ry0.b(requestConfiguration != null, "Null passed to setRequestConfiguration.");
-        synchronized (this.e) {
-            RequestConfiguration requestConfiguration2 = this.h;
-            this.h = requestConfiguration;
-            if (this.f == null) {
+        ry0.m10838b(requestConfiguration != null, "Null passed to setRequestConfiguration.");
+        synchronized (this.f36167e) {
+            RequestConfiguration requestConfiguration2 = this.f36170h;
+            this.f36170h = requestConfiguration;
+            if (this.f36168f == null) {
                 return;
             }
             if (requestConfiguration2.getTagForChildDirectedTreatment() != requestConfiguration.getTagForChildDirectedTreatment() || requestConfiguration2.getTagForUnderAgeOfConsent() != requestConfiguration.getTagForUnderAgeOfConsent()) {
-                b(requestConfiguration);
+                m1406b(requestConfiguration);
             }
         }
     }
 
     public final boolean zzx() {
-        synchronized (this.e) {
-            zzco zzcoVar = this.f;
+        synchronized (this.f36167e) {
+            zzco zzcoVar = this.f36168f;
             boolean z = false;
             if (zzcoVar == null) {
                 return false;

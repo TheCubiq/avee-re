@@ -7,13 +7,15 @@ public enum nw7 {
     DOUBLE(Double.valueOf(0.0d)),
     BOOLEAN(Boolean.FALSE),
     STRING(""),
-    BYTE_STRING(yq7.q),
+    BYTE_STRING(yq7.f33966q),
     ENUM(null),
     MESSAGE(null);
     
-    public final Object p;
+
+    /* renamed from: p */
+    public final Object f20808p;
 
     nw7(Object obj) {
-        this.p = obj;
+        this.f20808p = obj;
     }
 }

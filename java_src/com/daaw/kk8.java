@@ -4,99 +4,120 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 /* loaded from: classes.dex */
 public abstract class kk8 implements hi8 {
-    public di8 b;
-    public di8 c;
-    public di8 d;
-    public di8 e;
-    public ByteBuffer f;
-    public ByteBuffer g;
-    public boolean h;
+
+    /* renamed from: b */
+    public di8 f16433b;
+
+    /* renamed from: c */
+    public di8 f16434c;
+
+    /* renamed from: d */
+    public di8 f16435d;
+
+    /* renamed from: e */
+    public di8 f16436e;
+
+    /* renamed from: f */
+    public ByteBuffer f16437f;
+
+    /* renamed from: g */
+    public ByteBuffer f16438g;
+
+    /* renamed from: h */
+    public boolean f16439h;
 
     public kk8() {
-        ByteBuffer byteBuffer = hi8.a;
-        this.f = byteBuffer;
-        this.g = byteBuffer;
-        di8 di8Var = di8.e;
-        this.d = di8Var;
-        this.e = di8Var;
-        this.b = di8Var;
-        this.c = di8Var;
+        ByteBuffer byteBuffer = hi8.f12557a;
+        this.f16437f = byteBuffer;
+        this.f16438g = byteBuffer;
+        di8 di8Var = di8.f7132e;
+        this.f16435d = di8Var;
+        this.f16436e = di8Var;
+        this.f16433b = di8Var;
+        this.f16434c = di8Var;
     }
 
     @Override // com.daaw.hi8
-    public final di8 a(di8 di8Var) {
-        this.d = di8Var;
-        this.e = c(di8Var);
-        return zzg() ? this.e : di8.e;
+    /* renamed from: a */
+    public final di8 mo3499a(di8 di8Var) {
+        this.f16435d = di8Var;
+        this.f16436e = mo3570c(di8Var);
+        return zzg() ? this.f16436e : di8.f7132e;
     }
 
-    public abstract di8 c(di8 di8Var);
+    /* renamed from: c */
+    public abstract di8 mo3570c(di8 di8Var);
 
-    public final ByteBuffer d(int i) {
-        if (this.f.capacity() < i) {
-            this.f = ByteBuffer.allocateDirect(i).order(ByteOrder.nativeOrder());
+    /* renamed from: d */
+    public final ByteBuffer m17680d(int i) {
+        if (this.f16437f.capacity() < i) {
+            this.f16437f = ByteBuffer.allocateDirect(i).order(ByteOrder.nativeOrder());
         } else {
-            this.f.clear();
+            this.f16437f.clear();
         }
-        ByteBuffer byteBuffer = this.f;
-        this.g = byteBuffer;
+        ByteBuffer byteBuffer = this.f16437f;
+        this.f16438g = byteBuffer;
         return byteBuffer;
     }
 
-    public void e() {
+    /* renamed from: e */
+    public void mo8013e() {
     }
 
-    public void f() {
+    /* renamed from: f */
+    public void mo8012f() {
     }
 
-    public void g() {
+    /* renamed from: g */
+    public void mo8011g() {
     }
 
-    public final boolean h() {
-        return this.g.hasRemaining();
+    /* renamed from: h */
+    public final boolean m17679h() {
+        return this.f16438g.hasRemaining();
     }
 
     @Override // com.daaw.hi8
     public ByteBuffer zzb() {
-        ByteBuffer byteBuffer = this.g;
-        this.g = hi8.a;
+        ByteBuffer byteBuffer = this.f16438g;
+        this.f16438g = hi8.f12557a;
         return byteBuffer;
     }
 
     @Override // com.daaw.hi8
     public final void zzc() {
-        this.g = hi8.a;
-        this.h = false;
-        this.b = this.d;
-        this.c = this.e;
-        e();
+        this.f16438g = hi8.f12557a;
+        this.f16439h = false;
+        this.f16433b = this.f16435d;
+        this.f16434c = this.f16436e;
+        mo8013e();
     }
 
     @Override // com.daaw.hi8
     public final void zzd() {
-        this.h = true;
-        f();
+        this.f16439h = true;
+        mo8012f();
     }
 
     @Override // com.daaw.hi8
     public final void zzf() {
         zzc();
-        this.f = hi8.a;
-        di8 di8Var = di8.e;
-        this.d = di8Var;
-        this.e = di8Var;
-        this.b = di8Var;
-        this.c = di8Var;
-        g();
+        this.f16437f = hi8.f12557a;
+        di8 di8Var = di8.f7132e;
+        this.f16435d = di8Var;
+        this.f16436e = di8Var;
+        this.f16433b = di8Var;
+        this.f16434c = di8Var;
+        mo8011g();
     }
 
     @Override // com.daaw.hi8
     public boolean zzg() {
-        return this.e != di8.e;
+        return this.f16436e != di8.f7132e;
     }
 
     @Override // com.daaw.hi8
     public boolean zzh() {
-        return this.h && this.g == hi8.a;
+        return this.f16439h && this.f16438g == hi8.f12557a;
     }
 }

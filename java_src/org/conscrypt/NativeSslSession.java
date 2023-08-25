@@ -3,6 +3,7 @@ package org.conscrypt;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.security.Principal;
 import java.security.cert.Certificate;
@@ -276,125 +277,80 @@ public abstract class NativeSslSession {
     /* JADX WARN: Removed duplicated region for block: B:31:0x00b6 A[Catch: BufferUnderflowException -> 0x00e3, IOException -> 0x00e8, TryCatch #3 {IOException -> 0x00e8, BufferUnderflowException -> 0x00e3, blocks: (B:3:0x0005, B:5:0x000f, B:7:0x0027, B:10:0x003c, B:11:0x005a, B:12:0x005b, B:14:0x0061, B:16:0x006b, B:18:0x0079, B:21:0x008e, B:23:0x0094, B:25:0x009d, B:27:0x00a5, B:29:0x00ab, B:31:0x00b6, B:33:0x00cc, B:34:0x00e2, B:8:0x0033), top: B:43:0x0005, inners: #2 }] */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static org.conscrypt.NativeSslSession newInstance(org.conscrypt.AbstractSessionContext r14, byte[] r15, java.lang.String r16, int r17) {
-        /*
-            java.nio.ByteBuffer r0 = java.nio.ByteBuffer.wrap(r15)
-            r1 = 0
-            int r2 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            boolean r3 = org.conscrypt.SSLUtils.SessionType.isSupportedType(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            if (r3 == 0) goto Lcc
-            int r3 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r3)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            byte[] r3 = new byte[r3]     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r0.get(r3)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            int r4 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r4)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.security.cert.X509Certificate[] r10 = new java.security.cert.X509Certificate[r4]     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r5 = 0
-        L25:
-            if (r5 >= r4) goto L5b
-            int r6 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r6)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            byte[] r6 = new byte[r6]     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r0.get(r6)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            org.conscrypt.OpenSSLX509Certificate r6 = org.conscrypt.OpenSSLX509Certificate.fromX509Der(r6)     // Catch: java.lang.Exception -> L3c
-            r10[r5] = r6     // Catch: java.lang.Exception -> L3c
-            int r5 = r5 + 1
-            goto L25
-        L3c:
-            java.io.IOException r0 = new java.io.IOException     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.StringBuilder r2 = new java.lang.StringBuilder     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r2.<init>()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.String r3 = "Can not read certificate "
-            r2.append(r3)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r2.append(r5)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.String r3 = "/"
-            r2.append(r3)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r2.append(r4)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.String r2 = r2.toString()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r0.<init>(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            throw r0     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-        L5b:
-            org.conscrypt.SSLUtils$SessionType r4 = org.conscrypt.SSLUtils.SessionType.OPEN_SSL_WITH_OCSP     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            int r4 = r4.value     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            if (r2 < r4) goto L8d
-            int r4 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r4)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r5 = 1
-            if (r4 < r5) goto L8d
-            int r6 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r6)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            byte[] r6 = new byte[r6]     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r0.get(r6)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-        L77:
-            if (r5 >= r4) goto L8b
-            int r7 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r7)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            int r8 = r0.position()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            int r8 = r8 + r7
-            r0.position(r8)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            int r5 = r5 + 1
-            goto L77
-        L8b:
-            r11 = r6
-            goto L8e
-        L8d:
-            r11 = r1
-        L8e:
-            org.conscrypt.SSLUtils$SessionType r4 = org.conscrypt.SSLUtils.SessionType.OPEN_SSL_WITH_TLS_SCT     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            int r4 = r4.value     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            if (r2 != r4) goto La4
-            int r2 = r0.getInt()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            checkRemaining(r0, r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            if (r2 <= 0) goto La4
-            byte[] r2 = new byte[r2]     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r0.get(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r12 = r2
-            goto La5
-        La4:
-            r12 = r1
-        La5:
-            int r0 = r0.remaining()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            if (r0 == 0) goto Lb6
-            java.lang.AssertionError r0 = new java.lang.AssertionError     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.String r2 = "Read entire session, but data still remains; rejecting"
-            r0.<init>(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            log(r0)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            return r1
-        Lb6:
-            org.conscrypt.NativeRef$SSL_SESSION r7 = new org.conscrypt.NativeRef$SSL_SESSION     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            long r2 = org.conscrypt.NativeCrypto.d2i_SSL_SESSION(r3)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r7.<init>(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            org.conscrypt.NativeSslSession$Impl r0 = new org.conscrypt.NativeSslSession$Impl     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r13 = 0
-            r5 = r0
-            r6 = r14
-            r8 = r16
-            r9 = r17
-            r5.<init>(r6, r7, r8, r9, r10, r11, r12)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            return r0
-        Lcc:
-            java.io.IOException r0 = new java.io.IOException     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.StringBuilder r3 = new java.lang.StringBuilder     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r3.<init>()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.String r4 = "Unexpected type ID: "
-            r3.append(r4)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r3.append(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            java.lang.String r2 = r3.toString()     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            r0.<init>(r2)     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-            throw r0     // Catch: java.nio.BufferUnderflowException -> Le3 java.io.IOException -> Le8
-        Le3:
-            r0 = move-exception
-            log(r0)
-            return r1
-        Le8:
-            r0 = move-exception
-            log(r0)
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.NativeSslSession.newInstance(org.conscrypt.AbstractSessionContext, byte[], java.lang.String, int):org.conscrypt.NativeSslSession");
+    public static NativeSslSession newInstance(AbstractSessionContext abstractSessionContext, byte[] bArr, String str, int i) {
+        byte[] bArr2;
+        byte[] bArr3;
+        ByteBuffer wrap = ByteBuffer.wrap(bArr);
+        try {
+            int i2 = wrap.getInt();
+            if (!SSLUtils.SessionType.isSupportedType(i2)) {
+                throw new IOException("Unexpected type ID: " + i2);
+            }
+            int i3 = wrap.getInt();
+            checkRemaining(wrap, i3);
+            byte[] bArr4 = new byte[i3];
+            wrap.get(bArr4);
+            int i4 = wrap.getInt();
+            checkRemaining(wrap, i4);
+            X509Certificate[] x509CertificateArr = new X509Certificate[i4];
+            for (int i5 = 0; i5 < i4; i5++) {
+                int i6 = wrap.getInt();
+                checkRemaining(wrap, i6);
+                byte[] bArr5 = new byte[i6];
+                wrap.get(bArr5);
+                try {
+                    x509CertificateArr[i5] = OpenSSLX509Certificate.fromX509Der(bArr5);
+                } catch (Exception unused) {
+                    throw new IOException("Can not read certificate " + i5 + "/" + i4);
+                }
+            }
+            if (i2 >= SSLUtils.SessionType.OPEN_SSL_WITH_OCSP.value) {
+                int i7 = wrap.getInt();
+                checkRemaining(wrap, i7);
+                if (i7 >= 1) {
+                    int i8 = wrap.getInt();
+                    checkRemaining(wrap, i8);
+                    byte[] bArr6 = new byte[i8];
+                    wrap.get(bArr6);
+                    for (int i9 = 1; i9 < i7; i9++) {
+                        int i10 = wrap.getInt();
+                        checkRemaining(wrap, i10);
+                        wrap.position(wrap.position() + i10);
+                    }
+                    bArr2 = bArr6;
+                    if (i2 == SSLUtils.SessionType.OPEN_SSL_WITH_TLS_SCT.value) {
+                        int i11 = wrap.getInt();
+                        checkRemaining(wrap, i11);
+                        if (i11 > 0) {
+                            byte[] bArr7 = new byte[i11];
+                            wrap.get(bArr7);
+                            bArr3 = bArr7;
+                            if (wrap.remaining() != 0) {
+                                log(new AssertionError("Read entire session, but data still remains; rejecting"));
+                                return null;
+                            }
+                            return new Impl(abstractSessionContext, new NativeRef.SSL_SESSION(NativeCrypto.d2i_SSL_SESSION(bArr4)), str, i, x509CertificateArr, bArr2, bArr3);
+                        }
+                    }
+                    bArr3 = null;
+                    if (wrap.remaining() != 0) {
+                    }
+                }
+            }
+            bArr2 = null;
+            if (i2 == SSLUtils.SessionType.OPEN_SSL_WITH_TLS_SCT.value) {
+            }
+            bArr3 = null;
+            if (wrap.remaining() != 0) {
+            }
+        } catch (IOException e) {
+            log(e);
+            return null;
+        } catch (BufferUnderflowException e2) {
+            log(e2);
+            return null;
+        }
     }
 
     public static NativeSslSession newInstance(NativeRef.SSL_SESSION ssl_session, ConscryptSession conscryptSession) {

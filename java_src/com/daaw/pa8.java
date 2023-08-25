@@ -1,31 +1,37 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public abstract class pa8 extends na8 {
-    public boolean c;
+
+    /* renamed from: c */
+    public boolean f22778c;
 
     public pa8(yb8 yb8Var) {
         super(yb8Var);
-        this.b.q();
+        this.f19771b.m3883q();
     }
 
-    public final void g() {
-        if (!j()) {
+    /* renamed from: g */
+    public final void m13533g() {
+        if (!m13531j()) {
             throw new IllegalStateException("Not initialized");
         }
     }
 
-    public final void h() {
-        if (this.c) {
+    /* renamed from: h */
+    public final void m13532h() {
+        if (this.f22778c) {
             throw new IllegalStateException("Can't initialize twice");
         }
-        k();
-        this.b.l();
-        this.c = true;
+        mo8149k();
+        this.f19771b.m3889l();
+        this.f22778c = true;
     }
 
-    public final boolean j() {
-        return this.c;
+    /* renamed from: j */
+    public final boolean m13531j() {
+        return this.f22778c;
     }
 
-    public abstract boolean k();
+    /* renamed from: k */
+    public abstract boolean mo8149k();
 }

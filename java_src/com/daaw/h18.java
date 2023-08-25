@@ -10,6 +10,6 @@ public final class h18 extends ContentObserver {
 
     @Override // android.database.ContentObserver
     public final void onChange(boolean z) {
-        j38.d();
+        j38.m19093d();
     }
 }

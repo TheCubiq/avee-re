@@ -71,30 +71,36 @@ public enum db3 {
     VAR(41),
     WHILE(42);
     
-    public static final Map E0 = new HashMap();
-    public final int p;
+
+    /* renamed from: E0 */
+    public static final Map f6744E0 = new HashMap();
+
+    /* renamed from: p */
+    public final int f6803p;
 
     static {
         db3[] values;
         for (db3 db3Var : values()) {
-            E0.put(Integer.valueOf(db3Var.p), db3Var);
+            f6744E0.put(Integer.valueOf(db3Var.f6803p), db3Var);
         }
     }
 
     db3(int i) {
-        this.p = i;
+        this.f6803p = i;
     }
 
-    public static db3 a(int i) {
-        return (db3) E0.get(Integer.valueOf(i));
+    /* renamed from: a */
+    public static db3 m24569a(int i) {
+        return (db3) f6744E0.get(Integer.valueOf(i));
     }
 
-    public final Integer b() {
-        return Integer.valueOf(this.p);
+    /* renamed from: b */
+    public final Integer m24568b() {
+        return Integer.valueOf(this.f6803p);
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.valueOf(this.p).toString();
+        return Integer.valueOf(this.f6803p).toString();
     }
 }

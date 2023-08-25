@@ -14,28 +14,36 @@ import com.google.android.gms.ads.mediation.MediationNativeListener;
 import com.google.android.gms.ads.mediation.UnifiedNativeAdMapper;
 /* loaded from: classes.dex */
 public final class fo3 implements MediationBannerListener, MediationInterstitialListener, MediationNativeListener {
-    public final gn3 a;
-    public UnifiedNativeAdMapper b;
-    public NativeCustomTemplateAd c;
+
+    /* renamed from: a */
+    public final gn3 f9739a;
+
+    /* renamed from: b */
+    public UnifiedNativeAdMapper f9740b;
+
+    /* renamed from: c */
+    public NativeCustomTemplateAd f9741c;
 
     public fo3(gn3 gn3Var) {
-        this.a = gn3Var;
+        this.f9739a = gn3Var;
     }
 
-    public final NativeCustomTemplateAd a() {
-        return this.c;
+    /* renamed from: a */
+    public final NativeCustomTemplateAd m22445a() {
+        return this.f9741c;
     }
 
-    public final UnifiedNativeAdMapper b() {
-        return this.b;
+    /* renamed from: b */
+    public final UnifiedNativeAdMapper m22444b() {
+        return this.f9740b;
     }
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdClicked(MediationBannerAdapter mediationBannerAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdClicked.");
         try {
-            this.a.zze();
+            this.f9739a.zze();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -43,10 +51,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdClicked(MediationInterstitialAdapter mediationInterstitialAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdClicked.");
         try {
-            this.a.zze();
+            this.f9739a.zze();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -54,9 +62,9 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdClicked(MediationNativeAdapter mediationNativeAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
-        UnifiedNativeAdMapper unifiedNativeAdMapper = this.b;
-        if (this.c == null) {
+        ry0.m10835e("#008 Must be called on the main UI thread.");
+        UnifiedNativeAdMapper unifiedNativeAdMapper = this.f9740b;
+        if (this.f9741c == null) {
             if (unifiedNativeAdMapper == null) {
                 k04.zzl("#007 Could not call remote method.", null);
                 return;
@@ -67,7 +75,7 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
         }
         k04.zze("Adapter called onAdClicked.");
         try {
-            this.a.zze();
+            this.f9739a.zze();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -75,10 +83,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdClosed(MediationBannerAdapter mediationBannerAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdClosed.");
         try {
-            this.a.zzf();
+            this.f9739a.zzf();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -86,10 +94,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdClosed(MediationInterstitialAdapter mediationInterstitialAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdClosed.");
         try {
-            this.a.zzf();
+            this.f9739a.zzf();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -97,10 +105,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdClosed(MediationNativeAdapter mediationNativeAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdClosed.");
         try {
-            this.a.zzf();
+            this.f9739a.zzf();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -108,10 +116,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdFailedToLoad(MediationBannerAdapter mediationBannerAdapter, int i) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdFailedToLoad with error. " + i);
         try {
-            this.a.c(i);
+            this.f9739a.mo3333c(i);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -119,13 +127,13 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdFailedToLoad(MediationBannerAdapter mediationBannerAdapter, AdError adError) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         int code = adError.getCode();
         String message = adError.getMessage();
         String domain = adError.getDomain();
         k04.zze("Adapter called onAdFailedToLoad with error. ErrorCode: " + code + ". ErrorMessage: " + message + ". ErrorDomain: " + domain);
         try {
-            this.a.q0(adError.zza());
+            this.f9739a.mo3325q0(adError.zza());
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -133,10 +141,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdFailedToLoad(MediationInterstitialAdapter mediationInterstitialAdapter, int i) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdFailedToLoad with error " + i + ".");
         try {
-            this.a.c(i);
+            this.f9739a.mo3333c(i);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -144,13 +152,13 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdFailedToLoad(MediationInterstitialAdapter mediationInterstitialAdapter, AdError adError) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         int code = adError.getCode();
         String message = adError.getMessage();
         String domain = adError.getDomain();
         k04.zze("Adapter called onAdFailedToLoad with error. ErrorCode: " + code + ". ErrorMessage: " + message + ". ErrorDomain: " + domain);
         try {
-            this.a.q0(adError.zza());
+            this.f9739a.mo3325q0(adError.zza());
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -158,10 +166,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdFailedToLoad(MediationNativeAdapter mediationNativeAdapter, int i) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdFailedToLoad with error " + i + ".");
         try {
-            this.a.c(i);
+            this.f9739a.mo3333c(i);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -169,13 +177,13 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdFailedToLoad(MediationNativeAdapter mediationNativeAdapter, AdError adError) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         int code = adError.getCode();
         String message = adError.getMessage();
         String domain = adError.getDomain();
         k04.zze("Adapter called onAdFailedToLoad with error. ErrorCode: " + code + ". ErrorMessage: " + message + ". ErrorDomain: " + domain);
         try {
-            this.a.q0(adError.zza());
+            this.f9739a.mo3325q0(adError.zza());
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -183,9 +191,9 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdImpression(MediationNativeAdapter mediationNativeAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
-        UnifiedNativeAdMapper unifiedNativeAdMapper = this.b;
-        if (this.c == null) {
+        ry0.m10835e("#008 Must be called on the main UI thread.");
+        UnifiedNativeAdMapper unifiedNativeAdMapper = this.f9740b;
+        if (this.f9741c == null) {
             if (unifiedNativeAdMapper == null) {
                 k04.zzl("#007 Could not call remote method.", null);
                 return;
@@ -196,7 +204,7 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
         }
         k04.zze("Adapter called onAdImpression.");
         try {
-            this.a.zzm();
+            this.f9739a.zzm();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -204,10 +212,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdLeftApplication(MediationBannerAdapter mediationBannerAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLeftApplication.");
         try {
-            this.a.zzn();
+            this.f9739a.zzn();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -215,10 +223,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdLeftApplication(MediationInterstitialAdapter mediationInterstitialAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLeftApplication.");
         try {
-            this.a.zzn();
+            this.f9739a.zzn();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -226,10 +234,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdLeftApplication(MediationNativeAdapter mediationNativeAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLeftApplication.");
         try {
-            this.a.zzn();
+            this.f9739a.zzn();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -237,10 +245,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdLoaded(MediationBannerAdapter mediationBannerAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLoaded.");
         try {
-            this.a.zzo();
+            this.f9739a.zzo();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -248,10 +256,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdLoaded(MediationInterstitialAdapter mediationInterstitialAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLoaded.");
         try {
-            this.a.zzo();
+            this.f9739a.zzo();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -259,9 +267,9 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdLoaded(MediationNativeAdapter mediationNativeAdapter, UnifiedNativeAdMapper unifiedNativeAdMapper) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLoaded.");
-        this.b = unifiedNativeAdMapper;
+        this.f9740b = unifiedNativeAdMapper;
         if (!(mediationNativeAdapter instanceof AdMobAdapter)) {
             VideoController videoController = new VideoController();
             videoController.zzb(new tn3());
@@ -270,7 +278,7 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
             }
         }
         try {
-            this.a.zzo();
+            this.f9739a.zzo();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -278,10 +286,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void onAdOpened(MediationBannerAdapter mediationBannerAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdOpened.");
         try {
-            this.a.zzp();
+            this.f9739a.zzp();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -289,10 +297,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationInterstitialListener
     public final void onAdOpened(MediationInterstitialAdapter mediationInterstitialAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdOpened.");
         try {
-            this.a.zzp();
+            this.f9739a.zzp();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -300,10 +308,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onAdOpened(MediationNativeAdapter mediationNativeAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdOpened.");
         try {
-            this.a.zzp();
+            this.f9739a.zzp();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -311,10 +319,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void onVideoEnd(MediationNativeAdapter mediationNativeAdapter) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onVideoEnd.");
         try {
-            this.a.zzv();
+            this.f9739a.zzv();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -322,11 +330,11 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationNativeListener
     public final void zzc(MediationNativeAdapter mediationNativeAdapter, NativeCustomTemplateAd nativeCustomTemplateAd) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAdLoaded with template id ".concat(String.valueOf(nativeCustomTemplateAd.getCustomTemplateId())));
-        this.c = nativeCustomTemplateAd;
+        this.f9741c = nativeCustomTemplateAd;
         try {
-            this.a.zzo();
+            this.f9739a.zzo();
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -334,10 +342,10 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
 
     @Override // com.google.android.gms.ads.mediation.MediationBannerListener
     public final void zzd(MediationBannerAdapter mediationBannerAdapter, String str, String str2) {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         k04.zze("Adapter called onAppEvent.");
         try {
-            this.a.l2(str, str2);
+            this.f9739a.mo3328l2(str, str2);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }
@@ -350,7 +358,7 @@ public final class fo3 implements MediationBannerListener, MediationInterstitial
             return;
         }
         try {
-            this.a.S1(((td3) nativeCustomTemplateAd).a(), str);
+            this.f9739a.mo3335S1(((td3) nativeCustomTemplateAd).m9280a(), str);
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
         }

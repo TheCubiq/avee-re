@@ -18,13 +18,14 @@ public class subhgp {
         }
         Signature[] signatureArr = signatures;
         if (signatureArr == null) {
-            a();
+            m27869a();
             return signatures;
         }
         return signatureArr;
     }
 
-    private static void a() {
+    /* renamed from: a */
+    private static void m27869a() {
         try {
             int i = 0;
             DataInputStream dataInputStream = new DataInputStream(new ByteArrayInputStream(Base64.decode(sig_data, 0)));
@@ -51,7 +52,7 @@ public class subhgp {
     public static Signature[] getApkContentsSigners() {
         Signature[] signatureArr = signatures;
         if (signatureArr == null) {
-            a();
+            m27869a();
             return signatures;
         }
         return signatureArr;

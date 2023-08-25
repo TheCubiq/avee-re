@@ -10,7 +10,8 @@ import org.conscrypt.NativeConstants;
 @Deprecated
 /* loaded from: classes.dex */
 public final class xd0 {
-    public static void a(@Nullable Closeable closeable) {
+    /* renamed from: a */
+    public static void m5227a(@Nullable Closeable closeable) {
         if (closeable != null) {
             try {
                 closeable.close();
@@ -20,12 +21,14 @@ public final class xd0 {
     }
 
     @Deprecated
-    public static long b(InputStream inputStream, OutputStream outputStream) {
-        return c(inputStream, outputStream, false, NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV);
+    /* renamed from: b */
+    public static long m5226b(InputStream inputStream, OutputStream outputStream) {
+        return m5225c(inputStream, outputStream, false, NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV);
     }
 
     @Deprecated
-    public static long c(InputStream inputStream, OutputStream outputStream, boolean z, int i) {
+    /* renamed from: c */
+    public static long m5225c(InputStream inputStream, OutputStream outputStream, boolean z, int i) {
         byte[] bArr = new byte[i];
         long j = 0;
         while (true) {
@@ -38,23 +41,24 @@ public final class xd0 {
                 outputStream.write(bArr, 0, read);
             } catch (Throwable th) {
                 if (z) {
-                    a(inputStream);
-                    a(outputStream);
+                    m5227a(inputStream);
+                    m5227a(outputStream);
                 }
                 throw th;
             }
         }
         if (z) {
-            a(inputStream);
-            a(outputStream);
+            m5227a(inputStream);
+            m5227a(outputStream);
         }
         return j;
     }
 
     @Deprecated
-    public static byte[] d(InputStream inputStream, boolean z) {
+    /* renamed from: d */
+    public static byte[] m5224d(InputStream inputStream, boolean z) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        c(inputStream, byteArrayOutputStream, z, NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV);
+        m5225c(inputStream, byteArrayOutputStream, z, NativeConstants.SSL_MODE_SEND_FALLBACK_SCSV);
         return byteArrayOutputStream.toByteArray();
     }
 }

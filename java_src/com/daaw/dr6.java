@@ -23,344 +23,440 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class dr6 implements xe7 {
-    public static volatile dr6 H;
-    public volatile Boolean A;
-    public Boolean B;
-    public Boolean C;
-    public volatile boolean D;
-    public int E;
-    public final long G;
-    public final Context a;
-    public final String b;
-    public final String c;
-    public final String d;
-    public final boolean e;
-    public final b52 f;
-    public final qa2 g;
-    public final l36 h;
-    public final om5 i;
-    public final vn6 j;
-    public final ca8 k;
-    public final dd8 l;
-    public final xg5 m;
-    public final ag n;
-    public final r48 o;
-    public final p28 p;
-    public final vk4 q;
-    public final k38 r;
-    public final String s;
-    public re5 t;
-    public x78 u;
-    public lm2 v;
-    public xb5 w;
-    public Boolean y;
-    public long z;
-    public boolean x = false;
-    public final AtomicInteger F = new AtomicInteger(0);
+
+    /* renamed from: H */
+    public static volatile dr6 f7658H;
+
+    /* renamed from: A */
+    public volatile Boolean f7659A;
+
+    /* renamed from: B */
+    public Boolean f7660B;
+
+    /* renamed from: C */
+    public Boolean f7661C;
+
+    /* renamed from: D */
+    public volatile boolean f7662D;
+
+    /* renamed from: E */
+    public int f7663E;
+
+    /* renamed from: G */
+    public final long f7665G;
+
+    /* renamed from: a */
+    public final Context f7666a;
+
+    /* renamed from: b */
+    public final String f7667b;
+
+    /* renamed from: c */
+    public final String f7668c;
+
+    /* renamed from: d */
+    public final String f7669d;
+
+    /* renamed from: e */
+    public final boolean f7670e;
+
+    /* renamed from: f */
+    public final b52 f7671f;
+
+    /* renamed from: g */
+    public final qa2 f7672g;
+
+    /* renamed from: h */
+    public final l36 f7673h;
+
+    /* renamed from: i */
+    public final om5 f7674i;
+
+    /* renamed from: j */
+    public final vn6 f7675j;
+
+    /* renamed from: k */
+    public final ca8 f7676k;
+
+    /* renamed from: l */
+    public final dd8 f7677l;
+
+    /* renamed from: m */
+    public final xg5 f7678m;
+
+    /* renamed from: n */
+    public final InterfaceC0623ag f7679n;
+
+    /* renamed from: o */
+    public final r48 f7680o;
+
+    /* renamed from: p */
+    public final p28 f7681p;
+
+    /* renamed from: q */
+    public final vk4 f7682q;
+
+    /* renamed from: r */
+    public final k38 f7683r;
+
+    /* renamed from: s */
+    public final String f7684s;
+
+    /* renamed from: t */
+    public re5 f7685t;
+
+    /* renamed from: u */
+    public x78 f7686u;
+
+    /* renamed from: v */
+    public lm2 f7687v;
+
+    /* renamed from: w */
+    public xb5 f7688w;
+
+    /* renamed from: y */
+    public Boolean f7690y;
+
+    /* renamed from: z */
+    public long f7691z;
+
+    /* renamed from: x */
+    public boolean f7689x = false;
+
+    /* renamed from: F */
+    public final AtomicInteger f7664F = new AtomicInteger(0);
 
     public dr6(vn7 vn7Var) {
-        hk5 w;
+        hk5 m14155w;
         String str;
         Bundle bundle;
         boolean z = false;
-        ry0.j(vn7Var);
-        Context context = vn7Var.a;
+        ry0.m10830j(vn7Var);
+        Context context = vn7Var.f30370a;
         b52 b52Var = new b52(context);
-        this.f = b52Var;
-        d45.a = b52Var;
-        this.a = context;
-        this.b = vn7Var.b;
-        this.c = vn7Var.c;
-        this.d = vn7Var.d;
-        this.e = vn7Var.h;
-        this.A = vn7Var.e;
-        this.s = vn7Var.j;
-        this.D = true;
-        zzcl zzclVar = vn7Var.g;
-        if (zzclVar != null && (bundle = zzclVar.v) != null) {
+        this.f7671f = b52Var;
+        d45.f6527a = b52Var;
+        this.f7666a = context;
+        this.f7667b = vn7Var.f30371b;
+        this.f7668c = vn7Var.f30372c;
+        this.f7669d = vn7Var.f30373d;
+        this.f7670e = vn7Var.f30377h;
+        this.f7659A = vn7Var.f30374e;
+        this.f7684s = vn7Var.f30379j;
+        this.f7662D = true;
+        zzcl zzclVar = vn7Var.f30376g;
+        if (zzclVar != null && (bundle = zzclVar.f37047v) != null) {
             Object obj = bundle.get("measurementEnabled");
             if (obj instanceof Boolean) {
-                this.B = (Boolean) obj;
+                this.f7660B = (Boolean) obj;
             }
-            Object obj2 = zzclVar.v.get("measurementDeactivated");
+            Object obj2 = zzclVar.f37047v.get("measurementDeactivated");
             if (obj2 instanceof Boolean) {
-                this.C = (Boolean) obj2;
+                this.f7661C = (Boolean) obj2;
             }
         }
-        j38.e(context);
-        ag d = mq.d();
-        this.n = d;
-        Long l = vn7Var.i;
-        this.G = l != null ? l.longValue() : d.a();
-        this.g = new qa2(this);
+        j38.m19092e(context);
+        InterfaceC0623ag m15857d = C2202mq.m15857d();
+        this.f7679n = m15857d;
+        Long l = vn7Var.f30378i;
+        this.f7665G = l != null ? l.longValue() : m15857d.mo15860a();
+        this.f7672g = new qa2(this);
         l36 l36Var = new l36(this);
-        l36Var.k();
-        this.h = l36Var;
+        l36Var.m8309k();
+        this.f7673h = l36Var;
         om5 om5Var = new om5(this);
-        om5Var.k();
-        this.i = om5Var;
+        om5Var.m8309k();
+        this.f7674i = om5Var;
         dd8 dd8Var = new dd8(this);
-        dd8Var.k();
-        this.l = dd8Var;
-        this.m = new xg5(new sm7(vn7Var, this));
-        this.q = new vk4(this);
+        dd8Var.m8309k();
+        this.f7677l = dd8Var;
+        this.f7678m = new xg5(new sm7(vn7Var, this));
+        this.f7682q = new vk4(this);
         r48 r48Var = new r48(this);
-        r48Var.h();
-        this.o = r48Var;
+        r48Var.m25514h();
+        this.f7680o = r48Var;
         p28 p28Var = new p28(this);
-        p28Var.h();
-        this.p = p28Var;
+        p28Var.m25514h();
+        this.f7681p = p28Var;
         ca8 ca8Var = new ca8(this);
-        ca8Var.h();
-        this.k = ca8Var;
+        ca8Var.m25514h();
+        this.f7676k = ca8Var;
         k38 k38Var = new k38(this);
-        k38Var.k();
-        this.r = k38Var;
+        k38Var.m8309k();
+        this.f7683r = k38Var;
         vn6 vn6Var = new vn6(this);
-        vn6Var.k();
-        this.j = vn6Var;
-        zzcl zzclVar2 = vn7Var.g;
-        z = (zzclVar2 == null || zzclVar2.q == 0) ? true : true;
+        vn6Var.m8309k();
+        this.f7675j = vn6Var;
+        zzcl zzclVar2 = vn7Var.f30376g;
+        z = (zzclVar2 == null || zzclVar2.f37042q == 0) ? true : true;
         if (context.getApplicationContext() instanceof Application) {
-            p28 I = I();
-            if (I.a.a.getApplicationContext() instanceof Application) {
-                Application application = (Application) I.a.a.getApplicationContext();
-                if (I.c == null) {
-                    I.c = new m28(I, null);
+            p28 m24050I = m24050I();
+            if (m24050I.f25143a.f7666a.getApplicationContext() instanceof Application) {
+                Application application = (Application) m24050I.f25143a.f7666a.getApplicationContext();
+                if (m24050I.f22544c == null) {
+                    m24050I.f22544c = new m28(m24050I, null);
                 }
                 if (z) {
-                    application.unregisterActivityLifecycleCallbacks(I.c);
-                    application.registerActivityLifecycleCallbacks(I.c);
-                    w = I.a.i().v();
+                    application.unregisterActivityLifecycleCallbacks(m24050I.f22544c);
+                    application.registerActivityLifecycleCallbacks(m24050I.f22544c);
+                    m14155w = m24050I.f25143a.mo3895i().m14156v();
                     str = "Registered activity lifecycle callback";
                 }
             }
-            vn6Var.z(new bq6(this, vn7Var));
+            vn6Var.m6978z(new bq6(this, vn7Var));
         }
-        w = i().w();
+        m14155w = mo3895i().m14155w();
         str = "Application context is not an Application";
-        w.a(str);
-        vn6Var.z(new bq6(this, vn7Var));
+        m14155w.m20653a(str);
+        vn6Var.m6978z(new bq6(this, vn7Var));
     }
 
-    public static dr6 H(Context context, zzcl zzclVar, Long l) {
+    /* renamed from: H */
+    public static dr6 m24051H(Context context, zzcl zzclVar, Long l) {
         Bundle bundle;
-        if (zzclVar != null && (zzclVar.t == null || zzclVar.u == null)) {
-            zzclVar = new zzcl(zzclVar.p, zzclVar.q, zzclVar.r, zzclVar.s, null, null, zzclVar.v, null);
+        if (zzclVar != null && (zzclVar.f37045t == null || zzclVar.f37046u == null)) {
+            zzclVar = new zzcl(zzclVar.f37041p, zzclVar.f37042q, zzclVar.f37043r, zzclVar.f37044s, null, null, zzclVar.f37047v, null);
         }
-        ry0.j(context);
-        ry0.j(context.getApplicationContext());
-        if (H == null) {
+        ry0.m10830j(context);
+        ry0.m10830j(context.getApplicationContext());
+        if (f7658H == null) {
             synchronized (dr6.class) {
-                if (H == null) {
-                    H = new dr6(new vn7(context, zzclVar, l));
+                if (f7658H == null) {
+                    f7658H = new dr6(new vn7(context, zzclVar, l));
                 }
             }
-        } else if (zzclVar != null && (bundle = zzclVar.v) != null && bundle.containsKey("dataCollectionDefaultEnabled")) {
-            ry0.j(H);
-            H.A = Boolean.valueOf(zzclVar.v.getBoolean("dataCollectionDefaultEnabled"));
+        } else if (zzclVar != null && (bundle = zzclVar.f37047v) != null && bundle.containsKey("dataCollectionDefaultEnabled")) {
+            ry0.m10830j(f7658H);
+            f7658H.f7659A = Boolean.valueOf(zzclVar.f37047v.getBoolean("dataCollectionDefaultEnabled"));
         }
-        ry0.j(H);
-        return H;
+        ry0.m10830j(f7658H);
+        return f7658H;
     }
 
-    public static /* bridge */ /* synthetic */ void c(dr6 dr6Var, vn7 vn7Var) {
-        dr6Var.r().f();
-        dr6Var.g.w();
+    /* renamed from: c */
+    public static /* bridge */ /* synthetic */ void m24040c(dr6 dr6Var, vn7 vn7Var) {
+        dr6Var.mo3882r().mo6991f();
+        dr6Var.f7672g.m12655w();
         lm2 lm2Var = new lm2(dr6Var);
-        lm2Var.k();
-        dr6Var.v = lm2Var;
-        xb5 xb5Var = new xb5(dr6Var, vn7Var.f);
-        xb5Var.h();
-        dr6Var.w = xb5Var;
+        lm2Var.m8309k();
+        dr6Var.f7687v = lm2Var;
+        xb5 xb5Var = new xb5(dr6Var, vn7Var.f30375f);
+        xb5Var.m25514h();
+        dr6Var.f7688w = xb5Var;
         re5 re5Var = new re5(dr6Var);
-        re5Var.h();
-        dr6Var.t = re5Var;
+        re5Var.m25514h();
+        dr6Var.f7685t = re5Var;
         x78 x78Var = new x78(dr6Var);
-        x78Var.h();
-        dr6Var.u = x78Var;
-        dr6Var.l.l();
-        dr6Var.h.l();
-        dr6Var.w.j();
-        hk5 u = dr6Var.i().u();
-        dr6Var.g.p();
-        u.b("App measurement initialized, version", 74029L);
-        dr6Var.i().u().a("To enable debug logging run: adb shell setprop log.tag.FA VERBOSE");
-        String s = xb5Var.s();
-        if (TextUtils.isEmpty(dr6Var.b)) {
-            if (dr6Var.N().T(s)) {
-                dr6Var.i().u().a("Faster debug mode event logging enabled. To disable, run:\n  adb shell setprop debug.firebase.analytics.app .none.");
+        x78Var.m25514h();
+        dr6Var.f7686u = x78Var;
+        dr6Var.f7677l.m8308l();
+        dr6Var.f7673h.m8308l();
+        dr6Var.f7688w.m25513j();
+        hk5 m14157u = dr6Var.mo3895i().m14157u();
+        dr6Var.f7672g.m12661p();
+        m14157u.m20652b("App measurement initialized, version", 74029L);
+        dr6Var.mo3895i().m14157u().m20653a("To enable debug logging run: adb shell setprop log.tag.FA VERBOSE");
+        String m5301s = xb5Var.m5301s();
+        if (TextUtils.isEmpty(dr6Var.f7667b)) {
+            if (dr6Var.m24045N().m24495T(m5301s)) {
+                dr6Var.mo3895i().m14157u().m20653a("Faster debug mode event logging enabled. To disable, run:\n  adb shell setprop debug.firebase.analytics.app .none.");
             } else {
-                dr6Var.i().u().a("To enable faster debug mode event logging run:\n  adb shell setprop debug.firebase.analytics.app ".concat(String.valueOf(s)));
+                dr6Var.mo3895i().m14157u().m20653a("To enable faster debug mode event logging run:\n  adb shell setprop debug.firebase.analytics.app ".concat(String.valueOf(m5301s)));
             }
         }
-        dr6Var.i().p().a("Debug-level message logging enabled");
-        if (dr6Var.E != dr6Var.F.get()) {
-            dr6Var.i().q().c("Not all components initialized", Integer.valueOf(dr6Var.E), Integer.valueOf(dr6Var.F.get()));
+        dr6Var.mo3895i().m14161p().m20653a("Debug-level message logging enabled");
+        if (dr6Var.f7663E != dr6Var.f7664F.get()) {
+            dr6Var.mo3895i().m14160q().m20651c("Not all components initialized", Integer.valueOf(dr6Var.f7663E), Integer.valueOf(dr6Var.f7664F.get()));
         }
-        dr6Var.x = true;
+        dr6Var.f7689x = true;
     }
 
-    public static final void t() {
+    /* renamed from: t */
+    public static final void m24026t() {
         throw new IllegalStateException("Unexpected call on client side");
     }
 
-    public static final void u(rc7 rc7Var) {
+    /* renamed from: u */
+    public static final void m24025u(rc7 rc7Var) {
         if (rc7Var == null) {
             throw new IllegalStateException("Component not created");
         }
     }
 
-    public static final void v(c86 c86Var) {
+    /* renamed from: v */
+    public static final void m24024v(c86 c86Var) {
         if (c86Var == null) {
             throw new IllegalStateException("Component not created");
         }
-        if (!c86Var.l()) {
+        if (!c86Var.m25512l()) {
             throw new IllegalStateException("Component not initialized: ".concat(String.valueOf(c86Var.getClass())));
         }
     }
 
-    public static final void w(ud7 ud7Var) {
+    /* renamed from: w */
+    public static final void m24023w(ud7 ud7Var) {
         if (ud7Var == null) {
             throw new IllegalStateException("Component not created");
         }
-        if (!ud7Var.m()) {
+        if (!ud7Var.m8307m()) {
             throw new IllegalStateException("Component not initialized: ".concat(String.valueOf(ud7Var.getClass())));
         }
     }
 
     @Pure
-    public final lm2 A() {
-        w(this.v);
-        return this.v;
+    /* renamed from: A */
+    public final lm2 m24058A() {
+        m24023w(this.f7687v);
+        return this.f7687v;
     }
 
     @Pure
-    public final xb5 B() {
-        v(this.w);
-        return this.w;
+    /* renamed from: B */
+    public final xb5 m24057B() {
+        m24024v(this.f7688w);
+        return this.f7688w;
     }
 
     @Pure
-    public final re5 C() {
-        v(this.t);
-        return this.t;
+    /* renamed from: C */
+    public final re5 m24056C() {
+        m24024v(this.f7685t);
+        return this.f7685t;
     }
 
     @Pure
-    public final xg5 D() {
-        return this.m;
+    /* renamed from: D */
+    public final xg5 m24055D() {
+        return this.f7678m;
     }
 
-    public final om5 E() {
-        om5 om5Var = this.i;
-        if (om5Var == null || !om5Var.m()) {
+    /* renamed from: E */
+    public final om5 m24054E() {
+        om5 om5Var = this.f7674i;
+        if (om5Var == null || !om5Var.m8307m()) {
             return null;
         }
         return om5Var;
     }
 
     @Pure
-    public final l36 F() {
-        u(this.h);
-        return this.h;
+    /* renamed from: F */
+    public final l36 m24053F() {
+        m24025u(this.f7673h);
+        return this.f7673h;
     }
 
     @SideEffectFree
-    public final vn6 G() {
-        return this.j;
+    /* renamed from: G */
+    public final vn6 m24052G() {
+        return this.f7675j;
     }
 
     @Pure
-    public final p28 I() {
-        v(this.p);
-        return this.p;
+    /* renamed from: I */
+    public final p28 m24050I() {
+        m24024v(this.f7681p);
+        return this.f7681p;
     }
 
     @Pure
-    public final k38 J() {
-        w(this.r);
-        return this.r;
+    /* renamed from: J */
+    public final k38 m24049J() {
+        m24023w(this.f7683r);
+        return this.f7683r;
     }
 
     @Pure
-    public final r48 K() {
-        v(this.o);
-        return this.o;
+    /* renamed from: K */
+    public final r48 m24048K() {
+        m24024v(this.f7680o);
+        return this.f7680o;
     }
 
     @Pure
-    public final x78 L() {
-        v(this.u);
-        return this.u;
+    /* renamed from: L */
+    public final x78 m24047L() {
+        m24024v(this.f7686u);
+        return this.f7686u;
     }
 
     @Pure
-    public final ca8 M() {
-        v(this.k);
-        return this.k;
+    /* renamed from: M */
+    public final ca8 m24046M() {
+        m24024v(this.f7676k);
+        return this.f7676k;
     }
 
     @Pure
-    public final dd8 N() {
-        u(this.l);
-        return this.l;
+    /* renamed from: N */
+    public final dd8 m24045N() {
+        m24025u(this.f7677l);
+        return this.f7677l;
     }
 
     @Pure
-    public final String O() {
-        return this.b;
+    /* renamed from: O */
+    public final String m24044O() {
+        return this.f7667b;
     }
 
     @Pure
-    public final String P() {
-        return this.c;
+    /* renamed from: P */
+    public final String m24043P() {
+        return this.f7668c;
     }
 
     @Pure
-    public final String Q() {
-        return this.d;
+    /* renamed from: Q */
+    public final String m24042Q() {
+        return this.f7669d;
     }
 
     @Pure
-    public final String R() {
-        return this.s;
+    /* renamed from: R */
+    public final String m24041R() {
+        return this.f7684s;
     }
 
     @Override // com.daaw.xe7
     @Pure
-    public final b52 a() {
-        return this.f;
+    /* renamed from: a */
+    public final b52 mo3911a() {
+        return this.f7671f;
     }
 
     @Override // com.daaw.xe7
     @Pure
-    public final ag b() {
-        return this.n;
+    /* renamed from: b */
+    public final InterfaceC0623ag mo3909b() {
+        return this.f7679n;
     }
 
     @Override // com.daaw.xe7
     @Pure
-    public final Context d() {
-        return this.a;
+    /* renamed from: d */
+    public final Context mo3905d() {
+        return this.f7666a;
     }
 
-    public final void e() {
-        this.F.incrementAndGet();
+    /* renamed from: e */
+    public final void m24039e() {
+        this.f7664F.incrementAndGet();
     }
 
-    public final /* synthetic */ void f(String str, int i, Throwable th, byte[] bArr, Map map) {
+    /* renamed from: f */
+    public final /* synthetic */ void m24038f(String str, int i, Throwable th, byte[] bArr, Map map) {
         List<ResolveInfo> queryIntentActivities;
         if (i != 200 && i != 204) {
             if (i == 304) {
                 i = 304;
             }
-            i().w().c("Network Request for Deferred Deep Link failed. response, exception", Integer.valueOf(i), th);
+            mo3895i().m14155w().m20651c("Network Request for Deferred Deep Link failed. response, exception", Integer.valueOf(i), th);
         }
         if (th == null) {
-            F().s.a(true);
+            m24053F().f17017s.m12013a(true);
             if (bArr == null || bArr.length == 0) {
-                i().p().a("Deferred Deep Link response empty.");
+                mo3895i().m14161p().m20653a("Deferred Deep Link response empty.");
                 return;
             }
             try {
@@ -369,60 +465,62 @@ public final class dr6 implements xe7 {
                 String optString2 = jSONObject.optString("gclid", "");
                 double optDouble = jSONObject.optDouble("timestamp", 0.0d);
                 if (TextUtils.isEmpty(optString)) {
-                    i().p().a("Deferred Deep Link is empty.");
+                    mo3895i().m14161p().m20653a("Deferred Deep Link is empty.");
                     return;
                 }
-                dd8 N = N();
-                dr6 dr6Var = N.a;
-                if (!TextUtils.isEmpty(optString) && (queryIntentActivities = N.a.a.getPackageManager().queryIntentActivities(new Intent("android.intent.action.VIEW", Uri.parse(optString)), 0)) != null && !queryIntentActivities.isEmpty()) {
+                dd8 m24045N = m24045N();
+                dr6 dr6Var = m24045N.f25143a;
+                if (!TextUtils.isEmpty(optString) && (queryIntentActivities = m24045N.f25143a.f7666a.getPackageManager().queryIntentActivities(new Intent("android.intent.action.VIEW", Uri.parse(optString)), 0)) != null && !queryIntentActivities.isEmpty()) {
                     Bundle bundle = new Bundle();
                     bundle.putString("gclid", optString2);
                     bundle.putString("_cis", "ddp");
-                    this.p.u("auto", "_cmp", bundle);
-                    dd8 N2 = N();
+                    this.f7681p.m13683u("auto", "_cmp", bundle);
+                    dd8 m24045N2 = m24045N();
                     if (TextUtils.isEmpty(optString)) {
                         return;
                     }
                     try {
-                        SharedPreferences.Editor edit = N2.a.a.getSharedPreferences("google.analytics.deferred.deeplink.prefs", 0).edit();
+                        SharedPreferences.Editor edit = m24045N2.f25143a.f7666a.getSharedPreferences("google.analytics.deferred.deeplink.prefs", 0).edit();
                         edit.putString("deeplink", optString);
                         edit.putLong("timestamp", Double.doubleToRawLongBits(optDouble));
                         if (edit.commit()) {
-                            N2.a.a.sendBroadcast(new Intent("android.google.analytics.action.DEEPLINK_ACTION"));
+                            m24045N2.f25143a.f7666a.sendBroadcast(new Intent("android.google.analytics.action.DEEPLINK_ACTION"));
                             return;
                         }
                         return;
                     } catch (RuntimeException e) {
-                        N2.a.i().q().b("Failed to persist Deferred Deep Link. exception", e);
+                        m24045N2.f25143a.mo3895i().m14160q().m20652b("Failed to persist Deferred Deep Link. exception", e);
                         return;
                     }
                 }
-                i().w().c("Deferred Deep Link validation failed. gclid, deep link", optString2, optString);
+                mo3895i().m14155w().m20651c("Deferred Deep Link validation failed. gclid, deep link", optString2, optString);
                 return;
             } catch (JSONException e2) {
-                i().q().b("Failed to parse the Deferred Deep Link response. exception", e2);
+                mo3895i().m14160q().m20652b("Failed to parse the Deferred Deep Link response. exception", e2);
                 return;
             }
         }
-        i().w().c("Network Request for Deferred Deep Link failed. response, exception", Integer.valueOf(i), th);
+        mo3895i().m14155w().m20651c("Network Request for Deferred Deep Link failed. response, exception", Integer.valueOf(i), th);
     }
 
-    public final void g() {
-        this.E++;
+    /* renamed from: g */
+    public final void m24037g() {
+        this.f7663E++;
     }
 
-    public final void h() {
-        r().f();
-        w(J());
-        String s = B().s();
-        Pair o = F().o(s);
-        if (!this.g.A() || ((Boolean) o.second).booleanValue() || TextUtils.isEmpty((CharSequence) o.first)) {
-            i().p().a("ADID unavailable to retrieve Deferred Deep Link. Skipping");
+    /* renamed from: h */
+    public final void m24036h() {
+        mo3882r().mo6991f();
+        m24023w(m24049J());
+        String m5301s = m24057B().m5301s();
+        Pair m17175o = m24053F().m17175o(m5301s);
+        if (!this.f7672g.m12678A() || ((Boolean) m17175o.second).booleanValue() || TextUtils.isEmpty((CharSequence) m17175o.first)) {
+            mo3895i().m14161p().m20653a("ADID unavailable to retrieve Deferred Deep Link. Skipping");
             return;
         }
-        k38 J = J();
-        J.j();
-        ConnectivityManager connectivityManager = (ConnectivityManager) J.a.a.getSystemService("connectivity");
+        k38 m24049J = m24049J();
+        m24049J.m8310j();
+        ConnectivityManager connectivityManager = (ConnectivityManager) m24049J.f25143a.f7666a.getSystemService("connectivity");
         NetworkInfo networkInfo = null;
         if (connectivityManager != null) {
             try {
@@ -431,237 +529,249 @@ public final class dr6 implements xe7 {
             }
         }
         if (networkInfo == null || !networkInfo.isConnected()) {
-            i().w().a("Network is not available for Deferred Deep Link request. Skipping");
+            mo3895i().m14155w().m20653a("Network is not available for Deferred Deep Link request. Skipping");
             return;
         }
-        dd8 N = N();
-        B().a.g.p();
-        URL s2 = N.s(74029L, s, (String) o.first, F().t.a() - 1);
-        if (s2 != null) {
-            k38 J2 = J();
+        dd8 m24045N = m24045N();
+        m24057B().f25143a.f7672g.m12661p();
+        URL m24466s = m24045N.m24466s(74029L, m5301s, (String) m17175o.first, m24053F().f17018t.m4400a() - 1);
+        if (m24466s != null) {
+            k38 m24049J2 = m24049J();
             yo6 yo6Var = new yo6(this);
-            J2.f();
-            J2.j();
-            ry0.j(s2);
-            ry0.j(yo6Var);
-            J2.a.r().y(new h38(J2, s, s2, null, null, yo6Var, null));
+            m24049J2.mo6991f();
+            m24049J2.m8310j();
+            ry0.m10830j(m24466s);
+            ry0.m10830j(yo6Var);
+            m24049J2.f25143a.mo3882r().m6979y(new h38(m24049J2, m5301s, m24466s, null, null, yo6Var, null));
         }
     }
 
     @Override // com.daaw.xe7
     @Pure
-    public final om5 i() {
-        w(this.i);
-        return this.i;
+    /* renamed from: i */
+    public final om5 mo3895i() {
+        m24023w(this.f7674i);
+        return this.f7674i;
     }
 
-    public final void j(boolean z) {
-        this.A = Boolean.valueOf(z);
+    /* renamed from: j */
+    public final void m24035j(boolean z) {
+        this.f7659A = Boolean.valueOf(z);
     }
 
-    public final void k(boolean z) {
-        r().f();
-        this.D = z;
+    /* renamed from: k */
+    public final void m24034k(boolean z) {
+        mo3882r().mo6991f();
+        this.f7662D = z;
     }
 
-    public final void l(zzcl zzclVar) {
+    /* renamed from: l */
+    public final void m24033l(zzcl zzclVar) {
         cd2 cd2Var;
-        r().f();
-        cd2 p = F().p();
-        l36 F = F();
-        dr6 dr6Var = F.a;
-        F.f();
+        mo3882r().mo6991f();
+        cd2 m17174p = m24053F().m17174p();
+        l36 m24053F = m24053F();
+        dr6 dr6Var = m24053F.f25143a;
+        m24053F.mo6991f();
         int i = 100;
-        int i2 = F.n().getInt("consent_source", 100);
-        qa2 qa2Var = this.g;
-        dr6 dr6Var2 = qa2Var.a;
-        Boolean t = qa2Var.t("google_analytics_default_allow_ad_storage");
-        qa2 qa2Var2 = this.g;
-        dr6 dr6Var3 = qa2Var2.a;
-        Boolean t2 = qa2Var2.t("google_analytics_default_allow_analytics_storage");
-        if (!(t == null && t2 == null) && F().w(-10)) {
-            cd2Var = new cd2(t, t2);
+        int i2 = m24053F.m17176n().getInt("consent_source", 100);
+        qa2 qa2Var = this.f7672g;
+        dr6 dr6Var2 = qa2Var.f25143a;
+        Boolean m12658t = qa2Var.m12658t("google_analytics_default_allow_ad_storage");
+        qa2 qa2Var2 = this.f7672g;
+        dr6 dr6Var3 = qa2Var2.f25143a;
+        Boolean m12658t2 = qa2Var2.m12658t("google_analytics_default_allow_analytics_storage");
+        if (!(m12658t == null && m12658t2 == null) && m24053F().m17168w(-10)) {
+            cd2Var = new cd2(m12658t, m12658t2);
             i = -10;
         } else {
-            if (!TextUtils.isEmpty(B().t()) && (i2 == 0 || i2 == 30 || i2 == 10 || i2 == 30 || i2 == 30 || i2 == 40)) {
-                I().G(cd2.b, -10, this.G);
-            } else if (TextUtils.isEmpty(B().t()) && zzclVar != null && zzclVar.v != null && F().w(30)) {
-                cd2Var = cd2.a(zzclVar.v);
-                if (!cd2Var.equals(cd2.b)) {
+            if (!TextUtils.isEmpty(m24057B().m5300t()) && (i2 == 0 || i2 == 30 || i2 == 10 || i2 == 30 || i2 == 30 || i2 == 40)) {
+                m24050I().m13715G(cd2.f5740b, -10, this.f7665G);
+            } else if (TextUtils.isEmpty(m24057B().m5300t()) && zzclVar != null && zzclVar.f37047v != null && m24053F().m17168w(30)) {
+                cd2Var = cd2.m25431a(zzclVar.f37047v);
+                if (!cd2Var.equals(cd2.f5740b)) {
                     i = 30;
                 }
             }
             cd2Var = null;
         }
         if (cd2Var != null) {
-            I().G(cd2Var, i, this.G);
-            p = cd2Var;
+            m24050I().m13715G(cd2Var, i, this.f7665G);
+            m17174p = cd2Var;
         }
-        I().J(p);
-        if (F().e.a() == 0) {
-            i().v().b("Persisting first open", Long.valueOf(this.G));
-            F().e.b(this.G);
+        m24050I().m13712J(m17174p);
+        if (m24053F().f17003e.m4400a() == 0) {
+            mo3895i().m14156v().m20652b("Persisting first open", Long.valueOf(this.f7665G));
+            m24053F().f17003e.m4399b(this.f7665G);
         }
-        I().n.c();
-        if (q()) {
-            if (!TextUtils.isEmpty(B().t()) || !TextUtils.isEmpty(B().q())) {
-                dd8 N = N();
-                String t3 = B().t();
-                l36 F2 = F();
-                F2.f();
-                String string = F2.n().getString("gmp_app_id", null);
-                String q = B().q();
-                l36 F3 = F();
-                F3.f();
-                if (N.b0(t3, string, q, F3.n().getString("admob_app_id", null))) {
-                    i().u().a("Rechecking which service to use due to a GMP App Id change");
-                    l36 F4 = F();
-                    F4.f();
-                    Boolean q2 = F4.q();
-                    SharedPreferences.Editor edit = F4.n().edit();
+        m24050I().f22555n.m21302c();
+        if (m24028q()) {
+            if (!TextUtils.isEmpty(m24057B().m5300t()) || !TextUtils.isEmpty(m24057B().m5302q())) {
+                dd8 m24045N = m24045N();
+                String m5300t = m24057B().m5300t();
+                l36 m24053F2 = m24053F();
+                m24053F2.mo6991f();
+                String string = m24053F2.m17176n().getString("gmp_app_id", null);
+                String m5302q = m24057B().m5302q();
+                l36 m24053F3 = m24053F();
+                m24053F3.mo6991f();
+                if (m24045N.m24487b0(m5300t, string, m5302q, m24053F3.m17176n().getString("admob_app_id", null))) {
+                    mo3895i().m14157u().m20653a("Rechecking which service to use due to a GMP App Id change");
+                    l36 m24053F4 = m24053F();
+                    m24053F4.mo6991f();
+                    Boolean m17173q = m24053F4.m17173q();
+                    SharedPreferences.Editor edit = m24053F4.m17176n().edit();
                     edit.clear();
                     edit.apply();
-                    if (q2 != null) {
-                        F4.s(q2);
+                    if (m17173q != null) {
+                        m24053F4.m17172s(m17173q);
                     }
-                    C().p();
-                    this.u.Q();
-                    this.u.P();
-                    F().e.b(this.G);
-                    F().g.b(null);
+                    m24056C().m11364p();
+                    this.f7686u.m5467Q();
+                    this.f7686u.m5468P();
+                    m24053F().f17003e.m4399b(this.f7665G);
+                    m24053F().f17005g.m20166b(null);
                 }
-                l36 F5 = F();
-                String t4 = B().t();
-                F5.f();
-                SharedPreferences.Editor edit2 = F5.n().edit();
-                edit2.putString("gmp_app_id", t4);
+                l36 m24053F5 = m24053F();
+                String m5300t2 = m24057B().m5300t();
+                m24053F5.mo6991f();
+                SharedPreferences.Editor edit2 = m24053F5.m17176n().edit();
+                edit2.putString("gmp_app_id", m5300t2);
                 edit2.apply();
-                l36 F6 = F();
-                String q3 = B().q();
-                F6.f();
-                SharedPreferences.Editor edit3 = F6.n().edit();
-                edit3.putString("admob_app_id", q3);
+                l36 m24053F6 = m24053F();
+                String m5302q2 = m24057B().m5302q();
+                m24053F6.mo6991f();
+                SharedPreferences.Editor edit3 = m24053F6.m17176n().edit();
+                edit3.putString("admob_app_id", m5302q2);
                 edit3.apply();
             }
-            if (!F().p().i(vb2.ANALYTICS_STORAGE)) {
-                F().g.b(null);
+            if (!m24053F().m17174p().m25423i(vb2.ANALYTICS_STORAGE)) {
+                m24053F().f17005g.m20166b(null);
             }
-            I().C(F().g.a());
-            qj8.b();
-            if (this.g.B(null, m75.e0)) {
+            m24050I().m13719C(m24053F().f17005g.m20167a());
+            qj8.m12386b();
+            if (this.f7672g.m12677B(null, m75.f18528e0)) {
                 try {
-                    N().a.a.getClassLoader().loadClass("com.google.firebase.remoteconfig.FirebaseRemoteConfig");
+                    m24045N().f25143a.f7666a.getClassLoader().loadClass("com.google.firebase.remoteconfig.FirebaseRemoteConfig");
                 } catch (ClassNotFoundException unused) {
-                    if (!TextUtils.isEmpty(F().u.a())) {
-                        i().w().a("Remote config removed with active feature rollouts");
-                        F().u.b(null);
+                    if (!TextUtils.isEmpty(m24053F().f17019u.m20167a())) {
+                        mo3895i().m14155w().m20653a("Remote config removed with active feature rollouts");
+                        m24053F().f17019u.m20166b(null);
                     }
                 }
             }
-            if (!TextUtils.isEmpty(B().t()) || !TextUtils.isEmpty(B().q())) {
-                boolean n = n();
-                if (!F().u() && !this.g.E()) {
-                    F().t(!n);
+            if (!TextUtils.isEmpty(m24057B().m5300t()) || !TextUtils.isEmpty(m24057B().m5302q())) {
+                boolean m24031n = m24031n();
+                if (!m24053F().m17170u() && !this.f7672g.m12674E()) {
+                    m24053F().m17171t(!m24031n);
                 }
-                if (n) {
-                    I().f0();
+                if (m24031n) {
+                    m24050I().m13690f0();
                 }
-                M().d.a();
-                L().S(new AtomicReference());
-                L().v(F().x.a());
+                m24046M().f5683d.m2584a();
+                m24047L().m5465S(new AtomicReference());
+                m24047L().m5453v(m24053F().f17022x.m7652a());
             }
-        } else if (n()) {
-            if (!N().S("android.permission.INTERNET")) {
-                i().q().a("App is missing INTERNET permission");
+        } else if (m24031n()) {
+            if (!m24045N().m24496S("android.permission.INTERNET")) {
+                mo3895i().m14160q().m20653a("App is missing INTERNET permission");
             }
-            if (!N().S("android.permission.ACCESS_NETWORK_STATE")) {
-                i().q().a("App is missing ACCESS_NETWORK_STATE permission");
+            if (!m24045N().m24496S("android.permission.ACCESS_NETWORK_STATE")) {
+                mo3895i().m14160q().m20653a("App is missing ACCESS_NETWORK_STATE permission");
             }
-            if (!ez1.a(this.a).g() && !this.g.G()) {
-                if (!dd8.Y(this.a)) {
-                    i().q().a("AppMeasurementReceiver not registered/enabled");
+            if (!ez1.m22979a(this.f7666a).m19340g() && !this.f7672g.m12672G()) {
+                if (!dd8.m24490Y(this.f7666a)) {
+                    mo3895i().m14160q().m20653a("AppMeasurementReceiver not registered/enabled");
                 }
-                if (!dd8.Z(this.a, false)) {
-                    i().q().a("AppMeasurementService not registered/enabled");
+                if (!dd8.m24489Z(this.f7666a, false)) {
+                    mo3895i().m14160q().m20653a("AppMeasurementService not registered/enabled");
                 }
             }
-            i().q().a("Uploading is not possible. App measurement disabled");
+            mo3895i().m14160q().m20653a("Uploading is not possible. App measurement disabled");
         }
-        F().n.a(true);
+        m24053F().f17012n.m12013a(true);
     }
 
-    public final boolean m() {
-        return this.A != null && this.A.booleanValue();
+    /* renamed from: m */
+    public final boolean m24032m() {
+        return this.f7659A != null && this.f7659A.booleanValue();
     }
 
-    public final boolean n() {
-        return x() == 0;
+    /* renamed from: n */
+    public final boolean m24031n() {
+        return m24022x() == 0;
     }
 
-    public final boolean o() {
-        r().f();
-        return this.D;
+    /* renamed from: o */
+    public final boolean m24030o() {
+        mo3882r().mo6991f();
+        return this.f7662D;
     }
 
     @Pure
-    public final boolean p() {
-        return TextUtils.isEmpty(this.b);
+    /* renamed from: p */
+    public final boolean m24029p() {
+        return TextUtils.isEmpty(this.f7667b);
     }
 
-    public final boolean q() {
-        if (this.x) {
-            r().f();
-            Boolean bool = this.y;
-            if (bool == null || this.z == 0 || (!bool.booleanValue() && Math.abs(this.n.b() - this.z) > 1000)) {
-                this.z = this.n.b();
+    /* renamed from: q */
+    public final boolean m24028q() {
+        if (this.f7689x) {
+            mo3882r().mo6991f();
+            Boolean bool = this.f7690y;
+            if (bool == null || this.f7691z == 0 || (!bool.booleanValue() && Math.abs(this.f7679n.mo15859b() - this.f7691z) > 1000)) {
+                this.f7691z = this.f7679n.mo15859b();
                 boolean z = true;
-                Boolean valueOf = Boolean.valueOf(N().S("android.permission.INTERNET") && N().S("android.permission.ACCESS_NETWORK_STATE") && (ez1.a(this.a).g() || this.g.G() || (dd8.Y(this.a) && dd8.Z(this.a, false))));
-                this.y = valueOf;
+                Boolean valueOf = Boolean.valueOf(m24045N().m24496S("android.permission.INTERNET") && m24045N().m24496S("android.permission.ACCESS_NETWORK_STATE") && (ez1.m22979a(this.f7666a).m19340g() || this.f7672g.m12672G() || (dd8.m24490Y(this.f7666a) && dd8.m24489Z(this.f7666a, false))));
+                this.f7690y = valueOf;
                 if (valueOf.booleanValue()) {
-                    if (!N().L(B().t(), B().q()) && TextUtils.isEmpty(B().q())) {
+                    if (!m24045N().m24503L(m24057B().m5300t(), m24057B().m5302q()) && TextUtils.isEmpty(m24057B().m5302q())) {
                         z = false;
                     }
-                    this.y = Boolean.valueOf(z);
+                    this.f7690y = Boolean.valueOf(z);
                 }
             }
-            return this.y.booleanValue();
+            return this.f7690y.booleanValue();
         }
         throw new IllegalStateException("AppMeasurement is not initialized");
     }
 
     @Override // com.daaw.xe7
     @Pure
-    public final vn6 r() {
-        w(this.j);
-        return this.j;
+    /* renamed from: r */
+    public final vn6 mo3882r() {
+        m24023w(this.f7675j);
+        return this.f7675j;
     }
 
     @Pure
-    public final boolean s() {
-        return this.e;
+    /* renamed from: s */
+    public final boolean m24027s() {
+        return this.f7670e;
     }
 
-    public final int x() {
-        r().f();
-        if (this.g.E()) {
+    /* renamed from: x */
+    public final int m24022x() {
+        mo3882r().mo6991f();
+        if (this.f7672g.m12674E()) {
             return 1;
         }
-        Boolean bool = this.C;
+        Boolean bool = this.f7661C;
         if (bool == null || !bool.booleanValue()) {
-            r().f();
-            if (this.D) {
-                Boolean q = F().q();
-                if (q != null) {
-                    return q.booleanValue() ? 0 : 3;
+            mo3882r().mo6991f();
+            if (this.f7662D) {
+                Boolean m17173q = m24053F().m17173q();
+                if (m17173q != null) {
+                    return m17173q.booleanValue() ? 0 : 3;
                 }
-                qa2 qa2Var = this.g;
-                b52 b52Var = qa2Var.a.f;
-                Boolean t = qa2Var.t("firebase_analytics_collection_enabled");
-                if (t != null) {
-                    return t.booleanValue() ? 0 : 4;
+                qa2 qa2Var = this.f7672g;
+                b52 b52Var = qa2Var.f25143a.f7671f;
+                Boolean m12658t = qa2Var.m12658t("firebase_analytics_collection_enabled");
+                if (m12658t != null) {
+                    return m12658t.booleanValue() ? 0 : 4;
                 }
-                Boolean bool2 = this.B;
-                return bool2 != null ? bool2.booleanValue() ? 0 : 5 : (this.A == null || this.A.booleanValue()) ? 0 : 7;
+                Boolean bool2 = this.f7660B;
+                return bool2 != null ? bool2.booleanValue() ? 0 : 5 : (this.f7659A == null || this.f7659A.booleanValue()) ? 0 : 7;
             }
             return 8;
         }
@@ -669,8 +779,9 @@ public final class dr6 implements xe7 {
     }
 
     @Pure
-    public final vk4 y() {
-        vk4 vk4Var = this.q;
+    /* renamed from: y */
+    public final vk4 m24021y() {
+        vk4 vk4Var = this.f7682q;
         if (vk4Var != null) {
             return vk4Var;
         }
@@ -678,7 +789,8 @@ public final class dr6 implements xe7 {
     }
 
     @Pure
-    public final qa2 z() {
-        return this.g;
+    /* renamed from: z */
+    public final qa2 m24020z() {
+        return this.f7672g;
     }
 }

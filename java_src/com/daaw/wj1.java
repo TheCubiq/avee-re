@@ -3,9 +3,12 @@ package com.daaw;
 import java.util.concurrent.Executor;
 /* loaded from: classes.dex */
 public interface wj1 {
-    Executor a();
+    /* renamed from: a */
+    Executor mo6052a();
 
-    void b(Runnable runnable);
+    /* renamed from: b */
+    void mo6051b(Runnable runnable);
 
-    mb1 c();
+    /* renamed from: c */
+    mb1 mo6050c();
 }

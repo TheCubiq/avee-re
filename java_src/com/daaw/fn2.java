@@ -3,10 +3,12 @@ package com.daaw;
 import android.app.AppOpsManager;
 /* loaded from: classes.dex */
 public final class fn2 implements AppOpsManager.OnOpActiveChangedListener {
-    public final /* synthetic */ gn2 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ gn2 f9708a;
 
     public fn2(gn2 gn2Var) {
-        this.a = gn2Var;
+        this.f9708a = gn2Var;
     }
 
     @Override // android.app.AppOpsManager.OnOpActiveChangedListener
@@ -17,23 +19,23 @@ public final class fn2 implements AppOpsManager.OnOpActiveChangedListener {
         long j2;
         long j3;
         if (z) {
-            this.a.a = System.currentTimeMillis();
-            gn2Var = this.a;
+            this.f9708a.f11471a = System.currentTimeMillis();
+            gn2Var = this.f9708a;
             z2 = true;
         } else {
             long currentTimeMillis = System.currentTimeMillis();
-            gn2 gn2Var2 = this.a;
-            j = gn2Var2.b;
+            gn2 gn2Var2 = this.f9708a;
+            j = gn2Var2.f11472b;
             if (j > 0) {
-                j2 = gn2Var2.b;
+                j2 = gn2Var2.f11472b;
                 if (currentTimeMillis >= j2) {
-                    j3 = gn2Var2.b;
-                    gn2Var2.c = currentTimeMillis - j3;
+                    j3 = gn2Var2.f11472b;
+                    gn2Var2.f11473c = currentTimeMillis - j3;
                 }
             }
-            gn2Var = this.a;
+            gn2Var = this.f9708a;
             z2 = false;
         }
-        gn2Var.d = z2;
+        gn2Var.f11474d = z2;
     }
 }

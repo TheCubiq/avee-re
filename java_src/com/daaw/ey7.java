@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ey7 implements ps7 {
-    public static final ps7 a = new ey7();
+
+    /* renamed from: a */
+    public static final ps7 f8955a = new ey7();
 
     @Override // com.daaw.ps7
-    public final boolean a(int i) {
+    /* renamed from: a */
+    public final boolean mo3065a(int i) {
         switch (i) {
             case 0:
             case 1:

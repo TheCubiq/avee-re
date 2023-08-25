@@ -9,7 +9,8 @@ public final class q27 extends a47 {
     }
 
     @Override // com.daaw.a47
-    public final /* synthetic */ Object a(Object obj) {
+    /* renamed from: a */
+    public final /* synthetic */ Object mo12795a(Object obj) {
         return ((Map.Entry) obj).getValue();
     }
 }

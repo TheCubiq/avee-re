@@ -7,7 +7,9 @@ import java.security.spec.InvalidParameterSpecException;
 /* loaded from: classes2.dex */
 public final class GCMParameters extends AlgorithmParametersSpi {
     private static final int DEFAULT_TLEN = 96;
-    private byte[] iv;
+
+    /* renamed from: iv */
+    private byte[] f38018iv;
     private int tLen;
 
     public GCMParameters() {
@@ -15,7 +17,7 @@ public final class GCMParameters extends AlgorithmParametersSpi {
 
     public GCMParameters(int i, byte[] bArr) {
         this.tLen = i;
-        this.iv = bArr;
+        this.f38018iv = bArr;
     }
 
     @Override // java.security.AlgorithmParametersSpi
@@ -28,7 +30,7 @@ public final class GCMParameters extends AlgorithmParametersSpi {
             j = NativeCrypto.asn1_write_init();
             try {
                 j3 = NativeCrypto.asn1_write_sequence(j);
-                NativeCrypto.asn1_write_octetstring(j3, this.iv);
+                NativeCrypto.asn1_write_octetstring(j3, this.f38018iv);
                 if (this.tLen != 96) {
                     NativeCrypto.asn1_write_uint64(j3, i / 8);
                 }
@@ -81,7 +83,7 @@ public final class GCMParameters extends AlgorithmParametersSpi {
         if (cls == null || !cls.getName().equals("javax.crypto.spec.GCMParameterSpec")) {
             throw new InvalidParameterSpecException("Unsupported class: " + cls);
         }
-        return cls.cast(Platform.toGCMParameterSpec(this.tLen, this.iv));
+        return cls.cast(Platform.toGCMParameterSpec(this.tLen, this.f38018iv));
     }
 
     @Override // java.security.AlgorithmParametersSpi
@@ -91,7 +93,7 @@ public final class GCMParameters extends AlgorithmParametersSpi {
             throw new InvalidParameterSpecException("Only GCMParameterSpec is supported");
         }
         this.tLen = fromGCMParameterSpec.tLen;
-        this.iv = fromGCMParameterSpec.iv;
+        this.f38018iv = fromGCMParameterSpec.f38018iv;
     }
 
     @Override // java.security.AlgorithmParametersSpi
@@ -106,7 +108,7 @@ public final class GCMParameters extends AlgorithmParametersSpi {
                 if (!NativeCrypto.asn1_read_is_empty(asn1_read_sequence) || !NativeCrypto.asn1_read_is_empty(j)) {
                     throw new IOException("Error reading ASN.1 encoding");
                 }
-                this.iv = asn1_read_octetstring;
+                this.f38018iv = asn1_read_octetstring;
                 this.tLen = asn1_read_uint64;
                 NativeCrypto.asn1_read_free(asn1_read_sequence);
                 NativeCrypto.asn1_read_free(j);
@@ -137,7 +139,7 @@ public final class GCMParameters extends AlgorithmParametersSpi {
     }
 
     public byte[] getIV() {
-        return this.iv;
+        return this.f38018iv;
     }
 
     public int getTLen() {

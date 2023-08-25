@@ -6,72 +6,85 @@ import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public final class sg7 {
     @Nullable
-    public Integer a = null;
+
+    /* renamed from: a */
+    public Integer f26241a = null;
     @Nullable
-    public Integer b = null;
-    public tg7 c = null;
-    public ug7 d = ug7.e;
+
+    /* renamed from: b */
+    public Integer f26242b = null;
+
+    /* renamed from: c */
+    public tg7 f26243c = null;
+
+    /* renamed from: d */
+    public ug7 f26244d = ug7.f29054e;
 
     public /* synthetic */ sg7(rg7 rg7Var) {
     }
 
-    public final sg7 a(tg7 tg7Var) {
-        this.c = tg7Var;
+    /* renamed from: a */
+    public final sg7 m10369a(tg7 tg7Var) {
+        this.f26243c = tg7Var;
         return this;
     }
 
-    public final sg7 b(int i) {
-        this.a = Integer.valueOf(i);
+    /* renamed from: b */
+    public final sg7 m10368b(int i) {
+        this.f26241a = Integer.valueOf(i);
         return this;
     }
 
-    public final sg7 c(int i) {
-        this.b = Integer.valueOf(i);
+    /* renamed from: c */
+    public final sg7 m10367c(int i) {
+        this.f26242b = Integer.valueOf(i);
         return this;
     }
 
-    public final sg7 d(ug7 ug7Var) {
-        this.d = ug7Var;
+    /* renamed from: d */
+    public final sg7 m10366d(ug7 ug7Var) {
+        this.f26244d = ug7Var;
         return this;
     }
 
-    public final wg7 e() {
-        Integer num = this.a;
+    /* renamed from: e */
+    public final wg7 m10365e() {
+        Integer num = this.f26241a;
         if (num != null) {
-            if (this.b != null) {
-                if (this.c != null) {
+            if (this.f26242b != null) {
+                if (this.f26243c != null) {
                     if (num.intValue() >= 16) {
-                        int intValue = this.b.intValue();
-                        tg7 tg7Var = this.c;
+                        int intValue = this.f26242b.intValue();
+                        tg7 tg7Var = this.f26243c;
                         if (intValue >= 10) {
-                            if (tg7Var == tg7.b) {
+                            if (tg7Var == tg7.f27630b) {
                                 if (intValue > 20) {
                                     throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 20 bytes for SHA1", Integer.valueOf(intValue)));
                                 }
-                            } else if (tg7Var == tg7.c) {
+                            } else if (tg7Var == tg7.f27631c) {
                                 if (intValue > 28) {
                                     throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 28 bytes for SHA224", Integer.valueOf(intValue)));
                                 }
-                            } else if (tg7Var == tg7.d) {
+                            } else if (tg7Var == tg7.f27632d) {
                                 if (intValue > 32) {
                                     throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 32 bytes for SHA256", Integer.valueOf(intValue)));
                                 }
-                            } else if (tg7Var == tg7.e) {
+                            } else if (tg7Var == tg7.f27633e) {
                                 if (intValue > 48) {
                                     throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 48 bytes for SHA384", Integer.valueOf(intValue)));
                                 }
-                            } else if (tg7Var != tg7.f) {
+                            } else if (tg7Var != tg7.f27634f) {
                                 throw new GeneralSecurityException("unknown hash type; must be SHA256, SHA384 or SHA512");
                             } else {
                                 if (intValue > 64) {
                                     throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 64 bytes for SHA512", Integer.valueOf(intValue)));
                                 }
                             }
-                            return new wg7(this.a.intValue(), this.b.intValue(), this.d, this.c, null);
+                            return new wg7(this.f26241a.intValue(), this.f26242b.intValue(), this.f26244d, this.f26243c, null);
                         }
                         throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; must be at least 10 bytes", Integer.valueOf(intValue)));
                     }
-                    throw new InvalidAlgorithmParameterException(String.format("Invalid key size in bytes %d; must be at least 16 bytes", this.a));
+                    throw new InvalidAlgorithmParameterException(String.format("Invalid key size in bytes %d; must be at least 16 bytes", this.f26241a));
                 }
                 throw new GeneralSecurityException("hash type is not set");
             }

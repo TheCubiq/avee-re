@@ -8,22 +8,25 @@ import com.daaw.p51;
 import java.util.Objects;
 /* loaded from: classes2.dex */
 public final class t80 {
-    public static final s80 a;
+
+    /* renamed from: a */
+    public static final s80 f27113a;
     private static volatile Choreographer choreographer;
 
     static {
-        Object a2;
+        Object m13631a;
         try {
-            p51.a aVar = p51.p;
-            a2 = p51.a(new r80(a(Looper.getMainLooper(), true), null, 2, null));
+            p51.C2516a c2516a = p51.f22616p;
+            m13631a = p51.m13631a(new r80(m9457a(Looper.getMainLooper(), true), null, 2, null));
         } catch (Throwable th) {
-            p51.a aVar2 = p51.p;
-            a2 = p51.a(s51.a(th));
+            p51.C2516a c2516a2 = p51.f22616p;
+            m13631a = p51.m13631a(s51.m10708a(th));
         }
-        a = p51.c(a2) ? null : a2;
+        f27113a = p51.m13629c(m13631a) ? null : m13631a;
     }
 
-    public static final Handler a(Looper looper, boolean z) {
+    /* renamed from: a */
+    public static final Handler m9457a(Looper looper, boolean z) {
         if (z) {
             if (Build.VERSION.SDK_INT < 28) {
                 try {

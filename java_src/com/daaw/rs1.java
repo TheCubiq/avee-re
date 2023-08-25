@@ -6,182 +6,233 @@ import com.google.android.exoplayer2.Format;
 /* loaded from: classes.dex */
 public interface rs1 {
 
+    /* renamed from: com.daaw.rs1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public final Handler a;
-        public final rs1 b;
+    public static final class C2878a {
 
-        /* renamed from: com.daaw.rs1$a$a  reason: collision with other inner class name */
+        /* renamed from: a */
+        public final Handler f25546a;
+
+        /* renamed from: b */
+        public final rs1 f25547b;
+
+        /* renamed from: com.daaw.rs1$a$a */
         /* loaded from: classes.dex */
-        public class RunnableC0087a implements Runnable {
-            public final /* synthetic */ fq p;
+        public class RunnableC2879a implements Runnable {
 
-            public RunnableC0087a(fq fqVar) {
-                this.p = fqVar;
+            /* renamed from: p */
+            public final /* synthetic */ C1321fq f25548p;
+
+            public RunnableC2879a(C1321fq c1321fq) {
+                this.f25548p = c1321fq;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.y(this.p);
+                C2878a.this.f25547b.mo10986y(this.f25548p);
             }
         }
 
+        /* renamed from: com.daaw.rs1$a$b */
         /* loaded from: classes.dex */
-        public class b implements Runnable {
-            public final /* synthetic */ String p;
-            public final /* synthetic */ long q;
-            public final /* synthetic */ long r;
+        public class RunnableC2880b implements Runnable {
 
-            public b(String str, long j, long j2) {
-                this.p = str;
-                this.q = j;
-                this.r = j2;
+            /* renamed from: p */
+            public final /* synthetic */ String f25550p;
+
+            /* renamed from: q */
+            public final /* synthetic */ long f25551q;
+
+            /* renamed from: r */
+            public final /* synthetic */ long f25552r;
+
+            public RunnableC2880b(String str, long j, long j2) {
+                this.f25550p = str;
+                this.f25551q = j;
+                this.f25552r = j2;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.f(this.p, this.q, this.r);
+                C2878a.this.f25547b.mo10991f(this.f25550p, this.f25551q, this.f25552r);
             }
         }
 
+        /* renamed from: com.daaw.rs1$a$c */
         /* loaded from: classes.dex */
-        public class c implements Runnable {
-            public final /* synthetic */ Format p;
+        public class RunnableC2881c implements Runnable {
 
-            public c(Format format) {
-                this.p = format;
+            /* renamed from: p */
+            public final /* synthetic */ Format f25554p;
+
+            public RunnableC2881c(Format format) {
+                this.f25554p = format;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.x(this.p);
+                C2878a.this.f25547b.mo10987x(this.f25554p);
             }
         }
 
+        /* renamed from: com.daaw.rs1$a$d */
         /* loaded from: classes.dex */
-        public class d implements Runnable {
-            public final /* synthetic */ int p;
-            public final /* synthetic */ long q;
+        public class RunnableC2882d implements Runnable {
 
-            public d(int i, long j) {
-                this.p = i;
-                this.q = j;
+            /* renamed from: p */
+            public final /* synthetic */ int f25556p;
+
+            /* renamed from: q */
+            public final /* synthetic */ long f25557q;
+
+            public RunnableC2882d(int i, long j) {
+                this.f25556p = i;
+                this.f25557q = j;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.q(this.p, this.q);
+                C2878a.this.f25547b.mo10989q(this.f25556p, this.f25557q);
             }
         }
 
+        /* renamed from: com.daaw.rs1$a$e */
         /* loaded from: classes.dex */
-        public class e implements Runnable {
-            public final /* synthetic */ int p;
-            public final /* synthetic */ int q;
-            public final /* synthetic */ int r;
-            public final /* synthetic */ float s;
+        public class RunnableC2883e implements Runnable {
 
-            public e(int i, int i2, int i3, float f) {
-                this.p = i;
-                this.q = i2;
-                this.r = i3;
-                this.s = f;
+            /* renamed from: p */
+            public final /* synthetic */ int f25559p;
+
+            /* renamed from: q */
+            public final /* synthetic */ int f25560q;
+
+            /* renamed from: r */
+            public final /* synthetic */ int f25561r;
+
+            /* renamed from: s */
+            public final /* synthetic */ float f25562s;
+
+            public RunnableC2883e(int i, int i2, int i3, float f) {
+                this.f25559p = i;
+                this.f25560q = i2;
+                this.f25561r = i3;
+                this.f25562s = f;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.b(this.p, this.q, this.r, this.s);
+                C2878a.this.f25547b.mo10992b(this.f25559p, this.f25560q, this.f25561r, this.f25562s);
             }
         }
 
+        /* renamed from: com.daaw.rs1$a$f */
         /* loaded from: classes.dex */
-        public class f implements Runnable {
-            public final /* synthetic */ Surface p;
+        public class RunnableC2884f implements Runnable {
 
-            public f(Surface surface) {
-                this.p = surface;
+            /* renamed from: p */
+            public final /* synthetic */ Surface f25564p;
+
+            public RunnableC2884f(Surface surface) {
+                this.f25564p = surface;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.i(this.p);
+                C2878a.this.f25547b.mo10990i(this.f25564p);
             }
         }
 
+        /* renamed from: com.daaw.rs1$a$g */
         /* loaded from: classes.dex */
-        public class g implements Runnable {
-            public final /* synthetic */ fq p;
+        public class RunnableC2885g implements Runnable {
 
-            public g(fq fqVar) {
-                this.p = fqVar;
+            /* renamed from: p */
+            public final /* synthetic */ C1321fq f25566p;
+
+            public RunnableC2885g(C1321fq c1321fq) {
+                this.f25566p = c1321fq;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                this.p.a();
-                a.this.b.u(this.p);
+                this.f25566p.m22418a();
+                C2878a.this.f25547b.mo10988u(this.f25566p);
             }
         }
 
-        public a(Handler handler, rs1 rs1Var) {
-            this.a = rs1Var != null ? (Handler) s6.e(handler) : null;
-            this.b = rs1Var;
+        public C2878a(Handler handler, rs1 rs1Var) {
+            this.f25546a = rs1Var != null ? (Handler) C2914s6.m10686e(handler) : null;
+            this.f25547b = rs1Var;
         }
 
-        public void b(String str, long j, long j2) {
-            if (this.b != null) {
-                this.a.post(new b(str, j, j2));
+        /* renamed from: b */
+        public void m10984b(String str, long j, long j2) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2880b(str, j, j2));
             }
         }
 
-        public void c(fq fqVar) {
-            if (this.b != null) {
-                this.a.post(new g(fqVar));
+        /* renamed from: c */
+        public void m10983c(C1321fq c1321fq) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2885g(c1321fq));
             }
         }
 
-        public void d(int i, long j) {
-            if (this.b != null) {
-                this.a.post(new d(i, j));
+        /* renamed from: d */
+        public void m10982d(int i, long j) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2882d(i, j));
             }
         }
 
-        public void e(fq fqVar) {
-            if (this.b != null) {
-                this.a.post(new RunnableC0087a(fqVar));
+        /* renamed from: e */
+        public void m10981e(C1321fq c1321fq) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2879a(c1321fq));
             }
         }
 
-        public void f(Format format) {
-            if (this.b != null) {
-                this.a.post(new c(format));
+        /* renamed from: f */
+        public void m10980f(Format format) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2881c(format));
             }
         }
 
-        public void g(Surface surface) {
-            if (this.b != null) {
-                this.a.post(new f(surface));
+        /* renamed from: g */
+        public void m10979g(Surface surface) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2884f(surface));
             }
         }
 
-        public void h(int i, int i2, int i3, float f2) {
-            if (this.b != null) {
-                this.a.post(new e(i, i2, i3, f2));
+        /* renamed from: h */
+        public void m10978h(int i, int i2, int i3, float f) {
+            if (this.f25547b != null) {
+                this.f25546a.post(new RunnableC2883e(i, i2, i3, f));
             }
         }
     }
 
-    void b(int i, int i2, int i3, float f);
+    /* renamed from: b */
+    void mo10992b(int i, int i2, int i3, float f);
 
-    void f(String str, long j, long j2);
+    /* renamed from: f */
+    void mo10991f(String str, long j, long j2);
 
-    void i(Surface surface);
+    /* renamed from: i */
+    void mo10990i(Surface surface);
 
-    void q(int i, long j);
+    /* renamed from: q */
+    void mo10989q(int i, long j);
 
-    void u(fq fqVar);
+    /* renamed from: u */
+    void mo10988u(C1321fq c1321fq);
 
-    void x(Format format);
+    /* renamed from: x */
+    void mo10987x(Format format);
 
-    void y(fq fqVar);
+    /* renamed from: y */
+    void mo10986y(C1321fq c1321fq);
 }

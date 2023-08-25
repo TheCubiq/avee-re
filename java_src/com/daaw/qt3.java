@@ -15,8 +15,9 @@ import com.google.android.gms.internal.ads.zzchu;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public final class qt3 implements Parcelable.Creator {
-    public static final zzcbc a(Parcel parcel) {
-        int y = y71.y(parcel);
+    /* renamed from: a */
+    public static final zzcbc m12224a(Parcel parcel) {
+        int m4034y = y71.m4034y(parcel);
         long j = 0;
         long j2 = 0;
         Bundle bundle = null;
@@ -75,56 +76,56 @@ public final class qt3 implements Parcelable.Creator {
         boolean z7 = false;
         boolean z8 = false;
         boolean z9 = false;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            switch (y71.l(r)) {
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            switch (y71.m4047l(m4041r)) {
                 case 1:
-                    i = y71.t(parcel, r);
+                    i = y71.m4039t(parcel, m4041r);
                     break;
                 case 2:
-                    bundle = y71.a(parcel, r);
+                    bundle = y71.m4058a(parcel, m4041r);
                     break;
                 case 3:
-                    zzlVar = (zzl) y71.e(parcel, r, zzl.CREATOR);
+                    zzlVar = (zzl) y71.m4054e(parcel, m4041r, zzl.CREATOR);
                     break;
                 case 4:
-                    zzqVar = (zzq) y71.e(parcel, r, zzq.CREATOR);
+                    zzqVar = (zzq) y71.m4054e(parcel, m4041r, zzq.CREATOR);
                     break;
                 case 5:
-                    str = y71.f(parcel, r);
+                    str = y71.m4053f(parcel, m4041r);
                     break;
                 case 6:
-                    applicationInfo = (ApplicationInfo) y71.e(parcel, r, ApplicationInfo.CREATOR);
+                    applicationInfo = (ApplicationInfo) y71.m4054e(parcel, m4041r, ApplicationInfo.CREATOR);
                     break;
                 case 7:
-                    packageInfo = (PackageInfo) y71.e(parcel, r, PackageInfo.CREATOR);
+                    packageInfo = (PackageInfo) y71.m4054e(parcel, m4041r, PackageInfo.CREATOR);
                     break;
                 case 8:
-                    str2 = y71.f(parcel, r);
+                    str2 = y71.m4053f(parcel, m4041r);
                     break;
                 case 9:
-                    str3 = y71.f(parcel, r);
+                    str3 = y71.m4053f(parcel, m4041r);
                     break;
                 case 10:
-                    str4 = y71.f(parcel, r);
+                    str4 = y71.m4053f(parcel, m4041r);
                     break;
                 case 11:
-                    zzchuVar = (zzchu) y71.e(parcel, r, zzchu.CREATOR);
+                    zzchuVar = (zzchu) y71.m4054e(parcel, m4041r, zzchu.CREATOR);
                     break;
                 case 12:
-                    bundle2 = y71.a(parcel, r);
+                    bundle2 = y71.m4058a(parcel, m4041r);
                     break;
                 case 13:
-                    i2 = y71.t(parcel, r);
+                    i2 = y71.m4039t(parcel, m4041r);
                     break;
                 case 14:
-                    arrayList = y71.h(parcel, r);
+                    arrayList = y71.m4051h(parcel, m4041r);
                     break;
                 case 15:
-                    bundle3 = y71.a(parcel, r);
+                    bundle3 = y71.m4058a(parcel, m4041r);
                     break;
                 case 16:
-                    z = y71.m(parcel, r);
+                    z = y71.m4046m(parcel, m4041r);
                     break;
                 case 17:
                 case 22:
@@ -134,143 +135,143 @@ public final class qt3 implements Parcelable.Creator {
                 case 38:
                 case 62:
                 default:
-                    y71.x(parcel, r);
+                    y71.m4035x(parcel, m4041r);
                     break;
                 case 18:
-                    i3 = y71.t(parcel, r);
+                    i3 = y71.m4039t(parcel, m4041r);
                     break;
                 case 19:
-                    i4 = y71.t(parcel, r);
+                    i4 = y71.m4039t(parcel, m4041r);
                     break;
                 case 20:
-                    f = y71.p(parcel, r);
+                    f = y71.m4043p(parcel, m4041r);
                     break;
                 case 21:
-                    str5 = y71.f(parcel, r);
+                    str5 = y71.m4053f(parcel, m4041r);
                     break;
                 case 25:
-                    j = y71.u(parcel, r);
+                    j = y71.m4038u(parcel, m4041r);
                     break;
                 case 26:
-                    str6 = y71.f(parcel, r);
+                    str6 = y71.m4053f(parcel, m4041r);
                     break;
                 case 27:
-                    arrayList2 = y71.h(parcel, r);
+                    arrayList2 = y71.m4051h(parcel, m4041r);
                     break;
                 case 28:
-                    str7 = y71.f(parcel, r);
+                    str7 = y71.m4053f(parcel, m4041r);
                     break;
                 case 29:
-                    zzblzVar = (zzblz) y71.e(parcel, r, zzblz.CREATOR);
+                    zzblzVar = (zzblz) y71.m4054e(parcel, m4041r, zzblz.CREATOR);
                     break;
                 case 30:
-                    arrayList3 = y71.h(parcel, r);
+                    arrayList3 = y71.m4051h(parcel, m4041r);
                     break;
                 case 31:
-                    j2 = y71.u(parcel, r);
+                    j2 = y71.m4038u(parcel, m4041r);
                     break;
                 case 33:
-                    str8 = y71.f(parcel, r);
+                    str8 = y71.m4053f(parcel, m4041r);
                     break;
                 case 34:
-                    f2 = y71.p(parcel, r);
+                    f2 = y71.m4043p(parcel, m4041r);
                     break;
                 case 35:
-                    i5 = y71.t(parcel, r);
+                    i5 = y71.m4039t(parcel, m4041r);
                     break;
                 case 36:
-                    i6 = y71.t(parcel, r);
+                    i6 = y71.m4039t(parcel, m4041r);
                     break;
                 case 37:
-                    z3 = y71.m(parcel, r);
+                    z3 = y71.m4046m(parcel, m4041r);
                     break;
                 case 39:
-                    str9 = y71.f(parcel, r);
+                    str9 = y71.m4053f(parcel, m4041r);
                     break;
                 case 40:
-                    z2 = y71.m(parcel, r);
+                    z2 = y71.m4046m(parcel, m4041r);
                     break;
                 case 41:
-                    str10 = y71.f(parcel, r);
+                    str10 = y71.m4053f(parcel, m4041r);
                     break;
                 case 42:
-                    z4 = y71.m(parcel, r);
+                    z4 = y71.m4046m(parcel, m4041r);
                     break;
                 case 43:
-                    i7 = y71.t(parcel, r);
+                    i7 = y71.m4039t(parcel, m4041r);
                     break;
                 case 44:
-                    bundle4 = y71.a(parcel, r);
+                    bundle4 = y71.m4058a(parcel, m4041r);
                     break;
                 case 45:
-                    str11 = y71.f(parcel, r);
+                    str11 = y71.m4053f(parcel, m4041r);
                     break;
                 case 46:
-                    zzduVar = (zzdu) y71.e(parcel, r, zzdu.CREATOR);
+                    zzduVar = (zzdu) y71.m4054e(parcel, m4041r, zzdu.CREATOR);
                     break;
                 case 47:
-                    z5 = y71.m(parcel, r);
+                    z5 = y71.m4046m(parcel, m4041r);
                     break;
                 case 48:
-                    bundle5 = y71.a(parcel, r);
+                    bundle5 = y71.m4058a(parcel, m4041r);
                     break;
                 case 49:
-                    str12 = y71.f(parcel, r);
+                    str12 = y71.m4053f(parcel, m4041r);
                     break;
                 case 50:
-                    str13 = y71.f(parcel, r);
+                    str13 = y71.m4053f(parcel, m4041r);
                     break;
                 case 51:
-                    str14 = y71.f(parcel, r);
+                    str14 = y71.m4053f(parcel, m4041r);
                     break;
                 case 52:
-                    z6 = y71.m(parcel, r);
+                    z6 = y71.m4046m(parcel, m4041r);
                     break;
                 case 53:
-                    arrayList4 = y71.d(parcel, r);
+                    arrayList4 = y71.m4055d(parcel, m4041r);
                     break;
                 case 54:
-                    str15 = y71.f(parcel, r);
+                    str15 = y71.m4053f(parcel, m4041r);
                     break;
                 case 55:
-                    arrayList5 = y71.h(parcel, r);
+                    arrayList5 = y71.m4051h(parcel, m4041r);
                     break;
                 case 56:
-                    i8 = y71.t(parcel, r);
+                    i8 = y71.m4039t(parcel, m4041r);
                     break;
                 case 57:
-                    z7 = y71.m(parcel, r);
+                    z7 = y71.m4046m(parcel, m4041r);
                     break;
                 case 58:
-                    z8 = y71.m(parcel, r);
+                    z8 = y71.m4046m(parcel, m4041r);
                     break;
                 case 59:
-                    z9 = y71.m(parcel, r);
+                    z9 = y71.m4046m(parcel, m4041r);
                     break;
                 case 60:
-                    arrayList6 = y71.h(parcel, r);
+                    arrayList6 = y71.m4051h(parcel, m4041r);
                     break;
                 case 61:
-                    str16 = y71.f(parcel, r);
+                    str16 = y71.m4053f(parcel, m4041r);
                     break;
                 case 63:
-                    zzbslVar = (zzbsl) y71.e(parcel, r, zzbsl.CREATOR);
+                    zzbslVar = (zzbsl) y71.m4054e(parcel, m4041r, zzbsl.CREATOR);
                     break;
                 case 64:
-                    str17 = y71.f(parcel, r);
+                    str17 = y71.m4053f(parcel, m4041r);
                     break;
                 case 65:
-                    bundle6 = y71.a(parcel, r);
+                    bundle6 = y71.m4058a(parcel, m4041r);
                     break;
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzcbc(i, bundle, zzlVar, zzqVar, str, applicationInfo, packageInfo, str2, str3, str4, zzchuVar, bundle2, i2, arrayList, bundle3, z, i3, i4, f, str5, j, str6, arrayList2, str7, zzblzVar, arrayList3, j2, str8, f2, z2, i5, i6, z3, str9, str10, z4, i7, bundle4, str11, zzduVar, z5, bundle5, str12, str13, str14, z6, arrayList4, str15, arrayList5, i8, z7, z8, z9, arrayList6, str16, zzbslVar, str17, bundle6);
     }
 
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        return a(parcel);
+        return m12224a(parcel);
     }
 
     @Override // android.os.Parcelable.Creator

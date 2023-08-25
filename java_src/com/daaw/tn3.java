@@ -5,8 +5,12 @@ import com.google.android.gms.ads.internal.client.zzdp;
 import com.google.android.gms.ads.internal.client.zzdt;
 /* loaded from: classes.dex */
 public final class tn3 extends zzdp {
-    public final Object p = new Object();
-    public volatile zzdt q;
+
+    /* renamed from: p */
+    public final Object f27892p = new Object();
+
+    /* renamed from: q */
+    public volatile zzdt f27893q;
 
     @Override // com.google.android.gms.ads.internal.client.zzdq
     public final float zze() {
@@ -31,8 +35,8 @@ public final class tn3 extends zzdp {
     @Override // com.google.android.gms.ads.internal.client.zzdq
     public final zzdt zzi() {
         zzdt zzdtVar;
-        synchronized (this.p) {
-            zzdtVar = this.q;
+        synchronized (this.f27892p) {
+            zzdtVar = this.f27893q;
         }
         return zzdtVar;
     }
@@ -54,8 +58,8 @@ public final class tn3 extends zzdp {
 
     @Override // com.google.android.gms.ads.internal.client.zzdq
     public final void zzm(zzdt zzdtVar) {
-        synchronized (this.p) {
-            this.q = zzdtVar;
+        synchronized (this.f27892p) {
+            this.f27893q = zzdtVar;
         }
     }
 

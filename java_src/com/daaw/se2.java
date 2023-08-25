@@ -1,6 +1,7 @@
 package com.daaw;
 
 import android.util.Pair;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.BufferUnderflowException;
@@ -8,26 +9,39 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.FileChannel;
 import java.security.DigestException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.KeyFactory;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.SignatureException;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.security.spec.AlgorithmParameterSpec;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.MGF1ParameterSpec;
+import java.security.spec.PSSParameterSpec;
+import java.security.spec.X509EncodedKeySpec;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import org.conscrypt.EvpMdRef;
 /* loaded from: classes.dex */
 public final class se2 {
-    public static X509Certificate[][] a(String str) {
+    /* renamed from: a */
+    public static X509Certificate[][] m10443a(String str) {
         RandomAccessFile randomAccessFile = new RandomAccessFile(str, "r");
         try {
-            Pair c = te2.c(randomAccessFile);
-            if (c == null) {
+            Pair m9222c = te2.m9222c(randomAccessFile);
+            if (m9222c == null) {
                 throw new pe2("Not an APK file: ZIP End of Central Directory record not found in file with " + randomAccessFile.length() + " bytes");
             }
-            ByteBuffer byteBuffer = (ByteBuffer) c.first;
-            long longValue = ((Long) c.second).longValue();
+            ByteBuffer byteBuffer = (ByteBuffer) m9222c.first;
+            long longValue = ((Long) m9222c.second).longValue();
             long j = (-20) + longValue;
             if (j >= 0) {
                 randomAccessFile.seek(j);
@@ -35,17 +49,17 @@ public final class se2 {
                     throw new pe2("ZIP64 APK not supported");
                 }
             }
-            long a = te2.a(byteBuffer);
-            if (a >= longValue) {
-                throw new pe2("ZIP Central Directory offset out of range: " + a + ". ZIP End of Central Directory offset: " + longValue);
-            } else if (te2.b(byteBuffer) + a == longValue) {
-                if (a < 32) {
-                    throw new pe2("APK too small for APK Signing Block. ZIP Central Directory offset: " + a);
+            long m9224a = te2.m9224a(byteBuffer);
+            if (m9224a >= longValue) {
+                throw new pe2("ZIP Central Directory offset out of range: " + m9224a + ". ZIP End of Central Directory offset: " + longValue);
+            } else if (te2.m9223b(byteBuffer) + m9224a == longValue) {
+                if (m9224a < 32) {
+                    throw new pe2("APK too small for APK Signing Block. ZIP Central Directory offset: " + m9224a);
                 }
                 ByteBuffer allocate = ByteBuffer.allocate(24);
                 ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
                 allocate.order(byteOrder);
-                randomAccessFile.seek(a - allocate.capacity());
+                randomAccessFile.seek(m9224a - allocate.capacity());
                 randomAccessFile.readFully(allocate.array(), allocate.arrayOffset(), allocate.capacity());
                 if (allocate.getLong(8) == 2334950737559900225L && allocate.getLong(16) == 3617552046287187010L) {
                     int i = 0;
@@ -54,7 +68,7 @@ public final class se2 {
                         throw new pe2("APK Signing Block size out of range: " + j2);
                     }
                     int i2 = (int) (8 + j2);
-                    long j3 = a - i2;
+                    long j3 = m9224a - i2;
                     if (j3 < 0) {
                         throw new pe2("APK Signing Block offset out of range: " + j3);
                     }
@@ -102,13 +116,13 @@ public final class se2 {
                             if (i3 > slice.remaining()) {
                                 throw new pe2("APK Signing Block entry #" + i + " size out of range: " + i3 + ", available: " + slice.remaining());
                             } else if (slice.getInt() == 1896449818) {
-                                X509Certificate[][] l = l(randomAccessFile.getChannel(), new oe2(e(slice, i3 - 4), longValue2, a, longValue, byteBuffer, null));
+                                X509Certificate[][] m10432l = m10432l(randomAccessFile.getChannel(), new oe2(m10439e(slice, i3 - 4), longValue2, m9224a, longValue, byteBuffer, null));
                                 randomAccessFile.close();
                                 try {
                                     randomAccessFile.close();
                                 } catch (IOException unused) {
                                 }
-                                return l;
+                                return m10432l;
                             } else {
                                 slice.position(position2);
                             }
@@ -130,7 +144,8 @@ public final class se2 {
         }
     }
 
-    public static int b(int i) {
+    /* renamed from: b */
+    public static int m10442b(int i) {
         if (i != 1) {
             if (i == 2) {
                 return 64;
@@ -140,7 +155,8 @@ public final class se2 {
         return 32;
     }
 
-    public static int c(int i) {
+    /* renamed from: c */
+    public static int m10441c(int i) {
         if (i != 513) {
             if (i != 514) {
                 if (i != 769) {
@@ -162,7 +178,8 @@ public final class se2 {
         return 1;
     }
 
-    public static String d(int i) {
+    /* renamed from: d */
+    public static String m10440d(int i) {
         if (i != 1) {
             if (i == 2) {
                 return EvpMdRef.SHA512.JCA_NAME;
@@ -172,7 +189,8 @@ public final class se2 {
         return EvpMdRef.SHA256.JCA_NAME;
     }
 
-    public static ByteBuffer e(ByteBuffer byteBuffer, int i) {
+    /* renamed from: e */
+    public static ByteBuffer m10439e(ByteBuffer byteBuffer, int i) {
         int limit = byteBuffer.limit();
         int position = byteBuffer.position();
         int i2 = i + position;
@@ -190,7 +208,8 @@ public final class se2 {
         }
     }
 
-    public static ByteBuffer f(ByteBuffer byteBuffer) {
+    /* renamed from: f */
+    public static ByteBuffer m10438f(ByteBuffer byteBuffer) {
         if (byteBuffer.remaining() < 4) {
             int remaining = byteBuffer.remaining();
             throw new IOException("Remaining buffer too short to contain length of length-prefixed field. Remaining: " + remaining);
@@ -198,7 +217,7 @@ public final class se2 {
         int i = byteBuffer.getInt();
         if (i >= 0) {
             if (i <= byteBuffer.remaining()) {
-                return e(byteBuffer, i);
+                return m10439e(byteBuffer, i);
             }
             int remaining2 = byteBuffer.remaining();
             throw new IOException("Length-prefixed field longer than remaining buffer. Field length: " + i + ", remaining: " + remaining2);
@@ -206,14 +225,16 @@ public final class se2 {
         throw new IllegalArgumentException("Negative length");
     }
 
-    public static void g(int i, byte[] bArr, int i2) {
+    /* renamed from: g */
+    public static void m10437g(int i, byte[] bArr, int i2) {
         bArr[1] = (byte) (i & 255);
         bArr[2] = (byte) ((i >>> 8) & 255);
         bArr[3] = (byte) ((i >>> 16) & 255);
         bArr[4] = (byte) (i >> 24);
     }
 
-    public static void h(Map map, FileChannel fileChannel, long j, long j2, long j3, ByteBuffer byteBuffer) {
+    /* renamed from: h */
+    public static void m10436h(Map map, FileChannel fileChannel, long j, long j2, long j3, ByteBuffer byteBuffer) {
         if (map.isEmpty()) {
             throw new SecurityException("No digests provided");
         }
@@ -221,7 +242,7 @@ public final class se2 {
         me2 me2Var2 = new me2(fileChannel, j2, j3 - j2);
         ByteBuffer duplicate = byteBuffer.duplicate();
         duplicate.order(ByteOrder.LITTLE_ENDIAN);
-        te2.d(duplicate, j);
+        te2.m9221d(duplicate, j);
         ke2 ke2Var = new ke2(duplicate);
         int size = map.size();
         int[] iArr = new int[size];
@@ -231,11 +252,11 @@ public final class se2 {
             i++;
         }
         try {
-            byte[][] k = k(iArr, new le2[]{me2Var, me2Var2, ke2Var});
+            byte[][] m10433k = m10433k(iArr, new le2[]{me2Var, me2Var2, ke2Var});
             for (int i2 = 0; i2 < size; i2++) {
                 int i3 = iArr[i2];
-                if (!MessageDigest.isEqual((byte[]) map.get(Integer.valueOf(i3)), k[i2])) {
-                    throw new SecurityException(d(i3).concat(" digest of contents did not verify"));
+                if (!MessageDigest.isEqual((byte[]) map.get(Integer.valueOf(i3)), m10433k[i2])) {
+                    throw new SecurityException(m10440d(i3).concat(" digest of contents did not verify"));
                 }
             }
         } catch (DigestException e) {
@@ -243,7 +264,8 @@ public final class se2 {
         }
     }
 
-    public static byte[] i(ByteBuffer byteBuffer) {
+    /* renamed from: i */
+    public static byte[] m10435i(ByteBuffer byteBuffer) {
         int i = byteBuffer.getInt();
         if (i >= 0) {
             if (i <= byteBuffer.remaining()) {
@@ -258,8 +280,8 @@ public final class se2 {
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:15:0x0048, code lost:
-        r11 = c(r5);
-        r12 = c(r7);
+        r11 = m10441c(r5);
+        r12 = m10441c(r7);
      */
     /* JADX WARN: Code restructure failed: missing block: B:16:0x0050, code lost:
         if (r11 == 1) goto L26;
@@ -270,19 +292,181 @@ public final class se2 {
     /* JADX WARN: Removed duplicated region for block: B:111:0x023f  */
     /* JADX WARN: Removed duplicated region for block: B:62:0x012f A[Catch: SignatureException -> 0x024f, InvalidAlgorithmParameterException -> 0x0251, InvalidKeyException -> 0x0253, InvalidAlgorithmParameterException | InvalidKeyException | NoSuchAlgorithmException | SignatureException | InvalidKeySpecException -> 0x0255, NoSuchAlgorithmException -> 0x0257, TryCatch #5 {InvalidAlgorithmParameterException | InvalidKeyException | NoSuchAlgorithmException | SignatureException | InvalidKeySpecException -> 0x0255, blocks: (B:60:0x0119, B:62:0x012f, B:63:0x0132), top: B:131:0x0119 }] */
     /* JADX WARN: Removed duplicated region for block: B:65:0x013b  */
+    /* renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static java.security.cert.X509Certificate[] j(java.nio.ByteBuffer r22, java.util.Map r23, java.security.cert.CertificateFactory r24) {
-        /*
-            Method dump skipped, instructions count: 666
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.se2.j(java.nio.ByteBuffer, java.util.Map, java.security.cert.CertificateFactory):java.security.cert.X509Certificate[]");
+    public static X509Certificate[] m10434j(ByteBuffer byteBuffer, Map map, CertificateFactory certificateFactory) {
+        String str;
+        String str2;
+        Pair pair;
+        String str3;
+        AlgorithmParameterSpec algorithmParameterSpec;
+        Signature signature;
+        PSSParameterSpec pSSParameterSpec;
+        String str4;
+        ByteBuffer m10438f = m10438f(byteBuffer);
+        ByteBuffer m10438f2 = m10438f(byteBuffer);
+        byte[] m10435i = m10435i(byteBuffer);
+        ArrayList arrayList = new ArrayList();
+        byte[] bArr = null;
+        byte[] bArr2 = null;
+        int i = -1;
+        int i2 = 0;
+        while (m10438f2.hasRemaining()) {
+            i2++;
+            try {
+                ByteBuffer m10438f3 = m10438f(m10438f2);
+                if (m10438f3.remaining() < 8) {
+                    throw new SecurityException("Signature record too short");
+                }
+                int i3 = m10438f3.getInt();
+                arrayList.add(Integer.valueOf(i3));
+                if (i3 != 513 && i3 != 514 && i3 != 769) {
+                    switch (i3) {
+                        case 257:
+                        case 258:
+                        case 259:
+                        case 260:
+                            break;
+                        default:
+                            continue;
+                    }
+                }
+                bArr2 = m10435i(m10438f3);
+                i = i3;
+            } catch (IOException | BufferUnderflowException e) {
+                throw new SecurityException("Failed to parse signature record #" + i2, e);
+            }
+        }
+        if (i == -1) {
+            if (i2 == 0) {
+                throw new SecurityException("No signatures found");
+            }
+            throw new SecurityException("No supported signatures found");
+        }
+        if (i == 513 || i == 514) {
+            str = "EC";
+        } else if (i != 769) {
+            switch (i) {
+                case 257:
+                case 258:
+                case 259:
+                case 260:
+                    str = "RSA";
+                    break;
+                default:
+                    throw new IllegalArgumentException("Unknown signature algorithm: 0x".concat(String.valueOf(Long.toHexString(i))));
+            }
+        } else {
+            str = "DSA";
+        }
+        try {
+            if (i == 513) {
+                str2 = "SHA256withECDSA";
+            } else if (i == 514) {
+                str2 = "SHA512withECDSA";
+            } else if (i != 769) {
+                switch (i) {
+                    case 257:
+                        pSSParameterSpec = new PSSParameterSpec(EvpMdRef.SHA256.JCA_NAME, EvpMdRef.MGF1_ALGORITHM_NAME, MGF1ParameterSpec.SHA256, 32, 1);
+                        str4 = "SHA256withRSA/PSS";
+                        pair = Pair.create(str4, pSSParameterSpec);
+                        break;
+                    case 258:
+                        pSSParameterSpec = new PSSParameterSpec(EvpMdRef.SHA512.JCA_NAME, EvpMdRef.MGF1_ALGORITHM_NAME, MGF1ParameterSpec.SHA512, 64, 1);
+                        str4 = "SHA512withRSA/PSS";
+                        pair = Pair.create(str4, pSSParameterSpec);
+                        break;
+                    case 259:
+                        str2 = "SHA256withRSA";
+                        break;
+                    case 260:
+                        str2 = "SHA512withRSA";
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Unknown signature algorithm: 0x".concat(String.valueOf(Long.toHexString(i))));
+                }
+                str3 = (String) pair.first;
+                algorithmParameterSpec = (AlgorithmParameterSpec) pair.second;
+                PublicKey generatePublic = KeyFactory.getInstance(str).generatePublic(new X509EncodedKeySpec(m10435i));
+                signature = Signature.getInstance(str3);
+                signature.initVerify(generatePublic);
+                if (algorithmParameterSpec != null) {
+                    signature.setParameter(algorithmParameterSpec);
+                }
+                signature.update(m10438f);
+                if (signature.verify(bArr2)) {
+                    throw new SecurityException(String.valueOf(str3).concat(" signature did not verify"));
+                }
+                m10438f.clear();
+                ByteBuffer m10438f4 = m10438f(m10438f);
+                ArrayList arrayList2 = new ArrayList();
+                int i4 = 0;
+                while (m10438f4.hasRemaining()) {
+                    i4++;
+                    try {
+                        ByteBuffer m10438f5 = m10438f(m10438f4);
+                        if (m10438f5.remaining() < 8) {
+                            throw new IOException("Record too short");
+                        }
+                        int i5 = m10438f5.getInt();
+                        arrayList2.add(Integer.valueOf(i5));
+                        if (i5 == i) {
+                            bArr = m10435i(m10438f5);
+                        }
+                    } catch (IOException | BufferUnderflowException e2) {
+                        throw new IOException("Failed to parse digest record #" + i4, e2);
+                    }
+                }
+                if (arrayList.equals(arrayList2)) {
+                    int m10441c = m10441c(i);
+                    byte[] bArr3 = (byte[]) map.put(Integer.valueOf(m10441c), bArr);
+                    if (bArr3 == null || MessageDigest.isEqual(bArr3, bArr)) {
+                        ByteBuffer m10438f6 = m10438f(m10438f);
+                        ArrayList arrayList3 = new ArrayList();
+                        int i6 = 0;
+                        while (m10438f6.hasRemaining()) {
+                            i6++;
+                            byte[] m10435i2 = m10435i(m10438f6);
+                            try {
+                                arrayList3.add(new qe2((X509Certificate) certificateFactory.generateCertificate(new ByteArrayInputStream(m10435i2)), m10435i2));
+                            } catch (CertificateException e3) {
+                                throw new SecurityException("Failed to decode certificate #" + i6, e3);
+                            }
+                        }
+                        if (arrayList3.isEmpty()) {
+                            throw new SecurityException("No certificates listed");
+                        }
+                        if (Arrays.equals(m10435i, ((X509Certificate) arrayList3.get(0)).getPublicKey().getEncoded())) {
+                            return (X509Certificate[]) arrayList3.toArray(new X509Certificate[arrayList3.size()]);
+                        }
+                        throw new SecurityException("Public key mismatch between certificate and signature record");
+                    }
+                    throw new SecurityException(m10440d(m10441c).concat(" contents digest does not match the digest specified by a preceding signer"));
+                }
+                throw new SecurityException("Signature algorithms don't match between digests and signatures records");
+            } else {
+                str2 = "SHA256withDSA";
+            }
+            PublicKey generatePublic2 = KeyFactory.getInstance(str).generatePublic(new X509EncodedKeySpec(m10435i));
+            signature = Signature.getInstance(str3);
+            signature.initVerify(generatePublic2);
+            if (algorithmParameterSpec != null) {
+            }
+            signature.update(m10438f);
+            if (signature.verify(bArr2)) {
+            }
+        } catch (InvalidAlgorithmParameterException | InvalidKeyException | NoSuchAlgorithmException | SignatureException | InvalidKeySpecException e4) {
+            throw new SecurityException("Failed to verify " + str3 + " signature", e4);
+        }
+        pair = Pair.create(str2, null);
+        str3 = (String) pair.first;
+        algorithmParameterSpec = (AlgorithmParameterSpec) pair.second;
     }
 
-    public static byte[][] k(int[] iArr, le2[] le2VarArr) {
+    /* renamed from: k */
+    public static byte[][] m10433k(int[] iArr, le2[] le2VarArr) {
         long j;
         int i;
         int length;
@@ -309,9 +493,9 @@ public final class se2 {
             if (i5 >= length) {
                 break;
             }
-            byte[] bArr2 = new byte[(b(iArr[i5]) * i4) + 5];
+            byte[] bArr2 = new byte[(m10442b(iArr[i5]) * i4) + 5];
             bArr2[0] = 90;
-            g(i4, bArr2, 1);
+            m10437g(i4, bArr2, 1);
             bArr[i5] = bArr2;
             i5++;
         }
@@ -319,11 +503,11 @@ public final class se2 {
         bArr3[0] = -91;
         MessageDigest[] messageDigestArr = new MessageDigest[length];
         for (int i6 = 0; i6 < iArr.length; i6++) {
-            String d = d(iArr[i6]);
+            String m10440d = m10440d(iArr[i6]);
             try {
-                messageDigestArr[i6] = MessageDigest.getInstance(d);
+                messageDigestArr[i6] = MessageDigest.getInstance(m10440d);
             } catch (NoSuchAlgorithmException e) {
-                throw new RuntimeException(d.concat(" digest not supported"), e);
+                throw new RuntimeException(m10440d.concat(" digest not supported"), e);
             }
         }
         int i7 = 0;
@@ -334,25 +518,25 @@ public final class se2 {
             long zza = le2Var.zza();
             while (zza > j2) {
                 int min = (int) Math.min(zza, j);
-                g(min, bArr3, 1);
+                m10437g(min, bArr3, 1);
                 for (int i9 = 0; i9 < length; i9++) {
                     messageDigestArr[i9].update(bArr3);
                 }
                 long j5 = j4;
                 try {
-                    le2Var.a(messageDigestArr, j5, min);
+                    le2Var.mo16049a(messageDigestArr, j5, min);
                     byte[] bArr4 = bArr3;
                     int i10 = 0;
                     while (i10 < iArr.length) {
                         int i11 = iArr[i10];
                         le2 le2Var2 = le2Var;
                         byte[] bArr5 = bArr[i10];
-                        int b = b(i11);
+                        int m10442b = m10442b(i11);
                         int i12 = length;
                         MessageDigest messageDigest = messageDigestArr[i10];
                         MessageDigest[] messageDigestArr2 = messageDigestArr;
-                        int digest = messageDigest.digest(bArr5, (i8 * b) + 5, b);
-                        if (digest != b) {
+                        int digest = messageDigest.digest(bArr5, (i8 * m10442b) + 5, m10442b);
+                        if (digest != m10442b) {
                             throw new RuntimeException("Unexpected output size of " + messageDigest.getAlgorithm() + " digest: " + digest);
                         }
                         i10++;
@@ -381,17 +565,18 @@ public final class se2 {
         for (int i13 = 0; i13 < iArr.length; i13++) {
             int i14 = iArr[i13];
             byte[] bArr7 = bArr[i13];
-            String d2 = d(i14);
+            String m10440d2 = m10440d(i14);
             try {
-                bArr6[i13] = MessageDigest.getInstance(d2).digest(bArr7);
+                bArr6[i13] = MessageDigest.getInstance(m10440d2).digest(bArr7);
             } catch (NoSuchAlgorithmException e3) {
-                throw new RuntimeException(d2.concat(" digest not supported"), e3);
+                throw new RuntimeException(m10440d2.concat(" digest not supported"), e3);
             }
         }
         return bArr6;
     }
 
-    public static X509Certificate[][] l(FileChannel fileChannel, oe2 oe2Var) {
+    /* renamed from: l */
+    public static X509Certificate[][] m10432l(FileChannel fileChannel, oe2 oe2Var) {
         ByteBuffer byteBuffer;
         long j;
         long j2;
@@ -402,13 +587,13 @@ public final class se2 {
         try {
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
             try {
-                byteBuffer = oe2Var.a;
-                ByteBuffer f = f(byteBuffer);
+                byteBuffer = oe2Var.f21519a;
+                ByteBuffer m10438f = m10438f(byteBuffer);
                 int i = 0;
-                while (f.hasRemaining()) {
+                while (m10438f.hasRemaining()) {
                     i++;
                     try {
-                        arrayList.add(j(f(f), hashMap, certificateFactory));
+                        arrayList.add(m10434j(m10438f(m10438f), hashMap, certificateFactory));
                     } catch (IOException | SecurityException | BufferUnderflowException e) {
                         throw new SecurityException("Failed to parse/verify signer #" + i + " block", e);
                     }
@@ -417,11 +602,11 @@ public final class se2 {
                     if (hashMap.isEmpty()) {
                         throw new SecurityException("No content digests found");
                     }
-                    j = oe2Var.b;
-                    j2 = oe2Var.c;
-                    j3 = oe2Var.d;
-                    byteBuffer2 = oe2Var.e;
-                    h(hashMap, fileChannel, j, j2, j3, byteBuffer2);
+                    j = oe2Var.f21520b;
+                    j2 = oe2Var.f21521c;
+                    j3 = oe2Var.f21522d;
+                    byteBuffer2 = oe2Var.f21523e;
+                    m10436h(hashMap, fileChannel, j, j2, j3, byteBuffer2);
                     return (X509Certificate[][]) arrayList.toArray(new X509Certificate[arrayList.size()]);
                 }
                 throw new SecurityException("No signers found");

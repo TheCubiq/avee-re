@@ -6,22 +6,25 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public class hu1 {
-    public static Method a;
+
+    /* renamed from: a */
+    public static Method f12929a;
 
     static {
         try {
             Method declaredMethod = View.class.getDeclaredMethod("computeFitSystemWindows", Rect.class, Rect.class);
-            a = declaredMethod;
+            f12929a = declaredMethod;
             if (declaredMethod.isAccessible()) {
                 return;
             }
-            a.setAccessible(true);
+            f12929a.setAccessible(true);
         } catch (NoSuchMethodException unused) {
         }
     }
 
-    public static void a(View view, Rect rect, Rect rect2) {
-        Method method = a;
+    /* renamed from: a */
+    public static void m20418a(View view, Rect rect, Rect rect2) {
+        Method method = f12929a;
         if (method != null) {
             try {
                 method.invoke(view, rect, rect2);
@@ -30,11 +33,13 @@ public class hu1 {
         }
     }
 
-    public static boolean b(View view) {
-        return xs1.E(view) == 1;
+    /* renamed from: b */
+    public static boolean m20417b(View view) {
+        return xs1.m4768E(view) == 1;
     }
 
-    public static void c(View view) {
+    /* renamed from: c */
+    public static void m20416c(View view) {
         try {
             Method method = view.getClass().getMethod("makeOptionalFitsSystemWindows", new Class[0]);
             if (!method.isAccessible()) {

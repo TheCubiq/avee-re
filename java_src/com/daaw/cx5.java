@@ -1,13 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class cx5 {
-    public final fa3 a;
+
+    /* renamed from: a */
+    public final fa3 f6258a;
 
     public cx5(fa3 fa3Var) {
-        this.a = fa3Var;
+        this.f6258a = fa3Var;
     }
 
-    public final fa3 a() {
-        return this.a;
+    /* renamed from: a */
+    public final fa3 m24913a() {
+        return this.f6258a;
     }
 }

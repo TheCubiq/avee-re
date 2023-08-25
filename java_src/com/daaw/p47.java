@@ -1,44 +1,54 @@
 package com.daaw;
 
 import java.util.Objects;
+import java.util.concurrent.ExecutionException;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class p47 extends i67 implements Runnable {
     @CheckForNull
-    public f77 w;
+
+    /* renamed from: w */
+    public f77 f22612w;
     @CheckForNull
-    public Class x;
+
+    /* renamed from: x */
+    public Class f22613x;
     @CheckForNull
-    public Object y;
+
+    /* renamed from: y */
+    public Object f22614y;
 
     public p47(f77 f77Var, Class cls, Object obj) {
         Objects.requireNonNull(f77Var);
-        this.w = f77Var;
-        this.x = cls;
+        this.f22612w = f77Var;
+        this.f22613x = cls;
         Objects.requireNonNull(obj);
-        this.y = obj;
+        this.f22614y = obj;
     }
 
-    public abstract Object E(Object obj, Throwable th);
+    /* renamed from: E */
+    public abstract Object mo13633E(Object obj, Throwable th);
 
-    public abstract void F(Object obj);
+    /* renamed from: F */
+    public abstract void mo13632F(Object obj);
 
     @Override // com.daaw.c57
     @CheckForNull
-    public final String e() {
+    /* renamed from: e */
+    public final String mo7361e() {
         String str;
-        f77 f77Var = this.w;
-        Class cls = this.x;
-        Object obj = this.y;
-        String e = super.e();
+        f77 f77Var = this.f22612w;
+        Class cls = this.f22613x;
+        Object obj = this.f22614y;
+        String mo7361e = super.mo7361e();
         if (f77Var != null) {
             str = "inputFuture=[" + f77Var.toString() + "], ";
         } else {
             str = "";
         }
         if (cls == null || obj == null) {
-            if (e != null) {
-                return str.concat(e);
+            if (mo7361e != null) {
+                return str.concat(mo7361e);
             }
             return null;
         }
@@ -46,11 +56,12 @@ public abstract class p47 extends i67 implements Runnable {
     }
 
     @Override // com.daaw.c57
-    public final void g() {
-        v(this.w);
-        this.w = null;
-        this.x = null;
-        this.y = null;
+    /* renamed from: g */
+    public final void mo7360g() {
+        m25601v(this.f22612w);
+        this.f22612w = null;
+        this.f22613x = null;
+        this.f22614y = null;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:36:0x007c  */
@@ -58,115 +69,59 @@ public abstract class p47 extends i67 implements Runnable {
     @Override // java.lang.Runnable
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public final void run() {
-        /*
-            r9 = this;
-            com.daaw.f77 r0 = r9.w
-            java.lang.Class r1 = r9.x
-            java.lang.Object r2 = r9.y
-            r3 = 1
-            r4 = 0
-            if (r0 != 0) goto Lc
-            r5 = 1
-            goto Ld
-        Lc:
-            r5 = 0
-        Ld:
-            if (r1 != 0) goto L11
-            r6 = 1
-            goto L12
-        L11:
-            r6 = 0
-        L12:
-            r5 = r5 | r6
-            if (r2 != 0) goto L16
-            goto L17
-        L16:
-            r3 = 0
-        L17:
-            r3 = r3 | r5
-            if (r3 != 0) goto La7
-            boolean r3 = r9.isCancelled()
-            if (r3 == 0) goto L22
-            goto La7
-        L22:
-            r3 = 0
-            r9.w = r3
-            boolean r4 = r0 instanceof com.daaw.y77     // Catch: java.lang.Error -> L39 java.lang.RuntimeException -> L3b java.util.concurrent.ExecutionException -> L3e
-            if (r4 == 0) goto L31
-            r4 = r0
-            com.daaw.y77 r4 = (com.daaw.y77) r4     // Catch: java.lang.Error -> L39 java.lang.RuntimeException -> L3b java.util.concurrent.ExecutionException -> L3e
-            java.lang.Throwable r4 = r4.a()     // Catch: java.lang.Error -> L39 java.lang.RuntimeException -> L3b java.util.concurrent.ExecutionException -> L3e
-            goto L32
-        L31:
-            r4 = r3
-        L32:
-            if (r4 != 0) goto L3c
-            java.lang.Object r5 = com.daaw.s67.p(r0)     // Catch: java.lang.Error -> L39 java.lang.RuntimeException -> L3b java.util.concurrent.ExecutionException -> L3e
-            goto L7a
-        L39:
-            r4 = move-exception
-            goto L3c
-        L3b:
-            r4 = move-exception
-        L3c:
-            r5 = r3
-            goto L7a
-        L3e:
-            r4 = move-exception
-            java.lang.Throwable r5 = r4.getCause()
-            if (r5 != 0) goto L78
-            java.lang.NullPointerException r5 = new java.lang.NullPointerException
-            java.lang.Class r6 = r0.getClass()
-            java.lang.String r6 = java.lang.String.valueOf(r6)
-            java.lang.Class r4 = r4.getClass()
-            java.lang.String r4 = java.lang.String.valueOf(r4)
-            java.lang.StringBuilder r7 = new java.lang.StringBuilder
-            r7.<init>()
-            java.lang.String r8 = "Future type "
-            r7.append(r8)
-            r7.append(r6)
-            java.lang.String r6 = " threw "
-            r7.append(r6)
-            r7.append(r4)
-            java.lang.String r4 = " without a cause"
-            r7.append(r4)
-            java.lang.String r4 = r7.toString()
-            r5.<init>(r4)
-        L78:
-            r4 = r5
-            goto L3c
-        L7a:
-            if (r4 != 0) goto L80
-            r9.h(r5)
-            return
-        L80:
-            boolean r1 = r1.isInstance(r4)
-            if (r1 == 0) goto La4
-            java.lang.Object r0 = r9.E(r2, r4)     // Catch: java.lang.Throwable -> L92
-            r9.x = r3
-            r9.y = r3
-            r9.F(r0)
-            return
-        L92:
-            r0 = move-exception
-            com.daaw.n77.a(r0)     // Catch: java.lang.Throwable -> L9e
-            r9.i(r0)     // Catch: java.lang.Throwable -> L9e
-            r9.x = r3
-            r9.y = r3
-            return
-        L9e:
-            r0 = move-exception
-            r9.x = r3
-            r9.y = r3
-            throw r0
-        La4:
-            r9.w(r0)
-        La7:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.p47.run():void");
+        Throwable e;
+        Object obj;
+        f77 f77Var = this.f22612w;
+        Class cls = this.f22613x;
+        Object obj2 = this.f22614y;
+        if (((obj2 == null) || ((f77Var == null) | (cls == null))) || isCancelled()) {
+            return;
+        }
+        this.f22612w = null;
+        try {
+            e = f77Var instanceof y77 ? ((y77) f77Var).mo4029a() : null;
+        } catch (Error e2) {
+            e = e2;
+        } catch (RuntimeException e3) {
+            e = e3;
+        } catch (ExecutionException e4) {
+            Throwable cause = e4.getCause();
+            if (cause == null) {
+                cause = new NullPointerException("Future type " + String.valueOf(f77Var.getClass()) + " threw " + String.valueOf(e4.getClass()) + " without a cause");
+            }
+            e = cause;
+        }
+        if (e == null) {
+            obj = s67.m10627p(f77Var);
+            if (e != null) {
+                mo14486h(obj);
+                return;
+            } else if (!cls.isInstance(e)) {
+                m25600w(f77Var);
+                return;
+            } else {
+                try {
+                    Object mo13633E = mo13633E(obj2, e);
+                    this.f22613x = null;
+                    this.f22614y = null;
+                    mo13632F(mo13633E);
+                    return;
+                } catch (Throwable th) {
+                    try {
+                        n77.m15480a(th);
+                        mo14485i(th);
+                        return;
+                    } finally {
+                        this.f22613x = null;
+                        this.f22614y = null;
+                    }
+                }
+            }
+        }
+        obj = null;
+        if (e != null) {
+        }
     }
 }

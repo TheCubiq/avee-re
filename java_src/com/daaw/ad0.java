@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ad0<T> {
-    T a(int i);
+    /* renamed from: a */
+    T mo7019a(int i);
 
-    T b();
+    /* renamed from: b */
+    T mo7018b();
 
-    int c();
+    /* renamed from: c */
+    int mo7017c();
 }

@@ -3,37 +3,59 @@ package com.daaw;
 import java.util.concurrent.ScheduledExecutorService;
 /* loaded from: classes.dex */
 public final class bv5 implements wz7 {
-    public final m08 a;
-    public final m08 b;
-    public final m08 c;
-    public final m08 d;
-    public final m08 e;
-    public final m08 f;
-    public final m08 g;
-    public final m08 h;
-    public final m08 i;
-    public final m08 j;
-    public final m08 k;
+
+    /* renamed from: a */
+    public final m08 f5202a;
+
+    /* renamed from: b */
+    public final m08 f5203b;
+
+    /* renamed from: c */
+    public final m08 f5204c;
+
+    /* renamed from: d */
+    public final m08 f5205d;
+
+    /* renamed from: e */
+    public final m08 f5206e;
+
+    /* renamed from: f */
+    public final m08 f5207f;
+
+    /* renamed from: g */
+    public final m08 f5208g;
+
+    /* renamed from: h */
+    public final m08 f5209h;
+
+    /* renamed from: i */
+    public final m08 f5210i;
+
+    /* renamed from: j */
+    public final m08 f5211j;
+
+    /* renamed from: k */
+    public final m08 f5212k;
 
     public bv5(m08 m08Var, m08 m08Var2, m08 m08Var3, m08 m08Var4, m08 m08Var5, m08 m08Var6, m08 m08Var7, m08 m08Var8, m08 m08Var9, m08 m08Var10, m08 m08Var11) {
-        this.a = m08Var;
-        this.b = m08Var2;
-        this.c = m08Var3;
-        this.d = m08Var4;
-        this.e = m08Var5;
-        this.f = m08Var6;
-        this.g = m08Var7;
-        this.h = m08Var8;
-        this.i = m08Var9;
-        this.j = m08Var10;
-        this.k = m08Var11;
+        this.f5202a = m08Var;
+        this.f5203b = m08Var2;
+        this.f5204c = m08Var3;
+        this.f5205d = m08Var4;
+        this.f5206e = m08Var5;
+        this.f5207f = m08Var6;
+        this.f5208g = m08Var7;
+        this.f5209h = m08Var8;
+        this.f5210i = m08Var9;
+        this.f5211j = m08Var10;
+        this.f5212k = m08Var11;
     }
 
     @Override // com.daaw.m08
     /* renamed from: a */
     public final av5 zzb() {
-        g77 g77Var = z04.a;
-        e08.b(g77Var);
-        return new av5(((h94) this.a).a(), (en6) this.b.zzb(), (vu5) this.c.zzb(), (nq4) this.d.zzb(), (kp6) this.e.zzb(), (op6) this.f.zzb(), (cm4) this.g.zzb(), g77Var, (ScheduledExecutorService) this.i.zzb(), (vq5) this.j.zzb(), (to6) this.k.zzb());
+        g77 g77Var = z04.f34305a;
+        e08.m23801b(g77Var);
+        return new av5(((h94) this.f5202a).m20923a(), (en6) this.f5203b.zzb(), (vu5) this.f5204c.zzb(), (nq4) this.f5205d.zzb(), (kp6) this.f5206e.zzb(), (op6) this.f5207f.zzb(), (cm4) this.f5208g.zzb(), g77Var, (ScheduledExecutorService) this.f5210i.zzb(), (vq5) this.f5211j.zzb(), (to6) this.f5212k.zzb());
     }
 }

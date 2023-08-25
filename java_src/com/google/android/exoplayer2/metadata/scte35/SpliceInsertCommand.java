@@ -9,23 +9,50 @@ import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class SpliceInsertCommand extends SpliceCommand {
-    public static final Parcelable.Creator<SpliceInsertCommand> CREATOR = new a();
-    public final int A;
-    public final int B;
-    public final long p;
-    public final boolean q;
-    public final boolean r;
-    public final boolean s;
-    public final boolean t;
-    public final long u;
-    public final long v;
-    public final List<b> w;
-    public final boolean x;
-    public final long y;
-    public final int z;
+    public static final Parcelable.Creator<SpliceInsertCommand> CREATOR = new C3953a();
 
+    /* renamed from: A */
+    public final int f35812A;
+
+    /* renamed from: B */
+    public final int f35813B;
+
+    /* renamed from: p */
+    public final long f35814p;
+
+    /* renamed from: q */
+    public final boolean f35815q;
+
+    /* renamed from: r */
+    public final boolean f35816r;
+
+    /* renamed from: s */
+    public final boolean f35817s;
+
+    /* renamed from: t */
+    public final boolean f35818t;
+
+    /* renamed from: u */
+    public final long f35819u;
+
+    /* renamed from: v */
+    public final long f35820v;
+
+    /* renamed from: w */
+    public final List<C3954b> f35821w;
+
+    /* renamed from: x */
+    public final boolean f35822x;
+
+    /* renamed from: y */
+    public final long f35823y;
+
+    /* renamed from: z */
+    public final int f35824z;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceInsertCommand$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<SpliceInsertCommand> {
+    public static class C3953a implements Parcelable.Creator<SpliceInsertCommand> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public SpliceInsertCommand createFromParcel(Parcel parcel) {
@@ -39,75 +66,85 @@ public final class SpliceInsertCommand extends SpliceCommand {
         }
     }
 
+    /* renamed from: com.google.android.exoplayer2.metadata.scte35.SpliceInsertCommand$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final int a;
-        public final long b;
-        public final long c;
+    public static final class C3954b {
 
-        public b(int i, long j, long j2) {
-            this.a = i;
-            this.b = j;
-            this.c = j2;
+        /* renamed from: a */
+        public final int f35825a;
+
+        /* renamed from: b */
+        public final long f35826b;
+
+        /* renamed from: c */
+        public final long f35827c;
+
+        public C3954b(int i, long j, long j2) {
+            this.f35825a = i;
+            this.f35826b = j;
+            this.f35827c = j2;
         }
 
-        public /* synthetic */ b(int i, long j, long j2, a aVar) {
+        public /* synthetic */ C3954b(int i, long j, long j2, C3953a c3953a) {
             this(i, j, j2);
         }
 
-        public static b a(Parcel parcel) {
-            return new b(parcel.readInt(), parcel.readLong(), parcel.readLong());
+        /* renamed from: a */
+        public static C3954b m1619a(Parcel parcel) {
+            return new C3954b(parcel.readInt(), parcel.readLong(), parcel.readLong());
         }
 
-        public void b(Parcel parcel) {
-            parcel.writeInt(this.a);
-            parcel.writeLong(this.b);
-            parcel.writeLong(this.c);
+        /* renamed from: b */
+        public void m1618b(Parcel parcel) {
+            parcel.writeInt(this.f35825a);
+            parcel.writeLong(this.f35826b);
+            parcel.writeLong(this.f35827c);
         }
     }
 
-    public SpliceInsertCommand(long j, boolean z, boolean z2, boolean z3, boolean z4, long j2, long j3, List<b> list, boolean z5, long j4, int i, int i2, int i3) {
-        this.p = j;
-        this.q = z;
-        this.r = z2;
-        this.s = z3;
-        this.t = z4;
-        this.u = j2;
-        this.v = j3;
-        this.w = Collections.unmodifiableList(list);
-        this.x = z5;
-        this.y = j4;
-        this.z = i;
-        this.A = i2;
-        this.B = i3;
+    public SpliceInsertCommand(long j, boolean z, boolean z2, boolean z3, boolean z4, long j2, long j3, List<C3954b> list, boolean z5, long j4, int i, int i2, int i3) {
+        this.f35814p = j;
+        this.f35815q = z;
+        this.f35816r = z2;
+        this.f35817s = z3;
+        this.f35818t = z4;
+        this.f35819u = j2;
+        this.f35820v = j3;
+        this.f35821w = Collections.unmodifiableList(list);
+        this.f35822x = z5;
+        this.f35823y = j4;
+        this.f35824z = i;
+        this.f35812A = i2;
+        this.f35813B = i3;
     }
 
     public SpliceInsertCommand(Parcel parcel) {
-        this.p = parcel.readLong();
-        this.q = parcel.readByte() == 1;
-        this.r = parcel.readByte() == 1;
-        this.s = parcel.readByte() == 1;
-        this.t = parcel.readByte() == 1;
-        this.u = parcel.readLong();
-        this.v = parcel.readLong();
+        this.f35814p = parcel.readLong();
+        this.f35815q = parcel.readByte() == 1;
+        this.f35816r = parcel.readByte() == 1;
+        this.f35817s = parcel.readByte() == 1;
+        this.f35818t = parcel.readByte() == 1;
+        this.f35819u = parcel.readLong();
+        this.f35820v = parcel.readLong();
         int readInt = parcel.readInt();
         ArrayList arrayList = new ArrayList(readInt);
         for (int i = 0; i < readInt; i++) {
-            arrayList.add(b.a(parcel));
+            arrayList.add(C3954b.m1619a(parcel));
         }
-        this.w = Collections.unmodifiableList(arrayList);
-        this.x = parcel.readByte() == 1;
-        this.y = parcel.readLong();
-        this.z = parcel.readInt();
-        this.A = parcel.readInt();
-        this.B = parcel.readInt();
+        this.f35821w = Collections.unmodifiableList(arrayList);
+        this.f35822x = parcel.readByte() == 1;
+        this.f35823y = parcel.readLong();
+        this.f35824z = parcel.readInt();
+        this.f35812A = parcel.readInt();
+        this.f35813B = parcel.readInt();
     }
 
-    public /* synthetic */ SpliceInsertCommand(Parcel parcel, a aVar) {
+    public /* synthetic */ SpliceInsertCommand(Parcel parcel, C3953a c3953a) {
         this(parcel);
     }
 
-    public static SpliceInsertCommand a(rv0 rv0Var, long j, ol1 ol1Var) {
+    /* renamed from: a */
+    public static SpliceInsertCommand m1622a(rv0 rv0Var, long j, ol1 ol1Var) {
         List list;
         boolean z;
         boolean z2;
@@ -120,10 +157,10 @@ public final class SpliceInsertCommand extends SpliceCommand {
         boolean z4;
         boolean z5;
         long j4;
-        long z6 = rv0Var.z();
-        boolean z7 = (rv0Var.x() & 128) != 0;
+        long m10894z = rv0Var.m10894z();
+        boolean z6 = (rv0Var.m10896x() & 128) != 0;
         List emptyList = Collections.emptyList();
-        if (z7) {
+        if (z6) {
             list = emptyList;
             z = false;
             z2 = false;
@@ -135,64 +172,64 @@ public final class SpliceInsertCommand extends SpliceCommand {
             i3 = 0;
             z4 = false;
         } else {
-            int x = rv0Var.x();
-            boolean z8 = (x & 128) != 0;
-            boolean z9 = (x & 64) != 0;
-            boolean z10 = (x & 32) != 0;
-            boolean z11 = (x & 16) != 0;
-            long b2 = (!z9 || z11) ? -9223372036854775807L : TimeSignalCommand.b(rv0Var, j);
-            if (!z9) {
-                int x2 = rv0Var.x();
-                ArrayList arrayList = new ArrayList(x2);
-                for (int i4 = 0; i4 < x2; i4++) {
-                    int x3 = rv0Var.x();
-                    long b3 = !z11 ? TimeSignalCommand.b(rv0Var, j) : -9223372036854775807L;
-                    arrayList.add(new b(x3, b3, ol1Var.b(b3), null));
+            int m10896x = rv0Var.m10896x();
+            boolean z7 = (m10896x & 128) != 0;
+            boolean z8 = (m10896x & 64) != 0;
+            boolean z9 = (m10896x & 32) != 0;
+            boolean z10 = (m10896x & 16) != 0;
+            long m1601b = (!z8 || z10) ? -9223372036854775807L : TimeSignalCommand.m1601b(rv0Var, j);
+            if (!z8) {
+                int m10896x2 = rv0Var.m10896x();
+                ArrayList arrayList = new ArrayList(m10896x2);
+                for (int i4 = 0; i4 < m10896x2; i4++) {
+                    int m10896x3 = rv0Var.m10896x();
+                    long m1601b2 = !z10 ? TimeSignalCommand.m1601b(rv0Var, j) : -9223372036854775807L;
+                    arrayList.add(new C3954b(m10896x3, m1601b2, ol1Var.m14187b(m1601b2), null));
                 }
                 emptyList = arrayList;
             }
-            if (z10) {
-                long x4 = rv0Var.x();
-                boolean z12 = (128 & x4) != 0;
-                j4 = ((((x4 & 1) << 32) | rv0Var.z()) * 1000) / 90;
-                z5 = z12;
+            if (z9) {
+                long m10896x4 = rv0Var.m10896x();
+                boolean z11 = (128 & m10896x4) != 0;
+                j4 = ((((m10896x4 & 1) << 32) | rv0Var.m10894z()) * 1000) / 90;
+                z5 = z11;
             } else {
                 z5 = false;
                 j4 = -9223372036854775807L;
             }
-            i = rv0Var.D();
-            z4 = z9;
-            i2 = rv0Var.x();
-            i3 = rv0Var.x();
+            i = rv0Var.m10927D();
+            z4 = z8;
+            i2 = rv0Var.m10896x();
+            i3 = rv0Var.m10896x();
             list = emptyList;
-            long j5 = b2;
+            long j5 = m1601b;
             z3 = z5;
             j3 = j4;
-            z2 = z11;
-            z = z8;
+            z2 = z10;
+            z = z7;
             j2 = j5;
         }
-        return new SpliceInsertCommand(z6, z7, z, z4, z2, j2, ol1Var.b(j2), list, z3, j3, i, i2, i3);
+        return new SpliceInsertCommand(m10894z, z6, z, z4, z2, j2, ol1Var.m14187b(j2), list, z3, j3, i, i2, i3);
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeLong(this.p);
-        parcel.writeByte(this.q ? (byte) 1 : (byte) 0);
-        parcel.writeByte(this.r ? (byte) 1 : (byte) 0);
-        parcel.writeByte(this.s ? (byte) 1 : (byte) 0);
-        parcel.writeByte(this.t ? (byte) 1 : (byte) 0);
-        parcel.writeLong(this.u);
-        parcel.writeLong(this.v);
-        int size = this.w.size();
+        parcel.writeLong(this.f35814p);
+        parcel.writeByte(this.f35815q ? (byte) 1 : (byte) 0);
+        parcel.writeByte(this.f35816r ? (byte) 1 : (byte) 0);
+        parcel.writeByte(this.f35817s ? (byte) 1 : (byte) 0);
+        parcel.writeByte(this.f35818t ? (byte) 1 : (byte) 0);
+        parcel.writeLong(this.f35819u);
+        parcel.writeLong(this.f35820v);
+        int size = this.f35821w.size();
         parcel.writeInt(size);
         for (int i2 = 0; i2 < size; i2++) {
-            this.w.get(i2).b(parcel);
+            this.f35821w.get(i2).m1618b(parcel);
         }
-        parcel.writeByte(this.x ? (byte) 1 : (byte) 0);
-        parcel.writeLong(this.y);
-        parcel.writeInt(this.z);
-        parcel.writeInt(this.A);
-        parcel.writeInt(this.B);
+        parcel.writeByte(this.f35822x ? (byte) 1 : (byte) 0);
+        parcel.writeLong(this.f35823y);
+        parcel.writeInt(this.f35824z);
+        parcel.writeInt(this.f35812A);
+        parcel.writeInt(this.f35813B);
     }
 }

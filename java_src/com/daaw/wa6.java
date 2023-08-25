@@ -5,47 +5,60 @@ import com.google.android.gms.internal.ads.zzccb;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class wa6 {
-    public final zzccb a;
-    public final int b;
+
+    /* renamed from: a */
+    public final zzccb f31104a;
+
+    /* renamed from: b */
+    public final int f31105b;
 
     public wa6(zzccb zzccbVar, int i) {
-        this.a = zzccbVar;
-        this.b = i;
+        this.f31104a = zzccbVar;
+        this.f31105b = i;
     }
 
-    public final int a() {
-        return this.b;
+    /* renamed from: a */
+    public final int m6272a() {
+        return this.f31105b;
     }
 
-    public final PackageInfo b() {
-        return this.a.u;
+    /* renamed from: b */
+    public final PackageInfo m6271b() {
+        return this.f31104a.f36969u;
     }
 
-    public final String c() {
-        return this.a.s;
+    /* renamed from: c */
+    public final String m6270c() {
+        return this.f31104a.f36967s;
     }
 
-    public final String d() {
-        return this.a.p.getString("ms");
+    /* renamed from: d */
+    public final String m6269d() {
+        return this.f31104a.f36964p.getString("ms");
     }
 
-    public final String e() {
-        return this.a.w;
+    /* renamed from: e */
+    public final String m6268e() {
+        return this.f31104a.f36971w;
     }
 
-    public final List f() {
-        return this.a.t;
+    /* renamed from: f */
+    public final List m6267f() {
+        return this.f31104a.f36968t;
     }
 
-    public final boolean g() {
-        return this.a.A;
+    /* renamed from: g */
+    public final boolean m6266g() {
+        return this.f31104a.f36963A;
     }
 
-    public final boolean h() {
-        return this.a.p.getBoolean("is_gbid");
+    /* renamed from: h */
+    public final boolean m6265h() {
+        return this.f31104a.f36964p.getBoolean("is_gbid");
     }
 
-    public final boolean i() {
-        return this.a.z;
+    /* renamed from: i */
+    public final boolean m6264i() {
+        return this.f31104a.f36974z;
     }
 }

@@ -1,25 +1,43 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public class ac1 {
-    public final String a;
-    public final String b;
-    public final String c;
-    public final String d;
-    public final hg0 e;
-    public final String f;
-    public final String g;
-    public final String h;
-    public final int i;
+
+    /* renamed from: a */
+    public final String f3055a;
+
+    /* renamed from: b */
+    public final String f3056b;
+
+    /* renamed from: c */
+    public final String f3057c;
+
+    /* renamed from: d */
+    public final String f3058d;
+
+    /* renamed from: e */
+    public final hg0 f3059e;
+
+    /* renamed from: f */
+    public final String f3060f;
+
+    /* renamed from: g */
+    public final String f3061g;
+
+    /* renamed from: h */
+    public final String f3062h;
+
+    /* renamed from: i */
+    public final int f3063i;
 
     public ac1(String str, String str2, String str3, String str4, hg0 hg0Var, String str5, String str6, String str7, int i) {
-        this.a = str;
-        this.b = str2;
-        this.c = str3;
-        this.d = str4;
-        this.e = hg0Var;
-        this.f = str5;
-        this.g = str6;
-        this.h = str7;
-        this.i = i;
+        this.f3055a = str;
+        this.f3056b = str2;
+        this.f3057c = str3;
+        this.f3058d = str4;
+        this.f3059e = hg0Var;
+        this.f3060f = str5;
+        this.f3061g = str6;
+        this.f3062h = str7;
+        this.f3063i = i;
     }
 }

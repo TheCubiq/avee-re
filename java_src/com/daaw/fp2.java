@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class fp2 extends cp2 implements gp2 {
-    public static gp2 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static gp2 m22423g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

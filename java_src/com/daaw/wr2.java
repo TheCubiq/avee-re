@@ -1,33 +1,42 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class wr2 {
-    public int a;
 
-    public final void a(int i) {
-        this.a |= Integer.MIN_VALUE;
+    /* renamed from: a */
+    public int f31468a;
+
+    /* renamed from: a */
+    public final void m5838a(int i) {
+        this.f31468a |= Integer.MIN_VALUE;
     }
 
-    public void b() {
-        this.a = 0;
+    /* renamed from: b */
+    public void mo5837b() {
+        this.f31468a = 0;
     }
 
-    public final void c(int i) {
-        this.a = i;
+    /* renamed from: c */
+    public final void m5836c(int i) {
+        this.f31468a = i;
     }
 
-    public final boolean d(int i) {
-        return (this.a & i) == i;
+    /* renamed from: d */
+    public final boolean m5835d(int i) {
+        return (this.f31468a & i) == i;
     }
 
-    public final boolean e() {
-        return d(Integer.MIN_VALUE);
+    /* renamed from: e */
+    public final boolean m5834e() {
+        return m5835d(Integer.MIN_VALUE);
     }
 
-    public final boolean f() {
-        return d(4);
+    /* renamed from: f */
+    public final boolean m5833f() {
+        return m5835d(4);
     }
 
-    public final boolean g() {
-        return d(1);
+    /* renamed from: g */
+    public final boolean m5832g() {
+        return m5835d(1);
     }
 }

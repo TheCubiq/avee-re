@@ -8,33 +8,48 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 /* loaded from: classes.dex */
 public abstract class ym0<K, V> {
-    public ym0<K, V>.b a;
-    public ym0<K, V>.c b;
-    public ym0<K, V>.e c;
 
+    /* renamed from: a */
+    public ym0<K, V>.C3719b f33797a;
+
+    /* renamed from: b */
+    public ym0<K, V>.C3720c f33798b;
+
+    /* renamed from: c */
+    public ym0<K, V>.C3722e f33799c;
+
+    /* renamed from: com.daaw.ym0$a */
     /* loaded from: classes.dex */
-    public final class a<T> implements Iterator<T> {
-        public final int p;
-        public int q;
-        public int r;
-        public boolean s = false;
+    public final class C3718a<T> implements Iterator<T> {
 
-        public a(int i) {
-            this.p = i;
-            this.q = ym0.this.d();
+        /* renamed from: p */
+        public final int f33800p;
+
+        /* renamed from: q */
+        public int f33801q;
+
+        /* renamed from: r */
+        public int f33802r;
+
+        /* renamed from: s */
+        public boolean f33803s = false;
+
+        public C3718a(int i) {
+            this.f33800p = i;
+            this.f33801q = ym0.this.mo3532d();
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.r < this.q;
+            return this.f33802r < this.f33801q;
         }
 
         @Override // java.util.Iterator
         public T next() {
             if (hasNext()) {
-                T t = (T) ym0.this.b(this.r, this.p);
-                this.r++;
-                this.s = true;
+                T t = (T) ym0.this.mo3534b(this.f33802r, this.f33800p);
+                this.f33802r++;
+                this.f33803s = true;
                 return t;
             }
             throw new NoSuchElementException();
@@ -42,45 +57,46 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Iterator
         public void remove() {
-            if (!this.s) {
+            if (!this.f33803s) {
                 throw new IllegalStateException();
             }
-            int i = this.r - 1;
-            this.r = i;
-            this.q--;
-            this.s = false;
-            ym0.this.h(i);
+            int i = this.f33802r - 1;
+            this.f33802r = i;
+            this.f33801q--;
+            this.f33803s = false;
+            ym0.this.mo3528h(i);
         }
     }
 
+    /* renamed from: com.daaw.ym0$b */
     /* loaded from: classes.dex */
-    public final class b implements Set<Map.Entry<K, V>> {
-        public b() {
+    public final class C3719b implements Set<Map.Entry<K, V>> {
+        public C3719b() {
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean addAll(Collection<? extends Map.Entry<K, V>> collection) {
-            int d = ym0.this.d();
+            int mo3532d = ym0.this.mo3532d();
             for (Map.Entry<K, V> entry : collection) {
-                ym0.this.g(entry.getKey(), entry.getValue());
+                ym0.this.mo3529g(entry.getKey(), entry.getValue());
             }
-            return d != ym0.this.d();
+            return mo3532d != ym0.this.mo3532d();
         }
 
         @Override // java.util.Set, java.util.Collection
         public void clear() {
-            ym0.this.a();
+            ym0.this.mo3535a();
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean contains(Object obj) {
             if (obj instanceof Map.Entry) {
                 Map.Entry entry = (Map.Entry) obj;
-                int e = ym0.this.e(entry.getKey());
-                if (e < 0) {
+                int mo3531e = ym0.this.mo3531e(entry.getKey());
+                if (mo3531e < 0) {
                     return false;
                 }
-                return ck.c(ym0.this.b(e, 1), entry.getValue());
+                return C0957ck.m25298c(ym0.this.mo3534b(mo3531e, 1), entry.getValue());
             }
             return false;
         }
@@ -104,28 +120,28 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public boolean equals(Object obj) {
-            return ym0.k(this, obj);
+            return ym0.m3525k(this, obj);
         }
 
         @Override // java.util.Set, java.util.Collection
         public int hashCode() {
             int i = 0;
-            for (int d = ym0.this.d() - 1; d >= 0; d--) {
-                Object b = ym0.this.b(d, 0);
-                Object b2 = ym0.this.b(d, 1);
-                i += (b == null ? 0 : b.hashCode()) ^ (b2 == null ? 0 : b2.hashCode());
+            for (int mo3532d = ym0.this.mo3532d() - 1; mo3532d >= 0; mo3532d--) {
+                Object mo3534b = ym0.this.mo3534b(mo3532d, 0);
+                Object mo3534b2 = ym0.this.mo3534b(mo3532d, 1);
+                i += (mo3534b == null ? 0 : mo3534b.hashCode()) ^ (mo3534b2 == null ? 0 : mo3534b2.hashCode());
             }
             return i;
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean isEmpty() {
-            return ym0.this.d() == 0;
+            return ym0.this.mo3532d() == 0;
         }
 
         @Override // java.util.Set, java.util.Collection, java.lang.Iterable
         public Iterator<Map.Entry<K, V>> iterator() {
-            return new d();
+            return new C3721d();
         }
 
         @Override // java.util.Set, java.util.Collection
@@ -145,7 +161,7 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public int size() {
-            return ym0.this.d();
+            return ym0.this.mo3532d();
         }
 
         @Override // java.util.Set, java.util.Collection
@@ -159,9 +175,10 @@ public abstract class ym0<K, V> {
         }
     }
 
+    /* renamed from: com.daaw.ym0$c */
     /* loaded from: classes.dex */
-    public final class c implements Set<K> {
-        public c() {
+    public final class C3720c implements Set<K> {
+        public C3720c() {
         }
 
         @Override // java.util.Set, java.util.Collection
@@ -176,49 +193,49 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public void clear() {
-            ym0.this.a();
+            ym0.this.mo3535a();
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean contains(Object obj) {
-            return ym0.this.e(obj) >= 0;
+            return ym0.this.mo3531e(obj) >= 0;
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean containsAll(Collection<?> collection) {
-            return ym0.j(ym0.this.c(), collection);
+            return ym0.m3526j(ym0.this.mo3533c(), collection);
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean equals(Object obj) {
-            return ym0.k(this, obj);
+            return ym0.m3525k(this, obj);
         }
 
         @Override // java.util.Set, java.util.Collection
         public int hashCode() {
             int i = 0;
-            for (int d = ym0.this.d() - 1; d >= 0; d--) {
-                Object b = ym0.this.b(d, 0);
-                i += b == null ? 0 : b.hashCode();
+            for (int mo3532d = ym0.this.mo3532d() - 1; mo3532d >= 0; mo3532d--) {
+                Object mo3534b = ym0.this.mo3534b(mo3532d, 0);
+                i += mo3534b == null ? 0 : mo3534b.hashCode();
             }
             return i;
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean isEmpty() {
-            return ym0.this.d() == 0;
+            return ym0.this.mo3532d() == 0;
         }
 
         @Override // java.util.Set, java.util.Collection, java.lang.Iterable
         public Iterator<K> iterator() {
-            return new a(0);
+            return new C3718a(0);
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean remove(Object obj) {
-            int e = ym0.this.e(obj);
-            if (e >= 0) {
-                ym0.this.h(e);
+            int mo3531e = ym0.this.mo3531e(obj);
+            if (mo3531e >= 0) {
+                ym0.this.mo3528h(mo3531e);
                 return true;
             }
             return false;
@@ -226,46 +243,53 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Set, java.util.Collection
         public boolean removeAll(Collection<?> collection) {
-            return ym0.o(ym0.this.c(), collection);
+            return ym0.m3521o(ym0.this.mo3533c(), collection);
         }
 
         @Override // java.util.Set, java.util.Collection
         public boolean retainAll(Collection<?> collection) {
-            return ym0.p(ym0.this.c(), collection);
+            return ym0.m3520p(ym0.this.mo3533c(), collection);
         }
 
         @Override // java.util.Set, java.util.Collection
         public int size() {
-            return ym0.this.d();
+            return ym0.this.mo3532d();
         }
 
         @Override // java.util.Set, java.util.Collection
         public Object[] toArray() {
-            return ym0.this.q(0);
+            return ym0.this.m3519q(0);
         }
 
         @Override // java.util.Set, java.util.Collection
         public <T> T[] toArray(T[] tArr) {
-            return (T[]) ym0.this.r(tArr, 0);
+            return (T[]) ym0.this.m3518r(tArr, 0);
         }
     }
 
+    /* renamed from: com.daaw.ym0$d */
     /* loaded from: classes.dex */
-    public final class d implements Iterator<Map.Entry<K, V>>, Map.Entry<K, V> {
-        public int p;
-        public boolean r = false;
-        public int q = -1;
+    public final class C3721d implements Iterator<Map.Entry<K, V>>, Map.Entry<K, V> {
 
-        public d() {
-            this.p = ym0.this.d() - 1;
+        /* renamed from: p */
+        public int f33807p;
+
+        /* renamed from: r */
+        public boolean f33809r = false;
+
+        /* renamed from: q */
+        public int f33808q = -1;
+
+        public C3721d() {
+            this.f33807p = ym0.this.mo3532d() - 1;
         }
 
         @Override // java.util.Iterator
         /* renamed from: a */
         public Map.Entry<K, V> next() {
             if (hasNext()) {
-                this.q++;
-                this.r = true;
+                this.f33808q++;
+                this.f33809r = true;
                 return this;
             }
             throw new NoSuchElementException();
@@ -273,10 +297,10 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Map.Entry
         public boolean equals(Object obj) {
-            if (this.r) {
+            if (this.f33809r) {
                 if (obj instanceof Map.Entry) {
                     Map.Entry entry = (Map.Entry) obj;
-                    return ck.c(entry.getKey(), ym0.this.b(this.q, 0)) && ck.c(entry.getValue(), ym0.this.b(this.q, 1));
+                    return C0957ck.m25298c(entry.getKey(), ym0.this.mo3534b(this.f33808q, 0)) && C0957ck.m25298c(entry.getValue(), ym0.this.mo3534b(this.f33808q, 1));
                 }
                 return false;
             }
@@ -285,50 +309,50 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Map.Entry
         public K getKey() {
-            if (this.r) {
-                return (K) ym0.this.b(this.q, 0);
+            if (this.f33809r) {
+                return (K) ym0.this.mo3534b(this.f33808q, 0);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
 
         @Override // java.util.Map.Entry
         public V getValue() {
-            if (this.r) {
-                return (V) ym0.this.b(this.q, 1);
+            if (this.f33809r) {
+                return (V) ym0.this.mo3534b(this.f33808q, 1);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.q < this.p;
+            return this.f33808q < this.f33807p;
         }
 
         @Override // java.util.Map.Entry
         public int hashCode() {
-            if (this.r) {
-                Object b = ym0.this.b(this.q, 0);
-                Object b2 = ym0.this.b(this.q, 1);
-                return (b == null ? 0 : b.hashCode()) ^ (b2 != null ? b2.hashCode() : 0);
+            if (this.f33809r) {
+                Object mo3534b = ym0.this.mo3534b(this.f33808q, 0);
+                Object mo3534b2 = ym0.this.mo3534b(this.f33808q, 1);
+                return (mo3534b == null ? 0 : mo3534b.hashCode()) ^ (mo3534b2 != null ? mo3534b2.hashCode() : 0);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
 
         @Override // java.util.Iterator
         public void remove() {
-            if (!this.r) {
+            if (!this.f33809r) {
                 throw new IllegalStateException();
             }
-            ym0.this.h(this.q);
-            this.q--;
-            this.p--;
-            this.r = false;
+            ym0.this.mo3528h(this.f33808q);
+            this.f33808q--;
+            this.f33807p--;
+            this.f33809r = false;
         }
 
         @Override // java.util.Map.Entry
         public V setValue(V v) {
-            if (this.r) {
-                return (V) ym0.this.i(this.q, v);
+            if (this.f33809r) {
+                return (V) ym0.this.mo3527i(this.f33808q, v);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
         }
@@ -338,9 +362,10 @@ public abstract class ym0<K, V> {
         }
     }
 
+    /* renamed from: com.daaw.ym0$e */
     /* loaded from: classes.dex */
-    public final class e implements Collection<V> {
-        public e() {
+    public final class C3722e implements Collection<V> {
+        public C3722e() {
         }
 
         @Override // java.util.Collection
@@ -355,12 +380,12 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Collection
         public void clear() {
-            ym0.this.a();
+            ym0.this.mo3535a();
         }
 
         @Override // java.util.Collection
         public boolean contains(Object obj) {
-            return ym0.this.f(obj) >= 0;
+            return ym0.this.mo3530f(obj) >= 0;
         }
 
         @Override // java.util.Collection
@@ -376,19 +401,19 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Collection
         public boolean isEmpty() {
-            return ym0.this.d() == 0;
+            return ym0.this.mo3532d() == 0;
         }
 
         @Override // java.util.Collection, java.lang.Iterable
         public Iterator<V> iterator() {
-            return new a(1);
+            return new C3718a(1);
         }
 
         @Override // java.util.Collection
         public boolean remove(Object obj) {
-            int f = ym0.this.f(obj);
-            if (f >= 0) {
-                ym0.this.h(f);
+            int mo3530f = ym0.this.mo3530f(obj);
+            if (mo3530f >= 0) {
+                ym0.this.mo3528h(mo3530f);
                 return true;
             }
             return false;
@@ -396,14 +421,14 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Collection
         public boolean removeAll(Collection<?> collection) {
-            int d = ym0.this.d();
+            int mo3532d = ym0.this.mo3532d();
             int i = 0;
             boolean z = false;
-            while (i < d) {
-                if (collection.contains(ym0.this.b(i, 1))) {
-                    ym0.this.h(i);
+            while (i < mo3532d) {
+                if (collection.contains(ym0.this.mo3534b(i, 1))) {
+                    ym0.this.mo3528h(i);
                     i--;
-                    d--;
+                    mo3532d--;
                     z = true;
                 }
                 i++;
@@ -413,14 +438,14 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Collection
         public boolean retainAll(Collection<?> collection) {
-            int d = ym0.this.d();
+            int mo3532d = ym0.this.mo3532d();
             int i = 0;
             boolean z = false;
-            while (i < d) {
-                if (!collection.contains(ym0.this.b(i, 1))) {
-                    ym0.this.h(i);
+            while (i < mo3532d) {
+                if (!collection.contains(ym0.this.mo3534b(i, 1))) {
+                    ym0.this.mo3528h(i);
                     i--;
-                    d--;
+                    mo3532d--;
                     z = true;
                 }
                 i++;
@@ -430,21 +455,22 @@ public abstract class ym0<K, V> {
 
         @Override // java.util.Collection
         public int size() {
-            return ym0.this.d();
+            return ym0.this.mo3532d();
         }
 
         @Override // java.util.Collection
         public Object[] toArray() {
-            return ym0.this.q(1);
+            return ym0.this.m3519q(1);
         }
 
         @Override // java.util.Collection
         public <T> T[] toArray(T[] tArr) {
-            return (T[]) ym0.this.r(tArr, 1);
+            return (T[]) ym0.this.m3518r(tArr, 1);
         }
     }
 
-    public static <K, V> boolean j(Map<K, V> map, Collection<?> collection) {
+    /* renamed from: j */
+    public static <K, V> boolean m3526j(Map<K, V> map, Collection<?> collection) {
         Iterator<?> it = collection.iterator();
         while (it.hasNext()) {
             if (!map.containsKey(it.next())) {
@@ -454,7 +480,8 @@ public abstract class ym0<K, V> {
         return true;
     }
 
-    public static <T> boolean k(Set<T> set, Object obj) {
+    /* renamed from: k */
+    public static <T> boolean m3525k(Set<T> set, Object obj) {
         if (set == obj) {
             return true;
         }
@@ -473,7 +500,8 @@ public abstract class ym0<K, V> {
         return false;
     }
 
-    public static <K, V> boolean o(Map<K, V> map, Collection<?> collection) {
+    /* renamed from: o */
+    public static <K, V> boolean m3521o(Map<K, V> map, Collection<?> collection) {
         int size = map.size();
         Iterator<?> it = collection.iterator();
         while (it.hasNext()) {
@@ -482,7 +510,8 @@ public abstract class ym0<K, V> {
         return size != map.size();
     }
 
-    public static <K, V> boolean p(Map<K, V> map, Collection<?> collection) {
+    /* renamed from: p */
+    public static <K, V> boolean m3520p(Map<K, V> map, Collection<?> collection) {
         int size = map.size();
         Iterator<K> it = map.keySet().iterator();
         while (it.hasNext()) {
@@ -493,65 +522,79 @@ public abstract class ym0<K, V> {
         return size != map.size();
     }
 
-    public abstract void a();
+    /* renamed from: a */
+    public abstract void mo3535a();
 
-    public abstract Object b(int i, int i2);
+    /* renamed from: b */
+    public abstract Object mo3534b(int i, int i2);
 
-    public abstract Map<K, V> c();
+    /* renamed from: c */
+    public abstract Map<K, V> mo3533c();
 
-    public abstract int d();
+    /* renamed from: d */
+    public abstract int mo3532d();
 
-    public abstract int e(Object obj);
+    /* renamed from: e */
+    public abstract int mo3531e(Object obj);
 
-    public abstract int f(Object obj);
+    /* renamed from: f */
+    public abstract int mo3530f(Object obj);
 
-    public abstract void g(K k, V v);
+    /* renamed from: g */
+    public abstract void mo3529g(K k, V v);
 
-    public abstract void h(int i);
+    /* renamed from: h */
+    public abstract void mo3528h(int i);
 
-    public abstract V i(int i, V v);
+    /* renamed from: i */
+    public abstract V mo3527i(int i, V v);
 
-    public Set<Map.Entry<K, V>> l() {
-        if (this.a == null) {
-            this.a = new b();
+    /* renamed from: l */
+    public Set<Map.Entry<K, V>> m3524l() {
+        if (this.f33797a == null) {
+            this.f33797a = new C3719b();
         }
-        return this.a;
+        return this.f33797a;
     }
 
-    public Set<K> m() {
-        if (this.b == null) {
-            this.b = new c();
+    /* renamed from: m */
+    public Set<K> m3523m() {
+        if (this.f33798b == null) {
+            this.f33798b = new C3720c();
         }
-        return this.b;
+        return this.f33798b;
     }
 
-    public Collection<V> n() {
-        if (this.c == null) {
-            this.c = new e();
+    /* renamed from: n */
+    public Collection<V> m3522n() {
+        if (this.f33799c == null) {
+            this.f33799c = new C3722e();
         }
-        return this.c;
+        return this.f33799c;
     }
 
-    public Object[] q(int i) {
-        int d2 = d();
-        Object[] objArr = new Object[d2];
-        for (int i2 = 0; i2 < d2; i2++) {
-            objArr[i2] = b(i2, i);
+    /* renamed from: q */
+    public Object[] m3519q(int i) {
+        int mo3532d = mo3532d();
+        Object[] objArr = new Object[mo3532d];
+        for (int i2 = 0; i2 < mo3532d; i2++) {
+            objArr[i2] = mo3534b(i2, i);
         }
         return objArr;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public <T> T[] r(T[] tArr, int i) {
-        int d2 = d();
-        if (tArr.length < d2) {
-            tArr = (T[]) ((Object[]) Array.newInstance(tArr.getClass().getComponentType(), d2));
+    /* renamed from: r */
+    public <T> T[] m3518r(T[] tArr, int i) {
+        int mo3532d = mo3532d();
+        if (tArr.length < mo3532d) {
+            tArr = (T[]) ((Object[]) Array.newInstance(tArr.getClass().getComponentType(), mo3532d));
         }
-        for (int i2 = 0; i2 < d2; i2++) {
-            tArr[i2] = b(i2, i);
+        for (int i2 = 0; i2 < mo3532d; i2++) {
+            tArr[i2] = mo3534b(i2, i);
         }
-        if (tArr.length > d2) {
-            tArr[d2] = null;
+        if (tArr.length > mo3532d) {
+            tArr[mo3532d] = null;
         }
         return tArr;
     }

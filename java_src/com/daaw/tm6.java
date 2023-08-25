@@ -5,58 +5,69 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Semaphore;
 /* loaded from: classes2.dex */
 public final class tm6 extends Thread {
-    public final Object p;
-    public final BlockingQueue q;
-    public boolean r = false;
-    public final /* synthetic */ vn6 s;
+
+    /* renamed from: p */
+    public final Object f27871p;
+
+    /* renamed from: q */
+    public final BlockingQueue f27872q;
+
+    /* renamed from: r */
+    public boolean f27873r = false;
+
+    /* renamed from: s */
+    public final /* synthetic */ vn6 f27874s;
 
     public tm6(vn6 vn6Var, String str, BlockingQueue blockingQueue) {
-        this.s = vn6Var;
-        ry0.j(str);
-        ry0.j(blockingQueue);
-        this.p = new Object();
-        this.q = blockingQueue;
+        this.f27874s = vn6Var;
+        ry0.m10830j(str);
+        ry0.m10830j(blockingQueue);
+        this.f27871p = new Object();
+        this.f27872q = blockingQueue;
         setName(str);
     }
 
-    public final void a() {
-        synchronized (this.p) {
-            this.p.notifyAll();
+    /* renamed from: a */
+    public final void m8963a() {
+        synchronized (this.f27871p) {
+            this.f27871p.notifyAll();
         }
     }
 
-    public final void b() {
+    /* renamed from: b */
+    public final void m8962b() {
         Object obj;
         Semaphore semaphore;
         Object obj2;
         tm6 tm6Var;
         tm6 tm6Var2;
-        obj = this.s.i;
+        obj = this.f27874s.f30367i;
         synchronized (obj) {
-            if (!this.r) {
-                semaphore = this.s.j;
+            if (!this.f27873r) {
+                semaphore = this.f27874s.f30368j;
                 semaphore.release();
-                obj2 = this.s.i;
+                obj2 = this.f27874s.f30367i;
                 obj2.notifyAll();
-                vn6 vn6Var = this.s;
-                tm6Var = vn6Var.c;
+                vn6 vn6Var = this.f27874s;
+                tm6Var = vn6Var.f30361c;
                 if (this == tm6Var) {
-                    vn6Var.c = null;
+                    vn6Var.f30361c = null;
                 } else {
-                    tm6Var2 = vn6Var.d;
+                    tm6Var2 = vn6Var.f30362d;
                     if (this == tm6Var2) {
-                        vn6Var.d = null;
+                        vn6Var.f30362d = null;
                     } else {
-                        vn6Var.a.i().q().a("Current scheduler thread is neither worker nor network");
+                        vn6Var.f25143a.mo3895i().m14160q().m20653a("Current scheduler thread is neither worker nor network");
                     }
                 }
-                this.r = true;
+                this.f27873r = true;
             }
         }
     }
 
-    public final void c(InterruptedException interruptedException) {
-        this.s.a.i().w().b(String.valueOf(getName()).concat(" was interrupted"), interruptedException);
+    /* renamed from: c */
+    public final void m8961c(InterruptedException interruptedException) {
+        this.f27874s.f25143a.mo3895i().m14155w().m20652b(String.valueOf(getName()).concat(" was interrupted"), interruptedException);
     }
 
     @Override // java.lang.Thread, java.lang.Runnable
@@ -66,42 +77,42 @@ public final class tm6 extends Thread {
         boolean z = false;
         while (!z) {
             try {
-                semaphore = this.s.j;
+                semaphore = this.f27874s.f30368j;
                 semaphore.acquire();
                 z = true;
             } catch (InterruptedException e) {
-                c(e);
+                m8961c(e);
             }
         }
         try {
             int threadPriority = Process.getThreadPriority(Process.myTid());
             while (true) {
-                ql6 ql6Var = (ql6) this.q.poll();
+                ql6 ql6Var = (ql6) this.f27872q.poll();
                 if (ql6Var != null) {
-                    Process.setThreadPriority(true != ql6Var.q ? 10 : threadPriority);
+                    Process.setThreadPriority(true != ql6Var.f24147q ? 10 : threadPriority);
                     ql6Var.run();
                 } else {
-                    synchronized (this.p) {
-                        if (this.q.peek() == null) {
-                            vn6.B(this.s);
+                    synchronized (this.f27871p) {
+                        if (this.f27872q.peek() == null) {
+                            vn6.m6995B(this.f27874s);
                             try {
-                                this.p.wait(30000L);
+                                this.f27871p.wait(30000L);
                             } catch (InterruptedException e2) {
-                                c(e2);
+                                m8961c(e2);
                             }
                         }
                     }
-                    obj = this.s.i;
+                    obj = this.f27874s.f30367i;
                     synchronized (obj) {
-                        if (this.q.peek() == null) {
-                            b();
+                        if (this.f27872q.peek() == null) {
+                            m8962b();
                             return;
                         }
                     }
                 }
             }
         } finally {
-            b();
+            m8962b();
         }
     }
 }

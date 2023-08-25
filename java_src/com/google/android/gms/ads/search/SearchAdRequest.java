@@ -24,16 +24,21 @@ public final class SearchAdRequest {
     public static final int ERROR_CODE_NETWORK_ERROR = 2;
     public static final int ERROR_CODE_NO_FILL = 3;
     @NotOnlyInitialized
-    public final zzdx a;
-    public final String b;
+
+    /* renamed from: a */
+    public final zzdx f36549a;
+
+    /* renamed from: b */
+    public final String f36550b;
 
     public /* synthetic */ SearchAdRequest(zzb zzbVar, zzc zzcVar) {
-        this.b = zzb.b(zzbVar);
-        this.a = new zzdx(zzb.a(zzbVar), this);
+        this.f36550b = zzb.m1223b(zzbVar);
+        this.f36549a = new zzdx(zzb.m1224a(zzbVar), this);
     }
 
-    public final zzdx a() {
-        return this.a;
+    /* renamed from: a */
+    public final zzdx m1225a() {
+        return this.f36549a;
     }
 
     @Deprecated
@@ -82,7 +87,7 @@ public final class SearchAdRequest {
     }
 
     public <T extends CustomEvent> Bundle getCustomEventExtrasBundle(Class<T> cls) {
-        return this.a.zzd(cls);
+        return this.f36549a.zzd(cls);
     }
 
     @Deprecated
@@ -111,18 +116,18 @@ public final class SearchAdRequest {
 
     @Deprecated
     public <T extends NetworkExtras> T getNetworkExtras(Class<T> cls) {
-        return (T) this.a.zzh(cls);
+        return (T) this.f36549a.zzh(cls);
     }
 
     public <T extends MediationAdapter> Bundle getNetworkExtrasBundle(Class<T> cls) {
-        return this.a.zzf(cls);
+        return this.f36549a.zzf(cls);
     }
 
     public String getQuery() {
-        return this.b;
+        return this.f36550b;
     }
 
     public boolean isTestDevice(Context context) {
-        return this.a.zzt(context);
+        return this.f36549a.zzt(context);
     }
 }

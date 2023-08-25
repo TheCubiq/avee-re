@@ -8,26 +8,40 @@ import java.nio.charset.Charset;
 import java.util.Locale;
 /* loaded from: classes2.dex */
 public class n01 implements e10 {
-    public static final Charset d = Charset.forName("UTF-8");
-    public final File a;
-    public final int b;
-    public m01 c;
 
+    /* renamed from: d */
+    public static final Charset f19317d = Charset.forName("UTF-8");
+
+    /* renamed from: a */
+    public final File f19318a;
+
+    /* renamed from: b */
+    public final int f19319b;
+
+    /* renamed from: c */
+    public m01 f19320c;
+
+    /* renamed from: com.daaw.n01$a */
     /* loaded from: classes2.dex */
-    public class a implements m01.d {
-        public final /* synthetic */ byte[] a;
-        public final /* synthetic */ int[] b;
+    public class C2230a implements m01.InterfaceC2144d {
 
-        public a(byte[] bArr, int[] iArr) {
-            this.a = bArr;
-            this.b = iArr;
+        /* renamed from: a */
+        public final /* synthetic */ byte[] f19321a;
+
+        /* renamed from: b */
+        public final /* synthetic */ int[] f19322b;
+
+        public C2230a(byte[] bArr, int[] iArr) {
+            this.f19321a = bArr;
+            this.f19322b = iArr;
         }
 
-        @Override // com.daaw.m01.d
-        public void a(InputStream inputStream, int i) {
+        @Override // com.daaw.m01.InterfaceC2144d
+        /* renamed from: a */
+        public void mo15613a(InputStream inputStream, int i) {
             try {
-                inputStream.read(this.a, this.b[0], i);
-                int[] iArr = this.b;
+                inputStream.read(this.f19321a, this.f19322b[0], i);
+                int[] iArr = this.f19322b;
                 iArr[0] = iArr[0] + i;
             } finally {
                 inputStream.close();
@@ -35,108 +49,121 @@ public class n01 implements e10 {
         }
     }
 
+    /* renamed from: com.daaw.n01$b */
     /* loaded from: classes2.dex */
-    public static class b {
-        public final byte[] a;
-        public final int b;
+    public static class C2231b {
 
-        public b(byte[] bArr, int i) {
-            this.a = bArr;
-            this.b = i;
+        /* renamed from: a */
+        public final byte[] f19324a;
+
+        /* renamed from: b */
+        public final int f19325b;
+
+        public C2231b(byte[] bArr, int i) {
+            this.f19324a = bArr;
+            this.f19325b = i;
         }
     }
 
     public n01(File file, int i) {
-        this.a = file;
-        this.b = i;
+        this.f19318a = file;
+        this.f19319b = i;
     }
 
     @Override // com.daaw.e10
-    public void a() {
-        fh.e(this.c, "There was a problem closing the Crashlytics log file.");
-        this.c = null;
+    /* renamed from: a */
+    public void mo15621a() {
+        C1279fh.m22662e(this.f19320c, "There was a problem closing the Crashlytics log file.");
+        this.f19320c = null;
     }
 
     @Override // com.daaw.e10
-    public String b() {
-        byte[] c = c();
-        if (c != null) {
-            return new String(c, d);
+    /* renamed from: b */
+    public String mo15620b() {
+        byte[] mo15619c = mo15619c();
+        if (mo15619c != null) {
+            return new String(mo15619c, f19317d);
         }
         return null;
     }
 
     @Override // com.daaw.e10
-    public byte[] c() {
-        b g = g();
-        if (g == null) {
+    /* renamed from: c */
+    public byte[] mo15619c() {
+        C2231b m15615g = m15615g();
+        if (m15615g == null) {
             return null;
         }
-        int i = g.b;
+        int i = m15615g.f19325b;
         byte[] bArr = new byte[i];
-        System.arraycopy(g.a, 0, bArr, 0, i);
+        System.arraycopy(m15615g.f19324a, 0, bArr, 0, i);
         return bArr;
     }
 
     @Override // com.daaw.e10
-    public void d() {
-        a();
-        this.a.delete();
+    /* renamed from: d */
+    public void mo15618d() {
+        mo15621a();
+        this.f19318a.delete();
     }
 
     @Override // com.daaw.e10
-    public void e(long j, String str) {
-        h();
-        f(j, str);
+    /* renamed from: e */
+    public void mo15617e(long j, String str) {
+        m15614h();
+        m15616f(j, str);
     }
 
-    public final void f(long j, String str) {
+    /* renamed from: f */
+    public final void m15616f(long j, String str) {
         int i;
-        if (this.c == null) {
+        if (this.f19320c == null) {
             return;
         }
         if (str == null) {
             str = "null";
         }
         try {
-            if (str.length() > this.b / 4) {
+            if (str.length() > this.f19319b / 4) {
                 str = "..." + str.substring(str.length() - i);
             }
-            this.c.w(String.format(Locale.US, "%d %s%n", Long.valueOf(j), str.replaceAll("\r", " ").replaceAll("\n", " ")).getBytes(d));
-            while (!this.c.P() && this.c.c0() > this.b) {
-                this.c.Y();
+            this.f19320c.m16313w(String.format(Locale.US, "%d %s%n", Long.valueOf(j), str.replaceAll("\r", " ").replaceAll("\n", " ")).getBytes(f19317d));
+            while (!this.f19320c.m16333P() && this.f19320c.m16322c0() > this.f19319b) {
+                this.f19320c.m16326Y();
             }
         } catch (IOException e) {
-            ml0.f().e("There was a problem writing to the Crashlytics log.", e);
+            ml0.m15976f().m15977e("There was a problem writing to the Crashlytics log.", e);
         }
     }
 
-    public final b g() {
-        if (this.a.exists()) {
-            h();
-            m01 m01Var = this.c;
+    /* renamed from: g */
+    public final C2231b m15615g() {
+        if (this.f19318a.exists()) {
+            m15614h();
+            m01 m01Var = this.f19320c;
             if (m01Var == null) {
                 return null;
             }
             int[] iArr = {0};
-            byte[] bArr = new byte[m01Var.c0()];
+            byte[] bArr = new byte[m01Var.m16322c0()];
             try {
-                this.c.L(new a(bArr, iArr));
+                this.f19320c.m16335L(new C2230a(bArr, iArr));
             } catch (IOException e) {
-                ml0.f().e("A problem occurred while reading the Crashlytics log file.", e);
+                ml0.m15976f().m15977e("A problem occurred while reading the Crashlytics log file.", e);
             }
-            return new b(bArr, iArr[0]);
+            return new C2231b(bArr, iArr[0]);
         }
         return null;
     }
 
-    public final void h() {
-        if (this.c == null) {
+    /* renamed from: h */
+    public final void m15614h() {
+        if (this.f19320c == null) {
             try {
-                this.c = new m01(this.a);
+                this.f19320c = new m01(this.f19318a);
             } catch (IOException e) {
-                ml0 f = ml0.f();
-                f.e("Could not open log file: " + this.a, e);
+                ml0 m15976f = ml0.m15976f();
+                m15976f.m15977e("Could not open log file: " + this.f19318a, e);
             }
         }
     }

@@ -3,13 +3,16 @@ package com.daaw;
 import java.util.HashMap;
 /* loaded from: classes2.dex */
 public class t31 implements ef1 {
-    public final int a;
+
+    /* renamed from: a */
+    public final int f26952a;
 
     public t31(int i) {
-        this.a = i;
+        this.f26952a = i;
     }
 
-    public static boolean b(StackTraceElement[] stackTraceElementArr, int i, int i2) {
+    /* renamed from: b */
+    public static boolean m9613b(StackTraceElement[] stackTraceElementArr, int i, int i2) {
         int i3 = i2 - i;
         if (i2 + i3 > stackTraceElementArr.length) {
             return false;
@@ -22,7 +25,8 @@ public class t31 implements ef1 {
         return true;
     }
 
-    public static StackTraceElement[] c(StackTraceElement[] stackTraceElementArr, int i) {
+    /* renamed from: c */
+    public static StackTraceElement[] m9612c(StackTraceElement[] stackTraceElementArr, int i) {
         int i2;
         HashMap hashMap = new HashMap();
         StackTraceElement[] stackTraceElementArr2 = new StackTraceElement[stackTraceElementArr.length];
@@ -32,7 +36,7 @@ public class t31 implements ef1 {
         while (i3 < stackTraceElementArr.length) {
             StackTraceElement stackTraceElement = stackTraceElementArr[i3];
             Integer num = (Integer) hashMap.get(stackTraceElement);
-            if (num == null || !b(stackTraceElementArr, num.intValue(), i3)) {
+            if (num == null || !m9613b(stackTraceElementArr, num.intValue(), i3)) {
                 stackTraceElementArr2[i4] = stackTraceElementArr[i3];
                 i4++;
                 i2 = i3;
@@ -55,8 +59,9 @@ public class t31 implements ef1 {
     }
 
     @Override // com.daaw.ef1
-    public StackTraceElement[] a(StackTraceElement[] stackTraceElementArr) {
-        StackTraceElement[] c = c(stackTraceElementArr, this.a);
-        return c.length < stackTraceElementArr.length ? c : stackTraceElementArr;
+    /* renamed from: a */
+    public StackTraceElement[] mo9614a(StackTraceElement[] stackTraceElementArr) {
+        StackTraceElement[] m9612c = m9612c(stackTraceElementArr, this.f26952a);
+        return m9612c.length < stackTraceElementArr.length ? m9612c : stackTraceElementArr;
     }
 }

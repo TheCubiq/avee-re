@@ -1,18 +1,20 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class bi0 {
-    public static final <T> Class<T> a(di0<T> di0Var) {
-        ug0.f(di0Var, "<this>");
-        Class<T> cls = (Class<T>) ((qf) di0Var).a();
-        ug0.d(cls, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-java>>");
+    /* renamed from: a */
+    public static final <T> Class<T> m26166a(di0<T> di0Var) {
+        ug0.m8268f(di0Var, "<this>");
+        Class<T> cls = (Class<T>) ((InterfaceC2710qf) di0Var).mo11353a();
+        ug0.m8270d(cls, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-java>>");
         return cls;
     }
 
-    public static final <T> Class<T> b(di0<T> di0Var) {
-        ug0.f(di0Var, "<this>");
-        Class<T> cls = (Class<T>) ((qf) di0Var).a();
+    /* renamed from: b */
+    public static final <T> Class<T> m26165b(di0<T> di0Var) {
+        ug0.m8268f(di0Var, "<this>");
+        Class<T> cls = (Class<T>) ((InterfaceC2710qf) di0Var).mo11353a();
         if (!cls.isPrimitive()) {
-            ug0.d(cls, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-javaObjectType>>");
+            ug0.m8270d(cls, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-javaObjectType>>");
             return cls;
         }
         String name = cls.getName();
@@ -72,7 +74,7 @@ public final class bi0 {
                 }
                 break;
         }
-        ug0.d(cls, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-javaObjectType>>");
+        ug0.m8270d(cls, "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-javaObjectType>>");
         return cls;
     }
 }

@@ -7,41 +7,55 @@ import java.util.concurrent.ConcurrentMap;
 import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public final class s97 {
-    public final ConcurrentMap a;
-    public final o97 b;
-    public final Class c;
-    public final oh7 d;
+
+    /* renamed from: a */
+    public final ConcurrentMap f26030a;
+
+    /* renamed from: b */
+    public final o97 f26031b;
+
+    /* renamed from: c */
+    public final Class f26032c;
+
+    /* renamed from: d */
+    public final oh7 f26033d;
 
     public /* synthetic */ s97(ConcurrentMap concurrentMap, o97 o97Var, oh7 oh7Var, Class cls, r97 r97Var) {
-        this.a = concurrentMap;
-        this.b = o97Var;
-        this.c = cls;
-        this.d = oh7Var;
+        this.f26030a = concurrentMap;
+        this.f26031b = o97Var;
+        this.f26032c = cls;
+        this.f26033d = oh7Var;
     }
 
     @Nullable
-    public final o97 a() {
-        return this.b;
+    /* renamed from: a */
+    public final o97 m10490a() {
+        return this.f26031b;
     }
 
-    public final oh7 b() {
-        return this.d;
+    /* renamed from: b */
+    public final oh7 m10489b() {
+        return this.f26033d;
     }
 
-    public final Class c() {
-        return this.c;
+    /* renamed from: c */
+    public final Class m10488c() {
+        return this.f26032c;
     }
 
-    public final Collection d() {
-        return this.a.values();
+    /* renamed from: d */
+    public final Collection m10487d() {
+        return this.f26030a.values();
     }
 
-    public final List e(byte[] bArr) {
-        List list = (List) this.a.get(new q97(bArr, null));
+    /* renamed from: e */
+    public final List m10486e(byte[] bArr) {
+        List list = (List) this.f26030a.get(new q97(bArr, null));
         return list != null ? list : Collections.emptyList();
     }
 
-    public final boolean f() {
-        return !this.d.a().isEmpty();
+    /* renamed from: f */
+    public final boolean m10485f() {
+        return !this.f26033d.m14270a().isEmpty();
     }
 }

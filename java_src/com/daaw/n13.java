@@ -8,44 +8,54 @@ import javax.annotation.concurrent.GuardedBy;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class n13 {
-    public final Object a = new Object();
-    @GuardedBy("activityTrackerLock")
-    public l13 b = null;
-    @GuardedBy("activityTrackerLock")
-    public boolean c = false;
 
-    public final Activity a() {
-        synchronized (this.a) {
-            l13 l13Var = this.b;
+    /* renamed from: a */
+    public final Object f19338a = new Object();
+    @GuardedBy("activityTrackerLock")
+
+    /* renamed from: b */
+    public l13 f19339b = null;
+    @GuardedBy("activityTrackerLock")
+
+    /* renamed from: c */
+    public boolean f19340c = false;
+
+    /* renamed from: a */
+    public final Activity m15600a() {
+        synchronized (this.f19338a) {
+            l13 l13Var = this.f19339b;
             if (l13Var != null) {
-                return l13Var.a();
+                return l13Var.m17221a();
             }
             return null;
         }
     }
 
-    public final Context b() {
-        synchronized (this.a) {
-            l13 l13Var = this.b;
+    /* renamed from: b */
+    public final Context m15599b() {
+        synchronized (this.f19338a) {
+            l13 l13Var = this.f19339b;
             if (l13Var != null) {
-                return l13Var.b();
+                return l13Var.m17220b();
             }
             return null;
         }
     }
 
-    public final void c(m13 m13Var) {
-        synchronized (this.a) {
-            if (this.b == null) {
-                this.b = new l13();
+    /* renamed from: c */
+    public final void m15598c(m13 m13Var) {
+        synchronized (this.f19338a) {
+            if (this.f19339b == null) {
+                this.f19339b = new l13();
             }
-            this.b.f(m13Var);
+            this.f19339b.m17216f(m13Var);
         }
     }
 
-    public final void d(Context context) {
-        synchronized (this.a) {
-            if (!this.c) {
+    /* renamed from: d */
+    public final void m15597d(Context context) {
+        synchronized (this.f19338a) {
+            if (!this.f19340c) {
                 Context applicationContext = context.getApplicationContext();
                 if (applicationContext == null) {
                     applicationContext = context;
@@ -55,22 +65,23 @@ public final class n13 {
                     k04.zzj("Can not cast Context to Application");
                     return;
                 }
-                if (this.b == null) {
-                    this.b = new l13();
+                if (this.f19339b == null) {
+                    this.f19339b = new l13();
                 }
-                this.b.g(application, context);
-                this.c = true;
+                this.f19339b.m17215g(application, context);
+                this.f19340c = true;
             }
         }
     }
 
-    public final void e(m13 m13Var) {
-        synchronized (this.a) {
-            l13 l13Var = this.b;
+    /* renamed from: e */
+    public final void m15596e(m13 m13Var) {
+        synchronized (this.f19338a) {
+            l13 l13Var = this.f19339b;
             if (l13Var == null) {
                 return;
             }
-            l13Var.h(m13Var);
+            l13Var.m17214h(m13Var);
         }
     }
 }

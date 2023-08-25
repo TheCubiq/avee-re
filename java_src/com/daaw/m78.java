@@ -1,40 +1,60 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class m78 {
-    public final pr8 a;
-    public final long b;
-    public final long c;
-    public final long d;
-    public final long e;
-    public final boolean f;
-    public final boolean g;
-    public final boolean h;
-    public final boolean i;
+
+    /* renamed from: a */
+    public final pr8 f18573a;
+
+    /* renamed from: b */
+    public final long f18574b;
+
+    /* renamed from: c */
+    public final long f18575c;
+
+    /* renamed from: d */
+    public final long f18576d;
+
+    /* renamed from: e */
+    public final long f18577e;
+
+    /* renamed from: f */
+    public final boolean f18578f;
+
+    /* renamed from: g */
+    public final boolean f18579g;
+
+    /* renamed from: h */
+    public final boolean f18580h;
+
+    /* renamed from: i */
+    public final boolean f18581i;
 
     public m78(pr8 pr8Var, long j, long j2, long j3, long j4, boolean z, boolean z2, boolean z3, boolean z4) {
         boolean z5 = true;
-        uo4.d(!z4 || z2);
+        uo4.m7874d(!z4 || z2);
         if (z3 && !z2) {
             z5 = false;
         }
-        uo4.d(z5);
-        this.a = pr8Var;
-        this.b = j;
-        this.c = j2;
-        this.d = j3;
-        this.e = j4;
-        this.f = false;
-        this.g = z2;
-        this.h = z3;
-        this.i = z4;
+        uo4.m7874d(z5);
+        this.f18573a = pr8Var;
+        this.f18574b = j;
+        this.f18575c = j2;
+        this.f18576d = j3;
+        this.f18577e = j4;
+        this.f18578f = false;
+        this.f18579g = z2;
+        this.f18580h = z3;
+        this.f18581i = z4;
     }
 
-    public final m78 a(long j) {
-        return j == this.c ? this : new m78(this.a, this.b, j, this.d, this.e, false, this.g, this.h, this.i);
+    /* renamed from: a */
+    public final m78 m16185a(long j) {
+        return j == this.f18575c ? this : new m78(this.f18573a, this.f18574b, j, this.f18576d, this.f18577e, false, this.f18579g, this.f18580h, this.f18581i);
     }
 
-    public final m78 b(long j) {
-        return j == this.b ? this : new m78(this.a, j, this.c, this.d, this.e, false, this.g, this.h, this.i);
+    /* renamed from: b */
+    public final m78 m16184b(long j) {
+        return j == this.f18574b ? this : new m78(this.f18573a, j, this.f18575c, this.f18576d, this.f18577e, false, this.f18579g, this.f18580h, this.f18581i);
     }
 
     public final boolean equals(Object obj) {
@@ -43,7 +63,7 @@ public final class m78 {
         }
         if (obj != null && m78.class == obj.getClass()) {
             m78 m78Var = (m78) obj;
-            if (this.b == m78Var.b && this.c == m78Var.c && this.d == m78Var.d && this.e == m78Var.e && this.g == m78Var.g && this.h == m78Var.h && this.i == m78Var.i && it5.t(this.a, m78Var.a)) {
+            if (this.f18574b == m78Var.f18574b && this.f18575c == m78Var.f18575c && this.f18576d == m78Var.f18576d && this.f18577e == m78Var.f18577e && this.f18579g == m78Var.f18579g && this.f18580h == m78Var.f18580h && this.f18581i == m78Var.f18581i && it5.m19376t(this.f18573a, m78Var.f18573a)) {
                 return true;
             }
         }
@@ -51,6 +71,6 @@ public final class m78 {
     }
 
     public final int hashCode() {
-        return ((((((((((((((this.a.hashCode() + 527) * 31) + ((int) this.b)) * 31) + ((int) this.c)) * 31) + ((int) this.d)) * 31) + ((int) this.e)) * 961) + (this.g ? 1 : 0)) * 31) + (this.h ? 1 : 0)) * 31) + (this.i ? 1 : 0);
+        return ((((((((((((((this.f18573a.hashCode() + 527) * 31) + ((int) this.f18574b)) * 31) + ((int) this.f18575c)) * 31) + ((int) this.f18576d)) * 31) + ((int) this.f18577e)) * 961) + (this.f18579g ? 1 : 0)) * 31) + (this.f18580h ? 1 : 0)) * 31) + (this.f18581i ? 1 : 0);
     }
 }

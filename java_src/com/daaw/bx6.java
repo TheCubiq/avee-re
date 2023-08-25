@@ -4,5 +4,6 @@ import android.os.Bundle;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public interface bx6 extends IInterface {
-    void R1(Bundle bundle);
+    /* renamed from: R1 */
+    void mo13902R1(Bundle bundle);
 }

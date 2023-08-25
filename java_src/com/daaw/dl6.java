@@ -6,61 +6,78 @@ import java.util.ArrayDeque;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class dl6 {
-    public final fk6 a;
-    public final bl6 b;
-    public final bk6 c;
+
+    /* renamed from: a */
+    public final fk6 f7431a;
+
+    /* renamed from: b */
+    public final bl6 f7432b;
+
+    /* renamed from: c */
+    public final bk6 f7433c;
     @GuardedBy("this")
-    public jl6 e;
+
+    /* renamed from: e */
+    public jl6 f7435e;
     @GuardedBy("this")
-    public int f = 1;
+
+    /* renamed from: f */
+    public int f7436f = 1;
     @GuardedBy("this")
-    public final ArrayDeque d = new ArrayDeque();
+
+    /* renamed from: d */
+    public final ArrayDeque f7434d = new ArrayDeque();
 
     public dl6(fk6 fk6Var, bk6 bk6Var, bl6 bl6Var) {
-        this.a = fk6Var;
-        this.c = bk6Var;
-        this.b = bl6Var;
-        bk6Var.b(new yk6(this));
+        this.f7431a = fk6Var;
+        this.f7433c = bk6Var;
+        this.f7432b = bl6Var;
+        bk6Var.m26086b(new yk6(this));
     }
 
-    public final synchronized f77 a(cl6 cl6Var) {
-        this.f = 2;
-        if (i()) {
+    /* renamed from: a */
+    public final synchronized f77 m24264a(cl6 cl6Var) {
+        this.f7436f = 2;
+        if (m24256i()) {
             return null;
         }
-        return this.e.a(cl6Var);
+        return this.f7435e.m18423a(cl6Var);
     }
 
-    public final synchronized void e(cl6 cl6Var) {
-        this.d.add(cl6Var);
+    /* renamed from: e */
+    public final synchronized void m24260e(cl6 cl6Var) {
+        this.f7434d.add(cl6Var);
     }
 
-    public final /* synthetic */ void f() {
+    /* renamed from: f */
+    public final /* synthetic */ void m24259f() {
         synchronized (this) {
-            this.f = 1;
-            h();
+            this.f7436f = 1;
+            m24257h();
         }
     }
 
-    public final synchronized void h() {
-        if (((Boolean) zzba.zzc().b(g93.K5)).booleanValue() && !zzt.zzo().h().zzh().h()) {
-            this.d.clear();
+    /* renamed from: h */
+    public final synchronized void m24257h() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10467K5)).booleanValue() && !zzt.zzo().m11915h().zzh().m17289h()) {
+            this.f7434d.clear();
             return;
         }
-        if (i()) {
-            while (!this.d.isEmpty()) {
-                cl6 cl6Var = (cl6) this.d.pollFirst();
-                if (cl6Var == null || (cl6Var.zza() != null && this.a.a(cl6Var.zza()))) {
-                    jl6 jl6Var = new jl6(this.a, this.b, cl6Var);
-                    this.e = jl6Var;
-                    jl6Var.d(new zk6(this, cl6Var));
+        if (m24256i()) {
+            while (!this.f7434d.isEmpty()) {
+                cl6 cl6Var = (cl6) this.f7434d.pollFirst();
+                if (cl6Var == null || (cl6Var.zza() != null && this.f7431a.mo21509a(cl6Var.zza()))) {
+                    jl6 jl6Var = new jl6(this.f7431a, this.f7432b, cl6Var);
+                    this.f7435e = jl6Var;
+                    jl6Var.m18420d(new zk6(this, cl6Var));
                     return;
                 }
             }
         }
     }
 
-    public final synchronized boolean i() {
-        return this.e == null;
+    /* renamed from: i */
+    public final synchronized boolean m24256i() {
+        return this.f7435e == null;
     }
 }

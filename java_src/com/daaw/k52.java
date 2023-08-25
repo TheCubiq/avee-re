@@ -1,38 +1,43 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class k52 implements v42 {
-    public final y17 a;
-    public final int b;
+
+    /* renamed from: a */
+    public final y17 f15687a;
+
+    /* renamed from: b */
+    public final int f15688b;
 
     public k52(int i, y17 y17Var) {
-        this.b = i;
-        this.a = y17Var;
+        this.f15688b = i;
+        this.f15687a = y17Var;
     }
 
-    public static k52 b(int i, ik5 ik5Var) {
+    /* renamed from: b */
+    public static k52 m18045b(int i, ik5 ik5Var) {
         String concat;
-        int q;
+        int m19705q;
         StringBuilder sb;
         String str;
         String str2;
         v17 v17Var = new v17();
-        int l = ik5Var.l();
+        int m19710l = ik5Var.m19710l();
         int i2 = -2;
-        while (ik5Var.i() > 8) {
-            int o = ik5Var.o();
-            int k = ik5Var.k() + ik5Var.o();
-            ik5Var.e(k);
+        while (ik5Var.m19713i() > 8) {
+            int m19707o = ik5Var.m19707o();
+            int m19711k = ik5Var.m19711k() + ik5Var.m19707o();
+            ik5Var.m19717e(m19711k);
             v42 v42Var = null;
-            if (o != 1414744396) {
-                switch (o) {
+            if (m19707o != 1414744396) {
+                switch (m19707o) {
                     case 1718776947:
                         if (i2 == 2) {
-                            ik5Var.g(4);
-                            int o2 = ik5Var.o();
-                            int o3 = ik5Var.o();
-                            ik5Var.g(4);
-                            q = ik5Var.o();
-                            switch (q) {
+                            ik5Var.m19715g(4);
+                            int m19707o2 = ik5Var.m19707o();
+                            int m19707o3 = ik5Var.m19707o();
+                            ik5Var.m19715g(4);
+                            m19705q = ik5Var.m19707o();
+                            switch (m19705q) {
                                 case 808802372:
                                 case 877677894:
                                 case 1145656883:
@@ -63,90 +68,91 @@ public final class k52 implements v42 {
                             }
                             if (str2 != null) {
                                 b72 b72Var = new b72();
-                                b72Var.x(o2);
-                                b72Var.f(o3);
-                                b72Var.s(str2);
-                                v42Var = new l52(b72Var.y());
+                                b72Var.m26367x(m19707o2);
+                                b72Var.m26388f(m19707o3);
+                                b72Var.m26372s(str2);
+                                v42Var = new l52(b72Var.m26366y());
                                 break;
                             } else {
                                 sb = new StringBuilder();
                                 str = "Ignoring track with unsupported compression ";
                                 sb.append(str);
-                                sb.append(q);
+                                sb.append(m19705q);
                                 concat = sb.toString();
                             }
                         } else if (i2 == 1) {
-                            q = ik5Var.q();
-                            String str3 = q != 1 ? q != 85 ? q != 255 ? q != 8192 ? q != 8193 ? null : "audio/vnd.dts" : "audio/ac3" : "audio/mp4a-latm" : "audio/mpeg" : "audio/raw";
+                            m19705q = ik5Var.m19705q();
+                            String str3 = m19705q != 1 ? m19705q != 85 ? m19705q != 255 ? m19705q != 8192 ? m19705q != 8193 ? null : "audio/vnd.dts" : "audio/ac3" : "audio/mp4a-latm" : "audio/mpeg" : "audio/raw";
                             if (str3 != null) {
-                                int q2 = ik5Var.q();
-                                int o4 = ik5Var.o();
-                                ik5Var.g(6);
-                                int X = it5.X(ik5Var.w());
-                                int q3 = ik5Var.q();
-                                byte[] bArr = new byte[q3];
-                                ik5Var.b(bArr, 0, q3);
+                                int m19705q2 = ik5Var.m19705q();
+                                int m19707o4 = ik5Var.m19707o();
+                                ik5Var.m19715g(6);
+                                int m19408X = it5.m19408X(ik5Var.m19699w());
+                                int m19705q3 = ik5Var.m19705q();
+                                byte[] bArr = new byte[m19705q3];
+                                ik5Var.m19720b(bArr, 0, m19705q3);
                                 b72 b72Var2 = new b72();
-                                b72Var2.s(str3);
-                                b72Var2.e0(q2);
-                                b72Var2.t(o4);
-                                if ("audio/raw".equals(str3) && X != 0) {
-                                    b72Var2.n(X);
+                                b72Var2.m26372s(str3);
+                                b72Var2.m26389e0(m19705q2);
+                                b72Var2.m26371t(m19707o4);
+                                if ("audio/raw".equals(str3) && m19408X != 0) {
+                                    b72Var2.m26377n(m19408X);
                                 }
-                                if ("audio/mp4a-latm".equals(str3) && q3 > 0) {
-                                    b72Var2.i(y17.v(bArr));
+                                if ("audio/mp4a-latm".equals(str3) && m19705q3 > 0) {
+                                    b72Var2.m26382i(y17.m4259v(bArr));
                                 }
-                                v42Var = new l52(b72Var2.y());
+                                v42Var = new l52(b72Var2.m26366y());
                                 break;
                             } else {
                                 sb = new StringBuilder();
                                 str = "Ignoring track with unsupported format tag ";
                                 sb.append(str);
-                                sb.append(q);
+                                sb.append(m19705q);
                                 concat = sb.toString();
                             }
                         } else {
-                            concat = "Ignoring strf box for unsupported track type: ".concat(it5.o(i2));
+                            concat = "Ignoring strf box for unsupported track type: ".concat(it5.m19381o(i2));
                         }
-                        s95.e("StreamFormatChunk", concat);
+                        s95.m10493e("StreamFormatChunk", concat);
                         break;
                     case 1751742049:
-                        v42Var = h52.a(ik5Var);
+                        v42Var = h52.m21021a(ik5Var);
                         break;
                     case 1752331379:
-                        v42Var = i52.a(ik5Var);
+                        v42Var = i52.m20121a(ik5Var);
                         break;
                     case 1852994675:
-                        v42Var = m52.a(ik5Var);
+                        v42Var = m52.m16203a(ik5Var);
                         break;
                 }
             } else {
-                v42Var = b(ik5Var.o(), ik5Var);
+                v42Var = m18045b(ik5Var.m19707o(), ik5Var);
             }
             if (v42Var != null) {
                 if (v42Var.zza() == 1752331379) {
-                    int i3 = ((i52) v42Var).a;
+                    int i3 = ((i52) v42Var).f13258a;
                     if (i3 == 1935960438) {
                         i2 = 2;
                     } else if (i3 == 1935963489) {
                         i2 = 1;
                     } else if (i3 != 1937012852) {
-                        s95.e("AviStreamHeaderChunk", "Found unsupported streamType fourCC: ".concat(String.valueOf(Integer.toHexString(i3))));
+                        s95.m10493e("AviStreamHeaderChunk", "Found unsupported streamType fourCC: ".concat(String.valueOf(Integer.toHexString(i3))));
                         i2 = -1;
                     } else {
                         i2 = 3;
                     }
                 }
-                v17Var.f(v42Var);
+                v17Var.m7548f(v42Var);
             }
-            ik5Var.f(k);
-            ik5Var.e(l);
+            ik5Var.m19716f(m19711k);
+            ik5Var.m19717e(m19710l);
         }
-        return new k52(i, v17Var.h());
+        return new k52(i, v17Var.m7546h());
     }
 
-    public final v42 a(Class cls) {
-        y17 y17Var = this.a;
+    /* renamed from: a */
+    public final v42 m18046a(Class cls) {
+        y17 y17Var = this.f15687a;
         int size = y17Var.size();
         int i = 0;
         while (i < size) {
@@ -161,6 +167,6 @@ public final class k52 implements v42 {
 
     @Override // com.daaw.v42
     public final int zza() {
-        return this.b;
+        return this.f15688b;
     }
 }

@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface r64 {
-    th6 d();
+    /* renamed from: d */
+    th6 mo6421d();
 }

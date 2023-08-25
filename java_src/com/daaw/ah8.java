@@ -5,7 +5,8 @@ import java.security.PrivilegedExceptionAction;
 import sun.misc.Unsafe;
 /* loaded from: classes2.dex */
 public final class ah8 implements PrivilegedExceptionAction {
-    public static final Unsafe a() {
+    /* renamed from: a */
+    public static final Unsafe m27475a() {
         Field[] declaredFields;
         for (Field field : Unsafe.class.getDeclaredFields()) {
             field.setAccessible(true);
@@ -19,6 +20,6 @@ public final class ah8 implements PrivilegedExceptionAction {
 
     @Override // java.security.PrivilegedExceptionAction
     public final /* bridge */ /* synthetic */ Object run() {
-        return a();
+        return m27475a();
     }
 }

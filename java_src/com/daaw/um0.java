@@ -3,42 +3,49 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes2.dex */
 public final class um0 {
-    public static final boolean a = true;
 
-    public static final kq0 a(Throwable th, String str) {
-        if (a) {
+    /* renamed from: a */
+    public static final boolean f29183a = true;
+
+    /* renamed from: a */
+    public static final kq0 m8024a(Throwable th, String str) {
+        if (f29183a) {
             return new kq0(th, str);
         }
         if (th == null) {
-            d();
+            m8021d();
             throw new mi0();
         }
         throw th;
     }
 
-    public static /* synthetic */ kq0 b(Throwable th, String str, int i, Object obj) {
+    /* renamed from: b */
+    public static /* synthetic */ kq0 m8023b(Throwable th, String str, int i, Object obj) {
         if ((i & 1) != 0) {
             th = null;
         }
         if ((i & 2) != 0) {
             str = null;
         }
-        return a(th, str);
+        return m8024a(th, str);
     }
 
-    public static final boolean c(rm0 rm0Var) {
-        return rm0Var.W() instanceof kq0;
+    /* renamed from: c */
+    public static final boolean m8022c(rm0 rm0Var) {
+        return rm0Var.mo11184W() instanceof kq0;
     }
 
-    public static final Void d() {
+    /* renamed from: d */
+    public static final Void m8021d() {
         throw new IllegalStateException("Module with the Main dispatcher is missing. Add dependency providing the Main dispatcher, e.g. 'kotlinx-coroutines-android' and ensure it has the same version as 'kotlinx-coroutines-core'");
     }
 
-    public static final rm0 e(sm0 sm0Var, List<? extends sm0> list) {
+    /* renamed from: e */
+    public static final rm0 m8020e(sm0 sm0Var, List<? extends sm0> list) {
         try {
             return sm0Var.createDispatcher(list);
         } catch (Throwable th) {
-            return a(th, sm0Var.hintOnError());
+            return m8024a(th, sm0Var.hintOnError());
         }
     }
 }

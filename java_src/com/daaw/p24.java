@@ -6,64 +6,95 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes.dex */
 public abstract class p24 {
-    public static final AtomicInteger p = new AtomicInteger(0);
-    public static final AtomicInteger q = new AtomicInteger(0);
 
-    public static int X() {
-        return p.get();
+    /* renamed from: p */
+    public static final AtomicInteger f22538p = new AtomicInteger(0);
+
+    /* renamed from: q */
+    public static final AtomicInteger f22539q = new AtomicInteger(0);
+
+    /* renamed from: X */
+    public static int m13732X() {
+        return f22538p.get();
     }
 
-    public static int Z() {
-        return q.get();
+    /* renamed from: Z */
+    public static int m13730Z() {
+        return f22539q.get();
     }
 
-    public abstract long E();
+    /* renamed from: E */
+    public abstract long mo13751E();
 
-    public abstract long F();
+    /* renamed from: F */
+    public abstract long mo13750F();
 
-    public abstract void G(Uri[] uriArr, String str);
+    /* renamed from: G */
+    public abstract void mo13749G(Uri[] uriArr, String str);
 
-    public abstract void H(Uri[] uriArr, String str, ByteBuffer byteBuffer, boolean z);
+    /* renamed from: H */
+    public abstract void mo13748H(Uri[] uriArr, String str, ByteBuffer byteBuffer, boolean z);
 
-    public abstract void I();
+    /* renamed from: I */
+    public abstract void mo13747I();
 
-    public abstract void J(long j);
+    /* renamed from: J */
+    public abstract void mo13746J(long j);
 
-    public abstract void K(int i);
+    /* renamed from: K */
+    public abstract void mo13745K(int i);
 
-    public abstract void L(int i);
+    /* renamed from: L */
+    public abstract void mo13744L(int i);
 
-    public abstract void M(o24 o24Var);
+    /* renamed from: M */
+    public abstract void mo13743M(o24 o24Var);
 
-    public abstract void N(int i);
+    /* renamed from: N */
+    public abstract void mo13742N(int i);
 
-    public abstract void O(int i);
+    /* renamed from: O */
+    public abstract void mo13741O(int i);
 
-    public abstract void P(boolean z);
+    /* renamed from: P */
+    public abstract void mo13740P(boolean z);
 
-    public abstract void Q(boolean z);
+    /* renamed from: Q */
+    public abstract void mo13739Q(boolean z);
 
-    public abstract void R(int i);
+    /* renamed from: R */
+    public abstract void mo13738R(int i);
 
-    public abstract void S(Surface surface, boolean z);
+    /* renamed from: S */
+    public abstract void mo13737S(Surface surface, boolean z);
 
-    public abstract void T(float f, boolean z);
+    /* renamed from: T */
+    public abstract void mo13736T(float f, boolean z);
 
-    public abstract void U();
+    /* renamed from: U */
+    public abstract void mo13735U();
 
-    public abstract boolean V();
+    /* renamed from: V */
+    public abstract boolean mo13734V();
 
-    public abstract int W();
+    /* renamed from: W */
+    public abstract int mo13733W();
 
-    public abstract int Y();
+    /* renamed from: Y */
+    public abstract int mo13731Y();
 
-    public abstract long a0();
+    /* renamed from: a0 */
+    public abstract long mo13729a0();
 
-    public abstract long b0();
+    /* renamed from: b0 */
+    public abstract long mo13728b0();
 
-    public abstract long c0();
+    /* renamed from: c0 */
+    public abstract long mo13727c0();
 
-    public abstract long d0();
+    /* renamed from: d0 */
+    public abstract long mo13726d0();
 
-    public abstract long e0();
+    /* renamed from: e0 */
+    public abstract long mo13725e0();
 }

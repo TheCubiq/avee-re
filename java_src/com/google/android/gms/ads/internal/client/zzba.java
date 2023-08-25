@@ -5,29 +5,37 @@ import com.daaw.e93;
 import com.daaw.z83;
 /* loaded from: classes.dex */
 public final class zzba {
-    public static final zzba d = new zzba();
-    public final z83 a;
-    public final a93 b;
-    public final e93 c;
+
+    /* renamed from: d */
+    public static final zzba f36103d = new zzba();
+
+    /* renamed from: a */
+    public final z83 f36104a;
+
+    /* renamed from: b */
+    public final a93 f36105b;
+
+    /* renamed from: c */
+    public final e93 f36106c;
 
     public zzba() {
         z83 z83Var = new z83();
         a93 a93Var = new a93();
         e93 e93Var = new e93();
-        this.a = z83Var;
-        this.b = a93Var;
-        this.c = e93Var;
+        this.f36104a = z83Var;
+        this.f36105b = a93Var;
+        this.f36106c = e93Var;
     }
 
     public static z83 zza() {
-        return d.a;
+        return f36103d.f36104a;
     }
 
     public static a93 zzb() {
-        return d.b;
+        return f36103d.f36105b;
     }
 
     public static e93 zzc() {
-        return d.c;
+        return f36103d.f36106c;
     }
 }

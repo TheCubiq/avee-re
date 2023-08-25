@@ -6,30 +6,44 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class ja3 {
-    public MotionEvent a = MotionEvent.obtain(0, 0, 1, 0.0f, 0.0f, 0);
-    public MotionEvent b = MotionEvent.obtain(0, 0, 0, 0.0f, 0.0f, 0);
-    public final Context c;
-    public final ScheduledExecutorService d;
-    public final to6 e;
-    public final la3 f;
+
+    /* renamed from: a */
+    public MotionEvent f14607a = MotionEvent.obtain(0, 0, 1, 0.0f, 0.0f, 0);
+
+    /* renamed from: b */
+    public MotionEvent f14608b = MotionEvent.obtain(0, 0, 0, 0.0f, 0.0f, 0);
+
+    /* renamed from: c */
+    public final Context f14609c;
+
+    /* renamed from: d */
+    public final ScheduledExecutorService f14610d;
+
+    /* renamed from: e */
+    public final to6 f14611e;
+
+    /* renamed from: f */
+    public final la3 f14612f;
 
     public ja3(Context context, ScheduledExecutorService scheduledExecutorService, la3 la3Var, to6 to6Var, byte[] bArr) {
-        this.c = context;
-        this.d = scheduledExecutorService;
-        this.f = la3Var;
-        this.e = to6Var;
+        this.f14609c = context;
+        this.f14610d = scheduledExecutorService;
+        this.f14612f = la3Var;
+        this.f14611e = to6Var;
     }
 
-    public final f77 a() {
-        return (j67) s67.o(j67.D(s67.i(null)), ((Long) za3.c.e()).longValue(), TimeUnit.MILLISECONDS, this.d);
+    /* renamed from: a */
+    public final f77 m18677a() {
+        return (j67) s67.m10628o(j67.m18784D(s67.m10634i(null)), ((Long) za3.f34683c.m16137e()).longValue(), TimeUnit.MILLISECONDS, this.f14610d);
     }
 
-    public final void b(MotionEvent motionEvent) {
-        if (motionEvent.getAction() == 1 && motionEvent.getEventTime() > this.a.getEventTime()) {
-            this.a = MotionEvent.obtain(motionEvent);
-        } else if (motionEvent.getAction() != 0 || motionEvent.getEventTime() <= this.b.getEventTime()) {
+    /* renamed from: b */
+    public final void m18676b(MotionEvent motionEvent) {
+        if (motionEvent.getAction() == 1 && motionEvent.getEventTime() > this.f14607a.getEventTime()) {
+            this.f14607a = MotionEvent.obtain(motionEvent);
+        } else if (motionEvent.getAction() != 0 || motionEvent.getEventTime() <= this.f14608b.getEventTime()) {
         } else {
-            this.b = MotionEvent.obtain(motionEvent);
+            this.f14608b = MotionEvent.obtain(motionEvent);
         }
     }
 }

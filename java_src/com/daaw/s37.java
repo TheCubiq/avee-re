@@ -4,37 +4,51 @@ import java.util.Iterator;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class s37 extends d27 {
-    public static final Object[] w;
-    public static final s37 x;
-    public final transient Object[] r;
-    public final transient int s;
-    public final transient Object[] t;
-    public final transient int u;
-    public final transient int v;
+
+    /* renamed from: w */
+    public static final Object[] f25841w;
+
+    /* renamed from: x */
+    public static final s37 f25842x;
+
+    /* renamed from: r */
+    public final transient Object[] f25843r;
+
+    /* renamed from: s */
+    public final transient int f25844s;
+
+    /* renamed from: t */
+    public final transient Object[] f25845t;
+
+    /* renamed from: u */
+    public final transient int f25846u;
+
+    /* renamed from: v */
+    public final transient int f25847v;
 
     static {
         Object[] objArr = new Object[0];
-        w = objArr;
-        x = new s37(objArr, 0, objArr, 0, 0);
+        f25841w = objArr;
+        f25842x = new s37(objArr, 0, objArr, 0, 0);
     }
 
     public s37(Object[] objArr, int i, Object[] objArr2, int i2, int i3) {
-        this.r = objArr;
-        this.s = i;
-        this.t = objArr2;
-        this.u = i2;
-        this.v = i3;
+        this.f25843r = objArr;
+        this.f25844s = i;
+        this.f25845t = objArr2;
+        this.f25846u = i2;
+        this.f25847v = i3;
     }
 
     @Override // com.daaw.t17, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final boolean contains(@CheckForNull Object obj) {
-        Object[] objArr = this.t;
+        Object[] objArr = this.f25845t;
         if (obj == null || objArr.length == 0) {
             return false;
         }
-        int b = q17.b(obj);
+        int m12803b = q17.m12803b(obj);
         while (true) {
-            int i = b & this.u;
+            int i = m12803b & this.f25846u;
             Object obj2 = objArr[i];
             if (obj2 == null) {
                 return false;
@@ -42,58 +56,65 @@ public final class s37 extends d27 {
             if (obj2.equals(obj)) {
                 return true;
             }
-            b = i + 1;
+            m12803b = i + 1;
         }
     }
 
     @Override // com.daaw.t17
-    public final int d(Object[] objArr, int i) {
-        System.arraycopy(this.r, 0, objArr, i, this.v);
-        return i + this.v;
+    /* renamed from: d */
+    public final int mo2850d(Object[] objArr, int i) {
+        System.arraycopy(this.f25843r, 0, objArr, i, this.f25847v);
+        return i + this.f25847v;
     }
 
     @Override // com.daaw.t17
-    public final int e() {
-        return this.v;
+    /* renamed from: e */
+    public final int mo5648e() {
+        return this.f25847v;
     }
 
     @Override // com.daaw.t17
-    public final int f() {
+    /* renamed from: f */
+    public final int mo5647f() {
         return 0;
     }
 
     @Override // com.daaw.d27, java.util.Collection, java.util.Set
     public final int hashCode() {
-        return this.s;
+        return this.f25844s;
     }
 
     @Override // com.daaw.d27, com.daaw.t17, java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
     public final /* synthetic */ Iterator iterator() {
-        return h().listIterator(0);
+        return mo2849h().listIterator(0);
     }
 
     @Override // com.daaw.d27, com.daaw.t17
-    public final c47 j() {
-        return h().listIterator(0);
+    /* renamed from: j */
+    public final c47 mo2848j() {
+        return mo2849h().listIterator(0);
     }
 
     @Override // com.daaw.t17
-    public final Object[] m() {
-        return this.r;
+    /* renamed from: m */
+    public final Object[] mo5645m() {
+        return this.f25843r;
     }
 
     @Override // com.daaw.d27
-    public final y17 o() {
-        return y17.q(this.r, this.v);
+    /* renamed from: o */
+    public final y17 mo10727o() {
+        return y17.m4264q(this.f25843r, this.f25847v);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final int size() {
-        return this.v;
+        return this.f25847v;
     }
 
     @Override // com.daaw.d27
-    public final boolean w() {
+    /* renamed from: w */
+    public final boolean mo10726w() {
         return true;
     }
 }

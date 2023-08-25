@@ -1,27 +1,38 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class zw0 {
-    public static final zw0 e = new zw0(1.0f);
-    public final float a;
-    public final float b;
-    public final boolean c;
-    public final int d;
+
+    /* renamed from: e */
+    public static final zw0 f35604e = new zw0(1.0f);
+
+    /* renamed from: a */
+    public final float f35605a;
+
+    /* renamed from: b */
+    public final float f35606b;
+
+    /* renamed from: c */
+    public final boolean f35607c;
+
+    /* renamed from: d */
+    public final int f35608d;
 
     public zw0(float f) {
         this(f, 1.0f, false);
     }
 
     public zw0(float f, float f2, boolean z) {
-        s6.a(f > 0.0f);
-        s6.a(f2 > 0.0f);
-        this.a = f;
-        this.b = f2;
-        this.c = z;
-        this.d = Math.round(f * 1000.0f);
+        C2914s6.m10690a(f > 0.0f);
+        C2914s6.m10690a(f2 > 0.0f);
+        this.f35605a = f;
+        this.f35606b = f2;
+        this.f35607c = z;
+        this.f35608d = Math.round(f * 1000.0f);
     }
 
-    public long a(long j) {
-        return j * this.d;
+    /* renamed from: a */
+    public long m1826a(long j) {
+        return j * this.f35608d;
     }
 
     public boolean equals(Object obj) {
@@ -32,10 +43,10 @@ public final class zw0 {
             return false;
         }
         zw0 zw0Var = (zw0) obj;
-        return this.a == zw0Var.a && this.b == zw0Var.b && this.c == zw0Var.c;
+        return this.f35605a == zw0Var.f35605a && this.f35606b == zw0Var.f35606b && this.f35607c == zw0Var.f35607c;
     }
 
     public int hashCode() {
-        return ((((527 + Float.floatToRawIntBits(this.a)) * 31) + Float.floatToRawIntBits(this.b)) * 31) + (this.c ? 1 : 0);
+        return ((((527 + Float.floatToRawIntBits(this.f35605a)) * 31) + Float.floatToRawIntBits(this.f35606b)) * 31) + (this.f35607c ? 1 : 0);
     }
 }

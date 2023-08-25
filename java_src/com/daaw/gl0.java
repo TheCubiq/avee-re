@@ -1,6 +1,6 @@
 package com.daaw;
 
-import com.daaw.i9;
+import com.daaw.C1667i9;
 import com.google.auto.value.AutoValue;
 import java.util.List;
 @AutoValue
@@ -8,48 +8,67 @@ import java.util.List;
 public abstract class gl0 {
 
     @AutoValue.Builder
+    /* renamed from: com.daaw.gl0$a */
     /* loaded from: classes.dex */
-    public static abstract class a {
-        public abstract gl0 a();
+    public static abstract class AbstractC1439a {
+        /* renamed from: a */
+        public abstract gl0 mo20020a();
 
-        public abstract a b(uf ufVar);
+        /* renamed from: b */
+        public abstract AbstractC1439a mo20019b(AbstractC3202uf abstractC3202uf);
 
-        public abstract a c(List<cl0> list);
+        /* renamed from: c */
+        public abstract AbstractC1439a mo20018c(List<cl0> list);
 
-        public abstract a d(Integer num);
+        /* renamed from: d */
+        public abstract AbstractC1439a mo20017d(Integer num);
 
-        public abstract a e(String str);
+        /* renamed from: e */
+        public abstract AbstractC1439a mo20016e(String str);
 
-        public abstract a f(h01 h01Var);
+        /* renamed from: f */
+        public abstract AbstractC1439a mo20015f(h01 h01Var);
 
-        public abstract a g(long j);
+        /* renamed from: g */
+        public abstract AbstractC1439a mo20014g(long j);
 
-        public abstract a h(long j);
+        /* renamed from: h */
+        public abstract AbstractC1439a mo20013h(long j);
 
-        public a i(int i) {
-            return d(Integer.valueOf(i));
+        /* renamed from: i */
+        public AbstractC1439a m21498i(int i) {
+            return mo20017d(Integer.valueOf(i));
         }
 
-        public a j(String str) {
-            return e(str);
+        /* renamed from: j */
+        public AbstractC1439a m21497j(String str) {
+            return mo20016e(str);
         }
     }
 
-    public static a a() {
-        return new i9.b();
+    /* renamed from: a */
+    public static AbstractC1439a m21499a() {
+        return new C1667i9.C1669b();
     }
 
-    public abstract uf b();
+    /* renamed from: b */
+    public abstract AbstractC3202uf mo20027b();
 
-    public abstract List<cl0> c();
+    /* renamed from: c */
+    public abstract List<cl0> mo20026c();
 
-    public abstract Integer d();
+    /* renamed from: d */
+    public abstract Integer mo20025d();
 
-    public abstract String e();
+    /* renamed from: e */
+    public abstract String mo20024e();
 
-    public abstract h01 f();
+    /* renamed from: f */
+    public abstract h01 mo20023f();
 
-    public abstract long g();
+    /* renamed from: g */
+    public abstract long mo20022g();
 
-    public abstract long h();
+    /* renamed from: h */
+    public abstract long mo20021h();
 }

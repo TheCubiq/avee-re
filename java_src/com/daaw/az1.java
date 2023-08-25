@@ -3,7 +3,9 @@ package com.daaw;
 import android.graphics.drawable.Drawable;
 /* loaded from: classes.dex */
 public interface az1 {
-    void a(Drawable drawable);
+    /* renamed from: a */
+    void mo25724a(Drawable drawable);
 
-    Drawable b();
+    /* renamed from: b */
+    Drawable mo25723b();
 }

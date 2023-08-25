@@ -1,18 +1,21 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ix4 implements wz7 {
-    public final pw4 a;
+
+    /* renamed from: a */
+    public final pw4 f14107a;
 
     public ix4(pw4 pw4Var) {
-        this.a = pw4Var;
+        this.f14107a = pw4Var;
     }
 
-    public final pw4 a() {
-        return this.a;
+    /* renamed from: a */
+    public final pw4 m19293a() {
+        return this.f14107a;
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return this.a;
+        return this.f14107a;
     }
 }

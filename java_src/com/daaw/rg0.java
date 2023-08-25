@@ -1,28 +1,34 @@
 package com.daaw;
 
 import android.content.Context;
-import com.daaw.zt;
+import com.daaw.C3894zt;
 import java.io.File;
 /* loaded from: classes.dex */
-public final class rg0 extends zt {
+public final class rg0 extends C3894zt {
 
+    /* renamed from: com.daaw.rg0$a */
     /* loaded from: classes.dex */
-    public class a implements zt.a {
-        public final /* synthetic */ Context a;
-        public final /* synthetic */ String b;
+    public class C2858a implements C3894zt.InterfaceC3895a {
 
-        public a(Context context, String str) {
-            this.a = context;
-            this.b = str;
+        /* renamed from: a */
+        public final /* synthetic */ Context f25250a;
+
+        /* renamed from: b */
+        public final /* synthetic */ String f25251b;
+
+        public C2858a(Context context, String str) {
+            this.f25250a = context;
+            this.f25251b = str;
         }
 
-        @Override // com.daaw.zt.a
-        public File a() {
-            File cacheDir = this.a.getCacheDir();
+        @Override // com.daaw.C3894zt.InterfaceC3895a
+        /* renamed from: a */
+        public File mo1921a() {
+            File cacheDir = this.f25250a.getCacheDir();
             if (cacheDir == null) {
                 return null;
             }
-            return this.b != null ? new File(cacheDir, this.b) : cacheDir;
+            return this.f25251b != null ? new File(cacheDir, this.f25251b) : cacheDir;
         }
     }
 
@@ -31,6 +37,6 @@ public final class rg0 extends zt {
     }
 
     public rg0(Context context, String str, int i) {
-        super(new a(context, str), i);
+        super(new C2858a(context, str), i);
     }
 }

@@ -9,10 +9,13 @@ import com.google.android.gms.ads.mediation.customevent.CustomEventAdapter;
 import com.google.android.gms.ads.mediation.rtb.RtbAdapter;
 /* loaded from: classes.dex */
 public final class xm3 extends zm3 {
-    public static final hp3 p = new hp3();
+
+    /* renamed from: p */
+    public static final hp3 f32803p = new hp3();
 
     @Override // com.daaw.an3
-    public final boolean a(String str) {
+    /* renamed from: a */
+    public final boolean mo3509a(String str) {
         try {
             return CustomEvent.class.isAssignableFrom(Class.forName(str, false, xm3.class.getClassLoader()));
         } catch (Throwable unused) {
@@ -22,7 +25,8 @@ public final class xm3 extends zm3 {
     }
 
     @Override // com.daaw.an3
-    public final boolean l(String str) {
+    /* renamed from: l */
+    public final boolean mo3508l(String str) {
         try {
             return Adapter.class.isAssignableFrom(Class.forName(str, false, xm3.class.getClassLoader()));
         } catch (Throwable unused) {
@@ -32,7 +36,8 @@ public final class xm3 extends zm3 {
     }
 
     @Override // com.daaw.an3
-    public final dp3 m(String str) {
+    /* renamed from: m */
+    public final dp3 mo3507m(String str) {
         return new sp3((RtbAdapter) Class.forName(str, false, hp3.class.getClassLoader()).getDeclaredConstructor(new Class[0]).newInstance(new Object[0]));
     }
 

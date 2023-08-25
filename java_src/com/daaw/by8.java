@@ -7,38 +7,53 @@ import android.view.Choreographer;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class by8 implements Choreographer.FrameCallback, Handler.Callback {
-    public static final by8 u = new by8();
-    public volatile long p = -9223372036854775807L;
-    public final Handler q;
-    public final HandlerThread r;
-    public Choreographer s;
-    public int t;
+
+    /* renamed from: u */
+    public static final by8 f5279u = new by8();
+
+    /* renamed from: p */
+    public volatile long f5280p = -9223372036854775807L;
+
+    /* renamed from: q */
+    public final Handler f5281q;
+
+    /* renamed from: r */
+    public final HandlerThread f5282r;
+
+    /* renamed from: s */
+    public Choreographer f5283s;
+
+    /* renamed from: t */
+    public int f5284t;
 
     public by8() {
         HandlerThread handlerThread = new HandlerThread("ExoPlayer:FrameReleaseChoreographer");
-        this.r = handlerThread;
+        this.f5282r = handlerThread;
         handlerThread.start();
-        Handler c = it5.c(handlerThread.getLooper(), this);
-        this.q = c;
-        c.sendEmptyMessage(0);
+        Handler m19401c = it5.m19401c(handlerThread.getLooper(), this);
+        this.f5281q = m19401c;
+        m19401c.sendEmptyMessage(0);
     }
 
-    public static by8 a() {
-        return u;
+    /* renamed from: a */
+    public static by8 m25728a() {
+        return f5279u;
     }
 
-    public final void b() {
-        this.q.sendEmptyMessage(1);
+    /* renamed from: b */
+    public final void m25727b() {
+        this.f5281q.sendEmptyMessage(1);
     }
 
-    public final void c() {
-        this.q.sendEmptyMessage(2);
+    /* renamed from: c */
+    public final void m25726c() {
+        this.f5281q.sendEmptyMessage(2);
     }
 
     @Override // android.view.Choreographer.FrameCallback
     public final void doFrame(long j) {
-        this.p = j;
-        Choreographer choreographer = this.s;
+        this.f5280p = j;
+        Choreographer choreographer = this.f5283s;
         Objects.requireNonNull(choreographer);
         choreographer.postFrameCallbackDelayed(this, 500L);
     }
@@ -48,16 +63,16 @@ public final class by8 implements Choreographer.FrameCallback, Handler.Callback 
         int i = message.what;
         if (i == 0) {
             try {
-                this.s = Choreographer.getInstance();
+                this.f5283s = Choreographer.getInstance();
             } catch (RuntimeException e) {
-                s95.f("VideoFrameReleaseHelper", "Vsync sampling disabled due to platform error", e);
+                s95.m10492f("VideoFrameReleaseHelper", "Vsync sampling disabled due to platform error", e);
             }
             return true;
         } else if (i == 1) {
-            Choreographer choreographer = this.s;
+            Choreographer choreographer = this.f5283s;
             if (choreographer != null) {
-                int i2 = this.t + 1;
-                this.t = i2;
+                int i2 = this.f5284t + 1;
+                this.f5284t = i2;
                 if (i2 == 1) {
                     choreographer.postFrameCallback(this);
                 }
@@ -66,13 +81,13 @@ public final class by8 implements Choreographer.FrameCallback, Handler.Callback 
         } else if (i != 2) {
             return false;
         } else {
-            Choreographer choreographer2 = this.s;
+            Choreographer choreographer2 = this.f5283s;
             if (choreographer2 != null) {
-                int i3 = this.t - 1;
-                this.t = i3;
+                int i3 = this.f5284t - 1;
+                this.f5284t = i3;
                 if (i3 == 0) {
                     choreographer2.removeFrameCallback(this);
-                    this.p = -9223372036854775807L;
+                    this.f5280p = -9223372036854775807L;
                 }
             }
             return true;

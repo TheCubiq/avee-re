@@ -1,17 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class hz2 {
-    public byte[] a;
-    public int b;
-    public int c;
-    public int d;
+
+    /* renamed from: a */
+    public byte[] f13072a;
+
+    /* renamed from: b */
+    public int f13073b;
+
+    /* renamed from: c */
+    public int f13074c;
+
+    /* renamed from: d */
+    public int f13075d;
 
     public hz2(byte[] bArr, int i) {
-        this.a = bArr;
-        this.d = i;
+        this.f13072a = bArr;
+        this.f13075d = i;
     }
 
-    public final int a(int i) {
+    /* renamed from: a */
+    public final int m20320a(int i) {
         int i2;
         int i3;
         int i4;
@@ -20,41 +29,41 @@ public final class hz2 {
         boolean z = false;
         int i7 = 0;
         for (int i8 = 0; i8 < i6; i8++) {
-            int i9 = this.c;
+            int i9 = this.f13074c;
             if (i9 != 0) {
-                byte[] bArr = this.a;
-                int i10 = this.b;
+                byte[] bArr = this.f13072a;
+                int i10 = this.f13073b;
                 i5 = ((bArr[i10 + 1] & 255) >>> (8 - i9)) | ((bArr[i10] & 255) << i9);
             } else {
-                i5 = this.a[this.b];
+                i5 = this.f13072a[this.f13073b];
             }
             i -= 8;
             i7 |= (255 & i5) << i;
-            this.b++;
+            this.f13073b++;
         }
         if (i > 0) {
-            int i11 = this.c + i;
+            int i11 = this.f13074c + i;
             byte b = (byte) (255 >> (8 - i));
-            byte[] bArr2 = this.a;
-            int i12 = this.b;
+            byte[] bArr2 = this.f13072a;
+            int i12 = this.f13073b;
             if (i11 > 8) {
                 int i13 = i12 + 1;
                 i4 = (b & (((255 & bArr2[i13]) >> (16 - i11)) | ((bArr2[i12] & 255) << (i11 - 8)))) | i7;
-                this.b = i13;
+                this.f13073b = i13;
             } else {
                 i4 = (b & ((255 & bArr2[i12]) >> (8 - i11))) | i7;
                 if (i11 == 8) {
-                    this.b = i12 + 1;
+                    this.f13073b = i12 + 1;
                 }
             }
             i7 = i4;
-            this.c = i11 % 8;
+            this.f13074c = i11 % 8;
         }
-        int i14 = this.b;
-        if (i14 >= 0 && (i2 = this.c) >= 0 && (i14 < (i3 = this.d) || (i14 == i3 && i2 == 0))) {
+        int i14 = this.f13073b;
+        if (i14 >= 0 && (i2 = this.f13074c) >= 0 && (i14 < (i3 = this.f13075d) || (i14 == i3 && i2 == 0))) {
             z = true;
         }
-        az2.e(z);
+        az2.m26583e(z);
         return i7;
     }
 }

@@ -6,7 +6,7 @@ public final class qf8 implements Iterable {
     @Override // java.lang.Iterable
     public final Iterator iterator() {
         Iterator it;
-        it = sf8.a;
+        it = sf8.f26232a;
         return it;
     }
 }

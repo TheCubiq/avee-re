@@ -6,19 +6,28 @@ import android.util.DisplayMetrics;
 import com.google.android.gms.ads.internal.client.zzq;
 /* loaded from: classes.dex */
 public final class w06 implements i76 {
-    public final i76 a;
-    public final ri6 b;
-    public final Context c;
-    public final qz3 d;
+
+    /* renamed from: a */
+    public final i76 f30762a;
+
+    /* renamed from: b */
+    public final ri6 f30763b;
+
+    /* renamed from: c */
+    public final Context f30764c;
+
+    /* renamed from: d */
+    public final qz3 f30765d;
 
     public w06(u26 u26Var, ri6 ri6Var, Context context, qz3 qz3Var) {
-        this.a = u26Var;
-        this.b = ri6Var;
-        this.c = context;
-        this.d = qz3Var;
+        this.f30762a = u26Var;
+        this.f30763b = ri6Var;
+        this.f30764c = context;
+        this.f30765d = qz3Var;
     }
 
-    public final /* synthetic */ x06 a(n76 n76Var) {
+    /* renamed from: a */
+    public final /* synthetic */ x06 m6610a(n76 n76Var) {
         String str;
         boolean z;
         String str2;
@@ -27,7 +36,7 @@ public final class w06 implements i76 {
         int i2;
         int i3;
         DisplayMetrics displayMetrics;
-        zzq zzqVar = this.b.e;
+        zzq zzqVar = this.f30763b.f25345e;
         zzq[] zzqVarArr = zzqVar.zzg;
         if (zzqVarArr != null) {
             str = null;
@@ -56,7 +65,7 @@ public final class w06 implements i76 {
             str = zzqVar.zza;
             z = zzqVar.zzi;
         }
-        Resources resources = this.c.getResources();
+        Resources resources = this.f30764c.getResources();
         if (resources == null || (displayMetrics = resources.getDisplayMetrics()) == null) {
             str2 = null;
             f = 0.0f;
@@ -66,7 +75,7 @@ public final class w06 implements i76 {
             float f2 = displayMetrics.density;
             int i4 = displayMetrics.widthPixels;
             i2 = displayMetrics.heightPixels;
-            str2 = this.d.h().zzm();
+            str2 = this.f30765d.m11915h().zzm();
             i = i4;
             f = f2;
         }
@@ -104,7 +113,7 @@ public final class w06 implements i76 {
                 sb.insert(i3, "320x50");
             }
         }
-        return new x06(zzqVar, str, z, sb.toString(), f, i, i2, str2, this.b.p);
+        return new x06(zzqVar, str, z, sb.toString(), f, i, i2, str2, this.f30763b.f25356p);
     }
 
     @Override // com.daaw.i76
@@ -114,11 +123,11 @@ public final class w06 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return s67.m(this.a.zzb(), new ey6() { // from class: com.daaw.v06
+        return s67.m10630m(this.f30762a.zzb(), new ey6() { // from class: com.daaw.v06
             @Override // com.daaw.ey6
             public final Object apply(Object obj) {
-                return w06.this.a((n76) obj);
+                return w06.this.m6610a((n76) obj);
             }
-        }, z04.f);
+        }, z04.f34310f);
     }
 }

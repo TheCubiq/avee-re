@@ -12,48 +12,50 @@ import org.checkerframework.checker.initialization.qual.NotOnlyInitialized;
 /* loaded from: classes.dex */
 public final class SearchAdView extends ViewGroup {
     @NotOnlyInitialized
-    public final zzea p;
+
+    /* renamed from: p */
+    public final zzea f36551p;
 
     public SearchAdView(Context context) {
         super(context);
-        this.p = new zzea(this);
+        this.f36551p = new zzea(this);
     }
 
     public SearchAdView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.p = new zzea(this, attributeSet, false);
+        this.f36551p = new zzea(this, attributeSet, false);
     }
 
     public SearchAdView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        this.p = new zzea(this, attributeSet, false);
+        this.f36551p = new zzea(this, attributeSet, false);
     }
 
     public void destroy() {
-        this.p.zzk();
+        this.f36551p.zzk();
     }
 
     public AdListener getAdListener() {
-        return this.p.zza();
+        return this.f36551p.zza();
     }
 
     public AdSize getAdSize() {
-        return this.p.zzb();
+        return this.f36551p.zzb();
     }
 
     public String getAdUnitId() {
-        return this.p.zzj();
+        return this.f36551p.zzj();
     }
 
     public void loadAd(DynamicHeightSearchAdRequest dynamicHeightSearchAdRequest) {
         if (!AdSize.SEARCH.equals(getAdSize())) {
             throw new IllegalStateException("You must use AdSize.SEARCH for a DynamicHeightSearchAdRequest");
         }
-        this.p.zzm(dynamicHeightSearchAdRequest.a());
+        this.f36551p.zzm(dynamicHeightSearchAdRequest.m1227a());
     }
 
     public void loadAd(SearchAdRequest searchAdRequest) {
-        this.p.zzm(searchAdRequest.a());
+        this.f36551p.zzm(searchAdRequest.m1225a());
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -99,22 +101,22 @@ public final class SearchAdView extends ViewGroup {
     }
 
     public void pause() {
-        this.p.zzn();
+        this.f36551p.zzn();
     }
 
     public void resume() {
-        this.p.zzp();
+        this.f36551p.zzp();
     }
 
     public void setAdListener(AdListener adListener) {
-        this.p.zzr(adListener);
+        this.f36551p.zzr(adListener);
     }
 
     public void setAdSize(AdSize adSize) {
-        this.p.zzs(adSize);
+        this.f36551p.zzs(adSize);
     }
 
     public void setAdUnitId(String str) {
-        this.p.zzu(str);
+        this.f36551p.zzu(str);
     }
 }

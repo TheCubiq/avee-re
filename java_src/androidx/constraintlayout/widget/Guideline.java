@@ -27,21 +27,21 @@ public class Guideline extends View {
     }
 
     public void setGuidelineBegin(int i) {
-        ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        bVar.a = i;
-        setLayoutParams(bVar);
+        ConstraintLayout.C0175b c0175b = (ConstraintLayout.C0175b) getLayoutParams();
+        c0175b.f916a = i;
+        setLayoutParams(c0175b);
     }
 
     public void setGuidelineEnd(int i) {
-        ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        bVar.b = i;
-        setLayoutParams(bVar);
+        ConstraintLayout.C0175b c0175b = (ConstraintLayout.C0175b) getLayoutParams();
+        c0175b.f918b = i;
+        setLayoutParams(c0175b);
     }
 
     public void setGuidelinePercent(float f) {
-        ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        bVar.c = f;
-        setLayoutParams(bVar);
+        ConstraintLayout.C0175b c0175b = (ConstraintLayout.C0175b) getLayoutParams();
+        c0175b.f920c = f;
+        setLayoutParams(c0175b);
     }
 
     @Override // android.view.View

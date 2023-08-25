@@ -4,21 +4,24 @@ import java.io.FilterInputStream;
 import java.io.InputStream;
 /* loaded from: classes.dex */
 public class dn0 extends FilterInputStream {
-    public int p;
+
+    /* renamed from: p */
+    public int f7491p;
 
     public dn0(InputStream inputStream) {
         super(inputStream);
-        this.p = Integer.MIN_VALUE;
+        this.f7491p = Integer.MIN_VALUE;
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
     public int available() {
-        int i = this.p;
+        int i = this.f7491p;
         return i == Integer.MIN_VALUE ? super.available() : Math.min(i, super.available());
     }
 
-    public final long d(long j) {
-        int i = this.p;
+    /* renamed from: d */
+    public final long m24211d(long j) {
+        int i = this.f7491p;
         if (i == 0) {
             return -1L;
         }
@@ -28,52 +31,53 @@ public class dn0 extends FilterInputStream {
     @Override // java.io.FilterInputStream, java.io.InputStream
     public void mark(int i) {
         super.mark(i);
-        this.p = i;
+        this.f7491p = i;
     }
 
-    public final void n(long j) {
-        int i = this.p;
+    /* renamed from: n */
+    public final void m24210n(long j) {
+        int i = this.f7491p;
         if (i == Integer.MIN_VALUE || j == -1) {
             return;
         }
-        this.p = (int) (i - j);
+        this.f7491p = (int) (i - j);
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
     public int read() {
-        if (d(1L) == -1) {
+        if (m24211d(1L) == -1) {
             return -1;
         }
         int read = super.read();
-        n(1L);
+        m24210n(1L);
         return read;
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
     public int read(byte[] bArr, int i, int i2) {
-        int d = (int) d(i2);
-        if (d == -1) {
+        int m24211d = (int) m24211d(i2);
+        if (m24211d == -1) {
             return -1;
         }
-        int read = super.read(bArr, i, d);
-        n(read);
+        int read = super.read(bArr, i, m24211d);
+        m24210n(read);
         return read;
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
     public void reset() {
         super.reset();
-        this.p = Integer.MIN_VALUE;
+        this.f7491p = Integer.MIN_VALUE;
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
     public long skip(long j) {
-        long d = d(j);
-        if (d == -1) {
+        long m24211d = m24211d(j);
+        if (m24211d == -1) {
             return -1L;
         }
-        long skip = super.skip(d);
-        n(skip);
+        long skip = super.skip(m24211d);
+        m24210n(skip);
         return skip;
     }
 }

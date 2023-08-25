@@ -3,42 +3,54 @@ package com.daaw;
 import java.util.concurrent.atomic.AtomicBoolean;
 /* loaded from: classes.dex */
 public abstract class mc1 {
-    public final AtomicBoolean a = new AtomicBoolean(false);
-    public final b61 b;
-    public volatile ni1 c;
+
+    /* renamed from: a */
+    public final AtomicBoolean f18780a = new AtomicBoolean(false);
+
+    /* renamed from: b */
+    public final b61 f18781b;
+
+    /* renamed from: c */
+    public volatile ni1 f18782c;
 
     public mc1(b61 b61Var) {
-        this.b = b61Var;
+        this.f18781b = b61Var;
     }
 
-    public ni1 a() {
-        b();
-        return e(this.a.compareAndSet(false, true));
+    /* renamed from: a */
+    public ni1 m16094a() {
+        m16093b();
+        return m16091e(this.f18780a.compareAndSet(false, true));
     }
 
-    public void b() {
-        this.b.a();
+    /* renamed from: b */
+    public void m16093b() {
+        this.f18781b.m26483a();
     }
 
-    public final ni1 c() {
-        return this.b.d(d());
+    /* renamed from: c */
+    public final ni1 m16092c() {
+        return this.f18781b.m26480d(mo3082d());
     }
 
-    public abstract String d();
+    /* renamed from: d */
+    public abstract String mo3082d();
 
-    public final ni1 e(boolean z) {
+    /* renamed from: e */
+    public final ni1 m16091e(boolean z) {
         if (z) {
-            if (this.c == null) {
-                this.c = c();
+            if (this.f18782c == null) {
+                this.f18782c = m16092c();
             }
-            return this.c;
+            return this.f18782c;
         }
-        return c();
+        return m16092c();
     }
 
-    public void f(ni1 ni1Var) {
-        if (ni1Var == this.c) {
-            this.a.set(false);
+    /* renamed from: f */
+    public void m16090f(ni1 ni1Var) {
+        if (ni1Var == this.f18782c) {
+            this.f18780a.set(false);
         }
     }
 }

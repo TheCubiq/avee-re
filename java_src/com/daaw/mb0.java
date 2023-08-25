@@ -1,135 +1,178 @@
 package com.daaw;
 
 import android.net.Uri;
+import com.daaw.InterfaceC2200mp;
 import com.daaw.bp0;
 import com.daaw.lb0;
-import com.daaw.mp;
 import com.daaw.pb0;
 import com.daaw.vv0;
 import java.util.List;
 /* loaded from: classes.dex */
-public final class mb0 extends ua implements pb0.d {
-    public final pb0 A;
-    public final Object B;
-    public final gb0 u;
-    public final Uri v;
-    public final fb0 w;
-    public final wi x;
-    public final int y;
-    public final boolean z;
+public final class mb0 extends AbstractC3190ua implements pb0.InterfaceC2539d {
 
+    /* renamed from: A */
+    public final pb0 f18737A;
+
+    /* renamed from: B */
+    public final Object f18738B;
+
+    /* renamed from: u */
+    public final gb0 f18739u;
+
+    /* renamed from: v */
+    public final Uri f18740v;
+
+    /* renamed from: w */
+    public final fb0 f18741w;
+
+    /* renamed from: x */
+    public final InterfaceC3441wi f18742x;
+
+    /* renamed from: y */
+    public final int f18743y;
+
+    /* renamed from: z */
+    public final boolean f18744z;
+
+    /* renamed from: com.daaw.mb0$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final fb0 a;
-        public gb0 b;
-        public vv0.a<nb0> c;
-        public pb0 d;
-        public wi e;
-        public int f;
-        public boolean g;
-        public boolean h;
-        public Object i;
+    public static final class C2164b {
 
-        public b(fb0 fb0Var) {
-            this.a = (fb0) s6.e(fb0Var);
-            this.b = gb0.a;
-            this.f = 3;
-            this.e = new nq();
+        /* renamed from: a */
+        public final fb0 f18745a;
+
+        /* renamed from: b */
+        public gb0 f18746b;
+
+        /* renamed from: c */
+        public vv0.InterfaceC3379a<nb0> f18747c;
+
+        /* renamed from: d */
+        public pb0 f18748d;
+
+        /* renamed from: e */
+        public InterfaceC3441wi f18749e;
+
+        /* renamed from: f */
+        public int f18750f;
+
+        /* renamed from: g */
+        public boolean f18751g;
+
+        /* renamed from: h */
+        public boolean f18752h;
+
+        /* renamed from: i */
+        public Object f18753i;
+
+        public C2164b(fb0 fb0Var) {
+            this.f18745a = (fb0) C2914s6.m10686e(fb0Var);
+            this.f18746b = gb0.f10996a;
+            this.f18750f = 3;
+            this.f18749e = new C2358nq();
         }
 
-        public b(mp.a aVar) {
-            this(new dr(aVar));
+        public C2164b(InterfaceC2200mp.InterfaceC2201a interfaceC2201a) {
+            this(new C1128dr(interfaceC2201a));
         }
 
-        public mb0 a(Uri uri) {
-            this.h = true;
-            if (this.d == null) {
-                fb0 fb0Var = this.a;
-                int i = this.f;
-                vv0.a aVar = this.c;
-                if (aVar == null) {
-                    aVar = new ob0();
+        /* renamed from: a */
+        public mb0 m16117a(Uri uri) {
+            this.f18752h = true;
+            if (this.f18748d == null) {
+                fb0 fb0Var = this.f18745a;
+                int i = this.f18750f;
+                vv0.InterfaceC3379a interfaceC3379a = this.f18747c;
+                if (interfaceC3379a == null) {
+                    interfaceC3379a = new ob0();
                 }
-                this.d = new fr(fb0Var, i, aVar);
+                this.f18748d = new C1322fr(fb0Var, i, interfaceC3379a);
             }
-            return new mb0(uri, this.a, this.b, this.e, this.f, this.d, this.g, this.i);
+            return new mb0(uri, this.f18745a, this.f18746b, this.f18749e, this.f18750f, this.f18748d, this.f18751g, this.f18753i);
         }
 
-        public b b(vv0.a<nb0> aVar) {
-            s6.f(!this.h);
-            s6.g(this.d == null, "A playlist tracker has already been set.");
-            this.c = (vv0.a) s6.e(aVar);
+        /* renamed from: b */
+        public C2164b m16116b(vv0.InterfaceC3379a<nb0> interfaceC3379a) {
+            C2914s6.m10685f(!this.f18752h);
+            C2914s6.m10684g(this.f18748d == null, "A playlist tracker has already been set.");
+            this.f18747c = (vv0.InterfaceC3379a) C2914s6.m10686e(interfaceC3379a);
             return this;
         }
     }
 
     static {
-        vz.a("goog.exo.hls");
+        C3387vz.m6643a("goog.exo.hls");
     }
 
-    public mb0(Uri uri, fb0 fb0Var, gb0 gb0Var, wi wiVar, int i, pb0 pb0Var, boolean z, Object obj) {
-        this.v = uri;
-        this.w = fb0Var;
-        this.u = gb0Var;
-        this.x = wiVar;
-        this.y = i;
-        this.A = pb0Var;
-        this.z = z;
-        this.B = obj;
+    public mb0(Uri uri, fb0 fb0Var, gb0 gb0Var, InterfaceC3441wi interfaceC3441wi, int i, pb0 pb0Var, boolean z, Object obj) {
+        this.f18740v = uri;
+        this.f18741w = fb0Var;
+        this.f18739u = gb0Var;
+        this.f18742x = interfaceC3441wi;
+        this.f18743y = i;
+        this.f18737A = pb0Var;
+        this.f18744z = z;
+        this.f18738B = obj;
     }
 
     @Override // com.daaw.bp0
-    public void a(qo0 qo0Var) {
-        ((kb0) qo0Var).y();
+    /* renamed from: a */
+    public void mo16120a(qo0 qo0Var) {
+        ((kb0) qo0Var).m17837y();
     }
 
-    @Override // com.daaw.pb0.d
-    public void d(lb0 lb0Var) {
+    @Override // com.daaw.pb0.InterfaceC2539d
+    /* renamed from: d */
+    public void mo13493d(lb0 lb0Var) {
         od1 od1Var;
         long j;
-        long b2 = lb0Var.m ? dd.b(lb0Var.e) : -9223372036854775807L;
-        int i = lb0Var.c;
-        long j2 = (i == 2 || i == 1) ? b2 : -9223372036854775807L;
-        long j3 = lb0Var.d;
-        if (this.A.g()) {
-            long f = lb0Var.e - this.A.f();
-            long j4 = lb0Var.l ? f + lb0Var.p : -9223372036854775807L;
-            List<lb0.a> list = lb0Var.o;
+        long m24526b = lb0Var.f17195m ? C1075dd.m24526b(lb0Var.f17187e) : -9223372036854775807L;
+        int i = lb0Var.f17185c;
+        long j2 = (i == 2 || i == 1) ? m24526b : -9223372036854775807L;
+        long j3 = lb0Var.f17186d;
+        if (this.f18737A.mo13501g()) {
+            long mo13502f = lb0Var.f17187e - this.f18737A.mo13502f();
+            long j4 = lb0Var.f17194l ? mo13502f + lb0Var.f17198p : -9223372036854775807L;
+            List<lb0.C2025a> list = lb0Var.f17197o;
             if (j3 == -9223372036854775807L) {
-                j = list.isEmpty() ? 0L : list.get(Math.max(0, list.size() - 3)).t;
+                j = list.isEmpty() ? 0L : list.get(Math.max(0, list.size() - 3)).f17203t;
             } else {
                 j = j3;
             }
-            od1Var = new od1(j2, b2, j4, lb0Var.p, f, j, true, !lb0Var.l, this.B);
+            od1Var = new od1(j2, m24526b, j4, lb0Var.f17198p, mo13502f, j, true, !lb0Var.f17194l, this.f18738B);
         } else {
             long j5 = j3 == -9223372036854775807L ? 0L : j3;
-            long j6 = lb0Var.p;
-            od1Var = new od1(j2, b2, j6, j6, 0L, j5, true, false, this.B);
+            long j6 = lb0Var.f17198p;
+            od1Var = new od1(j2, m24526b, j6, j6, 0L, j5, true, false, this.f18738B);
         }
-        n(od1Var, new hb0(this.A.i(), lb0Var));
+        m8397n(od1Var, new hb0(this.f18737A.mo13499i(), lb0Var));
     }
 
     @Override // com.daaw.bp0
-    public void e() {
-        this.A.j();
+    /* renamed from: e */
+    public void mo16119e() {
+        this.f18737A.mo13498j();
     }
 
     @Override // com.daaw.bp0
-    public qo0 g(bp0.a aVar, l2 l2Var) {
-        s6.a(aVar.a == 0);
-        return new kb0(this.u, this.A, this.w, this.y, j(aVar), l2Var, this.x, this.z);
+    /* renamed from: g */
+    public qo0 mo16118g(bp0.C0880a c0880a, InterfaceC2006l2 interfaceC2006l2) {
+        C2914s6.m10690a(c0880a.f5022a == 0);
+        return new kb0(this.f18739u, this.f18737A, this.f18741w, this.f18743y, m8400j(c0880a), interfaceC2006l2, this.f18742x, this.f18744z);
     }
 
-    @Override // com.daaw.ua
-    public void m(rz rzVar, boolean z) {
-        this.A.b(this.v, j(null), this);
+    @Override // com.daaw.AbstractC3190ua
+    /* renamed from: m */
+    public void mo8398m(InterfaceC2898rz interfaceC2898rz, boolean z) {
+        this.f18737A.mo13506b(this.f18740v, m8400j(null), this);
     }
 
-    @Override // com.daaw.ua
-    public void p() {
-        pb0 pb0Var = this.A;
+    @Override // com.daaw.AbstractC3190ua
+    /* renamed from: p */
+    public void mo8396p() {
+        pb0 pb0Var = this.f18737A;
         if (pb0Var != null) {
-            pb0Var.a();
+            pb0Var.mo13507a();
         }
     }
 }

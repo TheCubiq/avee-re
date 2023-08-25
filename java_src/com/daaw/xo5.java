@@ -5,42 +5,52 @@ import com.google.android.gms.ads.internal.client.zze;
 import com.google.android.gms.ads.internal.util.zzg;
 /* loaded from: classes.dex */
 public final class xo5 implements fs4, oq4 {
-    public static final Object r = new Object();
-    public static int s;
-    public final zzg p;
-    public final hp5 q;
+
+    /* renamed from: r */
+    public static final Object f32856r = new Object();
+
+    /* renamed from: s */
+    public static int f32857s;
+
+    /* renamed from: p */
+    public final zzg f32858p;
+
+    /* renamed from: q */
+    public final hp5 f32859q;
 
     public xo5(hp5 hp5Var, zzg zzgVar) {
-        this.q = hp5Var;
-        this.p = zzgVar;
+        this.f32859q = hp5Var;
+        this.f32858p = zzgVar;
     }
 
-    public final void a(boolean z) {
+    /* renamed from: a */
+    public final void m4875a(boolean z) {
         int i;
         int intValue;
-        if (((Boolean) zzba.zzc().b(g93.E5)).booleanValue() && !this.p.zzP()) {
-            Object obj = r;
+        if (((Boolean) zzba.zzc().m23658b(g93.f10407E5)).booleanValue() && !this.f32858p.zzP()) {
+            Object obj = f32856r;
             synchronized (obj) {
-                i = s;
-                intValue = ((Integer) zzba.zzc().b(g93.F5)).intValue();
+                i = f32857s;
+                intValue = ((Integer) zzba.zzc().m23658b(g93.f10417F5)).intValue();
             }
             if (i >= intValue) {
                 return;
             }
-            this.q.e(z);
+            this.f32859q.m20542e(z);
             synchronized (obj) {
-                s++;
+                f32857s++;
             }
         }
     }
 
     @Override // com.daaw.oq4
-    public final void b(zze zzeVar) {
-        a(false);
+    /* renamed from: b */
+    public final void mo2194b(zze zzeVar) {
+        m4875a(false);
     }
 
     @Override // com.daaw.fs4
     public final void zzn() {
-        a(true);
+        m4875a(true);
     }
 }

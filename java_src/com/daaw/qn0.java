@@ -5,35 +5,42 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 /* loaded from: classes2.dex */
 public class qn0 {
-    public static final int[] a = {16842752, w01.theme};
-    public static final int[] b = {w01.materialThemeOverlay};
 
-    public static int a(Context context, AttributeSet attributeSet) {
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, a);
+    /* renamed from: a */
+    public static final int[] f24199a = {16842752, w01.theme};
+
+    /* renamed from: b */
+    public static final int[] f24200b = {w01.materialThemeOverlay};
+
+    /* renamed from: a */
+    public static int m12326a(Context context, AttributeSet attributeSet) {
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f24199a);
         int resourceId = obtainStyledAttributes.getResourceId(0, 0);
         int resourceId2 = obtainStyledAttributes.getResourceId(1, 0);
         obtainStyledAttributes.recycle();
         return resourceId != 0 ? resourceId : resourceId2;
     }
 
-    public static int b(Context context, AttributeSet attributeSet, int i, int i2) {
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, b, i, i2);
+    /* renamed from: b */
+    public static int m12325b(Context context, AttributeSet attributeSet, int i, int i2) {
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f24200b, i, i2);
         int resourceId = obtainStyledAttributes.getResourceId(0, 0);
         obtainStyledAttributes.recycle();
         return resourceId;
     }
 
-    public static Context c(Context context, AttributeSet attributeSet, int i, int i2) {
-        int b2 = b(context, attributeSet, i, i2);
-        boolean z = (context instanceof bl) && ((bl) context).c() == b2;
-        if (b2 == 0 || z) {
+    /* renamed from: c */
+    public static Context m12324c(Context context, AttributeSet attributeSet, int i, int i2) {
+        int m12325b = m12325b(context, attributeSet, i, i2);
+        boolean z = (context instanceof C0855bl) && ((C0855bl) context).m26077c() == m12325b;
+        if (m12325b == 0 || z) {
             return context;
         }
-        bl blVar = new bl(context, b2);
-        int a2 = a(context, attributeSet);
-        if (a2 != 0) {
-            blVar.getTheme().applyStyle(a2, true);
+        C0855bl c0855bl = new C0855bl(context, m12325b);
+        int m12326a = m12326a(context, attributeSet);
+        if (m12326a != 0) {
+            c0855bl.getTheme().applyStyle(m12326a, true);
         }
-        return blVar;
+        return c0855bl;
     }
 }

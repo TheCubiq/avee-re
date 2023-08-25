@@ -1,43 +1,50 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class ip1<T> extends h91<T> {
-    public nl s;
-    public Object t;
 
-    @Override // com.daaw.h91, com.daaw.f
-    public void i0(Object obj) {
-        nl nlVar = this.s;
-        if (nlVar != null) {
-            bl1.a(nlVar, this.t);
-            this.s = null;
-            this.t = null;
+    /* renamed from: s */
+    public InterfaceC2307nl f13890s;
+
+    /* renamed from: t */
+    public Object f13891t;
+
+    @Override // com.daaw.h91, com.daaw.AbstractC1239f
+    /* renamed from: i0 */
+    public void mo19545i0(Object obj) {
+        InterfaceC2307nl interfaceC2307nl = this.f13890s;
+        if (interfaceC2307nl != null) {
+            bl1.m26073a(interfaceC2307nl, this.f13891t);
+            this.f13890s = null;
+            this.f13891t = null;
         }
-        Object a = rh.a(obj, this.r);
-        gl<T> glVar = this.r;
-        nl context = glVar.getContext();
-        Object c = bl1.c(context, null);
-        ip1<?> c2 = c != bl1.a ? ol.c(glVar, context, c) : null;
+        Object m11315a = C2862rh.m11315a(obj, this.f12204r);
+        InterfaceC1438gl<T> interfaceC1438gl = this.f12204r;
+        InterfaceC2307nl context = interfaceC1438gl.getContext();
+        Object m26071c = bl1.m26071c(context, null);
+        ip1<?> m14202c = m26071c != bl1.f4887a ? C2447ol.m14202c(interfaceC1438gl, context, m26071c) : null;
         try {
-            this.r.b(a);
-            lp1 lp1Var = lp1.a;
+            this.f12204r.mo7267b(m11315a);
+            lp1 lp1Var = lp1.f17593a;
         } finally {
-            if (c2 == null || c2.l0()) {
-                bl1.a(context, c);
+            if (m14202c == null || m14202c.m19544l0()) {
+                bl1.m26073a(context, m26071c);
             }
         }
     }
 
-    public final boolean l0() {
-        if (this.s == null) {
+    /* renamed from: l0 */
+    public final boolean m19544l0() {
+        if (this.f13890s == null) {
             return false;
         }
-        this.s = null;
-        this.t = null;
+        this.f13890s = null;
+        this.f13891t = null;
         return true;
     }
 
-    public final void m0(nl nlVar, Object obj) {
-        this.s = nlVar;
-        this.t = obj;
+    /* renamed from: m0 */
+    public final void m19543m0(InterfaceC2307nl interfaceC2307nl, Object obj) {
+        this.f13890s = interfaceC2307nl;
+        this.f13891t = obj;
     }
 }

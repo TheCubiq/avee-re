@@ -1,20 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class uq6 {
-    public final wq6 a;
-    public final vq6 b;
+
+    /* renamed from: a */
+    public final wq6 f29453a;
+
+    /* renamed from: b */
+    public final vq6 f29454b;
 
     public uq6() {
         wq6 wq6Var = new wq6();
-        this.a = wq6Var;
-        this.b = new vq6(wq6Var);
+        this.f29453a = wq6Var;
+        this.f29454b = new vq6(wq6Var);
     }
 
-    public final tq6 a() {
-        return this.b;
+    /* renamed from: a */
+    public final tq6 m7802a() {
+        return this.f29454b;
     }
 
-    public final tq6 b() {
-        return this.a;
+    /* renamed from: b */
+    public final tq6 m7801b() {
+        return this.f29453a;
     }
 }

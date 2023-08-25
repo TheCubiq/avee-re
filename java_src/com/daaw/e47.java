@@ -20,6 +20,6 @@ public final class e47 extends OutputStream {
     @Override // java.io.OutputStream
     public final void write(byte[] bArr, int i, int i2) {
         Objects.requireNonNull(bArr);
-        sy6.g(i, i2 + i, bArr.length);
+        sy6.m9702g(i, i2 + i, bArr.length);
     }
 }

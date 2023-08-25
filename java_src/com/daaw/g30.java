@@ -3,26 +3,35 @@ package com.daaw;
 import android.app.Notification;
 /* loaded from: classes.dex */
 public final class g30 {
-    public final int a;
-    public final int b;
-    public final Notification c;
+
+    /* renamed from: a */
+    public final int f10223a;
+
+    /* renamed from: b */
+    public final int f10224b;
+
+    /* renamed from: c */
+    public final Notification f10225c;
 
     public g30(int i, Notification notification, int i2) {
-        this.a = i;
-        this.c = notification;
-        this.b = i2;
+        this.f10223a = i;
+        this.f10225c = notification;
+        this.f10224b = i2;
     }
 
-    public int a() {
-        return this.b;
+    /* renamed from: a */
+    public int m22055a() {
+        return this.f10224b;
     }
 
-    public Notification b() {
-        return this.c;
+    /* renamed from: b */
+    public Notification m22054b() {
+        return this.f10225c;
     }
 
-    public int c() {
-        return this.a;
+    /* renamed from: c */
+    public int m22053c() {
+        return this.f10223a;
     }
 
     public boolean equals(Object obj) {
@@ -33,17 +42,17 @@ public final class g30 {
             return false;
         }
         g30 g30Var = (g30) obj;
-        if (this.a == g30Var.a && this.b == g30Var.b) {
-            return this.c.equals(g30Var.c);
+        if (this.f10223a == g30Var.f10223a && this.f10224b == g30Var.f10224b) {
+            return this.f10225c.equals(g30Var.f10225c);
         }
         return false;
     }
 
     public int hashCode() {
-        return (((this.a * 31) + this.b) * 31) + this.c.hashCode();
+        return (((this.f10223a * 31) + this.f10224b) * 31) + this.f10225c.hashCode();
     }
 
     public String toString() {
-        return "ForegroundInfo{mNotificationId=" + this.a + ", mForegroundServiceType=" + this.b + ", mNotification=" + this.c + '}';
+        return "ForegroundInfo{mNotificationId=" + this.f10223a + ", mForegroundServiceType=" + this.f10224b + ", mNotification=" + this.f10225c + '}';
     }
 }

@@ -20,7 +20,8 @@ public abstract class zzdp extends cp2 implements zzdq {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         boolean zzq;
         float zzg;
         zzdt zzdrVar;
@@ -34,15 +35,15 @@ public abstract class zzdp extends cp2 implements zzdq {
                 parcel2.writeNoException();
                 return true;
             case 3:
-                boolean h = dp2.h(parcel);
-                dp2.c(parcel);
-                zzj(h);
+                boolean m24100h = dp2.m24100h(parcel);
+                dp2.m24105c(parcel);
+                zzj(m24100h);
                 parcel2.writeNoException();
                 return true;
             case 4:
                 zzq = zzq();
                 parcel2.writeNoException();
-                dp2.d(parcel2, zzq);
+                dp2.m24104d(parcel2, zzq);
                 return true;
             case 5:
                 int zzh = zzh();
@@ -67,7 +68,7 @@ public abstract class zzdp extends cp2 implements zzdq {
                     IInterface queryLocalInterface = readStrongBinder.queryLocalInterface("com.google.android.gms.ads.internal.client.IVideoLifecycleCallbacks");
                     zzdrVar = queryLocalInterface instanceof zzdt ? (zzdt) queryLocalInterface : new zzdr(readStrongBinder);
                 }
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 zzm(zzdrVar);
                 parcel2.writeNoException();
                 return true;
@@ -79,17 +80,17 @@ public abstract class zzdp extends cp2 implements zzdq {
             case 10:
                 zzq = zzp();
                 parcel2.writeNoException();
-                dp2.d(parcel2, zzq);
+                dp2.m24104d(parcel2, zzq);
                 return true;
             case 11:
                 zzdt zzi = zzi();
                 parcel2.writeNoException();
-                dp2.g(parcel2, zzi);
+                dp2.m24101g(parcel2, zzi);
                 return true;
             case 12:
                 zzq = zzo();
                 parcel2.writeNoException();
-                dp2.d(parcel2, zzq);
+                dp2.m24104d(parcel2, zzq);
                 return true;
             case 13:
                 zzn();

@@ -3,72 +3,115 @@ package com.daaw;
 import android.content.Context;
 import android.os.Handler;
 import android.os.SystemClock;
+import com.google.android.gms.ads.RequestConfiguration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class qw8 implements mw8, qz6 {
-    public static final y17 C = y17.y(4800000L, 3100000L, 2100000L, 1500000L, 800000L);
-    public static final y17 D = y17.y(1500000L, 1000000L, 730000L, 440000L, 170000L);
-    public static final y17 E = y17.y(2200000L, 1400000L, 1100000L, 910000L, 620000L);
-    public static final y17 F = y17.y(3000000L, 1900000L, 1400000L, 1000000L, 660000L);
-    public static final y17 G = y17.y(6000000L, 4100000L, 3200000L, 1800000L, 1000000L);
-    public static final y17 H = y17.y(2800000L, 2400000L, 1600000L, 1100000L, 950000L);
-    public static qw8 I;
-    public long A;
-    public long B;
-    public final b27 p;
-    public final xp4 s;
-    public int u;
-    public long v;
-    public long w;
-    public int x;
-    public long y;
-    public long z;
-    public final kw8 q = new kw8();
-    public final mx8 r = new mx8(2000);
-    public final boolean t = true;
+
+    /* renamed from: C */
+    public static final y17 f24549C = y17.m4256y(4800000L, 3100000L, 2100000L, 1500000L, 800000L);
+
+    /* renamed from: D */
+    public static final y17 f24550D = y17.m4256y(1500000L, 1000000L, 730000L, 440000L, 170000L);
+
+    /* renamed from: E */
+    public static final y17 f24551E = y17.m4256y(2200000L, 1400000L, 1100000L, 910000L, 620000L);
+
+    /* renamed from: F */
+    public static final y17 f24552F = y17.m4256y(3000000L, 1900000L, 1400000L, 1000000L, 660000L);
+
+    /* renamed from: G */
+    public static final y17 f24553G = y17.m4256y(6000000L, 4100000L, 3200000L, 1800000L, 1000000L);
+
+    /* renamed from: H */
+    public static final y17 f24554H = y17.m4256y(2800000L, 2400000L, 1600000L, 1100000L, 950000L);
+
+    /* renamed from: I */
+    public static qw8 f24555I;
+
+    /* renamed from: A */
+    public long f24556A;
+
+    /* renamed from: B */
+    public long f24557B;
+
+    /* renamed from: p */
+    public final b27 f24558p;
+
+    /* renamed from: s */
+    public final xp4 f24561s;
+
+    /* renamed from: u */
+    public int f24563u;
+
+    /* renamed from: v */
+    public long f24564v;
+
+    /* renamed from: w */
+    public long f24565w;
+
+    /* renamed from: x */
+    public int f24566x;
+
+    /* renamed from: y */
+    public long f24567y;
+
+    /* renamed from: z */
+    public long f24568z;
+
+    /* renamed from: q */
+    public final kw8 f24559q = new kw8();
+
+    /* renamed from: r */
+    public final mx8 f24560r = new mx8(2000);
+
+    /* renamed from: t */
+    public final boolean f24562t = true;
 
     public /* synthetic */ qw8(Context context, Map map, int i, xp4 xp4Var, boolean z, pw8 pw8Var) {
-        this.p = b27.c(map);
-        this.s = xp4Var;
+        this.f24558p = b27.m26519c(map);
+        this.f24561s = xp4Var;
         if (context == null) {
-            this.x = 0;
-            this.A = g(0);
+            this.f24566x = 0;
+            this.f24556A = m12006g(0);
             return;
         }
-        bi5 b = bi5.b(context);
-        int a = b.a();
-        this.x = a;
-        this.A = g(a);
-        b.d(new ow8(this));
+        bi5 m26143b = bi5.m26143b(context);
+        int m26144a = m26143b.m26144a();
+        this.f24566x = m26144a;
+        this.f24556A = m12006g(m26144a);
+        m26143b.m26141d(new ow8(this));
     }
 
-    public static synchronized qw8 d(Context context) {
+    /* renamed from: d */
+    public static synchronized qw8 m12008d(Context context) {
         qw8 qw8Var;
         synchronized (qw8.class) {
-            if (I == null) {
+            if (f24555I == null) {
                 Context applicationContext = context == null ? null : context.getApplicationContext();
-                int[] k = k(it5.l(context));
+                int[] m12002k = m12002k(it5.m19384l(context));
                 HashMap hashMap = new HashMap(8);
                 hashMap.put(0, 1000000L);
-                y17 y17Var = C;
-                hashMap.put(2, (Long) y17Var.get(k[0]));
-                hashMap.put(3, (Long) D.get(k[1]));
-                hashMap.put(4, (Long) E.get(k[2]));
-                hashMap.put(5, (Long) F.get(k[3]));
-                hashMap.put(10, (Long) G.get(k[4]));
-                hashMap.put(9, (Long) H.get(k[5]));
-                hashMap.put(7, (Long) y17Var.get(k[0]));
-                I = new qw8(applicationContext, hashMap, 2000, xp4.a, true, null);
+                y17 y17Var = f24549C;
+                hashMap.put(2, (Long) y17Var.get(m12002k[0]));
+                hashMap.put(3, (Long) f24550D.get(m12002k[1]));
+                hashMap.put(4, (Long) f24551E.get(m12002k[2]));
+                hashMap.put(5, (Long) f24552F.get(m12002k[3]));
+                hashMap.put(10, (Long) f24553G.get(m12002k[4]));
+                hashMap.put(9, (Long) f24554H.get(m12002k[5]));
+                hashMap.put(7, (Long) y17Var.get(m12002k[0]));
+                f24555I = new qw8(applicationContext, hashMap, 2000, xp4.f32865a, true, null);
             }
-            qw8Var = I;
+            qw8Var = f24555I;
         }
         return qw8Var;
     }
 
-    public static boolean j(pa6 pa6Var, boolean z) {
-        return z && !pa6Var.b(8);
+    /* renamed from: j */
+    public static boolean m12003j(pa6 pa6Var, boolean z) {
+        return z && !pa6Var.m13534b(8);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:100:0x0136, code lost:
@@ -587,67 +630,869 @@ public final class qw8 implements mw8, qz6 {
     /* JADX WARN: Code restructure failed: missing block: B:97:0x012c, code lost:
         if (r3.equals("WF") != false) goto L111;
      */
+    /* renamed from: k */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static int[] k(java.lang.String r3) {
-        /*
-            Method dump skipped, instructions count: 6360
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.qw8.k(java.lang.String):int[]");
-    }
-
-    @Override // com.daaw.qz6
-    public final synchronized void D(p46 p46Var, pa6 pa6Var, boolean z, int i) {
-        if (j(pa6Var, z)) {
-            this.w += i;
-        }
-    }
-
-    @Override // com.daaw.qz6
-    public final synchronized void a(p46 p46Var, pa6 pa6Var, boolean z) {
-        if (j(pa6Var, z)) {
-            uo4.f(this.u > 0);
-            long elapsedRealtime = SystemClock.elapsedRealtime();
-            int i = (int) (elapsedRealtime - this.v);
-            this.y += i;
-            long j = this.z;
-            long j2 = this.w;
-            this.z = j + j2;
-            if (i > 0) {
-                this.r.b((int) Math.sqrt(j2), (((float) j2) * 8000.0f) / i);
-                if (this.y >= 2000 || this.z >= 524288) {
-                    this.A = this.r.a(0.5f);
+    public static int[] m12002k(String str) {
+        int hashCode = str.hashCode();
+        if (hashCode != 2091) {
+            if (hashCode != 2092) {
+                if (hashCode != 2102) {
+                    if (hashCode != 2103) {
+                        if (hashCode != 2111) {
+                            if (hashCode != 2112) {
+                                if (hashCode != 2129) {
+                                    if (hashCode != 2130) {
+                                        if (hashCode != 2135) {
+                                            if (hashCode != 2136) {
+                                                switch (hashCode) {
+                                                    case 2083:
+                                                        break;
+                                                    case 2084:
+                                                        if (str.equals("AE")) {
+                                                            return new int[]{1, 4, 4, 4, 4, 0};
+                                                        }
+                                                        break;
+                                                    case 2085:
+                                                        break;
+                                                    case 2086:
+                                                        if (str.equals("AG")) {
+                                                            return new int[]{2, 4, 1, 2, 2, 2};
+                                                        }
+                                                        break;
+                                                    default:
+                                                        switch (hashCode) {
+                                                            case 2088:
+                                                                if (str.equals("AI")) {
+                                                                    return new int[]{0, 2, 0, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2094:
+                                                                if (str.equals("AO")) {
+                                                                    return new int[]{4, 4, 3, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2105:
+                                                                break;
+                                                            case 2114:
+                                                                if (str.equals("BD")) {
+                                                                    return new int[]{2, 1, 3, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2115:
+                                                                if (str.equals("BE")) {
+                                                                    return new int[]{0, 1, 4, 4, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2116:
+                                                                if (str.equals("BF")) {
+                                                                    return new int[]{4, 3, 4, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2117:
+                                                                break;
+                                                            case 2118:
+                                                                if (str.equals("BH")) {
+                                                                    return new int[]{1, 2, 1, 3, 4, 2};
+                                                                }
+                                                                break;
+                                                            case 2119:
+                                                                break;
+                                                            case 2120:
+                                                                if (str.equals("BJ")) {
+                                                                    return new int[]{4, 4, 3, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2127:
+                                                                break;
+                                                            case 2133:
+                                                                if (str.equals("BW")) {
+                                                                    return new int[]{3, 2, 1, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2142:
+                                                                if (str.equals("CA")) {
+                                                                    return new int[]{0, 2, 2, 2, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2145:
+                                                                if (str.equals("CD")) {
+                                                                    return new int[]{4, 2, 3, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2152:
+                                                                break;
+                                                            case 2153:
+                                                                break;
+                                                            case 2154:
+                                                                if (str.equals("CM")) {
+                                                                    return new int[]{3, 3, 3, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2155:
+                                                                if (str.equals("CN")) {
+                                                                    return new int[]{2, 0, 1, 1, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2156:
+                                                                if (str.equals("CO")) {
+                                                                    return new int[]{2, 3, 4, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2159:
+                                                                if (str.equals("CR")) {
+                                                                    return new int[]{2, 3, 4, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2162:
+                                                                break;
+                                                            case 2163:
+                                                                if (str.equals("CV")) {
+                                                                    return new int[]{2, 1, 0, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2164:
+                                                                break;
+                                                            case 2165:
+                                                                break;
+                                                            case 2166:
+                                                                break;
+                                                            case 2167:
+                                                                break;
+                                                            case 2177:
+                                                                if (str.equals("DE")) {
+                                                                    return new int[]{0, 1, 2, 2, 2, 3};
+                                                                }
+                                                                break;
+                                                            case 2182:
+                                                                break;
+                                                            case 2183:
+                                                                if (str.equals("DK")) {
+                                                                    return new int[]{0, 0, 3, 2, 0, 2};
+                                                                }
+                                                                break;
+                                                            case 2185:
+                                                                break;
+                                                            case 2187:
+                                                                if (str.equals("DO")) {
+                                                                    return new int[]{3, 4, 4, 4, 4, 2};
+                                                                }
+                                                                break;
+                                                            case 2198:
+                                                                break;
+                                                            case 2206:
+                                                                if (str.equals("EC")) {
+                                                                    return new int[]{2, 3, 2, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2208:
+                                                                break;
+                                                            case 2210:
+                                                                break;
+                                                            case 2221:
+                                                                break;
+                                                            case 2222:
+                                                                break;
+                                                            case 2223:
+                                                                if (str.equals("ET")) {
+                                                                    return new int[]{4, 3, 3, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2243:
+                                                                if (str.equals("FI")) {
+                                                                    return new int[]{0, 0, 0, 3, 0, 2};
+                                                                }
+                                                                break;
+                                                            case 2244:
+                                                                if (str.equals("FJ")) {
+                                                                    return new int[]{3, 1, 2, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2245:
+                                                                break;
+                                                            case 2247:
+                                                                if (str.equals("FM")) {
+                                                                    return new int[]{4, 2, 4, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2249:
+                                                                break;
+                                                            case 2252:
+                                                                if (str.equals("FR")) {
+                                                                    return new int[]{1, 2, 3, 1, 0, 2};
+                                                                }
+                                                                break;
+                                                            case 2266:
+                                                                break;
+                                                            case 2267:
+                                                                if (str.equals("GB")) {
+                                                                    return new int[]{0, 0, 1, 1, 1, 1};
+                                                                }
+                                                                break;
+                                                            case 2269:
+                                                                break;
+                                                            case 2270:
+                                                                if (str.equals("GE")) {
+                                                                    return new int[]{1, 1, 1, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2271:
+                                                                break;
+                                                            case 2272:
+                                                                break;
+                                                            case 2273:
+                                                                break;
+                                                            case 2274:
+                                                                break;
+                                                            case 2277:
+                                                                break;
+                                                            case 2278:
+                                                                break;
+                                                            case 2279:
+                                                                if (str.equals("GN")) {
+                                                                    return new int[]{4, 3, 4, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2281:
+                                                                break;
+                                                            case 2282:
+                                                                if (str.equals("GQ")) {
+                                                                    return new int[]{4, 2, 1, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2283:
+                                                                break;
+                                                            case 2285:
+                                                                if (str.equals("GT")) {
+                                                                    return new int[]{2, 3, 2, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2286:
+                                                                break;
+                                                            case 2288:
+                                                                break;
+                                                            case 2290:
+                                                                if (str.equals("GY")) {
+                                                                    return new int[]{3, 2, 2, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2307:
+                                                                if (str.equals("HK")) {
+                                                                    return new int[]{0, 1, 2, 3, 2, 0};
+                                                                }
+                                                                break;
+                                                            case 2314:
+                                                                break;
+                                                            case 2316:
+                                                                break;
+                                                            case 2317:
+                                                                if (str.equals("HU")) {
+                                                                    return new int[]{0, 0, 0, 1, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2331:
+                                                                if (str.equals("ID")) {
+                                                                    return new int[]{3, 1, 2, 2, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2332:
+                                                                break;
+                                                            case 2339:
+                                                                break;
+                                                            case 2340:
+                                                                break;
+                                                            case 2341:
+                                                                if (str.equals("IN")) {
+                                                                    return new int[]{1, 1, 3, 2, 3, 3};
+                                                                }
+                                                                break;
+                                                            case 2342:
+                                                                break;
+                                                            case 2344:
+                                                                if (str.equals("IQ")) {
+                                                                    return new int[]{3, 2, 2, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2345:
+                                                                if (str.equals("IR")) {
+                                                                    return new int[]{3, 0, 1, 1, 4, 1};
+                                                                }
+                                                                break;
+                                                            case 2346:
+                                                                break;
+                                                            case 2347:
+                                                                if (str.equals("IT")) {
+                                                                    return new int[]{0, 0, 0, 1, 1, 2};
+                                                                }
+                                                                break;
+                                                            case 2363:
+                                                                break;
+                                                            case 2371:
+                                                                if (str.equals("JM")) {
+                                                                    return new int[]{2, 4, 3, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2373:
+                                                                if (str.equals("JO")) {
+                                                                    return new int[]{2, 1, 1, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2374:
+                                                                if (str.equals("JP")) {
+                                                                    return new int[]{0, 1, 1, 2, 2, 4};
+                                                                }
+                                                                break;
+                                                            case 2394:
+                                                                break;
+                                                            case 2396:
+                                                                break;
+                                                            case 2397:
+                                                                if (str.equals("KH")) {
+                                                                    return new int[]{2, 1, 4, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2398:
+                                                                break;
+                                                            case 2402:
+                                                                break;
+                                                            case 2403:
+                                                                break;
+                                                            case 2405:
+                                                                break;
+                                                            case 2407:
+                                                                if (str.equals("KR")) {
+                                                                    return new int[]{0, 1, 1, 3, 4, 4};
+                                                                }
+                                                                break;
+                                                            case 2412:
+                                                                break;
+                                                            case 2414:
+                                                                break;
+                                                            case 2415:
+                                                                if (str.equals("KZ")) {
+                                                                    return new int[]{2, 1, 2, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2421:
+                                                                if (str.equals("LA")) {
+                                                                    return new int[]{1, 2, 1, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2422:
+                                                                if (str.equals("LB")) {
+                                                                    return new int[]{3, 3, 2, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2423:
+                                                                break;
+                                                            case 2429:
+                                                                break;
+                                                            case 2431:
+                                                                if (str.equals("LK")) {
+                                                                    return new int[]{3, 1, 3, 3, 4, 2};
+                                                                }
+                                                                break;
+                                                            case 2438:
+                                                                break;
+                                                            case 2439:
+                                                                if (str.equals("LS")) {
+                                                                    return new int[]{3, 3, 2, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2440:
+                                                                if (str.equals("LT")) {
+                                                                    return new int[]{0, 0, 0, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2441:
+                                                                if (str.equals("LU")) {
+                                                                    return new int[]{1, 0, 3, 2, 1, 4};
+                                                                }
+                                                                break;
+                                                            case 2442:
+                                                                break;
+                                                            case 2445:
+                                                                break;
+                                                            case 2452:
+                                                                if (str.equals(RequestConfiguration.MAX_AD_CONTENT_RATING_MA)) {
+                                                                    return new int[]{3, 3, 1, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2454:
+                                                                if (str.equals("MC")) {
+                                                                    return new int[]{0, 2, 2, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2455:
+                                                                break;
+                                                            case 2456:
+                                                                if (str.equals("ME")) {
+                                                                    return new int[]{2, 0, 0, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2457:
+                                                                break;
+                                                            case 2458:
+                                                                break;
+                                                            case 2459:
+                                                                break;
+                                                            case 2462:
+                                                                if (str.equals("MK")) {
+                                                                    return new int[]{1, 0, 0, 1, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2463:
+                                                                break;
+                                                            case 2464:
+                                                                if (str.equals("MM")) {
+                                                                    return new int[]{2, 4, 2, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2465:
+                                                                if (str.equals("MN")) {
+                                                                    return new int[]{2, 0, 1, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2466:
+                                                                break;
+                                                            case 2467:
+                                                                break;
+                                                            case 2468:
+                                                                break;
+                                                            case 2469:
+                                                                break;
+                                                            case 2470:
+                                                                break;
+                                                            case 2471:
+                                                                break;
+                                                            case 2472:
+                                                                if (str.equals("MU")) {
+                                                                    return new int[]{3, 1, 1, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2473:
+                                                                if (str.equals("MV")) {
+                                                                    return new int[]{3, 4, 1, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2474:
+                                                                if (str.equals("MW")) {
+                                                                    return new int[]{4, 2, 3, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2475:
+                                                                if (str.equals("MX")) {
+                                                                    return new int[]{2, 4, 3, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2476:
+                                                                if (str.equals("MY")) {
+                                                                    return new int[]{1, 0, 3, 1, 3, 2};
+                                                                }
+                                                                break;
+                                                            case 2477:
+                                                                if (str.equals("MZ")) {
+                                                                    return new int[]{3, 1, 2, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2483:
+                                                                break;
+                                                            case 2485:
+                                                                if (str.equals("NC")) {
+                                                                    return new int[]{3, 3, 4, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2487:
+                                                                break;
+                                                            case 2489:
+                                                                if (str.equals("NG")) {
+                                                                    return new int[]{3, 4, 2, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2491:
+                                                                break;
+                                                            case 2494:
+                                                                if (str.equals("NL")) {
+                                                                    return new int[]{0, 2, 2, 3, 0, 3};
+                                                                }
+                                                                break;
+                                                            case 2497:
+                                                                break;
+                                                            case 2498:
+                                                                if (str.equals("NP")) {
+                                                                    return new int[]{2, 2, 4, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2500:
+                                                                break;
+                                                            case 2503:
+                                                                break;
+                                                            case 2508:
+                                                                break;
+                                                            case 2526:
+                                                                if (str.equals("OM")) {
+                                                                    return new int[]{2, 3, 1, 3, 4, 2};
+                                                                }
+                                                                break;
+                                                            case 2545:
+                                                                break;
+                                                            case 2549:
+                                                                break;
+                                                            case 2550:
+                                                                break;
+                                                            case 2551:
+                                                                break;
+                                                            case 2552:
+                                                                if (str.equals("PH")) {
+                                                                    return new int[]{2, 1, 3, 3, 3, 0};
+                                                                }
+                                                                break;
+                                                            case 2555:
+                                                                break;
+                                                            case 2556:
+                                                                break;
+                                                            case 2557:
+                                                                break;
+                                                            case 2562:
+                                                                if (str.equals("PR")) {
+                                                                    return new int[]{2, 0, 2, 1, 2, 1};
+                                                                }
+                                                                break;
+                                                            case 2563:
+                                                                if (str.equals("PS")) {
+                                                                    return new int[]{3, 4, 1, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2564:
+                                                                break;
+                                                            case 2567:
+                                                                if (str.equals("PW")) {
+                                                                    return new int[]{2, 2, 4, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2576:
+                                                                if (str.equals("QA")) {
+                                                                    return new int[]{2, 4, 4, 4, 4, 2};
+                                                                }
+                                                                break;
+                                                            case 2611:
+                                                                break;
+                                                            case 2621:
+                                                                if (str.equals("RO")) {
+                                                                    return new int[]{0, 0, 1, 2, 1, 2};
+                                                                }
+                                                                break;
+                                                            case 2625:
+                                                                break;
+                                                            case 2627:
+                                                                if (str.equals("RU")) {
+                                                                    return new int[]{1, 0, 0, 0, 4, 3};
+                                                                }
+                                                                break;
+                                                            case 2629:
+                                                                if (str.equals("RW")) {
+                                                                    return new int[]{3, 4, 2, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2638:
+                                                                if (str.equals("SA")) {
+                                                                    return new int[]{3, 1, 1, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2639:
+                                                                if (str.equals("SB")) {
+                                                                    return new int[]{4, 2, 4, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2640:
+                                                                break;
+                                                            case 2641:
+                                                                break;
+                                                            case 2642:
+                                                                break;
+                                                            case 2644:
+                                                                if (str.equals("SG")) {
+                                                                    return new int[]{1, 1, 2, 2, 2, 1};
+                                                                }
+                                                                break;
+                                                            case 2645:
+                                                                break;
+                                                            case 2646:
+                                                                break;
+                                                            case 2648:
+                                                                break;
+                                                            case 2649:
+                                                                break;
+                                                            case 2650:
+                                                                break;
+                                                            case 2651:
+                                                                if (str.equals("SN")) {
+                                                                    return new int[]{4, 4, 4, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2652:
+                                                                break;
+                                                            case 2655:
+                                                                if (str.equals("SR")) {
+                                                                    return new int[]{2, 4, 3, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2656:
+                                                                if (str.equals("SS")) {
+                                                                    return new int[]{4, 3, 2, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2657:
+                                                                if (str.equals("ST")) {
+                                                                    return new int[]{2, 2, 1, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2659:
+                                                                break;
+                                                            case 2661:
+                                                                break;
+                                                            case 2662:
+                                                                break;
+                                                            case 2663:
+                                                                if (str.equals("SZ")) {
+                                                                    return new int[]{3, 3, 3, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2671:
+                                                                break;
+                                                            case 2672:
+                                                                break;
+                                                            case 2675:
+                                                                break;
+                                                            case 2676:
+                                                                if (str.equals("TH")) {
+                                                                    return new int[]{0, 2, 2, 3, 3, 4};
+                                                                }
+                                                                break;
+                                                            case 2678:
+                                                                break;
+                                                            case 2679:
+                                                                if (str.equals("TK")) {
+                                                                    return new int[]{2, 2, 2, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2680:
+                                                                break;
+                                                            case 2681:
+                                                                break;
+                                                            case 2682:
+                                                                break;
+                                                            case 2683:
+                                                                break;
+                                                            case 2686:
+                                                                if (str.equals("TR")) {
+                                                                    return new int[]{1, 1, 0, 0, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2688:
+                                                                if (str.equals("TT")) {
+                                                                    return new int[]{1, 4, 1, 3, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2690:
+                                                                break;
+                                                            case 2691:
+                                                                break;
+                                                            case 2694:
+                                                                if (str.equals("TZ")) {
+                                                                    return new int[]{3, 4, 3, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2700:
+                                                                break;
+                                                            case 2706:
+                                                                break;
+                                                            case 2718:
+                                                                if (str.equals("US")) {
+                                                                    return new int[]{1, 0, 2, 2, 3, 1};
+                                                                }
+                                                                break;
+                                                            case 2724:
+                                                                break;
+                                                            case 2725:
+                                                                if (str.equals("UZ")) {
+                                                                    return new int[]{2, 2, 3, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2731:
+                                                                break;
+                                                            case 2733:
+                                                                break;
+                                                            case 2735:
+                                                                break;
+                                                            case 2737:
+                                                                if (str.equals("VG")) {
+                                                                    return new int[]{2, 2, 1, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2739:
+                                                                break;
+                                                            case 2744:
+                                                                if (str.equals("VN")) {
+                                                                    return new int[]{0, 3, 3, 4, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2751:
+                                                                break;
+                                                            case 2767:
+                                                                break;
+                                                            case 2780:
+                                                                if (str.equals("WS")) {
+                                                                    return new int[]{3, 1, 3, 1, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2803:
+                                                                break;
+                                                            case 2828:
+                                                                break;
+                                                            case 2843:
+                                                                break;
+                                                            case 2855:
+                                                                if (str.equals("ZA")) {
+                                                                    return new int[]{3, 2, 2, 1, 1, 2};
+                                                                }
+                                                                break;
+                                                            case 2867:
+                                                                if (str.equals("ZM")) {
+                                                                    return new int[]{3, 3, 4, 2, 2, 2};
+                                                                }
+                                                                break;
+                                                            case 2877:
+                                                                break;
+                                                            default:
+                                                                switch (hashCode) {
+                                                                    case 2096:
+                                                                        break;
+                                                                    case 2097:
+                                                                        break;
+                                                                    case 2098:
+                                                                        if (str.equals("AS")) {
+                                                                            return new int[]{2, 2, 3, 3, 2, 2};
+                                                                        }
+                                                                        break;
+                                                                    case 2099:
+                                                                        if (str.equals("AT")) {
+                                                                            return new int[]{1, 0, 1, 1, 0, 0};
+                                                                        }
+                                                                        break;
+                                                                    case 2100:
+                                                                        if (str.equals("AU")) {
+                                                                            return new int[]{0, 1, 1, 1, 2, 0};
+                                                                        }
+                                                                        break;
+                                                                    default:
+                                                                        switch (hashCode) {
+                                                                            case 2122:
+                                                                                break;
+                                                                            case 2123:
+                                                                                break;
+                                                                            case 2124:
+                                                                                break;
+                                                                            case 2125:
+                                                                                if (str.equals("BO")) {
+                                                                                    return new int[]{1, 2, 3, 2, 2, 2};
+                                                                                }
+                                                                                break;
+                                                                            default:
+                                                                                switch (hashCode) {
+                                                                                    case 2149:
+                                                                                        if (str.equals("CH")) {
+                                                                                            return new int[]{0, 0, 0, 1, 0, 2};
+                                                                                        }
+                                                                                        break;
+                                                                                }
+                                                                        }
+                                                                }
+                                                        }
+                                                }
+                                            } else if (str.equals("BZ")) {
+                                                return new int[]{2, 4, 2, 1, 2, 2};
+                                            }
+                                        } else if (str.equals("BY")) {
+                                            return new int[]{0, 1, 2, 3, 2, 2};
+                                        }
+                                    } else if (str.equals("BT")) {
+                                        return new int[]{3, 1, 3, 2, 2, 2};
+                                    }
+                                } else if (str.equals("BS")) {
+                                    return new int[]{4, 4, 2, 2, 2, 2};
+                                }
+                            }
+                        } else if (str.equals("BA")) {
+                            return new int[]{1, 2, 1, 1, 2, 2};
+                        }
+                    }
+                } else if (str.equals("AW")) {
+                    return new int[]{1, 3, 4, 4, 2, 2};
                 }
-                h(i, this.w, this.A);
-                this.v = elapsedRealtime;
-                this.w = 0L;
+            } else if (str.equals("AM")) {
+                return new int[]{2, 3, 2, 3, 2, 2};
             }
-            this.u--;
+            return new int[]{2, 2, 2, 2, 2, 2};
+        }
+    }
+
+    @Override // com.daaw.qz6
+    /* renamed from: D */
+    public final synchronized void mo11898D(p46 p46Var, pa6 pa6Var, boolean z, int i) {
+        if (m12003j(pa6Var, z)) {
+            this.f24565w += i;
+        }
+    }
+
+    @Override // com.daaw.qz6
+    /* renamed from: a */
+    public final synchronized void mo11897a(p46 p46Var, pa6 pa6Var, boolean z) {
+        if (m12003j(pa6Var, z)) {
+            uo4.m7872f(this.f24563u > 0);
+            long elapsedRealtime = SystemClock.elapsedRealtime();
+            int i = (int) (elapsedRealtime - this.f24564v);
+            this.f24567y += i;
+            long j = this.f24568z;
+            long j2 = this.f24565w;
+            this.f24568z = j + j2;
+            if (i > 0) {
+                this.f24560r.m15680b((int) Math.sqrt(j2), (((float) j2) * 8000.0f) / i);
+                if (this.f24567y >= 2000 || this.f24568z >= 524288) {
+                    this.f24556A = this.f24560r.m15681a(0.5f);
+                }
+                m12005h(i, this.f24565w, this.f24556A);
+                this.f24564v = elapsedRealtime;
+                this.f24565w = 0L;
+            }
+            this.f24563u--;
         }
     }
 
     @Override // com.daaw.mw8
-    public final void b(lw8 lw8Var) {
-        this.q.c(lw8Var);
+    /* renamed from: b */
+    public final void mo12010b(lw8 lw8Var) {
+        this.f24559q.m17372c(lw8Var);
     }
 
     @Override // com.daaw.mw8
-    public final void c(Handler handler, lw8 lw8Var) {
+    /* renamed from: c */
+    public final void mo12009c(Handler handler, lw8 lw8Var) {
         Objects.requireNonNull(lw8Var);
-        this.q.a(handler, lw8Var);
+        this.f24559q.m17374a(handler, lw8Var);
     }
 
     @Override // com.daaw.qz6
-    public final void f(p46 p46Var, pa6 pa6Var, boolean z) {
+    /* renamed from: f */
+    public final void mo11896f(p46 p46Var, pa6 pa6Var, boolean z) {
     }
 
-    public final long g(int i) {
-        Long l = (Long) this.p.get(Integer.valueOf(i));
+    /* renamed from: g */
+    public final long m12006g(int i) {
+        Long l = (Long) this.f24558p.get(Integer.valueOf(i));
         if (l == null) {
-            l = (Long) this.p.get(0);
+            l = (Long) this.f24558p.get(0);
         }
         if (l == null) {
             l = 1000000L;
@@ -655,13 +1500,14 @@ public final class qw8 implements mw8, qz6 {
         return l.longValue();
     }
 
-    public final void h(int i, long j, long j2) {
+    /* renamed from: h */
+    public final void m12005h(int i, long j, long j2) {
         int i2;
         long j3;
         if (i == 0) {
             if (j != 0) {
                 j3 = j;
-            } else if (j2 == this.B) {
+            } else if (j2 == this.f24557B) {
                 return;
             } else {
                 j3 = 0;
@@ -671,37 +1517,39 @@ public final class qw8 implements mw8, qz6 {
             i2 = i;
             j3 = j;
         }
-        this.B = j2;
-        this.q.b(i2, j3, j2);
+        this.f24557B = j2;
+        this.f24559q.m17373b(i2, j3, j2);
     }
 
-    public final synchronized void i(int i) {
-        int i2 = this.x;
-        if (i2 == 0 || this.t) {
+    /* renamed from: i */
+    public final synchronized void m12004i(int i) {
+        int i2 = this.f24566x;
+        if (i2 == 0 || this.f24562t) {
             if (i2 == i) {
                 return;
             }
-            this.x = i;
+            this.f24566x = i;
             if (i != 1 && i != 0 && i != 8) {
-                this.A = g(i);
+                this.f24556A = m12006g(i);
                 long elapsedRealtime = SystemClock.elapsedRealtime();
-                h(this.u > 0 ? (int) (elapsedRealtime - this.v) : 0, this.w, this.A);
-                this.v = elapsedRealtime;
-                this.w = 0L;
-                this.z = 0L;
-                this.y = 0L;
-                this.r.c();
+                m12005h(this.f24563u > 0 ? (int) (elapsedRealtime - this.f24564v) : 0, this.f24565w, this.f24556A);
+                this.f24564v = elapsedRealtime;
+                this.f24565w = 0L;
+                this.f24568z = 0L;
+                this.f24567y = 0L;
+                this.f24560r.m15679c();
             }
         }
     }
 
     @Override // com.daaw.qz6
-    public final synchronized void l(p46 p46Var, pa6 pa6Var, boolean z) {
-        if (j(pa6Var, z)) {
-            if (this.u == 0) {
-                this.v = SystemClock.elapsedRealtime();
+    /* renamed from: l */
+    public final synchronized void mo11895l(p46 p46Var, pa6 pa6Var, boolean z) {
+        if (m12003j(pa6Var, z)) {
+            if (this.f24563u == 0) {
+                this.f24564v = SystemClock.elapsedRealtime();
             }
-            this.u++;
+            this.f24563u++;
         }
     }
 }

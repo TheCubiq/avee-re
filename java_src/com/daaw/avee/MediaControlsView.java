@@ -5,58 +5,66 @@ import android.content.res.Configuration;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
-import com.daaw.pq;
+import com.daaw.C2575pq;
 import com.daaw.sw1;
 import com.daaw.ug0;
 /* loaded from: classes.dex */
 public final class MediaControlsView extends FrameLayout {
-    public static final a p = new a(null);
-    public static final sw1<View, View, View> q = new sw1<>();
 
+    /* renamed from: p */
+    public static final C0686a f3764p = new C0686a(null);
+
+    /* renamed from: q */
+    public static final sw1<View, View, View> f3765q = new sw1<>();
+
+    /* renamed from: com.daaw.avee.MediaControlsView$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public a() {
+    public static final class C0686a {
+        public C0686a() {
         }
 
-        public /* synthetic */ a(pq pqVar) {
+        public /* synthetic */ C0686a(C2575pq c2575pq) {
             this();
         }
 
-        public final sw1<View, View, View> a() {
-            return MediaControlsView.q;
+        /* renamed from: a */
+        public final sw1<View, View, View> m26885a() {
+            return MediaControlsView.f3765q;
         }
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public MediaControlsView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0, 4, null);
-        ug0.f(context, "context");
+        ug0.m8268f(context, "context");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MediaControlsView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        ug0.f(context, "context");
-        b();
+        ug0.m8268f(context, "context");
+        m26887b();
     }
 
-    public /* synthetic */ MediaControlsView(Context context, AttributeSet attributeSet, int i, int i2, pq pqVar) {
+    public /* synthetic */ MediaControlsView(Context context, AttributeSet attributeSet, int i, int i2, C2575pq c2575pq) {
         this(context, (i2 & 2) != 0 ? null : attributeSet, (i2 & 4) != 0 ? 0 : i);
     }
 
-    public final void b() {
+    /* renamed from: b */
+    public final void m26887b() {
         FrameLayout.inflate(getContext(), R.layout.media_controls_view, this);
-        q.a(findViewById(R.id.layoutMediaControls), findViewById(R.id.layoutMediaControlsNarrow), findViewById(R.id.layoutMediaControlsContainer));
+        f3765q.m9795a(findViewById(R.id.layoutMediaControls), findViewById(R.id.layoutMediaControlsNarrow), findViewById(R.id.layoutMediaControlsContainer));
     }
 
-    public final void c() {
+    /* renamed from: c */
+    public final void m26886c() {
         removeAllViews();
-        b();
+        m26887b();
     }
 
     @Override // android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        c();
+        m26886c();
     }
 }

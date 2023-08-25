@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import com.daaw.by6;
 import com.daaw.fz6;
@@ -17,6 +19,7 @@ import com.daaw.g93;
 import com.daaw.k04;
 import com.daaw.th6;
 import java.lang.ref.WeakReference;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -24,17 +27,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class zzbx {
-    public static JSONObject a(Context context, Rect rect) {
+    /* renamed from: a */
+    public static JSONObject m1343a(Context context, Rect rect) {
         JSONObject jSONObject = new JSONObject();
-        jSONObject.put("width", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, rect.right - rect.left));
-        jSONObject.put("height", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, rect.bottom - rect.top));
-        jSONObject.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, rect.left));
-        jSONObject.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, rect.top));
+        jSONObject.put("width", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, rect.right - rect.left));
+        jSONObject.put("height", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, rect.bottom - rect.top));
+        jSONObject.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, rect.left));
+        jSONObject.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, rect.top));
         jSONObject.put("relative_to", "self");
         return jSONObject;
     }
 
-    public static int b(int i) {
+    /* renamed from: b */
+    public static int m1342b(int i) {
         if (i != -2) {
             return i != -1 ? 2 : 3;
         }
@@ -49,7 +54,7 @@ public final class zzbx {
 
     public static WindowManager.LayoutParams zzb() {
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams(-2, -2, 0, 0, -2);
-        layoutParams.flags = ((Integer) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.k7)).intValue();
+        layoutParams.flags = ((Integer) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10739k7)).intValue();
         layoutParams.type = 2;
         layoutParams.gravity = 8388659;
         return layoutParams;
@@ -66,10 +71,10 @@ public final class zzbx {
         try {
             JSONObject jSONObject3 = new JSONObject();
             try {
-                jSONObject3.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, point2.x));
-                jSONObject3.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, point2.y));
-                jSONObject3.put("start_x", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, point.x));
-                jSONObject3.put("start_y", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, point.y));
+                jSONObject3.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, point2.x));
+                jSONObject3.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, point2.y));
+                jSONObject3.put("start_x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, point.x));
+                jSONObject3.put("start_y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, point.y));
                 jSONObject2 = jSONObject3;
             } catch (JSONException e2) {
                 k04.zzh("Error occurred while putting signals into JSON object.", e2);
@@ -109,34 +114,34 @@ public final class zzbx {
                 try {
                     JSONObject jSONObject6 = jSONObject3;
                     try {
-                        jSONObject5.put("width", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, view2.getMeasuredWidth()));
-                        jSONObject5.put("height", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, view2.getMeasuredHeight()));
-                        jSONObject5.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, zzj2[0] - zzj[0]));
-                        jSONObject5.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, zzj2[1] - zzj[1]));
+                        jSONObject5.put("width", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, view2.getMeasuredWidth()));
+                        jSONObject5.put("height", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, view2.getMeasuredHeight()));
+                        jSONObject5.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj2[0] - zzj[0]));
+                        jSONObject5.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj2[1] - zzj[1]));
                         jSONObject5.put(str4, str3);
                         jSONObject4.put("frame", jSONObject5);
                         Rect rect = new Rect();
                         if (view2.getLocalVisibleRect(rect)) {
-                            jSONObject2 = a(context, rect);
+                            jSONObject2 = m1343a(context, rect);
                         } else {
                             jSONObject2 = new JSONObject();
                             jSONObject2.put("width", 0);
                             jSONObject2.put("height", 0);
-                            jSONObject2.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, zzj2[0] - zzj[0]));
-                            jSONObject2.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().g(context, zzj2[1] - zzj[1]));
+                            jSONObject2.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj2[0] - zzj[0]));
+                            jSONObject2.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj2[1] - zzj[1]));
                             jSONObject2.put(str4, str3);
                         }
                         jSONObject4.put("visible_bounds", jSONObject2);
                         if (((String) entry.getKey()).equals("3010")) {
-                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.e7)).booleanValue()) {
+                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10673e7)).booleanValue()) {
                                 jSONObject4.put("mediaview_graphics_matrix", view2.getMatrix().toShortString());
                             }
-                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.f7)).booleanValue()) {
+                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10684f7)).booleanValue()) {
                                 ViewGroup.LayoutParams layoutParams = view2.getLayoutParams();
-                                jSONObject4.put("view_width_layout_type", b(layoutParams.width) - 1);
-                                jSONObject4.put("view_height_layout_type", b(layoutParams.height) - 1);
+                                jSONObject4.put("view_width_layout_type", m1342b(layoutParams.width) - 1);
+                                jSONObject4.put("view_height_layout_type", m1342b(layoutParams.height) - 1);
                             }
-                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.g7)).booleanValue()) {
+                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10695g7)).booleanValue()) {
                                 ArrayList arrayList = new ArrayList();
                                 arrayList.add(Integer.valueOf(view2.getId()));
                                 for (ViewParent parent = view2.getParent(); parent instanceof View; parent = parent.getParent()) {
@@ -144,7 +149,7 @@ public final class zzbx {
                                 }
                                 jSONObject4.put("view_path", TextUtils.join("/", arrayList));
                             }
-                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.h7)).booleanValue() && scaleType != null) {
+                            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10706h7)).booleanValue() && scaleType != null) {
                                 jSONObject4.put("mediaview_scale_type", scaleType.ordinal());
                             }
                         }
@@ -218,64 +223,36 @@ public final class zzbx {
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static org.json.JSONObject zzf(android.view.View r6) {
-        /*
-            org.json.JSONObject r0 = new org.json.JSONObject
-            r0.<init>()
-            if (r6 != 0) goto L8
-            return r0
-        L8:
-            com.daaw.y83 r1 = com.daaw.g93.d7     // Catch: java.lang.Exception -> L58
-            com.daaw.e93 r2 = com.google.android.gms.ads.internal.client.zzba.zzc()     // Catch: java.lang.Exception -> L58
-            java.lang.Object r1 = r2.b(r1)     // Catch: java.lang.Exception -> L58
-            java.lang.Boolean r1 = (java.lang.Boolean) r1     // Catch: java.lang.Exception -> L58
-            boolean r1 = r1.booleanValue()     // Catch: java.lang.Exception -> L58
-            r2 = 0
-            r3 = 1
-            java.lang.String r4 = "contained_in_scroll_view"
-            if (r1 == 0) goto L38
-            com.google.android.gms.ads.internal.zzt.zzp()     // Catch: java.lang.Exception -> L58
-            android.view.ViewParent r6 = r6.getParent()     // Catch: java.lang.Exception -> L58
-        L25:
-            if (r6 == 0) goto L30
-            boolean r1 = r6 instanceof android.widget.ScrollView     // Catch: java.lang.Exception -> L58
-            if (r1 != 0) goto L30
-            android.view.ViewParent r6 = r6.getParent()     // Catch: java.lang.Exception -> L58
-            goto L25
-        L30:
-            if (r6 != 0) goto L33
-            goto L34
-        L33:
-            r2 = 1
-        L34:
-            r0.put(r4, r2)     // Catch: java.lang.Exception -> L58
-            goto L58
-        L38:
-            com.google.android.gms.ads.internal.zzt.zzp()     // Catch: java.lang.Exception -> L58
-            android.view.ViewParent r1 = r6.getParent()     // Catch: java.lang.Exception -> L58
-        L3f:
-            if (r1 == 0) goto L4a
-            boolean r5 = r1 instanceof android.widget.AdapterView     // Catch: java.lang.Exception -> L58
-            if (r5 != 0) goto L4a
-            android.view.ViewParent r1 = r1.getParent()     // Catch: java.lang.Exception -> L58
-            goto L3f
-        L4a:
-            r5 = -1
-            if (r1 != 0) goto L4f
-            r6 = -1
-            goto L55
-        L4f:
-            android.widget.AdapterView r1 = (android.widget.AdapterView) r1     // Catch: java.lang.Exception -> L58
-            int r6 = r1.getPositionForView(r6)     // Catch: java.lang.Exception -> L58
-        L55:
-            if (r6 == r5) goto L34
-            goto L33
-        L58:
-            return r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.ads.internal.util.zzbx.zzf(android.view.View):org.json.JSONObject");
+    public static JSONObject zzf(View view) {
+        boolean z;
+        JSONObject jSONObject = new JSONObject();
+        if (view == null) {
+            return jSONObject;
+        }
+        try {
+            z = false;
+        } catch (Exception unused) {
+        }
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10662d7)).booleanValue()) {
+            com.google.android.gms.ads.internal.zzt.zzp();
+            ViewParent parent = view.getParent();
+            while (parent != null && !(parent instanceof ScrollView)) {
+                parent = parent.getParent();
+            }
+            if (parent == null) {
+                jSONObject.put("contained_in_scroll_view", z);
+                return jSONObject;
+            }
+            z = true;
+            jSONObject.put("contained_in_scroll_view", z);
+            return jSONObject;
+        }
+        com.google.android.gms.ads.internal.zzt.zzp();
+        ViewParent parent2 = view.getParent();
+        while (parent2 != null && !(parent2 instanceof AdapterView)) {
+            parent2 = parent2.getParent();
+        }
     }
 
     /* JADX WARN: Can't wrap try/catch for region: R(11:18|(10:44|45|21|22|23|(3:25|(1:29)|38)(3:39|(1:41)|38)|30|(1:(2:33|34)(1:36))|37|34)|20|21|22|23|(0)(0)|30|(0)|37|34) */
@@ -292,25 +269,150 @@ public final class zzbx {
     /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:51:0x0171 -> B:63:0x0176). Please submit an issue!!! */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static org.json.JSONObject zzg(android.content.Context r16, android.view.View r17) {
-        /*
-            Method dump skipped, instructions count: 427
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.ads.internal.util.zzbx.zzg(android.content.Context, android.view.View):org.json.JSONObject");
+    public static JSONObject zzg(Context context, View view) {
+        String str;
+        int hashCode;
+        char c;
+        JSONObject jSONObject;
+        JSONObject jSONObject2 = new JSONObject();
+        if (view == null) {
+            return jSONObject2;
+        }
+        try {
+            int[] zzj = zzj(view);
+            int[] iArr = {view.getMeasuredWidth(), view.getMeasuredHeight()};
+            for (ViewParent parent = view.getParent(); parent instanceof ViewGroup; parent = parent.getParent()) {
+                ViewGroup viewGroup = (ViewGroup) parent;
+                iArr[0] = Math.min(viewGroup.getMeasuredWidth(), iArr[0]);
+                iArr[1] = Math.min(viewGroup.getMeasuredHeight(), iArr[1]);
+            }
+            JSONObject jSONObject3 = new JSONObject();
+            jSONObject3.put("width", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, view.getMeasuredWidth()));
+            jSONObject3.put("height", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, view.getMeasuredHeight()));
+            jSONObject3.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj[0]));
+            jSONObject3.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj[1]));
+            jSONObject3.put("maximum_visible_width", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, iArr[0]));
+            jSONObject3.put("maximum_visible_height", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, iArr[1]));
+            jSONObject3.put("relative_to", "window");
+            jSONObject2.put("frame", jSONObject3);
+            Rect rect = new Rect();
+            if (view.getGlobalVisibleRect(rect)) {
+                jSONObject = m1343a(context, rect);
+            } else {
+                JSONObject jSONObject4 = new JSONObject();
+                jSONObject4.put("width", 0);
+                jSONObject4.put("height", 0);
+                jSONObject4.put("x", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj[0]));
+                jSONObject4.put("y", com.google.android.gms.ads.internal.client.zzay.zzb().m24825g(context, zzj[1]));
+                jSONObject4.put("relative_to", "window");
+                jSONObject = jSONObject4;
+            }
+            jSONObject2.put("visible_bounds", jSONObject);
+        } catch (Exception unused) {
+            k04.zzj("Unable to get native ad view bounding box");
+        }
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10427G5)).booleanValue()) {
+            ViewParent parent2 = view.getParent();
+            if (parent2 != null) {
+                try {
+                    str = (String) parent2.getClass().getMethod("getTemplateTypeName", new Class[0]).invoke(parent2, new Object[0]);
+                } catch (IllegalAccessException e) {
+                    e = e;
+                    k04.zzh("Cannot access method getTemplateTypeName: ", e);
+                    str = "";
+                    hashCode = str.hashCode();
+                    if (hashCode != -2066603854) {
+                    }
+                    int i = 1;
+                    if (c != 0) {
+                    }
+                    jSONObject2.put("native_template_type", i);
+                    if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10684f7)).booleanValue()) {
+                    }
+                    return jSONObject2;
+                } catch (NoSuchMethodException unused2) {
+                } catch (SecurityException e2) {
+                    e = e2;
+                    k04.zzh("Cannot access method getTemplateTypeName: ", e);
+                    str = "";
+                    hashCode = str.hashCode();
+                    if (hashCode != -2066603854) {
+                    }
+                    int i2 = 1;
+                    if (c != 0) {
+                    }
+                    jSONObject2.put("native_template_type", i2);
+                    if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10684f7)).booleanValue()) {
+                    }
+                    return jSONObject2;
+                } catch (InvocationTargetException e3) {
+                    e = e3;
+                    k04.zzh("Cannot access method getTemplateTypeName: ", e);
+                    str = "";
+                    hashCode = str.hashCode();
+                    if (hashCode != -2066603854) {
+                    }
+                    int i22 = 1;
+                    if (c != 0) {
+                    }
+                    jSONObject2.put("native_template_type", i22);
+                    if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10684f7)).booleanValue()) {
+                    }
+                    return jSONObject2;
+                }
+                hashCode = str.hashCode();
+                if (hashCode != -2066603854) {
+                    if (hashCode == 2019754500 && str.equals("medium_template")) {
+                        c = 1;
+                    }
+                    c = 65535;
+                } else {
+                    if (str.equals("small_template")) {
+                        c = 0;
+                    }
+                    c = 65535;
+                }
+                int i222 = 1;
+                if (c != 0) {
+                    if (c != 1) {
+                        jSONObject2.put("native_template_type", 0);
+                    } else {
+                        i222 = 2;
+                    }
+                }
+                jSONObject2.put("native_template_type", i222);
+            }
+            str = "";
+            hashCode = str.hashCode();
+            if (hashCode != -2066603854) {
+            }
+            int i2222 = 1;
+            if (c != 0) {
+            }
+            jSONObject2.put("native_template_type", i2222);
+        }
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10684f7)).booleanValue()) {
+            try {
+                ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+                jSONObject2.put("view_width_layout_type", m1342b(layoutParams.width) - 1);
+                jSONObject2.put("view_height_layout_type", m1342b(layoutParams.height) - 1);
+            } catch (Exception unused3) {
+                zze.zza("Unable to get native ad view layout types");
+            }
+        }
+        return jSONObject2;
     }
 
     public static boolean zzh(Context context, th6 th6Var) {
-        if (th6Var.O) {
-            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.i7)).booleanValue()) {
-                return ((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.l7)).booleanValue();
+        if (th6Var.f27668O) {
+            if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10717i7)).booleanValue()) {
+                return ((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10750l7)).booleanValue();
             }
-            String str = (String) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.j7);
+            String str = (String) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10728j7);
             if (!str.isEmpty() && context != null) {
                 String packageName = context.getPackageName();
-                for (String str2 : fz6.c(by6.b(';')).d(str)) {
+                for (String str2 : fz6.m22122c(by6.m25734b(';')).m22121d(str)) {
                     if (str2.equals(packageName)) {
                         return true;
                     }
@@ -322,8 +424,8 @@ public final class zzbx {
     }
 
     public static boolean zzi(int i) {
-        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.X2)).booleanValue()) {
-            return ((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().b(g93.Y2)).booleanValue() || i <= 15299999;
+        if (((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10594X2)).booleanValue()) {
+            return ((Boolean) com.google.android.gms.ads.internal.client.zzba.zzc().m23658b(g93.f10604Y2)).booleanValue() || i <= 15299999;
         }
         return true;
     }

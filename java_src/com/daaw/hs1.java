@@ -18,20 +18,26 @@ import java.io.InputStream;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
 public class hs1 extends n51 {
-    public static boolean c;
-    public final WeakReference<Context> b;
+
+    /* renamed from: c */
+    public static boolean f12901c;
+
+    /* renamed from: b */
+    public final WeakReference<Context> f12902b;
 
     public hs1(Context context, Resources resources) {
         super(resources);
-        this.b = new WeakReference<>(context);
+        this.f12902b = new WeakReference<>(context);
     }
 
-    public static boolean b() {
-        return c;
+    /* renamed from: b */
+    public static boolean m20441b() {
+        return f12901c;
     }
 
-    public static boolean c() {
-        return b() && Build.VERSION.SDK_INT <= 20;
+    /* renamed from: c */
+    public static boolean m20440c() {
+        return m20441b() && Build.VERSION.SDK_INT <= 20;
     }
 
     @Override // com.daaw.n51, android.content.res.Resources
@@ -81,8 +87,8 @@ public class hs1 extends n51 {
 
     @Override // android.content.res.Resources
     public Drawable getDrawable(int i) {
-        Context context = this.b.get();
-        return context != null ? g51.h().t(context, this, i) : a(i);
+        Context context = this.f12902b.get();
+        return context != null ? g51.m21936h().m21924t(context, this, i) : m15521a(i);
     }
 
     @Override // com.daaw.n51, android.content.res.Resources

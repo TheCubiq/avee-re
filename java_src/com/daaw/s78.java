@@ -5,376 +5,385 @@ import android.util.Pair;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class s78 {
-    public final d34 a = new d34();
-    public final i54 b = new i54();
-    public final fb8 c;
-    public final Handler d;
-    public long e;
-    public int f;
-    public boolean g;
-    public j78 h;
-    public j78 i;
-    public j78 j;
-    public int k;
-    public Object l;
-    public long m;
+
+    /* renamed from: a */
+    public final d34 f25970a = new d34();
+
+    /* renamed from: b */
+    public final i54 f25971b = new i54();
+
+    /* renamed from: c */
+    public final fb8 f25972c;
+
+    /* renamed from: d */
+    public final Handler f25973d;
+
+    /* renamed from: e */
+    public long f25974e;
+
+    /* renamed from: f */
+    public int f25975f;
+
+    /* renamed from: g */
+    public boolean f25976g;
+
+    /* renamed from: h */
+    public j78 f25977h;
+
+    /* renamed from: i */
+    public j78 f25978i;
+
+    /* renamed from: j */
+    public j78 f25979j;
+
+    /* renamed from: k */
+    public int f25980k;
+
+    /* renamed from: l */
+    public Object f25981l;
+
+    /* renamed from: m */
+    public long f25982m;
 
     public s78(fb8 fb8Var, Handler handler) {
-        this.c = fb8Var;
-        this.d = handler;
+        this.f25972c = fb8Var;
+        this.f25973d = handler;
     }
 
-    public static pr8 A(l64 l64Var, Object obj, long j, long j2, i54 i54Var, d34 d34Var) {
-        l64Var.n(obj, d34Var);
-        l64Var.e(d34Var.c, i54Var, 0L);
-        l64Var.a(obj);
-        if (d34Var.d == 0) {
-            d34Var.b();
+    /* renamed from: A */
+    public static pr8 m10589A(l64 l64Var, Object obj, long j, long j2, i54 i54Var, d34 d34Var) {
+        l64Var.mo13467n(obj, d34Var);
+        l64Var.mo1923e(d34Var.f6450c, i54Var, 0L);
+        l64Var.mo4511a(obj);
+        if (d34Var.f6451d == 0) {
+            d34Var.m24727b();
         }
-        l64Var.n(obj, d34Var);
-        int d = d34Var.d(j);
-        return d == -1 ? new pr8(obj, j2, d34Var.c(j)) : new pr8(obj, d, d34Var.e(d), j2);
+        l64Var.mo13467n(obj, d34Var);
+        int m24725d = d34Var.m24725d(j);
+        return m24725d == -1 ? new pr8(obj, j2, d34Var.m24726c(j)) : new pr8(obj, m24725d, d34Var.m24724e(m24725d), j2);
     }
 
-    public static final boolean c(pr8 pr8Var) {
-        return !pr8Var.b() && pr8Var.e == -1;
+    /* renamed from: c */
+    public static final boolean m10584c(pr8 pr8Var) {
+        return !pr8Var.m16079b() && pr8Var.f18809e == -1;
     }
 
-    public final void B() {
-        final v17 o = y17.o();
-        for (j78 j78Var = this.h; j78Var != null; j78Var = j78Var.g()) {
-            o.f(j78Var.f.a);
+    /* renamed from: B */
+    public final void m10588B() {
+        final v17 m4266o = y17.m4266o();
+        for (j78 j78Var = this.f25977h; j78Var != null; j78Var = j78Var.m18753g()) {
+            m4266o.m7548f(j78Var.f14507f.f18573a);
         }
-        j78 j78Var2 = this.i;
-        final pr8 pr8Var = j78Var2 == null ? null : j78Var2.f.a;
-        this.d.post(new Runnable() { // from class: com.daaw.p78
+        j78 j78Var2 = this.f25978i;
+        final pr8 pr8Var = j78Var2 == null ? null : j78Var2.f14507f.f18573a;
+        this.f25973d.post(new Runnable() { // from class: com.daaw.p78
             @Override // java.lang.Runnable
             public final void run() {
-                s78.this.m(o, pr8Var);
+                s78.this.m10574m(m4266o, pr8Var);
             }
         });
     }
 
-    public final boolean C(l64 l64Var, pr8 pr8Var, boolean z) {
-        int a = l64Var.a(pr8Var.a);
-        return !l64Var.e(l64Var.d(a, this.a, false).c, this.b, 0L).g && l64Var.i(a, this.a, this.b, this.f, this.g) == -1 && z;
+    /* renamed from: C */
+    public final boolean m10587C(l64 l64Var, pr8 pr8Var, boolean z) {
+        int mo4511a = l64Var.mo4511a(pr8Var.f18805a);
+        return !l64Var.mo1923e(l64Var.mo1924d(mo4511a, this.f25970a, false).f6450c, this.f25971b, 0L).f13273g && l64Var.m17124i(mo4511a, this.f25970a, this.f25971b, this.f25975f, this.f25976g) == -1 && z;
     }
 
-    public final boolean a(l64 l64Var, pr8 pr8Var) {
-        if (c(pr8Var)) {
-            return l64Var.e(l64Var.n(pr8Var.a, this.a).c, this.b, 0L).n == l64Var.a(pr8Var.a);
+    /* renamed from: a */
+    public final boolean m10586a(l64 l64Var, pr8 pr8Var) {
+        if (m10584c(pr8Var)) {
+            return l64Var.mo1923e(l64Var.mo13467n(pr8Var.f18805a, this.f25970a).f6450c, this.f25971b, 0L).f13280n == l64Var.mo4511a(pr8Var.f18805a);
         }
         return false;
     }
 
-    public final boolean b(l64 l64Var) {
-        j78 j78Var = this.h;
+    /* renamed from: b */
+    public final boolean m10585b(l64 l64Var) {
+        j78 j78Var = this.f25977h;
         if (j78Var == null) {
             return true;
         }
-        int a = l64Var.a(j78Var.b);
+        int mo4511a = l64Var.mo4511a(j78Var.f14503b);
         while (true) {
-            a = l64Var.i(a, this.a, this.b, this.f, this.g);
-            while (j78Var.g() != null && !j78Var.f.g) {
-                j78Var = j78Var.g();
+            mo4511a = l64Var.m17124i(mo4511a, this.f25970a, this.f25971b, this.f25975f, this.f25976g);
+            while (j78Var.m18753g() != null && !j78Var.f14507f.f18579g) {
+                j78Var = j78Var.m18753g();
             }
-            j78 g = j78Var.g();
-            if (a == -1 || g == null || l64Var.a(g.b) != a) {
+            j78 m18753g = j78Var.m18753g();
+            if (mo4511a == -1 || m18753g == null || l64Var.mo4511a(m18753g.f14503b) != mo4511a) {
                 break;
             }
-            j78Var = g;
+            j78Var = m18753g;
         }
-        boolean p = p(j78Var);
-        j78Var.f = j(l64Var, j78Var.f);
-        return !p;
+        boolean m10571p = m10571p(j78Var);
+        j78Var.f14507f = m10577j(l64Var, j78Var.f14507f);
+        return !m10571p;
     }
 
-    public final j78 d() {
-        j78 j78Var = this.h;
+    /* renamed from: d */
+    public final j78 m10583d() {
+        j78 j78Var = this.f25977h;
         if (j78Var == null) {
             return null;
         }
-        if (j78Var == this.i) {
-            this.i = j78Var.g();
+        if (j78Var == this.f25978i) {
+            this.f25978i = j78Var.m18753g();
         }
-        j78Var.n();
-        int i = this.k - 1;
-        this.k = i;
+        j78Var.m18746n();
+        int i = this.f25980k - 1;
+        this.f25980k = i;
         if (i == 0) {
-            this.j = null;
-            j78 j78Var2 = this.h;
-            this.l = j78Var2.b;
-            this.m = j78Var2.f.a.d;
+            this.f25979j = null;
+            j78 j78Var2 = this.f25977h;
+            this.f25981l = j78Var2.f14503b;
+            this.f25982m = j78Var2.f14507f.f18573a.f18808d;
         }
-        this.h = this.h.g();
-        B();
-        return this.h;
+        this.f25977h = this.f25977h.m18753g();
+        m10588B();
+        return this.f25977h;
     }
 
-    public final j78 e() {
-        j78 j78Var = this.i;
+    /* renamed from: e */
+    public final j78 m10582e() {
+        j78 j78Var = this.f25978i;
         boolean z = false;
-        if (j78Var != null && j78Var.g() != null) {
+        if (j78Var != null && j78Var.m18753g() != null) {
             z = true;
         }
-        uo4.f(z);
-        this.i = this.i.g();
-        B();
-        return this.i;
+        uo4.m7872f(z);
+        this.f25978i = this.f25978i.m18753g();
+        m10588B();
+        return this.f25978i;
     }
 
-    public final j78 f() {
-        return this.j;
+    /* renamed from: f */
+    public final j78 m10581f() {
+        return this.f25979j;
     }
 
-    public final j78 g() {
-        return this.h;
+    /* renamed from: g */
+    public final j78 m10580g() {
+        return this.f25977h;
     }
 
-    public final j78 h() {
-        return this.i;
+    /* renamed from: h */
+    public final j78 m10579h() {
+        return this.f25978i;
     }
 
-    public final m78 i(long j, q88 q88Var) {
-        j78 j78Var = this.j;
-        return j78Var == null ? x(q88Var.a, q88Var.b, q88Var.c, q88Var.r) : w(q88Var.a, j78Var, j);
+    /* renamed from: i */
+    public final m78 m10578i(long j, q88 q88Var) {
+        j78 j78Var = this.f25979j;
+        return j78Var == null ? m10563x(q88Var.f23759a, q88Var.f23760b, q88Var.f23761c, q88Var.f23776r) : m10564w(q88Var.f23759a, j78Var, j);
     }
 
     /* JADX WARN: Removed duplicated region for block: B:19:0x005d  */
     /* JADX WARN: Removed duplicated region for block: B:20:0x0065  */
+    /* renamed from: j */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final com.daaw.m78 j(com.daaw.l64 r19, com.daaw.m78 r20) {
-        /*
-            r18 = this;
-            r0 = r18
-            r1 = r19
-            r2 = r20
-            com.daaw.pr8 r3 = r2.a
-            boolean r12 = c(r3)
-            boolean r13 = r0.a(r1, r3)
-            boolean r14 = r0.C(r1, r3, r12)
-            com.daaw.pr8 r4 = r2.a
-            java.lang.Object r4 = r4.a
-            com.daaw.d34 r5 = r0.a
-            r1.n(r4, r5)
-            boolean r1 = r3.b()
-            r4 = -1
-            r5 = 0
-            r7 = -9223372036854775807(0x8000000000000001, double:-4.9E-324)
-            if (r1 != 0) goto L37
-            int r1 = r3.e
-            if (r1 != r4) goto L30
-            goto L37
-        L30:
-            com.daaw.d34 r9 = r0.a
-            r9.h(r1)
-            r9 = r5
-            goto L38
-        L37:
-            r9 = r7
-        L38:
-            boolean r1 = r3.b()
-            if (r1 == 0) goto L4b
-            com.daaw.d34 r1 = r0.a
-            int r5 = r3.b
-            int r6 = r3.c
-            long r5 = r1.g(r5, r6)
-        L48:
-            r7 = r9
-            r9 = r5
-            goto L57
-        L4b:
-            int r1 = (r9 > r7 ? 1 : (r9 == r7 ? 0 : -1))
-            if (r1 == 0) goto L52
-            r7 = r5
-            r9 = r7
-            goto L57
-        L52:
-            com.daaw.d34 r1 = r0.a
-            long r5 = r1.d
-            goto L48
-        L57:
-            boolean r1 = r3.b()
-            if (r1 == 0) goto L65
-            com.daaw.d34 r1 = r0.a
-            int r4 = r3.b
-            r1.l(r4)
-            goto L6e
-        L65:
-            int r1 = r3.e
-            if (r1 == r4) goto L6e
-            com.daaw.d34 r4 = r0.a
-            r4.l(r1)
-        L6e:
-            com.daaw.m78 r15 = new com.daaw.m78
-            long r4 = r2.b
-            long r1 = r2.c
-            r11 = 0
-            r16 = r1
-            r1 = r15
-            r2 = r3
-            r3 = r4
-            r5 = r16
-            r1.<init>(r2, r3, r5, r7, r9, r11, r12, r13, r14)
-            return r15
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.s78.j(com.daaw.l64, com.daaw.m78):com.daaw.m78");
+    public final m78 m10577j(l64 l64Var, m78 m78Var) {
+        long j;
+        long j2;
+        long j3;
+        long j4;
+        int i;
+        pr8 pr8Var = m78Var.f18573a;
+        boolean m10584c = m10584c(pr8Var);
+        boolean m10586a = m10586a(l64Var, pr8Var);
+        boolean m10587C = m10587C(l64Var, pr8Var, m10584c);
+        l64Var.mo13467n(m78Var.f18573a.f18805a, this.f25970a);
+        if (pr8Var.m16079b() || (i = pr8Var.f18809e) == -1) {
+            j = -9223372036854775807L;
+        } else {
+            this.f25970a.m24721h(i);
+            j = 0;
+        }
+        if (pr8Var.m16079b()) {
+            j2 = this.f25970a.m24722g(pr8Var.f18806b, pr8Var.f18807c);
+        } else if (j != -9223372036854775807L) {
+            j3 = 0;
+            j4 = 0;
+            if (pr8Var.m16079b()) {
+                int i2 = pr8Var.f18809e;
+                if (i2 != -1) {
+                    this.f25970a.m24717l(i2);
+                }
+            } else {
+                this.f25970a.m24717l(pr8Var.f18806b);
+            }
+            return new m78(pr8Var, m78Var.f18574b, m78Var.f18575c, j3, j4, false, m10584c, m10586a, m10587C);
+        } else {
+            j2 = this.f25970a.f6451d;
+        }
+        j3 = j;
+        j4 = j2;
+        if (pr8Var.m16079b()) {
+        }
+        return new m78(pr8Var, m78Var.f18574b, m78Var.f18575c, j3, j4, false, m10584c, m10586a, m10587C);
     }
 
-    public final pr8 k(l64 l64Var, Object obj, long j) {
+    /* renamed from: k */
+    public final pr8 m10576k(l64 l64Var, Object obj, long j) {
         long j2;
-        int a;
-        int i = l64Var.n(obj, this.a).c;
-        Object obj2 = this.l;
-        if (obj2 == null || (a = l64Var.a(obj2)) == -1 || l64Var.d(a, this.a, false).c != i) {
-            j78 j78Var = this.h;
+        int mo4511a;
+        int i = l64Var.mo13467n(obj, this.f25970a).f6450c;
+        Object obj2 = this.f25981l;
+        if (obj2 == null || (mo4511a = l64Var.mo4511a(obj2)) == -1 || l64Var.mo1924d(mo4511a, this.f25970a, false).f6450c != i) {
+            j78 j78Var = this.f25977h;
             while (true) {
                 if (j78Var == null) {
-                    j78Var = this.h;
+                    j78Var = this.f25977h;
                     while (j78Var != null) {
-                        int a2 = l64Var.a(j78Var.b);
-                        if (a2 == -1 || l64Var.d(a2, this.a, false).c != i) {
-                            j78Var = j78Var.g();
+                        int mo4511a2 = l64Var.mo4511a(j78Var.f14503b);
+                        if (mo4511a2 == -1 || l64Var.mo1924d(mo4511a2, this.f25970a, false).f6450c != i) {
+                            j78Var = j78Var.m18753g();
                         }
                     }
-                    j2 = this.e;
-                    this.e = 1 + j2;
-                    if (this.h == null) {
-                        this.l = obj;
-                        this.m = j2;
+                    j2 = this.f25974e;
+                    this.f25974e = 1 + j2;
+                    if (this.f25977h == null) {
+                        this.f25981l = obj;
+                        this.f25982m = j2;
                     }
-                } else if (j78Var.b.equals(obj)) {
+                } else if (j78Var.f14503b.equals(obj)) {
                     break;
                 } else {
-                    j78Var = j78Var.g();
+                    j78Var = j78Var.m18753g();
                 }
             }
-            j2 = j78Var.f.a.d;
+            j2 = j78Var.f14507f.f18573a.f18808d;
         } else {
-            j2 = this.m;
+            j2 = this.f25982m;
         }
         long j3 = j2;
-        l64Var.n(obj, this.a);
-        l64Var.e(this.a.c, this.b, 0L);
-        int a3 = l64Var.a(obj);
+        l64Var.mo13467n(obj, this.f25970a);
+        l64Var.mo1923e(this.f25970a.f6450c, this.f25971b, 0L);
+        int mo4511a3 = l64Var.mo4511a(obj);
         Object obj3 = obj;
         while (true) {
-            i54 i54Var = this.b;
-            if (a3 < i54Var.m) {
-                return A(l64Var, obj3, j, j3, i54Var, this.a);
+            i54 i54Var = this.f25971b;
+            if (mo4511a3 < i54Var.f13279m) {
+                return m10589A(l64Var, obj3, j, j3, i54Var, this.f25970a);
             }
-            l64Var.d(a3, this.a, true);
-            this.a.b();
-            d34 d34Var = this.a;
-            if (d34Var.d(d34Var.d) != -1) {
-                obj3 = this.a.b;
+            l64Var.mo1924d(mo4511a3, this.f25970a, true);
+            this.f25970a.m24727b();
+            d34 d34Var = this.f25970a;
+            if (d34Var.m24725d(d34Var.f6451d) != -1) {
+                obj3 = this.f25970a.f6449b;
                 Objects.requireNonNull(obj3);
             }
-            a3--;
+            mo4511a3--;
         }
     }
 
-    public final void l() {
-        if (this.k == 0) {
+    /* renamed from: l */
+    public final void m10575l() {
+        if (this.f25980k == 0) {
             return;
         }
-        j78 j78Var = this.h;
-        uo4.b(j78Var);
-        this.l = j78Var.b;
-        this.m = j78Var.f.a.d;
+        j78 j78Var = this.f25977h;
+        uo4.m7876b(j78Var);
+        this.f25981l = j78Var.f14503b;
+        this.f25982m = j78Var.f14507f.f18573a.f18808d;
         while (j78Var != null) {
-            j78Var.n();
-            j78Var = j78Var.g();
+            j78Var.m18746n();
+            j78Var = j78Var.m18753g();
         }
-        this.h = null;
-        this.j = null;
-        this.i = null;
-        this.k = 0;
-        B();
+        this.f25977h = null;
+        this.f25979j = null;
+        this.f25978i = null;
+        this.f25980k = 0;
+        m10588B();
     }
 
-    public final /* synthetic */ void m(v17 v17Var, pr8 pr8Var) {
-        this.c.i(v17Var.h(), pr8Var);
+    /* renamed from: m */
+    public final /* synthetic */ void m10574m(v17 v17Var, pr8 pr8Var) {
+        this.f25972c.mo9133i(v17Var.m7546h(), pr8Var);
     }
 
-    public final void n(long j) {
-        j78 j78Var = this.j;
+    /* renamed from: n */
+    public final void m10573n(long j) {
+        j78 j78Var = this.f25979j;
         if (j78Var != null) {
-            j78Var.m(j);
+            j78Var.m18747m(j);
         }
     }
 
-    public final boolean o(nr8 nr8Var) {
-        j78 j78Var = this.j;
-        return j78Var != null && j78Var.a == nr8Var;
+    /* renamed from: o */
+    public final boolean m10572o(nr8 nr8Var) {
+        j78 j78Var = this.f25979j;
+        return j78Var != null && j78Var.f14502a == nr8Var;
     }
 
-    public final boolean p(j78 j78Var) {
+    /* renamed from: p */
+    public final boolean m10571p(j78 j78Var) {
         boolean z = false;
-        uo4.f(j78Var != null);
-        if (j78Var.equals(this.j)) {
+        uo4.m7872f(j78Var != null);
+        if (j78Var.equals(this.f25979j)) {
             return false;
         }
-        this.j = j78Var;
-        while (j78Var.g() != null) {
-            j78Var = j78Var.g();
-            if (j78Var == this.i) {
-                this.i = this.h;
+        this.f25979j = j78Var;
+        while (j78Var.m18753g() != null) {
+            j78Var = j78Var.m18753g();
+            if (j78Var == this.f25978i) {
+                this.f25978i = this.f25977h;
                 z = true;
             }
-            j78Var.n();
-            this.k--;
+            j78Var.m18746n();
+            this.f25980k--;
         }
-        this.j.o(null);
-        B();
+        this.f25979j.m18745o(null);
+        m10588B();
         return z;
     }
 
-    public final boolean q() {
-        j78 j78Var = this.j;
+    /* renamed from: q */
+    public final boolean m10570q() {
+        j78 j78Var = this.f25979j;
         if (j78Var != null) {
-            return !j78Var.f.i && j78Var.r() && this.j.f.e != -9223372036854775807L && this.k < 100;
+            return !j78Var.f14507f.f18581i && j78Var.m18742r() && this.f25979j.f14507f.f18577e != -9223372036854775807L && this.f25980k < 100;
         }
         return true;
     }
 
-    public final boolean r(l64 l64Var, long j, long j2) {
+    /* renamed from: r */
+    public final boolean m10569r(l64 l64Var, long j, long j2) {
         m78 m78Var;
         boolean z;
         j78 j78Var = null;
-        for (j78 j78Var2 = this.h; j78Var2 != null; j78Var2 = j78Var2.g()) {
-            m78 m78Var2 = j78Var2.f;
+        for (j78 j78Var2 = this.f25977h; j78Var2 != null; j78Var2 = j78Var2.m18753g()) {
+            m78 m78Var2 = j78Var2.f14507f;
             if (j78Var == null) {
-                m78Var = j(l64Var, m78Var2);
+                m78Var = m10577j(l64Var, m78Var2);
             } else {
-                m78 w = w(l64Var, j78Var, j);
-                if (w == null) {
-                    return !p(j78Var);
-                } else if (m78Var2.b != w.b || !m78Var2.a.equals(w.a)) {
-                    return !p(j78Var);
+                m78 m10564w = m10564w(l64Var, j78Var, j);
+                if (m10564w == null) {
+                    return !m10571p(j78Var);
+                } else if (m78Var2.f18574b != m10564w.f18574b || !m78Var2.f18573a.equals(m10564w.f18573a)) {
+                    return !m10571p(j78Var);
                 } else {
-                    m78Var = w;
+                    m78Var = m10564w;
                 }
             }
-            j78Var2.f = m78Var.a(m78Var2.c);
-            long j3 = m78Var2.e;
-            long j4 = m78Var.e;
+            j78Var2.f14507f = m78Var.m16185a(m78Var2.f18575c);
+            long j3 = m78Var2.f18577e;
+            long j4 = m78Var.f18577e;
             if (j3 != -9223372036854775807L && j3 != j4) {
-                j78Var2.q();
-                long j5 = m78Var.e;
-                long e = j5 == -9223372036854775807L ? Long.MAX_VALUE : j5 + j78Var2.e();
-                if (j78Var2 == this.i) {
-                    boolean z2 = j78Var2.f.f;
-                    if (j2 == Long.MIN_VALUE || j2 >= e) {
+                j78Var2.m18743q();
+                long j5 = m78Var.f18577e;
+                long m18755e = j5 == -9223372036854775807L ? Long.MAX_VALUE : j5 + j78Var2.m18755e();
+                if (j78Var2 == this.f25978i) {
+                    boolean z2 = j78Var2.f14507f.f18578f;
+                    if (j2 == Long.MIN_VALUE || j2 >= m18755e) {
                         z = true;
-                        return p(j78Var2) && !z;
+                        return m10571p(j78Var2) && !z;
                     }
                 }
                 z = false;
-                if (p(j78Var2)) {
+                if (m10571p(j78Var2)) {
                 }
             }
             j78Var = j78Var2;
@@ -382,155 +391,163 @@ public final class s78 {
         return true;
     }
 
-    public final boolean s(l64 l64Var, int i) {
-        this.f = i;
-        return b(l64Var);
+    /* renamed from: s */
+    public final boolean m10568s(l64 l64Var, int i) {
+        this.f25975f = i;
+        return m10585b(l64Var);
     }
 
-    public final boolean t(l64 l64Var, boolean z) {
-        this.g = z;
-        return b(l64Var);
+    /* renamed from: t */
+    public final boolean m10567t(l64 l64Var, boolean z) {
+        this.f25976g = z;
+        return m10585b(l64Var);
     }
 
-    public final j78 u(l98[] l98VarArr, zv8 zv8Var, nw8 nw8Var, n88 n88Var, m78 m78Var, fw8 fw8Var) {
-        j78 j78Var = this.j;
-        j78 j78Var2 = new j78(l98VarArr, j78Var == null ? 1000000000000L : (j78Var.e() + j78Var.f.e) - m78Var.b, zv8Var, nw8Var, n88Var, m78Var, fw8Var, null);
-        j78 j78Var3 = this.j;
+    /* renamed from: u */
+    public final j78 m10566u(l98[] l98VarArr, zv8 zv8Var, nw8 nw8Var, n88 n88Var, m78 m78Var, fw8 fw8Var) {
+        j78 j78Var = this.f25979j;
+        j78 j78Var2 = new j78(l98VarArr, j78Var == null ? 1000000000000L : (j78Var.m18755e() + j78Var.f14507f.f18577e) - m78Var.f18574b, zv8Var, nw8Var, n88Var, m78Var, fw8Var, null);
+        j78 j78Var3 = this.f25979j;
         if (j78Var3 != null) {
-            j78Var3.o(j78Var2);
+            j78Var3.m18745o(j78Var2);
         } else {
-            this.h = j78Var2;
-            this.i = j78Var2;
+            this.f25977h = j78Var2;
+            this.f25978i = j78Var2;
         }
-        this.l = null;
-        this.j = j78Var2;
-        this.k++;
-        B();
+        this.f25981l = null;
+        this.f25979j = j78Var2;
+        this.f25980k++;
+        m10588B();
         return j78Var2;
     }
 
-    public final long v(l64 l64Var, Object obj, int i) {
-        l64Var.n(obj, this.a);
-        this.a.h(i);
-        this.a.j(i);
+    /* renamed from: v */
+    public final long m10565v(l64 l64Var, Object obj, int i) {
+        l64Var.mo13467n(obj, this.f25970a);
+        this.f25970a.m24721h(i);
+        this.f25970a.m24719j(i);
         return 0L;
     }
 
-    public final m78 w(l64 l64Var, j78 j78Var, long j) {
+    /* renamed from: w */
+    public final m78 m10564w(l64 l64Var, j78 j78Var, long j) {
         long j2;
-        m78 m78Var = j78Var.f;
-        long e = (j78Var.e() + m78Var.e) - j;
-        if (!m78Var.g) {
-            pr8 pr8Var = m78Var.a;
-            l64Var.n(pr8Var.a, this.a);
-            if (!pr8Var.b()) {
-                int e2 = this.a.e(pr8Var.e);
-                this.a.l(pr8Var.e);
-                if (e2 != this.a.a(pr8Var.e)) {
-                    return y(l64Var, pr8Var.a, pr8Var.e, e2, m78Var.e, pr8Var.d);
+        m78 m78Var = j78Var.f14507f;
+        long m18755e = (j78Var.m18755e() + m78Var.f18577e) - j;
+        if (!m78Var.f18579g) {
+            pr8 pr8Var = m78Var.f18573a;
+            l64Var.mo13467n(pr8Var.f18805a, this.f25970a);
+            if (!pr8Var.m16079b()) {
+                int m24724e = this.f25970a.m24724e(pr8Var.f18809e);
+                this.f25970a.m24717l(pr8Var.f18809e);
+                if (m24724e != this.f25970a.m24728a(pr8Var.f18809e)) {
+                    return m10562y(l64Var, pr8Var.f18805a, pr8Var.f18809e, m24724e, m78Var.f18577e, pr8Var.f18808d);
                 }
-                v(l64Var, pr8Var.a, pr8Var.e);
-                return z(l64Var, pr8Var.a, 0L, m78Var.e, pr8Var.d);
+                m10565v(l64Var, pr8Var.f18805a, pr8Var.f18809e);
+                return m10561z(l64Var, pr8Var.f18805a, 0L, m78Var.f18577e, pr8Var.f18808d);
             }
-            int i = pr8Var.b;
-            if (this.a.a(i) == -1) {
+            int i = pr8Var.f18806b;
+            if (this.f25970a.m24728a(i) == -1) {
                 return null;
             }
-            int f = this.a.f(i, pr8Var.c);
-            if (f < 0) {
-                return y(l64Var, pr8Var.a, i, f, m78Var.c, pr8Var.d);
+            int m24723f = this.f25970a.m24723f(i, pr8Var.f18807c);
+            if (m24723f < 0) {
+                return m10562y(l64Var, pr8Var.f18805a, i, m24723f, m78Var.f18575c, pr8Var.f18808d);
             }
-            long j3 = m78Var.c;
+            long j3 = m78Var.f18575c;
             if (j3 == -9223372036854775807L) {
-                i54 i54Var = this.b;
-                d34 d34Var = this.a;
-                Pair m = l64Var.m(i54Var, d34Var, d34Var.c, -9223372036854775807L, Math.max(0L, e));
-                if (m == null) {
+                i54 i54Var = this.f25971b;
+                d34 d34Var = this.f25970a;
+                Pair m17122m = l64Var.m17122m(i54Var, d34Var, d34Var.f6450c, -9223372036854775807L, Math.max(0L, m18755e));
+                if (m17122m == null) {
                     return null;
                 }
-                j3 = ((Long) m.second).longValue();
+                j3 = ((Long) m17122m.second).longValue();
             }
-            v(l64Var, pr8Var.a, pr8Var.b);
-            return z(l64Var, pr8Var.a, Math.max(0L, j3), m78Var.c, pr8Var.d);
+            m10565v(l64Var, pr8Var.f18805a, pr8Var.f18806b);
+            return m10561z(l64Var, pr8Var.f18805a, Math.max(0L, j3), m78Var.f18575c, pr8Var.f18808d);
         }
         long j4 = 0;
-        int i2 = l64Var.i(l64Var.a(m78Var.a.a), this.a, this.b, this.f, this.g);
-        if (i2 == -1) {
+        int m17124i = l64Var.m17124i(l64Var.mo4511a(m78Var.f18573a.f18805a), this.f25970a, this.f25971b, this.f25975f, this.f25976g);
+        if (m17124i == -1) {
             return null;
         }
-        int i3 = l64Var.d(i2, this.a, true).c;
-        Object obj = this.a.b;
+        int i2 = l64Var.mo1924d(m17124i, this.f25970a, true).f6450c;
+        Object obj = this.f25970a.f6449b;
         Objects.requireNonNull(obj);
-        long j5 = m78Var.a.d;
-        if (l64Var.e(i3, this.b, 0L).m == i2) {
-            Pair m2 = l64Var.m(this.b, this.a, i3, -9223372036854775807L, Math.max(0L, e));
-            if (m2 == null) {
+        long j5 = m78Var.f18573a.f18808d;
+        if (l64Var.mo1923e(i2, this.f25971b, 0L).f13279m == m17124i) {
+            Pair m17122m2 = l64Var.m17122m(this.f25971b, this.f25970a, i2, -9223372036854775807L, Math.max(0L, m18755e));
+            if (m17122m2 == null) {
                 return null;
             }
-            obj = m2.first;
-            long longValue = ((Long) m2.second).longValue();
-            j78 g = j78Var.g();
-            if (g == null || !g.b.equals(obj)) {
-                j5 = this.e;
-                this.e = 1 + j5;
+            obj = m17122m2.first;
+            long longValue = ((Long) m17122m2.second).longValue();
+            j78 m18753g = j78Var.m18753g();
+            if (m18753g == null || !m18753g.f14503b.equals(obj)) {
+                j5 = this.f25974e;
+                this.f25974e = 1 + j5;
             } else {
-                j5 = g.f.a.d;
+                j5 = m18753g.f14507f.f18573a.f18808d;
             }
             j2 = longValue;
             j4 = -9223372036854775807L;
         } else {
             j2 = 0;
         }
-        pr8 A = A(l64Var, obj, j2, j5, this.b, this.a);
-        if (j4 != -9223372036854775807L && m78Var.c != -9223372036854775807L) {
-            l64Var.n(m78Var.a.a, this.a).b();
+        pr8 m10589A = m10589A(l64Var, obj, j2, j5, this.f25971b, this.f25970a);
+        if (j4 != -9223372036854775807L && m78Var.f18575c != -9223372036854775807L) {
+            l64Var.mo13467n(m78Var.f18573a.f18805a, this.f25970a).m24727b();
         }
-        return x(l64Var, A, j4, j2);
+        return m10563x(l64Var, m10589A, j4, j2);
     }
 
-    public final m78 x(l64 l64Var, pr8 pr8Var, long j, long j2) {
-        l64Var.n(pr8Var.a, this.a);
-        boolean b = pr8Var.b();
-        Object obj = pr8Var.a;
-        return b ? y(l64Var, obj, pr8Var.b, pr8Var.c, j, pr8Var.d) : z(l64Var, obj, j2, j, pr8Var.d);
+    /* renamed from: x */
+    public final m78 m10563x(l64 l64Var, pr8 pr8Var, long j, long j2) {
+        l64Var.mo13467n(pr8Var.f18805a, this.f25970a);
+        boolean m16079b = pr8Var.m16079b();
+        Object obj = pr8Var.f18805a;
+        return m16079b ? m10562y(l64Var, obj, pr8Var.f18806b, pr8Var.f18807c, j, pr8Var.f18808d) : m10561z(l64Var, obj, j2, j, pr8Var.f18808d);
     }
 
-    public final m78 y(l64 l64Var, Object obj, int i, int i2, long j, long j2) {
+    /* renamed from: y */
+    public final m78 m10562y(l64 l64Var, Object obj, int i, int i2, long j, long j2) {
         pr8 pr8Var = new pr8(obj, i, i2, j2);
-        long g = l64Var.n(pr8Var.a, this.a).g(pr8Var.b, pr8Var.c);
-        if (i2 == this.a.e(i)) {
-            this.a.i();
+        long m24722g = l64Var.mo13467n(pr8Var.f18805a, this.f25970a).m24722g(pr8Var.f18806b, pr8Var.f18807c);
+        if (i2 == this.f25970a.m24724e(i)) {
+            this.f25970a.m24720i();
         }
-        this.a.l(pr8Var.b);
+        this.f25970a.m24717l(pr8Var.f18806b);
         long j3 = 0;
-        if (g != -9223372036854775807L && g <= 0) {
-            j3 = Math.max(0L, (-1) + g);
+        if (m24722g != -9223372036854775807L && m24722g <= 0) {
+            j3 = Math.max(0L, (-1) + m24722g);
         }
-        return new m78(pr8Var, j3, j, -9223372036854775807L, g, false, false, false, false);
+        return new m78(pr8Var, j3, j, -9223372036854775807L, m24722g, false, false, false, false);
     }
 
-    public final m78 z(l64 l64Var, Object obj, long j, long j2, long j3) {
+    /* renamed from: z */
+    public final m78 m10561z(l64 l64Var, Object obj, long j, long j2, long j3) {
         long j4;
         long j5;
         long j6;
         long j7 = j;
-        l64Var.n(obj, this.a);
-        int c = this.a.c(j7);
-        d34 d34Var = this.a;
-        if (c == -1) {
-            d34Var.b();
+        l64Var.mo13467n(obj, this.f25970a);
+        int m24726c = this.f25970a.m24726c(j7);
+        d34 d34Var = this.f25970a;
+        if (m24726c == -1) {
+            d34Var.m24727b();
         } else {
-            d34Var.l(c);
+            d34Var.m24717l(m24726c);
         }
-        pr8 pr8Var = new pr8(obj, j3, c);
-        boolean c2 = c(pr8Var);
-        boolean a = a(l64Var, pr8Var);
-        boolean C = C(l64Var, pr8Var, c2);
-        if (c != -1) {
-            this.a.l(c);
+        pr8 pr8Var = new pr8(obj, j3, m24726c);
+        boolean m10584c = m10584c(pr8Var);
+        boolean m10586a = m10586a(l64Var, pr8Var);
+        boolean m10587C = m10587C(l64Var, pr8Var, m10584c);
+        if (m24726c != -1) {
+            this.f25970a.m24717l(m24726c);
         }
-        if (c != -1) {
-            this.a.h(c);
+        if (m24726c != -1) {
+            this.f25970a.m24721h(m24726c);
             j4 = 0;
         } else {
             j4 = -9223372036854775807L;
@@ -539,12 +556,12 @@ public final class s78 {
             j6 = j4;
             j5 = j6;
         } else {
-            j5 = this.a.d;
+            j5 = this.f25970a.f6451d;
             j6 = -9223372036854775807L;
         }
         if (j5 != -9223372036854775807L && j7 >= j5) {
             j7 = Math.max(0L, j5 - 1);
         }
-        return new m78(pr8Var, j7, j2, j6, j5, false, c2, a, C);
+        return new m78(pr8Var, j7, j2, j6, j5, false, m10584c, m10586a, m10587C);
     }
 }

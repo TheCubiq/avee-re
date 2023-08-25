@@ -7,7 +7,8 @@ import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.zzt;
 /* loaded from: classes.dex */
 public final class my3 {
-    public static Uri a(String str, String str2, String str3) {
+    /* renamed from: a */
+    public static Uri m15660a(String str, String str2, String str3) {
         int indexOf = str.indexOf("&adurl");
         if (indexOf == -1) {
             indexOf = str.indexOf("?adurl");
@@ -19,17 +20,18 @@ public final class my3 {
         return Uri.parse(str).buildUpon().appendQueryParameter(str2, str3).build();
     }
 
-    public static String b(Uri uri, Context context) {
-        String f;
-        if (zzt.zzn().z(context) && (f = zzt.zzn().f(context)) != null) {
-            String str = (String) zzba.zzc().b(g93.c0);
+    /* renamed from: b */
+    public static String m15659b(Uri uri, Context context) {
+        String m17337f;
+        if (zzt.zzn().m17317z(context) && (m17337f = zzt.zzn().m17337f(context)) != null) {
+            String str = (String) zzba.zzc().m23658b(g93.f10644c0);
             String uri2 = uri.toString();
-            if (((Boolean) zzba.zzc().b(g93.b0)).booleanValue() && uri2.contains(str)) {
-                zzt.zzn().r(context, f);
-                return d(uri2, context).replace(str, f);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10633b0)).booleanValue() && uri2.contains(str)) {
+                zzt.zzn().m17325r(context, m17337f);
+                return m15657d(uri2, context).replace(str, m17337f);
             } else if (TextUtils.isEmpty(uri.getQueryParameter("fbs_aeid"))) {
-                String uri3 = a(d(uri2, context), "fbs_aeid", f).toString();
-                zzt.zzn().r(context, f);
+                String uri3 = m15660a(m15657d(uri2, context), "fbs_aeid", m17337f).toString();
+                zzt.zzn().m17325r(context, m17337f);
                 return uri3;
             } else {
                 return uri2;
@@ -38,17 +40,18 @@ public final class my3 {
         return uri.toString();
     }
 
-    public static String c(String str, Context context, boolean z) {
-        String f;
-        if ((!((Boolean) zzba.zzc().b(g93.j0)).booleanValue() || z) && zzt.zzn().z(context) && !TextUtils.isEmpty(str) && (f = zzt.zzn().f(context)) != null) {
-            String str2 = (String) zzba.zzc().b(g93.c0);
-            if (((Boolean) zzba.zzc().b(g93.b0)).booleanValue() && str.contains(str2)) {
+    /* renamed from: c */
+    public static String m15658c(String str, Context context, boolean z) {
+        String m17337f;
+        if ((!((Boolean) zzba.zzc().m23658b(g93.f10721j0)).booleanValue() || z) && zzt.zzn().m17317z(context) && !TextUtils.isEmpty(str) && (m17337f = zzt.zzn().m17337f(context)) != null) {
+            String str2 = (String) zzba.zzc().m23658b(g93.f10644c0);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10633b0)).booleanValue() && str.contains(str2)) {
                 if (zzt.zzp().zzg(str)) {
-                    zzt.zzn().r(context, f);
-                    return d(str, context).replace(str2, f);
+                    zzt.zzn().m17325r(context, m17337f);
+                    return m15657d(str, context).replace(str2, m17337f);
                 } else if (zzt.zzp().zzh(str)) {
-                    zzt.zzn().s(context, f);
-                    return d(str, context).replace(str2, f);
+                    zzt.zzn().m17324s(context, m17337f);
+                    return m15657d(str, context).replace(str2, m17337f);
                 } else {
                     return str;
                 }
@@ -56,11 +59,11 @@ public final class my3 {
                 return str;
             } else {
                 if (zzt.zzp().zzg(str)) {
-                    zzt.zzn().r(context, f);
-                    return a(d(str, context), "fbs_aeid", f).toString();
+                    zzt.zzn().m17325r(context, m17337f);
+                    return m15660a(m15657d(str, context), "fbs_aeid", m17337f).toString();
                 } else if (zzt.zzp().zzh(str)) {
-                    zzt.zzn().s(context, f);
-                    return a(d(str, context), "fbs_aeid", f).toString();
+                    zzt.zzn().m17324s(context, m17337f);
+                    return m15660a(m15657d(str, context), "fbs_aeid", m17337f).toString();
                 } else {
                     return str;
                 }
@@ -69,12 +72,13 @@ public final class my3 {
         return str;
     }
 
-    public static String d(String str, Context context) {
-        String j = zzt.zzn().j(context);
-        String h = zzt.zzn().h(context);
-        if (!str.contains("gmp_app_id") && !TextUtils.isEmpty(j)) {
-            str = a(str, "gmp_app_id", j).toString();
+    /* renamed from: d */
+    public static String m15657d(String str, Context context) {
+        String m17333j = zzt.zzn().m17333j(context);
+        String m17335h = zzt.zzn().m17335h(context);
+        if (!str.contains("gmp_app_id") && !TextUtils.isEmpty(m17333j)) {
+            str = m15660a(str, "gmp_app_id", m17333j).toString();
         }
-        return (str.contains("fbs_aiid") || TextUtils.isEmpty(h)) ? str : a(str, "fbs_aiid", h).toString();
+        return (str.contains("fbs_aiid") || TextUtils.isEmpty(m17335h)) ? str : m15660a(str, "fbs_aiid", m17335h).toString();
     }
 }

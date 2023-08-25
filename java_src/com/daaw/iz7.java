@@ -4,11 +4,14 @@ import java.io.Closeable;
 import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public interface iz7 extends Closeable {
-    int N(ByteBuffer byteBuffer);
+    /* renamed from: N */
+    int mo12775N(ByteBuffer byteBuffer);
 
-    ByteBuffer R(long j, long j2);
+    /* renamed from: R */
+    ByteBuffer mo12774R(long j, long j2);
 
-    void b(long j);
+    /* renamed from: b */
+    void mo12773b(long j);
 
     long zzb();
 

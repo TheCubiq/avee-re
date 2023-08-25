@@ -1,16 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class is8 {
-    public static final is8 d = new is8(0, 0, 0);
-    public static final th8 e = new th8() { // from class: com.daaw.dr8
+
+    /* renamed from: d */
+    public static final is8 f13979d = new is8(0, 0, 0);
+
+    /* renamed from: e */
+    public static final th8 f13980e = new th8() { // from class: com.daaw.dr8
     };
-    public final int a = 0;
-    public final int b;
-    public final int c;
+
+    /* renamed from: a */
+    public final int f13981a = 0;
+
+    /* renamed from: b */
+    public final int f13982b;
+
+    /* renamed from: c */
+    public final int f13983c;
 
     public is8(int i, int i2, int i3) {
-        this.b = i2;
-        this.c = i3;
+        this.f13982b = i2;
+        this.f13983c = i3;
     }
 
     public final boolean equals(Object obj) {
@@ -19,13 +29,13 @@ public final class is8 {
         }
         if (obj instanceof is8) {
             is8 is8Var = (is8) obj;
-            int i = is8Var.a;
-            return this.b == is8Var.b && this.c == is8Var.c;
+            int i = is8Var.f13981a;
+            return this.f13982b == is8Var.f13982b && this.f13983c == is8Var.f13983c;
         }
         return false;
     }
 
     public final int hashCode() {
-        return ((this.b + 16337) * 31) + this.c;
+        return ((this.f13982b + 16337) * 31) + this.f13983c;
     }
 }

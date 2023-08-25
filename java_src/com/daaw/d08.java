@@ -7,16 +7,18 @@ public final class d08 extends sz7 implements qz7 {
         super(map);
     }
 
-    public static c08 b(int i) {
+    /* renamed from: b */
+    public static c08 m24803b(int i) {
         return new c08(1, null);
     }
 
-    public final Map c() {
-        return a();
+    /* renamed from: c */
+    public final Map m24802c() {
+        return m9680a();
     }
 
     @Override // com.daaw.m08
     public final /* synthetic */ Object zzb() {
-        return a();
+        return m9680a();
     }
 }

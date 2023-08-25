@@ -4,22 +4,26 @@ import java.security.GeneralSecurityException;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class oo7 implements a87 {
-    public final kb7 a;
+
+    /* renamed from: a */
+    public final kb7 f21785a;
 
     public oo7(byte[] bArr) {
-        if (!xb7.a(2)) {
+        if (!xb7.m5296a(2)) {
             throw new GeneralSecurityException("Can not use AES-GCM in FIPS-mode, as BoringCrypto module is not available.");
         }
-        this.a = new kb7(bArr, true);
+        this.f21785a = new kb7(bArr, true);
     }
 
     @Override // com.daaw.a87
-    public final byte[] a(byte[] bArr, byte[] bArr2) {
-        return this.a.a(Arrays.copyOf(bArr, 12), bArr, bArr2);
+    /* renamed from: a */
+    public final byte[] mo1998a(byte[] bArr, byte[] bArr2) {
+        return this.f21785a.m17835a(Arrays.copyOf(bArr, 12), bArr, bArr2);
     }
 
     @Override // com.daaw.a87
-    public final byte[] b(byte[] bArr, byte[] bArr2) {
-        return this.a.b(vp7.a(12), bArr, bArr2);
+    /* renamed from: b */
+    public final byte[] mo1997b(byte[] bArr, byte[] bArr2) {
+        return this.f21785a.m17834b(vp7.m6942a(12), bArr, bArr2);
     }
 }

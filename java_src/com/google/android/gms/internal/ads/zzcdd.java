@@ -10,15 +10,20 @@ import org.json.JSONArray;
 /* loaded from: classes.dex */
 public final class zzcdd extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzcdd> CREATOR = new qv3();
-    public final String p;
-    public final int q;
+
+    /* renamed from: p */
+    public final String f36977p;
+
+    /* renamed from: q */
+    public final int f36978q;
 
     public zzcdd(String str, int i) {
-        this.p = str;
-        this.q = i;
+        this.f36977p = str;
+        this.f36978q = i;
     }
 
-    public static zzcdd h(JSONArray jSONArray) {
+    /* renamed from: h */
+    public static zzcdd m1095h(JSONArray jSONArray) {
         if (jSONArray == null || jSONArray.length() == 0) {
             return null;
         }
@@ -28,7 +33,7 @@ public final class zzcdd extends AbstractSafeParcelable {
     public final boolean equals(Object obj) {
         if (obj != null && (obj instanceof zzcdd)) {
             zzcdd zzcddVar = (zzcdd) obj;
-            if (ot0.a(this.p, zzcddVar.p) && ot0.a(Integer.valueOf(this.q), Integer.valueOf(zzcddVar.q))) {
+            if (ot0.m13981a(this.f36977p, zzcddVar.f36977p) && ot0.m13981a(Integer.valueOf(this.f36978q), Integer.valueOf(zzcddVar.f36978q))) {
                 return true;
             }
         }
@@ -36,14 +41,14 @@ public final class zzcdd extends AbstractSafeParcelable {
     }
 
     public final int hashCode() {
-        return ot0.b(this.p, Integer.valueOf(this.q));
+        return ot0.m13980b(this.f36977p, Integer.valueOf(this.f36978q));
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.q(parcel, 2, this.p, false);
-        z71.k(parcel, 3, this.q);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2717q(parcel, 2, this.f36977p, false);
+        z71.m2723k(parcel, 3, this.f36978q);
+        z71.m2732b(parcel, m2733a);
     }
 }

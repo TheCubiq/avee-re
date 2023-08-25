@@ -6,18 +6,20 @@ public final class n54 extends j54 {
     }
 
     @Override // com.daaw.j54
-    public final void h() {
+    /* renamed from: h */
+    public final void mo10703h() {
     }
 
     @Override // com.daaw.j54
-    public final boolean s(String str) {
-        String j = d04.j(str);
-        y24 y24Var = (y24) this.r.get();
-        if (y24Var != null && j != null) {
-            y24Var.t(j, this);
+    /* renamed from: s */
+    public final boolean mo10698s(String str) {
+        String m24822j = d04.m24822j(str);
+        y24 y24Var = (y24) this.f14367r.get();
+        if (y24Var != null && m24822j != null) {
+            y24Var.mo4236t(m24822j, this);
         }
         k04.zzj("VideoStreamNoopCache is doing nothing.");
-        j(str, j, "noop", "Noop cache is a noop.");
+        m18856j(str, m24822j, "noop", "Noop cache is a noop.");
         return false;
     }
 }

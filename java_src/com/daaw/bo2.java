@@ -8,11 +8,12 @@ public final class bo2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        zl2 zl2Var = new zl2((String) this.f.invoke(null, this.b.b(), Boolean.valueOf(((Boolean) zzba.zzc().b(g93.n2)).booleanValue())));
-        synchronized (this.e) {
-            this.e.h0(zl2Var.a);
-            this.e.u(zl2Var.b);
+    /* renamed from: a */
+    public final void mo2099a() {
+        zl2 zl2Var = new zl2((String) this.f20529f.invoke(null, this.f20525b.m6004b(), Boolean.valueOf(((Boolean) zzba.zzc().m23658b(g93.f10767n2)).booleanValue())));
+        synchronized (this.f20528e) {
+            this.f20528e.m20758h0(zl2Var.f35200a);
+            this.f20528e.m20743u(zl2Var.f35201b);
         }
     }
 }

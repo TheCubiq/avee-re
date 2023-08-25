@@ -10,17 +10,18 @@ public final class i28 extends j38 {
     /* JADX WARN: Multi-variable type inference failed */
     @Override // com.daaw.j38
     @Nullable
-    public final /* bridge */ /* synthetic */ Object a(Object obj) {
-        if (tu7.c.matcher(obj).matches()) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo14601a(Object obj) {
+        if (tu7.f28081c.matcher(obj).matches()) {
             return Boolean.TRUE;
         }
-        if (tu7.d.matcher(obj).matches()) {
+        if (tu7.f28082d.matcher(obj).matches()) {
             return Boolean.FALSE;
         }
-        String c = super.c();
+        String m19094c = super.m19094c();
         StringBuilder sb = new StringBuilder();
         sb.append("Invalid boolean value for ");
-        sb.append(c);
+        sb.append(m19094c);
         sb.append(": ");
         sb.append((String) obj);
         return null;

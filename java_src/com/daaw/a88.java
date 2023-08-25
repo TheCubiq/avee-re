@@ -1,13 +1,19 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class a88 {
-    public final String a;
-    public final boolean b;
-    public final long c;
+
+    /* renamed from: a */
+    public final String f2995a;
+
+    /* renamed from: b */
+    public final boolean f2996b;
+
+    /* renamed from: c */
+    public final long f2997c;
 
     public a88(String str, boolean z, long j) {
-        this.a = str;
-        this.b = z;
-        this.c = j;
+        this.f2995a = str;
+        this.f2996b = z;
+        this.f2997c = j;
     }
 }

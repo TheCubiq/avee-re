@@ -1,84 +1,114 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class zo5 {
-    public long a = 0;
-    public int b = 0;
-    public long c = 0;
-    public long d = 0;
-    public long e = 0;
-    public final Object f = new Object();
-    public final Object g = new Object();
-    public final Object h = new Object();
-    public final Object i = new Object();
-    public final Object j = new Object();
 
-    public final int a() {
+    /* renamed from: a */
+    public long f35306a = 0;
+
+    /* renamed from: b */
+    public int f35307b = 0;
+
+    /* renamed from: c */
+    public long f35308c = 0;
+
+    /* renamed from: d */
+    public long f35309d = 0;
+
+    /* renamed from: e */
+    public long f35310e = 0;
+
+    /* renamed from: f */
+    public final Object f35311f = new Object();
+
+    /* renamed from: g */
+    public final Object f35312g = new Object();
+
+    /* renamed from: h */
+    public final Object f35313h = new Object();
+
+    /* renamed from: i */
+    public final Object f35314i = new Object();
+
+    /* renamed from: j */
+    public final Object f35315j = new Object();
+
+    /* renamed from: a */
+    public final int m2039a() {
         int i;
-        synchronized (this.g) {
-            i = this.b;
+        synchronized (this.f35312g) {
+            i = this.f35307b;
         }
         return i;
     }
 
-    public final synchronized long b() {
+    /* renamed from: b */
+    public final synchronized long m2038b() {
         long j;
-        synchronized (this.j) {
-            j = this.e;
+        synchronized (this.f35315j) {
+            j = this.f35310e;
         }
         return j;
     }
 
-    public final synchronized long c() {
+    /* renamed from: c */
+    public final synchronized long m2037c() {
         long j;
-        synchronized (this.i) {
-            j = this.d;
+        synchronized (this.f35314i) {
+            j = this.f35309d;
         }
         return j;
     }
 
-    public final synchronized long d() {
+    /* renamed from: d */
+    public final synchronized long m2036d() {
         long j;
-        synchronized (this.f) {
-            j = this.a;
+        synchronized (this.f35311f) {
+            j = this.f35306a;
         }
         return j;
     }
 
-    public final long e() {
+    /* renamed from: e */
+    public final long m2035e() {
         long j;
-        synchronized (this.h) {
-            j = this.c;
+        synchronized (this.f35313h) {
+            j = this.f35308c;
         }
         return j;
     }
 
-    public final synchronized void f(long j) {
-        synchronized (this.j) {
-            this.e = j;
+    /* renamed from: f */
+    public final synchronized void m2034f(long j) {
+        synchronized (this.f35315j) {
+            this.f35310e = j;
         }
     }
 
-    public final synchronized void g(long j) {
-        synchronized (this.i) {
-            this.d = j;
+    /* renamed from: g */
+    public final synchronized void m2033g(long j) {
+        synchronized (this.f35314i) {
+            this.f35309d = j;
         }
     }
 
-    public final synchronized void h(long j) {
-        synchronized (this.f) {
-            this.a = j;
+    /* renamed from: h */
+    public final synchronized void m2032h(long j) {
+        synchronized (this.f35311f) {
+            this.f35306a = j;
         }
     }
 
-    public final void i(int i) {
-        synchronized (this.g) {
-            this.b = i;
+    /* renamed from: i */
+    public final void m2031i(int i) {
+        synchronized (this.f35312g) {
+            this.f35307b = i;
         }
     }
 
-    public final void j(long j) {
-        synchronized (this.h) {
-            this.c = j;
+    /* renamed from: j */
+    public final void m2030j(long j) {
+        synchronized (this.f35313h) {
+            this.f35308c = j;
         }
     }
 }

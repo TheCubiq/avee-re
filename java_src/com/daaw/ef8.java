@@ -10,31 +10,32 @@ import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.common.internal.GetServiceRequest;
 /* loaded from: classes.dex */
 public final class ef8 implements Parcelable.Creator {
-    public static void a(GetServiceRequest getServiceRequest, Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, getServiceRequest.p);
-        z71.k(parcel, 2, getServiceRequest.q);
-        z71.k(parcel, 3, getServiceRequest.r);
-        z71.q(parcel, 4, getServiceRequest.s, false);
-        z71.j(parcel, 5, getServiceRequest.t, false);
-        z71.t(parcel, 6, getServiceRequest.u, i, false);
-        z71.e(parcel, 7, getServiceRequest.v, false);
-        z71.p(parcel, 8, getServiceRequest.w, i, false);
-        z71.t(parcel, 10, getServiceRequest.x, i, false);
-        z71.t(parcel, 11, getServiceRequest.y, i, false);
-        z71.c(parcel, 12, getServiceRequest.z);
-        z71.k(parcel, 13, getServiceRequest.A);
-        z71.c(parcel, 14, getServiceRequest.B);
-        z71.q(parcel, 15, getServiceRequest.h(), false);
-        z71.b(parcel, a);
+    /* renamed from: a */
+    public static void m23494a(GetServiceRequest getServiceRequest, Parcel parcel, int i) {
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, getServiceRequest.f36625p);
+        z71.m2723k(parcel, 2, getServiceRequest.f36626q);
+        z71.m2723k(parcel, 3, getServiceRequest.f36627r);
+        z71.m2717q(parcel, 4, getServiceRequest.f36628s, false);
+        z71.m2724j(parcel, 5, getServiceRequest.f36629t, false);
+        z71.m2714t(parcel, 6, getServiceRequest.f36630u, i, false);
+        z71.m2729e(parcel, 7, getServiceRequest.f36631v, false);
+        z71.m2718p(parcel, 8, getServiceRequest.f36632w, i, false);
+        z71.m2714t(parcel, 10, getServiceRequest.f36633x, i, false);
+        z71.m2714t(parcel, 11, getServiceRequest.f36634y, i, false);
+        z71.m2731c(parcel, 12, getServiceRequest.f36635z);
+        z71.m2723k(parcel, 13, getServiceRequest.f36622A);
+        z71.m2731c(parcel, 14, getServiceRequest.f36623B);
+        z71.m2717q(parcel, 15, getServiceRequest.m1166h(), false);
+        z71.m2732b(parcel, m2733a);
     }
 
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
-        Scope[] scopeArr = GetServiceRequest.D;
+        int m4034y = y71.m4034y(parcel);
+        Scope[] scopeArr = GetServiceRequest.f36620D;
         Bundle bundle = new Bundle();
-        Feature[] featureArr = GetServiceRequest.E;
+        Feature[] featureArr = GetServiceRequest.f36621E;
         Feature[] featureArr2 = featureArr;
         String str = null;
         IBinder iBinder = null;
@@ -46,58 +47,58 @@ public final class ef8 implements Parcelable.Creator {
         boolean z = false;
         int i4 = 0;
         boolean z2 = false;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            switch (y71.l(r)) {
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            switch (y71.m4047l(m4041r)) {
                 case 1:
-                    i = y71.t(parcel, r);
+                    i = y71.m4039t(parcel, m4041r);
                     break;
                 case 2:
-                    i2 = y71.t(parcel, r);
+                    i2 = y71.m4039t(parcel, m4041r);
                     break;
                 case 3:
-                    i3 = y71.t(parcel, r);
+                    i3 = y71.m4039t(parcel, m4041r);
                     break;
                 case 4:
-                    str = y71.f(parcel, r);
+                    str = y71.m4053f(parcel, m4041r);
                     break;
                 case 5:
-                    iBinder = y71.s(parcel, r);
+                    iBinder = y71.m4040s(parcel, m4041r);
                     break;
                 case 6:
-                    scopeArr = (Scope[]) y71.i(parcel, r, Scope.CREATOR);
+                    scopeArr = (Scope[]) y71.m4050i(parcel, m4041r, Scope.CREATOR);
                     break;
                 case 7:
-                    bundle = y71.a(parcel, r);
+                    bundle = y71.m4058a(parcel, m4041r);
                     break;
                 case 8:
-                    account = (Account) y71.e(parcel, r, Account.CREATOR);
+                    account = (Account) y71.m4054e(parcel, m4041r, Account.CREATOR);
                     break;
                 case 9:
                 default:
-                    y71.x(parcel, r);
+                    y71.m4035x(parcel, m4041r);
                     break;
                 case 10:
-                    featureArr = (Feature[]) y71.i(parcel, r, Feature.CREATOR);
+                    featureArr = (Feature[]) y71.m4050i(parcel, m4041r, Feature.CREATOR);
                     break;
                 case 11:
-                    featureArr2 = (Feature[]) y71.i(parcel, r, Feature.CREATOR);
+                    featureArr2 = (Feature[]) y71.m4050i(parcel, m4041r, Feature.CREATOR);
                     break;
                 case 12:
-                    z = y71.m(parcel, r);
+                    z = y71.m4046m(parcel, m4041r);
                     break;
                 case 13:
-                    i4 = y71.t(parcel, r);
+                    i4 = y71.m4039t(parcel, m4041r);
                     break;
                 case 14:
-                    z2 = y71.m(parcel, r);
+                    z2 = y71.m4046m(parcel, m4041r);
                     break;
                 case 15:
-                    str2 = y71.f(parcel, r);
+                    str2 = y71.m4053f(parcel, m4041r);
                     break;
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new GetServiceRequest(i, i2, i3, str, iBinder, scopeArr, bundle, account, featureArr, featureArr2, z, i4, z2, str2);
     }
 

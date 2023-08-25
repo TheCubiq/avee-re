@@ -1,11 +1,15 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class k35 extends m35 {
-    public abstract j75 i();
+    /* renamed from: i */
+    public abstract j75 mo18063i();
 
-    public abstract d85 j();
+    /* renamed from: j */
+    public abstract d85 mo18062j();
 
-    public abstract q85 k();
+    /* renamed from: k */
+    public abstract q85 mo18061k();
 
-    public abstract z85 l();
+    /* renamed from: l */
+    public abstract z85 mo18060l();
 }

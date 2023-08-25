@@ -4,7 +4,9 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 /* loaded from: classes.dex */
 public abstract class l70 extends Drawable implements Animatable {
-    public abstract boolean b();
+    /* renamed from: b */
+    public abstract boolean mo7215b();
 
-    public abstract void c(int i);
+    /* renamed from: c */
+    public abstract void mo7214c(int i);
 }

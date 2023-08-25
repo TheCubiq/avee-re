@@ -19,59 +19,66 @@ import java.io.OutputStream;
 /* loaded from: classes.dex */
 public final class zzcbz extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzcbz> CREATOR = new mu3();
-    public ParcelFileDescriptor p;
-    public Parcelable q = null;
-    public boolean r = true;
+
+    /* renamed from: p */
+    public ParcelFileDescriptor f36960p;
+
+    /* renamed from: q */
+    public Parcelable f36961q = null;
+
+    /* renamed from: r */
+    public boolean f36962r = true;
 
     public zzcbz(ParcelFileDescriptor parcelFileDescriptor) {
-        this.p = parcelFileDescriptor;
+        this.f36960p = parcelFileDescriptor;
     }
 
-    public final SafeParcelable h(Parcelable.Creator creator) {
-        if (this.r) {
-            if (this.p == null) {
+    /* renamed from: h */
+    public final SafeParcelable m1096h(Parcelable.Creator creator) {
+        if (this.f36962r) {
+            if (this.f36960p == null) {
                 k04.zzg("File descriptor is empty, returning null.");
                 return null;
             }
-            DataInputStream dataInputStream = new DataInputStream(new ParcelFileDescriptor.AutoCloseInputStream(this.p));
+            DataInputStream dataInputStream = new DataInputStream(new ParcelFileDescriptor.AutoCloseInputStream(this.f36960p));
             try {
                 try {
                     int readInt = dataInputStream.readInt();
                     byte[] bArr = new byte[readInt];
                     dataInputStream.readFully(bArr, 0, readInt);
-                    xd0.a(dataInputStream);
+                    xd0.m5227a(dataInputStream);
                     Parcel obtain = Parcel.obtain();
                     try {
                         obtain.unmarshall(bArr, 0, readInt);
                         obtain.setDataPosition(0);
-                        this.q = (Parcelable) creator.createFromParcel(obtain);
+                        this.f36961q = (Parcelable) creator.createFromParcel(obtain);
                         obtain.recycle();
-                        this.r = false;
+                        this.f36962r = false;
                     } catch (Throwable th) {
                         obtain.recycle();
                         throw th;
                     }
                 } catch (IOException e) {
                     k04.zzh("Could not read from parcel file descriptor", e);
-                    xd0.a(dataInputStream);
+                    xd0.m5227a(dataInputStream);
                     return null;
                 }
             } catch (Throwable th2) {
-                xd0.a(dataInputStream);
+                xd0.m5227a(dataInputStream);
                 throw th2;
             }
         }
-        return (SafeParcelable) this.q;
+        return (SafeParcelable) this.f36961q;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
         final ParcelFileDescriptor.AutoCloseOutputStream autoCloseOutputStream;
         ParcelFileDescriptor[] createPipe;
-        if (this.p == null) {
+        if (this.f36960p == null) {
             Parcel obtain = Parcel.obtain();
             try {
-                this.q.writeToParcel(obtain, 0);
+                this.f36961q.writeToParcel(obtain, 0);
                 final byte[] marshall = obtain.marshall();
                 obtain.recycle();
                 ParcelFileDescriptor parcelFileDescriptor = null;
@@ -83,7 +90,7 @@ public final class zzcbz extends AbstractSafeParcelable {
                     autoCloseOutputStream = null;
                 }
                 try {
-                    z04.a.execute(new Runnable() { // from class: com.daaw.iu3
+                    z04.f34305a.execute(new Runnable() { // from class: com.daaw.iu3
                         @Override // java.lang.Runnable
                         public final void run() {
                             DataOutputStream dataOutputStream;
@@ -103,24 +110,24 @@ public final class zzcbz extends AbstractSafeParcelable {
                             try {
                                 dataOutputStream.writeInt(bArr.length);
                                 dataOutputStream.write(bArr);
-                                xd0.a(dataOutputStream);
+                                xd0.m5227a(dataOutputStream);
                             } catch (IOException e3) {
                                 e = e3;
                                 dataOutputStream2 = dataOutputStream;
                                 k04.zzh("Error transporting the ad response", e);
-                                zzt.zzo().u(e, "LargeParcelTeleporter.pipeData.1");
+                                zzt.zzo().m11902u(e, "LargeParcelTeleporter.pipeData.1");
                                 if (dataOutputStream2 == null) {
-                                    xd0.a(outputStream);
+                                    xd0.m5227a(outputStream);
                                 } else {
-                                    xd0.a(dataOutputStream2);
+                                    xd0.m5227a(dataOutputStream2);
                                 }
                             } catch (Throwable th2) {
                                 th = th2;
                                 dataOutputStream2 = dataOutputStream;
                                 if (dataOutputStream2 == null) {
-                                    xd0.a(outputStream);
+                                    xd0.m5227a(outputStream);
                                 } else {
-                                    xd0.a(dataOutputStream2);
+                                    xd0.m5227a(dataOutputStream2);
                                 }
                                 throw th;
                             }
@@ -130,21 +137,21 @@ public final class zzcbz extends AbstractSafeParcelable {
                 } catch (IOException e2) {
                     e = e2;
                     k04.zzh("Error transporting the ad response", e);
-                    zzt.zzo().u(e, "LargeParcelTeleporter.pipeData.2");
-                    xd0.a(autoCloseOutputStream);
-                    this.p = parcelFileDescriptor;
-                    int a = z71.a(parcel);
-                    z71.p(parcel, 2, this.p, i, false);
-                    z71.b(parcel, a);
+                    zzt.zzo().m11902u(e, "LargeParcelTeleporter.pipeData.2");
+                    xd0.m5227a(autoCloseOutputStream);
+                    this.f36960p = parcelFileDescriptor;
+                    int m2733a = z71.m2733a(parcel);
+                    z71.m2718p(parcel, 2, this.f36960p, i, false);
+                    z71.m2732b(parcel, m2733a);
                 }
-                this.p = parcelFileDescriptor;
+                this.f36960p = parcelFileDescriptor;
             } catch (Throwable th) {
                 obtain.recycle();
                 throw th;
             }
         }
-        int a2 = z71.a(parcel);
-        z71.p(parcel, 2, this.p, i, false);
-        z71.b(parcel, a2);
+        int m2733a2 = z71.m2733a(parcel);
+        z71.m2718p(parcel, 2, this.f36960p, i, false);
+        z71.m2732b(parcel, m2733a2);
     }
 }

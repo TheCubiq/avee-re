@@ -7,10 +7,12 @@ public final class ql4 implements pt4 {
     }
 
     @Override // com.daaw.pt4
-    public final void F(fi6 fi6Var) {
+    /* renamed from: F */
+    public final void mo5181F(fi6 fi6Var) {
     }
 
     @Override // com.daaw.pt4
-    public final void e(zzccb zzccbVar) {
+    /* renamed from: e */
+    public final void mo5174e(zzccb zzccbVar) {
     }
 }

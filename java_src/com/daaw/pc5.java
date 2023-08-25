@@ -13,30 +13,47 @@ import com.google.android.gms.ads.nonagon.signalgeneration.zzf;
 import java.util.regex.Pattern;
 /* loaded from: classes.dex */
 public final class pc5 implements sv4, zza, ir4, pq4 {
-    public final Context p;
-    public final gj6 q;
-    public final kd5 r;
-    public final fi6 s;
-    public final th6 t;
-    public final cq5 u;
-    public Boolean v;
-    public final boolean w = ((Boolean) zzba.zzc().b(g93.m6)).booleanValue();
+
+    /* renamed from: p */
+    public final Context f22835p;
+
+    /* renamed from: q */
+    public final gj6 f22836q;
+
+    /* renamed from: r */
+    public final kd5 f22837r;
+
+    /* renamed from: s */
+    public final fi6 f22838s;
+
+    /* renamed from: t */
+    public final th6 f22839t;
+
+    /* renamed from: u */
+    public final cq5 f22840u;
+
+    /* renamed from: v */
+    public Boolean f22841v;
+
+    /* renamed from: w */
+    public final boolean f22842w = ((Boolean) zzba.zzc().m23658b(g93.f10760m6)).booleanValue();
 
     public pc5(Context context, gj6 gj6Var, kd5 kd5Var, fi6 fi6Var, th6 th6Var, cq5 cq5Var) {
-        this.p = context;
-        this.q = gj6Var;
-        this.r = kd5Var;
-        this.s = fi6Var;
-        this.t = th6Var;
-        this.u = cq5Var;
+        this.f22835p = context;
+        this.f22836q = gj6Var;
+        this.f22837r = kd5Var;
+        this.f22838s = fi6Var;
+        this.f22839t = th6Var;
+        this.f22840u = cq5Var;
     }
 
     @Override // com.daaw.pq4
-    public final void b(zze zzeVar) {
+    /* renamed from: b */
+    public final void mo4815b(zze zzeVar) {
         zze zzeVar2;
-        if (this.w) {
-            jd5 c = c("ifts");
-            c.b("reason", "adapter");
+        if (this.f22842w) {
+            jd5 m13449c = m13449c("ifts");
+            m13449c.m18590b("reason", "adapter");
             int i = zzeVar.zza;
             String str = zzeVar.zzb;
             if (zzeVar.zzc.equals(MobileAds.ERROR_DOMAIN) && (zzeVar2 = zzeVar.zzd) != null && !zzeVar2.zzc.equals(MobileAds.ERROR_DOMAIN)) {
@@ -45,117 +62,121 @@ public final class pc5 implements sv4, zza, ir4, pq4 {
                 str = zzeVar3.zzb;
             }
             if (i >= 0) {
-                c.b("arec", String.valueOf(i));
+                m13449c.m18590b("arec", String.valueOf(i));
             }
-            String a = this.q.a(str);
-            if (a != null) {
-                c.b("areec", a);
+            String m21558a = this.f22836q.m21558a(str);
+            if (m21558a != null) {
+                m13449c.m18590b("areec", m21558a);
             }
-            c.g();
+            m13449c.m18585g();
         }
     }
 
-    public final jd5 c(String str) {
-        jd5 a = this.r.a();
-        a.e(this.s.b.b);
-        a.d(this.t);
-        a.b("action", str);
-        if (!this.t.u.isEmpty()) {
-            a.b("ancn", (String) this.t.u.get(0));
+    /* renamed from: c */
+    public final jd5 m13449c(String str) {
+        jd5 m17776a = this.f22837r.m17776a();
+        m17776a.m18587e(this.f22838s.f9624b.f8508b);
+        m17776a.m18588d(this.f22839t);
+        m17776a.m18590b("action", str);
+        if (!this.f22839t.f27716u.isEmpty()) {
+            m17776a.m18590b("ancn", (String) this.f22839t.f27716u.get(0));
         }
-        if (this.t.k0) {
-            a.b("device_connectivity", true != zzt.zzo().x(this.p) ? "offline" : "online");
-            a.b("event_timestamp", String.valueOf(zzt.zzB().a()));
-            a.b("offline_ad", "1");
+        if (this.f22839t.f27701k0) {
+            m17776a.m18590b("device_connectivity", true != zzt.zzo().m11899x(this.f22835p) ? "offline" : "online");
+            m17776a.m18590b("event_timestamp", String.valueOf(zzt.zzB().mo15860a()));
+            m17776a.m18590b("offline_ad", "1");
         }
-        if (((Boolean) zzba.zzc().b(g93.v6)).booleanValue()) {
-            boolean z = zzf.zze(this.s.a.a) != 1;
-            a.b("scar", String.valueOf(z));
+        if (((Boolean) zzba.zzc().m23658b(g93.f10859v6)).booleanValue()) {
+            boolean z = zzf.zze(this.f22838s.f9623a.f5824a) != 1;
+            m17776a.m18590b("scar", String.valueOf(z));
             if (z) {
-                zzl zzlVar = this.s.a.a.d;
-                a.c("ragent", zzlVar.zzp);
-                a.c("rtype", zzf.zza(zzf.zzb(zzlVar)));
+                zzl zzlVar = this.f22838s.f9623a.f5824a.f25344d;
+                m17776a.m18589c("ragent", zzlVar.zzp);
+                m17776a.m18589c("rtype", zzf.zza(zzf.zzb(zzlVar)));
             }
         }
-        return a;
+        return m17776a;
     }
 
-    public final void e(jd5 jd5Var) {
-        if (!this.t.k0) {
-            jd5Var.g();
+    /* renamed from: e */
+    public final void m13448e(jd5 jd5Var) {
+        if (!this.f22839t.f27701k0) {
+            jd5Var.m18585g();
             return;
         }
-        this.u.u(new eq5(zzt.zzB().a(), this.s.b.b.b, jd5Var.f(), 2));
+        this.f22840u.m25118u(new eq5(zzt.zzB().mo15860a(), this.f22838s.f9624b.f8508b.f31252b, jd5Var.m18586f(), 2));
     }
 
-    public final boolean f() {
-        if (this.v == null) {
+    /* renamed from: f */
+    public final boolean m13447f() {
+        if (this.f22841v == null) {
             synchronized (this) {
-                if (this.v == null) {
-                    String str = (String) zzba.zzc().b(g93.m1);
+                if (this.f22841v == null) {
+                    String str = (String) zzba.zzc().m23658b(g93.f10755m1);
                     zzt.zzp();
-                    String zzo = zzs.zzo(this.p);
+                    String zzo = zzs.zzo(this.f22835p);
                     boolean z = false;
                     if (str != null && zzo != null) {
                         try {
                             z = Pattern.matches(str, zzo);
                         } catch (RuntimeException e) {
-                            zzt.zzo().u(e, "CsiActionsListener.isPatternMatched");
+                            zzt.zzo().m11902u(e, "CsiActionsListener.isPatternMatched");
                         }
                     }
-                    this.v = Boolean.valueOf(z);
+                    this.f22841v = Boolean.valueOf(z);
                 }
             }
         }
-        return this.v.booleanValue();
+        return this.f22841v.booleanValue();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zza
     public final void onAdClicked() {
-        if (this.t.k0) {
-            e(c("click"));
+        if (this.f22839t.f27701k0) {
+            m13448e(m13449c("click"));
         }
     }
 
     @Override // com.daaw.pq4
-    public final void s(b15 b15Var) {
-        if (this.w) {
-            jd5 c = c("ifts");
-            c.b("reason", "exception");
+    /* renamed from: s */
+    public final void mo4814s(b15 b15Var) {
+        if (this.f22842w) {
+            jd5 m13449c = m13449c("ifts");
+            m13449c.m18590b("reason", "exception");
             if (!TextUtils.isEmpty(b15Var.getMessage())) {
-                c.b("msg", b15Var.getMessage());
+                m13449c.m18590b("msg", b15Var.getMessage());
             }
-            c.g();
+            m13449c.m18585g();
         }
     }
 
     @Override // com.daaw.pq4
     public final void zzb() {
-        if (this.w) {
-            jd5 c = c("ifts");
-            c.b("reason", "blocked");
-            c.g();
+        if (this.f22842w) {
+            jd5 m13449c = m13449c("ifts");
+            m13449c.m18590b("reason", "blocked");
+            m13449c.m18585g();
         }
     }
 
     @Override // com.daaw.sv4
     public final void zzd() {
-        if (f()) {
-            c("adapter_shown").g();
+        if (m13447f()) {
+            m13449c("adapter_shown").m18585g();
         }
     }
 
     @Override // com.daaw.sv4
     public final void zze() {
-        if (f()) {
-            c("adapter_impression").g();
+        if (m13447f()) {
+            m13449c("adapter_impression").m18585g();
         }
     }
 
     @Override // com.daaw.ir4
     public final void zzl() {
-        if (f() || this.t.k0) {
-            e(c("impression"));
+        if (m13447f() || this.f22839t.f27701k0) {
+            m13448e(m13449c("impression"));
         }
     }
 }

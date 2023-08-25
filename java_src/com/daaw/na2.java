@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class na2 extends IllegalStateException {
-    public final l64 p;
+
+    /* renamed from: p */
+    public final l64 f19768p;
 
     public na2(l64 l64Var, int i, long j) {
-        this.p = l64Var;
+        this.f19768p = l64Var;
     }
 }

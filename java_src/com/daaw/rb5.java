@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class rb5 implements wz7 {
-    public static rb5 a() {
+    /* renamed from: a */
+    public static rb5 m11447a() {
         rb5 rb5Var;
-        rb5Var = qb5.a;
+        rb5Var = qb5.f23845a;
         return rb5Var;
     }
 

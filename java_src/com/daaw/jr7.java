@@ -3,82 +3,120 @@ package com.daaw;
 import java.io.InputStream;
 /* loaded from: classes.dex */
 public abstract class jr7 {
-    public static volatile int d = 100;
-    public static final /* synthetic */ int e = 0;
-    public int a;
-    public final int b = d;
-    public kr7 c;
+
+    /* renamed from: d */
+    public static volatile int f15354d = 100;
+
+    /* renamed from: e */
+    public static final /* synthetic */ int f15355e = 0;
+
+    /* renamed from: a */
+    public int f15356a;
+
+    /* renamed from: b */
+    public final int f15357b = f15354d;
+
+    /* renamed from: c */
+    public kr7 f15358c;
 
     public /* synthetic */ jr7(ir7 ir7Var) {
     }
 
-    public static int e(int i) {
+    /* renamed from: e */
+    public static int m18301e(int i) {
         return (-(i & 1)) ^ (i >>> 1);
     }
 
-    public static long f(long j) {
+    /* renamed from: f */
+    public static long m18300f(long j) {
         return (-(j & 1)) ^ (j >>> 1);
     }
 
-    public static jr7 g(InputStream inputStream, int i) {
+    /* renamed from: g */
+    public static jr7 m18299g(InputStream inputStream, int i) {
         return new hr7(inputStream, 4096, null);
     }
 
-    public static jr7 h(byte[] bArr, int i, int i2, boolean z) {
+    /* renamed from: h */
+    public static jr7 m18298h(byte[] bArr, int i, int i2, boolean z) {
         ar7 ar7Var = new ar7(bArr, i, i2, z, null);
         try {
-            ar7Var.l(i2);
+            ar7Var.mo18294l(i2);
             return ar7Var;
-        } catch (xs7 e2) {
-            throw new IllegalArgumentException(e2);
+        } catch (xs7 e) {
+            throw new IllegalArgumentException(e);
         }
     }
 
-    public abstract String A();
+    /* renamed from: A */
+    public abstract String mo18307A();
 
-    public abstract void B(int i);
+    /* renamed from: B */
+    public abstract void mo18306B(int i);
 
-    public abstract void a(int i);
+    /* renamed from: a */
+    public abstract void mo18305a(int i);
 
-    public abstract boolean b();
+    /* renamed from: b */
+    public abstract boolean mo18304b();
 
-    public abstract boolean c();
+    /* renamed from: c */
+    public abstract boolean mo18303c();
 
-    public abstract boolean d(int i);
+    /* renamed from: d */
+    public abstract boolean mo18302d(int i);
 
-    public abstract double i();
+    /* renamed from: i */
+    public abstract double mo18297i();
 
-    public abstract float j();
+    /* renamed from: j */
+    public abstract float mo18296j();
 
-    public abstract int k();
+    /* renamed from: k */
+    public abstract int mo18295k();
 
-    public abstract int l(int i);
+    /* renamed from: l */
+    public abstract int mo18294l(int i);
 
-    public abstract int m();
+    /* renamed from: m */
+    public abstract int mo18293m();
 
-    public abstract int n();
+    /* renamed from: n */
+    public abstract int mo18292n();
 
-    public abstract int o();
+    /* renamed from: o */
+    public abstract int mo18291o();
 
-    public abstract int p();
+    /* renamed from: p */
+    public abstract int mo18290p();
 
-    public abstract int q();
+    /* renamed from: q */
+    public abstract int mo18289q();
 
-    public abstract int r();
+    /* renamed from: r */
+    public abstract int mo18288r();
 
-    public abstract int s();
+    /* renamed from: s */
+    public abstract int mo18287s();
 
-    public abstract long t();
+    /* renamed from: t */
+    public abstract long mo18286t();
 
-    public abstract long u();
+    /* renamed from: u */
+    public abstract long mo18285u();
 
-    public abstract long v();
+    /* renamed from: v */
+    public abstract long mo18284v();
 
-    public abstract long w();
+    /* renamed from: w */
+    public abstract long mo18283w();
 
-    public abstract long x();
+    /* renamed from: x */
+    public abstract long mo18282x();
 
-    public abstract yq7 y();
+    /* renamed from: y */
+    public abstract yq7 mo18281y();
 
-    public abstract String z();
+    /* renamed from: z */
+    public abstract String mo18280z();
 }

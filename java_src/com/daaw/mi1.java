@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface mi1 {
-    void d(li1 li1Var);
+    /* renamed from: d */
+    void mo16024d(li1 li1Var);
 
-    String n();
+    /* renamed from: n */
+    String mo16023n();
 }

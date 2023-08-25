@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class lk6 {
-    public static int[] a() {
+    /* renamed from: a */
+    public static int[] m16892a() {
         return new int[]{1};
     }
 }

@@ -8,7 +8,7 @@ public abstract class h07 implements Map.Entry {
     public final boolean equals(@CheckForNull Object obj) {
         if (obj instanceof Map.Entry) {
             Map.Entry entry = (Map.Entry) obj;
-            if (ky6.a(getKey(), entry.getKey()) && ky6.a(getValue(), entry.getValue())) {
+            if (ky6.m17316a(getKey(), entry.getKey()) && ky6.m17316a(getValue(), entry.getValue())) {
                 return true;
             }
         }

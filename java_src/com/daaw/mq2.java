@@ -1,72 +1,63 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class mq2 {
-    public static final mq2 a = new jq2();
 
-    public abstract int a(Object obj);
+    /* renamed from: a */
+    public static final mq2 f19069a = new jq2();
 
-    public abstract int b();
+    /* renamed from: a */
+    public abstract int mo15854a(Object obj);
 
-    public abstract int c();
+    /* renamed from: b */
+    public abstract int mo15853b();
 
-    public abstract kq2 d(int i, kq2 kq2Var, boolean z);
+    /* renamed from: c */
+    public abstract int mo15852c();
 
-    public abstract lq2 e(int i, lq2 lq2Var, boolean z, long j);
+    /* renamed from: d */
+    public abstract kq2 mo15851d(int i, kq2 kq2Var, boolean z);
+
+    /* renamed from: e */
+    public abstract lq2 mo15850e(int i, lq2 lq2Var, boolean z, long j);
 
     /* JADX WARN: Code restructure failed: missing block: B:10:0x0017, code lost:
-        if ((c() - 1) == 0) goto L17;
+        if ((mo15852c() - 1) == 0) goto L17;
      */
+    /* renamed from: f */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final int f(int r3, com.daaw.kq2 r4, com.daaw.lq2 r5, int r6) {
-        /*
-            r2 = this;
-            r0 = 0
-            r2.d(r3, r4, r0)
-            r2.g(r0, r5, r0)
-            r4 = 1
-            if (r3 != 0) goto L31
-            r3 = -1
-            if (r6 == 0) goto L22
-            if (r6 == r4) goto L20
-            r1 = 2
-            if (r6 != r1) goto L1a
-            int r6 = r2.c()
-            int r6 = r6 + r3
-            if (r6 != 0) goto L2a
-            goto L20
-        L1a:
-            java.lang.IllegalStateException r3 = new java.lang.IllegalStateException
-            r3.<init>()
-            throw r3
-        L20:
-            r4 = 0
-            goto L2a
-        L22:
-            int r6 = r2.c()
-            int r6 = r6 + r3
-            if (r6 != 0) goto L2a
-            r4 = -1
-        L2a:
-            if (r4 != r3) goto L2d
-            return r3
-        L2d:
-            r2.g(r4, r5, r0)
-            return r0
-        L31:
-            int r3 = r3 + r4
-            return r3
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.mq2.f(int, com.daaw.kq2, com.daaw.lq2, int):int");
+    public final int m15849f(int i, kq2 kq2Var, lq2 lq2Var, int i2) {
+        mo15851d(i, kq2Var, false);
+        m15848g(0, lq2Var, false);
+        int i3 = 1;
+        if (i == 0) {
+            if (i2 != 0) {
+                if (i2 != 1) {
+                    if (i2 != 2) {
+                        throw new IllegalStateException();
+                    }
+                }
+                i3 = 0;
+            } else if (mo15852c() - 1 == 0) {
+                i3 = -1;
+            }
+            if (i3 == -1) {
+                return -1;
+            }
+            m15848g(i3, lq2Var, false);
+            return 0;
+        }
+        return i + 1;
     }
 
-    public final lq2 g(int i, lq2 lq2Var, boolean z) {
-        return e(i, lq2Var, false, 0L);
+    /* renamed from: g */
+    public final lq2 m15848g(int i, lq2 lq2Var, boolean z) {
+        return mo15850e(i, lq2Var, false, 0L);
     }
 
-    public final boolean h() {
-        return c() == 0;
+    /* renamed from: h */
+    public final boolean m15847h() {
+        return mo15852c() == 0;
     }
 }

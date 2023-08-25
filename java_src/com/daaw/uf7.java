@@ -6,8 +6,9 @@ public final class uf7 extends cf7 {
     }
 
     @Override // com.daaw.cf7
-    public final /* bridge */ /* synthetic */ Object a(xt7 xt7Var) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo2495a(xt7 xt7Var) {
         zh7 zh7Var = (zh7) xt7Var;
-        return new tp7(new qp7(zh7Var.Q().j()), zh7Var.P().L());
+        return new tp7(new qp7(zh7Var.m2289Q().m3415j()), zh7Var.m2290P().m19764L());
     }
 }

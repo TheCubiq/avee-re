@@ -3,17 +3,21 @@ package com.daaw;
 import android.media.MediaCodec;
 /* loaded from: classes.dex */
 public class cp8 extends g87 {
-    public final ep8 p;
-    public final String q;
+
+    /* renamed from: p */
+    public final ep8 f6068p;
+
+    /* renamed from: q */
+    public final String f6069q;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public cp8(Throwable th, ep8 ep8Var) {
-        super("Decoder failed: ".concat(String.valueOf(ep8Var == null ? null : ep8Var.a)), th);
+        super("Decoder failed: ".concat(String.valueOf(ep8Var == null ? null : ep8Var.f8666a)), th);
         String str = null;
-        this.p = ep8Var;
-        if (it5.a >= 21 && (th instanceof MediaCodec.CodecException)) {
+        this.f6068p = ep8Var;
+        if (it5.f13991a >= 21 && (th instanceof MediaCodec.CodecException)) {
             str = ((MediaCodec.CodecException) th).getDiagnosticInfo();
         }
-        this.q = str;
+        this.f6069q = str;
     }
 }

@@ -7,22 +7,31 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes2.dex */
 public final class ux5 {
-    public final String a;
-    public final Bundle b;
-    public Bundle c;
-    public final /* synthetic */ l36 d;
+
+    /* renamed from: a */
+    public final String f29604a;
+
+    /* renamed from: b */
+    public final Bundle f29605b;
+
+    /* renamed from: c */
+    public Bundle f29606c;
+
+    /* renamed from: d */
+    public final /* synthetic */ l36 f29607d;
 
     public ux5(l36 l36Var, String str, Bundle bundle) {
-        this.d = l36Var;
-        ry0.f("default_event_parameters");
-        this.a = "default_event_parameters";
-        this.b = new Bundle();
+        this.f29607d = l36Var;
+        ry0.m10834f("default_event_parameters");
+        this.f29604a = "default_event_parameters";
+        this.f29605b = new Bundle();
     }
 
-    public final Bundle a() {
+    /* renamed from: a */
+    public final Bundle m7652a() {
         char c;
-        if (this.c == null) {
-            String string = this.d.n().getString(this.a, null);
+        if (this.f29606c == null) {
+            String string = this.f29607d.m17176n().getString(this.f29604a, null);
             if (string != null) {
                 try {
                     Bundle bundle = new Bundle();
@@ -54,36 +63,37 @@ public final class ux5 {
                             } else if (c == 1) {
                                 bundle.putDouble(string2, Double.parseDouble(jSONObject.getString("v")));
                             } else if (c != 2) {
-                                this.d.a.i().q().b("Unrecognized persisted bundle type. Type", string3);
+                                this.f29607d.f25143a.mo3895i().m14160q().m20652b("Unrecognized persisted bundle type. Type", string3);
                             } else {
                                 bundle.putLong(string2, Long.parseLong(jSONObject.getString("v")));
                             }
                         } catch (NumberFormatException | JSONException unused) {
-                            this.d.a.i().q().a("Error reading value from SharedPreferences. Value dropped");
+                            this.f29607d.f25143a.mo3895i().m14160q().m20653a("Error reading value from SharedPreferences. Value dropped");
                         }
                     }
-                    this.c = bundle;
+                    this.f29606c = bundle;
                 } catch (JSONException unused2) {
-                    this.d.a.i().q().a("Error loading bundle from SharedPreferences. Values will be lost");
+                    this.f29607d.f25143a.mo3895i().m14160q().m20653a("Error loading bundle from SharedPreferences. Values will be lost");
                 }
             }
-            if (this.c == null) {
-                this.c = this.b;
+            if (this.f29606c == null) {
+                this.f29606c = this.f29605b;
             }
         }
-        return this.c;
+        return this.f29606c;
     }
 
-    public final void b(Bundle bundle) {
+    /* renamed from: b */
+    public final void m7651b(Bundle bundle) {
         String str;
         if (bundle == null) {
             bundle = new Bundle();
         }
-        SharedPreferences.Editor edit = this.d.n().edit();
+        SharedPreferences.Editor edit = this.f29607d.m17176n().edit();
         if (bundle.size() == 0) {
-            edit.remove(this.a);
+            edit.remove(this.f29604a);
         } else {
-            String str2 = this.a;
+            String str2 = this.f29604a;
             JSONArray jSONArray = new JSONArray();
             for (String str3 : bundle.keySet()) {
                 Object obj = bundle.get(str3);
@@ -99,18 +109,18 @@ public final class ux5 {
                         } else if (obj instanceof Double) {
                             str = "d";
                         } else {
-                            this.d.a.i().q().b("Cannot serialize bundle value to SharedPreferences. Type", obj.getClass());
+                            this.f29607d.f25143a.mo3895i().m14160q().m20652b("Cannot serialize bundle value to SharedPreferences. Type", obj.getClass());
                         }
                         jSONObject.put("t", str);
                         jSONArray.put(jSONObject);
                     } catch (JSONException e) {
-                        this.d.a.i().q().b("Cannot serialize bundle value to SharedPreferences", e);
+                        this.f29607d.f25143a.mo3895i().m14160q().m20652b("Cannot serialize bundle value to SharedPreferences", e);
                     }
                 }
             }
             edit.putString(str2, jSONArray.toString());
         }
         edit.apply();
-        this.c = bundle;
+        this.f29606c = bundle;
     }
 }

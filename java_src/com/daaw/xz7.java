@@ -1,24 +1,30 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class xz7 implements wz7, qz7 {
-    public static final xz7 b = new xz7(null);
-    public final Object a;
+
+    /* renamed from: b */
+    public static final xz7 f33141b = new xz7(null);
+
+    /* renamed from: a */
+    public final Object f33142a;
 
     public xz7(Object obj) {
-        this.a = obj;
+        this.f33142a = obj;
     }
 
-    public static wz7 a(Object obj) {
-        e08.a(obj, "instance cannot be null");
+    /* renamed from: a */
+    public static wz7 m4374a(Object obj) {
+        e08.m23802a(obj, "instance cannot be null");
         return new xz7(obj);
     }
 
-    public static wz7 b(Object obj) {
-        return obj == null ? b : new xz7(obj);
+    /* renamed from: b */
+    public static wz7 m4373b(Object obj) {
+        return obj == null ? f33141b : new xz7(obj);
     }
 
     @Override // com.daaw.m08
     public final Object zzb() {
-        return this.a;
+        return this.f33142a;
     }
 }

@@ -17,87 +17,109 @@ import java.util.Set;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public final class j04 {
-    public static boolean c;
-    public static boolean d;
-    public static final /* synthetic */ int g = 0;
-    public final List a;
-    public static final Object b = new Object();
-    public static final ag e = mq.d();
-    public static final Set f = new HashSet(Arrays.asList(new String[0]));
+
+    /* renamed from: c */
+    public static boolean f14151c;
+
+    /* renamed from: d */
+    public static boolean f14152d;
+
+    /* renamed from: g */
+    public static final /* synthetic */ int f14155g = 0;
+
+    /* renamed from: a */
+    public final List f14156a;
+
+    /* renamed from: b */
+    public static final Object f14150b = new Object();
+
+    /* renamed from: e */
+    public static final InterfaceC0623ag f14153e = C2202mq.m15857d();
+
+    /* renamed from: f */
+    public static final Set f14154f = new HashSet(Arrays.asList(new String[0]));
 
     public j04(String str) {
-        this.a = !l() ? new ArrayList() : Arrays.asList("network_request_".concat(String.valueOf(UUID.randomUUID().toString())));
+        this.f14156a = !m19188l() ? new ArrayList() : Arrays.asList("network_request_".concat(String.valueOf(UUID.randomUUID().toString())));
     }
 
-    public static /* synthetic */ void a(String str, String str2, Map map, byte[] bArr, JsonWriter jsonWriter) {
+    /* renamed from: a */
+    public static /* synthetic */ void m19199a(String str, String str2, Map map, byte[] bArr, JsonWriter jsonWriter) {
         jsonWriter.name("params").beginObject();
         jsonWriter.name("firstline").beginObject();
         jsonWriter.name("uri").value(str);
         jsonWriter.name("verb").value(str2);
         jsonWriter.endObject();
-        s(jsonWriter, map);
+        m19181s(jsonWriter, map);
         if (bArr != null) {
-            jsonWriter.name("body").value(ka.a(bArr));
+            jsonWriter.name("body").value(C1926ka.m17934a(bArr));
         }
         jsonWriter.endObject();
     }
 
-    public static /* synthetic */ void b(int i, Map map, JsonWriter jsonWriter) {
+    /* renamed from: b */
+    public static /* synthetic */ void m19198b(int i, Map map, JsonWriter jsonWriter) {
         jsonWriter.name("params").beginObject();
         jsonWriter.name("firstline").beginObject();
         jsonWriter.name("code").value(i);
         jsonWriter.endObject();
-        s(jsonWriter, map);
+        m19181s(jsonWriter, map);
         jsonWriter.endObject();
     }
 
-    public static void i() {
-        synchronized (b) {
-            c = false;
-            d = false;
+    /* renamed from: i */
+    public static void m19191i() {
+        synchronized (f14150b) {
+            f14151c = false;
+            f14152d = false;
             k04.zzj("Ad debug logging enablement is out of date.");
         }
     }
 
-    public static void j(boolean z) {
-        synchronized (b) {
-            c = true;
-            d = z;
+    /* renamed from: j */
+    public static void m19190j(boolean z) {
+        synchronized (f14150b) {
+            f14151c = true;
+            f14152d = z;
         }
     }
 
-    public static boolean k(Context context) {
-        if (((Boolean) wa3.a.e()).booleanValue()) {
+    /* renamed from: k */
+    public static boolean m19189k(Context context) {
+        if (((Boolean) wa3.f31100a.m16137e()).booleanValue()) {
             try {
                 return Settings.Global.getInt(context.getContentResolver(), "development_settings_enabled", 0) != 0;
-            } catch (Exception e2) {
-                k04.zzk("Fail to determine debug setting.", e2);
+            } catch (Exception e) {
+                k04.zzk("Fail to determine debug setting.", e);
                 return false;
             }
         }
         return false;
     }
 
-    public static boolean l() {
+    /* renamed from: l */
+    public static boolean m19188l() {
         boolean z;
-        synchronized (b) {
+        synchronized (f14150b) {
             z = false;
-            if (c && d) {
+            if (f14151c && f14152d) {
                 z = true;
             }
         }
         return z;
     }
 
-    public static boolean m() {
+    /* renamed from: m */
+    public static boolean m19187m() {
         boolean z;
-        synchronized (b) {
-            z = c;
+        synchronized (f14150b) {
+            z = f14151c;
         }
         return z;
     }
 
-    public static synchronized void n(String str) {
+    /* renamed from: n */
+    public static synchronized void m19186n(String str) {
         synchronized (j04.class) {
             k04.zzi("GMA Debug BEGIN");
             int i = 0;
@@ -110,7 +132,8 @@ public final class j04 {
         }
     }
 
-    public static void s(JsonWriter jsonWriter, Map map) {
+    /* renamed from: s */
+    public static void m19181s(JsonWriter jsonWriter, Map map) {
         if (map == null) {
             return;
         }
@@ -122,7 +145,7 @@ public final class j04 {
             }
             Map.Entry entry = (Map.Entry) it.next();
             String str = (String) entry.getKey();
-            if (!f.contains(str)) {
+            if (!f14154f.contains(str)) {
                 if (!(entry.getValue() instanceof List)) {
                     if (!(entry.getValue() instanceof String)) {
                         k04.zzg("Connection headers should be either Map<String, String> or Map<String, List<String>>");
@@ -145,100 +168,110 @@ public final class j04 {
         jsonWriter.endArray();
     }
 
-    public final void c(HttpURLConnection httpURLConnection, byte[] bArr) {
-        if (l()) {
-            q(new String(httpURLConnection.getURL().toString()), new String(httpURLConnection.getRequestMethod()), httpURLConnection.getRequestProperties() == null ? null : new HashMap(httpURLConnection.getRequestProperties()), bArr);
+    /* renamed from: c */
+    public final void m19197c(HttpURLConnection httpURLConnection, byte[] bArr) {
+        if (m19188l()) {
+            m19183q(new String(httpURLConnection.getURL().toString()), new String(httpURLConnection.getRequestMethod()), httpURLConnection.getRequestProperties() == null ? null : new HashMap(httpURLConnection.getRequestProperties()), bArr);
         }
     }
 
-    public final void d(String str, String str2, Map map, byte[] bArr) {
-        if (l()) {
-            q(str, "GET", map, bArr);
+    /* renamed from: d */
+    public final void m19196d(String str, String str2, Map map, byte[] bArr) {
+        if (m19188l()) {
+            m19183q(str, "GET", map, bArr);
         }
     }
 
-    public final void e(HttpURLConnection httpURLConnection, int i) {
-        if (l()) {
+    /* renamed from: e */
+    public final void m19195e(HttpURLConnection httpURLConnection, int i) {
+        if (m19188l()) {
             String str = null;
-            r(httpURLConnection.getHeaderFields() == null ? null : new HashMap(httpURLConnection.getHeaderFields()), i);
+            m19182r(httpURLConnection.getHeaderFields() == null ? null : new HashMap(httpURLConnection.getHeaderFields()), i);
             if (i < 200 || i >= 300) {
                 try {
                     str = httpURLConnection.getResponseMessage();
-                } catch (IOException e2) {
-                    k04.zzj("Can not get error message from error HttpURLConnection\n".concat(String.valueOf(e2.getMessage())));
+                } catch (IOException e) {
+                    k04.zzj("Can not get error message from error HttpURLConnection\n".concat(String.valueOf(e.getMessage())));
                 }
-                p(str);
+                m19184p(str);
             }
         }
     }
 
-    public final void f(Map map, int i) {
-        if (l()) {
-            r(map, i);
+    /* renamed from: f */
+    public final void m19194f(Map map, int i) {
+        if (m19188l()) {
+            m19182r(map, i);
             if (i < 200 || i >= 300) {
-                p(null);
+                m19184p(null);
             }
         }
     }
 
-    public final void g(String str) {
-        if (l() && str != null) {
-            h(str.getBytes());
+    /* renamed from: g */
+    public final void m19193g(String str) {
+        if (m19188l() && str != null) {
+            m19192h(str.getBytes());
         }
     }
 
-    public final void h(final byte[] bArr) {
-        o("onNetworkResponseBody", new i04() { // from class: com.daaw.h04
+    /* renamed from: h */
+    public final void m19192h(final byte[] bArr) {
+        m19185o("onNetworkResponseBody", new i04() { // from class: com.daaw.h04
             @Override // com.daaw.i04
-            public final void a(JsonWriter jsonWriter) {
+            /* renamed from: a */
+            public final void mo20228a(JsonWriter jsonWriter) {
                 String str;
                 byte[] bArr2 = bArr;
-                int i = j04.g;
+                int i = j04.f14155g;
                 jsonWriter.name("params").beginObject();
                 int length = bArr2.length;
-                String a = ka.a(bArr2);
+                String m17934a = C1926ka.m17934a(bArr2);
                 if (length >= 10000) {
-                    a = d04.j(a);
-                    str = a != null ? "bodydigest" : "bodydigest";
+                    m17934a = d04.m24822j(m17934a);
+                    str = m17934a != null ? "bodydigest" : "bodydigest";
                     jsonWriter.name("bodylength").value(length);
                     jsonWriter.endObject();
                 }
                 str = "body";
-                jsonWriter.name(str).value(a);
+                jsonWriter.name(str).value(m17934a);
                 jsonWriter.name("bodylength").value(length);
                 jsonWriter.endObject();
             }
         });
     }
 
-    public final void o(String str, i04 i04Var) {
+    /* renamed from: o */
+    public final void m19185o(String str, i04 i04Var) {
         StringWriter stringWriter = new StringWriter();
         JsonWriter jsonWriter = new JsonWriter(stringWriter);
         try {
             jsonWriter.beginObject();
-            jsonWriter.name("timestamp").value(e.a());
+            jsonWriter.name("timestamp").value(f14153e.mo15860a());
             jsonWriter.name("event").value(str);
             jsonWriter.name("components").beginArray();
-            for (String str2 : this.a) {
+            for (String str2 : this.f14156a) {
                 jsonWriter.value(str2);
             }
             jsonWriter.endArray();
-            i04Var.a(jsonWriter);
+            i04Var.mo20228a(jsonWriter);
             jsonWriter.endObject();
             jsonWriter.flush();
             jsonWriter.close();
-        } catch (IOException e2) {
-            k04.zzh("unable to log", e2);
+        } catch (IOException e) {
+            k04.zzh("unable to log", e);
         }
-        n(stringWriter.toString());
+        m19186n(stringWriter.toString());
     }
 
-    public final void p(final String str) {
-        o("onNetworkRequestError", new i04() { // from class: com.daaw.f04
+    /* renamed from: p */
+    public final void m19184p(final String str) {
+        m19185o("onNetworkRequestError", new i04() { // from class: com.daaw.f04
             @Override // com.daaw.i04
-            public final void a(JsonWriter jsonWriter) {
+            /* renamed from: a */
+            public final void mo20228a(JsonWriter jsonWriter) {
                 String str2 = str;
-                int i = j04.g;
+                int i = j04.f14155g;
                 jsonWriter.name("params").beginObject();
                 if (str2 != null) {
                     jsonWriter.name("error_description").value(str2);
@@ -248,20 +281,24 @@ public final class j04 {
         });
     }
 
-    public final void q(final String str, final String str2, final Map map, final byte[] bArr) {
-        o("onNetworkRequest", new i04() { // from class: com.daaw.g04
+    /* renamed from: q */
+    public final void m19183q(final String str, final String str2, final Map map, final byte[] bArr) {
+        m19185o("onNetworkRequest", new i04() { // from class: com.daaw.g04
             @Override // com.daaw.i04
-            public final void a(JsonWriter jsonWriter) {
-                j04.a(str, str2, map, bArr, jsonWriter);
+            /* renamed from: a */
+            public final void mo20228a(JsonWriter jsonWriter) {
+                j04.m19199a(str, str2, map, bArr, jsonWriter);
             }
         });
     }
 
-    public final void r(final Map map, final int i) {
-        o("onNetworkResponse", new i04() { // from class: com.daaw.e04
+    /* renamed from: r */
+    public final void m19182r(final Map map, final int i) {
+        m19185o("onNetworkResponse", new i04() { // from class: com.daaw.e04
             @Override // com.daaw.i04
-            public final void a(JsonWriter jsonWriter) {
-                j04.b(i, map, jsonWriter);
+            /* renamed from: a */
+            public final void mo20228a(JsonWriter jsonWriter) {
+                j04.m19198b(i, map, jsonWriter);
             }
         });
     }

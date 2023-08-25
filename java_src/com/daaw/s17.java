@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class s17 {
-    public static int b(int i, int i2) {
+    /* renamed from: b */
+    public static int m10754b(int i, int i2) {
         int i3 = i + (i >> 1) + 1;
         if (i3 < i2) {
             int highestOneBit = Integer.highestOneBit(i2 - 1);
@@ -13,5 +14,6 @@ public abstract class s17 {
         return i3;
     }
 
-    public abstract s17 a(Object obj);
+    /* renamed from: a */
+    public abstract s17 mo7549a(Object obj);
 }

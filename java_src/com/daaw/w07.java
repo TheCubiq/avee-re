@@ -5,29 +5,40 @@ import java.util.Iterator;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class w07 {
-    public final w07 a;
-    public final mu2 b;
-    public final Map c = new HashMap();
-    public final Map d = new HashMap();
+
+    /* renamed from: a */
+    public final w07 f30766a;
+
+    /* renamed from: b */
+    public final mu2 f30767b;
+
+    /* renamed from: c */
+    public final Map f30768c = new HashMap();
+
+    /* renamed from: d */
+    public final Map f30769d = new HashMap();
 
     public w07(w07 w07Var, mu2 mu2Var) {
-        this.a = w07Var;
-        this.b = mu2Var;
+        this.f30766a = w07Var;
+        this.f30767b = mu2Var;
     }
 
-    public final w07 a() {
-        return new w07(this, this.b);
+    /* renamed from: a */
+    public final w07 m6609a() {
+        return new w07(this, this.f30767b);
     }
 
-    public final gl2 b(gl2 gl2Var) {
-        return this.b.a(this, gl2Var);
+    /* renamed from: b */
+    public final gl2 m6608b(gl2 gl2Var) {
+        return this.f30767b.m15761a(this, gl2Var);
     }
 
-    public final gl2 c(z72 z72Var) {
-        gl2 gl2Var = gl2.g;
-        Iterator n = z72Var.n();
-        while (n.hasNext()) {
-            gl2Var = this.b.a(this, z72Var.k(((Integer) n.next()).intValue()));
+    /* renamed from: c */
+    public final gl2 m6607c(z72 z72Var) {
+        gl2 gl2Var = gl2.f11420g;
+        Iterator m2701n = z72Var.m2701n();
+        while (m2701n.hasNext()) {
+            gl2Var = this.f30767b.m15761a(this, z72Var.m2703k(((Integer) m2701n.next()).intValue()));
             if (gl2Var instanceof oa2) {
                 break;
             }
@@ -35,54 +46,59 @@ public final class w07 {
         return gl2Var;
     }
 
-    public final gl2 d(String str) {
-        if (this.c.containsKey(str)) {
-            return (gl2) this.c.get(str);
+    /* renamed from: d */
+    public final gl2 m6606d(String str) {
+        if (this.f30768c.containsKey(str)) {
+            return (gl2) this.f30768c.get(str);
         }
-        w07 w07Var = this.a;
+        w07 w07Var = this.f30766a;
         if (w07Var != null) {
-            return w07Var.d(str);
+            return w07Var.m6606d(str);
         }
         throw new IllegalArgumentException(String.format("%s is not defined", str));
     }
 
-    public final void e(String str, gl2 gl2Var) {
-        if (this.d.containsKey(str)) {
+    /* renamed from: e */
+    public final void m6605e(String str, gl2 gl2Var) {
+        if (this.f30769d.containsKey(str)) {
             return;
         }
         if (gl2Var == null) {
-            this.c.remove(str);
+            this.f30768c.remove(str);
         } else {
-            this.c.put(str, gl2Var);
+            this.f30768c.put(str, gl2Var);
         }
     }
 
-    public final void f(String str, gl2 gl2Var) {
-        e(str, gl2Var);
-        this.d.put(str, Boolean.TRUE);
+    /* renamed from: f */
+    public final void m6604f(String str, gl2 gl2Var) {
+        m6605e(str, gl2Var);
+        this.f30769d.put(str, Boolean.TRUE);
     }
 
-    public final void g(String str, gl2 gl2Var) {
+    /* renamed from: g */
+    public final void m6603g(String str, gl2 gl2Var) {
         w07 w07Var;
-        if (!this.c.containsKey(str) && (w07Var = this.a) != null && w07Var.h(str)) {
-            this.a.g(str, gl2Var);
-        } else if (this.d.containsKey(str)) {
+        if (!this.f30768c.containsKey(str) && (w07Var = this.f30766a) != null && w07Var.m6602h(str)) {
+            this.f30766a.m6603g(str, gl2Var);
+        } else if (this.f30769d.containsKey(str)) {
         } else {
             if (gl2Var == null) {
-                this.c.remove(str);
+                this.f30768c.remove(str);
             } else {
-                this.c.put(str, gl2Var);
+                this.f30768c.put(str, gl2Var);
             }
         }
     }
 
-    public final boolean h(String str) {
-        if (this.c.containsKey(str)) {
+    /* renamed from: h */
+    public final boolean m6602h(String str) {
+        if (this.f30768c.containsKey(str)) {
             return true;
         }
-        w07 w07Var = this.a;
+        w07 w07Var = this.f30766a;
         if (w07Var != null) {
-            return w07Var.h(str);
+            return w07Var.m6602h(str);
         }
         return false;
     }

@@ -4,14 +4,17 @@ import android.app.Activity;
 import android.app.Application;
 /* loaded from: classes.dex */
 public final class dm2 implements hm2 {
-    public final /* synthetic */ Activity a;
+
+    /* renamed from: a */
+    public final /* synthetic */ Activity f7478a;
 
     public dm2(im2 im2Var, Activity activity) {
-        this.a = activity;
+        this.f7478a = activity;
     }
 
     @Override // com.daaw.hm2
-    public final void a(Application.ActivityLifecycleCallbacks activityLifecycleCallbacks) {
-        activityLifecycleCallbacks.onActivityPaused(this.a);
+    /* renamed from: a */
+    public final void mo20624a(Application.ActivityLifecycleCallbacks activityLifecycleCallbacks) {
+        activityLifecycleCallbacks.onActivityPaused(this.f7478a);
     }
 }

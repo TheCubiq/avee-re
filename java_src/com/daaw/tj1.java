@@ -1,25 +1,32 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public class tj1<TResult> {
-    public final dw8 a = new dw8();
 
-    public rj1<TResult> a() {
-        return this.a;
+    /* renamed from: a */
+    public final dw8 f27775a = new dw8();
+
+    /* renamed from: a */
+    public rj1<TResult> m9082a() {
+        return this.f27775a;
     }
 
-    public void b(Exception exc) {
-        this.a.q(exc);
+    /* renamed from: b */
+    public void m9081b(Exception exc) {
+        this.f27775a.m23856q(exc);
     }
 
-    public void c(TResult tresult) {
-        this.a.r(tresult);
+    /* renamed from: c */
+    public void m9080c(TResult tresult) {
+        this.f27775a.m23855r(tresult);
     }
 
-    public boolean d(Exception exc) {
-        return this.a.t(exc);
+    /* renamed from: d */
+    public boolean m9079d(Exception exc) {
+        return this.f27775a.m23853t(exc);
     }
 
-    public boolean e(TResult tresult) {
-        return this.a.u(tresult);
+    /* renamed from: e */
+    public boolean m9078e(TResult tresult) {
+        return this.f27775a.m23852u(tresult);
     }
 }

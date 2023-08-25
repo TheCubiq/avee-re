@@ -3,7 +3,7 @@ package com.daaw;
 import android.content.Context;
 import android.os.Binder;
 import android.os.RemoteException;
-import com.daaw.pa;
+import com.daaw.AbstractC2527pa;
 import com.google.android.gms.ads.internal.client.zzba;
 import com.google.android.gms.ads.internal.zzt;
 import com.google.android.gms.internal.ads.zzbef;
@@ -13,39 +13,53 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class h33 {
-    public ScheduledFuture a = null;
-    public final Runnable b = new d33(this);
-    public final Object c = new Object();
-    @GuardedBy("lock")
-    public j33 d;
-    @GuardedBy("lock")
-    public Context e;
-    @GuardedBy("lock")
-    public l33 f;
 
-    public static /* bridge */ /* synthetic */ void h(h33 h33Var) {
-        synchronized (h33Var.c) {
-            j33 j33Var = h33Var.d;
+    /* renamed from: a */
+    public ScheduledFuture f11997a = null;
+
+    /* renamed from: b */
+    public final Runnable f11998b = new d33(this);
+
+    /* renamed from: c */
+    public final Object f11999c = new Object();
+    @GuardedBy("lock")
+
+    /* renamed from: d */
+    public j33 f12000d;
+    @GuardedBy("lock")
+
+    /* renamed from: e */
+    public Context f12001e;
+    @GuardedBy("lock")
+
+    /* renamed from: f */
+    public l33 f12002f;
+
+    /* renamed from: h */
+    public static /* bridge */ /* synthetic */ void m21048h(h33 h33Var) {
+        synchronized (h33Var.f11999c) {
+            j33 j33Var = h33Var.f12000d;
             if (j33Var == null) {
                 return;
             }
-            if (j33Var.isConnected() || h33Var.d.isConnecting()) {
-                h33Var.d.disconnect();
+            if (j33Var.isConnected() || h33Var.f12000d.isConnecting()) {
+                h33Var.f12000d.disconnect();
             }
-            h33Var.d = null;
-            h33Var.f = null;
+            h33Var.f12000d = null;
+            h33Var.f12002f = null;
             Binder.flushPendingCommands();
         }
     }
 
-    public final long a(zzbei zzbeiVar) {
-        synchronized (this.c) {
-            if (this.f == null) {
+    /* renamed from: a */
+    public final long m21055a(zzbei zzbeiVar) {
+        synchronized (this.f11999c) {
+            if (this.f12002f == null) {
                 return -2L;
             }
-            if (this.d.J()) {
+            if (this.f12000d.m19157J()) {
                 try {
-                    return this.f.h3(zzbeiVar);
+                    return this.f12002f.m17179h3(zzbeiVar);
                 } catch (RemoteException e) {
                     k04.zzh("Unable to call into cache service.", e);
                 }
@@ -54,16 +68,17 @@ public final class h33 {
         }
     }
 
-    public final zzbef b(zzbei zzbeiVar) {
-        synchronized (this.c) {
-            if (this.f == null) {
+    /* renamed from: b */
+    public final zzbef m21054b(zzbei zzbeiVar) {
+        synchronized (this.f11999c) {
+            if (this.f12002f == null) {
                 return new zzbef();
             }
             try {
-                if (this.d.J()) {
-                    return this.f.j3(zzbeiVar);
+                if (this.f12000d.m19157J()) {
+                    return this.f12002f.m17177j3(zzbeiVar);
                 }
-                return this.f.i3(zzbeiVar);
+                return this.f12002f.m17178i3(zzbeiVar);
             } catch (RemoteException e) {
                 k04.zzh("Unable to call into cache service.", e);
                 return new zzbef();
@@ -71,48 +86,52 @@ public final class h33 {
         }
     }
 
-    public final synchronized j33 d(pa.a aVar, pa.b bVar) {
-        return new j33(this.e, zzt.zzt().zzb(), aVar, bVar);
+    /* renamed from: d */
+    public final synchronized j33 m21052d(AbstractC2527pa.InterfaceC2528a interfaceC2528a, AbstractC2527pa.InterfaceC2529b interfaceC2529b) {
+        return new j33(this.f12001e, zzt.zzt().zzb(), interfaceC2528a, interfaceC2529b);
     }
 
-    public final void i(Context context) {
+    /* renamed from: i */
+    public final void m21047i(Context context) {
         if (context == null) {
             return;
         }
-        synchronized (this.c) {
-            if (this.e != null) {
+        synchronized (this.f11999c) {
+            if (this.f12001e != null) {
                 return;
             }
-            this.e = context.getApplicationContext();
-            if (((Boolean) zzba.zzc().b(g93.I3)).booleanValue()) {
-                l();
+            this.f12001e = context.getApplicationContext();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10445I3)).booleanValue()) {
+                m21044l();
             } else {
-                if (((Boolean) zzba.zzc().b(g93.H3)).booleanValue()) {
-                    zzt.zzb().c(new e33(this));
+                if (((Boolean) zzba.zzc().m23658b(g93.f10435H3)).booleanValue()) {
+                    zzt.zzb().m15598c(new e33(this));
                 }
             }
         }
     }
 
-    public final void j() {
-        if (((Boolean) zzba.zzc().b(g93.J3)).booleanValue()) {
-            synchronized (this.c) {
-                l();
-                ScheduledFuture scheduledFuture = this.a;
+    /* renamed from: j */
+    public final void m21046j() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10455J3)).booleanValue()) {
+            synchronized (this.f11999c) {
+                m21044l();
+                ScheduledFuture scheduledFuture = this.f11997a;
                 if (scheduledFuture != null) {
                     scheduledFuture.cancel(false);
                 }
-                this.a = z04.d.schedule(this.b, ((Long) zzba.zzc().b(g93.K3)).longValue(), TimeUnit.MILLISECONDS);
+                this.f11997a = z04.f34308d.schedule(this.f11998b, ((Long) zzba.zzc().m23658b(g93.f10465K3)).longValue(), TimeUnit.MILLISECONDS);
             }
         }
     }
 
-    public final void l() {
-        synchronized (this.c) {
-            if (this.e != null && this.d == null) {
-                j33 d = d(new f33(this), new g33(this));
-                this.d = d;
-                d.checkAvailabilityAndConnect();
+    /* renamed from: l */
+    public final void m21044l() {
+        synchronized (this.f11999c) {
+            if (this.f12001e != null && this.f12000d == null) {
+                j33 m21052d = m21052d(new f33(this), new g33(this));
+                this.f12000d = m21052d;
+                m21052d.checkAvailabilityAndConnect();
             }
         }
     }

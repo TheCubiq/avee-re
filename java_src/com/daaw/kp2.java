@@ -7,15 +7,18 @@ public final class kp2 extends Exception {
         super(null, th);
     }
 
-    public static kp2 a(Exception exc, int i) {
+    /* renamed from: a */
+    public static kp2 m17548a(Exception exc, int i) {
         return new kp2(1, null, exc, i);
     }
 
-    public static kp2 b(IOException iOException) {
+    /* renamed from: b */
+    public static kp2 m17547b(IOException iOException) {
         return new kp2(0, null, iOException, -1);
     }
 
-    public static kp2 c(RuntimeException runtimeException) {
+    /* renamed from: c */
+    public static kp2 m17546c(RuntimeException runtimeException) {
         return new kp2(2, null, runtimeException, -1);
     }
 }

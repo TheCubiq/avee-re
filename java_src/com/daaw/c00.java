@@ -1,93 +1,134 @@
 package com.daaw;
 
 import android.net.Uri;
+import com.daaw.InterfaceC2200mp;
 import com.daaw.b00;
 import com.daaw.bp0;
-import com.daaw.mp;
 /* loaded from: classes.dex */
-public final class c00 extends ua implements b00.e {
-    public final Object A;
-    public long B;
-    public boolean C;
-    public final Uri u;
-    public final mp.a v;
-    public final e00 w;
-    public final int x;
-    public final String y;
-    public final int z;
+public final class c00 extends AbstractC3190ua implements b00.InterfaceC0798e {
 
+    /* renamed from: A */
+    public final Object f5310A;
+
+    /* renamed from: B */
+    public long f5311B;
+
+    /* renamed from: C */
+    public boolean f5312C;
+
+    /* renamed from: u */
+    public final Uri f5313u;
+
+    /* renamed from: v */
+    public final InterfaceC2200mp.InterfaceC2201a f5314v;
+
+    /* renamed from: w */
+    public final e00 f5315w;
+
+    /* renamed from: x */
+    public final int f5316x;
+
+    /* renamed from: y */
+    public final String f5317y;
+
+    /* renamed from: z */
+    public final int f5318z;
+
+    /* renamed from: com.daaw.c00$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final mp.a a;
-        public e00 b;
-        public String c;
-        public Object d;
-        public int e = -1;
-        public int f = 1048576;
-        public boolean g;
+    public static final class C0905b {
 
-        public b(mp.a aVar) {
-            this.a = aVar;
+        /* renamed from: a */
+        public final InterfaceC2200mp.InterfaceC2201a f5319a;
+
+        /* renamed from: b */
+        public e00 f5320b;
+
+        /* renamed from: c */
+        public String f5321c;
+
+        /* renamed from: d */
+        public Object f5322d;
+
+        /* renamed from: e */
+        public int f5323e = -1;
+
+        /* renamed from: f */
+        public int f5324f = 1048576;
+
+        /* renamed from: g */
+        public boolean f5325g;
+
+        public C0905b(InterfaceC2200mp.InterfaceC2201a interfaceC2201a) {
+            this.f5319a = interfaceC2201a;
         }
 
-        public c00 a(Uri uri) {
-            this.g = true;
-            if (this.b == null) {
-                this.b = new xq();
+        /* renamed from: a */
+        public c00 m25702a(Uri uri) {
+            this.f5325g = true;
+            if (this.f5320b == null) {
+                this.f5320b = new C3564xq();
             }
-            return new c00(uri, this.a, this.b, this.e, this.c, this.f, this.d);
+            return new c00(uri, this.f5319a, this.f5320b, this.f5323e, this.f5321c, this.f5324f, this.f5322d);
         }
     }
 
-    public c00(Uri uri, mp.a aVar, e00 e00Var, int i, String str, int i2, Object obj) {
-        this.u = uri;
-        this.v = aVar;
-        this.w = e00Var;
-        this.x = i;
-        this.y = str;
-        this.z = i2;
-        this.B = -9223372036854775807L;
-        this.A = obj;
+    public c00(Uri uri, InterfaceC2200mp.InterfaceC2201a interfaceC2201a, e00 e00Var, int i, String str, int i2, Object obj) {
+        this.f5313u = uri;
+        this.f5314v = interfaceC2201a;
+        this.f5315w = e00Var;
+        this.f5316x = i;
+        this.f5317y = str;
+        this.f5318z = i2;
+        this.f5311B = -9223372036854775807L;
+        this.f5310A = obj;
     }
 
     @Override // com.daaw.bp0
-    public void a(qo0 qo0Var) {
-        ((b00) qo0Var).Q();
+    /* renamed from: a */
+    public void mo16120a(qo0 qo0Var) {
+        ((b00) qo0Var).m26547Q();
     }
 
-    @Override // com.daaw.b00.e
-    public void b(long j, boolean z) {
+    @Override // com.daaw.b00.InterfaceC0798e
+    /* renamed from: b */
+    public void mo25704b(long j, boolean z) {
         if (j == -9223372036854775807L) {
-            j = this.B;
+            j = this.f5311B;
         }
-        if (this.B == j && this.C == z) {
+        if (this.f5311B == j && this.f5312C == z) {
             return;
         }
-        q(j, z);
+        m25703q(j, z);
     }
 
     @Override // com.daaw.bp0
-    public void e() {
+    /* renamed from: e */
+    public void mo16119e() {
     }
 
     @Override // com.daaw.bp0
-    public qo0 g(bp0.a aVar, l2 l2Var) {
-        s6.a(aVar.a == 0);
-        return new b00(this.u, this.v.a(), this.w.a(), this.x, j(aVar), this, l2Var, this.y, this.z);
+    /* renamed from: g */
+    public qo0 mo16118g(bp0.C0880a c0880a, InterfaceC2006l2 interfaceC2006l2) {
+        C2914s6.m10690a(c0880a.f5022a == 0);
+        return new b00(this.f5313u, this.f5314v.mo9376a(), this.f5315w.mo4824a(), this.f5316x, m8400j(c0880a), this, interfaceC2006l2, this.f5317y, this.f5318z);
     }
 
-    @Override // com.daaw.ua
-    public void m(rz rzVar, boolean z) {
-        q(this.B, false);
+    @Override // com.daaw.AbstractC3190ua
+    /* renamed from: m */
+    public void mo8398m(InterfaceC2898rz interfaceC2898rz, boolean z) {
+        m25703q(this.f5311B, false);
     }
 
-    @Override // com.daaw.ua
-    public void p() {
+    @Override // com.daaw.AbstractC3190ua
+    /* renamed from: p */
+    public void mo8396p() {
     }
 
-    public final void q(long j, boolean z) {
-        this.B = j;
-        this.C = z;
-        n(new od1(this.B, this.C, false, this.A), null);
+    /* renamed from: q */
+    public final void m25703q(long j, boolean z) {
+        this.f5311B = j;
+        this.f5312C = z;
+        m8397n(new od1(this.f5311B, this.f5312C, false, this.f5310A), null);
     }
 }

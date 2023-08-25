@@ -6,17 +6,18 @@ public final class hj2 extends ls7 implements yt7 {
     private long zze;
     private int zzf;
     private boolean zzg;
-    private qs7 zzh = ls7.t();
+    private qs7 zzh = ls7.m16579t();
     private long zzi;
 
     static {
         hj2 hj2Var = new hj2();
         zzb = hj2Var;
-        ls7.C(hj2.class, hj2Var);
+        ls7.m16597C(hj2.class, hj2Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -31,7 +32,7 @@ public final class hj2 extends ls7 implements yt7 {
                 }
                 return new hj2();
             }
-            return ls7.z(zzb, "\u0001\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001ဂ\u0000\u0002င\u0001\u0003ဇ\u0002\u0004\u0016\u0005ဃ\u0003", new Object[]{"zzd", "zze", "zzf", "zzg", "zzh", "zzi"});
+            return ls7.m16573z(zzb, "\u0001\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001ဂ\u0000\u0002င\u0001\u0003ဇ\u0002\u0004\u0016\u0005ဃ\u0003", new Object[]{"zzd", "zze", "zzf", "zzg", "zzh", "zzi"});
         }
         return (byte) 1;
     }

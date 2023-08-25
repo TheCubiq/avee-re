@@ -1,22 +1,28 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class yv6 extends tw6 {
-    public final int a;
-    public final String b;
+
+    /* renamed from: a */
+    public final int f34177a;
+
+    /* renamed from: b */
+    public final String f34178b;
 
     public /* synthetic */ yv6(int i, String str, xv6 xv6Var) {
-        this.a = i;
-        this.b = str;
+        this.f34177a = i;
+        this.f34178b = str;
     }
 
     @Override // com.daaw.tw6
-    public final int a() {
-        return this.a;
+    /* renamed from: a */
+    public final int mo3164a() {
+        return this.f34177a;
     }
 
     @Override // com.daaw.tw6
-    public final String b() {
-        return this.b;
+    /* renamed from: b */
+    public final String mo3163b() {
+        return this.f34178b;
     }
 
     public final boolean equals(Object obj) {
@@ -25,10 +31,10 @@ public final class yv6 extends tw6 {
         }
         if (obj instanceof tw6) {
             tw6 tw6Var = (tw6) obj;
-            if (this.a == tw6Var.a()) {
-                String str = this.b;
-                String b = tw6Var.b();
-                if (str != null ? str.equals(b) : b == null) {
+            if (this.f34177a == tw6Var.mo3164a()) {
+                String str = this.f34178b;
+                String mo3163b = tw6Var.mo3163b();
+                if (str != null ? str.equals(mo3163b) : mo3163b == null) {
                     return true;
                 }
             }
@@ -37,14 +43,14 @@ public final class yv6 extends tw6 {
     }
 
     public final int hashCode() {
-        int i = (this.a ^ 1000003) * 1000003;
-        String str = this.b;
+        int i = (this.f34177a ^ 1000003) * 1000003;
+        String str = this.f34178b;
         return i ^ (str == null ? 0 : str.hashCode());
     }
 
     public final String toString() {
-        int i = this.a;
-        String str = this.b;
+        int i = this.f34177a;
+        String str = this.f34178b;
         return "OverlayDisplayState{statusCode=" + i + ", sessionToken=" + str + "}";
     }
 }

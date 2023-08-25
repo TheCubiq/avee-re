@@ -6,22 +6,29 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public abstract class ad2 implements gl2, og2 {
-    public final String p;
-    public final Map q = new HashMap();
+
+    /* renamed from: p */
+    public final String f3097p;
+
+    /* renamed from: q */
+    public final Map f3098q = new HashMap();
 
     public ad2(String str) {
-        this.p = str;
+        this.f3097p = str;
     }
 
-    public abstract gl2 a(w07 w07Var, List list);
+    /* renamed from: a */
+    public abstract gl2 mo5780a(w07 w07Var, List list);
 
-    public final String b() {
-        return this.p;
+    /* renamed from: b */
+    public final String m27518b() {
+        return this.f3097p;
     }
 
     @Override // com.daaw.gl2
-    public final gl2 d(String str, w07 w07Var, List list) {
-        return "toString".equals(str) ? new wp2(this.p) : fe2.a(this, new wp2(str), w07Var, list);
+    /* renamed from: d */
+    public final gl2 mo2708d(String str, w07 w07Var, List list) {
+        return "toString".equals(str) ? new wp2(this.f3097p) : fe2.m22750a(this, new wp2(str), w07Var, list);
     }
 
     public final boolean equals(Object obj) {
@@ -30,9 +37,9 @@ public abstract class ad2 implements gl2, og2 {
         }
         if (obj instanceof ad2) {
             ad2 ad2Var = (ad2) obj;
-            String str = this.p;
+            String str = this.f3097p;
             if (str != null) {
-                return str.equals(ad2Var.p);
+                return str.equals(ad2Var.f3097p);
             }
             return false;
         }
@@ -40,21 +47,23 @@ public abstract class ad2 implements gl2, og2 {
     }
 
     @Override // com.daaw.og2
-    public final gl2 f(String str) {
-        return this.q.containsKey(str) ? (gl2) this.q.get(str) : gl2.g;
+    /* renamed from: f */
+    public final gl2 mo2706f(String str) {
+        return this.f3098q.containsKey(str) ? (gl2) this.f3098q.get(str) : gl2.f11420g;
     }
 
     @Override // com.daaw.og2
-    public final void h(String str, gl2 gl2Var) {
+    /* renamed from: h */
+    public final void mo2705h(String str, gl2 gl2Var) {
         if (gl2Var == null) {
-            this.q.remove(str);
+            this.f3098q.remove(str);
         } else {
-            this.q.put(str, gl2Var);
+            this.f3098q.put(str, gl2Var);
         }
     }
 
     public final int hashCode() {
-        String str = this.p;
+        String str = this.f3097p;
         if (str != null) {
             return str.hashCode();
         }
@@ -78,16 +87,16 @@ public abstract class ad2 implements gl2, og2 {
 
     @Override // com.daaw.gl2
     public final String zzi() {
-        return this.p;
+        return this.f3097p;
     }
 
     @Override // com.daaw.gl2
     public final Iterator zzl() {
-        return fe2.b(this.q);
+        return fe2.m22749b(this.f3098q);
     }
 
     @Override // com.daaw.og2
     public final boolean zzt(String str) {
-        return this.q.containsKey(str);
+        return this.f3098q.containsKey(str);
     }
 }

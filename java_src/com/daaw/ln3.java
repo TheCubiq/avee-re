@@ -9,7 +9,8 @@ public abstract class ln3 extends cp2 implements mn3 {
         super("com.google.android.gms.ads.internal.mediation.client.IMediationInterscrollerAd");
     }
 
-    public static mn3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static mn3 m16715g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -18,17 +19,18 @@ public abstract class ln3 extends cp2 implements mn3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             yd0 zze = zze();
             parcel2.writeNoException();
-            dp2.g(parcel2, zze);
+            dp2.m24101g(parcel2, zze);
         } else if (i != 2) {
             return false;
         } else {
             boolean zzf = zzf();
             parcel2.writeNoException();
-            dp2.d(parcel2, zzf);
+            dp2.m24104d(parcel2, zzf);
         }
         return true;
     }

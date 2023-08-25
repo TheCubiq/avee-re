@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class yv4 implements wz7 {
-    public static yv4 a() {
+    /* renamed from: a */
+    public static yv4 m3166a() {
         yv4 yv4Var;
-        yv4Var = xv4.a;
+        yv4Var = xv4.f32984a;
         return yv4Var;
     }
 

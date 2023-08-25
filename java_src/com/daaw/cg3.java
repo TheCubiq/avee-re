@@ -10,7 +10,8 @@ import java.util.Map;
 /* loaded from: classes.dex */
 public final class cg3 implements zg3 {
     @Override // com.daaw.zg3
-    public final /* bridge */ /* synthetic */ void a(Object obj, Map map) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ void mo2341a(Object obj, Map map) {
         a74 a74Var = (a74) obj;
         zzt.zzp();
         DisplayMetrics zzr = zzs.zzr((WindowManager) a74Var.getContext().getSystemService("window"));
@@ -23,7 +24,7 @@ public final class cg3 implements zg3 {
         hashMap.put("yInPixels", Integer.valueOf(iArr[1]));
         hashMap.put("windowWidthInPixels", Integer.valueOf(i));
         hashMap.put("windowHeightInPixels", Integer.valueOf(i2));
-        a74Var.T("locationReady", hashMap);
+        a74Var.mo6434T("locationReady", hashMap);
         k04.zzj("GET LOCATION COMPILED");
     }
 }

@@ -7,33 +7,41 @@ import com.daaw.gv6;
 import com.daaw.ry0;
 /* loaded from: classes.dex */
 public final class zzbv {
-    public HandlerThread a = null;
-    public Handler b = null;
-    public int c = 0;
-    public final Object d = new Object();
+
+    /* renamed from: a */
+    public HandlerThread f36278a = null;
+
+    /* renamed from: b */
+    public Handler f36279b = null;
+
+    /* renamed from: c */
+    public int f36280c = 0;
+
+    /* renamed from: d */
+    public final Object f36281d = new Object();
 
     public final Handler zza() {
-        return this.b;
+        return this.f36279b;
     }
 
     public final Looper zzb() {
         Looper looper;
-        synchronized (this.d) {
-            if (this.c != 0) {
-                ry0.k(this.a, "Invalid state: mHandlerThread should already been initialized.");
-            } else if (this.a == null) {
+        synchronized (this.f36281d) {
+            if (this.f36280c != 0) {
+                ry0.m10829k(this.f36278a, "Invalid state: mHandlerThread should already been initialized.");
+            } else if (this.f36278a == null) {
                 zze.zza("Starting the looper thread.");
                 HandlerThread handlerThread = new HandlerThread("LooperProvider");
-                this.a = handlerThread;
+                this.f36278a = handlerThread;
                 handlerThread.start();
-                this.b = new gv6(this.a.getLooper());
+                this.f36279b = new gv6(this.f36278a.getLooper());
                 zze.zza("Looper thread started.");
             } else {
                 zze.zza("Resuming the looper thread");
-                this.d.notifyAll();
+                this.f36281d.notifyAll();
             }
-            this.c++;
-            looper = this.a.getLooper();
+            this.f36280c++;
+            looper = this.f36278a.getLooper();
         }
         return looper;
     }

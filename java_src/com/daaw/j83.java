@@ -4,46 +4,39 @@ public final class j83 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public j83() {
-        /*
-            r1 = this;
-            com.daaw.k83 r0 = com.daaw.k83.M()
-            r1.<init>(r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.j83.<init>():void");
+        super(r0);
+        k83 k83Var;
+        k83Var = k83.zzb;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ j83(com.daaw.h43 r1) {
-        /*
-            r0 = this;
-            com.daaw.k83 r1 = com.daaw.k83.M()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.j83.<init>(com.daaw.h43):void");
+    public /* synthetic */ j83(h43 h43Var) {
+        super(r1);
+        k83 k83Var;
+        k83Var = k83.zzb;
     }
 
-    public final j83 s(boolean z) {
-        p();
-        k83.N((k83) this.q, z);
+    /* renamed from: s */
+    public final j83 m18734s(boolean z) {
+        m22313p();
+        k83.m17961N((k83) this.f9851q, z);
         return this;
     }
 
-    public final j83 t(int i) {
-        p();
-        k83.O((k83) this.q, i);
+    /* renamed from: t */
+    public final j83 m18733t(int i) {
+        m22313p();
+        k83.m17960O((k83) this.f9851q, i);
         return this;
     }
 
-    public final boolean u() {
-        return ((k83) this.q).P();
+    /* renamed from: u */
+    public final boolean m18732u() {
+        return ((k83) this.f9851q).m17959P();
     }
 }

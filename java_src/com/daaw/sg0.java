@@ -1,27 +1,41 @@
 package com.daaw;
+
+import com.daaw.avee.comp.playback.C0729a;
 /* loaded from: classes.dex */
 public interface sg0 {
-    bs1 a(String str, bs1 bs1Var, bs1 bs1Var2, bq0 bq0Var, de0 de0Var);
+    /* renamed from: a */
+    bs1 mo2876a(String str, bs1 bs1Var, bs1 bs1Var2, bq0 bq0Var, de0 de0Var);
 
-    int b();
+    /* renamed from: b */
+    int mo2875b();
 
-    void c(af0 af0Var, h2 h2Var);
+    /* renamed from: c */
+    void mo2874c(af0 af0Var, C1496h2 c1496h2);
 
-    String d(String str);
+    /* renamed from: d */
+    String mo2873d(String str);
 
-    boolean e();
+    /* renamed from: e */
+    boolean mo2872e();
 
-    void f();
+    /* renamed from: f */
+    void mo2871f();
 
-    int g();
+    /* renamed from: g */
+    int mo2870g();
 
-    void h(vk1 vk1Var, boolean z, String str);
+    /* renamed from: h */
+    void mo2869h(vk1 vk1Var, boolean z, String str);
 
-    om1 i();
+    /* renamed from: i */
+    om1 mo2868i();
 
-    com.daaw.avee.comp.playback.a j(int i);
+    /* renamed from: j */
+    C0729a mo2867j(int i);
 
-    i2 k();
+    /* renamed from: k */
+    C1652i2 mo2866k();
 
-    int l();
+    /* renamed from: l */
+    int mo2865l();
 }

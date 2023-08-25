@@ -45,90 +45,153 @@ import javax.annotation.concurrent.GuardedBy;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public class h74 extends WebViewClient implements t84 {
-    public static final /* synthetic */ int R = 0;
-    public boolean A;
-    public boolean B;
+
+    /* renamed from: R */
+    public static final /* synthetic */ int f12132R = 0;
+
+    /* renamed from: A */
+    public boolean f12133A;
+
+    /* renamed from: B */
+    public boolean f12134B;
     @GuardedBy("lock")
-    public boolean C;
+
+    /* renamed from: C */
+    public boolean f12135C;
     @GuardedBy("lock")
-    public boolean D;
+
+    /* renamed from: D */
+    public boolean f12136D;
     @GuardedBy("lock")
-    public boolean E;
-    public zzz F;
-    public gq3 G;
-    public zzb H;
-    public bq3 I;
-    public cx3 J;
-    public op6 K;
-    public boolean L;
-    public boolean M;
-    public int N;
-    public boolean O;
-    public final HashSet P;
-    public View.OnAttachStateChangeListener Q;
-    public final a74 p;
-    public final x33 q;
-    public final HashMap r;
-    public final Object s;
-    public zza t;
-    public zzo u;
-    public o84 v;
-    public s84 w;
-    public mf3 x;
-    public of3 y;
-    public vy4 z;
+
+    /* renamed from: E */
+    public boolean f12137E;
+
+    /* renamed from: F */
+    public zzz f12138F;
+
+    /* renamed from: G */
+    public gq3 f12139G;
+
+    /* renamed from: H */
+    public zzb f12140H;
+
+    /* renamed from: I */
+    public bq3 f12141I;
+
+    /* renamed from: J */
+    public cx3 f12142J;
+
+    /* renamed from: K */
+    public op6 f12143K;
+
+    /* renamed from: L */
+    public boolean f12144L;
+
+    /* renamed from: M */
+    public boolean f12145M;
+
+    /* renamed from: N */
+    public int f12146N;
+
+    /* renamed from: O */
+    public boolean f12147O;
+
+    /* renamed from: P */
+    public final HashSet f12148P;
+
+    /* renamed from: Q */
+    public View.OnAttachStateChangeListener f12149Q;
+
+    /* renamed from: p */
+    public final a74 f12150p;
+
+    /* renamed from: q */
+    public final x33 f12151q;
+
+    /* renamed from: r */
+    public final HashMap f12152r;
+
+    /* renamed from: s */
+    public final Object f12153s;
+
+    /* renamed from: t */
+    public zza f12154t;
+
+    /* renamed from: u */
+    public zzo f12155u;
+
+    /* renamed from: v */
+    public o84 f12156v;
+
+    /* renamed from: w */
+    public s84 f12157w;
+
+    /* renamed from: x */
+    public mf3 f12158x;
+
+    /* renamed from: y */
+    public of3 f12159y;
+
+    /* renamed from: z */
+    public vy4 f12160z;
 
     public h74(a74 a74Var, x33 x33Var, boolean z) {
-        gq3 gq3Var = new gq3(a74Var, a74Var.j(), new m83(a74Var.getContext()));
-        this.r = new HashMap();
-        this.s = new Object();
-        this.q = x33Var;
-        this.p = a74Var;
-        this.C = z;
-        this.G = gq3Var;
-        this.I = null;
-        this.P = new HashSet(Arrays.asList(((String) zzba.zzc().b(g93.b5)).split(",")));
+        gq3 gq3Var = new gq3(a74Var, a74Var.mo6412j(), new m83(a74Var.getContext()));
+        this.f12152r = new HashMap();
+        this.f12153s = new Object();
+        this.f12151q = x33Var;
+        this.f12150p = a74Var;
+        this.f12135C = z;
+        this.f12139G = gq3Var;
+        this.f12141I = null;
+        this.f12148P = new HashSet(Arrays.asList(((String) zzba.zzc().m23658b(g93.f10638b5)).split(",")));
     }
 
-    public static final boolean H(boolean z, a74 a74Var) {
-        return (!z || a74Var.o().i() || a74Var.O().equals("interstitial_mb")) ? false : true;
+    /* renamed from: H */
+    public static final boolean m20971H(boolean z, a74 a74Var) {
+        return (!z || a74Var.mo6408o().m7329i() || a74Var.mo6444O().equals("interstitial_mb")) ? false : true;
     }
 
-    public static WebResourceResponse l() {
-        if (((Boolean) zzba.zzc().b(g93.D0)).booleanValue()) {
+    /* renamed from: l */
+    public static WebResourceResponse m20957l() {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10392D0)).booleanValue()) {
             return new WebResourceResponse("", "", new ByteArrayInputStream(new byte[0]));
         }
         return null;
     }
 
-    public final void A() {
-        View.OnAttachStateChangeListener onAttachStateChangeListener = this.Q;
+    /* renamed from: A */
+    public final void m20979A() {
+        View.OnAttachStateChangeListener onAttachStateChangeListener = this.f12149Q;
         if (onAttachStateChangeListener == null) {
             return;
         }
-        ((View) this.p).removeOnAttachStateChangeListener(onAttachStateChangeListener);
+        ((View) this.f12150p).removeOnAttachStateChangeListener(onAttachStateChangeListener);
     }
 
-    public final void A0(boolean z, int i, boolean z2) {
-        boolean H = H(this.p.L(), this.p);
+    /* renamed from: A0 */
+    public final void m20978A0(boolean z, int i, boolean z2) {
+        boolean m20971H = m20971H(this.f12150p.mo6449L(), this.f12150p);
         boolean z3 = true;
-        if (!H && z2) {
+        if (!m20971H && z2) {
             z3 = false;
         }
-        zza zzaVar = H ? null : this.t;
-        zzo zzoVar = this.u;
-        zzz zzzVar = this.F;
-        a74 a74Var = this.p;
-        B0(new AdOverlayInfoParcel(zzaVar, zzoVar, zzzVar, a74Var, z, i, a74Var.zzp(), z3 ? null : this.z));
+        zza zzaVar = m20971H ? null : this.f12154t;
+        zzo zzoVar = this.f12155u;
+        zzz zzzVar = this.f12138F;
+        a74 a74Var = this.f12150p;
+        m20977B0(new AdOverlayInfoParcel(zzaVar, zzoVar, zzzVar, a74Var, z, i, a74Var.zzp(), z3 ? null : this.f12160z));
     }
 
-    public final void B0(AdOverlayInfoParcel adOverlayInfoParcel) {
+    /* renamed from: B0 */
+    public final void m20977B0(AdOverlayInfoParcel adOverlayInfoParcel) {
         zzc zzcVar;
-        bq3 bq3Var = this.I;
-        boolean l = bq3Var != null ? bq3Var.l() : false;
+        bq3 bq3Var = this.f12141I;
+        boolean m25919l = bq3Var != null ? bq3Var.m25919l() : false;
         zzt.zzi();
-        zzm.zza(this.p.getContext(), adOverlayInfoParcel, !l);
-        cx3 cx3Var = this.J;
+        zzm.zza(this.f12150p.getContext(), adOverlayInfoParcel, !m25919l);
+        cx3 cx3Var = this.f12142J;
         if (cx3Var != null) {
             String str = adOverlayInfoParcel.zzl;
             if (str == null && (zzcVar = adOverlayInfoParcel.zza) != null) {
@@ -138,283 +201,300 @@ public class h74 extends WebViewClient implements t84 {
         }
     }
 
-    public final void C0(boolean z, int i, String str, boolean z2) {
-        boolean L = this.p.L();
-        boolean H = H(L, this.p);
+    /* renamed from: C0 */
+    public final void m20976C0(boolean z, int i, String str, boolean z2) {
+        boolean mo6449L = this.f12150p.mo6449L();
+        boolean m20971H = m20971H(mo6449L, this.f12150p);
         boolean z3 = true;
-        if (!H && z2) {
+        if (!m20971H && z2) {
             z3 = false;
         }
-        zza zzaVar = H ? null : this.t;
-        g74 g74Var = L ? null : new g74(this.p, this.u);
-        mf3 mf3Var = this.x;
-        of3 of3Var = this.y;
-        zzz zzzVar = this.F;
-        a74 a74Var = this.p;
-        B0(new AdOverlayInfoParcel(zzaVar, g74Var, mf3Var, of3Var, zzzVar, a74Var, z, i, str, a74Var.zzp(), z3 ? null : this.z));
+        zza zzaVar = m20971H ? null : this.f12154t;
+        g74 g74Var = mo6449L ? null : new g74(this.f12150p, this.f12155u);
+        mf3 mf3Var = this.f12158x;
+        of3 of3Var = this.f12159y;
+        zzz zzzVar = this.f12138F;
+        a74 a74Var = this.f12150p;
+        m20977B0(new AdOverlayInfoParcel(zzaVar, g74Var, mf3Var, of3Var, zzzVar, a74Var, z, i, str, a74Var.zzp(), z3 ? null : this.f12160z));
     }
 
-    public final void D0(boolean z, int i, String str, String str2, boolean z2) {
-        boolean L = this.p.L();
-        boolean H = H(L, this.p);
+    /* renamed from: D0 */
+    public final void m20975D0(boolean z, int i, String str, String str2, boolean z2) {
+        boolean mo6449L = this.f12150p.mo6449L();
+        boolean m20971H = m20971H(mo6449L, this.f12150p);
         boolean z3 = true;
-        if (!H && z2) {
+        if (!m20971H && z2) {
             z3 = false;
         }
-        zza zzaVar = H ? null : this.t;
-        g74 g74Var = L ? null : new g74(this.p, this.u);
-        mf3 mf3Var = this.x;
-        of3 of3Var = this.y;
-        zzz zzzVar = this.F;
-        a74 a74Var = this.p;
-        B0(new AdOverlayInfoParcel(zzaVar, g74Var, mf3Var, of3Var, zzzVar, a74Var, z, i, str, str2, a74Var.zzp(), z3 ? null : this.z));
+        zza zzaVar = m20971H ? null : this.f12154t;
+        g74 g74Var = mo6449L ? null : new g74(this.f12150p, this.f12155u);
+        mf3 mf3Var = this.f12158x;
+        of3 of3Var = this.f12159y;
+        zzz zzzVar = this.f12138F;
+        a74 a74Var = this.f12150p;
+        m20977B0(new AdOverlayInfoParcel(zzaVar, g74Var, mf3Var, of3Var, zzzVar, a74Var, z, i, str, str2, a74Var.zzp(), z3 ? null : this.f12160z));
     }
 
     @Override // com.daaw.t84
-    public final void E(o84 o84Var) {
-        this.v = o84Var;
+    /* renamed from: E */
+    public final void mo9454E(o84 o84Var) {
+        this.f12156v = o84Var;
     }
 
-    public final void E0(String str, zg3 zg3Var) {
-        synchronized (this.s) {
-            List list = (List) this.r.get(str);
+    /* renamed from: E0 */
+    public final void m20974E0(String str, zg3 zg3Var) {
+        synchronized (this.f12153s) {
+            List list = (List) this.f12152r.get(str);
             if (list == null) {
                 list = new CopyOnWriteArrayList();
-                this.r.put(str, list);
+                this.f12152r.put(str, list);
             }
             list.add(zg3Var);
         }
     }
 
-    public final void F(final View view, final cx3 cx3Var, final int i) {
+    /* renamed from: F */
+    public final void m20973F(final View view, final cx3 cx3Var, final int i) {
         if (!cx3Var.zzi() || i <= 0) {
             return;
         }
-        cx3Var.b(view);
+        cx3Var.mo3151b(view);
         if (cx3Var.zzi()) {
             zzs.zza.postDelayed(new Runnable() { // from class: com.daaw.d74
                 @Override // java.lang.Runnable
                 public final void run() {
-                    h74.this.l0(view, cx3Var, i);
+                    h74.this.m20956l0(view, cx3Var, i);
                 }
             }, 100L);
         }
     }
 
-    public final void F0() {
-        cx3 cx3Var = this.J;
+    /* renamed from: F0 */
+    public final void m20972F0() {
+        cx3 cx3Var = this.f12142J;
         if (cx3Var != null) {
             cx3Var.zze();
-            this.J = null;
+            this.f12142J = null;
         }
-        A();
-        synchronized (this.s) {
-            this.r.clear();
-            this.t = null;
-            this.u = null;
-            this.v = null;
-            this.w = null;
-            this.x = null;
-            this.y = null;
-            this.A = false;
-            this.C = false;
-            this.D = false;
-            this.F = null;
-            this.H = null;
-            this.G = null;
-            bq3 bq3Var = this.I;
+        m20979A();
+        synchronized (this.f12153s) {
+            this.f12152r.clear();
+            this.f12154t = null;
+            this.f12155u = null;
+            this.f12156v = null;
+            this.f12157w = null;
+            this.f12158x = null;
+            this.f12159y = null;
+            this.f12133A = false;
+            this.f12135C = false;
+            this.f12136D = false;
+            this.f12138F = null;
+            this.f12140H = null;
+            this.f12139G = null;
+            bq3 bq3Var = this.f12141I;
             if (bq3Var != null) {
-                bq3Var.h(true);
-                this.I = null;
+                bq3Var.m25923h(true);
+                this.f12141I = null;
             }
-            this.K = null;
+            this.f12143K = null;
         }
     }
 
     @Override // com.daaw.t84
-    public final void G(int i, int i2, boolean z) {
-        gq3 gq3Var = this.G;
+    /* renamed from: G */
+    public final void mo9453G(int i, int i2, boolean z) {
+        gq3 gq3Var = this.f12139G;
         if (gq3Var != null) {
-            gq3Var.h(i, i2);
+            gq3Var.m21344h(i, i2);
         }
-        bq3 bq3Var = this.I;
+        bq3 bq3Var = this.f12141I;
         if (bq3Var != null) {
-            bq3Var.j(i, i2, false);
+            bq3Var.m25921j(i, i2, false);
         }
     }
 
     @Override // com.daaw.t84
-    public final void J(zza zzaVar, mf3 mf3Var, zzo zzoVar, of3 of3Var, zzz zzzVar, boolean z, bh3 bh3Var, zzb zzbVar, iq3 iq3Var, cx3 cx3Var, final cq5 cq5Var, final op6 op6Var, kd5 kd5Var, on6 on6Var, rh3 rh3Var, final vy4 vy4Var, qh3 qh3Var, kh3 kh3Var) {
+    /* renamed from: J */
+    public final void mo9452J(zza zzaVar, mf3 mf3Var, zzo zzoVar, of3 of3Var, zzz zzzVar, boolean z, bh3 bh3Var, zzb zzbVar, iq3 iq3Var, cx3 cx3Var, final cq5 cq5Var, final op6 op6Var, kd5 kd5Var, on6 on6Var, rh3 rh3Var, final vy4 vy4Var, qh3 qh3Var, kh3 kh3Var) {
         zg3 zg3Var;
-        zzb zzbVar2 = zzbVar == null ? new zzb(this.p.getContext(), cx3Var, null) : zzbVar;
-        this.I = new bq3(this.p, iq3Var);
-        this.J = cx3Var;
-        if (((Boolean) zzba.zzc().b(g93.L0)).booleanValue()) {
-            E0("/adMetadata", new lf3(mf3Var));
+        zzb zzbVar2 = zzbVar == null ? new zzb(this.f12150p.getContext(), cx3Var, null) : zzbVar;
+        this.f12141I = new bq3(this.f12150p, iq3Var);
+        this.f12142J = cx3Var;
+        if (((Boolean) zzba.zzc().m23658b(g93.f10472L0)).booleanValue()) {
+            m20974E0("/adMetadata", new lf3(mf3Var));
         }
         if (of3Var != null) {
-            E0("/appEvent", new nf3(of3Var));
+            m20974E0("/appEvent", new nf3(of3Var));
         }
-        E0("/backButton", yg3.j);
-        E0("/refresh", yg3.k);
-        E0("/canOpenApp", yg3.b);
-        E0("/canOpenURLs", yg3.a);
-        E0("/canOpenIntents", yg3.c);
-        E0("/close", yg3.d);
-        E0("/customClose", yg3.e);
-        E0("/instrument", yg3.n);
-        E0("/delayPageLoaded", yg3.p);
-        E0("/delayPageClosed", yg3.q);
-        E0("/getLocationInfo", yg3.r);
-        E0("/log", yg3.g);
-        E0("/mraid", new fh3(zzbVar2, this.I, iq3Var));
-        gq3 gq3Var = this.G;
+        m20974E0("/backButton", yg3.f33653j);
+        m20974E0("/refresh", yg3.f33654k);
+        m20974E0("/canOpenApp", yg3.f33645b);
+        m20974E0("/canOpenURLs", yg3.f33644a);
+        m20974E0("/canOpenIntents", yg3.f33646c);
+        m20974E0("/close", yg3.f33647d);
+        m20974E0("/customClose", yg3.f33648e);
+        m20974E0("/instrument", yg3.f33657n);
+        m20974E0("/delayPageLoaded", yg3.f33659p);
+        m20974E0("/delayPageClosed", yg3.f33660q);
+        m20974E0("/getLocationInfo", yg3.f33661r);
+        m20974E0("/log", yg3.f33650g);
+        m20974E0("/mraid", new fh3(zzbVar2, this.f12141I, iq3Var));
+        gq3 gq3Var = this.f12139G;
         if (gq3Var != null) {
-            E0("/mraidLoaded", gq3Var);
+            m20974E0("/mraidLoaded", gq3Var);
         }
         zzb zzbVar3 = zzbVar2;
-        E0("/open", new jh3(zzbVar2, this.I, cq5Var, kd5Var, on6Var));
-        E0("/precache", new k54());
-        E0("/touch", yg3.i);
-        E0("/video", yg3.l);
-        E0("/videoMeta", yg3.m);
+        m20974E0("/open", new jh3(zzbVar2, this.f12141I, cq5Var, kd5Var, on6Var));
+        m20974E0("/precache", new k54());
+        m20974E0("/touch", yg3.f33652i);
+        m20974E0("/video", yg3.f33655l);
+        m20974E0("/videoMeta", yg3.f33656m);
         if (cq5Var == null || op6Var == null) {
-            E0("/click", yg3.a(vy4Var));
-            zg3Var = yg3.f;
+            m20974E0("/click", yg3.m3759a(vy4Var));
+            zg3Var = yg3.f33649f;
         } else {
-            E0("/click", new zg3() { // from class: com.daaw.yi6
+            m20974E0("/click", new zg3() { // from class: com.daaw.yi6
                 @Override // com.daaw.zg3
-                public final void a(Object obj, Map map) {
+                /* renamed from: a */
+                public final void mo2341a(Object obj, Map map) {
                     vy4 vy4Var2 = vy4.this;
                     op6 op6Var2 = op6Var;
                     cq5 cq5Var2 = cq5Var;
                     a74 a74Var = (a74) obj;
-                    yg3.d(map, vy4Var2);
+                    yg3.m3756d(map, vy4Var2);
                     String str = (String) map.get("u");
                     if (str == null) {
                         k04.zzj("URL missing from click GMSG.");
                     } else {
-                        s67.r(yg3.b(a74Var, str), new zi6(a74Var, op6Var2, cq5Var2), z04.a);
+                        s67.m10625r(yg3.m3758b(a74Var, str), new zi6(a74Var, op6Var2, cq5Var2), z04.f34305a);
                     }
                 }
             });
             zg3Var = new zg3() { // from class: com.daaw.xi6
                 @Override // com.daaw.zg3
-                public final void a(Object obj, Map map) {
+                /* renamed from: a */
+                public final void mo2341a(Object obj, Map map) {
                     op6 op6Var2 = op6.this;
                     cq5 cq5Var2 = cq5Var;
                     r64 r64Var = (r64) obj;
                     String str = (String) map.get("u");
                     if (str == null) {
                         k04.zzj("URL missing from httpTrack GMSG.");
-                    } else if (r64Var.d().k0) {
-                        cq5Var2.u(new eq5(zzt.zzB().a(), ((a84) r64Var).v().b, str, 2));
+                    } else if (r64Var.mo6421d().f27701k0) {
+                        cq5Var2.m25118u(new eq5(zzt.zzB().mo15860a(), ((a84) r64Var).mo6398v().f31252b, str, 2));
                     } else {
-                        op6Var2.c(str, null);
+                        op6Var2.m14098c(str, null);
                     }
                 }
             };
         }
-        E0("/httpTrack", zg3Var);
-        if (zzt.zzn().z(this.p.getContext())) {
-            E0("/logScionEvent", new eh3(this.p.getContext()));
+        m20974E0("/httpTrack", zg3Var);
+        if (zzt.zzn().m17317z(this.f12150p.getContext())) {
+            m20974E0("/logScionEvent", new eh3(this.f12150p.getContext()));
         }
         if (bh3Var != null) {
-            E0("/setInterstitialProperties", new ah3(bh3Var, null));
+            m20974E0("/setInterstitialProperties", new ah3(bh3Var, null));
         }
         if (rh3Var != null) {
-            if (((Boolean) zzba.zzc().b(g93.X7)).booleanValue()) {
-                E0("/inspectorNetworkExtras", rh3Var);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10599X7)).booleanValue()) {
+                m20974E0("/inspectorNetworkExtras", rh3Var);
             }
         }
-        if (((Boolean) zzba.zzc().b(g93.q8)).booleanValue() && qh3Var != null) {
-            E0("/shareSheet", qh3Var);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10806q8)).booleanValue() && qh3Var != null) {
+            m20974E0("/shareSheet", qh3Var);
         }
-        if (((Boolean) zzba.zzc().b(g93.t8)).booleanValue() && kh3Var != null) {
-            E0("/inspectorOutOfContextTest", kh3Var);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10839t8)).booleanValue() && kh3Var != null) {
+            m20974E0("/inspectorOutOfContextTest", kh3Var);
         }
-        if (((Boolean) zzba.zzc().b(g93.v9)).booleanValue()) {
-            E0("/bindPlayStoreOverlay", yg3.u);
-            E0("/presentPlayStoreOverlay", yg3.v);
-            E0("/expandPlayStoreOverlay", yg3.w);
-            E0("/collapsePlayStoreOverlay", yg3.x);
-            E0("/closePlayStoreOverlay", yg3.y);
-            if (((Boolean) zzba.zzc().b(g93.K2)).booleanValue()) {
-                E0("/setPAIDPersonalizationEnabled", yg3.A);
-                E0("/resetPAID", yg3.z);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10862v9)).booleanValue()) {
+            m20974E0("/bindPlayStoreOverlay", yg3.f33664u);
+            m20974E0("/presentPlayStoreOverlay", yg3.f33665v);
+            m20974E0("/expandPlayStoreOverlay", yg3.f33666w);
+            m20974E0("/collapsePlayStoreOverlay", yg3.f33667x);
+            m20974E0("/closePlayStoreOverlay", yg3.f33668y);
+            if (((Boolean) zzba.zzc().m23658b(g93.f10464K2)).booleanValue()) {
+                m20974E0("/setPAIDPersonalizationEnabled", yg3.f33643A);
+                m20974E0("/resetPAID", yg3.f33669z);
             }
         }
-        this.t = zzaVar;
-        this.u = zzoVar;
-        this.x = mf3Var;
-        this.y = of3Var;
-        this.F = zzzVar;
-        this.H = zzbVar3;
-        this.z = vy4Var;
-        this.A = z;
-        this.K = op6Var;
+        this.f12154t = zzaVar;
+        this.f12155u = zzoVar;
+        this.f12158x = mf3Var;
+        this.f12159y = of3Var;
+        this.f12138F = zzzVar;
+        this.f12140H = zzbVar3;
+        this.f12160z = vy4Var;
+        this.f12133A = z;
+        this.f12143K = op6Var;
     }
 
-    public final ViewTreeObserver.OnGlobalLayoutListener M() {
-        synchronized (this.s) {
+    /* renamed from: M */
+    public final ViewTreeObserver.OnGlobalLayoutListener m20970M() {
+        synchronized (this.f12153s) {
         }
         return null;
     }
 
-    public final ViewTreeObserver.OnScrollChangedListener S() {
-        synchronized (this.s) {
+    /* renamed from: S */
+    public final ViewTreeObserver.OnScrollChangedListener m20969S() {
+        synchronized (this.f12153s) {
         }
         return null;
     }
 
-    public final WebResourceResponse T(String str, Map map) {
-        zzbef b;
+    /* renamed from: T */
+    public final WebResourceResponse m20968T(String str, Map map) {
+        zzbef m21054b;
         try {
-            if (((Boolean) gb3.a.e()).booleanValue() && this.K != null && "oda".equals(Uri.parse(str).getScheme())) {
-                this.K.c(str, null);
+            if (((Boolean) gb3.f11010a.m16137e()).booleanValue() && this.f12143K != null && "oda".equals(Uri.parse(str).getScheme())) {
+                this.f12143K.m14098c(str, null);
                 return new WebResourceResponse("", "", new ByteArrayInputStream(new byte[0]));
             }
-            String c = my3.c(str, this.p.getContext(), this.O);
-            if (c.equals(str)) {
-                zzbei h = zzbei.h(Uri.parse(str));
-                if (h == null || (b = zzt.zzc().b(h)) == null || !b.u()) {
-                    if (j04.l() && ((Boolean) wa3.b.e()).booleanValue()) {
-                        return m(str, map);
+            String m15658c = my3.m15658c(str, this.f12150p.getContext(), this.f12147O);
+            if (m15658c.equals(str)) {
+                zzbei m1106h = zzbei.m1106h(Uri.parse(str));
+                if (m1106h == null || (m21054b = zzt.zzc().m21054b(m1106h)) == null || !m21054b.m1109u()) {
+                    if (j04.m19188l() && ((Boolean) wa3.f31101b.m16137e()).booleanValue()) {
+                        return m20955m(str, map);
                     }
                     return null;
                 }
-                return new WebResourceResponse("", "", b.s());
+                return new WebResourceResponse("", "", m21054b.m1111s());
             }
-            return m(c, map);
+            return m20955m(m15658c, map);
         } catch (Exception | NoClassDefFoundError e) {
-            zzt.zzo().u(e, "AdWebViewClient.interceptRequest");
-            return l();
+            zzt.zzo().m11902u(e, "AdWebViewClient.interceptRequest");
+            return m20957l();
         }
     }
 
     @Override // com.daaw.t84
-    public final void Z(boolean z) {
-        synchronized (this.s) {
-            this.D = true;
+    /* renamed from: Z */
+    public final void mo9451Z(boolean z) {
+        synchronized (this.f12153s) {
+            this.f12136D = true;
         }
     }
 
     @Override // com.daaw.t84
-    public final boolean a() {
+    /* renamed from: a */
+    public final boolean mo9450a() {
         boolean z;
-        synchronized (this.s) {
-            z = this.C;
+        synchronized (this.f12153s) {
+            z = this.f12135C;
         }
         return z;
     }
 
-    public final void b(boolean z) {
-        this.A = false;
+    /* renamed from: b */
+    public final void m20966b(boolean z) {
+        this.f12133A = false;
     }
 
-    public final void c(String str, zg3 zg3Var) {
-        synchronized (this.s) {
-            List list = (List) this.r.get(str);
+    /* renamed from: c */
+    public final void m20965c(String str, zg3 zg3Var) {
+        synchronized (this.f12153s) {
+            List list = (List) this.f12152r.get(str);
             if (list == null) {
                 return;
             }
@@ -422,9 +502,10 @@ public class h74 extends WebViewClient implements t84 {
         }
     }
 
-    public final void e(String str, uy0 uy0Var) {
-        synchronized (this.s) {
-            List<zg3> list = (List) this.r.get(str);
+    /* renamed from: e */
+    public final void m20963e(String str, uy0 uy0Var) {
+        synchronized (this.f12153s) {
+            List<zg3> list = (List) this.f12152r.get(str);
             if (list == null) {
                 return;
             }
@@ -438,87 +519,95 @@ public class h74 extends WebViewClient implements t84 {
         }
     }
 
-    public final void e0() {
-        if (this.v != null && ((this.L && this.N <= 0) || this.M || this.B)) {
-            if (((Boolean) zzba.zzc().b(g93.F1)).booleanValue() && this.p.zzo() != null) {
-                n93.a(this.p.zzo().a(), this.p.zzn(), "awfllc");
+    /* renamed from: e0 */
+    public final void m20962e0() {
+        if (this.f12156v != null && ((this.f12144L && this.f12146N <= 0) || this.f12145M || this.f12134B)) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10413F1)).booleanValue() && this.f12150p.zzo() != null) {
+                n93.m15381a(this.f12150p.zzo().m9423a(), this.f12150p.zzn(), "awfllc");
             }
-            o84 o84Var = this.v;
+            o84 o84Var = this.f12156v;
             boolean z = false;
-            if (!this.M && !this.B) {
+            if (!this.f12145M && !this.f12134B) {
                 z = true;
             }
             o84Var.zza(z);
-            this.v = null;
+            this.f12156v = null;
         }
-        this.p.N();
+        this.f12150p.mo6446N();
     }
 
-    public final boolean f() {
+    /* renamed from: f */
+    public final boolean m20961f() {
         boolean z;
-        synchronized (this.s) {
-            z = this.E;
+        synchronized (this.f12153s) {
+            z = this.f12137E;
         }
         return z;
     }
 
-    public final void h0(boolean z) {
-        this.O = z;
+    /* renamed from: h0 */
+    public final void m20960h0(boolean z) {
+        this.f12147O = z;
     }
 
-    public final /* synthetic */ void i0() {
-        this.p.f0();
-        zzl zzN = this.p.zzN();
+    /* renamed from: i0 */
+    public final /* synthetic */ void m20959i0() {
+        this.f12150p.mo6419f0();
+        zzl zzN = this.f12150p.zzN();
         if (zzN != null) {
             zzN.zzx();
         }
     }
 
-    public final boolean k() {
+    /* renamed from: k */
+    public final boolean m20958k() {
         boolean z;
-        synchronized (this.s) {
-            z = this.D;
+        synchronized (this.f12153s) {
+            z = this.f12136D;
         }
         return z;
     }
 
     @Override // com.daaw.t84
-    public final void k0(Uri uri) {
+    /* renamed from: k0 */
+    public final void mo9449k0(Uri uri) {
         String path = uri.getPath();
-        List list = (List) this.r.get(path);
+        List list = (List) this.f12152r.get(path);
         if (path == null || list == null) {
             zze.zza("No GMSG handler found for GMSG: ".concat(String.valueOf(uri)));
-            if (!((Boolean) zzba.zzc().b(g93.h6)).booleanValue() || zzt.zzo().f() == null) {
+            if (!((Boolean) zzba.zzc().m23658b(g93.f10705h6)).booleanValue() || zzt.zzo().m11917f() == null) {
                 return;
             }
             final String substring = (path == null || path.length() < 2) ? "null" : path.substring(1);
-            z04.a.execute(new Runnable() { // from class: com.daaw.b74
+            z04.f34305a.execute(new Runnable() { // from class: com.daaw.b74
                 @Override // java.lang.Runnable
                 public final void run() {
                     String str = substring;
-                    int i = h74.R;
-                    zzt.zzo().f().e(str);
+                    int i = h74.f12132R;
+                    zzt.zzo().m11917f().m17082e(str);
                 }
             });
             return;
         }
         String encodedQuery = uri.getEncodedQuery();
-        if (((Boolean) zzba.zzc().b(g93.a5)).booleanValue() && this.P.contains(path) && encodedQuery != null) {
-            if (encodedQuery.length() >= ((Integer) zzba.zzc().b(g93.c5)).intValue()) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10627a5)).booleanValue() && this.f12148P.contains(path) && encodedQuery != null) {
+            if (encodedQuery.length() >= ((Integer) zzba.zzc().m23658b(g93.f10649c5)).intValue()) {
                 zze.zza("Parsing gmsg query params on BG thread: ".concat(path));
-                s67.r(zzt.zzp().zzb(uri), new f74(this, list, path, uri), z04.e);
+                s67.m10625r(zzt.zzp().zzb(uri), new f74(this, list, path, uri), z04.f34309e);
                 return;
             }
         }
         zzt.zzp();
-        s(zzs.zzL(uri), list, path);
+        m20952s(zzs.zzL(uri), list, path);
     }
 
-    public final /* synthetic */ void l0(View view, cx3 cx3Var, int i) {
-        F(view, cx3Var, i - 1);
+    /* renamed from: l0 */
+    public final /* synthetic */ void m20956l0(View view, cx3 cx3Var, int i) {
+        m20973F(view, cx3Var, i - 1);
     }
 
-    public final WebResourceResponse m(String str, Map map) {
+    /* renamed from: m */
+    public final WebResourceResponse m20955m(String str, Map map) {
         HttpURLConnection httpURLConnection;
         URL url = new URL(str);
         try {
@@ -540,11 +629,11 @@ public class h74 extends WebViewClient implements t84 {
                     throw new IOException("Invalid protocol.");
                 }
                 httpURLConnection = (HttpURLConnection) openConnection;
-                zzt.zzp().zze(this.p.getContext(), this.p.zzp().p, false, httpURLConnection, false, 60000);
+                zzt.zzp().zze(this.f12150p.getContext(), this.f12150p.zzp().f36993p, false, httpURLConnection, false, 60000);
                 j04 j04Var = new j04(null);
-                j04Var.c(httpURLConnection, null);
+                j04Var.m19197c(httpURLConnection, null);
                 int responseCode = httpURLConnection.getResponseCode();
-                j04Var.e(httpURLConnection, responseCode);
+                j04Var.m19195e(httpURLConnection, responseCode);
                 if (responseCode < 300 || responseCode >= 400) {
                     break;
                 }
@@ -559,10 +648,10 @@ public class h74 extends WebViewClient implements t84 {
                 String protocol = url2.getProtocol();
                 if (protocol == null) {
                     k04.zzj("Protocol is null");
-                    return l();
+                    return m20957l();
                 } else if (!protocol.equals("http") && !protocol.equals("https")) {
                     k04.zzj("Unsupported scheme: " + protocol);
-                    return l();
+                    return m20957l();
                 } else {
                     k04.zze("Redirecting to " + headerField);
                     httpURLConnection.disconnect();
@@ -576,24 +665,26 @@ public class h74 extends WebViewClient implements t84 {
         }
     }
 
-    public final void m0(zzc zzcVar, boolean z) {
-        boolean L = this.p.L();
-        boolean H = H(L, this.p);
+    /* renamed from: m0 */
+    public final void m20954m0(zzc zzcVar, boolean z) {
+        boolean mo6449L = this.f12150p.mo6449L();
+        boolean m20971H = m20971H(mo6449L, this.f12150p);
         boolean z2 = true;
-        if (!H && z) {
+        if (!m20971H && z) {
             z2 = false;
         }
-        B0(new AdOverlayInfoParcel(zzcVar, H ? null : this.t, L ? null : this.u, this.F, this.p.zzp(), this.p, z2 ? null : this.z));
+        m20977B0(new AdOverlayInfoParcel(zzcVar, m20971H ? null : this.f12154t, mo6449L ? null : this.f12155u, this.f12138F, this.f12150p.zzp(), this.f12150p, z2 ? null : this.f12160z));
     }
 
-    public final void n0(zzbr zzbrVar, cq5 cq5Var, kd5 kd5Var, on6 on6Var, String str, String str2, int i) {
-        a74 a74Var = this.p;
-        B0(new AdOverlayInfoParcel(a74Var, a74Var.zzp(), zzbrVar, cq5Var, kd5Var, on6Var, str, str2, 14));
+    /* renamed from: n0 */
+    public final void m20953n0(zzbr zzbrVar, cq5 cq5Var, kd5 kd5Var, on6 on6Var, String str, String str2, int i) {
+        a74 a74Var = this.f12150p;
+        m20977B0(new AdOverlayInfoParcel(a74Var, a74Var.zzp(), zzbrVar, cq5Var, kd5Var, on6Var, str, str2, 14));
     }
 
     @Override // com.google.android.gms.ads.internal.client.zza
     public final void onAdClicked() {
-        zza zzaVar = this.t;
+        zza zzaVar = this.f12154t;
         if (zzaVar != null) {
             zzaVar.onAdClicked();
         }
@@ -604,40 +695,41 @@ public class h74 extends WebViewClient implements t84 {
         zze.zza("Loading resource: ".concat(String.valueOf(str)));
         Uri parse = Uri.parse(str);
         if ("gmsg".equalsIgnoreCase(parse.getScheme()) && "mobileads.google.com".equalsIgnoreCase(parse.getHost())) {
-            k0(parse);
+            mo9449k0(parse);
         }
     }
 
     @Override // android.webkit.WebViewClient
     public final void onPageFinished(WebView webView, String str) {
-        synchronized (this.s) {
-            if (this.p.o0()) {
+        synchronized (this.f12153s) {
+            if (this.f12150p.mo6407o0()) {
                 zze.zza("Blank page loaded, 1...");
-                this.p.z();
+                this.f12150p.mo6391z();
                 return;
             }
-            this.L = true;
-            s84 s84Var = this.w;
+            this.f12144L = true;
+            s84 s84Var = this.f12157w;
             if (s84Var != null) {
                 s84Var.zza();
-                this.w = null;
+                this.f12157w = null;
             }
-            e0();
+            m20962e0();
         }
     }
 
     @Override // android.webkit.WebViewClient
     public final void onReceivedError(WebView webView, int i, String str, String str2) {
-        this.B = true;
+        this.f12134B = true;
     }
 
     @Override // android.webkit.WebViewClient
     @TargetApi(26)
     public final boolean onRenderProcessGone(WebView webView, RenderProcessGoneDetail renderProcessGoneDetail) {
-        return this.p.x0(renderProcessGoneDetail.didCrash(), renderProcessGoneDetail.rendererPriorityAtExit());
+        return this.f12150p.mo6393x0(renderProcessGoneDetail.didCrash(), renderProcessGoneDetail.rendererPriorityAtExit());
     }
 
-    public final void s(Map map, List list, String str) {
+    /* renamed from: s */
+    public final void m20952s(Map map, List list, String str) {
         if (zze.zzc()) {
             zze.zza("Received GMSG: ".concat(str));
             for (String str2 : map.keySet()) {
@@ -646,13 +738,13 @@ public class h74 extends WebViewClient implements t84 {
         }
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            ((zg3) it.next()).a(this.p, map);
+            ((zg3) it.next()).mo2341a(this.f12150p, map);
         }
     }
 
     @Override // android.webkit.WebViewClient
     public WebResourceResponse shouldInterceptRequest(WebView webView, String str) {
-        return T(str, Collections.emptyMap());
+        return m20968T(str, Collections.emptyMap());
     }
 
     @Override // android.webkit.WebViewClient
@@ -668,11 +760,11 @@ public class h74 extends WebViewClient implements t84 {
             case 88:
             case 89:
             case 90:
-            case p21.J0 /* 91 */:
+            case p21.f22268J0 /* 91 */:
                 return true;
             default:
                 switch (keyCode) {
-                    case x21.M0 /* 126 */:
+                    case x21.f31819M0 /* 126 */:
                     case 127:
                     case 128:
                     case 129:
@@ -689,46 +781,46 @@ public class h74 extends WebViewClient implements t84 {
         zze.zza("AdWebView shouldOverrideUrlLoading: ".concat(String.valueOf(str)));
         Uri parse = Uri.parse(str);
         if ("gmsg".equalsIgnoreCase(parse.getScheme()) && "mobileads.google.com".equalsIgnoreCase(parse.getHost())) {
-            k0(parse);
+            mo9449k0(parse);
         } else {
-            if (this.A && webView == this.p.h()) {
+            if (this.f12133A && webView == this.f12150p.mo6416h()) {
                 String scheme = parse.getScheme();
                 if ("http".equalsIgnoreCase(scheme) || "https".equalsIgnoreCase(scheme)) {
-                    zza zzaVar = this.t;
+                    zza zzaVar = this.f12154t;
                     if (zzaVar != null) {
                         zzaVar.onAdClicked();
-                        cx3 cx3Var = this.J;
+                        cx3 cx3Var = this.f12142J;
                         if (cx3Var != null) {
                             cx3Var.zzh(str);
                         }
-                        this.t = null;
+                        this.f12154t = null;
                     }
-                    vy4 vy4Var = this.z;
+                    vy4 vy4Var = this.f12160z;
                     if (vy4Var != null) {
                         vy4Var.zzq();
-                        this.z = null;
+                        this.f12160z = null;
                     }
                     return super.shouldOverrideUrlLoading(webView, str);
                 }
             }
-            if (this.p.h().willNotDraw()) {
+            if (this.f12150p.mo6416h().willNotDraw()) {
                 k04.zzj("AdWebView unable to handle URL: ".concat(String.valueOf(str)));
             } else {
                 try {
-                    sl2 a = this.p.a();
-                    if (a != null && a.f(parse)) {
-                        Context context = this.p.getContext();
-                        a74 a74Var = this.p;
-                        parse = a.a(parse, context, (View) a74Var, a74Var.zzk());
+                    sl2 mo6425a = this.f12150p.mo6425a();
+                    if (mo6425a != null && mo6425a.m10199f(parse)) {
+                        Context context = this.f12150p.getContext();
+                        a74 a74Var = this.f12150p;
+                        parse = mo6425a.m10204a(parse, context, (View) a74Var, a74Var.zzk());
                     }
                 } catch (tl2 unused) {
                     k04.zzj("Unable to append parameter to URL: ".concat(String.valueOf(str)));
                 }
-                zzb zzbVar = this.H;
+                zzb zzbVar = this.f12140H;
                 if (zzbVar == null || zzbVar.zzc()) {
-                    m0(new zzc("android.intent.action.VIEW", parse.toString(), null, null, null, null, null, null), true);
+                    m20954m0(new zzc("android.intent.action.VIEW", parse.toString(), null, null, null, null, null, null), true);
                 } else {
-                    this.H.zzb(str);
+                    this.f12140H.zzb(str);
                 }
             }
         }
@@ -736,34 +828,37 @@ public class h74 extends WebViewClient implements t84 {
     }
 
     @Override // com.daaw.t84
-    public final void t0(boolean z) {
-        synchronized (this.s) {
-            this.E = z;
+    /* renamed from: t0 */
+    public final void mo9448t0(boolean z) {
+        synchronized (this.f12153s) {
+            this.f12137E = z;
         }
     }
 
     @Override // com.daaw.t84
-    public final void y0(s84 s84Var) {
-        this.w = s84Var;
+    /* renamed from: y0 */
+    public final void mo9447y0(s84 s84Var) {
+        this.f12157w = s84Var;
     }
 
     @Override // com.daaw.t84
-    public final void z0(int i, int i2) {
-        bq3 bq3Var = this.I;
+    /* renamed from: z0 */
+    public final void mo9446z0(int i, int i2) {
+        bq3 bq3Var = this.f12141I;
         if (bq3Var != null) {
-            bq3Var.k(i, i2);
+            bq3Var.m25920k(i, i2);
         }
     }
 
     @Override // com.daaw.t84
     public final void zzE() {
-        synchronized (this.s) {
-            this.A = false;
-            this.C = true;
-            z04.e.execute(new Runnable() { // from class: com.daaw.c74
+        synchronized (this.f12153s) {
+            this.f12133A = false;
+            this.f12135C = true;
+            z04.f34309e.execute(new Runnable() { // from class: com.daaw.c74
                 @Override // java.lang.Runnable
                 public final void run() {
-                    h74.this.i0();
+                    h74.this.m20959i0();
                 }
             });
         }
@@ -771,53 +866,53 @@ public class h74 extends WebViewClient implements t84 {
 
     @Override // com.daaw.t84
     public final zzb zzd() {
-        return this.H;
+        return this.f12140H;
     }
 
     @Override // com.daaw.t84
     public final void zzj() {
-        x33 x33Var = this.q;
+        x33 x33Var = this.f12151q;
         if (x33Var != null) {
-            x33Var.c(10005);
+            x33Var.m5589c(10005);
         }
-        this.M = true;
-        e0();
-        this.p.destroy();
+        this.f12145M = true;
+        m20962e0();
+        this.f12150p.destroy();
     }
 
     @Override // com.daaw.t84
     public final void zzk() {
-        synchronized (this.s) {
+        synchronized (this.f12153s) {
         }
-        this.N++;
-        e0();
+        this.f12146N++;
+        m20962e0();
     }
 
     @Override // com.daaw.t84
     public final void zzl() {
-        this.N--;
-        e0();
+        this.f12146N--;
+        m20962e0();
     }
 
     @Override // com.daaw.t84
     public final void zzp() {
-        cx3 cx3Var = this.J;
+        cx3 cx3Var = this.f12142J;
         if (cx3Var != null) {
-            WebView h = this.p.h();
-            if (xs1.U(h)) {
-                F(h, cx3Var, 10);
+            WebView mo6416h = this.f12150p.mo6416h();
+            if (xs1.m4743U(mo6416h)) {
+                m20973F(mo6416h, cx3Var, 10);
                 return;
             }
-            A();
+            m20979A();
             e74 e74Var = new e74(this, cx3Var);
-            this.Q = e74Var;
-            ((View) this.p).addOnAttachStateChangeListener(e74Var);
+            this.f12149Q = e74Var;
+            ((View) this.f12150p).addOnAttachStateChangeListener(e74Var);
         }
     }
 
     @Override // com.daaw.vy4
     public final void zzq() {
-        vy4 vy4Var = this.z;
+        vy4 vy4Var = this.f12160z;
         if (vy4Var != null) {
             vy4Var.zzq();
         }
@@ -825,7 +920,7 @@ public class h74 extends WebViewClient implements t84 {
 
     @Override // com.daaw.vy4
     public final void zzr() {
-        vy4 vy4Var = this.z;
+        vy4 vy4Var = this.f12160z;
         if (vy4Var != null) {
             vy4Var.zzr();
         }

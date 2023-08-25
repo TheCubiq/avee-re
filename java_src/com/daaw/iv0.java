@@ -10,53 +10,63 @@ import android.os.Binder;
 import android.os.Process;
 /* loaded from: classes.dex */
 public class iv0 {
-    public final Context a;
+
+    /* renamed from: a */
+    public final Context f14023a;
 
     public iv0(Context context) {
-        this.a = context;
+        this.f14023a = context;
     }
 
-    public int a(String str) {
-        return this.a.checkCallingOrSelfPermission(str);
+    /* renamed from: a */
+    public int m19346a(String str) {
+        return this.f14023a.checkCallingOrSelfPermission(str);
     }
 
-    public int b(String str, String str2) {
-        return this.a.getPackageManager().checkPermission(str, str2);
+    /* renamed from: b */
+    public int m19345b(String str, String str2) {
+        return this.f14023a.getPackageManager().checkPermission(str, str2);
     }
 
-    public ApplicationInfo c(String str, int i) {
-        return this.a.getPackageManager().getApplicationInfo(str, i);
+    /* renamed from: c */
+    public ApplicationInfo m19344c(String str, int i) {
+        return this.f14023a.getPackageManager().getApplicationInfo(str, i);
     }
 
-    public CharSequence d(String str) {
-        return this.a.getPackageManager().getApplicationLabel(this.a.getPackageManager().getApplicationInfo(str, 0));
+    /* renamed from: d */
+    public CharSequence m19343d(String str) {
+        return this.f14023a.getPackageManager().getApplicationLabel(this.f14023a.getPackageManager().getApplicationInfo(str, 0));
     }
 
-    public ov0<CharSequence, Drawable> e(String str) {
-        ApplicationInfo applicationInfo = this.a.getPackageManager().getApplicationInfo(str, 0);
-        return ov0.a(this.a.getPackageManager().getApplicationLabel(applicationInfo), this.a.getPackageManager().getApplicationIcon(applicationInfo));
+    /* renamed from: e */
+    public ov0<CharSequence, Drawable> m19342e(String str) {
+        ApplicationInfo applicationInfo = this.f14023a.getPackageManager().getApplicationInfo(str, 0);
+        return ov0.m13911a(this.f14023a.getPackageManager().getApplicationLabel(applicationInfo), this.f14023a.getPackageManager().getApplicationIcon(applicationInfo));
     }
 
-    public PackageInfo f(String str, int i) {
-        return this.a.getPackageManager().getPackageInfo(str, i);
+    /* renamed from: f */
+    public PackageInfo m19341f(String str, int i) {
+        return this.f14023a.getPackageManager().getPackageInfo(str, i);
     }
 
-    public boolean g() {
+    /* renamed from: g */
+    public boolean m19340g() {
         String nameForUid;
         if (Binder.getCallingUid() == Process.myUid()) {
-            return lg0.a(this.a);
+            return lg0.m16965a(this.f14023a);
         }
-        if (!vw0.i() || (nameForUid = this.a.getPackageManager().getNameForUid(Binder.getCallingUid())) == null) {
+        if (!vw0.m6696i() || (nameForUid = this.f14023a.getPackageManager().getNameForUid(Binder.getCallingUid())) == null) {
             return false;
         }
-        return this.a.getPackageManager().isInstantApp(nameForUid);
+        return this.f14023a.getPackageManager().isInstantApp(nameForUid);
     }
 
     @TargetApi(19)
-    public final boolean h(int i, String str) {
-        if (vw0.d()) {
+    /* renamed from: h */
+    public final boolean m19339h(int i, String str) {
+        if (vw0.m6701d()) {
             try {
-                AppOpsManager appOpsManager = (AppOpsManager) this.a.getSystemService("appops");
+                AppOpsManager appOpsManager = (AppOpsManager) this.f14023a.getSystemService("appops");
                 if (appOpsManager != null) {
                     appOpsManager.checkPackage(i, str);
                     return true;
@@ -66,7 +76,7 @@ public class iv0 {
                 return false;
             }
         }
-        String[] packagesForUid = this.a.getPackageManager().getPackagesForUid(i);
+        String[] packagesForUid = this.f14023a.getPackageManager().getPackagesForUid(i);
         if (str != null && packagesForUid != null) {
             for (String str2 : packagesForUid) {
                 if (str.equals(str2)) {

@@ -3,51 +3,63 @@ package com.daaw;
 import android.os.Build;
 /* loaded from: classes.dex */
 public final class vw0 {
-    public static boolean a() {
+    /* renamed from: a */
+    public static boolean m6704a() {
         return true;
     }
 
-    public static boolean b() {
+    /* renamed from: b */
+    public static boolean m6703b() {
         return true;
     }
 
-    public static boolean c() {
+    /* renamed from: c */
+    public static boolean m6702c() {
         return true;
     }
 
-    public static boolean d() {
+    /* renamed from: d */
+    public static boolean m6701d() {
         return true;
     }
 
-    public static boolean e() {
+    /* renamed from: e */
+    public static boolean m6700e() {
         return Build.VERSION.SDK_INT >= 20;
     }
 
-    public static boolean f() {
+    /* renamed from: f */
+    public static boolean m6699f() {
         return Build.VERSION.SDK_INT >= 21;
     }
 
-    public static boolean g() {
+    /* renamed from: g */
+    public static boolean m6698g() {
         return Build.VERSION.SDK_INT >= 23;
     }
 
-    public static boolean h() {
+    /* renamed from: h */
+    public static boolean m6697h() {
         return Build.VERSION.SDK_INT >= 24;
     }
 
-    public static boolean i() {
+    /* renamed from: i */
+    public static boolean m6696i() {
         return Build.VERSION.SDK_INT >= 26;
     }
 
-    public static boolean j() {
+    /* renamed from: j */
+    public static boolean m6695j() {
         return Build.VERSION.SDK_INT >= 29;
     }
 
-    public static boolean k() {
+    /* renamed from: k */
+    public static boolean m6694k() {
         return Build.VERSION.SDK_INT >= 30;
     }
 
-    public static boolean l() {
+    /* renamed from: l */
+    public static boolean m6693l() {
         return Build.VERSION.SDK_INT >= 31;
     }
 }

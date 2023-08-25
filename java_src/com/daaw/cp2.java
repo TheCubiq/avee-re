@@ -10,7 +10,8 @@ public class cp2 extends Binder implements IInterface {
         attachInterface(this, str);
     }
 
-    public boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         throw null;
     }
 
@@ -26,6 +27,6 @@ public class cp2 extends Binder implements IInterface {
         } else if (super.onTransact(i, parcel, parcel2, i2)) {
             return true;
         }
-        return M(i, parcel, parcel2, i2);
+        return mo1346M(i, parcel, parcel2, i2);
     }
 }

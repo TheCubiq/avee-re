@@ -10,55 +10,65 @@ import java.util.ArrayList;
 import java.util.Iterator;
 /* loaded from: classes.dex */
 public final class bk1 implements Iterable<Intent> {
-    public final ArrayList<Intent> p = new ArrayList<>();
-    public final Context q;
 
+    /* renamed from: p */
+    public final ArrayList<Intent> f4874p = new ArrayList<>();
+
+    /* renamed from: q */
+    public final Context f4875q;
+
+    /* renamed from: com.daaw.bk1$a */
     /* loaded from: classes.dex */
-    public interface a {
-        Intent f();
+    public interface InterfaceC0854a {
+        /* renamed from: f */
+        Intent mo13663f();
     }
 
     public bk1(Context context) {
-        this.q = context;
+        this.f4875q = context;
     }
 
-    public static bk1 h(Context context) {
+    /* renamed from: h */
+    public static bk1 m26090h(Context context) {
         return new bk1(context);
     }
 
-    public bk1 d(Intent intent) {
-        this.p.add(intent);
+    /* renamed from: d */
+    public bk1 m26093d(Intent intent) {
+        this.f4874p.add(intent);
         return this;
     }
 
-    public bk1 e(Activity activity) {
-        Intent f = activity instanceof a ? ((a) activity).f() : null;
-        if (f == null) {
-            f = as0.a(activity);
+    /* renamed from: e */
+    public bk1 m26092e(Activity activity) {
+        Intent mo13663f = activity instanceof InterfaceC0854a ? ((InterfaceC0854a) activity).mo13663f() : null;
+        if (mo13663f == null) {
+            mo13663f = as0.m27111a(activity);
         }
-        if (f != null) {
-            ComponentName component = f.getComponent();
+        if (mo13663f != null) {
+            ComponentName component = mo13663f.getComponent();
             if (component == null) {
-                component = f.resolveActivity(this.q.getPackageManager());
+                component = mo13663f.resolveActivity(this.f4875q.getPackageManager());
             }
-            f(component);
-            d(f);
+            m26091f(component);
+            m26093d(mo13663f);
         }
         return this;
     }
 
-    public bk1 f(ComponentName componentName) {
-        int size = this.p.size();
+    /* renamed from: f */
+    public bk1 m26091f(ComponentName componentName) {
+        int size = this.f4874p.size();
         try {
-            Context context = this.q;
+            Context context = this.f4875q;
             while (true) {
-                Intent b = as0.b(context, componentName);
-                if (b == null) {
+                Intent m27110b = as0.m27110b(context, componentName);
+                if (m27110b == null) {
                     return this;
                 }
-                this.p.add(size, b);
-                context = this.q;
-                componentName = b.getComponent();
+                this.f4874p.add(size, m27110b);
+                context = this.f4875q;
+                componentName = m27110b.getComponent();
             }
         } catch (PackageManager.NameNotFoundException e) {
             throw new IllegalArgumentException(e);
@@ -68,24 +78,26 @@ public final class bk1 implements Iterable<Intent> {
     @Override // java.lang.Iterable
     @Deprecated
     public Iterator<Intent> iterator() {
-        return this.p.iterator();
+        return this.f4874p.iterator();
     }
 
-    public void j() {
-        k(null);
+    /* renamed from: j */
+    public void m26089j() {
+        m26088k(null);
     }
 
-    public void k(Bundle bundle) {
-        if (this.p.isEmpty()) {
+    /* renamed from: k */
+    public void m26088k(Bundle bundle) {
+        if (this.f4874p.isEmpty()) {
             throw new IllegalStateException("No intents added to TaskStackBuilder; cannot startActivities");
         }
-        Intent[] intentArr = (Intent[]) this.p.toArray(new Intent[0]);
+        Intent[] intentArr = (Intent[]) this.f4874p.toArray(new Intent[0]);
         intentArr[0] = new Intent(intentArr[0]).addFlags(268484608);
-        if (zk.h(this.q, intentArr, bundle)) {
+        if (C3866zk.m2175h(this.f4875q, intentArr, bundle)) {
             return;
         }
         Intent intent = new Intent(intentArr[intentArr.length - 1]);
         intent.addFlags(268435456);
-        this.q.startActivity(intent);
+        this.f4875q.startActivity(intent);
     }
 }

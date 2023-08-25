@@ -52,7 +52,7 @@ public abstract class AbstractAdViewAdapter implements MediationBannerAdapter, M
         }
         if (mediationAdRequest.isTesting()) {
             zzay.zzb();
-            builder.zza(d04.E(context));
+            builder.zza(d04.m24832E(context));
         }
         if (mediationAdRequest.taggedForChildDirectedTreatment() != -1) {
             builder.zze(mediationAdRequest.taggedForChildDirectedTreatment() == 1);

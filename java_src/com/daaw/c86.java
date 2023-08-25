@@ -1,45 +1,53 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public abstract class c86 extends de5 {
-    public boolean b;
+
+    /* renamed from: b */
+    public boolean f5622b;
 
     public c86(dr6 dr6Var) {
         super(dr6Var);
-        this.a.g();
+        this.f25143a.m24037g();
     }
 
-    public final void g() {
-        if (!l()) {
+    /* renamed from: g */
+    public final void m25515g() {
+        if (!m25512l()) {
             throw new IllegalStateException("Not initialized");
         }
     }
 
-    public final void h() {
-        if (this.b) {
+    /* renamed from: h */
+    public final void m25514h() {
+        if (this.f5622b) {
             throw new IllegalStateException("Can't initialize twice");
         }
-        if (m()) {
+        if (mo5306m()) {
             return;
         }
-        this.a.e();
-        this.b = true;
+        this.f25143a.m24039e();
+        this.f5622b = true;
     }
 
-    public final void j() {
-        if (this.b) {
+    /* renamed from: j */
+    public final void m25513j() {
+        if (this.f5622b) {
             throw new IllegalStateException("Can't initialize twice");
         }
-        k();
-        this.a.e();
-        this.b = true;
+        mo5307k();
+        this.f25143a.m24039e();
+        this.f5622b = true;
     }
 
-    public void k() {
+    /* renamed from: k */
+    public void mo5307k() {
     }
 
-    public final boolean l() {
-        return this.b;
+    /* renamed from: l */
+    public final boolean m25512l() {
+        return this.f5622b;
     }
 
-    public abstract boolean m();
+    /* renamed from: m */
+    public abstract boolean mo5306m();
 }

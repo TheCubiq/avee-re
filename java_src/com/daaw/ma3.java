@@ -1,41 +1,52 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class ma3 {
-    public final String a;
-    public final Object b;
-    public final int c;
+
+    /* renamed from: a */
+    public final String f18693a;
+
+    /* renamed from: b */
+    public final Object f18694b;
+
+    /* renamed from: c */
+    public final int f18695c;
 
     public ma3(String str, Object obj, int i) {
-        this.a = str;
-        this.b = obj;
-        this.c = i;
+        this.f18693a = str;
+        this.f18694b = obj;
+        this.f18695c = i;
     }
 
-    public static ma3 a(String str, double d) {
+    /* renamed from: a */
+    public static ma3 m16141a(String str, double d) {
         return new ma3(str, Double.valueOf(d), 3);
     }
 
-    public static ma3 b(String str, long j) {
+    /* renamed from: b */
+    public static ma3 m16140b(String str, long j) {
         return new ma3(str, Long.valueOf(j), 2);
     }
 
-    public static ma3 c(String str, String str2) {
+    /* renamed from: c */
+    public static ma3 m16139c(String str, String str2) {
         return new ma3(str, str2, 4);
     }
 
-    public static ma3 d(String str, boolean z) {
+    /* renamed from: d */
+    public static ma3 m16138d(String str, boolean z) {
         return new ma3(str, Boolean.valueOf(z), 1);
     }
 
-    public final Object e() {
-        ub3 a = wb3.a();
-        if (a != null) {
-            int i = this.c - 1;
-            return i != 0 ? i != 1 ? i != 2 ? a.a(this.a, (String) this.b) : a.b(this.a, ((Double) this.b).doubleValue()) : a.c(this.a, ((Long) this.b).longValue()) : a.d(this.a, ((Boolean) this.b).booleanValue());
+    /* renamed from: e */
+    public final Object m16137e() {
+        ub3 m6207a = wb3.m6207a();
+        if (m6207a != null) {
+            int i = this.f18695c - 1;
+            return i != 0 ? i != 1 ? i != 2 ? m6207a.mo8352a(this.f18693a, (String) this.f18694b) : m6207a.mo8351b(this.f18693a, ((Double) this.f18694b).doubleValue()) : m6207a.mo8350c(this.f18693a, ((Long) this.f18694b).longValue()) : m6207a.mo8349d(this.f18693a, ((Boolean) this.f18694b).booleanValue());
         }
-        if (wb3.b() != null) {
-            wb3.b().zza();
+        if (wb3.m6206b() != null) {
+            wb3.m6206b().zza();
         }
-        return this.b;
+        return this.f18694b;
     }
 }

@@ -14,10 +14,13 @@ import com.google.android.gms.ads.internal.client.zzay;
 /* loaded from: classes.dex */
 public final class AdActivity extends Activity {
     public static final String CLASS_NAME = "com.google.android.gms.ads.AdActivity";
-    public hr3 p;
 
-    public final void a() {
-        hr3 hr3Var = this.p;
+    /* renamed from: p */
+    public hr3 f35997p;
+
+    /* renamed from: a */
+    public final void m1468a() {
+        hr3 hr3Var = this.f35997p;
         if (hr3Var != null) {
             try {
                 hr3Var.zzv();
@@ -30,7 +33,7 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void onActivityResult(int i, int i2, Intent intent) {
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzg(i, i2, intent);
             }
@@ -43,7 +46,7 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void onBackPressed() {
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 if (!hr3Var.zzE()) {
                     return;
@@ -54,7 +57,7 @@ public final class AdActivity extends Activity {
         }
         super.onBackPressed();
         try {
-            hr3 hr3Var2 = this.p;
+            hr3 hr3Var2 = this.f35997p;
             if (hr3Var2 != null) {
                 hr3Var2.zzh();
             }
@@ -67,9 +70,9 @@ public final class AdActivity extends Activity {
     public final void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
-                hr3Var.zzj(nt0.g3(configuration));
+                hr3Var.zzj(nt0.m14830g3(configuration));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
@@ -80,7 +83,7 @@ public final class AdActivity extends Activity {
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         hr3 zzo = zzay.zza().zzo(this);
-        this.p = zzo;
+        this.f35997p = zzo;
         if (zzo != null) {
             try {
                 zzo.zzk(bundle);
@@ -98,7 +101,7 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void onDestroy() {
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzl();
             }
@@ -111,7 +114,7 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void onPause() {
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzn();
             }
@@ -126,7 +129,7 @@ public final class AdActivity extends Activity {
     public final void onRestart() {
         super.onRestart();
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzo();
             }
@@ -140,7 +143,7 @@ public final class AdActivity extends Activity {
     public final void onResume() {
         super.onResume();
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzp();
             }
@@ -153,7 +156,7 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void onSaveInstanceState(Bundle bundle) {
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzq(bundle);
             }
@@ -168,7 +171,7 @@ public final class AdActivity extends Activity {
     public final void onStart() {
         super.onStart();
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzr();
             }
@@ -181,7 +184,7 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void onStop() {
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzs();
             }
@@ -196,7 +199,7 @@ public final class AdActivity extends Activity {
     public final void onUserLeaveHint() {
         super.onUserLeaveHint();
         try {
-            hr3 hr3Var = this.p;
+            hr3 hr3Var = this.f35997p;
             if (hr3Var != null) {
                 hr3Var.zzt();
             }
@@ -208,18 +211,18 @@ public final class AdActivity extends Activity {
     @Override // android.app.Activity
     public final void setContentView(int i) {
         super.setContentView(i);
-        a();
+        m1468a();
     }
 
     @Override // android.app.Activity
     public final void setContentView(View view) {
         super.setContentView(view);
-        a();
+        m1468a();
     }
 
     @Override // android.app.Activity
     public final void setContentView(View view, ViewGroup.LayoutParams layoutParams) {
         super.setContentView(view, layoutParams);
-        a();
+        m1468a();
     }
 }

@@ -6,9 +6,12 @@ import android.os.IInterface;
 import com.google.android.gms.common.internal.zzj;
 /* loaded from: classes.dex */
 public interface td0 extends IInterface {
-    void O0(int i, Bundle bundle);
+    /* renamed from: O0 */
+    void mo9294O0(int i, Bundle bundle);
 
-    void p1(int i, IBinder iBinder, Bundle bundle);
+    /* renamed from: p1 */
+    void mo9293p1(int i, IBinder iBinder, Bundle bundle);
 
-    void w1(int i, IBinder iBinder, zzj zzjVar);
+    /* renamed from: w1 */
+    void mo9292w1(int i, IBinder iBinder, zzj zzjVar);
 }

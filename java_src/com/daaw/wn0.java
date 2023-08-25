@@ -3,176 +3,194 @@ package com.daaw;
 import com.daaw.avee.R;
 /* loaded from: classes.dex */
 public class wn0 {
-    public static final String[] a = {"Constant", "Beat", "TotalTime", "TotalTimeBackward", "TotalTimeWhenPlaying", "TotalTimeAndBeat", "TrackPosition", "BeatRandomShake", "BeatCamShakeRotMore", "BeatCamShakeRotLess", "ConstantShakeRotMore", "ConstantShakeRotLess", "PeakBarIndex", "BeatTriggerAnim"};
-    public static final String[] b = {"Constant", "Beat", "TotalTime", "TotalTimeBackward", "TotalTimeWhenPlaying", "TotalTimeAndBeat", "TrackPosition", "BeatRandomShake", "BeatCamShakeMore", "BeatCamShakeLess", "ConstantShakeMore", "ConstantShake"};
-    public static final String[] c = {"Nothing", "Beat", "TotalTime", "TotalTimeBackward", "TotalTimeWhenPlaying", "TotalTimeAndBeat", "TrackPosition", "BeatRandomShake", "BeatCamShakeRotMore", "BeatCamShakeRotLess", "ConstantShakeRotMore", "ConstantShakeRotLess", "BeatTriggerAnim"};
-    public static final a[] d = {new a("IsPlaying", "", ""), new a("Constant", "X", "Y"), new a("Nothing", "X", "Y"), new a("Beat", "X Amount", "Y Amount"), new a("TotalTime", "X Speed", "Y Speed"), new a("TotalTimeBackward", "X Speed", "Y Speed"), new a("TotalTimeWhenPlaying", "X Speed", "Y Speed"), new a("TotalTimeAndBeat", "Speed", "Beat Amount", true), new a("TrackPosition", "Amount", "Amount"), new a("BeatRandomShake", "Amount", "Speed", true), new a("BeatCamShakeMore", "Amount", "Speed", true), new a("BeatCamShakeLess", "Amount", "Speed", true), new a("BeatCamShakeRotMore", "Amount", "Speed", true), new a("BeatCamShakeRotLess", "Amount", "Speed", true), new a("ConstantShake", "Amount", "Speed", true), new a("ConstantShake", "Amount", "Speed", true), new a("ConstantShakeRotMore", "Amount", "Speed", true), new a("ConstantShakeRotLess", "Amount", "Speed", true), new a("PeakBarIndex", "Amount", "Smoothness", true), new a("BeatTriggerAnim", "Threshold", "Speed", true)};
 
+    /* renamed from: a */
+    public static final String[] f31382a = {"Constant", "Beat", "TotalTime", "TotalTimeBackward", "TotalTimeWhenPlaying", "TotalTimeAndBeat", "TrackPosition", "BeatRandomShake", "BeatCamShakeRotMore", "BeatCamShakeRotLess", "ConstantShakeRotMore", "ConstantShakeRotLess", "PeakBarIndex", "BeatTriggerAnim"};
+
+    /* renamed from: b */
+    public static final String[] f31383b = {"Constant", "Beat", "TotalTime", "TotalTimeBackward", "TotalTimeWhenPlaying", "TotalTimeAndBeat", "TrackPosition", "BeatRandomShake", "BeatCamShakeMore", "BeatCamShakeLess", "ConstantShakeMore", "ConstantShake"};
+
+    /* renamed from: c */
+    public static final String[] f31384c = {"Nothing", "Beat", "TotalTime", "TotalTimeBackward", "TotalTimeWhenPlaying", "TotalTimeAndBeat", "TrackPosition", "BeatRandomShake", "BeatCamShakeRotMore", "BeatCamShakeRotLess", "ConstantShakeRotMore", "ConstantShakeRotLess", "BeatTriggerAnim"};
+
+    /* renamed from: d */
+    public static final C3455a[] f31385d = {new C3455a("IsPlaying", "", ""), new C3455a("Constant", "X", "Y"), new C3455a("Nothing", "X", "Y"), new C3455a("Beat", "X Amount", "Y Amount"), new C3455a("TotalTime", "X Speed", "Y Speed"), new C3455a("TotalTimeBackward", "X Speed", "Y Speed"), new C3455a("TotalTimeWhenPlaying", "X Speed", "Y Speed"), new C3455a("TotalTimeAndBeat", "Speed", "Beat Amount", true), new C3455a("TrackPosition", "Amount", "Amount"), new C3455a("BeatRandomShake", "Amount", "Speed", true), new C3455a("BeatCamShakeMore", "Amount", "Speed", true), new C3455a("BeatCamShakeLess", "Amount", "Speed", true), new C3455a("BeatCamShakeRotMore", "Amount", "Speed", true), new C3455a("BeatCamShakeRotLess", "Amount", "Speed", true), new C3455a("ConstantShake", "Amount", "Speed", true), new C3455a("ConstantShake", "Amount", "Speed", true), new C3455a("ConstantShakeRotMore", "Amount", "Speed", true), new C3455a("ConstantShakeRotLess", "Amount", "Speed", true), new C3455a("PeakBarIndex", "Amount", "Smoothness", true), new C3455a("BeatTriggerAnim", "Threshold", "Speed", true)};
+
+    /* renamed from: com.daaw.wn0$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public final String a;
-        public final String b;
-        public final String c;
-        public boolean d;
+    public static class C3455a {
 
-        public a(String str, String str2, String str3) {
-            this.a = str;
-            this.b = str2;
-            this.c = str3;
-            this.d = false;
+        /* renamed from: a */
+        public final String f31386a;
+
+        /* renamed from: b */
+        public final String f31387b;
+
+        /* renamed from: c */
+        public final String f31388c;
+
+        /* renamed from: d */
+        public boolean f31389d;
+
+        public C3455a(String str, String str2, String str3) {
+            this.f31386a = str;
+            this.f31387b = str2;
+            this.f31388c = str3;
+            this.f31389d = false;
         }
 
-        public a(String str, String str2, String str3, boolean z) {
-            this.a = str;
-            this.b = str2;
-            this.c = str3;
-            this.d = z;
+        public C3455a(String str, String str2, String str3, boolean z) {
+            this.f31386a = str;
+            this.f31387b = str2;
+            this.f31388c = str3;
+            this.f31389d = z;
         }
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    public static int a(String str) {
-        char c2;
+    /* renamed from: a */
+    public static int m5945a(String str) {
+        char c;
         str.hashCode();
         switch (str.hashCode()) {
             case -1970646622:
                 if (str.equals("ConstantShake")) {
-                    c2 = 0;
+                    c = 0;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -1274453993:
                 if (str.equals("ConstantShakeMore")) {
-                    c2 = 1;
+                    c = 1;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -1137728652:
                 if (str.equals("TrackPosition")) {
-                    c2 = 2;
+                    c = 2;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -1037027930:
                 if (str.equals("BeatCamShakeLess")) {
-                    c2 = 3;
+                    c = 3;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -1036988574:
                 if (str.equals("BeatCamShakeMore")) {
-                    c2 = 4;
+                    c = 4;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -831910124:
                 if (str.equals("TotalTimeBackward")) {
-                    c2 = 5;
+                    c = 5;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -503167036:
                 if (str.equals("Constant")) {
-                    c2 = 6;
+                    c = 6;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case -269505853:
                 if (str.equals("TotalTimeWhenPlaying")) {
-                    c2 = 7;
+                    c = 7;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 2066390:
                 if (str.equals("Beat")) {
-                    c2 = '\b';
+                    c = '\b';
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 395745294:
                 if (str.equals("ConstantShakeRotLess")) {
-                    c2 = '\t';
+                    c = '\t';
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 395784650:
                 if (str.equals("ConstantShakeRotMore")) {
-                    c2 = '\n';
+                    c = '\n';
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 916906211:
                 if (str.equals("BeatCamShakeRotLess")) {
-                    c2 = 11;
+                    c = 11;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 916945567:
                 if (str.equals("BeatCamShakeRotMore")) {
-                    c2 = '\f';
+                    c = '\f';
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 930625412:
                 if (str.equals("IsPlaying")) {
-                    c2 = '\r';
+                    c = '\r';
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 1211574942:
                 if (str.equals("PeakBarIndex")) {
-                    c2 = 14;
+                    c = 14;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 1258639580:
                 if (str.equals("TotalTimeAndBeat")) {
-                    c2 = 15;
+                    c = 15;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 1426685969:
                 if (str.equals("TotalTime")) {
-                    c2 = 16;
+                    c = 16;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 1547631181:
                 if (str.equals("BeatRandomShake")) {
-                    c2 = 17;
+                    c = 17;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             case 1577119283:
                 if (str.equals("BeatTriggerAnim")) {
-                    c2 = 18;
+                    c = 18;
                     break;
                 }
-                c2 = 65535;
+                c = 65535;
                 break;
             default:
-                c2 = 65535;
+                c = 65535;
                 break;
         }
-        switch (c2) {
+        switch (c) {
             case 0:
                 return R.string.constant_cam_shake_less;
             case 1:
@@ -216,39 +234,43 @@ public class wn0 {
         }
     }
 
-    public static String b(String str) {
-        a e = e(str);
-        if (e != null) {
-            return e.b;
+    /* renamed from: b */
+    public static String m5944b(String str) {
+        C3455a m5941e = m5941e(str);
+        if (m5941e != null) {
+            return m5941e.f31387b;
         }
         return null;
     }
 
-    public static String c(String str) {
-        a e = e(str);
-        if (e != null) {
-            return e.c;
+    /* renamed from: c */
+    public static String m5943c(String str) {
+        C3455a m5941e = m5941e(str);
+        if (m5941e != null) {
+            return m5941e.f31388c;
         }
         return null;
     }
 
-    public static boolean d(String str) {
-        a e = e(str);
-        if (e != null) {
-            return e.d;
+    /* renamed from: d */
+    public static boolean m5942d(String str) {
+        C3455a m5941e = m5941e(str);
+        if (m5941e != null) {
+            return m5941e.f31389d;
         }
         return false;
     }
 
-    public static a e(String str) {
+    /* renamed from: e */
+    public static C3455a m5941e(String str) {
         int i = 0;
         while (true) {
-            a[] aVarArr = d;
-            if (i >= aVarArr.length) {
+            C3455a[] c3455aArr = f31385d;
+            if (i >= c3455aArr.length) {
                 return null;
             }
-            if (aVarArr[i].a.equals(str)) {
-                return aVarArr[i];
+            if (c3455aArr[i].f31386a.equals(str)) {
+                return c3455aArr[i];
             }
             i++;
         }

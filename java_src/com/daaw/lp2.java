@@ -1,15 +1,20 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface lp2 {
-    void B(boolean z, int i);
+    /* renamed from: B */
+    void mo16685B(boolean z, int i);
 
-    void h(rw2 rw2Var, dx2 dx2Var);
+    /* renamed from: h */
+    void mo16684h(rw2 rw2Var, dx2 dx2Var);
 
-    void m(kp2 kp2Var);
+    /* renamed from: m */
+    void mo16683m(kp2 kp2Var);
 
-    void v(fq2 fq2Var);
+    /* renamed from: v */
+    void mo16682v(fq2 fq2Var);
 
-    void z(mq2 mq2Var, Object obj);
+    /* renamed from: z */
+    void mo16681z(mq2 mq2Var, Object obj);
 
     void zza(boolean z);
 

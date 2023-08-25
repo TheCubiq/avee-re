@@ -5,11 +5,13 @@ import android.opengl.GLES20;
 import java.nio.IntBuffer;
 /* loaded from: classes.dex */
 public class f80 {
-    public static int a(int[] iArr) {
+    /* renamed from: a */
+    public static int m22873a(int[] iArr) {
         return (iArr[2] & 255) | ((iArr[3] & 255) << 24) | 0 | ((iArr[0] & 255) << 16) | ((iArr[1] & 255) << 8);
     }
 
-    public static void b(float[] fArr, float[] fArr2, float[] fArr3, float f) {
+    /* renamed from: b */
+    public static void m22872b(float[] fArr, float[] fArr2, float[] fArr3, float f) {
         float max = Math.max(fArr2[0], Math.max(fArr2[1], fArr2[2]));
         float max2 = max + ((Math.max(fArr3[0], Math.max(fArr3[1], fArr3[2])) - max) * f);
         fArr[0] = fArr2[0] + ((fArr3[0] - fArr2[0]) * f);
@@ -25,39 +27,46 @@ public class f80 {
         fArr[2] = fArr[2] * max2;
     }
 
-    public static int c(int i, int i2, int i3) {
+    /* renamed from: c */
+    public static int m22871c(int i, int i2, int i3) {
         return i < i2 ? i2 : i > i3 ? i3 : i;
     }
 
-    public static void d(float[] fArr, float[] fArr2, float[] fArr3) {
+    /* renamed from: d */
+    public static void m22870d(float[] fArr, float[] fArr2, float[] fArr3) {
         fArr[0] = fArr2[0] * fArr3[0];
         fArr[1] = fArr2[1] * fArr3[1];
         fArr[2] = fArr2[2] * fArr3[2];
         fArr[3] = fArr2[3] * fArr3[3];
     }
 
-    public static int e(float f, float f2, float f3, float f4) {
+    /* renamed from: e */
+    public static int m22869e(float f, float f2, float f3, float f4) {
         return (((int) (f * 255.0f)) << 24) | 0 | (((int) (f2 * 255.0f)) << 16) | (((int) (f3 * 255.0f)) << 8) | ((int) (f4 * 255.0f));
     }
 
-    public static int f(float[] fArr) {
+    /* renamed from: f */
+    public static int m22868f(float[] fArr) {
         return ((int) (fArr[2] * 255.0f)) | (((int) (fArr[3] * 255.0f)) << 24) | 0 | (((int) (fArr[0] * 255.0f)) << 16) | (((int) (fArr[1] * 255.0f)) << 8);
     }
 
-    public static int g(float[] fArr, int i) {
+    /* renamed from: g */
+    public static int m22867g(float[] fArr, int i) {
         return ((int) (fArr[i + 0] * 255.0f)) | (((((((int) (fArr[i + 3] * 255.0f)) << 8) | ((int) (fArr[i + 2] * 255.0f))) << 8) | ((int) (fArr[i + 1] * 255.0f))) << 8);
     }
 
-    public static float h(int i) {
+    /* renamed from: h */
+    public static float m22866h(int i) {
         return ((i >> 24) & 255) / 255.0f;
     }
 
-    public static int[] i(int i, int i2, int i3, int i4, int[][] iArr) {
+    /* renamed from: i */
+    public static int[] m22865i(int i, int i2, int i3, int i4, int[][] iArr) {
         if (iArr == null) {
             iArr = new int[1];
         }
         if (iArr[0] == null || iArr[0].length != (i2 + i4) * i3) {
-            lz1.a("## allocating buffer 0");
+            lz1.m16365a("## allocating buffer 0");
             iArr[0] = new int[(i2 + i4) * i3];
         }
         int[] iArr2 = iArr[0];
@@ -67,11 +76,13 @@ public class f80 {
         return iArr2;
     }
 
-    public static void j(float[] fArr, float[] fArr2) {
-        l(fArr, fArr2, 360.0f);
+    /* renamed from: j */
+    public static void m22864j(float[] fArr, float[] fArr2) {
+        m22862l(fArr, fArr2, 360.0f);
     }
 
-    public static int k(float[] fArr) {
+    /* renamed from: k */
+    public static int m22863k(float[] fArr) {
         int round;
         int round2;
         int round3;
@@ -119,10 +130,11 @@ public class f80 {
                 round2 = 0;
                 break;
         }
-        return (((int) (fArr[3] * 255.0f)) << 24) | (Color.rgb(c(round, 0, 255), c(round2, 0, 255), c(round3, 0, 255)) & 16777215);
+        return (((int) (fArr[3] * 255.0f)) << 24) | (Color.rgb(m22871c(round, 0, 255), m22871c(round2, 0, 255), m22871c(round3, 0, 255)) & 16777215);
     }
 
-    public static void l(float[] fArr, float[] fArr2, float f) {
+    /* renamed from: l */
+    public static void m22862l(float[] fArr, float[] fArr2, float f) {
         float f2;
         float f3;
         float f4;
@@ -180,47 +192,55 @@ public class f80 {
         fArr2[3] = fArr[3];
     }
 
-    public static int m(float[] fArr) {
-        return (((int) (fArr[3] * 255.0f)) << 24) | (zg.a(fArr) & 16777215);
+    /* renamed from: m */
+    public static int m22861m(float[] fArr) {
+        return (((int) (fArr[3] * 255.0f)) << 24) | (C3838zg.m2353a(fArr) & 16777215);
     }
 
-    public static void n(float[] fArr, int i) {
-        o(fArr, 0, i);
+    /* renamed from: n */
+    public static void m22860n(float[] fArr, int i) {
+        m22859o(fArr, 0, i);
     }
 
-    public static void o(float[] fArr, int i, int i2) {
+    /* renamed from: o */
+    public static void m22859o(float[] fArr, int i, int i2) {
         fArr[i + 3] = ((i2 >> 24) & 255) / 255.0f;
         fArr[i + 0] = ((i2 >> 16) & 255) / 255.0f;
         fArr[i + 1] = ((i2 >> 8) & 255) / 255.0f;
         fArr[i + 2] = (i2 & 255) / 255.0f;
     }
 
-    public static void p(float[] fArr, int i) {
-        zg.b((i >> 16) & 255, (i >> 8) & 255, i & 255, fArr);
+    /* renamed from: p */
+    public static void m22858p(float[] fArr, int i) {
+        C3838zg.m2352b((i >> 16) & 255, (i >> 8) & 255, i & 255, fArr);
         fArr[0] = fArr[0] * 0.0027777778f;
         fArr[3] = ((i >> 24) & 255) / 255.0f;
     }
 
-    public static void q(float[] fArr, int i) {
-        zg.b((i >> 16) & 255, (i >> 8) & 255, i & 255, fArr);
+    /* renamed from: q */
+    public static void m22857q(float[] fArr, int i) {
+        C3838zg.m2352b((i >> 16) & 255, (i >> 8) & 255, i & 255, fArr);
         fArr[3] = ((i >> 24) & 255) / 255.0f;
     }
 
-    public static void r(int[] iArr, int i, int i2) {
+    /* renamed from: r */
+    public static void m22856r(int[] iArr, int i, int i2) {
         iArr[i + 3] = (i2 >> 24) & 255;
         iArr[i + 0] = (i2 >> 16) & 255;
         iArr[i + 1] = (i2 >> 8) & 255;
         iArr[i + 2] = i2 & 255;
     }
 
-    public static int s(int i, String str) {
+    /* renamed from: s */
+    public static int m22855s(int i, String str) {
         int glCreateShader = GLES20.glCreateShader(i);
         GLES20.glShaderSource(glCreateShader, str);
         GLES20.glCompileShader(glCreateShader);
         return glCreateShader;
     }
 
-    public static int t(int i, int i2) {
+    /* renamed from: t */
+    public static int m22854t(int i, int i2) {
         return (i & 16777215) | (i2 << 24);
     }
 }

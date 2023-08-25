@@ -6,128 +6,159 @@ import android.os.Build;
 import android.view.inputmethod.InputContentInfo;
 /* loaded from: classes.dex */
 public final class bg0 {
-    public final c a;
 
+    /* renamed from: a */
+    public final InterfaceC0840c f4776a;
+
+    /* renamed from: com.daaw.bg0$a */
     /* loaded from: classes.dex */
-    public static final class a implements c {
-        public final InputContentInfo a;
+    public static final class C0838a implements InterfaceC0840c {
 
-        public a(Uri uri, ClipDescription clipDescription, Uri uri2) {
-            this.a = new InputContentInfo(uri, clipDescription, uri2);
+        /* renamed from: a */
+        public final InputContentInfo f4777a;
+
+        public C0838a(Uri uri, ClipDescription clipDescription, Uri uri2) {
+            this.f4777a = new InputContentInfo(uri, clipDescription, uri2);
         }
 
-        public a(Object obj) {
-            this.a = (InputContentInfo) obj;
+        public C0838a(Object obj) {
+            this.f4777a = (InputContentInfo) obj;
         }
 
-        @Override // com.daaw.bg0.c
-        public Uri a() {
-            return this.a.getContentUri();
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: a */
+        public Uri mo26179a() {
+            return this.f4777a.getContentUri();
         }
 
-        @Override // com.daaw.bg0.c
-        public void b() {
-            this.a.requestPermission();
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: b */
+        public void mo26178b() {
+            this.f4777a.requestPermission();
         }
 
-        @Override // com.daaw.bg0.c
-        public Uri c() {
-            return this.a.getLinkUri();
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: c */
+        public Uri mo26177c() {
+            return this.f4777a.getLinkUri();
         }
 
-        @Override // com.daaw.bg0.c
-        public Object d() {
-            return this.a;
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: d */
+        public Object mo26176d() {
+            return this.f4777a;
         }
 
-        @Override // com.daaw.bg0.c
+        @Override // com.daaw.bg0.InterfaceC0840c
         public ClipDescription getDescription() {
-            return this.a.getDescription();
+            return this.f4777a.getDescription();
         }
     }
 
+    /* renamed from: com.daaw.bg0$b */
     /* loaded from: classes.dex */
-    public static final class b implements c {
-        public final Uri a;
-        public final ClipDescription b;
-        public final Uri c;
+    public static final class C0839b implements InterfaceC0840c {
 
-        public b(Uri uri, ClipDescription clipDescription, Uri uri2) {
-            this.a = uri;
-            this.b = clipDescription;
-            this.c = uri2;
+        /* renamed from: a */
+        public final Uri f4778a;
+
+        /* renamed from: b */
+        public final ClipDescription f4779b;
+
+        /* renamed from: c */
+        public final Uri f4780c;
+
+        public C0839b(Uri uri, ClipDescription clipDescription, Uri uri2) {
+            this.f4778a = uri;
+            this.f4779b = clipDescription;
+            this.f4780c = uri2;
         }
 
-        @Override // com.daaw.bg0.c
-        public Uri a() {
-            return this.a;
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: a */
+        public Uri mo26179a() {
+            return this.f4778a;
         }
 
-        @Override // com.daaw.bg0.c
-        public void b() {
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: b */
+        public void mo26178b() {
         }
 
-        @Override // com.daaw.bg0.c
-        public Uri c() {
-            return this.c;
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: c */
+        public Uri mo26177c() {
+            return this.f4780c;
         }
 
-        @Override // com.daaw.bg0.c
-        public Object d() {
+        @Override // com.daaw.bg0.InterfaceC0840c
+        /* renamed from: d */
+        public Object mo26176d() {
             return null;
         }
 
-        @Override // com.daaw.bg0.c
+        @Override // com.daaw.bg0.InterfaceC0840c
         public ClipDescription getDescription() {
-            return this.b;
+            return this.f4779b;
         }
     }
 
+    /* renamed from: com.daaw.bg0$c */
     /* loaded from: classes.dex */
-    public interface c {
-        Uri a();
+    public interface InterfaceC0840c {
+        /* renamed from: a */
+        Uri mo26179a();
 
-        void b();
+        /* renamed from: b */
+        void mo26178b();
 
-        Uri c();
+        /* renamed from: c */
+        Uri mo26177c();
 
-        Object d();
+        /* renamed from: d */
+        Object mo26176d();
 
         ClipDescription getDescription();
     }
 
     public bg0(Uri uri, ClipDescription clipDescription, Uri uri2) {
-        this.a = Build.VERSION.SDK_INT >= 25 ? new a(uri, clipDescription, uri2) : new b(uri, clipDescription, uri2);
+        this.f4776a = Build.VERSION.SDK_INT >= 25 ? new C0838a(uri, clipDescription, uri2) : new C0839b(uri, clipDescription, uri2);
     }
 
-    public bg0(c cVar) {
-        this.a = cVar;
+    public bg0(InterfaceC0840c interfaceC0840c) {
+        this.f4776a = interfaceC0840c;
     }
 
-    public static bg0 f(Object obj) {
+    /* renamed from: f */
+    public static bg0 m26180f(Object obj) {
         if (obj != null && Build.VERSION.SDK_INT >= 25) {
-            return new bg0(new a(obj));
+            return new bg0(new C0838a(obj));
         }
         return null;
     }
 
-    public Uri a() {
-        return this.a.a();
+    /* renamed from: a */
+    public Uri m26185a() {
+        return this.f4776a.mo26179a();
     }
 
-    public ClipDescription b() {
-        return this.a.getDescription();
+    /* renamed from: b */
+    public ClipDescription m26184b() {
+        return this.f4776a.getDescription();
     }
 
-    public Uri c() {
-        return this.a.c();
+    /* renamed from: c */
+    public Uri m26183c() {
+        return this.f4776a.mo26177c();
     }
 
-    public void d() {
-        this.a.b();
+    /* renamed from: d */
+    public void m26182d() {
+        this.f4776a.mo26178b();
     }
 
-    public Object e() {
-        return this.a.d();
+    /* renamed from: e */
+    public Object m26181e() {
+        return this.f4776a.mo26176d();
     }
 }

@@ -3,42 +3,58 @@ package com.daaw;
 import com.daaw.fx0;
 import com.google.android.exoplayer2.Format;
 /* loaded from: classes.dex */
-public interface a41 extends fx0.b {
-    d81 b();
+public interface a41 extends fx0.InterfaceC1343b {
+    /* renamed from: b */
+    d81 mo5364b();
 
-    boolean c();
+    /* renamed from: c */
+    boolean mo3459c();
 
-    boolean d();
+    /* renamed from: d */
+    boolean mo3458d();
 
-    void e(int i);
+    /* renamed from: e */
+    void mo5363e(int i);
 
-    void g();
+    /* renamed from: g */
+    void mo5362g();
 
     int getState();
 
-    int i();
+    /* renamed from: i */
+    int mo5361i();
 
-    boolean j();
+    /* renamed from: j */
+    boolean mo5360j();
 
-    void k(c41 c41Var, Format[] formatArr, d81 d81Var, long j, boolean z, long j2);
+    /* renamed from: k */
+    void mo5359k(c41 c41Var, Format[] formatArr, d81 d81Var, long j, boolean z, long j2);
 
-    void l();
+    /* renamed from: l */
+    void mo5358l();
 
-    void m(Format[] formatArr, d81 d81Var, long j);
+    /* renamed from: m */
+    void mo5357m(Format[] formatArr, d81 d81Var, long j);
 
-    b41 n();
+    /* renamed from: n */
+    b41 mo5356n();
 
-    void q(long j, long j2);
+    /* renamed from: q */
+    void mo3457q(long j, long j2);
 
-    void s();
+    /* renamed from: s */
+    void mo5353s();
 
     void start();
 
     void stop();
 
-    void t(long j);
+    /* renamed from: t */
+    void mo5352t(long j);
 
-    boolean u();
+    /* renamed from: u */
+    boolean mo5351u();
 
-    ao0 v();
+    /* renamed from: v */
+    ao0 mo5350v();
 }

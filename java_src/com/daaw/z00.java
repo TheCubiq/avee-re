@@ -12,13 +12,13 @@ public class z00 extends qk0<ParcelFileDescriptor> {
 
     @Override // com.daaw.qk0
     /* renamed from: e */
-    public void c(ParcelFileDescriptor parcelFileDescriptor) {
+    public void mo3010c(ParcelFileDescriptor parcelFileDescriptor) {
         parcelFileDescriptor.close();
     }
 
     @Override // com.daaw.qk0
     /* renamed from: f */
-    public ParcelFileDescriptor d(Uri uri, ContentResolver contentResolver) {
+    public ParcelFileDescriptor mo3009d(Uri uri, ContentResolver contentResolver) {
         return contentResolver.openAssetFileDescriptor(uri, "r").getParcelFileDescriptor();
     }
 }

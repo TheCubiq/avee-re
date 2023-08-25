@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface xe8 {
-    ve8 a(Class cls);
+    /* renamed from: a */
+    ve8 mo5168a(Class cls);
 }

@@ -3,36 +3,46 @@ package com.daaw;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class tm7 {
-    public final String a;
-    public final f92 b;
-    public final f92 c;
-    public final int d;
-    public final int e;
+
+    /* renamed from: a */
+    public final String f27875a;
+
+    /* renamed from: b */
+    public final f92 f27876b;
+
+    /* renamed from: c */
+    public final f92 f27877c;
+
+    /* renamed from: d */
+    public final int f27878d;
+
+    /* renamed from: e */
+    public final int f27879e;
 
     public tm7(String str, f92 f92Var, f92 f92Var2, int i, int i2) {
         boolean z = false;
         if (i != 0) {
             i2 = i2 == 0 ? 0 : i2;
-            uo4.d(z);
-            uo4.c(str);
-            this.a = str;
+            uo4.m7874d(z);
+            uo4.m7875c(str);
+            this.f27875a = str;
             Objects.requireNonNull(f92Var);
-            this.b = f92Var;
+            this.f27876b = f92Var;
             Objects.requireNonNull(f92Var2);
-            this.c = f92Var2;
-            this.d = i;
-            this.e = i2;
+            this.f27877c = f92Var2;
+            this.f27878d = i;
+            this.f27879e = i2;
         }
         z = true;
-        uo4.d(z);
-        uo4.c(str);
-        this.a = str;
+        uo4.m7874d(z);
+        uo4.m7875c(str);
+        this.f27875a = str;
         Objects.requireNonNull(f92Var);
-        this.b = f92Var;
+        this.f27876b = f92Var;
         Objects.requireNonNull(f92Var2);
-        this.c = f92Var2;
-        this.d = i;
-        this.e = i2;
+        this.f27877c = f92Var2;
+        this.f27878d = i;
+        this.f27879e = i2;
     }
 
     public final boolean equals(Object obj) {
@@ -41,7 +51,7 @@ public final class tm7 {
         }
         if (obj != null && tm7.class == obj.getClass()) {
             tm7 tm7Var = (tm7) obj;
-            if (this.d == tm7Var.d && this.e == tm7Var.e && this.a.equals(tm7Var.a) && this.b.equals(tm7Var.b) && this.c.equals(tm7Var.c)) {
+            if (this.f27878d == tm7Var.f27878d && this.f27879e == tm7Var.f27879e && this.f27875a.equals(tm7Var.f27875a) && this.f27876b.equals(tm7Var.f27876b) && this.f27877c.equals(tm7Var.f27877c)) {
                 return true;
             }
         }
@@ -49,6 +59,6 @@ public final class tm7 {
     }
 
     public final int hashCode() {
-        return ((((((((this.d + 527) * 31) + this.e) * 31) + this.a.hashCode()) * 31) + this.b.hashCode()) * 31) + this.c.hashCode();
+        return ((((((((this.f27878d + 527) * 31) + this.f27879e) * 31) + this.f27875a.hashCode()) * 31) + this.f27876b.hashCode()) * 31) + this.f27877c.hashCode();
     }
 }

@@ -9,12 +9,13 @@ public abstract class mu6 extends cp2 implements nu6 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         switch (i) {
             case 2:
-                yd0.a.I(parcel.readStrongBinder());
+                yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
                 parcel.readString();
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 parcel2.writeNoException();
                 return true;
             case 3:
@@ -22,25 +23,25 @@ public abstract class mu6 extends cp2 implements nu6 {
                 return true;
             case 4:
                 parcel.createIntArray();
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 parcel2.writeNoException();
                 return true;
             case 5:
                 parcel.createByteArray();
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 parcel2.writeNoException();
                 return true;
             case 6:
             case 7:
                 parcel.readInt();
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 parcel2.writeNoException();
                 return true;
             case 8:
-                yd0.a.I(parcel.readStrongBinder());
+                yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
                 parcel.readString();
                 parcel.readString();
-                dp2.c(parcel);
+                dp2.m24105c(parcel);
                 parcel2.writeNoException();
                 return true;
             default:

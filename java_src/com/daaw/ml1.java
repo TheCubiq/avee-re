@@ -1,46 +1,63 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ml1 {
-    public static final ml1 c = new a().a();
-    public final long a;
-    public final long b;
 
+    /* renamed from: c */
+    public static final ml1 f18954c = new C2194a().m15966a();
+
+    /* renamed from: a */
+    public final long f18955a;
+
+    /* renamed from: b */
+    public final long f18956b;
+
+    /* renamed from: com.daaw.ml1$a */
     /* loaded from: classes.dex */
-    public static final class a {
-        public long a = 0;
-        public long b = 0;
+    public static final class C2194a {
 
-        public ml1 a() {
-            return new ml1(this.a, this.b);
+        /* renamed from: a */
+        public long f18957a = 0;
+
+        /* renamed from: b */
+        public long f18958b = 0;
+
+        /* renamed from: a */
+        public ml1 m15966a() {
+            return new ml1(this.f18957a, this.f18958b);
         }
 
-        public a b(long j) {
-            this.b = j;
+        /* renamed from: b */
+        public C2194a m15965b(long j) {
+            this.f18958b = j;
             return this;
         }
 
-        public a c(long j) {
-            this.a = j;
+        /* renamed from: c */
+        public C2194a m15964c(long j) {
+            this.f18957a = j;
             return this;
         }
     }
 
     public ml1(long j, long j2) {
-        this.a = j;
-        this.b = j2;
+        this.f18955a = j;
+        this.f18956b = j2;
     }
 
-    public static a c() {
-        return new a();
+    /* renamed from: c */
+    public static C2194a m15967c() {
+        return new C2194a();
     }
 
     @uz0(tag = 2)
-    public long a() {
-        return this.b;
+    /* renamed from: a */
+    public long m15969a() {
+        return this.f18956b;
     }
 
     @uz0(tag = 1)
-    public long b() {
-        return this.a;
+    /* renamed from: b */
+    public long m15968b() {
+        return this.f18955a;
     }
 }

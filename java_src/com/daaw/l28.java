@@ -9,14 +9,15 @@ public final class l28 extends j38 {
 
     @Override // com.daaw.j38
     @Nullable
-    public final /* bridge */ /* synthetic */ Object a(Object obj) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo14601a(Object obj) {
         try {
             return Double.valueOf(Double.parseDouble((String) obj));
         } catch (NumberFormatException unused) {
-            String c = super.c();
+            String m19094c = super.m19094c();
             StringBuilder sb = new StringBuilder();
             sb.append("Invalid double value for ");
-            sb.append(c);
+            sb.append(m19094c);
             sb.append(": ");
             sb.append((String) obj);
             return null;

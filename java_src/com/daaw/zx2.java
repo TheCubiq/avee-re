@@ -5,76 +5,84 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class zx2 extends uk4 {
-    public final s28 a;
+
+    /* renamed from: a */
+    public final s28 f35632a;
 
     public zx2(s28 s28Var) {
         super(null);
-        ry0.j(s28Var);
-        this.a = s28Var;
+        ry0.m10830j(s28Var);
+        this.f35632a = s28Var;
     }
 
     @Override // com.daaw.s28
-    public final List a(String str, String str2) {
-        return this.a.a(str, str2);
+    /* renamed from: a */
+    public final List mo1806a(String str, String str2) {
+        return this.f35632a.mo1806a(str, str2);
     }
 
     @Override // com.daaw.s28
-    public final Map b(String str, String str2, boolean z) {
-        return this.a.b(str, str2, z);
+    /* renamed from: b */
+    public final Map mo1805b(String str, String str2, boolean z) {
+        return this.f35632a.mo1805b(str, str2, z);
     }
 
     @Override // com.daaw.s28
-    public final void c(Bundle bundle) {
-        this.a.c(bundle);
+    /* renamed from: c */
+    public final void mo1804c(Bundle bundle) {
+        this.f35632a.mo1804c(bundle);
     }
 
     @Override // com.daaw.s28
-    public final void d(String str, String str2, Bundle bundle) {
-        this.a.d(str, str2, bundle);
+    /* renamed from: d */
+    public final void mo1803d(String str, String str2, Bundle bundle) {
+        this.f35632a.mo1803d(str, str2, bundle);
     }
 
     @Override // com.daaw.s28
-    public final void e(String str, String str2, Bundle bundle) {
-        this.a.e(str, str2, bundle);
+    /* renamed from: e */
+    public final void mo1802e(String str, String str2, Bundle bundle) {
+        this.f35632a.mo1802e(str, str2, bundle);
     }
 
     @Override // com.daaw.s28
-    public final void r(String str) {
-        this.a.r(str);
+    /* renamed from: r */
+    public final void mo1801r(String str) {
+        this.f35632a.mo1801r(str);
     }
 
     @Override // com.daaw.s28
     public final int zza(String str) {
-        return this.a.zza(str);
+        return this.f35632a.zza(str);
     }
 
     @Override // com.daaw.s28
     public final long zzb() {
-        return this.a.zzb();
+        return this.f35632a.zzb();
     }
 
     @Override // com.daaw.s28
     public final String zzh() {
-        return this.a.zzh();
+        return this.f35632a.zzh();
     }
 
     @Override // com.daaw.s28
     public final String zzi() {
-        return this.a.zzi();
+        return this.f35632a.zzi();
     }
 
     @Override // com.daaw.s28
     public final String zzj() {
-        return this.a.zzj();
+        return this.f35632a.zzj();
     }
 
     @Override // com.daaw.s28
     public final String zzk() {
-        return this.a.zzk();
+        return this.f35632a.zzk();
     }
 
     @Override // com.daaw.s28
     public final void zzr(String str) {
-        this.a.zzr(str);
+        this.f35632a.zzr(str);
     }
 }

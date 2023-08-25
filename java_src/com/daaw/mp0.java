@@ -5,11 +5,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 /* loaded from: classes.dex */
 public interface mp0 {
-    boolean a(MenuItem menuItem);
+    /* renamed from: a */
+    boolean m15868a(MenuItem menuItem);
 
-    void b(Menu menu);
+    /* renamed from: b */
+    void m15867b(Menu menu);
 
-    void c(Menu menu, MenuInflater menuInflater);
+    /* renamed from: c */
+    void m15866c(Menu menu, MenuInflater menuInflater);
 
-    void d(Menu menu);
+    /* renamed from: d */
+    void m15865d(Menu menu);
 }

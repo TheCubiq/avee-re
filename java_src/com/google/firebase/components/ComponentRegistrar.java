@@ -1,8 +1,8 @@
 package com.google.firebase.components;
 
-import com.daaw.vh;
+import com.daaw.C3330vh;
 import java.util.List;
 /* loaded from: classes2.dex */
 public interface ComponentRegistrar {
-    List<vh<?>> getComponents();
+    List<C3330vh<?>> getComponents();
 }

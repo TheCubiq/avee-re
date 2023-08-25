@@ -10,15 +10,16 @@ public abstract class du3 extends cp2 implements eu3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
-            dp2.c(parcel);
-            y((ParcelFileDescriptor) dp2.a(parcel, ParcelFileDescriptor.CREATOR));
+            dp2.m24105c(parcel);
+            mo19640y((ParcelFileDescriptor) dp2.m24107a(parcel, ParcelFileDescriptor.CREATOR));
         } else if (i != 2) {
             return false;
         } else {
-            dp2.c(parcel);
-            K((zzaz) dp2.a(parcel, zzaz.CREATOR));
+            dp2.m24105c(parcel);
+            mo19641K((zzaz) dp2.m24107a(parcel, zzaz.CREATOR));
         }
         parcel2.writeNoException();
         return true;

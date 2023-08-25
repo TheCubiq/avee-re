@@ -6,38 +6,39 @@ import com.google.android.gms.measurement.internal.zzau;
 import com.google.android.gms.measurement.internal.zzaw;
 /* loaded from: classes2.dex */
 public final class nu2 implements Parcelable.Creator {
-    public static void a(zzaw zzawVar, Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.q(parcel, 2, zzawVar.p, false);
-        z71.p(parcel, 3, zzawVar.q, i, false);
-        z71.q(parcel, 4, zzawVar.r, false);
-        z71.n(parcel, 5, zzawVar.s);
-        z71.b(parcel, a);
+    /* renamed from: a */
+    public static void m14781a(zzaw zzawVar, Parcel parcel, int i) {
+        int m2733a = z71.m2733a(parcel);
+        z71.m2717q(parcel, 2, zzawVar.f37068p, false);
+        z71.m2718p(parcel, 3, zzawVar.f37069q, i, false);
+        z71.m2717q(parcel, 4, zzawVar.f37070r, false);
+        z71.m2720n(parcel, 5, zzawVar.f37071s);
+        z71.m2732b(parcel, m2733a);
     }
 
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         String str = null;
         zzau zzauVar = null;
         String str2 = null;
         long j = 0;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            int l = y71.l(r);
-            if (l == 2) {
-                str = y71.f(parcel, r);
-            } else if (l == 3) {
-                zzauVar = (zzau) y71.e(parcel, r, zzau.CREATOR);
-            } else if (l == 4) {
-                str2 = y71.f(parcel, r);
-            } else if (l != 5) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            int m4047l = y71.m4047l(m4041r);
+            if (m4047l == 2) {
+                str = y71.m4053f(parcel, m4041r);
+            } else if (m4047l == 3) {
+                zzauVar = (zzau) y71.m4054e(parcel, m4041r, zzau.CREATOR);
+            } else if (m4047l == 4) {
+                str2 = y71.m4053f(parcel, m4041r);
+            } else if (m4047l != 5) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                j = y71.u(parcel, r);
+                j = y71.m4038u(parcel, m4041r);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzaw(str, zzauVar, str2, j);
     }
 

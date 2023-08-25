@@ -1,8 +1,12 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class rd8 {
-    public static final pd8 a;
-    public static final pd8 b;
+
+    /* renamed from: a */
+    public static final pd8 f25188a;
+
+    /* renamed from: b */
+    public static final pd8 f25189b;
 
     static {
         pd8 pd8Var;
@@ -11,15 +15,17 @@ public final class rd8 {
         } catch (Exception unused) {
             pd8Var = null;
         }
-        a = pd8Var;
-        b = new pd8();
+        f25188a = pd8Var;
+        f25189b = new pd8();
     }
 
-    public static pd8 a() {
-        return a;
+    /* renamed from: a */
+    public static pd8 m11373a() {
+        return f25188a;
     }
 
-    public static pd8 b() {
-        return b;
+    /* renamed from: b */
+    public static pd8 m11372b() {
+        return f25189b;
     }
 }

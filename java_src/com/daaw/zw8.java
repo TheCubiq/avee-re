@@ -1,14 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class zw8 implements Runnable {
-    public final yw8 p;
+
+    /* renamed from: p */
+    public final yw8 f35623p;
 
     public zw8(yw8 yw8Var) {
-        this.p = yw8Var;
+        this.f35623p = yw8Var;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.p.a();
+        this.f35623p.mo3146a();
     }
 }

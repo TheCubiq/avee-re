@@ -10,10 +10,13 @@ import android.os.Bundle;
 import com.daaw.ie1;
 /* loaded from: classes.dex */
 public class dp0 {
-    public static Cursor a = new a();
 
+    /* renamed from: a */
+    public static Cursor f7597a = new C1123a();
+
+    /* renamed from: com.daaw.dp0$a */
     /* loaded from: classes.dex */
-    public class a implements Cursor {
+    public class C1123a implements Cursor {
         @Override // android.database.Cursor, java.io.Closeable, java.lang.AutoCloseable
         public void close() {
         }
@@ -211,7 +214,8 @@ public class dp0 {
         }
     }
 
-    public static String a(Cursor cursor, int i) {
+    /* renamed from: a */
+    public static String m24113a(Cursor cursor, int i) {
         if (cursor == null) {
             return "";
         }
@@ -222,27 +226,30 @@ public class dp0 {
         }
     }
 
-    public static void b(Cursor cursor) {
+    /* renamed from: b */
+    public static void m24112b(Cursor cursor) {
         if (cursor == null || cursor.isClosed()) {
             return;
         }
         cursor.close();
     }
 
-    public static String c(ie1.h hVar, int i) {
-        int i2 = hVar.a;
+    /* renamed from: c */
+    public static String m24111c(ie1.C1695h c1695h, int i) {
+        int i2 = c1695h.f13560a;
         if (i2 != 8) {
             i = i2;
         }
-        return d(hVar, i);
+        return m24110d(c1695h, i);
     }
 
-    public static String d(ie1.h hVar, int i) {
+    /* renamed from: d */
+    public static String m24110d(ie1.C1695h c1695h, int i) {
         String str = null;
-        if (hVar == null) {
+        if (c1695h == null) {
             return null;
         }
-        boolean z = hVar.b;
+        boolean z = c1695h.f13561b;
         switch (i) {
             case 0:
                 str = "title";
@@ -276,22 +283,24 @@ public class dp0 {
         return str + " DESC";
     }
 
-    public static Cursor e(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
+    /* renamed from: e */
+    public static Cursor m24109e(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         try {
             return contentResolver.query(uri, strArr, str, strArr2, str2);
         } catch (Exception e) {
-            lz1.c(e.getMessage());
+            lz1.m16363c(e.getMessage());
             return null;
         }
     }
 
-    public static Cursor f(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
+    /* renamed from: f */
+    public static Cursor m24108f(ContentResolver contentResolver, Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         try {
             Cursor query = contentResolver.query(uri, strArr, str, strArr2, str2);
-            return query == null ? a : query;
+            return query == null ? f7597a : query;
         } catch (Exception e) {
-            lz1.c(e.getMessage());
-            return a;
+            lz1.m16363c(e.getMessage());
+            return f7597a;
         }
     }
 }

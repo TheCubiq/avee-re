@@ -4,15 +4,10 @@ public final class wy7 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ wy7(com.daaw.rw7 r1) {
-        /*
-            r0 = this;
-            com.daaw.xy7 r1 = com.daaw.xy7.L()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.wy7.<init>(com.daaw.rw7):void");
+    public /* synthetic */ wy7(rw7 rw7Var) {
+        super(r1);
+        xy7 xy7Var;
+        xy7Var = xy7.zzb;
     }
 }

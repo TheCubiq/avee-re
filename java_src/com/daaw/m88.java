@@ -1,18 +1,22 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class m88 implements Runnable {
-    public final /* synthetic */ yb8 p;
-    public final /* synthetic */ Runnable q;
+
+    /* renamed from: p */
+    public final /* synthetic */ yb8 f18662p;
+
+    /* renamed from: q */
+    public final /* synthetic */ Runnable f18663q;
 
     public m88(s88 s88Var, yb8 yb8Var, Runnable runnable) {
-        this.p = yb8Var;
-        this.q = runnable;
+        this.f18662p = yb8Var;
+        this.f18663q = runnable;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.p.c();
-        this.p.l0(this.q);
-        this.p.C();
+        this.f18662p.m3907c();
+        this.f18662p.m3888l0(this.f18663q);
+        this.f18662p.m3935C();
     }
 }

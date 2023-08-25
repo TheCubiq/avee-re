@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface lk1 {
-    boolean a(CharSequence charSequence, int i, int i2);
+    /* renamed from: a */
+    boolean mo15990a(CharSequence charSequence, int i, int i2);
 }

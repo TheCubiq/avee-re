@@ -1,8 +1,12 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public class m31 {
-    public static final n31 a;
-    public static final di0[] b;
+
+    /* renamed from: a */
+    public static final n31 f18420a;
+
+    /* renamed from: b */
+    public static final di0[] f18421b;
 
     static {
         n31 n31Var = null;
@@ -13,23 +17,27 @@ public class m31 {
         if (n31Var == null) {
             n31Var = new n31();
         }
-        a = n31Var;
-        b = new di0[0];
+        f18420a = n31Var;
+        f18421b = new di0[0];
     }
 
-    public static di0 a(Class cls) {
-        return a.a(cls);
+    /* renamed from: a */
+    public static di0 m16243a(Class cls) {
+        return f18420a.m15548a(cls);
     }
 
-    public static ei0 b(Class cls) {
-        return a.b(cls, "");
+    /* renamed from: b */
+    public static ei0 m16242b(Class cls) {
+        return f18420a.m15547b(cls, "");
     }
 
-    public static fi0 c(oz0 oz0Var) {
-        return a.c(oz0Var);
+    /* renamed from: c */
+    public static fi0 m16241c(oz0 oz0Var) {
+        return f18420a.m15546c(oz0Var);
     }
 
-    public static String d(si0 si0Var) {
-        return a.e(si0Var);
+    /* renamed from: d */
+    public static String m16240d(si0 si0Var) {
+        return f18420a.m15544e(si0Var);
     }
 }

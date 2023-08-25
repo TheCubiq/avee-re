@@ -6,27 +6,33 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 /* loaded from: classes.dex */
 public class yw1<T1, T2, T3, TResult> {
-    public Map<WeakReference<a<T1, T2, T3, TResult>>, Object> a = new ConcurrentHashMap();
 
+    /* renamed from: a */
+    public Map<WeakReference<InterfaceC3757a<T1, T2, T3, TResult>>, Object> f34190a = new ConcurrentHashMap();
+
+    /* renamed from: com.daaw.yw1$a */
     /* loaded from: classes.dex */
-    public interface a<T1, T2, T3, TResult> {
-        TResult a(T1 t1, T2 t2, T3 t3);
+    public interface InterfaceC3757a<T1, T2, T3, TResult> {
+        /* renamed from: a */
+        TResult mo3153a(T1 t1, T2 t2, T3 t3);
     }
 
-    public TResult a(T1 t1, T2 t2, T3 t3, TResult tresult) {
-        for (WeakReference<a<T1, T2, T3, TResult>> weakReference : this.a.keySet()) {
-            a<T1, T2, T3, TResult> aVar = weakReference.get();
-            if (aVar != null) {
-                tresult = aVar.a(t1, t2, t3);
+    /* renamed from: a */
+    public TResult m3155a(T1 t1, T2 t2, T3 t3, TResult tresult) {
+        for (WeakReference<InterfaceC3757a<T1, T2, T3, TResult>> weakReference : this.f34190a.keySet()) {
+            InterfaceC3757a<T1, T2, T3, TResult> interfaceC3757a = weakReference.get();
+            if (interfaceC3757a != null) {
+                tresult = interfaceC3757a.mo3153a(t1, t2, t3);
             } else {
-                this.a.remove(weakReference);
+                this.f34190a.remove(weakReference);
             }
         }
         return tresult;
     }
 
-    public void b(a<T1, T2, T3, TResult> aVar, List<Object> list) {
-        list.add(aVar);
-        this.a.put(new WeakReference<>(aVar), this);
+    /* renamed from: b */
+    public void m3154b(InterfaceC3757a<T1, T2, T3, TResult> interfaceC3757a, List<Object> list) {
+        list.add(interfaceC3757a);
+        this.f34190a.put(new WeakReference<>(interfaceC3757a), this);
     }
 }

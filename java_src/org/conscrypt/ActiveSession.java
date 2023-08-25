@@ -12,7 +12,9 @@ import javax.net.ssl.SSLSessionContext;
 public final class ActiveSession implements ConscryptSession {
     private String applicationProtocol;
     private long creationTime;
-    private byte[] id;
+
+    /* renamed from: id */
+    private byte[] f38013id;
     private X509Certificate[] localCertificates;
     private volatile javax.security.cert.X509Certificate[] peerCertificateChain;
     private byte[] peerCertificateOcspData;
@@ -85,12 +87,12 @@ public final class ActiveSession implements ConscryptSession {
 
     @Override // javax.net.ssl.SSLSession
     public byte[] getId() {
-        if (this.id == null) {
+        if (this.f38013id == null) {
             synchronized (this.ssl) {
-                this.id = this.ssl.getSessionId();
+                this.f38013id = this.ssl.getSessionId();
             }
         }
-        byte[] bArr = this.id;
+        byte[] bArr = this.f38013id;
         return bArr != null ? (byte[]) bArr.clone() : EmptyArray.BYTE;
     }
 
@@ -234,7 +236,7 @@ public final class ActiveSession implements ConscryptSession {
 
     public void onPeerCertificateAvailable(String str, int i) {
         synchronized (this.ssl) {
-            this.id = null;
+            this.f38013id = null;
             if (this.localCertificates == null) {
                 this.localCertificates = this.ssl.getLocalCertificates();
             }

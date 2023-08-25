@@ -10,71 +10,87 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class vp8 extends u70 {
     @GuardedBy("connectionStatus")
-    public final HashMap f = new HashMap();
-    public final Context g;
-    public volatile Handler h;
-    public final ko8 i;
-    public final fj j;
-    public final long k;
-    public final long l;
+
+    /* renamed from: f */
+    public final HashMap f30428f = new HashMap();
+
+    /* renamed from: g */
+    public final Context f30429g;
+
+    /* renamed from: h */
+    public volatile Handler f30430h;
+
+    /* renamed from: i */
+    public final ko8 f30431i;
+
+    /* renamed from: j */
+    public final C1291fj f30432j;
+
+    /* renamed from: k */
+    public final long f30433k;
+
+    /* renamed from: l */
+    public final long f30434l;
 
     public vp8(Context context, Looper looper) {
         ko8 ko8Var = new ko8(this, null);
-        this.i = ko8Var;
-        this.g = context.getApplicationContext();
-        this.h = new a38(looper, ko8Var);
-        this.j = fj.b();
-        this.k = 5000L;
-        this.l = 300000L;
+        this.f30431i = ko8Var;
+        this.f30429g = context.getApplicationContext();
+        this.f30430h = new a38(looper, ko8Var);
+        this.f30432j = C1291fj.m22614b();
+        this.f30433k = 5000L;
+        this.f30434l = 300000L;
     }
 
     @Override // com.daaw.u70
-    public final void d(rh8 rh8Var, ServiceConnection serviceConnection, String str) {
-        ry0.k(serviceConnection, "ServiceConnection must not be null");
-        synchronized (this.f) {
-            zj8 zj8Var = (zj8) this.f.get(rh8Var);
+    /* renamed from: d */
+    public final void mo6941d(rh8 rh8Var, ServiceConnection serviceConnection, String str) {
+        ry0.m10829k(serviceConnection, "ServiceConnection must not be null");
+        synchronized (this.f30428f) {
+            zj8 zj8Var = (zj8) this.f30428f.get(rh8Var);
             if (zj8Var == null) {
                 String obj = rh8Var.toString();
                 throw new IllegalStateException("Nonexistent connection status for service config: " + obj);
-            } else if (!zj8Var.h(serviceConnection)) {
+            } else if (!zj8Var.m2185h(serviceConnection)) {
                 String obj2 = rh8Var.toString();
                 throw new IllegalStateException("Trying to unbind a GmsServiceConnection  that was not bound before.  config=" + obj2);
             } else {
-                zj8Var.f(serviceConnection, str);
-                if (zj8Var.i()) {
-                    this.h.sendMessageDelayed(this.h.obtainMessage(0, rh8Var), this.k);
+                zj8Var.m2187f(serviceConnection, str);
+                if (zj8Var.m2184i()) {
+                    this.f30430h.sendMessageDelayed(this.f30430h.obtainMessage(0, rh8Var), this.f30433k);
                 }
             }
         }
     }
 
     @Override // com.daaw.u70
-    public final boolean f(rh8 rh8Var, ServiceConnection serviceConnection, String str, Executor executor) {
-        boolean j;
-        ry0.k(serviceConnection, "ServiceConnection must not be null");
-        synchronized (this.f) {
-            zj8 zj8Var = (zj8) this.f.get(rh8Var);
+    /* renamed from: f */
+    public final boolean mo6940f(rh8 rh8Var, ServiceConnection serviceConnection, String str, Executor executor) {
+        boolean m2183j;
+        ry0.m10829k(serviceConnection, "ServiceConnection must not be null");
+        synchronized (this.f30428f) {
+            zj8 zj8Var = (zj8) this.f30428f.get(rh8Var);
             if (zj8Var == null) {
                 zj8Var = new zj8(this, rh8Var);
-                zj8Var.d(serviceConnection, serviceConnection, str);
-                zj8Var.e(str, executor);
-                this.f.put(rh8Var, zj8Var);
+                zj8Var.m2189d(serviceConnection, serviceConnection, str);
+                zj8Var.m2188e(str, executor);
+                this.f30428f.put(rh8Var, zj8Var);
             } else {
-                this.h.removeMessages(0, rh8Var);
-                if (zj8Var.h(serviceConnection)) {
+                this.f30430h.removeMessages(0, rh8Var);
+                if (zj8Var.m2185h(serviceConnection)) {
                     String obj = rh8Var.toString();
                     throw new IllegalStateException("Trying to bind a GmsServiceConnection that was already connected before.  config=" + obj);
                 }
-                zj8Var.d(serviceConnection, serviceConnection, str);
-                int a = zj8Var.a();
-                if (a == 1) {
-                    serviceConnection.onServiceConnected(zj8Var.b(), zj8Var.c());
-                } else if (a == 2) {
-                    zj8Var.e(str, executor);
+                zj8Var.m2189d(serviceConnection, serviceConnection, str);
+                int m2192a = zj8Var.m2192a();
+                if (m2192a == 1) {
+                    serviceConnection.onServiceConnected(zj8Var.m2191b(), zj8Var.m2190c());
+                } else if (m2192a == 2) {
+                    zj8Var.m2188e(str, executor);
                 }
             }
-            j = zj8Var.j();
+            m2183j = zj8Var.m2183j();
         }
-        return j;
+        return m2183j;
     }
 }

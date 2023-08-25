@@ -1,14 +1,16 @@
 package com.google.android.gms.ads.internal.client;
 /* loaded from: classes.dex */
 public final class zzb extends zzbd {
-    public final zza p;
+
+    /* renamed from: p */
+    public final zza f36102p;
 
     public zzb(zza zzaVar) {
-        this.p = zzaVar;
+        this.f36102p = zzaVar;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzbe
     public final void zzb() {
-        this.p.onAdClicked();
+        this.f36102p.onAdClicked();
     }
 }

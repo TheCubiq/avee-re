@@ -12,12 +12,24 @@ import com.daaw.sd3;
 import com.google.android.gms.ads.MediaContent;
 /* loaded from: classes.dex */
 public class MediaView extends FrameLayout {
-    public MediaContent p;
-    public boolean q;
-    public ImageView.ScaleType r;
-    public boolean s;
-    public zzb t;
-    public zzc u;
+
+    /* renamed from: p */
+    public MediaContent f36447p;
+
+    /* renamed from: q */
+    public boolean f36448q;
+
+    /* renamed from: r */
+    public ImageView.ScaleType f36449r;
+
+    /* renamed from: s */
+    public boolean f36450s;
+
+    /* renamed from: t */
+    public zzb f36451t;
+
+    /* renamed from: u */
+    public zzc f36452u;
 
     public MediaView(Context context) {
         super(context);
@@ -36,46 +48,48 @@ public class MediaView extends FrameLayout {
         super(context, attributeSet, i, i2);
     }
 
-    public final synchronized void a(zzb zzbVar) {
-        this.t = zzbVar;
-        if (this.q) {
-            zzbVar.zza.b(this.p);
+    /* renamed from: a */
+    public final synchronized void m1298a(zzb zzbVar) {
+        this.f36451t = zzbVar;
+        if (this.f36448q) {
+            zzbVar.zza.m1286b(this.f36447p);
         }
     }
 
-    public final synchronized void b(zzc zzcVar) {
-        this.u = zzcVar;
-        if (this.s) {
-            zzcVar.zza.c(this.r);
+    /* renamed from: b */
+    public final synchronized void m1297b(zzc zzcVar) {
+        this.f36452u = zzcVar;
+        if (this.f36450s) {
+            zzcVar.zza.m1285c(this.f36449r);
         }
     }
 
     public MediaContent getMediaContent() {
-        return this.p;
+        return this.f36447p;
     }
 
     public void setImageScaleType(ImageView.ScaleType scaleType) {
-        this.s = true;
-        this.r = scaleType;
-        zzc zzcVar = this.u;
+        this.f36450s = true;
+        this.f36449r = scaleType;
+        zzc zzcVar = this.f36452u;
         if (zzcVar != null) {
-            zzcVar.zza.c(scaleType);
+            zzcVar.zza.m1285c(scaleType);
         }
     }
 
     public void setMediaContent(MediaContent mediaContent) {
-        this.q = true;
-        this.p = mediaContent;
-        zzb zzbVar = this.t;
+        this.f36448q = true;
+        this.f36447p = mediaContent;
+        zzb zzbVar = this.f36451t;
         if (zzbVar != null) {
-            zzbVar.zza.b(mediaContent);
+            zzbVar.zza.m1286b(mediaContent);
         }
         if (mediaContent == null) {
             return;
         }
         try {
             sd3 zza = mediaContent.zza();
-            if (zza == null || zza.q(nt0.g3(this))) {
+            if (zza == null || zza.mo2682q(nt0.m14830g3(this))) {
                 return;
             }
             removeAllViews();

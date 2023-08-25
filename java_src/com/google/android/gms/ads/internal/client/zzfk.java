@@ -3,34 +3,36 @@ package com.google.android.gms.ads.internal.client;
 import com.google.android.gms.ads.VideoController;
 /* loaded from: classes.dex */
 public final class zzfk extends zzds {
-    public final VideoController.VideoLifecycleCallbacks p;
+
+    /* renamed from: p */
+    public final VideoController.VideoLifecycleCallbacks f36188p;
 
     public zzfk(VideoController.VideoLifecycleCallbacks videoLifecycleCallbacks) {
-        this.p = videoLifecycleCallbacks;
+        this.f36188p = videoLifecycleCallbacks;
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdt
     public final void zze() {
-        this.p.onVideoEnd();
+        this.f36188p.onVideoEnd();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdt
     public final void zzf(boolean z) {
-        this.p.onVideoMute(z);
+        this.f36188p.onVideoMute(z);
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdt
     public final void zzg() {
-        this.p.onVideoPause();
+        this.f36188p.onVideoPause();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdt
     public final void zzh() {
-        this.p.onVideoPlay();
+        this.f36188p.onVideoPlay();
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdt
     public final void zzi() {
-        this.p.onVideoStart();
+        this.f36188p.onVideoStart();
     }
 }

@@ -6,16 +6,24 @@ import java.nio.charset.Charset;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class ul3 {
-    public static final Charset a = Charset.forName("UTF-8");
-    public static final rl3 b = new tl3();
-    public static final pl3 c = new pl3() { // from class: com.daaw.sl3
+
+    /* renamed from: a */
+    public static final Charset f29175a = Charset.forName("UTF-8");
+
+    /* renamed from: b */
+    public static final rl3 f29176b = new tl3();
+
+    /* renamed from: c */
+    public static final pl3 f29177c = new pl3() { // from class: com.daaw.sl3
         @Override // com.daaw.pl3
-        public final Object b(JSONObject jSONObject) {
-            return ul3.a(jSONObject);
+        /* renamed from: b */
+        public final Object mo8081b(JSONObject jSONObject) {
+            return ul3.m8035a(jSONObject);
         }
     };
 
-    public static /* synthetic */ InputStream a(JSONObject jSONObject) {
-        return new ByteArrayInputStream(jSONObject.toString().getBytes(a));
+    /* renamed from: a */
+    public static /* synthetic */ InputStream m8035a(JSONObject jSONObject) {
+        return new ByteArrayInputStream(jSONObject.toString().getBytes(f29175a));
     }
 }

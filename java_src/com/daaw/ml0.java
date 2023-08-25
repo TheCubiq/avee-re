@@ -3,59 +3,77 @@ package com.daaw;
 import android.util.Log;
 /* loaded from: classes2.dex */
 public class ml0 {
-    public static final ml0 c = new ml0("FirebaseCrashlytics");
-    public final String a;
-    public int b = 4;
+
+    /* renamed from: c */
+    public static final ml0 f18951c = new ml0("FirebaseCrashlytics");
+
+    /* renamed from: a */
+    public final String f18952a;
+
+    /* renamed from: b */
+    public int f18953b = 4;
 
     public ml0(String str) {
-        this.a = str;
+        this.f18952a = str;
     }
 
-    public static ml0 f() {
-        return c;
+    /* renamed from: f */
+    public static ml0 m15976f() {
+        return f18951c;
     }
 
-    public final boolean a(int i) {
-        return this.b <= i || Log.isLoggable(this.a, i);
+    /* renamed from: a */
+    public final boolean m15981a(int i) {
+        return this.f18953b <= i || Log.isLoggable(this.f18952a, i);
     }
 
-    public void b(String str) {
-        c(str, null);
+    /* renamed from: b */
+    public void m15980b(String str) {
+        m15979c(str, null);
     }
 
-    public void c(String str, Throwable th) {
-        a(3);
+    /* renamed from: c */
+    public void m15979c(String str, Throwable th) {
+        m15981a(3);
     }
 
-    public void d(String str) {
-        e(str, null);
+    /* renamed from: d */
+    public void m15978d(String str) {
+        m15977e(str, null);
     }
 
-    public void e(String str, Throwable th) {
-        a(6);
+    /* renamed from: e */
+    public void m15977e(String str, Throwable th) {
+        m15981a(6);
     }
 
-    public void g(String str) {
-        h(str, null);
+    /* renamed from: g */
+    public void m15975g(String str) {
+        m15974h(str, null);
     }
 
-    public void h(String str, Throwable th) {
-        a(4);
+    /* renamed from: h */
+    public void m15974h(String str, Throwable th) {
+        m15981a(4);
     }
 
-    public void i(String str) {
-        j(str, null);
+    /* renamed from: i */
+    public void m15973i(String str) {
+        m15972j(str, null);
     }
 
-    public void j(String str, Throwable th) {
-        a(2);
+    /* renamed from: j */
+    public void m15972j(String str, Throwable th) {
+        m15981a(2);
     }
 
-    public void k(String str) {
-        l(str, null);
+    /* renamed from: k */
+    public void m15971k(String str) {
+        m15970l(str, null);
     }
 
-    public void l(String str, Throwable th) {
-        a(5);
+    /* renamed from: l */
+    public void m15970l(String str, Throwable th) {
+        m15981a(5);
     }
 }

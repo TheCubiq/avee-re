@@ -5,399 +5,523 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes2.dex */
 public final class qu7 {
-    public long A;
-    public String B;
-    public boolean C;
-    public long D;
-    public long E;
-    public final dr6 a;
-    public final String b;
-    public String c;
-    public String d;
-    public String e;
-    public String f;
-    public long g;
-    public long h;
-    public long i;
-    public String j;
-    public long k;
-    public String l;
-    public long m;
-    public long n;
-    public boolean o;
-    public boolean p;
-    public String q;
-    public Boolean r;
-    public long s;
-    public List t;
-    public String u;
-    public long v;
-    public long w;
-    public long x;
-    public long y;
-    public long z;
+
+    /* renamed from: A */
+    public long f24400A;
+
+    /* renamed from: B */
+    public String f24401B;
+
+    /* renamed from: C */
+    public boolean f24402C;
+
+    /* renamed from: D */
+    public long f24403D;
+
+    /* renamed from: E */
+    public long f24404E;
+
+    /* renamed from: a */
+    public final dr6 f24405a;
+
+    /* renamed from: b */
+    public final String f24406b;
+
+    /* renamed from: c */
+    public String f24407c;
+
+    /* renamed from: d */
+    public String f24408d;
+
+    /* renamed from: e */
+    public String f24409e;
+
+    /* renamed from: f */
+    public String f24410f;
+
+    /* renamed from: g */
+    public long f24411g;
+
+    /* renamed from: h */
+    public long f24412h;
+
+    /* renamed from: i */
+    public long f24413i;
+
+    /* renamed from: j */
+    public String f24414j;
+
+    /* renamed from: k */
+    public long f24415k;
+
+    /* renamed from: l */
+    public String f24416l;
+
+    /* renamed from: m */
+    public long f24417m;
+
+    /* renamed from: n */
+    public long f24418n;
+
+    /* renamed from: o */
+    public boolean f24419o;
+
+    /* renamed from: p */
+    public boolean f24420p;
+
+    /* renamed from: q */
+    public String f24421q;
+
+    /* renamed from: r */
+    public Boolean f24422r;
+
+    /* renamed from: s */
+    public long f24423s;
+
+    /* renamed from: t */
+    public List f24424t;
+
+    /* renamed from: u */
+    public String f24425u;
+
+    /* renamed from: v */
+    public long f24426v;
+
+    /* renamed from: w */
+    public long f24427w;
+
+    /* renamed from: x */
+    public long f24428x;
+
+    /* renamed from: y */
+    public long f24429y;
+
+    /* renamed from: z */
+    public long f24430z;
 
     public qu7(dr6 dr6Var, String str) {
-        ry0.j(dr6Var);
-        ry0.f(str);
-        this.a = dr6Var;
-        this.b = str;
-        dr6Var.r().f();
+        ry0.m10830j(dr6Var);
+        ry0.m10834f(str);
+        this.f24405a = dr6Var;
+        this.f24406b = str;
+        dr6Var.mo3882r().mo6991f();
     }
 
-    public final long A() {
-        this.a.r().f();
+    /* renamed from: A */
+    public final long m12202A() {
+        this.f24405a.mo3882r().mo6991f();
         return 0L;
     }
 
-    public final void B(long j) {
-        ry0.a(j >= 0);
-        this.a.r().f();
-        this.C = (this.g != j) | this.C;
-        this.g = j;
+    /* renamed from: B */
+    public final void m12201B(long j) {
+        ry0.m10839a(j >= 0);
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C = (this.f24411g != j) | this.f24402C;
+        this.f24411g = j;
     }
 
-    public final void C(long j) {
-        this.a.r().f();
-        this.C |= this.h != j;
-        this.h = j;
+    /* renamed from: C */
+    public final void m12200C(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24412h != j;
+        this.f24412h = j;
     }
 
-    public final void D(boolean z) {
-        this.a.r().f();
-        this.C |= this.o != z;
-        this.o = z;
+    /* renamed from: D */
+    public final void m12199D(boolean z) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24419o != z;
+        this.f24419o = z;
     }
 
-    public final void E(Boolean bool) {
-        this.a.r().f();
-        this.C |= !x07.a(this.r, bool);
-        this.r = bool;
+    /* renamed from: E */
+    public final void m12198E(Boolean bool) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24422r, bool);
+        this.f24422r = bool;
     }
 
-    public final void F(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.e, str);
-        this.e = str;
+    /* renamed from: F */
+    public final void m12197F(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24409e, str);
+        this.f24409e = str;
     }
 
-    public final void G(List list) {
-        this.a.r().f();
-        if (x07.a(this.t, list)) {
+    /* renamed from: G */
+    public final void m12196G(List list) {
+        this.f24405a.mo3882r().mo6991f();
+        if (x07.m5666a(this.f24424t, list)) {
             return;
         }
-        this.C = true;
-        this.t = list != null ? new ArrayList(list) : null;
+        this.f24402C = true;
+        this.f24424t = list != null ? new ArrayList(list) : null;
     }
 
-    public final void H(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.u, str);
-        this.u = str;
+    /* renamed from: H */
+    public final void m12195H(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24425u, str);
+        this.f24425u = str;
     }
 
-    public final boolean I() {
-        this.a.r().f();
-        return this.p;
+    /* renamed from: I */
+    public final boolean m12194I() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24420p;
     }
 
-    public final boolean J() {
-        this.a.r().f();
-        return this.o;
+    /* renamed from: J */
+    public final boolean m12193J() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24419o;
     }
 
-    public final boolean K() {
-        this.a.r().f();
-        return this.C;
+    /* renamed from: K */
+    public final boolean m12192K() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24402C;
     }
 
-    public final long L() {
-        this.a.r().f();
-        return this.k;
+    /* renamed from: L */
+    public final long m12191L() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24415k;
     }
 
-    public final long M() {
-        this.a.r().f();
-        return this.D;
+    /* renamed from: M */
+    public final long m12190M() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24403D;
     }
 
-    public final long N() {
-        this.a.r().f();
-        return this.y;
+    /* renamed from: N */
+    public final long m12189N() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24429y;
     }
 
-    public final long O() {
-        this.a.r().f();
-        return this.z;
+    /* renamed from: O */
+    public final long m12188O() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24430z;
     }
 
-    public final long P() {
-        this.a.r().f();
-        return this.x;
+    /* renamed from: P */
+    public final long m12187P() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24428x;
     }
 
-    public final long Q() {
-        this.a.r().f();
-        return this.w;
+    /* renamed from: Q */
+    public final long m12186Q() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24427w;
     }
 
-    public final long R() {
-        this.a.r().f();
-        return this.A;
+    /* renamed from: R */
+    public final long m12185R() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24400A;
     }
 
-    public final long S() {
-        this.a.r().f();
-        return this.v;
+    /* renamed from: S */
+    public final long m12184S() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24426v;
     }
 
-    public final long T() {
-        this.a.r().f();
-        return this.n;
+    /* renamed from: T */
+    public final long m12183T() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24418n;
     }
 
-    public final long U() {
-        this.a.r().f();
-        return this.s;
+    /* renamed from: U */
+    public final long m12182U() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24423s;
     }
 
-    public final long V() {
-        this.a.r().f();
-        return this.E;
+    /* renamed from: V */
+    public final long m12181V() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24404E;
     }
 
-    public final long W() {
-        this.a.r().f();
-        return this.m;
+    /* renamed from: W */
+    public final long m12180W() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24417m;
     }
 
-    public final long X() {
-        this.a.r().f();
-        return this.i;
+    /* renamed from: X */
+    public final long m12179X() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24413i;
     }
 
-    public final long Y() {
-        this.a.r().f();
-        return this.g;
+    /* renamed from: Y */
+    public final long m12178Y() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24411g;
     }
 
-    public final long Z() {
-        this.a.r().f();
-        return this.h;
+    /* renamed from: Z */
+    public final long m12177Z() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24412h;
     }
 
-    public final String a() {
-        this.a.r().f();
-        return this.e;
+    /* renamed from: a */
+    public final String m12176a() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24409e;
     }
 
-    public final Boolean a0() {
-        this.a.r().f();
-        return this.r;
+    /* renamed from: a0 */
+    public final Boolean m12175a0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24422r;
     }
 
-    public final String b() {
-        this.a.r().f();
-        return this.u;
+    /* renamed from: b */
+    public final String m12174b() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24425u;
     }
 
-    public final String b0() {
-        this.a.r().f();
-        return this.q;
+    /* renamed from: b0 */
+    public final String m12173b0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24421q;
     }
 
-    public final List c() {
-        this.a.r().f();
-        return this.t;
+    /* renamed from: c */
+    public final List m12172c() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24424t;
     }
 
-    public final String c0() {
-        this.a.r().f();
-        String str = this.B;
-        y(null);
+    /* renamed from: c0 */
+    public final String m12171c0() {
+        this.f24405a.mo3882r().mo6991f();
+        String str = this.f24401B;
+        m12142y(null);
         return str;
     }
 
-    public final void d() {
-        this.a.r().f();
-        this.C = false;
+    /* renamed from: d */
+    public final void m12170d() {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C = false;
     }
 
-    public final String d0() {
-        this.a.r().f();
-        return this.b;
+    /* renamed from: d0 */
+    public final String m12169d0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24406b;
     }
 
-    public final void e() {
-        this.a.r().f();
-        long j = this.g + 1;
+    /* renamed from: e */
+    public final void m12168e() {
+        this.f24405a.mo3882r().mo6991f();
+        long j = this.f24411g + 1;
         if (j > 2147483647L) {
-            this.a.i().w().b("Bundle index overflow. appId", om5.z(this.b));
+            this.f24405a.mo3895i().m14155w().m20652b("Bundle index overflow. appId", om5.m14152z(this.f24406b));
             j = 0;
         }
-        this.C = true;
-        this.g = j;
+        this.f24402C = true;
+        this.f24411g = j;
     }
 
-    public final String e0() {
-        this.a.r().f();
-        return this.c;
+    /* renamed from: e0 */
+    public final String m12167e0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24407c;
     }
 
-    public final void f(String str) {
-        this.a.r().f();
+    /* renamed from: f */
+    public final void m12166f(String str) {
+        this.f24405a.mo3882r().mo6991f();
         if (true == TextUtils.isEmpty(str)) {
             str = null;
         }
-        this.C |= true ^ x07.a(this.q, str);
-        this.q = str;
+        this.f24402C |= true ^ x07.m5666a(this.f24421q, str);
+        this.f24421q = str;
     }
 
-    public final String f0() {
-        this.a.r().f();
-        return this.l;
+    /* renamed from: f0 */
+    public final String m12165f0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24416l;
     }
 
-    public final void g(boolean z) {
-        this.a.r().f();
-        this.C |= this.p != z;
-        this.p = z;
+    /* renamed from: g */
+    public final void m12164g(boolean z) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24420p != z;
+        this.f24420p = z;
     }
 
-    public final String g0() {
-        this.a.r().f();
-        return this.j;
+    /* renamed from: g0 */
+    public final String m12163g0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24414j;
     }
 
-    public final void h(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.c, str);
-        this.c = str;
+    /* renamed from: h */
+    public final void m12162h(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24407c, str);
+        this.f24407c = str;
     }
 
-    public final String h0() {
-        this.a.r().f();
-        return this.f;
+    /* renamed from: h0 */
+    public final String m12161h0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24410f;
     }
 
-    public final void i(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.l, str);
-        this.l = str;
+    /* renamed from: i */
+    public final void m12160i(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24416l, str);
+        this.f24416l = str;
     }
 
-    public final String i0() {
-        this.a.r().f();
-        return this.d;
+    /* renamed from: i0 */
+    public final String m12159i0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24408d;
     }
 
-    public final void j(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.j, str);
-        this.j = str;
+    /* renamed from: j */
+    public final void m12158j(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24414j, str);
+        this.f24414j = str;
     }
 
-    public final String j0() {
-        this.a.r().f();
-        return this.B;
+    /* renamed from: j0 */
+    public final String m12157j0() {
+        this.f24405a.mo3882r().mo6991f();
+        return this.f24401B;
     }
 
-    public final void k(long j) {
-        this.a.r().f();
-        this.C |= this.k != j;
-        this.k = j;
+    /* renamed from: k */
+    public final void m12156k(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24415k != j;
+        this.f24415k = j;
     }
 
-    public final void l(long j) {
-        this.a.r().f();
-        this.C |= this.D != j;
-        this.D = j;
+    /* renamed from: l */
+    public final void m12155l(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24403D != j;
+        this.f24403D = j;
     }
 
-    public final void m(long j) {
-        this.a.r().f();
-        this.C |= this.y != j;
-        this.y = j;
+    /* renamed from: m */
+    public final void m12154m(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24429y != j;
+        this.f24429y = j;
     }
 
-    public final void n(long j) {
-        this.a.r().f();
-        this.C |= this.z != j;
-        this.z = j;
+    /* renamed from: n */
+    public final void m12153n(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24430z != j;
+        this.f24430z = j;
     }
 
-    public final void o(long j) {
-        this.a.r().f();
-        this.C |= this.x != j;
-        this.x = j;
+    /* renamed from: o */
+    public final void m12152o(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24428x != j;
+        this.f24428x = j;
     }
 
-    public final void p(long j) {
-        this.a.r().f();
-        this.C |= this.w != j;
-        this.w = j;
+    /* renamed from: p */
+    public final void m12151p(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24427w != j;
+        this.f24427w = j;
     }
 
-    public final void q(long j) {
-        this.a.r().f();
-        this.C |= this.A != j;
-        this.A = j;
+    /* renamed from: q */
+    public final void m12150q(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24400A != j;
+        this.f24400A = j;
     }
 
-    public final void r(long j) {
-        this.a.r().f();
-        this.C |= this.v != j;
-        this.v = j;
+    /* renamed from: r */
+    public final void m12149r(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24426v != j;
+        this.f24426v = j;
     }
 
-    public final void s(long j) {
-        this.a.r().f();
-        this.C |= this.n != j;
-        this.n = j;
+    /* renamed from: s */
+    public final void m12148s(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24418n != j;
+        this.f24418n = j;
     }
 
-    public final void t(long j) {
-        this.a.r().f();
-        this.C |= this.s != j;
-        this.s = j;
+    /* renamed from: t */
+    public final void m12147t(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24423s != j;
+        this.f24423s = j;
     }
 
-    public final void u(long j) {
-        this.a.r().f();
-        this.C |= this.E != j;
-        this.E = j;
+    /* renamed from: u */
+    public final void m12146u(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24404E != j;
+        this.f24404E = j;
     }
 
-    public final void v(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.f, str);
-        this.f = str;
+    /* renamed from: v */
+    public final void m12145v(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24410f, str);
+        this.f24410f = str;
     }
 
-    public final void w(String str) {
-        this.a.r().f();
+    /* renamed from: w */
+    public final void m12144w(String str) {
+        this.f24405a.mo3882r().mo6991f();
         if (true == TextUtils.isEmpty(str)) {
             str = null;
         }
-        this.C |= true ^ x07.a(this.d, str);
-        this.d = str;
+        this.f24402C |= true ^ x07.m5666a(this.f24408d, str);
+        this.f24408d = str;
     }
 
-    public final void x(long j) {
-        this.a.r().f();
-        this.C |= this.m != j;
-        this.m = j;
+    /* renamed from: x */
+    public final void m12143x(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24417m != j;
+        this.f24417m = j;
     }
 
-    public final void y(String str) {
-        this.a.r().f();
-        this.C |= !x07.a(this.B, str);
-        this.B = str;
+    /* renamed from: y */
+    public final void m12142y(String str) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= !x07.m5666a(this.f24401B, str);
+        this.f24401B = str;
     }
 
-    public final void z(long j) {
-        this.a.r().f();
-        this.C |= this.i != j;
-        this.i = j;
+    /* renamed from: z */
+    public final void m12141z(long j) {
+        this.f24405a.mo3882r().mo6991f();
+        this.f24402C |= this.f24413i != j;
+        this.f24413i = j;
     }
 }

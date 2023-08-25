@@ -1,44 +1,58 @@
 package com.daaw;
 
-import com.daaw.f9;
+import com.daaw.C1261f9;
 import com.google.auto.value.AutoValue;
 @AutoValue
 /* loaded from: classes2.dex */
 public abstract class ig0 {
 
     @AutoValue.Builder
+    /* renamed from: com.daaw.ig0$a */
     /* loaded from: classes2.dex */
-    public static abstract class a {
-        public abstract ig0 a();
+    public static abstract class AbstractC1702a {
+        /* renamed from: a */
+        public abstract ig0 mo19834a();
 
-        public abstract a b(bm1 bm1Var);
+        /* renamed from: b */
+        public abstract AbstractC1702a mo19833b(bm1 bm1Var);
 
-        public abstract a c(String str);
+        /* renamed from: c */
+        public abstract AbstractC1702a mo19832c(String str);
 
-        public abstract a d(String str);
+        /* renamed from: d */
+        public abstract AbstractC1702a mo19831d(String str);
 
-        public abstract a e(b bVar);
+        /* renamed from: e */
+        public abstract AbstractC1702a mo19830e(EnumC1703b enumC1703b);
 
-        public abstract a f(String str);
+        /* renamed from: f */
+        public abstract AbstractC1702a mo19829f(String str);
     }
 
+    /* renamed from: com.daaw.ig0$b */
     /* loaded from: classes2.dex */
-    public enum b {
+    public enum EnumC1703b {
         OK,
         BAD_CONFIG
     }
 
-    public static a a() {
-        return new f9.b();
+    /* renamed from: a */
+    public static AbstractC1702a m19840a() {
+        return new C1261f9.C1263b();
     }
 
-    public abstract bm1 b();
+    /* renamed from: b */
+    public abstract bm1 mo19839b();
 
-    public abstract String c();
+    /* renamed from: c */
+    public abstract String mo19838c();
 
-    public abstract String d();
+    /* renamed from: d */
+    public abstract String mo19837d();
 
-    public abstract b e();
+    /* renamed from: e */
+    public abstract EnumC1703b mo19836e();
 
-    public abstract String f();
+    /* renamed from: f */
+    public abstract String mo19835f();
 }

@@ -10,89 +10,118 @@ import java.util.Set;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class i17 extends AbstractMap implements Serializable {
-    public static final Object y = new Object();
+
+    /* renamed from: y */
+    public static final Object f13180y = new Object();
     @CheckForNull
-    public transient Object p;
+
+    /* renamed from: p */
+    public transient Object f13181p;
     @CheckForNull
-    public transient int[] q;
+
+    /* renamed from: q */
+    public transient int[] f13182q;
     @CheckForNull
-    public transient Object[] r;
+
+    /* renamed from: r */
+    public transient Object[] f13183r;
     @CheckForNull
-    public transient Object[] s;
-    public transient int t;
-    public transient int u;
+
+    /* renamed from: s */
+    public transient Object[] f13184s;
+
+    /* renamed from: t */
+    public transient int f13185t;
+
+    /* renamed from: u */
+    public transient int f13186u;
     @CheckForNull
-    public transient Set v;
+
+    /* renamed from: v */
+    public transient Set f13187v;
     @CheckForNull
-    public transient Set w;
+
+    /* renamed from: w */
+    public transient Set f13188w;
     @CheckForNull
-    public transient Collection x;
+
+    /* renamed from: x */
+    public transient Collection f13189x;
 
     public i17(int i) {
-        q(8);
+        m20182q(8);
     }
 
-    public static /* synthetic */ int d(i17 i17Var) {
-        int i = i17Var.u;
-        i17Var.u = i - 1;
+    /* renamed from: d */
+    public static /* synthetic */ int m20195d(i17 i17Var) {
+        int i = i17Var.f13186u;
+        i17Var.f13186u = i - 1;
         return i;
     }
 
-    public static /* synthetic */ Object i(i17 i17Var, int i) {
-        return i17Var.a()[i];
+    /* renamed from: i */
+    public static /* synthetic */ Object m20190i(i17 i17Var, int i) {
+        return i17Var.m20198a()[i];
     }
 
-    public static /* synthetic */ Object l(i17 i17Var, int i) {
-        return i17Var.b()[i];
+    /* renamed from: l */
+    public static /* synthetic */ Object m20187l(i17 i17Var, int i) {
+        return i17Var.m20197b()[i];
     }
 
-    public static /* synthetic */ Object m(i17 i17Var) {
-        Object obj = i17Var.p;
+    /* renamed from: m */
+    public static /* synthetic */ Object m20186m(i17 i17Var) {
+        Object obj = i17Var.f13181p;
         obj.getClass();
         return obj;
     }
 
-    public static /* synthetic */ void o(i17 i17Var, int i, Object obj) {
-        i17Var.b()[i] = obj;
+    /* renamed from: o */
+    public static /* synthetic */ void m20184o(i17 i17Var, int i, Object obj) {
+        i17Var.m20197b()[i] = obj;
     }
 
-    public final void A(int i) {
-        this.t = ((32 - Integer.numberOfLeadingZeros(i)) & 31) | (this.t & (-32));
+    /* renamed from: A */
+    public final void m20200A(int i) {
+        this.f13185t = ((32 - Integer.numberOfLeadingZeros(i)) & 31) | (this.f13185t & (-32));
     }
 
-    public final int[] B() {
-        int[] iArr = this.q;
+    /* renamed from: B */
+    public final int[] m20199B() {
+        int[] iArr = this.f13182q;
         iArr.getClass();
         return iArr;
     }
 
-    public final Object[] a() {
-        Object[] objArr = this.r;
+    /* renamed from: a */
+    public final Object[] m20198a() {
+        Object[] objArr = this.f13183r;
         objArr.getClass();
         return objArr;
     }
 
-    public final Object[] b() {
-        Object[] objArr = this.s;
+    /* renamed from: b */
+    public final Object[] m20197b() {
+        Object[] objArr = this.f13184s;
         objArr.getClass();
         return objArr;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final void clear() {
-        if (s()) {
+        if (m20180s()) {
             return;
         }
-        p();
-        Map n = n();
-        if (n != null) {
-            this.t = i47.b(size(), 3, 1073741823);
-            n.clear();
-            this.p = null;
+        m20183p();
+        Map m20185n = m20185n();
+        if (m20185n != null) {
+            this.f13185t = i47.m20125b(size(), 3, 1073741823);
+            m20185n.clear();
+            this.f13181p = null;
         } else {
-            Arrays.fill(a(), 0, this.u, (Object) null);
-            Arrays.fill(b(), 0, this.u, (Object) null);
-            Object obj = this.p;
+            Arrays.fill(m20198a(), 0, this.f13186u, (Object) null);
+            Arrays.fill(m20197b(), 0, this.f13186u, (Object) null);
+            Object obj = this.f13181p;
             obj.getClass();
             if (obj instanceof byte[]) {
                 Arrays.fill((byte[]) obj, (byte) 0);
@@ -101,63 +130,65 @@ public final class i17 extends AbstractMap implements Serializable {
             } else {
                 Arrays.fill((int[]) obj, 0);
             }
-            Arrays.fill(B(), 0, this.u, 0);
+            Arrays.fill(m20199B(), 0, this.f13186u, 0);
         }
-        this.u = 0;
+        this.f13186u = 0;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final boolean containsKey(@CheckForNull Object obj) {
-        Map n = n();
-        return n != null ? n.containsKey(obj) : x(obj) != -1;
+        Map m20185n = m20185n();
+        return m20185n != null ? m20185n.containsKey(obj) : m20175x(obj) != -1;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final boolean containsValue(@CheckForNull Object obj) {
-        Map n = n();
-        if (n == null) {
-            for (int i = 0; i < this.u; i++) {
-                if (ky6.a(obj, b()[i])) {
+        Map m20185n = m20185n();
+        if (m20185n == null) {
+            for (int i = 0; i < this.f13186u; i++) {
+                if (ky6.m17316a(obj, m20197b()[i])) {
                     return true;
                 }
             }
             return false;
         }
-        return n.containsValue(obj);
+        return m20185n.containsValue(obj);
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final Set entrySet() {
-        Set set = this.w;
+        Set set = this.f13188w;
         if (set == null) {
             q07 q07Var = new q07(this);
-            this.w = q07Var;
+            this.f13188w = q07Var;
             return q07Var;
         }
         return set;
     }
 
-    public final int g() {
+    /* renamed from: g */
+    public final int m20192g() {
         return isEmpty() ? -1 : 0;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     @CheckForNull
     public final Object get(@CheckForNull Object obj) {
-        Map n = n();
-        if (n != null) {
-            return n.get(obj);
+        Map m20185n = m20185n();
+        if (m20185n != null) {
+            return m20185n.get(obj);
         }
-        int x = x(obj);
-        if (x == -1) {
+        int m20175x = m20175x(obj);
+        if (m20175x == -1) {
             return null;
         }
-        return b()[x];
+        return m20197b()[m20175x];
     }
 
-    public final int h(int i) {
+    /* renamed from: h */
+    public final int m20191h(int i) {
         int i2 = i + 1;
-        if (i2 < this.u) {
+        if (i2 < this.f13186u) {
             return i2;
         }
         return -1;
@@ -170,26 +201,28 @@ public final class i17 extends AbstractMap implements Serializable {
 
     @Override // java.util.AbstractMap, java.util.Map
     public final Set keySet() {
-        Set set = this.v;
+        Set set = this.f13187v;
         if (set == null) {
             f17 f17Var = new f17(this);
-            this.v = f17Var;
+            this.f13187v = f17Var;
             return f17Var;
         }
         return set;
     }
 
     @CheckForNull
-    public final Map n() {
-        Object obj = this.p;
+    /* renamed from: n */
+    public final Map m20185n() {
+        Object obj = this.f13181p;
         if (obj instanceof Map) {
             return (Map) obj;
         }
         return null;
     }
 
-    public final void p() {
-        this.t += 32;
+    /* renamed from: p */
+    public final void m20183p() {
+        this.f13185t += 32;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -197,252 +230,259 @@ public final class i17 extends AbstractMap implements Serializable {
     public final Object put(Object obj, Object obj2) {
         int length;
         int min;
-        if (s()) {
-            sy6.i(s(), "Arrays already allocated");
-            int i = this.t;
+        if (m20180s()) {
+            sy6.m9700i(m20180s(), "Arrays already allocated");
+            int i = this.f13185t;
             int max = Math.max(i + 1, 2);
             int highestOneBit = Integer.highestOneBit(max);
             if (max > highestOneBit && (highestOneBit = highestOneBit + highestOneBit) <= 0) {
                 highestOneBit = 1073741824;
             }
             int max2 = Math.max(4, highestOneBit);
-            this.p = j17.d(max2);
-            A(max2 - 1);
-            this.q = new int[i];
-            this.r = new Object[i];
-            this.s = new Object[i];
+            this.f13181p = j17.m19164d(max2);
+            m20200A(max2 - 1);
+            this.f13182q = new int[i];
+            this.f13183r = new Object[i];
+            this.f13184s = new Object[i];
         }
-        Map n = n();
-        if (n != null) {
-            return n.put(obj, obj2);
+        Map m20185n = m20185n();
+        if (m20185n != null) {
+            return m20185n.put(obj, obj2);
         }
-        int[] B = B();
-        Object[] a = a();
-        Object[] b = b();
-        int i2 = this.u;
+        int[] m20199B = m20199B();
+        Object[] m20198a = m20198a();
+        Object[] m20197b = m20197b();
+        int i2 = this.f13186u;
         int i3 = i2 + 1;
-        int b2 = q17.b(obj);
-        int w = w();
-        int i4 = b2 & w;
-        Object obj3 = this.p;
+        int m12803b = q17.m12803b(obj);
+        int m20176w = m20176w();
+        int i4 = m12803b & m20176w;
+        Object obj3 = this.f13181p;
         obj3.getClass();
-        int c = j17.c(obj3, i4);
-        if (c == 0) {
-            if (i3 <= w) {
-                Object obj4 = this.p;
+        int m19165c = j17.m19165c(obj3, i4);
+        if (m19165c == 0) {
+            if (i3 <= m20176w) {
+                Object obj4 = this.f13181p;
                 obj4.getClass();
-                j17.e(obj4, i4, i3);
-                length = B().length;
+                j17.m19163e(obj4, i4, i3);
+                length = m20199B().length;
                 if (i3 > length && (min = Math.min(1073741823, (Math.max(1, length >>> 1) + length) | 1)) != length) {
-                    this.q = Arrays.copyOf(B(), min);
-                    this.r = Arrays.copyOf(a(), min);
-                    this.s = Arrays.copyOf(b(), min);
+                    this.f13182q = Arrays.copyOf(m20199B(), min);
+                    this.f13183r = Arrays.copyOf(m20198a(), min);
+                    this.f13184s = Arrays.copyOf(m20197b(), min);
                 }
-                B()[i2] = (w ^ (-1)) & b2;
-                a()[i2] = obj;
-                b()[i2] = obj2;
-                this.u = i3;
-                p();
+                m20199B()[i2] = (m20176w ^ (-1)) & m12803b;
+                m20198a()[i2] = obj;
+                m20197b()[i2] = obj2;
+                this.f13186u = i3;
+                m20183p();
                 return null;
             }
-            w = y(w, j17.a(w), b2, i2);
-            length = B().length;
+            m20176w = m20174y(m20176w, j17.m19167a(m20176w), m12803b, i2);
+            length = m20199B().length;
             if (i3 > length) {
-                this.q = Arrays.copyOf(B(), min);
-                this.r = Arrays.copyOf(a(), min);
-                this.s = Arrays.copyOf(b(), min);
+                this.f13182q = Arrays.copyOf(m20199B(), min);
+                this.f13183r = Arrays.copyOf(m20198a(), min);
+                this.f13184s = Arrays.copyOf(m20197b(), min);
             }
-            B()[i2] = (w ^ (-1)) & b2;
-            a()[i2] = obj;
-            b()[i2] = obj2;
-            this.u = i3;
-            p();
+            m20199B()[i2] = (m20176w ^ (-1)) & m12803b;
+            m20198a()[i2] = obj;
+            m20197b()[i2] = obj2;
+            this.f13186u = i3;
+            m20183p();
             return null;
         }
-        int i5 = w ^ (-1);
-        int i6 = b2 & i5;
+        int i5 = m20176w ^ (-1);
+        int i6 = m12803b & i5;
         int i7 = 0;
         while (true) {
-            int i8 = c - 1;
-            int i9 = B[i8];
+            int i8 = m19165c - 1;
+            int i9 = m20199B[i8];
             int i10 = i9 & i5;
-            if (i10 == i6 && ky6.a(obj, a[i8])) {
-                Object obj5 = b[i8];
-                b[i8] = obj2;
+            if (i10 == i6 && ky6.m17316a(obj, m20198a[i8])) {
+                Object obj5 = m20197b[i8];
+                m20197b[i8] = obj2;
                 return obj5;
             }
-            int i11 = i9 & w;
+            int i11 = i9 & m20176w;
             i7++;
             if (i11 != 0) {
-                c = i11;
+                m19165c = i11;
             } else if (i7 >= 9) {
-                LinkedHashMap linkedHashMap = new LinkedHashMap(w() + 1, 1.0f);
-                int g = g();
-                while (g >= 0) {
-                    linkedHashMap.put(a()[g], b()[g]);
-                    g = h(g);
+                LinkedHashMap linkedHashMap = new LinkedHashMap(m20176w() + 1, 1.0f);
+                int m20192g = m20192g();
+                while (m20192g >= 0) {
+                    linkedHashMap.put(m20198a()[m20192g], m20197b()[m20192g]);
+                    m20192g = m20191h(m20192g);
                 }
-                this.p = linkedHashMap;
-                this.q = null;
-                this.r = null;
-                this.s = null;
-                p();
+                this.f13181p = linkedHashMap;
+                this.f13182q = null;
+                this.f13183r = null;
+                this.f13184s = null;
+                m20183p();
                 return linkedHashMap.put(obj, obj2);
-            } else if (i3 <= w) {
-                B[i8] = (i3 & w) | i10;
+            } else if (i3 <= m20176w) {
+                m20199B[i8] = (i3 & m20176w) | i10;
             }
         }
     }
 
-    public final void q(int i) {
-        this.t = i47.b(8, 1, 1073741823);
+    /* renamed from: q */
+    public final void m20182q(int i) {
+        this.f13185t = i47.m20125b(8, 1, 1073741823);
     }
 
-    public final void r(int i, int i2) {
-        Object obj = this.p;
+    /* renamed from: r */
+    public final void m20181r(int i, int i2) {
+        Object obj = this.f13181p;
         obj.getClass();
-        int[] B = B();
-        Object[] a = a();
-        Object[] b = b();
+        int[] m20199B = m20199B();
+        Object[] m20198a = m20198a();
+        Object[] m20197b = m20197b();
         int size = size() - 1;
         if (i >= size) {
-            a[i] = null;
-            b[i] = null;
-            B[i] = 0;
+            m20198a[i] = null;
+            m20197b[i] = null;
+            m20199B[i] = 0;
             return;
         }
-        Object obj2 = a[size];
-        a[i] = obj2;
-        b[i] = b[size];
-        a[size] = null;
-        b[size] = null;
-        B[i] = B[size];
-        B[size] = 0;
-        int b2 = q17.b(obj2) & i2;
-        int c = j17.c(obj, b2);
+        Object obj2 = m20198a[size];
+        m20198a[i] = obj2;
+        m20197b[i] = m20197b[size];
+        m20198a[size] = null;
+        m20197b[size] = null;
+        m20199B[i] = m20199B[size];
+        m20199B[size] = 0;
+        int m12803b = q17.m12803b(obj2) & i2;
+        int m19165c = j17.m19165c(obj, m12803b);
         int i3 = size + 1;
-        if (c == i3) {
-            j17.e(obj, b2, i + 1);
+        if (m19165c == i3) {
+            j17.m19163e(obj, m12803b, i + 1);
             return;
         }
         while (true) {
-            int i4 = c - 1;
-            int i5 = B[i4];
+            int i4 = m19165c - 1;
+            int i5 = m20199B[i4];
             int i6 = i5 & i2;
             if (i6 == i3) {
-                B[i4] = ((i + 1) & i2) | (i5 & (i2 ^ (-1)));
+                m20199B[i4] = ((i + 1) & i2) | (i5 & (i2 ^ (-1)));
                 return;
             }
-            c = i6;
+            m19165c = i6;
         }
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     @CheckForNull
     public final Object remove(@CheckForNull Object obj) {
-        Map n = n();
-        if (n != null) {
-            return n.remove(obj);
+        Map m20185n = m20185n();
+        if (m20185n != null) {
+            return m20185n.remove(obj);
         }
-        Object z = z(obj);
-        if (z == y) {
+        Object m20173z = m20173z(obj);
+        if (m20173z == f13180y) {
             return null;
         }
-        return z;
+        return m20173z;
     }
 
-    public final boolean s() {
-        return this.p == null;
+    /* renamed from: s */
+    public final boolean m20180s() {
+        return this.f13181p == null;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final int size() {
-        Map n = n();
-        return n != null ? n.size() : this.u;
+        Map m20185n = m20185n();
+        return m20185n != null ? m20185n.size() : this.f13186u;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public final Collection values() {
-        Collection collection = this.x;
+        Collection collection = this.f13189x;
         if (collection == null) {
             h17 h17Var = new h17(this);
-            this.x = h17Var;
+            this.f13189x = h17Var;
             return h17Var;
         }
         return collection;
     }
 
-    public final int w() {
-        return (1 << (this.t & 31)) - 1;
+    /* renamed from: w */
+    public final int m20176w() {
+        return (1 << (this.f13185t & 31)) - 1;
     }
 
-    public final int x(@CheckForNull Object obj) {
-        if (s()) {
+    /* renamed from: x */
+    public final int m20175x(@CheckForNull Object obj) {
+        if (m20180s()) {
             return -1;
         }
-        int b = q17.b(obj);
-        int w = w();
-        Object obj2 = this.p;
+        int m12803b = q17.m12803b(obj);
+        int m20176w = m20176w();
+        Object obj2 = this.f13181p;
         obj2.getClass();
-        int c = j17.c(obj2, b & w);
-        if (c != 0) {
-            int i = w ^ (-1);
-            int i2 = b & i;
+        int m19165c = j17.m19165c(obj2, m12803b & m20176w);
+        if (m19165c != 0) {
+            int i = m20176w ^ (-1);
+            int i2 = m12803b & i;
             do {
-                int i3 = c - 1;
-                int i4 = B()[i3];
-                if ((i4 & i) == i2 && ky6.a(obj, a()[i3])) {
+                int i3 = m19165c - 1;
+                int i4 = m20199B()[i3];
+                if ((i4 & i) == i2 && ky6.m17316a(obj, m20198a()[i3])) {
                     return i3;
                 }
-                c = i4 & w;
-            } while (c != 0);
+                m19165c = i4 & m20176w;
+            } while (m19165c != 0);
             return -1;
         }
         return -1;
     }
 
-    public final int y(int i, int i2, int i3, int i4) {
-        Object d = j17.d(i2);
+    /* renamed from: y */
+    public final int m20174y(int i, int i2, int i3, int i4) {
+        Object m19164d = j17.m19164d(i2);
         int i5 = i2 - 1;
         if (i4 != 0) {
-            j17.e(d, i3 & i5, i4 + 1);
+            j17.m19163e(m19164d, i3 & i5, i4 + 1);
         }
-        Object obj = this.p;
+        Object obj = this.f13181p;
         obj.getClass();
-        int[] B = B();
+        int[] m20199B = m20199B();
         for (int i6 = 0; i6 <= i; i6++) {
-            int c = j17.c(obj, i6);
-            while (c != 0) {
-                int i7 = c - 1;
-                int i8 = B[i7];
+            int m19165c = j17.m19165c(obj, i6);
+            while (m19165c != 0) {
+                int i7 = m19165c - 1;
+                int i8 = m20199B[i7];
                 int i9 = ((i ^ (-1)) & i8) | i6;
                 int i10 = i9 & i5;
-                int c2 = j17.c(d, i10);
-                j17.e(d, i10, c);
-                B[i7] = ((i5 ^ (-1)) & i9) | (c2 & i5);
-                c = i8 & i;
+                int m19165c2 = j17.m19165c(m19164d, i10);
+                j17.m19163e(m19164d, i10, m19165c);
+                m20199B[i7] = ((i5 ^ (-1)) & i9) | (m19165c2 & i5);
+                m19165c = i8 & i;
             }
         }
-        this.p = d;
-        A(i5);
+        this.f13181p = m19164d;
+        m20200A(i5);
         return i5;
     }
 
-    public final Object z(@CheckForNull Object obj) {
-        if (s()) {
-            return y;
+    /* renamed from: z */
+    public final Object m20173z(@CheckForNull Object obj) {
+        if (m20180s()) {
+            return f13180y;
         }
-        int w = w();
-        Object obj2 = this.p;
+        int m20176w = m20176w();
+        Object obj2 = this.f13181p;
         obj2.getClass();
-        int b = j17.b(obj, null, w, obj2, B(), a(), null);
-        if (b == -1) {
-            return y;
+        int m19166b = j17.m19166b(obj, null, m20176w, obj2, m20199B(), m20198a(), null);
+        if (m19166b == -1) {
+            return f13180y;
         }
-        Object obj3 = b()[b];
-        r(b, w);
-        this.u--;
-        p();
+        Object obj3 = m20197b()[m19166b];
+        m20181r(m19166b, m20176w);
+        this.f13186u--;
+        m20183p();
         return obj3;
     }
 }

@@ -5,42 +5,49 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class cj6 {
-    public static Bundle a(Bundle bundle, String str) {
+    /* renamed from: a */
+    public static Bundle m25318a(Bundle bundle, String str) {
         Bundle bundle2 = bundle.getBundle(str);
         return bundle2 == null ? new Bundle() : bundle2;
     }
 
-    public static void b(Bundle bundle, String str, Bundle bundle2) {
+    /* renamed from: b */
+    public static void m25317b(Bundle bundle, String str, Bundle bundle2) {
         if (bundle2 != null) {
             bundle.putBundle(str, bundle2);
         }
     }
 
-    public static void c(Bundle bundle, String str, String str2) {
+    /* renamed from: c */
+    public static void m25316c(Bundle bundle, String str, String str2) {
         if (str2 != null) {
             bundle.putString(str, str2);
         }
     }
 
-    public static void d(Bundle bundle, String str, List list) {
+    /* renamed from: d */
+    public static void m25315d(Bundle bundle, String str, List list) {
         if (list != null) {
             bundle.putStringArrayList(str, new ArrayList<>(list));
         }
     }
 
-    public static void e(Bundle bundle, String str, int i, boolean z) {
+    /* renamed from: e */
+    public static void m25314e(Bundle bundle, String str, int i, boolean z) {
         if (z) {
             bundle.putInt(str, i);
         }
     }
 
-    public static void f(Bundle bundle, String str, String str2, boolean z) {
+    /* renamed from: f */
+    public static void m25313f(Bundle bundle, String str, String str2, boolean z) {
         if (z) {
             bundle.putString(str, str2);
         }
     }
 
-    public static void g(Bundle bundle, String str, boolean z, boolean z2) {
+    /* renamed from: g */
+    public static void m25312g(Bundle bundle, String str, boolean z, boolean z2) {
         if (z2) {
             bundle.putBoolean(str, z);
         }

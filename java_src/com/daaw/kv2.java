@@ -4,17 +4,18 @@ import java.util.List;
 /* loaded from: classes2.dex */
 public final class kv2 extends it2 {
     public kv2() {
-        this.a.add(db3.EQUALS);
-        this.a.add(db3.GREATER_THAN);
-        this.a.add(db3.GREATER_THAN_EQUALS);
-        this.a.add(db3.IDENTITY_EQUALS);
-        this.a.add(db3.IDENTITY_NOT_EQUALS);
-        this.a.add(db3.LESS_THAN);
-        this.a.add(db3.LESS_THAN_EQUALS);
-        this.a.add(db3.NOT_EQUALS);
+        this.f13989a.add(db3.EQUALS);
+        this.f13989a.add(db3.GREATER_THAN);
+        this.f13989a.add(db3.GREATER_THAN_EQUALS);
+        this.f13989a.add(db3.IDENTITY_EQUALS);
+        this.f13989a.add(db3.IDENTITY_NOT_EQUALS);
+        this.f13989a.add(db3.LESS_THAN);
+        this.f13989a.add(db3.LESS_THAN_EQUALS);
+        this.f13989a.add(db3.NOT_EQUALS);
     }
 
-    public static boolean c(gl2 gl2Var, gl2 gl2Var2) {
+    /* renamed from: c */
+    public static boolean m17409c(gl2 gl2Var, gl2 gl2Var2) {
         if (gl2Var.getClass().equals(gl2Var2.getClass())) {
             if ((gl2Var instanceof br2) || (gl2Var instanceof xi2)) {
                 return true;
@@ -25,26 +26,27 @@ public final class kv2 extends it2 {
         } else {
             boolean z = gl2Var instanceof tb2;
             if (z && (gl2Var2 instanceof wp2)) {
-                return c(gl2Var, new tb2(gl2Var2.zzh()));
+                return m17409c(gl2Var, new tb2(gl2Var2.zzh()));
             }
             boolean z2 = gl2Var instanceof wp2;
             if ((!z2 || !(gl2Var2 instanceof tb2)) && !(gl2Var instanceof g92)) {
                 if (gl2Var2 instanceof g92) {
-                    return c(gl2Var, new tb2(gl2Var2.zzh()));
+                    return m17409c(gl2Var, new tb2(gl2Var2.zzh()));
                 }
                 if ((z2 || z) && (gl2Var2 instanceof og2)) {
-                    return c(gl2Var, new wp2(gl2Var2.zzi()));
+                    return m17409c(gl2Var, new wp2(gl2Var2.zzi()));
                 }
                 if ((gl2Var instanceof og2) && ((gl2Var2 instanceof wp2) || (gl2Var2 instanceof tb2))) {
-                    return c(new wp2(gl2Var.zzi()), gl2Var2);
+                    return m17409c(new wp2(gl2Var.zzi()), gl2Var2);
                 }
                 return false;
             }
-            return c(new tb2(gl2Var.zzh()), gl2Var2);
+            return m17409c(new tb2(gl2Var.zzh()), gl2Var2);
         }
     }
 
-    public static boolean d(gl2 gl2Var, gl2 gl2Var2) {
+    /* renamed from: d */
+    public static boolean m17408d(gl2 gl2Var, gl2 gl2Var2) {
         if (gl2Var instanceof og2) {
             gl2Var = new wp2(gl2Var.zzi());
         }
@@ -59,53 +61,55 @@ public final class kv2 extends it2 {
         return (Double.isNaN(doubleValue) || Double.isNaN(doubleValue2) || (doubleValue == 0.0d && doubleValue2 == 0.0d) || ((doubleValue == 0.0d && doubleValue2 == 0.0d) || Double.compare(doubleValue, doubleValue2) >= 0)) ? false : true;
     }
 
-    public static boolean e(gl2 gl2Var, gl2 gl2Var2) {
+    /* renamed from: e */
+    public static boolean m17407e(gl2 gl2Var, gl2 gl2Var2) {
         if (gl2Var instanceof og2) {
             gl2Var = new wp2(gl2Var.zzi());
         }
         if (gl2Var2 instanceof og2) {
             gl2Var2 = new wp2(gl2Var2.zzi());
         }
-        return (((gl2Var instanceof wp2) && (gl2Var2 instanceof wp2)) || !(Double.isNaN(gl2Var.zzh().doubleValue()) || Double.isNaN(gl2Var2.zzh().doubleValue()))) && !d(gl2Var2, gl2Var);
+        return (((gl2Var instanceof wp2) && (gl2Var2 instanceof wp2)) || !(Double.isNaN(gl2Var.zzh().doubleValue()) || Double.isNaN(gl2Var2.zzh().doubleValue()))) && !m17408d(gl2Var2, gl2Var);
     }
 
     @Override // com.daaw.it2
-    public final gl2 a(String str, w07 w07Var, List list) {
-        boolean c;
-        boolean c2;
-        ou7.h(ou7.e(str).name(), 2, list);
-        gl2 b = w07Var.b((gl2) list.get(0));
-        gl2 b2 = w07Var.b((gl2) list.get(1));
-        int ordinal = ou7.e(str).ordinal();
+    /* renamed from: a */
+    public final gl2 mo3983a(String str, w07 w07Var, List list) {
+        boolean m17409c;
+        boolean m17409c2;
+        ou7.m13916h(ou7.m13919e(str).name(), 2, list);
+        gl2 m6608b = w07Var.m6608b((gl2) list.get(0));
+        gl2 m6608b2 = w07Var.m6608b((gl2) list.get(1));
+        int ordinal = ou7.m13919e(str).ordinal();
         if (ordinal != 23) {
             if (ordinal == 48) {
-                c2 = c(b, b2);
+                m17409c2 = m17409c(m6608b, m6608b2);
             } else if (ordinal == 42) {
-                c = d(b, b2);
+                m17409c = m17408d(m6608b, m6608b2);
             } else if (ordinal != 43) {
                 switch (ordinal) {
                     case 37:
-                        c = d(b2, b);
+                        m17409c = m17408d(m6608b2, m6608b);
                         break;
                     case 38:
-                        c = e(b2, b);
+                        m17409c = m17407e(m6608b2, m6608b);
                         break;
                     case 39:
-                        c = ou7.l(b, b2);
+                        m17409c = ou7.m13912l(m6608b, m6608b2);
                         break;
                     case 40:
-                        c2 = ou7.l(b, b2);
+                        m17409c2 = ou7.m13912l(m6608b, m6608b2);
                         break;
                     default:
-                        return super.b(str);
+                        return super.m19432b(str);
                 }
             } else {
-                c = e(b, b2);
+                m17409c = m17407e(m6608b, m6608b2);
             }
-            c = !c2;
+            m17409c = !m17409c2;
         } else {
-            c = c(b, b2);
+            m17409c = m17409c(m6608b, m6608b2);
         }
-        return c ? gl2.l : gl2.m;
+        return m17409c ? gl2.f11425l : gl2.f11426m;
     }
 }

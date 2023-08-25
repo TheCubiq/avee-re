@@ -1,14 +1,28 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class wi2 {
-    public static final wi2 f = new fl2(new ng2(), null);
-    public static final th8 g = new th8() { // from class: com.daaw.if2
+
+    /* renamed from: f */
+    public static final wi2 f31263f = new fl2(new ng2(), null);
+
+    /* renamed from: g */
+    public static final th8 f31264g = new th8() { // from class: com.daaw.if2
     };
-    public final long a = 0;
-    public final long b = Long.MIN_VALUE;
-    public final boolean c = false;
-    public final boolean d = false;
-    public final boolean e = false;
+
+    /* renamed from: a */
+    public final long f31265a = 0;
+
+    /* renamed from: b */
+    public final long f31266b = Long.MIN_VALUE;
+
+    /* renamed from: c */
+    public final boolean f31267c = false;
+
+    /* renamed from: d */
+    public final boolean f31268d = false;
+
+    /* renamed from: e */
+    public final boolean f31269e = false;
 
     public /* synthetic */ wi2(ng2 ng2Var, sh2 sh2Var) {
     }
@@ -18,7 +32,7 @@ public class wi2 {
             return true;
         }
         if (obj instanceof wi2) {
-            long j = ((wi2) obj).a;
+            long j = ((wi2) obj).f31265a;
             return true;
         }
         return false;

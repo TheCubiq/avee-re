@@ -7,143 +7,178 @@ import java.util.HashSet;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public abstract class lq8 implements rr8 {
-    public final ArrayList a = new ArrayList(1);
-    public final HashSet b = new HashSet(1);
-    public final yr8 c = new yr8();
-    public final jn8 d = new jn8();
-    public Looper e;
-    public l64 f;
-    public lh8 g;
+
+    /* renamed from: a */
+    public final ArrayList f17644a = new ArrayList(1);
+
+    /* renamed from: b */
+    public final HashSet f17645b = new HashSet(1);
+
+    /* renamed from: c */
+    public final yr8 f17646c = new yr8();
+
+    /* renamed from: d */
+    public final jn8 f17647d = new jn8();
+
+    /* renamed from: e */
+    public Looper f17648e;
+
+    /* renamed from: f */
+    public l64 f17649f;
+
+    /* renamed from: g */
+    public lh8 f17650g;
 
     @Override // com.daaw.rr8
-    public final void a(qr8 qr8Var) {
-        boolean isEmpty = this.b.isEmpty();
-        this.b.remove(qr8Var);
-        if ((!isEmpty) && this.b.isEmpty()) {
-            u();
+    /* renamed from: a */
+    public final void mo11008a(qr8 qr8Var) {
+        boolean isEmpty = this.f17645b.isEmpty();
+        this.f17645b.remove(qr8Var);
+        if ((!isEmpty) && this.f17645b.isEmpty()) {
+            mo9982u();
         }
     }
 
     @Override // com.daaw.rr8
-    public /* synthetic */ boolean b() {
+    /* renamed from: b */
+    public /* synthetic */ boolean mo11007b() {
         return true;
     }
 
     @Override // com.daaw.rr8
-    public final void d(Handler handler, ln8 ln8Var) {
+    /* renamed from: d */
+    public final void mo11006d(Handler handler, ln8 ln8Var) {
         Objects.requireNonNull(ln8Var);
-        this.d.b(handler, ln8Var);
+        this.f17647d.m18378b(handler, ln8Var);
     }
 
     @Override // com.daaw.rr8
-    public final void f(Handler handler, zr8 zr8Var) {
+    /* renamed from: f */
+    public final void mo11005f(Handler handler, zr8 zr8Var) {
         Objects.requireNonNull(zr8Var);
-        this.c.b(handler, zr8Var);
+        this.f17646c.m3371b(handler, zr8Var);
     }
 
     @Override // com.daaw.rr8
-    public final void g(zr8 zr8Var) {
-        this.c.m(zr8Var);
+    /* renamed from: g */
+    public final void mo11004g(zr8 zr8Var) {
+        this.f17646c.m3360m(zr8Var);
     }
 
     @Override // com.daaw.rr8
-    public final void i(ln8 ln8Var) {
-        this.d.c(ln8Var);
+    /* renamed from: i */
+    public final void mo11002i(ln8 ln8Var) {
+        this.f17647d.m18377c(ln8Var);
     }
 
     @Override // com.daaw.rr8
-    public final void j(qr8 qr8Var) {
-        Objects.requireNonNull(this.e);
-        boolean isEmpty = this.b.isEmpty();
-        this.b.add(qr8Var);
+    /* renamed from: j */
+    public final void mo11001j(qr8 qr8Var) {
+        Objects.requireNonNull(this.f17648e);
+        boolean isEmpty = this.f17645b.isEmpty();
+        this.f17645b.add(qr8Var);
         if (isEmpty) {
-            v();
+            mo9981v();
         }
     }
 
     @Override // com.daaw.rr8
-    public final void m(qr8 qr8Var, qz6 qz6Var, lh8 lh8Var) {
+    /* renamed from: m */
+    public final void mo10998m(qr8 qr8Var, qz6 qz6Var, lh8 lh8Var) {
         Looper myLooper = Looper.myLooper();
-        Looper looper = this.e;
+        Looper looper = this.f17648e;
         boolean z = true;
         if (looper != null && looper != myLooper) {
             z = false;
         }
-        uo4.d(z);
-        this.g = lh8Var;
-        l64 l64Var = this.f;
-        this.a.add(qr8Var);
-        if (this.e == null) {
-            this.e = myLooper;
-            this.b.add(qr8Var);
-            w(qz6Var);
+        uo4.m7874d(z);
+        this.f17650g = lh8Var;
+        l64 l64Var = this.f17649f;
+        this.f17644a.add(qr8Var);
+        if (this.f17648e == null) {
+            this.f17648e = myLooper;
+            this.f17645b.add(qr8Var);
+            mo9980w(qz6Var);
         } else if (l64Var != null) {
-            j(qr8Var);
-            qr8Var.a(this, l64Var);
+            mo11001j(qr8Var);
+            qr8Var.mo4028a(this, l64Var);
         }
     }
 
     @Override // com.daaw.rr8
-    public final void n(qr8 qr8Var) {
-        this.a.remove(qr8Var);
-        if (!this.a.isEmpty()) {
-            a(qr8Var);
+    /* renamed from: n */
+    public final void mo10997n(qr8 qr8Var) {
+        this.f17644a.remove(qr8Var);
+        if (!this.f17644a.isEmpty()) {
+            mo11008a(qr8Var);
             return;
         }
-        this.e = null;
-        this.f = null;
-        this.g = null;
-        this.b.clear();
-        y();
+        this.f17648e = null;
+        this.f17649f = null;
+        this.f17650g = null;
+        this.f17645b.clear();
+        mo9979y();
     }
 
-    public final lh8 o() {
-        lh8 lh8Var = this.g;
-        uo4.b(lh8Var);
+    /* renamed from: o */
+    public final lh8 m16644o() {
+        lh8 lh8Var = this.f17650g;
+        uo4.m7876b(lh8Var);
         return lh8Var;
     }
 
     @Override // com.daaw.rr8
-    public /* synthetic */ l64 p() {
+    /* renamed from: p */
+    public /* synthetic */ l64 mo10996p() {
         return null;
     }
 
-    public final jn8 q(pr8 pr8Var) {
-        return this.d.a(0, pr8Var);
+    /* renamed from: q */
+    public final jn8 m16643q(pr8 pr8Var) {
+        return this.f17647d.m18379a(0, pr8Var);
     }
 
-    public final jn8 r(int i, pr8 pr8Var) {
-        return this.d.a(i, pr8Var);
+    /* renamed from: r */
+    public final jn8 m16642r(int i, pr8 pr8Var) {
+        return this.f17647d.m18379a(i, pr8Var);
     }
 
-    public final yr8 s(pr8 pr8Var) {
-        return this.c.a(0, pr8Var, 0L);
+    /* renamed from: s */
+    public final yr8 m16641s(pr8 pr8Var) {
+        return this.f17646c.m3372a(0, pr8Var, 0L);
     }
 
-    public final yr8 t(int i, pr8 pr8Var, long j) {
-        return this.c.a(i, pr8Var, 0L);
+    /* renamed from: t */
+    public final yr8 m16640t(int i, pr8 pr8Var, long j) {
+        return this.f17646c.m3372a(i, pr8Var, 0L);
     }
 
-    public void u() {
+    /* renamed from: u */
+    public void mo9982u() {
     }
 
-    public void v() {
+    /* renamed from: v */
+    public void mo9981v() {
     }
 
-    public abstract void w(qz6 qz6Var);
+    /* renamed from: w */
+    public abstract void mo9980w(qz6 qz6Var);
 
-    public final void x(l64 l64Var) {
-        this.f = l64Var;
-        ArrayList arrayList = this.a;
+    /* renamed from: x */
+    public final void m16639x(l64 l64Var) {
+        this.f17649f = l64Var;
+        ArrayList arrayList = this.f17644a;
         int size = arrayList.size();
         for (int i = 0; i < size; i++) {
-            ((qr8) arrayList.get(i)).a(this, l64Var);
+            ((qr8) arrayList.get(i)).mo4028a(this, l64Var);
         }
     }
 
-    public abstract void y();
+    /* renamed from: y */
+    public abstract void mo9979y();
 
-    public final boolean z() {
-        return !this.b.isEmpty();
+    /* renamed from: z */
+    public final boolean m16638z() {
+        return !this.f17645b.isEmpty();
     }
 }

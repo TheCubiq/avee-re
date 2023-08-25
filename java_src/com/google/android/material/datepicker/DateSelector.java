@@ -11,19 +11,27 @@ import com.daaw.ov0;
 import java.util.Collection;
 /* loaded from: classes2.dex */
 public interface DateSelector<S> extends Parcelable {
-    String d(Context context);
+    /* renamed from: d */
+    String m604d(Context context);
 
-    Collection<ov0<Long, Long>> e();
+    /* renamed from: e */
+    Collection<ov0<Long, Long>> m603e();
 
-    int j(Context context);
+    /* renamed from: j */
+    int m602j(Context context);
 
-    boolean m();
+    /* renamed from: m */
+    boolean m601m();
 
-    Collection<Long> n();
+    /* renamed from: n */
+    Collection<Long> m600n();
 
-    S o();
+    /* renamed from: o */
+    S m599o();
 
-    View p(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle, CalendarConstraints calendarConstraints, ju0<S> ju0Var);
+    /* renamed from: p */
+    View m598p(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle, CalendarConstraints calendarConstraints, ju0<S> ju0Var);
 
-    void r(long j);
+    /* renamed from: r */
+    void m597r(long j);
 }

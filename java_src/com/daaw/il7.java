@@ -1,16 +1,20 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class il7 {
-    public static final os7 a = new hl7();
 
-    public static int a(int i) {
+    /* renamed from: a */
+    public static final os7 f13777a = new hl7();
+
+    /* renamed from: a */
+    public static int m19657a(int i) {
         if (i != 1) {
             return i - 2;
         }
         throw new IllegalArgumentException("Can't get the number of an unknown enum value.");
     }
 
-    public static int b(int i) {
+    /* renamed from: b */
+    public static int m19656b(int i) {
         if (i != 0) {
             if (i != 1) {
                 if (i != 2) {

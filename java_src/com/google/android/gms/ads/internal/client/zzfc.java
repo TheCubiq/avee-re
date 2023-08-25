@@ -13,9 +13,10 @@ import com.daaw.zv3;
 import com.google.android.gms.internal.ads.zzcdy;
 /* loaded from: classes.dex */
 public final class zzfc extends vv3 {
-    public static void g3(final dw3 dw3Var) {
+    /* renamed from: g3 */
+    public static void m1392g3(final dw3 dw3Var) {
         k04.zzg("This app is using a lightweight version of the Google Mobile Ads SDK that requires the latest Google Play services to be installed, but Google Play services is either missing or out of date.");
-        d04.b.post(new Runnable() { // from class: com.google.android.gms.ads.internal.client.zzfb
+        d04.f6340b.post(new Runnable() { // from class: com.google.android.gms.ads.internal.client.zzfb
             @Override // java.lang.Runnable
             public final void run() {
                 dw3 dw3Var2 = dw3.this;
@@ -52,12 +53,12 @@ public final class zzfc extends vv3 {
 
     @Override // com.daaw.wv3
     public final void zzf(zzl zzlVar, dw3 dw3Var) {
-        g3(dw3Var);
+        m1392g3(dw3Var);
     }
 
     @Override // com.daaw.wv3
     public final void zzg(zzl zzlVar, dw3 dw3Var) {
-        g3(dw3Var);
+        m1392g3(dw3Var);
     }
 
     @Override // com.daaw.wv3

@@ -3,20 +3,26 @@ package com.daaw;
 import com.google.android.gms.common.ConnectionResult;
 /* loaded from: classes.dex */
 public final class i22 {
-    public final int a;
-    public final ConnectionResult b;
+
+    /* renamed from: a */
+    public final int f13195a;
+
+    /* renamed from: b */
+    public final ConnectionResult f13196b;
 
     public i22(ConnectionResult connectionResult, int i) {
-        ry0.j(connectionResult);
-        this.b = connectionResult;
-        this.a = i;
+        ry0.m10830j(connectionResult);
+        this.f13196b = connectionResult;
+        this.f13195a = i;
     }
 
-    public final int a() {
-        return this.a;
+    /* renamed from: a */
+    public final int m20170a() {
+        return this.f13195a;
     }
 
-    public final ConnectionResult b() {
-        return this.b;
+    /* renamed from: b */
+    public final ConnectionResult m20169b() {
+        return this.f13196b;
     }
 }

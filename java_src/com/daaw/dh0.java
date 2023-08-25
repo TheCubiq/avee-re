@@ -6,63 +6,78 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class dh0 {
-    public static sw1<Context, String, String> a = new sw1<>();
-    public static rw1<Context, List<String>> b = new rw1<>();
 
+    /* renamed from: a */
+    public static sw1<Context, String, String> f7056a = new sw1<>();
+
+    /* renamed from: b */
+    public static rw1<Context, List<String>> f7057b = new rw1<>();
+
+    /* renamed from: com.daaw.dh0$a */
     /* loaded from: classes.dex */
-    public static class a extends ch0 {
-        public static ch0 g = new a();
+    public static class C1084a extends ch0 {
 
-        /* renamed from: com.daaw.dh0$a$a  reason: collision with other inner class name */
+        /* renamed from: g */
+        public static ch0 f7058g = new C1084a();
+
+        /* renamed from: com.daaw.dh0$a$a */
         /* loaded from: classes.dex */
-        public static abstract class AbstractC0048a extends l0 {
-            public AbstractC0048a() {
-                super(a.g);
+        public static abstract class AbstractC1085a extends AbstractC2004l0 {
+            public AbstractC1085a() {
+                super(C1084a.f7058g);
             }
 
-            public abstract void c(Context context, Object obj, List<String> list);
+            /* renamed from: c */
+            public abstract void mo2219c(Context context, Object obj, List<String> list);
         }
 
-        public a() {
+        public C1084a() {
             super(4, true, R.drawable.ic_add2, R.string.libItemAction_addToFolders);
         }
 
         @Override // com.daaw.ch0
-        public void b(al alVar, List<Object> list, List<l0> list2) {
+        /* renamed from: b */
+        public void mo8957b(C0645al c0645al, List<Object> list, List<AbstractC2004l0> list2) {
             ArrayList arrayList = new ArrayList();
             for (int i = 0; i < list.size(); i++) {
-                ((AbstractC0048a) list2.get(i)).c(alVar.b(), list.get(i), arrayList);
+                ((AbstractC1085a) list2.get(i)).mo2219c(c0645al.m27377b(), list.get(i), arrayList);
             }
-            dh0.b.a(alVar.b(), arrayList);
+            dh0.f7057b.m10862a(c0645al.m27377b(), arrayList);
         }
     }
 
+    /* renamed from: com.daaw.dh0$b */
     /* loaded from: classes.dex */
-    public static class b extends ch0 {
-        public static ch0 g = new b();
+    public static class C1086b extends ch0 {
 
+        /* renamed from: g */
+        public static ch0 f7059g = new C1086b();
+
+        /* renamed from: com.daaw.dh0$b$a */
         /* loaded from: classes.dex */
-        public static abstract class a extends l0 {
-            public a() {
-                super(b.g);
+        public static abstract class AbstractC1087a extends AbstractC2004l0 {
+            public AbstractC1087a() {
+                super(C1086b.f7059g);
             }
 
-            public abstract void c(Context context, Object obj, er0<String, String> er0Var);
+            /* renamed from: c */
+            public abstract void mo24413c(Context context, Object obj, er0<String, String> er0Var);
         }
 
-        public b() {
+        public C1086b() {
             super(4, false, true, R.drawable.ic_close, R.string.libItemAction_removeFolder);
         }
 
         @Override // com.daaw.ch0
-        public void b(al alVar, List<Object> list, List<l0> list2) {
+        /* renamed from: b */
+        public void mo8957b(C0645al c0645al, List<Object> list, List<AbstractC2004l0> list2) {
             er0<String, String> er0Var = new er0<>();
             for (int i = 0; i < list.size(); i++) {
-                ((a) list2.get(i)).c(alVar.b(), list.get(i), er0Var);
+                ((AbstractC1087a) list2.get(i)).mo24413c(c0645al.m27377b(), list.get(i), er0Var);
             }
             lo1<String, String> lo1Var = er0Var.size() > 0 ? er0Var.get(er0Var.size() - 1) : null;
             if (lo1Var != null) {
-                dh0.a.a(alVar.b(), lo1Var.a, lo1Var.b);
+                dh0.f7056a.m9795a(c0645al.m27377b(), lo1Var.f17576a, lo1Var.f17577b);
             }
         }
     }

@@ -7,61 +7,73 @@ import java.util.Set;
 import java.util.WeakHashMap;
 /* loaded from: classes.dex */
 public class v41 {
-    public final Set<l41> a = Collections.newSetFromMap(new WeakHashMap());
-    public final List<l41> b = new ArrayList();
-    public boolean c;
 
-    public void a() {
-        for (l41 l41Var : tq1.h(this.a)) {
+    /* renamed from: a */
+    public final Set<l41> f29859a = Collections.newSetFromMap(new WeakHashMap());
+
+    /* renamed from: b */
+    public final List<l41> f29860b = new ArrayList();
+
+    /* renamed from: c */
+    public boolean f29861c;
+
+    /* renamed from: a */
+    public void m7464a() {
+        for (l41 l41Var : tq1.m8863h(this.f29859a)) {
             l41Var.clear();
         }
-        this.b.clear();
+        this.f29860b.clear();
     }
 
-    public void b() {
-        this.c = true;
-        for (l41 l41Var : tq1.h(this.a)) {
+    /* renamed from: b */
+    public void m7463b() {
+        this.f29861c = true;
+        for (l41 l41Var : tq1.m8863h(this.f29859a)) {
             if (l41Var.isRunning()) {
-                l41Var.b();
-                this.b.add(l41Var);
+                l41Var.mo17163b();
+                this.f29860b.add(l41Var);
             }
         }
     }
 
-    public void c(l41 l41Var) {
-        this.a.remove(l41Var);
-        this.b.remove(l41Var);
+    /* renamed from: c */
+    public void m7462c(l41 l41Var) {
+        this.f29859a.remove(l41Var);
+        this.f29860b.remove(l41Var);
     }
 
-    public void d() {
-        for (l41 l41Var : tq1.h(this.a)) {
-            if (!l41Var.i() && !l41Var.isCancelled()) {
-                l41Var.b();
-                if (this.c) {
-                    this.b.add(l41Var);
+    /* renamed from: d */
+    public void m7461d() {
+        for (l41 l41Var : tq1.m8863h(this.f29859a)) {
+            if (!l41Var.mo17159i() && !l41Var.isCancelled()) {
+                l41Var.mo17163b();
+                if (this.f29861c) {
+                    this.f29860b.add(l41Var);
                 } else {
-                    l41Var.g();
+                    l41Var.mo17160g();
                 }
             }
         }
     }
 
-    public void e() {
-        this.c = false;
-        for (l41 l41Var : tq1.h(this.a)) {
-            if (!l41Var.i() && !l41Var.isCancelled() && !l41Var.isRunning()) {
-                l41Var.g();
+    /* renamed from: e */
+    public void m7460e() {
+        this.f29861c = false;
+        for (l41 l41Var : tq1.m8863h(this.f29859a)) {
+            if (!l41Var.mo17159i() && !l41Var.isCancelled() && !l41Var.isRunning()) {
+                l41Var.mo17160g();
             }
         }
-        this.b.clear();
+        this.f29860b.clear();
     }
 
-    public void f(l41 l41Var) {
-        this.a.add(l41Var);
-        if (this.c) {
-            this.b.add(l41Var);
+    /* renamed from: f */
+    public void m7459f(l41 l41Var) {
+        this.f29859a.add(l41Var);
+        if (this.f29861c) {
+            this.f29860b.add(l41Var);
         } else {
-            l41Var.g();
+            l41Var.mo17160g();
         }
     }
 }

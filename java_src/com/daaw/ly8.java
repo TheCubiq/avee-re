@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ly8 {
-    public static int a(int i) {
+    /* renamed from: a */
+    public static int m16366a(int i) {
         int[] iArr = {1, 2, 3, 4, 5, 6};
         for (int i2 = 0; i2 < 6; i2++) {
             int i3 = iArr[i2];

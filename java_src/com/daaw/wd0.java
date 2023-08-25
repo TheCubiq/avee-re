@@ -3,7 +3,9 @@ package com.daaw;
 import android.net.Uri;
 /* loaded from: classes.dex */
 public interface wd0 {
-    Uri a();
+    /* renamed from: a */
+    Uri mo6166a();
 
-    int b();
+    /* renamed from: b */
+    int mo6165b();
 }

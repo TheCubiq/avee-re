@@ -5,54 +5,71 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public abstract class is1 {
-    public final g6<String, Method> a;
-    public final g6<String, Method> b;
-    public final g6<String, Class> c;
 
-    public is1(g6<String, Method> g6Var, g6<String, Method> g6Var2, g6<String, Class> g6Var3) {
-        this.a = g6Var;
-        this.b = g6Var2;
-        this.c = g6Var3;
+    /* renamed from: a */
+    public final C1370g6<String, Method> f13966a;
+
+    /* renamed from: b */
+    public final C1370g6<String, Method> f13967b;
+
+    /* renamed from: c */
+    public final C1370g6<String, Class> f13968c;
+
+    public is1(C1370g6<String, Method> c1370g6, C1370g6<String, Method> c1370g62, C1370g6<String, Class> c1370g63) {
+        this.f13966a = c1370g6;
+        this.f13967b = c1370g62;
+        this.f13968c = c1370g63;
     }
 
-    public abstract void A(byte[] bArr);
+    /* renamed from: A */
+    public abstract void mo18275A(byte[] bArr);
 
-    public void B(byte[] bArr, int i) {
-        w(i);
-        A(bArr);
+    /* renamed from: B */
+    public void m19471B(byte[] bArr, int i) {
+        mo18261w(i);
+        mo18275A(bArr);
     }
 
-    public abstract void C(CharSequence charSequence);
+    /* renamed from: C */
+    public abstract void mo18274C(CharSequence charSequence);
 
-    public void D(CharSequence charSequence, int i) {
-        w(i);
-        C(charSequence);
+    /* renamed from: D */
+    public void m19470D(CharSequence charSequence, int i) {
+        mo18261w(i);
+        mo18274C(charSequence);
     }
 
-    public abstract void E(int i);
+    /* renamed from: E */
+    public abstract void mo18273E(int i);
 
-    public void F(int i, int i2) {
-        w(i2);
-        E(i);
+    /* renamed from: F */
+    public void m19469F(int i, int i2) {
+        mo18261w(i2);
+        mo18273E(i);
     }
 
-    public abstract void G(Parcelable parcelable);
+    /* renamed from: G */
+    public abstract void mo18272G(Parcelable parcelable);
 
-    public void H(Parcelable parcelable, int i) {
-        w(i);
-        G(parcelable);
+    /* renamed from: H */
+    public void m19468H(Parcelable parcelable, int i) {
+        mo18261w(i);
+        mo18272G(parcelable);
     }
 
-    public abstract void I(String str);
+    /* renamed from: I */
+    public abstract void mo18271I(String str);
 
-    public void J(String str, int i) {
-        w(i);
-        I(str);
+    /* renamed from: J */
+    public void m19467J(String str, int i) {
+        mo18261w(i);
+        mo18271I(str);
     }
 
-    public <T extends ks1> void K(T t, is1 is1Var) {
+    /* renamed from: K */
+    public <T extends ks1> void m19466K(T t, is1 is1Var) {
         try {
-            e(t.getClass()).invoke(null, t, is1Var);
+            m19460e(t.getClass()).invoke(null, t, is1Var);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("VersionedParcel encountered ClassNotFoundException", e);
         } catch (IllegalAccessException e2) {
@@ -67,95 +84,112 @@ public abstract class is1 {
         }
     }
 
-    public void L(ks1 ks1Var) {
+    /* renamed from: L */
+    public void m19465L(ks1 ks1Var) {
         if (ks1Var == null) {
-            I(null);
+            mo18271I(null);
             return;
         }
-        N(ks1Var);
-        is1 b = b();
-        K(ks1Var, b);
-        b.a();
+        m19463N(ks1Var);
+        is1 mo18269b = mo18269b();
+        m19466K(ks1Var, mo18269b);
+        mo18269b.mo18270a();
     }
 
-    public void M(ks1 ks1Var, int i) {
-        w(i);
-        L(ks1Var);
+    /* renamed from: M */
+    public void m19464M(ks1 ks1Var, int i) {
+        mo18261w(i);
+        m19465L(ks1Var);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final void N(ks1 ks1Var) {
+    /* renamed from: N */
+    public final void m19463N(ks1 ks1Var) {
         try {
-            I(c(ks1Var.getClass()).getName());
+            mo18271I(m19462c(ks1Var.getClass()).getName());
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(ks1Var.getClass().getSimpleName() + " does not have a Parcelizer", e);
         }
     }
 
-    public abstract void a();
+    /* renamed from: a */
+    public abstract void mo18270a();
 
-    public abstract is1 b();
+    /* renamed from: b */
+    public abstract is1 mo18269b();
 
-    public final Class c(Class<? extends ks1> cls) {
-        Class cls2 = this.c.get(cls.getName());
+    /* renamed from: c */
+    public final Class m19462c(Class<? extends ks1> cls) {
+        Class cls2 = this.f13968c.get(cls.getName());
         if (cls2 == null) {
             Class<?> cls3 = Class.forName(String.format("%s.%sParcelizer", cls.getPackage().getName(), cls.getSimpleName()), false, cls.getClassLoader());
-            this.c.put(cls.getName(), cls3);
+            this.f13968c.put(cls.getName(), cls3);
             return cls3;
         }
         return cls2;
     }
 
-    public final Method d(String str) {
-        Method method = this.a.get(str);
+    /* renamed from: d */
+    public final Method m19461d(String str) {
+        Method method = this.f13966a.get(str);
         if (method == null) {
             System.currentTimeMillis();
             Method declaredMethod = Class.forName(str, true, is1.class.getClassLoader()).getDeclaredMethod("read", is1.class);
-            this.a.put(str, declaredMethod);
+            this.f13966a.put(str, declaredMethod);
             return declaredMethod;
         }
         return method;
     }
 
-    public final Method e(Class cls) {
-        Method method = this.b.get(cls.getName());
+    /* renamed from: e */
+    public final Method m19460e(Class cls) {
+        Method method = this.f13967b.get(cls.getName());
         if (method == null) {
-            Class c = c(cls);
+            Class m19462c = m19462c(cls);
             System.currentTimeMillis();
-            Method declaredMethod = c.getDeclaredMethod("write", cls, is1.class);
-            this.b.put(cls.getName(), declaredMethod);
+            Method declaredMethod = m19462c.getDeclaredMethod("write", cls, is1.class);
+            this.f13967b.put(cls.getName(), declaredMethod);
             return declaredMethod;
         }
         return method;
     }
 
-    public boolean f() {
+    /* renamed from: f */
+    public boolean m19459f() {
         return false;
     }
 
-    public abstract boolean g();
+    /* renamed from: g */
+    public abstract boolean mo18268g();
 
-    public boolean h(boolean z, int i) {
-        return !m(i) ? z : g();
+    /* renamed from: h */
+    public boolean m19458h(boolean z, int i) {
+        return !mo18265m(i) ? z : mo18268g();
     }
 
-    public abstract byte[] i();
+    /* renamed from: i */
+    public abstract byte[] mo18267i();
 
-    public byte[] j(byte[] bArr, int i) {
-        return !m(i) ? bArr : i();
+    /* renamed from: j */
+    public byte[] m19457j(byte[] bArr, int i) {
+        return !mo18265m(i) ? bArr : mo18267i();
     }
 
-    public abstract CharSequence k();
+    /* renamed from: k */
+    public abstract CharSequence mo18266k();
 
-    public CharSequence l(CharSequence charSequence, int i) {
-        return !m(i) ? charSequence : k();
+    /* renamed from: l */
+    public CharSequence m19456l(CharSequence charSequence, int i) {
+        return !mo18265m(i) ? charSequence : mo18266k();
     }
 
-    public abstract boolean m(int i);
+    /* renamed from: m */
+    public abstract boolean mo18265m(int i);
 
-    public <T extends ks1> T n(String str, is1 is1Var) {
+    /* renamed from: n */
+    public <T extends ks1> T m19455n(String str, is1 is1Var) {
         try {
-            return (T) d(str).invoke(null, is1Var);
+            return (T) m19461d(str).invoke(null, is1Var);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException("VersionedParcel encountered ClassNotFoundException", e);
         } catch (IllegalAccessException e2) {
@@ -170,45 +204,57 @@ public abstract class is1 {
         }
     }
 
-    public abstract int o();
+    /* renamed from: o */
+    public abstract int mo18264o();
 
-    public int p(int i, int i2) {
-        return !m(i2) ? i : o();
+    /* renamed from: p */
+    public int m19454p(int i, int i2) {
+        return !mo18265m(i2) ? i : mo18264o();
     }
 
-    public abstract <T extends Parcelable> T q();
+    /* renamed from: q */
+    public abstract <T extends Parcelable> T mo18263q();
 
-    public <T extends Parcelable> T r(T t, int i) {
-        return !m(i) ? t : (T) q();
+    /* renamed from: r */
+    public <T extends Parcelable> T m19453r(T t, int i) {
+        return !mo18265m(i) ? t : (T) mo18263q();
     }
 
-    public abstract String s();
+    /* renamed from: s */
+    public abstract String mo18262s();
 
-    public String t(String str, int i) {
-        return !m(i) ? str : s();
+    /* renamed from: t */
+    public String m19452t(String str, int i) {
+        return !mo18265m(i) ? str : mo18262s();
     }
 
-    public <T extends ks1> T u() {
-        String s = s();
-        if (s == null) {
+    /* renamed from: u */
+    public <T extends ks1> T m19451u() {
+        String mo18262s = mo18262s();
+        if (mo18262s == null) {
             return null;
         }
-        return (T) n(s, b());
+        return (T) m19455n(mo18262s, mo18269b());
     }
 
-    public <T extends ks1> T v(T t, int i) {
-        return !m(i) ? t : (T) u();
+    /* renamed from: v */
+    public <T extends ks1> T m19450v(T t, int i) {
+        return !mo18265m(i) ? t : (T) m19451u();
     }
 
-    public abstract void w(int i);
+    /* renamed from: w */
+    public abstract void mo18261w(int i);
 
-    public void x(boolean z, boolean z2) {
+    /* renamed from: x */
+    public void m19449x(boolean z, boolean z2) {
     }
 
-    public abstract void y(boolean z);
+    /* renamed from: y */
+    public abstract void mo18260y(boolean z);
 
-    public void z(boolean z, int i) {
-        w(i);
-        y(z);
+    /* renamed from: z */
+    public void m19448z(boolean z, int i) {
+        mo18261w(i);
+        mo18260y(z);
     }
 }

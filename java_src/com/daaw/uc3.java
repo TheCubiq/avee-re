@@ -10,7 +10,8 @@ public abstract class uc3 extends cp2 implements vc3 {
         super("com.google.android.gms.ads.internal.formats.client.INativeAdImage");
     }
 
-    public static vc3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static vc3 m8320g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -19,16 +20,17 @@ public abstract class uc3 extends cp2 implements vc3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         int zzd;
         if (i == 1) {
             yd0 zzf = zzf();
             parcel2.writeNoException();
-            dp2.g(parcel2, zzf);
+            dp2.m24101g(parcel2, zzf);
         } else if (i == 2) {
             Uri zze = zze();
             parcel2.writeNoException();
-            dp2.f(parcel2, zze);
+            dp2.m24102f(parcel2, zze);
         } else if (i != 3) {
             if (i == 4) {
                 zzd = zzd();

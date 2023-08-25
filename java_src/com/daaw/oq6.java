@@ -5,18 +5,25 @@ import android.content.Context;
 /* loaded from: classes.dex */
 public final class oq6 {
     @SuppressLint({"StaticFieldLeak"})
-    public static final oq6 b = new oq6();
-    public Context a;
 
-    public static oq6 b() {
-        return b;
+    /* renamed from: b */
+    public static final oq6 f21835b = new oq6();
+
+    /* renamed from: a */
+    public Context f21836a;
+
+    /* renamed from: b */
+    public static oq6 m14068b() {
+        return f21835b;
     }
 
-    public final Context a() {
-        return this.a;
+    /* renamed from: a */
+    public final Context m14069a() {
+        return this.f21836a;
     }
 
-    public final void c(Context context) {
-        this.a = context != null ? context.getApplicationContext() : null;
+    /* renamed from: c */
+    public final void m14067c(Context context) {
+        this.f21836a = context != null ? context.getApplicationContext() : null;
     }
 }

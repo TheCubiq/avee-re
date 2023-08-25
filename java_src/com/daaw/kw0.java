@@ -1,94 +1,125 @@
 package com.daaw;
 
+import com.daaw.C2158m9;
 import com.daaw.jw0;
-import com.daaw.m9;
 import com.google.auto.value.AutoValue;
 @AutoValue
 /* loaded from: classes2.dex */
 public abstract class kw0 {
-    public static kw0 a = a().a();
+
+    /* renamed from: a */
+    public static kw0 f16785a = m17394a().mo16155a();
 
     @AutoValue.Builder
+    /* renamed from: com.daaw.kw0$a */
     /* loaded from: classes2.dex */
-    public static abstract class a {
-        public abstract kw0 a();
+    public static abstract class AbstractC1990a {
+        /* renamed from: a */
+        public abstract kw0 mo16155a();
 
-        public abstract a b(String str);
+        /* renamed from: b */
+        public abstract AbstractC1990a mo16154b(String str);
 
-        public abstract a c(long j);
+        /* renamed from: c */
+        public abstract AbstractC1990a mo16153c(long j);
 
-        public abstract a d(String str);
+        /* renamed from: d */
+        public abstract AbstractC1990a mo16152d(String str);
 
-        public abstract a e(String str);
+        /* renamed from: e */
+        public abstract AbstractC1990a mo16151e(String str);
 
-        public abstract a f(String str);
+        /* renamed from: f */
+        public abstract AbstractC1990a mo16150f(String str);
 
-        public abstract a g(jw0.a aVar);
+        /* renamed from: g */
+        public abstract AbstractC1990a mo16149g(jw0.EnumC1884a enumC1884a);
 
-        public abstract a h(long j);
+        /* renamed from: h */
+        public abstract AbstractC1990a mo16148h(long j);
     }
 
-    public static a a() {
-        return new m9.b().h(0L).g(jw0.a.ATTEMPT_MIGRATION).c(0L);
+    /* renamed from: a */
+    public static AbstractC1990a m17394a() {
+        return new C2158m9.C2160b().mo16148h(0L).mo16149g(jw0.EnumC1884a.ATTEMPT_MIGRATION).mo16153c(0L);
     }
 
-    public abstract String b();
+    /* renamed from: b */
+    public abstract String mo16163b();
 
-    public abstract long c();
+    /* renamed from: c */
+    public abstract long mo16162c();
 
-    public abstract String d();
+    /* renamed from: d */
+    public abstract String mo16161d();
 
-    public abstract String e();
+    /* renamed from: e */
+    public abstract String mo16160e();
 
-    public abstract String f();
+    /* renamed from: f */
+    public abstract String mo16159f();
 
-    public abstract jw0.a g();
+    /* renamed from: g */
+    public abstract jw0.EnumC1884a mo16158g();
 
-    public abstract long h();
+    /* renamed from: h */
+    public abstract long mo16157h();
 
-    public boolean i() {
-        return g() == jw0.a.REGISTER_ERROR;
+    /* renamed from: i */
+    public boolean m17393i() {
+        return mo16158g() == jw0.EnumC1884a.REGISTER_ERROR;
     }
 
-    public boolean j() {
-        return g() == jw0.a.NOT_GENERATED || g() == jw0.a.ATTEMPT_MIGRATION;
+    /* renamed from: j */
+    public boolean m17392j() {
+        return mo16158g() == jw0.EnumC1884a.NOT_GENERATED || mo16158g() == jw0.EnumC1884a.ATTEMPT_MIGRATION;
     }
 
-    public boolean k() {
-        return g() == jw0.a.REGISTERED;
+    /* renamed from: k */
+    public boolean m17391k() {
+        return mo16158g() == jw0.EnumC1884a.REGISTERED;
     }
 
-    public boolean l() {
-        return g() == jw0.a.UNREGISTERED;
+    /* renamed from: l */
+    public boolean m17390l() {
+        return mo16158g() == jw0.EnumC1884a.UNREGISTERED;
     }
 
-    public boolean m() {
-        return g() == jw0.a.ATTEMPT_MIGRATION;
+    /* renamed from: m */
+    public boolean m17389m() {
+        return mo16158g() == jw0.EnumC1884a.ATTEMPT_MIGRATION;
     }
 
-    public abstract a n();
+    /* renamed from: n */
+    public abstract AbstractC1990a mo16156n();
 
-    public kw0 o(String str, long j, long j2) {
-        return n().b(str).c(j).h(j2).a();
+    /* renamed from: o */
+    public kw0 m17388o(String str, long j, long j2) {
+        return mo16156n().mo16154b(str).mo16153c(j).mo16148h(j2).mo16155a();
     }
 
-    public kw0 p() {
-        return n().b(null).a();
+    /* renamed from: p */
+    public kw0 m17387p() {
+        return mo16156n().mo16154b(null).mo16155a();
     }
 
-    public kw0 q(String str) {
-        return n().e(str).g(jw0.a.REGISTER_ERROR).a();
+    /* renamed from: q */
+    public kw0 m17386q(String str) {
+        return mo16156n().mo16151e(str).mo16149g(jw0.EnumC1884a.REGISTER_ERROR).mo16155a();
     }
 
-    public kw0 r() {
-        return n().g(jw0.a.NOT_GENERATED).a();
+    /* renamed from: r */
+    public kw0 m17385r() {
+        return mo16156n().mo16149g(jw0.EnumC1884a.NOT_GENERATED).mo16155a();
     }
 
-    public kw0 s(String str, String str2, long j, String str3, long j2) {
-        return n().d(str).g(jw0.a.REGISTERED).b(str3).f(str2).c(j2).h(j).a();
+    /* renamed from: s */
+    public kw0 m17384s(String str, String str2, long j, String str3, long j2) {
+        return mo16156n().mo16152d(str).mo16149g(jw0.EnumC1884a.REGISTERED).mo16154b(str3).mo16150f(str2).mo16153c(j2).mo16148h(j).mo16155a();
     }
 
-    public kw0 t(String str) {
-        return n().d(str).g(jw0.a.UNREGISTERED).a();
+    /* renamed from: t */
+    public kw0 m17383t(String str) {
+        return mo16156n().mo16152d(str).mo16149g(jw0.EnumC1884a.UNREGISTERED).mo16155a();
     }
 }

@@ -13,15 +13,17 @@ public final class AdRequest {
         NETWORK_ERROR("A network error occurred."),
         INTERNAL_ERROR("There was an internal error.");
         
-        public final String p;
+
+        /* renamed from: p */
+        public final String f35697p;
 
         ErrorCode(String str) {
-            this.p = str;
+            this.f35697p = str;
         }
 
         @Override // java.lang.Enum
         public String toString() {
-            return this.p;
+            return this.f35697p;
         }
     }
 

@@ -3,53 +3,69 @@ package com.daaw;
 import java.util.concurrent.Executor;
 /* loaded from: classes2.dex */
 public abstract class rj1<TResult> {
-    public rj1<TResult> a(Executor executor, zt0 zt0Var) {
+    /* renamed from: a */
+    public rj1<TResult> mo11249a(Executor executor, zt0 zt0Var) {
         throw new UnsupportedOperationException("addOnCanceledListener is not implemented");
     }
 
-    public rj1<TResult> b(cu0<TResult> cu0Var) {
+    /* renamed from: b */
+    public rj1<TResult> mo11248b(cu0<TResult> cu0Var) {
         throw new UnsupportedOperationException("addOnCompleteListener is not implemented");
     }
 
-    public rj1<TResult> c(Executor executor, cu0<TResult> cu0Var) {
+    /* renamed from: c */
+    public rj1<TResult> mo11247c(Executor executor, cu0<TResult> cu0Var) {
         throw new UnsupportedOperationException("addOnCompleteListener is not implemented");
     }
 
-    public abstract rj1<TResult> d(Executor executor, gu0 gu0Var);
+    /* renamed from: d */
+    public abstract rj1<TResult> mo11246d(Executor executor, gu0 gu0Var);
 
-    public abstract rj1<TResult> e(Executor executor, ku0<? super TResult> ku0Var);
+    /* renamed from: e */
+    public abstract rj1<TResult> mo11245e(Executor executor, ku0<? super TResult> ku0Var);
 
-    public <TContinuationResult> rj1<TContinuationResult> f(hl<TResult, TContinuationResult> hlVar) {
+    /* renamed from: f */
+    public <TContinuationResult> rj1<TContinuationResult> mo11244f(InterfaceC1587hl<TResult, TContinuationResult> interfaceC1587hl) {
         throw new UnsupportedOperationException("continueWith is not implemented");
     }
 
-    public <TContinuationResult> rj1<TContinuationResult> g(Executor executor, hl<TResult, TContinuationResult> hlVar) {
+    /* renamed from: g */
+    public <TContinuationResult> rj1<TContinuationResult> mo11243g(Executor executor, InterfaceC1587hl<TResult, TContinuationResult> interfaceC1587hl) {
         throw new UnsupportedOperationException("continueWith is not implemented");
     }
 
-    public <TContinuationResult> rj1<TContinuationResult> h(hl<TResult, rj1<TContinuationResult>> hlVar) {
+    /* renamed from: h */
+    public <TContinuationResult> rj1<TContinuationResult> mo11242h(InterfaceC1587hl<TResult, rj1<TContinuationResult>> interfaceC1587hl) {
         throw new UnsupportedOperationException("continueWithTask is not implemented");
     }
 
-    public <TContinuationResult> rj1<TContinuationResult> i(Executor executor, hl<TResult, rj1<TContinuationResult>> hlVar) {
+    /* renamed from: i */
+    public <TContinuationResult> rj1<TContinuationResult> mo11241i(Executor executor, InterfaceC1587hl<TResult, rj1<TContinuationResult>> interfaceC1587hl) {
         throw new UnsupportedOperationException("continueWithTask is not implemented");
     }
 
-    public abstract Exception j();
+    /* renamed from: j */
+    public abstract Exception mo11240j();
 
-    public abstract TResult k();
+    /* renamed from: k */
+    public abstract TResult mo11239k();
 
-    public abstract boolean l();
+    /* renamed from: l */
+    public abstract boolean mo11238l();
 
-    public abstract boolean m();
+    /* renamed from: m */
+    public abstract boolean mo11237m();
 
-    public abstract boolean n();
+    /* renamed from: n */
+    public abstract boolean mo11236n();
 
-    public <TContinuationResult> rj1<TContinuationResult> o(ai1<TResult, TContinuationResult> ai1Var) {
+    /* renamed from: o */
+    public <TContinuationResult> rj1<TContinuationResult> mo11235o(ai1<TResult, TContinuationResult> ai1Var) {
         throw new UnsupportedOperationException("onSuccessTask is not implemented");
     }
 
-    public <TContinuationResult> rj1<TContinuationResult> p(Executor executor, ai1<TResult, TContinuationResult> ai1Var) {
+    /* renamed from: p */
+    public <TContinuationResult> rj1<TContinuationResult> mo11234p(Executor executor, ai1<TResult, TContinuationResult> ai1Var) {
         throw new UnsupportedOperationException("onSuccessTask is not implemented");
     }
 }

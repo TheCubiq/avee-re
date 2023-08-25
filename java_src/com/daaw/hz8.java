@@ -1,35 +1,49 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class hz8 implements i42 {
-    public final kz8 a;
-    public final long b;
-    public final long c;
-    public final long d;
-    public final long e;
-    public final long f;
+
+    /* renamed from: a */
+    public final kz8 f13086a;
+
+    /* renamed from: b */
+    public final long f13087b;
+
+    /* renamed from: c */
+    public final long f13088c;
+
+    /* renamed from: d */
+    public final long f13089d;
+
+    /* renamed from: e */
+    public final long f13090e;
+
+    /* renamed from: f */
+    public final long f13091f;
 
     public hz8(kz8 kz8Var, long j, long j2, long j3, long j4, long j5, long j6) {
-        this.a = kz8Var;
-        this.b = j;
-        this.c = j3;
-        this.d = j4;
-        this.e = j5;
-        this.f = j6;
+        this.f13086a = kz8Var;
+        this.f13087b = j;
+        this.f13088c = j3;
+        this.f13089d = j4;
+        this.f13090e = j5;
+        this.f13091f = j6;
     }
 
     @Override // com.daaw.i42
-    public final g42 b(long j) {
-        j42 j42Var = new j42(j, jz8.f(this.a.a(j), 0L, this.c, this.d, this.e, this.f));
+    /* renamed from: b */
+    public final g42 mo2631b(long j) {
+        j42 j42Var = new j42(j, jz8.m18118f(this.f13086a.mo15520a(j), 0L, this.f13088c, this.f13089d, this.f13090e, this.f13091f));
         return new g42(j42Var, j42Var);
     }
 
-    public final long g(long j) {
-        return this.a.a(j);
+    /* renamed from: g */
+    public final long m20307g(long j) {
+        return this.f13086a.mo15520a(j);
     }
 
     @Override // com.daaw.i42
     public final long zze() {
-        return this.b;
+        return this.f13087b;
     }
 
     @Override // com.daaw.i42

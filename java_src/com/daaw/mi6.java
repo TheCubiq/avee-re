@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class mi6 implements wz7 {
-    public static mi6 a() {
+    /* renamed from: a */
+    public static mi6 m16022a() {
         mi6 mi6Var;
-        mi6Var = li6.a;
+        mi6Var = li6.f17427a;
         return mi6Var;
     }
 

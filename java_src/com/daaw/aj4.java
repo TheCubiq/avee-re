@@ -1,11 +1,15 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class aj4 extends am4 {
-    public abstract zi4 h();
+    /* renamed from: h */
+    public abstract zi4 mo9371h();
 
-    public abstract ny4 i();
+    /* renamed from: i */
+    public abstract ny4 mo9370i();
 
-    public abstract ha5 j();
+    /* renamed from: j */
+    public abstract ha5 mo9369j();
 
-    public abstract uw5 k();
+    /* renamed from: k */
+    public abstract uw5 mo9368k();
 }

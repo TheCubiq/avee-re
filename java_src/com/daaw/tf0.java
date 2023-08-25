@@ -6,51 +6,71 @@ import java.util.Date;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public class tf0 {
-    public static final DateFormat g = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-    public Date a = null;
-    public Date b = null;
-    public String c = null;
-    public String d = null;
-    public String e = null;
-    public String f = "1";
 
-    public String a() {
-        return this.c;
+    /* renamed from: g */
+    public static final DateFormat f27582g = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+
+    /* renamed from: a */
+    public Date f27583a = null;
+
+    /* renamed from: b */
+    public Date f27584b = null;
+
+    /* renamed from: c */
+    public String f27585c = null;
+
+    /* renamed from: d */
+    public String f27586d = null;
+
+    /* renamed from: e */
+    public String f27587e = null;
+
+    /* renamed from: f */
+    public String f27588f = "1";
+
+    /* renamed from: a */
+    public String m9212a() {
+        return this.f27585c;
     }
 
-    public String b() {
+    /* renamed from: b */
+    public String m9211b() {
         String format;
-        if (this.a != null) {
-            DateFormat dateFormat = g;
+        if (this.f27583a != null) {
+            DateFormat dateFormat = f27582g;
             synchronized (dateFormat) {
-                format = dateFormat.format(this.a);
+                format = dateFormat.format(this.f27583a);
             }
             return format;
         }
         return null;
     }
 
-    public String c() {
-        return this.f;
+    /* renamed from: c */
+    public String m9210c() {
+        return this.f27588f;
     }
 
-    public String d() {
+    /* renamed from: d */
+    public String m9209d() {
         String format;
-        if (this.b != null) {
-            DateFormat dateFormat = g;
+        if (this.f27584b != null) {
+            DateFormat dateFormat = f27582g;
             synchronized (dateFormat) {
-                format = dateFormat.format(this.b);
+                format = dateFormat.format(this.f27584b);
             }
             return format;
         }
         return null;
     }
 
-    public String e() {
-        return this.d;
+    /* renamed from: e */
+    public String m9208e() {
+        return this.f27586d;
     }
 
-    public String f() {
-        return this.e;
+    /* renamed from: f */
+    public String m9207f() {
+        return this.f27587e;
     }
 }

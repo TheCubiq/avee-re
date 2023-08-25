@@ -7,23 +7,32 @@ import android.view.Surface;
 import java.nio.ByteBuffer;
 /* loaded from: classes.dex */
 public interface bp8 {
-    void a(int i, long j);
+    /* renamed from: a */
+    void mo18333a(int i, long j);
 
-    void b(int i, int i2, int i3, long j, int i4);
+    /* renamed from: b */
+    void mo18332b(int i, int i2, int i3, long j, int i4);
 
-    ByteBuffer c(int i);
+    /* renamed from: c */
+    ByteBuffer mo18331c(int i);
 
-    void d(int i, int i2, d77 d77Var, long j, int i3);
+    /* renamed from: d */
+    void mo18330d(int i, int i2, d77 d77Var, long j, int i3);
 
-    void e(Surface surface);
+    /* renamed from: e */
+    void mo18329e(Surface surface);
 
-    void f(int i);
+    /* renamed from: f */
+    void mo18328f(int i);
 
-    void g(int i, boolean z);
+    /* renamed from: g */
+    void mo18327g(int i, boolean z);
 
-    int h(MediaCodec.BufferInfo bufferInfo);
+    /* renamed from: h */
+    int mo18326h(MediaCodec.BufferInfo bufferInfo);
 
-    void o(Bundle bundle);
+    /* renamed from: o */
+    void mo18325o(Bundle bundle);
 
     int zza();
 

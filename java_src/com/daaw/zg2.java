@@ -3,45 +3,48 @@ package com.daaw;
 import java.io.ByteArrayOutputStream;
 /* loaded from: classes.dex */
 public final class zg2 extends ByteArrayOutputStream {
-    public final hg2 p;
+
+    /* renamed from: p */
+    public final hg2 f35030p;
 
     public zg2(hg2 hg2Var, int i) {
-        this.p = hg2Var;
-        ((ByteArrayOutputStream) this).buf = hg2Var.b(Math.max(i, 256));
+        this.f35030p = hg2Var;
+        ((ByteArrayOutputStream) this).buf = hg2Var.m20801b(Math.max(i, 256));
     }
 
     @Override // java.io.ByteArrayOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
     public final void close() {
-        this.p.a(((ByteArrayOutputStream) this).buf);
+        this.f35030p.m20802a(((ByteArrayOutputStream) this).buf);
         ((ByteArrayOutputStream) this).buf = null;
         super.close();
     }
 
-    public final void d(int i) {
+    /* renamed from: d */
+    public final void m2342d(int i) {
         int i2 = ((ByteArrayOutputStream) this).count;
         if (i2 + i <= ((ByteArrayOutputStream) this).buf.length) {
             return;
         }
         int i3 = i2 + i;
-        byte[] b = this.p.b(i3 + i3);
-        System.arraycopy(((ByteArrayOutputStream) this).buf, 0, b, 0, ((ByteArrayOutputStream) this).count);
-        this.p.a(((ByteArrayOutputStream) this).buf);
-        ((ByteArrayOutputStream) this).buf = b;
+        byte[] m20801b = this.f35030p.m20801b(i3 + i3);
+        System.arraycopy(((ByteArrayOutputStream) this).buf, 0, m20801b, 0, ((ByteArrayOutputStream) this).count);
+        this.f35030p.m20802a(((ByteArrayOutputStream) this).buf);
+        ((ByteArrayOutputStream) this).buf = m20801b;
     }
 
     public final void finalize() {
-        this.p.a(((ByteArrayOutputStream) this).buf);
+        this.f35030p.m20802a(((ByteArrayOutputStream) this).buf);
     }
 
     @Override // java.io.ByteArrayOutputStream, java.io.OutputStream
     public final synchronized void write(int i) {
-        d(1);
+        m2342d(1);
         super.write(i);
     }
 
     @Override // java.io.ByteArrayOutputStream, java.io.OutputStream
     public final synchronized void write(byte[] bArr, int i, int i2) {
-        d(i2);
+        m2342d(i2);
         super.write(bArr, i, i2);
     }
 }

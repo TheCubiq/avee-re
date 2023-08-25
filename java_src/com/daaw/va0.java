@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface va0 {
-    rj1<String> a();
+    /* renamed from: a */
+    rj1<String> mo7304a();
 }

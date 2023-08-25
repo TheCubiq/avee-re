@@ -7,44 +7,60 @@ import java.util.Objects;
 @TargetApi(16)
 /* loaded from: classes.dex */
 public final class ju2 {
-    public final String a;
-    public final boolean b;
-    public final boolean c;
-    public final boolean d;
-    public final String e;
-    public final MediaCodecInfo.CodecCapabilities f;
+
+    /* renamed from: a */
+    public final String f15415a;
+
+    /* renamed from: b */
+    public final boolean f15416b;
+
+    /* renamed from: c */
+    public final boolean f15417c;
+
+    /* renamed from: d */
+    public final boolean f15418d;
+
+    /* renamed from: e */
+    public final String f15419e;
+
+    /* renamed from: f */
+    public final MediaCodecInfo.CodecCapabilities f15420f;
 
     public ju2(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities, boolean z, boolean z2) {
         Objects.requireNonNull(str);
-        this.a = str;
-        this.e = str2;
-        this.f = codecCapabilities;
+        this.f15415a = str;
+        this.f15419e = str2;
+        this.f15420f = codecCapabilities;
         boolean z3 = true;
-        this.b = !z && codecCapabilities != null && pz2.a >= 19 && codecCapabilities.isFeatureSupported("adaptive-playback");
-        this.c = codecCapabilities != null && pz2.a >= 21 && codecCapabilities.isFeatureSupported("tunneled-playback");
-        if (!z2 && (codecCapabilities == null || pz2.a < 21 || !codecCapabilities.isFeatureSupported("secure-playback"))) {
+        this.f15416b = !z && codecCapabilities != null && pz2.f23547a >= 19 && codecCapabilities.isFeatureSupported("adaptive-playback");
+        this.f15417c = codecCapabilities != null && pz2.f23547a >= 21 && codecCapabilities.isFeatureSupported("tunneled-playback");
+        if (!z2 && (codecCapabilities == null || pz2.f23547a < 21 || !codecCapabilities.isFeatureSupported("secure-playback"))) {
             z3 = false;
         }
-        this.d = z3;
+        this.f15418d = z3;
     }
 
-    public static ju2 a(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities, boolean z, boolean z2) {
+    /* renamed from: a */
+    public static ju2 m18248a(String str, String str2, MediaCodecInfo.CodecCapabilities codecCapabilities, boolean z, boolean z2) {
         return new ju2(str, str2, codecCapabilities, z, z2);
     }
 
-    public static ju2 b(String str) {
+    /* renamed from: b */
+    public static ju2 m18247b(String str) {
         return new ju2("OMX.google.raw.decoder", null, null, false, false);
     }
 
     @TargetApi(21)
-    public static boolean i(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
+    /* renamed from: i */
+    public static boolean m18240i(MediaCodecInfo.VideoCapabilities videoCapabilities, int i, int i2, double d) {
         return (d == -1.0d || d <= 0.0d) ? videoCapabilities.isSizeSupported(i, i2) : videoCapabilities.areSizeAndRateSupported(i, i2, d);
     }
 
     @TargetApi(21)
-    public final boolean c(int i) {
+    /* renamed from: c */
+    public final boolean m18246c(int i) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f15420f;
         if (codecCapabilities == null) {
             str = "channelCount.caps";
         } else {
@@ -57,14 +73,15 @@ public final class ju2 {
                 str = "channelCount.support, " + i;
             }
         }
-        h(str);
+        m18241h(str);
         return false;
     }
 
     @TargetApi(21)
-    public final boolean d(int i) {
+    /* renamed from: d */
+    public final boolean m18245d(int i) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f15420f;
         if (codecCapabilities == null) {
             str = "sampleRate.caps";
         } else {
@@ -77,15 +94,16 @@ public final class ju2 {
                 str = "sampleRate.support, " + i;
             }
         }
-        h(str);
+        m18241h(str);
         return false;
     }
 
-    public final boolean e(String str) {
-        MediaCodecInfo.CodecProfileLevel[] g;
+    /* renamed from: e */
+    public final boolean m18244e(String str) {
+        MediaCodecInfo.CodecProfileLevel[] m18242g;
         StringBuilder sb;
         String str2;
-        if (str == null || this.e == null) {
+        if (str == null || this.f15419e == null) {
             return true;
         }
         String trim = str.trim();
@@ -93,13 +111,13 @@ public final class ju2 {
         if (str3 == null) {
             return true;
         }
-        if (this.e.equals(str3)) {
-            Pair b = av2.b(str);
-            if (b == null) {
+        if (this.f15419e.equals(str3)) {
+            Pair m26960b = av2.m26960b(str);
+            if (m26960b == null) {
                 return true;
             }
-            for (MediaCodecInfo.CodecProfileLevel codecProfileLevel : g()) {
-                if (codecProfileLevel.profile == ((Integer) b.first).intValue() && codecProfileLevel.level >= ((Integer) b.second).intValue()) {
+            for (MediaCodecInfo.CodecProfileLevel codecProfileLevel : m18242g()) {
+                if (codecProfileLevel.profile == ((Integer) m26960b.first).intValue() && codecProfileLevel.level >= ((Integer) m26960b.second).intValue()) {
                     return true;
                 }
             }
@@ -113,27 +131,28 @@ public final class ju2 {
         sb.append(str);
         sb.append(", ");
         sb.append(str3);
-        h(sb.toString());
+        m18241h(sb.toString());
         return false;
     }
 
     @TargetApi(21)
-    public final boolean f(int i, int i2, double d) {
+    /* renamed from: f */
+    public final boolean m18243f(int i, int i2, double d) {
         String str;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f15420f;
         if (codecCapabilities == null) {
             str = "sizeAndRate.caps";
         } else {
             MediaCodecInfo.VideoCapabilities videoCapabilities = codecCapabilities.getVideoCapabilities();
             if (videoCapabilities == null) {
                 str = "sizeAndRate.vCaps";
-            } else if (i(videoCapabilities, i, i2, d)) {
+            } else if (m18240i(videoCapabilities, i, i2, d)) {
                 return true;
             } else {
-                if (i < i2 && i(videoCapabilities, i2, i, d)) {
-                    String str2 = this.a;
-                    String str3 = this.e;
-                    String str4 = pz2.e;
+                if (i < i2 && m18240i(videoCapabilities, i2, i, d)) {
+                    String str2 = this.f15415a;
+                    String str3 = this.f15419e;
+                    String str4 = pz2.f23551e;
                     StringBuilder sb = new StringBuilder();
                     sb.append("AssumedSupport [");
                     sb.append("sizeAndRate.rotated, " + i + "x" + i2 + "x" + d);
@@ -149,20 +168,22 @@ public final class ju2 {
                 str = "sizeAndRate.support, " + i + "x" + i2 + "x" + d;
             }
         }
-        h(str);
+        m18241h(str);
         return false;
     }
 
-    public final MediaCodecInfo.CodecProfileLevel[] g() {
+    /* renamed from: g */
+    public final MediaCodecInfo.CodecProfileLevel[] m18242g() {
         MediaCodecInfo.CodecProfileLevel[] codecProfileLevelArr;
-        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f;
+        MediaCodecInfo.CodecCapabilities codecCapabilities = this.f15420f;
         return (codecCapabilities == null || (codecProfileLevelArr = codecCapabilities.profileLevels) == null) ? new MediaCodecInfo.CodecProfileLevel[0] : codecProfileLevelArr;
     }
 
-    public final void h(String str) {
-        String str2 = this.a;
-        String str3 = this.e;
-        String str4 = pz2.e;
+    /* renamed from: h */
+    public final void m18241h(String str) {
+        String str2 = this.f15415a;
+        String str3 = this.f15419e;
+        String str4 = pz2.f23551e;
         StringBuilder sb = new StringBuilder();
         sb.append("NoSupport [");
         sb.append(str);

@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public abstract class u81 {
-    public abstract long a();
+    /* renamed from: a */
+    public abstract long mo8436a();
 }

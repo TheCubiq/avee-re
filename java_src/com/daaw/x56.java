@@ -1,12 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class x56 implements i76 {
-    public final String a;
-    public final String b;
+
+    /* renamed from: a */
+    public final String f32123a;
+
+    /* renamed from: b */
+    public final String f32124b;
 
     public x56(String str, String str2) {
-        this.a = str;
-        this.b = str2;
+        this.f32123a = str;
+        this.f32124b = str2;
     }
 
     @Override // com.daaw.i76
@@ -16,6 +20,6 @@ public final class x56 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return s67.i(new y56(this.a, this.b));
+        return s67.m10634i(new y56(this.f32123a, this.f32124b));
     }
 }

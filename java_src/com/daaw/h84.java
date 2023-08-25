@@ -16,6 +16,6 @@ public final class h84 extends g84 {
         if (webResourceRequest == null || webResourceRequest.getUrl() == null) {
             return null;
         }
-        return G0(webView, webResourceRequest.getUrl().toString(), webResourceRequest.getRequestHeaders());
+        return m21885G0(webView, webResourceRequest.getUrl().toString(), webResourceRequest.getRequestHeaders());
     }
 }

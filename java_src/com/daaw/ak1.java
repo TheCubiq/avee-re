@@ -4,43 +4,54 @@ import android.os.AsyncTask;
 import com.daaw.ir1;
 /* loaded from: classes.dex */
 public class ak1<Result> {
-    public String a = null;
-    public me0<Result> b = null;
 
+    /* renamed from: a */
+    public String f3265a = null;
+
+    /* renamed from: b */
+    public me0<Result> f3266b = null;
+
+    /* renamed from: com.daaw.ak1$a */
     /* loaded from: classes.dex */
-    public class a implements ir1.b<Result> {
-        public final /* synthetic */ ir1.b a;
+    public class C0644a implements ir1.InterfaceC1750b<Result> {
 
-        public a(ir1.b bVar) {
-            this.a = bVar;
+        /* renamed from: a */
+        public final /* synthetic */ ir1.InterfaceC1750b f3267a;
+
+        public C0644a(ir1.InterfaceC1750b interfaceC1750b) {
+            this.f3267a = interfaceC1750b;
         }
 
-        @Override // com.daaw.ir1.b
-        public void a(Result result, boolean z) {
-            ak1.this.b = null;
-            ak1.this.a = null;
-            this.a.a(result, z);
+        @Override // com.daaw.ir1.InterfaceC1750b
+        /* renamed from: a */
+        public void mo15140a(Result result, boolean z) {
+            ak1.this.f3266b = null;
+            ak1.this.f3265a = null;
+            this.f3267a.mo15140a(result, z);
         }
     }
 
-    public void a() {
-        me0<Result> me0Var = this.b;
+    /* renamed from: a */
+    public void m27394a() {
+        me0<Result> me0Var = this.f3266b;
         if (me0Var != null) {
             me0Var.cancel(true);
         }
-        this.b = null;
-        this.a = null;
+        this.f3266b = null;
+        this.f3265a = null;
     }
 
-    public void b(String str, me0<Result> me0Var, ir1.b<Result> bVar) {
-        a();
-        this.b = me0Var;
-        this.a = str;
-        me0Var.a(new a(bVar));
+    /* renamed from: b */
+    public void m27393b(String str, me0<Result> me0Var, ir1.InterfaceC1750b<Result> interfaceC1750b) {
+        m27394a();
+        this.f3266b = me0Var;
+        this.f3265a = str;
+        me0Var.mo8856a(new C0644a(interfaceC1750b));
     }
 
-    public boolean e(String str) {
+    /* renamed from: e */
+    public boolean m27390e(String str) {
         me0<Result> me0Var;
-        return br1.h(this.a, str) && (me0Var = this.b) != null && me0Var.getStatus() == AsyncTask.Status.RUNNING;
+        return br1.m25901h(this.f3265a, str) && (me0Var = this.f3266b) != null && me0Var.getStatus() == AsyncTask.Status.RUNNING;
     }
 }

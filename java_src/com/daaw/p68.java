@@ -4,21 +4,25 @@ import java.nio.charset.Charset;
 import java.util.Objects;
 /* loaded from: classes2.dex */
 public class p68 extends m68 {
-    public final byte[] t;
+
+    /* renamed from: t */
+    public final byte[] f22647t;
 
     public p68(byte[] bArr) {
         Objects.requireNonNull(bArr);
-        this.t = bArr;
+        this.f22647t = bArr;
     }
 
     @Override // com.daaw.y68
-    public byte d(int i) {
-        return this.t[i];
+    /* renamed from: d */
+    public byte mo2807d(int i) {
+        return this.f22647t[i];
     }
 
     @Override // com.daaw.y68
-    public byte e(int i) {
-        return this.t[i];
+    /* renamed from: e */
+    public byte mo2806e(int i) {
+        return this.f22647t[i];
     }
 
     @Override // com.daaw.y68
@@ -26,29 +30,29 @@ public class p68 extends m68 {
         if (obj == this) {
             return true;
         }
-        if ((obj instanceof y68) && f() == ((y68) obj).f()) {
-            if (f() == 0) {
+        if ((obj instanceof y68) && mo2805f() == ((y68) obj).mo2805f()) {
+            if (mo2805f() == 0) {
                 return true;
             }
             if (obj instanceof p68) {
                 p68 p68Var = (p68) obj;
-                int p = p();
-                int p2 = p68Var.p();
-                if (p == 0 || p2 == 0 || p == p2) {
-                    int f = f();
-                    if (f > p68Var.f()) {
-                        int f2 = f();
-                        throw new IllegalArgumentException("Length too large: " + f + f2);
-                    } else if (f > p68Var.f()) {
-                        int f3 = p68Var.f();
-                        throw new IllegalArgumentException("Ran off end of other: 0, " + f + ", " + f3);
+                int m4064p = m4064p();
+                int m4064p2 = p68Var.m4064p();
+                if (m4064p == 0 || m4064p2 == 0 || m4064p == m4064p2) {
+                    int mo2805f = mo2805f();
+                    if (mo2805f > p68Var.mo2805f()) {
+                        int mo2805f2 = mo2805f();
+                        throw new IllegalArgumentException("Length too large: " + mo2805f + mo2805f2);
+                    } else if (mo2805f > p68Var.mo2805f()) {
+                        int mo2805f3 = p68Var.mo2805f();
+                        throw new IllegalArgumentException("Ran off end of other: 0, " + mo2805f + ", " + mo2805f3);
                     } else {
-                        byte[] bArr = this.t;
-                        byte[] bArr2 = p68Var.t;
-                        p68Var.t();
+                        byte[] bArr = this.f22647t;
+                        byte[] bArr2 = p68Var.f22647t;
+                        p68Var.mo2804t();
                         int i = 0;
                         int i2 = 0;
-                        while (i < f) {
+                        while (i < mo2805f) {
                             if (bArr[i] != bArr2[i2]) {
                                 return false;
                             }
@@ -66,37 +70,44 @@ public class p68 extends m68 {
     }
 
     @Override // com.daaw.y68
-    public int f() {
-        return this.t.length;
+    /* renamed from: f */
+    public int mo2805f() {
+        return this.f22647t.length;
     }
 
     @Override // com.daaw.y68
-    public final int h(int i, int i2, int i3) {
-        return gb8.d(i, this.t, 0, i3);
+    /* renamed from: h */
+    public final int mo4070h(int i, int i2, int i3) {
+        return gb8.m21817d(i, this.f22647t, 0, i3);
     }
 
     @Override // com.daaw.y68
-    public final y68 j(int i, int i2) {
-        int o = y68.o(0, i2, f());
-        return o == 0 ? y68.q : new z58(this.t, 0, o);
+    /* renamed from: j */
+    public final y68 mo4069j(int i, int i2) {
+        int m4065o = y68.m4065o(0, i2, mo2805f());
+        return m4065o == 0 ? y68.f33399q : new z58(this.f22647t, 0, m4065o);
     }
 
     @Override // com.daaw.y68
-    public final String k(Charset charset) {
-        return new String(this.t, 0, f(), charset);
+    /* renamed from: k */
+    public final String mo4068k(Charset charset) {
+        return new String(this.f22647t, 0, mo2805f(), charset);
     }
 
     @Override // com.daaw.y68
-    public final void m(n58 n58Var) {
-        ((n78) n58Var).E(this.t, 0, f());
+    /* renamed from: m */
+    public final void mo4067m(n58 n58Var) {
+        ((n78) n58Var).m15479E(this.f22647t, 0, mo2805f());
     }
 
     @Override // com.daaw.y68
-    public final boolean n() {
-        return ei8.f(this.t, 0, f());
+    /* renamed from: n */
+    public final boolean mo4066n() {
+        return ei8.m23446f(this.f22647t, 0, mo2805f());
     }
 
-    public int t() {
+    /* renamed from: t */
+    public int mo2804t() {
         return 0;
     }
 }

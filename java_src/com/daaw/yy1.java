@@ -5,45 +5,52 @@ import androidx.work.ListenableWorker;
 import androidx.work.WorkerParameters;
 /* loaded from: classes.dex */
 public abstract class yy1 {
-    public static final String a = ll0.f("WorkerFactory");
 
+    /* renamed from: a */
+    public static final String f34254a = ll0.m16883f("WorkerFactory");
+
+    /* renamed from: com.daaw.yy1$a */
     /* loaded from: classes.dex */
-    public class a extends yy1 {
+    public class C3780a extends yy1 {
         @Override // com.daaw.yy1
-        public ListenableWorker a(Context context, String str, WorkerParameters workerParameters) {
+        /* renamed from: a */
+        public ListenableWorker mo3077a(Context context, String str, WorkerParameters workerParameters) {
             return null;
         }
     }
 
-    public static yy1 c() {
-        return new a();
+    /* renamed from: c */
+    public static yy1 m3078c() {
+        return new C3780a();
     }
 
-    public abstract ListenableWorker a(Context context, String str, WorkerParameters workerParameters);
+    /* renamed from: a */
+    public abstract ListenableWorker mo3077a(Context context, String str, WorkerParameters workerParameters);
 
-    public final ListenableWorker b(Context context, String str, WorkerParameters workerParameters) {
-        ListenableWorker a2 = a(context, str, workerParameters);
-        if (a2 == null) {
+    /* renamed from: b */
+    public final ListenableWorker m3079b(Context context, String str, WorkerParameters workerParameters) {
+        ListenableWorker mo3077a = mo3077a(context, str, workerParameters);
+        if (mo3077a == null) {
             Class cls = null;
             try {
                 cls = Class.forName(str).asSubclass(ListenableWorker.class);
             } catch (Throwable th) {
-                ll0 c = ll0.c();
-                String str2 = a;
-                c.b(str2, "Invalid class: " + str, th);
+                ll0 m16885c = ll0.m16885c();
+                String str2 = f34254a;
+                m16885c.mo16881b(str2, "Invalid class: " + str, th);
             }
             if (cls != null) {
                 try {
-                    a2 = (ListenableWorker) cls.getDeclaredConstructor(Context.class, WorkerParameters.class).newInstance(context, workerParameters);
+                    mo3077a = (ListenableWorker) cls.getDeclaredConstructor(Context.class, WorkerParameters.class).newInstance(context, workerParameters);
                 } catch (Throwable th2) {
-                    ll0 c2 = ll0.c();
-                    String str3 = a;
-                    c2.b(str3, "Could not instantiate " + str, th2);
+                    ll0 m16885c2 = ll0.m16885c();
+                    String str3 = f34254a;
+                    m16885c2.mo16881b(str3, "Could not instantiate " + str, th2);
                 }
             }
         }
-        if (a2 == null || !a2.isUsed()) {
-            return a2;
+        if (mo3077a == null || !mo3077a.isUsed()) {
+            return mo3077a;
         }
         throw new IllegalStateException(String.format("WorkerFactory (%s) returned an instance of a ListenableWorker (%s) which has already been invoked. createWorker() must always return a new instance of a ListenableWorker.", getClass().getName(), str));
     }

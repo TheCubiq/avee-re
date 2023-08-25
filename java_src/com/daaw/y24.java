@@ -6,33 +6,45 @@ import com.google.android.gms.ads.internal.zza;
 import com.google.android.gms.internal.ads.zzchu;
 /* loaded from: classes.dex */
 public interface y24 extends k84, n84, uj3 {
-    void A(int i);
+    /* renamed from: A */
+    void mo4246A(int i);
 
-    void F(int i);
+    /* renamed from: F */
+    void mo4245F(int i);
 
-    j54 H(String str);
+    /* renamed from: H */
+    j54 mo4244H(String str);
 
-    void M(int i);
+    /* renamed from: M */
+    void mo4243M(int i);
 
-    void W(int i);
+    /* renamed from: W */
+    void mo4242W(int i);
 
-    String b();
+    /* renamed from: b */
+    String mo4241b();
 
-    void e();
+    /* renamed from: e */
+    void mo4240e();
 
     Context getContext();
 
-    void k();
+    /* renamed from: k */
+    void mo4239k();
 
-    n24 l0();
+    /* renamed from: l0 */
+    n24 mo4238l0();
 
-    void m0(boolean z, long j);
+    /* renamed from: m0 */
+    void mo4237m0(boolean z, long j);
 
     void setBackgroundColor(int i);
 
-    void t(String str, j54 j54Var);
+    /* renamed from: t */
+    void mo4236t(String str, j54 j54Var);
 
-    void u(z74 z74Var);
+    /* renamed from: u */
+    void mo4235u(z74 z74Var);
 
     void zzB(boolean z);
 

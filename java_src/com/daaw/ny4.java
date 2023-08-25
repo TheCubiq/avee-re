@@ -10,46 +10,55 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class ny4 extends kw4 implements q03 {
     @GuardedBy("this")
-    public final Map q;
-    public final Context r;
-    public final th6 s;
+
+    /* renamed from: q */
+    public final Map f20853q;
+
+    /* renamed from: r */
+    public final Context f20854r;
+
+    /* renamed from: s */
+    public final th6 f20855s;
 
     public ny4(Context context, Set set, th6 th6Var) {
         super(set);
-        this.q = new WeakHashMap(1);
-        this.r = context;
-        this.s = th6Var;
+        this.f20853q = new WeakHashMap(1);
+        this.f20854r = context;
+        this.f20855s = th6Var;
     }
 
-    public final synchronized void C0(View view) {
-        r03 r03Var = (r03) this.q.get(view);
+    /* renamed from: C0 */
+    public final synchronized void m14720C0(View view) {
+        r03 r03Var = (r03) this.f20853q.get(view);
         if (r03Var == null) {
-            r03Var = new r03(this.r, view);
-            r03Var.c(this);
-            this.q.put(view, r03Var);
+            r03Var = new r03(this.f20854r, view);
+            r03Var.m11874c(this);
+            this.f20853q.put(view, r03Var);
         }
-        if (this.s.Y) {
-            if (((Boolean) zzba.zzc().b(g93.h1)).booleanValue()) {
-                r03Var.g(((Long) zzba.zzc().b(g93.g1)).longValue());
+        if (this.f20855s.f27678Y) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10700h1)).booleanValue()) {
+                r03Var.m11870g(((Long) zzba.zzc().m23658b(g93.f10689g1)).longValue());
                 return;
             }
         }
-        r03Var.f();
+        r03Var.m11871f();
     }
 
-    public final synchronized void D0(View view) {
-        if (this.q.containsKey(view)) {
-            ((r03) this.q.get(view)).e(this);
-            this.q.remove(view);
+    /* renamed from: D0 */
+    public final synchronized void m14719D0(View view) {
+        if (this.f20853q.containsKey(view)) {
+            ((r03) this.f20853q.get(view)).m11872e(this);
+            this.f20853q.remove(view);
         }
     }
 
     @Override // com.daaw.q03
-    public final synchronized void e0(final p03 p03Var) {
-        B0(new jw4() { // from class: com.daaw.my4
+    /* renamed from: e0 */
+    public final synchronized void mo6420e0(final p03 p03Var) {
+        m17378B0(new jw4() { // from class: com.daaw.my4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((q03) obj).e0(p03.this);
+                ((q03) obj).mo6420e0(p03.this);
             }
         });
     }

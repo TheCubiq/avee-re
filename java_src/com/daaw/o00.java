@@ -3,21 +3,24 @@ package com.daaw;
 import com.daaw.p51;
 /* loaded from: classes2.dex */
 public final class o00 {
-    public static final boolean a;
+
+    /* renamed from: a */
+    public static final boolean f20905a;
 
     static {
-        Object a2;
+        Object m13631a;
         try {
-            p51.a aVar = p51.p;
-            a2 = p51.a(Class.forName("android.os.Build"));
+            p51.C2516a c2516a = p51.f22616p;
+            m13631a = p51.m13631a(Class.forName("android.os.Build"));
         } catch (Throwable th) {
-            p51.a aVar2 = p51.p;
-            a2 = p51.a(s51.a(th));
+            p51.C2516a c2516a2 = p51.f22616p;
+            m13631a = p51.m13631a(s51.m10708a(th));
         }
-        a = p51.d(a2);
+        f20905a = p51.m13628d(m13631a);
     }
 
-    public static final boolean a() {
-        return a;
+    /* renamed from: a */
+    public static final boolean m14661a() {
+        return f20905a;
     }
 }

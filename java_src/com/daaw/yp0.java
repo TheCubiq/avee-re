@@ -7,125 +7,157 @@ import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.metadata.Metadata;
 import java.util.Arrays;
 /* loaded from: classes.dex */
-public final class yp0 extends xa implements Handler.Callback {
-    public final Handler A;
-    public final k30 B;
-    public final tp0 C;
-    public final Metadata[] D;
-    public final long[] E;
-    public int F;
-    public int G;
-    public rp0 H;
-    public boolean I;
-    public final sp0 y;
-    public final xp0 z;
+public final class yp0 extends AbstractC3517xa implements Handler.Callback {
+
+    /* renamed from: A */
+    public final Handler f33910A;
+
+    /* renamed from: B */
+    public final k30 f33911B;
+
+    /* renamed from: C */
+    public final tp0 f33912C;
+
+    /* renamed from: D */
+    public final Metadata[] f33913D;
+
+    /* renamed from: E */
+    public final long[] f33914E;
+
+    /* renamed from: F */
+    public int f33915F;
+
+    /* renamed from: G */
+    public int f33916G;
+
+    /* renamed from: H */
+    public rp0 f33917H;
+
+    /* renamed from: I */
+    public boolean f33918I;
+
+    /* renamed from: y */
+    public final sp0 f33919y;
+
+    /* renamed from: z */
+    public final xp0 f33920z;
 
     public yp0(xp0 xp0Var, Looper looper) {
-        this(xp0Var, looper, sp0.a);
+        this(xp0Var, looper, sp0.f26479a);
     }
 
     public yp0(xp0 xp0Var, Looper looper, sp0 sp0Var) {
         super(4);
-        this.z = (xp0) s6.e(xp0Var);
-        this.A = looper == null ? null : new Handler(looper, this);
-        this.y = (sp0) s6.e(sp0Var);
-        this.B = new k30();
-        this.C = new tp0();
-        this.D = new Metadata[5];
-        this.E = new long[5];
+        this.f33920z = (xp0) C2914s6.m10686e(xp0Var);
+        this.f33910A = looper == null ? null : new Handler(looper, this);
+        this.f33919y = (sp0) C2914s6.m10686e(sp0Var);
+        this.f33911B = new k30();
+        this.f33912C = new tp0();
+        this.f33913D = new Metadata[5];
+        this.f33914E = new long[5];
     }
 
-    @Override // com.daaw.xa
-    public void A() {
-        J();
-        this.H = null;
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: A */
+    public void mo3466A() {
+        m3463J();
+        this.f33917H = null;
     }
 
-    @Override // com.daaw.xa
-    public void C(long j, boolean z) {
-        J();
-        this.I = false;
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: C */
+    public void mo3465C(long j, boolean z) {
+        m3463J();
+        this.f33918I = false;
     }
 
-    @Override // com.daaw.xa
-    public void F(Format[] formatArr, long j) {
-        this.H = this.y.b(formatArr[0]);
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: F */
+    public void mo3464F(Format[] formatArr, long j) {
+        this.f33917H = this.f33919y.mo10094b(formatArr[0]);
     }
 
-    public final void J() {
-        Arrays.fill(this.D, (Object) null);
-        this.F = 0;
-        this.G = 0;
+    /* renamed from: J */
+    public final void m3463J() {
+        Arrays.fill(this.f33913D, (Object) null);
+        this.f33915F = 0;
+        this.f33916G = 0;
     }
 
-    public final void K(Metadata metadata) {
-        Handler handler = this.A;
+    /* renamed from: K */
+    public final void m3462K(Metadata metadata) {
+        Handler handler = this.f33910A;
         if (handler != null) {
             handler.obtainMessage(0, metadata).sendToTarget();
         } else {
-            L(metadata);
+            m3461L(metadata);
         }
     }
 
-    public final void L(Metadata metadata) {
-        this.z.p(metadata);
+    /* renamed from: L */
+    public final void m3461L(Metadata metadata) {
+        this.f33920z.mo4856p(metadata);
     }
 
     @Override // com.daaw.b41
-    public int a(Format format) {
-        if (this.y.a(format)) {
-            return xa.I(null, format.x) ? 4 : 2;
+    /* renamed from: a */
+    public int mo3460a(Format format) {
+        if (this.f33919y.mo10095a(format)) {
+            return AbstractC3517xa.m5365I(null, format.f35724x) ? 4 : 2;
         }
         return 0;
     }
 
     @Override // com.daaw.a41
-    public boolean c() {
-        return this.I;
+    /* renamed from: c */
+    public boolean mo3459c() {
+        return this.f33918I;
     }
 
     @Override // com.daaw.a41
-    public boolean d() {
+    /* renamed from: d */
+    public boolean mo3458d() {
         return true;
     }
 
     @Override // android.os.Handler.Callback
     public boolean handleMessage(Message message) {
         if (message.what == 0) {
-            L((Metadata) message.obj);
+            m3461L((Metadata) message.obj);
             return true;
         }
         throw new IllegalStateException();
     }
 
     @Override // com.daaw.a41
-    public void q(long j, long j2) {
-        if (!this.I && this.G < 5) {
-            this.C.f();
-            if (G(this.B, this.C, false) == -4) {
-                if (this.C.j()) {
-                    this.I = true;
-                } else if (!this.C.i()) {
-                    tp0 tp0Var = this.C;
-                    tp0Var.u = this.B.a.L;
-                    tp0Var.o();
-                    int i = (this.F + this.G) % 5;
-                    this.D[i] = this.H.a(this.C);
-                    this.E[i] = this.C.s;
-                    this.G++;
+    /* renamed from: q */
+    public void mo3457q(long j, long j2) {
+        if (!this.f33918I && this.f33916G < 5) {
+            this.f33912C.mo3749f();
+            if (m5367G(this.f33911B, this.f33912C, false) == -4) {
+                if (this.f33912C.m11437j()) {
+                    this.f33918I = true;
+                } else if (!this.f33912C.m11438i()) {
+                    tp0 tp0Var = this.f33912C;
+                    tp0Var.f27939u = this.f33911B.f15633a.f35711L;
+                    tp0Var.m21350o();
+                    int i = (this.f33915F + this.f33916G) % 5;
+                    this.f33913D[i] = this.f33917H.mo11098a(this.f33912C);
+                    this.f33914E[i] = this.f33912C.f11566s;
+                    this.f33916G++;
                 }
             }
         }
-        if (this.G > 0) {
-            long[] jArr = this.E;
-            int i2 = this.F;
+        if (this.f33916G > 0) {
+            long[] jArr = this.f33914E;
+            int i2 = this.f33915F;
             if (jArr[i2] <= j) {
-                K(this.D[i2]);
-                Metadata[] metadataArr = this.D;
-                int i3 = this.F;
+                m3462K(this.f33913D[i2]);
+                Metadata[] metadataArr = this.f33913D;
+                int i3 = this.f33915F;
                 metadataArr[i3] = null;
-                this.F = (i3 + 1) % 5;
-                this.G--;
+                this.f33915F = (i3 + 1) % 5;
+                this.f33916G--;
             }
         }
     }

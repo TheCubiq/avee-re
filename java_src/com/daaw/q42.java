@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class q42 {
-    public final boolean a;
+
+    /* renamed from: a */
+    public final boolean f23670a;
 
     public q42(boolean z, int i, int i2, int i3) {
-        this.a = z;
+        this.f23670a = z;
     }
 }

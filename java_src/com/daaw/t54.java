@@ -5,68 +5,73 @@ import java.net.Socket;
 import javax.net.ssl.SSLSocketFactory;
 /* loaded from: classes.dex */
 public final class t54 extends SSLSocketFactory {
-    public final SSLSocketFactory a = (SSLSocketFactory) SSLSocketFactory.getDefault();
-    public final /* synthetic */ u54 b;
+
+    /* renamed from: a */
+    public final SSLSocketFactory f27014a = (SSLSocketFactory) SSLSocketFactory.getDefault();
+
+    /* renamed from: b */
+    public final /* synthetic */ u54 f27015b;
 
     public t54(u54 u54Var) {
-        this.b = u54Var;
+        this.f27015b = u54Var;
     }
 
-    public final Socket a(Socket socket) {
+    /* renamed from: a */
+    public final Socket m9518a(Socket socket) {
         int i;
         int i2;
-        u54 u54Var = this.b;
-        i = u54Var.s;
+        u54 u54Var = this.f27015b;
+        i = u54Var.f28574s;
         if (i > 0) {
-            i2 = u54Var.s;
+            i2 = u54Var.f28574s;
             socket.setReceiveBufferSize(i2);
         }
-        this.b.t.add(socket);
+        this.f27015b.f28575t.add(socket);
         return socket;
     }
 
     @Override // javax.net.SocketFactory
     public final Socket createSocket(String str, int i) {
-        Socket createSocket = this.a.createSocket(str, i);
-        a(createSocket);
+        Socket createSocket = this.f27014a.createSocket(str, i);
+        m9518a(createSocket);
         return createSocket;
     }
 
     @Override // javax.net.SocketFactory
     public final Socket createSocket(String str, int i, InetAddress inetAddress, int i2) {
-        Socket createSocket = this.a.createSocket(str, i, inetAddress, i2);
-        a(createSocket);
+        Socket createSocket = this.f27014a.createSocket(str, i, inetAddress, i2);
+        m9518a(createSocket);
         return createSocket;
     }
 
     @Override // javax.net.SocketFactory
     public final Socket createSocket(InetAddress inetAddress, int i) {
-        Socket createSocket = this.a.createSocket(inetAddress, i);
-        a(createSocket);
+        Socket createSocket = this.f27014a.createSocket(inetAddress, i);
+        m9518a(createSocket);
         return createSocket;
     }
 
     @Override // javax.net.SocketFactory
     public final Socket createSocket(InetAddress inetAddress, int i, InetAddress inetAddress2, int i2) {
-        Socket createSocket = this.a.createSocket(inetAddress, i, inetAddress2, i2);
-        a(createSocket);
+        Socket createSocket = this.f27014a.createSocket(inetAddress, i, inetAddress2, i2);
+        m9518a(createSocket);
         return createSocket;
     }
 
     @Override // javax.net.ssl.SSLSocketFactory
     public final Socket createSocket(Socket socket, String str, int i, boolean z) {
-        Socket createSocket = this.a.createSocket(socket, str, i, z);
-        a(createSocket);
+        Socket createSocket = this.f27014a.createSocket(socket, str, i, z);
+        m9518a(createSocket);
         return createSocket;
     }
 
     @Override // javax.net.ssl.SSLSocketFactory
     public final String[] getDefaultCipherSuites() {
-        return this.a.getDefaultCipherSuites();
+        return this.f27014a.getDefaultCipherSuites();
     }
 
     @Override // javax.net.ssl.SSLSocketFactory
     public final String[] getSupportedCipherSuites() {
-        return this.a.getSupportedCipherSuites();
+        return this.f27014a.getSupportedCipherSuites();
     }
 }

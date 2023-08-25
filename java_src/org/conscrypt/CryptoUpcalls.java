@@ -1,10 +1,17 @@
 package org.conscrypt;
 
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.Security;
+import java.security.Signature;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
 /* loaded from: classes2.dex */
 final class CryptoUpcalls {
     private static final Logger logger = Logger.getLogger(CryptoUpcalls.class.getName());
@@ -44,14 +51,68 @@ final class CryptoUpcalls {
     /* JADX WARN: Removed duplicated region for block: B:33:0x00af  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    private static byte[] rsaOpWithPrivateKey(java.security.PrivateKey r5, int r6, int r7, byte[] r8) {
-        /*
-            Method dump skipped, instructions count: 288
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.CryptoUpcalls.rsaOpWithPrivateKey(java.security.PrivateKey, int, int, byte[]):byte[]");
+    private static byte[] rsaOpWithPrivateKey(PrivateKey privateKey, int i, int i2, byte[] bArr) {
+        String str;
+        String str2;
+        Cipher cipher;
+        Iterator<Provider> it;
+        String algorithm = privateKey.getAlgorithm();
+        if (!"RSA".equals(algorithm)) {
+            logger.warning("Unexpected key type: " + algorithm);
+            return null;
+        }
+        if (i == 1) {
+            str = "PKCS1Padding";
+        } else if (i == 3) {
+            str = "NoPadding";
+        } else if (i != 4) {
+            logger.warning("Unsupported OpenSSL/BoringSSL padding: " + i);
+            return null;
+        } else {
+            str = "OAEPPadding";
+        }
+        str2 = "RSA/ECB/" + str;
+        try {
+            cipher = Cipher.getInstance(str2);
+            cipher.init(i2, privateKey);
+        } catch (InvalidKeyException e) {
+            logger.log(Level.WARNING, "Preferred provider doesn't support key:", (Throwable) e);
+        } catch (NoSuchAlgorithmException unused) {
+            logger.warning("Unsupported cipher algorithm: " + str2);
+            return null;
+        } catch (NoSuchPaddingException unused2) {
+            logger.warning("Unsupported cipher algorithm: " + str2);
+            return null;
+        }
+        while (it.hasNext()) {
+            try {
+                cipher = Cipher.getInstance(str2, it.next());
+                cipher.init(i2, privateKey);
+                break;
+            } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException unused3) {
+                cipher = null;
+            }
+        }
+        if (cipher == null) {
+            logger.warning("Could not find provider for algorithm: " + str2);
+            return null;
+        }
+        try {
+            return cipher.doFinal(bArr);
+        } catch (Exception e2) {
+            logger.log(Level.WARNING, "Exception while decrypting message with " + privateKey.getAlgorithm() + " private key using " + str2 + ":", (Throwable) e2);
+            return null;
+        }
+        cipher = null;
+        if (cipher == null) {
+            it = getExternalProviders("Cipher." + str2).iterator();
+            while (it.hasNext()) {
+            }
+            if (cipher == null) {
+            }
+        }
+        return cipher.doFinal(bArr);
     }
 
     public static byte[] rsaSignDigestWithPrivateKey(PrivateKey privateKey, int i, byte[] bArr) {
@@ -65,95 +126,59 @@ final class CryptoUpcalls {
     /* JADX WARN: Removed duplicated region for block: B:21:0x0057  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    private static byte[] signDigestWithPrivateKey(java.security.PrivateKey r5, byte[] r6, java.lang.String r7) {
-        /*
-            r0 = 0
-            java.security.Signature r1 = java.security.Signature.getInstance(r7)     // Catch: java.security.InvalidKeyException -> L13 java.security.NoSuchAlgorithmException -> L9c
-            r1.initSign(r5)     // Catch: java.security.InvalidKeyException -> L13 java.security.NoSuchAlgorithmException -> L9c
-            java.security.Provider r2 = r1.getProvider()     // Catch: java.security.InvalidKeyException -> L13 java.security.NoSuchAlgorithmException -> L9c
-            boolean r2 = org.conscrypt.Conscrypt.isConscrypt(r2)     // Catch: java.security.InvalidKeyException -> L13 java.security.NoSuchAlgorithmException -> L9c
-            if (r2 == 0) goto L1f
-            goto L1e
-        L13:
-            r1 = move-exception
-            java.util.logging.Logger r2 = org.conscrypt.CryptoUpcalls.logger
-            java.lang.String r3 = "Preferred provider doesn't support key:"
-            r2.warning(r3)
-            r1.printStackTrace()
-        L1e:
-            r1 = r0
-        L1f:
-            if (r1 != 0) goto L71
-            java.lang.StringBuilder r2 = new java.lang.StringBuilder
-            r2.<init>()
-            java.lang.String r3 = "Signature."
-            r2.append(r3)
-            r2.append(r7)
-            java.lang.String r2 = r2.toString()
-            java.util.ArrayList r2 = getExternalProviders(r2)
-            java.util.Iterator r2 = r2.iterator()
-            r3 = r0
-        L3b:
-            boolean r4 = r2.hasNext()
-            if (r4 == 0) goto L55
-            java.lang.Object r1 = r2.next()
-            java.security.Provider r1 = (java.security.Provider) r1
-            java.security.Signature r1 = java.security.Signature.getInstance(r7, r1)     // Catch: java.lang.RuntimeException -> L4f java.lang.Throwable -> L53
-            r1.initSign(r5)     // Catch: java.lang.RuntimeException -> L4f java.lang.Throwable -> L53
-            goto L55
-        L4f:
-            r1 = move-exception
-            if (r3 != 0) goto L53
-            r3 = r1
-        L53:
-            r1 = r0
-            goto L3b
-        L55:
-            if (r1 != 0) goto L71
-            if (r3 != 0) goto L70
-            java.util.logging.Logger r5 = org.conscrypt.CryptoUpcalls.logger
-            java.lang.StringBuilder r6 = new java.lang.StringBuilder
-            r6.<init>()
-            java.lang.String r1 = "Could not find provider for algorithm: "
-            r6.append(r1)
-            r6.append(r7)
-            java.lang.String r6 = r6.toString()
-            r5.warning(r6)
-            return r0
-        L70:
-            throw r3
-        L71:
-            r1.update(r6)     // Catch: java.lang.Exception -> L79
-            byte[] r5 = r1.sign()     // Catch: java.lang.Exception -> L79
-            return r5
-        L79:
-            r6 = move-exception
-            java.util.logging.Logger r7 = org.conscrypt.CryptoUpcalls.logger
-            java.util.logging.Level r1 = java.util.logging.Level.WARNING
-            java.lang.StringBuilder r2 = new java.lang.StringBuilder
-            r2.<init>()
-            java.lang.String r3 = "Exception while signing message with "
-            r2.append(r3)
-            java.lang.String r5 = r5.getAlgorithm()
-            r2.append(r5)
-            java.lang.String r5 = " private key:"
-            r2.append(r5)
-            java.lang.String r5 = r2.toString()
-            r7.log(r1, r5, r6)
-            return r0
-        L9c:
-            java.util.logging.Logger r5 = org.conscrypt.CryptoUpcalls.logger
-            java.lang.StringBuilder r6 = new java.lang.StringBuilder
-            r6.<init>()
-            java.lang.String r1 = "Unsupported signature algorithm: "
-            r6.append(r1)
-            r6.append(r7)
-            java.lang.String r6 = r6.toString()
-            r5.warning(r6)
-            return r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.CryptoUpcalls.signDigestWithPrivateKey(java.security.PrivateKey, byte[], java.lang.String):byte[]");
+    private static byte[] signDigestWithPrivateKey(PrivateKey privateKey, byte[] bArr, String str) {
+        Signature signature;
+        Iterator<Provider> it;
+        RuntimeException runtimeException;
+        try {
+            signature = Signature.getInstance(str);
+            signature.initSign(privateKey);
+        } catch (InvalidKeyException e) {
+            logger.warning("Preferred provider doesn't support key:");
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException unused) {
+            logger.warning("Unsupported signature algorithm: " + str);
+            return null;
+        }
+        while (it.hasNext()) {
+            try {
+                signature = Signature.getInstance(str, it.next());
+                signature.initSign(privateKey);
+                break;
+            } catch (RuntimeException e2) {
+                if (runtimeException == null) {
+                    runtimeException = e2;
+                }
+                signature = null;
+            } catch (InvalidKeyException | NoSuchAlgorithmException unused2) {
+                signature = null;
+            }
+        }
+        if (signature == null) {
+            if (runtimeException == null) {
+                logger.warning("Could not find provider for algorithm: " + str);
+                return null;
+            }
+            throw runtimeException;
+        }
+        try {
+            signature.update(bArr);
+            return signature.sign();
+        } catch (Exception e3) {
+            logger.log(Level.WARNING, "Exception while signing message with " + privateKey.getAlgorithm() + " private key:", (Throwable) e3);
+            return null;
+        }
+        signature = null;
+        if (signature == null) {
+            it = getExternalProviders("Signature." + str).iterator();
+            runtimeException = null;
+            while (it.hasNext()) {
+            }
+            if (signature == null) {
+            }
+        }
+        signature.update(bArr);
+        return signature.sign();
     }
 }

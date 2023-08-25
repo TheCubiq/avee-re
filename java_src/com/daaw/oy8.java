@@ -5,11 +5,12 @@ import java.util.List;
 public final class oy8 extends ad2 {
     public oy8() {
         super("internal.platform");
-        this.q.put("getVersion", new hx8(this, "getVersion"));
+        this.f3098q.put("getVersion", new hx8(this, "getVersion"));
     }
 
     @Override // com.daaw.ad2
-    public final gl2 a(w07 w07Var, List list) {
-        return gl2.g;
+    /* renamed from: a */
+    public final gl2 mo5780a(w07 w07Var, List list) {
+        return gl2.f11420g;
     }
 }

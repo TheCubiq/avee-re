@@ -7,7 +7,8 @@ import java.util.List;
 /* loaded from: classes2.dex */
 public final class sz2 {
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    public static gl2 a(String str, z72 z72Var, w07 w07Var, List list) {
+    /* renamed from: a */
+    public static gl2 m9694a(String str, z72 z72Var, w07 w07Var, List list) {
         String str2;
         char c;
         String str3;
@@ -205,240 +206,240 @@ public final class sz2 {
                 if (!list.isEmpty()) {
                     Iterator it = list.iterator();
                     while (it.hasNext()) {
-                        gl2 b = w07Var.b((gl2) it.next());
-                        if (b instanceof oa2) {
+                        gl2 m6608b = w07Var.m6608b((gl2) it.next());
+                        if (m6608b instanceof oa2) {
                             throw new IllegalStateException("Failed evaluation of arguments");
                         }
                         z72 z72Var2 = (z72) zzd;
-                        int j = z72Var2.j();
-                        if (b instanceof z72) {
-                            z72 z72Var3 = (z72) b;
-                            Iterator n = z72Var3.n();
-                            while (n.hasNext()) {
-                                Integer num = (Integer) n.next();
-                                z72Var2.s(num.intValue() + j, z72Var3.k(num.intValue()));
+                        int m2704j = z72Var2.m2704j();
+                        if (m6608b instanceof z72) {
+                            z72 z72Var3 = (z72) m6608b;
+                            Iterator m2701n = z72Var3.m2701n();
+                            while (m2701n.hasNext()) {
+                                Integer num = (Integer) m2701n.next();
+                                z72Var2.m2696s(num.intValue() + m2704j, z72Var3.m2703k(num.intValue()));
                             }
                         } else {
-                            z72Var2.s(j, b);
+                            z72Var2.m2696s(m2704j, m6608b);
                         }
                     }
                 }
                 return zzd;
             case 1:
-                ou7.h("every", 1, list);
-                gl2 b2 = w07Var.b((gl2) list.get(0));
-                if (b2 instanceof ck2) {
-                    return (z72Var.j() == 0 || b(z72Var, w07Var, (ck2) b2, Boolean.FALSE, Boolean.TRUE).j() == z72Var.j()) ? gl2.l : gl2.m;
+                ou7.m13916h("every", 1, list);
+                gl2 m6608b2 = w07Var.m6608b((gl2) list.get(0));
+                if (m6608b2 instanceof ck2) {
+                    return (z72Var.m2704j() == 0 || m9693b(z72Var, w07Var, (ck2) m6608b2, Boolean.FALSE, Boolean.TRUE).m2704j() == z72Var.m2704j()) ? gl2.f11425l : gl2.f11426m;
                 }
                 throw new IllegalArgumentException("Callback should be a method");
             case 2:
-                ou7.h("filter", 1, list);
-                gl2 b3 = w07Var.b((gl2) list.get(0));
-                if (b3 instanceof ck2) {
-                    if (z72Var.e() == 0) {
+                ou7.m13916h("filter", 1, list);
+                gl2 m6608b3 = w07Var.m6608b((gl2) list.get(0));
+                if (m6608b3 instanceof ck2) {
+                    if (z72Var.m2707e() == 0) {
                         return new z72();
                     }
                     gl2 zzd2 = z72Var.zzd();
-                    z72 b4 = b(z72Var, w07Var, (ck2) b3, null, Boolean.TRUE);
+                    z72 m9693b = m9693b(z72Var, w07Var, (ck2) m6608b3, null, Boolean.TRUE);
                     z72 z72Var4 = new z72();
-                    Iterator n2 = b4.n();
-                    while (n2.hasNext()) {
-                        z72Var4.s(z72Var4.j(), ((z72) zzd2).k(((Integer) n2.next()).intValue()));
+                    Iterator m2701n2 = m9693b.m2701n();
+                    while (m2701n2.hasNext()) {
+                        z72Var4.m2696s(z72Var4.m2704j(), ((z72) zzd2).m2703k(((Integer) m2701n2.next()).intValue()));
                     }
                     return z72Var4;
                 }
                 throw new IllegalArgumentException("Callback should be a method");
             case 3:
-                ou7.h("forEach", 1, list);
-                gl2 b5 = w07Var.b((gl2) list.get(0));
-                if (b5 instanceof ck2) {
-                    if (z72Var.e() != 0) {
-                        b(z72Var, w07Var, (ck2) b5, null, null);
+                ou7.m13916h("forEach", 1, list);
+                gl2 m6608b4 = w07Var.m6608b((gl2) list.get(0));
+                if (m6608b4 instanceof ck2) {
+                    if (z72Var.m2707e() != 0) {
+                        m9693b(z72Var, w07Var, (ck2) m6608b4, null, null);
                     }
-                    return gl2.g;
+                    return gl2.f11420g;
                 }
                 throw new IllegalArgumentException("Callback should be a method");
             case 4:
-                ou7.j("indexOf", 2, list);
-                gl2 gl2Var = gl2.g;
+                ou7.m13914j("indexOf", 2, list);
+                gl2 gl2Var = gl2.f11420g;
                 if (!list.isEmpty()) {
-                    gl2Var = w07Var.b((gl2) list.get(0));
+                    gl2Var = w07Var.m6608b((gl2) list.get(0));
                 }
                 if (list.size() > 1) {
-                    double a = ou7.a(w07Var.b((gl2) list.get(1)).zzh().doubleValue());
-                    if (a >= z72Var.j()) {
+                    double m13923a = ou7.m13923a(w07Var.m6608b((gl2) list.get(1)).zzh().doubleValue());
+                    if (m13923a >= z72Var.m2704j()) {
                         return new tb2(Double.valueOf(-1.0d));
                     }
-                    if (a < 0.0d) {
-                        double j2 = z72Var.j();
-                        Double.isNaN(j2);
-                        d = j2 + a;
+                    if (m13923a < 0.0d) {
+                        double m2704j2 = z72Var.m2704j();
+                        Double.isNaN(m2704j2);
+                        d = m2704j2 + m13923a;
                     } else {
-                        d = a;
+                        d = m13923a;
                     }
                 }
-                Iterator n3 = z72Var.n();
-                while (n3.hasNext()) {
-                    int intValue = ((Integer) n3.next()).intValue();
+                Iterator m2701n3 = z72Var.m2701n();
+                while (m2701n3.hasNext()) {
+                    int intValue = ((Integer) m2701n3.next()).intValue();
                     double d2 = intValue;
-                    if (d2 >= d && ou7.l(z72Var.k(intValue), gl2Var)) {
+                    if (d2 >= d && ou7.m13912l(z72Var.m2703k(intValue), gl2Var)) {
                         return new tb2(Double.valueOf(d2));
                     }
                 }
                 return new tb2(Double.valueOf(-1.0d));
             case 5:
-                ou7.j("join", 1, list);
-                if (z72Var.j() == 0) {
-                    return gl2.n;
+                ou7.m13914j("join", 1, list);
+                if (z72Var.m2704j() == 0) {
+                    return gl2.f11427n;
                 }
                 if (list.isEmpty()) {
                     str3 = ",";
                 } else {
-                    gl2 b6 = w07Var.b((gl2) list.get(0));
-                    str3 = ((b6 instanceof xi2) || (b6 instanceof br2)) ? "" : b6.zzi();
+                    gl2 m6608b5 = w07Var.m6608b((gl2) list.get(0));
+                    str3 = ((m6608b5 instanceof xi2) || (m6608b5 instanceof br2)) ? "" : m6608b5.zzi();
                 }
-                return new wp2(z72Var.m(str3));
+                return new wp2(z72Var.m2702m(str3));
             case 6:
-                ou7.j("lastIndexOf", 2, list);
-                gl2 gl2Var2 = gl2.g;
+                ou7.m13914j("lastIndexOf", 2, list);
+                gl2 gl2Var2 = gl2.f11420g;
                 if (!list.isEmpty()) {
-                    gl2Var2 = w07Var.b((gl2) list.get(0));
+                    gl2Var2 = w07Var.m6608b((gl2) list.get(0));
                 }
-                double j3 = z72Var.j() - 1;
+                double m2704j3 = z72Var.m2704j() - 1;
                 if (list.size() > 1) {
-                    gl2 b7 = w07Var.b((gl2) list.get(1));
-                    j3 = Double.isNaN(b7.zzh().doubleValue()) ? z72Var.j() - 1 : ou7.a(b7.zzh().doubleValue());
-                    if (j3 < 0.0d) {
-                        double j4 = z72Var.j();
-                        Double.isNaN(j4);
-                        j3 += j4;
+                    gl2 m6608b6 = w07Var.m6608b((gl2) list.get(1));
+                    m2704j3 = Double.isNaN(m6608b6.zzh().doubleValue()) ? z72Var.m2704j() - 1 : ou7.m13923a(m6608b6.zzh().doubleValue());
+                    if (m2704j3 < 0.0d) {
+                        double m2704j4 = z72Var.m2704j();
+                        Double.isNaN(m2704j4);
+                        m2704j3 += m2704j4;
                     }
                 }
-                if (j3 < 0.0d) {
+                if (m2704j3 < 0.0d) {
                     return new tb2(Double.valueOf(-1.0d));
                 }
-                for (int min2 = (int) Math.min(z72Var.j(), j3); min2 >= 0; min2--) {
-                    if (z72Var.t(min2) && ou7.l(z72Var.k(min2), gl2Var2)) {
+                for (int min2 = (int) Math.min(z72Var.m2704j(), m2704j3); min2 >= 0; min2--) {
+                    if (z72Var.m2695t(min2) && ou7.m13912l(z72Var.m2703k(min2), gl2Var2)) {
                         return new tb2(Double.valueOf(min2));
                     }
                 }
                 return new tb2(Double.valueOf(-1.0d));
             case 7:
-                ou7.h("map", 1, list);
-                gl2 b8 = w07Var.b((gl2) list.get(0));
-                if (b8 instanceof ck2) {
-                    return z72Var.j() == 0 ? new z72() : b(z72Var, w07Var, (ck2) b8, null, null);
+                ou7.m13916h("map", 1, list);
+                gl2 m6608b7 = w07Var.m6608b((gl2) list.get(0));
+                if (m6608b7 instanceof ck2) {
+                    return z72Var.m2704j() == 0 ? new z72() : m9693b(z72Var, w07Var, (ck2) m6608b7, null, null);
                 }
                 throw new IllegalArgumentException("Callback should be a method");
             case '\b':
-                ou7.h("pop", 0, list);
-                int j5 = z72Var.j();
-                if (j5 == 0) {
-                    return gl2.g;
+                ou7.m13916h("pop", 0, list);
+                int m2704j5 = z72Var.m2704j();
+                if (m2704j5 == 0) {
+                    return gl2.f11420g;
                 }
-                int i = j5 - 1;
-                gl2 k = z72Var.k(i);
-                z72Var.r(i);
-                return k;
+                int i = m2704j5 - 1;
+                gl2 m2703k = z72Var.m2703k(i);
+                z72Var.m2697r(i);
+                return m2703k;
             case '\t':
                 if (!list.isEmpty()) {
                     Iterator it2 = list.iterator();
                     while (it2.hasNext()) {
-                        z72Var.s(z72Var.j(), w07Var.b((gl2) it2.next()));
+                        z72Var.m2696s(z72Var.m2704j(), w07Var.m6608b((gl2) it2.next()));
                     }
                 }
-                return new tb2(Double.valueOf(z72Var.j()));
+                return new tb2(Double.valueOf(z72Var.m2704j()));
             case '\n':
-                return c(z72Var, w07Var, list, true);
+                return m9692c(z72Var, w07Var, list, true);
             case 11:
-                return c(z72Var, w07Var, list, false);
+                return m9692c(z72Var, w07Var, list, false);
             case '\f':
-                ou7.h("reverse", 0, list);
-                int j6 = z72Var.j();
-                if (j6 != 0) {
-                    for (int i2 = 0; i2 < j6 / 2; i2++) {
-                        if (z72Var.t(i2)) {
-                            gl2 k2 = z72Var.k(i2);
-                            z72Var.s(i2, null);
-                            int i3 = (j6 - 1) - i2;
-                            if (z72Var.t(i3)) {
-                                z72Var.s(i2, z72Var.k(i3));
+                ou7.m13916h("reverse", 0, list);
+                int m2704j6 = z72Var.m2704j();
+                if (m2704j6 != 0) {
+                    for (int i2 = 0; i2 < m2704j6 / 2; i2++) {
+                        if (z72Var.m2695t(i2)) {
+                            gl2 m2703k2 = z72Var.m2703k(i2);
+                            z72Var.m2696s(i2, null);
+                            int i3 = (m2704j6 - 1) - i2;
+                            if (z72Var.m2695t(i3)) {
+                                z72Var.m2696s(i2, z72Var.m2703k(i3));
                             }
-                            z72Var.s(i3, k2);
+                            z72Var.m2696s(i3, m2703k2);
                         }
                     }
                 }
                 return z72Var;
             case '\r':
-                ou7.h("shift", 0, list);
-                if (z72Var.j() == 0) {
-                    return gl2.g;
+                ou7.m13916h("shift", 0, list);
+                if (z72Var.m2704j() == 0) {
+                    return gl2.f11420g;
                 }
-                gl2 k3 = z72Var.k(0);
-                z72Var.r(0);
-                return k3;
+                gl2 m2703k3 = z72Var.m2703k(0);
+                z72Var.m2697r(0);
+                return m2703k3;
             case 14:
-                ou7.j("slice", 2, list);
+                ou7.m13914j("slice", 2, list);
                 if (list.isEmpty()) {
                     return z72Var.zzd();
                 }
-                double j7 = z72Var.j();
-                double a2 = ou7.a(w07Var.b((gl2) list.get(0)).zzh().doubleValue());
-                if (a2 < 0.0d) {
-                    Double.isNaN(j7);
-                    min = Math.max(a2 + j7, 0.0d);
+                double m2704j7 = z72Var.m2704j();
+                double m13923a2 = ou7.m13923a(w07Var.m6608b((gl2) list.get(0)).zzh().doubleValue());
+                if (m13923a2 < 0.0d) {
+                    Double.isNaN(m2704j7);
+                    min = Math.max(m13923a2 + m2704j7, 0.0d);
                 } else {
-                    min = Math.min(a2, j7);
+                    min = Math.min(m13923a2, m2704j7);
                 }
                 if (list.size() == 2) {
-                    double a3 = ou7.a(w07Var.b((gl2) list.get(1)).zzh().doubleValue());
-                    if (a3 < 0.0d) {
-                        Double.isNaN(j7);
-                        j7 = Math.max(j7 + a3, 0.0d);
+                    double m13923a3 = ou7.m13923a(w07Var.m6608b((gl2) list.get(1)).zzh().doubleValue());
+                    if (m13923a3 < 0.0d) {
+                        Double.isNaN(m2704j7);
+                        m2704j7 = Math.max(m2704j7 + m13923a3, 0.0d);
                     } else {
-                        j7 = Math.min(j7, a3);
+                        m2704j7 = Math.min(m2704j7, m13923a3);
                     }
                 }
                 z72 z72Var5 = new z72();
-                for (int i4 = (int) min; i4 < j7; i4++) {
-                    z72Var5.s(z72Var5.j(), z72Var.k(i4));
+                for (int i4 = (int) min; i4 < m2704j7; i4++) {
+                    z72Var5.m2696s(z72Var5.m2704j(), z72Var.m2703k(i4));
                 }
                 return z72Var5;
             case 15:
-                ou7.h("some", 1, list);
-                gl2 b9 = w07Var.b((gl2) list.get(0));
-                if (b9 instanceof ad2) {
-                    if (z72Var.j() != 0) {
-                        ad2 ad2Var2 = (ad2) b9;
-                        Iterator n4 = z72Var.n();
-                        while (n4.hasNext()) {
-                            int intValue2 = ((Integer) n4.next()).intValue();
-                            if (z72Var.t(intValue2) && ad2Var2.a(w07Var, Arrays.asList(z72Var.k(intValue2), new tb2(Double.valueOf(intValue2)), z72Var)).zzg().booleanValue()) {
-                                return gl2.l;
+                ou7.m13916h("some", 1, list);
+                gl2 m6608b8 = w07Var.m6608b((gl2) list.get(0));
+                if (m6608b8 instanceof ad2) {
+                    if (z72Var.m2704j() != 0) {
+                        ad2 ad2Var2 = (ad2) m6608b8;
+                        Iterator m2701n4 = z72Var.m2701n();
+                        while (m2701n4.hasNext()) {
+                            int intValue2 = ((Integer) m2701n4.next()).intValue();
+                            if (z72Var.m2695t(intValue2) && ad2Var2.mo5780a(w07Var, Arrays.asList(z72Var.m2703k(intValue2), new tb2(Double.valueOf(intValue2)), z72Var)).zzg().booleanValue()) {
+                                return gl2.f11425l;
                             }
                         }
                     }
-                    return gl2.m;
+                    return gl2.f11426m;
                 }
                 throw new IllegalArgumentException("Callback should be a method");
             case 16:
-                ou7.j("sort", 1, list);
-                if (z72Var.j() >= 2) {
-                    List<gl2> o = z72Var.o();
+                ou7.m13914j("sort", 1, list);
+                if (z72Var.m2704j() >= 2) {
+                    List<gl2> m2700o = z72Var.m2700o();
                     if (list.isEmpty()) {
                         ad2Var = null;
                     } else {
-                        gl2 b10 = w07Var.b((gl2) list.get(0));
-                        if (!(b10 instanceof ad2)) {
+                        gl2 m6608b9 = w07Var.m6608b((gl2) list.get(0));
+                        if (!(m6608b9 instanceof ad2)) {
                             throw new IllegalArgumentException("Comparator should be a method");
                         }
-                        ad2Var = (ad2) b10;
+                        ad2Var = (ad2) m6608b9;
                     }
-                    Collections.sort(o, new oy2(ad2Var, w07Var));
-                    z72Var.p();
+                    Collections.sort(m2700o, new oy2(ad2Var, w07Var));
+                    z72Var.m2699p();
                     int i5 = 0;
-                    for (gl2 gl2Var3 : o) {
-                        z72Var.s(i5, gl2Var3);
+                    for (gl2 gl2Var3 : m2700o) {
+                        z72Var.m2696s(i5, gl2Var3);
                         i5++;
                     }
                 }
@@ -447,118 +448,120 @@ public final class sz2 {
                 if (list.isEmpty()) {
                     return new z72();
                 }
-                int a4 = (int) ou7.a(w07Var.b((gl2) list.get(0)).zzh().doubleValue());
-                if (a4 < 0) {
-                    a4 = Math.max(0, a4 + z72Var.j());
-                } else if (a4 > z72Var.j()) {
-                    a4 = z72Var.j();
+                int m13923a4 = (int) ou7.m13923a(w07Var.m6608b((gl2) list.get(0)).zzh().doubleValue());
+                if (m13923a4 < 0) {
+                    m13923a4 = Math.max(0, m13923a4 + z72Var.m2704j());
+                } else if (m13923a4 > z72Var.m2704j()) {
+                    m13923a4 = z72Var.m2704j();
                 }
-                int j8 = z72Var.j();
+                int m2704j8 = z72Var.m2704j();
                 z72 z72Var6 = new z72();
                 if (list.size() > 1) {
-                    int max = Math.max(0, (int) ou7.a(w07Var.b((gl2) list.get(1)).zzh().doubleValue()));
+                    int max = Math.max(0, (int) ou7.m13923a(w07Var.m6608b((gl2) list.get(1)).zzh().doubleValue()));
                     if (max > 0) {
-                        for (int i6 = a4; i6 < Math.min(j8, a4 + max); i6++) {
-                            z72Var6.s(z72Var6.j(), z72Var.k(a4));
-                            z72Var.r(a4);
+                        for (int i6 = m13923a4; i6 < Math.min(m2704j8, m13923a4 + max); i6++) {
+                            z72Var6.m2696s(z72Var6.m2704j(), z72Var.m2703k(m13923a4));
+                            z72Var.m2697r(m13923a4);
                         }
                     }
                     if (list.size() > 2) {
                         for (int i7 = 2; i7 < list.size(); i7++) {
-                            gl2 b11 = w07Var.b((gl2) list.get(i7));
-                            if (b11 instanceof oa2) {
+                            gl2 m6608b10 = w07Var.m6608b((gl2) list.get(i7));
+                            if (m6608b10 instanceof oa2) {
                                 throw new IllegalArgumentException("Failed to parse elements to add");
                             }
-                            z72Var.q((a4 + i7) - 2, b11);
+                            z72Var.m2698q((m13923a4 + i7) - 2, m6608b10);
                         }
                     }
                 } else {
-                    while (a4 < j8) {
-                        z72Var6.s(z72Var6.j(), z72Var.k(a4));
-                        z72Var.s(a4, null);
-                        a4++;
+                    while (m13923a4 < m2704j8) {
+                        z72Var6.m2696s(z72Var6.m2704j(), z72Var.m2703k(m13923a4));
+                        z72Var.m2696s(m13923a4, null);
+                        m13923a4++;
                     }
                 }
                 return z72Var6;
             case 18:
-                ou7.h(str2, 0, list);
-                return new wp2(z72Var.m(","));
+                ou7.m13916h(str2, 0, list);
+                return new wp2(z72Var.m2702m(","));
             case 19:
                 if (!list.isEmpty()) {
                     z72 z72Var7 = new z72();
                     Iterator it3 = list.iterator();
                     while (it3.hasNext()) {
-                        gl2 b12 = w07Var.b((gl2) it3.next());
-                        if (b12 instanceof oa2) {
+                        gl2 m6608b11 = w07Var.m6608b((gl2) it3.next());
+                        if (m6608b11 instanceof oa2) {
                             throw new IllegalStateException("Argument evaluation failed");
                         }
-                        z72Var7.s(z72Var7.j(), b12);
+                        z72Var7.m2696s(z72Var7.m2704j(), m6608b11);
                     }
-                    int j9 = z72Var7.j();
-                    Iterator n5 = z72Var.n();
-                    while (n5.hasNext()) {
-                        Integer num2 = (Integer) n5.next();
-                        z72Var7.s(num2.intValue() + j9, z72Var.k(num2.intValue()));
+                    int m2704j9 = z72Var7.m2704j();
+                    Iterator m2701n5 = z72Var.m2701n();
+                    while (m2701n5.hasNext()) {
+                        Integer num2 = (Integer) m2701n5.next();
+                        z72Var7.m2696s(num2.intValue() + m2704j9, z72Var.m2703k(num2.intValue()));
                     }
-                    z72Var.p();
-                    Iterator n6 = z72Var7.n();
-                    while (n6.hasNext()) {
-                        Integer num3 = (Integer) n6.next();
-                        z72Var.s(num3.intValue(), z72Var7.k(num3.intValue()));
+                    z72Var.m2699p();
+                    Iterator m2701n6 = z72Var7.m2701n();
+                    while (m2701n6.hasNext()) {
+                        Integer num3 = (Integer) m2701n6.next();
+                        z72Var.m2696s(num3.intValue(), z72Var7.m2703k(num3.intValue()));
                     }
                 }
-                return new tb2(Double.valueOf(z72Var.j()));
+                return new tb2(Double.valueOf(z72Var.m2704j()));
             default:
                 throw new IllegalArgumentException("Command not supported");
         }
     }
 
-    public static z72 b(z72 z72Var, w07 w07Var, ad2 ad2Var, Boolean bool, Boolean bool2) {
+    /* renamed from: b */
+    public static z72 m9693b(z72 z72Var, w07 w07Var, ad2 ad2Var, Boolean bool, Boolean bool2) {
         z72 z72Var2 = new z72();
-        Iterator n = z72Var.n();
-        while (n.hasNext()) {
-            int intValue = ((Integer) n.next()).intValue();
-            if (z72Var.t(intValue)) {
-                gl2 a = ad2Var.a(w07Var, Arrays.asList(z72Var.k(intValue), new tb2(Double.valueOf(intValue)), z72Var));
-                if (a.zzg().equals(bool)) {
+        Iterator m2701n = z72Var.m2701n();
+        while (m2701n.hasNext()) {
+            int intValue = ((Integer) m2701n.next()).intValue();
+            if (z72Var.m2695t(intValue)) {
+                gl2 mo5780a = ad2Var.mo5780a(w07Var, Arrays.asList(z72Var.m2703k(intValue), new tb2(Double.valueOf(intValue)), z72Var));
+                if (mo5780a.zzg().equals(bool)) {
                     return z72Var2;
                 }
-                if (bool2 == null || a.zzg().equals(bool2)) {
-                    z72Var2.s(intValue, a);
+                if (bool2 == null || mo5780a.zzg().equals(bool2)) {
+                    z72Var2.m2696s(intValue, mo5780a);
                 }
             }
         }
         return z72Var2;
     }
 
-    public static gl2 c(z72 z72Var, w07 w07Var, List list, boolean z) {
+    /* renamed from: c */
+    public static gl2 m9692c(z72 z72Var, w07 w07Var, List list, boolean z) {
         gl2 gl2Var;
-        ou7.i("reduce", 1, list);
-        ou7.j("reduce", 2, list);
-        gl2 b = w07Var.b((gl2) list.get(0));
-        if (b instanceof ad2) {
+        ou7.m13915i("reduce", 1, list);
+        ou7.m13914j("reduce", 2, list);
+        gl2 m6608b = w07Var.m6608b((gl2) list.get(0));
+        if (m6608b instanceof ad2) {
             if (list.size() == 2) {
-                gl2Var = w07Var.b((gl2) list.get(1));
+                gl2Var = w07Var.m6608b((gl2) list.get(1));
                 if (gl2Var instanceof oa2) {
                     throw new IllegalArgumentException("Failed to parse initial value");
                 }
-            } else if (z72Var.j() == 0) {
+            } else if (z72Var.m2704j() == 0) {
                 throw new IllegalStateException("Empty array with no initial value error");
             } else {
                 gl2Var = null;
             }
-            ad2 ad2Var = (ad2) b;
-            int j = z72Var.j();
-            int i = z ? 0 : j - 1;
-            int i2 = z ? j - 1 : 0;
+            ad2 ad2Var = (ad2) m6608b;
+            int m2704j = z72Var.m2704j();
+            int i = z ? 0 : m2704j - 1;
+            int i2 = z ? m2704j - 1 : 0;
             int i3 = true == z ? 1 : -1;
             if (gl2Var == null) {
-                gl2Var = z72Var.k(i);
+                gl2Var = z72Var.m2703k(i);
                 i += i3;
             }
             while ((i2 - i) * i3 >= 0) {
-                if (z72Var.t(i)) {
-                    gl2Var = ad2Var.a(w07Var, Arrays.asList(gl2Var, z72Var.k(i), new tb2(Double.valueOf(i)), z72Var));
+                if (z72Var.m2695t(i)) {
+                    gl2Var = ad2Var.mo5780a(w07Var, Arrays.asList(gl2Var, z72Var.m2703k(i), new tb2(Double.valueOf(i)), z72Var));
                     if (gl2Var instanceof oa2) {
                         throw new IllegalStateException("Reduce operation failed");
                     }

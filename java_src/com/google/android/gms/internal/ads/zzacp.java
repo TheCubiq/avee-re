@@ -9,27 +9,35 @@ import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class zzacp extends zzade {
     public static final Parcelable.Creator<zzacp> CREATOR = new u62();
-    public final String q;
-    public final String r;
-    public final int s;
-    public final byte[] t;
+
+    /* renamed from: q */
+    public final String f36724q;
+
+    /* renamed from: r */
+    public final String f36725r;
+
+    /* renamed from: s */
+    public final int f36726s;
+
+    /* renamed from: t */
+    public final byte[] f36727t;
 
     public zzacp(Parcel parcel) {
         super("APIC");
         String readString = parcel.readString();
-        int i = it5.a;
-        this.q = readString;
-        this.r = parcel.readString();
-        this.s = parcel.readInt();
-        this.t = (byte[]) it5.h(parcel.createByteArray());
+        int i = it5.f13991a;
+        this.f36724q = readString;
+        this.f36725r = parcel.readString();
+        this.f36726s = parcel.readInt();
+        this.f36727t = (byte[]) it5.m19391h(parcel.createByteArray());
     }
 
     public zzacp(String str, String str2, int i, byte[] bArr) {
         super("APIC");
-        this.q = str;
-        this.r = str2;
-        this.s = i;
-        this.t = bArr;
+        this.f36724q = str;
+        this.f36725r = str2;
+        this.f36726s = i;
+        this.f36727t = bArr;
     }
 
     public final boolean equals(Object obj) {
@@ -38,7 +46,7 @@ public final class zzacp extends zzade {
         }
         if (obj != null && zzacp.class == obj.getClass()) {
             zzacp zzacpVar = (zzacp) obj;
-            if (this.s == zzacpVar.s && it5.t(this.q, zzacpVar.q) && it5.t(this.r, zzacpVar.r) && Arrays.equals(this.t, zzacpVar.t)) {
+            if (this.f36726s == zzacpVar.f36726s && it5.m19376t(this.f36724q, zzacpVar.f36724q) && it5.m19376t(this.f36725r, zzacpVar.f36725r) && Arrays.equals(this.f36727t, zzacpVar.f36727t)) {
                 return true;
             }
         }
@@ -46,31 +54,32 @@ public final class zzacp extends zzade {
     }
 
     @Override // com.google.android.gms.internal.ads.zzade, com.google.android.gms.internal.ads.zzbp
-    public final void f(x93 x93Var) {
-        x93Var.q(this.t, this.s);
+    /* renamed from: f */
+    public final void mo1104f(x93 x93Var) {
+        x93Var.m5382q(this.f36727t, this.f36726s);
     }
 
     public final int hashCode() {
-        int i = (this.s + 527) * 31;
-        String str = this.q;
+        int i = (this.f36726s + 527) * 31;
+        String str = this.f36724q;
         int hashCode = (i + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
-        return ((hashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + Arrays.hashCode(this.t);
+        String str2 = this.f36725r;
+        return ((hashCode + (str2 != null ? str2.hashCode() : 0)) * 31) + Arrays.hashCode(this.f36727t);
     }
 
     @Override // com.google.android.gms.internal.ads.zzade
     public final String toString() {
-        String str = this.p;
-        String str2 = this.q;
-        String str3 = this.r;
+        String str = this.f36747p;
+        String str2 = this.f36724q;
+        String str3 = this.f36725r;
         return str + ": mimeType=" + str2 + ", description=" + str3;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
-        parcel.writeInt(this.s);
-        parcel.writeByteArray(this.t);
+        parcel.writeString(this.f36724q);
+        parcel.writeString(this.f36725r);
+        parcel.writeInt(this.f36726s);
+        parcel.writeByteArray(this.f36727t);
     }
 }

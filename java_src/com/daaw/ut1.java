@@ -9,133 +9,159 @@ import android.view.animation.Interpolator;
 import java.lang.ref.WeakReference;
 /* loaded from: classes.dex */
 public final class ut1 {
-    public final WeakReference<View> a;
-    public Runnable b = null;
-    public Runnable c = null;
-    public int d = -1;
 
+    /* renamed from: a */
+    public final WeakReference<View> f29511a;
+
+    /* renamed from: b */
+    public Runnable f29512b = null;
+
+    /* renamed from: c */
+    public Runnable f29513c = null;
+
+    /* renamed from: d */
+    public int f29514d = -1;
+
+    /* renamed from: com.daaw.ut1$a */
     /* loaded from: classes.dex */
-    public class a extends AnimatorListenerAdapter {
-        public final /* synthetic */ wt1 a;
-        public final /* synthetic */ View b;
+    public class C3258a extends AnimatorListenerAdapter {
 
-        public a(wt1 wt1Var, View view) {
-            this.a = wt1Var;
-            this.b = view;
+        /* renamed from: a */
+        public final /* synthetic */ wt1 f29515a;
+
+        /* renamed from: b */
+        public final /* synthetic */ View f29516b;
+
+        public C3258a(wt1 wt1Var, View view) {
+            this.f29515a = wt1Var;
+            this.f29516b = view;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationCancel(Animator animator) {
-            this.a.a(this.b);
+            this.f29515a.mo4527a(this.f29516b);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            this.a.b(this.b);
+            this.f29515a.mo5810b(this.f29516b);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            this.a.c(this.b);
+            this.f29515a.mo4526c(this.f29516b);
         }
     }
 
+    /* renamed from: com.daaw.ut1$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public static ViewPropertyAnimator a(ViewPropertyAnimator viewPropertyAnimator, ValueAnimator.AnimatorUpdateListener animatorUpdateListener) {
+    public static class C3259b {
+        /* renamed from: a */
+        public static ViewPropertyAnimator m7722a(ViewPropertyAnimator viewPropertyAnimator, ValueAnimator.AnimatorUpdateListener animatorUpdateListener) {
             return viewPropertyAnimator.setUpdateListener(animatorUpdateListener);
         }
     }
 
     public ut1(View view) {
-        this.a = new WeakReference<>(view);
+        this.f29511a = new WeakReference<>(view);
     }
 
-    public ut1 b(float f) {
-        View view = this.a.get();
+    /* renamed from: b */
+    public ut1 m7734b(float f) {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().alpha(f);
         }
         return this;
     }
 
-    public void c() {
-        View view = this.a.get();
+    /* renamed from: c */
+    public void m7733c() {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().cancel();
         }
     }
 
-    public long d() {
-        View view = this.a.get();
+    /* renamed from: d */
+    public long m7732d() {
+        View view = this.f29511a.get();
         if (view != null) {
             return view.animate().getDuration();
         }
         return 0L;
     }
 
-    public ut1 f(long j) {
-        View view = this.a.get();
+    /* renamed from: f */
+    public ut1 m7730f(long j) {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().setDuration(j);
         }
         return this;
     }
 
-    public ut1 g(Interpolator interpolator) {
-        View view = this.a.get();
+    /* renamed from: g */
+    public ut1 m7729g(Interpolator interpolator) {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().setInterpolator(interpolator);
         }
         return this;
     }
 
-    public ut1 h(wt1 wt1Var) {
-        View view = this.a.get();
+    /* renamed from: h */
+    public ut1 m7728h(wt1 wt1Var) {
+        View view = this.f29511a.get();
         if (view != null) {
-            i(view, wt1Var);
+            m7727i(view, wt1Var);
         }
         return this;
     }
 
-    public final void i(View view, wt1 wt1Var) {
+    /* renamed from: i */
+    public final void m7727i(View view, wt1 wt1Var) {
         if (wt1Var != null) {
-            view.animate().setListener(new a(wt1Var, view));
+            view.animate().setListener(new C3258a(wt1Var, view));
         } else {
             view.animate().setListener(null);
         }
     }
 
-    public ut1 j(long j) {
-        View view = this.a.get();
+    /* renamed from: j */
+    public ut1 m7726j(long j) {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().setStartDelay(j);
         }
         return this;
     }
 
-    public ut1 k(final yt1 yt1Var) {
-        final View view = this.a.get();
+    /* renamed from: k */
+    public ut1 m7725k(final yt1 yt1Var) {
+        final View view = this.f29511a.get();
         if (view != null) {
-            b.a(view.animate(), yt1Var != null ? new ValueAnimator.AnimatorUpdateListener() { // from class: com.daaw.tt1
+            C3259b.m7722a(view.animate(), yt1Var != null ? new ValueAnimator.AnimatorUpdateListener() { // from class: com.daaw.tt1
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                    yt1.this.a(view);
+                    yt1.this.mo3232a(view);
                 }
             } : null);
         }
         return this;
     }
 
-    public void l() {
-        View view = this.a.get();
+    /* renamed from: l */
+    public void m7724l() {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().start();
         }
     }
 
-    public ut1 m(float f) {
-        View view = this.a.get();
+    /* renamed from: m */
+    public ut1 m7723m(float f) {
+        View view = this.f29511a.get();
         if (view != null) {
             view.animate().translationY(f);
         }

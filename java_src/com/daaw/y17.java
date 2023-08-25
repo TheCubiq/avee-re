@@ -9,90 +9,104 @@ import java.util.RandomAccess;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class y17 extends t17 implements List, RandomAccess {
-    public static final d47 q = new w17(m37.t, 0);
 
-    public static v17 o() {
+    /* renamed from: q */
+    public static final d47 f33222q = new w17(m37.f18426t, 0);
+
+    /* renamed from: o */
+    public static v17 m4266o() {
         return new v17(4);
     }
 
-    public static y17 p(Object[] objArr) {
-        return q(objArr, objArr.length);
+    /* renamed from: p */
+    public static y17 m4265p(Object[] objArr) {
+        return m4264q(objArr, objArr.length);
     }
 
-    public static y17 q(Object[] objArr, int i) {
-        return i == 0 ? m37.t : new m37(objArr, i);
+    /* renamed from: q */
+    public static y17 m4264q(Object[] objArr, int i) {
+        return i == 0 ? m37.f18426t : new m37(objArr, i);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static y17 r(Iterable iterable) {
+    /* renamed from: r */
+    public static y17 m4263r(Iterable iterable) {
         Objects.requireNonNull(iterable);
-        return s(iterable);
+        return m4262s(iterable);
     }
 
-    public static y17 s(Collection collection) {
+    /* renamed from: s */
+    public static y17 m4262s(Collection collection) {
         if (!(collection instanceof t17)) {
             Object[] array = collection.toArray();
             int length = array.length;
-            k37.b(array, length);
-            return q(array, length);
+            k37.m18058b(array, length);
+            return m4264q(array, length);
         }
-        y17 h = ((t17) collection).h();
-        if (h.k()) {
-            Object[] array2 = h.toArray();
-            return q(array2, array2.length);
+        y17 mo2849h = ((t17) collection).mo2849h();
+        if (mo2849h.mo5646k()) {
+            Object[] array2 = mo2849h.toArray();
+            return m4264q(array2, array2.length);
         }
-        return h;
+        return mo2849h;
     }
 
-    public static y17 t(Object[] objArr) {
+    /* renamed from: t */
+    public static y17 m4261t(Object[] objArr) {
         if (objArr.length == 0) {
-            return m37.t;
+            return m37.f18426t;
         }
         Object[] objArr2 = (Object[]) objArr.clone();
         int length = objArr2.length;
-        k37.b(objArr2, length);
-        return q(objArr2, length);
+        k37.m18058b(objArr2, length);
+        return m4264q(objArr2, length);
     }
 
-    public static y17 u() {
-        return m37.t;
+    /* renamed from: u */
+    public static y17 m4260u() {
+        return m37.f18426t;
     }
 
-    public static y17 v(Object obj) {
+    /* renamed from: v */
+    public static y17 m4259v(Object obj) {
         Object[] objArr = {obj};
-        k37.b(objArr, 1);
-        return q(objArr, 1);
+        k37.m18058b(objArr, 1);
+        return m4264q(objArr, 1);
     }
 
-    public static y17 w(Object obj, Object obj2) {
+    /* renamed from: w */
+    public static y17 m4258w(Object obj, Object obj2) {
         Object[] objArr = {obj, obj2};
-        k37.b(objArr, 2);
-        return q(objArr, 2);
+        k37.m18058b(objArr, 2);
+        return m4264q(objArr, 2);
     }
 
-    public static y17 x(Object obj, Object obj2, Object obj3) {
+    /* renamed from: x */
+    public static y17 m4257x(Object obj, Object obj2, Object obj3) {
         Object[] objArr = {"2011", "1009", "3010"};
-        k37.b(objArr, 3);
-        return q(objArr, 3);
+        k37.m18058b(objArr, 3);
+        return m4264q(objArr, 3);
     }
 
-    public static y17 y(Object obj, Object obj2, Object obj3, Object obj4, Object obj5) {
+    /* renamed from: y */
+    public static y17 m4256y(Object obj, Object obj2, Object obj3, Object obj4, Object obj5) {
         Object[] objArr = {obj, obj2, obj3, obj4, obj5};
-        k37.b(objArr, 5);
-        return q(objArr, 5);
+        k37.m18058b(objArr, 5);
+        return m4264q(objArr, 5);
     }
 
-    public static y17 z(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6) {
+    /* renamed from: z */
+    public static y17 m4255z(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6) {
         Object[] objArr = {"3010", "3008", "1005", "1009", "2011", "2007"};
-        k37.b(objArr, 6);
-        return q(objArr, 6);
+        k37.m18058b(objArr, 6);
+        return m4264q(objArr, 6);
     }
 
     @Override // java.util.List
     /* renamed from: A */
     public final d47 listIterator(int i) {
-        sy6.b(i, size(), "index");
-        return isEmpty() ? q : new w17(this, i);
+        sy6.m9707b(i, size(), "index");
+        return isEmpty() ? f33222q : new w17(this, i);
     }
 
     @Override // java.util.List
@@ -113,7 +127,8 @@ public abstract class y17 extends t17 implements List, RandomAccess {
     }
 
     @Override // com.daaw.t17
-    public int d(Object[] objArr, int i) {
+    /* renamed from: d */
+    public int mo2850d(Object[] objArr, int i) {
         int size = size();
         for (int i2 = 0; i2 < size; i2++) {
             objArr[i + i2] = get(i2);
@@ -132,7 +147,7 @@ public abstract class y17 extends t17 implements List, RandomAccess {
             if (size == list.size()) {
                 if (list instanceof RandomAccess) {
                     for (int i = 0; i < size; i++) {
-                        if (ky6.a(get(i), list.get(i))) {
+                        if (ky6.m17316a(get(i), list.get(i))) {
                         }
                     }
                     return true;
@@ -142,7 +157,7 @@ public abstract class y17 extends t17 implements List, RandomAccess {
                 while (true) {
                     if (it.hasNext()) {
                         if (it2.hasNext()) {
-                            if (!ky6.a(it.next(), it2.next())) {
+                            if (!ky6.m17316a(it.next(), it2.next())) {
                                 break;
                             }
                         } else {
@@ -159,7 +174,8 @@ public abstract class y17 extends t17 implements List, RandomAccess {
 
     @Override // com.daaw.t17
     @Deprecated
-    public final y17 h() {
+    /* renamed from: h */
+    public final y17 mo2849h() {
         return this;
     }
 
@@ -193,7 +209,8 @@ public abstract class y17 extends t17 implements List, RandomAccess {
     }
 
     @Override // com.daaw.t17
-    public final c47 j() {
+    /* renamed from: j */
+    public final c47 mo2848j() {
         return listIterator(0);
     }
 
@@ -218,9 +235,9 @@ public abstract class y17 extends t17 implements List, RandomAccess {
     @Override // java.util.List
     /* renamed from: n */
     public y17 subList(int i, int i2) {
-        sy6.g(i, i2, size());
+        sy6.m9702g(i, i2, size());
         int i3 = i2 - i;
-        return i3 == size() ? this : i3 == 0 ? m37.t : new x17(this, i, i3);
+        return i3 == size() ? this : i3 == 0 ? m37.f18426t : new x17(this, i, i3);
     }
 
     @Override // java.util.List

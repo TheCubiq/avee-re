@@ -13,203 +13,243 @@ import java.util.LinkedList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class ie1 {
-    public static final lo1<Integer, Integer> d = new lo1<>(8, Integer.valueOf((int) R.string.sort_mode_Default));
-    public static final lo1<Integer, Integer> e = new lo1<>(0, Integer.valueOf((int) R.string.sort_mode_Title));
-    public static final lo1<Integer, Integer> f = new lo1<>(3, Integer.valueOf((int) R.string.sort_mode_Path_url));
-    public static final lo1<Integer, Integer> g = new lo1<>(9, Integer.valueOf((int) R.string.sort_mode_Bitrate));
-    public er0<Integer, Integer> a = new er0<>();
-    public er0<Integer, Integer> b = new er0<>();
-    public List<Object> c = new LinkedList();
 
+    /* renamed from: d */
+    public static final lo1<Integer, Integer> f13546d = new lo1<>(8, Integer.valueOf((int) R.string.sort_mode_Default));
+
+    /* renamed from: e */
+    public static final lo1<Integer, Integer> f13547e = new lo1<>(0, Integer.valueOf((int) R.string.sort_mode_Title));
+
+    /* renamed from: f */
+    public static final lo1<Integer, Integer> f13548f = new lo1<>(3, Integer.valueOf((int) R.string.sort_mode_Path_url));
+
+    /* renamed from: g */
+    public static final lo1<Integer, Integer> f13549g = new lo1<>(9, Integer.valueOf((int) R.string.sort_mode_Bitrate));
+
+    /* renamed from: a */
+    public er0<Integer, Integer> f13550a = new er0<>();
+
+    /* renamed from: b */
+    public er0<Integer, Integer> f13551b = new er0<>();
+
+    /* renamed from: c */
+    public List<Object> f13552c = new LinkedList();
+
+    /* renamed from: com.daaw.ie1$a */
     /* loaded from: classes.dex */
-    public class a implements rw1.a<al, View> {
-        public a() {
+    public class C1688a implements rw1.InterfaceC2894a<C0645al, View> {
+        public C1688a() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(al alVar, View view) {
-            je1.b(alVar, view, "regular");
+        public void mo2813c(C0645al c0645al, View view) {
+            je1.m18547b(c0645al, view, "regular");
         }
     }
 
+    /* renamed from: com.daaw.ie1$b */
     /* loaded from: classes.dex */
-    public class b implements rw1.a<al, View> {
-        public b() {
+    public class C1689b implements rw1.InterfaceC2894a<C0645al, View> {
+        public C1689b() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(al alVar, View view) {
-            je1.b(alVar, view, "files");
+        public void mo2813c(C0645al c0645al, View view) {
+            je1.m18547b(c0645al, view, "files");
         }
     }
 
+    /* renamed from: com.daaw.ie1$c */
     /* loaded from: classes.dex */
-    public class c implements rw1.a<al, View> {
-        public c() {
+    public class C1690c implements rw1.InterfaceC2894a<C0645al, View> {
+        public C1690c() {
         }
 
-        @Override // com.daaw.rw1.a
+        @Override // com.daaw.rw1.InterfaceC2894a
         /* renamed from: a */
-        public void c(al alVar, View view) {
-            je1.b(alVar, view, "stations");
+        public void mo2813c(C0645al c0645al, View view) {
+            je1.m18547b(c0645al, view, "stations");
         }
     }
 
+    /* renamed from: com.daaw.ie1$d */
     /* loaded from: classes.dex */
-    public class d implements yw1.a<Integer, sd0, String, i> {
-        public d() {
+    public class C1691d implements yw1.InterfaceC3757a<Integer, sd0, String, C1696i> {
+        public C1691d() {
         }
 
-        @Override // com.daaw.yw1.a
+        @Override // com.daaw.yw1.InterfaceC3757a
         /* renamed from: b */
-        public i a(Integer num, sd0 sd0Var, String str) {
-            i c = ie1.this.c();
+        public C1696i mo3153a(Integer num, sd0 sd0Var, String str) {
+            C1696i m19896c = ie1.this.m19896c();
             if (str.equals("regular")) {
-                return c;
+                return m19896c;
             }
             if (str.equals("files")) {
-                return c.a(8, 0, 3, 5, 7);
+                return m19896c.m19887a(8, 0, 3, 5, 7);
             }
             if (str.equals("stations")) {
-                c.b(ie1.d, ie1.e, ie1.f, ie1.g);
+                m19896c.m19886b(ie1.f13546d, ie1.f13547e, ie1.f13548f, ie1.f13549g);
             }
-            return c;
+            return m19896c;
         }
     }
 
+    /* renamed from: com.daaw.ie1$e */
     /* loaded from: classes.dex */
-    public class e implements tw1.a<Integer, sd0, Integer, Integer> {
-        public e() {
+    public class C1692e implements tw1.InterfaceC3140a<Integer, sd0, Integer, Integer> {
+        public C1692e() {
         }
 
-        @Override // com.daaw.tw1.a
+        @Override // com.daaw.tw1.InterfaceC3140a
         /* renamed from: b */
-        public void a(Integer num, sd0 sd0Var, Integer num2, Integer num3) {
-            j5.e().c0(j5.M, num2.intValue());
-            j5.e().c0(j5.N, num3.intValue());
-            ie1.this.d();
+        public void mo3114a(Integer num, sd0 sd0Var, Integer num2, Integer num3) {
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18931c0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14277M, num2.intValue());
+            SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18931c0(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14278N, num3.intValue());
+            ie1.this.m19895d();
         }
     }
 
+    /* renamed from: com.daaw.ie1$f */
     /* loaded from: classes.dex */
-    public class f implements xw1.a<Integer, sd0, h> {
-        public f() {
+    public class C1693f implements xw1.InterfaceC3648a<Integer, sd0, C1695h> {
+        public C1693f() {
         }
 
-        @Override // com.daaw.xw1.a
+        @Override // com.daaw.xw1.InterfaceC3648a
         /* renamed from: a */
-        public h c(Integer num, sd0 sd0Var) {
-            int k = j5.e().k(j5.M);
-            int k2 = j5.e().k(j5.N);
-            h hVar = new h();
-            hVar.a = k;
-            hVar.b = (k2 & 1) != 0;
-            return hVar;
+        public C1695h mo4423c(Integer num, sd0 sd0Var) {
+            int m18916k = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18916k(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14277M);
+            int m18916k2 = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18916k(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14278N);
+            C1695h c1695h = new C1695h();
+            c1695h.f13560a = m18916k;
+            c1695h.f13561b = (m18916k2 & 1) != 0;
+            return c1695h;
         }
     }
 
+    /* renamed from: com.daaw.ie1$g */
     /* loaded from: classes.dex */
-    public class g implements yw1.a<Integer, sd0, File, Boolean> {
-        public g() {
+    public class C1694g implements yw1.InterfaceC3757a<Integer, sd0, File, Boolean> {
+        public C1694g() {
         }
 
-        @Override // com.daaw.yw1.a
+        @Override // com.daaw.yw1.InterfaceC3757a
         /* renamed from: b */
-        public Boolean a(Integer num, sd0 sd0Var, File file) {
+        public Boolean mo3153a(Integer num, sd0 sd0Var, File file) {
             if (file.isDirectory()) {
                 return Boolean.TRUE;
             }
-            String i = cr1.i(file);
-            if (!i.equals("mp3") && !i.equals("wav") && !i.equals("mp4") && !i.equals("m4a") && !i.equals("m4p") && !i.equals("m4b") && !i.equals("m4r") && !i.equals("m4v") && !i.equals("mp4v") && !i.equals("3gp") && !i.equals("3g2") && !i.equals("3gp2") && !i.equals("3gpp") && !i.equals("3ga") && !i.equals("webm") && !i.equals("flv") && !i.equals("aac") && !i.equals("mkv") && !i.equals("fmp4") && !i.equals("ts") && !i.equals("tsv") && !i.equals("tsa") && !i.equals("flac") && !i.equals("mid") && !i.equals("midi") && !i.equals("rmi") && !i.equals("xmf") && !i.equals("mxmf") && !i.equals("rtttl") && !i.equals("rtx") && !i.equals("ota") && !i.equals("imy") && !i.equals("ogg") && !i.equals("asf") && !i.equals("wma") && !i.equals("wmv") && !i.equals("wm") && !i.equals("asx") && !i.equals("wax") && !i.equals("wvx") && !i.equals("wmx") && !i.equals("wpl") && !i.equals("dvr-ms") && !i.equals("wmd") && !i.equals("avi") && !i.equals("mpg") && !i.equals("mpeg") && !i.equals("m1v") && !i.equals("mp2") && !i.equals("mpa") && !i.equals("mpe") && !i.equals("mpga") && !i.equals("aif") && !i.equals("aifc") && !i.equals("aiff") && !i.equals("au") && !i.equals("snd") && !i.equals("cda") && !i.equals("ivf") && !i.equals("mov") && !i.equals("adt") && !i.equals("adts") && !i.equals("m2ts") && !i.equals("amr") && !i.equals("aup") && !i.equals("caf") && !i.equals("kar") && !i.equals("mmf") && !i.equals("oma") && !i.equals("opus") && !i.equals("qcp") && !i.equals("ra") && !i.equals("ram") && !i.equals("xspf") && !i.equals("m3u") && !i.equals("m3u8")) {
+            String m25071i = cr1.m25071i(file);
+            if (!m25071i.equals("mp3") && !m25071i.equals("wav") && !m25071i.equals("mp4") && !m25071i.equals("m4a") && !m25071i.equals("m4p") && !m25071i.equals("m4b") && !m25071i.equals("m4r") && !m25071i.equals("m4v") && !m25071i.equals("mp4v") && !m25071i.equals("3gp") && !m25071i.equals("3g2") && !m25071i.equals("3gp2") && !m25071i.equals("3gpp") && !m25071i.equals("3ga") && !m25071i.equals("webm") && !m25071i.equals("flv") && !m25071i.equals("aac") && !m25071i.equals("mkv") && !m25071i.equals("fmp4") && !m25071i.equals("ts") && !m25071i.equals("tsv") && !m25071i.equals("tsa") && !m25071i.equals("flac") && !m25071i.equals("mid") && !m25071i.equals("midi") && !m25071i.equals("rmi") && !m25071i.equals("xmf") && !m25071i.equals("mxmf") && !m25071i.equals("rtttl") && !m25071i.equals("rtx") && !m25071i.equals("ota") && !m25071i.equals("imy") && !m25071i.equals("ogg") && !m25071i.equals("asf") && !m25071i.equals("wma") && !m25071i.equals("wmv") && !m25071i.equals("wm") && !m25071i.equals("asx") && !m25071i.equals("wax") && !m25071i.equals("wvx") && !m25071i.equals("wmx") && !m25071i.equals("wpl") && !m25071i.equals("dvr-ms") && !m25071i.equals("wmd") && !m25071i.equals("avi") && !m25071i.equals("mpg") && !m25071i.equals("mpeg") && !m25071i.equals("m1v") && !m25071i.equals("mp2") && !m25071i.equals("mpa") && !m25071i.equals("mpe") && !m25071i.equals("mpga") && !m25071i.equals("aif") && !m25071i.equals("aifc") && !m25071i.equals("aiff") && !m25071i.equals("au") && !m25071i.equals("snd") && !m25071i.equals("cda") && !m25071i.equals("ivf") && !m25071i.equals("mov") && !m25071i.equals("adt") && !m25071i.equals("adts") && !m25071i.equals("m2ts") && !m25071i.equals("amr") && !m25071i.equals("aup") && !m25071i.equals("caf") && !m25071i.equals("kar") && !m25071i.equals("mmf") && !m25071i.equals("oma") && !m25071i.equals("opus") && !m25071i.equals("qcp") && !m25071i.equals("ra") && !m25071i.equals("ram") && !m25071i.equals("xspf") && !m25071i.equals("m3u") && !m25071i.equals("m3u8")) {
                 return Boolean.FALSE;
             }
             return Boolean.TRUE;
         }
     }
 
+    /* renamed from: com.daaw.ie1$h */
     /* loaded from: classes.dex */
-    public static class h {
-        public int a;
-        public boolean b;
+    public static class C1695h {
+
+        /* renamed from: a */
+        public int f13560a;
+
+        /* renamed from: b */
+        public boolean f13561b;
     }
 
+    /* renamed from: com.daaw.ie1$i */
     /* loaded from: classes.dex */
-    public static class i {
-        public er0<Integer, Integer> a;
-        public er0<Integer, Integer> b;
-        public int c;
-        public int d;
+    public static class C1696i {
 
-        public i a(int... iArr) {
-            i iVar = new i();
-            iVar.a = new er0<>();
-            Iterator<lo1<Integer, Integer>> it = this.a.iterator();
+        /* renamed from: a */
+        public er0<Integer, Integer> f13562a;
+
+        /* renamed from: b */
+        public er0<Integer, Integer> f13563b;
+
+        /* renamed from: c */
+        public int f13564c;
+
+        /* renamed from: d */
+        public int f13565d;
+
+        /* renamed from: a */
+        public C1696i m19887a(int... iArr) {
+            C1696i c1696i = new C1696i();
+            c1696i.f13562a = new er0<>();
+            Iterator<lo1<Integer, Integer>> it = this.f13562a.iterator();
             while (it.hasNext()) {
                 lo1<Integer, Integer> next = it.next();
-                if (ie1.b(iArr, next.a.intValue())) {
-                    iVar.a.add(next);
+                if (ie1.m19897b(iArr, next.f17576a.intValue())) {
+                    c1696i.f13562a.add(next);
                 }
             }
-            iVar.b = this.b;
-            iVar.c = this.c;
-            iVar.d = this.d;
-            return iVar;
+            c1696i.f13563b = this.f13563b;
+            c1696i.f13564c = this.f13564c;
+            c1696i.f13565d = this.f13565d;
+            return c1696i;
         }
 
-        public void b(lo1<Integer, Integer>... lo1VarArr) {
-            this.a = new er0<>();
+        /* renamed from: b */
+        public void m19886b(lo1<Integer, Integer>... lo1VarArr) {
+            this.f13562a = new er0<>();
             for (lo1<Integer, Integer> lo1Var : lo1VarArr) {
-                this.a.add(lo1Var);
+                this.f13562a.add(lo1Var);
             }
         }
     }
 
     public ie1() {
-        this.a.f(8, Integer.valueOf((int) R.string.sort_mode_Default));
-        this.a.f(0, Integer.valueOf((int) R.string.sort_mode_Title));
-        this.a.f(1, Integer.valueOf((int) R.string.sort_mode_Artist));
-        this.a.f(2, Integer.valueOf((int) R.string.sort_mode_Album));
-        this.a.f(3, Integer.valueOf((int) R.string.sort_mode_Path));
-        this.a.f(4, Integer.valueOf((int) R.string.sort_mode_DateAdded));
-        this.a.f(5, Integer.valueOf((int) R.string.sort_mode_DateModified));
-        this.a.f(6, Integer.valueOf((int) R.string.sort_mode_Duration));
-        this.a.f(7, Integer.valueOf((int) R.string.sort_mode_Size));
-        this.b.f(1, Integer.valueOf((int) R.string.sort_Descending));
-        dj0.W.b(new a(), this.c);
-        dj0.V.b(new b(), this.c);
-        dj0.U.b(new c(), this.c);
-        je1.c.b(new d(), this.c);
-        je1.d.b(new e(), this.c);
-        dj0.Z.b(new f(), this.c);
-        dj0.a0.b(new g(), this.c);
+        this.f13550a.m23274f(8, Integer.valueOf((int) R.string.sort_mode_Default));
+        this.f13550a.m23274f(0, Integer.valueOf((int) R.string.sort_mode_Title));
+        this.f13550a.m23274f(1, Integer.valueOf((int) R.string.sort_mode_Artist));
+        this.f13550a.m23274f(2, Integer.valueOf((int) R.string.sort_mode_Album));
+        this.f13550a.m23274f(3, Integer.valueOf((int) R.string.sort_mode_Path));
+        this.f13550a.m23274f(4, Integer.valueOf((int) R.string.sort_mode_DateAdded));
+        this.f13550a.m23274f(5, Integer.valueOf((int) R.string.sort_mode_DateModified));
+        this.f13550a.m23274f(6, Integer.valueOf((int) R.string.sort_mode_Duration));
+        this.f13550a.m23274f(7, Integer.valueOf((int) R.string.sort_mode_Size));
+        this.f13551b.m23274f(1, Integer.valueOf((int) R.string.sort_Descending));
+        dj0.f7159W.m10861b(new C1688a(), this.f13552c);
+        dj0.f7158V.m10861b(new C1689b(), this.f13552c);
+        dj0.f7157U.m10861b(new C1690c(), this.f13552c);
+        je1.f15041c.m3154b(new C1691d(), this.f13552c);
+        je1.f15042d.m8755b(new C1692e(), this.f13552c);
+        dj0.f7162Z.m4424b(new C1693f(), this.f13552c);
+        dj0.f7163a0.m3154b(new C1694g(), this.f13552c);
     }
 
-    public static boolean b(int[] iArr, int i2) {
-        for (int i3 : iArr) {
-            if (i3 == i2) {
+    /* renamed from: b */
+    public static boolean m19897b(int[] iArr, int i) {
+        for (int i2 : iArr) {
+            if (i2 == i) {
                 return true;
             }
         }
         return false;
     }
 
-    public i c() {
-        int k = j5.e().k(j5.M);
-        int k2 = j5.e().k(j5.N);
-        i iVar = new i();
-        iVar.a = this.a;
-        iVar.b = this.b;
-        iVar.c = k;
-        iVar.d = k2;
-        return iVar;
+    /* renamed from: c */
+    public C1696i m19896c() {
+        int m18916k = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18916k(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14277M);
+        int m18916k2 = SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.m18928e().m18916k(SharedPreferences$OnSharedPreferenceChangeListenerC1788j5.f14278N);
+        C1696i c1696i = new C1696i();
+        c1696i.f13562a = this.f13550a;
+        c1696i.f13563b = this.f13551b;
+        c1696i.f13564c = m18916k;
+        c1696i.f13565d = m18916k2;
+        return c1696i;
     }
 
-    public final void d() {
-        m30 o0 = MainActivity.o0();
-        if (o0 != null) {
-            o0.A();
+    /* renamed from: d */
+    public final void m19895d() {
+        m30 m26906o0 = MainActivity.m26906o0();
+        if (m26906o0 != null) {
+            m26906o0.m16263A();
         }
     }
 }

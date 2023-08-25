@@ -1,13 +1,18 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface e10 {
-    void a();
+    /* renamed from: a */
+    void mo15621a();
 
-    String b();
+    /* renamed from: b */
+    String mo15620b();
 
-    byte[] c();
+    /* renamed from: c */
+    byte[] mo15619c();
 
-    void d();
+    /* renamed from: d */
+    void mo15618d();
 
-    void e(long j, String str);
+    /* renamed from: e */
+    void mo15617e(long j, String str);
 }

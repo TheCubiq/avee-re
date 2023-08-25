@@ -1,17 +1,24 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class k95 extends am4 {
-    public abstract xs4 h();
+    /* renamed from: h */
+    public abstract xs4 mo17783h();
 
-    public abstract ez4 i();
+    /* renamed from: i */
+    public abstract ez4 mo17782i();
 
-    public abstract p05 j();
+    /* renamed from: j */
+    public abstract p05 mo17781j();
 
-    public abstract j95 k();
+    /* renamed from: k */
+    public abstract j95 mo17780k();
 
-    public abstract ha5 l();
+    /* renamed from: l */
+    public abstract ha5 mo17779l();
 
-    public abstract jv5 m();
+    /* renamed from: m */
+    public abstract jv5 mo17778m();
 
-    public abstract gw5 n();
+    /* renamed from: n */
+    public abstract gw5 mo17777n();
 }

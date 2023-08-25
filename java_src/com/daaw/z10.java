@@ -25,18 +25,29 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes2.dex */
 public class z10 {
-    public static final Pattern d = Pattern.compile("[0-9]+s");
-    public static final Charset e = Charset.forName("UTF-8");
-    public final Context a;
-    public final b01<va0> b;
-    public final p41 c = new p41();
+
+    /* renamed from: d */
+    public static final Pattern f34325d = Pattern.compile("[0-9]+s");
+
+    /* renamed from: e */
+    public static final Charset f34326e = Charset.forName("UTF-8");
+
+    /* renamed from: a */
+    public final Context f34327a;
+
+    /* renamed from: b */
+    public final b01<va0> f34328b;
+
+    /* renamed from: c */
+    public final p41 f34329c = new p41();
 
     public z10(Context context, b01<va0> b01Var) {
-        this.a = context;
-        this.b = b01Var;
+        this.f34327a = context;
+        this.f34328b = b01Var;
     }
 
-    public static String a(String str, String str2, String str3) {
+    /* renamed from: a */
+    public static String m3001a(String str, String str2, String str3) {
         String str4;
         Object[] objArr = new Object[3];
         objArr[0] = str2;
@@ -50,7 +61,8 @@ public class z10 {
         return String.format("Firebase options used while communicating with Firebase server APIs: %s, %s%s", objArr);
     }
 
-    public static JSONObject b(String str, String str2) {
+    /* renamed from: b */
+    public static JSONObject m3000b(String str, String str2) {
         try {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("fid", str);
@@ -58,55 +70,62 @@ public class z10 {
             jSONObject.put("authVersion", "FIS_v2");
             jSONObject.put("sdkVersion", "a:17.1.0");
             return jSONObject;
-        } catch (JSONException e2) {
-            throw new IllegalStateException(e2);
+        } catch (JSONException e) {
+            throw new IllegalStateException(e);
         }
     }
 
-    public static JSONObject c() {
+    /* renamed from: c */
+    public static JSONObject m2999c() {
         try {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("sdkVersion", "a:17.1.0");
             JSONObject jSONObject2 = new JSONObject();
             jSONObject2.put("installation", jSONObject);
             return jSONObject2;
-        } catch (JSONException e2) {
-            throw new IllegalStateException(e2);
+        } catch (JSONException e) {
+            throw new IllegalStateException(e);
         }
     }
 
-    public static byte[] h(JSONObject jSONObject) {
+    /* renamed from: h */
+    public static byte[] m2994h(JSONObject jSONObject) {
         return jSONObject.toString().getBytes("UTF-8");
     }
 
-    public static boolean i(int i) {
+    /* renamed from: i */
+    public static boolean m2993i(int i) {
         return i >= 200 && i < 300;
     }
 
-    public static void j() {
+    /* renamed from: j */
+    public static void m2992j() {
     }
 
-    public static void k(HttpURLConnection httpURLConnection, String str, String str2, String str3) {
-        if (TextUtils.isEmpty(o(httpURLConnection))) {
+    /* renamed from: k */
+    public static void m2991k(HttpURLConnection httpURLConnection, String str, String str2, String str3) {
+        if (TextUtils.isEmpty(m2987o(httpURLConnection))) {
             return;
         }
-        a(str, str2, str3);
+        m3001a(str, str2, str3);
     }
 
-    public static long m(String str) {
-        ry0.b(d.matcher(str).matches(), "Invalid Expiration Timestamp.");
+    /* renamed from: m */
+    public static long m2989m(String str) {
+        ry0.m10838b(f34325d.matcher(str).matches(), "Invalid Expiration Timestamp.");
         if (str == null || str.length() == 0) {
             return 0L;
         }
         return Long.parseLong(str.substring(0, str.length() - 1));
     }
 
-    public static String o(HttpURLConnection httpURLConnection) {
+    /* renamed from: o */
+    public static String m2987o(HttpURLConnection httpURLConnection) {
         InputStream errorStream = httpURLConnection.getErrorStream();
         if (errorStream == null) {
             return null;
         }
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(errorStream, e));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(errorStream, f34326e));
         try {
             try {
                 StringBuilder sb = new StringBuilder();
@@ -139,7 +158,8 @@ public class z10 {
         }
     }
 
-    public static void s(URLConnection uRLConnection, byte[] bArr) {
+    /* renamed from: s */
+    public static void m2983s(URLConnection uRLConnection, byte[] bArr) {
         OutputStream outputStream = uRLConnection.getOutputStream();
         if (outputStream == null) {
             throw new IOException("Cannot send request to FIS servers. No OutputStream available.");
@@ -156,132 +176,137 @@ public class z10 {
         }
     }
 
-    public ig0 d(String str, String str2, String str3, String str4, String str5) {
+    /* renamed from: d */
+    public ig0 m2998d(String str, String str2, String str3, String str4, String str5) {
         int responseCode;
-        ig0 n;
-        if (this.c.b()) {
-            URL g = g(String.format("projects/%s/installations", str3));
+        ig0 m2988n;
+        if (this.f34329c.m13645b()) {
+            URL m2995g = m2995g(String.format("projects/%s/installations", str3));
             for (int i = 0; i <= 1; i++) {
                 TrafficStats.setThreadStatsTag(32769);
-                HttpURLConnection l = l(g, str);
+                HttpURLConnection m2990l = m2990l(m2995g, str);
                 try {
-                    l.setRequestMethod("POST");
-                    l.setDoOutput(true);
+                    m2990l.setRequestMethod("POST");
+                    m2990l.setDoOutput(true);
                     if (str5 != null) {
-                        l.addRequestProperty("x-goog-fis-android-iid-migration-auth", str5);
+                        m2990l.addRequestProperty("x-goog-fis-android-iid-migration-auth", str5);
                     }
-                    q(l, str2, str4);
-                    responseCode = l.getResponseCode();
-                    this.c.f(responseCode);
+                    m2985q(m2990l, str2, str4);
+                    responseCode = m2990l.getResponseCode();
+                    this.f34329c.m13641f(responseCode);
                 } catch (IOException | AssertionError unused) {
                 } catch (Throwable th) {
-                    l.disconnect();
+                    m2990l.disconnect();
                     TrafficStats.clearThreadStatsTag();
                     throw th;
                 }
-                if (i(responseCode)) {
-                    n = n(l);
+                if (m2993i(responseCode)) {
+                    m2988n = m2988n(m2990l);
                 } else {
-                    k(l, str4, str, str3);
+                    m2991k(m2990l, str4, str, str3);
                     if (responseCode == 429) {
-                        throw new f20("Firebase servers have received too many requests from this client in a short period of time. Please try again later.", f20.a.TOO_MANY_REQUESTS);
+                        throw new f20("Firebase servers have received too many requests from this client in a short period of time. Please try again later.", f20.EnumC1246a.TOO_MANY_REQUESTS);
                     }
                     if (responseCode < 500 || responseCode >= 600) {
-                        j();
-                        n = ig0.a().e(ig0.b.BAD_CONFIG).a();
+                        m2992j();
+                        m2988n = ig0.m19840a().mo19830e(ig0.EnumC1703b.BAD_CONFIG).mo19834a();
                     } else {
-                        l.disconnect();
+                        m2990l.disconnect();
                         TrafficStats.clearThreadStatsTag();
                     }
                 }
-                l.disconnect();
+                m2990l.disconnect();
                 TrafficStats.clearThreadStatsTag();
-                return n;
+                return m2988n;
             }
-            throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.a.UNAVAILABLE);
+            throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.EnumC1246a.UNAVAILABLE);
         }
-        throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.a.UNAVAILABLE);
+        throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.EnumC1246a.UNAVAILABLE);
     }
 
-    public bm1 e(String str, String str2, String str3, String str4) {
+    /* renamed from: e */
+    public bm1 m2997e(String str, String str2, String str3, String str4) {
         int responseCode;
-        bm1 p;
-        bm1.a b;
-        if (this.c.b()) {
-            URL g = g(String.format("projects/%s/installations/%s/authTokens:generate", str3, str2));
+        bm1 m2986p;
+        bm1.AbstractC0872a mo7322b;
+        if (this.f34329c.m13645b()) {
+            URL m2995g = m2995g(String.format("projects/%s/installations/%s/authTokens:generate", str3, str2));
             for (int i = 0; i <= 1; i++) {
                 TrafficStats.setThreadStatsTag(32771);
-                HttpURLConnection l = l(g, str);
+                HttpURLConnection m2990l = m2990l(m2995g, str);
                 try {
-                    l.setRequestMethod("POST");
-                    l.addRequestProperty("Authorization", "FIS_v2 " + str4);
-                    l.setDoOutput(true);
-                    r(l);
-                    responseCode = l.getResponseCode();
-                    this.c.f(responseCode);
+                    m2990l.setRequestMethod("POST");
+                    m2990l.addRequestProperty("Authorization", "FIS_v2 " + str4);
+                    m2990l.setDoOutput(true);
+                    m2984r(m2990l);
+                    responseCode = m2990l.getResponseCode();
+                    this.f34329c.m13641f(responseCode);
                 } catch (IOException | AssertionError unused) {
                 } catch (Throwable th) {
-                    l.disconnect();
+                    m2990l.disconnect();
                     TrafficStats.clearThreadStatsTag();
                     throw th;
                 }
-                if (i(responseCode)) {
-                    p = p(l);
+                if (m2993i(responseCode)) {
+                    m2986p = m2986p(m2990l);
                 } else {
-                    k(l, null, str, str3);
+                    m2991k(m2990l, null, str, str3);
                     if (responseCode != 401 && responseCode != 404) {
                         if (responseCode == 429) {
-                            throw new f20("Firebase servers have received too many requests from this client in a short period of time. Please try again later.", f20.a.TOO_MANY_REQUESTS);
+                            throw new f20("Firebase servers have received too many requests from this client in a short period of time. Please try again later.", f20.EnumC1246a.TOO_MANY_REQUESTS);
                         }
                         if (responseCode < 500 || responseCode >= 600) {
-                            j();
-                            b = bm1.a().b(bm1.b.BAD_CONFIG);
-                            p = b.a();
+                            m2992j();
+                            mo7322b = bm1.m25997a().mo7322b(bm1.EnumC0873b.BAD_CONFIG);
+                            m2986p = mo7322b.mo7323a();
                         } else {
-                            l.disconnect();
+                            m2990l.disconnect();
                             TrafficStats.clearThreadStatsTag();
                         }
                     }
-                    b = bm1.a().b(bm1.b.AUTH_ERROR);
-                    p = b.a();
+                    mo7322b = bm1.m25997a().mo7322b(bm1.EnumC0873b.AUTH_ERROR);
+                    m2986p = mo7322b.mo7323a();
                 }
-                l.disconnect();
+                m2990l.disconnect();
                 TrafficStats.clearThreadStatsTag();
-                return p;
+                return m2986p;
             }
-            throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.a.UNAVAILABLE);
+            throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.EnumC1246a.UNAVAILABLE);
         }
-        throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.a.UNAVAILABLE);
+        throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.EnumC1246a.UNAVAILABLE);
     }
 
-    public final String f() {
+    /* renamed from: f */
+    public final String m2996f() {
         try {
-            Context context = this.a;
-            byte[] a = b3.a(context, context.getPackageName());
-            if (a == null) {
+            Context context = this.f34327a;
+            byte[] m26515a = C0803b3.m26515a(context, context.getPackageName());
+            if (m26515a == null) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Could not get fingerprint hash for package: ");
-                sb.append(this.a.getPackageName());
+                sb.append(this.f34327a.getPackageName());
                 return null;
             }
-            return db0.b(a, false);
+            return db0.m24573b(m26515a, false);
         } catch (PackageManager.NameNotFoundException unused) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("No such package: ");
-            sb2.append(this.a.getPackageName());
+            sb2.append(this.f34327a.getPackageName());
             return null;
         }
     }
 
-    public final URL g(String str) {
+    /* renamed from: g */
+    public final URL m2995g(String str) {
         try {
             return new URL(String.format("https://%s/%s/%s", "firebaseinstallations.googleapis.com", "v1", str));
-        } catch (MalformedURLException e2) {
-            throw new f20(e2.getMessage(), f20.a.UNAVAILABLE);
+        } catch (MalformedURLException e) {
+            throw new f20(e.getMessage(), f20.EnumC1246a.UNAVAILABLE);
         }
     }
 
-    public final HttpURLConnection l(URL url, String str) {
+    /* renamed from: l */
+    public final HttpURLConnection m2990l(URL url, String str) {
         try {
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setConnectTimeout(10000);
@@ -291,51 +316,52 @@ public class z10 {
             httpURLConnection.addRequestProperty("Accept", "application/json");
             httpURLConnection.addRequestProperty("Content-Encoding", "gzip");
             httpURLConnection.addRequestProperty("Cache-Control", "no-cache");
-            httpURLConnection.addRequestProperty("X-Android-Package", this.a.getPackageName());
-            va0 va0Var = this.b.get();
+            httpURLConnection.addRequestProperty("X-Android-Package", this.f34327a.getPackageName());
+            va0 va0Var = this.f34328b.get();
             if (va0Var != null) {
                 try {
-                    httpURLConnection.addRequestProperty("x-firebase-client", (String) dk1.a(va0Var.a()));
+                    httpURLConnection.addRequestProperty("x-firebase-client", (String) dk1.m24308a(va0Var.mo7304a()));
                 } catch (InterruptedException unused) {
                     Thread.currentThread().interrupt();
                 } catch (ExecutionException unused2) {
                 }
             }
-            httpURLConnection.addRequestProperty("X-Android-Cert", f());
+            httpURLConnection.addRequestProperty("X-Android-Cert", m2996f());
             httpURLConnection.addRequestProperty("x-goog-api-key", str);
             return httpURLConnection;
         } catch (IOException unused3) {
-            throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.a.UNAVAILABLE);
+            throw new f20("Firebase Installations Service is unavailable. Please try again later.", f20.EnumC1246a.UNAVAILABLE);
         }
     }
 
-    public final ig0 n(HttpURLConnection httpURLConnection) {
+    /* renamed from: n */
+    public final ig0 m2988n(HttpURLConnection httpURLConnection) {
         InputStream inputStream = httpURLConnection.getInputStream();
-        JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream, e));
-        bm1.a a = bm1.a();
-        ig0.a a2 = ig0.a();
+        JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream, f34326e));
+        bm1.AbstractC0872a m25997a = bm1.m25997a();
+        ig0.AbstractC1702a m19840a = ig0.m19840a();
         jsonReader.beginObject();
         while (jsonReader.hasNext()) {
             String nextName = jsonReader.nextName();
             if (nextName.equals("name")) {
-                a2.f(jsonReader.nextString());
+                m19840a.mo19829f(jsonReader.nextString());
             } else if (nextName.equals("fid")) {
-                a2.c(jsonReader.nextString());
+                m19840a.mo19832c(jsonReader.nextString());
             } else if (nextName.equals("refreshToken")) {
-                a2.d(jsonReader.nextString());
+                m19840a.mo19831d(jsonReader.nextString());
             } else if (nextName.equals("authToken")) {
                 jsonReader.beginObject();
                 while (jsonReader.hasNext()) {
                     String nextName2 = jsonReader.nextName();
                     if (nextName2.equals("token")) {
-                        a.c(jsonReader.nextString());
+                        m25997a.mo7321c(jsonReader.nextString());
                     } else if (nextName2.equals("expiresIn")) {
-                        a.d(m(jsonReader.nextString()));
+                        m25997a.mo7320d(m2989m(jsonReader.nextString()));
                     } else {
                         jsonReader.skipValue();
                     }
                 }
-                a2.b(a.a());
+                m19840a.mo19833b(m25997a.mo7323a());
                 jsonReader.endObject();
             } else {
                 jsonReader.skipValue();
@@ -344,20 +370,21 @@ public class z10 {
         jsonReader.endObject();
         jsonReader.close();
         inputStream.close();
-        return a2.e(ig0.b.OK).a();
+        return m19840a.mo19830e(ig0.EnumC1703b.OK).mo19834a();
     }
 
-    public final bm1 p(HttpURLConnection httpURLConnection) {
+    /* renamed from: p */
+    public final bm1 m2986p(HttpURLConnection httpURLConnection) {
         InputStream inputStream = httpURLConnection.getInputStream();
-        JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream, e));
-        bm1.a a = bm1.a();
+        JsonReader jsonReader = new JsonReader(new InputStreamReader(inputStream, f34326e));
+        bm1.AbstractC0872a m25997a = bm1.m25997a();
         jsonReader.beginObject();
         while (jsonReader.hasNext()) {
             String nextName = jsonReader.nextName();
             if (nextName.equals("token")) {
-                a.c(jsonReader.nextString());
+                m25997a.mo7321c(jsonReader.nextString());
             } else if (nextName.equals("expiresIn")) {
-                a.d(m(jsonReader.nextString()));
+                m25997a.mo7320d(m2989m(jsonReader.nextString()));
             } else {
                 jsonReader.skipValue();
             }
@@ -365,14 +392,16 @@ public class z10 {
         jsonReader.endObject();
         jsonReader.close();
         inputStream.close();
-        return a.b(bm1.b.OK).a();
+        return m25997a.mo7322b(bm1.EnumC0873b.OK).mo7323a();
     }
 
-    public final void q(HttpURLConnection httpURLConnection, String str, String str2) {
-        s(httpURLConnection, h(b(str, str2)));
+    /* renamed from: q */
+    public final void m2985q(HttpURLConnection httpURLConnection, String str, String str2) {
+        m2983s(httpURLConnection, m2994h(m3000b(str, str2)));
     }
 
-    public final void r(HttpURLConnection httpURLConnection) {
-        s(httpURLConnection, h(c()));
+    /* renamed from: r */
+    public final void m2984r(HttpURLConnection httpURLConnection) {
+        m2983s(httpURLConnection, m2994h(m2999c()));
     }
 }

@@ -1,11 +1,15 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface el1 {
-    int b();
+    /* renamed from: b */
+    int mo23022b();
 
-    dl1<?> d();
+    /* renamed from: d */
+    dl1<?> mo23021d();
 
-    void e(int i);
+    /* renamed from: e */
+    void mo23020e(int i);
 
-    void f(dl1<?> dl1Var);
+    /* renamed from: f */
+    void mo23019f(dl1<?> dl1Var);
 }

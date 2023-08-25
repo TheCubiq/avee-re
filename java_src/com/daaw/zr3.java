@@ -7,25 +7,29 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.gms.ads.mediation.MediationInterstitialListener;
 /* loaded from: classes.dex */
 public final class zr3 extends InterstitialAdLoadCallback {
-    public final AbstractAdViewAdapter a;
-    public final MediationInterstitialListener b;
+
+    /* renamed from: a */
+    public final AbstractAdViewAdapter f35439a;
+
+    /* renamed from: b */
+    public final MediationInterstitialListener f35440b;
 
     public zr3(AbstractAdViewAdapter abstractAdViewAdapter, MediationInterstitialListener mediationInterstitialListener) {
-        this.a = abstractAdViewAdapter;
-        this.b = mediationInterstitialListener;
+        this.f35439a = abstractAdViewAdapter;
+        this.f35440b = mediationInterstitialListener;
     }
 
     @Override // com.google.android.gms.ads.AdLoadCallback
     public final void onAdFailedToLoad(LoadAdError loadAdError) {
-        this.b.onAdFailedToLoad(this.a, loadAdError);
+        this.f35440b.onAdFailedToLoad(this.f35439a, loadAdError);
     }
 
     @Override // com.google.android.gms.ads.AdLoadCallback
     public final /* bridge */ /* synthetic */ void onAdLoaded(InterstitialAd interstitialAd) {
         InterstitialAd interstitialAd2 = interstitialAd;
-        AbstractAdViewAdapter abstractAdViewAdapter = this.a;
+        AbstractAdViewAdapter abstractAdViewAdapter = this.f35439a;
         abstractAdViewAdapter.mInterstitialAd = interstitialAd2;
-        interstitialAd2.setFullScreenContentCallback(new zk4(abstractAdViewAdapter, this.b));
-        this.b.onAdLoaded(this.a);
+        interstitialAd2.setFullScreenContentCallback(new zk4(abstractAdViewAdapter, this.f35440b));
+        this.f35440b.onAdLoaded(this.f35439a);
     }
 }

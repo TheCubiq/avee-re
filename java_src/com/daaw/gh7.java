@@ -2,11 +2,14 @@ package com.daaw;
 /* loaded from: classes.dex */
 public abstract class gh7 extends m87 {
     @Override // com.daaw.m87
-    public /* bridge */ /* synthetic */ l97 a() {
+    /* renamed from: a */
+    public /* bridge */ /* synthetic */ l97 mo9195a() {
         throw null;
     }
 
-    public abstract hh7 b();
+    /* renamed from: b */
+    public abstract hh7 mo9194b();
 
-    public abstract dq7 c();
+    /* renamed from: c */
+    public abstract dq7 mo9193c();
 }

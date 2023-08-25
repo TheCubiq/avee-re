@@ -3,14 +3,21 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes2.dex */
 public final class bw8 {
-    public Object[] a = new Object[8];
-    public int b = 0;
-    public xu8 c;
 
-    public final bw8 a(Object obj, Object obj2) {
-        int i = this.b + 1;
+    /* renamed from: a */
+    public Object[] f5237a = new Object[8];
+
+    /* renamed from: b */
+    public int f5238b = 0;
+
+    /* renamed from: c */
+    public xu8 f5239c;
+
+    /* renamed from: a */
+    public final bw8 m25782a(Object obj, Object obj2) {
+        int i = this.f5238b + 1;
         int i2 = i + i;
-        Object[] objArr = this.a;
+        Object[] objArr = this.f5237a;
         int length = objArr.length;
         if (i2 > length) {
             int i3 = length + (length >> 1) + 1;
@@ -21,28 +28,29 @@ public final class bw8 {
             if (i3 < 0) {
                 i3 = Integer.MAX_VALUE;
             }
-            this.a = Arrays.copyOf(objArr, i3);
+            this.f5237a = Arrays.copyOf(objArr, i3);
         }
-        rm8.a(obj, obj2);
-        Object[] objArr2 = this.a;
-        int i4 = this.b;
+        rm8.m11174a(obj, obj2);
+        Object[] objArr2 = this.f5237a;
+        int i4 = this.f5238b;
         int i5 = i4 + i4;
         objArr2[i5] = obj;
         objArr2[i5 + 1] = obj2;
-        this.b = i4 + 1;
+        this.f5238b = i4 + 1;
         return this;
     }
 
-    public final ix8 b() {
-        xu8 xu8Var = this.c;
+    /* renamed from: b */
+    public final ix8 m25781b() {
+        xu8 xu8Var = this.f5239c;
         if (xu8Var == null) {
-            h92 f = h92.f(this.b, this.a, this);
-            xu8 xu8Var2 = this.c;
+            h92 m20927f = h92.m20927f(this.f5238b, this.f5237a, this);
+            xu8 xu8Var2 = this.f5239c;
             if (xu8Var2 == null) {
-                return f;
+                return m20927f;
             }
-            throw xu8Var2.a();
+            throw xu8Var2.m4497a();
         }
-        throw xu8Var.a();
+        throw xu8Var.m4497a();
     }
 }

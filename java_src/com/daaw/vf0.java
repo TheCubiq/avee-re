@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface vf0 {
-    void a(Throwable th);
+    /* renamed from: a */
+    void m7197a(Throwable th);
 }

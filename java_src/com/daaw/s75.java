@@ -10,22 +10,33 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.Collections;
 /* loaded from: classes.dex */
 public final class s75 extends lj3 implements ViewTreeObserver.OnGlobalLayoutListener, ViewTreeObserver.OnScrollChangedListener, cc3 {
-    public View p;
-    public zzdq q;
-    public e35 r;
-    public boolean s = false;
-    public boolean t = false;
+
+    /* renamed from: p */
+    public View f25962p;
+
+    /* renamed from: q */
+    public zzdq f25963q;
+
+    /* renamed from: r */
+    public e35 f25964r;
+
+    /* renamed from: s */
+    public boolean f25965s = false;
+
+    /* renamed from: t */
+    public boolean f25966t = false;
 
     public s75(e35 e35Var, j35 j35Var) {
-        this.p = j35Var.N();
-        this.q = j35Var.R();
-        this.r = e35Var;
-        if (j35Var.Z() != null) {
-            j35Var.Z().q0(this);
+        this.f25962p = j35Var.m19142N();
+        this.f25963q = j35Var.m19138R();
+        this.f25964r = e35Var;
+        if (j35Var.m19130Z() != null) {
+            j35Var.m19130Z().mo6403q0(this);
         }
     }
 
-    public static final void g3(pj3 pj3Var, int i) {
+    /* renamed from: g3 */
+    public static final void m10594g3(pj3 pj3Var, int i) {
         try {
             pj3Var.zze(i);
         } catch (RemoteException e) {
@@ -34,28 +45,29 @@ public final class s75 extends lj3 implements ViewTreeObserver.OnGlobalLayoutLis
     }
 
     @Override // com.daaw.mj3
-    public final void R(yd0 yd0Var, pj3 pj3Var) {
-        ry0.e("#008 Must be called on the main UI thread.");
-        if (this.s) {
+    /* renamed from: R */
+    public final void mo10595R(yd0 yd0Var, pj3 pj3Var) {
+        ry0.m10835e("#008 Must be called on the main UI thread.");
+        if (this.f25965s) {
             k04.zzg("Instream ad can not be shown after destroy().");
-            g3(pj3Var, 2);
+            m10594g3(pj3Var, 2);
             return;
         }
-        View view = this.p;
-        if (view == null || this.q == null) {
+        View view = this.f25962p;
+        if (view == null || this.f25963q == null) {
             k04.zzg("Instream internal error: ".concat(view == null ? "can not get video view." : "can not get video controller."));
-            g3(pj3Var, 0);
-        } else if (this.t) {
+            m10594g3(pj3Var, 0);
+        } else if (this.f25966t) {
             k04.zzg("Instream ad should not be used again.");
-            g3(pj3Var, 1);
+            m10594g3(pj3Var, 1);
         } else {
-            this.t = true;
+            this.f25966t = true;
             zzh();
-            ((ViewGroup) nt0.M(yd0Var)).addView(this.p, new ViewGroup.LayoutParams(-1, -1));
+            ((ViewGroup) nt0.m14831M(yd0Var)).addView(this.f25962p, new ViewGroup.LayoutParams(-1, -1));
             zzt.zzx();
-            m14.a(this.p, this);
+            m14.m16299a(this.f25962p, this);
             zzt.zzx();
-            m14.b(this.p, this);
+            m14.m16298b(this.f25962p, this);
             zzg();
             try {
                 pj3Var.zzf();
@@ -77,65 +89,65 @@ public final class s75 extends lj3 implements ViewTreeObserver.OnGlobalLayoutLis
 
     @Override // com.daaw.mj3
     public final zzdq zzb() {
-        ry0.e("#008 Must be called on the main UI thread.");
-        if (this.s) {
+        ry0.m10835e("#008 Must be called on the main UI thread.");
+        if (this.f25965s) {
             k04.zzg("getVideoController: Instream ad should not be used after destroyed");
             return null;
         }
-        return this.q;
+        return this.f25963q;
     }
 
     @Override // com.daaw.mj3
     public final sc3 zzc() {
-        ry0.e("#008 Must be called on the main UI thread.");
-        if (this.s) {
+        ry0.m10835e("#008 Must be called on the main UI thread.");
+        if (this.f25965s) {
             k04.zzg("getVideoController: Instream ad should not be used after destroyed");
             return null;
         }
-        e35 e35Var = this.r;
-        if (e35Var == null || e35Var.I() == null) {
+        e35 e35Var = this.f25964r;
+        if (e35Var == null || e35Var.m23770I() == null) {
             return null;
         }
-        return e35Var.I().a();
+        return e35Var.m23770I().m22051a();
     }
 
     @Override // com.daaw.mj3
     public final void zzd() {
-        ry0.e("#008 Must be called on the main UI thread.");
+        ry0.m10835e("#008 Must be called on the main UI thread.");
         zzh();
-        e35 e35Var = this.r;
+        e35 e35Var = this.f25964r;
         if (e35Var != null) {
-            e35Var.a();
+            e35Var.mo2132a();
         }
-        this.r = null;
-        this.p = null;
-        this.q = null;
-        this.s = true;
+        this.f25964r = null;
+        this.f25962p = null;
+        this.f25963q = null;
+        this.f25965s = true;
     }
 
     @Override // com.daaw.mj3
     public final void zze(yd0 yd0Var) {
-        ry0.e("#008 Must be called on the main UI thread.");
-        R(yd0Var, new r75(this));
+        ry0.m10835e("#008 Must be called on the main UI thread.");
+        mo10595R(yd0Var, new r75(this));
     }
 
     public final void zzg() {
         View view;
-        e35 e35Var = this.r;
-        if (e35Var == null || (view = this.p) == null) {
+        e35 e35Var = this.f25964r;
+        if (e35Var == null || (view = this.f25962p) == null) {
             return;
         }
-        e35Var.X(view, Collections.emptyMap(), Collections.emptyMap(), e35.A(this.p));
+        e35Var.m23755X(view, Collections.emptyMap(), Collections.emptyMap(), e35.m23778A(this.f25962p));
     }
 
     public final void zzh() {
-        View view = this.p;
+        View view = this.f25962p;
         if (view == null) {
             return;
         }
         ViewParent parent = view.getParent();
         if (parent instanceof ViewGroup) {
-            ((ViewGroup) parent).removeView(this.p);
+            ((ViewGroup) parent).removeView(this.f25962p);
         }
     }
 }

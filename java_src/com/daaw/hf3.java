@@ -5,24 +5,30 @@ import com.google.android.gms.ads.formats.OnAdManagerAdViewLoadedListener;
 import com.google.android.gms.ads.internal.client.zzbu;
 /* loaded from: classes.dex */
 public final class hf3 implements Runnable {
-    public final /* synthetic */ AdManagerAdView p;
-    public final /* synthetic */ zzbu q;
-    public final /* synthetic */ if3 r;
+
+    /* renamed from: p */
+    public final /* synthetic */ AdManagerAdView f12499p;
+
+    /* renamed from: q */
+    public final /* synthetic */ zzbu f12500q;
+
+    /* renamed from: r */
+    public final /* synthetic */ if3 f12501r;
 
     public hf3(if3 if3Var, AdManagerAdView adManagerAdView, zzbu zzbuVar) {
-        this.r = if3Var;
-        this.p = adManagerAdView;
-        this.q = zzbuVar;
+        this.f12501r = if3Var;
+        this.f12499p = adManagerAdView;
+        this.f12500q = zzbuVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         OnAdManagerAdViewLoadedListener onAdManagerAdViewLoadedListener;
-        if (!this.p.zzb(this.q)) {
+        if (!this.f12499p.zzb(this.f12500q)) {
             k04.zzj("Could not bind.");
             return;
         }
-        onAdManagerAdViewLoadedListener = this.r.p;
-        onAdManagerAdViewLoadedListener.onAdManagerAdViewLoaded(this.p);
+        onAdManagerAdViewLoadedListener = this.f12501r.f13617p;
+        onAdManagerAdViewLoadedListener.onAdManagerAdViewLoaded(this.f12499p);
     }
 }

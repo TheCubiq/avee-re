@@ -7,7 +7,9 @@ public abstract class q02 extends b22 {
         super(i);
     }
 
-    public abstract boolean f(i02<?> i02Var);
+    /* renamed from: f */
+    public abstract boolean mo4271f(i02<?> i02Var);
 
-    public abstract Feature[] g(i02<?> i02Var);
+    /* renamed from: g */
+    public abstract Feature[] mo4270g(i02<?> i02Var);
 }

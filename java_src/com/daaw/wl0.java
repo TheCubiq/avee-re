@@ -6,193 +6,172 @@ import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public class wl0<K, V> {
-    public final LinkedHashMap<K, V> a;
-    public int b;
-    public int c;
-    public int d;
-    public int e;
-    public int f;
-    public int g;
-    public int h;
+
+    /* renamed from: a */
+    public final LinkedHashMap<K, V> f31309a;
+
+    /* renamed from: b */
+    public int f31310b;
+
+    /* renamed from: c */
+    public int f31311c;
+
+    /* renamed from: d */
+    public int f31312d;
+
+    /* renamed from: e */
+    public int f31313e;
+
+    /* renamed from: f */
+    public int f31314f;
+
+    /* renamed from: g */
+    public int f31315g;
+
+    /* renamed from: h */
+    public int f31316h;
 
     public wl0(int i) {
         if (i <= 0) {
             throw new IllegalArgumentException("maxSize <= 0");
         }
-        this.c = i;
-        this.a = new LinkedHashMap<>(0, 0.75f, true);
+        this.f31311c = i;
+        this.f31309a = new LinkedHashMap<>(0, 0.75f, true);
     }
 
-    public V a(K k) {
+    /* renamed from: a */
+    public V mo5204a(K k) {
         return null;
     }
 
-    public void b(boolean z, K k, V v, V v2) {
+    /* renamed from: b */
+    public void m6024b(boolean z, K k, V v, V v2) {
     }
 
-    public final V c(K k) {
+    /* renamed from: c */
+    public final V m6023c(K k) {
         V put;
         Objects.requireNonNull(k, "key == null");
         synchronized (this) {
-            V v = this.a.get(k);
+            V v = this.f31309a.get(k);
             if (v != null) {
-                this.g++;
+                this.f31315g++;
                 return v;
             }
-            this.h++;
-            V a = a(k);
-            if (a == null) {
+            this.f31316h++;
+            V mo5204a = mo5204a(k);
+            if (mo5204a == null) {
                 return null;
             }
             synchronized (this) {
-                this.e++;
-                put = this.a.put(k, a);
+                this.f31313e++;
+                put = this.f31309a.put(k, mo5204a);
                 if (put != null) {
-                    this.a.put(k, put);
+                    this.f31309a.put(k, put);
                 } else {
-                    this.b += f(k, a);
+                    this.f31310b += m6020f(k, mo5204a);
                 }
             }
             if (put != null) {
-                b(false, k, a, put);
+                m6024b(false, k, mo5204a, put);
                 return put;
             }
-            i(this.c);
-            return a;
+            m6017i(this.f31311c);
+            return mo5204a;
         }
     }
 
-    public final V d(K k, V v) {
+    /* renamed from: d */
+    public final V m6022d(K k, V v) {
         V put;
         if (k == null || v == null) {
             throw new NullPointerException("key == null || value == null");
         }
         synchronized (this) {
-            this.d++;
-            this.b += f(k, v);
-            put = this.a.put(k, v);
+            this.f31312d++;
+            this.f31310b += m6020f(k, v);
+            put = this.f31309a.put(k, v);
             if (put != null) {
-                this.b -= f(k, put);
+                this.f31310b -= m6020f(k, put);
             }
         }
         if (put != null) {
-            b(false, k, put, v);
+            m6024b(false, k, put, v);
         }
-        i(this.c);
+        m6017i(this.f31311c);
         return put;
     }
 
-    public final V e(K k) {
+    /* renamed from: e */
+    public final V m6021e(K k) {
         V remove;
         Objects.requireNonNull(k, "key == null");
         synchronized (this) {
-            remove = this.a.remove(k);
+            remove = this.f31309a.remove(k);
             if (remove != null) {
-                this.b -= f(k, remove);
+                this.f31310b -= m6020f(k, remove);
             }
         }
         if (remove != null) {
-            b(false, k, remove, null);
+            m6024b(false, k, remove, null);
         }
         return remove;
     }
 
-    public final int f(K k, V v) {
-        int g = g(k, v);
-        if (g >= 0) {
-            return g;
+    /* renamed from: f */
+    public final int m6020f(K k, V v) {
+        int m6019g = m6019g(k, v);
+        if (m6019g >= 0) {
+            return m6019g;
         }
         throw new IllegalStateException("Negative size: " + k + "=" + v);
     }
 
-    public int g(K k, V v) {
+    /* renamed from: g */
+    public int m6019g(K k, V v) {
         return 1;
     }
 
-    public final synchronized Map<K, V> h() {
-        return new LinkedHashMap(this.a);
+    /* renamed from: h */
+    public final synchronized Map<K, V> m6018h() {
+        return new LinkedHashMap(this.f31309a);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:20:0x0070, code lost:
         throw new java.lang.IllegalStateException(getClass().getName() + ".sizeOf() is reporting inconsistent results!");
      */
+    /* renamed from: i */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void i(int r5) {
-        /*
-            r4 = this;
-        L0:
-            monitor-enter(r4)
-            int r0 = r4.b     // Catch: java.lang.Throwable -> L71
-            if (r0 < 0) goto L52
-            java.util.LinkedHashMap<K, V> r0 = r4.a     // Catch: java.lang.Throwable -> L71
-            boolean r0 = r0.isEmpty()     // Catch: java.lang.Throwable -> L71
-            if (r0 == 0) goto L11
-            int r0 = r4.b     // Catch: java.lang.Throwable -> L71
-            if (r0 != 0) goto L52
-        L11:
-            int r0 = r4.b     // Catch: java.lang.Throwable -> L71
-            if (r0 <= r5) goto L50
-            java.util.LinkedHashMap<K, V> r0 = r4.a     // Catch: java.lang.Throwable -> L71
-            boolean r0 = r0.isEmpty()     // Catch: java.lang.Throwable -> L71
-            if (r0 == 0) goto L1e
-            goto L50
-        L1e:
-            java.util.LinkedHashMap<K, V> r0 = r4.a     // Catch: java.lang.Throwable -> L71
-            java.util.Set r0 = r0.entrySet()     // Catch: java.lang.Throwable -> L71
-            java.util.Iterator r0 = r0.iterator()     // Catch: java.lang.Throwable -> L71
-            java.lang.Object r0 = r0.next()     // Catch: java.lang.Throwable -> L71
-            java.util.Map$Entry r0 = (java.util.Map.Entry) r0     // Catch: java.lang.Throwable -> L71
-            java.lang.Object r1 = r0.getKey()     // Catch: java.lang.Throwable -> L71
-            java.lang.Object r0 = r0.getValue()     // Catch: java.lang.Throwable -> L71
-            java.util.LinkedHashMap<K, V> r2 = r4.a     // Catch: java.lang.Throwable -> L71
-            r2.remove(r1)     // Catch: java.lang.Throwable -> L71
-            int r2 = r4.b     // Catch: java.lang.Throwable -> L71
-            int r3 = r4.f(r1, r0)     // Catch: java.lang.Throwable -> L71
-            int r2 = r2 - r3
-            r4.b = r2     // Catch: java.lang.Throwable -> L71
-            int r2 = r4.f     // Catch: java.lang.Throwable -> L71
-            r3 = 1
-            int r2 = r2 + r3
-            r4.f = r2     // Catch: java.lang.Throwable -> L71
-            monitor-exit(r4)     // Catch: java.lang.Throwable -> L71
-            r2 = 0
-            r4.b(r3, r1, r0, r2)
-            goto L0
-        L50:
-            monitor-exit(r4)     // Catch: java.lang.Throwable -> L71
-            return
-        L52:
-            java.lang.IllegalStateException r5 = new java.lang.IllegalStateException     // Catch: java.lang.Throwable -> L71
-            java.lang.StringBuilder r0 = new java.lang.StringBuilder     // Catch: java.lang.Throwable -> L71
-            r0.<init>()     // Catch: java.lang.Throwable -> L71
-            java.lang.Class r1 = r4.getClass()     // Catch: java.lang.Throwable -> L71
-            java.lang.String r1 = r1.getName()     // Catch: java.lang.Throwable -> L71
-            r0.append(r1)     // Catch: java.lang.Throwable -> L71
-            java.lang.String r1 = ".sizeOf() is reporting inconsistent results!"
-            r0.append(r1)     // Catch: java.lang.Throwable -> L71
-            java.lang.String r0 = r0.toString()     // Catch: java.lang.Throwable -> L71
-            r5.<init>(r0)     // Catch: java.lang.Throwable -> L71
-            throw r5     // Catch: java.lang.Throwable -> L71
-        L71:
-            r5 = move-exception
-            monitor-exit(r4)     // Catch: java.lang.Throwable -> L71
-            goto L75
-        L74:
-            throw r5
-        L75:
-            goto L74
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.wl0.i(int):void");
+    public void m6017i(int i) {
+        K key;
+        V value;
+        while (true) {
+            synchronized (this) {
+                if (this.f31310b >= 0 && (!this.f31309a.isEmpty() || this.f31310b == 0)) {
+                    if (this.f31310b <= i || this.f31309a.isEmpty()) {
+                        break;
+                    }
+                    Map.Entry<K, V> next = this.f31309a.entrySet().iterator().next();
+                    key = next.getKey();
+                    value = next.getValue();
+                    this.f31309a.remove(key);
+                    this.f31310b -= m6020f(key, value);
+                    this.f31314f++;
+                } else {
+                    break;
+                }
+            }
+            m6024b(true, key, value, null);
+        }
     }
 
     public final synchronized String toString() {
         int i;
         int i2;
-        i = this.g;
-        i2 = this.h + i;
-        return String.format(Locale.US, "LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]", Integer.valueOf(this.c), Integer.valueOf(this.g), Integer.valueOf(this.h), Integer.valueOf(i2 != 0 ? (i * 100) / i2 : 0));
+        i = this.f31315g;
+        i2 = this.f31316h + i;
+        return String.format(Locale.US, "LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]", Integer.valueOf(this.f31311c), Integer.valueOf(this.f31315g), Integer.valueOf(this.f31316h), Integer.valueOf(i2 != 0 ? (i * 100) / i2 : 0));
     }
 }

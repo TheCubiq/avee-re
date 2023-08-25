@@ -9,41 +9,54 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public class nu1 {
-    public static Method a;
-    public static boolean b;
-    public static Field c;
-    public static boolean d;
 
-    public void a(View view) {
+    /* renamed from: a */
+    public static Method f20735a;
+
+    /* renamed from: b */
+    public static boolean f20736b;
+
+    /* renamed from: c */
+    public static Field f20737c;
+
+    /* renamed from: d */
+    public static boolean f20738d;
+
+    /* renamed from: a */
+    public void mo14790a(View view) {
         throw null;
     }
 
     @SuppressLint({"PrivateApi"})
-    public final void b() {
-        if (b) {
+    /* renamed from: b */
+    public final void m14789b() {
+        if (f20736b) {
             return;
         }
         try {
             Class cls = Integer.TYPE;
             Method declaredMethod = View.class.getDeclaredMethod("setFrame", cls, cls, cls, cls);
-            a = declaredMethod;
+            f20735a = declaredMethod;
             declaredMethod.setAccessible(true);
         } catch (NoSuchMethodException unused) {
         }
-        b = true;
+        f20736b = true;
     }
 
-    public float c(View view) {
+    /* renamed from: c */
+    public float mo14788c(View view) {
         throw null;
     }
 
-    public void d(View view) {
+    /* renamed from: d */
+    public void mo14787d(View view) {
         throw null;
     }
 
-    public void e(View view, int i, int i2, int i3, int i4) {
-        b();
-        Method method = a;
+    /* renamed from: e */
+    public void mo14786e(View view, int i, int i2, int i3, int i4) {
+        m14789b();
+        Method method = f20735a;
         if (method != null) {
             try {
                 method.invoke(view, Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3), Integer.valueOf(i4));
@@ -54,34 +67,37 @@ public class nu1 {
         }
     }
 
-    public void f(View view, float f) {
+    /* renamed from: f */
+    public void mo14785f(View view, float f) {
         throw null;
     }
 
-    public void g(View view, int i) {
-        if (!d) {
+    /* renamed from: g */
+    public void mo14784g(View view, int i) {
+        if (!f20738d) {
             try {
                 Field declaredField = View.class.getDeclaredField("mViewFlags");
-                c = declaredField;
+                f20737c = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused) {
             }
-            d = true;
+            f20738d = true;
         }
-        Field field = c;
+        Field field = f20737c;
         if (field != null) {
             try {
-                c.setInt(view, i | (field.getInt(view) & (-13)));
+                f20737c.setInt(view, i | (field.getInt(view) & (-13)));
             } catch (IllegalAccessException unused2) {
             }
         }
     }
 
-    public void h(View view, Matrix matrix) {
+    /* renamed from: h */
+    public void mo14783h(View view, Matrix matrix) {
         ViewParent parent = view.getParent();
         if (parent instanceof View) {
             View view2 = (View) parent;
-            h(view2, matrix);
+            mo14783h(view2, matrix);
             matrix.preTranslate(-view2.getScrollX(), -view2.getScrollY());
         }
         matrix.preTranslate(view.getLeft(), view.getTop());
@@ -92,11 +108,12 @@ public class nu1 {
         matrix.preConcat(matrix2);
     }
 
-    public void i(View view, Matrix matrix) {
+    /* renamed from: i */
+    public void mo14782i(View view, Matrix matrix) {
         ViewParent parent = view.getParent();
         if (parent instanceof View) {
             View view2 = (View) parent;
-            i(view2, matrix);
+            mo14782i(view2, matrix);
             matrix.postTranslate(view2.getScrollX(), view2.getScrollY());
         }
         matrix.postTranslate(-view.getLeft(), -view.getTop());

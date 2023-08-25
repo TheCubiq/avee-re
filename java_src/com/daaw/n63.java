@@ -3,19 +3,25 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class n63 {
-    public final List a;
-    public final xb b;
 
-    public n63(xb xbVar, List list) {
-        this.a = list;
-        this.b = xbVar;
+    /* renamed from: a */
+    public final List f19508a;
+
+    /* renamed from: b */
+    public final C3518xb f19509b;
+
+    public n63(C3518xb c3518xb, List list) {
+        this.f19508a = list;
+        this.f19509b = c3518xb;
     }
 
-    public final xb a() {
-        return this.b;
+    /* renamed from: a */
+    public final C3518xb m15500a() {
+        return this.f19509b;
     }
 
-    public final List b() {
-        return this.a;
+    /* renamed from: b */
+    public final List m15499b() {
+        return this.f19508a;
     }
 }

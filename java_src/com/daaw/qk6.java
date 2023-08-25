@@ -1,8 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class qk6 {
-    public rp4 a;
-    public fi6 b;
-    public zl4 c;
-    public long d;
+
+    /* renamed from: a */
+    public rp4 f24123a;
+
+    /* renamed from: b */
+    public fi6 f24124b;
+
+    /* renamed from: c */
+    public zl4 f24125c;
+
+    /* renamed from: d */
+    public long f24126d;
 }

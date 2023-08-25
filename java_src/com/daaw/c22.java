@@ -8,21 +8,21 @@ import com.google.android.gms.signin.internal.zai;
 public final class c22 implements Parcelable.Creator<zai> {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ zai createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         int i = 0;
         zat zatVar = null;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            int l = y71.l(r);
-            if (l == 1) {
-                i = y71.t(parcel, r);
-            } else if (l != 2) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            int m4047l = y71.m4047l(m4041r);
+            if (m4047l == 1) {
+                i = y71.m4039t(parcel, m4041r);
+            } else if (m4047l != 2) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                zatVar = (zat) y71.e(parcel, r, zat.CREATOR);
+                zatVar = (zat) y71.m4054e(parcel, m4041r, zat.CREATOR);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zai(i, zatVar);
     }
 

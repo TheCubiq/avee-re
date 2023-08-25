@@ -5,44 +5,64 @@ import java.util.Map;
 import java.util.TreeMap;
 /* loaded from: classes.dex */
 public class e61 implements mi1, li1 {
-    public static final TreeMap<Integer, e61> x = new TreeMap<>();
-    public volatile String p;
-    public final long[] q;
-    public final double[] r;
-    public final String[] s;
-    public final byte[][] t;
-    public final int[] u;
-    public final int v;
-    public int w;
+
+    /* renamed from: x */
+    public static final TreeMap<Integer, e61> f8185x = new TreeMap<>();
+
+    /* renamed from: p */
+    public volatile String f8186p;
+
+    /* renamed from: q */
+    public final long[] f8187q;
+
+    /* renamed from: r */
+    public final double[] f8188r;
+
+    /* renamed from: s */
+    public final String[] f8189s;
+
+    /* renamed from: t */
+    public final byte[][] f8190t;
+
+    /* renamed from: u */
+    public final int[] f8191u;
+
+    /* renamed from: v */
+    public final int f8192v;
+
+    /* renamed from: w */
+    public int f8193w;
 
     public e61(int i) {
-        this.v = i;
+        this.f8192v = i;
         int i2 = i + 1;
-        this.u = new int[i2];
-        this.q = new long[i2];
-        this.r = new double[i2];
-        this.s = new String[i2];
-        this.t = new byte[i2];
+        this.f8191u = new int[i2];
+        this.f8187q = new long[i2];
+        this.f8188r = new double[i2];
+        this.f8189s = new String[i2];
+        this.f8190t = new byte[i2];
     }
 
-    public static e61 q(String str, int i) {
-        TreeMap<Integer, e61> treeMap = x;
+    /* renamed from: q */
+    public static e61 m23701q(String str, int i) {
+        TreeMap<Integer, e61> treeMap = f8185x;
         synchronized (treeMap) {
             Map.Entry<Integer, e61> ceilingEntry = treeMap.ceilingEntry(Integer.valueOf(i));
             if (ceilingEntry == null) {
                 e61 e61Var = new e61(i);
-                e61Var.u(str, i);
+                e61Var.m23700u(str, i);
                 return e61Var;
             }
             treeMap.remove(ceilingEntry.getKey());
             e61 value = ceilingEntry.getValue();
-            value.u(str, i);
+            value.m23700u(str, i);
             return value;
         }
     }
 
-    public static void w() {
-        TreeMap<Integer, e61> treeMap = x;
+    /* renamed from: w */
+    public static void m23699w() {
+        TreeMap<Integer, e61> treeMap = f8185x;
         if (treeMap.size() <= 15) {
             return;
         }
@@ -59,17 +79,19 @@ public class e61 implements mi1, li1 {
         }
     }
 
-    public void D() {
-        TreeMap<Integer, e61> treeMap = x;
+    /* renamed from: D */
+    public void m23702D() {
+        TreeMap<Integer, e61> treeMap = f8185x;
         synchronized (treeMap) {
-            treeMap.put(Integer.valueOf(this.v), this);
-            w();
+            treeMap.put(Integer.valueOf(this.f8192v), this);
+            m23699w();
         }
     }
 
     @Override // com.daaw.li1
-    public void F(int i) {
-        this.u[i] = 1;
+    /* renamed from: F */
+    public void mo16232F(int i) {
+        this.f8191u[i] = 1;
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -77,54 +99,61 @@ public class e61 implements mi1, li1 {
     }
 
     @Override // com.daaw.mi1
-    public void d(li1 li1Var) {
-        for (int i = 1; i <= this.w; i++) {
-            int i2 = this.u[i];
+    /* renamed from: d */
+    public void mo16024d(li1 li1Var) {
+        for (int i = 1; i <= this.f8193w; i++) {
+            int i2 = this.f8191u[i];
             if (i2 == 1) {
-                li1Var.F(i);
+                li1Var.mo16232F(i);
             } else if (i2 == 2) {
-                li1Var.r(i, this.q[i]);
+                li1Var.mo16229r(i, this.f8187q[i]);
             } else if (i2 == 3) {
-                li1Var.m(i, this.r[i]);
+                li1Var.mo16230m(i, this.f8188r[i]);
             } else if (i2 == 4) {
-                li1Var.i(i, this.s[i]);
+                li1Var.mo16231i(i, this.f8189s[i]);
             } else if (i2 == 5) {
-                li1Var.x(i, this.t[i]);
+                li1Var.mo16228x(i, this.f8190t[i]);
             }
         }
     }
 
     @Override // com.daaw.li1
-    public void i(int i, String str) {
-        this.u[i] = 4;
-        this.s[i] = str;
+    /* renamed from: i */
+    public void mo16231i(int i, String str) {
+        this.f8191u[i] = 4;
+        this.f8189s[i] = str;
     }
 
     @Override // com.daaw.li1
-    public void m(int i, double d) {
-        this.u[i] = 3;
-        this.r[i] = d;
+    /* renamed from: m */
+    public void mo16230m(int i, double d) {
+        this.f8191u[i] = 3;
+        this.f8188r[i] = d;
     }
 
     @Override // com.daaw.mi1
-    public String n() {
-        return this.p;
+    /* renamed from: n */
+    public String mo16023n() {
+        return this.f8186p;
     }
 
     @Override // com.daaw.li1
-    public void r(int i, long j) {
-        this.u[i] = 2;
-        this.q[i] = j;
+    /* renamed from: r */
+    public void mo16229r(int i, long j) {
+        this.f8191u[i] = 2;
+        this.f8187q[i] = j;
     }
 
-    public void u(String str, int i) {
-        this.p = str;
-        this.w = i;
+    /* renamed from: u */
+    public void m23700u(String str, int i) {
+        this.f8186p = str;
+        this.f8193w = i;
     }
 
     @Override // com.daaw.li1
-    public void x(int i, byte[] bArr) {
-        this.u[i] = 5;
-        this.t[i] = bArr;
+    /* renamed from: x */
+    public void mo16228x(int i, byte[] bArr) {
+        this.f8191u[i] = 5;
+        this.f8190t[i] = bArr;
     }
 }

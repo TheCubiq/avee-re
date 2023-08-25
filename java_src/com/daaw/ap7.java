@@ -1,19 +1,25 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ap7 {
-    public final dq7 a;
-    public final dq7 b;
+
+    /* renamed from: a */
+    public final dq7 f3424a;
+
+    /* renamed from: b */
+    public final dq7 f3425b;
 
     public ap7(byte[] bArr, byte[] bArr2) {
-        this.a = dq7.b(bArr);
-        this.b = dq7.b(bArr2);
+        this.f3424a = dq7.m24078b(bArr);
+        this.f3425b = dq7.m24078b(bArr2);
     }
 
-    public final byte[] a() {
-        return this.a.c();
+    /* renamed from: a */
+    public final byte[] m27229a() {
+        return this.f3424a.m24077c();
     }
 
-    public final byte[] b() {
-        return this.b.c();
+    /* renamed from: b */
+    public final byte[] m27228b() {
+        return this.f3425b.m24077c();
     }
 }

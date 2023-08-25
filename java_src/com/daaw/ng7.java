@@ -3,31 +3,42 @@ package com.daaw;
 import javax.annotation.Nullable;
 /* loaded from: classes.dex */
 public final class ng7 extends gh7 {
-    public final wg7 a;
-    public final eq7 b;
-    public final dq7 c;
+
+    /* renamed from: a */
+    public final wg7 f20112a;
+
+    /* renamed from: b */
+    public final eq7 f20113b;
+
+    /* renamed from: c */
+    public final dq7 f20114c;
     @Nullable
-    public final Integer d;
+
+    /* renamed from: d */
+    public final Integer f20115d;
 
     public /* synthetic */ ng7(wg7 wg7Var, eq7 eq7Var, dq7 dq7Var, Integer num, mg7 mg7Var) {
-        this.a = wg7Var;
-        this.b = eq7Var;
-        this.c = dq7Var;
-        this.d = num;
+        this.f20112a = wg7Var;
+        this.f20113b = eq7Var;
+        this.f20114c = dq7Var;
+        this.f20115d = num;
     }
 
     @Override // com.daaw.gh7, com.daaw.m87
-    public final /* synthetic */ l97 a() {
-        return this.a;
+    /* renamed from: a */
+    public final /* synthetic */ l97 mo9195a() {
+        return this.f20112a;
     }
 
     @Override // com.daaw.gh7
-    public final /* synthetic */ hh7 b() {
-        return this.a;
+    /* renamed from: b */
+    public final /* synthetic */ hh7 mo9194b() {
+        return this.f20112a;
     }
 
     @Override // com.daaw.gh7
-    public final dq7 c() {
-        return this.c;
+    /* renamed from: c */
+    public final dq7 mo9193c() {
+        return this.f20114c;
     }
 }

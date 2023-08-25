@@ -1,20 +1,26 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ch4 implements wz7 {
-    public final m08 a;
-    public final m08 b;
-    public final m08 c;
+
+    /* renamed from: a */
+    public final m08 f5812a;
+
+    /* renamed from: b */
+    public final m08 f5813b;
+
+    /* renamed from: c */
+    public final m08 f5814c;
 
     public ch4(m08 m08Var, m08 m08Var2, m08 m08Var3) {
-        this.a = m08Var;
-        this.b = m08Var2;
-        this.c = m08Var3;
+        this.f5812a = m08Var;
+        this.f5813b = m08Var2;
+        this.f5814c = m08Var3;
     }
 
     @Override // com.daaw.m08
     public final /* bridge */ /* synthetic */ Object zzb() {
-        g77 a = ll6.a();
-        e08.b(a);
-        return new vg4(((m03) this.a.zzb()).c(), (jm3) this.b.zzb(), a);
+        g77 m16859a = ll6.m16859a();
+        e08.m23801b(m16859a);
+        return new vg4(((m03) this.f5812a.zzb()).m16303c(), (jm3) this.f5813b.zzb(), m16859a);
     }
 }

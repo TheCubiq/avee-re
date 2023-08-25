@@ -5,39 +5,49 @@ import android.os.Bundle;
 import com.google.android.gms.common.ConnectionResult;
 /* loaded from: classes.dex */
 public abstract class m32 extends es3 {
-    public final int d;
-    public final Bundle e;
-    public final /* synthetic */ pa f;
+
+    /* renamed from: d */
+    public final int f18422d;
+
+    /* renamed from: e */
+    public final Bundle f18423e;
+
+    /* renamed from: f */
+    public final /* synthetic */ AbstractC2527pa f18424f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public m32(pa paVar, int i, Bundle bundle) {
-        super(paVar, Boolean.TRUE);
-        this.f = paVar;
-        this.d = i;
-        this.e = bundle;
+    public m32(AbstractC2527pa abstractC2527pa, int i, Bundle bundle) {
+        super(abstractC2527pa, Boolean.TRUE);
+        this.f18424f = abstractC2527pa;
+        this.f18422d = i;
+        this.f18423e = bundle;
     }
 
     @Override // com.daaw.es3
-    public final /* bridge */ /* synthetic */ void a(Object obj) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ void mo16239a(Object obj) {
         ConnectionResult connectionResult;
-        if (this.d != 0) {
-            this.f.I(1, null);
-            Bundle bundle = this.e;
-            connectionResult = new ConnectionResult(this.d, bundle != null ? (PendingIntent) bundle.getParcelable(pa.KEY_PENDING_INTENT) : null);
-        } else if (g()) {
+        if (this.f18422d != 0) {
+            this.f18424f.m13558I(1, null);
+            Bundle bundle = this.f18423e;
+            connectionResult = new ConnectionResult(this.f18422d, bundle != null ? (PendingIntent) bundle.getParcelable(AbstractC2527pa.KEY_PENDING_INTENT) : null);
+        } else if (mo5485g()) {
             return;
         } else {
-            this.f.I(1, null);
+            this.f18424f.m13558I(1, null);
             connectionResult = new ConnectionResult(8, null);
         }
-        f(connectionResult);
+        mo5486f(connectionResult);
     }
 
     @Override // com.daaw.es3
-    public final void b() {
+    /* renamed from: b */
+    public final void mo16238b() {
     }
 
-    public abstract void f(ConnectionResult connectionResult);
+    /* renamed from: f */
+    public abstract void mo5486f(ConnectionResult connectionResult);
 
-    public abstract boolean g();
+    /* renamed from: g */
+    public abstract boolean mo5485g();
 }

@@ -7,19 +7,26 @@ import android.os.Build;
 import android.os.PersistableBundle;
 import android.text.TextUtils;
 import androidx.work.WorkerParameters;
+import com.daaw.InterfaceC3778yy;
 import com.daaw.ey1;
 import com.daaw.ll0;
-import com.daaw.yy;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
-public class SystemJobService extends JobService implements yy {
-    public static final String r = ll0.f("SystemJobService");
-    public ey1 p;
-    public final Map<String, JobParameters> q = new HashMap();
+public class SystemJobService extends JobService implements InterfaceC3778yy {
 
-    public static String a(JobParameters jobParameters) {
+    /* renamed from: r */
+    public static final String f2533r = ll0.m16883f("SystemJobService");
+
+    /* renamed from: p */
+    public ey1 f2534p;
+
+    /* renamed from: q */
+    public final Map<String, JobParameters> f2535q = new HashMap();
+
+    /* renamed from: a */
+    public static String m27899a(JobParameters jobParameters) {
         try {
             PersistableBundle extras = jobParameters.getExtras();
             if (extras == null || !extras.containsKey("EXTRA_WORK_SPEC_ID")) {
@@ -31,12 +38,13 @@ public class SystemJobService extends JobService implements yy {
         }
     }
 
-    @Override // com.daaw.yy
-    public void c(String str, boolean z) {
+    @Override // com.daaw.InterfaceC3778yy
+    /* renamed from: c */
+    public void mo3085c(String str, boolean z) {
         JobParameters remove;
-        ll0.c().a(r, String.format("%s executed on JobScheduler", str), new Throwable[0]);
-        synchronized (this.q) {
-            remove = this.q.remove(str);
+        ll0.m16885c().mo16882a(f2533r, String.format("%s executed on JobScheduler", str), new Throwable[0]);
+        synchronized (this.f2535q) {
+            remove = this.f2535q.remove(str);
         }
         if (remove != null) {
             jobFinished(remove, z);
@@ -47,80 +55,80 @@ public class SystemJobService extends JobService implements yy {
     public void onCreate() {
         super.onCreate();
         try {
-            ey1 k = ey1.k(getApplicationContext());
-            this.p = k;
-            k.m().d(this);
+            ey1 m23004k = ey1.m23004k(getApplicationContext());
+            this.f2534p = m23004k;
+            m23004k.m23002m().m18158d(this);
         } catch (IllegalStateException unused) {
             if (!Application.class.equals(getApplication().getClass())) {
                 throw new IllegalStateException("WorkManager needs to be initialized via a ContentProvider#onCreate() or an Application#onCreate().");
             }
-            ll0.c().h(r, "Could not find WorkManager instance; this may be because an auto-backup is in progress. Ignoring JobScheduler commands for now. Please make sure that you are initializing WorkManager if you have manually disabled WorkManagerInitializer.", new Throwable[0]);
+            ll0.m16885c().mo16878h(f2533r, "Could not find WorkManager instance; this may be because an auto-backup is in progress. Ignoring JobScheduler commands for now. Please make sure that you are initializing WorkManager if you have manually disabled WorkManagerInitializer.", new Throwable[0]);
         }
     }
 
     @Override // android.app.Service
     public void onDestroy() {
         super.onDestroy();
-        ey1 ey1Var = this.p;
+        ey1 ey1Var = this.f2534p;
         if (ey1Var != null) {
-            ey1Var.m().i(this);
+            ey1Var.m23002m().m18153i(this);
         }
     }
 
     @Override // android.app.job.JobService
     public boolean onStartJob(JobParameters jobParameters) {
-        if (this.p == null) {
-            ll0.c().a(r, "WorkManager is not initialized; requesting retry.", new Throwable[0]);
+        if (this.f2534p == null) {
+            ll0.m16885c().mo16882a(f2533r, "WorkManager is not initialized; requesting retry.", new Throwable[0]);
             jobFinished(jobParameters, true);
             return false;
         }
-        String a = a(jobParameters);
-        if (TextUtils.isEmpty(a)) {
-            ll0.c().b(r, "WorkSpec id not found!", new Throwable[0]);
+        String m27899a = m27899a(jobParameters);
+        if (TextUtils.isEmpty(m27899a)) {
+            ll0.m16885c().mo16881b(f2533r, "WorkSpec id not found!", new Throwable[0]);
             return false;
         }
-        synchronized (this.q) {
-            if (this.q.containsKey(a)) {
-                ll0.c().a(r, String.format("Job is already being executed by SystemJobService: %s", a), new Throwable[0]);
+        synchronized (this.f2535q) {
+            if (this.f2535q.containsKey(m27899a)) {
+                ll0.m16885c().mo16882a(f2533r, String.format("Job is already being executed by SystemJobService: %s", m27899a), new Throwable[0]);
                 return false;
             }
-            ll0.c().a(r, String.format("onStartJob for %s", a), new Throwable[0]);
-            this.q.put(a, jobParameters);
-            WorkerParameters.a aVar = null;
+            ll0.m16885c().mo16882a(f2533r, String.format("onStartJob for %s", m27899a), new Throwable[0]);
+            this.f2535q.put(m27899a, jobParameters);
+            WorkerParameters.C0506a c0506a = null;
             int i = Build.VERSION.SDK_INT;
             if (i >= 24) {
-                aVar = new WorkerParameters.a();
+                c0506a = new WorkerParameters.C0506a();
                 if (jobParameters.getTriggeredContentUris() != null) {
-                    aVar.b = Arrays.asList(jobParameters.getTriggeredContentUris());
+                    c0506a.f2437b = Arrays.asList(jobParameters.getTriggeredContentUris());
                 }
                 if (jobParameters.getTriggeredContentAuthorities() != null) {
-                    aVar.a = Arrays.asList(jobParameters.getTriggeredContentAuthorities());
+                    c0506a.f2436a = Arrays.asList(jobParameters.getTriggeredContentAuthorities());
                 }
                 if (i >= 28) {
-                    aVar.c = jobParameters.getNetwork();
+                    c0506a.f2438c = jobParameters.getNetwork();
                 }
             }
-            this.p.v(a, aVar);
+            this.f2534p.m22993v(m27899a, c0506a);
             return true;
         }
     }
 
     @Override // android.app.job.JobService
     public boolean onStopJob(JobParameters jobParameters) {
-        if (this.p == null) {
-            ll0.c().a(r, "WorkManager is not initialized; requesting retry.", new Throwable[0]);
+        if (this.f2534p == null) {
+            ll0.m16885c().mo16882a(f2533r, "WorkManager is not initialized; requesting retry.", new Throwable[0]);
             return true;
         }
-        String a = a(jobParameters);
-        if (TextUtils.isEmpty(a)) {
-            ll0.c().b(r, "WorkSpec id not found!", new Throwable[0]);
+        String m27899a = m27899a(jobParameters);
+        if (TextUtils.isEmpty(m27899a)) {
+            ll0.m16885c().mo16881b(f2533r, "WorkSpec id not found!", new Throwable[0]);
             return false;
         }
-        ll0.c().a(r, String.format("onStopJob for %s", a), new Throwable[0]);
-        synchronized (this.q) {
-            this.q.remove(a);
+        ll0.m16885c().mo16882a(f2533r, String.format("onStopJob for %s", m27899a), new Throwable[0]);
+        synchronized (this.f2535q) {
+            this.f2535q.remove(m27899a);
         }
-        this.p.x(a);
-        return !this.p.m().f(a);
+        this.f2534p.m22991x(m27899a);
+        return !this.f2534p.m23002m().m18156f(m27899a);
     }
 }

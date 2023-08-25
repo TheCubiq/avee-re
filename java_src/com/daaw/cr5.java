@@ -3,35 +3,45 @@ package com.daaw;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public final class cr5 {
-    public long a;
-    public long b;
-    public long c;
-    public final ThreadLocal d = new ThreadLocal();
+
+    /* renamed from: a */
+    public long f6111a;
+
+    /* renamed from: b */
+    public long f6112b;
+
+    /* renamed from: c */
+    public long f6113c;
+
+    /* renamed from: d */
+    public final ThreadLocal f6114d = new ThreadLocal();
 
     public cr5(long j) {
-        f(0L);
+        m25052f(0L);
     }
 
-    public final synchronized long a(long j) {
-        if (this.b == -9223372036854775807L) {
-            long j2 = this.a;
+    /* renamed from: a */
+    public final synchronized long m25057a(long j) {
+        if (this.f6112b == -9223372036854775807L) {
+            long j2 = this.f6111a;
             if (j2 == 9223372036854775806L) {
-                Long l = (Long) this.d.get();
+                Long l = (Long) this.f6114d.get();
                 Objects.requireNonNull(l);
                 j2 = l.longValue();
             }
-            this.b = j2 - j;
+            this.f6112b = j2 - j;
             notifyAll();
         }
-        this.c = j;
-        return j + this.b;
+        this.f6113c = j;
+        return j + this.f6112b;
     }
 
-    public final synchronized long b(long j) {
+    /* renamed from: b */
+    public final synchronized long m25056b(long j) {
         if (j == -9223372036854775807L) {
             return -9223372036854775807L;
         }
-        long j2 = this.c;
+        long j2 = this.f6113c;
         if (j2 != -9223372036854775807L) {
             long j3 = (j2 * 90000) / 1000000;
             long j4 = (4294967296L + j3) / 8589934592L;
@@ -41,30 +51,34 @@ public final class cr5 {
                 j = j5;
             }
         }
-        return a((j * 1000000) / 90000);
+        return m25057a((j * 1000000) / 90000);
     }
 
-    public final synchronized long c() {
-        long j = this.a;
+    /* renamed from: c */
+    public final synchronized long m25055c() {
+        long j = this.f6111a;
         if (j == Long.MAX_VALUE || j == 9223372036854775806L) {
             return -9223372036854775807L;
         }
         return j;
     }
 
-    public final synchronized long d() {
+    /* renamed from: d */
+    public final synchronized long m25054d() {
         long j;
-        j = this.c;
-        return j != -9223372036854775807L ? j + this.b : c();
+        j = this.f6113c;
+        return j != -9223372036854775807L ? j + this.f6112b : m25055c();
     }
 
-    public final synchronized long e() {
-        return this.b;
+    /* renamed from: e */
+    public final synchronized long m25053e() {
+        return this.f6112b;
     }
 
-    public final synchronized void f(long j) {
-        this.a = j;
-        this.b = j == Long.MAX_VALUE ? 0L : -9223372036854775807L;
-        this.c = -9223372036854775807L;
+    /* renamed from: f */
+    public final synchronized void m25052f(long j) {
+        this.f6111a = j;
+        this.f6112b = j == Long.MAX_VALUE ? 0L : -9223372036854775807L;
+        this.f6113c = -9223372036854775807L;
     }
 }

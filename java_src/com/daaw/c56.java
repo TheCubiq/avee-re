@@ -4,7 +4,8 @@ import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class c56 implements h76 {
     @Override // com.daaw.h76
-    public final /* bridge */ /* synthetic */ void b(Object obj) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ void mo2851b(Object obj) {
         JSONObject jSONObject = (JSONObject) obj;
     }
 }

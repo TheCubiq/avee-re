@@ -21,55 +21,72 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class zzw {
-    public uw6 f;
-    public a74 c = null;
-    public boolean e = false;
-    public String a = null;
-    public ew6 d = null;
-    public String b = null;
 
-    public final void a(String str) {
-        b(str, new HashMap());
+    /* renamed from: f */
+    public uw6 f36236f;
+
+    /* renamed from: c */
+    public a74 f36233c = null;
+
+    /* renamed from: e */
+    public boolean f36235e = false;
+
+    /* renamed from: a */
+    public String f36231a = null;
+
+    /* renamed from: d */
+    public ew6 f36234d = null;
+
+    /* renamed from: b */
+    public String f36232b = null;
+
+    /* renamed from: a */
+    public final void m1381a(String str) {
+        m1380b(str, new HashMap());
     }
 
-    public final void b(final String str, final Map map) {
-        z04.e.execute(new Runnable() { // from class: com.google.android.gms.ads.internal.overlay.zzu
+    /* renamed from: b */
+    public final void m1380b(final String str, final Map map) {
+        z04.f34309e.execute(new Runnable() { // from class: com.google.android.gms.ads.internal.overlay.zzu
             @Override // java.lang.Runnable
             public final void run() {
-                zzw.this.d(str, map);
+                zzw.this.m1378d(str, map);
             }
         });
     }
 
-    public final void c(String str, String str2) {
+    /* renamed from: c */
+    public final void m1379c(String str, String str2) {
         com.google.android.gms.ads.internal.util.zze.zza(str);
-        if (this.c != null) {
+        if (this.f36233c != null) {
             HashMap hashMap = new HashMap();
             hashMap.put("message", str);
             hashMap.put("action", str2);
-            b("onError", hashMap);
+            m1380b("onError", hashMap);
         }
     }
 
-    public final /* synthetic */ void d(String str, Map map) {
-        a74 a74Var = this.c;
+    /* renamed from: d */
+    public final /* synthetic */ void m1378d(String str, Map map) {
+        a74 a74Var = this.f36233c;
         if (a74Var != null) {
-            a74Var.T(str, map);
+            a74Var.mo6434T(str, map);
         }
     }
 
-    public final void e(tw6 tw6Var) {
-        if (!TextUtils.isEmpty(tw6Var.b())) {
-            if (!((Boolean) zzba.zzc().b(g93.u9)).booleanValue()) {
-                this.a = tw6Var.b();
+    /* renamed from: e */
+    public final void m1377e(tw6 tw6Var) {
+        if (!TextUtils.isEmpty(tw6Var.mo3163b())) {
+            if (!((Boolean) zzba.zzc().m23658b(g93.f10851u9)).booleanValue()) {
+                this.f36231a = tw6Var.mo3163b();
             }
         }
-        switch (tw6Var.a()) {
+        switch (tw6Var.mo3164a()) {
             case 8152:
-                a("onLMDOverlayOpened");
+                m1381a("onLMDOverlayOpened");
                 return;
             case 8153:
-                a("onLMDOverlayClicked");
+                m1381a("onLMDOverlayClicked");
                 return;
             case 8154:
             case 8156:
@@ -78,129 +95,131 @@ public final class zzw {
             default:
                 return;
             case 8155:
-                a("onLMDOverlayClose");
+                m1381a("onLMDOverlayClose");
                 return;
             case 8157:
-                this.a = null;
-                this.b = null;
-                this.e = false;
+                this.f36231a = null;
+                this.f36232b = null;
+                this.f36235e = false;
                 return;
             case 8160:
             case 8161:
             case 8162:
                 HashMap hashMap = new HashMap();
-                hashMap.put("error", String.valueOf(tw6Var.a()));
-                b("onLMDOverlayFailedToOpen", hashMap);
+                hashMap.put("error", String.valueOf(tw6Var.mo3164a()));
+                m1380b("onLMDOverlayFailedToOpen", hashMap);
                 return;
         }
     }
 
-    public final ww6 f() {
-        vw6 c = ww6.c();
-        if (!((Boolean) zzba.zzc().b(g93.u9)).booleanValue() || TextUtils.isEmpty(this.b)) {
-            String str = this.a;
+    /* renamed from: f */
+    public final ww6 m1376f() {
+        vw6 m5747c = ww6.m5747c();
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10851u9)).booleanValue() || TextUtils.isEmpty(this.f36232b)) {
+            String str = this.f36231a;
             if (str != null) {
-                c.b(str);
+                m5747c.mo1837b(str);
             } else {
-                c("Missing session token and/or appId", "onLMDupdate");
+                m1379c("Missing session token and/or appId", "onLMDupdate");
             }
         } else {
-            c.a(this.b);
+            m5747c.mo1838a(this.f36232b);
         }
-        return c.c();
+        return m5747c.mo1836c();
     }
 
-    public final void g() {
-        if (this.f == null) {
-            this.f = new zu8(this);
+    /* renamed from: g */
+    public final void m1375g() {
+        if (this.f36236f == null) {
+            this.f36236f = new zu8(this);
         }
     }
 
     public final synchronized void zza(a74 a74Var, Context context) {
-        this.c = a74Var;
+        this.f36233c = a74Var;
         if (!zzk(context)) {
-            c("Unable to bind", "on_play_store_bind");
+            m1379c("Unable to bind", "on_play_store_bind");
             return;
         }
         HashMap hashMap = new HashMap();
         hashMap.put("action", "fetch_completed");
-        b("on_play_store_bind", hashMap);
+        m1380b("on_play_store_bind", hashMap);
     }
 
     public final void zzb() {
         ew6 ew6Var;
-        if (!this.e || (ew6Var = this.d) == null) {
+        if (!this.f36235e || (ew6Var = this.f36234d) == null) {
             com.google.android.gms.ads.internal.util.zze.zza("LastMileDelivery not connected");
             return;
         }
-        ew6Var.b(f(), this.f);
-        a("onLMDOverlayCollapse");
+        ew6Var.mo18202b(m1376f(), this.f36236f);
+        m1381a("onLMDOverlayCollapse");
     }
 
     public final void zzc() {
         ew6 ew6Var;
-        if (!this.e || (ew6Var = this.d) == null) {
+        if (!this.f36235e || (ew6Var = this.f36234d) == null) {
             com.google.android.gms.ads.internal.util.zze.zza("LastMileDelivery not connected");
             return;
         }
-        cw6 c = dw6.c();
-        if (!((Boolean) zzba.zzc().b(g93.u9)).booleanValue() || TextUtils.isEmpty(this.b)) {
-            String str = this.a;
+        cw6 m23857c = dw6.m23857c();
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10851u9)).booleanValue() || TextUtils.isEmpty(this.f36232b)) {
+            String str = this.f36231a;
             if (str != null) {
-                c.b(str);
+                m23857c.mo12030b(str);
             } else {
-                c("Missing session token and/or appId", "onLMDupdate");
+                m1379c("Missing session token and/or appId", "onLMDupdate");
             }
         } else {
-            c.a(this.b);
+            m23857c.mo12031a(this.f36232b);
         }
-        ew6Var.a(c.c(), this.f);
+        ew6Var.mo18203a(m23857c.mo12029c(), this.f36236f);
     }
 
     public final void zzg() {
         ew6 ew6Var;
-        if (!this.e || (ew6Var = this.d) == null) {
+        if (!this.f36235e || (ew6Var = this.f36234d) == null) {
             com.google.android.gms.ads.internal.util.zze.zza("LastMileDelivery not connected");
             return;
         }
-        ew6Var.d(f(), this.f);
-        a("onLMDOverlayExpand");
+        ew6Var.mo18200d(m1376f(), this.f36236f);
+        m1381a("onLMDOverlayExpand");
     }
 
     public final void zzj(a74 a74Var, rw6 rw6Var) {
         if (a74Var == null) {
-            c("adWebview missing", "onLMDShow");
+            m1379c("adWebview missing", "onLMDShow");
             return;
         }
-        this.c = a74Var;
-        if (!this.e && !zzk(a74Var.getContext())) {
-            c("LMDOverlay not bound", "on_play_store_bind");
+        this.f36233c = a74Var;
+        if (!this.f36235e && !zzk(a74Var.getContext())) {
+            m1379c("LMDOverlay not bound", "on_play_store_bind");
             return;
         }
-        if (((Boolean) zzba.zzc().b(g93.u9)).booleanValue()) {
-            this.b = rw6Var.g();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10851u9)).booleanValue()) {
+            this.f36232b = rw6Var.mo6730g();
         }
-        g();
-        ew6 ew6Var = this.d;
+        m1375g();
+        ew6 ew6Var = this.f36234d;
         if (ew6Var != null) {
-            ew6Var.c(rw6Var, this.f);
+            ew6Var.mo18201c(rw6Var, this.f36236f);
         }
     }
 
     public final synchronized boolean zzk(Context context) {
-        if (tx6.a(context)) {
+        if (tx6.m8708a(context)) {
             try {
-                this.d = iw6.a(context);
+                this.f36234d = iw6.m19305a(context);
             } catch (NullPointerException e) {
                 com.google.android.gms.ads.internal.util.zze.zza("Error connecting LMD Overlay service");
-                com.google.android.gms.ads.internal.zzt.zzo().u(e, "LastMileDeliveryOverlay.bindLastMileDeliveryService");
+                com.google.android.gms.ads.internal.zzt.zzo().m11902u(e, "LastMileDeliveryOverlay.bindLastMileDeliveryService");
             }
-            if (this.d == null) {
-                this.e = false;
+            if (this.f36234d == null) {
+                this.f36235e = false;
                 return false;
             }
-            g();
-            this.e = true;
+            m1375g();
+            this.f36235e = true;
             return true;
         }
         return false;

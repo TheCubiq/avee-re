@@ -1,10 +1,13 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ct6 implements ps7 {
-    public static final ps7 a = new ct6();
+
+    /* renamed from: a */
+    public static final ps7 f6180a = new ct6();
 
     @Override // com.daaw.ps7
-    public final boolean a(int i) {
+    /* renamed from: a */
+    public final boolean mo3065a(int i) {
         return i == 1 || i == 2;
     }
 }

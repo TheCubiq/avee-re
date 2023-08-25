@@ -11,51 +11,54 @@ import javax.annotation.Nullable;
 public final class dj6 {
     public dj6() {
         try {
-            z97.a();
+            z97.m2585a();
         } catch (GeneralSecurityException e) {
             zze.zza("Failed to Configure Aead. ".concat(e.toString()));
-            zzt.zzo().u(e, "CryptoUtils.registerAead");
+            zzt.zzo().m11902u(e, "CryptoUtils.registerAead");
         }
     }
 
-    public static final String a() {
-        vq7 D = yq7.D();
+    /* renamed from: a */
+    public static final String m24342a() {
+        vq7 m3426D = yq7.m3426D();
         try {
-            h87.b(d97.b(x87.a("AES128_GCM")), c87.b(D));
+            h87.m20944b(d97.m24590b(x87.m5428a("AES128_GCM")), c87.m25510b(m3426D));
         } catch (IOException | GeneralSecurityException e) {
             zze.zza("Failed to generate key".concat(e.toString()));
-            zzt.zzo().u(e, "CryptoUtils.generateKey");
+            zzt.zzo().m11902u(e, "CryptoUtils.generateKey");
         }
-        String encodeToString = Base64.encodeToString(D.n().j(), 11);
-        D.q();
+        String encodeToString = Base64.encodeToString(m3426D.m6906n().m3415j(), 11);
+        m3426D.m6905q();
         return encodeToString;
     }
 
     @Nullable
-    public static final String b(byte[] bArr, byte[] bArr2, String str, fd5 fd5Var) {
-        d97 c = c(str);
-        if (c == null) {
+    /* renamed from: b */
+    public static final String m24341b(byte[] bArr, byte[] bArr2, String str, fd5 fd5Var) {
+        d97 m24340c = m24340c(str);
+        if (m24340c == null) {
             return null;
         }
         try {
-            byte[] a = ((a87) c.d(a87.class)).a(bArr, bArr2);
-            fd5Var.a().put("ds", "1");
-            return new String(a, "UTF-8");
+            byte[] mo1998a = ((a87) m24340c.m24588d(a87.class)).mo1998a(bArr, bArr2);
+            fd5Var.m22773a().put("ds", "1");
+            return new String(mo1998a, "UTF-8");
         } catch (UnsupportedEncodingException | GeneralSecurityException e) {
             zze.zza("Failed to decrypt ".concat(e.toString()));
-            zzt.zzo().u(e, "CryptoUtils.decrypt");
-            fd5Var.a().put("dsf", e.toString());
+            zzt.zzo().m11902u(e, "CryptoUtils.decrypt");
+            fd5Var.m22773a().put("dsf", e.toString());
             return null;
         }
     }
 
     @Nullable
-    public static final d97 c(String str) {
+    /* renamed from: c */
+    public static final d97 m24340c(String str) {
         try {
-            return h87.a(b87.b(Base64.decode(str, 11)));
+            return h87.m20945a(b87.m26326b(Base64.decode(str, 11)));
         } catch (IOException | GeneralSecurityException e) {
             zze.zza("Failed to get keysethandle".concat(e.toString()));
-            zzt.zzo().u(e, "CryptoUtils.getHandle");
+            zzt.zzo().m11902u(e, "CryptoUtils.getHandle");
             return null;
         }
     }

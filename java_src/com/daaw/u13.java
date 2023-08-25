@@ -7,24 +7,30 @@ import org.conscrypt.EvpMdRef;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public abstract class u13 {
-    public static MessageDigest b;
-    public final Object a = new Object();
 
-    public final MessageDigest a() {
-        synchronized (this.a) {
-            MessageDigest messageDigest = b;
+    /* renamed from: b */
+    public static MessageDigest f28319b;
+
+    /* renamed from: a */
+    public final Object f28320a = new Object();
+
+    /* renamed from: a */
+    public final MessageDigest m8636a() {
+        synchronized (this.f28320a) {
+            MessageDigest messageDigest = f28319b;
             if (messageDigest != null) {
                 return messageDigest;
             }
             for (int i = 0; i < 2; i++) {
                 try {
-                    b = MessageDigest.getInstance(EvpMdRef.MD5.JCA_NAME);
+                    f28319b = MessageDigest.getInstance(EvpMdRef.MD5.JCA_NAME);
                 } catch (NoSuchAlgorithmException unused) {
                 }
             }
-            return b;
+            return f28319b;
         }
     }
 
-    public abstract byte[] b(String str);
+    /* renamed from: b */
+    public abstract byte[] mo8635b(String str);
 }

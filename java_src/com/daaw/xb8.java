@@ -8,15 +8,21 @@ import java.util.List;
 import java.util.RandomAccess;
 /* loaded from: classes2.dex */
 public final class xb8 extends z48 implements RandomAccess, ac8 {
-    public static final xb8 r;
-    public static final ac8 s;
-    public final List q;
+
+    /* renamed from: r */
+    public static final xb8 f32343r;
+
+    /* renamed from: s */
+    public static final ac8 f32344s;
+
+    /* renamed from: q */
+    public final List f32345q;
 
     static {
         xb8 xb8Var = new xb8(10);
-        r = xb8Var;
+        f32343r = xb8Var;
         xb8Var.zzb();
-        s = xb8Var;
+        f32344s = xb8Var;
     }
 
     public xb8() {
@@ -24,31 +30,32 @@ public final class xb8 extends z48 implements RandomAccess, ac8 {
     }
 
     public xb8(int i) {
-        this.q = new ArrayList(i);
+        this.f32345q = new ArrayList(i);
     }
 
     public xb8(ArrayList arrayList) {
-        this.q = arrayList;
+        this.f32345q = arrayList;
     }
 
-    public static String f(Object obj) {
-        return obj instanceof String ? (String) obj : obj instanceof y68 ? ((y68) obj).s(gb8.b) : gb8.g((byte[]) obj);
+    /* renamed from: f */
+    public static String m5293f(Object obj) {
+        return obj instanceof String ? (String) obj : obj instanceof y68 ? ((y68) obj).m4061s(gb8.f11017b) : gb8.m21814g((byte[]) obj);
     }
 
     @Override // java.util.AbstractList, java.util.List
     public final /* bridge */ /* synthetic */ void add(int i, Object obj) {
-        d();
-        this.q.add(i, (String) obj);
+        m2816d();
+        this.f32345q.add(i, (String) obj);
         ((AbstractList) this).modCount++;
     }
 
     @Override // com.daaw.z48, java.util.AbstractList, java.util.List
     public final boolean addAll(int i, Collection collection) {
-        d();
+        m2816d();
         if (collection instanceof ac8) {
             collection = ((ac8) collection).zzh();
         }
-        boolean addAll = this.q.addAll(i, collection);
+        boolean addAll = this.f32345q.addAll(i, collection);
         ((AbstractList) this).modCount++;
         return addAll;
     }
@@ -59,10 +66,11 @@ public final class xb8 extends z48 implements RandomAccess, ac8 {
     }
 
     @Override // com.daaw.db8
-    public final /* bridge */ /* synthetic */ db8 b(int i) {
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ db8 mo5295b(int i) {
         if (i >= size()) {
             ArrayList arrayList = new ArrayList(i);
-            arrayList.addAll(this.q);
+            arrayList.addAll(this.f32345q);
             return new xb8(arrayList);
         }
         throw new IllegalArgumentException();
@@ -70,58 +78,59 @@ public final class xb8 extends z48 implements RandomAccess, ac8 {
 
     @Override // com.daaw.z48, java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
     public final void clear() {
-        d();
-        this.q.clear();
+        m2816d();
+        this.f32345q.clear();
         ((AbstractList) this).modCount++;
     }
 
     @Override // java.util.AbstractList, java.util.List
     /* renamed from: e */
     public final String get(int i) {
-        Object obj = this.q.get(i);
+        Object obj = this.f32345q.get(i);
         if (obj instanceof String) {
             return (String) obj;
         }
         if (obj instanceof y68) {
             y68 y68Var = (y68) obj;
-            String s2 = y68Var.s(gb8.b);
-            if (y68Var.n()) {
-                this.q.set(i, s2);
+            String m4061s = y68Var.m4061s(gb8.f11017b);
+            if (y68Var.mo4066n()) {
+                this.f32345q.set(i, m4061s);
             }
-            return s2;
+            return m4061s;
         }
         byte[] bArr = (byte[]) obj;
-        String g = gb8.g(bArr);
-        if (gb8.h(bArr)) {
-            this.q.set(i, g);
+        String m21814g = gb8.m21814g(bArr);
+        if (gb8.m21813h(bArr)) {
+            this.f32345q.set(i, m21814g);
         }
-        return g;
+        return m21814g;
     }
 
     @Override // com.daaw.ac8
-    public final void g(y68 y68Var) {
-        d();
-        this.q.add(y68Var);
+    /* renamed from: g */
+    public final void mo3754g(y68 y68Var) {
+        m2816d();
+        this.f32345q.add(y68Var);
         ((AbstractList) this).modCount++;
     }
 
     @Override // com.daaw.z48, java.util.AbstractList, java.util.List
     public final /* bridge */ /* synthetic */ Object remove(int i) {
-        d();
-        Object remove = this.q.remove(i);
+        m2816d();
+        Object remove = this.f32345q.remove(i);
         ((AbstractList) this).modCount++;
-        return f(remove);
+        return m5293f(remove);
     }
 
     @Override // java.util.AbstractList, java.util.List
     public final /* bridge */ /* synthetic */ Object set(int i, Object obj) {
-        d();
-        return f(this.q.set(i, (String) obj));
+        m2816d();
+        return m5293f(this.f32345q.set(i, (String) obj));
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.q.size();
+        return this.f32345q.size();
     }
 
     @Override // com.daaw.ac8
@@ -131,11 +140,11 @@ public final class xb8 extends z48 implements RandomAccess, ac8 {
 
     @Override // com.daaw.ac8
     public final Object zzf(int i) {
-        return this.q.get(i);
+        return this.f32345q.get(i);
     }
 
     @Override // com.daaw.ac8
     public final List zzh() {
-        return Collections.unmodifiableList(this.q);
+        return Collections.unmodifiableList(this.f32345q);
     }
 }

@@ -10,74 +10,80 @@ import java.util.HashMap;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class io3 extends rn3 {
-    public final UnifiedNativeAdMapper p;
+
+    /* renamed from: p */
+    public final UnifiedNativeAdMapper f13883p;
 
     public io3(UnifiedNativeAdMapper unifiedNativeAdMapper) {
-        this.p = unifiedNativeAdMapper;
+        this.f13883p = unifiedNativeAdMapper;
     }
 
     @Override // com.daaw.sn3
-    public final String b() {
-        return this.p.getStore();
+    /* renamed from: b */
+    public final String mo10146b() {
+        return this.f13883p.getStore();
     }
 
     @Override // com.daaw.sn3
-    public final void n0(yd0 yd0Var) {
-        this.p.untrackView((View) nt0.M(yd0Var));
+    /* renamed from: n0 */
+    public final void mo10145n0(yd0 yd0Var) {
+        this.f13883p.untrackView((View) nt0.m14831M(yd0Var));
     }
 
     @Override // com.daaw.sn3
-    public final void n2(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3) {
-        this.p.trackViews((View) nt0.M(yd0Var), (HashMap) nt0.M(yd0Var2), (HashMap) nt0.M(yd0Var3));
+    /* renamed from: n2 */
+    public final void mo10144n2(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3) {
+        this.f13883p.trackViews((View) nt0.m14831M(yd0Var), (HashMap) nt0.m14831M(yd0Var2), (HashMap) nt0.m14831M(yd0Var3));
     }
 
     @Override // com.daaw.sn3
-    public final void w2(yd0 yd0Var) {
-        this.p.handleClick((View) nt0.M(yd0Var));
+    /* renamed from: w2 */
+    public final void mo10143w2(yd0 yd0Var) {
+        this.f13883p.handleClick((View) nt0.m14831M(yd0Var));
     }
 
     @Override // com.daaw.sn3
     public final boolean zzA() {
-        return this.p.getOverrideClickHandling();
+        return this.f13883p.getOverrideClickHandling();
     }
 
     @Override // com.daaw.sn3
     public final boolean zzB() {
-        return this.p.getOverrideImpressionRecording();
+        return this.f13883p.getOverrideImpressionRecording();
     }
 
     @Override // com.daaw.sn3
     public final double zze() {
-        if (this.p.getStarRating() != null) {
-            return this.p.getStarRating().doubleValue();
+        if (this.f13883p.getStarRating() != null) {
+            return this.f13883p.getStarRating().doubleValue();
         }
         return -1.0d;
     }
 
     @Override // com.daaw.sn3
     public final float zzf() {
-        return this.p.getMediaContentAspectRatio();
+        return this.f13883p.getMediaContentAspectRatio();
     }
 
     @Override // com.daaw.sn3
     public final float zzg() {
-        return this.p.getCurrentTime();
+        return this.f13883p.getCurrentTime();
     }
 
     @Override // com.daaw.sn3
     public final float zzh() {
-        return this.p.getDuration();
+        return this.f13883p.getDuration();
     }
 
     @Override // com.daaw.sn3
     public final Bundle zzi() {
-        return this.p.getExtras();
+        return this.f13883p.getExtras();
     }
 
     @Override // com.daaw.sn3
     public final zzdq zzj() {
-        if (this.p.zzb() != null) {
-            return this.p.zzb().zza();
+        if (this.f13883p.zzb() != null) {
+            return this.f13883p.zzb().zza();
         }
         return null;
     }
@@ -89,7 +95,7 @@ public final class io3 extends rn3 {
 
     @Override // com.daaw.sn3
     public final vc3 zzl() {
-        NativeAd.Image icon = this.p.getIcon();
+        NativeAd.Image icon = this.f13883p.getIcon();
         if (icon != null) {
             return new dc3(icon.getDrawable(), icon.getUri(), icon.getScale(), icon.zzb(), icon.zza());
         }
@@ -98,59 +104,59 @@ public final class io3 extends rn3 {
 
     @Override // com.daaw.sn3
     public final yd0 zzm() {
-        View adChoicesContent = this.p.getAdChoicesContent();
+        View adChoicesContent = this.f13883p.getAdChoicesContent();
         if (adChoicesContent == null) {
             return null;
         }
-        return nt0.g3(adChoicesContent);
+        return nt0.m14830g3(adChoicesContent);
     }
 
     @Override // com.daaw.sn3
     public final yd0 zzn() {
-        View zza = this.p.zza();
+        View zza = this.f13883p.zza();
         if (zza == null) {
             return null;
         }
-        return nt0.g3(zza);
+        return nt0.m14830g3(zza);
     }
 
     @Override // com.daaw.sn3
     public final yd0 zzo() {
-        Object zzc = this.p.zzc();
+        Object zzc = this.f13883p.zzc();
         if (zzc == null) {
             return null;
         }
-        return nt0.g3(zzc);
+        return nt0.m14830g3(zzc);
     }
 
     @Override // com.daaw.sn3
     public final String zzp() {
-        return this.p.getAdvertiser();
+        return this.f13883p.getAdvertiser();
     }
 
     @Override // com.daaw.sn3
     public final String zzq() {
-        return this.p.getBody();
+        return this.f13883p.getBody();
     }
 
     @Override // com.daaw.sn3
     public final String zzr() {
-        return this.p.getCallToAction();
+        return this.f13883p.getCallToAction();
     }
 
     @Override // com.daaw.sn3
     public final String zzs() {
-        return this.p.getHeadline();
+        return this.f13883p.getHeadline();
     }
 
     @Override // com.daaw.sn3
     public final String zzt() {
-        return this.p.getPrice();
+        return this.f13883p.getPrice();
     }
 
     @Override // com.daaw.sn3
     public final List zzv() {
-        List<NativeAd.Image> images = this.p.getImages();
+        List<NativeAd.Image> images = this.f13883p.getImages();
         ArrayList arrayList = new ArrayList();
         if (images != null) {
             for (NativeAd.Image image : images) {
@@ -162,6 +168,6 @@ public final class io3 extends rn3 {
 
     @Override // com.daaw.sn3
     public final void zzx() {
-        this.p.recordImpression();
+        this.f13883p.recordImpression();
     }
 }

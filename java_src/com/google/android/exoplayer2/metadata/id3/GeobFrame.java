@@ -6,14 +6,23 @@ import com.daaw.sq1;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class GeobFrame extends Id3Frame {
-    public static final Parcelable.Creator<GeobFrame> CREATOR = new a();
-    public final String q;
-    public final String r;
-    public final String s;
-    public final byte[] t;
+    public static final Parcelable.Creator<GeobFrame> CREATOR = new C3948a();
 
+    /* renamed from: q */
+    public final String f35798q;
+
+    /* renamed from: r */
+    public final String f35799r;
+
+    /* renamed from: s */
+    public final String f35800s;
+
+    /* renamed from: t */
+    public final byte[] f35801t;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.id3.GeobFrame$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<GeobFrame> {
+    public static class C3948a implements Parcelable.Creator<GeobFrame> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public GeobFrame createFromParcel(Parcel parcel) {
@@ -29,18 +38,18 @@ public final class GeobFrame extends Id3Frame {
 
     public GeobFrame(Parcel parcel) {
         super("GEOB");
-        this.q = parcel.readString();
-        this.r = parcel.readString();
-        this.s = parcel.readString();
-        this.t = parcel.createByteArray();
+        this.f35798q = parcel.readString();
+        this.f35799r = parcel.readString();
+        this.f35800s = parcel.readString();
+        this.f35801t = parcel.createByteArray();
     }
 
     public GeobFrame(String str, String str2, String str3, byte[] bArr) {
         super("GEOB");
-        this.q = str;
-        this.r = str2;
-        this.s = str3;
-        this.t = bArr;
+        this.f35798q = str;
+        this.f35799r = str2;
+        this.f35800s = str3;
+        this.f35801t = bArr;
     }
 
     public boolean equals(Object obj) {
@@ -51,28 +60,28 @@ public final class GeobFrame extends Id3Frame {
             return false;
         }
         GeobFrame geobFrame = (GeobFrame) obj;
-        return sq1.b(this.q, geobFrame.q) && sq1.b(this.r, geobFrame.r) && sq1.b(this.s, geobFrame.s) && Arrays.equals(this.t, geobFrame.t);
+        return sq1.m10016b(this.f35798q, geobFrame.f35798q) && sq1.m10016b(this.f35799r, geobFrame.f35799r) && sq1.m10016b(this.f35800s, geobFrame.f35800s) && Arrays.equals(this.f35801t, geobFrame.f35801t);
     }
 
     public int hashCode() {
-        String str = this.q;
+        String str = this.f35798q;
         int hashCode = (527 + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
+        String str2 = this.f35799r;
         int hashCode2 = (hashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
-        String str3 = this.s;
-        return ((hashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31) + Arrays.hashCode(this.t);
+        String str3 = this.f35800s;
+        return ((hashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31) + Arrays.hashCode(this.f35801t);
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame
     public String toString() {
-        return this.p + ": mimeType=" + this.q + ", filename=" + this.r + ", description=" + this.s;
+        return this.f35802p + ": mimeType=" + this.f35798q + ", filename=" + this.f35799r + ", description=" + this.f35800s;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
-        parcel.writeString(this.s);
-        parcel.writeByteArray(this.t);
+        parcel.writeString(this.f35798q);
+        parcel.writeString(this.f35799r);
+        parcel.writeString(this.f35800s);
+        parcel.writeByteArray(this.f35801t);
     }
 }

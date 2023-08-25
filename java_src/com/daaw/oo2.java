@@ -5,14 +5,17 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes.dex */
 public final class oo2 {
-    public final Map a = new HashMap();
 
-    public final AtomicReference a(String str) {
+    /* renamed from: a */
+    public final Map f21781a = new HashMap();
+
+    /* renamed from: a */
+    public final AtomicReference m14116a(String str) {
         synchronized (this) {
-            if (!this.a.containsKey(str)) {
-                this.a.put(str, new AtomicReference());
+            if (!this.f21781a.containsKey(str)) {
+                this.f21781a.put(str, new AtomicReference());
             }
         }
-        return (AtomicReference) this.a.get(str);
+        return (AtomicReference) this.f21781a.get(str);
     }
 }

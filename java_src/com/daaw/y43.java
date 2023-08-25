@@ -13,15 +13,20 @@ public enum y43 implements ns7 {
     REWARD_BASED_VIDEO_AD(9),
     BANNER_SEARCH_ADS(10);
     
-    public static final os7 B = new os7() { // from class: com.daaw.w43
+
+    /* renamed from: B */
+    public static final os7 f33337B = new os7() { // from class: com.daaw.w43
     };
-    public final int p;
+
+    /* renamed from: p */
+    public final int f33349p;
 
     y43(int i) {
-        this.p = i;
+        this.f33349p = i;
     }
 
-    public static y43 a(int i) {
+    /* renamed from: a */
+    public static y43 m4129a(int i) {
         switch (i) {
             case 0:
                 return AD_FORMAT_TYPE_UNSPECIFIED;
@@ -50,16 +55,17 @@ public enum y43 implements ns7 {
         }
     }
 
-    public static ps7 b() {
-        return x43.a;
+    /* renamed from: b */
+    public static ps7 m4128b() {
+        return x43.f32091a;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.p);
+        return Integer.toString(this.f33349p);
     }
 
     public final int zza() {
-        return this.p;
+        return this.f33349p;
     }
 }

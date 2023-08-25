@@ -11,106 +11,123 @@ import com.daaw.b30;
 import com.daaw.j51;
 /* loaded from: classes.dex */
 public class to1 {
-    public static final zo1 a;
-    public static final wl0<String, Typeface> b;
 
+    /* renamed from: a */
+    public static final zo1 f27913a;
+
+    /* renamed from: b */
+    public static final wl0<String, Typeface> f27914b;
+
+    /* renamed from: com.daaw.to1$a */
     /* loaded from: classes.dex */
-    public static class a extends b30.c {
-        public j51.f a;
+    public static class C3105a extends b30.C0806c {
 
-        public a(j51.f fVar) {
-            this.a = fVar;
+        /* renamed from: a */
+        public j51.AbstractC1794f f27915a;
+
+        public C3105a(j51.AbstractC1794f abstractC1794f) {
+            this.f27915a = abstractC1794f;
         }
 
-        @Override // com.daaw.b30.c
-        public void a(int i) {
-            j51.f fVar = this.a;
-            if (fVar != null) {
-                fVar.f(i);
+        @Override // com.daaw.b30.C0806c
+        /* renamed from: a */
+        public void mo8908a(int i) {
+            j51.AbstractC1794f abstractC1794f = this.f27915a;
+            if (abstractC1794f != null) {
+                abstractC1794f.m18876f(i);
             }
         }
 
-        @Override // com.daaw.b30.c
-        public void b(Typeface typeface) {
-            j51.f fVar = this.a;
-            if (fVar != null) {
-                fVar.g(typeface);
+        @Override // com.daaw.b30.C0806c
+        /* renamed from: b */
+        public void mo8907b(Typeface typeface) {
+            j51.AbstractC1794f abstractC1794f = this.f27915a;
+            if (abstractC1794f != null) {
+                abstractC1794f.m18875g(typeface);
             }
         }
     }
 
     static {
         int i = Build.VERSION.SDK_INT;
-        a = i >= 29 ? new yo1() : i >= 28 ? new xo1() : i >= 26 ? new wo1() : (i < 24 || !vo1.m()) ? i >= 21 ? new uo1() : new zo1() : new vo1();
-        b = new wl0<>(16);
+        f27913a = i >= 29 ? new yo1() : i >= 28 ? new xo1() : i >= 26 ? new wo1() : (i < 24 || !vo1.m6972m()) ? i >= 21 ? new uo1() : new zo1() : new vo1();
+        f27914b = new wl0<>(16);
     }
 
-    public static Typeface a(Context context, Typeface typeface, int i) {
-        Typeface g;
+    /* renamed from: a */
+    public static Typeface m8916a(Context context, Typeface typeface, int i) {
+        Typeface m8910g;
         if (context != null) {
-            return (Build.VERSION.SDK_INT >= 21 || (g = g(context, typeface, i)) == null) ? Typeface.create(typeface, i) : g;
+            return (Build.VERSION.SDK_INT >= 21 || (m8910g = m8910g(context, typeface, i)) == null) ? Typeface.create(typeface, i) : m8910g;
         }
         throw new IllegalArgumentException("Context cannot be null");
     }
 
-    public static Typeface b(Context context, CancellationSignal cancellationSignal, b30.b[] bVarArr, int i) {
-        return a.c(context, cancellationSignal, bVarArr, i);
+    /* renamed from: b */
+    public static Typeface m8915b(Context context, CancellationSignal cancellationSignal, b30.C0805b[] c0805bArr, int i) {
+        return f27913a.mo2058c(context, cancellationSignal, c0805bArr, i);
     }
 
-    public static Typeface c(Context context, a30.b bVar, Resources resources, int i, String str, int i2, int i3, j51.f fVar, Handler handler, boolean z) {
-        Typeface b2;
-        if (bVar instanceof a30.e) {
-            a30.e eVar = (a30.e) bVar;
-            Typeface h = h(eVar.c());
-            if (h != null) {
-                if (fVar != null) {
-                    fVar.d(h, handler);
+    /* renamed from: c */
+    public static Typeface m8914c(Context context, a30.InterfaceC0569b interfaceC0569b, Resources resources, int i, String str, int i2, int i3, j51.AbstractC1794f abstractC1794f, Handler handler, boolean z) {
+        Typeface mo2059b;
+        if (interfaceC0569b instanceof a30.C0572e) {
+            a30.C0572e c0572e = (a30.C0572e) interfaceC0569b;
+            Typeface m8909h = m8909h(c0572e.m27726c());
+            if (m8909h != null) {
+                if (abstractC1794f != null) {
+                    abstractC1794f.m18878d(m8909h, handler);
                 }
-                return h;
+                return m8909h;
             }
-            b2 = b30.c(context, eVar.b(), i3, !z ? fVar != null : eVar.a() != 0, z ? eVar.d() : -1, j51.f.e(handler), new a(fVar));
+            mo2059b = b30.m26511c(context, c0572e.m27727b(), i3, !z ? abstractC1794f != null : c0572e.m27728a() != 0, z ? c0572e.m27725d() : -1, j51.AbstractC1794f.m18877e(handler), new C3105a(abstractC1794f));
         } else {
-            b2 = a.b(context, (a30.c) bVar, resources, i3);
-            if (fVar != null) {
-                if (b2 != null) {
-                    fVar.d(b2, handler);
+            mo2059b = f27913a.mo2059b(context, (a30.C0570c) interfaceC0569b, resources, i3);
+            if (abstractC1794f != null) {
+                if (mo2059b != null) {
+                    abstractC1794f.m18878d(mo2059b, handler);
                 } else {
-                    fVar.c(-3, handler);
+                    abstractC1794f.m18879c(-3, handler);
                 }
             }
         }
-        if (b2 != null) {
-            b.d(e(resources, i, str, i2, i3), b2);
+        if (mo2059b != null) {
+            f27914b.m6022d(m8912e(resources, i, str, i2, i3), mo2059b);
         }
-        return b2;
+        return mo2059b;
     }
 
-    public static Typeface d(Context context, Resources resources, int i, String str, int i2, int i3) {
-        Typeface e = a.e(context, resources, i, str, i3);
-        if (e != null) {
-            b.d(e(resources, i, str, i2, i3), e);
+    /* renamed from: d */
+    public static Typeface m8913d(Context context, Resources resources, int i, String str, int i2, int i3) {
+        Typeface mo2056e = f27913a.mo2056e(context, resources, i, str, i3);
+        if (mo2056e != null) {
+            f27914b.m6022d(m8912e(resources, i, str, i2, i3), mo2056e);
         }
-        return e;
+        return mo2056e;
     }
 
-    public static String e(Resources resources, int i, String str, int i2, int i3) {
+    /* renamed from: e */
+    public static String m8912e(Resources resources, int i, String str, int i2, int i3) {
         return resources.getResourcePackageName(i) + '-' + str + '-' + i2 + '-' + i + '-' + i3;
     }
 
-    public static Typeface f(Resources resources, int i, String str, int i2, int i3) {
-        return b.c(e(resources, i, str, i2, i3));
+    /* renamed from: f */
+    public static Typeface m8911f(Resources resources, int i, String str, int i2, int i3) {
+        return f27914b.m6023c(m8912e(resources, i, str, i2, i3));
     }
 
-    public static Typeface g(Context context, Typeface typeface, int i) {
-        zo1 zo1Var = a;
-        a30.c i2 = zo1Var.i(typeface);
-        if (i2 == null) {
+    /* renamed from: g */
+    public static Typeface m8910g(Context context, Typeface typeface, int i) {
+        zo1 zo1Var = f27913a;
+        a30.C0570c m2052i = zo1Var.m2052i(typeface);
+        if (m2052i == null) {
             return null;
         }
-        return zo1Var.b(context, i2, context.getResources(), i);
+        return zo1Var.mo2059b(context, m2052i, context.getResources(), i);
     }
 
-    public static Typeface h(String str) {
+    /* renamed from: h */
+    public static Typeface m8909h(String str) {
         if (str == null || str.isEmpty()) {
             return null;
         }

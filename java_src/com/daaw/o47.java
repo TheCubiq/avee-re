@@ -6,12 +6,14 @@ public final class o47 extends p47 {
     }
 
     @Override // com.daaw.p47
-    public final /* synthetic */ Object E(Object obj, Throwable th) {
+    /* renamed from: E */
+    public final /* synthetic */ Object mo13633E(Object obj, Throwable th) {
         return ((ey6) obj).apply(th);
     }
 
     @Override // com.daaw.p47
-    public final void F(Object obj) {
-        h(obj);
+    /* renamed from: F */
+    public final void mo13632F(Object obj) {
+        mo14486h(obj);
     }
 }

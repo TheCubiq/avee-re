@@ -13,27 +13,30 @@ public final class tt6 extends bp2 {
         super(iBinder, "com.google.android.gms.gass.internal.IGassService");
     }
 
-    public final zzftj h3(zzfth zzfthVar) {
-        Parcel D = D();
-        dp2.e(D, zzfthVar);
-        Parcel I = I(1, D);
-        zzftj zzftjVar = (zzftj) dp2.a(I, zzftj.CREATOR);
-        I.recycle();
+    /* renamed from: h3 */
+    public final zzftj m8825h3(zzfth zzfthVar) {
+        Parcel m25952D = m25952D();
+        dp2.m24103e(m25952D, zzfthVar);
+        Parcel m25951I = m25951I(1, m25952D);
+        zzftj zzftjVar = (zzftj) dp2.m24107a(m25951I, zzftj.CREATOR);
+        m25951I.recycle();
         return zzftjVar;
     }
 
-    public final zzfts i3(zzftq zzftqVar) {
-        Parcel D = D();
-        dp2.e(D, zzftqVar);
-        Parcel I = I(3, D);
-        zzfts zzftsVar = (zzfts) dp2.a(I, zzfts.CREATOR);
-        I.recycle();
+    /* renamed from: i3 */
+    public final zzfts m8824i3(zzftq zzftqVar) {
+        Parcel m25952D = m25952D();
+        dp2.m24103e(m25952D, zzftqVar);
+        Parcel m25951I = m25951I(3, m25952D);
+        zzfts zzftsVar = (zzfts) dp2.m24107a(m25951I, zzfts.CREATOR);
+        m25951I.recycle();
         return zzftsVar;
     }
 
-    public final void j3(zzfte zzfteVar) {
-        Parcel D = D();
-        dp2.e(D, zzfteVar);
-        M(2, D);
+    /* renamed from: j3 */
+    public final void m8823j3(zzfte zzfteVar) {
+        Parcel m25952D = m25952D();
+        dp2.m24103e(m25952D, zzfteVar);
+        m25950M(2, m25952D);
     }
 }

@@ -1,13 +1,15 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class pi1 {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f22954a;
 
     public pi1(String str) {
-        this.a = str;
+        this.f22954a = str;
     }
 
     public String toString() {
-        return '<' + this.a + '>';
+        return '<' + this.f22954a + '>';
     }
 }

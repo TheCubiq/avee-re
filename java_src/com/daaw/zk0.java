@@ -3,50 +3,56 @@ package com.daaw;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 /* loaded from: classes2.dex */
 public class zk0<E> {
-    public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater.newUpdater(zk0.class, Object.class, "_cur");
+
+    /* renamed from: a */
+    public static final /* synthetic */ AtomicReferenceFieldUpdater f35181a = AtomicReferenceFieldUpdater.newUpdater(zk0.class, Object.class, "_cur");
     private volatile /* synthetic */ Object _cur;
 
     public zk0(boolean z) {
         this._cur = new al0(8, z);
     }
 
-    public final boolean a(E e) {
+    /* renamed from: a */
+    public final boolean m2156a(E e) {
         while (true) {
             al0 al0Var = (al0) this._cur;
-            int a2 = al0Var.a(e);
-            if (a2 == 0) {
+            int m27374a = al0Var.m27374a(e);
+            if (m27374a == 0) {
                 return true;
             }
-            if (a2 == 1) {
-                j.a(a, this, al0Var, al0Var.i());
-            } else if (a2 == 2) {
+            if (m27374a == 1) {
+                C1773j.m19216a(f35181a, this, al0Var, al0Var.m27366i());
+            } else if (m27374a == 2) {
                 return false;
             }
         }
     }
 
-    public final void b() {
+    /* renamed from: b */
+    public final void m2155b() {
         while (true) {
             al0 al0Var = (al0) this._cur;
-            if (al0Var.d()) {
+            if (al0Var.m27371d()) {
                 return;
             }
-            j.a(a, this, al0Var, al0Var.i());
+            C1773j.m19216a(f35181a, this, al0Var, al0Var.m27366i());
         }
     }
 
-    public final int c() {
-        return ((al0) this._cur).f();
+    /* renamed from: c */
+    public final int m2154c() {
+        return ((al0) this._cur).m27369f();
     }
 
-    public final E d() {
+    /* renamed from: d */
+    public final E m2153d() {
         while (true) {
             al0 al0Var = (al0) this._cur;
-            E e = (E) al0Var.j();
-            if (e != al0.h) {
+            E e = (E) al0Var.m27365j();
+            if (e != al0.f3290h) {
                 return e;
             }
-            j.a(a, this, al0Var, al0Var.i());
+            C1773j.m19216a(f35181a, this, al0Var, al0Var.m27366i());
         }
     }
 }

@@ -3,32 +3,38 @@ package com.daaw;
 import android.os.Looper;
 /* loaded from: classes.dex */
 public final class sx2 {
-    public static volatile ClassLoader a;
-    public static volatile Thread b;
 
-    public static synchronized ClassLoader a() {
+    /* renamed from: a */
+    public static volatile ClassLoader f26739a;
+
+    /* renamed from: b */
+    public static volatile Thread f26740b;
+
+    /* renamed from: a */
+    public static synchronized ClassLoader m9787a() {
         ClassLoader classLoader;
         synchronized (sx2.class) {
-            if (a == null) {
-                a = b();
+            if (f26739a == null) {
+                f26739a = m9786b();
             }
-            classLoader = a;
+            classLoader = f26739a;
         }
         return classLoader;
     }
 
-    public static synchronized ClassLoader b() {
+    /* renamed from: b */
+    public static synchronized ClassLoader m9786b() {
         synchronized (sx2.class) {
             ClassLoader classLoader = null;
-            if (b == null) {
-                b = c();
-                if (b == null) {
+            if (f26740b == null) {
+                f26740b = m9785c();
+                if (f26740b == null) {
                     return null;
                 }
             }
-            synchronized (b) {
+            synchronized (f26740b) {
                 try {
-                    classLoader = b.getContextClassLoader();
+                    classLoader = f26740b.getContextClassLoader();
                 } catch (SecurityException e) {
                     String message = e.getMessage();
                     StringBuilder sb = new StringBuilder();
@@ -40,7 +46,8 @@ public final class sx2 {
         }
     }
 
-    public static synchronized Thread c() {
+    /* renamed from: c */
+    public static synchronized Thread m9785c() {
         SecurityException e;
         o32 o32Var;
         o32 o32Var2;

@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
-public interface ik0<A, T, Z, R> extends jp<T, Z> {
-    i51<Z, R> b();
+public interface ik0<A, T, Z, R> extends InterfaceC1849jp<T, Z> {
+    /* renamed from: b */
+    i51<Z, R> mo18073b();
 
-    mq0<A, T> f();
+    /* renamed from: f */
+    mq0<A, T> mo18072f();
 }

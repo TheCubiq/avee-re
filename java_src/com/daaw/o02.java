@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public abstract class o02 {
-    public abstract void a();
+    /* renamed from: a */
+    public abstract void mo14658a();
 }

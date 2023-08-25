@@ -3,43 +3,54 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public abstract class yh1 extends av0 implements th1 {
-    public th1 s;
-    public long t;
+
+    /* renamed from: s */
+    public th1 f33678s;
+
+    /* renamed from: t */
+    public long f33679t;
 
     @Override // com.daaw.th1
-    public int a(long j) {
-        return this.s.a(j - this.t);
-    }
-
-    @Override // com.daaw.th1
-    public long b(int i) {
-        return this.s.b(i) + this.t;
-    }
-
-    @Override // com.daaw.th1
-    public List<ln> c(long j) {
-        return this.s.c(j - this.t);
+    /* renamed from: a */
+    public int mo3753a(long j) {
+        return this.f33678s.mo3753a(j - this.f33679t);
     }
 
     @Override // com.daaw.th1
-    public int d() {
-        return this.s.d();
+    /* renamed from: b */
+    public long mo3752b(int i) {
+        return this.f33678s.mo3752b(i) + this.f33679t;
     }
 
-    @Override // com.daaw.rc
-    public void f() {
-        super.f();
-        this.s = null;
+    @Override // com.daaw.th1
+    /* renamed from: c */
+    public List<C2099ln> mo3751c(long j) {
+        return this.f33678s.mo3751c(j - this.f33679t);
     }
 
-    public abstract void m();
+    @Override // com.daaw.th1
+    /* renamed from: d */
+    public int mo3750d() {
+        return this.f33678s.mo3750d();
+    }
 
-    public void n(long j, th1 th1Var, long j2) {
-        this.q = j;
-        this.s = th1Var;
+    @Override // com.daaw.AbstractC2846rc
+    /* renamed from: f */
+    public void mo3749f() {
+        super.mo3749f();
+        this.f33678s = null;
+    }
+
+    /* renamed from: m */
+    public abstract void mo3748m();
+
+    /* renamed from: n */
+    public void m3747n(long j, th1 th1Var, long j2) {
+        this.f3671q = j;
+        this.f33678s = th1Var;
         if (j2 != Long.MAX_VALUE) {
             j = j2;
         }
-        this.t = j;
+        this.f33679t = j;
     }
 }

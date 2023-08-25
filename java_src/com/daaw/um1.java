@@ -1,23 +1,32 @@
 package com.daaw;
 
+import com.google.android.exoplayer2.trackselection.InterfaceC3970c;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class um1 {
-    public final int a;
-    public final com.google.android.exoplayer2.trackselection.c[] b;
-    public int c;
 
-    public um1(com.google.android.exoplayer2.trackselection.c... cVarArr) {
-        this.b = cVarArr;
-        this.a = cVarArr.length;
+    /* renamed from: a */
+    public final int f29184a;
+
+    /* renamed from: b */
+    public final InterfaceC3970c[] f29185b;
+
+    /* renamed from: c */
+    public int f29186c;
+
+    public um1(InterfaceC3970c... interfaceC3970cArr) {
+        this.f29185b = interfaceC3970cArr;
+        this.f29184a = interfaceC3970cArr.length;
     }
 
-    public com.google.android.exoplayer2.trackselection.c a(int i) {
-        return this.b[i];
+    /* renamed from: a */
+    public InterfaceC3970c m8019a(int i) {
+        return this.f29185b[i];
     }
 
-    public com.google.android.exoplayer2.trackselection.c[] b() {
-        return (com.google.android.exoplayer2.trackselection.c[]) this.b.clone();
+    /* renamed from: b */
+    public InterfaceC3970c[] m8018b() {
+        return (InterfaceC3970c[]) this.f29185b.clone();
     }
 
     public boolean equals(Object obj) {
@@ -27,13 +36,13 @@ public final class um1 {
         if (obj == null || um1.class != obj.getClass()) {
             return false;
         }
-        return Arrays.equals(this.b, ((um1) obj).b);
+        return Arrays.equals(this.f29185b, ((um1) obj).f29185b);
     }
 
     public int hashCode() {
-        if (this.c == 0) {
-            this.c = 527 + Arrays.hashCode(this.b);
+        if (this.f29186c == 0) {
+            this.f29186c = 527 + Arrays.hashCode(this.f29185b);
         }
-        return this.c;
+        return this.f29186c;
     }
 }

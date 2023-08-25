@@ -7,7 +7,8 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class l27 {
     @CheckForNull
-    public static Object a(Iterator it) {
+    /* renamed from: a */
+    public static Object m17194a(Iterator it) {
         if (it.hasNext()) {
             Object next = it.next();
             it.remove();
@@ -16,7 +17,8 @@ public final class l27 {
         return null;
     }
 
-    public static void b(Iterator it) {
+    /* renamed from: b */
+    public static void m17193b(Iterator it) {
         Objects.requireNonNull(it);
         while (it.hasNext()) {
             it.next();
@@ -24,7 +26,8 @@ public final class l27 {
         }
     }
 
-    public static boolean c(Collection collection, Iterator it) {
+    /* renamed from: c */
+    public static boolean m17192c(Collection collection, Iterator it) {
         boolean z = false;
         while (it.hasNext()) {
             z |= collection.add(it.next());

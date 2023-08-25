@@ -10,14 +10,17 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class qh3 implements zg3 {
-    public final Context a;
+
+    /* renamed from: a */
+    public final Context f23955a;
 
     public qh3(Context context) {
-        this.a = context;
+        this.f23955a = context;
     }
 
     @Override // com.daaw.zg3
-    public final void a(Object obj, Map map) {
+    /* renamed from: a */
+    public final void mo2341a(Object obj, Map map) {
         if (!map.containsKey("text") || TextUtils.isEmpty((CharSequence) map.get("text"))) {
             return;
         }
@@ -31,9 +34,9 @@ public final class qh3 implements zg3 {
         }
         try {
             zzt.zzp();
-            zzs.zzQ(this.a, intent);
+            zzs.zzQ(this.f23955a, intent);
         } catch (ActivityNotFoundException e) {
-            zzt.zzo().u(e, "ShareSheetGmsgHandler.onGmsg");
+            zzt.zzo().m11902u(e, "ShareSheetGmsgHandler.onGmsg");
         }
     }
 }

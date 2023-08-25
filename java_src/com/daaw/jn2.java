@@ -9,16 +9,17 @@ public final class jn2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        this.e.T(3);
+    /* renamed from: a */
+    public final void mo2099a() {
+        this.f20528e.m20772T(3);
         try {
             int i = 1;
-            boolean booleanValue = ((Boolean) this.f.invoke(null, this.b.b())).booleanValue();
-            hi2 hi2Var = this.e;
+            boolean booleanValue = ((Boolean) this.f20529f.invoke(null, this.f20525b.m6004b())).booleanValue();
+            hi2 hi2Var = this.f20528e;
             if (true == booleanValue) {
                 i = 2;
             }
-            hi2Var.T(i);
+            hi2Var.m20772T(i);
         } catch (InvocationTargetException e) {
             if (!(e.getTargetException() instanceof Settings.SettingNotFoundException)) {
                 throw e;

@@ -6,7 +6,8 @@ public final class ya7 extends cf7 {
     }
 
     @Override // com.daaw.cf7
-    public final /* bridge */ /* synthetic */ Object a(xt7 xt7Var) {
-        return f97.a(((ln7) xt7Var).P().O()).zzb();
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo2495a(xt7 xt7Var) {
+        return f97.m22825a(((ln7) xt7Var).m16708P().m14123O()).zzb();
     }
 }

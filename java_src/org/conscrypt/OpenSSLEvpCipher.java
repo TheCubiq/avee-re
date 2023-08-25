@@ -18,7 +18,7 @@ public abstract class OpenSSLEvpCipher extends OpenSSLCipher {
     }
 
     private void reset() {
-        NativeCrypto.EVP_CipherInit_ex(this.cipherCtx, 0L, this.encodedKey, this.iv, isEncrypting());
+        NativeCrypto.EVP_CipherInit_ex(this.cipherCtx, 0L, this.encodedKey, this.f38020iv, isEncrypting());
         this.calledUpdate = false;
     }
 
@@ -71,7 +71,7 @@ public abstract class OpenSSLEvpCipher extends OpenSSLCipher {
                 NativeCrypto.RAND_bytes(iv);
             }
         }
-        this.iv = iv;
+        this.f38020iv = iv;
         boolean supportsVariableSizeKey = supportsVariableSizeKey();
         NativeRef.EVP_CIPHER_CTX evp_cipher_ctx = this.cipherCtx;
         if (supportsVariableSizeKey) {

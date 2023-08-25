@@ -4,67 +4,86 @@ import java.nio.ByteBuffer;
 import java.util.Date;
 /* loaded from: classes.dex */
 public final class lh2 extends cz7 {
-    public Date A;
-    public Date B;
-    public long C;
-    public long D;
-    public double E;
-    public float F;
-    public pz7 G;
-    public long H;
+
+    /* renamed from: A */
+    public Date f17391A;
+
+    /* renamed from: B */
+    public Date f17392B;
+
+    /* renamed from: C */
+    public long f17393C;
+
+    /* renamed from: D */
+    public long f17394D;
+
+    /* renamed from: E */
+    public double f17395E;
+
+    /* renamed from: F */
+    public float f17396F;
+
+    /* renamed from: G */
+    public pz7 f17397G;
+
+    /* renamed from: H */
+    public long f17398H;
 
     public lh2() {
         super("mvhd");
-        this.E = 1.0d;
-        this.F = 1.0f;
-        this.G = pz7.j;
+        this.f17395E = 1.0d;
+        this.f17396F = 1.0f;
+        this.f17397G = pz7.f23560j;
     }
 
     @Override // com.daaw.az7
-    public final void b(ByteBuffer byteBuffer) {
-        long e;
-        f(byteBuffer);
-        if (e() == 1) {
-            this.A = kz7.a(hh2.f(byteBuffer));
-            this.B = kz7.a(hh2.f(byteBuffer));
-            this.C = hh2.e(byteBuffer);
-            e = hh2.f(byteBuffer);
+    /* renamed from: b */
+    public final void mo16028b(ByteBuffer byteBuffer) {
+        long m20793e;
+        m24855f(byteBuffer);
+        if (m24856e() == 1) {
+            this.f17391A = kz7.m17287a(hh2.m20792f(byteBuffer));
+            this.f17392B = kz7.m17287a(hh2.m20792f(byteBuffer));
+            this.f17393C = hh2.m20793e(byteBuffer);
+            m20793e = hh2.m20792f(byteBuffer);
         } else {
-            this.A = kz7.a(hh2.e(byteBuffer));
-            this.B = kz7.a(hh2.e(byteBuffer));
-            this.C = hh2.e(byteBuffer);
-            e = hh2.e(byteBuffer);
+            this.f17391A = kz7.m17287a(hh2.m20793e(byteBuffer));
+            this.f17392B = kz7.m17287a(hh2.m20793e(byteBuffer));
+            this.f17393C = hh2.m20793e(byteBuffer);
+            m20793e = hh2.m20793e(byteBuffer);
         }
-        this.D = e;
-        this.E = hh2.b(byteBuffer);
+        this.f17394D = m20793e;
+        this.f17395E = hh2.m20796b(byteBuffer);
         byte[] bArr = new byte[2];
         byteBuffer.get(bArr);
-        this.F = ((short) ((bArr[1] & 255) | ((short) ((bArr[0] << 8) & 65280)))) / 256.0f;
-        hh2.d(byteBuffer);
-        hh2.e(byteBuffer);
-        hh2.e(byteBuffer);
-        double b = hh2.b(byteBuffer);
-        double b2 = hh2.b(byteBuffer);
-        double a = hh2.a(byteBuffer);
-        this.G = new pz7(b, b2, hh2.b(byteBuffer), hh2.b(byteBuffer), a, hh2.a(byteBuffer), hh2.a(byteBuffer), hh2.b(byteBuffer), hh2.b(byteBuffer));
+        this.f17396F = ((short) ((bArr[1] & 255) | ((short) ((bArr[0] << 8) & 65280)))) / 256.0f;
+        hh2.m20794d(byteBuffer);
+        hh2.m20793e(byteBuffer);
+        hh2.m20793e(byteBuffer);
+        double m20796b = hh2.m20796b(byteBuffer);
+        double m20796b2 = hh2.m20796b(byteBuffer);
+        double m20797a = hh2.m20797a(byteBuffer);
+        this.f17397G = new pz7(m20796b, m20796b2, hh2.m20796b(byteBuffer), hh2.m20796b(byteBuffer), m20797a, hh2.m20797a(byteBuffer), hh2.m20797a(byteBuffer), hh2.m20796b(byteBuffer), hh2.m20796b(byteBuffer));
         byteBuffer.getInt();
         byteBuffer.getInt();
         byteBuffer.getInt();
         byteBuffer.getInt();
         byteBuffer.getInt();
         byteBuffer.getInt();
-        this.H = hh2.e(byteBuffer);
+        this.f17398H = hh2.m20793e(byteBuffer);
     }
 
-    public final long g() {
-        return this.D;
+    /* renamed from: g */
+    public final long m16955g() {
+        return this.f17394D;
     }
 
-    public final long h() {
-        return this.C;
+    /* renamed from: h */
+    public final long m16954h() {
+        return this.f17393C;
     }
 
     public final String toString() {
-        return "MovieHeaderBox[creationTime=" + this.A + ";modificationTime=" + this.B + ";timescale=" + this.C + ";duration=" + this.D + ";rate=" + this.E + ";volume=" + this.F + ";matrix=" + this.G + ";nextTrackId=" + this.H + "]";
+        return "MovieHeaderBox[creationTime=" + this.f17391A + ";modificationTime=" + this.f17392B + ";timescale=" + this.f17393C + ";duration=" + this.f17394D + ";rate=" + this.f17395E + ";volume=" + this.f17396F + ";matrix=" + this.f17397G + ";nextTrackId=" + this.f17398H + "]";
     }
 }

@@ -8,21 +8,42 @@ import android.util.TypedValue;
 import android.view.View;
 /* loaded from: classes.dex */
 public class yk1 {
-    public static final ThreadLocal<TypedValue> a = new ThreadLocal<>();
-    public static final int[] b = {-16842910};
-    public static final int[] c = {16842908};
-    public static final int[] d = {16843518};
-    public static final int[] e = {16842919};
-    public static final int[] f = {16842912};
-    public static final int[] g = {16842913};
-    public static final int[] h = {-16842919, -16842908};
-    public static final int[] i = new int[0];
-    public static final int[] j = new int[1];
 
-    public static void a(View view, Context context) {
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(x21.y0);
+    /* renamed from: a */
+    public static final ThreadLocal<TypedValue> f33747a = new ThreadLocal<>();
+
+    /* renamed from: b */
+    public static final int[] f33748b = {-16842910};
+
+    /* renamed from: c */
+    public static final int[] f33749c = {16842908};
+
+    /* renamed from: d */
+    public static final int[] f33750d = {16843518};
+
+    /* renamed from: e */
+    public static final int[] f33751e = {16842919};
+
+    /* renamed from: f */
+    public static final int[] f33752f = {16842912};
+
+    /* renamed from: g */
+    public static final int[] f33753g = {16842913};
+
+    /* renamed from: h */
+    public static final int[] f33754h = {-16842919, -16842908};
+
+    /* renamed from: i */
+    public static final int[] f33755i = new int[0];
+
+    /* renamed from: j */
+    public static final int[] f33756j = new int[1];
+
+    /* renamed from: a */
+    public static void m3617a(View view, Context context) {
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(x21.f32003y0);
         try {
-            if (!obtainStyledAttributes.hasValue(x21.D0)) {
+            if (!obtainStyledAttributes.hasValue(x21.f31774D0)) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("View ");
                 sb.append(view.getClass());
@@ -33,45 +54,50 @@ public class yk1 {
         }
     }
 
-    public static int b(Context context, int i2) {
-        ColorStateList e2 = e(context, i2);
-        if (e2 == null || !e2.isStateful()) {
-            TypedValue f2 = f();
-            context.getTheme().resolveAttribute(16842803, f2, true);
-            return d(context, i2, f2.getFloat());
+    /* renamed from: b */
+    public static int m3616b(Context context, int i) {
+        ColorStateList m3613e = m3613e(context, i);
+        if (m3613e == null || !m3613e.isStateful()) {
+            TypedValue m3612f = m3612f();
+            context.getTheme().resolveAttribute(16842803, m3612f, true);
+            return m3614d(context, i, m3612f.getFloat());
         }
-        return e2.getColorForState(b, e2.getDefaultColor());
+        return m3613e.getColorForState(f33748b, m3613e.getDefaultColor());
     }
 
-    public static int c(Context context, int i2) {
-        int[] iArr = j;
-        iArr[0] = i2;
-        ul1 u = ul1.u(context, null, iArr);
+    /* renamed from: c */
+    public static int m3615c(Context context, int i) {
+        int[] iArr = f33756j;
+        iArr[0] = i;
+        ul1 m8038u = ul1.m8038u(context, null, iArr);
         try {
-            return u.b(0, 0);
+            return m8038u.m8057b(0, 0);
         } finally {
-            u.w();
+            m8038u.m8036w();
         }
     }
 
-    public static int d(Context context, int i2, float f2) {
-        int c2 = c(context, i2);
-        return zg.j(c2, Math.round(Color.alpha(c2) * f2));
+    /* renamed from: d */
+    public static int m3614d(Context context, int i, float f) {
+        int m3615c = m3615c(context, i);
+        return C3838zg.m2344j(m3615c, Math.round(Color.alpha(m3615c) * f));
     }
 
-    public static ColorStateList e(Context context, int i2) {
-        int[] iArr = j;
-        iArr[0] = i2;
-        ul1 u = ul1.u(context, null, iArr);
+    /* renamed from: e */
+    public static ColorStateList m3613e(Context context, int i) {
+        int[] iArr = f33756j;
+        iArr[0] = i;
+        ul1 m8038u = ul1.m8038u(context, null, iArr);
         try {
-            return u.c(0);
+            return m8038u.m8056c(0);
         } finally {
-            u.w();
+            m8038u.m8036w();
         }
     }
 
-    public static TypedValue f() {
-        ThreadLocal<TypedValue> threadLocal = a;
+    /* renamed from: f */
+    public static TypedValue m3612f() {
+        ThreadLocal<TypedValue> threadLocal = f33747a;
         TypedValue typedValue = threadLocal.get();
         if (typedValue == null) {
             TypedValue typedValue2 = new TypedValue();

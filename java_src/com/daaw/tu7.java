@@ -8,60 +8,87 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 /* loaded from: classes2.dex */
 public final class tu7 {
-    public static HashMap f;
-    public static Object k;
-    public static boolean l;
-    public static final Uri a = Uri.parse("content://com.google.android.gsf.gservices");
-    public static final Uri b = Uri.parse("content://com.google.android.gsf.gservices/prefix");
-    public static final Pattern c = Pattern.compile("^(1|true|t|on|yes|y)$", 2);
-    public static final Pattern d = Pattern.compile("^(0|false|f|off|no|n)$", 2);
-    public static final AtomicBoolean e = new AtomicBoolean();
-    public static final HashMap g = new HashMap();
-    public static final HashMap h = new HashMap();
-    public static final HashMap i = new HashMap();
-    public static final HashMap j = new HashMap();
-    public static final String[] m = new String[0];
 
-    public static String a(ContentResolver contentResolver, String str, String str2) {
+    /* renamed from: f */
+    public static HashMap f28084f;
+
+    /* renamed from: k */
+    public static Object f28089k;
+
+    /* renamed from: l */
+    public static boolean f28090l;
+
+    /* renamed from: a */
+    public static final Uri f28079a = Uri.parse("content://com.google.android.gsf.gservices");
+
+    /* renamed from: b */
+    public static final Uri f28080b = Uri.parse("content://com.google.android.gsf.gservices/prefix");
+
+    /* renamed from: c */
+    public static final Pattern f28081c = Pattern.compile("^(1|true|t|on|yes|y)$", 2);
+
+    /* renamed from: d */
+    public static final Pattern f28082d = Pattern.compile("^(0|false|f|off|no|n)$", 2);
+
+    /* renamed from: e */
+    public static final AtomicBoolean f28083e = new AtomicBoolean();
+
+    /* renamed from: g */
+    public static final HashMap f28085g = new HashMap();
+
+    /* renamed from: h */
+    public static final HashMap f28086h = new HashMap();
+
+    /* renamed from: i */
+    public static final HashMap f28087i = new HashMap();
+
+    /* renamed from: j */
+    public static final HashMap f28088j = new HashMap();
+
+    /* renamed from: m */
+    public static final String[] f28091m = new String[0];
+
+    /* renamed from: a */
+    public static String m8819a(ContentResolver contentResolver, String str, String str2) {
         synchronized (tu7.class) {
-            if (f == null) {
-                e.set(false);
-                f = new HashMap();
-                k = new Object();
-                l = false;
-                contentResolver.registerContentObserver(a, true, new ht7(null));
-            } else if (e.getAndSet(false)) {
-                f.clear();
-                g.clear();
-                h.clear();
-                i.clear();
-                j.clear();
-                k = new Object();
-                l = false;
+            if (f28084f == null) {
+                f28083e.set(false);
+                f28084f = new HashMap();
+                f28089k = new Object();
+                f28090l = false;
+                contentResolver.registerContentObserver(f28079a, true, new ht7(null));
+            } else if (f28083e.getAndSet(false)) {
+                f28084f.clear();
+                f28085g.clear();
+                f28086h.clear();
+                f28087i.clear();
+                f28088j.clear();
+                f28089k = new Object();
+                f28090l = false;
             }
-            Object obj = k;
-            if (f.containsKey(str)) {
-                String str3 = (String) f.get(str);
+            Object obj = f28089k;
+            if (f28084f.containsKey(str)) {
+                String str3 = (String) f28084f.get(str);
                 if (str3 != null) {
                     r3 = str3;
                 }
                 return r3;
             }
-            int length = m.length;
-            Cursor query = contentResolver.query(a, null, null, new String[]{str}, null);
+            int length = f28091m.length;
+            Cursor query = contentResolver.query(f28079a, null, null, new String[]{str}, null);
             if (query == null) {
                 return null;
             }
             try {
                 if (!query.moveToFirst()) {
-                    c(obj, str, null);
+                    m8817c(obj, str, null);
                     return null;
                 }
                 String string = query.getString(1);
                 if (string != null && string.equals(null)) {
                     string = null;
                 }
-                c(obj, str, string);
+                m8817c(obj, str, string);
                 return string != null ? string : null;
             } finally {
                 query.close();
@@ -69,10 +96,11 @@ public final class tu7 {
         }
     }
 
-    public static void c(Object obj, String str, String str2) {
+    /* renamed from: c */
+    public static void m8817c(Object obj, String str, String str2) {
         synchronized (tu7.class) {
-            if (obj == k) {
-                f.put(str, str2);
+            if (obj == f28089k) {
+                f28084f.put(str, str2);
             }
         }
     }

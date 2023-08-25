@@ -7,16 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class fv0 implements oe1 {
-    public transient pe1 a = null;
-    public final List<a51> b = new ArrayList();
+
+    /* renamed from: a */
+    public transient pe1 f9986a = null;
+
+    /* renamed from: b */
+    public final List<a51> f9987b = new ArrayList();
 
     @Override // com.daaw.oe1
-    public pe1 a() {
-        return this.a;
+    /* renamed from: a */
+    public pe1 mo2137a() {
+        return this.f9986a;
     }
 
     @Override // com.daaw.oe1
-    public void b(OutputStream outputStream, String str) {
+    /* renamed from: b */
+    public void mo2136b(OutputStream outputStream, String str) {
         if (str == null) {
             str = "UTF-8";
         }
@@ -24,27 +30,27 @@ public class fv0 implements oe1 {
         bufferedWriter.write("[Playlist]");
         bufferedWriter.newLine();
         bufferedWriter.write("NumberOfEntries=");
-        bufferedWriter.write(Integer.toString(this.b.size()));
+        bufferedWriter.write(Integer.toString(this.f9987b.size()));
         bufferedWriter.newLine();
         int i = 1;
-        for (a51 a51Var : this.b) {
+        for (a51 a51Var : this.f9987b) {
             bufferedWriter.write("File");
             bufferedWriter.write(Integer.toString(i));
             bufferedWriter.write("=");
-            bufferedWriter.write(a51Var.b());
+            bufferedWriter.write(a51Var.m27608b());
             bufferedWriter.newLine();
-            if (a51Var.c() != null) {
+            if (a51Var.m27607c() != null) {
                 bufferedWriter.write("Title");
                 bufferedWriter.write(Integer.toString(i));
                 bufferedWriter.write("=");
-                bufferedWriter.write(a51Var.c());
+                bufferedWriter.write(a51Var.m27607c());
                 bufferedWriter.newLine();
             }
-            if (a51Var.a() >= 0) {
+            if (a51Var.m27609a() >= 0) {
                 bufferedWriter.write("Length");
                 bufferedWriter.write(Integer.toString(i));
                 bufferedWriter.write("=");
-                bufferedWriter.write(Long.toString(a51Var.a()));
+                bufferedWriter.write(Long.toString(a51Var.m27609a()));
                 bufferedWriter.newLine();
             }
             i++;
@@ -54,11 +60,13 @@ public class fv0 implements oe1 {
         bufferedWriter.flush();
     }
 
-    public List<a51> c() {
-        return this.b;
+    /* renamed from: c */
+    public List<a51> m22252c() {
+        return this.f9987b;
     }
 
-    public void d(pe1 pe1Var) {
-        this.a = pe1Var;
+    /* renamed from: d */
+    public void m22251d(pe1 pe1Var) {
+        this.f9986a = pe1Var;
     }
 }

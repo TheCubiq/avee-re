@@ -6,13 +6,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class AdapterResponseInfo {
-    public final zzu a;
-    public final AdError b;
+
+    /* renamed from: a */
+    public final zzu f36021a;
+
+    /* renamed from: b */
+    public final AdError f36022b;
 
     public AdapterResponseInfo(zzu zzuVar) {
-        this.a = zzuVar;
+        this.f36021a = zzuVar;
         com.google.android.gms.ads.internal.client.zze zzeVar = zzuVar.zzc;
-        this.b = zzeVar == null ? null : zzeVar.zza();
+        this.f36022b = zzeVar == null ? null : zzeVar.zza();
     }
 
     public static AdapterResponseInfo zza(zzu zzuVar) {
@@ -23,35 +27,35 @@ public final class AdapterResponseInfo {
     }
 
     public AdError getAdError() {
-        return this.b;
+        return this.f36022b;
     }
 
     public String getAdSourceId() {
-        return this.a.zzf;
+        return this.f36021a.zzf;
     }
 
     public String getAdSourceInstanceId() {
-        return this.a.zzh;
+        return this.f36021a.zzh;
     }
 
     public String getAdSourceInstanceName() {
-        return this.a.zzg;
+        return this.f36021a.zzg;
     }
 
     public String getAdSourceName() {
-        return this.a.zze;
+        return this.f36021a.zze;
     }
 
     public String getAdapterClassName() {
-        return this.a.zza;
+        return this.f36021a.zza;
     }
 
     public Bundle getCredentials() {
-        return this.a.zzd;
+        return this.f36021a.zzd;
     }
 
     public long getLatencyMillis() {
-        return this.a.zzb;
+        return this.f36021a.zzb;
     }
 
     public String toString() {
@@ -64,8 +68,8 @@ public final class AdapterResponseInfo {
 
     public final JSONObject zzb() {
         JSONObject jSONObject = new JSONObject();
-        jSONObject.put("Adapter", this.a.zza);
-        jSONObject.put("Latency", this.a.zzb);
+        jSONObject.put("Adapter", this.f36021a.zza);
+        jSONObject.put("Latency", this.f36021a.zzb);
         String adSourceName = getAdSourceName();
         if (adSourceName == null) {
             jSONObject.put("Ad Source Name", "null");
@@ -91,11 +95,11 @@ public final class AdapterResponseInfo {
             jSONObject.put("Ad Source Instance ID", adSourceInstanceId);
         }
         JSONObject jSONObject2 = new JSONObject();
-        for (String str : this.a.zzd.keySet()) {
-            jSONObject2.put(str, this.a.zzd.get(str));
+        for (String str : this.f36021a.zzd.keySet()) {
+            jSONObject2.put(str, this.f36021a.zzd.get(str));
         }
         jSONObject.put("Credentials", jSONObject2);
-        AdError adError = this.b;
+        AdError adError = this.f36022b;
         if (adError == null) {
             jSONObject.put("Ad Error", "null");
         } else {

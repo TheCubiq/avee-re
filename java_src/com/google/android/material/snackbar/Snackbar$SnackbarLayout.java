@@ -6,9 +6,9 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
-import com.daaw.db;
+import com.daaw.C1070db;
 /* loaded from: classes2.dex */
-public final class Snackbar$SnackbarLayout extends db {
+public final class Snackbar$SnackbarLayout extends C1070db {
     public Snackbar$SnackbarLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
     }
@@ -26,27 +26,27 @@ public final class Snackbar$SnackbarLayout extends db {
         }
     }
 
-    @Override // com.daaw.db, android.view.View
+    @Override // com.daaw.C1070db, android.view.View
     public /* bridge */ /* synthetic */ void setBackground(Drawable drawable) {
         super.setBackground(drawable);
     }
 
-    @Override // com.daaw.db, android.view.View
+    @Override // com.daaw.C1070db, android.view.View
     public /* bridge */ /* synthetic */ void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
     }
 
-    @Override // com.daaw.db, android.view.View
+    @Override // com.daaw.C1070db, android.view.View
     public /* bridge */ /* synthetic */ void setBackgroundTintList(ColorStateList colorStateList) {
         super.setBackgroundTintList(colorStateList);
     }
 
-    @Override // com.daaw.db, android.view.View
+    @Override // com.daaw.C1070db, android.view.View
     public /* bridge */ /* synthetic */ void setBackgroundTintMode(PorterDuff.Mode mode) {
         super.setBackgroundTintMode(mode);
     }
 
-    @Override // com.daaw.db, android.view.View
+    @Override // com.daaw.C1070db, android.view.View
     public /* bridge */ /* synthetic */ void setOnClickListener(View.OnClickListener onClickListener) {
         super.setOnClickListener(onClickListener);
     }

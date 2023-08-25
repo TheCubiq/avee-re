@@ -6,7 +6,8 @@ import java.util.Map;
 /* loaded from: classes.dex */
 public final class pf3 implements zg3 {
     @Override // com.daaw.zg3
-    public final /* bridge */ /* synthetic */ void a(Object obj, Map map) {
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ void mo2341a(Object obj, Map map) {
         a74 a74Var = (a74) obj;
         String str = (String) map.get("action");
         if ("tick".equals(str)) {
@@ -19,11 +20,11 @@ public final class pf3 implements zg3 {
                 k04.zzj("No timestamp given for CSI tick.");
             } else {
                 try {
-                    long b = zzt.zzB().b() + (Long.parseLong(str4) - zzt.zzB().a());
+                    long mo15859b = zzt.zzB().mo15859b() + (Long.parseLong(str4) - zzt.zzB().mo15860a());
                     if (true == TextUtils.isEmpty(str3)) {
                         str3 = "native:view_load";
                     }
-                    a74Var.zzo().c(str2, str3, b);
+                    a74Var.zzo().m9421c(str2, str3, mo15859b);
                 } catch (NumberFormatException e) {
                     k04.zzk("Malformed timestamp for CSI tick.", e);
                 }
@@ -33,7 +34,7 @@ public final class pf3 implements zg3 {
             if (TextUtils.isEmpty(str5)) {
                 k04.zzj("No value given for CSI experiment.");
             } else {
-                a74Var.zzo().a().d("e", str5);
+                a74Var.zzo().m9423a().m7314d("e", str5);
             }
         } else if ("extra".equals(str)) {
             String str6 = (String) map.get("name");
@@ -43,7 +44,7 @@ public final class pf3 implements zg3 {
             } else if (TextUtils.isEmpty(str6)) {
                 k04.zzj("No name given for CSI extra.");
             } else {
-                a74Var.zzo().a().d(str6, str7);
+                a74Var.zzo().m9423a().m7314d(str6, str7);
             }
         }
     }

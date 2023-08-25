@@ -9,37 +9,46 @@ import java.util.concurrent.Callable;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class g16 implements i76 {
-    public final g77 a;
-    public final ya5 b;
-    public final fg5 c;
-    public final j16 d;
+
+    /* renamed from: a */
+    public final g77 f10149a;
+
+    /* renamed from: b */
+    public final ya5 f10150b;
+
+    /* renamed from: c */
+    public final fg5 f10151c;
+
+    /* renamed from: d */
+    public final j16 f10152d;
 
     public g16(g77 g77Var, ya5 ya5Var, fg5 fg5Var, j16 j16Var) {
-        this.a = g77Var;
-        this.b = ya5Var;
-        this.c = fg5Var;
-        this.d = j16Var;
+        this.f10149a = g77Var;
+        this.f10150b = ya5Var;
+        this.f10151c = fg5Var;
+        this.f10152d = j16Var;
     }
 
-    public final /* synthetic */ i16 a() {
-        List<String> asList = Arrays.asList(((String) zzba.zzc().b(g93.k1)).split(";"));
+    /* renamed from: a */
+    public final /* synthetic */ i16 m22093a() {
+        List<String> asList = Arrays.asList(((String) zzba.zzc().m23658b(g93.f10733k1)).split(";"));
         Bundle bundle = new Bundle();
         for (String str : asList) {
             try {
-                oj6 c = this.b.c(str, new JSONObject());
-                c.c();
+                oj6 m3950c = this.f10150b.m3950c(str, new JSONObject());
+                m3950c.m14243c();
                 Bundle bundle2 = new Bundle();
                 try {
-                    zzbye k = c.k();
-                    if (k != null) {
-                        bundle2.putString("sdk_version", k.toString());
+                    zzbye m14235k = m3950c.m14235k();
+                    if (m14235k != null) {
+                        bundle2.putString("sdk_version", m14235k.toString());
                     }
                 } catch (wi6 unused) {
                 }
                 try {
-                    zzbye j = c.j();
-                    if (j != null) {
-                        bundle2.putString("adapter_version", j.toString());
+                    zzbye m14236j = m3950c.m14236j();
+                    if (m14236j != null) {
+                        bundle2.putString("adapter_version", m14236j.toString());
                     }
                 } catch (wi6 unused2) {
                 }
@@ -57,14 +66,14 @@ public final class g16 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        if (hz6.d((String) zzba.zzc().b(g93.k1)) || this.d.b() || !this.c.t()) {
-            return s67.i(new i16(new Bundle(), null));
+        if (hz6.m20315d((String) zzba.zzc().m23658b(g93.f10733k1)) || this.f10152d.m19168b() || !this.f10151c.m22670t()) {
+            return s67.m10634i(new i16(new Bundle(), null));
         }
-        this.d.a(true);
-        return this.a.M(new Callable() { // from class: com.daaw.c16
+        this.f10152d.m19169a(true);
+        return this.f10149a.mo20112M(new Callable() { // from class: com.daaw.c16
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return g16.this.a();
+                return g16.this.m22093a();
             }
         });
     }

@@ -9,14 +9,15 @@ public final class bj3 extends bp2 implements dj3 {
     }
 
     @Override // com.daaw.dj3
-    public final void a(String str) {
-        Parcel D = D();
-        D.writeString(str);
-        M(3, D);
+    /* renamed from: a */
+    public final void mo23476a(String str) {
+        Parcel m25952D = m25952D();
+        m25952D.writeString(str);
+        m25950M(3, m25952D);
     }
 
     @Override // com.daaw.dj3
     public final void zzf() {
-        M(2, D());
+        m25950M(2, m25952D());
     }
 }

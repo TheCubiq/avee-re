@@ -8,7 +8,8 @@ public final class en6 extends wm6 {
     }
 
     @Override // com.daaw.wm6
-    public final /* synthetic */ String f(Object obj) {
-        return ((ym6) obj).a();
+    /* renamed from: f */
+    public final /* synthetic */ String mo5971f(Object obj) {
+        return ((ym6) obj).m3506a();
     }
 }

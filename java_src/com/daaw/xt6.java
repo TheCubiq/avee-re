@@ -6,7 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 /* loaded from: classes.dex */
 public final class xt6 {
-    public static File a(File file, boolean z) {
+    /* renamed from: a */
+    public static File m4521a(File file, boolean z) {
         if (z && file.exists() && !file.isDirectory()) {
             file.delete();
         }
@@ -16,23 +17,26 @@ public final class xt6 {
         return file;
     }
 
-    public static File b(String str, String str2, File file) {
+    /* renamed from: b */
+    public static File m4520b(String str, String str2, File file) {
         if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
             return null;
         }
-        return new File(c(str, file), str2);
+        return new File(m4519c(str, file), str2);
     }
 
-    public static File c(String str, File file) {
+    /* renamed from: c */
+    public static File m4519c(String str, File file) {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
         File file2 = new File(file, str);
-        a(file2, false);
+        m4521a(file2, false);
         return file2;
     }
 
-    public static boolean d(File file) {
+    /* renamed from: d */
+    public static boolean m4518d(File file) {
         boolean z;
         if (file.exists()) {
             File[] listFiles = file.listFiles();
@@ -41,7 +45,7 @@ public final class xt6 {
                 z = true;
                 for (int i = 0; i < length; i++) {
                     File file2 = listFiles[i];
-                    z = file2 != null && d(file2) && z;
+                    z = file2 != null && m4518d(file2) && z;
                 }
             } else {
                 z = true;
@@ -51,23 +55,24 @@ public final class xt6 {
         return true;
     }
 
-    public static boolean e(File file, byte[] bArr) {
+    /* renamed from: e */
+    public static boolean m4517e(File file, byte[] bArr) {
         FileOutputStream fileOutputStream = null;
         try {
             FileOutputStream fileOutputStream2 = new FileOutputStream(file);
             try {
                 fileOutputStream2.write(bArr);
                 fileOutputStream2.flush();
-                xd0.a(fileOutputStream2);
+                xd0.m5227a(fileOutputStream2);
                 return true;
             } catch (IOException unused) {
                 fileOutputStream = fileOutputStream2;
-                xd0.a(fileOutputStream);
+                xd0.m5227a(fileOutputStream);
                 return false;
             } catch (Throwable th) {
                 th = th;
                 fileOutputStream = fileOutputStream2;
-                xd0.a(fileOutputStream);
+                xd0.m5227a(fileOutputStream);
                 throw th;
             }
         } catch (IOException unused2) {

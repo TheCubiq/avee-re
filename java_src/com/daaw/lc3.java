@@ -12,17 +12,17 @@ public final class lc3 extends bp2 implements nc3 {
 
     @Override // com.daaw.nc3
     public final String zzg() {
-        Parcel I = I(2, D());
-        String readString = I.readString();
-        I.recycle();
+        Parcel m25951I = m25951I(2, m25952D());
+        String readString = m25951I.readString();
+        m25951I.recycle();
         return readString;
     }
 
     @Override // com.daaw.nc3
     public final List zzh() {
-        Parcel I = I(3, D());
-        ArrayList b = dp2.b(I);
-        I.recycle();
-        return b;
+        Parcel m25951I = m25951I(3, m25952D());
+        ArrayList m24106b = dp2.m24106b(m25951I);
+        m25951I.recycle();
+        return m24106b;
     }
 }

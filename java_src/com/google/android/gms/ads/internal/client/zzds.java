@@ -10,7 +10,8 @@ public abstract class zzds extends cp2 implements zzdt {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             zzi();
         } else if (i == 2) {
@@ -22,9 +23,9 @@ public abstract class zzds extends cp2 implements zzdt {
         } else if (i != 5) {
             return false;
         } else {
-            boolean h = dp2.h(parcel);
-            dp2.c(parcel);
-            zzf(h);
+            boolean m24100h = dp2.m24100h(parcel);
+            dp2.m24105c(parcel);
+            zzf(m24100h);
         }
         parcel2.writeNoException();
         return true;

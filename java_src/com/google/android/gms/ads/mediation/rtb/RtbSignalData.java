@@ -7,40 +7,48 @@ import com.google.android.gms.ads.mediation.MediationConfiguration;
 import java.util.List;
 /* loaded from: classes.dex */
 public class RtbSignalData {
-    public final Context a;
-    public final List b;
-    public final Bundle c;
-    public final AdSize d;
+
+    /* renamed from: a */
+    public final Context f36443a;
+
+    /* renamed from: b */
+    public final List f36444b;
+
+    /* renamed from: c */
+    public final Bundle f36445c;
+
+    /* renamed from: d */
+    public final AdSize f36446d;
 
     public RtbSignalData(Context context, List<MediationConfiguration> list, Bundle bundle, AdSize adSize) {
-        this.a = context;
-        this.b = list;
-        this.c = bundle;
-        this.d = adSize;
+        this.f36443a = context;
+        this.f36444b = list;
+        this.f36445c = bundle;
+        this.f36446d = adSize;
     }
 
     public AdSize getAdSize() {
-        return this.d;
+        return this.f36446d;
     }
 
     @Deprecated
     public MediationConfiguration getConfiguration() {
-        List list = this.b;
+        List list = this.f36444b;
         if (list == null || list.size() <= 0) {
             return null;
         }
-        return (MediationConfiguration) this.b.get(0);
+        return (MediationConfiguration) this.f36444b.get(0);
     }
 
     public List<MediationConfiguration> getConfigurations() {
-        return this.b;
+        return this.f36444b;
     }
 
     public Context getContext() {
-        return this.a;
+        return this.f36443a;
     }
 
     public Bundle getNetworkExtras() {
-        return this.c;
+        return this.f36445c;
     }
 }

@@ -18,6 +18,6 @@ public enum k27 implements Iterator {
 
     @Override // java.util.Iterator
     public final void remove() {
-        sy6.i(false, "no calls to next() since the last call to remove()");
+        sy6.m9700i(false, "no calls to next() since the last call to remove()");
     }
 }

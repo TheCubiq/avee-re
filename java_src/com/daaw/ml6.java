@@ -1,5 +1,7 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ml6 {
-    public static final nl6 a = new nl6();
+
+    /* renamed from: a */
+    public static final nl6 f18966a = new nl6();
 }

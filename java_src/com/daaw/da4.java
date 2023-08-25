@@ -5,22 +5,26 @@ import com.google.android.gms.ads.internal.zzt;
 import com.google.android.gms.internal.ads.zzchu;
 /* loaded from: classes.dex */
 public final class da4 implements wz7 {
-    public final m08 a;
-    public final m08 b;
+
+    /* renamed from: a */
+    public final m08 f6718a;
+
+    /* renamed from: b */
+    public final m08 f6719b;
 
     public da4(m08 m08Var, m08 m08Var2) {
-        this.a = m08Var;
-        this.b = m08Var2;
+        this.f6718a = m08Var;
+        this.f6719b = m08Var2;
     }
 
     @Override // com.daaw.m08
     /* renamed from: a */
     public final xu3 zzb() {
-        Context a = ((h94) this.a).a();
-        vo6 vo6Var = (vo6) this.b.zzb();
-        xl3 b = zzt.zzf().b(a, zzchu.h(), vo6Var);
-        rl3 rl3Var = ul3.b;
-        b.a("google.afma.request.getAdDictionary", rl3Var, rl3Var);
-        return new wu3(a, zzt.zzf().b(a, zzchu.h(), vo6Var).a("google.afma.sdkConstants.getSdkConstants", rl3Var, rl3Var));
+        Context m20923a = ((h94) this.f6718a).m20923a();
+        vo6 vo6Var = (vo6) this.f6719b.zzb();
+        xl3 m14177b = zzt.zzf().m14177b(m20923a, zzchu.m1093h(), vo6Var);
+        rl3 rl3Var = ul3.f29176b;
+        m14177b.m5010a("google.afma.request.getAdDictionary", rl3Var, rl3Var);
+        return new wu3(m20923a, zzt.zzf().m14177b(m20923a, zzchu.m1093h(), vo6Var).m5010a("google.afma.sdkConstants.getSdkConstants", rl3Var, rl3Var));
     }
 }

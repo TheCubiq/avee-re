@@ -8,11 +8,14 @@ import com.daaw.ks1;
 @SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public class ParcelImpl implements Parcelable {
-    public static final Parcelable.Creator<ParcelImpl> CREATOR = new a();
-    public final ks1 p;
+    public static final Parcelable.Creator<ParcelImpl> CREATOR = new C0486a();
 
+    /* renamed from: p */
+    public final ks1 f2334p;
+
+    /* renamed from: androidx.versionedparcelable.ParcelImpl$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<ParcelImpl> {
+    public static class C0486a implements Parcelable.Creator<ParcelImpl> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public ParcelImpl createFromParcel(Parcel parcel) {
@@ -27,7 +30,7 @@ public class ParcelImpl implements Parcelable {
     }
 
     public ParcelImpl(Parcel parcel) {
-        this.p = new js1(parcel).u();
+        this.f2334p = new js1(parcel).m19451u();
     }
 
     @Override // android.os.Parcelable
@@ -37,6 +40,6 @@ public class ParcelImpl implements Parcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        new js1(parcel).L(this.p);
+        new js1(parcel).m19465L(this.f2334p);
     }
 }

@@ -5,43 +5,55 @@ import com.google.android.gms.internal.ads.zzcbf;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class t86 {
-    public final zzcbf a;
-    public final int b;
+
+    /* renamed from: a */
+    public final zzcbf f27124a;
+
+    /* renamed from: b */
+    public final int f27125b;
 
     public t86(zzcbf zzcbfVar, int i) {
-        this.a = zzcbfVar;
-        this.b = i;
+        this.f27124a = zzcbfVar;
+        this.f27125b = i;
     }
 
-    public final int a() {
-        return this.b;
+    /* renamed from: a */
+    public final int m9445a() {
+        return this.f27125b;
     }
 
-    public final PackageInfo b() {
-        return this.a.r;
+    /* renamed from: b */
+    public final PackageInfo m9444b() {
+        return this.f27124a.f36944r;
     }
 
-    public final String c() {
-        return this.a.q;
+    /* renamed from: c */
+    public final String m9443c() {
+        return this.f27124a.f36943q;
     }
 
-    public final String d() {
-        return this.a.s;
+    /* renamed from: d */
+    public final String m9442d() {
+        return this.f27124a.f36945s;
     }
 
-    public final String e() {
-        return this.a.u;
+    /* renamed from: e */
+    public final String m9441e() {
+        return this.f27124a.f36947u;
     }
 
-    public final List f() {
-        return this.a.v;
+    /* renamed from: f */
+    public final List m9440f() {
+        return this.f27124a.f36948v;
     }
 
-    public final boolean g() {
-        return this.a.x;
+    /* renamed from: g */
+    public final boolean m9439g() {
+        return this.f27124a.f36950x;
     }
 
-    public final boolean h() {
-        return this.a.w;
+    /* renamed from: h */
+    public final boolean m9438h() {
+        return this.f27124a.f36949w;
     }
 }

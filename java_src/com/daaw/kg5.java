@@ -14,50 +14,61 @@ import java.io.ByteArrayOutputStream;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class kg5 {
-    public final Context a;
-    public final ApplicationInfo b;
-    public String e = "";
-    public final int c = ((Integer) zzba.zzc().b(g93.k8)).intValue();
-    public final int d = ((Integer) zzba.zzc().b(g93.l8)).intValue();
+
+    /* renamed from: a */
+    public final Context f16365a;
+
+    /* renamed from: b */
+    public final ApplicationInfo f16366b;
+
+    /* renamed from: e */
+    public String f16369e = "";
+
+    /* renamed from: c */
+    public final int f16367c = ((Integer) zzba.zzc().m23658b(g93.f10740k8)).intValue();
+
+    /* renamed from: d */
+    public final int f16368d = ((Integer) zzba.zzc().m23658b(g93.f10751l8)).intValue();
 
     public kg5(Context context) {
-        this.a = context;
-        this.b = context.getApplicationInfo();
+        this.f16365a = context;
+        this.f16366b = context.getApplicationInfo();
     }
 
-    public final JSONObject a() {
+    /* renamed from: a */
+    public final JSONObject m17754a() {
         Drawable drawable;
         String encodeToString;
         JSONObject jSONObject = new JSONObject();
         try {
-            jSONObject.put("name", ez1.a(this.a).d(this.b.packageName));
+            jSONObject.put("name", ez1.m22979a(this.f16365a).m19343d(this.f16366b.packageName));
         } catch (PackageManager.NameNotFoundException unused) {
         }
-        jSONObject.put("packageName", this.b.packageName);
+        jSONObject.put("packageName", this.f16366b.packageName);
         zzt.zzp();
-        jSONObject.put("adMobAppId", zzs.zzo(this.a));
-        if (this.e.isEmpty()) {
+        jSONObject.put("adMobAppId", zzs.zzo(this.f16365a));
+        if (this.f16369e.isEmpty()) {
             try {
-                drawable = ez1.a(this.a).e(this.b.packageName).b;
+                drawable = ez1.m22979a(this.f16365a).m19342e(this.f16366b.packageName).f22031b;
             } catch (PackageManager.NameNotFoundException unused2) {
                 drawable = null;
             }
             if (drawable == null) {
                 encodeToString = "";
             } else {
-                drawable.setBounds(0, 0, this.c, this.d);
-                Bitmap createBitmap = Bitmap.createBitmap(this.c, this.d, Bitmap.Config.ARGB_8888);
+                drawable.setBounds(0, 0, this.f16367c, this.f16368d);
+                Bitmap createBitmap = Bitmap.createBitmap(this.f16367c, this.f16368d, Bitmap.Config.ARGB_8888);
                 drawable.draw(new Canvas(createBitmap));
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 createBitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 encodeToString = Base64.encodeToString(byteArrayOutputStream.toByteArray(), 2);
             }
-            this.e = encodeToString;
+            this.f16369e = encodeToString;
         }
-        if (!this.e.isEmpty()) {
-            jSONObject.put("icon", this.e);
-            jSONObject.put("iconWidthPx", this.c);
-            jSONObject.put("iconHeightPx", this.d);
+        if (!this.f16369e.isEmpty()) {
+            jSONObject.put("icon", this.f16369e);
+            jSONObject.put("iconWidthPx", this.f16367c);
+            jSONObject.put("iconHeightPx", this.f16368d);
         }
         return jSONObject;
     }

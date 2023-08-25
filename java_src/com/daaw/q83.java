@@ -10,22 +10,26 @@ public final class q83 extends y83 {
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ Object a(JSONObject jSONObject) {
-        return Long.valueOf(jSONObject.optLong(n(), ((Long) m()).longValue()));
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo4015a(JSONObject jSONObject) {
+        return Long.valueOf(jSONObject.optLong(m4002n(), ((Long) m4003m()).longValue()));
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ Object b(Bundle bundle) {
-        return bundle.containsKey("com.google.android.gms.ads.flag.".concat(n())) ? Long.valueOf(bundle.getLong("com.google.android.gms.ads.flag.".concat(n()))) : (Long) m();
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ Object mo4014b(Bundle bundle) {
+        return bundle.containsKey("com.google.android.gms.ads.flag.".concat(m4002n())) ? Long.valueOf(bundle.getLong("com.google.android.gms.ads.flag.".concat(m4002n()))) : (Long) m4003m();
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ Object c(SharedPreferences sharedPreferences) {
-        return Long.valueOf(sharedPreferences.getLong(n(), ((Long) m()).longValue()));
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo4013c(SharedPreferences sharedPreferences) {
+        return Long.valueOf(sharedPreferences.getLong(m4002n(), ((Long) m4003m()).longValue()));
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ void d(SharedPreferences.Editor editor, Object obj) {
-        editor.putLong(n(), ((Long) obj).longValue());
+    /* renamed from: d */
+    public final /* bridge */ /* synthetic */ void mo4012d(SharedPreferences.Editor editor, Object obj) {
+        editor.putLong(m4002n(), ((Long) obj).longValue());
     }
 }

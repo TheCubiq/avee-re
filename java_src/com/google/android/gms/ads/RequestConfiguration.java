@@ -16,11 +16,19 @@ public class RequestConfiguration {
     public static final int TAG_FOR_UNDER_AGE_OF_CONSENT_FALSE = 0;
     public static final int TAG_FOR_UNDER_AGE_OF_CONSENT_TRUE = 1;
     public static final int TAG_FOR_UNDER_AGE_OF_CONSENT_UNSPECIFIED = -1;
-    public final int a;
-    public final int b;
+
+    /* renamed from: a */
+    public final int f36026a;
+
+    /* renamed from: b */
+    public final int f36027b;
     @Nullable
-    public final String c;
-    public final List d;
+
+    /* renamed from: c */
+    public final String f36028c;
+
+    /* renamed from: d */
+    public final List f36029d;
     public static final String MAX_AD_CONTENT_RATING_MA = "MA";
     public static final String MAX_AD_CONTENT_RATING_T = "T";
     public static final String MAX_AD_CONTENT_RATING_PG = "PG";
@@ -29,14 +37,22 @@ public class RequestConfiguration {
 
     /* loaded from: classes.dex */
     public static class Builder {
-        public int a = -1;
-        public int b = -1;
+
+        /* renamed from: a */
+        public int f36030a = -1;
+
+        /* renamed from: b */
+        public int f36031b = -1;
         @Nullable
-        public String c = null;
-        public final List d = new ArrayList();
+
+        /* renamed from: c */
+        public String f36032c = null;
+
+        /* renamed from: d */
+        public final List f36033d = new ArrayList();
 
         public RequestConfiguration build() {
-            return new RequestConfiguration(this.a, this.b, this.c, this.d, null);
+            return new RequestConfiguration(this.f36030a, this.f36031b, this.f36032c, this.f36033d, null);
         }
 
         public Builder setMaxAdContentRating(@Nullable String str) {
@@ -46,13 +62,13 @@ public class RequestConfiguration {
                 k04.zzj("Invalid value passed to setMaxAdContentRating: ".concat(str));
                 return this;
             }
-            this.c = str;
+            this.f36032c = str;
             return this;
         }
 
         public Builder setTagForChildDirectedTreatment(int i) {
             if (i == -1 || i == 0 || i == 1) {
-                this.a = i;
+                this.f36030a = i;
             } else {
                 k04.zzj("Invalid value passed to setTagForChildDirectedTreatment: " + i);
             }
@@ -61,7 +77,7 @@ public class RequestConfiguration {
 
         public Builder setTagForUnderAgeOfConsent(int i) {
             if (i == -1 || i == 0 || i == 1) {
-                this.b = i;
+                this.f36031b = i;
             } else {
                 k04.zzj("Invalid value passed to setTagForUnderAgeOfConsent: " + i);
             }
@@ -69,9 +85,9 @@ public class RequestConfiguration {
         }
 
         public Builder setTestDeviceIds(@Nullable List<String> list) {
-            this.d.clear();
+            this.f36033d.clear();
             if (list != null) {
-                this.d.addAll(list);
+                this.f36033d.addAll(list);
             }
             return this;
         }
@@ -93,35 +109,35 @@ public class RequestConfiguration {
     }
 
     public /* synthetic */ RequestConfiguration(int i, int i2, String str, List list, zzh zzhVar) {
-        this.a = i;
-        this.b = i2;
-        this.c = str;
-        this.d = list;
+        this.f36026a = i;
+        this.f36027b = i2;
+        this.f36028c = str;
+        this.f36029d = list;
     }
 
     public String getMaxAdContentRating() {
-        String str = this.c;
+        String str = this.f36028c;
         return str == null ? "" : str;
     }
 
     public int getTagForChildDirectedTreatment() {
-        return this.a;
+        return this.f36026a;
     }
 
     public int getTagForUnderAgeOfConsent() {
-        return this.b;
+        return this.f36027b;
     }
 
     public List<String> getTestDeviceIds() {
-        return new ArrayList(this.d);
+        return new ArrayList(this.f36029d);
     }
 
     public Builder toBuilder() {
         Builder builder = new Builder();
-        builder.setTagForChildDirectedTreatment(this.a);
-        builder.setTagForUnderAgeOfConsent(this.b);
-        builder.setMaxAdContentRating(this.c);
-        builder.setTestDeviceIds(this.d);
+        builder.setTagForChildDirectedTreatment(this.f36026a);
+        builder.setTagForUnderAgeOfConsent(this.f36027b);
+        builder.setMaxAdContentRating(this.f36028c);
+        builder.setTestDeviceIds(this.f36029d);
         return builder;
     }
 }

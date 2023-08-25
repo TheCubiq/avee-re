@@ -6,63 +6,73 @@ import java.util.Iterator;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class a27 {
-    public Object[] a;
-    public int b;
-    public z17 c;
+
+    /* renamed from: a */
+    public Object[] f2715a;
+
+    /* renamed from: b */
+    public int f2716b;
+
+    /* renamed from: c */
+    public z17 f2717c;
 
     public a27() {
         this(4);
     }
 
     public a27(int i) {
-        this.a = new Object[i + i];
-        this.b = 0;
+        this.f2715a = new Object[i + i];
+        this.f2716b = 0;
     }
 
-    public final a27 a(Object obj, Object obj2) {
-        d(this.b + 1);
-        k07.b(obj, obj2);
-        Object[] objArr = this.a;
-        int i = this.b;
+    /* renamed from: a */
+    public final a27 m27748a(Object obj, Object obj2) {
+        m27745d(this.f2716b + 1);
+        k07.m18088b(obj, obj2);
+        Object[] objArr = this.f2715a;
+        int i = this.f2716b;
         int i2 = i + i;
         objArr[i2] = obj;
         objArr[i2 + 1] = obj2;
-        this.b = i + 1;
+        this.f2716b = i + 1;
         return this;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final a27 b(Iterable iterable) {
+    /* renamed from: b */
+    public final a27 m27747b(Iterable iterable) {
         if (iterable instanceof Collection) {
-            d(this.b + iterable.size());
+            m27745d(this.f2716b + iterable.size());
         }
         Iterator it = iterable.iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
-            a(entry.getKey(), entry.getValue());
+            m27748a(entry.getKey(), entry.getValue());
         }
         return this;
     }
 
-    public final b27 c() {
-        z17 z17Var = this.c;
+    /* renamed from: c */
+    public final b27 m27746c() {
+        z17 z17Var = this.f2717c;
         if (z17Var == null) {
-            r37 i = r37.i(this.b, this.a, this);
-            z17 z17Var2 = this.c;
+            r37 m11785i = r37.m11785i(this.f2716b, this.f2715a, this);
+            z17 z17Var2 = this.f2717c;
             if (z17Var2 == null) {
-                return i;
+                return m11785i;
             }
-            throw z17Var2.a();
+            throw z17Var2.m2981a();
         }
-        throw z17Var.a();
+        throw z17Var.m2981a();
     }
 
-    public final void d(int i) {
+    /* renamed from: d */
+    public final void m27745d(int i) {
         int i2 = i + i;
-        Object[] objArr = this.a;
+        Object[] objArr = this.f2715a;
         int length = objArr.length;
         if (i2 > length) {
-            this.a = Arrays.copyOf(objArr, s17.b(length, i2));
+            this.f2715a = Arrays.copyOf(objArr, s17.m10754b(length, i2));
         }
     }
 }

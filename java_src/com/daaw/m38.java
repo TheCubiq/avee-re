@@ -7,16 +7,21 @@ import java.util.Iterator;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public final class m38 implements b18 {
-    public static final Map b = new g6();
-    public final SharedPreferences a;
 
-    public static m38 a(Context context, String str, Runnable runnable) {
+    /* renamed from: b */
+    public static final Map f18429b = new C1370g6();
+
+    /* renamed from: a */
+    public final SharedPreferences f18430a;
+
+    /* renamed from: a */
+    public static m38 m16237a(Context context, String str, Runnable runnable) {
         m38 m38Var;
-        if (wv7.b()) {
+        if (wv7.m5758b()) {
             throw null;
         }
         synchronized (m38.class) {
-            m38Var = (m38) b.get(null);
+            m38Var = (m38) f18429b.get(null);
             if (m38Var == null) {
                 StrictMode.allowThreadDiskReads();
                 throw null;
@@ -25,12 +30,13 @@ public final class m38 implements b18 {
         return m38Var;
     }
 
-    public static synchronized void b() {
+    /* renamed from: b */
+    public static synchronized void m16236b() {
         synchronized (m38.class) {
-            Map map = b;
+            Map map = f18429b;
             Iterator it = map.values().iterator();
             if (it.hasNext()) {
-                SharedPreferences sharedPreferences = ((m38) it.next()).a;
+                SharedPreferences sharedPreferences = ((m38) it.next()).f18430a;
                 throw null;
             }
             map.clear();

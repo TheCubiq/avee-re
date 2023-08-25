@@ -6,7 +6,8 @@ import java.util.List;
 /* loaded from: classes2.dex */
 public final class br2 implements gl2 {
     @Override // com.daaw.gl2
-    public final gl2 d(String str, w07 w07Var, List list) {
+    /* renamed from: d */
+    public final gl2 mo2708d(String str, w07 w07Var, List list) {
         throw new IllegalStateException(String.format("Undefined has no function %s", str));
     }
 
@@ -19,7 +20,7 @@ public final class br2 implements gl2 {
 
     @Override // com.daaw.gl2
     public final gl2 zzd() {
-        return gl2.g;
+        return gl2.f11420g;
     }
 
     @Override // com.daaw.gl2

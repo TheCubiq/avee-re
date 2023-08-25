@@ -5,14 +5,17 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public abstract class l68 extends my8 {
-    public final int p;
+
+    /* renamed from: p */
+    public final int f17094p;
 
     public l68(byte[] bArr) {
-        ry0.a(bArr.length == 25);
-        this.p = Arrays.hashCode(bArr);
+        ry0.m10839a(bArr.length == 25);
+        this.f17094p = Arrays.hashCode(bArr);
     }
 
-    public static byte[] M(String str) {
+    /* renamed from: M */
+    public static byte[] m17120M(String str) {
         try {
             return str.getBytes("ISO-8859-1");
         } catch (UnsupportedEncodingException e) {
@@ -25,8 +28,8 @@ public abstract class l68 extends my8 {
         if (obj != null && (obj instanceof tz8)) {
             try {
                 tz8 tz8Var = (tz8) obj;
-                if (tz8Var.zzc() == this.p && (zzd = tz8Var.zzd()) != null) {
-                    return Arrays.equals(g3(), (byte[]) nt0.M(zzd));
+                if (tz8Var.zzc() == this.f17094p && (zzd = tz8Var.zzd()) != null) {
+                    return Arrays.equals(mo3860g3(), (byte[]) nt0.m14831M(zzd));
                 }
                 return false;
             } catch (RemoteException unused) {
@@ -35,19 +38,20 @@ public abstract class l68 extends my8 {
         return false;
     }
 
-    public abstract byte[] g3();
+    /* renamed from: g3 */
+    public abstract byte[] mo3860g3();
 
     public final int hashCode() {
-        return this.p;
+        return this.f17094p;
     }
 
     @Override // com.daaw.tz8
     public final int zzc() {
-        return this.p;
+        return this.f17094p;
     }
 
     @Override // com.daaw.tz8
     public final yd0 zzd() {
-        return nt0.g3(g3());
+        return nt0.m14830g3(mo3860g3());
     }
 }

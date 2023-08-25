@@ -1,23 +1,33 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface wy8 {
-    void a(ll4 ll4Var);
+    /* renamed from: a */
+    void mo4123a(ll4 ll4Var);
 
-    void d(f92 f92Var, tm7 tm7Var);
+    /* renamed from: d */
+    void mo4120d(f92 f92Var, tm7 tm7Var);
 
-    void e(int i, long j);
+    /* renamed from: e */
+    void mo4119e(int i, long j);
 
-    void f(long j, int i);
+    /* renamed from: f */
+    void mo4118f(long j, int i);
 
-    void k(ql7 ql7Var);
+    /* renamed from: k */
+    void mo4113k(ql7 ql7Var);
 
-    void n(ql7 ql7Var);
+    /* renamed from: n */
+    void mo4110n(ql7 ql7Var);
 
-    void p(Exception exc);
+    /* renamed from: p */
+    void mo4108p(Exception exc);
 
-    void q(String str, long j, long j2);
+    /* renamed from: q */
+    void mo4107q(String str, long j, long j2);
 
-    void r(String str);
+    /* renamed from: r */
+    void mo4106r(String str);
 
-    void t(Object obj, long j);
+    /* renamed from: t */
+    void mo4104t(Object obj, long j);
 }

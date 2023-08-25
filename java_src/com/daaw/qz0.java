@@ -1,6 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
-public abstract class qz0 extends kd implements gi0 {
+public abstract class qz0 extends AbstractC1940kd implements gi0 {
     public qz0() {
     }
 
@@ -14,23 +14,23 @@ public abstract class qz0 extends kd implements gi0 {
         }
         if (obj instanceof qz0) {
             qz0 qz0Var = (qz0) obj;
-            return f().equals(qz0Var.f()) && e().equals(qz0Var.e()) && g().equals(qz0Var.g()) && ug0.a(d(), qz0Var.d());
+            return m17790f().equals(qz0Var.m17790f()) && m17791e().equals(qz0Var.m17791e()) && m17789g().equals(qz0Var.m17789g()) && ug0.m8273a(m17792d(), qz0Var.m17792d());
         } else if (obj instanceof gi0) {
-            return obj.equals(b());
+            return obj.equals(m17793b());
         } else {
             return false;
         }
     }
 
     public int hashCode() {
-        return (((f().hashCode() * 31) + e().hashCode()) * 31) + g().hashCode();
+        return (((m17790f().hashCode() * 31) + m17791e().hashCode()) * 31) + m17789g().hashCode();
     }
 
     public String toString() {
-        ci0 b = b();
-        if (b != this) {
-            return b.toString();
+        ci0 m17793b = m17793b();
+        if (m17793b != this) {
+            return m17793b.toString();
         }
-        return "property " + e() + " (Kotlin reflection is not available)";
+        return "property " + m17791e() + " (Kotlin reflection is not available)";
     }
 }

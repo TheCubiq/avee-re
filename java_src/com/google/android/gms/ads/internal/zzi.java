@@ -27,151 +27,188 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes.dex */
 public final class zzi implements Runnable, ol2 {
-    public final zzchu A;
-    public final boolean B;
-    public int D;
-    public boolean s;
-    public final boolean t;
-    public final boolean u;
-    public final Executor v;
-    public final es6 w;
-    public Context x;
-    public final Context y;
-    public zzchu z;
-    public final List p = new Vector();
-    public final AtomicReference q = new AtomicReference();
-    public final AtomicReference r = new AtomicReference();
-    public final CountDownLatch C = new CountDownLatch(1);
+
+    /* renamed from: A */
+    public final zzchu f36351A;
+
+    /* renamed from: B */
+    public final boolean f36352B;
+
+    /* renamed from: D */
+    public int f36354D;
+
+    /* renamed from: s */
+    public boolean f36358s;
+
+    /* renamed from: t */
+    public final boolean f36359t;
+
+    /* renamed from: u */
+    public final boolean f36360u;
+
+    /* renamed from: v */
+    public final Executor f36361v;
+
+    /* renamed from: w */
+    public final es6 f36362w;
+
+    /* renamed from: x */
+    public Context f36363x;
+
+    /* renamed from: y */
+    public final Context f36364y;
+
+    /* renamed from: z */
+    public zzchu f36365z;
+
+    /* renamed from: p */
+    public final List f36355p = new Vector();
+
+    /* renamed from: q */
+    public final AtomicReference f36356q = new AtomicReference();
+
+    /* renamed from: r */
+    public final AtomicReference f36357r = new AtomicReference();
+
+    /* renamed from: C */
+    public final CountDownLatch f36353C = new CountDownLatch(1);
 
     public zzi(Context context, zzchu zzchuVar) {
-        this.x = context;
-        this.y = context;
-        this.z = zzchuVar;
-        this.A = zzchuVar;
+        this.f36363x = context;
+        this.f36364y = context;
+        this.f36365z = zzchuVar;
+        this.f36351A = zzchuVar;
         ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
-        this.v = newCachedThreadPool;
-        boolean booleanValue = ((Boolean) zzba.zzc().b(g93.X1)).booleanValue();
-        this.B = booleanValue;
-        this.w = es6.a(context, newCachedThreadPool, booleanValue);
-        this.t = ((Boolean) zzba.zzc().b(g93.T1)).booleanValue();
-        this.u = ((Boolean) zzba.zzc().b(g93.Y1)).booleanValue();
-        if (((Boolean) zzba.zzc().b(g93.W1)).booleanValue()) {
-            this.D = 2;
+        this.f36361v = newCachedThreadPool;
+        boolean booleanValue = ((Boolean) zzba.zzc().m23658b(g93.f10593X1)).booleanValue();
+        this.f36352B = booleanValue;
+        this.f36362w = es6.m23231a(context, newCachedThreadPool, booleanValue);
+        this.f36359t = ((Boolean) zzba.zzc().m23658b(g93.f10553T1)).booleanValue();
+        this.f36360u = ((Boolean) zzba.zzc().m23658b(g93.f10603Y1)).booleanValue();
+        if (((Boolean) zzba.zzc().m23658b(g93.f10583W1)).booleanValue()) {
+            this.f36354D = 2;
         } else {
-            this.D = 1;
+            this.f36354D = 1;
         }
-        if (!((Boolean) zzba.zzc().b(g93.W2)).booleanValue()) {
-            this.s = c();
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10584W2)).booleanValue()) {
+            this.f36358s = m1316c();
         }
-        if (!((Boolean) zzba.zzc().b(g93.P2)).booleanValue()) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10514P2)).booleanValue()) {
             zzay.zzb();
-            if (!d04.A()) {
+            if (!d04.m24836A()) {
                 run();
                 return;
             }
         }
-        z04.a.execute(this);
+        z04.f34305a.execute(this);
     }
 
-    public static final Context h(Context context) {
+    /* renamed from: h */
+    public static final Context m1311h(Context context) {
         Context applicationContext = context.getApplicationContext();
         return applicationContext == null ? context : applicationContext;
     }
 
-    public final /* synthetic */ void b(boolean z) {
+    /* renamed from: b */
+    public final /* synthetic */ void m1317b(boolean z) {
         long currentTimeMillis = System.currentTimeMillis();
         try {
-            ll2.a(this.A.p, h(this.y), z, this.B).h();
+            ll2.m16874a(this.f36351A.f36993p, m1311h(this.f36364y), z, this.f36352B).m16867h();
         } catch (NullPointerException e) {
-            this.w.c(2027, System.currentTimeMillis() - currentTimeMillis, e);
+            this.f36362w.m23229c(2027, System.currentTimeMillis() - currentTimeMillis, e);
         }
     }
 
-    public final boolean c() {
-        Context context = this.x;
-        es6 es6Var = this.w;
+    /* renamed from: c */
+    public final boolean m1316c() {
+        Context context = this.f36363x;
+        es6 es6Var = this.f36362w;
         su7 su7Var = new su7(this);
-        return new bu6(this.x, mt6.b(context, es6Var), su7Var, ((Boolean) zzba.zzc().b(g93.U1)).booleanValue()).d(1);
+        return new bu6(this.f36363x, mt6.m15772b(context, es6Var), su7Var, ((Boolean) zzba.zzc().m23658b(g93.f10563U1)).booleanValue()).m25821d(1);
     }
 
-    public final int d() {
-        if (!this.t || this.s) {
-            return this.D;
+    /* renamed from: d */
+    public final int m1315d() {
+        if (!this.f36359t || this.f36358s) {
+            return this.f36354D;
         }
         return 1;
     }
 
-    public final ol2 e() {
-        return (ol2) (d() == 2 ? this.r : this.q).get();
+    /* renamed from: e */
+    public final ol2 m1314e() {
+        return (ol2) (m1315d() == 2 ? this.f36357r : this.f36356q).get();
     }
 
-    public final void f() {
-        ol2 e = e();
-        if (this.p.isEmpty() || e == null) {
+    /* renamed from: f */
+    public final void m1313f() {
+        ol2 m1314e = m1314e();
+        if (this.f36355p.isEmpty() || m1314e == null) {
             return;
         }
-        for (Object[] objArr : this.p) {
+        for (Object[] objArr : this.f36355p) {
             int length = objArr.length;
             if (length == 1) {
-                e.zzk((MotionEvent) objArr[0]);
+                m1314e.zzk((MotionEvent) objArr[0]);
             } else if (length == 3) {
-                e.zzl(((Integer) objArr[0]).intValue(), ((Integer) objArr[1]).intValue(), ((Integer) objArr[2]).intValue());
+                m1314e.zzl(((Integer) objArr[0]).intValue(), ((Integer) objArr[1]).intValue(), ((Integer) objArr[2]).intValue());
             }
         }
-        this.p.clear();
+        this.f36355p.clear();
     }
 
-    public final void g(boolean z) {
-        this.q.set(rl2.q(this.z.p, h(this.x), z, this.D));
+    /* renamed from: g */
+    public final void m1312g(boolean z) {
+        this.f36356q.set(rl2.m11196q(this.f36365z.f36993p, m1311h(this.f36363x), z, this.f36354D));
     }
 
     /* JADX WARN: Type inference failed for: r0v0, types: [android.content.Context, com.google.android.gms.internal.ads.zzchu] */
     @Override // java.lang.Runnable
     public final void run() {
         try {
-            if (((Boolean) zzba.zzc().b(g93.W2)).booleanValue()) {
-                this.s = c();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10584W2)).booleanValue()) {
+                this.f36358s = m1316c();
             }
-            boolean z = this.z.s;
+            boolean z = this.f36365z.f36996s;
             final boolean z2 = false;
-            if (!((Boolean) zzba.zzc().b(g93.Q0)).booleanValue() && z) {
+            if (!((Boolean) zzba.zzc().m23658b(g93.f10522Q0)).booleanValue() && z) {
                 z2 = true;
             }
-            if (d() == 1) {
-                g(z2);
-                if (this.D == 2) {
-                    this.v.execute(new Runnable() { // from class: com.google.android.gms.ads.internal.zzg
+            if (m1315d() == 1) {
+                m1312g(z2);
+                if (this.f36354D == 2) {
+                    this.f36361v.execute(new Runnable() { // from class: com.google.android.gms.ads.internal.zzg
                         @Override // java.lang.Runnable
                         public final void run() {
-                            zzi.this.b(z2);
+                            zzi.this.m1317b(z2);
                         }
                     });
                 }
             } else {
                 long currentTimeMillis = System.currentTimeMillis();
                 try {
-                    ll2 a = ll2.a(this.z.p, h(this.x), z2, this.B);
-                    this.r.set(a);
-                    if (this.u && !a.j()) {
-                        this.D = 1;
-                        g(z2);
+                    ll2 m16874a = ll2.m16874a(this.f36365z.f36993p, m1311h(this.f36363x), z2, this.f36352B);
+                    this.f36357r.set(m16874a);
+                    if (this.f36360u && !m16874a.m16865j()) {
+                        this.f36354D = 1;
+                        m1312g(z2);
                     }
                 } catch (NullPointerException e) {
-                    this.D = 1;
-                    g(z2);
-                    this.w.c(2031, System.currentTimeMillis() - currentTimeMillis, e);
+                    this.f36354D = 1;
+                    m1312g(z2);
+                    this.f36362w.m23229c(2031, System.currentTimeMillis() - currentTimeMillis, e);
                 }
             }
         } finally {
-            this.C.countDown();
-            this.x = null;
-            this.z = null;
+            this.f36353C.countDown();
+            this.f36363x = null;
+            this.f36365z = null;
         }
     }
 
     public final boolean zzd() {
         try {
-            this.C.await();
+            this.f36353C.await();
             return true;
         } catch (InterruptedException e) {
             k04.zzk("Interrupted during GADSignals creation.", e);
@@ -187,14 +224,14 @@ public final class zzi implements Runnable, ol2 {
     @Override // com.daaw.ol2
     public final String zzf(Context context, String str, View view, Activity activity) {
         if (zzd()) {
-            ol2 e = e();
-            if (((Boolean) zzba.zzc().b(g93.R8)).booleanValue()) {
+            ol2 m1314e = m1314e();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10540R8)).booleanValue()) {
                 zzt.zzp();
                 com.google.android.gms.ads.internal.util.zzs.zzF(view, 4, null);
             }
-            if (e != null) {
-                f();
-                return e.zzf(h(context), str, view, activity);
+            if (m1314e != null) {
+                m1313f();
+                return m1314e.zzf(m1311h(context), str, view, activity);
             }
             return "";
         }
@@ -203,30 +240,30 @@ public final class zzi implements Runnable, ol2 {
 
     @Override // com.daaw.ol2
     public final String zzg(Context context) {
-        ol2 e;
-        if (!zzd() || (e = e()) == null) {
+        ol2 m1314e;
+        if (!zzd() || (m1314e = m1314e()) == null) {
             return "";
         }
-        f();
-        return e.zzg(h(context));
+        m1313f();
+        return m1314e.zzg(m1311h(context));
     }
 
     @Override // com.daaw.ol2
     public final String zzh(Context context, View view, Activity activity) {
-        if (!((Boolean) zzba.zzc().b(g93.Q8)).booleanValue()) {
-            ol2 e = e();
-            if (((Boolean) zzba.zzc().b(g93.R8)).booleanValue()) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10530Q8)).booleanValue()) {
+            ol2 m1314e = m1314e();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10540R8)).booleanValue()) {
                 zzt.zzp();
                 com.google.android.gms.ads.internal.util.zzs.zzF(view, 2, null);
             }
-            return e != null ? e.zzh(context, view, activity) : "";
+            return m1314e != null ? m1314e.zzh(context, view, activity) : "";
         } else if (zzd()) {
-            ol2 e2 = e();
-            if (((Boolean) zzba.zzc().b(g93.R8)).booleanValue()) {
+            ol2 m1314e2 = m1314e();
+            if (((Boolean) zzba.zzc().m23658b(g93.f10540R8)).booleanValue()) {
                 zzt.zzp();
                 com.google.android.gms.ads.internal.util.zzs.zzF(view, 2, null);
             }
-            return e2 != null ? e2.zzh(context, view, activity) : "";
+            return m1314e2 != null ? m1314e2.zzh(context, view, activity) : "";
         } else {
             return "";
         }
@@ -234,31 +271,31 @@ public final class zzi implements Runnable, ol2 {
 
     @Override // com.daaw.ol2
     public final void zzk(MotionEvent motionEvent) {
-        ol2 e = e();
-        if (e == null) {
-            this.p.add(new Object[]{motionEvent});
+        ol2 m1314e = m1314e();
+        if (m1314e == null) {
+            this.f36355p.add(new Object[]{motionEvent});
             return;
         }
-        f();
-        e.zzk(motionEvent);
+        m1313f();
+        m1314e.zzk(motionEvent);
     }
 
     @Override // com.daaw.ol2
     public final void zzl(int i, int i2, int i3) {
-        ol2 e = e();
-        if (e == null) {
-            this.p.add(new Object[]{Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3)});
+        ol2 m1314e = m1314e();
+        if (m1314e == null) {
+            this.f36355p.add(new Object[]{Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(i3)});
             return;
         }
-        f();
-        e.zzl(i, i2, i3);
+        m1313f();
+        m1314e.zzl(i, i2, i3);
     }
 
     @Override // com.daaw.ol2
     public final void zzn(View view) {
-        ol2 e = e();
-        if (e != null) {
-            e.zzn(view);
+        ol2 m1314e = m1314e();
+        if (m1314e != null) {
+            m1314e.zzn(view);
         }
     }
 }

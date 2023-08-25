@@ -8,9 +8,10 @@ public final class zb3 extends bp2 {
         super(iBinder, "com.google.android.gms.ads.internal.flags.IFlagRetrieverSupplierProxy");
     }
 
-    public final void h3(ot3 ot3Var) {
-        Parcel D = D();
-        dp2.g(D, ot3Var);
-        M(1, D);
+    /* renamed from: h3 */
+    public final void m2549h3(ot3 ot3Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, ot3Var);
+        m25950M(1, m25952D);
     }
 }

@@ -7,36 +7,50 @@ import java.util.Comparator;
 /* loaded from: classes.dex */
 public class u20 {
 
+    /* renamed from: com.daaw.u20$a */
     /* loaded from: classes.dex */
-    public interface a<T> {
-        void a(T t, Rect rect);
+    public interface InterfaceC3156a<T> {
+        /* renamed from: a */
+        void mo3034a(T t, Rect rect);
     }
 
+    /* renamed from: com.daaw.u20$b */
     /* loaded from: classes.dex */
-    public interface b<T, V> {
-        V a(T t, int i);
+    public interface InterfaceC3157b<T, V> {
+        /* renamed from: a */
+        V mo3032a(T t, int i);
 
-        int b(T t);
+        /* renamed from: b */
+        int mo3031b(T t);
     }
 
+    /* renamed from: com.daaw.u20$c */
     /* loaded from: classes.dex */
-    public static class c<T> implements Comparator<T> {
-        public final Rect p = new Rect();
-        public final Rect q = new Rect();
-        public final boolean r;
-        public final a<T> s;
+    public static class C3158c<T> implements Comparator<T> {
 
-        public c(boolean z, a<T> aVar) {
-            this.r = z;
-            this.s = aVar;
+        /* renamed from: p */
+        public final Rect f28333p = new Rect();
+
+        /* renamed from: q */
+        public final Rect f28334q = new Rect();
+
+        /* renamed from: r */
+        public final boolean f28335r;
+
+        /* renamed from: s */
+        public final InterfaceC3156a<T> f28336s;
+
+        public C3158c(boolean z, InterfaceC3156a<T> interfaceC3156a) {
+            this.f28335r = z;
+            this.f28336s = interfaceC3156a;
         }
 
         @Override // java.util.Comparator
         public int compare(T t, T t2) {
-            Rect rect = this.p;
-            Rect rect2 = this.q;
-            this.s.a(t, rect);
-            this.s.a(t2, rect2);
+            Rect rect = this.f28333p;
+            Rect rect2 = this.f28334q;
+            this.f28336s.mo3034a(t, rect);
+            this.f28336s.mo3034a(t2, rect2);
             int i = rect.top;
             int i2 = rect2.top;
             if (i < i2) {
@@ -48,9 +62,9 @@ public class u20 {
             int i3 = rect.left;
             int i4 = rect2.left;
             if (i3 < i4) {
-                return this.r ? 1 : -1;
+                return this.f28335r ? 1 : -1;
             } else if (i3 > i4) {
-                return this.r ? -1 : 1;
+                return this.f28335r ? -1 : 1;
             } else {
                 int i5 = rect.bottom;
                 int i6 = rect2.bottom;
@@ -63,9 +77,9 @@ public class u20 {
                 int i7 = rect.right;
                 int i8 = rect2.right;
                 if (i7 < i8) {
-                    return this.r ? 1 : -1;
+                    return this.f28335r ? 1 : -1;
                 } else if (i7 > i8) {
-                    return this.r ? -1 : 1;
+                    return this.f28335r ? -1 : 1;
                 } else {
                     return 0;
                 }
@@ -73,15 +87,17 @@ public class u20 {
         }
     }
 
-    public static boolean a(int i, Rect rect, Rect rect2, Rect rect3) {
-        boolean b2 = b(i, rect, rect2);
-        if (b(i, rect, rect3) || !b2) {
+    /* renamed from: a */
+    public static boolean m8623a(int i, Rect rect, Rect rect2, Rect rect3) {
+        boolean m8622b = m8622b(i, rect, rect2);
+        if (m8622b(i, rect, rect3) || !m8622b) {
             return false;
         }
-        return !j(i, rect, rect3) || i == 17 || i == 66 || k(i, rect, rect2) < m(i, rect, rect3);
+        return !m8614j(i, rect, rect3) || i == 17 || i == 66 || m8613k(i, rect, rect2) < m8611m(i, rect, rect3);
     }
 
-    public static boolean b(int i, Rect rect, Rect rect2) {
+    /* renamed from: b */
+    public static boolean m8622b(int i, Rect rect, Rect rect2) {
         if (i != 17) {
             if (i != 33) {
                 if (i != 66) {
@@ -96,90 +112,70 @@ public class u20 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:20:0x004d  */
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public static <L, T> T c(L r7, com.daaw.u20.b<L, T> r8, com.daaw.u20.a<T> r9, T r10, android.graphics.Rect r11, int r12) {
-        /*
-            android.graphics.Rect r0 = new android.graphics.Rect
-            r0.<init>(r11)
-            r1 = 17
-            r2 = 0
-            if (r12 == r1) goto L38
-            r1 = 33
-            if (r12 == r1) goto L2e
-            r1 = 66
-            if (r12 == r1) goto L26
-            r1 = 130(0x82, float:1.82E-43)
-            if (r12 != r1) goto L1e
-            int r1 = r11.height()
-            int r1 = r1 + 1
-            int r1 = -r1
-            goto L34
-        L1e:
-            java.lang.IllegalArgumentException r7 = new java.lang.IllegalArgumentException
-            java.lang.String r8 = "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}."
-            r7.<init>(r8)
-            throw r7
-        L26:
-            int r1 = r11.width()
-            int r1 = r1 + 1
-            int r1 = -r1
-            goto L3e
-        L2e:
-            int r1 = r11.height()
-            int r1 = r1 + 1
-        L34:
-            r0.offset(r2, r1)
-            goto L41
-        L38:
-            int r1 = r11.width()
-            int r1 = r1 + 1
-        L3e:
-            r0.offset(r1, r2)
-        L41:
-            r1 = 0
-            int r3 = r8.b(r7)
-            android.graphics.Rect r4 = new android.graphics.Rect
-            r4.<init>()
-        L4b:
-            if (r2 >= r3) goto L64
-            java.lang.Object r5 = r8.a(r7, r2)
-            if (r5 != r10) goto L54
-            goto L61
-        L54:
-            r9.a(r5, r4)
-            boolean r6 = h(r12, r11, r4, r0)
-            if (r6 == 0) goto L61
-            r0.set(r4)
-            r1 = r5
-        L61:
-            int r2 = r2 + 1
-            goto L4b
-        L64:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.u20.c(java.lang.Object, com.daaw.u20$b, com.daaw.u20$a, java.lang.Object, android.graphics.Rect, int):java.lang.Object");
+    public static <L, T> T m8621c(L l, InterfaceC3157b<L, T> interfaceC3157b, InterfaceC3156a<T> interfaceC3156a, T t, Rect rect, int i) {
+        int width;
+        int mo3031b;
+        int height;
+        Rect rect2 = new Rect(rect);
+        if (i != 17) {
+            if (i == 33) {
+                height = rect.height() + 1;
+            } else if (i == 66) {
+                width = -(rect.width() + 1);
+            } else if (i != 130) {
+                throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
+            } else {
+                height = -(rect.height() + 1);
+            }
+            rect2.offset(0, height);
+            T t2 = null;
+            mo3031b = interfaceC3157b.mo3031b(l);
+            Rect rect3 = new Rect();
+            for (int i2 = 0; i2 < mo3031b; i2++) {
+                T mo3032a = interfaceC3157b.mo3032a(l, i2);
+                if (mo3032a != t) {
+                    interfaceC3156a.mo3034a(mo3032a, rect3);
+                    if (m8616h(i, rect, rect3, rect2)) {
+                        rect2.set(rect3);
+                        t2 = mo3032a;
+                    }
+                }
+            }
+            return t2;
+        }
+        width = rect.width() + 1;
+        rect2.offset(width, 0);
+        T t22 = null;
+        mo3031b = interfaceC3157b.mo3031b(l);
+        Rect rect32 = new Rect();
+        while (i2 < mo3031b) {
+        }
+        return t22;
     }
 
-    public static <L, T> T d(L l, b<L, T> bVar, a<T> aVar, T t, int i, boolean z, boolean z2) {
-        int b2 = bVar.b(l);
-        ArrayList arrayList = new ArrayList(b2);
-        for (int i2 = 0; i2 < b2; i2++) {
-            arrayList.add(bVar.a(l, i2));
+    /* renamed from: d */
+    public static <L, T> T m8620d(L l, InterfaceC3157b<L, T> interfaceC3157b, InterfaceC3156a<T> interfaceC3156a, T t, int i, boolean z, boolean z2) {
+        int mo3031b = interfaceC3157b.mo3031b(l);
+        ArrayList arrayList = new ArrayList(mo3031b);
+        for (int i2 = 0; i2 < mo3031b; i2++) {
+            arrayList.add(interfaceC3157b.mo3032a(l, i2));
         }
-        Collections.sort(arrayList, new c(z, aVar));
+        Collections.sort(arrayList, new C3158c(z, interfaceC3156a));
         if (i != 1) {
             if (i == 2) {
-                return (T) e(t, arrayList, z2);
+                return (T) m8619e(t, arrayList, z2);
             }
             throw new IllegalArgumentException("direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD}.");
         }
-        return (T) f(t, arrayList, z2);
+        return (T) m8618f(t, arrayList, z2);
     }
 
-    public static <T> T e(T t, ArrayList<T> arrayList, boolean z) {
+    /* renamed from: e */
+    public static <T> T m8619e(T t, ArrayList<T> arrayList, boolean z) {
         int size = arrayList.size();
         int lastIndexOf = (t == null ? -1 : arrayList.lastIndexOf(t)) + 1;
         if (lastIndexOf < size) {
@@ -191,7 +187,8 @@ public class u20 {
         return arrayList.get(0);
     }
 
-    public static <T> T f(T t, ArrayList<T> arrayList, boolean z) {
+    /* renamed from: f */
+    public static <T> T m8618f(T t, ArrayList<T> arrayList, boolean z) {
         int size = arrayList.size();
         int indexOf = (t == null ? size : arrayList.indexOf(t)) - 1;
         if (indexOf >= 0) {
@@ -203,21 +200,24 @@ public class u20 {
         return arrayList.get(size - 1);
     }
 
-    public static int g(int i, int i2) {
+    /* renamed from: g */
+    public static int m8617g(int i, int i2) {
         return (i * 13 * i) + (i2 * i2);
     }
 
-    public static boolean h(int i, Rect rect, Rect rect2, Rect rect3) {
-        if (i(rect, rect2, i)) {
-            if (i(rect, rect3, i) && !a(i, rect, rect2, rect3)) {
-                return !a(i, rect, rect3, rect2) && g(k(i, rect, rect2), o(i, rect, rect2)) < g(k(i, rect, rect3), o(i, rect, rect3));
+    /* renamed from: h */
+    public static boolean m8616h(int i, Rect rect, Rect rect2, Rect rect3) {
+        if (m8615i(rect, rect2, i)) {
+            if (m8615i(rect, rect3, i) && !m8623a(i, rect, rect2, rect3)) {
+                return !m8623a(i, rect, rect3, rect2) && m8617g(m8613k(i, rect, rect2), m8609o(i, rect, rect2)) < m8617g(m8613k(i, rect, rect3), m8609o(i, rect, rect3));
             }
             return true;
         }
         return false;
     }
 
-    public static boolean i(Rect rect, Rect rect2, int i) {
+    /* renamed from: i */
+    public static boolean m8615i(Rect rect, Rect rect2, int i) {
         if (i == 17) {
             int i2 = rect.right;
             int i3 = rect2.right;
@@ -239,7 +239,8 @@ public class u20 {
         }
     }
 
-    public static boolean j(int i, Rect rect, Rect rect2) {
+    /* renamed from: j */
+    public static boolean m8614j(int i, Rect rect, Rect rect2) {
         if (i == 17) {
             return rect.left >= rect2.right;
         } else if (i == 33) {
@@ -253,11 +254,13 @@ public class u20 {
         }
     }
 
-    public static int k(int i, Rect rect, Rect rect2) {
-        return Math.max(0, l(i, rect, rect2));
+    /* renamed from: k */
+    public static int m8613k(int i, Rect rect, Rect rect2) {
+        return Math.max(0, m8612l(i, rect, rect2));
     }
 
-    public static int l(int i, Rect rect, Rect rect2) {
+    /* renamed from: l */
+    public static int m8612l(int i, Rect rect, Rect rect2) {
         int i2;
         int i3;
         if (i == 17) {
@@ -278,11 +281,13 @@ public class u20 {
         return i2 - i3;
     }
 
-    public static int m(int i, Rect rect, Rect rect2) {
-        return Math.max(1, n(i, rect, rect2));
+    /* renamed from: m */
+    public static int m8611m(int i, Rect rect, Rect rect2) {
+        return Math.max(1, m8610n(i, rect, rect2));
     }
 
-    public static int n(int i, Rect rect, Rect rect2) {
+    /* renamed from: n */
+    public static int m8610n(int i, Rect rect, Rect rect2) {
         int i2;
         int i3;
         if (i == 17) {
@@ -303,7 +308,8 @@ public class u20 {
         return i2 - i3;
     }
 
-    public static int o(int i, Rect rect, Rect rect2) {
+    /* renamed from: o */
+    public static int m8609o(int i, Rect rect, Rect rect2) {
         int height;
         int i2;
         int height2;

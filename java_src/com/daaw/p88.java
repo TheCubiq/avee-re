@@ -4,9 +4,12 @@ import android.app.job.JobParameters;
 import android.content.Intent;
 /* loaded from: classes2.dex */
 public interface p88 {
-    boolean b(int i);
+    /* renamed from: b */
+    boolean mo1083b(int i);
 
-    void c(Intent intent);
+    /* renamed from: c */
+    void mo1082c(Intent intent);
 
-    void d(JobParameters jobParameters, boolean z);
+    /* renamed from: d */
+    void mo1081d(JobParameters jobParameters, boolean z);
 }

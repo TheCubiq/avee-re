@@ -5,21 +5,24 @@ import com.google.android.gms.dynamite.DynamiteModule;
 import com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor;
 /* loaded from: classes.dex */
 public final class o04 {
-    public static Context a(Context context) {
-        return c(context).b();
+    /* renamed from: a */
+    public static Context m14657a(Context context) {
+        return m14655c(context).m1148b();
     }
 
-    public static Object b(Context context, String str, m04 m04Var) {
+    /* renamed from: b */
+    public static Object m14656b(Context context, String str, m04 m04Var) {
         try {
-            return m04Var.zza(c(context).d(str));
+            return m04Var.zza(m14655c(context).m1146d(str));
         } catch (Exception e) {
             throw new n04(e);
         }
     }
 
-    public static DynamiteModule c(Context context) {
+    /* renamed from: c */
+    public static DynamiteModule m14655c(Context context) {
         try {
-            return DynamiteModule.e(context, DynamiteModule.b, ModuleDescriptor.MODULE_ID);
+            return DynamiteModule.m1145e(context, DynamiteModule.f36678b, ModuleDescriptor.MODULE_ID);
         } catch (Exception e) {
             throw new n04(e);
         }

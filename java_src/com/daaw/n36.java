@@ -9,22 +9,27 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class n36 implements i76 {
-    public final Context a;
-    public final g77 b;
+
+    /* renamed from: a */
+    public final Context f19451a;
+
+    /* renamed from: b */
+    public final g77 f19452b;
 
     public n36(Context context, g77 g77Var) {
-        this.a = context;
-        this.b = g77Var;
+        this.f19451a = context;
+        this.f19452b = g77Var;
     }
 
-    public final /* synthetic */ j36 a() {
+    /* renamed from: a */
+    public final /* synthetic */ j36 m15542a() {
         Bundle bundle;
         zzt.zzp();
-        String string = !((Boolean) zzba.zzc().b(g93.x5)).booleanValue() ? "" : this.a.getSharedPreferences("mobileads_consent", 0).getString("consent_string", "");
-        String string2 = ((Boolean) zzba.zzc().b(g93.z5)).booleanValue() ? this.a.getSharedPreferences("mobileads_consent", 0).getString("fc_consent", "") : "";
+        String string = !((Boolean) zzba.zzc().m23658b(g93.f10880x5)).booleanValue() ? "" : this.f19451a.getSharedPreferences("mobileads_consent", 0).getString("consent_string", "");
+        String string2 = ((Boolean) zzba.zzc().m23658b(g93.f10902z5)).booleanValue() ? this.f19451a.getSharedPreferences("mobileads_consent", 0).getString("fc_consent", "") : "";
         zzt.zzp();
-        Context context = this.a;
-        if (((Boolean) zzba.zzc().b(g93.y5)).booleanValue()) {
+        Context context = this.f19451a;
+        if (((Boolean) zzba.zzc().m23658b(g93.f10891y5)).booleanValue()) {
             SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
             bundle = new Bundle();
             if (defaultSharedPreferences.contains("IABConsent_CMPPresent")) {
@@ -50,10 +55,10 @@ public final class n36 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return this.b.M(new Callable() { // from class: com.daaw.h36
+        return this.f19452b.mo20112M(new Callable() { // from class: com.daaw.h36
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return n36.this.a();
+                return n36.this.m15542a();
             }
         });
     }

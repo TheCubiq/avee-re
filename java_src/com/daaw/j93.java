@@ -10,16 +10,24 @@ import java.util.Map;
 import java.util.concurrent.Future;
 /* loaded from: classes.dex */
 public final class j93 {
-    public final String a = (String) ua3.b.e();
-    public final Map b;
-    public final Context c;
-    public final String d;
+
+    /* renamed from: a */
+    public final String f14547a = (String) ua3.f28851b.m16137e();
+
+    /* renamed from: b */
+    public final Map f14548b;
+
+    /* renamed from: c */
+    public final Context f14549c;
+
+    /* renamed from: d */
+    public final String f14550d;
 
     public j93(Context context, String str) {
-        this.c = context;
-        this.d = str;
+        this.f14549c = context;
+        this.f14550d = str;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        this.b = linkedHashMap;
+        this.f14548b = linkedHashMap;
         linkedHashMap.put("s", "gmob_sdk");
         linkedHashMap.put("v", "3");
         linkedHashMap.put("os", Build.VERSION.RELEASE);
@@ -29,31 +37,35 @@ public final class j93 {
         linkedHashMap.put("app", context.getApplicationContext() != null ? context.getApplicationContext().getPackageName() : context.getPackageName());
         zzt.zzp();
         linkedHashMap.put("is_lite_sdk", true != zzs.zzA(context) ? "0" : "1");
-        Future b = zzt.zzm().b(context);
+        Future m7702b = zzt.zzm().m7702b(context);
         try {
-            linkedHashMap.put("network_coarse", Integer.toString(((ru3) b.get()).k));
-            linkedHashMap.put("network_fine", Integer.toString(((ru3) b.get()).l));
+            linkedHashMap.put("network_coarse", Integer.toString(((ru3) m7702b.get()).f25621k));
+            linkedHashMap.put("network_fine", Integer.toString(((ru3) m7702b.get()).f25622l));
         } catch (Exception e) {
-            zzt.zzo().u(e, "CsiConfiguration.CsiConfiguration");
+            zzt.zzo().m11902u(e, "CsiConfiguration.CsiConfiguration");
         }
-        if (((Boolean) zzba.zzc().b(g93.r9)).booleanValue()) {
-            this.b.put("is_bstar", true == nt.b(context) ? "1" : "0");
+        if (((Boolean) zzba.zzc().m23658b(g93.f10818r9)).booleanValue()) {
+            this.f14548b.put("is_bstar", true == C2365nt.m14839b(context) ? "1" : "0");
         }
     }
 
-    public final Context a() {
-        return this.c;
+    /* renamed from: a */
+    public final Context m18713a() {
+        return this.f14549c;
     }
 
-    public final String b() {
-        return this.d;
+    /* renamed from: b */
+    public final String m18712b() {
+        return this.f14550d;
     }
 
-    public final String c() {
-        return this.a;
+    /* renamed from: c */
+    public final String m18711c() {
+        return this.f14547a;
     }
 
-    public final Map d() {
-        return this.b;
+    /* renamed from: d */
+    public final Map m18710d() {
+        return this.f14548b;
     }
 }

@@ -9,27 +9,29 @@ public final class wp8 extends z22 {
         super(iBinder, "com.google.android.gms.dynamite.IDynamiteLoaderV2");
     }
 
-    public final yd0 M(yd0 yd0Var, String str, int i, yd0 yd0Var2) {
-        Parcel I = I();
-        sr3.e(I, yd0Var);
-        I.writeString(str);
-        I.writeInt(i);
-        sr3.e(I, yd0Var2);
-        Parcel D = D(2, I);
-        yd0 I2 = yd0.a.I(D.readStrongBinder());
-        D.recycle();
-        return I2;
+    /* renamed from: M */
+    public final yd0 m5868M(yd0 yd0Var, String str, int i, yd0 yd0Var2) {
+        Parcel m2965I = m2965I();
+        sr3.m9939e(m2965I, yd0Var);
+        m2965I.writeString(str);
+        m2965I.writeInt(i);
+        sr3.m9939e(m2965I, yd0Var2);
+        Parcel m2966D = m2966D(2, m2965I);
+        yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(m2966D.readStrongBinder());
+        m2966D.recycle();
+        return m3857I;
     }
 
-    public final yd0 g3(yd0 yd0Var, String str, int i, yd0 yd0Var2) {
-        Parcel I = I();
-        sr3.e(I, yd0Var);
-        I.writeString(str);
-        I.writeInt(i);
-        sr3.e(I, yd0Var2);
-        Parcel D = D(3, I);
-        yd0 I2 = yd0.a.I(D.readStrongBinder());
-        D.recycle();
-        return I2;
+    /* renamed from: g3 */
+    public final yd0 m5867g3(yd0 yd0Var, String str, int i, yd0 yd0Var2) {
+        Parcel m2965I = m2965I();
+        sr3.m9939e(m2965I, yd0Var);
+        m2965I.writeString(str);
+        m2965I.writeInt(i);
+        sr3.m9939e(m2965I, yd0Var2);
+        Parcel m2966D = m2966D(3, m2965I);
+        yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(m2966D.readStrongBinder());
+        m2966D.recycle();
+        return m3857I;
     }
 }

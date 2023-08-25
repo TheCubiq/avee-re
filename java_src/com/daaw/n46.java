@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class n46 {
-    public static final ra8 a = new h26();
 
-    public static int a(int i) {
+    /* renamed from: a */
+    public static final ra8 f19476a = new h26();
+
+    /* renamed from: a */
+    public static int m15524a(int i) {
         switch (i) {
             case 0:
                 return 1;

@@ -7,57 +7,80 @@ import java.io.IOException;
 /* loaded from: classes.dex */
 public interface pb0 {
 
+    /* renamed from: com.daaw.pb0$a */
     /* loaded from: classes.dex */
-    public interface a {
-        boolean d(ib0.a aVar, boolean z);
+    public interface InterfaceC2536a {
+        /* renamed from: d */
+        boolean mo13495d(ib0.C1674a c1674a, boolean z);
 
-        void h();
+        /* renamed from: h */
+        void mo13494h();
     }
 
+    /* renamed from: com.daaw.pb0$b */
     /* loaded from: classes.dex */
-    public static final class b extends IOException {
-        public final String p;
+    public static final class C2537b extends IOException {
 
-        public b(String str) {
-            this.p = str;
+        /* renamed from: p */
+        public final String f22796p;
+
+        public C2537b(String str) {
+            this.f22796p = str;
         }
     }
 
+    /* renamed from: com.daaw.pb0$c */
     /* loaded from: classes.dex */
-    public static final class c extends IOException {
-        public final String p;
+    public static final class C2538c extends IOException {
 
-        public c(String str) {
-            this.p = str;
+        /* renamed from: p */
+        public final String f22797p;
+
+        public C2538c(String str) {
+            this.f22797p = str;
         }
     }
 
+    /* renamed from: com.daaw.pb0$d */
     /* loaded from: classes.dex */
-    public interface d {
-        void d(lb0 lb0Var);
+    public interface InterfaceC2539d {
+        /* renamed from: d */
+        void mo13493d(lb0 lb0Var);
     }
 
-    void a();
+    /* renamed from: a */
+    void mo13507a();
 
-    void b(Uri uri, cp0.a aVar, d dVar);
+    /* renamed from: b */
+    void mo13506b(Uri uri, cp0.C0975a c0975a, InterfaceC2539d interfaceC2539d);
 
-    void c(a aVar);
+    /* renamed from: c */
+    void mo13505c(InterfaceC2536a interfaceC2536a);
 
-    lb0 d(ib0.a aVar);
+    /* renamed from: d */
+    lb0 mo13504d(ib0.C1674a c1674a);
 
-    void e(ib0.a aVar);
+    /* renamed from: e */
+    void mo13503e(ib0.C1674a c1674a);
 
-    long f();
+    /* renamed from: f */
+    long mo13502f();
 
-    boolean g();
+    /* renamed from: g */
+    boolean mo13501g();
 
-    void h(ib0.a aVar);
+    /* renamed from: h */
+    void mo13500h(ib0.C1674a c1674a);
 
-    ib0 i();
+    /* renamed from: i */
+    ib0 mo13499i();
 
-    void j();
+    /* renamed from: j */
+    void mo13498j();
 
-    void l(a aVar);
+    /* renamed from: l */
+    void mo13497l(InterfaceC2536a interfaceC2536a);
 
-    boolean m(ib0.a aVar);
+    /* renamed from: m */
+    boolean mo13496m(ib0.C1674a c1674a);
 }

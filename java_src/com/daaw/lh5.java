@@ -16,112 +16,136 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class lh5 implements zzo, o84 {
-    public final Context p;
-    public final zzchu q;
-    public dh5 r;
-    public a74 s;
-    public boolean t;
-    public boolean u;
-    public long v;
-    public zzda w;
-    public boolean x;
+
+    /* renamed from: p */
+    public final Context f17403p;
+
+    /* renamed from: q */
+    public final zzchu f17404q;
+
+    /* renamed from: r */
+    public dh5 f17405r;
+
+    /* renamed from: s */
+    public a74 f17406s;
+
+    /* renamed from: t */
+    public boolean f17407t;
+
+    /* renamed from: u */
+    public boolean f17408u;
+
+    /* renamed from: v */
+    public long f17409v;
+
+    /* renamed from: w */
+    public zzda f17410w;
+
+    /* renamed from: x */
+    public boolean f17411x;
 
     public lh5(Context context, zzchu zzchuVar) {
-        this.p = context;
-        this.q = zzchuVar;
+        this.f17403p = context;
+        this.f17404q = zzchuVar;
     }
 
-    public final Activity a() {
-        a74 a74Var = this.s;
-        if (a74Var == null || a74Var.o0()) {
+    /* renamed from: a */
+    public final Activity m16953a() {
+        a74 a74Var = this.f17406s;
+        if (a74Var == null || a74Var.mo6407o0()) {
             return null;
         }
-        return this.s.zzk();
+        return this.f17406s.zzk();
     }
 
-    public final void b(dh5 dh5Var) {
-        this.r = dh5Var;
+    /* renamed from: b */
+    public final void m16952b(dh5 dh5Var) {
+        this.f17405r = dh5Var;
     }
 
-    public final /* synthetic */ void c(String str) {
-        JSONObject e = this.r.e();
+    /* renamed from: c */
+    public final /* synthetic */ void m16951c(String str) {
+        JSONObject m24406e = this.f17405r.m24406e();
         if (!TextUtils.isEmpty(str)) {
             try {
-                e.put("redirectUrl", str);
+                m24406e.put("redirectUrl", str);
             } catch (JSONException unused) {
             }
         }
-        this.s.c("window.inspectorInfo", e.toString());
+        this.f17406s.mo6049c("window.inspectorInfo", m24406e.toString());
     }
 
-    public final synchronized void d(zzda zzdaVar, rh3 rh3Var, kh3 kh3Var) {
-        if (f(zzdaVar)) {
+    /* renamed from: d */
+    public final synchronized void m16950d(zzda zzdaVar, rh3 rh3Var, kh3 kh3Var) {
+        if (m16948f(zzdaVar)) {
             try {
                 zzt.zzz();
-                a74 a = p74.a(this.p, v84.a(), "", false, false, null, null, this.q, null, null, null, x33.a(), null, null);
-                this.s = a;
-                t84 zzP = a.zzP();
+                a74 m13613a = p74.m13613a(this.f17403p, v84.m7337a(), "", false, false, null, null, this.f17404q, null, null, null, x33.m5591a(), null, null);
+                this.f17406s = m13613a;
+                t84 zzP = m13613a.zzP();
                 if (zzP == null) {
                     k04.zzj("Failed to obtain a web view for the ad inspector");
                     try {
-                        zzdaVar.zze(tj6.d(17, "Failed to obtain a web view for the ad inspector", null));
+                        zzdaVar.zze(tj6.m9071d(17, "Failed to obtain a web view for the ad inspector", null));
                         return;
                     } catch (RemoteException unused) {
                         return;
                     }
                 }
-                this.w = zzdaVar;
-                zzP.J(null, null, null, null, null, false, null, null, null, null, null, null, null, null, rh3Var, null, new qh3(this.p), kh3Var);
-                zzP.E(this);
-                this.s.loadUrl((String) zzba.zzc().b(g93.Y7));
+                this.f17410w = zzdaVar;
+                zzP.mo9452J(null, null, null, null, null, false, null, null, null, null, null, null, null, null, rh3Var, null, new qh3(this.f17403p), kh3Var);
+                zzP.mo9454E(this);
+                this.f17406s.loadUrl((String) zzba.zzc().m23658b(g93.f10609Y7));
                 zzt.zzi();
-                zzm.zza(this.p, new AdOverlayInfoParcel(this, this.s, 1, this.q), true);
-                this.v = zzt.zzB().a();
+                zzm.zza(this.f17403p, new AdOverlayInfoParcel(this, this.f17406s, 1, this.f17404q), true);
+                this.f17409v = zzt.zzB().mo15860a();
             } catch (l74 e) {
                 k04.zzk("Failed to obtain a web view for the ad inspector", e);
                 try {
-                    zzdaVar.zze(tj6.d(17, "Failed to obtain a web view for the ad inspector", null));
+                    zzdaVar.zze(tj6.m9071d(17, "Failed to obtain a web view for the ad inspector", null));
                 } catch (RemoteException unused2) {
                 }
             }
         }
     }
 
-    public final synchronized void e(final String str) {
-        if (this.t && this.u) {
-            z04.e.execute(new Runnable() { // from class: com.daaw.kh5
+    /* renamed from: e */
+    public final synchronized void m16949e(final String str) {
+        if (this.f17407t && this.f17408u) {
+            z04.f34309e.execute(new Runnable() { // from class: com.daaw.kh5
                 @Override // java.lang.Runnable
                 public final void run() {
-                    lh5.this.c(str);
+                    lh5.this.m16951c(str);
                 }
             });
         }
     }
 
-    public final synchronized boolean f(zzda zzdaVar) {
-        if (!((Boolean) zzba.zzc().b(g93.X7)).booleanValue()) {
+    /* renamed from: f */
+    public final synchronized boolean m16948f(zzda zzdaVar) {
+        if (!((Boolean) zzba.zzc().m23658b(g93.f10599X7)).booleanValue()) {
             k04.zzj("Ad inspector had an internal error.");
             try {
-                zzdaVar.zze(tj6.d(16, null, null));
+                zzdaVar.zze(tj6.m9071d(16, null, null));
             } catch (RemoteException unused) {
             }
             return false;
-        } else if (this.r == null) {
+        } else if (this.f17405r == null) {
             k04.zzj("Ad inspector had an internal error.");
             try {
-                zzdaVar.zze(tj6.d(16, null, null));
+                zzdaVar.zze(tj6.m9071d(16, null, null));
             } catch (RemoteException unused2) {
             }
             return false;
         } else {
-            if (!this.t && !this.u) {
-                if (zzt.zzB().a() >= this.v + ((Integer) zzba.zzc().b(g93.a8)).intValue()) {
+            if (!this.f17407t && !this.f17408u) {
+                if (zzt.zzB().mo15860a() >= this.f17409v + ((Integer) zzba.zzc().m23658b(g93.f10630a8)).intValue()) {
                     return true;
                 }
             }
             k04.zzj("Ad inspector cannot be opened because it is already open.");
             try {
-                zzdaVar.zze(tj6.d(19, null, null));
+                zzdaVar.zze(tj6.m9071d(19, null, null));
             } catch (RemoteException unused3) {
             }
             return false;
@@ -132,26 +156,26 @@ public final class lh5 implements zzo, o84 {
     public final synchronized void zza(boolean z) {
         if (z) {
             zze.zza("Ad inspector loaded.");
-            this.t = true;
-            e("");
+            this.f17407t = true;
+            m16949e("");
             return;
         }
         k04.zzj("Ad inspector failed to load.");
         try {
-            zzda zzdaVar = this.w;
+            zzda zzdaVar = this.f17410w;
             if (zzdaVar != null) {
-                zzdaVar.zze(tj6.d(17, null, null));
+                zzdaVar.zze(tj6.m9071d(17, null, null));
             }
         } catch (RemoteException unused) {
         }
-        this.x = true;
-        this.s.destroy();
+        this.f17411x = true;
+        this.f17406s.destroy();
     }
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
     public final synchronized void zzb() {
-        this.u = true;
-        e("");
+        this.f17408u = true;
+        m16949e("");
     }
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
@@ -172,10 +196,10 @@ public final class lh5 implements zzo, o84 {
 
     @Override // com.google.android.gms.ads.internal.overlay.zzo
     public final synchronized void zzf(int i) {
-        this.s.destroy();
-        if (!this.x) {
+        this.f17406s.destroy();
+        if (!this.f17411x) {
             zze.zza("Inspector closed.");
-            zzda zzdaVar = this.w;
+            zzda zzdaVar = this.f17410w;
             if (zzdaVar != null) {
                 try {
                     zzdaVar.zze(null);
@@ -183,10 +207,10 @@ public final class lh5 implements zzo, o84 {
                 }
             }
         }
-        this.u = false;
-        this.t = false;
-        this.v = 0L;
-        this.x = false;
-        this.w = null;
+        this.f17408u = false;
+        this.f17407t = false;
+        this.f17409v = 0L;
+        this.f17411x = false;
+        this.f17410w = null;
     }
 }

@@ -10,22 +10,26 @@ public final class r83 extends y83 {
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ Object a(JSONObject jSONObject) {
-        return Float.valueOf((float) jSONObject.optDouble(n(), ((Float) m()).floatValue()));
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo4015a(JSONObject jSONObject) {
+        return Float.valueOf((float) jSONObject.optDouble(m4002n(), ((Float) m4003m()).floatValue()));
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ Object b(Bundle bundle) {
-        return bundle.containsKey("com.google.android.gms.ads.flag.".concat(n())) ? Float.valueOf(bundle.getFloat("com.google.android.gms.ads.flag.".concat(n()))) : (Float) m();
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ Object mo4014b(Bundle bundle) {
+        return bundle.containsKey("com.google.android.gms.ads.flag.".concat(m4002n())) ? Float.valueOf(bundle.getFloat("com.google.android.gms.ads.flag.".concat(m4002n()))) : (Float) m4003m();
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ Object c(SharedPreferences sharedPreferences) {
-        return Float.valueOf(sharedPreferences.getFloat(n(), ((Float) m()).floatValue()));
+    /* renamed from: c */
+    public final /* bridge */ /* synthetic */ Object mo4013c(SharedPreferences sharedPreferences) {
+        return Float.valueOf(sharedPreferences.getFloat(m4002n(), ((Float) m4003m()).floatValue()));
     }
 
     @Override // com.daaw.y83
-    public final /* bridge */ /* synthetic */ void d(SharedPreferences.Editor editor, Object obj) {
-        editor.putFloat(n(), ((Float) obj).floatValue());
+    /* renamed from: d */
+    public final /* bridge */ /* synthetic */ void mo4012d(SharedPreferences.Editor editor, Object obj) {
+        editor.putFloat(m4002n(), ((Float) obj).floatValue());
     }
 }

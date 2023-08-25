@@ -5,22 +5,29 @@ import java.util.List;
 import java.util.ServiceLoader;
 /* loaded from: classes2.dex */
 public final class tm0 {
-    public static final tm0 a;
-    public static final boolean b;
-    public static final rm0 c;
+
+    /* renamed from: a */
+    public static final tm0 f27856a;
+
+    /* renamed from: b */
+    public static final boolean f27857b;
+
+    /* renamed from: c */
+    public static final rm0 f27858c;
 
     static {
         tm0 tm0Var = new tm0();
-        a = tm0Var;
-        b = dj1.e("kotlinx.coroutines.fast.service.loader", true);
-        c = tm0Var.a();
+        f27856a = tm0Var;
+        f27857b = dj1.m24352e("kotlinx.coroutines.fast.service.loader", true);
+        f27858c = tm0Var.m8969a();
     }
 
-    public final rm0 a() {
+    /* renamed from: a */
+    public final rm0 m8969a() {
         Object next;
         try {
-            List<sm0> c2 = b ? n00.a.c() : lb1.d(jb1.a(ServiceLoader.load(sm0.class, sm0.class.getClassLoader()).iterator()));
-            Iterator<T> it = c2.iterator();
+            List<sm0> m15625c = f27857b ? n00.f19316a.m15625c() : lb1.m17064d(jb1.m18650a(ServiceLoader.load(sm0.class, sm0.class.getClassLoader()).iterator()));
+            Iterator<T> it = m15625c.iterator();
             if (it.hasNext()) {
                 next = it.next();
                 if (it.hasNext()) {
@@ -38,10 +45,10 @@ public final class tm0 {
                 next = null;
             }
             sm0 sm0Var = (sm0) next;
-            rm0 e = sm0Var == null ? null : um0.e(sm0Var, c2);
-            return e == null ? um0.b(null, null, 3, null) : e;
+            rm0 m8020e = sm0Var == null ? null : um0.m8020e(sm0Var, m15625c);
+            return m8020e == null ? um0.m8023b(null, null, 3, null) : m8020e;
         } catch (Throwable th) {
-            return um0.b(th, null, 2, null);
+            return um0.m8023b(th, null, 2, null);
         }
     }
 }

@@ -13,100 +13,129 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 /* loaded from: classes.dex */
 public class ir1<Result> extends AsyncTask<Object, Integer, Result> implements me0<Result> {
-    public static final int d;
-    public static final int e;
-    public static final int f;
-    public static final ThreadFactory g;
-    public static final BlockingQueue<Runnable> h;
-    public static final RejectedExecutionHandler i;
-    public static final Executor j;
-    public Result a;
-    public c<Result> b;
-    public List<b<Result>> c = new ArrayList();
 
+    /* renamed from: d */
+    public static final int f13935d;
+
+    /* renamed from: e */
+    public static final int f13936e;
+
+    /* renamed from: f */
+    public static final int f13937f;
+
+    /* renamed from: g */
+    public static final ThreadFactory f13938g;
+
+    /* renamed from: h */
+    public static final BlockingQueue<Runnable> f13939h;
+
+    /* renamed from: i */
+    public static final RejectedExecutionHandler f13940i;
+
+    /* renamed from: j */
+    public static final Executor f13941j;
+
+    /* renamed from: a */
+    public Result f13942a;
+
+    /* renamed from: b */
+    public InterfaceC1751c<Result> f13943b;
+
+    /* renamed from: c */
+    public List<InterfaceC1750b<Result>> f13944c = new ArrayList();
+
+    /* renamed from: com.daaw.ir1$a */
     /* loaded from: classes.dex */
-    public class a implements ThreadFactory {
-        public final AtomicInteger a = new AtomicInteger(1);
+    public class ThreadFactoryC1749a implements ThreadFactory {
+
+        /* renamed from: a */
+        public final AtomicInteger f13945a = new AtomicInteger(1);
 
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(Runnable runnable) {
-            return new Thread(runnable, "VAsyncTask #" + this.a.getAndIncrement());
+            return new Thread(runnable, "VAsyncTask #" + this.f13945a.getAndIncrement());
         }
     }
 
+    /* renamed from: com.daaw.ir1$b */
     /* loaded from: classes.dex */
-    public interface b<Result> {
-        void a(Result result, boolean z);
+    public interface InterfaceC1750b<Result> {
+        /* renamed from: a */
+        void mo15140a(Result result, boolean z);
     }
 
+    /* renamed from: com.daaw.ir1$c */
     /* loaded from: classes.dex */
-    public interface c<Result> {
-        Result a(ir1<Result> ir1Var);
+    public interface InterfaceC1751c<Result> {
+        /* renamed from: a */
+        Result mo9328a(ir1<Result> ir1Var);
     }
 
     static {
         int availableProcessors = Runtime.getRuntime().availableProcessors();
-        d = availableProcessors;
+        f13935d = availableProcessors;
         int max = Math.max(2, Math.min(availableProcessors - 1, 4));
-        e = max;
-        int i2 = (availableProcessors * 2) + 1;
-        f = i2;
-        a aVar = new a();
-        g = aVar;
+        f13936e = max;
+        int i = (availableProcessors * 2) + 1;
+        f13937f = i;
+        ThreadFactoryC1749a threadFactoryC1749a = new ThreadFactoryC1749a();
+        f13938g = threadFactoryC1749a;
         LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue(128);
-        h = linkedBlockingQueue;
+        f13939h = linkedBlockingQueue;
         ThreadPoolExecutor.CallerRunsPolicy callerRunsPolicy = new ThreadPoolExecutor.CallerRunsPolicy();
-        i = callerRunsPolicy;
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(max, i2, 30L, TimeUnit.SECONDS, linkedBlockingQueue, aVar, callerRunsPolicy);
+        f13940i = callerRunsPolicy;
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(max, i, 30L, TimeUnit.SECONDS, linkedBlockingQueue, threadFactoryC1749a, callerRunsPolicy);
         threadPoolExecutor.allowCoreThreadTimeOut(true);
-        j = threadPoolExecutor;
+        f13941j = threadPoolExecutor;
     }
 
-    public ir1(c<Result> cVar) {
-        this.b = cVar;
+    public ir1(InterfaceC1751c<Result> interfaceC1751c) {
+        this.f13943b = interfaceC1751c;
     }
 
     @Override // com.daaw.me0
-    public void a(b<Result> bVar) {
+    /* renamed from: a */
+    public void mo8856a(InterfaceC1750b<Result> interfaceC1750b) {
         if (getStatus() == AsyncTask.Status.FINISHED) {
-            bVar.a(this.a, false);
+            interfaceC1750b.mo15140a(this.f13942a, false);
             return;
         }
-        this.c.add(bVar);
+        this.f13944c.add(interfaceC1750b);
         if (getStatus() != AsyncTask.Status.RUNNING) {
             execute(null);
         }
     }
 
-    public void b(b<Result> bVar) {
+    /* renamed from: b */
+    public void m19487b(InterfaceC1750b<Result> interfaceC1750b) {
         if (getStatus() == AsyncTask.Status.FINISHED) {
-            bVar.a(this.a, false);
+            interfaceC1750b.mo15140a(this.f13942a, false);
             return;
         }
-        this.c.add(bVar);
+        this.f13944c.add(interfaceC1750b);
         if (getStatus() != AsyncTask.Status.RUNNING) {
-            executeOnExecutor(j, null);
+            executeOnExecutor(f13941j, null);
         }
     }
 
     @Override // android.os.AsyncTask
     public Result doInBackground(Object... objArr) {
-        return this.b.a(this);
+        return this.f13943b.mo9328a(this);
     }
 
     @Override // android.os.AsyncTask
     public void onCancelled(Result result) {
-        this.a = result;
-        for (int i2 = 0; i2 < this.c.size(); i2++) {
-            this.c.get(i2).a(null, true);
+        this.f13942a = result;
+        for (int i = 0; i < this.f13944c.size(); i++) {
+            this.f13944c.get(i).mo15140a(null, true);
         }
     }
 
     @Override // android.os.AsyncTask
     public void onPostExecute(Result result) {
-        this.a = result;
-        for (int i2 = 0; i2 < this.c.size(); i2++) {
-            this.c.get(i2).a(result, false);
+        this.f13942a = result;
+        for (int i = 0; i < this.f13944c.size(); i++) {
+            this.f13944c.get(i).mo15140a(result, false);
         }
     }
 }

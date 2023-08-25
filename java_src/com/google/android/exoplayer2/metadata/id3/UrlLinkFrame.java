@@ -5,12 +5,17 @@ import android.os.Parcelable;
 import com.daaw.sq1;
 /* loaded from: classes.dex */
 public final class UrlLinkFrame extends Id3Frame {
-    public static final Parcelable.Creator<UrlLinkFrame> CREATOR = new a();
-    public final String q;
-    public final String r;
+    public static final Parcelable.Creator<UrlLinkFrame> CREATOR = new C3951a();
 
+    /* renamed from: q */
+    public final String f35807q;
+
+    /* renamed from: r */
+    public final String f35808r;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.id3.UrlLinkFrame$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<UrlLinkFrame> {
+    public static class C3951a implements Parcelable.Creator<UrlLinkFrame> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public UrlLinkFrame createFromParcel(Parcel parcel) {
@@ -26,14 +31,14 @@ public final class UrlLinkFrame extends Id3Frame {
 
     public UrlLinkFrame(Parcel parcel) {
         super(parcel.readString());
-        this.q = parcel.readString();
-        this.r = parcel.readString();
+        this.f35807q = parcel.readString();
+        this.f35808r = parcel.readString();
     }
 
     public UrlLinkFrame(String str, String str2, String str3) {
         super(str);
-        this.q = str2;
-        this.r = str3;
+        this.f35807q = str2;
+        this.f35808r = str3;
     }
 
     public boolean equals(Object obj) {
@@ -44,26 +49,26 @@ public final class UrlLinkFrame extends Id3Frame {
             return false;
         }
         UrlLinkFrame urlLinkFrame = (UrlLinkFrame) obj;
-        return this.p.equals(urlLinkFrame.p) && sq1.b(this.q, urlLinkFrame.q) && sq1.b(this.r, urlLinkFrame.r);
+        return this.f35802p.equals(urlLinkFrame.f35802p) && sq1.m10016b(this.f35807q, urlLinkFrame.f35807q) && sq1.m10016b(this.f35808r, urlLinkFrame.f35808r);
     }
 
     public int hashCode() {
-        int hashCode = (527 + this.p.hashCode()) * 31;
-        String str = this.q;
+        int hashCode = (527 + this.f35802p.hashCode()) * 31;
+        String str = this.f35807q;
         int hashCode2 = (hashCode + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
+        String str2 = this.f35808r;
         return hashCode2 + (str2 != null ? str2.hashCode() : 0);
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame
     public String toString() {
-        return this.p + ": url=" + this.r;
+        return this.f35802p + ": url=" + this.f35808r;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
+        parcel.writeString(this.f35802p);
+        parcel.writeString(this.f35807q);
+        parcel.writeString(this.f35808r);
     }
 }

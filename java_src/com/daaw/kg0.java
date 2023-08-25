@@ -1,19 +1,24 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class kg0<T> implements g00<T> {
-    public static final kg0<Object> b = new kg0<>(null);
-    public final T a;
+
+    /* renamed from: b */
+    public static final kg0<Object> f16354b = new kg0<>(null);
+
+    /* renamed from: a */
+    public final T f16355a;
 
     public kg0(T t) {
-        this.a = t;
+        this.f16355a = t;
     }
 
-    public static <T> g00<T> a(T t) {
-        return new kg0(qy0.c(t, "instance cannot be null"));
+    /* renamed from: a */
+    public static <T> g00<T> m17757a(T t) {
+        return new kg0(qy0.m11939c(t, "instance cannot be null"));
     }
 
     @Override // com.daaw.a01
     public T get() {
-        return this.a;
+        return this.f16355a;
     }
 }

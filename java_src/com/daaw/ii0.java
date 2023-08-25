@@ -14,25 +14,36 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 /* loaded from: classes.dex */
 public class ii0 {
-    public static boolean a;
-    public static Method b;
-    public static boolean c;
-    public static Field d;
 
+    /* renamed from: a */
+    public static boolean f13655a;
+
+    /* renamed from: b */
+    public static Method f13656b;
+
+    /* renamed from: c */
+    public static boolean f13657c;
+
+    /* renamed from: d */
+    public static Field f13658d;
+
+    /* renamed from: com.daaw.ii0$a */
     /* loaded from: classes.dex */
-    public interface a {
-        boolean k(KeyEvent keyEvent);
+    public interface InterfaceC1709a {
+        /* renamed from: k */
+        boolean mo2326k(KeyEvent keyEvent);
     }
 
-    public static boolean a(ActionBar actionBar, KeyEvent keyEvent) {
-        if (!a) {
+    /* renamed from: a */
+    public static boolean m19786a(ActionBar actionBar, KeyEvent keyEvent) {
+        if (!f13655a) {
             try {
-                b = actionBar.getClass().getMethod("onMenuKeyEvent", KeyEvent.class);
+                f13656b = actionBar.getClass().getMethod("onMenuKeyEvent", KeyEvent.class);
             } catch (NoSuchMethodException unused) {
             }
-            a = true;
+            f13655a = true;
         }
-        Method method = b;
+        Method method = f13656b;
         if (method != null) {
             try {
                 Object invoke = method.invoke(actionBar, keyEvent);
@@ -46,12 +57,13 @@ public class ii0 {
         return false;
     }
 
-    public static boolean b(Activity activity, KeyEvent keyEvent) {
+    /* renamed from: b */
+    public static boolean m19785b(Activity activity, KeyEvent keyEvent) {
         activity.onUserInteraction();
         Window window = activity.getWindow();
         if (window.hasFeature(8)) {
             ActionBar actionBar = activity.getActionBar();
-            if (keyEvent.getKeyCode() == 82 && actionBar != null && a(actionBar, keyEvent)) {
+            if (keyEvent.getKeyCode() == 82 && actionBar != null && m19786a(actionBar, keyEvent)) {
                 return true;
             }
         }
@@ -59,21 +71,22 @@ public class ii0 {
             return true;
         }
         View decorView = window.getDecorView();
-        if (xs1.j(decorView, keyEvent)) {
+        if (xs1.m4719j(decorView, keyEvent)) {
             return true;
         }
         return keyEvent.dispatch(activity, decorView != null ? decorView.getKeyDispatcherState() : null, activity);
     }
 
-    public static boolean c(Dialog dialog, KeyEvent keyEvent) {
-        DialogInterface.OnKeyListener f = f(dialog);
-        if (f == null || !f.onKey(dialog, keyEvent.getKeyCode(), keyEvent)) {
+    /* renamed from: c */
+    public static boolean m19784c(Dialog dialog, KeyEvent keyEvent) {
+        DialogInterface.OnKeyListener m19781f = m19781f(dialog);
+        if (m19781f == null || !m19781f.onKey(dialog, keyEvent.getKeyCode(), keyEvent)) {
             Window window = dialog.getWindow();
             if (window.superDispatchKeyEvent(keyEvent)) {
                 return true;
             }
             View decorView = window.getDecorView();
-            if (xs1.j(decorView, keyEvent)) {
+            if (xs1.m4719j(decorView, keyEvent)) {
                 return true;
             }
             return keyEvent.dispatch(dialog, decorView != null ? decorView.getKeyDispatcherState() : null, dialog);
@@ -81,29 +94,32 @@ public class ii0 {
         return true;
     }
 
-    public static boolean d(View view, KeyEvent keyEvent) {
-        return xs1.k(view, keyEvent);
+    /* renamed from: d */
+    public static boolean m19783d(View view, KeyEvent keyEvent) {
+        return xs1.m4717k(view, keyEvent);
     }
 
     @SuppressLint({"LambdaLast"})
-    public static boolean e(a aVar, View view, Window.Callback callback, KeyEvent keyEvent) {
-        if (aVar == null) {
+    /* renamed from: e */
+    public static boolean m19782e(InterfaceC1709a interfaceC1709a, View view, Window.Callback callback, KeyEvent keyEvent) {
+        if (interfaceC1709a == null) {
             return false;
         }
-        return Build.VERSION.SDK_INT >= 28 ? aVar.k(keyEvent) : callback instanceof Activity ? b((Activity) callback, keyEvent) : callback instanceof Dialog ? c((Dialog) callback, keyEvent) : (view != null && xs1.j(view, keyEvent)) || aVar.k(keyEvent);
+        return Build.VERSION.SDK_INT >= 28 ? interfaceC1709a.mo2326k(keyEvent) : callback instanceof Activity ? m19785b((Activity) callback, keyEvent) : callback instanceof Dialog ? m19784c((Dialog) callback, keyEvent) : (view != null && xs1.m4719j(view, keyEvent)) || interfaceC1709a.mo2326k(keyEvent);
     }
 
-    public static DialogInterface.OnKeyListener f(Dialog dialog) {
-        if (!c) {
+    /* renamed from: f */
+    public static DialogInterface.OnKeyListener m19781f(Dialog dialog) {
+        if (!f13657c) {
             try {
                 Field declaredField = Dialog.class.getDeclaredField("mOnKeyListener");
-                d = declaredField;
+                f13658d = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused) {
             }
-            c = true;
+            f13657c = true;
         }
-        Field field = d;
+        Field field = f13658d;
         if (field != null) {
             try {
                 return (DialogInterface.OnKeyListener) field.get(dialog);

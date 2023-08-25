@@ -3,11 +3,13 @@ package com.daaw;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class q17 {
-    public static int a(int i) {
+    /* renamed from: a */
+    public static int m12804a(int i) {
         return (int) (Integer.rotateLeft((int) (i * (-862048943)), 15) * 461845907);
     }
 
-    public static int b(@CheckForNull Object obj) {
-        return a(obj == null ? 0 : obj.hashCode());
+    /* renamed from: b */
+    public static int m12803b(@CheckForNull Object obj) {
+        return m12804a(obj == null ? 0 : obj.hashCode());
     }
 }

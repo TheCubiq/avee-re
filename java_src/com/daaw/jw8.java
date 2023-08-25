@@ -3,16 +3,23 @@ package com.daaw;
 import android.os.Handler;
 /* loaded from: classes.dex */
 public final class jw8 {
-    public final Handler a;
-    public final lw8 b;
-    public boolean c;
+
+    /* renamed from: a */
+    public final Handler f15488a;
+
+    /* renamed from: b */
+    public final lw8 f15489b;
+
+    /* renamed from: c */
+    public boolean f15490c;
 
     public jw8(Handler handler, lw8 lw8Var) {
-        this.a = handler;
-        this.b = lw8Var;
+        this.f15488a = handler;
+        this.f15489b = lw8Var;
     }
 
-    public final void c() {
-        this.c = true;
+    /* renamed from: c */
+    public final void m18195c() {
+        this.f15490c = true;
     }
 }

@@ -8,28 +8,34 @@ import android.widget.ImageView;
 /* loaded from: classes.dex */
 public class lf0 {
 
+    /* renamed from: com.daaw.lf0$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static ColorStateList a(ImageView imageView) {
+    public static class C2035a {
+        /* renamed from: a */
+        public static ColorStateList m16975a(ImageView imageView) {
             return imageView.getImageTintList();
         }
 
-        public static PorterDuff.Mode b(ImageView imageView) {
+        /* renamed from: b */
+        public static PorterDuff.Mode m16974b(ImageView imageView) {
             return imageView.getImageTintMode();
         }
 
-        public static void c(ImageView imageView, ColorStateList colorStateList) {
+        /* renamed from: c */
+        public static void m16973c(ImageView imageView, ColorStateList colorStateList) {
             imageView.setImageTintList(colorStateList);
         }
 
-        public static void d(ImageView imageView, PorterDuff.Mode mode) {
+        /* renamed from: d */
+        public static void m16972d(ImageView imageView, PorterDuff.Mode mode) {
             imageView.setImageTintMode(mode);
         }
     }
 
-    public static ColorStateList a(ImageView imageView) {
+    /* renamed from: a */
+    public static ColorStateList m16979a(ImageView imageView) {
         if (Build.VERSION.SDK_INT >= 21) {
-            return a.a(imageView);
+            return C2035a.m16975a(imageView);
         }
         if (imageView instanceof zl1) {
             return ((zl1) imageView).getSupportImageTintList();
@@ -37,9 +43,10 @@ public class lf0 {
         return null;
     }
 
-    public static PorterDuff.Mode b(ImageView imageView) {
+    /* renamed from: b */
+    public static PorterDuff.Mode m16978b(ImageView imageView) {
         if (Build.VERSION.SDK_INT >= 21) {
-            return a.b(imageView);
+            return C2035a.m16974b(imageView);
         }
         if (imageView instanceof zl1) {
             return ((zl1) imageView).getSupportImageTintMode();
@@ -47,7 +54,8 @@ public class lf0 {
         return null;
     }
 
-    public static void c(ImageView imageView, ColorStateList colorStateList) {
+    /* renamed from: c */
+    public static void m16977c(ImageView imageView, ColorStateList colorStateList) {
         Drawable drawable;
         int i = Build.VERSION.SDK_INT;
         if (i < 21) {
@@ -57,8 +65,8 @@ public class lf0 {
             }
             return;
         }
-        a.c(imageView, colorStateList);
-        if (i != 21 || (drawable = imageView.getDrawable()) == null || a.a(imageView) == null) {
+        C2035a.m16973c(imageView, colorStateList);
+        if (i != 21 || (drawable = imageView.getDrawable()) == null || C2035a.m16975a(imageView) == null) {
             return;
         }
         if (drawable.isStateful()) {
@@ -67,7 +75,8 @@ public class lf0 {
         imageView.setImageDrawable(drawable);
     }
 
-    public static void d(ImageView imageView, PorterDuff.Mode mode) {
+    /* renamed from: d */
+    public static void m16976d(ImageView imageView, PorterDuff.Mode mode) {
         Drawable drawable;
         int i = Build.VERSION.SDK_INT;
         if (i < 21) {
@@ -77,8 +86,8 @@ public class lf0 {
             }
             return;
         }
-        a.d(imageView, mode);
-        if (i != 21 || (drawable = imageView.getDrawable()) == null || a.a(imageView) == null) {
+        C2035a.m16972d(imageView, mode);
+        if (i != 21 || (drawable = imageView.getDrawable()) == null || C2035a.m16975a(imageView) == null) {
             return;
         }
         if (drawable.isStateful()) {

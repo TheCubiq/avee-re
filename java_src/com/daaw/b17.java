@@ -4,40 +4,32 @@ public final class b17 extends y98 implements be8 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public b17() {
-        /*
-            r1 = this;
-            com.daaw.e27 r0 = com.daaw.e27.E()
-            r1.<init>(r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.b17.<init>():void");
+        super(r0);
+        e27 e27Var;
+        e27Var = e27.zza;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ b17(com.daaw.lj6 r1) {
-        /*
-            r0 = this;
-            com.daaw.e27 r1 = com.daaw.e27.E()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.b17.<init>(com.daaw.lj6):void");
+    public /* synthetic */ b17(lj6 lj6Var) {
+        super(r1);
+        e27 e27Var;
+        e27Var = e27.zza;
     }
 
-    public final b17 s(g37 g37Var) {
-        o();
-        e27.H((e27) this.q, (j47) g37Var.m());
+    /* renamed from: s */
+    public final b17 m26525s(g37 g37Var) {
+        m3973o();
+        e27.m23785H((e27) this.f33442q, (j47) g37Var.m3975m());
         return this;
     }
 
-    public final j47 t(int i) {
-        return ((e27) this.q).F(0);
+    /* renamed from: t */
+    public final j47 m26524t(int i) {
+        return ((e27) this.f33442q).m23787F(0);
     }
 }

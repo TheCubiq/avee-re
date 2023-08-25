@@ -7,97 +7,114 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public class xq6 {
-    public xr6 a;
-    public long b;
-    public int c;
+
+    /* renamed from: a */
+    public xr6 f32889a;
+
+    /* renamed from: b */
+    public long f32890b;
+
+    /* renamed from: c */
+    public int f32891c;
 
     public xq6() {
-        b();
-        this.a = new xr6(null);
+        m4810b();
+        this.f32889a = new xr6(null);
     }
 
-    public final WebView a() {
-        return (WebView) this.a.get();
+    /* renamed from: a */
+    public final WebView m4811a() {
+        return (WebView) this.f32889a.get();
     }
 
-    public final void b() {
-        this.b = System.nanoTime();
-        this.c = 1;
+    /* renamed from: b */
+    public final void m4810b() {
+        this.f32890b = System.nanoTime();
+        this.f32891c = 1;
     }
 
-    public void c() {
-        this.a.clear();
+    /* renamed from: c */
+    public void mo4809c() {
+        this.f32889a.clear();
     }
 
-    public final void d(String str, long j) {
-        if (j < this.b || this.c == 3) {
+    /* renamed from: d */
+    public final void m4808d(String str, long j) {
+        if (j < this.f32890b || this.f32891c == 3) {
             return;
         }
-        this.c = 3;
-        qq6.a().f(a(), str);
+        this.f32891c = 3;
+        qq6.m12283a().m12278f(m4811a(), str);
     }
 
-    public final void e(String str, long j) {
-        if (j >= this.b) {
-            this.c = 2;
-            qq6.a().f(a(), str);
+    /* renamed from: e */
+    public final void m4807e(String str, long j) {
+        if (j >= this.f32890b) {
+            this.f32891c = 2;
+            qq6.m12283a().m12278f(m4811a(), str);
         }
     }
 
-    public void f(xp6 xp6Var, vp6 vp6Var) {
-        g(xp6Var, vp6Var, null);
+    /* renamed from: f */
+    public void mo4806f(xp6 xp6Var, vp6 vp6Var) {
+        m4805g(xp6Var, vp6Var, null);
     }
 
-    public final void g(xp6 xp6Var, vp6 vp6Var, JSONObject jSONObject) {
-        String h = xp6Var.h();
+    /* renamed from: g */
+    public final void m4805g(xp6 xp6Var, vp6 vp6Var, JSONObject jSONObject) {
+        String m4830h = xp6Var.m4830h();
         JSONObject jSONObject2 = new JSONObject();
-        br6.h(jSONObject2, "environment", "app");
-        br6.h(jSONObject2, "adSessionType", vp6Var.d());
+        br6.m25875h(jSONObject2, "environment", "app");
+        br6.m25875h(jSONObject2, "adSessionType", vp6Var.m6948d());
         JSONObject jSONObject3 = new JSONObject();
         String str = Build.MANUFACTURER;
         String str2 = Build.MODEL;
-        br6.h(jSONObject3, "deviceType", str + "; " + str2);
-        br6.h(jSONObject3, "osVersion", Integer.toString(Build.VERSION.SDK_INT));
-        br6.h(jSONObject3, "os", "Android");
-        br6.h(jSONObject2, "deviceInfo", jSONObject3);
+        br6.m25875h(jSONObject3, "deviceType", str + "; " + str2);
+        br6.m25875h(jSONObject3, "osVersion", Integer.toString(Build.VERSION.SDK_INT));
+        br6.m25875h(jSONObject3, "os", "Android");
+        br6.m25875h(jSONObject2, "deviceInfo", jSONObject3);
         JSONArray jSONArray = new JSONArray();
         jSONArray.put("clid");
         jSONArray.put("vlid");
-        br6.h(jSONObject2, "supports", jSONArray);
+        br6.m25875h(jSONObject2, "supports", jSONArray);
         JSONObject jSONObject4 = new JSONObject();
-        br6.h(jSONObject4, "partnerName", vp6Var.e().b());
-        br6.h(jSONObject4, "partnerVersion", vp6Var.e().c());
-        br6.h(jSONObject2, "omidNativeInfo", jSONObject4);
+        br6.m25875h(jSONObject4, "partnerName", vp6Var.m6947e().m22401b());
+        br6.m25875h(jSONObject4, "partnerVersion", vp6Var.m6947e().m22400c());
+        br6.m25875h(jSONObject2, "omidNativeInfo", jSONObject4);
         JSONObject jSONObject5 = new JSONObject();
-        br6.h(jSONObject5, "libraryVersion", "1.3.37-google_20220829");
-        br6.h(jSONObject5, "appId", oq6.b().a().getApplicationContext().getPackageName());
-        br6.h(jSONObject2, "app", jSONObject5);
-        if (vp6Var.f() != null) {
-            br6.h(jSONObject2, "contentUrl", vp6Var.f());
+        br6.m25875h(jSONObject5, "libraryVersion", "1.3.37-google_20220829");
+        br6.m25875h(jSONObject5, "appId", oq6.m14068b().m14069a().getApplicationContext().getPackageName());
+        br6.m25875h(jSONObject2, "app", jSONObject5);
+        if (vp6Var.m6946f() != null) {
+            br6.m25875h(jSONObject2, "contentUrl", vp6Var.m6946f());
         }
-        br6.h(jSONObject2, "customReferenceData", vp6Var.g());
+        br6.m25875h(jSONObject2, "customReferenceData", vp6Var.m6945g());
         JSONObject jSONObject6 = new JSONObject();
-        Iterator it = vp6Var.h().iterator();
+        Iterator it = vp6Var.m6944h().iterator();
         if (it.hasNext()) {
             gq6 gq6Var = (gq6) it.next();
             throw null;
         } else {
-            qq6.a().g(a(), h, jSONObject2, jSONObject6, jSONObject);
+            qq6.m12283a().m12277g(m4811a(), m4830h, jSONObject2, jSONObject6, jSONObject);
         }
     }
 
-    public final void h(float f) {
-        qq6.a().e(a(), f);
+    /* renamed from: h */
+    public final void m4804h(float f) {
+        qq6.m12283a().m12279e(m4811a(), f);
     }
 
-    public final void i(WebView webView) {
-        this.a = new xr6(webView);
+    /* renamed from: i */
+    public final void m4803i(WebView webView) {
+        this.f32889a = new xr6(webView);
     }
 
-    public void j() {
+    /* renamed from: j */
+    public void mo4802j() {
     }
 
-    public final boolean k() {
-        return this.a.get() != 0;
+    /* renamed from: k */
+    public final boolean m4801k() {
+        return this.f32889a.get() != 0;
     }
 }

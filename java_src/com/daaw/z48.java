@@ -6,34 +6,37 @@ import java.util.List;
 import java.util.RandomAccess;
 /* loaded from: classes2.dex */
 public abstract class z48 extends AbstractList implements db8 {
-    public boolean p = true;
+
+    /* renamed from: p */
+    public boolean f34452p = true;
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
     public boolean add(Object obj) {
-        d();
+        m2816d();
         return super.add(obj);
     }
 
     @Override // java.util.AbstractList, java.util.List
     public boolean addAll(int i, Collection collection) {
-        d();
+        m2816d();
         return super.addAll(i, collection);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public boolean addAll(Collection collection) {
-        d();
+        m2816d();
         return super.addAll(collection);
     }
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
     public void clear() {
-        d();
+        m2816d();
         super.clear();
     }
 
-    public final void d() {
-        if (!this.p) {
+    /* renamed from: d */
+    public final void m2816d() {
+        if (!this.f34452p) {
             throw new UnsupportedOperationException();
         }
     }
@@ -77,7 +80,7 @@ public abstract class z48 extends AbstractList implements db8 {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean remove(Object obj) {
-        d();
+        m2816d();
         int indexOf = indexOf(obj);
         if (indexOf == -1) {
             return false;
@@ -88,23 +91,23 @@ public abstract class z48 extends AbstractList implements db8 {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean removeAll(Collection collection) {
-        d();
+        m2816d();
         return super.removeAll(collection);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean retainAll(Collection collection) {
-        d();
+        m2816d();
         return super.retainAll(collection);
     }
 
     @Override // com.daaw.db8
     public final void zzb() {
-        this.p = false;
+        this.f34452p = false;
     }
 
     @Override // com.daaw.db8
     public final boolean zzc() {
-        return this.p;
+        return this.f34452p;
     }
 }

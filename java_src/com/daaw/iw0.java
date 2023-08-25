@@ -4,13 +4,17 @@ import com.google.auto.value.AutoValue;
 @AutoValue
 /* loaded from: classes.dex */
 public abstract class iw0 {
-    public static iw0 a(long j, sn1 sn1Var, by byVar) {
-        return new l9(j, sn1Var, byVar);
+    /* renamed from: a */
+    public static iw0 m19310a(long j, sn1 sn1Var, AbstractC0896by abstractC0896by) {
+        return new C2021l9(j, sn1Var, abstractC0896by);
     }
 
-    public abstract by b();
+    /* renamed from: b */
+    public abstract AbstractC0896by mo17097b();
 
-    public abstract long c();
+    /* renamed from: c */
+    public abstract long mo17096c();
 
-    public abstract sn1 d();
+    /* renamed from: d */
+    public abstract sn1 mo17095d();
 }

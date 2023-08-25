@@ -8,22 +8,28 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes.dex */
 public final class zzbrm extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbrm> CREATOR = new li3();
-    public final String p;
-    public final String[] q;
-    public final String[] r;
+
+    /* renamed from: p */
+    public final String f36855p;
+
+    /* renamed from: q */
+    public final String[] f36856q;
+
+    /* renamed from: r */
+    public final String[] f36857r;
 
     public zzbrm(String str, String[] strArr, String[] strArr2) {
-        this.p = str;
-        this.q = strArr;
-        this.r = strArr2;
+        this.f36855p = str;
+        this.f36856q = strArr;
+        this.f36857r = strArr2;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.q(parcel, 1, this.p, false);
-        z71.r(parcel, 2, this.q, false);
-        z71.r(parcel, 3, this.r, false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2717q(parcel, 1, this.f36855p, false);
+        z71.m2716r(parcel, 2, this.f36856q, false);
+        z71.m2716r(parcel, 3, this.f36857r, false);
+        z71.m2732b(parcel, m2733a);
     }
 }

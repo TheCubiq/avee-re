@@ -11,20 +11,22 @@ import com.daaw.xm3;
 import com.google.android.gms.ads.internal.client.zzay;
 /* loaded from: classes.dex */
 public class OfflineNotificationPoster extends Worker {
-    public final ar3 v;
+
+    /* renamed from: v */
+    public final ar3 f36206v;
 
     public OfflineNotificationPoster(Context context, WorkerParameters workerParameters) {
         super(context, workerParameters);
-        this.v = zzay.zza().zzm(context, new xm3());
+        this.f36206v = zzay.zza().zzm(context, new xm3());
     }
 
     @Override // androidx.work.Worker
-    public final ListenableWorker.a doWork() {
+    public final ListenableWorker.AbstractC0501a doWork() {
         try {
-            this.v.l1(nt0.g3(getApplicationContext()), getInputData().i("uri"), getInputData().i("gws_query_id"));
-            return ListenableWorker.a.c();
+            this.f36206v.mo3431l1(nt0.m14830g3(getApplicationContext()), getInputData().m27964i("uri"), getInputData().m27964i("gws_query_id"));
+            return ListenableWorker.AbstractC0501a.m28004c();
         } catch (RemoteException unused) {
-            return ListenableWorker.a.a();
+            return ListenableWorker.AbstractC0501a.m28006a();
         }
     }
 }

@@ -3,30 +3,40 @@ package com.daaw;
 import android.os.IBinder;
 /* loaded from: classes.dex */
 public abstract class rw6 {
-    public static qw6 j() {
+    /* renamed from: j */
+    public static qw6 m10857j() {
         tv6 tv6Var = new tv6();
-        tv6Var.d(8388691);
-        tv6Var.e(-1.0f);
-        tv6Var.c(0);
-        tv6Var.f(false);
+        tv6Var.mo8766d(8388691);
+        tv6Var.mo8765e(-1.0f);
+        tv6Var.mo8767c(0);
+        tv6Var.mo8764f(false);
         return tv6Var;
     }
 
-    public abstract float a();
+    /* renamed from: a */
+    public abstract float mo6736a();
 
-    public abstract int b();
+    /* renamed from: b */
+    public abstract int mo6735b();
 
-    public abstract int c();
+    /* renamed from: c */
+    public abstract int mo6734c();
 
-    public abstract int d();
+    /* renamed from: d */
+    public abstract int mo6733d();
 
-    public abstract IBinder e();
+    /* renamed from: e */
+    public abstract IBinder mo6732e();
 
-    public abstract String f();
+    /* renamed from: f */
+    public abstract String mo6731f();
 
-    public abstract String g();
+    /* renamed from: g */
+    public abstract String mo6730g();
 
-    public abstract String h();
+    /* renamed from: h */
+    public abstract String mo6729h();
 
-    public abstract boolean i();
+    /* renamed from: i */
+    public abstract boolean mo6728i();
 }

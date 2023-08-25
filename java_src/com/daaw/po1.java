@@ -7,45 +7,69 @@ import android.location.LocationManager;
 import java.util.Calendar;
 /* loaded from: classes.dex */
 public class po1 {
-    public static po1 d;
-    public final Context a;
-    public final LocationManager b;
-    public final a c = new a();
 
+    /* renamed from: d */
+    public static po1 f23096d;
+
+    /* renamed from: a */
+    public final Context f23097a;
+
+    /* renamed from: b */
+    public final LocationManager f23098b;
+
+    /* renamed from: c */
+    public final C2569a f23099c = new C2569a();
+
+    /* renamed from: com.daaw.po1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public boolean a;
-        public long b;
-        public long c;
-        public long d;
-        public long e;
-        public long f;
+    public static class C2569a {
+
+        /* renamed from: a */
+        public boolean f23100a;
+
+        /* renamed from: b */
+        public long f23101b;
+
+        /* renamed from: c */
+        public long f23102c;
+
+        /* renamed from: d */
+        public long f23103d;
+
+        /* renamed from: e */
+        public long f23104e;
+
+        /* renamed from: f */
+        public long f23105f;
     }
 
     public po1(Context context, LocationManager locationManager) {
-        this.a = context;
-        this.b = locationManager;
+        this.f23097a = context;
+        this.f23098b = locationManager;
     }
 
-    public static po1 a(Context context) {
-        if (d == null) {
+    /* renamed from: a */
+    public static po1 m13258a(Context context) {
+        if (f23096d == null) {
             Context applicationContext = context.getApplicationContext();
-            d = new po1(applicationContext, (LocationManager) applicationContext.getSystemService("location"));
+            f23096d = new po1(applicationContext, (LocationManager) applicationContext.getSystemService("location"));
         }
-        return d;
+        return f23096d;
     }
 
     @SuppressLint({"MissingPermission"})
-    public final Location b() {
-        Location c = hw0.b(this.a, "android.permission.ACCESS_COARSE_LOCATION") == 0 ? c("network") : null;
-        Location c2 = hw0.b(this.a, "android.permission.ACCESS_FINE_LOCATION") == 0 ? c("gps") : null;
-        return (c2 == null || c == null) ? c2 != null ? c2 : c : c2.getTime() > c.getTime() ? c2 : c;
+    /* renamed from: b */
+    public final Location m13257b() {
+        Location m13256c = hw0.m20364b(this.f23097a, "android.permission.ACCESS_COARSE_LOCATION") == 0 ? m13256c("network") : null;
+        Location m13256c2 = hw0.m20364b(this.f23097a, "android.permission.ACCESS_FINE_LOCATION") == 0 ? m13256c("gps") : null;
+        return (m13256c2 == null || m13256c == null) ? m13256c2 != null ? m13256c2 : m13256c : m13256c2.getTime() > m13256c.getTime() ? m13256c2 : m13256c;
     }
 
-    public final Location c(String str) {
+    /* renamed from: c */
+    public final Location m13256c(String str) {
         try {
-            if (this.b.isProviderEnabled(str)) {
-                return this.b.getLastKnownLocation(str);
+            if (this.f23098b.isProviderEnabled(str)) {
+                return this.f23098b.getLastKnownLocation(str);
             }
             return null;
         } catch (Exception unused) {
@@ -53,48 +77,51 @@ public class po1 {
         }
     }
 
-    public boolean d() {
-        a aVar = this.c;
-        if (e()) {
-            return aVar.a;
+    /* renamed from: d */
+    public boolean m13255d() {
+        C2569a c2569a = this.f23099c;
+        if (m13254e()) {
+            return c2569a.f23100a;
         }
-        Location b = b();
-        if (b != null) {
-            f(b);
-            return aVar.a;
+        Location m13257b = m13257b();
+        if (m13257b != null) {
+            m13253f(m13257b);
+            return c2569a.f23100a;
         }
         int i = Calendar.getInstance().get(11);
         return i < 6 || i >= 22;
     }
 
-    public final boolean e() {
-        return this.c.f > System.currentTimeMillis();
+    /* renamed from: e */
+    public final boolean m13254e() {
+        return this.f23099c.f23105f > System.currentTimeMillis();
     }
 
-    public final void f(Location location) {
+    /* renamed from: f */
+    public final void m13253f(Location location) {
         long j;
-        a aVar = this.c;
+        C2569a c2569a = this.f23099c;
         long currentTimeMillis = System.currentTimeMillis();
-        oo1 b = oo1.b();
-        b.a(currentTimeMillis - 86400000, location.getLatitude(), location.getLongitude());
-        long j2 = b.a;
-        b.a(currentTimeMillis, location.getLatitude(), location.getLongitude());
-        boolean z = b.c == 1;
-        long j3 = b.b;
-        long j4 = b.a;
+        oo1 m14117b = oo1.m14117b();
+        m14117b.m14118a(currentTimeMillis - 86400000, location.getLatitude(), location.getLongitude());
+        long j2 = m14117b.f21778a;
+        m14117b.m14118a(currentTimeMillis, location.getLatitude(), location.getLongitude());
+        boolean z = m14117b.f21780c == 1;
+        long j3 = m14117b.f21779b;
+        long j4 = m14117b.f21778a;
         boolean z2 = z;
-        b.a(86400000 + currentTimeMillis, location.getLatitude(), location.getLongitude());
-        long j5 = b.b;
+        m14117b.m14118a(86400000 + currentTimeMillis, location.getLatitude(), location.getLongitude());
+        long j5 = m14117b.f21779b;
         if (j3 == -1 || j4 == -1) {
             j = 43200000 + currentTimeMillis;
         } else {
             j = (currentTimeMillis > j4 ? 0 + j5 : currentTimeMillis > j3 ? 0 + j4 : 0 + j3) + 60000;
         }
-        aVar.a = z2;
-        aVar.b = j2;
-        aVar.c = j3;
-        aVar.d = j4;
-        aVar.e = j5;
-        aVar.f = j;
+        c2569a.f23100a = z2;
+        c2569a.f23101b = j2;
+        c2569a.f23102c = j3;
+        c2569a.f23103d = j4;
+        c2569a.f23104e = j5;
+        c2569a.f23105f = j;
     }
 }

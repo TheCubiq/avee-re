@@ -4,43 +4,50 @@ import android.content.Context;
 import android.os.IBinder;
 /* loaded from: classes.dex */
 public abstract class r31<T> {
-    public final String a;
-    public Object b;
 
+    /* renamed from: a */
+    public final String f24804a;
+
+    /* renamed from: b */
+    public Object f24805b;
+
+    /* renamed from: com.daaw.r31$a */
     /* loaded from: classes.dex */
-    public static class a extends Exception {
-        public a(String str) {
+    public static class C2817a extends Exception {
+        public C2817a(String str) {
             super(str);
         }
 
-        public a(String str, Throwable th) {
+        public C2817a(String str, Throwable th) {
             super(str, th);
         }
     }
 
     public r31(String str) {
-        this.a = str;
+        this.f24804a = str;
     }
 
-    public abstract T a(IBinder iBinder);
+    /* renamed from: a */
+    public abstract T mo1391a(IBinder iBinder);
 
-    public final T b(Context context) {
-        if (this.b == null) {
-            ry0.j(context);
-            Context c = c80.c(context);
-            if (c == null) {
-                throw new a("Could not get remote context.");
+    /* renamed from: b */
+    public final T m11808b(Context context) {
+        if (this.f24805b == null) {
+            ry0.m10830j(context);
+            Context m25525c = c80.m25525c(context);
+            if (m25525c == null) {
+                throw new C2817a("Could not get remote context.");
             }
             try {
-                this.b = a((IBinder) c.getClassLoader().loadClass(this.a).newInstance());
+                this.f24805b = mo1391a((IBinder) m25525c.getClassLoader().loadClass(this.f24804a).newInstance());
             } catch (ClassNotFoundException e) {
-                throw new a("Could not load creator class.", e);
+                throw new C2817a("Could not load creator class.", e);
             } catch (IllegalAccessException e2) {
-                throw new a("Could not access creator.", e2);
+                throw new C2817a("Could not access creator.", e2);
             } catch (InstantiationException e3) {
-                throw new a("Could not instantiate creator.", e3);
+                throw new C2817a("Could not instantiate creator.", e3);
             }
         }
-        return (T) this.b;
+        return (T) this.f24805b;
     }
 }

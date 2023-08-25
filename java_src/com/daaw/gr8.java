@@ -6,16 +6,19 @@ import android.text.TextUtils;
 import android.util.Pair;
 /* loaded from: classes2.dex */
 public final class gr8 {
-    public final dr6 a;
+
+    /* renamed from: a */
+    public final dr6 f11633a;
 
     public gr8(dr6 dr6Var) {
-        this.a = dr6Var;
+        this.f11633a = dr6Var;
     }
 
-    public final void a(String str, Bundle bundle) {
+    /* renamed from: a */
+    public final void m21304a(String str, Bundle bundle) {
         String uri;
-        this.a.r().f();
-        if (this.a.n()) {
+        this.f11633a.mo3882r().mo6991f();
+        if (this.f11633a.m24031n()) {
             return;
         }
         if (bundle.isEmpty()) {
@@ -34,54 +37,58 @@ public final class gr8 {
         if (TextUtils.isEmpty(uri)) {
             return;
         }
-        this.a.F().v.b(uri);
-        this.a.F().w.b(this.a.b().a());
+        this.f11633a.m24053F().f17020v.m20166b(uri);
+        this.f11633a.m24053F().f17021w.m4399b(this.f11633a.mo3909b().mo15860a());
     }
 
-    public final void b() {
-        this.a.r().f();
-        if (d()) {
-            if (e()) {
-                this.a.F().v.b(null);
+    /* renamed from: b */
+    public final void m21303b() {
+        this.f11633a.mo3882r().mo6991f();
+        if (m21301d()) {
+            if (m21300e()) {
+                this.f11633a.m24053F().f17020v.m20166b(null);
                 Bundle bundle = new Bundle();
                 bundle.putString("source", "(not set)");
                 bundle.putString("medium", "(not set)");
                 bundle.putString("_cis", "intent");
                 bundle.putLong("_cc", 1L);
-                this.a.I().u("auto", "_cmpx", bundle);
+                this.f11633a.m24050I().m13683u("auto", "_cmpx", bundle);
             } else {
-                String a = this.a.F().v.a();
-                if (TextUtils.isEmpty(a)) {
-                    this.a.i().t().a("Cache still valid but referrer not found");
+                String m20167a = this.f11633a.m24053F().f17020v.m20167a();
+                if (TextUtils.isEmpty(m20167a)) {
+                    this.f11633a.mo3895i().m14158t().m20653a("Cache still valid but referrer not found");
                 } else {
-                    long a2 = ((this.a.F().w.a() / 3600000) - 1) * 3600000;
-                    Uri parse = Uri.parse(a);
+                    long m4400a = ((this.f11633a.m24053F().f17021w.m4400a() / 3600000) - 1) * 3600000;
+                    Uri parse = Uri.parse(m20167a);
                     Bundle bundle2 = new Bundle();
                     Pair pair = new Pair(parse.getPath(), bundle2);
                     for (String str : parse.getQueryParameterNames()) {
                         bundle2.putString(str, parse.getQueryParameter(str));
                     }
-                    ((Bundle) pair.second).putLong("_cc", a2);
+                    ((Bundle) pair.second).putLong("_cc", m4400a);
                     Object obj = pair.first;
-                    this.a.I().u(obj == null ? "app" : (String) obj, "_cmp", (Bundle) pair.second);
+                    this.f11633a.m24050I().m13683u(obj == null ? "app" : (String) obj, "_cmp", (Bundle) pair.second);
                 }
-                this.a.F().v.b(null);
+                this.f11633a.m24053F().f17020v.m20166b(null);
             }
-            this.a.F().w.b(0L);
+            this.f11633a.m24053F().f17021w.m4399b(0L);
         }
     }
 
-    public final void c() {
-        if (d() && e()) {
-            this.a.F().v.b(null);
+    /* renamed from: c */
+    public final void m21302c() {
+        if (m21301d() && m21300e()) {
+            this.f11633a.m24053F().f17020v.m20166b(null);
         }
     }
 
-    public final boolean d() {
-        return this.a.F().w.a() > 0;
+    /* renamed from: d */
+    public final boolean m21301d() {
+        return this.f11633a.m24053F().f17021w.m4400a() > 0;
     }
 
-    public final boolean e() {
-        return d() && this.a.b().a() - this.a.F().w.a() > this.a.z().q(null, m75.S);
+    /* renamed from: e */
+    public final boolean m21300e() {
+        return m21301d() && this.f11633a.mo3909b().mo15860a() - this.f11633a.m24053F().f17021w.m4400a() > this.f11633a.m24020z().m12660q(null, m75.f18511S);
     }
 }

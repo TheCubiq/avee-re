@@ -11,7 +11,7 @@ public class CombineContinuationsWorker extends Worker {
     }
 
     @Override // androidx.work.Worker
-    public ListenableWorker.a doWork() {
-        return ListenableWorker.a.d(getInputData());
+    public ListenableWorker.AbstractC0501a doWork() {
+        return ListenableWorker.AbstractC0501a.m28003d(getInputData());
     }
 }

@@ -1,23 +1,32 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface aj8 {
-    long a();
+    /* renamed from: a */
+    long mo25309a();
 
-    long b();
+    /* renamed from: b */
+    long mo25308b();
 
-    long d();
+    /* renamed from: d */
+    long mo25307d();
 
-    long e();
+    /* renamed from: e */
+    long mo25306e();
 
-    String g();
+    /* renamed from: g */
+    String mo25305g();
 
-    String h();
+    /* renamed from: h */
+    String mo25304h();
 
-    long j();
+    /* renamed from: j */
+    long mo25303j();
 
-    long k();
+    /* renamed from: k */
+    long mo25302k();
 
-    String n();
+    /* renamed from: n */
+    String mo25301n();
 
     long zzA();
 

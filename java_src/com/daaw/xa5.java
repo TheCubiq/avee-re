@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class xa5 implements wz7 {
-    public static xa5 a() {
+    /* renamed from: a */
+    public static xa5 m5333a() {
         xa5 xa5Var;
-        xa5Var = wa5.a;
+        xa5Var = wa5.f31103a;
         return xa5Var;
     }
 

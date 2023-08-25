@@ -16,18 +16,23 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes.dex */
 public final class vi3 implements ff2 {
-    public volatile ki3 a;
-    public final Context b;
+
+    /* renamed from: a */
+    public volatile ki3 f30242a;
+
+    /* renamed from: b */
+    public final Context f30243b;
 
     public vi3(Context context) {
-        this.b = context;
+        this.f30243b = context;
     }
 
-    public static /* bridge */ /* synthetic */ void b(vi3 vi3Var) {
-        if (vi3Var.a == null) {
+    /* renamed from: b */
+    public static /* bridge */ /* synthetic */ void m7137b(vi3 vi3Var) {
+        if (vi3Var.f30242a == null) {
             return;
         }
-        vi3Var.a.disconnect();
+        vi3Var.f30242a.disconnect();
         Binder.flushPendingCommands();
     }
 
@@ -46,44 +51,44 @@ public final class vi3 implements ff2 {
             i2++;
         }
         zzbrm zzbrmVar = new zzbrm(qf2Var.zzk(), strArr, strArr2);
-        long b = zzt.zzB().b();
+        long mo15859b = zzt.zzB().mo15859b();
         try {
             e14 e14Var = new e14();
-            this.a = new ki3(this.b, zzt.zzt().zzb(), new ti3(this, e14Var), new ui3(this, e14Var));
-            this.a.checkAvailabilityAndConnect();
+            this.f30242a = new ki3(this.f30243b, zzt.zzt().zzb(), new ti3(this, e14Var), new ui3(this, e14Var));
+            this.f30242a.checkAvailabilityAndConnect();
             ri3 ri3Var = new ri3(this, zzbrmVar);
-            g77 g77Var = z04.a;
-            f77 o = s67.o(s67.n(e14Var, ri3Var, g77Var), ((Integer) zzba.zzc().b(g93.W3)).intValue(), TimeUnit.MILLISECONDS, z04.d);
-            o.f(new si3(this), g77Var);
-            ParcelFileDescriptor parcelFileDescriptor = (ParcelFileDescriptor) o.get();
-            long b2 = zzt.zzB().b();
-            zze.zza("Http assets remote cache took " + (b2 - b) + "ms");
-            zzbro zzbroVar = (zzbro) new zzcbz(parcelFileDescriptor).h(zzbro.CREATOR);
+            g77 g77Var = z04.f34305a;
+            f77 m10628o = s67.m10628o(s67.m10629n(e14Var, ri3Var, g77Var), ((Integer) zzba.zzc().m23658b(g93.f10585W3)).intValue(), TimeUnit.MILLISECONDS, z04.f34308d);
+            m10628o.mo6515f(new si3(this), g77Var);
+            ParcelFileDescriptor parcelFileDescriptor = (ParcelFileDescriptor) m10628o.get();
+            long mo15859b2 = zzt.zzB().mo15859b();
+            zze.zza("Http assets remote cache took " + (mo15859b2 - mo15859b) + "ms");
+            zzbro zzbroVar = (zzbro) new zzcbz(parcelFileDescriptor).m1096h(zzbro.CREATOR);
             if (zzbroVar == null) {
                 return null;
             }
-            if (zzbroVar.p) {
-                throw new zf2(zzbroVar.q);
+            if (zzbroVar.f36858p) {
+                throw new zf2(zzbroVar.f36859q);
             }
-            if (zzbroVar.t.length != zzbroVar.u.length) {
+            if (zzbroVar.f36862t.length != zzbroVar.f36863u.length) {
                 return null;
             }
             HashMap hashMap = new HashMap();
             while (true) {
-                String[] strArr3 = zzbroVar.t;
+                String[] strArr3 = zzbroVar.f36862t;
                 if (i >= strArr3.length) {
-                    return new mf2(zzbroVar.r, zzbroVar.s, hashMap, zzbroVar.v, zzbroVar.w);
+                    return new mf2(zzbroVar.f36860r, zzbroVar.f36861s, hashMap, zzbroVar.f36864v, zzbroVar.f36865w);
                 }
-                hashMap.put(strArr3[i], zzbroVar.u[i]);
+                hashMap.put(strArr3[i], zzbroVar.f36863u[i]);
                 i++;
             }
         } catch (InterruptedException | ExecutionException unused) {
-            long b3 = zzt.zzB().b();
-            zze.zza("Http assets remote cache took " + (b3 - b) + "ms");
+            long mo15859b3 = zzt.zzB().mo15859b();
+            zze.zza("Http assets remote cache took " + (mo15859b3 - mo15859b) + "ms");
             return null;
         } catch (Throwable th) {
-            long b4 = zzt.zzB().b();
-            zze.zza("Http assets remote cache took " + (b4 - b) + "ms");
+            long mo15859b4 = zzt.zzB().mo15859b();
+            zze.zza("Http assets remote cache took " + (mo15859b4 - mo15859b) + "ms");
             throw th;
         }
     }

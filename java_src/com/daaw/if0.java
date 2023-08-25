@@ -5,93 +5,95 @@ import java.io.InputStream;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public class if0<A> implements mq0<A, jf0> {
-    public final mq0<A, InputStream> a;
-    public final mq0<A, ParcelFileDescriptor> b;
 
+    /* renamed from: a */
+    public final mq0<A, InputStream> f13612a;
+
+    /* renamed from: b */
+    public final mq0<A, ParcelFileDescriptor> f13613b;
+
+    /* renamed from: com.daaw.if0$a */
     /* loaded from: classes.dex */
-    public static class a implements ip<jf0> {
-        public final ip<InputStream> a;
-        public final ip<ParcelFileDescriptor> b;
+    public static class C1700a implements InterfaceC1744ip<jf0> {
 
-        public a(ip<InputStream> ipVar, ip<ParcelFileDescriptor> ipVar2) {
-            this.a = ipVar;
-            this.b = ipVar2;
+        /* renamed from: a */
+        public final InterfaceC1744ip<InputStream> f13614a;
+
+        /* renamed from: b */
+        public final InterfaceC1744ip<ParcelFileDescriptor> f13615b;
+
+        public C1700a(InterfaceC1744ip<InputStream> interfaceC1744ip, InterfaceC1744ip<ParcelFileDescriptor> interfaceC1744ip2) {
+            this.f13614a = interfaceC1744ip;
+            this.f13615b = interfaceC1744ip2;
         }
 
-        @Override // com.daaw.ip
-        public void b() {
-            ip<InputStream> ipVar = this.a;
-            if (ipVar != null) {
-                ipVar.b();
+        @Override // com.daaw.InterfaceC1744ip
+        /* renamed from: b */
+        public void mo4084b() {
+            InterfaceC1744ip<InputStream> interfaceC1744ip = this.f13614a;
+            if (interfaceC1744ip != null) {
+                interfaceC1744ip.mo4084b();
             }
-            ip<ParcelFileDescriptor> ipVar2 = this.b;
-            if (ipVar2 != null) {
-                ipVar2.b();
+            InterfaceC1744ip<ParcelFileDescriptor> interfaceC1744ip2 = this.f13615b;
+            if (interfaceC1744ip2 != null) {
+                interfaceC1744ip2.mo4084b();
             }
         }
 
         /* JADX WARN: Removed duplicated region for block: B:22:0x0018 A[EXC_TOP_SPLITTER, SYNTHETIC] */
-        @Override // com.daaw.ip
+        @Override // com.daaw.InterfaceC1744ip
         /* renamed from: c */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
         */
-        public com.daaw.jf0 a(com.daaw.dz0 r4) {
-            /*
-                r3 = this;
-                com.daaw.ip<java.io.InputStream> r0 = r3.a
-                r1 = 0
-                if (r0 == 0) goto L13
-                java.lang.Object r0 = r0.a(r4)     // Catch: java.lang.Exception -> Lc
-                java.io.InputStream r0 = (java.io.InputStream) r0     // Catch: java.lang.Exception -> Lc
-                goto L14
-            Lc:
-                r0 = move-exception
-                com.daaw.ip<android.os.ParcelFileDescriptor> r2 = r3.b
-                if (r2 == 0) goto L12
-                goto L13
-            L12:
-                throw r0
-            L13:
-                r0 = r1
-            L14:
-                com.daaw.ip<android.os.ParcelFileDescriptor> r2 = r3.b
-                if (r2 == 0) goto L25
-                java.lang.Object r4 = r2.a(r4)     // Catch: java.lang.Exception -> L20
-                android.os.ParcelFileDescriptor r4 = (android.os.ParcelFileDescriptor) r4     // Catch: java.lang.Exception -> L20
-                r1 = r4
-                goto L25
-            L20:
-                r4 = move-exception
-                if (r0 == 0) goto L24
-                goto L25
-            L24:
-                throw r4
-            L25:
-                com.daaw.jf0 r4 = new com.daaw.jf0
-                r4.<init>(r0, r1)
-                return r4
-            */
-            throw new UnsupportedOperationException("Method not decompiled: com.daaw.if0.a.a(com.daaw.dz0):com.daaw.jf0");
+        public jf0 mo4085a(dz0 dz0Var) {
+            InputStream mo4085a;
+            InterfaceC1744ip<ParcelFileDescriptor> interfaceC1744ip;
+            InterfaceC1744ip<InputStream> interfaceC1744ip2 = this.f13614a;
+            ParcelFileDescriptor parcelFileDescriptor = null;
+            if (interfaceC1744ip2 != null) {
+                try {
+                    mo4085a = interfaceC1744ip2.mo4085a(dz0Var);
+                } catch (Exception e) {
+                    if (this.f13615b == null) {
+                        throw e;
+                    }
+                }
+                interfaceC1744ip = this.f13615b;
+                if (interfaceC1744ip != null) {
+                    try {
+                        parcelFileDescriptor = interfaceC1744ip.mo4085a(dz0Var);
+                    } catch (Exception e2) {
+                        if (mo4085a == null) {
+                            throw e2;
+                        }
+                    }
+                }
+                return new jf0(mo4085a, parcelFileDescriptor);
+            }
+            mo4085a = null;
+            interfaceC1744ip = this.f13615b;
+            if (interfaceC1744ip != null) {
+            }
+            return new jf0(mo4085a, parcelFileDescriptor);
         }
 
-        @Override // com.daaw.ip
+        @Override // com.daaw.InterfaceC1744ip
         public void cancel() {
-            ip<InputStream> ipVar = this.a;
-            if (ipVar != null) {
-                ipVar.cancel();
+            InterfaceC1744ip<InputStream> interfaceC1744ip = this.f13614a;
+            if (interfaceC1744ip != null) {
+                interfaceC1744ip.cancel();
             }
-            ip<ParcelFileDescriptor> ipVar2 = this.b;
-            if (ipVar2 != null) {
-                ipVar2.cancel();
+            InterfaceC1744ip<ParcelFileDescriptor> interfaceC1744ip2 = this.f13615b;
+            if (interfaceC1744ip2 != null) {
+                interfaceC1744ip2.cancel();
             }
         }
 
-        @Override // com.daaw.ip
+        @Override // com.daaw.InterfaceC1744ip
         public String getId() {
-            ip<InputStream> ipVar = this.a;
-            return ipVar != null ? ipVar.getId() : this.b.getId();
+            InterfaceC1744ip<InputStream> interfaceC1744ip = this.f13614a;
+            return interfaceC1744ip != null ? interfaceC1744ip.getId() : this.f13615b.getId();
         }
     }
 
@@ -99,19 +101,20 @@ public class if0<A> implements mq0<A, jf0> {
         if (mq0Var == null) {
             Objects.requireNonNull(mq0Var2, "At least one of streamLoader and fileDescriptorLoader must be non null");
         }
-        this.a = mq0Var;
-        this.b = mq0Var2;
+        this.f13612a = mq0Var;
+        this.f13613b = mq0Var2;
     }
 
     @Override // com.daaw.mq0
-    public ip<jf0> a(A a2, int i, int i2) {
-        mq0<A, InputStream> mq0Var = this.a;
-        ip<InputStream> a3 = mq0Var != null ? mq0Var.a(a2, i, i2) : null;
-        mq0<A, ParcelFileDescriptor> mq0Var2 = this.b;
-        ip<ParcelFileDescriptor> a4 = mq0Var2 != null ? mq0Var2.a(a2, i, i2) : null;
-        if (a3 == null && a4 == null) {
+    /* renamed from: a */
+    public InterfaceC1744ip<jf0> mo3764a(A a, int i, int i2) {
+        mq0<A, InputStream> mq0Var = this.f13612a;
+        InterfaceC1744ip<InputStream> mo3764a = mq0Var != null ? mq0Var.mo3764a(a, i, i2) : null;
+        mq0<A, ParcelFileDescriptor> mq0Var2 = this.f13613b;
+        InterfaceC1744ip<ParcelFileDescriptor> mo3764a2 = mq0Var2 != null ? mq0Var2.mo3764a(a, i, i2) : null;
+        if (mo3764a == null && mo3764a2 == null) {
             return null;
         }
-        return new a(a3, a4);
+        return new C1700a(mo3764a, mo3764a2);
     }
 }

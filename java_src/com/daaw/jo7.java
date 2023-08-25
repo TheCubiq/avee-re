@@ -4,9 +4,10 @@ import java.security.GeneralSecurityException;
 import javax.crypto.Cipher;
 /* loaded from: classes.dex */
 public final class jo7 extends ThreadLocal {
-    public static final Cipher a() {
+    /* renamed from: a */
+    public static final Cipher m18351a() {
         try {
-            return (Cipher) ep7.e.a("AES/CTR/NoPadding");
+            return (Cipher) ep7.f8658e.m23314a("AES/CTR/NoPadding");
         } catch (GeneralSecurityException e) {
             throw new IllegalStateException(e);
         }
@@ -14,6 +15,6 @@ public final class jo7 extends ThreadLocal {
 
     @Override // java.lang.ThreadLocal
     public final /* bridge */ /* synthetic */ Object initialValue() {
-        return a();
+        return m18351a();
     }
 }

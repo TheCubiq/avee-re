@@ -15,7 +15,8 @@ public final class zzi extends r31 {
     }
 
     @Override // com.daaw.r31
-    public final /* synthetic */ Object a(IBinder iBinder) {
+    /* renamed from: a */
+    public final /* synthetic */ Object mo1391a(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -25,13 +26,13 @@ public final class zzi extends r31 {
 
     public final zzbq zza(Context context, String str, an3 an3Var) {
         try {
-            IBinder zze = ((zzbr) b(context)).zze(nt0.g3(context), str, an3Var, 224400000);
+            IBinder zze = ((zzbr) m11808b(context)).zze(nt0.m14830g3(context), str, an3Var, 224400000);
             if (zze == null) {
                 return null;
             }
             IInterface queryLocalInterface = zze.queryLocalInterface("com.google.android.gms.ads.internal.client.IAdLoaderBuilder");
             return queryLocalInterface instanceof zzbq ? (zzbq) queryLocalInterface : new zzbo(zze);
-        } catch (RemoteException | r31.a e) {
+        } catch (RemoteException | r31.C2817a e) {
             k04.zzk("Could not create remote builder for AdLoader.", e);
             return null;
         }

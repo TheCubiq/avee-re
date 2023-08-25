@@ -10,141 +10,244 @@ import com.daaw.qo0;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.source.TrackGroup;
 import com.google.android.exoplayer2.source.TrackGroupArray;
+import com.google.android.exoplayer2.trackselection.InterfaceC3970c;
 import java.io.EOFException;
 import java.io.IOException;
 import java.util.Arrays;
 /* loaded from: classes.dex */
-public final class b00 implements qo0, d00, jk0.a<c>, jk0.d, b81.b {
-    public qo0.a D;
-    public da1 E;
-    public boolean H;
-    public boolean I;
-    public int J;
-    public boolean K;
-    public boolean L;
-    public boolean M;
-    public int N;
-    public TrackGroupArray O;
-    public boolean[] Q;
-    public boolean[] R;
-    public boolean[] S;
-    public boolean T;
-    public long V;
-    public boolean X;
-    public int Y;
-    public boolean Z;
-    public boolean a0;
-    public final Uri p;
-    public final mp q;
-    public final int r;
-    public final cp0.a s;
-    public final e t;
-    public final l2 u;
-    public final String v;
-    public final long w;
-    public final d y;
-    public final jk0 x = new jk0("Loader:ExtractorMediaPeriod");
-    public final bj z = new bj();
-    public final Runnable A = new a();
-    public final Runnable B = new b();
-    public final Handler C = new Handler();
-    public int[] G = new int[0];
-    public b81[] F = new b81[0];
-    public long W = -9223372036854775807L;
-    public long U = -1;
-    public long P = -9223372036854775807L;
+public final class b00 implements qo0, d00, jk0.InterfaceC1834a<C0796c>, jk0.InterfaceC1837d, b81.InterfaceC0826b {
 
+    /* renamed from: D */
+    public qo0.InterfaceC2744a f4152D;
+
+    /* renamed from: E */
+    public da1 f4153E;
+
+    /* renamed from: H */
+    public boolean f4156H;
+
+    /* renamed from: I */
+    public boolean f4157I;
+
+    /* renamed from: J */
+    public int f4158J;
+
+    /* renamed from: K */
+    public boolean f4159K;
+
+    /* renamed from: L */
+    public boolean f4160L;
+
+    /* renamed from: M */
+    public boolean f4161M;
+
+    /* renamed from: N */
+    public int f4162N;
+
+    /* renamed from: O */
+    public TrackGroupArray f4163O;
+
+    /* renamed from: Q */
+    public boolean[] f4165Q;
+
+    /* renamed from: R */
+    public boolean[] f4166R;
+
+    /* renamed from: S */
+    public boolean[] f4167S;
+
+    /* renamed from: T */
+    public boolean f4168T;
+
+    /* renamed from: V */
+    public long f4170V;
+
+    /* renamed from: X */
+    public boolean f4172X;
+
+    /* renamed from: Y */
+    public int f4173Y;
+
+    /* renamed from: Z */
+    public boolean f4174Z;
+
+    /* renamed from: a0 */
+    public boolean f4175a0;
+
+    /* renamed from: p */
+    public final Uri f4176p;
+
+    /* renamed from: q */
+    public final InterfaceC2200mp f4177q;
+
+    /* renamed from: r */
+    public final int f4178r;
+
+    /* renamed from: s */
+    public final cp0.C0975a f4179s;
+
+    /* renamed from: t */
+    public final InterfaceC0798e f4180t;
+
+    /* renamed from: u */
+    public final InterfaceC2006l2 f4181u;
+
+    /* renamed from: v */
+    public final String f4182v;
+
+    /* renamed from: w */
+    public final long f4183w;
+
+    /* renamed from: y */
+    public final C0797d f4185y;
+
+    /* renamed from: x */
+    public final jk0 f4184x = new jk0("Loader:ExtractorMediaPeriod");
+
+    /* renamed from: z */
+    public final C0844bj f4186z = new C0844bj();
+
+    /* renamed from: A */
+    public final Runnable f4149A = new RunnableC0794a();
+
+    /* renamed from: B */
+    public final Runnable f4150B = new RunnableC0795b();
+
+    /* renamed from: C */
+    public final Handler f4151C = new Handler();
+
+    /* renamed from: G */
+    public int[] f4155G = new int[0];
+
+    /* renamed from: F */
+    public b81[] f4154F = new b81[0];
+
+    /* renamed from: W */
+    public long f4171W = -9223372036854775807L;
+
+    /* renamed from: U */
+    public long f4169U = -1;
+
+    /* renamed from: P */
+    public long f4164P = -9223372036854775807L;
+
+    /* renamed from: com.daaw.b00$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public a() {
+    public class RunnableC0794a implements Runnable {
+        public RunnableC0794a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            b00.this.I();
+            b00.this.m26555I();
         }
     }
 
+    /* renamed from: com.daaw.b00$b */
     /* loaded from: classes.dex */
-    public class b implements Runnable {
-        public b() {
+    public class RunnableC0795b implements Runnable {
+        public RunnableC0795b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            if (b00.this.a0) {
+            if (b00.this.f4175a0) {
                 return;
             }
-            b00.this.D.n(b00.this);
+            b00.this.f4152D.mo2077n(b00.this);
         }
     }
 
+    /* renamed from: com.daaw.b00$c */
     /* loaded from: classes.dex */
-    public final class c implements jk0.c {
-        public final Uri a;
-        public final mp b;
-        public final d c;
-        public final bj d;
-        public volatile boolean f;
-        public long h;
-        public pp i;
-        public long k;
-        public final iy0 e = new iy0();
-        public boolean g = true;
-        public long j = -1;
+    public final class C0796c implements jk0.InterfaceC1836c {
 
-        public c(Uri uri, mp mpVar, d dVar, bj bjVar) {
-            this.a = (Uri) s6.e(uri);
-            this.b = (mp) s6.e(mpVar);
-            this.c = (d) s6.e(dVar);
-            this.d = bjVar;
+        /* renamed from: a */
+        public final Uri f4189a;
+
+        /* renamed from: b */
+        public final InterfaceC2200mp f4190b;
+
+        /* renamed from: c */
+        public final C0797d f4191c;
+
+        /* renamed from: d */
+        public final C0844bj f4192d;
+
+        /* renamed from: f */
+        public volatile boolean f4194f;
+
+        /* renamed from: h */
+        public long f4196h;
+
+        /* renamed from: i */
+        public C2570pp f4197i;
+
+        /* renamed from: k */
+        public long f4199k;
+
+        /* renamed from: e */
+        public final iy0 f4193e = new iy0();
+
+        /* renamed from: g */
+        public boolean f4195g = true;
+
+        /* renamed from: j */
+        public long f4198j = -1;
+
+        public C0796c(Uri uri, InterfaceC2200mp interfaceC2200mp, C0797d c0797d, C0844bj c0844bj) {
+            this.f4189a = (Uri) C2914s6.m10686e(uri);
+            this.f4190b = (InterfaceC2200mp) C2914s6.m10686e(interfaceC2200mp);
+            this.f4191c = (C0797d) C2914s6.m10686e(c0797d);
+            this.f4192d = c0844bj;
         }
 
-        @Override // com.daaw.jk0.c
-        public void a() {
+        @Override // com.daaw.jk0.InterfaceC1836c
+        /* renamed from: a */
+        public void mo6740a() {
             int i = 0;
-            while (i == 0 && !this.f) {
-                wq wqVar = null;
+            while (i == 0 && !this.f4194f) {
+                C3462wq c3462wq = null;
                 try {
-                    long j = this.e.a;
-                    pp ppVar = new pp(this.a, j, -1L, b00.this.v);
-                    this.i = ppVar;
-                    long c = this.b.c(ppVar);
-                    this.j = c;
-                    if (c != -1) {
-                        this.j = c + j;
+                    long j = this.f4193e.f14112a;
+                    C2570pp c2570pp = new C2570pp(this.f4189a, j, -1L, b00.this.f4182v);
+                    this.f4197i = c2570pp;
+                    long mo8641c = this.f4190b.mo8641c(c2570pp);
+                    this.f4198j = mo8641c;
+                    if (mo8641c != -1) {
+                        this.f4198j = mo8641c + j;
                     }
-                    wq wqVar2 = new wq(this.b, j, this.j);
+                    C3462wq c3462wq2 = new C3462wq(this.f4190b, j, this.f4198j);
                     try {
-                        zz b = this.c.b(wqVar2, this.b.d());
-                        if (this.g) {
-                            b.f(j, this.h);
-                            this.g = false;
+                        InterfaceC3919zz m26530b = this.f4191c.m26530b(c3462wq2, this.f4190b.mo8640d());
+                        if (this.f4195g) {
+                            m26530b.mo1759f(j, this.f4196h);
+                            this.f4195g = false;
                         }
-                        while (i == 0 && !this.f) {
-                            this.d.a();
-                            i = b.d(wqVar2, this.e);
-                            if (wqVar2.getPosition() > b00.this.w + j) {
-                                j = wqVar2.getPosition();
-                                this.d.b();
-                                b00.this.C.post(b00.this.B);
+                        while (i == 0 && !this.f4194f) {
+                            this.f4192d.m26135a();
+                            i = m26530b.mo1760d(c3462wq2, this.f4193e);
+                            if (c3462wq2.getPosition() > b00.this.f4183w + j) {
+                                j = c3462wq2.getPosition();
+                                this.f4192d.m26134b();
+                                b00.this.f4151C.post(b00.this.f4150B);
                             }
                         }
                         if (i == 1) {
                             i = 0;
                         } else {
-                            this.e.a = wqVar2.getPosition();
-                            this.k = this.e.a - this.i.c;
+                            this.f4193e.f14112a = c3462wq2.getPosition();
+                            this.f4199k = this.f4193e.f14112a - this.f4197i.f23117c;
                         }
-                        sq1.h(this.b);
+                        sq1.m10008h(this.f4190b);
                     } catch (Throwable th) {
                         th = th;
-                        wqVar = wqVar2;
-                        if (i != 1 && wqVar != null) {
-                            this.e.a = wqVar.getPosition();
-                            this.k = this.e.a - this.i.c;
+                        c3462wq = c3462wq2;
+                        if (i != 1 && c3462wq != null) {
+                            this.f4193e.f14112a = c3462wq.getPosition();
+                            this.f4199k = this.f4193e.f14112a - this.f4197i.f23117c;
                         }
-                        sq1.h(this.b);
+                        sq1.m10008h(this.f4190b);
                         throw th;
                     }
                 } catch (Throwable th2) {
@@ -153,531 +256,577 @@ public final class b00 implements qo0, d00, jk0.a<c>, jk0.d, b81.b {
             }
         }
 
-        @Override // com.daaw.jk0.c
-        public void b() {
-            this.f = true;
+        @Override // com.daaw.jk0.InterfaceC1836c
+        /* renamed from: b */
+        public void mo6739b() {
+            this.f4194f = true;
         }
 
-        public void g(long j, long j2) {
-            this.e.a = j;
-            this.h = j2;
-            this.g = true;
+        /* renamed from: g */
+        public void m26532g(long j, long j2) {
+            this.f4193e.f14112a = j;
+            this.f4196h = j2;
+            this.f4195g = true;
         }
     }
 
+    /* renamed from: com.daaw.b00$d */
     /* loaded from: classes.dex */
-    public static final class d {
-        public final zz[] a;
-        public final d00 b;
-        public zz c;
+    public static final class C0797d {
 
-        public d(zz[] zzVarArr, d00 d00Var) {
-            this.a = zzVarArr;
-            this.b = d00Var;
+        /* renamed from: a */
+        public final InterfaceC3919zz[] f4201a;
+
+        /* renamed from: b */
+        public final d00 f4202b;
+
+        /* renamed from: c */
+        public InterfaceC3919zz f4203c;
+
+        public C0797d(InterfaceC3919zz[] interfaceC3919zzArr, d00 d00Var) {
+            this.f4201a = interfaceC3919zzArr;
+            this.f4202b = d00Var;
         }
 
-        public void a() {
-            zz zzVar = this.c;
-            if (zzVar != null) {
-                zzVar.a();
-                this.c = null;
+        /* renamed from: a */
+        public void m26531a() {
+            InterfaceC3919zz interfaceC3919zz = this.f4203c;
+            if (interfaceC3919zz != null) {
+                interfaceC3919zz.mo1762a();
+                this.f4203c = null;
             }
         }
 
-        public zz b(a00 a00Var, Uri uri) {
-            zz zzVar = this.c;
-            if (zzVar != null) {
-                return zzVar;
+        /* renamed from: b */
+        public InterfaceC3919zz m26530b(a00 a00Var, Uri uri) {
+            InterfaceC3919zz interfaceC3919zz = this.f4203c;
+            if (interfaceC3919zz != null) {
+                return interfaceC3919zz;
             }
-            zz[] zzVarArr = this.a;
-            int length = zzVarArr.length;
+            InterfaceC3919zz[] interfaceC3919zzArr = this.f4201a;
+            int length = interfaceC3919zzArr.length;
             int i = 0;
             while (true) {
                 if (i >= length) {
                     break;
                 }
-                zz zzVar2 = zzVarArr[i];
+                InterfaceC3919zz interfaceC3919zz2 = interfaceC3919zzArr[i];
                 try {
                 } catch (EOFException unused) {
                 } catch (Throwable th) {
-                    a00Var.i();
+                    a00Var.mo5858i();
                     throw th;
                 }
-                if (zzVar2.c(a00Var)) {
-                    this.c = zzVar2;
-                    a00Var.i();
+                if (interfaceC3919zz2.mo1761c(a00Var)) {
+                    this.f4203c = interfaceC3919zz2;
+                    a00Var.mo5858i();
                     break;
                 }
                 continue;
-                a00Var.i();
+                a00Var.mo5858i();
                 i++;
             }
-            zz zzVar3 = this.c;
-            if (zzVar3 != null) {
-                zzVar3.i(this.b);
-                return this.c;
+            InterfaceC3919zz interfaceC3919zz3 = this.f4203c;
+            if (interfaceC3919zz3 != null) {
+                interfaceC3919zz3.mo1758i(this.f4202b);
+                return this.f4203c;
             }
-            throw new qp1("None of the available extractors (" + sq1.t(this.a) + ") could read the stream.", uri);
+            throw new qp1("None of the available extractors (" + sq1.m9996t(this.f4201a) + ") could read the stream.", uri);
         }
     }
 
+    /* renamed from: com.daaw.b00$e */
     /* loaded from: classes.dex */
-    public interface e {
-        void b(long j, boolean z);
+    public interface InterfaceC0798e {
+        /* renamed from: b */
+        void mo25704b(long j, boolean z);
     }
 
+    /* renamed from: com.daaw.b00$f */
     /* loaded from: classes.dex */
-    public final class f implements d81 {
-        public final int p;
+    public final class C0799f implements d81 {
 
-        public f(int i) {
-            this.p = i;
+        /* renamed from: p */
+        public final int f4204p;
+
+        public C0799f(int i) {
+            this.f4204p = i;
         }
 
         @Override // com.daaw.d81
-        public void a() {
-            b00.this.L();
+        /* renamed from: a */
+        public void mo3789a() {
+            b00.this.m26552L();
         }
 
         @Override // com.daaw.d81
-        public boolean d() {
-            return b00.this.H(this.p);
+        /* renamed from: d */
+        public boolean mo3787d() {
+            return b00.this.m26556H(this.f4204p);
         }
 
         @Override // com.daaw.d81
-        public int j(k30 k30Var, gq gqVar, boolean z) {
-            return b00.this.P(this.p, k30Var, gqVar, z);
+        /* renamed from: j */
+        public int mo3786j(k30 k30Var, C1454gq c1454gq, boolean z) {
+            return b00.this.m26548P(this.f4204p, k30Var, c1454gq, z);
         }
 
         @Override // com.daaw.d81
-        public int n(long j) {
-            return b00.this.S(this.p, j);
+        /* renamed from: n */
+        public int mo3785n(long j) {
+            return b00.this.m26545S(this.f4204p, j);
         }
     }
 
-    public b00(Uri uri, mp mpVar, zz[] zzVarArr, int i, cp0.a aVar, e eVar, l2 l2Var, String str, int i2) {
-        this.p = uri;
-        this.q = mpVar;
-        this.r = i;
-        this.s = aVar;
-        this.t = eVar;
-        this.u = l2Var;
-        this.v = str;
-        this.w = i2;
-        this.y = new d(zzVarArr, this);
-        this.J = i == -1 ? 3 : i;
-        aVar.q();
+    public b00(Uri uri, InterfaceC2200mp interfaceC2200mp, InterfaceC3919zz[] interfaceC3919zzArr, int i, cp0.C0975a c0975a, InterfaceC0798e interfaceC0798e, InterfaceC2006l2 interfaceC2006l2, String str, int i2) {
+        this.f4176p = uri;
+        this.f4177q = interfaceC2200mp;
+        this.f4178r = i;
+        this.f4179s = c0975a;
+        this.f4180t = interfaceC0798e;
+        this.f4181u = interfaceC2006l2;
+        this.f4182v = str;
+        this.f4183w = i2;
+        this.f4185y = new C0797d(interfaceC3919zzArr, this);
+        this.f4158J = i == -1 ? 3 : i;
+        c0975a.m25151q();
     }
 
-    public static boolean F(IOException iOException) {
+    /* renamed from: F */
+    public static boolean m26558F(IOException iOException) {
         return iOException instanceof qp1;
     }
 
-    public final boolean B(c cVar, int i) {
+    /* renamed from: B */
+    public final boolean m26562B(C0796c c0796c, int i) {
         da1 da1Var;
-        if (this.U != -1 || ((da1Var = this.E) != null && da1Var.h() != -9223372036854775807L)) {
-            this.Y = i;
+        if (this.f4169U != -1 || ((da1Var = this.f4153E) != null && da1Var.mo6930h() != -9223372036854775807L)) {
+            this.f4173Y = i;
             return true;
         }
-        if (this.I && !U()) {
-            this.X = true;
+        if (this.f4157I && !m26543U()) {
+            this.f4172X = true;
             return false;
         }
-        this.L = this.I;
-        this.V = 0L;
-        this.Y = 0;
-        for (b81 b81Var : this.F) {
-            b81Var.C();
+        this.f4160L = this.f4157I;
+        this.f4170V = 0L;
+        this.f4173Y = 0;
+        for (b81 b81Var : this.f4154F) {
+            b81Var.m26361C();
         }
-        cVar.g(0L, 0L);
+        c0796c.m26532g(0L, 0L);
         return true;
     }
 
-    public final void C(c cVar) {
-        if (this.U == -1) {
-            this.U = cVar.j;
+    /* renamed from: C */
+    public final void m26561C(C0796c c0796c) {
+        if (this.f4169U == -1) {
+            this.f4169U = c0796c.f4198j;
         }
     }
 
-    public final int D() {
+    /* renamed from: D */
+    public final int m26560D() {
         int i = 0;
-        for (b81 b81Var : this.F) {
-            i += b81Var.t();
+        for (b81 b81Var : this.f4154F) {
+            i += b81Var.m26338t();
         }
         return i;
     }
 
-    public final long E() {
+    /* renamed from: E */
+    public final long m26559E() {
         long j = Long.MIN_VALUE;
-        for (b81 b81Var : this.F) {
-            j = Math.max(j, b81Var.q());
+        for (b81 b81Var : this.f4154F) {
+            j = Math.max(j, b81Var.m26341q());
         }
         return j;
     }
 
-    public final boolean G() {
-        return this.W != -9223372036854775807L;
+    /* renamed from: G */
+    public final boolean m26557G() {
+        return this.f4171W != -9223372036854775807L;
     }
 
-    public boolean H(int i) {
-        return !U() && (this.Z || this.F[i].u());
+    /* renamed from: H */
+    public boolean m26556H(int i) {
+        return !m26543U() && (this.f4174Z || this.f4154F[i].m26337u());
     }
 
-    public final void I() {
-        if (this.a0 || this.I || this.E == null || !this.H) {
+    /* renamed from: I */
+    public final void m26555I() {
+        if (this.f4175a0 || this.f4157I || this.f4153E == null || !this.f4156H) {
             return;
         }
-        for (b81 b81Var : this.F) {
-            if (b81Var.s() == null) {
+        for (b81 b81Var : this.f4154F) {
+            if (b81Var.m26339s() == null) {
                 return;
             }
         }
-        this.z.b();
-        int length = this.F.length;
+        this.f4186z.m26134b();
+        int length = this.f4154F.length;
         TrackGroup[] trackGroupArr = new TrackGroup[length];
-        this.R = new boolean[length];
-        this.Q = new boolean[length];
-        this.S = new boolean[length];
-        this.P = this.E.h();
+        this.f4166R = new boolean[length];
+        this.f4165Q = new boolean[length];
+        this.f4167S = new boolean[length];
+        this.f4164P = this.f4153E.mo6930h();
         int i = 0;
         while (true) {
             boolean z = true;
             if (i >= length) {
                 break;
             }
-            Format s = this.F[i].s();
-            trackGroupArr[i] = new TrackGroup(s);
-            String str = s.u;
-            if (!hq0.m(str) && !hq0.k(str)) {
+            Format m26339s = this.f4154F[i].m26339s();
+            trackGroupArr[i] = new TrackGroup(m26339s);
+            String str = m26339s.f35721u;
+            if (!hq0.m20492m(str) && !hq0.m20494k(str)) {
                 z = false;
             }
-            this.R[i] = z;
-            this.T = z | this.T;
+            this.f4166R[i] = z;
+            this.f4168T = z | this.f4168T;
             i++;
         }
-        this.O = new TrackGroupArray(trackGroupArr);
-        if (this.r == -1 && this.U == -1 && this.E.h() == -9223372036854775807L) {
-            this.J = 6;
+        this.f4163O = new TrackGroupArray(trackGroupArr);
+        if (this.f4178r == -1 && this.f4169U == -1 && this.f4153E.mo6930h() == -9223372036854775807L) {
+            this.f4158J = 6;
         }
-        this.I = true;
-        this.t.b(this.P, this.E.e());
-        this.D.j(this);
+        this.f4157I = true;
+        this.f4180t.mo25704b(this.f4164P, this.f4153E.mo6932e());
+        this.f4152D.mo3792j(this);
     }
 
-    public final void J(int i) {
-        if (this.S[i]) {
+    /* renamed from: J */
+    public final void m26554J(int i) {
+        if (this.f4167S[i]) {
             return;
         }
-        Format a2 = this.O.a(i).a(0);
-        this.s.c(hq0.g(a2.u), a2, 0, null, this.V);
-        this.S[i] = true;
+        Format m1598a = this.f4163O.m1594a(i).m1598a(0);
+        this.f4179s.m25165c(hq0.m20498g(m1598a.f35721u), m1598a, 0, null, this.f4170V);
+        this.f4167S[i] = true;
     }
 
-    public final void K(int i) {
-        if (this.X && this.R[i] && !this.F[i].u()) {
-            this.W = 0L;
-            this.X = false;
-            this.L = true;
-            this.V = 0L;
-            this.Y = 0;
-            for (b81 b81Var : this.F) {
-                b81Var.C();
+    /* renamed from: K */
+    public final void m26553K(int i) {
+        if (this.f4172X && this.f4166R[i] && !this.f4154F[i].m26337u()) {
+            this.f4171W = 0L;
+            this.f4172X = false;
+            this.f4160L = true;
+            this.f4170V = 0L;
+            this.f4173Y = 0;
+            for (b81 b81Var : this.f4154F) {
+                b81Var.m26361C();
             }
-            this.D.n(this);
+            this.f4152D.mo2077n(this);
         }
     }
 
-    public void L() {
-        this.x.h(this.J);
+    /* renamed from: L */
+    public void m26552L() {
+        this.f4184x.m18464h(this.f4158J);
     }
 
-    @Override // com.daaw.jk0.a
+    @Override // com.daaw.jk0.InterfaceC1834a
     /* renamed from: M */
-    public void k(c cVar, long j, long j2, boolean z) {
-        this.s.e(cVar.i, 1, -1, null, 0, null, cVar.h, this.P, j, j2, cVar.k);
+    public void mo11472k(C0796c c0796c, long j, long j2, boolean z) {
+        this.f4179s.m25163e(c0796c.f4197i, 1, -1, null, 0, null, c0796c.f4196h, this.f4164P, j, j2, c0796c.f4199k);
         if (z) {
             return;
         }
-        C(cVar);
-        for (b81 b81Var : this.F) {
-            b81Var.C();
+        m26561C(c0796c);
+        for (b81 b81Var : this.f4154F) {
+            b81Var.m26361C();
         }
-        if (this.N > 0) {
-            this.D.n(this);
+        if (this.f4162N > 0) {
+            this.f4152D.mo2077n(this);
         }
     }
 
-    @Override // com.daaw.jk0.a
+    @Override // com.daaw.jk0.InterfaceC1834a
     /* renamed from: N */
-    public void o(c cVar, long j, long j2) {
-        if (this.P == -9223372036854775807L) {
-            long E = E();
-            long j3 = E == Long.MIN_VALUE ? 0L : E + 10000;
-            this.P = j3;
-            this.t.b(j3, this.E.e());
+    public void mo11469o(C0796c c0796c, long j, long j2) {
+        if (this.f4164P == -9223372036854775807L) {
+            long m26559E = m26559E();
+            long j3 = m26559E == Long.MIN_VALUE ? 0L : m26559E + 10000;
+            this.f4164P = j3;
+            this.f4180t.mo25704b(j3, this.f4153E.mo6932e());
         }
-        this.s.h(cVar.i, 1, -1, null, 0, null, cVar.h, this.P, j, j2, cVar.k);
-        C(cVar);
-        this.Z = true;
-        this.D.n(this);
+        this.f4179s.m25160h(c0796c.f4197i, 1, -1, null, 0, null, c0796c.f4196h, this.f4164P, j, j2, c0796c.f4199k);
+        m26561C(c0796c);
+        this.f4174Z = true;
+        this.f4152D.mo2077n(this);
     }
 
-    @Override // com.daaw.jk0.a
+    @Override // com.daaw.jk0.InterfaceC1834a
     /* renamed from: O */
-    public int r(c cVar, long j, long j2, IOException iOException) {
-        c cVar2;
+    public int mo11468r(C0796c c0796c, long j, long j2, IOException iOException) {
+        C0796c c0796c2;
         boolean z;
-        boolean F = F(iOException);
-        this.s.k(cVar.i, 1, -1, null, 0, null, cVar.h, this.P, j, j2, cVar.k, iOException, F);
-        C(cVar);
-        if (F) {
+        boolean m26558F = m26558F(iOException);
+        this.f4179s.m25157k(c0796c.f4197i, 1, -1, null, 0, null, c0796c.f4196h, this.f4164P, j, j2, c0796c.f4199k, iOException, m26558F);
+        m26561C(c0796c);
+        if (m26558F) {
             return 3;
         }
-        int D = D();
-        if (D > this.Y) {
-            cVar2 = cVar;
+        int m26560D = m26560D();
+        if (m26560D > this.f4173Y) {
+            c0796c2 = c0796c;
             z = true;
         } else {
-            cVar2 = cVar;
+            c0796c2 = c0796c;
             z = false;
         }
-        if (B(cVar2, D)) {
+        if (m26562B(c0796c2, m26560D)) {
             return z ? 1 : 0;
         }
         return 2;
     }
 
-    public int P(int i, k30 k30Var, gq gqVar, boolean z) {
-        if (U()) {
+    /* renamed from: P */
+    public int m26548P(int i, k30 k30Var, C1454gq c1454gq, boolean z) {
+        if (m26543U()) {
             return -3;
         }
-        int y = this.F[i].y(k30Var, gqVar, z, this.Z, this.V);
-        if (y == -4) {
-            J(i);
-        } else if (y == -3) {
-            K(i);
+        int m26333y = this.f4154F[i].m26333y(k30Var, c1454gq, z, this.f4174Z, this.f4170V);
+        if (m26333y == -4) {
+            m26554J(i);
+        } else if (m26333y == -3) {
+            m26553K(i);
         }
-        return y;
+        return m26333y;
     }
 
-    public void Q() {
-        if (this.I) {
-            for (b81 b81Var : this.F) {
-                b81Var.k();
+    /* renamed from: Q */
+    public void m26547Q() {
+        if (this.f4157I) {
+            for (b81 b81Var : this.f4154F) {
+                b81Var.m26347k();
             }
         }
-        this.x.j(this);
-        this.C.removeCallbacksAndMessages(null);
-        this.D = null;
-        this.a0 = true;
-        this.s.r();
+        this.f4184x.m18462j(this);
+        this.f4151C.removeCallbacksAndMessages(null);
+        this.f4152D = null;
+        this.f4175a0 = true;
+        this.f4179s.m25150r();
     }
 
-    public final boolean R(long j) {
+    /* renamed from: R */
+    public final boolean m26546R(long j) {
         int i;
-        int length = this.F.length;
+        int length = this.f4154F.length;
         while (true) {
             if (i >= length) {
                 return true;
             }
-            b81 b81Var = this.F[i];
-            b81Var.E();
-            i = ((b81Var.f(j, true, false) != -1) || (!this.R[i] && this.T)) ? i + 1 : 0;
+            b81 b81Var = this.f4154F[i];
+            b81Var.m26359E();
+            i = ((b81Var.m26352f(j, true, false) != -1) || (!this.f4166R[i] && this.f4168T)) ? i + 1 : 0;
         }
         return false;
     }
 
-    public int S(int i, long j) {
+    /* renamed from: S */
+    public int m26545S(int i, long j) {
         int i2 = 0;
-        if (U()) {
+        if (m26543U()) {
             return 0;
         }
-        b81 b81Var = this.F[i];
-        if (!this.Z || j <= b81Var.q()) {
-            int f2 = b81Var.f(j, true, true);
-            if (f2 != -1) {
-                i2 = f2;
+        b81 b81Var = this.f4154F[i];
+        if (!this.f4174Z || j <= b81Var.m26341q()) {
+            int m26352f = b81Var.m26352f(j, true, true);
+            if (m26352f != -1) {
+                i2 = m26352f;
             }
         } else {
-            i2 = b81Var.g();
+            i2 = b81Var.m26351g();
         }
         if (i2 > 0) {
-            J(i);
+            m26554J(i);
         } else {
-            K(i);
+            m26553K(i);
         }
         return i2;
     }
 
-    public final void T() {
-        c cVar = new c(this.p, this.q, this.y, this.z);
-        if (this.I) {
-            s6.f(G());
-            long j = this.P;
-            if (j != -9223372036854775807L && this.W >= j) {
-                this.Z = true;
-                this.W = -9223372036854775807L;
+    /* renamed from: T */
+    public final void m26544T() {
+        C0796c c0796c = new C0796c(this.f4176p, this.f4177q, this.f4185y, this.f4186z);
+        if (this.f4157I) {
+            C2914s6.m10685f(m26557G());
+            long j = this.f4164P;
+            if (j != -9223372036854775807L && this.f4171W >= j) {
+                this.f4174Z = true;
+                this.f4171W = -9223372036854775807L;
                 return;
             }
-            cVar.g(this.E.g(this.W).a.b, this.W);
-            this.W = -9223372036854775807L;
+            c0796c.m26532g(this.f4153E.mo6931g(this.f4171W).f6712a.f9303b, this.f4171W);
+            this.f4171W = -9223372036854775807L;
         }
-        this.Y = D();
-        this.s.n(cVar.i, 1, -1, null, 0, null, cVar.h, this.P, this.x.k(cVar, this, this.J));
+        this.f4173Y = m26560D();
+        this.f4179s.m25154n(c0796c.f4197i, 1, -1, null, 0, null, c0796c.f4196h, this.f4164P, this.f4184x.m18461k(c0796c, this, this.f4158J));
     }
 
-    public final boolean U() {
-        return this.L || G();
+    /* renamed from: U */
+    public final boolean m26543U() {
+        return this.f4160L || m26557G();
     }
 
     @Override // com.daaw.d00
-    public sm1 a(int i, int i2) {
-        int length = this.F.length;
+    /* renamed from: a */
+    public sm1 mo11478a(int i, int i2) {
+        int length = this.f4154F.length;
         for (int i3 = 0; i3 < length; i3++) {
-            if (this.G[i3] == i) {
-                return this.F[i3];
+            if (this.f4155G[i3] == i) {
+                return this.f4154F[i3];
             }
         }
-        b81 b81Var = new b81(this.u);
-        b81Var.H(this);
+        b81 b81Var = new b81(this.f4181u);
+        b81Var.m26356H(this);
         int i4 = length + 1;
-        int[] copyOf = Arrays.copyOf(this.G, i4);
-        this.G = copyOf;
+        int[] copyOf = Arrays.copyOf(this.f4155G, i4);
+        this.f4155G = copyOf;
         copyOf[length] = i;
-        b81[] b81VarArr = (b81[]) Arrays.copyOf(this.F, i4);
-        this.F = b81VarArr;
+        b81[] b81VarArr = (b81[]) Arrays.copyOf(this.f4154F, i4);
+        this.f4154F = b81VarArr;
         b81VarArr[length] = b81Var;
         return b81Var;
     }
 
     @Override // com.daaw.qo0, com.daaw.gb1
-    public long b() {
-        if (this.N == 0) {
+    /* renamed from: b */
+    public long mo2087b() {
+        if (this.f4162N == 0) {
             return Long.MIN_VALUE;
         }
-        return f();
+        return mo2083f();
     }
 
     @Override // com.daaw.qo0, com.daaw.gb1
-    public boolean c(long j) {
-        if (this.Z || this.X) {
+    /* renamed from: c */
+    public boolean mo2086c(long j) {
+        if (this.f4174Z || this.f4172X) {
             return false;
         }
-        if (this.I && this.N == 0) {
+        if (this.f4157I && this.f4162N == 0) {
             return false;
         }
-        boolean c2 = this.z.c();
-        if (this.x.g()) {
-            return c2;
+        boolean m26133c = this.f4186z.m26133c();
+        if (this.f4184x.m18465g()) {
+            return m26133c;
         }
-        T();
+        m26544T();
         return true;
     }
 
     @Override // com.daaw.d00
-    public void d(da1 da1Var) {
-        this.E = da1Var;
-        this.C.post(this.A);
+    /* renamed from: d */
+    public void mo11475d(da1 da1Var) {
+        this.f4153E = da1Var;
+        this.f4151C.post(this.f4149A);
     }
 
     @Override // com.daaw.qo0
-    public long e(long j, ea1 ea1Var) {
-        if (this.E.e()) {
-            da1.a g = this.E.g(j);
-            return sq1.S(j, ea1Var, g.a.a, g.b.a);
+    /* renamed from: e */
+    public long mo2084e(long j, ea1 ea1Var) {
+        if (this.f4153E.mo6932e()) {
+            da1.C1068a mo6931g = this.f4153E.mo6931g(j);
+            return sq1.m10026S(j, ea1Var, mo6931g.f6712a.f9302a, mo6931g.f6713b.f9302a);
         }
         return 0L;
     }
 
     @Override // com.daaw.qo0, com.daaw.gb1
-    public long f() {
-        long E;
-        if (this.Z) {
+    /* renamed from: f */
+    public long mo2083f() {
+        long m26559E;
+        if (this.f4174Z) {
             return Long.MIN_VALUE;
         }
-        if (G()) {
-            return this.W;
+        if (m26557G()) {
+            return this.f4171W;
         }
-        if (this.T) {
-            E = Long.MAX_VALUE;
-            int length = this.F.length;
+        if (this.f4168T) {
+            m26559E = Long.MAX_VALUE;
+            int length = this.f4154F.length;
             for (int i = 0; i < length; i++) {
-                if (this.R[i]) {
-                    E = Math.min(E, this.F[i].q());
+                if (this.f4166R[i]) {
+                    m26559E = Math.min(m26559E, this.f4154F[i].m26341q());
                 }
             }
         } else {
-            E = E();
+            m26559E = m26559E();
         }
-        return E == Long.MIN_VALUE ? this.V : E;
+        return m26559E == Long.MIN_VALUE ? this.f4170V : m26559E;
     }
 
     @Override // com.daaw.qo0, com.daaw.gb1
-    public void g(long j) {
+    /* renamed from: g */
+    public void mo2082g(long j) {
     }
 
-    @Override // com.daaw.jk0.d
-    public void h() {
-        for (b81 b81Var : this.F) {
-            b81Var.C();
+    @Override // com.daaw.jk0.InterfaceC1837d
+    /* renamed from: h */
+    public void mo11474h() {
+        for (b81 b81Var : this.f4154F) {
+            b81Var.m26361C();
         }
-        this.y.a();
+        this.f4185y.m26531a();
     }
 
     @Override // com.daaw.qo0
-    public long i(com.google.android.exoplayer2.trackselection.c[] cVarArr, boolean[] zArr, d81[] d81VarArr, boolean[] zArr2, long j) {
-        s6.f(this.I);
-        int i = this.N;
+    /* renamed from: i */
+    public long mo2080i(InterfaceC3970c[] interfaceC3970cArr, boolean[] zArr, d81[] d81VarArr, boolean[] zArr2, long j) {
+        C2914s6.m10685f(this.f4157I);
+        int i = this.f4162N;
         int i2 = 0;
-        for (int i3 = 0; i3 < cVarArr.length; i3++) {
-            if (d81VarArr[i3] != null && (cVarArr[i3] == null || !zArr[i3])) {
-                int i4 = ((f) d81VarArr[i3]).p;
-                s6.f(this.Q[i4]);
-                this.N--;
-                this.Q[i4] = false;
+        for (int i3 = 0; i3 < interfaceC3970cArr.length; i3++) {
+            if (d81VarArr[i3] != null && (interfaceC3970cArr[i3] == null || !zArr[i3])) {
+                int i4 = ((C0799f) d81VarArr[i3]).f4204p;
+                C2914s6.m10685f(this.f4165Q[i4]);
+                this.f4162N--;
+                this.f4165Q[i4] = false;
                 d81VarArr[i3] = null;
             }
         }
-        boolean z = !this.K ? j == 0 : i != 0;
-        for (int i5 = 0; i5 < cVarArr.length; i5++) {
-            if (d81VarArr[i5] == null && cVarArr[i5] != null) {
-                com.google.android.exoplayer2.trackselection.c cVar = cVarArr[i5];
-                s6.f(cVar.length() == 1);
-                s6.f(cVar.f(0) == 0);
-                int b2 = this.O.b(cVar.a());
-                s6.f(!this.Q[b2]);
-                this.N++;
-                this.Q[b2] = true;
-                d81VarArr[i5] = new f(b2);
+        boolean z = !this.f4159K ? j == 0 : i != 0;
+        for (int i5 = 0; i5 < interfaceC3970cArr.length; i5++) {
+            if (d81VarArr[i5] == null && interfaceC3970cArr[i5] != null) {
+                InterfaceC3970c interfaceC3970c = interfaceC3970cArr[i5];
+                C2914s6.m10685f(interfaceC3970c.length() == 1);
+                C2914s6.m10685f(interfaceC3970c.mo1529f(0) == 0);
+                int m1593b = this.f4163O.m1593b(interfaceC3970c.mo1534a());
+                C2914s6.m10685f(!this.f4165Q[m1593b]);
+                this.f4162N++;
+                this.f4165Q[m1593b] = true;
+                d81VarArr[i5] = new C0799f(m1593b);
                 zArr2[i5] = true;
                 if (!z) {
-                    b81 b81Var = this.F[b2];
-                    b81Var.E();
-                    z = b81Var.f(j, true, true) == -1 && b81Var.r() != 0;
+                    b81 b81Var = this.f4154F[m1593b];
+                    b81Var.m26359E();
+                    z = b81Var.m26352f(j, true, true) == -1 && b81Var.m26340r() != 0;
                 }
             }
         }
-        if (this.N == 0) {
-            this.X = false;
-            this.L = false;
-            if (this.x.g()) {
-                b81[] b81VarArr = this.F;
+        if (this.f4162N == 0) {
+            this.f4172X = false;
+            this.f4160L = false;
+            if (this.f4184x.m18465g()) {
+                b81[] b81VarArr = this.f4154F;
                 int length = b81VarArr.length;
                 while (i2 < length) {
-                    b81VarArr[i2].k();
+                    b81VarArr[i2].m26347k();
                     i2++;
                 }
-                this.x.f();
+                this.f4184x.m18466f();
             } else {
-                b81[] b81VarArr2 = this.F;
+                b81[] b81VarArr2 = this.f4154F;
                 int length2 = b81VarArr2.length;
                 while (i2 < length2) {
-                    b81VarArr2[i2].C();
+                    b81VarArr2[i2].m26361C();
                     i2++;
                 }
             }
         } else if (z) {
-            j = m(j);
+            j = mo2078m(j);
             while (i2 < d81VarArr.length) {
                 if (d81VarArr[i2] != null) {
                     zArr2[i2] = true;
@@ -685,36 +834,39 @@ public final class b00 implements qo0, d00, jk0.a<c>, jk0.d, b81.b {
                 i2++;
             }
         }
-        this.K = true;
+        this.f4159K = true;
         return j;
     }
 
-    @Override // com.daaw.b81.b
-    public void j(Format format) {
-        this.C.post(this.A);
+    @Override // com.daaw.b81.InterfaceC0826b
+    /* renamed from: j */
+    public void mo11473j(Format format) {
+        this.f4151C.post(this.f4149A);
     }
 
     @Override // com.daaw.qo0
-    public void l() {
-        L();
+    /* renamed from: l */
+    public void mo2079l() {
+        m26552L();
     }
 
     @Override // com.daaw.qo0
-    public long m(long j) {
-        if (!this.E.e()) {
+    /* renamed from: m */
+    public long mo2078m(long j) {
+        if (!this.f4153E.mo6932e()) {
             j = 0;
         }
-        this.V = j;
-        this.L = false;
-        if (G() || !R(j)) {
-            this.X = false;
-            this.W = j;
-            this.Z = false;
-            if (this.x.g()) {
-                this.x.f();
+        this.f4170V = j;
+        this.f4160L = false;
+        if (m26557G() || !m26546R(j)) {
+            this.f4172X = false;
+            this.f4171W = j;
+            this.f4174Z = false;
+            if (this.f4184x.m18465g()) {
+                this.f4184x.m18466f();
             } else {
-                for (b81 b81Var : this.F) {
-                    b81Var.C();
+                for (b81 b81Var : this.f4154F) {
+                    b81Var.m26361C();
                 }
             }
             return j;
@@ -723,28 +875,31 @@ public final class b00 implements qo0, d00, jk0.a<c>, jk0.d, b81.b {
     }
 
     @Override // com.daaw.d00
-    public void n() {
-        this.H = true;
-        this.C.post(this.A);
+    /* renamed from: n */
+    public void mo11470n() {
+        this.f4156H = true;
+        this.f4151C.post(this.f4149A);
     }
 
     @Override // com.daaw.qo0
-    public void p(qo0.a aVar, long j) {
-        this.D = aVar;
-        this.z.c();
-        T();
+    /* renamed from: p */
+    public void mo2075p(qo0.InterfaceC2744a interfaceC2744a, long j) {
+        this.f4152D = interfaceC2744a;
+        this.f4186z.m26133c();
+        m26544T();
     }
 
     @Override // com.daaw.qo0
-    public long q() {
-        if (!this.M) {
-            this.s.t();
-            this.M = true;
+    /* renamed from: q */
+    public long mo2074q() {
+        if (!this.f4161M) {
+            this.f4179s.m25148t();
+            this.f4161M = true;
         }
-        if (this.L) {
-            if (this.Z || D() > this.Y) {
-                this.L = false;
-                return this.V;
+        if (this.f4160L) {
+            if (this.f4174Z || m26560D() > this.f4173Y) {
+                this.f4160L = false;
+                return this.f4170V;
             }
             return -9223372036854775807L;
         }
@@ -752,15 +907,17 @@ public final class b00 implements qo0, d00, jk0.a<c>, jk0.d, b81.b {
     }
 
     @Override // com.daaw.qo0
-    public TrackGroupArray s() {
-        return this.O;
+    /* renamed from: s */
+    public TrackGroupArray mo2072s() {
+        return this.f4163O;
     }
 
     @Override // com.daaw.qo0
-    public void t(long j, boolean z) {
-        int length = this.F.length;
+    /* renamed from: t */
+    public void mo2071t(long j, boolean z) {
+        int length = this.f4154F.length;
         for (int i = 0; i < length; i++) {
-            this.F[i].j(j, z, this.Q[i]);
+            this.f4154F[i].m26348j(j, z, this.f4165Q[i]);
         }
     }
 }

@@ -4,9 +4,12 @@ import android.util.Log;
 import com.google.ads.AdRequest;
 /* loaded from: classes.dex */
 public class k04 {
-    public static final fz6 a = fz6.b(4000);
 
-    public static String a(String str) {
+    /* renamed from: a */
+    public static final fz6 f15577a = fz6.m22123b(4000);
+
+    /* renamed from: a */
+    public static String m18090a(String str) {
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
         if (stackTrace.length >= 4) {
             int lineNumber = stackTrace[3].getLineNumber();
@@ -19,7 +22,7 @@ public class k04 {
         if (!zzm(3) || str == null || str.length() <= 4000) {
             return;
         }
-        for (String str2 : a.d(str)) {
+        for (String str2 : f15577a.m22121d(str)) {
         }
     }
 
@@ -31,7 +34,7 @@ public class k04 {
         if (!zzm(6) || str == null || str.length() <= 4000) {
             return;
         }
-        for (String str2 : a.d(str)) {
+        for (String str2 : f15577a.m22121d(str)) {
         }
     }
 
@@ -43,7 +46,7 @@ public class k04 {
         if (!zzm(4) || str == null || str.length() <= 4000) {
             return;
         }
-        for (String str2 : a.d(str)) {
+        for (String str2 : f15577a.m22121d(str)) {
         }
     }
 
@@ -51,7 +54,7 @@ public class k04 {
         if (!zzm(5) || str == null || str.length() <= 4000) {
             return;
         }
-        for (String str2 : a.d(str)) {
+        for (String str2 : f15577a.m22121d(str)) {
         }
     }
 
@@ -61,11 +64,11 @@ public class k04 {
 
     public static void zzl(String str, Throwable th) {
         if (zzm(5)) {
-            String a2 = a(str);
+            String m18090a = m18090a(str);
             if (th != null) {
-                zzk(a2, th);
+                zzk(m18090a, th);
             } else {
-                zzj(a2);
+                zzj(m18090a);
             }
         }
     }

@@ -33,27 +33,37 @@ import com.google.android.gms.ads.nativead.NativeCustomFormatAd;
 import com.google.android.gms.internal.ads.zzblz;
 /* loaded from: classes.dex */
 public class AdLoader {
-    public final zzp a;
-    public final Context b;
-    public final zzbn c;
+
+    /* renamed from: a */
+    public final zzp f36003a;
+
+    /* renamed from: b */
+    public final Context f36004b;
+
+    /* renamed from: c */
+    public final zzbn f36005c;
 
     /* loaded from: classes.dex */
     public static class Builder {
-        public final Context a;
-        public final zzbq b;
+
+        /* renamed from: a */
+        public final Context f36006a;
+
+        /* renamed from: b */
+        public final zzbq f36007b;
 
         public Builder(Context context, String str) {
             zzbq zzc = zzay.zza().zzc(context, str, new xm3());
-            this.a = (Context) ry0.k(context, "context cannot be null");
-            this.b = zzc;
+            this.f36006a = (Context) ry0.m10829k(context, "context cannot be null");
+            this.f36007b = zzc;
         }
 
         public AdLoader build() {
             try {
-                return new AdLoader(this.a, this.b.zze(), zzp.zza);
+                return new AdLoader(this.f36006a, this.f36007b.zze(), zzp.zza);
             } catch (RemoteException e) {
                 k04.zzh("Failed to build AdLoader.", e);
-                return new AdLoader(this.a, new zzeu().zzc(), zzp.zza);
+                return new AdLoader(this.f36006a, new zzeu().zzc(), zzp.zza);
             }
         }
 
@@ -62,7 +72,7 @@ public class AdLoader {
                 throw new IllegalArgumentException("The supported ad sizes must contain at least one valid ad size.");
             }
             try {
-                this.b.zzj(new if3(onAdManagerAdViewLoadedListener), new zzq(this.a, adSizeArr));
+                this.f36007b.zzj(new if3(onAdManagerAdViewLoadedListener), new zzq(this.f36006a, adSizeArr));
             } catch (RemoteException e) {
                 k04.zzk("Failed to add Google Ad Manager banner ad listener", e);
             }
@@ -72,7 +82,7 @@ public class AdLoader {
         public Builder forCustomFormatAd(String str, NativeCustomFormatAd.OnCustomFormatAdLoadedListener onCustomFormatAdLoadedListener, NativeCustomFormatAd.OnCustomClickListener onCustomClickListener) {
             uq3 uq3Var = new uq3(onCustomFormatAdLoadedListener, onCustomClickListener);
             try {
-                this.b.zzh(str, uq3Var.b(), uq3Var.a());
+                this.f36007b.zzh(str, uq3Var.m7808b(), uq3Var.m7809a());
             } catch (RemoteException e) {
                 k04.zzk("Failed to add custom format ad listener", e);
             }
@@ -83,7 +93,7 @@ public class AdLoader {
         public Builder forCustomTemplateAd(String str, NativeCustomTemplateAd.OnCustomTemplateAdLoadedListener onCustomTemplateAdLoadedListener, NativeCustomTemplateAd.OnCustomClickListener onCustomClickListener) {
             gf3 gf3Var = new gf3(onCustomTemplateAdLoadedListener, onCustomClickListener);
             try {
-                this.b.zzh(str, gf3Var.e(), gf3Var.d());
+                this.f36007b.zzh(str, gf3Var.m21720e(), gf3Var.m21721d());
             } catch (RemoteException e) {
                 k04.zzk("Failed to add custom template ad listener", e);
             }
@@ -92,7 +102,7 @@ public class AdLoader {
 
         public Builder forNativeAd(NativeAd.OnNativeAdLoadedListener onNativeAdLoadedListener) {
             try {
-                this.b.zzk(new wq3(onNativeAdLoadedListener));
+                this.f36007b.zzk(new wq3(onNativeAdLoadedListener));
             } catch (RemoteException e) {
                 k04.zzk("Failed to add google native ad listener", e);
             }
@@ -102,7 +112,7 @@ public class AdLoader {
         @Deprecated
         public Builder forUnifiedNativeAd(UnifiedNativeAd.OnUnifiedNativeAdLoadedListener onUnifiedNativeAdLoadedListener) {
             try {
-                this.b.zzk(new jf3(onUnifiedNativeAdLoadedListener));
+                this.f36007b.zzk(new jf3(onUnifiedNativeAdLoadedListener));
             } catch (RemoteException e) {
                 k04.zzk("Failed to add google native ad listener", e);
             }
@@ -111,7 +121,7 @@ public class AdLoader {
 
         public Builder withAdListener(AdListener adListener) {
             try {
-                this.b.zzl(new com.google.android.gms.ads.internal.client.zzg(adListener));
+                this.f36007b.zzl(new com.google.android.gms.ads.internal.client.zzg(adListener));
             } catch (RemoteException e) {
                 k04.zzk("Failed to set AdListener.", e);
             }
@@ -120,7 +130,7 @@ public class AdLoader {
 
         public Builder withAdManagerAdViewOptions(AdManagerAdViewOptions adManagerAdViewOptions) {
             try {
-                this.b.zzm(adManagerAdViewOptions);
+                this.f36007b.zzm(adManagerAdViewOptions);
             } catch (RemoteException e) {
                 k04.zzk("Failed to specify Ad Manager banner ad options", e);
             }
@@ -130,7 +140,7 @@ public class AdLoader {
         @Deprecated
         public Builder withNativeAdOptions(NativeAdOptions nativeAdOptions) {
             try {
-                this.b.zzo(new zzblz(nativeAdOptions));
+                this.f36007b.zzo(new zzblz(nativeAdOptions));
             } catch (RemoteException e) {
                 k04.zzk("Failed to specify native ad options", e);
             }
@@ -139,7 +149,7 @@ public class AdLoader {
 
         public Builder withNativeAdOptions(com.google.android.gms.ads.nativead.NativeAdOptions nativeAdOptions) {
             try {
-                this.b.zzo(new zzblz(4, nativeAdOptions.shouldReturnUrlsForImageAssets(), -1, nativeAdOptions.shouldRequestMultipleImages(), nativeAdOptions.getAdChoicesPlacement(), nativeAdOptions.getVideoOptions() != null ? new zzfl(nativeAdOptions.getVideoOptions()) : null, nativeAdOptions.zzc(), nativeAdOptions.getMediaAspectRatio(), nativeAdOptions.zza(), nativeAdOptions.zzb()));
+                this.f36007b.zzo(new zzblz(4, nativeAdOptions.shouldReturnUrlsForImageAssets(), -1, nativeAdOptions.shouldRequestMultipleImages(), nativeAdOptions.getAdChoicesPlacement(), nativeAdOptions.getVideoOptions() != null ? new zzfl(nativeAdOptions.getVideoOptions()) : null, nativeAdOptions.zzc(), nativeAdOptions.getMediaAspectRatio(), nativeAdOptions.zza(), nativeAdOptions.zzb()));
             } catch (RemoteException e) {
                 k04.zzk("Failed to specify native ad options", e);
             }
@@ -148,34 +158,36 @@ public class AdLoader {
     }
 
     public AdLoader(Context context, zzbn zzbnVar, zzp zzpVar) {
-        this.b = context;
-        this.c = zzbnVar;
-        this.a = zzpVar;
+        this.f36004b = context;
+        this.f36005c = zzbnVar;
+        this.f36003a = zzpVar;
     }
 
-    public final /* synthetic */ void a(zzdx zzdxVar) {
+    /* renamed from: a */
+    public final /* synthetic */ void m1467a(zzdx zzdxVar) {
         try {
-            this.c.zzg(this.a.zza(this.b, zzdxVar));
+            this.f36005c.zzg(this.f36003a.zza(this.f36004b, zzdxVar));
         } catch (RemoteException e) {
             k04.zzh("Failed to load ad.", e);
         }
     }
 
-    public final void b(final zzdx zzdxVar) {
-        g93.c(this.b);
-        if (((Boolean) ya3.c.e()).booleanValue()) {
-            if (((Boolean) zzba.zzc().b(g93.n9)).booleanValue()) {
-                zz3.b.execute(new Runnable() { // from class: com.google.android.gms.ads.zza
+    /* renamed from: b */
+    public final void m1466b(final zzdx zzdxVar) {
+        g93.m21879c(this.f36004b);
+        if (((Boolean) ya3.f33451c.m16137e()).booleanValue()) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10774n9)).booleanValue()) {
+                zz3.f35693b.execute(new Runnable() { // from class: com.google.android.gms.ads.zza
                     @Override // java.lang.Runnable
                     public final void run() {
-                        AdLoader.this.a(zzdxVar);
+                        AdLoader.this.m1467a(zzdxVar);
                     }
                 });
                 return;
             }
         }
         try {
-            this.c.zzg(this.a.zza(this.b, zzdxVar));
+            this.f36005c.zzg(this.f36003a.zza(this.f36004b, zzdxVar));
         } catch (RemoteException e) {
             k04.zzh("Failed to load ad.", e);
         }
@@ -183,7 +195,7 @@ public class AdLoader {
 
     public boolean isLoading() {
         try {
-            return this.c.zzi();
+            return this.f36005c.zzi();
         } catch (RemoteException e) {
             k04.zzk("Failed to check if ad is loading.", e);
             return false;
@@ -191,16 +203,16 @@ public class AdLoader {
     }
 
     public void loadAd(AdRequest adRequest) {
-        b(adRequest.zza());
+        m1466b(adRequest.zza());
     }
 
     public void loadAd(AdManagerAdRequest adManagerAdRequest) {
-        b(adManagerAdRequest.a);
+        m1466b(adManagerAdRequest.f36008a);
     }
 
     public void loadAds(AdRequest adRequest, int i) {
         try {
-            this.c.zzh(this.a.zza(this.b, adRequest.zza()), i);
+            this.f36005c.zzh(this.f36003a.zza(this.f36004b, adRequest.zza()), i);
         } catch (RemoteException e) {
             k04.zzh("Failed to load ads.", e);
         }

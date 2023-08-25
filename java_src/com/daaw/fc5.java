@@ -1,9 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class fc5 implements wz7 {
-    public static fc5 a() {
+    /* renamed from: a */
+    public static fc5 m22802a() {
         fc5 fc5Var;
-        fc5Var = ec5.a;
+        fc5Var = ec5.f8347a;
         return fc5Var;
     }
 

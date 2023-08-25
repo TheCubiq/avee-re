@@ -6,47 +6,54 @@ import com.google.android.gms.ads.internal.client.zzba;
 import java.util.concurrent.ExecutorService;
 /* loaded from: classes.dex */
 public final class g43 {
-    public gp2 a;
-    public boolean b;
-    public final ExecutorService c;
+
+    /* renamed from: a */
+    public gp2 f10254a;
+
+    /* renamed from: b */
+    public boolean f10255b;
+
+    /* renamed from: c */
+    public final ExecutorService f10256c;
 
     public g43() {
-        this.c = zz3.b;
+        this.f10256c = zz3.f35693b;
     }
 
     public g43(final Context context) {
-        ExecutorService executorService = zz3.b;
-        this.c = executorService;
-        g93.c(context);
-        if (((Boolean) zzba.zzc().b(g93.h9)).booleanValue()) {
+        ExecutorService executorService = zz3.f35693b;
+        this.f10256c = executorService;
+        g93.m21879c(context);
+        if (((Boolean) zzba.zzc().m23658b(g93.f10708h9)).booleanValue()) {
             executorService.execute(new Runnable() { // from class: com.daaw.y33
                 @Override // java.lang.Runnable
                 public final void run() {
-                    g43.this.b(context);
+                    g43.this.m21968b(context);
                 }
             });
         } else {
-            b(context);
+            m21968b(context);
         }
     }
 
-    public static /* bridge */ /* synthetic */ ExecutorService a(g43 g43Var) {
-        return g43Var.c;
+    /* renamed from: a */
+    public static /* bridge */ /* synthetic */ ExecutorService m21969a(g43 g43Var) {
+        return g43Var.f10256c;
     }
 
     /* renamed from: c */
-    public final void b(Context context) {
-        if (((Boolean) zzba.zzc().b(g93.s4)).booleanValue()) {
+    public final void m21968b(Context context) {
+        if (((Boolean) zzba.zzc().m23658b(g93.f10824s4)).booleanValue()) {
             try {
-                this.a = (gp2) o04.b(context, "com.google.android.gms.ads.clearcut.DynamiteClearcutLogger", new m04() { // from class: com.daaw.z33
+                this.f10254a = (gp2) o04.m14656b(context, "com.google.android.gms.ads.clearcut.DynamiteClearcutLogger", new m04() { // from class: com.daaw.z33
                     /* JADX WARN: Multi-variable type inference failed */
                     @Override // com.daaw.m04
                     public final Object zza(Object obj) {
-                        return fp2.g3(obj);
+                        return fp2.m22423g3(obj);
                     }
                 });
-                this.a.Y(nt0.g3(context), "GMA_SDK");
-                this.b = true;
+                this.f10254a.mo21361Y(nt0.m14830g3(context), "GMA_SDK");
+                this.f10255b = true;
             } catch (RemoteException | n04 | NullPointerException unused) {
                 k04.zze("Cannot dynamite load clearcut");
             }

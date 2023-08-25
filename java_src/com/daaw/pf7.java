@@ -1,7 +1,8 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class pf7 {
-    public static final dq7 a(String str) {
+    /* renamed from: a */
+    public static final dq7 m13405a(String str) {
         byte[] bArr = new byte[str.length()];
         for (int i = 0; i < str.length(); i++) {
             char charAt = str.charAt(i);
@@ -10,6 +11,6 @@ public final class pf7 {
             }
             bArr[i] = (byte) charAt;
         }
-        return dq7.b(bArr);
+        return dq7.m24078b(bArr);
     }
 }

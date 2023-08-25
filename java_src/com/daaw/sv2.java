@@ -7,327 +7,464 @@ import com.google.android.gms.internal.ads.zzatd;
 import java.io.IOException;
 /* loaded from: classes.dex */
 public final class sv2 implements wv2, os2, uy2, gw2 {
-    public vv2 D;
-    public us2 E;
-    public boolean F;
-    public boolean G;
-    public boolean H;
-    public boolean I;
-    public int J;
-    public rw2 K;
-    public long L;
-    public boolean[] M;
-    public boolean[] N;
-    public boolean O;
-    public long Q;
-    public int S;
-    public boolean T;
-    public boolean U;
-    public final nx2 V;
-    public final Uri p;
-    public final kx2 q;
-    public final int r;
-    public final Handler s;
-    public final tv2 t;
-    public final xv2 u;
-    public final long v;
-    public final qv2 x;
-    public final yy2 w = new yy2("Loader:ExtractorMediaPeriod");
-    public final cz2 y = new cz2();
-    public final Runnable z = new hv2(this);
-    public final Runnable A = new iv2(this);
-    public final Handler B = new Handler();
-    public long R = -9223372036854775807L;
-    public final SparseArray C = new SparseArray();
-    public long P = -1;
+
+    /* renamed from: D */
+    public vv2 f26670D;
+
+    /* renamed from: E */
+    public us2 f26671E;
+
+    /* renamed from: F */
+    public boolean f26672F;
+
+    /* renamed from: G */
+    public boolean f26673G;
+
+    /* renamed from: H */
+    public boolean f26674H;
+
+    /* renamed from: I */
+    public boolean f26675I;
+
+    /* renamed from: J */
+    public int f26676J;
+
+    /* renamed from: K */
+    public rw2 f26677K;
+
+    /* renamed from: L */
+    public long f26678L;
+
+    /* renamed from: M */
+    public boolean[] f26679M;
+
+    /* renamed from: N */
+    public boolean[] f26680N;
+
+    /* renamed from: O */
+    public boolean f26681O;
+
+    /* renamed from: Q */
+    public long f26683Q;
+
+    /* renamed from: S */
+    public int f26685S;
+
+    /* renamed from: T */
+    public boolean f26686T;
+
+    /* renamed from: U */
+    public boolean f26687U;
+
+    /* renamed from: V */
+    public final nx2 f26688V;
+
+    /* renamed from: p */
+    public final Uri f26689p;
+
+    /* renamed from: q */
+    public final kx2 f26690q;
+
+    /* renamed from: r */
+    public final int f26691r;
+
+    /* renamed from: s */
+    public final Handler f26692s;
+
+    /* renamed from: t */
+    public final tv2 f26693t;
+
+    /* renamed from: u */
+    public final xv2 f26694u;
+
+    /* renamed from: v */
+    public final long f26695v;
+
+    /* renamed from: x */
+    public final qv2 f26697x;
+
+    /* renamed from: w */
+    public final yy2 f26696w = new yy2("Loader:ExtractorMediaPeriod");
+
+    /* renamed from: y */
+    public final cz2 f26698y = new cz2();
+
+    /* renamed from: z */
+    public final Runnable f26699z = new hv2(this);
+
+    /* renamed from: A */
+    public final Runnable f26667A = new iv2(this);
+
+    /* renamed from: B */
+    public final Handler f26668B = new Handler();
+
+    /* renamed from: R */
+    public long f26684R = -9223372036854775807L;
+
+    /* renamed from: C */
+    public final SparseArray f26669C = new SparseArray();
+
+    /* renamed from: P */
+    public long f26682P = -1;
 
     public sv2(Uri uri, kx2 kx2Var, ns2[] ns2VarArr, int i, Handler handler, tv2 tv2Var, xv2 xv2Var, nx2 nx2Var, String str, int i2, byte[] bArr) {
-        this.p = uri;
-        this.q = kx2Var;
-        this.r = i;
-        this.s = handler;
-        this.t = tv2Var;
-        this.u = xv2Var;
-        this.V = nx2Var;
-        this.v = i2;
-        this.x = new qv2(ns2VarArr, this);
+        this.f26689p = uri;
+        this.f26690q = kx2Var;
+        this.f26691r = i;
+        this.f26692s = handler;
+        this.f26693t = tv2Var;
+        this.f26694u = xv2Var;
+        this.f26688V = nx2Var;
+        this.f26695v = i2;
+        this.f26697x = new qv2(ns2VarArr, this);
     }
 
-    public static /* bridge */ /* synthetic */ void y(sv2 sv2Var) {
-        if (sv2Var.U || sv2Var.G || sv2Var.E == null || !sv2Var.F) {
+    /* renamed from: y */
+    public static /* bridge */ /* synthetic */ void m9803y(sv2 sv2Var) {
+        if (sv2Var.f26687U || sv2Var.f26673G || sv2Var.f26671E == null || !sv2Var.f26672F) {
             return;
         }
-        int size = sv2Var.C.size();
+        int size = sv2Var.f26669C.size();
         for (int i = 0; i < size; i++) {
-            if (((hw2) sv2Var.C.valueAt(i)).h() == null) {
+            if (((hw2) sv2Var.f26669C.valueAt(i)).m20357h() == null) {
                 return;
             }
         }
-        sv2Var.y.b();
+        sv2Var.f26698y.m24859b();
         mw2[] mw2VarArr = new mw2[size];
-        sv2Var.N = new boolean[size];
-        sv2Var.M = new boolean[size];
-        sv2Var.L = sv2Var.E.zza();
+        sv2Var.f26680N = new boolean[size];
+        sv2Var.f26679M = new boolean[size];
+        sv2Var.f26678L = sv2Var.f26671E.zza();
         int i2 = 0;
         while (true) {
             boolean z = true;
             if (i2 >= size) {
-                sv2Var.K = new rw2(mw2VarArr);
-                sv2Var.G = true;
-                sv2Var.u.d(new lw2(sv2Var.L, sv2Var.E.zzc()), null);
-                sv2Var.D.h(sv2Var);
+                sv2Var.f26677K = new rw2(mw2VarArr);
+                sv2Var.f26673G = true;
+                sv2Var.f26694u.mo4485d(new lw2(sv2Var.f26678L, sv2Var.f26671E.zzc()), null);
+                sv2Var.f26670D.mo1842h(sv2Var);
                 return;
             }
-            zzatd h = ((hw2) sv2Var.C.valueAt(i2)).h();
-            mw2VarArr[i2] = new mw2(h);
-            String str = h.u;
-            if (!fz2.b(str) && !fz2.a(str)) {
+            zzatd m20357h = ((hw2) sv2Var.f26669C.valueAt(i2)).m20357h();
+            mw2VarArr[i2] = new mw2(m20357h);
+            String str = m20357h.f36794u;
+            if (!fz2.m22127b(str) && !fz2.m22128a(str)) {
                 z = false;
             }
-            sv2Var.N[i2] = z;
-            sv2Var.O = z | sv2Var.O;
+            sv2Var.f26680N[i2] = z;
+            sv2Var.f26681O = z | sv2Var.f26681O;
             i2++;
         }
     }
 
-    public final void A() {
-        this.w.h(new nv2(this, this.x));
-        this.B.removeCallbacksAndMessages(null);
-        this.U = true;
+    /* renamed from: A */
+    public final void m9822A() {
+        this.f26696w.m3069h(new nv2(this, this.f26697x));
+        this.f26668B.removeCallbacksAndMessages(null);
+        this.f26687U = true;
     }
 
-    public final void B(int i, long j) {
-        hw2 hw2Var = (hw2) this.C.valueAt(i);
-        if (!this.T || j <= hw2Var.g()) {
-            hw2Var.n(j, true);
+    /* renamed from: B */
+    public final void m9821B(int i, long j) {
+        hw2 hw2Var = (hw2) this.f26669C.valueAt(i);
+        if (!this.f26686T || j <= hw2Var.m20358g()) {
+            hw2Var.m20351n(j, true);
         } else {
-            hw2Var.l();
+            hw2Var.m20353l();
         }
     }
 
     @Override // com.daaw.wv2, com.daaw.kw2
-    public final boolean a(long j) {
-        if (this.T) {
+    /* renamed from: a */
+    public final boolean mo1848a(long j) {
+        if (this.f26686T) {
             return false;
         }
-        if (this.G && this.J == 0) {
+        if (this.f26673G && this.f26676J == 0) {
             return false;
         }
-        boolean c = this.y.c();
-        if (this.w.i()) {
-            return c;
+        boolean m24858c = this.f26698y.m24858c();
+        if (this.f26696w.m3068i()) {
+            return m24858c;
         }
-        p();
+        m9812p();
         return true;
     }
 
     @Override // com.daaw.os2
-    public final void b(us2 us2Var) {
-        this.E = us2Var;
-        this.B.post(this.z);
+    /* renamed from: b */
+    public final void mo9819b(us2 us2Var) {
+        this.f26671E = us2Var;
+        this.f26668B.post(this.f26699z);
     }
 
     @Override // com.daaw.wv2
-    public final void c(long j) {
+    /* renamed from: c */
+    public final void mo1846c(long j) {
     }
 
     @Override // com.daaw.gw2
-    public final void d(zzatd zzatdVar) {
-        this.B.post(this.z);
+    /* renamed from: d */
+    public final void mo9818d(zzatd zzatdVar) {
+        this.f26668B.post(this.f26699z);
     }
 
     @Override // com.daaw.wv2
-    public final long e(long j) {
-        if (true != this.E.zzc()) {
+    /* renamed from: e */
+    public final long mo1845e(long j) {
+        if (true != this.f26671E.zzc()) {
             j = 0;
         }
-        this.Q = j;
-        int size = this.C.size();
-        boolean q = true ^ q();
+        this.f26683Q = j;
+        int size = this.f26669C.size();
+        boolean m9811q = true ^ m9811q();
         int i = 0;
         while (true) {
-            if (!q) {
-                this.R = j;
-                this.T = false;
-                yy2 yy2Var = this.w;
-                if (yy2Var.i()) {
-                    yy2Var.f();
+            if (!m9811q) {
+                this.f26684R = j;
+                this.f26686T = false;
+                yy2 yy2Var = this.f26696w;
+                if (yy2Var.m3068i()) {
+                    yy2Var.m3071f();
                 } else {
                     for (int i2 = 0; i2 < size; i2++) {
-                        ((hw2) this.C.valueAt(i2)).j(this.M[i2]);
+                        ((hw2) this.f26669C.valueAt(i2)).m20355j(this.f26679M[i2]);
                     }
                 }
             } else if (i >= size) {
                 break;
             } else {
-                if (this.M[i]) {
-                    q = ((hw2) this.C.valueAt(i)).n(j, false);
+                if (this.f26679M[i]) {
+                    m9811q = ((hw2) this.f26669C.valueAt(i)).m20351n(j, false);
                 }
                 i++;
             }
         }
-        this.I = false;
+        this.f26675I = false;
         return j;
     }
 
     @Override // com.daaw.wv2
-    public final void f(vv2 vv2Var, long j) {
-        this.D = vv2Var;
-        this.y.c();
-        p();
+    /* renamed from: f */
+    public final void mo1844f(vv2 vv2Var, long j) {
+        this.f26670D = vv2Var;
+        this.f26698y.m24858c();
+        m9812p();
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:110:0x00bc, code lost:
         if (r1 != false) goto L55;
      */
     @Override // com.daaw.wv2
+    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final long g(com.daaw.vw2[] r7, boolean[] r8, com.daaw.iw2[] r9, boolean[] r10, long r11) {
-        /*
-            Method dump skipped, instructions count: 216
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.sv2.g(com.daaw.vw2[], boolean[], com.daaw.iw2[], boolean[], long):long");
+    public final long mo1843g(vw2[] vw2VarArr, boolean[] zArr, iw2[] iw2VarArr, boolean[] zArr2, long j) {
+        vw2 vw2Var;
+        int i;
+        az2.m26583e(this.f26673G);
+        for (int i2 = 0; i2 < vw2VarArr.length; i2++) {
+            iw2 iw2Var = iw2VarArr[i2];
+            if (iw2Var != null && (vw2VarArr[i2] == null || !zArr[i2])) {
+                i = ((rv2) iw2Var).f25648a;
+                az2.m26583e(this.f26679M[i]);
+                this.f26676J--;
+                this.f26679M[i] = false;
+                ((hw2) this.f26669C.valueAt(i)).m20356i();
+                iw2VarArr[i2] = null;
+            }
+        }
+        boolean z = false;
+        for (int i3 = 0; i3 < vw2VarArr.length; i3++) {
+            if (iw2VarArr[i3] == null && (vw2Var = vw2VarArr[i3]) != null) {
+                vw2Var.m6689b();
+                az2.m26583e(vw2Var.m6690a(0) == 0);
+                int m10859a = this.f26677K.m10859a(vw2Var.m6687d());
+                az2.m26583e(!this.f26679M[m10859a]);
+                this.f26676J++;
+                this.f26679M[m10859a] = true;
+                iw2VarArr[i3] = new rv2(this, m10859a);
+                zArr2[i3] = true;
+                z = true;
+            }
+        }
+        if (!this.f26674H) {
+            int size = this.f26669C.size();
+            for (int i4 = 0; i4 < size; i4++) {
+                if (!this.f26679M[i4]) {
+                    ((hw2) this.f26669C.valueAt(i4)).m20356i();
+                }
+            }
+        }
+        if (this.f26676J == 0) {
+            this.f26675I = false;
+            yy2 yy2Var = this.f26696w;
+            if (yy2Var.m3068i()) {
+                yy2Var.m3071f();
+            }
+        } else if (!this.f26674H) {
+            if (j == 0) {
+                j = 0;
+            }
+            j = mo1845e(j);
+            for (int i5 = 0; i5 < iw2VarArr.length; i5++) {
+                if (iw2VarArr[i5] != null) {
+                    zArr2[i5] = true;
+                }
+            }
+        }
+        this.f26674H = true;
+        return j;
     }
 
     @Override // com.daaw.os2
-    public final ws2 h(int i, int i2) {
-        hw2 hw2Var = (hw2) this.C.get(i);
+    /* renamed from: h */
+    public final ws2 mo9817h(int i, int i2) {
+        hw2 hw2Var = (hw2) this.f26669C.get(i);
         if (hw2Var == null) {
-            hw2 hw2Var2 = new hw2(this.V, null);
-            hw2Var2.k(this);
-            this.C.put(i, hw2Var2);
+            hw2 hw2Var2 = new hw2(this.f26688V, null);
+            hw2Var2.m20354k(this);
+            this.f26669C.put(i, hw2Var2);
             return hw2Var2;
         }
         return hw2Var;
     }
 
     @Override // com.daaw.uy2
-    public final /* bridge */ /* synthetic */ int i(wy2 wy2Var, long j, long j2, IOException iOException) {
+    /* renamed from: i */
+    public final /* bridge */ /* synthetic */ int mo7647i(wy2 wy2Var, long j, long j2, IOException iOException) {
         us2 us2Var;
         pv2 pv2Var = (pv2) wy2Var;
-        o(pv2Var);
-        Handler handler = this.s;
+        m9813o(pv2Var);
+        Handler handler = this.f26692s;
         if (handler != null) {
             handler.post(new ov2(this, iOException));
         }
         if (iOException instanceof sw2) {
             return 3;
         }
-        int m = m();
-        int i = this.S;
-        if (this.P == -1 && ((us2Var = this.E) == null || us2Var.zza() == -9223372036854775807L)) {
-            this.Q = 0L;
-            this.I = this.G;
-            int size = this.C.size();
+        int m9815m = m9815m();
+        int i = this.f26685S;
+        if (this.f26682P == -1 && ((us2Var = this.f26671E) == null || us2Var.zza() == -9223372036854775807L)) {
+            this.f26683Q = 0L;
+            this.f26675I = this.f26673G;
+            int size = this.f26669C.size();
             for (int i2 = 0; i2 < size; i2++) {
-                ((hw2) this.C.valueAt(i2)).j(!this.G || this.M[i2]);
+                ((hw2) this.f26669C.valueAt(i2)).m20355j(!this.f26673G || this.f26679M[i2]);
             }
-            pv2Var.b(0L, 0L);
+            pv2Var.m13018b(0L, 0L);
         }
-        this.S = m();
-        return m <= i ? 0 : 1;
+        this.f26685S = m9815m();
+        return m9815m <= i ? 0 : 1;
     }
 
     @Override // com.daaw.uy2
-    public final /* bridge */ /* synthetic */ void j(wy2 wy2Var, long j, long j2, boolean z) {
-        o((pv2) wy2Var);
-        if (z || this.J <= 0) {
+    /* renamed from: j */
+    public final /* bridge */ /* synthetic */ void mo7646j(wy2 wy2Var, long j, long j2, boolean z) {
+        m9813o((pv2) wy2Var);
+        if (z || this.f26676J <= 0) {
             return;
         }
-        int size = this.C.size();
+        int size = this.f26669C.size();
         for (int i = 0; i < size; i++) {
-            ((hw2) this.C.valueAt(i)).j(this.M[i]);
+            ((hw2) this.f26669C.valueAt(i)).m20355j(this.f26679M[i]);
         }
-        this.D.b(this);
+        this.f26670D.mo1847b(this);
     }
 
     @Override // com.daaw.uy2
-    public final /* bridge */ /* synthetic */ void k(wy2 wy2Var, long j, long j2) {
-        o((pv2) wy2Var);
-        this.T = true;
-        if (this.L == -9223372036854775807L) {
-            long n = n();
-            long j3 = n == Long.MIN_VALUE ? 0L : n + 10000;
-            this.L = j3;
-            this.u.d(new lw2(j3, this.E.zzc()), null);
+    /* renamed from: k */
+    public final /* bridge */ /* synthetic */ void mo7645k(wy2 wy2Var, long j, long j2) {
+        m9813o((pv2) wy2Var);
+        this.f26686T = true;
+        if (this.f26678L == -9223372036854775807L) {
+            long m9814n = m9814n();
+            long j3 = m9814n == Long.MIN_VALUE ? 0L : m9814n + 10000;
+            this.f26678L = j3;
+            this.f26694u.mo4485d(new lw2(j3, this.f26671E.zzc()), null);
         }
-        this.D.b(this);
+        this.f26670D.mo1847b(this);
     }
 
-    public final boolean l(int i) {
-        return this.T || (!q() && ((hw2) this.C.valueAt(i)).m());
+    /* renamed from: l */
+    public final boolean m9816l(int i) {
+        return this.f26686T || (!m9811q() && ((hw2) this.f26669C.valueAt(i)).m20352m());
     }
 
-    public final int m() {
-        int size = this.C.size();
+    /* renamed from: m */
+    public final int m9815m() {
+        int size = this.f26669C.size();
         int i = 0;
         for (int i2 = 0; i2 < size; i2++) {
-            i += ((hw2) this.C.valueAt(i2)).e();
+            i += ((hw2) this.f26669C.valueAt(i2)).m20360e();
         }
         return i;
     }
 
-    public final long n() {
-        int size = this.C.size();
+    /* renamed from: n */
+    public final long m9814n() {
+        int size = this.f26669C.size();
         long j = Long.MIN_VALUE;
         for (int i = 0; i < size; i++) {
-            j = Math.max(j, ((hw2) this.C.valueAt(i)).g());
+            j = Math.max(j, ((hw2) this.f26669C.valueAt(i)).m20358g());
         }
         return j;
     }
 
-    public final void o(pv2 pv2Var) {
+    /* renamed from: o */
+    public final void m9813o(pv2 pv2Var) {
         long j;
-        if (this.P == -1) {
-            j = pv2Var.i;
-            this.P = j;
+        if (this.f26682P == -1) {
+            j = pv2Var.f23409i;
+            this.f26682P = j;
         }
     }
 
-    public final void p() {
+    /* renamed from: p */
+    public final void m9812p() {
         us2 us2Var;
-        pv2 pv2Var = new pv2(this, this.p, this.q, this.x, this.y);
-        if (this.G) {
-            az2.e(q());
-            long j = this.L;
-            if (j != -9223372036854775807L && this.R >= j) {
-                this.T = true;
-                this.R = -9223372036854775807L;
+        pv2 pv2Var = new pv2(this, this.f26689p, this.f26690q, this.f26697x, this.f26698y);
+        if (this.f26673G) {
+            az2.m26583e(m9811q());
+            long j = this.f26678L;
+            if (j != -9223372036854775807L && this.f26684R >= j) {
+                this.f26686T = true;
+                this.f26684R = -9223372036854775807L;
                 return;
             }
-            pv2Var.b(this.E.a(this.R), this.R);
-            this.R = -9223372036854775807L;
+            pv2Var.m13018b(this.f26671E.mo7742a(this.f26684R), this.f26684R);
+            this.f26684R = -9223372036854775807L;
         }
-        this.S = m();
-        int i = this.r;
+        this.f26685S = m9815m();
+        int i = this.f26691r;
         if (i == -1) {
-            i = (this.G && this.P == -1 && ((us2Var = this.E) == null || us2Var.zza() == -9223372036854775807L)) ? 6 : 3;
+            i = (this.f26673G && this.f26682P == -1 && ((us2Var = this.f26671E) == null || us2Var.zza() == -9223372036854775807L)) ? 6 : 3;
         }
-        this.w.a(pv2Var, this, i);
+        this.f26696w.m3076a(pv2Var, this, i);
     }
 
-    public final boolean q() {
-        return this.R != -9223372036854775807L;
+    /* renamed from: q */
+    public final boolean m9811q() {
+        return this.f26684R != -9223372036854775807L;
     }
 
-    public final int r(int i, cq2 cq2Var, bs2 bs2Var, boolean z) {
-        if (this.I || q()) {
+    /* renamed from: r */
+    public final int m9810r(int i, cq2 cq2Var, bs2 bs2Var, boolean z) {
+        if (this.f26675I || m9811q()) {
             return -3;
         }
-        return ((hw2) this.C.valueAt(i)).f(cq2Var, bs2Var, z, this.T, this.Q);
+        return ((hw2) this.f26669C.valueAt(i)).m20359f(cq2Var, bs2Var, z, this.f26686T, this.f26683Q);
     }
 
-    public final void z() {
-        this.w.g(Integer.MIN_VALUE);
+    /* renamed from: z */
+    public final void m9802z() {
+        this.f26696w.m3070g(Integer.MIN_VALUE);
     }
 
     @Override // com.daaw.wv2, com.daaw.kw2
     public final long zza() {
-        if (this.J == 0) {
+        if (this.f26676J == 0) {
             return Long.MIN_VALUE;
         }
         return zzg();
@@ -335,49 +472,49 @@ public final class sv2 implements wv2, os2, uy2, gw2 {
 
     @Override // com.daaw.os2
     public final void zzb() {
-        this.F = true;
-        this.B.post(this.z);
+        this.f26672F = true;
+        this.f26668B.post(this.f26699z);
     }
 
     @Override // com.daaw.wv2
     public final long zzg() {
-        long n;
-        if (this.T) {
+        long m9814n;
+        if (this.f26686T) {
             return Long.MIN_VALUE;
         }
-        if (q()) {
-            return this.R;
+        if (m9811q()) {
+            return this.f26684R;
         }
-        if (this.O) {
-            int size = this.C.size();
-            n = Long.MAX_VALUE;
+        if (this.f26681O) {
+            int size = this.f26669C.size();
+            m9814n = Long.MAX_VALUE;
             for (int i = 0; i < size; i++) {
-                if (this.N[i]) {
-                    n = Math.min(n, ((hw2) this.C.valueAt(i)).g());
+                if (this.f26680N[i]) {
+                    m9814n = Math.min(m9814n, ((hw2) this.f26669C.valueAt(i)).m20358g());
                 }
             }
         } else {
-            n = n();
+            m9814n = m9814n();
         }
-        return n == Long.MIN_VALUE ? this.Q : n;
+        return m9814n == Long.MIN_VALUE ? this.f26683Q : m9814n;
     }
 
     @Override // com.daaw.wv2
     public final long zzh() {
-        if (this.I) {
-            this.I = false;
-            return this.Q;
+        if (this.f26675I) {
+            this.f26675I = false;
+            return this.f26683Q;
         }
         return -9223372036854775807L;
     }
 
     @Override // com.daaw.wv2
     public final rw2 zzn() {
-        return this.K;
+        return this.f26677K;
     }
 
     @Override // com.daaw.wv2
     public final void zzs() {
-        this.w.g(Integer.MIN_VALUE);
+        this.f26696w.m3070g(Integer.MIN_VALUE);
     }
 }

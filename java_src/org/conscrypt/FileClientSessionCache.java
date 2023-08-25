@@ -16,7 +16,7 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.net.ssl.SSLSession;
-import org.conscrypt.io.IoUtils;
+import org.conscrypt.p005io.IoUtils;
 /* loaded from: classes2.dex */
 public final class FileClientSessionCache {
     public static final int MAX_SIZE = 12;

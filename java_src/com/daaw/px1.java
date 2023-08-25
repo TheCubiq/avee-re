@@ -11,30 +11,43 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public class px1 {
-    public static final px1 b;
-    public final l a;
+
+    /* renamed from: b */
+    public static final px1 f23475b;
+
+    /* renamed from: a */
+    public final C2662l f23476a;
 
     @SuppressLint({"SoonBlockedPrivateApi"})
+    /* renamed from: com.daaw.px1$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static Field a;
-        public static Field b;
-        public static Field c;
-        public static boolean d;
+    public static class C2651a {
+
+        /* renamed from: a */
+        public static Field f23477a;
+
+        /* renamed from: b */
+        public static Field f23478b;
+
+        /* renamed from: c */
+        public static Field f23479c;
+
+        /* renamed from: d */
+        public static boolean f23480d;
 
         static {
             try {
                 Field declaredField = View.class.getDeclaredField("mAttachInfo");
-                a = declaredField;
+                f23477a = declaredField;
                 declaredField.setAccessible(true);
                 Class<?> cls = Class.forName("android.view.View$AttachInfo");
                 Field declaredField2 = cls.getDeclaredField("mStableInsets");
-                b = declaredField2;
+                f23478b = declaredField2;
                 declaredField2.setAccessible(true);
                 Field declaredField3 = cls.getDeclaredField("mContentInsets");
-                c = declaredField3;
+                f23479c = declaredField3;
                 declaredField3.setAccessible(true);
-                d = true;
+                f23480d = true;
             } catch (ReflectiveOperationException e) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Failed to get visible insets from AttachInfo ");
@@ -42,18 +55,19 @@ public class px1 {
             }
         }
 
-        public static px1 a(View view) {
-            if (d && view.isAttachedToWindow()) {
+        /* renamed from: a */
+        public static px1 m12936a(View view) {
+            if (f23480d && view.isAttachedToWindow()) {
                 try {
-                    Object obj = a.get(view.getRootView());
+                    Object obj = f23477a.get(view.getRootView());
                     if (obj != null) {
-                        Rect rect = (Rect) b.get(obj);
-                        Rect rect2 = (Rect) c.get(obj);
+                        Rect rect = (Rect) f23478b.get(obj);
+                        Rect rect2 = (Rect) f23479c.get(obj);
                         if (rect != null && rect2 != null) {
-                            px1 a2 = new b().b(gg0.c(rect)).c(gg0.c(rect2)).a();
-                            a2.t(a2);
-                            a2.d(view.getRootView());
-                            return a2;
+                            px1 m12935a = new C2652b().m12934b(gg0.m21659c(rect)).m12933c(gg0.m21659c(rect2)).m12935a();
+                            m12935a.m12941t(m12935a);
+                            m12935a.m12957d(view.getRootView());
+                            return m12935a;
                         }
                     }
                 } catch (IllegalAccessException e) {
@@ -66,64 +80,84 @@ public class px1 {
         }
     }
 
+    /* renamed from: com.daaw.px1$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public final f a;
+    public static final class C2652b {
 
-        public b() {
+        /* renamed from: a */
+        public final C2656f f23481a;
+
+        public C2652b() {
             int i = Build.VERSION.SDK_INT;
-            this.a = i >= 30 ? new e() : i >= 29 ? new d() : i >= 20 ? new c() : new f();
+            this.f23481a = i >= 30 ? new C2655e() : i >= 29 ? new C2654d() : i >= 20 ? new C2653c() : new C2656f();
         }
 
-        public b(px1 px1Var) {
+        public C2652b(px1 px1Var) {
             int i = Build.VERSION.SDK_INT;
-            this.a = i >= 30 ? new e(px1Var) : i >= 29 ? new d(px1Var) : i >= 20 ? new c(px1Var) : new f(px1Var);
+            this.f23481a = i >= 30 ? new C2655e(px1Var) : i >= 29 ? new C2654d(px1Var) : i >= 20 ? new C2653c(px1Var) : new C2656f(px1Var);
         }
 
-        public px1 a() {
-            return this.a.b();
+        /* renamed from: a */
+        public px1 m12935a() {
+            return this.f23481a.mo12930b();
         }
 
         @Deprecated
-        public b b(gg0 gg0Var) {
-            this.a.d(gg0Var);
+        /* renamed from: b */
+        public C2652b m12934b(gg0 gg0Var) {
+            this.f23481a.mo12928d(gg0Var);
             return this;
         }
 
         @Deprecated
-        public b c(gg0 gg0Var) {
-            this.a.f(gg0Var);
+        /* renamed from: c */
+        public C2652b m12933c(gg0 gg0Var) {
+            this.f23481a.mo12926f(gg0Var);
             return this;
         }
     }
 
+    /* renamed from: com.daaw.px1$c */
     /* loaded from: classes.dex */
-    public static class c extends f {
-        public static Field e;
-        public static boolean f;
-        public static Constructor<WindowInsets> g;
-        public static boolean h;
-        public WindowInsets c;
-        public gg0 d;
+    public static class C2653c extends C2656f {
 
-        public c() {
-            this.c = h();
+        /* renamed from: e */
+        public static Field f23482e;
+
+        /* renamed from: f */
+        public static boolean f23483f;
+
+        /* renamed from: g */
+        public static Constructor<WindowInsets> f23484g;
+
+        /* renamed from: h */
+        public static boolean f23485h;
+
+        /* renamed from: c */
+        public WindowInsets f23486c;
+
+        /* renamed from: d */
+        public gg0 f23487d;
+
+        public C2653c() {
+            this.f23486c = m12932h();
         }
 
-        public c(px1 px1Var) {
+        public C2653c(px1 px1Var) {
             super(px1Var);
-            this.c = px1Var.v();
+            this.f23486c = px1Var.m12939v();
         }
 
-        private static WindowInsets h() {
-            if (!f) {
+        /* renamed from: h */
+        private static WindowInsets m12932h() {
+            if (!f23483f) {
                 try {
-                    e = WindowInsets.class.getDeclaredField("CONSUMED");
+                    f23482e = WindowInsets.class.getDeclaredField("CONSUMED");
                 } catch (ReflectiveOperationException unused) {
                 }
-                f = true;
+                f23483f = true;
             }
-            Field field = e;
+            Field field = f23482e;
             if (field != null) {
                 try {
                     WindowInsets windowInsets = (WindowInsets) field.get(null);
@@ -133,14 +167,14 @@ public class px1 {
                 } catch (ReflectiveOperationException unused2) {
                 }
             }
-            if (!h) {
+            if (!f23485h) {
                 try {
-                    g = WindowInsets.class.getConstructor(Rect.class);
+                    f23484g = WindowInsets.class.getConstructor(Rect.class);
                 } catch (ReflectiveOperationException unused3) {
                 }
-                h = true;
+                f23485h = true;
             }
-            Constructor<WindowInsets> constructor = g;
+            Constructor<WindowInsets> constructor = f23484g;
             if (constructor != null) {
                 try {
                     return constructor.newInstance(new Rect());
@@ -150,202 +184,251 @@ public class px1 {
             return null;
         }
 
-        @Override // com.daaw.px1.f
-        public px1 b() {
-            a();
-            px1 w = px1.w(this.c);
-            w.r(this.b);
-            w.u(this.d);
-            return w;
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: b */
+        public px1 mo12930b() {
+            m12931a();
+            px1 m12938w = px1.m12938w(this.f23486c);
+            m12938w.m12943r(this.f23490b);
+            m12938w.m12940u(this.f23487d);
+            return m12938w;
         }
 
-        @Override // com.daaw.px1.f
-        public void d(gg0 gg0Var) {
-            this.d = gg0Var;
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: d */
+        public void mo12928d(gg0 gg0Var) {
+            this.f23487d = gg0Var;
         }
 
-        @Override // com.daaw.px1.f
-        public void f(gg0 gg0Var) {
-            WindowInsets windowInsets = this.c;
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: f */
+        public void mo12926f(gg0 gg0Var) {
+            WindowInsets windowInsets = this.f23486c;
             if (windowInsets != null) {
-                this.c = windowInsets.replaceSystemWindowInsets(gg0Var.a, gg0Var.b, gg0Var.c, gg0Var.d);
+                this.f23486c = windowInsets.replaceSystemWindowInsets(gg0Var.f11215a, gg0Var.f11216b, gg0Var.f11217c, gg0Var.f11218d);
             }
         }
     }
 
+    /* renamed from: com.daaw.px1$d */
     /* loaded from: classes.dex */
-    public static class d extends f {
-        public final WindowInsets.Builder c;
+    public static class C2654d extends C2656f {
 
-        public d() {
-            this.c = new WindowInsets.Builder();
+        /* renamed from: c */
+        public final WindowInsets.Builder f23488c;
+
+        public C2654d() {
+            this.f23488c = new WindowInsets.Builder();
         }
 
-        public d(px1 px1Var) {
+        public C2654d(px1 px1Var) {
             super(px1Var);
-            WindowInsets v = px1Var.v();
-            this.c = v != null ? new WindowInsets.Builder(v) : new WindowInsets.Builder();
+            WindowInsets m12939v = px1Var.m12939v();
+            this.f23488c = m12939v != null ? new WindowInsets.Builder(m12939v) : new WindowInsets.Builder();
         }
 
-        @Override // com.daaw.px1.f
-        public px1 b() {
-            a();
-            px1 w = px1.w(this.c.build());
-            w.r(this.b);
-            return w;
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: b */
+        public px1 mo12930b() {
+            m12931a();
+            px1 m12938w = px1.m12938w(this.f23488c.build());
+            m12938w.m12943r(this.f23490b);
+            return m12938w;
         }
 
-        @Override // com.daaw.px1.f
-        public void c(gg0 gg0Var) {
-            this.c.setMandatorySystemGestureInsets(gg0Var.e());
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: c */
+        public void mo12929c(gg0 gg0Var) {
+            this.f23488c.setMandatorySystemGestureInsets(gg0Var.m21657e());
         }
 
-        @Override // com.daaw.px1.f
-        public void d(gg0 gg0Var) {
-            this.c.setStableInsets(gg0Var.e());
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: d */
+        public void mo12928d(gg0 gg0Var) {
+            this.f23488c.setStableInsets(gg0Var.m21657e());
         }
 
-        @Override // com.daaw.px1.f
-        public void e(gg0 gg0Var) {
-            this.c.setSystemGestureInsets(gg0Var.e());
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: e */
+        public void mo12927e(gg0 gg0Var) {
+            this.f23488c.setSystemGestureInsets(gg0Var.m21657e());
         }
 
-        @Override // com.daaw.px1.f
-        public void f(gg0 gg0Var) {
-            this.c.setSystemWindowInsets(gg0Var.e());
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: f */
+        public void mo12926f(gg0 gg0Var) {
+            this.f23488c.setSystemWindowInsets(gg0Var.m21657e());
         }
 
-        @Override // com.daaw.px1.f
-        public void g(gg0 gg0Var) {
-            this.c.setTappableElementInsets(gg0Var.e());
+        @Override // com.daaw.px1.C2656f
+        /* renamed from: g */
+        public void mo12925g(gg0 gg0Var) {
+            this.f23488c.setTappableElementInsets(gg0Var.m21657e());
         }
     }
 
+    /* renamed from: com.daaw.px1$e */
     /* loaded from: classes.dex */
-    public static class e extends d {
-        public e() {
+    public static class C2655e extends C2654d {
+        public C2655e() {
         }
 
-        public e(px1 px1Var) {
+        public C2655e(px1 px1Var) {
             super(px1Var);
         }
     }
 
+    /* renamed from: com.daaw.px1$f */
     /* loaded from: classes.dex */
-    public static class f {
-        public final px1 a;
-        public gg0[] b;
+    public static class C2656f {
 
-        public f() {
+        /* renamed from: a */
+        public final px1 f23489a;
+
+        /* renamed from: b */
+        public gg0[] f23490b;
+
+        public C2656f() {
             this(new px1((px1) null));
         }
 
-        public f(px1 px1Var) {
-            this.a = px1Var;
+        public C2656f(px1 px1Var) {
+            this.f23489a = px1Var;
         }
 
-        public final void a() {
-            gg0[] gg0VarArr = this.b;
+        /* renamed from: a */
+        public final void m12931a() {
+            gg0[] gg0VarArr = this.f23490b;
             if (gg0VarArr != null) {
-                gg0 gg0Var = gg0VarArr[m.a(1)];
-                gg0 gg0Var2 = this.b[m.a(2)];
+                gg0 gg0Var = gg0VarArr[C2663m.m12900a(1)];
+                gg0 gg0Var2 = this.f23490b[C2663m.m12900a(2)];
                 if (gg0Var2 == null) {
-                    gg0Var2 = this.a.f(2);
+                    gg0Var2 = this.f23489a.m12955f(2);
                 }
                 if (gg0Var == null) {
-                    gg0Var = this.a.f(1);
+                    gg0Var = this.f23489a.m12955f(1);
                 }
-                f(gg0.a(gg0Var, gg0Var2));
-                gg0 gg0Var3 = this.b[m.a(16)];
+                mo12926f(gg0.m21661a(gg0Var, gg0Var2));
+                gg0 gg0Var3 = this.f23490b[C2663m.m12900a(16)];
                 if (gg0Var3 != null) {
-                    e(gg0Var3);
+                    mo12927e(gg0Var3);
                 }
-                gg0 gg0Var4 = this.b[m.a(32)];
+                gg0 gg0Var4 = this.f23490b[C2663m.m12900a(32)];
                 if (gg0Var4 != null) {
-                    c(gg0Var4);
+                    mo12929c(gg0Var4);
                 }
-                gg0 gg0Var5 = this.b[m.a(64)];
+                gg0 gg0Var5 = this.f23490b[C2663m.m12900a(64)];
                 if (gg0Var5 != null) {
-                    g(gg0Var5);
+                    mo12925g(gg0Var5);
                 }
             }
         }
 
-        public px1 b() {
-            a();
-            return this.a;
+        /* renamed from: b */
+        public px1 mo12930b() {
+            m12931a();
+            return this.f23489a;
         }
 
-        public void c(gg0 gg0Var) {
+        /* renamed from: c */
+        public void mo12929c(gg0 gg0Var) {
         }
 
-        public void d(gg0 gg0Var) {
+        /* renamed from: d */
+        public void mo12928d(gg0 gg0Var) {
         }
 
-        public void e(gg0 gg0Var) {
+        /* renamed from: e */
+        public void mo12927e(gg0 gg0Var) {
         }
 
-        public void f(gg0 gg0Var) {
+        /* renamed from: f */
+        public void mo12926f(gg0 gg0Var) {
         }
 
-        public void g(gg0 gg0Var) {
+        /* renamed from: g */
+        public void mo12925g(gg0 gg0Var) {
         }
     }
 
+    /* renamed from: com.daaw.px1$g */
     /* loaded from: classes.dex */
-    public static class g extends l {
-        public static boolean h;
-        public static Method i;
-        public static Class<?> j;
-        public static Field k;
-        public static Field l;
-        public final WindowInsets c;
-        public gg0[] d;
-        public gg0 e;
-        public px1 f;
-        public gg0 g;
+    public static class C2657g extends C2662l {
 
-        public g(px1 px1Var, WindowInsets windowInsets) {
+        /* renamed from: h */
+        public static boolean f23491h;
+
+        /* renamed from: i */
+        public static Method f23492i;
+
+        /* renamed from: j */
+        public static Class<?> f23493j;
+
+        /* renamed from: k */
+        public static Field f23494k;
+
+        /* renamed from: l */
+        public static Field f23495l;
+
+        /* renamed from: c */
+        public final WindowInsets f23496c;
+
+        /* renamed from: d */
+        public gg0[] f23497d;
+
+        /* renamed from: e */
+        public gg0 f23498e;
+
+        /* renamed from: f */
+        public px1 f23499f;
+
+        /* renamed from: g */
+        public gg0 f23500g;
+
+        public C2657g(px1 px1Var, WindowInsets windowInsets) {
             super(px1Var);
-            this.e = null;
-            this.c = windowInsets;
+            this.f23498e = null;
+            this.f23496c = windowInsets;
         }
 
-        public g(px1 px1Var, g gVar) {
-            this(px1Var, new WindowInsets(gVar.c));
+        public C2657g(px1 px1Var, C2657g c2657g) {
+            this(px1Var, new WindowInsets(c2657g.f23496c));
         }
 
         @SuppressLint({"WrongConstant"})
-        private gg0 t(int i2, boolean z) {
-            gg0 gg0Var = gg0.e;
-            for (int i3 = 1; i3 <= 256; i3 <<= 1) {
-                if ((i2 & i3) != 0) {
-                    gg0Var = gg0.a(gg0Var, u(i3, z));
+        /* renamed from: t */
+        private gg0 m12924t(int i, boolean z) {
+            gg0 gg0Var = gg0.f11214e;
+            for (int i2 = 1; i2 <= 256; i2 <<= 1) {
+                if ((i & i2) != 0) {
+                    gg0Var = gg0.m21661a(gg0Var, m12923u(i2, z));
                 }
             }
             return gg0Var;
         }
 
-        private gg0 v() {
-            px1 px1Var = this.f;
-            return px1Var != null ? px1Var.h() : gg0.e;
+        /* renamed from: v */
+        private gg0 m12922v() {
+            px1 px1Var = this.f23499f;
+            return px1Var != null ? px1Var.m12953h() : gg0.f11214e;
         }
 
-        private gg0 w(View view) {
+        /* renamed from: w */
+        private gg0 m12921w(View view) {
             if (Build.VERSION.SDK_INT < 30) {
-                if (!h) {
-                    x();
+                if (!f23491h) {
+                    m12920x();
                 }
-                Method method = i;
-                if (method != null && j != null && k != null) {
+                Method method = f23492i;
+                if (method != null && f23493j != null && f23494k != null) {
                     try {
                         Object invoke = method.invoke(view, new Object[0]);
                         if (invoke == null) {
                             return null;
                         }
-                        Rect rect = (Rect) k.get(l.get(invoke));
+                        Rect rect = (Rect) f23494k.get(f23495l.get(invoke));
                         if (rect != null) {
-                            return gg0.c(rect);
+                            return gg0.m21659c(rect);
                         }
                         return null;
                     } catch (ReflectiveOperationException e) {
@@ -360,397 +443,462 @@ public class px1 {
         }
 
         @SuppressLint({"PrivateApi"})
-        private static void x() {
+        /* renamed from: x */
+        private static void m12920x() {
             try {
-                i = View.class.getDeclaredMethod("getViewRootImpl", new Class[0]);
+                f23492i = View.class.getDeclaredMethod("getViewRootImpl", new Class[0]);
                 Class<?> cls = Class.forName("android.view.View$AttachInfo");
-                j = cls;
-                k = cls.getDeclaredField("mVisibleInsets");
-                l = Class.forName("android.view.ViewRootImpl").getDeclaredField("mAttachInfo");
-                k.setAccessible(true);
-                l.setAccessible(true);
+                f23493j = cls;
+                f23494k = cls.getDeclaredField("mVisibleInsets");
+                f23495l = Class.forName("android.view.ViewRootImpl").getDeclaredField("mAttachInfo");
+                f23494k.setAccessible(true);
+                f23495l.setAccessible(true);
             } catch (ReflectiveOperationException e) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("Failed to get visible insets. (Reflection error). ");
                 sb.append(e.getMessage());
             }
-            h = true;
+            f23491h = true;
         }
 
-        @Override // com.daaw.px1.l
-        public void d(View view) {
-            gg0 w = w(view);
-            if (w == null) {
-                w = gg0.e;
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: d */
+        public void mo12916d(View view) {
+            gg0 m12921w = m12921w(view);
+            if (m12921w == null) {
+                m12921w = gg0.f11214e;
             }
-            q(w);
+            mo12903q(m12921w);
         }
 
-        @Override // com.daaw.px1.l
-        public void e(px1 px1Var) {
-            px1Var.t(this.f);
-            px1Var.s(this.g);
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: e */
+        public void mo12915e(px1 px1Var) {
+            px1Var.m12941t(this.f23499f);
+            px1Var.m12942s(this.f23500g);
         }
 
-        @Override // com.daaw.px1.l
+        @Override // com.daaw.px1.C2662l
         public boolean equals(Object obj) {
             if (super.equals(obj)) {
-                return Objects.equals(this.g, ((g) obj).g);
+                return Objects.equals(this.f23500g, ((C2657g) obj).f23500g);
             }
             return false;
         }
 
-        @Override // com.daaw.px1.l
-        public gg0 g(int i2) {
-            return t(i2, false);
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: g */
+        public gg0 mo12913g(int i) {
+            return m12924t(i, false);
         }
 
-        @Override // com.daaw.px1.l
-        public final gg0 k() {
-            if (this.e == null) {
-                this.e = gg0.b(this.c.getSystemWindowInsetLeft(), this.c.getSystemWindowInsetTop(), this.c.getSystemWindowInsetRight(), this.c.getSystemWindowInsetBottom());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: k */
+        public final gg0 mo12909k() {
+            if (this.f23498e == null) {
+                this.f23498e = gg0.m21660b(this.f23496c.getSystemWindowInsetLeft(), this.f23496c.getSystemWindowInsetTop(), this.f23496c.getSystemWindowInsetRight(), this.f23496c.getSystemWindowInsetBottom());
             }
-            return this.e;
+            return this.f23498e;
         }
 
-        @Override // com.daaw.px1.l
-        public px1 m(int i2, int i3, int i4, int i5) {
-            b bVar = new b(px1.w(this.c));
-            bVar.c(px1.o(k(), i2, i3, i4, i5));
-            bVar.b(px1.o(i(), i2, i3, i4, i5));
-            return bVar.a();
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: m */
+        public px1 mo12907m(int i, int i2, int i3, int i4) {
+            C2652b c2652b = new C2652b(px1.m12938w(this.f23496c));
+            c2652b.m12933c(px1.m12946o(mo12909k(), i, i2, i3, i4));
+            c2652b.m12934b(px1.m12946o(mo12911i(), i, i2, i3, i4));
+            return c2652b.m12935a();
         }
 
-        @Override // com.daaw.px1.l
-        public boolean o() {
-            return this.c.isRound();
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: o */
+        public boolean mo12905o() {
+            return this.f23496c.isRound();
         }
 
-        @Override // com.daaw.px1.l
-        public void p(gg0[] gg0VarArr) {
-            this.d = gg0VarArr;
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: p */
+        public void mo12904p(gg0[] gg0VarArr) {
+            this.f23497d = gg0VarArr;
         }
 
-        @Override // com.daaw.px1.l
-        public void q(gg0 gg0Var) {
-            this.g = gg0Var;
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: q */
+        public void mo12903q(gg0 gg0Var) {
+            this.f23500g = gg0Var;
         }
 
-        @Override // com.daaw.px1.l
-        public void r(px1 px1Var) {
-            this.f = px1Var;
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: r */
+        public void mo12902r(px1 px1Var) {
+            this.f23499f = px1Var;
         }
 
-        public gg0 u(int i2, boolean z) {
-            gg0 h2;
-            int i3;
-            if (i2 == 1) {
-                return z ? gg0.b(0, Math.max(v().b, k().b), 0, 0) : gg0.b(0, k().b, 0, 0);
+        /* renamed from: u */
+        public gg0 m12923u(int i, boolean z) {
+            gg0 m12953h;
+            int i2;
+            if (i == 1) {
+                return z ? gg0.m21660b(0, Math.max(m12922v().f11216b, mo12909k().f11216b), 0, 0) : gg0.m21660b(0, mo12909k().f11216b, 0, 0);
             }
-            if (i2 == 2) {
+            if (i == 2) {
                 if (z) {
-                    gg0 v = v();
-                    gg0 i4 = i();
-                    return gg0.b(Math.max(v.a, i4.a), 0, Math.max(v.c, i4.c), Math.max(v.d, i4.d));
+                    gg0 m12922v = m12922v();
+                    gg0 mo12911i = mo12911i();
+                    return gg0.m21660b(Math.max(m12922v.f11215a, mo12911i.f11215a), 0, Math.max(m12922v.f11217c, mo12911i.f11217c), Math.max(m12922v.f11218d, mo12911i.f11218d));
                 }
-                gg0 k2 = k();
-                px1 px1Var = this.f;
-                h2 = px1Var != null ? px1Var.h() : null;
-                int i5 = k2.d;
-                if (h2 != null) {
-                    i5 = Math.min(i5, h2.d);
+                gg0 mo12909k = mo12909k();
+                px1 px1Var = this.f23499f;
+                m12953h = px1Var != null ? px1Var.m12953h() : null;
+                int i3 = mo12909k.f11218d;
+                if (m12953h != null) {
+                    i3 = Math.min(i3, m12953h.f11218d);
                 }
-                return gg0.b(k2.a, 0, k2.c, i5);
-            } else if (i2 != 8) {
-                if (i2 != 16) {
-                    if (i2 != 32) {
-                        if (i2 != 64) {
-                            if (i2 != 128) {
-                                return gg0.e;
+                return gg0.m21660b(mo12909k.f11215a, 0, mo12909k.f11217c, i3);
+            } else if (i != 8) {
+                if (i != 16) {
+                    if (i != 32) {
+                        if (i != 64) {
+                            if (i != 128) {
+                                return gg0.f11214e;
                             }
-                            px1 px1Var2 = this.f;
-                            hu e = px1Var2 != null ? px1Var2.e() : f();
-                            return e != null ? gg0.b(e.b(), e.d(), e.c(), e.a()) : gg0.e;
+                            px1 px1Var2 = this.f23499f;
+                            C1611hu m12956e = px1Var2 != null ? px1Var2.m12956e() : mo12914f();
+                            return m12956e != null ? gg0.m21660b(m12956e.m20428b(), m12956e.m20426d(), m12956e.m20427c(), m12956e.m20429a()) : gg0.f11214e;
                         }
-                        return l();
+                        return mo12908l();
                     }
-                    return h();
+                    return mo12912h();
                 }
-                return j();
+                return mo12910j();
             } else {
-                gg0[] gg0VarArr = this.d;
-                h2 = gg0VarArr != null ? gg0VarArr[m.a(8)] : null;
-                if (h2 != null) {
-                    return h2;
+                gg0[] gg0VarArr = this.f23497d;
+                m12953h = gg0VarArr != null ? gg0VarArr[C2663m.m12900a(8)] : null;
+                if (m12953h != null) {
+                    return m12953h;
                 }
-                gg0 k3 = k();
-                gg0 v2 = v();
-                int i6 = k3.d;
-                if (i6 > v2.d) {
-                    return gg0.b(0, 0, 0, i6);
+                gg0 mo12909k2 = mo12909k();
+                gg0 m12922v2 = m12922v();
+                int i4 = mo12909k2.f11218d;
+                if (i4 > m12922v2.f11218d) {
+                    return gg0.m21660b(0, 0, 0, i4);
                 }
-                gg0 gg0Var = this.g;
-                return (gg0Var == null || gg0Var.equals(gg0.e) || (i3 = this.g.d) <= v2.d) ? gg0.e : gg0.b(0, 0, 0, i3);
+                gg0 gg0Var = this.f23500g;
+                return (gg0Var == null || gg0Var.equals(gg0.f11214e) || (i2 = this.f23500g.f11218d) <= m12922v2.f11218d) ? gg0.f11214e : gg0.m21660b(0, 0, 0, i2);
             }
         }
     }
 
+    /* renamed from: com.daaw.px1$h */
     /* loaded from: classes.dex */
-    public static class h extends g {
-        public gg0 m;
+    public static class C2658h extends C2657g {
 
-        public h(px1 px1Var, WindowInsets windowInsets) {
+        /* renamed from: m */
+        public gg0 f23501m;
+
+        public C2658h(px1 px1Var, WindowInsets windowInsets) {
             super(px1Var, windowInsets);
-            this.m = null;
+            this.f23501m = null;
         }
 
-        public h(px1 px1Var, h hVar) {
-            super(px1Var, hVar);
-            this.m = null;
-            this.m = hVar.m;
+        public C2658h(px1 px1Var, C2658h c2658h) {
+            super(px1Var, c2658h);
+            this.f23501m = null;
+            this.f23501m = c2658h.f23501m;
         }
 
-        @Override // com.daaw.px1.l
-        public px1 b() {
-            return px1.w(this.c.consumeStableInsets());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: b */
+        public px1 mo12918b() {
+            return px1.m12938w(this.f23496c.consumeStableInsets());
         }
 
-        @Override // com.daaw.px1.l
-        public px1 c() {
-            return px1.w(this.c.consumeSystemWindowInsets());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: c */
+        public px1 mo12917c() {
+            return px1.m12938w(this.f23496c.consumeSystemWindowInsets());
         }
 
-        @Override // com.daaw.px1.l
-        public final gg0 i() {
-            if (this.m == null) {
-                this.m = gg0.b(this.c.getStableInsetLeft(), this.c.getStableInsetTop(), this.c.getStableInsetRight(), this.c.getStableInsetBottom());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: i */
+        public final gg0 mo12911i() {
+            if (this.f23501m == null) {
+                this.f23501m = gg0.m21660b(this.f23496c.getStableInsetLeft(), this.f23496c.getStableInsetTop(), this.f23496c.getStableInsetRight(), this.f23496c.getStableInsetBottom());
             }
-            return this.m;
+            return this.f23501m;
         }
 
-        @Override // com.daaw.px1.l
-        public boolean n() {
-            return this.c.isConsumed();
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: n */
+        public boolean mo12906n() {
+            return this.f23496c.isConsumed();
         }
 
-        @Override // com.daaw.px1.l
-        public void s(gg0 gg0Var) {
-            this.m = gg0Var;
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: s */
+        public void mo12901s(gg0 gg0Var) {
+            this.f23501m = gg0Var;
         }
     }
 
+    /* renamed from: com.daaw.px1$i */
     /* loaded from: classes.dex */
-    public static class i extends h {
-        public i(px1 px1Var, WindowInsets windowInsets) {
+    public static class C2659i extends C2658h {
+        public C2659i(px1 px1Var, WindowInsets windowInsets) {
             super(px1Var, windowInsets);
         }
 
-        public i(px1 px1Var, i iVar) {
-            super(px1Var, iVar);
+        public C2659i(px1 px1Var, C2659i c2659i) {
+            super(px1Var, c2659i);
         }
 
-        @Override // com.daaw.px1.l
-        public px1 a() {
-            return px1.w(this.c.consumeDisplayCutout());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: a */
+        public px1 mo12919a() {
+            return px1.m12938w(this.f23496c.consumeDisplayCutout());
         }
 
-        @Override // com.daaw.px1.g, com.daaw.px1.l
+        @Override // com.daaw.px1.C2657g, com.daaw.px1.C2662l
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof i) {
-                i iVar = (i) obj;
-                return Objects.equals(this.c, iVar.c) && Objects.equals(this.g, iVar.g);
+            if (obj instanceof C2659i) {
+                C2659i c2659i = (C2659i) obj;
+                return Objects.equals(this.f23496c, c2659i.f23496c) && Objects.equals(this.f23500g, c2659i.f23500g);
             }
             return false;
         }
 
-        @Override // com.daaw.px1.l
-        public hu f() {
-            return hu.e(this.c.getDisplayCutout());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: f */
+        public C1611hu mo12914f() {
+            return C1611hu.m20425e(this.f23496c.getDisplayCutout());
         }
 
-        @Override // com.daaw.px1.l
+        @Override // com.daaw.px1.C2662l
         public int hashCode() {
-            return this.c.hashCode();
+            return this.f23496c.hashCode();
         }
     }
 
+    /* renamed from: com.daaw.px1$j */
     /* loaded from: classes.dex */
-    public static class j extends i {
-        public gg0 n;
-        public gg0 o;
-        public gg0 p;
+    public static class C2660j extends C2659i {
 
-        public j(px1 px1Var, WindowInsets windowInsets) {
+        /* renamed from: n */
+        public gg0 f23502n;
+
+        /* renamed from: o */
+        public gg0 f23503o;
+
+        /* renamed from: p */
+        public gg0 f23504p;
+
+        public C2660j(px1 px1Var, WindowInsets windowInsets) {
             super(px1Var, windowInsets);
-            this.n = null;
-            this.o = null;
-            this.p = null;
+            this.f23502n = null;
+            this.f23503o = null;
+            this.f23504p = null;
         }
 
-        public j(px1 px1Var, j jVar) {
-            super(px1Var, jVar);
-            this.n = null;
-            this.o = null;
-            this.p = null;
+        public C2660j(px1 px1Var, C2660j c2660j) {
+            super(px1Var, c2660j);
+            this.f23502n = null;
+            this.f23503o = null;
+            this.f23504p = null;
         }
 
-        @Override // com.daaw.px1.l
-        public gg0 h() {
-            if (this.o == null) {
-                this.o = gg0.d(this.c.getMandatorySystemGestureInsets());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: h */
+        public gg0 mo12912h() {
+            if (this.f23503o == null) {
+                this.f23503o = gg0.m21658d(this.f23496c.getMandatorySystemGestureInsets());
             }
-            return this.o;
+            return this.f23503o;
         }
 
-        @Override // com.daaw.px1.l
-        public gg0 j() {
-            if (this.n == null) {
-                this.n = gg0.d(this.c.getSystemGestureInsets());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: j */
+        public gg0 mo12910j() {
+            if (this.f23502n == null) {
+                this.f23502n = gg0.m21658d(this.f23496c.getSystemGestureInsets());
             }
-            return this.n;
+            return this.f23502n;
         }
 
-        @Override // com.daaw.px1.l
-        public gg0 l() {
-            if (this.p == null) {
-                this.p = gg0.d(this.c.getTappableElementInsets());
+        @Override // com.daaw.px1.C2662l
+        /* renamed from: l */
+        public gg0 mo12908l() {
+            if (this.f23504p == null) {
+                this.f23504p = gg0.m21658d(this.f23496c.getTappableElementInsets());
             }
-            return this.p;
+            return this.f23504p;
         }
 
-        @Override // com.daaw.px1.g, com.daaw.px1.l
-        public px1 m(int i, int i2, int i3, int i4) {
-            return px1.w(this.c.inset(i, i2, i3, i4));
+        @Override // com.daaw.px1.C2657g, com.daaw.px1.C2662l
+        /* renamed from: m */
+        public px1 mo12907m(int i, int i2, int i3, int i4) {
+            return px1.m12938w(this.f23496c.inset(i, i2, i3, i4));
         }
 
-        @Override // com.daaw.px1.h, com.daaw.px1.l
-        public void s(gg0 gg0Var) {
+        @Override // com.daaw.px1.C2658h, com.daaw.px1.C2662l
+        /* renamed from: s */
+        public void mo12901s(gg0 gg0Var) {
         }
     }
 
+    /* renamed from: com.daaw.px1$k */
     /* loaded from: classes.dex */
-    public static class k extends j {
-        public static final px1 q = px1.w(WindowInsets.CONSUMED);
+    public static class C2661k extends C2660j {
 
-        public k(px1 px1Var, WindowInsets windowInsets) {
+        /* renamed from: q */
+        public static final px1 f23505q = px1.m12938w(WindowInsets.CONSUMED);
+
+        public C2661k(px1 px1Var, WindowInsets windowInsets) {
             super(px1Var, windowInsets);
         }
 
-        public k(px1 px1Var, k kVar) {
-            super(px1Var, kVar);
+        public C2661k(px1 px1Var, C2661k c2661k) {
+            super(px1Var, c2661k);
         }
 
-        @Override // com.daaw.px1.g, com.daaw.px1.l
-        public final void d(View view) {
+        @Override // com.daaw.px1.C2657g, com.daaw.px1.C2662l
+        /* renamed from: d */
+        public final void mo12916d(View view) {
         }
 
-        @Override // com.daaw.px1.g, com.daaw.px1.l
-        public gg0 g(int i) {
-            return gg0.d(this.c.getInsets(n.a(i)));
+        @Override // com.daaw.px1.C2657g, com.daaw.px1.C2662l
+        /* renamed from: g */
+        public gg0 mo12913g(int i) {
+            return gg0.m21658d(this.f23496c.getInsets(C2664n.m12899a(i)));
         }
     }
 
+    /* renamed from: com.daaw.px1$l */
     /* loaded from: classes.dex */
-    public static class l {
-        public static final px1 b = new b().a().a().b().c();
-        public final px1 a;
+    public static class C2662l {
 
-        public l(px1 px1Var) {
-            this.a = px1Var;
+        /* renamed from: b */
+        public static final px1 f23506b = new C2652b().m12935a().m12960a().m12959b().m12958c();
+
+        /* renamed from: a */
+        public final px1 f23507a;
+
+        public C2662l(px1 px1Var) {
+            this.f23507a = px1Var;
         }
 
-        public px1 a() {
-            return this.a;
+        /* renamed from: a */
+        public px1 mo12919a() {
+            return this.f23507a;
         }
 
-        public px1 b() {
-            return this.a;
+        /* renamed from: b */
+        public px1 mo12918b() {
+            return this.f23507a;
         }
 
-        public px1 c() {
-            return this.a;
+        /* renamed from: c */
+        public px1 mo12917c() {
+            return this.f23507a;
         }
 
-        public void d(View view) {
+        /* renamed from: d */
+        public void mo12916d(View view) {
         }
 
-        public void e(px1 px1Var) {
+        /* renamed from: e */
+        public void mo12915e(px1 px1Var) {
         }
 
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof l) {
-                l lVar = (l) obj;
-                return o() == lVar.o() && n() == lVar.n() && pt0.a(k(), lVar.k()) && pt0.a(i(), lVar.i()) && pt0.a(f(), lVar.f());
+            if (obj instanceof C2662l) {
+                C2662l c2662l = (C2662l) obj;
+                return mo12905o() == c2662l.mo12905o() && mo12906n() == c2662l.mo12906n() && pt0.m13160a(mo12909k(), c2662l.mo12909k()) && pt0.m13160a(mo12911i(), c2662l.mo12911i()) && pt0.m13160a(mo12914f(), c2662l.mo12914f());
             }
             return false;
         }
 
-        public hu f() {
+        /* renamed from: f */
+        public C1611hu mo12914f() {
             return null;
         }
 
-        public gg0 g(int i) {
-            return gg0.e;
+        /* renamed from: g */
+        public gg0 mo12913g(int i) {
+            return gg0.f11214e;
         }
 
-        public gg0 h() {
-            return k();
+        /* renamed from: h */
+        public gg0 mo12912h() {
+            return mo12909k();
         }
 
         public int hashCode() {
-            return pt0.b(Boolean.valueOf(o()), Boolean.valueOf(n()), k(), i(), f());
+            return pt0.m13159b(Boolean.valueOf(mo12905o()), Boolean.valueOf(mo12906n()), mo12909k(), mo12911i(), mo12914f());
         }
 
-        public gg0 i() {
-            return gg0.e;
+        /* renamed from: i */
+        public gg0 mo12911i() {
+            return gg0.f11214e;
         }
 
-        public gg0 j() {
-            return k();
+        /* renamed from: j */
+        public gg0 mo12910j() {
+            return mo12909k();
         }
 
-        public gg0 k() {
-            return gg0.e;
+        /* renamed from: k */
+        public gg0 mo12909k() {
+            return gg0.f11214e;
         }
 
-        public gg0 l() {
-            return k();
+        /* renamed from: l */
+        public gg0 mo12908l() {
+            return mo12909k();
         }
 
-        public px1 m(int i, int i2, int i3, int i4) {
-            return b;
+        /* renamed from: m */
+        public px1 mo12907m(int i, int i2, int i3, int i4) {
+            return f23506b;
         }
 
-        public boolean n() {
+        /* renamed from: n */
+        public boolean mo12906n() {
             return false;
         }
 
-        public boolean o() {
+        /* renamed from: o */
+        public boolean mo12905o() {
             return false;
         }
 
-        public void p(gg0[] gg0VarArr) {
+        /* renamed from: p */
+        public void mo12904p(gg0[] gg0VarArr) {
         }
 
-        public void q(gg0 gg0Var) {
+        /* renamed from: q */
+        public void mo12903q(gg0 gg0Var) {
         }
 
-        public void r(px1 px1Var) {
+        /* renamed from: r */
+        public void mo12902r(px1 px1Var) {
         }
 
-        public void s(gg0 gg0Var) {
+        /* renamed from: s */
+        public void mo12901s(gg0 gg0Var) {
         }
     }
 
+    /* renamed from: com.daaw.px1$m */
     /* loaded from: classes.dex */
-    public static final class m {
-        public static int a(int i) {
+    public static final class C2663m {
+        /* renamed from: a */
+        public static int m12900a(int i) {
             if (i != 1) {
                 if (i != 2) {
                     if (i != 4) {
@@ -782,9 +930,11 @@ public class px1 {
         }
     }
 
+    /* renamed from: com.daaw.px1$n */
     /* loaded from: classes.dex */
-    public static final class n {
-        public static int a(int i) {
+    public static final class C2664n {
+        /* renamed from: a */
+        public static int m12899a(int i) {
             int statusBars;
             int i2 = 0;
             for (int i3 = 1; i3 <= 256; i3 <<= 1) {
@@ -814,82 +964,90 @@ public class px1 {
     }
 
     static {
-        b = Build.VERSION.SDK_INT >= 30 ? k.q : l.b;
+        f23475b = Build.VERSION.SDK_INT >= 30 ? C2661k.f23505q : C2662l.f23506b;
     }
 
     public px1(WindowInsets windowInsets) {
-        l gVar;
-        int i2 = Build.VERSION.SDK_INT;
-        if (i2 >= 30) {
-            gVar = new k(this, windowInsets);
-        } else if (i2 >= 29) {
-            gVar = new j(this, windowInsets);
-        } else if (i2 >= 28) {
-            gVar = new i(this, windowInsets);
-        } else if (i2 >= 21) {
-            gVar = new h(this, windowInsets);
-        } else if (i2 < 20) {
-            this.a = new l(this);
+        C2662l c2657g;
+        int i = Build.VERSION.SDK_INT;
+        if (i >= 30) {
+            c2657g = new C2661k(this, windowInsets);
+        } else if (i >= 29) {
+            c2657g = new C2660j(this, windowInsets);
+        } else if (i >= 28) {
+            c2657g = new C2659i(this, windowInsets);
+        } else if (i >= 21) {
+            c2657g = new C2658h(this, windowInsets);
+        } else if (i < 20) {
+            this.f23476a = new C2662l(this);
             return;
         } else {
-            gVar = new g(this, windowInsets);
+            c2657g = new C2657g(this, windowInsets);
         }
-        this.a = gVar;
+        this.f23476a = c2657g;
     }
 
     public px1(px1 px1Var) {
         if (px1Var == null) {
-            this.a = new l(this);
+            this.f23476a = new C2662l(this);
             return;
         }
-        l lVar = px1Var.a;
-        int i2 = Build.VERSION.SDK_INT;
-        this.a = (i2 < 30 || !(lVar instanceof k)) ? (i2 < 29 || !(lVar instanceof j)) ? (i2 < 28 || !(lVar instanceof i)) ? (i2 < 21 || !(lVar instanceof h)) ? (i2 < 20 || !(lVar instanceof g)) ? new l(this) : new g(this, (g) lVar) : new h(this, (h) lVar) : new i(this, (i) lVar) : new j(this, (j) lVar) : new k(this, (k) lVar);
-        lVar.e(this);
+        C2662l c2662l = px1Var.f23476a;
+        int i = Build.VERSION.SDK_INT;
+        this.f23476a = (i < 30 || !(c2662l instanceof C2661k)) ? (i < 29 || !(c2662l instanceof C2660j)) ? (i < 28 || !(c2662l instanceof C2659i)) ? (i < 21 || !(c2662l instanceof C2658h)) ? (i < 20 || !(c2662l instanceof C2657g)) ? new C2662l(this) : new C2657g(this, (C2657g) c2662l) : new C2658h(this, (C2658h) c2662l) : new C2659i(this, (C2659i) c2662l) : new C2660j(this, (C2660j) c2662l) : new C2661k(this, (C2661k) c2662l);
+        c2662l.mo12915e(this);
     }
 
-    public static gg0 o(gg0 gg0Var, int i2, int i3, int i4, int i5) {
-        int max = Math.max(0, gg0Var.a - i2);
-        int max2 = Math.max(0, gg0Var.b - i3);
-        int max3 = Math.max(0, gg0Var.c - i4);
-        int max4 = Math.max(0, gg0Var.d - i5);
-        return (max == i2 && max2 == i3 && max3 == i4 && max4 == i5) ? gg0Var : gg0.b(max, max2, max3, max4);
+    /* renamed from: o */
+    public static gg0 m12946o(gg0 gg0Var, int i, int i2, int i3, int i4) {
+        int max = Math.max(0, gg0Var.f11215a - i);
+        int max2 = Math.max(0, gg0Var.f11216b - i2);
+        int max3 = Math.max(0, gg0Var.f11217c - i3);
+        int max4 = Math.max(0, gg0Var.f11218d - i4);
+        return (max == i && max2 == i2 && max3 == i3 && max4 == i4) ? gg0Var : gg0.m21660b(max, max2, max3, max4);
     }
 
-    public static px1 w(WindowInsets windowInsets) {
-        return x(windowInsets, null);
+    /* renamed from: w */
+    public static px1 m12938w(WindowInsets windowInsets) {
+        return m12937x(windowInsets, null);
     }
 
-    public static px1 x(WindowInsets windowInsets, View view) {
-        px1 px1Var = new px1((WindowInsets) ty0.f(windowInsets));
-        if (view != null && xs1.U(view)) {
-            px1Var.t(xs1.L(view));
-            px1Var.d(view.getRootView());
+    /* renamed from: x */
+    public static px1 m12937x(WindowInsets windowInsets, View view) {
+        px1 px1Var = new px1((WindowInsets) ty0.m8699f(windowInsets));
+        if (view != null && xs1.m4743U(view)) {
+            px1Var.m12941t(xs1.m4754L(view));
+            px1Var.m12957d(view.getRootView());
         }
         return px1Var;
     }
 
     @Deprecated
-    public px1 a() {
-        return this.a.a();
+    /* renamed from: a */
+    public px1 m12960a() {
+        return this.f23476a.mo12919a();
     }
 
     @Deprecated
-    public px1 b() {
-        return this.a.b();
+    /* renamed from: b */
+    public px1 m12959b() {
+        return this.f23476a.mo12918b();
     }
 
     @Deprecated
-    public px1 c() {
-        return this.a.c();
+    /* renamed from: c */
+    public px1 m12958c() {
+        return this.f23476a.mo12917c();
     }
 
-    public void d(View view) {
-        this.a.d(view);
+    /* renamed from: d */
+    public void m12957d(View view) {
+        this.f23476a.mo12916d(view);
     }
 
-    public hu e() {
-        return this.a.f();
+    /* renamed from: e */
+    public C1611hu m12956e() {
+        return this.f23476a.mo12914f();
     }
 
     public boolean equals(Object obj) {
@@ -897,91 +1055,107 @@ public class px1 {
             return true;
         }
         if (obj instanceof px1) {
-            return pt0.a(this.a, ((px1) obj).a);
+            return pt0.m13160a(this.f23476a, ((px1) obj).f23476a);
         }
         return false;
     }
 
-    public gg0 f(int i2) {
-        return this.a.g(i2);
+    /* renamed from: f */
+    public gg0 m12955f(int i) {
+        return this.f23476a.mo12913g(i);
     }
 
     @Deprecated
-    public gg0 g() {
-        return this.a.h();
+    /* renamed from: g */
+    public gg0 m12954g() {
+        return this.f23476a.mo12912h();
     }
 
     @Deprecated
-    public gg0 h() {
-        return this.a.i();
+    /* renamed from: h */
+    public gg0 m12953h() {
+        return this.f23476a.mo12911i();
     }
 
     public int hashCode() {
-        l lVar = this.a;
-        if (lVar == null) {
+        C2662l c2662l = this.f23476a;
+        if (c2662l == null) {
             return 0;
         }
-        return lVar.hashCode();
+        return c2662l.hashCode();
     }
 
     @Deprecated
-    public int i() {
-        return this.a.k().d;
+    /* renamed from: i */
+    public int m12952i() {
+        return this.f23476a.mo12909k().f11218d;
     }
 
     @Deprecated
-    public int j() {
-        return this.a.k().a;
+    /* renamed from: j */
+    public int m12951j() {
+        return this.f23476a.mo12909k().f11215a;
     }
 
     @Deprecated
-    public int k() {
-        return this.a.k().c;
+    /* renamed from: k */
+    public int m12950k() {
+        return this.f23476a.mo12909k().f11217c;
     }
 
     @Deprecated
-    public int l() {
-        return this.a.k().b;
+    /* renamed from: l */
+    public int m12949l() {
+        return this.f23476a.mo12909k().f11216b;
     }
 
     @Deprecated
-    public boolean m() {
-        return !this.a.k().equals(gg0.e);
+    /* renamed from: m */
+    public boolean m12948m() {
+        return !this.f23476a.mo12909k().equals(gg0.f11214e);
     }
 
-    public px1 n(int i2, int i3, int i4, int i5) {
-        return this.a.m(i2, i3, i4, i5);
+    /* renamed from: n */
+    public px1 m12947n(int i, int i2, int i3, int i4) {
+        return this.f23476a.mo12907m(i, i2, i3, i4);
     }
 
-    public boolean p() {
-        return this.a.n();
+    /* renamed from: p */
+    public boolean m12945p() {
+        return this.f23476a.mo12906n();
     }
 
     @Deprecated
-    public px1 q(int i2, int i3, int i4, int i5) {
-        return new b(this).c(gg0.b(i2, i3, i4, i5)).a();
+    /* renamed from: q */
+    public px1 m12944q(int i, int i2, int i3, int i4) {
+        return new C2652b(this).m12933c(gg0.m21660b(i, i2, i3, i4)).m12935a();
     }
 
-    public void r(gg0[] gg0VarArr) {
-        this.a.p(gg0VarArr);
+    /* renamed from: r */
+    public void m12943r(gg0[] gg0VarArr) {
+        this.f23476a.mo12904p(gg0VarArr);
     }
 
-    public void s(gg0 gg0Var) {
-        this.a.q(gg0Var);
+    /* renamed from: s */
+    public void m12942s(gg0 gg0Var) {
+        this.f23476a.mo12903q(gg0Var);
     }
 
-    public void t(px1 px1Var) {
-        this.a.r(px1Var);
+    /* renamed from: t */
+    public void m12941t(px1 px1Var) {
+        this.f23476a.mo12902r(px1Var);
     }
 
-    public void u(gg0 gg0Var) {
-        this.a.s(gg0Var);
+    /* renamed from: u */
+    public void m12940u(gg0 gg0Var) {
+        this.f23476a.mo12901s(gg0Var);
     }
 
-    public WindowInsets v() {
-        l lVar = this.a;
-        if (lVar instanceof g) {
-            return ((g) lVar).c;
+    /* renamed from: v */
+    public WindowInsets m12939v() {
+        C2662l c2662l = this.f23476a;
+        if (c2662l instanceof C2657g) {
+            return ((C2657g) c2662l).f23496c;
         }
         return null;
     }

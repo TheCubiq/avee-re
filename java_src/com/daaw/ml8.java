@@ -3,12 +3,16 @@ package com.daaw;
 import android.media.AudioTrack;
 /* loaded from: classes.dex */
 public final class ml8 extends AudioTrack.StreamEventCallback {
-    public final /* synthetic */ sl8 a;
-    public final /* synthetic */ ol8 b;
+
+    /* renamed from: a */
+    public final /* synthetic */ sl8 f18967a;
+
+    /* renamed from: b */
+    public final /* synthetic */ ol8 f18968b;
 
     public ml8(ol8 ol8Var, sl8 sl8Var) {
-        this.b = ol8Var;
-        this.a = sl8Var;
+        this.f18968b = ol8Var;
+        this.f18967a = sl8Var;
     }
 
     @Override // android.media.AudioTrack.StreamEventCallback
@@ -17,14 +21,14 @@ public final class ml8 extends AudioTrack.StreamEventCallback {
         lj8 lj8Var;
         boolean z;
         lj8 lj8Var2;
-        audioTrack2 = this.b.c.q;
+        audioTrack2 = this.f18968b.f21648c.f26401q;
         if (audioTrack.equals(audioTrack2)) {
-            sl8 sl8Var = this.b.c;
-            lj8Var = sl8Var.n;
+            sl8 sl8Var = this.f18968b.f21648c;
+            lj8Var = sl8Var.f26398n;
             if (lj8Var != null) {
-                z = sl8Var.O;
+                z = sl8Var.f26377O;
                 if (z) {
-                    lj8Var2 = sl8Var.n;
+                    lj8Var2 = sl8Var.f26398n;
                     lj8Var2.zzb();
                 }
             }
@@ -37,14 +41,14 @@ public final class ml8 extends AudioTrack.StreamEventCallback {
         lj8 lj8Var;
         boolean z;
         lj8 lj8Var2;
-        audioTrack2 = this.b.c.q;
+        audioTrack2 = this.f18968b.f21648c.f26401q;
         if (audioTrack.equals(audioTrack2)) {
-            sl8 sl8Var = this.b.c;
-            lj8Var = sl8Var.n;
+            sl8 sl8Var = this.f18968b.f21648c;
+            lj8Var = sl8Var.f26398n;
             if (lj8Var != null) {
-                z = sl8Var.O;
+                z = sl8Var.f26377O;
                 if (z) {
-                    lj8Var2 = sl8Var.n;
+                    lj8Var2 = sl8Var.f26398n;
                     lj8Var2.zzb();
                 }
             }

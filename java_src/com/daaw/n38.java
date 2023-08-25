@@ -5,12 +5,14 @@ public final class n38 extends pa8 {
         super(yb8Var);
     }
 
-    public static final String c(String str, String str2) {
+    /* renamed from: c */
+    public static final String m15541c(String str, String str2) {
         throw new SecurityException("This implementation should not be used.");
     }
 
     @Override // com.daaw.pa8
-    public final boolean k() {
+    /* renamed from: k */
+    public final boolean mo8149k() {
         return false;
     }
 }

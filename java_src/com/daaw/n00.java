@@ -13,9 +13,12 @@ import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
 /* loaded from: classes2.dex */
 public final class n00 {
-    public static final n00 a = new n00();
 
-    public final <S> S a(String str, ClassLoader classLoader, Class<S> cls) {
+    /* renamed from: a */
+    public static final n00 f19316a = new n00();
+
+    /* renamed from: a */
+    public final <S> S m15627a(String str, ClassLoader classLoader, Class<S> cls) {
         Class<?> cls2 = Class.forName(str, false, classLoader);
         if (cls.isAssignableFrom(cls2)) {
             return cls.cast(cls2.getDeclaredConstructor(new Class[0]).newInstance(new Object[0]));
@@ -23,17 +26,19 @@ public final class n00 {
         throw new IllegalArgumentException(("Expected service of class " + cls + ", but found " + cls2).toString());
     }
 
-    public final <S> List<S> b(Class<S> cls, ClassLoader classLoader) {
+    /* renamed from: b */
+    public final <S> List<S> m15626b(Class<S> cls, ClassLoader classLoader) {
         try {
-            return d(cls, classLoader);
+            return m15624d(cls, classLoader);
         } catch (Throwable unused) {
-            return sg.m(ServiceLoader.load(cls, classLoader));
+            return C2937sg.m10378m(ServiceLoader.load(cls, classLoader));
         }
     }
 
-    public final List<sm0> c() {
+    /* renamed from: c */
+    public final List<sm0> m15625c() {
         sm0 sm0Var;
-        if (o00.a()) {
+        if (o00.m14661a()) {
             try {
                 ArrayList arrayList = new ArrayList(2);
                 sm0 sm0Var2 = null;
@@ -55,56 +60,58 @@ public final class n00 {
                 arrayList.add(sm0Var2);
                 return arrayList;
             } catch (Throwable unused3) {
-                return b(sm0.class, sm0.class.getClassLoader());
+                return m15626b(sm0.class, sm0.class.getClassLoader());
             }
         }
-        return b(sm0.class, sm0.class.getClassLoader());
+        return m15626b(sm0.class, sm0.class.getClassLoader());
     }
 
-    public final <S> List<S> d(Class<S> cls, ClassLoader classLoader) {
-        ArrayList<URL> list = Collections.list(classLoader.getResources(ug0.l("META-INF/services/", cls.getName())));
-        ug0.e(list, "list(this)");
+    /* renamed from: d */
+    public final <S> List<S> m15624d(Class<S> cls, ClassLoader classLoader) {
+        ArrayList<URL> list = Collections.list(classLoader.getResources(ug0.m8262l("META-INF/services/", cls.getName())));
+        ug0.m8269e(list, "list(this)");
         ArrayList arrayList = new ArrayList();
         for (URL url : list) {
-            pg.i(arrayList, a.e(url));
+            C2550pg.m13404i(arrayList, f19316a.m15623e(url));
         }
-        Set<String> p = sg.p(arrayList);
-        if (!p.isEmpty()) {
-            ArrayList arrayList2 = new ArrayList(lg.h(p, 10));
-            for (String str : p) {
-                arrayList2.add(a.a(str, classLoader, cls));
+        Set<String> m10375p = C2937sg.m10375p(arrayList);
+        if (!m10375p.isEmpty()) {
+            ArrayList arrayList2 = new ArrayList(C2037lg.m16966h(m10375p, 10));
+            for (String str : m10375p) {
+                arrayList2.add(f19316a.m15627a(str, classLoader, cls));
             }
             return arrayList2;
         }
         throw new IllegalArgumentException("No providers were loaded with FastServiceLoader".toString());
     }
 
-    public final List<String> e(URL url) {
+    /* renamed from: e */
+    public final List<String> m15623e(URL url) {
         String url2 = url.toString();
-        if (!nh1.e(url2, "jar", false, 2, null)) {
+        if (!nh1.m15177e(url2, "jar", false, 2, null)) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()));
             try {
-                List<String> f = a.f(bufferedReader);
-                dg.a(bufferedReader, null);
-                return f;
+                List<String> m15622f = f19316a.m15622f(bufferedReader);
+                C1080dg.m24422a(bufferedReader, null);
+                return m15622f;
             } catch (Throwable th) {
                 try {
                     throw th;
                 } catch (Throwable th2) {
-                    dg.a(bufferedReader, th);
+                    C1080dg.m24422a(bufferedReader, th);
                     throw th2;
                 }
             }
         }
-        String z = oh1.z(oh1.u(url2, "jar:file:", null, 2, null), '!', null, 2, null);
-        String u = oh1.u(url2, "!/", null, 2, null);
-        JarFile jarFile = new JarFile(z, false);
+        String m14279z = oh1.m14279z(oh1.m14284u(url2, "jar:file:", null, 2, null), '!', null, 2, null);
+        String m14284u = oh1.m14284u(url2, "!/", null, 2, null);
+        JarFile jarFile = new JarFile(m14279z, false);
         try {
-            BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(jarFile.getInputStream(new ZipEntry(u)), "UTF-8"));
-            List<String> f2 = a.f(bufferedReader2);
-            dg.a(bufferedReader2, null);
+            BufferedReader bufferedReader2 = new BufferedReader(new InputStreamReader(jarFile.getInputStream(new ZipEntry(m14284u)), "UTF-8"));
+            List<String> m15622f2 = f19316a.m15622f(bufferedReader2);
+            C1080dg.m24422a(bufferedReader2, null);
             jarFile.close();
-            return f2;
+            return m15622f2;
         } catch (Throwable th3) {
             try {
                 throw th3;
@@ -113,23 +120,24 @@ public final class n00 {
                     jarFile.close();
                     throw th4;
                 } catch (Throwable th5) {
-                    xy.a(th3, th5);
+                    C3651xy.m4411a(th3, th5);
                     throw th3;
                 }
             }
         }
     }
 
-    public final List<String> f(BufferedReader bufferedReader) {
+    /* renamed from: f */
+    public final List<String> m15622f(BufferedReader bufferedReader) {
         boolean z;
         boolean z2;
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         while (true) {
             String readLine = bufferedReader.readLine();
             if (readLine == null) {
-                return sg.m(linkedHashSet);
+                return C2937sg.m10378m(linkedHashSet);
             }
-            String obj = oh1.B(oh1.A(readLine, "#", null, 2, null)).toString();
+            String obj = oh1.m14300B(oh1.m14301A(readLine, "#", null, 2, null)).toString();
             int i = 0;
             while (true) {
                 if (i >= obj.length()) {
@@ -151,7 +159,7 @@ public final class n00 {
                 }
             }
             if (!z) {
-                throw new IllegalArgumentException(ug0.l("Illegal service provider class name: ", obj).toString());
+                throw new IllegalArgumentException(ug0.m8262l("Illegal service provider class name: ", obj).toString());
             }
             if (obj.length() > 0) {
                 linkedHashSet.add(obj);

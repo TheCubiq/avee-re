@@ -6,11 +6,12 @@ public final class go2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        synchronized (this.e) {
-            rm2 rm2Var = new rm2((String) this.f.invoke(null, new Object[0]));
-            this.e.n0(rm2Var.a.longValue());
-            this.e.o0(rm2Var.b.longValue());
+    /* renamed from: a */
+    public final void mo2099a() {
+        synchronized (this.f20528e) {
+            rm2 rm2Var = new rm2((String) this.f20529f.invoke(null, new Object[0]));
+            this.f20528e.m20752n0(rm2Var.f25411a.longValue());
+            this.f20528e.m20751o0(rm2Var.f25412b.longValue());
         }
     }
 }

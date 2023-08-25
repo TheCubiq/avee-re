@@ -1,117 +1,165 @@
 package com.daaw;
 
+import androidx.work.C0511b;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class qy1 {
-    public static final String s = ll0.f("WorkSpec");
-    public static final v50<List<Object>, List<Object>> t = new a();
-    public String a;
-    public yx1 b;
-    public String c;
-    public String d;
-    public androidx.work.b e;
-    public androidx.work.b f;
-    public long g;
-    public long h;
-    public long i;
-    public sj j;
-    public int k;
-    public ha l;
-    public long m;
-    public long n;
-    public long o;
-    public long p;
-    public boolean q;
-    public zu0 r;
 
+    /* renamed from: s */
+    public static final String f24622s = ll0.m16883f("WorkSpec");
+
+    /* renamed from: t */
+    public static final v50<List<Object>, List<Object>> f24623t = new C2800a();
+
+    /* renamed from: a */
+    public String f24624a;
+
+    /* renamed from: b */
+    public yx1 f24625b;
+
+    /* renamed from: c */
+    public String f24626c;
+
+    /* renamed from: d */
+    public String f24627d;
+
+    /* renamed from: e */
+    public C0511b f24628e;
+
+    /* renamed from: f */
+    public C0511b f24629f;
+
+    /* renamed from: g */
+    public long f24630g;
+
+    /* renamed from: h */
+    public long f24631h;
+
+    /* renamed from: i */
+    public long f24632i;
+
+    /* renamed from: j */
+    public C2943sj f24633j;
+
+    /* renamed from: k */
+    public int f24634k;
+
+    /* renamed from: l */
+    public EnumC1520ha f24635l;
+
+    /* renamed from: m */
+    public long f24636m;
+
+    /* renamed from: n */
+    public long f24637n;
+
+    /* renamed from: o */
+    public long f24638o;
+
+    /* renamed from: p */
+    public long f24639p;
+
+    /* renamed from: q */
+    public boolean f24640q;
+
+    /* renamed from: r */
+    public zu0 f24641r;
+
+    /* renamed from: com.daaw.qy1$a */
     /* loaded from: classes.dex */
-    public class a implements v50<List<Object>, List<Object>> {
+    public class C2800a implements v50<List<Object>, List<Object>> {
     }
 
+    /* renamed from: com.daaw.qy1$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public String a;
-        public yx1 b;
+    public static class C2801b {
+
+        /* renamed from: a */
+        public String f24642a;
+
+        /* renamed from: b */
+        public yx1 f24643b;
 
         public boolean equals(Object obj) {
             if (this == obj) {
                 return true;
             }
-            if (obj instanceof b) {
-                b bVar = (b) obj;
-                if (this.b != bVar.b) {
+            if (obj instanceof C2801b) {
+                C2801b c2801b = (C2801b) obj;
+                if (this.f24643b != c2801b.f24643b) {
                     return false;
                 }
-                return this.a.equals(bVar.a);
+                return this.f24642a.equals(c2801b.f24642a);
             }
             return false;
         }
 
         public int hashCode() {
-            return (this.a.hashCode() * 31) + this.b.hashCode();
+            return (this.f24642a.hashCode() * 31) + this.f24643b.hashCode();
         }
     }
 
     public qy1(qy1 qy1Var) {
-        this.b = yx1.ENQUEUED;
-        androidx.work.b bVar = androidx.work.b.c;
-        this.e = bVar;
-        this.f = bVar;
-        this.j = sj.i;
-        this.l = ha.EXPONENTIAL;
-        this.m = 30000L;
-        this.p = -1L;
-        this.r = zu0.RUN_AS_NON_EXPEDITED_WORK_REQUEST;
-        this.a = qy1Var.a;
-        this.c = qy1Var.c;
-        this.b = qy1Var.b;
-        this.d = qy1Var.d;
-        this.e = new androidx.work.b(qy1Var.e);
-        this.f = new androidx.work.b(qy1Var.f);
-        this.g = qy1Var.g;
-        this.h = qy1Var.h;
-        this.i = qy1Var.i;
-        this.j = new sj(qy1Var.j);
-        this.k = qy1Var.k;
-        this.l = qy1Var.l;
-        this.m = qy1Var.m;
-        this.n = qy1Var.n;
-        this.o = qy1Var.o;
-        this.p = qy1Var.p;
-        this.q = qy1Var.q;
-        this.r = qy1Var.r;
+        this.f24625b = yx1.ENQUEUED;
+        C0511b c0511b = C0511b.f2466c;
+        this.f24628e = c0511b;
+        this.f24629f = c0511b;
+        this.f24633j = C2943sj.f26283i;
+        this.f24635l = EnumC1520ha.EXPONENTIAL;
+        this.f24636m = 30000L;
+        this.f24639p = -1L;
+        this.f24641r = zu0.RUN_AS_NON_EXPEDITED_WORK_REQUEST;
+        this.f24624a = qy1Var.f24624a;
+        this.f24626c = qy1Var.f24626c;
+        this.f24625b = qy1Var.f24625b;
+        this.f24627d = qy1Var.f24627d;
+        this.f24628e = new C0511b(qy1Var.f24628e);
+        this.f24629f = new C0511b(qy1Var.f24629f);
+        this.f24630g = qy1Var.f24630g;
+        this.f24631h = qy1Var.f24631h;
+        this.f24632i = qy1Var.f24632i;
+        this.f24633j = new C2943sj(qy1Var.f24633j);
+        this.f24634k = qy1Var.f24634k;
+        this.f24635l = qy1Var.f24635l;
+        this.f24636m = qy1Var.f24636m;
+        this.f24637n = qy1Var.f24637n;
+        this.f24638o = qy1Var.f24638o;
+        this.f24639p = qy1Var.f24639p;
+        this.f24640q = qy1Var.f24640q;
+        this.f24641r = qy1Var.f24641r;
     }
 
     public qy1(String str, String str2) {
-        this.b = yx1.ENQUEUED;
-        androidx.work.b bVar = androidx.work.b.c;
-        this.e = bVar;
-        this.f = bVar;
-        this.j = sj.i;
-        this.l = ha.EXPONENTIAL;
-        this.m = 30000L;
-        this.p = -1L;
-        this.r = zu0.RUN_AS_NON_EXPEDITED_WORK_REQUEST;
-        this.a = str;
-        this.c = str2;
+        this.f24625b = yx1.ENQUEUED;
+        C0511b c0511b = C0511b.f2466c;
+        this.f24628e = c0511b;
+        this.f24629f = c0511b;
+        this.f24633j = C2943sj.f26283i;
+        this.f24635l = EnumC1520ha.EXPONENTIAL;
+        this.f24636m = 30000L;
+        this.f24639p = -1L;
+        this.f24641r = zu0.RUN_AS_NON_EXPEDITED_WORK_REQUEST;
+        this.f24624a = str;
+        this.f24626c = str2;
     }
 
-    public long a() {
-        if (c()) {
-            return this.n + Math.min(18000000L, this.l == ha.LINEAR ? this.m * this.k : Math.scalb((float) this.m, this.k - 1));
+    /* renamed from: a */
+    public long m11938a() {
+        if (m11936c()) {
+            return this.f24637n + Math.min(18000000L, this.f24635l == EnumC1520ha.LINEAR ? this.f24636m * this.f24634k : Math.scalb((float) this.f24636m, this.f24634k - 1));
         }
-        if (!d()) {
-            long j = this.n;
+        if (!m11935d()) {
+            long j = this.f24637n;
             if (j == 0) {
                 j = System.currentTimeMillis();
             }
-            return j + this.g;
+            return j + this.f24630g;
         }
         long currentTimeMillis = System.currentTimeMillis();
-        long j2 = this.n;
-        long j3 = j2 == 0 ? currentTimeMillis + this.g : j2;
-        long j4 = this.i;
-        long j5 = this.h;
+        long j2 = this.f24637n;
+        long j3 = j2 == 0 ? currentTimeMillis + this.f24630g : j2;
+        long j4 = this.f24632i;
+        long j5 = this.f24631h;
         int i = (j2 > 0L ? 1 : (j2 == 0L ? 0 : -1));
         if (j4 != j5) {
             return j3 + j5 + (i == 0 ? j4 * (-1) : 0L);
@@ -119,16 +167,19 @@ public final class qy1 {
         return j3 + (i != 0 ? j5 : 0L);
     }
 
-    public boolean b() {
-        return !sj.i.equals(this.j);
+    /* renamed from: b */
+    public boolean m11937b() {
+        return !C2943sj.f26283i.equals(this.f24633j);
     }
 
-    public boolean c() {
-        return this.b == yx1.ENQUEUED && this.k > 0;
+    /* renamed from: c */
+    public boolean m11936c() {
+        return this.f24625b == yx1.ENQUEUED && this.f24634k > 0;
     }
 
-    public boolean d() {
-        return this.h != 0;
+    /* renamed from: d */
+    public boolean m11935d() {
+        return this.f24631h != 0;
     }
 
     public boolean equals(Object obj) {
@@ -139,10 +190,10 @@ public final class qy1 {
             return false;
         }
         qy1 qy1Var = (qy1) obj;
-        if (this.g == qy1Var.g && this.h == qy1Var.h && this.i == qy1Var.i && this.k == qy1Var.k && this.m == qy1Var.m && this.n == qy1Var.n && this.o == qy1Var.o && this.p == qy1Var.p && this.q == qy1Var.q && this.a.equals(qy1Var.a) && this.b == qy1Var.b && this.c.equals(qy1Var.c)) {
-            String str = this.d;
-            if (str == null ? qy1Var.d == null : str.equals(qy1Var.d)) {
-                return this.e.equals(qy1Var.e) && this.f.equals(qy1Var.f) && this.j.equals(qy1Var.j) && this.l == qy1Var.l && this.r == qy1Var.r;
+        if (this.f24630g == qy1Var.f24630g && this.f24631h == qy1Var.f24631h && this.f24632i == qy1Var.f24632i && this.f24634k == qy1Var.f24634k && this.f24636m == qy1Var.f24636m && this.f24637n == qy1Var.f24637n && this.f24638o == qy1Var.f24638o && this.f24639p == qy1Var.f24639p && this.f24640q == qy1Var.f24640q && this.f24624a.equals(qy1Var.f24624a) && this.f24625b == qy1Var.f24625b && this.f24626c.equals(qy1Var.f24626c)) {
+            String str = this.f24627d;
+            if (str == null ? qy1Var.f24627d == null : str.equals(qy1Var.f24627d)) {
+                return this.f24628e.equals(qy1Var.f24628e) && this.f24629f.equals(qy1Var.f24629f) && this.f24633j.equals(qy1Var.f24633j) && this.f24635l == qy1Var.f24635l && this.f24641r == qy1Var.f24641r;
             }
             return false;
         }
@@ -150,20 +201,20 @@ public final class qy1 {
     }
 
     public int hashCode() {
-        int hashCode = ((((this.a.hashCode() * 31) + this.b.hashCode()) * 31) + this.c.hashCode()) * 31;
-        String str = this.d;
+        int hashCode = ((((this.f24624a.hashCode() * 31) + this.f24625b.hashCode()) * 31) + this.f24626c.hashCode()) * 31;
+        String str = this.f24627d;
         int hashCode2 = str != null ? str.hashCode() : 0;
-        long j = this.g;
-        long j2 = this.h;
-        long j3 = this.i;
-        long j4 = this.m;
-        long j5 = this.n;
-        long j6 = this.o;
-        long j7 = this.p;
-        return ((((((((((((((((((((((((((((hashCode + hashCode2) * 31) + this.e.hashCode()) * 31) + this.f.hashCode()) * 31) + ((int) (j ^ (j >>> 32)))) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31) + ((int) (j3 ^ (j3 >>> 32)))) * 31) + this.j.hashCode()) * 31) + this.k) * 31) + this.l.hashCode()) * 31) + ((int) (j4 ^ (j4 >>> 32)))) * 31) + ((int) (j5 ^ (j5 >>> 32)))) * 31) + ((int) (j6 ^ (j6 >>> 32)))) * 31) + ((int) (j7 ^ (j7 >>> 32)))) * 31) + (this.q ? 1 : 0)) * 31) + this.r.hashCode();
+        long j = this.f24630g;
+        long j2 = this.f24631h;
+        long j3 = this.f24632i;
+        long j4 = this.f24636m;
+        long j5 = this.f24637n;
+        long j6 = this.f24638o;
+        long j7 = this.f24639p;
+        return ((((((((((((((((((((((((((((hashCode + hashCode2) * 31) + this.f24628e.hashCode()) * 31) + this.f24629f.hashCode()) * 31) + ((int) (j ^ (j >>> 32)))) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31) + ((int) (j3 ^ (j3 >>> 32)))) * 31) + this.f24633j.hashCode()) * 31) + this.f24634k) * 31) + this.f24635l.hashCode()) * 31) + ((int) (j4 ^ (j4 >>> 32)))) * 31) + ((int) (j5 ^ (j5 >>> 32)))) * 31) + ((int) (j6 ^ (j6 >>> 32)))) * 31) + ((int) (j7 ^ (j7 >>> 32)))) * 31) + (this.f24640q ? 1 : 0)) * 31) + this.f24641r.hashCode();
     }
 
     public String toString() {
-        return "{WorkSpec: " + this.a + "}";
+        return "{WorkSpec: " + this.f24624a + "}";
     }
 }

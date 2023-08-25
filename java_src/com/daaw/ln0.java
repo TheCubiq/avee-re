@@ -2,78 +2,70 @@ package com.daaw;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 /* loaded from: classes2.dex */
-public class ln0 extends o4 {
-    public static final int v = k21.Widget_MaterialComponents_CompoundButton_RadioButton;
-    public static final int[][] w = {new int[]{16842910, 16842912}, new int[]{16842910, -16842912}, new int[]{-16842910, 16842912}, new int[]{-16842910, -16842912}};
-    public ColorStateList t;
-    public boolean u;
+public class ln0 extends C2405o4 {
+
+    /* renamed from: v */
+    public static final int f17558v = k21.Widget_MaterialComponents_CompoundButton_RadioButton;
+
+    /* renamed from: w */
+    public static final int[][] f17559w = {new int[]{16842910, 16842912}, new int[]{16842910, -16842912}, new int[]{-16842910, 16842912}, new int[]{-16842910, -16842912}};
+
+    /* renamed from: t */
+    public ColorStateList f17560t;
+
+    /* renamed from: u */
+    public boolean f17561u;
 
     public ln0(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, w01.w);
+        this(context, attributeSet, w01.f30753w);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public ln0(android.content.Context r8, android.util.AttributeSet r9, int r10) {
-        /*
-            r7 = this;
-            int r4 = com.daaw.ln0.v
-            android.content.Context r8 = com.daaw.qn0.c(r8, r9, r10, r4)
-            r7.<init>(r8, r9, r10)
-            android.content.Context r8 = r7.getContext()
-            int[] r2 = com.daaw.m21.J2
-            r6 = 0
-            int[] r5 = new int[r6]
-            r0 = r8
-            r1 = r9
-            r3 = r10
-            android.content.res.TypedArray r9 = com.daaw.xk1.h(r0, r1, r2, r3, r4, r5)
-            int r10 = com.daaw.m21.K2
-            boolean r0 = r9.hasValue(r10)
-            if (r0 == 0) goto L28
-            android.content.res.ColorStateList r8 = com.daaw.mn0.a(r8, r9, r10)
-            com.daaw.yi.c(r7, r8)
-        L28:
-            int r8 = com.daaw.m21.L2
-            boolean r8 = r9.getBoolean(r8, r6)
-            r7.u = r8
-            r9.recycle()
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.ln0.<init>(android.content.Context, android.util.AttributeSet, int):void");
+    public ln0(Context context, AttributeSet attributeSet, int i) {
+        super(qn0.m12324c(context, attributeSet, i, r4), attributeSet, i);
+        int i2 = f17558v;
+        Context context2 = getContext();
+        TypedArray m5026h = xk1.m5026h(context2, attributeSet, m21.f18073J2, i, i2, new int[0]);
+        int i3 = m21.f18080K2;
+        if (m5026h.hasValue(i3)) {
+            C3708yi.m3732c(this, mn0.m15930a(context2, m5026h, i3));
+        }
+        this.f17561u = m5026h.getBoolean(m21.f18087L2, false);
+        m5026h.recycle();
     }
 
     private ColorStateList getMaterialThemeColorsTintList() {
-        if (this.t == null) {
-            int c = jn0.c(this, w01.f);
-            int c2 = jn0.c(this, w01.colorOnSurface);
-            int c3 = jn0.c(this, w01.colorSurface);
-            int[][] iArr = w;
+        if (this.f17560t == null) {
+            int m18396c = jn0.m18396c(this, w01.f30749f);
+            int m18396c2 = jn0.m18396c(this, w01.colorOnSurface);
+            int m18396c3 = jn0.m18396c(this, w01.colorSurface);
+            int[][] iArr = f17559w;
             int[] iArr2 = new int[iArr.length];
-            iArr2[0] = jn0.f(c3, c, 1.0f);
-            iArr2[1] = jn0.f(c3, c2, 0.54f);
-            iArr2[2] = jn0.f(c3, c2, 0.38f);
-            iArr2[3] = jn0.f(c3, c2, 0.38f);
-            this.t = new ColorStateList(iArr, iArr2);
+            iArr2[0] = jn0.m18393f(m18396c3, m18396c, 1.0f);
+            iArr2[1] = jn0.m18393f(m18396c3, m18396c2, 0.54f);
+            iArr2[2] = jn0.m18393f(m18396c3, m18396c2, 0.38f);
+            iArr2[3] = jn0.m18393f(m18396c3, m18396c2, 0.38f);
+            this.f17560t = new ColorStateList(iArr, iArr2);
         }
-        return this.t;
+        return this.f17560t;
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (this.u && yi.b(this) == null) {
+        if (this.f17561u && C3708yi.m3733b(this) == null) {
             setUseMaterialThemeColors(true);
         }
     }
 
     public void setUseMaterialThemeColors(boolean z) {
-        this.u = z;
-        yi.c(this, z ? getMaterialThemeColorsTintList() : null);
+        this.f17561u = z;
+        C3708yi.m3732c(this, z ? getMaterialThemeColorsTintList() : null);
     }
 }

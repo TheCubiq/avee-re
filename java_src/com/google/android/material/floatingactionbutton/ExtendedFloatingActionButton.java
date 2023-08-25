@@ -13,7 +13,7 @@ import android.util.Property;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.daaw.it;
+import com.daaw.C1753it;
 import com.daaw.k21;
 import com.daaw.m21;
 import com.daaw.rq0;
@@ -23,175 +23,230 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
 import java.util.List;
 /* loaded from: classes2.dex */
-public class ExtendedFloatingActionButton extends MaterialButton implements CoordinatorLayout.b {
-    public static final int V = k21.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
-    public static final Property<View, Float> W = new b(Float.class, "width");
-    public static final Property<View, Float> a0 = new c(Float.class, "height");
-    public static final Property<View, Float> b0 = new d(Float.class, "paddingStart");
-    public static final Property<View, Float> c0 = new e(Float.class, "paddingEnd");
-    public int I;
-    public final com.google.android.material.floatingactionbutton.b J;
-    public final com.google.android.material.floatingactionbutton.b K;
-    public final com.google.android.material.floatingactionbutton.b L;
-    public final com.google.android.material.floatingactionbutton.b M;
-    public final int N;
-    public int O;
-    public int P;
-    public final CoordinatorLayout.c<ExtendedFloatingActionButton> Q;
-    public boolean R;
-    public boolean S;
-    public boolean T;
-    public ColorStateList U;
+public class ExtendedFloatingActionButton extends MaterialButton implements CoordinatorLayout.InterfaceC0193b {
+
+    /* renamed from: V */
+    public static final int f37521V = k21.Widget_MaterialComponents_ExtendedFloatingActionButton_Icon;
+
+    /* renamed from: W */
+    public static final Property<View, Float> f37522W = new C4085b(Float.class, "width");
+
+    /* renamed from: a0 */
+    public static final Property<View, Float> f37523a0 = new C4086c(Float.class, "height");
+
+    /* renamed from: b0 */
+    public static final Property<View, Float> f37524b0 = new C4087d(Float.class, "paddingStart");
+
+    /* renamed from: c0 */
+    public static final Property<View, Float> f37525c0 = new C4088e(Float.class, "paddingEnd");
+
+    /* renamed from: I */
+    public int f37526I;
+
+    /* renamed from: J */
+    public final InterfaceC4107b f37527J;
+
+    /* renamed from: K */
+    public final InterfaceC4107b f37528K;
+
+    /* renamed from: L */
+    public final InterfaceC4107b f37529L;
+
+    /* renamed from: M */
+    public final InterfaceC4107b f37530M;
+
+    /* renamed from: N */
+    public final int f37531N;
+
+    /* renamed from: O */
+    public int f37532O;
+
+    /* renamed from: P */
+    public int f37533P;
+
+    /* renamed from: Q */
+    public final CoordinatorLayout.AbstractC0194c<ExtendedFloatingActionButton> f37534Q;
+
+    /* renamed from: R */
+    public boolean f37535R;
+
+    /* renamed from: S */
+    public boolean f37536S;
+
+    /* renamed from: T */
+    public boolean f37537T;
+
+    /* renamed from: U */
+    public ColorStateList f37538U;
 
     /* loaded from: classes2.dex */
-    public static class ExtendedFloatingActionButtonBehavior<T extends ExtendedFloatingActionButton> extends CoordinatorLayout.c<T> {
-        public Rect a;
-        public boolean b;
-        public boolean c;
+    public static class ExtendedFloatingActionButtonBehavior<T extends ExtendedFloatingActionButton> extends CoordinatorLayout.AbstractC0194c<T> {
+
+        /* renamed from: a */
+        public Rect f37539a;
+
+        /* renamed from: b */
+        public boolean f37540b;
+
+        /* renamed from: c */
+        public boolean f37541c;
 
         public ExtendedFloatingActionButtonBehavior() {
-            this.b = false;
-            this.c = true;
+            this.f37540b = false;
+            this.f37541c = true;
         }
 
         public ExtendedFloatingActionButtonBehavior(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, m21.g1);
-            this.b = obtainStyledAttributes.getBoolean(m21.h1, false);
-            this.c = obtainStyledAttributes.getBoolean(m21.i1, true);
+            TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, m21.f18239g1);
+            this.f37540b = obtainStyledAttributes.getBoolean(m21.f18247h1, false);
+            this.f37541c = obtainStyledAttributes.getBoolean(m21.f18255i1, true);
             obtainStyledAttributes.recycle();
         }
 
-        public static boolean G(View view) {
+        /* renamed from: G */
+        public static boolean m480G(View view) {
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            if (layoutParams instanceof CoordinatorLayout.f) {
-                return ((CoordinatorLayout.f) layoutParams).f() instanceof BottomSheetBehavior;
+            if (layoutParams instanceof CoordinatorLayout.C0197f) {
+                return ((CoordinatorLayout.C0197f) layoutParams).m29760f() instanceof BottomSheetBehavior;
             }
             return false;
         }
 
-        public void E(ExtendedFloatingActionButton extendedFloatingActionButton) {
-            extendedFloatingActionButton.r(this.c ? extendedFloatingActionButton.K : extendedFloatingActionButton.L, null);
+        /* renamed from: E */
+        public void m482E(ExtendedFloatingActionButton extendedFloatingActionButton) {
+            extendedFloatingActionButton.m485r(this.f37541c ? extendedFloatingActionButton.f37528K : extendedFloatingActionButton.f37529L, null);
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
         /* renamed from: F */
-        public boolean b(CoordinatorLayout coordinatorLayout, ExtendedFloatingActionButton extendedFloatingActionButton, Rect rect) {
-            return super.b(coordinatorLayout, extendedFloatingActionButton, rect);
+        public boolean mo440b(CoordinatorLayout coordinatorLayout, ExtendedFloatingActionButton extendedFloatingActionButton, Rect rect) {
+            return super.mo440b(coordinatorLayout, extendedFloatingActionButton, rect);
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
         /* renamed from: H */
-        public boolean h(CoordinatorLayout coordinatorLayout, ExtendedFloatingActionButton extendedFloatingActionButton, View view) {
+        public boolean mo127h(CoordinatorLayout coordinatorLayout, ExtendedFloatingActionButton extendedFloatingActionButton, View view) {
             if (view instanceof AppBarLayout) {
-                L(coordinatorLayout, (AppBarLayout) view, extendedFloatingActionButton);
+                m475L(coordinatorLayout, (AppBarLayout) view, extendedFloatingActionButton);
                 return false;
-            } else if (G(view)) {
-                M(view, extendedFloatingActionButton);
+            } else if (m480G(view)) {
+                m474M(view, extendedFloatingActionButton);
                 return false;
             } else {
                 return false;
             }
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
         /* renamed from: I */
-        public boolean l(CoordinatorLayout coordinatorLayout, ExtendedFloatingActionButton extendedFloatingActionButton, int i) {
-            List<View> r = coordinatorLayout.r(extendedFloatingActionButton);
-            int size = r.size();
+        public boolean mo126l(CoordinatorLayout coordinatorLayout, ExtendedFloatingActionButton extendedFloatingActionButton, int i) {
+            List<View> m29789r = coordinatorLayout.m29789r(extendedFloatingActionButton);
+            int size = m29789r.size();
             for (int i2 = 0; i2 < size; i2++) {
-                View view = r.get(i2);
+                View view = m29789r.get(i2);
                 if (!(view instanceof AppBarLayout)) {
-                    if (G(view) && M(view, extendedFloatingActionButton)) {
+                    if (m480G(view) && m474M(view, extendedFloatingActionButton)) {
                         break;
                     }
-                } else if (L(coordinatorLayout, (AppBarLayout) view, extendedFloatingActionButton)) {
+                } else if (m475L(coordinatorLayout, (AppBarLayout) view, extendedFloatingActionButton)) {
                     break;
                 }
             }
-            coordinatorLayout.I(extendedFloatingActionButton, i);
+            coordinatorLayout.m29816I(extendedFloatingActionButton, i);
             return true;
         }
 
-        public final boolean J(View view, ExtendedFloatingActionButton extendedFloatingActionButton) {
-            return (this.b || this.c) && ((CoordinatorLayout.f) extendedFloatingActionButton.getLayoutParams()).e() == view.getId();
+        /* renamed from: J */
+        public final boolean m477J(View view, ExtendedFloatingActionButton extendedFloatingActionButton) {
+            return (this.f37540b || this.f37541c) && ((CoordinatorLayout.C0197f) extendedFloatingActionButton.getLayoutParams()).m29761e() == view.getId();
         }
 
-        public void K(ExtendedFloatingActionButton extendedFloatingActionButton) {
-            extendedFloatingActionButton.r(this.c ? extendedFloatingActionButton.J : extendedFloatingActionButton.M, null);
+        /* renamed from: K */
+        public void m476K(ExtendedFloatingActionButton extendedFloatingActionButton) {
+            extendedFloatingActionButton.m485r(this.f37541c ? extendedFloatingActionButton.f37527J : extendedFloatingActionButton.f37530M, null);
         }
 
-        public final boolean L(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, ExtendedFloatingActionButton extendedFloatingActionButton) {
-            if (J(appBarLayout, extendedFloatingActionButton)) {
-                if (this.a == null) {
-                    this.a = new Rect();
+        /* renamed from: L */
+        public final boolean m475L(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, ExtendedFloatingActionButton extendedFloatingActionButton) {
+            if (m477J(appBarLayout, extendedFloatingActionButton)) {
+                if (this.f37539a == null) {
+                    this.f37539a = new Rect();
                 }
-                Rect rect = this.a;
-                it.a(coordinatorLayout, appBarLayout, rect);
+                Rect rect = this.f37539a;
+                C1753it.m19438a(coordinatorLayout, appBarLayout, rect);
                 if (rect.bottom <= appBarLayout.getMinimumHeightForVisibleOverlappingContent()) {
-                    K(extendedFloatingActionButton);
+                    m476K(extendedFloatingActionButton);
                     return true;
                 }
-                E(extendedFloatingActionButton);
+                m482E(extendedFloatingActionButton);
                 return true;
             }
             return false;
         }
 
-        public final boolean M(View view, ExtendedFloatingActionButton extendedFloatingActionButton) {
-            if (J(view, extendedFloatingActionButton)) {
-                if (view.getTop() < (extendedFloatingActionButton.getHeight() / 2) + ((ViewGroup.MarginLayoutParams) ((CoordinatorLayout.f) extendedFloatingActionButton.getLayoutParams())).topMargin) {
-                    K(extendedFloatingActionButton);
+        /* renamed from: M */
+        public final boolean m474M(View view, ExtendedFloatingActionButton extendedFloatingActionButton) {
+            if (m477J(view, extendedFloatingActionButton)) {
+                if (view.getTop() < (extendedFloatingActionButton.getHeight() / 2) + ((ViewGroup.MarginLayoutParams) ((CoordinatorLayout.C0197f) extendedFloatingActionButton.getLayoutParams())).topMargin) {
+                    m476K(extendedFloatingActionButton);
                     return true;
                 }
-                E(extendedFloatingActionButton);
+                m482E(extendedFloatingActionButton);
                 return true;
             }
             return false;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-        public void g(CoordinatorLayout.f fVar) {
-            if (fVar.h == 0) {
-                fVar.h = 80;
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0194c
+        /* renamed from: g */
+        public void mo103g(CoordinatorLayout.C0197f c0197f) {
+            if (c0197f.f1143h == 0) {
+                c0197f.f1143h = 80;
             }
         }
     }
 
+    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$a */
     /* loaded from: classes2.dex */
-    public class a extends AnimatorListenerAdapter {
-        public boolean a;
-        public final /* synthetic */ com.google.android.material.floatingactionbutton.b b;
+    public class C4084a extends AnimatorListenerAdapter {
 
-        public a(com.google.android.material.floatingactionbutton.b bVar, f fVar) {
-            this.b = bVar;
+        /* renamed from: a */
+        public boolean f37542a;
+
+        /* renamed from: b */
+        public final /* synthetic */ InterfaceC4107b f37543b;
+
+        public C4084a(InterfaceC4107b interfaceC4107b, AbstractC4089f abstractC4089f) {
+            this.f37543b = interfaceC4107b;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationCancel(Animator animator) {
-            this.a = true;
-            this.b.a();
+            this.f37542a = true;
+            this.f37543b.m368a();
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            this.b.e();
-            if (this.a) {
+            this.f37543b.m364e();
+            if (this.f37542a) {
                 return;
             }
-            this.b.i(null);
+            this.f37543b.m360i(null);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            this.b.onAnimationStart(animator);
-            this.a = false;
+            this.f37543b.onAnimationStart(animator);
+            this.f37542a = false;
         }
     }
 
+    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$b */
     /* loaded from: classes2.dex */
-    public static class b extends Property<View, Float> {
-        public b(Class cls, String str) {
+    public static class C4085b extends Property<View, Float> {
+        public C4085b(Class cls, String str) {
             super(cls, str);
         }
 
@@ -209,9 +264,10 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
+    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$c */
     /* loaded from: classes2.dex */
-    public static class c extends Property<View, Float> {
-        public c(Class cls, String str) {
+    public static class C4086c extends Property<View, Float> {
+        public C4086c(Class cls, String str) {
             super(cls, str);
         }
 
@@ -229,51 +285,54 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
     }
 
+    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$d */
     /* loaded from: classes2.dex */
-    public static class d extends Property<View, Float> {
-        public d(Class cls, String str) {
+    public static class C4087d extends Property<View, Float> {
+        public C4087d(Class cls, String str) {
             super(cls, str);
         }
 
         @Override // android.util.Property
         /* renamed from: a */
         public Float get(View view) {
-            return Float.valueOf(xs1.J(view));
+            return Float.valueOf(xs1.m4758J(view));
         }
 
         @Override // android.util.Property
         /* renamed from: b */
         public void set(View view, Float f) {
-            xs1.E0(view, f.intValue(), view.getPaddingTop(), xs1.I(view), view.getPaddingBottom());
+            xs1.m4767E0(view, f.intValue(), view.getPaddingTop(), xs1.m4760I(view), view.getPaddingBottom());
         }
     }
 
+    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$e */
     /* loaded from: classes2.dex */
-    public static class e extends Property<View, Float> {
-        public e(Class cls, String str) {
+    public static class C4088e extends Property<View, Float> {
+        public C4088e(Class cls, String str) {
             super(cls, str);
         }
 
         @Override // android.util.Property
         /* renamed from: a */
         public Float get(View view) {
-            return Float.valueOf(xs1.I(view));
+            return Float.valueOf(xs1.m4760I(view));
         }
 
         @Override // android.util.Property
         /* renamed from: b */
         public void set(View view, Float f) {
-            xs1.E0(view, xs1.J(view), view.getPaddingTop(), f.intValue(), view.getPaddingBottom());
+            xs1.m4767E0(view, xs1.m4758J(view), view.getPaddingTop(), f.intValue(), view.getPaddingBottom());
         }
     }
 
+    /* renamed from: com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$f */
     /* loaded from: classes2.dex */
-    public static abstract class f {
+    public static abstract class AbstractC4089f {
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.b
-    public CoordinatorLayout.c<ExtendedFloatingActionButton> getBehavior() {
-        return this.Q;
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.InterfaceC0193b
+    public CoordinatorLayout.AbstractC0194c<ExtendedFloatingActionButton> getBehavior() {
+        return this.f37534Q;
     }
 
     public int getCollapsedPadding() {
@@ -281,141 +340,145 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public int getCollapsedSize() {
-        int i = this.N;
-        return i < 0 ? (Math.min(xs1.J(this), xs1.I(this)) * 2) + getIconSize() : i;
+        int i = this.f37531N;
+        return i < 0 ? (Math.min(xs1.m4758J(this), xs1.m4760I(this)) * 2) + getIconSize() : i;
     }
 
     public rq0 getExtendMotionSpec() {
-        return this.K.c();
+        return this.f37528K.m366c();
     }
 
     public rq0 getHideMotionSpec() {
-        return this.M.c();
+        return this.f37530M.m366c();
     }
 
     public rq0 getShowMotionSpec() {
-        return this.L.c();
+        return this.f37529L.m366c();
     }
 
     public rq0 getShrinkMotionSpec() {
-        return this.J.c();
+        return this.f37527J.m366c();
     }
 
     @Override // com.google.android.material.button.MaterialButton, android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (this.R && TextUtils.isEmpty(getText()) && getIcon() != null) {
-            this.R = false;
-            this.J.b();
+        if (this.f37535R && TextUtils.isEmpty(getText()) && getIcon() != null) {
+            this.f37535R = false;
+            this.f37527J.m367b();
         }
     }
 
-    public final boolean q() {
-        return getVisibility() != 0 ? this.I == 2 : this.I != 1;
+    /* renamed from: q */
+    public final boolean m486q() {
+        return getVisibility() != 0 ? this.f37526I == 2 : this.f37526I != 1;
     }
 
-    public final void r(com.google.android.material.floatingactionbutton.b bVar, f fVar) {
-        if (bVar.d()) {
+    /* renamed from: r */
+    public final void m485r(InterfaceC4107b interfaceC4107b, AbstractC4089f abstractC4089f) {
+        if (interfaceC4107b.m365d()) {
             return;
         }
-        if (!t()) {
-            bVar.b();
-            bVar.i(fVar);
+        if (!m483t()) {
+            interfaceC4107b.m367b();
+            interfaceC4107b.m360i(abstractC4089f);
             return;
         }
         measure(0, 0);
-        AnimatorSet g = bVar.g();
-        g.addListener(new a(bVar, fVar));
-        for (Animator.AnimatorListener animatorListener : bVar.h()) {
-            g.addListener(animatorListener);
+        AnimatorSet m362g = interfaceC4107b.m362g();
+        m362g.addListener(new C4084a(interfaceC4107b, abstractC4089f));
+        for (Animator.AnimatorListener animatorListener : interfaceC4107b.m361h()) {
+            m362g.addListener(animatorListener);
         }
-        g.start();
+        m362g.start();
     }
 
-    public final void s() {
-        this.U = getTextColors();
+    /* renamed from: s */
+    public final void m484s() {
+        this.f37538U = getTextColors();
     }
 
     public void setAnimateShowBeforeLayout(boolean z) {
-        this.T = z;
+        this.f37537T = z;
     }
 
     public void setExtendMotionSpec(rq0 rq0Var) {
-        this.K.f(rq0Var);
+        this.f37528K.m363f(rq0Var);
     }
 
     public void setExtendMotionSpecResource(int i) {
-        setExtendMotionSpec(rq0.c(getContext(), i));
+        setExtendMotionSpec(rq0.m11069c(getContext(), i));
     }
 
     public void setExtended(boolean z) {
-        if (this.R == z) {
+        if (this.f37535R == z) {
             return;
         }
-        com.google.android.material.floatingactionbutton.b bVar = z ? this.K : this.J;
-        if (bVar.d()) {
+        InterfaceC4107b interfaceC4107b = z ? this.f37528K : this.f37527J;
+        if (interfaceC4107b.m365d()) {
             return;
         }
-        bVar.b();
+        interfaceC4107b.m367b();
     }
 
     public void setHideMotionSpec(rq0 rq0Var) {
-        this.M.f(rq0Var);
+        this.f37530M.m363f(rq0Var);
     }
 
     public void setHideMotionSpecResource(int i) {
-        setHideMotionSpec(rq0.c(getContext(), i));
+        setHideMotionSpec(rq0.m11069c(getContext(), i));
     }
 
     @Override // android.widget.TextView, android.view.View
     public void setPadding(int i, int i2, int i3, int i4) {
         super.setPadding(i, i2, i3, i4);
-        if (!this.R || this.S) {
+        if (!this.f37535R || this.f37536S) {
             return;
         }
-        this.O = xs1.J(this);
-        this.P = xs1.I(this);
+        this.f37532O = xs1.m4758J(this);
+        this.f37533P = xs1.m4760I(this);
     }
 
     @Override // android.widget.TextView, android.view.View
     public void setPaddingRelative(int i, int i2, int i3, int i4) {
         super.setPaddingRelative(i, i2, i3, i4);
-        if (!this.R || this.S) {
+        if (!this.f37535R || this.f37536S) {
             return;
         }
-        this.O = i;
-        this.P = i3;
+        this.f37532O = i;
+        this.f37533P = i3;
     }
 
     public void setShowMotionSpec(rq0 rq0Var) {
-        this.L.f(rq0Var);
+        this.f37529L.m363f(rq0Var);
     }
 
     public void setShowMotionSpecResource(int i) {
-        setShowMotionSpec(rq0.c(getContext(), i));
+        setShowMotionSpec(rq0.m11069c(getContext(), i));
     }
 
     public void setShrinkMotionSpec(rq0 rq0Var) {
-        this.J.f(rq0Var);
+        this.f37527J.m363f(rq0Var);
     }
 
     public void setShrinkMotionSpecResource(int i) {
-        setShrinkMotionSpec(rq0.c(getContext(), i));
+        setShrinkMotionSpec(rq0.m11069c(getContext(), i));
     }
 
     @Override // android.widget.TextView
     public void setTextColor(int i) {
         super.setTextColor(i);
-        s();
+        m484s();
     }
 
     @Override // android.widget.TextView
     public void setTextColor(ColorStateList colorStateList) {
         super.setTextColor(colorStateList);
-        s();
+        m484s();
     }
 
-    public final boolean t() {
-        return (xs1.V(this) || (!q() && this.T)) && !isInEditMode();
+    /* renamed from: t */
+    public final boolean m483t() {
+        return (xs1.m4742V(this) || (!m486q() && this.f37537T)) && !isInEditMode();
     }
 }

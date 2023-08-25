@@ -11,37 +11,44 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes2.dex */
 public class rq0 {
-    public final cd1<String, sq0> a = new cd1<>();
-    public final cd1<String, PropertyValuesHolder[]> b = new cd1<>();
 
-    public static void a(rq0 rq0Var, Animator animator) {
+    /* renamed from: a */
+    public final cd1<String, sq0> f25509a = new cd1<>();
+
+    /* renamed from: b */
+    public final cd1<String, PropertyValuesHolder[]> f25510b = new cd1<>();
+
+    /* renamed from: a */
+    public static void m11071a(rq0 rq0Var, Animator animator) {
         if (animator instanceof ObjectAnimator) {
             ObjectAnimator objectAnimator = (ObjectAnimator) animator;
-            rq0Var.h(objectAnimator.getPropertyName(), objectAnimator.getValues());
-            rq0Var.i(objectAnimator.getPropertyName(), sq0.b(objectAnimator));
+            rq0Var.m11064h(objectAnimator.getPropertyName(), objectAnimator.getValues());
+            rq0Var.m11063i(objectAnimator.getPropertyName(), sq0.m10051b(objectAnimator));
             return;
         }
         throw new IllegalArgumentException("Animator must be an ObjectAnimator: " + animator);
     }
 
-    public static rq0 b(Context context, TypedArray typedArray, int i) {
+    /* renamed from: b */
+    public static rq0 m11070b(Context context, TypedArray typedArray, int i) {
         int resourceId;
         if (!typedArray.hasValue(i) || (resourceId = typedArray.getResourceId(i, 0)) == 0) {
             return null;
         }
-        return c(context, resourceId);
+        return m11069c(context, resourceId);
     }
 
-    public static rq0 c(Context context, int i) {
+    /* renamed from: c */
+    public static rq0 m11069c(Context context, int i) {
         try {
             Animator loadAnimator = AnimatorInflater.loadAnimator(context, i);
             if (loadAnimator instanceof AnimatorSet) {
-                return d(((AnimatorSet) loadAnimator).getChildAnimations());
+                return m11068d(((AnimatorSet) loadAnimator).getChildAnimations());
             }
             if (loadAnimator != null) {
                 ArrayList arrayList = new ArrayList();
                 arrayList.add(loadAnimator);
-                return d(arrayList);
+                return m11068d(arrayList);
             }
             return null;
         } catch (Exception unused) {
@@ -52,18 +59,20 @@ public class rq0 {
         }
     }
 
-    public static rq0 d(List<Animator> list) {
+    /* renamed from: d */
+    public static rq0 m11068d(List<Animator> list) {
         rq0 rq0Var = new rq0();
         int size = list.size();
         for (int i = 0; i < size; i++) {
-            a(rq0Var, list.get(i));
+            m11071a(rq0Var, list.get(i));
         }
         return rq0Var;
     }
 
-    public sq0 e(String str) {
-        if (g(str)) {
-            return this.a.get(str);
+    /* renamed from: e */
+    public sq0 m11067e(String str) {
+        if (m11065g(str)) {
+            return this.f25509a.get(str);
         }
         throw new IllegalArgumentException();
     }
@@ -73,38 +82,42 @@ public class rq0 {
             return true;
         }
         if (obj instanceof rq0) {
-            return this.a.equals(((rq0) obj).a);
+            return this.f25509a.equals(((rq0) obj).f25509a);
         }
         return false;
     }
 
-    public long f() {
-        int size = this.a.size();
+    /* renamed from: f */
+    public long m11066f() {
+        int size = this.f25509a.size();
         long j = 0;
         for (int i = 0; i < size; i++) {
-            sq0 m = this.a.m(i);
-            j = Math.max(j, m.c() + m.d());
+            sq0 m25432m = this.f25509a.m25432m(i);
+            j = Math.max(j, m25432m.m10050c() + m25432m.m10049d());
         }
         return j;
     }
 
-    public boolean g(String str) {
-        return this.a.get(str) != null;
+    /* renamed from: g */
+    public boolean m11065g(String str) {
+        return this.f25509a.get(str) != null;
     }
 
-    public void h(String str, PropertyValuesHolder[] propertyValuesHolderArr) {
-        this.b.put(str, propertyValuesHolderArr);
+    /* renamed from: h */
+    public void m11064h(String str, PropertyValuesHolder[] propertyValuesHolderArr) {
+        this.f25510b.put(str, propertyValuesHolderArr);
     }
 
     public int hashCode() {
-        return this.a.hashCode();
+        return this.f25509a.hashCode();
     }
 
-    public void i(String str, sq0 sq0Var) {
-        this.a.put(str, sq0Var);
+    /* renamed from: i */
+    public void m11063i(String str, sq0 sq0Var) {
+        this.f25509a.put(str, sq0Var);
     }
 
     public String toString() {
-        return '\n' + getClass().getName() + '{' + Integer.toHexString(System.identityHashCode(this)) + " timings: " + this.a + "}\n";
+        return '\n' + getClass().getName() + '{' + Integer.toHexString(System.identityHashCode(this)) + " timings: " + this.f25509a + "}\n";
     }
 }

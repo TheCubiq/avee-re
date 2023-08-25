@@ -14,91 +14,113 @@ import java.util.concurrent.TimeoutException;
 /* loaded from: classes.dex */
 public class n41 {
 
+    /* renamed from: com.daaw.n41$a */
     /* loaded from: classes.dex */
-    public static class a implements ThreadFactory {
-        public String a;
-        public int b;
+    public static class ThreadFactoryC2243a implements ThreadFactory {
 
-        /* renamed from: com.daaw.n41$a$a  reason: collision with other inner class name */
+        /* renamed from: a */
+        public String f19458a;
+
+        /* renamed from: b */
+        public int f19459b;
+
+        /* renamed from: com.daaw.n41$a$a */
         /* loaded from: classes.dex */
-        public static class C0077a extends Thread {
-            public final int p;
+        public static class C2244a extends Thread {
 
-            public C0077a(Runnable runnable, String str, int i) {
+            /* renamed from: p */
+            public final int f19460p;
+
+            public C2244a(Runnable runnable, String str, int i) {
                 super(runnable, str);
-                this.p = i;
+                this.f19460p = i;
             }
 
             @Override // java.lang.Thread, java.lang.Runnable
             public void run() {
-                Process.setThreadPriority(this.p);
+                Process.setThreadPriority(this.f19460p);
                 super.run();
             }
         }
 
-        public a(String str, int i) {
-            this.a = str;
-            this.b = i;
+        public ThreadFactoryC2243a(String str, int i) {
+            this.f19458a = str;
+            this.f19459b = i;
         }
 
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(Runnable runnable) {
-            return new C0077a(runnable, this.a, this.b);
+            return new C2244a(runnable, this.f19458a, this.f19459b);
         }
     }
 
+    /* renamed from: com.daaw.n41$b */
     /* loaded from: classes.dex */
-    public static class b<T> implements Runnable {
-        public Callable<T> p;
-        public uj<T> q;
-        public Handler r;
+    public static class RunnableC2245b<T> implements Runnable {
 
+        /* renamed from: p */
+        public Callable<T> f19461p;
+
+        /* renamed from: q */
+        public InterfaceC3222uj<T> f19462q;
+
+        /* renamed from: r */
+        public Handler f19463r;
+
+        /* renamed from: com.daaw.n41$b$a */
         /* loaded from: classes.dex */
-        public class a implements Runnable {
-            public final /* synthetic */ uj p;
-            public final /* synthetic */ Object q;
+        public class RunnableC2246a implements Runnable {
 
-            public a(uj ujVar, Object obj) {
-                this.p = ujVar;
-                this.q = obj;
+            /* renamed from: p */
+            public final /* synthetic */ InterfaceC3222uj f19464p;
+
+            /* renamed from: q */
+            public final /* synthetic */ Object f19465q;
+
+            public RunnableC2246a(InterfaceC3222uj interfaceC3222uj, Object obj) {
+                this.f19464p = interfaceC3222uj;
+                this.f19465q = obj;
             }
 
             /* JADX WARN: Multi-variable type inference failed */
             @Override // java.lang.Runnable
             public void run() {
-                this.p.a(this.q);
+                this.f19464p.mo2971a(this.f19465q);
             }
         }
 
-        public b(Handler handler, Callable<T> callable, uj<T> ujVar) {
-            this.p = callable;
-            this.q = ujVar;
-            this.r = handler;
+        public RunnableC2245b(Handler handler, Callable<T> callable, InterfaceC3222uj<T> interfaceC3222uj) {
+            this.f19461p = callable;
+            this.f19462q = interfaceC3222uj;
+            this.f19463r = handler;
         }
 
         @Override // java.lang.Runnable
         public void run() {
             T t;
             try {
-                t = this.p.call();
+                t = this.f19461p.call();
             } catch (Exception unused) {
                 t = null;
             }
-            this.r.post(new a(this.q, t));
+            this.f19463r.post(new RunnableC2246a(this.f19462q, t));
         }
     }
 
-    public static ThreadPoolExecutor a(String str, int i, int i2) {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, 1, i2, TimeUnit.MILLISECONDS, new LinkedBlockingDeque(), new a(str, i));
+    /* renamed from: a */
+    public static ThreadPoolExecutor m15535a(String str, int i, int i2) {
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, 1, i2, TimeUnit.MILLISECONDS, new LinkedBlockingDeque(), new ThreadFactoryC2243a(str, i));
         threadPoolExecutor.allowCoreThreadTimeOut(true);
         return threadPoolExecutor;
     }
 
-    public static <T> void b(Executor executor, Callable<T> callable, uj<T> ujVar) {
-        executor.execute(new b(md.a(), callable, ujVar));
+    /* renamed from: b */
+    public static <T> void m15534b(Executor executor, Callable<T> callable, InterfaceC3222uj<T> interfaceC3222uj) {
+        executor.execute(new RunnableC2245b(C2167md.m16088a(), callable, interfaceC3222uj));
     }
 
-    public static <T> T c(ExecutorService executorService, Callable<T> callable, int i) {
+    /* renamed from: c */
+    public static <T> T m15533c(ExecutorService executorService, Callable<T> callable, int i) {
         try {
             return executorService.submit(callable).get(i, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e) {

@@ -6,9 +6,10 @@ import android.os.IInterface;
 import android.os.RemoteException;
 /* loaded from: classes.dex */
 public final class iw3 {
-    public static final wv3 a(Context context, String str, an3 an3Var) {
+    /* renamed from: a */
+    public static final wv3 m19306a(Context context, String str, an3 an3Var) {
         try {
-            IBinder zze = ((aw3) o04.b(context, "com.google.android.gms.ads.rewarded.ChimeraRewardedAdCreatorImpl", new m04() { // from class: com.daaw.hw3
+            IBinder zze = ((aw3) o04.m14656b(context, "com.google.android.gms.ads.rewarded.ChimeraRewardedAdCreatorImpl", new m04() { // from class: com.daaw.hw3
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // com.daaw.m04
                 public final Object zza(Object obj) {
@@ -18,7 +19,7 @@ public final class iw3 {
                     IInterface queryLocalInterface = obj.queryLocalInterface("com.google.android.gms.ads.internal.rewarded.client.IRewardedAdCreator");
                     return queryLocalInterface instanceof aw3 ? (aw3) queryLocalInterface : new aw3(obj);
                 }
-            })).zze(nt0.g3(context), str, an3Var, 224400000);
+            })).zze(nt0.m14830g3(context), str, an3Var, 224400000);
             if (zze == null) {
                 return null;
             }

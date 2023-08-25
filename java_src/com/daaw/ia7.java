@@ -7,40 +7,47 @@ public final class ia7 extends ee7 {
         super(ri7.class, new ga7(pp7.class));
     }
 
-    public static final void l(ri7 ri7Var) {
-        xp7.b(ri7Var.L(), 0);
-        xp7.a(ri7Var.R().o());
-        m(ri7Var.Q());
+    /* renamed from: l */
+    public static final void m19998l(ri7 ri7Var) {
+        xp7.m4825b(ri7Var.m11284L(), 0);
+        xp7.m4826a(ri7Var.m11278R().mo3411o());
+        m19997m(ri7Var.m11279Q());
     }
 
-    public static final void m(xi7 xi7Var) {
-        if (xi7Var.L() < 12 || xi7Var.L() > 16) {
+    /* renamed from: m */
+    public static final void m19997m(xi7 xi7Var) {
+        if (xi7Var.m5061L() < 12 || xi7Var.m5061L() > 16) {
             throw new GeneralSecurityException("invalid IV size");
         }
     }
 
     @Override // com.daaw.ee7
-    public final de7 a() {
+    /* renamed from: a */
+    public final de7 mo5331a() {
         return new ha7(this, ui7.class);
     }
 
     @Override // com.daaw.ee7
-    public final mm7 b() {
+    /* renamed from: b */
+    public final mm7 mo5330b() {
         return mm7.SYMMETRIC;
     }
 
     @Override // com.daaw.ee7
-    public final /* synthetic */ xt7 c(yq7 yq7Var) {
-        return ri7.P(yq7Var, vr7.a());
+    /* renamed from: c */
+    public final /* synthetic */ xt7 mo5329c(yq7 yq7Var) {
+        return ri7.m11280P(yq7Var, vr7.m6834a());
     }
 
     @Override // com.daaw.ee7
-    public final String d() {
+    /* renamed from: d */
+    public final String mo5328d() {
         return "type.googleapis.com/google.crypto.tink.AesCtrKey";
     }
 
     @Override // com.daaw.ee7
-    public final /* bridge */ /* synthetic */ void e(xt7 xt7Var) {
-        l((ri7) xt7Var);
+    /* renamed from: e */
+    public final /* bridge */ /* synthetic */ void mo5327e(xt7 xt7Var) {
+        m19998l((ri7) xt7Var);
     }
 }

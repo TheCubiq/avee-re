@@ -3,31 +3,43 @@ package com.daaw;
 import android.content.SharedPreferences;
 /* loaded from: classes2.dex */
 public final class xy5 {
-    public final String a;
-    public final long b;
-    public boolean c;
-    public long d;
-    public final /* synthetic */ l36 e;
+
+    /* renamed from: a */
+    public final String f33117a;
+
+    /* renamed from: b */
+    public final long f33118b;
+
+    /* renamed from: c */
+    public boolean f33119c;
+
+    /* renamed from: d */
+    public long f33120d;
+
+    /* renamed from: e */
+    public final /* synthetic */ l36 f33121e;
 
     public xy5(l36 l36Var, String str, long j) {
-        this.e = l36Var;
-        ry0.f(str);
-        this.a = str;
-        this.b = j;
+        this.f33121e = l36Var;
+        ry0.m10834f(str);
+        this.f33117a = str;
+        this.f33118b = j;
     }
 
-    public final long a() {
-        if (!this.c) {
-            this.c = true;
-            this.d = this.e.n().getLong(this.a, this.b);
+    /* renamed from: a */
+    public final long m4400a() {
+        if (!this.f33119c) {
+            this.f33119c = true;
+            this.f33120d = this.f33121e.m17176n().getLong(this.f33117a, this.f33118b);
         }
-        return this.d;
+        return this.f33120d;
     }
 
-    public final void b(long j) {
-        SharedPreferences.Editor edit = this.e.n().edit();
-        edit.putLong(this.a, j);
+    /* renamed from: b */
+    public final void m4399b(long j) {
+        SharedPreferences.Editor edit = this.f33121e.m17176n().edit();
+        edit.putLong(this.f33117a, j);
         edit.apply();
-        this.d = j;
+        this.f33120d = j;
     }
 }

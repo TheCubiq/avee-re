@@ -1,11 +1,14 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface ee0 {
-    String a();
+    /* renamed from: a */
+    String mo17094a();
 
-    int b();
+    /* renamed from: b */
+    int mo17093b();
 
-    String c();
+    /* renamed from: c */
+    String mo17092c();
 
     boolean isEnabled();
 }

@@ -4,10 +4,15 @@ import android.os.Bundle;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes2.dex */
 public final class oq3 extends lw3 {
-    public final AtomicReference p = new AtomicReference();
-    public boolean q;
 
-    public static final Object h3(Bundle bundle, Class cls) {
+    /* renamed from: p */
+    public final AtomicReference f21828p = new AtomicReference();
+
+    /* renamed from: q */
+    public boolean f21829q;
+
+    /* renamed from: h3 */
+    public static final Object m14070h3(Bundle bundle, Class cls) {
         Object obj;
         if (bundle == null || (obj = bundle.get("r")) == null) {
             return null;
@@ -20,35 +25,39 @@ public final class oq3 extends lw3 {
         }
     }
 
-    public final Bundle I(long j) {
+    /* renamed from: I */
+    public final Bundle m14073I(long j) {
         Bundle bundle;
-        synchronized (this.p) {
-            if (!this.q) {
+        synchronized (this.f21828p) {
+            if (!this.f21829q) {
                 try {
-                    this.p.wait(j);
+                    this.f21828p.wait(j);
                 } catch (InterruptedException unused) {
                     return null;
                 }
             }
-            bundle = (Bundle) this.p.get();
+            bundle = (Bundle) this.f21828p.get();
         }
         return bundle;
     }
 
-    public final Long M(long j) {
-        return (Long) h3(I(j), Long.class);
+    /* renamed from: M */
+    public final Long m14072M(long j) {
+        return (Long) m14070h3(m14073I(j), Long.class);
     }
 
     @Override // com.daaw.ox3
-    public final void T0(Bundle bundle) {
-        synchronized (this.p) {
-            this.p.set(bundle);
-            this.q = true;
-            this.p.notify();
+    /* renamed from: T0 */
+    public final void mo13884T0(Bundle bundle) {
+        synchronized (this.f21828p) {
+            this.f21828p.set(bundle);
+            this.f21829q = true;
+            this.f21828p.notify();
         }
     }
 
-    public final String g3(long j) {
-        return (String) h3(I(j), String.class);
+    /* renamed from: g3 */
+    public final String m14071g3(long j) {
+        return (String) m14070h3(m14073I(j), String.class);
     }
 }

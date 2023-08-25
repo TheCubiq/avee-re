@@ -12,42 +12,51 @@ import java.util.SortedMap;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class g07 extends j07 implements Serializable {
-    public final transient Map s;
-    public transient int t;
+
+    /* renamed from: s */
+    public final transient Map f10130s;
+
+    /* renamed from: t */
+    public transient int f10131t;
 
     public g07(Map map) {
-        sy6.e(map.isEmpty());
-        this.s = map;
+        sy6.m9704e(map.isEmpty());
+        this.f10130s = map;
     }
 
-    public static /* synthetic */ int k(g07 g07Var) {
-        int i = g07Var.t;
-        g07Var.t = i + 1;
+    /* renamed from: k */
+    public static /* synthetic */ int m22114k(g07 g07Var) {
+        int i = g07Var.f10131t;
+        g07Var.f10131t = i + 1;
         return i;
     }
 
-    public static /* synthetic */ int l(g07 g07Var) {
-        int i = g07Var.t;
-        g07Var.t = i - 1;
+    /* renamed from: l */
+    public static /* synthetic */ int m22113l(g07 g07Var) {
+        int i = g07Var.f10131t;
+        g07Var.f10131t = i - 1;
         return i;
     }
 
-    public static /* synthetic */ int m(g07 g07Var, int i) {
-        int i2 = g07Var.t + i;
-        g07Var.t = i2;
+    /* renamed from: m */
+    public static /* synthetic */ int m22112m(g07 g07Var, int i) {
+        int i2 = g07Var.f10131t + i;
+        g07Var.f10131t = i2;
         return i2;
     }
 
-    public static /* synthetic */ int n(g07 g07Var, int i) {
-        int i2 = g07Var.t - i;
-        g07Var.t = i2;
+    /* renamed from: n */
+    public static /* synthetic */ int m22111n(g07 g07Var, int i) {
+        int i2 = g07Var.f10131t - i;
+        g07Var.f10131t = i2;
         return i2;
     }
 
-    public static /* synthetic */ void s(g07 g07Var, Object obj) {
+    /* renamed from: s */
+    public static /* synthetic */ void m22106s(g07 g07Var, Object obj) {
         Object obj2;
         try {
-            obj2 = g07Var.s.remove(obj);
+            obj2 = g07Var.f10130s.remove(obj);
         } catch (ClassCastException | NullPointerException unused) {
             obj2 = null;
         }
@@ -55,70 +64,79 @@ public abstract class g07 extends j07 implements Serializable {
         if (collection != null) {
             int size = collection.size();
             collection.clear();
-            g07Var.t -= size;
+            g07Var.f10131t -= size;
         }
     }
 
     @Override // com.daaw.w27
-    public final boolean a(Object obj, Object obj2) {
-        Collection collection = (Collection) this.s.get(obj);
+    /* renamed from: a */
+    public final boolean mo6568a(Object obj, Object obj2) {
+        Collection collection = (Collection) this.f10130s.get(obj);
         if (collection != null) {
             if (collection.add(obj2)) {
-                this.t++;
+                this.f10131t++;
                 return true;
             }
             return false;
         }
-        Collection h = h();
-        if (h.add(obj2)) {
-            this.t++;
-            this.s.put(obj, h);
+        Collection mo22115h = mo22115h();
+        if (mo22115h.add(obj2)) {
+            this.f10131t++;
+            this.f10130s.put(obj, mo22115h);
             return true;
         }
         throw new AssertionError("New Collection violated the Collection spec");
     }
 
     @Override // com.daaw.j07
-    public final Collection c() {
+    /* renamed from: c */
+    public final Collection mo19180c() {
         return new i07(this);
     }
 
     @Override // com.daaw.j07
-    public final Iterator d() {
+    /* renamed from: d */
+    public final Iterator mo19179d() {
         return new nz6(this);
     }
 
-    public abstract Collection h();
+    /* renamed from: h */
+    public abstract Collection mo22115h();
 
-    public abstract Collection i(Collection collection);
+    /* renamed from: i */
+    public abstract Collection mo15651i(Collection collection);
 
-    public abstract Collection j(Object obj, Collection collection);
+    /* renamed from: j */
+    public abstract Collection mo15650j(Object obj, Collection collection);
 
-    public final List o(Object obj, List list, @CheckForNull d07 d07Var) {
+    /* renamed from: o */
+    public final List m22110o(Object obj, List list, @CheckForNull d07 d07Var) {
         return list instanceof RandomAccess ? new zz6(this, obj, list, d07Var) : new f07(this, obj, list, d07Var);
     }
 
-    public final Map q() {
-        Map map = this.s;
+    /* renamed from: q */
+    public final Map m22108q() {
+        Map map = this.f10130s;
         return map instanceof NavigableMap ? new xz6(this, (NavigableMap) map) : map instanceof SortedMap ? new a07(this, (SortedMap) map) : new tz6(this, map);
     }
 
-    public final Set r() {
-        Map map = this.s;
+    /* renamed from: r */
+    public final Set m22107r() {
+        Map map = this.f10130s;
         return map instanceof NavigableMap ? new yz6(this, (NavigableMap) map) : map instanceof SortedMap ? new b07(this, (SortedMap) map) : new wz6(this, map);
     }
 
     @Override // com.daaw.w27
     public final int zzh() {
-        return this.t;
+        return this.f10131t;
     }
 
     @Override // com.daaw.w27
     public final void zzr() {
-        for (Collection collection : this.s.values()) {
+        for (Collection collection : this.f10130s.values()) {
             collection.clear();
         }
-        this.s.clear();
-        this.t = 0;
+        this.f10130s.clear();
+        this.f10131t = 0;
     }
 }

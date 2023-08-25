@@ -10,47 +10,59 @@ import com.daaw.uo4;
 import com.daaw.ux8;
 /* loaded from: classes.dex */
 public final class zzxk extends Surface {
-    public static int s;
-    public static boolean t;
-    public final boolean p;
-    public final tx8 q;
-    public boolean r;
+
+    /* renamed from: s */
+    public static int f37036s;
+
+    /* renamed from: t */
+    public static boolean f37037t;
+
+    /* renamed from: p */
+    public final boolean f37038p;
+
+    /* renamed from: q */
+    public final tx8 f37039q;
+
+    /* renamed from: r */
+    public boolean f37040r;
 
     public /* synthetic */ zzxk(tx8 tx8Var, SurfaceTexture surfaceTexture, boolean z, ux8 ux8Var) {
         super(surfaceTexture);
-        this.q = tx8Var;
-        this.p = z;
+        this.f37039q = tx8Var;
+        this.f37038p = z;
     }
 
-    public static zzxk a(Context context, boolean z) {
+    /* renamed from: a */
+    public static zzxk m1088a(Context context, boolean z) {
         boolean z2 = true;
-        if (z && !b(context)) {
+        if (z && !m1087b(context)) {
             z2 = false;
         }
-        uo4.f(z2);
-        return new tx8().a(z ? s : 0);
+        uo4.m7872f(z2);
+        return new tx8().m8706a(z ? f37036s : 0);
     }
 
-    public static synchronized boolean b(Context context) {
+    /* renamed from: b */
+    public static synchronized boolean m1087b(Context context) {
         int i;
         String eglQueryString;
         synchronized (zzxk.class) {
-            if (!t) {
-                int i2 = it5.a;
+            if (!f37037t) {
+                int i2 = it5.f13991a;
                 int i3 = 2;
-                if (i2 >= 24 && ((i2 >= 26 || (!"samsung".equals(it5.c) && !"XT1650".equals(it5.d))) && ((i2 >= 26 || context.getPackageManager().hasSystemFeature("android.hardware.vr.high_performance")) && (eglQueryString = EGL14.eglQueryString(EGL14.eglGetDisplay(0), 12373)) != null && eglQueryString.contains("EGL_EXT_protected_content")))) {
+                if (i2 >= 24 && ((i2 >= 26 || (!"samsung".equals(it5.f13993c) && !"XT1650".equals(it5.f13994d))) && ((i2 >= 26 || context.getPackageManager().hasSystemFeature("android.hardware.vr.high_performance")) && (eglQueryString = EGL14.eglQueryString(EGL14.eglGetDisplay(0), 12373)) != null && eglQueryString.contains("EGL_EXT_protected_content")))) {
                     String eglQueryString2 = EGL14.eglQueryString(EGL14.eglGetDisplay(0), 12373);
                     if (eglQueryString2 != null && eglQueryString2.contains("EGL_KHR_surfaceless_context")) {
                         i3 = 1;
                     }
-                    s = i3;
-                    t = true;
+                    f37036s = i3;
+                    f37037t = true;
                 }
                 i3 = 0;
-                s = i3;
-                t = true;
+                f37036s = i3;
+                f37037t = true;
             }
-            i = s;
+            i = f37036s;
         }
         return i != 0;
     }
@@ -58,10 +70,10 @@ public final class zzxk extends Surface {
     @Override // android.view.Surface
     public final void release() {
         super.release();
-        synchronized (this.q) {
-            if (!this.r) {
-                this.q.b();
-                this.r = true;
+        synchronized (this.f37039q) {
+            if (!this.f37040r) {
+                this.f37039q.m8705b();
+                this.f37040r = true;
             }
         }
     }

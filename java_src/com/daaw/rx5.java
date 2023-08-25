@@ -3,13 +3,19 @@ package com.daaw;
 import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class rx5 {
-    public final String a;
-    public final String b;
-    public final Bundle c;
+
+    /* renamed from: a */
+    public final String f25699a;
+
+    /* renamed from: b */
+    public final String f25700b;
+
+    /* renamed from: c */
+    public final Bundle f25701c;
 
     public rx5(String str, String str2, Bundle bundle) {
-        this.a = str;
-        this.b = str2;
-        this.c = bundle;
+        this.f25699a = str;
+        this.f25700b = str2;
+        this.f25701c = bundle;
     }
 }

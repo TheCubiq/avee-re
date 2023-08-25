@@ -3,15 +3,20 @@ package com.daaw;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public interface gp2 extends IInterface {
-    void C(int i);
+    /* renamed from: C */
+    void mo21363C(int i);
 
-    void E(int[] iArr);
+    /* renamed from: E */
+    void mo21362E(int[] iArr);
 
-    void Y(yd0 yd0Var, String str);
+    /* renamed from: Y */
+    void mo21361Y(yd0 yd0Var, String str);
 
-    void c(int i);
+    /* renamed from: c */
+    void mo21360c(int i);
 
-    void w(byte[] bArr);
+    /* renamed from: w */
+    void mo21359w(byte[] bArr);
 
     void zzf();
 }

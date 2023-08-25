@@ -3,11 +3,15 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface zi1 {
-    List<String> a();
+    /* renamed from: a */
+    List<String> mo2279a();
 
-    void b(yi1 yi1Var);
+    /* renamed from: b */
+    void mo2278b(yi1 yi1Var);
 
-    yi1 c(String str);
+    /* renamed from: c */
+    yi1 mo2277c(String str);
 
-    void d(String str);
+    /* renamed from: d */
+    void mo2276d(String str);
 }

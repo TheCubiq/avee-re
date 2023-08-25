@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface l98 {
-    String a();
+    /* renamed from: a */
+    String mo9751a();
 
-    int c(f92 f92Var);
+    /* renamed from: c */
+    int mo17079c(f92 f92Var);
 
     int zzb();
 

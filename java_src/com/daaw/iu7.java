@@ -4,43 +4,62 @@ import java.util.List;
 /* loaded from: classes.dex */
 public interface iu7 {
     @Deprecated
-    void a(List list, cv7 cv7Var, vr7 vr7Var);
+    /* renamed from: a */
+    void mo17477a(List list, cv7 cv7Var, vr7 vr7Var);
 
-    void b(List list);
+    /* renamed from: b */
+    void mo17476b(List list);
 
-    void c(List list);
+    /* renamed from: c */
+    void mo17475c(List list);
 
-    void d(List list);
+    /* renamed from: d */
+    void mo17474d(List list);
 
-    void e(List list);
+    /* renamed from: e */
+    void mo17473e(List list);
 
-    void f(List list);
+    /* renamed from: f */
+    void mo17472f(List list);
 
-    void g(List list);
+    /* renamed from: g */
+    void mo17471g(List list);
 
-    void h(Object obj, cv7 cv7Var, vr7 vr7Var);
+    /* renamed from: h */
+    void mo17470h(Object obj, cv7 cv7Var, vr7 vr7Var);
 
-    void i(List list);
+    /* renamed from: i */
+    void mo17469i(List list);
 
-    void j(List list);
+    /* renamed from: j */
+    void mo17468j(List list);
 
-    void k(Object obj, cv7 cv7Var, vr7 vr7Var);
+    /* renamed from: k */
+    void mo17467k(Object obj, cv7 cv7Var, vr7 vr7Var);
 
-    void l(List list);
+    /* renamed from: l */
+    void mo17466l(List list);
 
-    void m(List list);
+    /* renamed from: m */
+    void mo17465m(List list);
 
-    void n(List list);
+    /* renamed from: n */
+    void mo17464n(List list);
 
-    void o(List list);
+    /* renamed from: o */
+    void mo17463o(List list);
 
-    void p(List list);
+    /* renamed from: p */
+    void mo17462p(List list);
 
-    void q(List list);
+    /* renamed from: q */
+    void mo17461q(List list);
 
-    void r(List list, cv7 cv7Var, vr7 vr7Var);
+    /* renamed from: r */
+    void mo17460r(List list, cv7 cv7Var, vr7 vr7Var);
 
-    void s(List list);
+    /* renamed from: s */
+    void mo17459s(List list);
 
     boolean zzN();
 

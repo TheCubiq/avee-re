@@ -10,7 +10,8 @@ import android.provider.MediaStore;
 import java.util.ArrayList;
 /* loaded from: classes.dex */
 public class rx0 {
-    public static int a(Context context, long j, long[] jArr, boolean z) {
+    /* renamed from: a */
+    public static int m10855a(Context context, long j, long[] jArr, boolean z) {
         int length = jArr.length;
         ContentResolver contentResolver = context.getContentResolver();
         String[] strArr = {"_id"};
@@ -19,12 +20,12 @@ public class rx0 {
         if (z) {
             contentResolver.delete(contentUri, null, null);
         }
-        Cursor e = dp0.e(contentResolver, contentUri, strArr, null, null, null);
-        if (e != null) {
-            int count = e.getCount();
+        Cursor m24109e = dp0.m24109e(contentResolver, contentUri, strArr, null, null, null);
+        if (m24109e != null) {
+            int count = m24109e.getCount();
             int i = 0;
             for (int i2 = 0; i2 < length; i2 += 1000) {
-                contentValuesArr = d(contentValuesArr, jArr, i2, 1000, count);
+                contentValuesArr = m10852d(contentValuesArr, jArr, i2, 1000, count);
                 i += contentResolver.bulkInsert(contentUri, contentValuesArr);
             }
             return i;
@@ -32,10 +33,11 @@ public class rx0 {
         return 0;
     }
 
-    public static int b(Context context, String str, long[] jArr) {
+    /* renamed from: b */
+    public static int m10854b(Context context, String str, long[] jArr) {
         Uri uri;
         ContentResolver contentResolver = context.getContentResolver();
-        if (dr1.d(context, str) >= 0) {
+        if (dr1.m24062d(context, str) >= 0) {
             return -1;
         }
         ContentValues contentValues = new ContentValues(1);
@@ -44,7 +46,7 @@ public class rx0 {
         try {
             uri = contentResolver.insert(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI, contentValues);
         } catch (Exception e) {
-            lz1.c("failed to create playlist: " + e.getMessage());
+            lz1.m16363c("failed to create playlist: " + e.getMessage());
             e.printStackTrace();
             uri = null;
         }
@@ -53,17 +55,19 @@ public class rx0 {
         }
         int i = 0;
         for (int i2 = 0; i2 < jArr.length; i2 += 1000) {
-            contentValuesArr = d(contentValuesArr, jArr, i2, 1000, 0);
+            contentValuesArr = m10852d(contentValuesArr, jArr, i2, 1000, 0);
             i += contentResolver.bulkInsert(uri, contentValuesArr);
         }
         return i;
     }
 
-    public static int c(Context context, long j) {
+    /* renamed from: c */
+    public static int m10853c(Context context, long j) {
         return context.getContentResolver().delete(ContentUris.withAppendedId(MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI, j), null, null) > 0 ? 1 : 0;
     }
 
-    public static ContentValues[] d(ContentValues[] contentValuesArr, long[] jArr, int i, int i2, int i3) {
+    /* renamed from: d */
+    public static ContentValues[] m10852d(ContentValues[] contentValuesArr, long[] jArr, int i, int i2, int i3) {
         if (i + i2 > jArr.length) {
             i2 = jArr.length - i;
         }
@@ -83,11 +87,13 @@ public class rx0 {
         return (ContentValues[]) arrayList.toArray(contentValuesArr);
     }
 
-    public static void e(Context context, long j, String str) {
-        f(context, "" + j, str);
+    /* renamed from: e */
+    public static void m10851e(Context context, long j, String str) {
+        m10850f(context, "" + j, str);
     }
 
-    public static void f(Context context, String str, String str2) {
+    /* renamed from: f */
+    public static void m10850f(Context context, String str, String str2) {
         ContentResolver contentResolver = context.getContentResolver();
         ContentValues contentValues = new ContentValues(1);
         contentValues.put("name", str2);

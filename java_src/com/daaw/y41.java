@@ -1,31 +1,43 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class y41 {
-    public String a = null;
-    public String b = "0";
-    public String c = null;
 
-    public String a() {
-        return this.a;
+    /* renamed from: a */
+    public String f33332a = null;
+
+    /* renamed from: b */
+    public String f33333b = "0";
+
+    /* renamed from: c */
+    public String f33334c = null;
+
+    /* renamed from: a */
+    public String m4135a() {
+        return this.f33332a;
     }
 
-    public String b() {
-        return this.c;
+    /* renamed from: b */
+    public String m4134b() {
+        return this.f33334c;
     }
 
-    public String c() {
-        return this.b;
+    /* renamed from: c */
+    public String m4133c() {
+        return this.f33333b;
     }
 
-    public void d(String str) {
-        this.a = str.trim();
+    /* renamed from: d */
+    public void m4132d(String str) {
+        this.f33332a = str.trim();
     }
 
-    public void e(String str) {
-        this.c = str;
+    /* renamed from: e */
+    public void m4131e(String str) {
+        this.f33334c = str;
     }
 
-    public void f(String str) {
-        this.b = str.trim();
+    /* renamed from: f */
+    public void m4130f(String str) {
+        this.f33333b = str.trim();
     }
 }

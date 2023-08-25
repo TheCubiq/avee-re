@@ -7,17 +7,17 @@ import com.daaw.y71;
 public final class zzfi implements Parcelable.Creator {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         String str = null;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            if (y71.l(r) != 15) {
-                y71.x(parcel, r);
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            if (y71.m4047l(m4041r) != 15) {
+                y71.m4035x(parcel, m4041r);
             } else {
-                str = y71.f(parcel, r);
+                str = y71.m4053f(parcel, m4041r);
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new zzfh(str);
     }
 

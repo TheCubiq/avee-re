@@ -4,7 +4,8 @@ import java.util.Collections;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public class an0 extends zm0 {
-    public static final int a(int i) {
+    /* renamed from: a */
+    public static final int m27335a(int i) {
         if (i < 0) {
             return i;
         }
@@ -17,18 +18,20 @@ public class an0 extends zm0 {
         return Integer.MAX_VALUE;
     }
 
-    public static final <K, V> Map<K, V> b(nv0<? extends K, ? extends V> nv0Var) {
-        ug0.f(nv0Var, "pair");
-        Map<K, V> singletonMap = Collections.singletonMap(nv0Var.c(), nv0Var.d());
-        ug0.e(singletonMap, "singletonMap(pair.first, pair.second)");
+    /* renamed from: b */
+    public static final <K, V> Map<K, V> m27334b(nv0<? extends K, ? extends V> nv0Var) {
+        ug0.m8268f(nv0Var, "pair");
+        Map<K, V> singletonMap = Collections.singletonMap(nv0Var.m14777c(), nv0Var.m14776d());
+        ug0.m8269e(singletonMap, "singletonMap(pair.first, pair.second)");
         return singletonMap;
     }
 
-    public static final <K, V> Map<K, V> c(Map<? extends K, ? extends V> map) {
-        ug0.f(map, "<this>");
+    /* renamed from: c */
+    public static final <K, V> Map<K, V> m27333c(Map<? extends K, ? extends V> map) {
+        ug0.m8268f(map, "<this>");
         Map.Entry<? extends K, ? extends V> next = map.entrySet().iterator().next();
         Map<K, V> singletonMap = Collections.singletonMap(next.getKey(), next.getValue());
-        ug0.e(singletonMap, "with(entries.iterator().…ingletonMap(key, value) }");
+        ug0.m8269e(singletonMap, "with(entries.iterator().…ingletonMap(key, value) }");
         return singletonMap;
     }
 }

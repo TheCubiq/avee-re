@@ -14,270 +14,337 @@ import com.daaw.avee.R;
 import com.daaw.u21;
 /* loaded from: classes2.dex */
 public class SeekArc extends View {
-    public static final String N = SeekArc.class.getSimpleName();
-    public static int O = -1;
-    public boolean A;
-    public int B;
-    public float C;
-    public RectF D;
-    public Paint E;
-    public Paint F;
-    public int G;
-    public int H;
-    public int I;
-    public int J;
-    public double K;
-    public float L;
-    public a M;
-    public final int p;
-    public Drawable q;
-    public int r;
-    public int s;
-    public int t;
-    public int u;
-    public int v;
-    public int w;
-    public int x;
-    public boolean y;
-    public boolean z;
 
+    /* renamed from: N */
+    public static final String f37987N = SeekArc.class.getSimpleName();
+
+    /* renamed from: O */
+    public static int f37988O = -1;
+
+    /* renamed from: A */
+    public boolean f37989A;
+
+    /* renamed from: B */
+    public int f37990B;
+
+    /* renamed from: C */
+    public float f37991C;
+
+    /* renamed from: D */
+    public RectF f37992D;
+
+    /* renamed from: E */
+    public Paint f37993E;
+
+    /* renamed from: F */
+    public Paint f37994F;
+
+    /* renamed from: G */
+    public int f37995G;
+
+    /* renamed from: H */
+    public int f37996H;
+
+    /* renamed from: I */
+    public int f37997I;
+
+    /* renamed from: J */
+    public int f37998J;
+
+    /* renamed from: K */
+    public double f37999K;
+
+    /* renamed from: L */
+    public float f38000L;
+
+    /* renamed from: M */
+    public InterfaceC4185a f38001M;
+
+    /* renamed from: p */
+    public final int f38002p;
+
+    /* renamed from: q */
+    public Drawable f38003q;
+
+    /* renamed from: r */
+    public int f38004r;
+
+    /* renamed from: s */
+    public int f38005s;
+
+    /* renamed from: t */
+    public int f38006t;
+
+    /* renamed from: u */
+    public int f38007u;
+
+    /* renamed from: v */
+    public int f38008v;
+
+    /* renamed from: w */
+    public int f38009w;
+
+    /* renamed from: x */
+    public int f38010x;
+
+    /* renamed from: y */
+    public boolean f38011y;
+
+    /* renamed from: z */
+    public boolean f38012z;
+
+    /* renamed from: com.triggertrap.seekarc.SeekArc$a */
     /* loaded from: classes2.dex */
-    public interface a {
-        void a(SeekArc seekArc);
+    public interface InterfaceC4185a {
+        /* renamed from: a */
+        void mo2a(SeekArc seekArc);
 
-        void b(SeekArc seekArc);
+        /* renamed from: b */
+        void mo1b(SeekArc seekArc);
 
-        void c(SeekArc seekArc, int i, boolean z);
+        /* renamed from: c */
+        void mo0c(SeekArc seekArc, int i, boolean z);
     }
 
     public SeekArc(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.p = -90;
-        this.r = 100;
-        this.s = 0;
-        this.t = 4;
-        this.u = 2;
-        this.v = 0;
-        this.w = 360;
-        this.x = 0;
-        this.y = false;
-        this.z = true;
-        this.A = true;
-        this.B = 0;
-        this.C = 0.0f;
-        this.D = new RectF();
-        d(context, attributeSet, R.attr.seekArcStyle);
+        this.f38002p = -90;
+        this.f38004r = 100;
+        this.f38005s = 0;
+        this.f38006t = 4;
+        this.f38007u = 2;
+        this.f38008v = 0;
+        this.f38009w = 360;
+        this.f38010x = 0;
+        this.f38011y = false;
+        this.f38012z = true;
+        this.f37989A = true;
+        this.f37990B = 0;
+        this.f37991C = 0.0f;
+        this.f37992D = new RectF();
+        m10d(context, attributeSet, R.attr.seekArcStyle);
     }
 
-    public final int a(double d) {
-        double k = k();
-        Double.isNaN(k);
-        int round = (int) Math.round(k * d);
+    /* renamed from: a */
+    public final int m13a(double d) {
+        double m3k = m3k();
+        Double.isNaN(m3k);
+        int round = (int) Math.round(m3k * d);
         if (round < 0) {
-            round = O;
+            round = f37988O;
         }
-        return round > this.r ? O : round;
+        return round > this.f38004r ? f37988O : round;
     }
 
-    public final double b(float f, float f2) {
-        float f3 = f - this.G;
-        float f4 = f2 - this.H;
-        if (!this.A) {
+    /* renamed from: b */
+    public final double m12b(float f, float f2) {
+        float f3 = f - this.f37995G;
+        float f4 = f2 - this.f37996H;
+        if (!this.f37989A) {
             f3 = -f3;
         }
-        double degrees = Math.toDegrees((Math.atan2(f4, f3) + 1.5707963267948966d) - Math.toRadians(this.x));
+        double degrees = Math.toDegrees((Math.atan2(f4, f3) + 1.5707963267948966d) - Math.toRadians(this.f38010x));
         if (degrees < 0.0d) {
             degrees += 360.0d;
         }
-        double d = this.v;
+        double d = this.f38008v;
         Double.isNaN(d);
         return degrees - d;
     }
 
-    public final boolean c(float f, float f2) {
-        float f3 = f - this.G;
-        float f4 = f2 - this.H;
-        return ((float) Math.sqrt((double) ((f3 * f3) + (f4 * f4)))) < this.L;
+    /* renamed from: c */
+    public final boolean m11c(float f, float f2) {
+        float f3 = f - this.f37995G;
+        float f4 = f2 - this.f37996H;
+        return ((float) Math.sqrt((double) ((f3 * f3) + (f4 * f4)))) < this.f38000L;
     }
 
-    public final void d(Context context, AttributeSet attributeSet, int i) {
+    /* renamed from: d */
+    public final void m10d(Context context, AttributeSet attributeSet, int i) {
         Resources resources = getResources();
         float f = context.getResources().getDisplayMetrics().density;
         int color = resources.getColor(R.color.progress_gray);
         int color2 = resources.getColor(17170450);
-        this.q = resources.getDrawable(R.drawable.seek_arc_control_selector);
-        this.t = (int) (this.t * f);
+        this.f38003q = resources.getDrawable(R.drawable.seek_arc_control_selector);
+        this.f38006t = (int) (this.f38006t * f);
         if (attributeSet != null) {
-            TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, u21.u1, i, 0);
+            TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, u21.f28475u1, i, 0);
             Drawable drawable = obtainStyledAttributes.getDrawable(11);
             if (drawable != null) {
-                this.q = drawable;
+                this.f38003q = drawable;
             }
-            int intrinsicHeight = this.q.getIntrinsicHeight() / 2;
-            int intrinsicWidth = this.q.getIntrinsicWidth() / 2;
-            this.q.setBounds(-intrinsicWidth, -intrinsicHeight, intrinsicWidth, intrinsicHeight);
-            this.r = obtainStyledAttributes.getInteger(3, this.r);
-            this.s = obtainStyledAttributes.getInteger(4, this.s);
-            this.t = (int) obtainStyledAttributes.getDimension(6, this.t);
-            this.u = (int) obtainStyledAttributes.getDimension(1, this.u);
-            this.v = obtainStyledAttributes.getInt(9, this.v);
-            this.w = obtainStyledAttributes.getInt(10, this.w);
-            this.x = obtainStyledAttributes.getInt(7, this.x);
-            this.y = obtainStyledAttributes.getBoolean(8, this.y);
-            this.z = obtainStyledAttributes.getBoolean(13, this.z);
-            this.A = obtainStyledAttributes.getBoolean(2, this.A);
+            int intrinsicHeight = this.f38003q.getIntrinsicHeight() / 2;
+            int intrinsicWidth = this.f38003q.getIntrinsicWidth() / 2;
+            this.f38003q.setBounds(-intrinsicWidth, -intrinsicHeight, intrinsicWidth, intrinsicHeight);
+            this.f38004r = obtainStyledAttributes.getInteger(3, this.f38004r);
+            this.f38005s = obtainStyledAttributes.getInteger(4, this.f38005s);
+            this.f38006t = (int) obtainStyledAttributes.getDimension(6, this.f38006t);
+            this.f38007u = (int) obtainStyledAttributes.getDimension(1, this.f38007u);
+            this.f38008v = obtainStyledAttributes.getInt(9, this.f38008v);
+            this.f38009w = obtainStyledAttributes.getInt(10, this.f38009w);
+            this.f38010x = obtainStyledAttributes.getInt(7, this.f38010x);
+            this.f38011y = obtainStyledAttributes.getBoolean(8, this.f38011y);
+            this.f38012z = obtainStyledAttributes.getBoolean(13, this.f38012z);
+            this.f37989A = obtainStyledAttributes.getBoolean(2, this.f37989A);
             color = obtainStyledAttributes.getColor(0, color);
             color2 = obtainStyledAttributes.getColor(5, color2);
             obtainStyledAttributes.recycle();
         }
-        int i2 = this.s;
-        int i3 = this.r;
+        int i2 = this.f38005s;
+        int i3 = this.f38004r;
         if (i2 > i3) {
             i2 = i3;
         }
-        this.s = i2;
+        this.f38005s = i2;
         if (i2 < 0) {
             i2 = 0;
         }
-        this.s = i2;
-        int i4 = this.w;
+        this.f38005s = i2;
+        int i4 = this.f38009w;
         if (i4 > 360) {
             i4 = 360;
         }
-        this.w = i4;
+        this.f38009w = i4;
         if (i4 < 0) {
             i4 = 0;
         }
-        this.w = i4;
-        int i5 = this.v;
+        this.f38009w = i4;
+        int i5 = this.f38008v;
         if (i5 > 360) {
             i5 = 0;
         }
-        this.v = i5;
-        this.v = i5 >= 0 ? i5 : 0;
+        this.f38008v = i5;
+        this.f38008v = i5 >= 0 ? i5 : 0;
         Paint paint = new Paint();
-        this.E = paint;
+        this.f37993E = paint;
         paint.setColor(color);
-        this.E.setAntiAlias(true);
-        this.E.setStyle(Paint.Style.STROKE);
-        this.E.setStrokeWidth(this.u);
+        this.f37993E.setAntiAlias(true);
+        this.f37993E.setStyle(Paint.Style.STROKE);
+        this.f37993E.setStrokeWidth(this.f38007u);
         Paint paint2 = new Paint();
-        this.F = paint2;
+        this.f37994F = paint2;
         paint2.setColor(color2);
-        this.F.setAntiAlias(true);
-        this.F.setStyle(Paint.Style.STROKE);
-        this.F.setStrokeWidth(this.t);
-        if (this.y) {
-            this.E.setStrokeCap(Paint.Cap.ROUND);
-            this.F.setStrokeCap(Paint.Cap.ROUND);
+        this.f37994F.setAntiAlias(true);
+        this.f37994F.setStyle(Paint.Style.STROKE);
+        this.f37994F.setStrokeWidth(this.f38006t);
+        if (this.f38011y) {
+            this.f37993E.setStrokeCap(Paint.Cap.ROUND);
+            this.f37994F.setStrokeCap(Paint.Cap.ROUND);
         }
     }
 
     @Override // android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        Drawable drawable = this.q;
+        Drawable drawable = this.f38003q;
         if (drawable != null && drawable.isStateful()) {
-            this.q.setState(getDrawableState());
+            this.f38003q.setState(getDrawableState());
         }
         invalidate();
     }
 
-    public final void e(int i, boolean z) {
-        i(i, z);
+    /* renamed from: e */
+    public final void m9e(int i, boolean z) {
+        m5i(i, z);
     }
 
-    public final void f() {
-        a aVar = this.M;
-        if (aVar != null) {
-            aVar.a(this);
+    /* renamed from: f */
+    public final void m8f() {
+        InterfaceC4185a interfaceC4185a = this.f38001M;
+        if (interfaceC4185a != null) {
+            interfaceC4185a.mo2a(this);
         }
     }
 
-    public final void g() {
-        a aVar = this.M;
-        if (aVar != null) {
-            aVar.b(this);
+    /* renamed from: g */
+    public final void m7g() {
+        InterfaceC4185a interfaceC4185a = this.f38001M;
+        if (interfaceC4185a != null) {
+            interfaceC4185a.mo1b(this);
         }
     }
 
     public int getArcRotation() {
-        return this.x;
+        return this.f38010x;
     }
 
     public int getArcWidth() {
-        return this.u;
+        return this.f38007u;
     }
 
     public int getProgressWidth() {
-        return this.t;
+        return this.f38006t;
     }
 
     public int getStartAngle() {
-        return this.v;
+        return this.f38008v;
     }
 
     public int getSweepAngle() {
-        return this.w;
+        return this.f38009w;
     }
 
-    public final void h(MotionEvent motionEvent) {
-        if (c(motionEvent.getX(), motionEvent.getY())) {
+    /* renamed from: h */
+    public final void m6h(MotionEvent motionEvent) {
+        if (m11c(motionEvent.getX(), motionEvent.getY())) {
             return;
         }
         setPressed(true);
-        double b = b(motionEvent.getX(), motionEvent.getY());
-        this.K = b;
-        e(a(b), true);
+        double m12b = m12b(motionEvent.getX(), motionEvent.getY());
+        this.f37999K = m12b;
+        m9e(m13a(m12b), true);
     }
 
-    public final void i(int i, boolean z) {
-        if (i == O) {
+    /* renamed from: i */
+    public final void m5i(int i, boolean z) {
+        if (i == f37988O) {
             return;
         }
-        a aVar = this.M;
-        if (aVar != null) {
-            aVar.c(this, i, z);
+        InterfaceC4185a interfaceC4185a = this.f38001M;
+        if (interfaceC4185a != null) {
+            interfaceC4185a.mo0c(this, i, z);
         }
-        int i2 = this.r;
+        int i2 = this.f38004r;
         if (i > i2) {
             i = i2;
         }
-        if (this.s < 0) {
+        if (this.f38005s < 0) {
             i = 0;
         }
-        this.s = i;
-        this.C = (i / i2) * this.w;
-        j();
+        this.f38005s = i;
+        this.f37991C = (i / i2) * this.f38009w;
+        m4j();
         invalidate();
     }
 
-    public final void j() {
-        double d = this.B;
-        double d2 = (int) (this.v + this.C + this.x + 90.0f);
+    /* renamed from: j */
+    public final void m4j() {
+        double d = this.f37990B;
+        double d2 = (int) (this.f38008v + this.f37991C + this.f38010x + 90.0f);
         double cos = Math.cos(Math.toRadians(d2));
         Double.isNaN(d);
-        this.I = (int) (d * cos);
-        double d3 = this.B;
+        this.f37997I = (int) (d * cos);
+        double d3 = this.f37990B;
         double sin = Math.sin(Math.toRadians(d2));
         Double.isNaN(d3);
-        this.J = (int) (d3 * sin);
+        this.f37998J = (int) (d3 * sin);
     }
 
-    public final float k() {
-        return this.r / this.w;
+    /* renamed from: k */
+    public final float m3k() {
+        return this.f38004r / this.f38009w;
     }
 
     @Override // android.view.View
     public void onDraw(Canvas canvas) {
-        if (!this.A) {
-            canvas.scale(-1.0f, 1.0f, this.D.centerX(), this.D.centerY());
+        if (!this.f37989A) {
+            canvas.scale(-1.0f, 1.0f, this.f37992D.centerX(), this.f37992D.centerY());
         }
-        float f = (this.v - 90) + this.x;
-        canvas.drawArc(this.D, f, this.w, false, this.E);
-        canvas.drawArc(this.D, f, this.C, false, this.F);
-        canvas.translate(this.G - this.I, this.H - this.J);
-        this.q.draw(canvas);
+        float f = (this.f38008v - 90) + this.f38010x;
+        canvas.drawArc(this.f37992D, f, this.f38009w, false, this.f37993E);
+        canvas.drawArc(this.f37992D, f, this.f37991C, false, this.f37994F);
+        canvas.translate(this.f37995G - this.f37997I, this.f37996H - this.f37998J);
+        this.f38003q.draw(canvas);
     }
 
     @Override // android.view.View
@@ -285,25 +352,25 @@ public class SeekArc extends View {
         int defaultSize = View.getDefaultSize(getSuggestedMinimumHeight(), i2);
         int defaultSize2 = View.getDefaultSize(getSuggestedMinimumWidth(), i);
         int min = Math.min(defaultSize2, defaultSize);
-        this.G = (int) (defaultSize2 * 0.5f);
-        this.H = (int) (defaultSize * 0.5f);
+        this.f37995G = (int) (defaultSize2 * 0.5f);
+        this.f37996H = (int) (defaultSize * 0.5f);
         int paddingLeft = min - getPaddingLeft();
         int i3 = paddingLeft / 2;
-        this.B = i3;
+        this.f37990B = i3;
         float f = (defaultSize / 2) - i3;
         float f2 = (defaultSize2 / 2) - i3;
         float f3 = paddingLeft;
-        this.D.set(f2, f, f2 + f3, f3 + f);
-        double d = this.B;
-        double d2 = ((int) this.C) + this.v + this.x + 90;
+        this.f37992D.set(f2, f, f2 + f3, f3 + f);
+        double d = this.f37990B;
+        double d2 = ((int) this.f37991C) + this.f38008v + this.f38010x + 90;
         double cos = Math.cos(Math.toRadians(d2));
         Double.isNaN(d);
-        this.I = (int) (d * cos);
-        double d3 = this.B;
+        this.f37997I = (int) (d * cos);
+        double d3 = this.f37990B;
         double sin = Math.sin(Math.toRadians(d2));
         Double.isNaN(d3);
-        this.J = (int) (d3 * sin);
-        setTouchInSide(this.z);
+        this.f37998J = (int) (d3 * sin);
+        setTouchInSide(this.f38012z);
         super.onMeasure(i, i2);
     }
 
@@ -313,92 +380,80 @@ public class SeekArc extends View {
     @Override // android.view.View
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public boolean onTouchEvent(android.view.MotionEvent r5) {
-        /*
-            r4 = this;
-            int r0 = r5.getAction()
-            r1 = 1
-            if (r0 == 0) goto L18
-            r2 = 0
-            if (r0 == r1) goto L11
-            r3 = 2
-            if (r0 == r3) goto L1b
-            r5 = 3
-            if (r0 == r5) goto L11
-            goto L1e
-        L11:
-            r4.g()
-            r4.setPressed(r2)
-            goto L1e
-        L18:
-            r4.f()
-        L1b:
-            r4.h(r5)
-        L1e:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.triggertrap.seekarc.SeekArc.onTouchEvent(android.view.MotionEvent):boolean");
+    public boolean onTouchEvent(MotionEvent motionEvent) {
+        int action = motionEvent.getAction();
+        if (action != 0) {
+            if (action != 1) {
+                if (action != 2) {
+                }
+            }
+            m7g();
+            setPressed(false);
+            return true;
+        }
+        m8f();
+        m6h(motionEvent);
+        return true;
     }
 
     public void setArcRotation(int i) {
-        this.x = i;
-        j();
+        this.f38010x = i;
+        m4j();
     }
 
     public void setArcWidth(int i) {
-        this.u = i;
-        this.E.setStrokeWidth(i);
+        this.f38007u = i;
+        this.f37993E.setStrokeWidth(i);
     }
 
     public void setClockwise(boolean z) {
-        this.A = z;
+        this.f37989A = z;
     }
 
-    public void setOnSeekArcChangeListener(a aVar) {
-        this.M = aVar;
+    public void setOnSeekArcChangeListener(InterfaceC4185a interfaceC4185a) {
+        this.f38001M = interfaceC4185a;
     }
 
     public void setProgress(int i) {
-        i(i, false);
+        m5i(i, false);
     }
 
     public void setProgressWidth(int i) {
-        this.t = i;
-        this.F.setStrokeWidth(i);
+        this.f38006t = i;
+        this.f37994F.setStrokeWidth(i);
     }
 
     public void setRoundedEdges(boolean z) {
         Paint paint;
         Paint.Cap cap;
-        this.y = z;
+        this.f38011y = z;
         if (z) {
-            this.E.setStrokeCap(Paint.Cap.ROUND);
-            paint = this.F;
+            this.f37993E.setStrokeCap(Paint.Cap.ROUND);
+            paint = this.f37994F;
             cap = Paint.Cap.ROUND;
         } else {
-            this.E.setStrokeCap(Paint.Cap.SQUARE);
-            paint = this.F;
+            this.f37993E.setStrokeCap(Paint.Cap.SQUARE);
+            paint = this.f37994F;
             cap = Paint.Cap.SQUARE;
         }
         paint.setStrokeCap(cap);
     }
 
     public void setStartAngle(int i) {
-        this.v = i;
-        j();
+        this.f38008v = i;
+        m4j();
     }
 
     public void setSweepAngle(int i) {
-        this.w = i;
-        j();
+        this.f38009w = i;
+        m4j();
     }
 
     public void setTouchInSide(boolean z) {
-        int intrinsicHeight = this.q.getIntrinsicHeight() / 2;
-        int intrinsicWidth = this.q.getIntrinsicWidth() / 2;
-        this.z = z;
-        this.L = z ? this.B / 4.0f : this.B - Math.min(intrinsicWidth, intrinsicHeight);
+        int intrinsicHeight = this.f38003q.getIntrinsicHeight() / 2;
+        int intrinsicWidth = this.f38003q.getIntrinsicWidth() / 2;
+        this.f38012z = z;
+        this.f38000L = z ? this.f37990B / 4.0f : this.f37990B - Math.min(intrinsicWidth, intrinsicHeight);
     }
 }

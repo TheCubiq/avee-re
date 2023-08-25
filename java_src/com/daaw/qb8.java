@@ -4,40 +4,52 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes2.dex */
 public final class qb8 {
-    public j47 a;
-    public List b;
-    public List c;
-    public long d;
-    public final /* synthetic */ yb8 e;
+
+    /* renamed from: a */
+    public j47 f23846a;
+
+    /* renamed from: b */
+    public List f23847b;
+
+    /* renamed from: c */
+    public List f23848c;
+
+    /* renamed from: d */
+    public long f23849d;
+
+    /* renamed from: e */
+    public final /* synthetic */ yb8 f23850e;
 
     public /* synthetic */ qb8(yb8 yb8Var, nb8 nb8Var) {
-        this.e = yb8Var;
+        this.f23850e = yb8Var;
     }
 
-    public static final long b(it6 it6Var) {
-        return ((it6Var.G() / 1000) / 60) / 60;
+    /* renamed from: b */
+    public static final long m12629b(it6 it6Var) {
+        return ((it6Var.m19366G() / 1000) / 60) / 60;
     }
 
-    public final boolean a(long j, it6 it6Var) {
-        ry0.j(it6Var);
-        if (this.c == null) {
-            this.c = new ArrayList();
+    /* renamed from: a */
+    public final boolean m12630a(long j, it6 it6Var) {
+        ry0.m10830j(it6Var);
+        if (this.f23848c == null) {
+            this.f23848c = new ArrayList();
         }
-        if (this.b == null) {
-            this.b = new ArrayList();
+        if (this.f23847b == null) {
+            this.f23847b = new ArrayList();
         }
-        if (this.c.isEmpty() || b((it6) this.c.get(0)) == b(it6Var)) {
-            long c = this.d + it6Var.c();
-            this.e.U();
-            if (c >= Math.max(0, ((Integer) m75.j.a(null)).intValue())) {
+        if (this.f23848c.isEmpty() || m12629b((it6) this.f23848c.get(0)) == m12629b(it6Var)) {
+            long mo2461c = this.f23849d + it6Var.mo2461c();
+            this.f23850e.m3917U();
+            if (mo2461c >= Math.max(0, ((Integer) m75.f18537j.m18786a(null)).intValue())) {
                 return false;
             }
-            this.d = c;
-            this.c.add(it6Var);
-            this.b.add(Long.valueOf(j));
-            int size = this.c.size();
-            this.e.U();
-            return size < Math.max(1, ((Integer) m75.k.a(null)).intValue());
+            this.f23849d = mo2461c;
+            this.f23848c.add(it6Var);
+            this.f23847b.add(Long.valueOf(j));
+            int size = this.f23848c.size();
+            this.f23850e.m3917U();
+            return size < Math.max(1, ((Integer) m75.f18539k.m18786a(null)).intValue());
         }
         return false;
     }

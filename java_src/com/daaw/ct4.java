@@ -5,5 +5,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public interface ct4 {
-    void f(zzs zzsVar);
+    /* renamed from: f */
+    void mo9172f(zzs zzsVar);
 }

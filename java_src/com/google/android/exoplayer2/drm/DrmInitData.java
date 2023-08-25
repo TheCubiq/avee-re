@@ -2,8 +2,8 @@ package com.google.android.exoplayer2.drm;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.daaw.dd;
-import com.daaw.s6;
+import com.daaw.C1075dd;
+import com.daaw.C2914s6;
 import com.daaw.sq1;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,23 +12,42 @@ import java.util.List;
 import java.util.UUID;
 /* loaded from: classes.dex */
 public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
-    public static final Parcelable.Creator<DrmInitData> CREATOR = new a();
-    public final SchemeData[] p;
-    public int q;
-    public final String r;
-    public final int s;
+    public static final Parcelable.Creator<DrmInitData> CREATOR = new C3922a();
+
+    /* renamed from: p */
+    public final SchemeData[] f35727p;
+
+    /* renamed from: q */
+    public int f35728q;
+
+    /* renamed from: r */
+    public final String f35729r;
+
+    /* renamed from: s */
+    public final int f35730s;
 
     /* loaded from: classes.dex */
     public static final class SchemeData implements Parcelable {
-        public static final Parcelable.Creator<SchemeData> CREATOR = new a();
-        public int p;
-        public final UUID q;
-        public final String r;
-        public final byte[] s;
-        public final boolean t;
+        public static final Parcelable.Creator<SchemeData> CREATOR = new C3921a();
 
+        /* renamed from: p */
+        public int f35731p;
+
+        /* renamed from: q */
+        public final UUID f35732q;
+
+        /* renamed from: r */
+        public final String f35733r;
+
+        /* renamed from: s */
+        public final byte[] f35734s;
+
+        /* renamed from: t */
+        public final boolean f35735t;
+
+        /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$SchemeData$a */
         /* loaded from: classes.dex */
-        public static class a implements Parcelable.Creator<SchemeData> {
+        public static class C3921a implements Parcelable.Creator<SchemeData> {
             @Override // android.os.Parcelable.Creator
             /* renamed from: a */
             public SchemeData createFromParcel(Parcel parcel) {
@@ -43,10 +62,10 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
         }
 
         public SchemeData(Parcel parcel) {
-            this.q = new UUID(parcel.readLong(), parcel.readLong());
-            this.r = parcel.readString();
-            this.s = parcel.createByteArray();
-            this.t = parcel.readByte() != 0;
+            this.f35732q = new UUID(parcel.readLong(), parcel.readLong());
+            this.f35733r = parcel.readString();
+            this.f35734s = parcel.createByteArray();
+            this.f35735t = parcel.readByte() != 0;
         }
 
         public SchemeData(UUID uuid, String str, byte[] bArr) {
@@ -54,18 +73,20 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
         }
 
         public SchemeData(UUID uuid, String str, byte[] bArr, boolean z) {
-            this.q = (UUID) s6.e(uuid);
-            this.r = (String) s6.e(str);
-            this.s = bArr;
-            this.t = z;
+            this.f35732q = (UUID) C2914s6.m10686e(uuid);
+            this.f35733r = (String) C2914s6.m10686e(str);
+            this.f35734s = bArr;
+            this.f35735t = z;
         }
 
-        public boolean b(SchemeData schemeData) {
-            return c() && !schemeData.c() && g(schemeData.q);
+        /* renamed from: b */
+        public boolean m1708b(SchemeData schemeData) {
+            return m1707c() && !schemeData.m1707c() && m1706g(schemeData.f35732q);
         }
 
-        public boolean c() {
-            return this.s != null;
+        /* renamed from: c */
+        public boolean m1707c() {
+            return this.f35734s != null;
         }
 
         @Override // android.os.Parcelable
@@ -79,34 +100,36 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
                     return true;
                 }
                 SchemeData schemeData = (SchemeData) obj;
-                return this.r.equals(schemeData.r) && sq1.b(this.q, schemeData.q) && Arrays.equals(this.s, schemeData.s);
+                return this.f35733r.equals(schemeData.f35733r) && sq1.m10016b(this.f35732q, schemeData.f35732q) && Arrays.equals(this.f35734s, schemeData.f35734s);
             }
             return false;
         }
 
-        public boolean g(UUID uuid) {
-            return dd.b.equals(this.q) || uuid.equals(this.q);
+        /* renamed from: g */
+        public boolean m1706g(UUID uuid) {
+            return C1075dd.f6942b.equals(this.f35732q) || uuid.equals(this.f35732q);
         }
 
         public int hashCode() {
-            if (this.p == 0) {
-                this.p = (((this.q.hashCode() * 31) + this.r.hashCode()) * 31) + Arrays.hashCode(this.s);
+            if (this.f35731p == 0) {
+                this.f35731p = (((this.f35732q.hashCode() * 31) + this.f35733r.hashCode()) * 31) + Arrays.hashCode(this.f35734s);
             }
-            return this.p;
+            return this.f35731p;
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
-            parcel.writeLong(this.q.getMostSignificantBits());
-            parcel.writeLong(this.q.getLeastSignificantBits());
-            parcel.writeString(this.r);
-            parcel.writeByteArray(this.s);
-            parcel.writeByte(this.t ? (byte) 1 : (byte) 0);
+            parcel.writeLong(this.f35732q.getMostSignificantBits());
+            parcel.writeLong(this.f35732q.getLeastSignificantBits());
+            parcel.writeString(this.f35733r);
+            parcel.writeByteArray(this.f35734s);
+            parcel.writeByte(this.f35735t ? (byte) 1 : (byte) 0);
         }
     }
 
+    /* renamed from: com.google.android.exoplayer2.drm.DrmInitData$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<DrmInitData> {
+    public static class C3922a implements Parcelable.Creator<DrmInitData> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public DrmInitData createFromParcel(Parcel parcel) {
@@ -121,10 +144,10 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
     }
 
     public DrmInitData(Parcel parcel) {
-        this.r = parcel.readString();
+        this.f35729r = parcel.readString();
         SchemeData[] schemeDataArr = (SchemeData[]) parcel.createTypedArray(SchemeData.CREATOR);
-        this.p = schemeDataArr;
-        this.s = schemeDataArr.length;
+        this.f35727p = schemeDataArr;
+        this.f35730s = schemeDataArr.length;
     }
 
     public DrmInitData(String str, List<SchemeData> list) {
@@ -132,11 +155,11 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
     }
 
     public DrmInitData(String str, boolean z, SchemeData... schemeDataArr) {
-        this.r = str;
+        this.f35729r = str;
         schemeDataArr = z ? (SchemeData[]) schemeDataArr.clone() : schemeDataArr;
         Arrays.sort(schemeDataArr, this);
-        this.p = schemeDataArr;
-        this.s = schemeDataArr.length;
+        this.f35727p = schemeDataArr;
+        this.f35730s = schemeDataArr.length;
     }
 
     public DrmInitData(String str, SchemeData... schemeDataArr) {
@@ -151,24 +174,26 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
         this((String) null, schemeDataArr);
     }
 
-    public static boolean b(ArrayList<SchemeData> arrayList, int i, UUID uuid) {
+    /* renamed from: b */
+    public static boolean m1713b(ArrayList<SchemeData> arrayList, int i, UUID uuid) {
         for (int i2 = 0; i2 < i; i2++) {
-            if (arrayList.get(i2).q.equals(uuid)) {
+            if (arrayList.get(i2).f35732q.equals(uuid)) {
                 return true;
             }
         }
         return false;
     }
 
-    public static DrmInitData g(DrmInitData drmInitData, DrmInitData drmInitData2) {
+    /* renamed from: g */
+    public static DrmInitData m1711g(DrmInitData drmInitData, DrmInitData drmInitData2) {
         String str;
         SchemeData[] schemeDataArr;
         SchemeData[] schemeDataArr2;
         ArrayList arrayList = new ArrayList();
         if (drmInitData != null) {
-            str = drmInitData.r;
-            for (SchemeData schemeData : drmInitData.p) {
-                if (schemeData.c()) {
+            str = drmInitData.f35729r;
+            for (SchemeData schemeData : drmInitData.f35727p) {
+                if (schemeData.m1707c()) {
                     arrayList.add(schemeData);
                 }
             }
@@ -177,11 +202,11 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
         }
         if (drmInitData2 != null) {
             if (str == null) {
-                str = drmInitData2.r;
+                str = drmInitData2.f35729r;
             }
             int size = arrayList.size();
-            for (SchemeData schemeData2 : drmInitData2.p) {
-                if (schemeData2.c() && !b(arrayList, size, schemeData2.q)) {
+            for (SchemeData schemeData2 : drmInitData2.f35727p) {
+                if (schemeData2.m1707c() && !m1713b(arrayList, size, schemeData2.f35732q)) {
                     arrayList.add(schemeData2);
                 }
             }
@@ -195,12 +220,13 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
     @Override // java.util.Comparator
     /* renamed from: a */
     public int compare(SchemeData schemeData, SchemeData schemeData2) {
-        UUID uuid = dd.b;
-        return uuid.equals(schemeData.q) ? uuid.equals(schemeData2.q) ? 0 : 1 : schemeData.q.compareTo(schemeData2.q);
+        UUID uuid = C1075dd.f6942b;
+        return uuid.equals(schemeData.f35732q) ? uuid.equals(schemeData2.f35732q) ? 0 : 1 : schemeData.f35732q.compareTo(schemeData2.f35732q);
     }
 
-    public DrmInitData c(String str) {
-        return sq1.b(this.r, str) ? this : new DrmInitData(str, false, this.p);
+    /* renamed from: c */
+    public DrmInitData m1712c(String str) {
+        return sq1.m10016b(this.f35729r, str) ? this : new DrmInitData(str, false, this.f35727p);
     }
 
     @Override // android.os.Parcelable
@@ -217,24 +243,25 @@ public final class DrmInitData implements Comparator<SchemeData>, Parcelable {
             return false;
         }
         DrmInitData drmInitData = (DrmInitData) obj;
-        return sq1.b(this.r, drmInitData.r) && Arrays.equals(this.p, drmInitData.p);
+        return sq1.m10016b(this.f35729r, drmInitData.f35729r) && Arrays.equals(this.f35727p, drmInitData.f35727p);
     }
 
-    public SchemeData h(int i) {
-        return this.p[i];
+    /* renamed from: h */
+    public SchemeData m1710h(int i) {
+        return this.f35727p[i];
     }
 
     public int hashCode() {
-        if (this.q == 0) {
-            String str = this.r;
-            this.q = ((str == null ? 0 : str.hashCode()) * 31) + Arrays.hashCode(this.p);
+        if (this.f35728q == 0) {
+            String str = this.f35729r;
+            this.f35728q = ((str == null ? 0 : str.hashCode()) * 31) + Arrays.hashCode(this.f35727p);
         }
-        return this.q;
+        return this.f35728q;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.r);
-        parcel.writeTypedArray(this.p, 0);
+        parcel.writeString(this.f35729r);
+        parcel.writeTypedArray(this.f35727p, 0);
     }
 }

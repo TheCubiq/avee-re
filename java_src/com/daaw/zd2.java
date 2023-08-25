@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface zd2 {
-    void a(long j);
+    /* renamed from: a */
+    void mo2467a(long j);
 
-    void b(int i, long j);
+    /* renamed from: b */
+    void mo2466b(int i, long j);
 
-    boolean c(k09 k09Var, long j);
+    /* renamed from: c */
+    boolean mo2465c(k09 k09Var, long j);
 }

@@ -1,15 +1,19 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class pq1 {
-    public final String a;
-    public final String b;
+
+    /* renamed from: a */
+    public final String f23180a;
+
+    /* renamed from: b */
+    public final String f23181b;
 
     public pq1(String str, String str2) {
-        this.a = str;
-        this.b = str2;
+        this.f23180a = str;
+        this.f23181b = str2;
     }
 
     public String toString() {
-        return this.a + ", " + this.b;
+        return this.f23180a + ", " + this.f23181b;
     }
 }

@@ -3,7 +3,9 @@ package com.daaw;
 import java.io.OutputStream;
 /* loaded from: classes.dex */
 public interface oe1 {
-    pe1 a();
+    /* renamed from: a */
+    pe1 mo2137a();
 
-    void b(OutputStream outputStream, String str);
+    /* renamed from: b */
+    void mo2136b(OutputStream outputStream, String str);
 }

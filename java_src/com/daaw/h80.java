@@ -3,143 +3,171 @@ package com.daaw;
 import android.content.Context;
 import android.os.Build;
 import android.text.TextUtils;
+import androidx.work.C0507a;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 /* loaded from: classes.dex */
-public class h80 implements r81, rx1, yy {
-    public static final String x = ll0.f("GreedyScheduler");
-    public final Context p;
-    public final ey1 q;
-    public final sx1 r;
-    public hs t;
-    public boolean u;
-    public Boolean w;
-    public final Set<qy1> s = new HashSet();
-    public final Object v = new Object();
+public class h80 implements r81, rx1, InterfaceC3778yy {
 
-    public h80(Context context, androidx.work.a aVar, wj1 wj1Var, ey1 ey1Var) {
-        this.p = context;
-        this.q = ey1Var;
-        this.r = new sx1(context, wj1Var, this);
-        this.t = new hs(this, aVar.k());
+    /* renamed from: x */
+    public static final String f12168x = ll0.m16883f("GreedyScheduler");
+
+    /* renamed from: p */
+    public final Context f12169p;
+
+    /* renamed from: q */
+    public final ey1 f12170q;
+
+    /* renamed from: r */
+    public final sx1 f12171r;
+
+    /* renamed from: t */
+    public C1608hs f12173t;
+
+    /* renamed from: u */
+    public boolean f12174u;
+
+    /* renamed from: w */
+    public Boolean f12176w;
+
+    /* renamed from: s */
+    public final Set<qy1> f12172s = new HashSet();
+
+    /* renamed from: v */
+    public final Object f12175v = new Object();
+
+    public h80(Context context, C0507a c0507a, wj1 wj1Var, ey1 ey1Var) {
+        this.f12169p = context;
+        this.f12170q = ey1Var;
+        this.f12171r = new sx1(context, wj1Var, this);
+        this.f12173t = new C1608hs(this, c0507a.m27977k());
     }
 
     @Override // com.daaw.r81
-    public boolean a() {
+    /* renamed from: a */
+    public boolean mo9090a() {
         return false;
     }
 
     @Override // com.daaw.rx1
-    public void b(List<String> list) {
+    /* renamed from: b */
+    public void mo10849b(List<String> list) {
         for (String str : list) {
-            ll0.c().a(x, String.format("Constraints not met: Cancelling work ID %s", str), new Throwable[0]);
-            this.q.x(str);
+            ll0.m16885c().mo16882a(f12168x, String.format("Constraints not met: Cancelling work ID %s", str), new Throwable[0]);
+            this.f12170q.m22991x(str);
         }
     }
 
-    @Override // com.daaw.yy
-    public void c(String str, boolean z) {
-        i(str);
-    }
-
-    @Override // com.daaw.r81
-    public void d(String str) {
-        if (this.w == null) {
-            g();
-        }
-        if (!this.w.booleanValue()) {
-            ll0.c().d(x, "Ignoring schedule request in non-main process", new Throwable[0]);
-            return;
-        }
-        h();
-        ll0.c().a(x, String.format("Cancelling work ID %s", str), new Throwable[0]);
-        hs hsVar = this.t;
-        if (hsVar != null) {
-            hsVar.b(str);
-        }
-        this.q.x(str);
+    @Override // com.daaw.InterfaceC3778yy
+    /* renamed from: c */
+    public void mo3085c(String str, boolean z) {
+        m20949i(str);
     }
 
     @Override // com.daaw.r81
-    public void e(qy1... qy1VarArr) {
-        if (this.w == null) {
-            g();
+    /* renamed from: d */
+    public void mo9088d(String str) {
+        if (this.f12176w == null) {
+            m20951g();
         }
-        if (!this.w.booleanValue()) {
-            ll0.c().d(x, "Ignoring schedule request in a secondary process", new Throwable[0]);
+        if (!this.f12176w.booleanValue()) {
+            ll0.m16885c().mo16880d(f12168x, "Ignoring schedule request in non-main process", new Throwable[0]);
             return;
         }
-        h();
+        m20950h();
+        ll0.m16885c().mo16882a(f12168x, String.format("Cancelling work ID %s", str), new Throwable[0]);
+        C1608hs c1608hs = this.f12173t;
+        if (c1608hs != null) {
+            c1608hs.m20443b(str);
+        }
+        this.f12170q.m22991x(str);
+    }
+
+    @Override // com.daaw.r81
+    /* renamed from: e */
+    public void mo9087e(qy1... qy1VarArr) {
+        if (this.f12176w == null) {
+            m20951g();
+        }
+        if (!this.f12176w.booleanValue()) {
+            ll0.m16885c().mo16880d(f12168x, "Ignoring schedule request in a secondary process", new Throwable[0]);
+            return;
+        }
+        m20950h();
         HashSet hashSet = new HashSet();
         HashSet hashSet2 = new HashSet();
         for (qy1 qy1Var : qy1VarArr) {
-            long a = qy1Var.a();
+            long m11938a = qy1Var.m11938a();
             long currentTimeMillis = System.currentTimeMillis();
-            if (qy1Var.b == yx1.ENQUEUED) {
-                if (currentTimeMillis < a) {
-                    hs hsVar = this.t;
-                    if (hsVar != null) {
-                        hsVar.a(qy1Var);
+            if (qy1Var.f24625b == yx1.ENQUEUED) {
+                if (currentTimeMillis < m11938a) {
+                    C1608hs c1608hs = this.f12173t;
+                    if (c1608hs != null) {
+                        c1608hs.m20444a(qy1Var);
                     }
-                } else if (qy1Var.b()) {
+                } else if (qy1Var.m11937b()) {
                     int i = Build.VERSION.SDK_INT;
-                    if (i >= 23 && qy1Var.j.h()) {
-                        ll0.c().a(x, String.format("Ignoring WorkSpec %s, Requires device idle.", qy1Var), new Throwable[0]);
-                    } else if (i < 24 || !qy1Var.j.e()) {
+                    if (i >= 23 && qy1Var.f24633j.m10316h()) {
+                        ll0.m16885c().mo16882a(f12168x, String.format("Ignoring WorkSpec %s, Requires device idle.", qy1Var), new Throwable[0]);
+                    } else if (i < 24 || !qy1Var.f24633j.m10319e()) {
                         hashSet.add(qy1Var);
-                        hashSet2.add(qy1Var.a);
+                        hashSet2.add(qy1Var.f24624a);
                     } else {
-                        ll0.c().a(x, String.format("Ignoring WorkSpec %s, Requires ContentUri triggers.", qy1Var), new Throwable[0]);
+                        ll0.m16885c().mo16882a(f12168x, String.format("Ignoring WorkSpec %s, Requires ContentUri triggers.", qy1Var), new Throwable[0]);
                     }
                 } else {
-                    ll0.c().a(x, String.format("Starting work for %s", qy1Var.a), new Throwable[0]);
-                    this.q.u(qy1Var.a);
+                    ll0.m16885c().mo16882a(f12168x, String.format("Starting work for %s", qy1Var.f24624a), new Throwable[0]);
+                    this.f12170q.m22994u(qy1Var.f24624a);
                 }
             }
         }
-        synchronized (this.v) {
+        synchronized (this.f12175v) {
             if (!hashSet.isEmpty()) {
-                ll0.c().a(x, String.format("Starting tracking for [%s]", TextUtils.join(",", hashSet2)), new Throwable[0]);
-                this.s.addAll(hashSet);
-                this.r.d(this.s);
+                ll0.m16885c().mo16882a(f12168x, String.format("Starting tracking for [%s]", TextUtils.join(",", hashSet2)), new Throwable[0]);
+                this.f12172s.addAll(hashSet);
+                this.f12171r.m9789d(this.f12172s);
             }
         }
     }
 
     @Override // com.daaw.rx1
-    public void f(List<String> list) {
+    /* renamed from: f */
+    public void mo10848f(List<String> list) {
         for (String str : list) {
-            ll0.c().a(x, String.format("Constraints met: Scheduling work ID %s", str), new Throwable[0]);
-            this.q.u(str);
+            ll0.m16885c().mo16882a(f12168x, String.format("Constraints met: Scheduling work ID %s", str), new Throwable[0]);
+            this.f12170q.m22994u(str);
         }
     }
 
-    public final void g() {
-        this.w = Boolean.valueOf(iz0.b(this.p, this.q.i()));
+    /* renamed from: g */
+    public final void m20951g() {
+        this.f12176w = Boolean.valueOf(iz0.m19252b(this.f12169p, this.f12170q.m23006i()));
     }
 
-    public final void h() {
-        if (this.u) {
+    /* renamed from: h */
+    public final void m20950h() {
+        if (this.f12174u) {
             return;
         }
-        this.q.m().d(this);
-        this.u = true;
+        this.f12170q.m23002m().m18158d(this);
+        this.f12174u = true;
     }
 
-    public final void i(String str) {
-        synchronized (this.v) {
-            Iterator<qy1> it = this.s.iterator();
+    /* renamed from: i */
+    public final void m20949i(String str) {
+        synchronized (this.f12175v) {
+            Iterator<qy1> it = this.f12172s.iterator();
             while (true) {
                 if (!it.hasNext()) {
                     break;
                 }
                 qy1 next = it.next();
-                if (next.a.equals(str)) {
-                    ll0.c().a(x, String.format("Stopping tracking for %s", str), new Throwable[0]);
-                    this.s.remove(next);
-                    this.r.d(this.s);
+                if (next.f24624a.equals(str)) {
+                    ll0.m16885c().mo16882a(f12168x, String.format("Stopping tracking for %s", str), new Throwable[0]);
+                    this.f12172s.remove(next);
+                    this.f12171r.m9789d(this.f12172s);
                     break;
                 }
             }

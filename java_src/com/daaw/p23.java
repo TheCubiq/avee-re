@@ -6,13 +6,17 @@ import com.google.android.gms.ads.internal.client.zzdg;
 import com.google.android.gms.ads.internal.client.zzdn;
 /* loaded from: classes.dex */
 public interface p23 extends IInterface {
-    void V2(boolean z);
+    /* renamed from: V2 */
+    void mo7136V2(boolean z);
 
-    void X1(t23 t23Var);
+    /* renamed from: X1 */
+    void mo7135X1(t23 t23Var);
 
-    void Y0(zzdg zzdgVar);
+    /* renamed from: Y0 */
+    void mo7134Y0(zzdg zzdgVar);
 
-    void t1(yd0 yd0Var, w23 w23Var);
+    /* renamed from: t1 */
+    void mo7133t1(yd0 yd0Var, w23 w23Var);
 
     zzbu zze();
 

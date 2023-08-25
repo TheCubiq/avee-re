@@ -1,37 +1,50 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class fc4 {
-    public e94 a;
-    public vd4 b;
-    public in6 c;
-    public ke4 d;
-    public uj6 e;
+
+    /* renamed from: a */
+    public e94 f9435a;
+
+    /* renamed from: b */
+    public vd4 f9436b;
+
+    /* renamed from: c */
+    public in6 f9437c;
+
+    /* renamed from: d */
+    public ke4 f9438d;
+
+    /* renamed from: e */
+    public uj6 f9439e;
 
     public /* synthetic */ fc4(ec4 ec4Var) {
     }
 
-    public final b94 a() {
-        e08.c(this.a, e94.class);
-        e08.c(this.b, vd4.class);
-        if (this.c == null) {
-            this.c = new in6();
+    /* renamed from: a */
+    public final b94 m22805a() {
+        e08.m23800c(this.f9435a, e94.class);
+        e08.m23800c(this.f9436b, vd4.class);
+        if (this.f9437c == null) {
+            this.f9437c = new in6();
         }
-        if (this.d == null) {
-            this.d = new ke4();
+        if (this.f9438d == null) {
+            this.f9438d = new ke4();
         }
-        if (this.e == null) {
-            this.e = new uj6();
+        if (this.f9439e == null) {
+            this.f9439e = new uj6();
         }
-        return new bb4(this.a, this.b, this.c, this.d, this.e, null);
+        return new bb4(this.f9435a, this.f9436b, this.f9437c, this.f9438d, this.f9439e, null);
     }
 
-    public final fc4 b(e94 e94Var) {
-        this.a = e94Var;
+    /* renamed from: b */
+    public final fc4 m22804b(e94 e94Var) {
+        this.f9435a = e94Var;
         return this;
     }
 
-    public final fc4 c(vd4 vd4Var) {
-        this.b = vd4Var;
+    /* renamed from: c */
+    public final fc4 m22803c(vd4 vd4Var) {
+        this.f9436b = vd4Var;
         return this;
     }
 }

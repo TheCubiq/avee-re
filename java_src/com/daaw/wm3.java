@@ -7,7 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class wm3 {
-    public static final List a(JSONObject jSONObject, String str) {
+    /* renamed from: a */
+    public static final List m5979a(JSONObject jSONObject, String str) {
         JSONArray optJSONArray = jSONObject.optJSONArray(str);
         if (optJSONArray != null) {
             ArrayList arrayList = new ArrayList(optJSONArray.length());

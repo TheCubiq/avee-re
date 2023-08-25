@@ -3,31 +3,77 @@ package com.daaw;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class gc3 {
-    public static final gc3 v = new gc3(new x93());
-    public static final th8 w = new th8() { // from class: com.daaw.p73
+
+    /* renamed from: v */
+    public static final gc3 f11048v = new gc3(new x93());
+
+    /* renamed from: w */
+    public static final th8 f11049w = new th8() { // from class: com.daaw.p73
     };
-    public final CharSequence a;
-    public final CharSequence b;
-    public final CharSequence c;
-    public final CharSequence d;
-    public final CharSequence e;
-    public final byte[] f;
-    public final Integer g;
-    public final Integer h;
-    public final Integer i;
+
+    /* renamed from: a */
+    public final CharSequence f11050a;
+
+    /* renamed from: b */
+    public final CharSequence f11051b;
+
+    /* renamed from: c */
+    public final CharSequence f11052c;
+
+    /* renamed from: d */
+    public final CharSequence f11053d;
+
+    /* renamed from: e */
+    public final CharSequence f11054e;
+
+    /* renamed from: f */
+    public final byte[] f11055f;
+
+    /* renamed from: g */
+    public final Integer f11056g;
+
+    /* renamed from: h */
+    public final Integer f11057h;
+
+    /* renamed from: i */
+    public final Integer f11058i;
     @Deprecated
-    public final Integer j;
-    public final Integer k;
-    public final Integer l;
-    public final Integer m;
-    public final Integer n;
-    public final Integer o;
-    public final Integer p;
-    public final CharSequence q;
-    public final CharSequence r;
-    public final CharSequence s;
-    public final CharSequence t;
-    public final CharSequence u;
+
+    /* renamed from: j */
+    public final Integer f11059j;
+
+    /* renamed from: k */
+    public final Integer f11060k;
+
+    /* renamed from: l */
+    public final Integer f11061l;
+
+    /* renamed from: m */
+    public final Integer f11062m;
+
+    /* renamed from: n */
+    public final Integer f11063n;
+
+    /* renamed from: o */
+    public final Integer f11064o;
+
+    /* renamed from: p */
+    public final Integer f11065p;
+
+    /* renamed from: q */
+    public final CharSequence f11066q;
+
+    /* renamed from: r */
+    public final CharSequence f11067r;
+
+    /* renamed from: s */
+    public final CharSequence f11068s;
+
+    /* renamed from: t */
+    public final CharSequence f11069t;
+
+    /* renamed from: u */
+    public final CharSequence f11070u;
 
     public gc3(x93 x93Var) {
         CharSequence charSequence;
@@ -51,51 +97,52 @@ public final class gc3 {
         CharSequence charSequence8;
         CharSequence charSequence9;
         CharSequence charSequence10;
-        charSequence = x93Var.a;
-        this.a = charSequence;
-        charSequence2 = x93Var.b;
-        this.b = charSequence2;
-        charSequence3 = x93Var.c;
-        this.c = charSequence3;
-        charSequence4 = x93Var.d;
-        this.d = charSequence4;
-        charSequence5 = x93Var.e;
-        this.e = charSequence5;
-        bArr = x93Var.f;
-        this.f = bArr;
-        num = x93Var.g;
-        this.g = num;
-        num2 = x93Var.h;
-        this.h = num2;
-        num3 = x93Var.i;
-        this.i = num3;
-        num4 = x93Var.j;
-        this.j = num4;
-        num5 = x93Var.j;
-        this.k = num5;
-        num6 = x93Var.k;
-        this.l = num6;
-        num7 = x93Var.l;
-        this.m = num7;
-        num8 = x93Var.m;
-        this.n = num8;
-        num9 = x93Var.n;
-        this.o = num9;
-        num10 = x93Var.o;
-        this.p = num10;
-        charSequence6 = x93Var.p;
-        this.q = charSequence6;
-        charSequence7 = x93Var.q;
-        this.r = charSequence7;
-        charSequence8 = x93Var.r;
-        this.s = charSequence8;
-        charSequence9 = x93Var.s;
-        this.t = charSequence9;
-        charSequence10 = x93Var.t;
-        this.u = charSequence10;
+        charSequence = x93Var.f32228a;
+        this.f11050a = charSequence;
+        charSequence2 = x93Var.f32229b;
+        this.f11051b = charSequence2;
+        charSequence3 = x93Var.f32230c;
+        this.f11052c = charSequence3;
+        charSequence4 = x93Var.f32231d;
+        this.f11053d = charSequence4;
+        charSequence5 = x93Var.f32232e;
+        this.f11054e = charSequence5;
+        bArr = x93Var.f32233f;
+        this.f11055f = bArr;
+        num = x93Var.f32234g;
+        this.f11056g = num;
+        num2 = x93Var.f32235h;
+        this.f11057h = num2;
+        num3 = x93Var.f32236i;
+        this.f11058i = num3;
+        num4 = x93Var.f32237j;
+        this.f11059j = num4;
+        num5 = x93Var.f32237j;
+        this.f11060k = num5;
+        num6 = x93Var.f32238k;
+        this.f11061l = num6;
+        num7 = x93Var.f32239l;
+        this.f11062m = num7;
+        num8 = x93Var.f32240m;
+        this.f11063n = num8;
+        num9 = x93Var.f32241n;
+        this.f11064o = num9;
+        num10 = x93Var.f32242o;
+        this.f11065p = num10;
+        charSequence6 = x93Var.f32243p;
+        this.f11066q = charSequence6;
+        charSequence7 = x93Var.f32244q;
+        this.f11067r = charSequence7;
+        charSequence8 = x93Var.f32245r;
+        this.f11068s = charSequence8;
+        charSequence9 = x93Var.f32246s;
+        this.f11069t = charSequence9;
+        charSequence10 = x93Var.f32247t;
+        this.f11070u = charSequence10;
     }
 
-    public final x93 a() {
+    /* renamed from: a */
+    public final x93 m21755a() {
         return new x93(this, null);
     }
 
@@ -105,7 +152,7 @@ public final class gc3 {
         }
         if (obj != null && gc3.class == obj.getClass()) {
             gc3 gc3Var = (gc3) obj;
-            if (it5.t(this.a, gc3Var.a) && it5.t(this.b, gc3Var.b) && it5.t(this.c, gc3Var.c) && it5.t(this.d, gc3Var.d) && it5.t(null, null) && it5.t(null, null) && it5.t(this.e, gc3Var.e) && it5.t(null, null) && it5.t(null, null) && Arrays.equals(this.f, gc3Var.f) && it5.t(this.g, gc3Var.g) && it5.t(null, null) && it5.t(this.h, gc3Var.h) && it5.t(this.i, gc3Var.i) && it5.t(null, null) && it5.t(null, null) && it5.t(this.k, gc3Var.k) && it5.t(this.l, gc3Var.l) && it5.t(this.m, gc3Var.m) && it5.t(this.n, gc3Var.n) && it5.t(this.o, gc3Var.o) && it5.t(this.p, gc3Var.p) && it5.t(this.q, gc3Var.q) && it5.t(this.r, gc3Var.r) && it5.t(this.s, gc3Var.s) && it5.t(null, null) && it5.t(null, null) && it5.t(this.t, gc3Var.t) && it5.t(null, null) && it5.t(this.u, gc3Var.u)) {
+            if (it5.m19376t(this.f11050a, gc3Var.f11050a) && it5.m19376t(this.f11051b, gc3Var.f11051b) && it5.m19376t(this.f11052c, gc3Var.f11052c) && it5.m19376t(this.f11053d, gc3Var.f11053d) && it5.m19376t(null, null) && it5.m19376t(null, null) && it5.m19376t(this.f11054e, gc3Var.f11054e) && it5.m19376t(null, null) && it5.m19376t(null, null) && Arrays.equals(this.f11055f, gc3Var.f11055f) && it5.m19376t(this.f11056g, gc3Var.f11056g) && it5.m19376t(null, null) && it5.m19376t(this.f11057h, gc3Var.f11057h) && it5.m19376t(this.f11058i, gc3Var.f11058i) && it5.m19376t(null, null) && it5.m19376t(null, null) && it5.m19376t(this.f11060k, gc3Var.f11060k) && it5.m19376t(this.f11061l, gc3Var.f11061l) && it5.m19376t(this.f11062m, gc3Var.f11062m) && it5.m19376t(this.f11063n, gc3Var.f11063n) && it5.m19376t(this.f11064o, gc3Var.f11064o) && it5.m19376t(this.f11065p, gc3Var.f11065p) && it5.m19376t(this.f11066q, gc3Var.f11066q) && it5.m19376t(this.f11067r, gc3Var.f11067r) && it5.m19376t(this.f11068s, gc3Var.f11068s) && it5.m19376t(null, null) && it5.m19376t(null, null) && it5.m19376t(this.f11069t, gc3Var.f11069t) && it5.m19376t(null, null) && it5.m19376t(this.f11070u, gc3Var.f11070u)) {
                 return true;
             }
         }
@@ -113,6 +160,6 @@ public final class gc3 {
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new Object[]{this.a, this.b, this.c, this.d, null, null, this.e, null, null, Integer.valueOf(Arrays.hashCode(this.f)), this.g, null, this.h, this.i, null, null, this.k, this.l, this.m, this.n, this.o, this.p, this.q, this.r, this.s, null, null, this.t, null, this.u});
+        return Arrays.hashCode(new Object[]{this.f11050a, this.f11051b, this.f11052c, this.f11053d, null, null, this.f11054e, null, null, Integer.valueOf(Arrays.hashCode(this.f11055f)), this.f11056g, null, this.f11057h, this.f11058i, null, null, this.f11060k, this.f11061l, this.f11062m, this.f11063n, this.f11064o, this.f11065p, this.f11066q, this.f11067r, this.f11068s, null, null, this.f11069t, null, this.f11070u});
     }
 }

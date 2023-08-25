@@ -12,7 +12,9 @@ final class SessionSnapshot implements ConscryptSession {
     private final String applicationProtocol;
     private final String cipherSuite;
     private final long creationTime;
-    private final byte[] id;
+
+    /* renamed from: id */
+    private final byte[] f38022id;
     private final long lastAccessedTime;
     private final String peerHost;
     private final int peerPort;
@@ -24,7 +26,7 @@ final class SessionSnapshot implements ConscryptSession {
 
     public SessionSnapshot(ConscryptSession conscryptSession) {
         this.sessionContext = conscryptSession.getSessionContext();
-        this.id = conscryptSession.getId();
+        this.f38022id = conscryptSession.getId();
         this.requestedServerName = conscryptSession.getRequestedServerName();
         this.statusResponses = conscryptSession.getStatusResponses();
         this.peerTlsSctData = conscryptSession.getPeerSignedCertificateTimestamp();
@@ -59,7 +61,7 @@ final class SessionSnapshot implements ConscryptSession {
 
     @Override // javax.net.ssl.SSLSession
     public byte[] getId() {
-        return this.id;
+        return this.f38022id;
     }
 
     @Override // javax.net.ssl.SSLSession

@@ -8,35 +8,43 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes2.dex */
 public final class zzaw extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzaw> CREATOR = new nu2();
-    public final String p;
-    public final zzau q;
-    public final String r;
-    public final long s;
+
+    /* renamed from: p */
+    public final String f37068p;
+
+    /* renamed from: q */
+    public final zzau f37069q;
+
+    /* renamed from: r */
+    public final String f37070r;
+
+    /* renamed from: s */
+    public final long f37071s;
 
     public zzaw(zzaw zzawVar, long j) {
-        ry0.j(zzawVar);
-        this.p = zzawVar.p;
-        this.q = zzawVar.q;
-        this.r = zzawVar.r;
-        this.s = j;
+        ry0.m10830j(zzawVar);
+        this.f37068p = zzawVar.f37068p;
+        this.f37069q = zzawVar.f37069q;
+        this.f37070r = zzawVar.f37070r;
+        this.f37071s = j;
     }
 
     public zzaw(String str, zzau zzauVar, String str2, long j) {
-        this.p = str;
-        this.q = zzauVar;
-        this.r = str2;
-        this.s = j;
+        this.f37068p = str;
+        this.f37069q = zzauVar;
+        this.f37070r = str2;
+        this.f37071s = j;
     }
 
     public final String toString() {
-        String str = this.r;
-        String str2 = this.p;
-        String valueOf = String.valueOf(this.q);
+        String str = this.f37070r;
+        String str2 = this.f37068p;
+        String valueOf = String.valueOf(this.f37069q);
         return "origin=" + str + ",name=" + str2 + ",params=" + valueOf;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        nu2.a(this, parcel, i);
+        nu2.m14781a(this, parcel, i);
     }
 }

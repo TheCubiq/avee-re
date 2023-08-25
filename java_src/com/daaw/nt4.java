@@ -9,21 +9,23 @@ public final class nt4 extends kw4 implements pt4 {
     }
 
     @Override // com.daaw.pt4
-    public final void F(final fi6 fi6Var) {
-        B0(new jw4() { // from class: com.daaw.mt4
+    /* renamed from: F */
+    public final void mo5181F(final fi6 fi6Var) {
+        m17378B0(new jw4() { // from class: com.daaw.mt4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((pt4) obj).F(fi6.this);
+                ((pt4) obj).mo5181F(fi6.this);
             }
         });
     }
 
     @Override // com.daaw.pt4
-    public final void e(final zzccb zzccbVar) {
-        B0(new jw4() { // from class: com.daaw.lt4
+    /* renamed from: e */
+    public final void mo5174e(final zzccb zzccbVar) {
+        m17378B0(new jw4() { // from class: com.daaw.lt4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
-                ((pt4) obj).e(zzccb.this);
+                ((pt4) obj).mo5174e(zzccb.this);
             }
         });
     }

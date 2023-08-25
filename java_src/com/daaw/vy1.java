@@ -5,74 +5,82 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class vy1 implements uy1 {
-    public final b61 a;
-    public final nx<ty1> b;
 
+    /* renamed from: a */
+    public final b61 f30704a;
+
+    /* renamed from: b */
+    public final AbstractC2374nx<ty1> f30705b;
+
+    /* renamed from: com.daaw.vy1$a */
     /* loaded from: classes.dex */
-    public class a extends nx<ty1> {
-        public a(b61 b61Var) {
+    public class C3386a extends AbstractC2374nx<ty1> {
+        public C3386a(b61 b61Var) {
             super(b61Var);
         }
 
         @Override // com.daaw.mc1
-        public String d() {
+        /* renamed from: d */
+        public String mo3082d() {
             return "INSERT OR IGNORE INTO `WorkTag` (`tag`,`work_spec_id`) VALUES (?,?)";
         }
 
-        @Override // com.daaw.nx
+        @Override // com.daaw.AbstractC2374nx
         /* renamed from: i */
-        public void g(ni1 ni1Var, ty1 ty1Var) {
-            String str = ty1Var.a;
+        public void mo3081g(ni1 ni1Var, ty1 ty1Var) {
+            String str = ty1Var.f28247a;
             if (str == null) {
-                ni1Var.F(1);
+                ni1Var.mo16232F(1);
             } else {
-                ni1Var.i(1, str);
+                ni1Var.mo16231i(1, str);
             }
-            String str2 = ty1Var.b;
+            String str2 = ty1Var.f28248b;
             if (str2 == null) {
-                ni1Var.F(2);
+                ni1Var.mo16232F(2);
             } else {
-                ni1Var.i(2, str2);
+                ni1Var.mo16231i(2, str2);
             }
         }
     }
 
     public vy1(b61 b61Var) {
-        this.a = b61Var;
-        this.b = new a(b61Var);
+        this.f30704a = b61Var;
+        this.f30705b = new C3386a(b61Var);
     }
 
     @Override // com.daaw.uy1
-    public List<String> a(String str) {
-        e61 q = e61.q("SELECT DISTINCT tag FROM worktag WHERE work_spec_id=?", 1);
+    /* renamed from: a */
+    public List<String> mo6670a(String str) {
+        e61 m23701q = e61.m23701q("SELECT DISTINCT tag FROM worktag WHERE work_spec_id=?", 1);
         if (str == null) {
-            q.F(1);
+            m23701q.mo16232F(1);
         } else {
-            q.i(1, str);
+            m23701q.mo16231i(1, str);
         }
-        this.a.b();
-        Cursor b = to.b(this.a, q, false, null);
+        this.f30704a.m26482b();
+        Cursor m8950b = C3104to.m8950b(this.f30704a, m23701q, false, null);
         try {
-            ArrayList arrayList = new ArrayList(b.getCount());
-            while (b.moveToNext()) {
-                arrayList.add(b.getString(0));
+            ArrayList arrayList = new ArrayList(m8950b.getCount());
+            while (m8950b.moveToNext()) {
+                arrayList.add(m8950b.getString(0));
             }
             return arrayList;
         } finally {
-            b.close();
-            q.D();
+            m8950b.close();
+            m23701q.m23702D();
         }
     }
 
     @Override // com.daaw.uy1
-    public void b(ty1 ty1Var) {
-        this.a.b();
-        this.a.c();
+    /* renamed from: b */
+    public void mo6669b(ty1 ty1Var) {
+        this.f30704a.m26482b();
+        this.f30704a.m26481c();
         try {
-            this.b.h(ty1Var);
-            this.a.r();
+            this.f30705b.m14752h(ty1Var);
+            this.f30704a.m26466r();
         } finally {
-            this.a.g();
+            this.f30704a.m26477g();
         }
     }
 }

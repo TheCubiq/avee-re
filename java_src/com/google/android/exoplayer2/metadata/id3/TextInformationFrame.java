@@ -5,12 +5,17 @@ import android.os.Parcelable;
 import com.daaw.sq1;
 /* loaded from: classes.dex */
 public final class TextInformationFrame extends Id3Frame {
-    public static final Parcelable.Creator<TextInformationFrame> CREATOR = new a();
-    public final String q;
-    public final String r;
+    public static final Parcelable.Creator<TextInformationFrame> CREATOR = new C3950a();
 
+    /* renamed from: q */
+    public final String f35805q;
+
+    /* renamed from: r */
+    public final String f35806r;
+
+    /* renamed from: com.google.android.exoplayer2.metadata.id3.TextInformationFrame$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<TextInformationFrame> {
+    public static class C3950a implements Parcelable.Creator<TextInformationFrame> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public TextInformationFrame createFromParcel(Parcel parcel) {
@@ -26,14 +31,14 @@ public final class TextInformationFrame extends Id3Frame {
 
     public TextInformationFrame(Parcel parcel) {
         super(parcel.readString());
-        this.q = parcel.readString();
-        this.r = parcel.readString();
+        this.f35805q = parcel.readString();
+        this.f35806r = parcel.readString();
     }
 
     public TextInformationFrame(String str, String str2, String str3) {
         super(str);
-        this.q = str2;
-        this.r = str3;
+        this.f35805q = str2;
+        this.f35806r = str3;
     }
 
     public boolean equals(Object obj) {
@@ -44,26 +49,26 @@ public final class TextInformationFrame extends Id3Frame {
             return false;
         }
         TextInformationFrame textInformationFrame = (TextInformationFrame) obj;
-        return this.p.equals(textInformationFrame.p) && sq1.b(this.q, textInformationFrame.q) && sq1.b(this.r, textInformationFrame.r);
+        return this.f35802p.equals(textInformationFrame.f35802p) && sq1.m10016b(this.f35805q, textInformationFrame.f35805q) && sq1.m10016b(this.f35806r, textInformationFrame.f35806r);
     }
 
     public int hashCode() {
-        int hashCode = (527 + this.p.hashCode()) * 31;
-        String str = this.q;
+        int hashCode = (527 + this.f35802p.hashCode()) * 31;
+        String str = this.f35805q;
         int hashCode2 = (hashCode + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
+        String str2 = this.f35806r;
         return hashCode2 + (str2 != null ? str2.hashCode() : 0);
     }
 
     @Override // com.google.android.exoplayer2.metadata.id3.Id3Frame
     public String toString() {
-        return this.p + ": value=" + this.r;
+        return this.f35802p + ": value=" + this.f35806r;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
+        parcel.writeString(this.f35802p);
+        parcel.writeString(this.f35805q);
+        parcel.writeString(this.f35806r);
     }
 }

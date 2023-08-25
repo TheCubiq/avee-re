@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface qx1 {
-    CharSequence a();
+    /* renamed from: a */
+    CharSequence m11973a();
 }

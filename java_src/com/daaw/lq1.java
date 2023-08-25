@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface lq1 {
-    String a();
+    /* renamed from: a */
+    String mo16668a();
 }

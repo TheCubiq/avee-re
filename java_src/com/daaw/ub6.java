@@ -10,10 +10,11 @@ public final class ub6 extends kc6 {
     }
 
     @Override // com.daaw.kc6
-    public final /* bridge */ /* synthetic */ qp4 b(wi4 wi4Var, up4 up4Var, pw4 pw4Var) {
-        xh4 h = this.c.h();
-        h.a(up4Var);
-        h.b(pw4Var);
-        return h;
+    /* renamed from: b */
+    public final /* bridge */ /* synthetic */ qp4 mo8348b(wi4 wi4Var, up4 up4Var, pw4 pw4Var) {
+        xh4 mo26269h = this.f16178c.mo26269h();
+        mo26269h.mo5107a(up4Var);
+        mo26269h.mo5106b(pw4Var);
+        return mo26269h;
     }
 }

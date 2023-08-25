@@ -5,19 +5,26 @@ import java.util.concurrent.Executor;
 @Deprecated
 /* loaded from: classes.dex */
 public final class kd5 {
-    public final pd5 a;
-    public final Executor b;
-    public final Map c;
+
+    /* renamed from: a */
+    public final pd5 f16315a;
+
+    /* renamed from: b */
+    public final Executor f16316b;
+
+    /* renamed from: c */
+    public final Map f16317c;
 
     public kd5(pd5 pd5Var, Executor executor) {
-        this.a = pd5Var;
-        this.c = pd5Var.f();
-        this.b = executor;
+        this.f16315a = pd5Var;
+        this.f16317c = pd5Var.m13435f();
+        this.f16316b = executor;
     }
 
-    public final jd5 a() {
+    /* renamed from: a */
+    public final jd5 m17776a() {
         jd5 jd5Var = new jd5(this);
-        jd5.a(jd5Var);
+        jd5.m18591a(jd5Var);
         return jd5Var;
     }
 }

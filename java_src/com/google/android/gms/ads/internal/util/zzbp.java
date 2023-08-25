@@ -13,20 +13,20 @@ public final class zzbp extends bp2 implements zzbr {
 
     @Override // com.google.android.gms.ads.internal.util.zzbr
     public final void zze(yd0 yd0Var) {
-        Parcel D = D();
-        dp2.g(D, yd0Var);
-        M(2, D);
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, yd0Var);
+        m25950M(2, m25952D);
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzbr
     public final boolean zzf(yd0 yd0Var, String str, String str2) {
-        Parcel D = D();
-        dp2.g(D, yd0Var);
-        D.writeString(str);
-        D.writeString(str2);
-        Parcel I = I(1, D);
-        boolean h = dp2.h(I);
-        I.recycle();
-        return h;
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, yd0Var);
+        m25952D.writeString(str);
+        m25952D.writeString(str2);
+        Parcel m25951I = m25951I(1, m25952D);
+        boolean m24100h = dp2.m24100h(m25951I);
+        m25951I.recycle();
+        return m24100h;
     }
 }

@@ -5,32 +5,38 @@ import android.os.Looper;
 import android.os.Message;
 /* loaded from: classes.dex */
 public class h51 {
-    public boolean a;
-    public final Handler b = new Handler(Looper.getMainLooper(), new b());
 
+    /* renamed from: a */
+    public boolean f12062a;
+
+    /* renamed from: b */
+    public final Handler f12063b = new Handler(Looper.getMainLooper(), new C1506b());
+
+    /* renamed from: com.daaw.h51$b */
     /* loaded from: classes.dex */
-    public static class b implements Handler.Callback {
-        public b() {
+    public static class C1506b implements Handler.Callback {
+        public C1506b() {
         }
 
         @Override // android.os.Handler.Callback
         public boolean handleMessage(Message message) {
             if (message.what == 1) {
-                ((z41) message.obj).c();
+                ((z41) message.obj).mo2827c();
                 return true;
             }
             return false;
         }
     }
 
-    public void a(z41<?> z41Var) {
-        tq1.b();
-        if (this.a) {
-            this.b.obtainMessage(1, z41Var).sendToTarget();
+    /* renamed from: a */
+    public void m21022a(z41<?> z41Var) {
+        tq1.m8869b();
+        if (this.f12062a) {
+            this.f12063b.obtainMessage(1, z41Var).sendToTarget();
             return;
         }
-        this.a = true;
-        z41Var.c();
-        this.a = false;
+        this.f12062a = true;
+        z41Var.mo2827c();
+        this.f12062a = false;
     }
 }

@@ -5,7 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import com.daaw.c5;
+import com.daaw.C0914c5;
 import com.daaw.if1;
 /* loaded from: classes.dex */
 public class InitializationProvider extends ContentProvider {
@@ -29,7 +29,7 @@ public class InitializationProvider extends ContentProvider {
         Context context = getContext();
         if (context != null) {
             if (context.getApplicationContext() != null) {
-                c5.e(context).a();
+                C0914c5.m25621e(context).m25625a();
                 return true;
             }
             return true;

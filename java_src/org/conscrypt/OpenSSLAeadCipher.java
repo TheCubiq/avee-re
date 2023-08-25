@@ -1,5 +1,6 @@
 package org.conscrypt;
 
+import java.lang.reflect.InvocationTargetException;
 import java.nio.ByteBuffer;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.SecureRandom;
@@ -78,48 +79,32 @@ public abstract class OpenSSLAeadCipher extends OpenSSLCipher {
     /* JADX WARN: Removed duplicated region for block: B:14:0x0038  */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    private void throwAEADBadTagExceptionIfAvailable(java.lang.String r6, java.lang.Throwable r7) {
-        /*
-            r5 = this;
-            java.lang.String r0 = "javax.crypto.AEADBadTagException"
-            java.lang.Class r0 = java.lang.Class.forName(r0)     // Catch: java.lang.Exception -> L39
-            r1 = 1
-            java.lang.Class[] r2 = new java.lang.Class[r1]     // Catch: java.lang.Exception -> L39
-            java.lang.Class<java.lang.String> r3 = java.lang.String.class
-            r4 = 0
-            r2[r4] = r3     // Catch: java.lang.Exception -> L39
-            java.lang.reflect.Constructor r0 = r0.getConstructor(r2)     // Catch: java.lang.Exception -> L39
-            r2 = 0
-            java.lang.Object[] r1 = new java.lang.Object[r1]     // Catch: java.lang.reflect.InvocationTargetException -> L23 java.lang.Throwable -> L34
-            r1[r4] = r6     // Catch: java.lang.reflect.InvocationTargetException -> L23 java.lang.Throwable -> L34
-            java.lang.Object r6 = r0.newInstance(r1)     // Catch: java.lang.reflect.InvocationTargetException -> L23 java.lang.Throwable -> L34
-            javax.crypto.BadPaddingException r6 = (javax.crypto.BadPaddingException) r6     // Catch: java.lang.reflect.InvocationTargetException -> L23 java.lang.Throwable -> L34
-            r6.initCause(r7)     // Catch: java.lang.Throwable -> L21 java.lang.reflect.InvocationTargetException -> L23
-            goto L35
-        L21:
-            r2 = r6
-            goto L34
-        L23:
-            r6 = move-exception
-            javax.crypto.BadPaddingException r7 = new javax.crypto.BadPaddingException
-            r7.<init>()
-            java.lang.Throwable r6 = r6.getTargetException()
-            java.lang.Throwable r6 = r7.initCause(r6)
-            javax.crypto.BadPaddingException r6 = (javax.crypto.BadPaddingException) r6
-            throw r6
-        L34:
-            r6 = r2
-        L35:
-            if (r6 != 0) goto L38
-            return
-        L38:
-            throw r6
-        L39:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: org.conscrypt.OpenSSLAeadCipher.throwAEADBadTagExceptionIfAvailable(java.lang.String, java.lang.Throwable):void");
+    private void throwAEADBadTagExceptionIfAvailable(String str, Throwable th) {
+        BadPaddingException badPaddingException;
+        try {
+            BadPaddingException badPaddingException2 = null;
+            try {
+                try {
+                    badPaddingException = (BadPaddingException) Class.forName("javax.crypto.AEADBadTagException").getConstructor(String.class).newInstance(str);
+                    try {
+                        badPaddingException.initCause(th);
+                    } catch (IllegalAccessException | InstantiationException unused) {
+                        badPaddingException2 = badPaddingException;
+                        badPaddingException = badPaddingException2;
+                        if (badPaddingException == null) {
+                        }
+                    }
+                } catch (InvocationTargetException e) {
+                    throw ((BadPaddingException) new BadPaddingException().initCause(e.getTargetException()));
+                }
+            } catch (IllegalAccessException | InstantiationException unused2) {
+            }
+            if (badPaddingException == null) {
+                throw badPaddingException;
+            }
+        } catch (Exception unused3) {
+        }
     }
 
     public boolean allowsNonceReuse() {
@@ -143,7 +128,7 @@ public abstract class OpenSSLAeadCipher extends OpenSSLCipher {
     public int doFinalInternal(ByteBuffer byteBuffer, ByteBuffer byteBuffer2) {
         checkInitialization();
         try {
-            int EVP_AEAD_CTX_seal_buf = isEncrypting() ? NativeCrypto.EVP_AEAD_CTX_seal_buf(this.evpAead, this.encodedKey, this.tagLengthInBytes, byteBuffer2, this.iv, byteBuffer, this.aad) : NativeCrypto.EVP_AEAD_CTX_open_buf(this.evpAead, this.encodedKey, this.tagLengthInBytes, byteBuffer2, this.iv, byteBuffer, this.aad);
+            int EVP_AEAD_CTX_seal_buf = isEncrypting() ? NativeCrypto.EVP_AEAD_CTX_seal_buf(this.evpAead, this.encodedKey, this.tagLengthInBytes, byteBuffer2, this.f38020iv, byteBuffer, this.aad) : NativeCrypto.EVP_AEAD_CTX_open_buf(this.evpAead, this.encodedKey, this.tagLengthInBytes, byteBuffer2, this.f38020iv, byteBuffer, this.aad);
             if (isEncrypting()) {
                 this.mustInitialize = true;
             }
@@ -158,7 +143,7 @@ public abstract class OpenSSLAeadCipher extends OpenSSLCipher {
     public int doFinalInternal(byte[] bArr, int i, int i2) {
         checkInitialization();
         try {
-            int EVP_AEAD_CTX_seal = isEncrypting() ? NativeCrypto.EVP_AEAD_CTX_seal(this.evpAead, this.encodedKey, this.tagLengthInBytes, bArr, i, this.iv, this.buf, 0, this.bufCount, this.aad) : NativeCrypto.EVP_AEAD_CTX_open(this.evpAead, this.encodedKey, this.tagLengthInBytes, bArr, i, this.iv, this.buf, 0, this.bufCount, this.aad);
+            int EVP_AEAD_CTX_seal = isEncrypting() ? NativeCrypto.EVP_AEAD_CTX_seal(this.evpAead, this.encodedKey, this.tagLengthInBytes, bArr, i, this.f38020iv, this.buf, 0, this.bufCount, this.aad) : NativeCrypto.EVP_AEAD_CTX_open(this.evpAead, this.encodedKey, this.tagLengthInBytes, bArr, i, this.f38020iv, this.buf, 0, this.bufCount, this.aad);
             if (isEncrypting()) {
                 this.mustInitialize = true;
             }
@@ -258,7 +243,7 @@ public abstract class OpenSSLAeadCipher extends OpenSSLCipher {
             }
         }
         this.mustInitialize = false;
-        this.iv = bArr2;
+        this.f38020iv = bArr2;
         reset();
     }
 

@@ -10,15 +10,23 @@ import android.widget.FrameLayout;
 import android.widget.HeaderViewListAdapter;
 import android.widget.ListAdapter;
 import android.widget.PopupWindow;
+import androidx.appcompat.view.menu.C0081d;
+import androidx.appcompat.view.menu.C0082e;
+import androidx.appcompat.view.menu.C0086g;
+import androidx.appcompat.view.menu.InterfaceC0091i;
 /* loaded from: classes.dex */
-public abstract class kp0 implements vc1, androidx.appcompat.view.menu.i, AdapterView.OnItemClickListener {
-    public Rect p;
+public abstract class kp0 implements vc1, InterfaceC0091i, AdapterView.OnItemClickListener {
 
-    public static androidx.appcompat.view.menu.d A(ListAdapter listAdapter) {
-        return listAdapter instanceof HeaderViewListAdapter ? (androidx.appcompat.view.menu.d) ((HeaderViewListAdapter) listAdapter).getWrappedAdapter() : (androidx.appcompat.view.menu.d) listAdapter;
+    /* renamed from: p */
+    public Rect f16609p;
+
+    /* renamed from: A */
+    public static C0081d m17565A(ListAdapter listAdapter) {
+        return listAdapter instanceof HeaderViewListAdapter ? (C0081d) ((HeaderViewListAdapter) listAdapter).getWrappedAdapter() : (C0081d) listAdapter;
     }
 
-    public static int q(ListAdapter listAdapter, ViewGroup viewGroup, Context context, int i) {
+    /* renamed from: q */
+    public static int m17558q(ListAdapter listAdapter, ViewGroup viewGroup, Context context, int i) {
         int makeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
         int makeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(0, 0);
         int count = listAdapter.getCount();
@@ -47,10 +55,11 @@ public abstract class kp0 implements vc1, androidx.appcompat.view.menu.i, Adapte
         return i2;
     }
 
-    public static boolean z(androidx.appcompat.view.menu.e eVar) {
-        int size = eVar.size();
+    /* renamed from: z */
+    public static boolean m17549z(C0082e c0082e) {
+        int size = c0082e.size();
         for (int i = 0; i < size; i++) {
-            MenuItem item = eVar.getItem(i);
+            MenuItem item = c0082e.getItem(i);
             if (item.isVisible() && item.getIcon() != null) {
                 return true;
             }
@@ -58,56 +67,70 @@ public abstract class kp0 implements vc1, androidx.appcompat.view.menu.i, Adapte
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public boolean e(androidx.appcompat.view.menu.e eVar, androidx.appcompat.view.menu.g gVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: e */
+    public boolean mo17564e(C0082e c0082e, C0086g c0086g) {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public boolean f(androidx.appcompat.view.menu.e eVar, androidx.appcompat.view.menu.g gVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: f */
+    public boolean mo17563f(C0082e c0082e, C0086g c0086g) {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
     public int getId() {
         return 0;
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public void i(Context context, androidx.appcompat.view.menu.e eVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: i */
+    public void mo17562i(Context context, C0082e c0082e) {
     }
 
-    public abstract void n(androidx.appcompat.view.menu.e eVar);
+    /* renamed from: n */
+    public abstract void mo17561n(C0082e c0082e);
 
-    public boolean o() {
+    /* renamed from: o */
+    public boolean mo17560o() {
         return true;
     }
 
     @Override // android.widget.AdapterView.OnItemClickListener
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
         ListAdapter listAdapter = (ListAdapter) adapterView.getAdapter();
-        A(listAdapter).p.O((MenuItem) listAdapter.getItem(i), this, o() ? 0 : 4);
+        m17565A(listAdapter).f358p.m30258O((MenuItem) listAdapter.getItem(i), this, mo17560o() ? 0 : 4);
     }
 
-    public Rect p() {
-        return this.p;
+    /* renamed from: p */
+    public Rect m17559p() {
+        return this.f16609p;
     }
 
-    public abstract void r(View view);
+    /* renamed from: r */
+    public abstract void mo17557r(View view);
 
-    public void s(Rect rect) {
-        this.p = rect;
+    /* renamed from: s */
+    public void m17556s(Rect rect) {
+        this.f16609p = rect;
     }
 
-    public abstract void t(boolean z);
+    /* renamed from: t */
+    public abstract void mo17555t(boolean z);
 
-    public abstract void u(int i);
+    /* renamed from: u */
+    public abstract void mo17554u(int i);
 
-    public abstract void v(int i);
+    /* renamed from: v */
+    public abstract void mo17553v(int i);
 
-    public abstract void w(PopupWindow.OnDismissListener onDismissListener);
+    /* renamed from: w */
+    public abstract void mo17552w(PopupWindow.OnDismissListener onDismissListener);
 
-    public abstract void x(boolean z);
+    /* renamed from: x */
+    public abstract void mo17551x(boolean z);
 
-    public abstract void y(int i);
+    /* renamed from: y */
+    public abstract void mo17550y(int i);
 }

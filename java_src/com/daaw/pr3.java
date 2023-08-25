@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public final class pr3 extends cp2 implements qr3 {
-    public static qr3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static qr3 m13196g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

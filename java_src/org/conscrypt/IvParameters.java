@@ -7,7 +7,9 @@ import java.security.spec.InvalidParameterSpecException;
 import javax.crypto.spec.IvParameterSpec;
 /* loaded from: classes2.dex */
 public class IvParameters extends AlgorithmParametersSpi {
-    private byte[] iv;
+
+    /* renamed from: iv */
+    private byte[] f38019iv;
 
     /* loaded from: classes2.dex */
     public static class AES extends IvParameters {
@@ -27,7 +29,7 @@ public class IvParameters extends AlgorithmParametersSpi {
         try {
             try {
                 j = NativeCrypto.asn1_write_init();
-                NativeCrypto.asn1_write_octetstring(j, this.iv);
+                NativeCrypto.asn1_write_octetstring(j, this.f38019iv);
                 return NativeCrypto.asn1_write_finish(j);
             } catch (IOException e) {
                 NativeCrypto.asn1_write_cleanup(j);
@@ -44,7 +46,7 @@ public class IvParameters extends AlgorithmParametersSpi {
             return engineGetEncoded();
         }
         if (str.equals("RAW")) {
-            return (byte[]) this.iv.clone();
+            return (byte[]) this.f38019iv.clone();
         }
         throw new IOException("Unsupported format: " + str);
     }
@@ -52,7 +54,7 @@ public class IvParameters extends AlgorithmParametersSpi {
     @Override // java.security.AlgorithmParametersSpi
     public <T extends AlgorithmParameterSpec> T engineGetParameterSpec(Class<T> cls) {
         if (cls == IvParameterSpec.class) {
-            return new IvParameterSpec(this.iv);
+            return new IvParameterSpec(this.f38019iv);
         }
         throw new InvalidParameterSpecException("Incompatible AlgorithmParametersSpec class: " + cls);
     }
@@ -62,7 +64,7 @@ public class IvParameters extends AlgorithmParametersSpi {
         if (!(algorithmParameterSpec instanceof IvParameterSpec)) {
             throw new InvalidParameterSpecException("Only IvParameterSpec is supported");
         }
-        this.iv = (byte[]) ((IvParameterSpec) algorithmParameterSpec).getIV().clone();
+        this.f38019iv = (byte[]) ((IvParameterSpec) algorithmParameterSpec).getIV().clone();
     }
 
     @Override // java.security.AlgorithmParametersSpi
@@ -75,7 +77,7 @@ public class IvParameters extends AlgorithmParametersSpi {
                 if (!NativeCrypto.asn1_read_is_empty(j)) {
                     throw new IOException("Error reading ASN.1 encoding");
                 }
-                this.iv = asn1_read_octetstring;
+                this.f38019iv = asn1_read_octetstring;
                 NativeCrypto.asn1_read_free(j);
             } catch (Throwable th) {
                 th = th;
@@ -93,7 +95,7 @@ public class IvParameters extends AlgorithmParametersSpi {
         if (str == null || str.equals("ASN.1")) {
             engineInit(bArr);
         } else if (str.equals("RAW")) {
-            this.iv = (byte[]) bArr.clone();
+            this.f38019iv = (byte[]) bArr.clone();
         } else {
             throw new IOException("Unsupported format: " + str);
         }

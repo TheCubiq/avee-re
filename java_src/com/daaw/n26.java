@@ -9,18 +9,23 @@ import com.google.android.gms.ads.internal.client.zzba;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class n26 implements i76 {
-    public final g77 a;
-    public final Context b;
+
+    /* renamed from: a */
+    public final g77 f19431a;
+
+    /* renamed from: b */
+    public final Context f19432b;
 
     public n26(g77 g77Var, Context context) {
-        this.a = g77Var;
-        this.b = context;
+        this.f19431a = g77Var;
+        this.f19432b = context;
     }
 
-    public final /* synthetic */ o26 a() {
+    /* renamed from: a */
+    public final /* synthetic */ o26 m15563a() {
         double d;
         IntentFilter intentFilter = new IntentFilter("android.intent.action.BATTERY_CHANGED");
-        Intent registerReceiver = (!((Boolean) zzba.zzc().b(g93.e9)).booleanValue() || Build.VERSION.SDK_INT < 33) ? this.b.registerReceiver(null, intentFilter) : this.b.registerReceiver(null, intentFilter, 4);
+        Intent registerReceiver = (!((Boolean) zzba.zzc().m23658b(g93.f10675e9)).booleanValue() || Build.VERSION.SDK_INT < 33) ? this.f19432b.registerReceiver(null, intentFilter) : this.f19432b.registerReceiver(null, intentFilter, 4);
         boolean z = false;
         if (registerReceiver != null) {
             int intExtra = registerReceiver.getIntExtra("status", -1);
@@ -46,10 +51,10 @@ public final class n26 implements i76 {
     @Override // com.daaw.i76
     @SuppressLint({"UnprotectedReceiver"})
     public final f77 zzb() {
-        return this.a.M(new Callable() { // from class: com.daaw.m26
+        return this.f19431a.mo20112M(new Callable() { // from class: com.daaw.m26
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return n26.this.a();
+                return n26.this.m15563a();
             }
         });
     }

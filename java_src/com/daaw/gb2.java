@@ -3,143 +3,178 @@ package com.daaw;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNullIf;
 /* loaded from: classes.dex */
 public abstract class gb2 {
-    public m42 b;
-    public m09 c;
-    public bb2 d;
-    public long e;
-    public long f;
-    public long g;
-    public int h;
-    public int i;
-    public long k;
-    public boolean l;
-    public boolean m;
-    public final za2 a = new za2();
-    public db2 j = new db2();
 
-    public abstract long a(ik5 ik5Var);
+    /* renamed from: b */
+    public m42 f10998b;
 
-    public void b(boolean z) {
+    /* renamed from: c */
+    public m09 f10999c;
+
+    /* renamed from: d */
+    public bb2 f11000d;
+
+    /* renamed from: e */
+    public long f11001e;
+
+    /* renamed from: f */
+    public long f11002f;
+
+    /* renamed from: g */
+    public long f11003g;
+
+    /* renamed from: h */
+    public int f11004h;
+
+    /* renamed from: i */
+    public int f11005i;
+
+    /* renamed from: k */
+    public long f11007k;
+
+    /* renamed from: l */
+    public boolean f11008l;
+
+    /* renamed from: m */
+    public boolean f11009m;
+
+    /* renamed from: a */
+    public final za2 f10997a = new za2();
+
+    /* renamed from: j */
+    public db2 f11006j = new db2();
+
+    /* renamed from: a */
+    public abstract long mo6277a(ik5 ik5Var);
+
+    /* renamed from: b */
+    public void mo6276b(boolean z) {
         int i;
         if (z) {
-            this.j = new db2();
-            this.f = 0L;
+            this.f11006j = new db2();
+            this.f11002f = 0L;
             i = 0;
         } else {
             i = 1;
         }
-        this.h = i;
-        this.e = -1L;
-        this.g = 0L;
+        this.f11004h = i;
+        this.f11001e = -1L;
+        this.f11003g = 0L;
     }
 
     @EnsuresNonNullIf(expression = {"#3.format"}, result = false)
-    public abstract boolean c(ik5 ik5Var, long j, db2 db2Var);
+    /* renamed from: c */
+    public abstract boolean mo6275c(ik5 ik5Var, long j, db2 db2Var);
 
-    public final int d(k09 k09Var, f42 f42Var) {
-        uo4.b(this.b);
-        int i = it5.a;
-        int i2 = this.h;
+    /* renamed from: d */
+    public final int m21826d(k09 k09Var, f42 f42Var) {
+        uo4.m7876b(this.f10998b);
+        int i = it5.f13991a;
+        int i2 = this.f11004h;
         if (i2 == 0) {
-            while (this.a.e(k09Var)) {
+            while (this.f10997a.m2565e(k09Var)) {
                 long zzf = k09Var.zzf();
-                long j = this.f;
-                this.k = zzf - j;
-                if (!c(this.a.a(), j, this.j)) {
-                    f92 f92Var = this.j.a;
-                    this.i = f92Var.z;
-                    if (!this.m) {
-                        this.b.f(f92Var);
-                        this.m = true;
+                long j = this.f11002f;
+                this.f11007k = zzf - j;
+                if (!mo6275c(this.f10997a.m2569a(), j, this.f11006j)) {
+                    f92 f92Var = this.f11006j.f6733a;
+                    this.f11005i = f92Var.f9289z;
+                    if (!this.f11009m) {
+                        this.f10998b.mo16218f(f92Var);
+                        this.f11009m = true;
                     }
-                    bb2 bb2Var = this.j.b;
+                    bb2 bb2Var = this.f11006j.f6734b;
                     if (bb2Var != null) {
-                        this.d = bb2Var;
+                        this.f11000d = bb2Var;
                     } else if (k09Var.zzd() == -1) {
-                        this.d = new fb2(null);
+                        this.f11000d = new fb2(null);
                     } else {
-                        ab2 b = this.a.b();
-                        this.d = new ua2(this, this.f, k09Var.zzd(), b.d + b.e, b.b, (b.a & 4) != 0);
+                        ab2 m2568b = this.f10997a.m2568b();
+                        this.f11000d = new ua2(this, this.f11002f, k09Var.zzd(), m2568b.f3043d + m2568b.f3044e, m2568b.f3041b, (m2568b.f3040a & 4) != 0);
                     }
-                    this.h = 2;
-                    this.a.d();
+                    this.f11004h = 2;
+                    this.f10997a.m2566d();
                     return 0;
                 }
-                this.f = k09Var.zzf();
+                this.f11002f = k09Var.zzf();
             }
-            this.h = 3;
+            this.f11004h = 3;
             return -1;
         } else if (i2 == 1) {
-            ((rz8) k09Var).l((int) this.f, false);
-            this.h = 2;
+            ((rz8) k09Var).m10811l((int) this.f11002f, false);
+            this.f11004h = 2;
             return 0;
         } else if (i2 != 2) {
             return -1;
         } else {
-            long a = this.d.a(k09Var);
-            if (a >= 0) {
-                f42Var.a = a;
+            long mo7303a = this.f11000d.mo7303a(k09Var);
+            if (mo7303a >= 0) {
+                f42Var.f9093a = mo7303a;
                 return 1;
             }
-            if (a < -1) {
-                h(-(a + 2));
+            if (mo7303a < -1) {
+                mo19986h(-(mo7303a + 2));
             }
-            if (!this.l) {
-                i42 zze = this.d.zze();
-                uo4.b(zze);
-                this.c.i(zze);
-                this.l = true;
+            if (!this.f11008l) {
+                i42 zze = this.f11000d.zze();
+                uo4.m7876b(zze);
+                this.f10999c.mo3297i(zze);
+                this.f11008l = true;
             }
-            if (this.k <= 0 && !this.a.e(k09Var)) {
-                this.h = 3;
+            if (this.f11007k <= 0 && !this.f10997a.m2565e(k09Var)) {
+                this.f11004h = 3;
                 return -1;
             }
-            this.k = 0L;
-            ik5 a2 = this.a.a();
-            long a3 = a(a2);
-            if (a3 >= 0) {
-                long j2 = this.g;
-                if (j2 + a3 >= this.e) {
-                    long e = e(j2);
-                    k42.b(this.b, a2, a2.l());
-                    this.b.b(e, 1, a2.l(), 0, null);
-                    this.e = -1L;
+            this.f11007k = 0L;
+            ik5 m2569a = this.f10997a.m2569a();
+            long mo6277a = mo6277a(m2569a);
+            if (mo6277a >= 0) {
+                long j2 = this.f11003g;
+                if (j2 + mo6277a >= this.f11001e) {
+                    long m21825e = m21825e(j2);
+                    k42.m18050b(this.f10998b, m2569a, m2569a.m19710l());
+                    this.f10998b.mo16222b(m21825e, 1, m2569a.m19710l(), 0, null);
+                    this.f11001e = -1L;
                 }
             }
-            this.g += a3;
+            this.f11003g += mo6277a;
             return 0;
         }
     }
 
-    public final long e(long j) {
-        return (j * 1000000) / this.i;
+    /* renamed from: e */
+    public final long m21825e(long j) {
+        return (j * 1000000) / this.f11005i;
     }
 
-    public final long f(long j) {
-        return (this.i * j) / 1000000;
+    /* renamed from: f */
+    public final long m21824f(long j) {
+        return (this.f11005i * j) / 1000000;
     }
 
-    public final void g(m09 m09Var, m42 m42Var) {
-        this.c = m09Var;
-        this.b = m42Var;
-        b(true);
+    /* renamed from: g */
+    public final void m21823g(m09 m09Var, m42 m42Var) {
+        this.f10999c = m09Var;
+        this.f10998b = m42Var;
+        mo6276b(true);
     }
 
-    public void h(long j) {
-        this.g = j;
+    /* renamed from: h */
+    public void mo19986h(long j) {
+        this.f11003g = j;
     }
 
-    public final void i(long j, long j2) {
-        this.a.c();
+    /* renamed from: i */
+    public final void m21822i(long j, long j2) {
+        this.f10997a.m2567c();
         if (j == 0) {
-            b(!this.l);
-        } else if (this.h != 0) {
-            long f = f(j2);
-            this.e = f;
-            bb2 bb2Var = this.d;
-            int i = it5.a;
-            bb2Var.b(f);
-            this.h = 2;
+            mo6276b(!this.f11008l);
+        } else if (this.f11004h != 0) {
+            long m21824f = m21824f(j2);
+            this.f11001e = m21824f;
+            bb2 bb2Var = this.f11000d;
+            int i = it5.f13991a;
+            bb2Var.mo7302b(m21824f);
+            this.f11004h = 2;
         }
     }
 }

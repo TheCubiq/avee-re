@@ -14,17 +14,18 @@ public abstract class r95 extends kd3 implements ua5 {
     }
 
     @Override // com.daaw.kd3
-    public final boolean D(int i, Parcel parcel, Parcel parcel2, int i2) {
-        List l0;
+    /* renamed from: D */
+    public final boolean mo8662D(int i, Parcel parcel, Parcel parcel2, int i2) {
+        List mo8369l0;
         switch (i) {
             case 1:
-                ne3.c(parcel);
-                i1((zzaw) ne3.a(parcel, zzaw.CREATOR), (zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8371i1((zzaw) ne3.m15209a(parcel, zzaw.CREATOR), (zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 2:
-                ne3.c(parcel);
-                C1((zzkw) ne3.a(parcel, zzkw.CREATOR), (zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8379C1((zzkw) ne3.m15209a(parcel, zzkw.CREATOR), (zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 3:
@@ -32,105 +33,105 @@ public abstract class r95 extends kd3 implements ua5 {
             default:
                 return false;
             case 4:
-                ne3.c(parcel);
-                m1((zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8367m1((zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 5:
                 String readString = parcel.readString();
                 String readString2 = parcel.readString();
-                ne3.c(parcel);
-                y1((zzaw) ne3.a(parcel, zzaw.CREATOR), readString, readString2);
+                ne3.m15207c(parcel);
+                mo8362y1((zzaw) ne3.m15209a(parcel, zzaw.CREATOR), readString, readString2);
                 parcel2.writeNoException();
                 return true;
             case 6:
-                ne3.c(parcel);
-                X((zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8375X((zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 7:
-                boolean g = ne3.g(parcel);
-                ne3.c(parcel);
-                l0 = l0((zzq) ne3.a(parcel, zzq.CREATOR), g);
+                boolean m15203g = ne3.m15203g(parcel);
+                ne3.m15207c(parcel);
+                mo8369l0 = mo8369l0((zzq) ne3.m15209a(parcel, zzq.CREATOR), m15203g);
                 parcel2.writeNoException();
-                parcel2.writeTypedList(l0);
+                parcel2.writeTypedList(mo8369l0);
                 return true;
             case 9:
                 String readString3 = parcel.readString();
-                ne3.c(parcel);
-                byte[] m0 = m0((zzaw) ne3.a(parcel, zzaw.CREATOR), readString3);
+                ne3.m15207c(parcel);
+                byte[] mo8368m0 = mo8368m0((zzaw) ne3.m15209a(parcel, zzaw.CREATOR), readString3);
                 parcel2.writeNoException();
-                parcel2.writeByteArray(m0);
+                parcel2.writeByteArray(mo8368m0);
                 return true;
             case 10:
                 long readLong = parcel.readLong();
                 String readString4 = parcel.readString();
                 String readString5 = parcel.readString();
                 String readString6 = parcel.readString();
-                ne3.c(parcel);
-                u1(readLong, readString4, readString5, readString6);
+                ne3.m15207c(parcel);
+                mo8364u1(readLong, readString4, readString5, readString6);
                 parcel2.writeNoException();
                 return true;
             case 11:
-                ne3.c(parcel);
-                String w0 = w0((zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                String mo8363w0 = mo8363w0((zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
-                parcel2.writeString(w0);
+                parcel2.writeString(mo8363w0);
                 return true;
             case 12:
-                ne3.c(parcel);
-                C2((zzac) ne3.a(parcel, zzac.CREATOR), (zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8378C2((zzac) ne3.m15209a(parcel, zzac.CREATOR), (zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 13:
-                ne3.c(parcel);
-                k0((zzac) ne3.a(parcel, zzac.CREATOR));
+                ne3.m15207c(parcel);
+                mo8370k0((zzac) ne3.m15209a(parcel, zzac.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 14:
-                ne3.c(parcel);
-                l0 = a2(parcel.readString(), parcel.readString(), ne3.g(parcel), (zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8369l0 = mo8374a2(parcel.readString(), parcel.readString(), ne3.m15203g(parcel), (zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
-                parcel2.writeTypedList(l0);
+                parcel2.writeTypedList(mo8369l0);
                 return true;
             case 15:
                 String readString7 = parcel.readString();
                 String readString8 = parcel.readString();
                 String readString9 = parcel.readString();
-                boolean g2 = ne3.g(parcel);
-                ne3.c(parcel);
-                l0 = h0(readString7, readString8, readString9, g2);
+                boolean m15203g2 = ne3.m15203g(parcel);
+                ne3.m15207c(parcel);
+                mo8369l0 = mo8372h0(readString7, readString8, readString9, m15203g2);
                 parcel2.writeNoException();
-                parcel2.writeTypedList(l0);
+                parcel2.writeTypedList(mo8369l0);
                 return true;
             case 16:
-                ne3.c(parcel);
-                l0 = n1(parcel.readString(), parcel.readString(), (zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8369l0 = mo8366n1(parcel.readString(), parcel.readString(), (zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
-                parcel2.writeTypedList(l0);
+                parcel2.writeTypedList(mo8369l0);
                 return true;
             case 17:
                 String readString10 = parcel.readString();
                 String readString11 = parcel.readString();
                 String readString12 = parcel.readString();
-                ne3.c(parcel);
-                l0 = G0(readString10, readString11, readString12);
+                ne3.m15207c(parcel);
+                mo8369l0 = mo8377G0(readString10, readString11, readString12);
                 parcel2.writeNoException();
-                parcel2.writeTypedList(l0);
+                parcel2.writeTypedList(mo8369l0);
                 return true;
             case 18:
-                ne3.c(parcel);
-                s2((zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8365s2((zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 19:
-                ne3.c(parcel);
-                e0((Bundle) ne3.a(parcel, Bundle.CREATOR), (zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8373e0((Bundle) ne3.m15209a(parcel, Bundle.CREATOR), (zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
             case 20:
-                ne3.c(parcel);
-                T1((zzq) ne3.a(parcel, zzq.CREATOR));
+                ne3.m15207c(parcel);
+                mo8376T1((zzq) ne3.m15209a(parcel, zzq.CREATOR));
                 parcel2.writeNoException();
                 return true;
         }

@@ -3,7 +3,8 @@ package com.daaw;
 import android.text.TextUtils;
 /* loaded from: classes.dex */
 public final class q93 extends r93 {
-    public static final String b(String str) {
+    /* renamed from: b */
+    public static final String m12691b(String str) {
         if (TextUtils.isEmpty(str)) {
             return str;
         }
@@ -32,15 +33,16 @@ public final class q93 extends r93 {
     }
 
     @Override // com.daaw.r93
-    public final String a(String str, String str2) {
-        String b = b(str);
-        String b2 = b(str2);
-        if (TextUtils.isEmpty(b)) {
-            return b2;
+    /* renamed from: a */
+    public final String mo11550a(String str, String str2) {
+        String m12691b = m12691b(str);
+        String m12691b2 = m12691b(str2);
+        if (TextUtils.isEmpty(m12691b)) {
+            return m12691b2;
         }
-        if (TextUtils.isEmpty(b2)) {
-            return b;
+        if (TextUtils.isEmpty(m12691b2)) {
+            return m12691b;
         }
-        return b + "," + b2;
+        return m12691b + "," + m12691b2;
     }
 }

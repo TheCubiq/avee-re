@@ -1,48 +1,69 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class s35 {
-    public zd3 a;
-    public wd3 b;
-    public me3 c;
-    public je3 d;
-    public sj3 e;
-    public final cd1 f = new cd1();
-    public final cd1 g = new cd1();
 
-    public final s35 a(wd3 wd3Var) {
-        this.b = wd3Var;
+    /* renamed from: a */
+    public zd3 f25832a;
+
+    /* renamed from: b */
+    public wd3 f25833b;
+
+    /* renamed from: c */
+    public me3 f25834c;
+
+    /* renamed from: d */
+    public je3 f25835d;
+
+    /* renamed from: e */
+    public sj3 f25836e;
+
+    /* renamed from: f */
+    public final cd1 f25837f = new cd1();
+
+    /* renamed from: g */
+    public final cd1 f25838g = new cd1();
+
+    /* renamed from: a */
+    public final s35 m10734a(wd3 wd3Var) {
+        this.f25833b = wd3Var;
         return this;
     }
 
-    public final s35 b(zd3 zd3Var) {
-        this.a = zd3Var;
+    /* renamed from: b */
+    public final s35 m10733b(zd3 zd3Var) {
+        this.f25832a = zd3Var;
         return this;
     }
 
-    public final s35 c(String str, fe3 fe3Var, ce3 ce3Var) {
-        this.f.put(str, fe3Var);
+    /* renamed from: c */
+    public final s35 m10732c(String str, fe3 fe3Var, ce3 ce3Var) {
+        this.f25837f.put(str, fe3Var);
         if (ce3Var != null) {
-            this.g.put(str, ce3Var);
+            this.f25838g.put(str, ce3Var);
         }
         return this;
     }
 
-    public final s35 d(sj3 sj3Var) {
-        this.e = sj3Var;
+    /* renamed from: d */
+    public final s35 m10731d(sj3 sj3Var) {
+        this.f25836e = sj3Var;
         return this;
     }
 
-    public final s35 e(je3 je3Var) {
-        this.d = je3Var;
+    /* renamed from: e */
+    public final s35 m10730e(je3 je3Var) {
+        this.f25835d = je3Var;
         return this;
     }
 
-    public final s35 f(me3 me3Var) {
-        this.c = me3Var;
+    /* renamed from: f */
+    public final s35 m10729f(me3 me3Var) {
+        this.f25834c = me3Var;
         return this;
     }
 
-    public final u35 g() {
+    /* renamed from: g */
+    public final u35 m10728g() {
         return new u35(this);
     }
 }

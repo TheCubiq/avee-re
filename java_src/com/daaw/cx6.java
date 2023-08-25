@@ -7,15 +7,18 @@ import java.util.IllegalFormatException;
 import java.util.Locale;
 /* loaded from: classes.dex */
 public final class cx6 {
-    public final String a;
+
+    /* renamed from: a */
+    public final String f6259a;
 
     public cx6(String str) {
         int myUid = Process.myUid();
         int myPid = Process.myPid();
-        this.a = ("UID: [" + myUid + "]  PID: [" + myPid + "] ").concat(str);
+        this.f6259a = ("UID: [" + myUid + "]  PID: [" + myPid + "] ").concat(str);
     }
 
-    public static String f(String str, String str2, Object... objArr) {
+    /* renamed from: f */
+    public static String m24907f(String str, String str2, Object... objArr) {
         if (objArr.length > 0) {
             try {
                 str2 = String.format(Locale.US, str2, objArr);
@@ -27,37 +30,42 @@ public final class cx6 {
         return str + " : " + str2;
     }
 
-    public final int a(String str, Object... objArr) {
+    /* renamed from: a */
+    public final int m24912a(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 3)) {
-            return Log.d("PlayCore", f(this.a, "Already connected to the service.", objArr));
+            return Log.d("PlayCore", m24907f(this.f6259a, "Already connected to the service.", objArr));
         }
         return 0;
     }
 
-    public final int b(String str, Object... objArr) {
+    /* renamed from: b */
+    public final int m24911b(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 6)) {
-            return Log.e("PlayCore", f(this.a, str, objArr));
+            return Log.e("PlayCore", m24907f(this.f6259a, str, objArr));
         }
         return 0;
     }
 
-    public final int c(Throwable th, String str, Object... objArr) {
+    /* renamed from: c */
+    public final int m24910c(Throwable th, String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 6)) {
-            return Log.e("PlayCore", f(this.a, str, objArr), th);
+            return Log.e("PlayCore", m24907f(this.f6259a, str, objArr), th);
         }
         return 0;
     }
 
-    public final int d(String str, Object... objArr) {
+    /* renamed from: d */
+    public final int m24909d(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 4)) {
-            return Log.i("PlayCore", f(this.a, str, objArr));
+            return Log.i("PlayCore", m24907f(this.f6259a, str, objArr));
         }
         return 0;
     }
 
-    public final int e(String str, Object... objArr) {
+    /* renamed from: e */
+    public final int m24908e(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 5)) {
-            return Log.w("PlayCore", f(this.a, "Phonesky package is not signed -- possibly self-built package. Could not verify.", objArr));
+            return Log.w("PlayCore", m24907f(this.f6259a, "Phonesky package is not signed -- possibly self-built package. Could not verify.", objArr));
         }
         return 0;
     }

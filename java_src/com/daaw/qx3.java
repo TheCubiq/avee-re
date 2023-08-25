@@ -6,14 +6,16 @@ import android.content.Intent;
 import com.google.android.gms.ads.internal.util.zzcg;
 /* loaded from: classes.dex */
 public final class qx3 extends BroadcastReceiver {
-    public final /* synthetic */ zzcg a;
+
+    /* renamed from: a */
+    public final /* synthetic */ zzcg f24604a;
 
     public qx3(zzcg zzcgVar) {
-        this.a = zzcgVar;
+        this.f24604a = zzcgVar;
     }
 
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
-        this.a.b(context, intent);
+        this.f24604a.m1340b(context, intent);
     }
 }

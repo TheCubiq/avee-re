@@ -10,18 +10,19 @@ public class MyLightnessSlider extends vj0 {
         super(context, attributeSet);
     }
 
-    public final void h() {
+    /* renamed from: h */
+    public final void m26859h() {
         if (getParent() != null) {
             getParent().requestDisallowInterceptTouchEvent(true);
         }
     }
 
-    @Override // com.daaw.d, android.view.View
+    @Override // com.daaw.AbstractC1031d, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
         boolean onTouchEvent = super.onTouchEvent(motionEvent);
         int action = motionEvent.getAction();
         if ((action == 0 || action == 2) && onTouchEvent) {
-            h();
+            m26859h();
         }
         return onTouchEvent;
     }

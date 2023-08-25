@@ -10,27 +10,38 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface ye3 extends IInterface {
-    void L0(zzdg zzdgVar);
+    /* renamed from: L0 */
+    void mo3807L0(zzdg zzdgVar);
 
-    void M1(zzcs zzcsVar);
+    /* renamed from: M1 */
+    void mo3806M1(zzcs zzcsVar);
 
-    void W2(Bundle bundle);
+    /* renamed from: W2 */
+    void mo3805W2(Bundle bundle);
 
-    void Z0(Bundle bundle);
+    /* renamed from: Z0 */
+    void mo3804Z0(Bundle bundle);
 
-    List b();
+    /* renamed from: b */
+    List mo3803b();
 
-    void d2(ve3 ve3Var);
+    /* renamed from: d2 */
+    void mo3802d2(ve3 ve3Var);
 
-    boolean g();
+    /* renamed from: g */
+    boolean mo3801g();
 
-    boolean g2(Bundle bundle);
+    /* renamed from: g2 */
+    boolean mo3800g2(Bundle bundle);
 
-    boolean j();
+    /* renamed from: j */
+    boolean mo3799j();
 
-    void k();
+    /* renamed from: k */
+    void mo3798k();
 
-    void v0(zzcw zzcwVar);
+    /* renamed from: v0 */
+    void mo3797v0(zzcw zzcwVar);
 
     void zzA();
 

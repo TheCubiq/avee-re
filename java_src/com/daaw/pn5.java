@@ -8,12 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class pn5 {
-    public int a = 0;
-    public Map b = new HashMap();
-    public String c = "";
-    public long d = -1;
 
-    public static pn5 a(Reader reader) {
+    /* renamed from: a */
+    public int f23079a = 0;
+
+    /* renamed from: b */
+    public Map f23080b = new HashMap();
+
+    /* renamed from: c */
+    public String f23081c = "";
+
+    /* renamed from: d */
+    public long f23082d = -1;
+
+    /* renamed from: a */
+    public static pn5 m13270a(Reader reader) {
         try {
             try {
                 JsonReader jsonReader = new JsonReader(reader);
@@ -43,15 +52,15 @@ public final class pn5 {
                 }
                 jsonReader.endObject();
                 pn5 pn5Var = new pn5();
-                pn5Var.a = i;
+                pn5Var.f23079a = i;
                 if (str != null) {
-                    pn5Var.c = str;
+                    pn5Var.f23081c = str;
                 }
-                pn5Var.d = j;
-                pn5Var.b = hashMap;
+                pn5Var.f23082d = j;
+                pn5Var.f23080b = hashMap;
                 return pn5Var;
             } finally {
-                xd0.a(reader);
+                xd0.m5227a(reader);
             }
         } catch (IOException | AssertionError | IllegalStateException | NumberFormatException e) {
             throw new xh6("Unable to parse Response", e);

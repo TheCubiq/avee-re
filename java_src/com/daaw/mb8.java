@@ -7,27 +7,33 @@ public class mb8 extends IOException {
         super(str);
     }
 
-    public static jb8 a() {
+    /* renamed from: a */
+    public static jb8 m16109a() {
         return new jb8("Protocol message tag had invalid wire type.");
     }
 
-    public static mb8 b() {
+    /* renamed from: b */
+    public static mb8 m16108b() {
         return new mb8("Protocol message contained an invalid tag (zero).");
     }
 
-    public static mb8 c() {
+    /* renamed from: c */
+    public static mb8 m16107c() {
         return new mb8("Protocol message had invalid UTF-8.");
     }
 
-    public static mb8 d() {
+    /* renamed from: d */
+    public static mb8 m16106d() {
         return new mb8("CodedInputStream encountered an embedded string or message which claimed to have negative size.");
     }
 
-    public static mb8 e() {
+    /* renamed from: e */
+    public static mb8 m16105e() {
         return new mb8("Failed to parse the message.");
     }
 
-    public static mb8 f() {
+    /* renamed from: f */
+    public static mb8 m16104f() {
         return new mb8("While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either that the input has been truncated or that an embedded message misreported its own length.");
     }
 }

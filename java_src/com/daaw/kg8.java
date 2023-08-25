@@ -1,17 +1,18 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class kg8 {
-    public static String a(y68 y68Var) {
+    /* renamed from: a */
+    public static String m17753a(y68 y68Var) {
         String str;
-        StringBuilder sb = new StringBuilder(y68Var.f());
-        for (int i = 0; i < y68Var.f(); i++) {
-            int d = y68Var.d(i);
-            if (d == 34) {
+        StringBuilder sb = new StringBuilder(y68Var.mo2805f());
+        for (int i = 0; i < y68Var.mo2805f(); i++) {
+            int mo2807d = y68Var.mo2807d(i);
+            if (mo2807d == 34) {
                 str = "\\\"";
-            } else if (d == 39) {
+            } else if (mo2807d == 39) {
                 str = "\\'";
-            } else if (d != 92) {
-                switch (d) {
+            } else if (mo2807d != 92) {
+                switch (mo2807d) {
                     case 7:
                         str = "\\a";
                         break;
@@ -34,13 +35,13 @@ public final class kg8 {
                         str = "\\r";
                         break;
                     default:
-                        if (d < 32 || d > 126) {
+                        if (mo2807d < 32 || mo2807d > 126) {
                             sb.append('\\');
-                            sb.append((char) (((d >>> 6) & 3) + 48));
-                            sb.append((char) (((d >>> 3) & 7) + 48));
-                            d = (d & 7) + 48;
+                            sb.append((char) (((mo2807d >>> 6) & 3) + 48));
+                            sb.append((char) (((mo2807d >>> 3) & 7) + 48));
+                            mo2807d = (mo2807d & 7) + 48;
                         }
-                        sb.append((char) d);
+                        sb.append((char) mo2807d);
                         continue;
                         break;
                 }

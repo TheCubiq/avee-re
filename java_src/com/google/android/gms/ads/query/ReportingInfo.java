@@ -9,16 +9,20 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class ReportingInfo {
-    public final zs3 a;
+
+    /* renamed from: a */
+    public final zs3 f36540a;
 
     /* loaded from: classes.dex */
     public static final class Builder {
-        public final ys3 a;
+
+        /* renamed from: a */
+        public final ys3 f36541a;
 
         public Builder(View view) {
             ys3 ys3Var = new ys3();
-            this.a = ys3Var;
-            ys3Var.b(view);
+            this.f36541a = ys3Var;
+            ys3Var.m3341b(view);
         }
 
         public ReportingInfo build() {
@@ -26,32 +30,32 @@ public final class ReportingInfo {
         }
 
         public Builder setAssetViews(Map<String, View> map) {
-            this.a.c(map);
+            this.f36541a.m3340c(map);
             return this;
         }
     }
 
     public /* synthetic */ ReportingInfo(Builder builder, zzb zzbVar) {
-        this.a = new zs3(builder.a);
+        this.f36540a = new zs3(builder.f36541a);
     }
 
     public void recordClick(List<Uri> list) {
-        this.a.a(list);
+        this.f36540a.m1940a(list);
     }
 
     public void recordImpression(List<Uri> list) {
-        this.a.b(list);
+        this.f36540a.m1939b(list);
     }
 
     public void reportTouchEvent(MotionEvent motionEvent) {
-        this.a.c(motionEvent);
+        this.f36540a.m1938c(motionEvent);
     }
 
     public void updateClickUrl(Uri uri, UpdateClickUrlCallback updateClickUrlCallback) {
-        this.a.d(uri, updateClickUrlCallback);
+        this.f36540a.m1937d(uri, updateClickUrlCallback);
     }
 
     public void updateImpressionUrls(List<Uri> list, UpdateImpressionUrlsCallback updateImpressionUrlsCallback) {
-        this.a.e(list, updateImpressionUrlsCallback);
+        this.f36540a.m1936e(list, updateImpressionUrlsCallback);
     }
 }

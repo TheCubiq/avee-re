@@ -5,32 +5,41 @@ import com.google.android.gms.ads.OnUserEarnedRewardListener;
 import com.google.android.gms.ads.internal.client.zze;
 /* loaded from: classes.dex */
 public final class qw3 extends yv3 {
-    public FullScreenContentCallback p;
-    public OnUserEarnedRewardListener q;
+
+    /* renamed from: p */
+    public FullScreenContentCallback f24539p;
+
+    /* renamed from: q */
+    public OnUserEarnedRewardListener f24540q;
 
     @Override // com.daaw.zv3
-    public final void H0(tv3 tv3Var) {
-        OnUserEarnedRewardListener onUserEarnedRewardListener = this.q;
+    /* renamed from: H0 */
+    public final void mo1841H0(tv3 tv3Var) {
+        OnUserEarnedRewardListener onUserEarnedRewardListener = this.f24540q;
         if (onUserEarnedRewardListener != null) {
             onUserEarnedRewardListener.onUserEarnedReward(new gw3(tv3Var));
         }
     }
 
-    public final void g3(FullScreenContentCallback fullScreenContentCallback) {
-        this.p = fullScreenContentCallback;
+    /* renamed from: g3 */
+    public final void m12015g3(FullScreenContentCallback fullScreenContentCallback) {
+        this.f24539p = fullScreenContentCallback;
     }
 
-    public final void h3(OnUserEarnedRewardListener onUserEarnedRewardListener) {
-        this.q = onUserEarnedRewardListener;
+    /* renamed from: h3 */
+    public final void m12014h3(OnUserEarnedRewardListener onUserEarnedRewardListener) {
+        this.f24540q = onUserEarnedRewardListener;
     }
 
     @Override // com.daaw.zv3
-    public final void i(int i) {
+    /* renamed from: i */
+    public final void mo1840i(int i) {
     }
 
     @Override // com.daaw.zv3
-    public final void z2(zze zzeVar) {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+    /* renamed from: z2 */
+    public final void mo1839z2(zze zzeVar) {
+        FullScreenContentCallback fullScreenContentCallback = this.f24539p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdFailedToShowFullScreenContent(zzeVar.zza());
         }
@@ -38,7 +47,7 @@ public final class qw3 extends yv3 {
 
     @Override // com.daaw.zv3
     public final void zze() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f24539p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdClicked();
         }
@@ -46,7 +55,7 @@ public final class qw3 extends yv3 {
 
     @Override // com.daaw.zv3
     public final void zzf() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f24539p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdImpression();
         }
@@ -54,7 +63,7 @@ public final class qw3 extends yv3 {
 
     @Override // com.daaw.zv3
     public final void zzg() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f24539p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdDismissedFullScreenContent();
         }
@@ -62,7 +71,7 @@ public final class qw3 extends yv3 {
 
     @Override // com.daaw.zv3
     public final void zzj() {
-        FullScreenContentCallback fullScreenContentCallback = this.p;
+        FullScreenContentCallback fullScreenContentCallback = this.f24539p;
         if (fullScreenContentCallback != null) {
             fullScreenContentCallback.onAdShowedFullScreenContent();
         }

@@ -1,8 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class tt7 {
-    public static final st7 a;
-    public static final st7 b;
+
+    /* renamed from: a */
+    public static final st7 f28063a;
+
+    /* renamed from: b */
+    public static final st7 f28064b;
 
     static {
         st7 st7Var;
@@ -11,15 +15,17 @@ public final class tt7 {
         } catch (Exception unused) {
             st7Var = null;
         }
-        a = st7Var;
-        b = new st7();
+        f28063a = st7Var;
+        f28064b = new st7();
     }
 
-    public static st7 a() {
-        return a;
+    /* renamed from: a */
+    public static st7 m8822a() {
+        return f28063a;
     }
 
-    public static st7 b() {
-        return b;
+    /* renamed from: b */
+    public static st7 m8821b() {
+        return f28064b;
     }
 }

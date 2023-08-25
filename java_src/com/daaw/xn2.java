@@ -6,7 +6,8 @@ public final class xn2 extends no2 {
     }
 
     @Override // com.daaw.no2
-    public final void a() {
-        this.e.W(true == ((Boolean) this.f.invoke(null, this.b.b())).booleanValue() ? 2 : 1);
+    /* renamed from: a */
+    public final void mo2099a() {
+        this.f20528e.m20769W(true == ((Boolean) this.f20529f.invoke(null, this.f20525b.m6004b())).booleanValue() ? 2 : 1);
     }
 }

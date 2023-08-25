@@ -28,25 +28,39 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class xh5 extends zzdi {
-    public final Map p = new HashMap();
-    public final Context q;
-    public final lh5 r;
-    public final g77 s;
-    public final yh5 t;
-    public dh5 u;
+
+    /* renamed from: p */
+    public final Map f32719p = new HashMap();
+
+    /* renamed from: q */
+    public final Context f32720q;
+
+    /* renamed from: r */
+    public final lh5 f32721r;
+
+    /* renamed from: s */
+    public final g77 f32722s;
+
+    /* renamed from: t */
+    public final yh5 f32723t;
+
+    /* renamed from: u */
+    public dh5 f32724u;
 
     public xh5(Context context, lh5 lh5Var, yh5 yh5Var, g77 g77Var) {
-        this.q = context;
-        this.r = lh5Var;
-        this.s = g77Var;
-        this.t = yh5Var;
+        this.f32720q = context;
+        this.f32721r = lh5Var;
+        this.f32722s = g77Var;
+        this.f32723t = yh5Var;
     }
 
-    public static AdRequest n3() {
+    /* renamed from: n3 */
+    public static AdRequest m5098n3() {
         return new AdRequest.Builder().build();
     }
 
-    public static String o3(Object obj) {
+    /* renamed from: o3 */
+    public static String m5097o3(Object obj) {
         ResponseInfo responseInfo;
         zzdn zzc;
         if (obj instanceof LoadAdError) {
@@ -76,16 +90,19 @@ public final class xh5 extends zzdi {
         }
     }
 
-    public final void j3(dh5 dh5Var) {
-        this.u = dh5Var;
+    /* renamed from: j3 */
+    public final void m5102j3(dh5 dh5Var) {
+        this.f32724u = dh5Var;
     }
 
-    public final synchronized void k3(String str, Object obj, String str2) {
-        this.p.put(str, obj);
-        p3(o3(obj), str2);
+    /* renamed from: k3 */
+    public final synchronized void m5101k3(String str, Object obj, String str2) {
+        this.f32719p.put(str, obj);
+        m5096p3(m5097o3(obj), str2);
     }
 
-    public final synchronized void l3(final String str, String str2, final String str3) {
+    /* renamed from: l3 */
+    public final synchronized void m5100l3(final String str, String str2, final String str3) {
         char c;
         switch (str2.hashCode()) {
             case -1999289321:
@@ -135,105 +152,108 @@ public final class xh5 extends zzdi {
                 break;
         }
         if (c == 0) {
-            AppOpenAd.load(this.q, str, n3(), 1, new ph5(this, str, str3));
+            AppOpenAd.load(this.f32720q, str, m5098n3(), 1, new ph5(this, str, str3));
         } else if (c == 1) {
-            AdView adView = new AdView(this.q);
+            AdView adView = new AdView(this.f32720q);
             adView.setAdSize(AdSize.BANNER);
             adView.setAdUnitId(str);
             adView.setAdListener(new qh5(this, str, adView, str3));
-            adView.loadAd(n3());
+            adView.loadAd(m5098n3());
         } else if (c == 2) {
-            InterstitialAd.load(this.q, str, n3(), new rh5(this, str, str3));
+            InterstitialAd.load(this.f32720q, str, m5098n3(), new rh5(this, str, str3));
         } else if (c == 3) {
-            AdLoader.Builder builder = new AdLoader.Builder(this.q, str);
+            AdLoader.Builder builder = new AdLoader.Builder(this.f32720q, str);
             builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() { // from class: com.daaw.oh5
                 @Override // com.google.android.gms.ads.nativead.NativeAd.OnNativeAdLoadedListener
                 public final void onNativeAdLoaded(NativeAd nativeAd) {
-                    xh5.this.k3(str, nativeAd, str3);
+                    xh5.this.m5101k3(str, nativeAd, str3);
                 }
             });
             builder.withAdListener(new uh5(this, str3));
-            builder.build().loadAd(n3());
+            builder.build().loadAd(m5098n3());
         } else if (c == 4) {
-            RewardedAd.load(this.q, str, n3(), new sh5(this, str, str3));
+            RewardedAd.load(this.f32720q, str, m5098n3(), new sh5(this, str, str3));
         } else if (c != 5) {
         } else {
-            RewardedInterstitialAd.load(this.q, str, n3(), new th5(this, str, str3));
+            RewardedInterstitialAd.load(this.f32720q, str, m5098n3(), new th5(this, str, str3));
         }
     }
 
-    public final synchronized void m3(String str, String str2) {
-        Activity a = this.r.a();
-        if (a == null) {
+    /* renamed from: m3 */
+    public final synchronized void m5099m3(String str, String str2) {
+        Activity m16953a = this.f32721r.m16953a();
+        if (m16953a == null) {
             return;
         }
-        Object obj = this.p.get(str);
+        Object obj = this.f32719p.get(str);
         if (obj == null) {
             return;
         }
-        y83 y83Var = g93.u8;
-        if (!((Boolean) zzba.zzc().b(y83Var)).booleanValue() || (obj instanceof AppOpenAd) || (obj instanceof InterstitialAd) || (obj instanceof RewardedAd) || (obj instanceof RewardedInterstitialAd)) {
-            this.p.remove(str);
+        y83 y83Var = g93.f10850u8;
+        if (!((Boolean) zzba.zzc().m23658b(y83Var)).booleanValue() || (obj instanceof AppOpenAd) || (obj instanceof InterstitialAd) || (obj instanceof RewardedAd) || (obj instanceof RewardedInterstitialAd)) {
+            this.f32719p.remove(str);
         }
-        q3(o3(obj), str2);
+        m5095q3(m5097o3(obj), str2);
         if (obj instanceof AppOpenAd) {
-            ((AppOpenAd) obj).show(a);
+            ((AppOpenAd) obj).show(m16953a);
         } else if (obj instanceof InterstitialAd) {
-            ((InterstitialAd) obj).show(a);
+            ((InterstitialAd) obj).show(m16953a);
         } else if (obj instanceof RewardedAd) {
-            ((RewardedAd) obj).show(a, new OnUserEarnedRewardListener() { // from class: com.daaw.mh5
+            ((RewardedAd) obj).show(m16953a, new OnUserEarnedRewardListener() { // from class: com.daaw.mh5
                 @Override // com.google.android.gms.ads.OnUserEarnedRewardListener
                 public final void onUserEarnedReward(RewardItem rewardItem) {
                 }
             });
         } else if (obj instanceof RewardedInterstitialAd) {
-            ((RewardedInterstitialAd) obj).show(a, new OnUserEarnedRewardListener() { // from class: com.daaw.nh5
+            ((RewardedInterstitialAd) obj).show(m16953a, new OnUserEarnedRewardListener() { // from class: com.daaw.nh5
                 @Override // com.google.android.gms.ads.OnUserEarnedRewardListener
                 public final void onUserEarnedReward(RewardItem rewardItem) {
                 }
             });
-        } else if (((Boolean) zzba.zzc().b(y83Var)).booleanValue() && ((obj instanceof AdView) || (obj instanceof NativeAd))) {
+        } else if (((Boolean) zzba.zzc().m23658b(y83Var)).booleanValue() && ((obj instanceof AdView) || (obj instanceof NativeAd))) {
             Intent intent = new Intent();
-            intent.setClassName(this.q, OutOfContextTestingActivity.CLASS_NAME);
+            intent.setClassName(this.f32720q, OutOfContextTestingActivity.CLASS_NAME);
             intent.putExtra(OutOfContextTestingActivity.AD_UNIT_KEY, str);
             zzt.zzp();
-            zzs.zzQ(this.q, intent);
+            zzs.zzQ(this.f32720q, intent);
         }
     }
 
-    public final synchronized void p3(String str, String str2) {
+    /* renamed from: p3 */
+    public final synchronized void m5096p3(String str, String str2) {
         try {
-            s67.r(this.u.b(str), new vh5(this, str2), this.s);
+            s67.m10625r(this.f32724u.m24409b(str), new vh5(this, str2), this.f32722s);
         } catch (NullPointerException e) {
-            zzt.zzo().u(e, "OutOfContextTester.setAdAsOutOfContext");
-            this.r.e(str2);
+            zzt.zzo().m11902u(e, "OutOfContextTester.setAdAsOutOfContext");
+            this.f32721r.m16949e(str2);
         }
     }
 
-    public final synchronized void q3(String str, String str2) {
+    /* renamed from: q3 */
+    public final synchronized void m5095q3(String str, String str2) {
         try {
-            s67.r(this.u.b(str), new wh5(this, str2), this.s);
+            s67.m10625r(this.f32724u.m24409b(str), new wh5(this, str2), this.f32722s);
         } catch (NullPointerException e) {
-            zzt.zzo().u(e, "OutOfContextTester.setAdAsShown");
-            this.r.e(str2);
+            zzt.zzo().m11902u(e, "OutOfContextTester.setAdAsShown");
+            this.f32721r.m16949e(str2);
         }
     }
 
     @Override // com.google.android.gms.ads.internal.client.zzdj
     public final void zze(String str, yd0 yd0Var, yd0 yd0Var2) {
-        Context context = (Context) nt0.M(yd0Var);
-        ViewGroup viewGroup = (ViewGroup) nt0.M(yd0Var2);
+        Context context = (Context) nt0.m14831M(yd0Var);
+        ViewGroup viewGroup = (ViewGroup) nt0.m14831M(yd0Var2);
         if (context == null || viewGroup == null) {
             return;
         }
-        Object obj = this.p.get(str);
+        Object obj = this.f32719p.get(str);
         if (obj != null) {
-            this.p.remove(str);
+            this.f32719p.remove(str);
         }
         if (obj instanceof AdView) {
-            yh5.a(context, viewGroup, (AdView) obj);
+            yh5.m3745a(context, viewGroup, (AdView) obj);
         } else if (obj instanceof NativeAd) {
-            yh5.b(context, viewGroup, (NativeAd) obj);
+            yh5.m3744b(context, viewGroup, (NativeAd) obj);
         }
     }
 }

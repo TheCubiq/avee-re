@@ -5,21 +5,23 @@ import java.util.List;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class vy6 implements Serializable, ty6 {
-    public final List p;
+
+    /* renamed from: p */
+    public final List f30717p;
 
     public final boolean equals(@CheckForNull Object obj) {
         if (obj instanceof vy6) {
-            return this.p.equals(((vy6) obj).p);
+            return this.f30717p.equals(((vy6) obj).f30717p);
         }
         return false;
     }
 
     public final int hashCode() {
-        return this.p.hashCode() + 306654252;
+        return this.f30717p.hashCode() + 306654252;
     }
 
     public final String toString() {
-        List list = this.p;
+        List list = this.f30717p;
         StringBuilder sb = new StringBuilder("Predicates.");
         sb.append("and(");
         boolean z = true;
@@ -36,8 +38,8 @@ public final class vy6 implements Serializable, ty6 {
 
     @Override // com.daaw.ty6
     public final boolean zza(Object obj) {
-        for (int i = 0; i < this.p.size(); i++) {
-            if (!((ty6) this.p.get(i)).zza(obj)) {
+        for (int i = 0; i < this.f30717p.size(); i++) {
+            if (!((ty6) this.f30717p.get(i)).zza(obj)) {
                 return false;
             }
         }

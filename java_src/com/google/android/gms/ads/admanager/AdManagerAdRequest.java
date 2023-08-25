@@ -12,18 +12,18 @@ public final class AdManagerAdRequest extends AdRequest {
     /* loaded from: classes.dex */
     public static final class Builder extends AdRequest.Builder {
         public Builder addCategoryExclusion(String str) {
-            this.a.zzq(str);
+            this.f36009a.zzq(str);
             return this;
         }
 
         public Builder addCustomTargeting(String str, String str2) {
-            this.a.zzs(str, str2);
+            this.f36009a.zzs(str, str2);
             return this;
         }
 
         public Builder addCustomTargeting(String str, List<String> list) {
             if (list != null) {
-                this.a.zzs(str, TextUtils.join(",", list));
+                this.f36009a.zzs(str, TextUtils.join(",", list));
             }
             return this;
         }
@@ -43,7 +43,7 @@ public final class AdManagerAdRequest extends AdRequest {
         @Override // com.google.android.gms.ads.AdRequest.Builder
         @Deprecated
         public Builder setAdInfo(AdInfo adInfo) {
-            this.a.zzy(adInfo);
+            this.f36009a.zzy(adInfo);
             return this;
         }
 
@@ -55,12 +55,12 @@ public final class AdManagerAdRequest extends AdRequest {
 
         @Override // com.google.android.gms.ads.AdRequest.Builder
         public Builder setAdString(String str) {
-            this.a.zzz(str);
+            this.f36009a.zzz(str);
             return this;
         }
 
         public Builder setPublisherProvidedId(String str) {
-            this.a.zzG(str);
+            this.f36009a.zzG(str);
             return this;
         }
     }
@@ -71,15 +71,15 @@ public final class AdManagerAdRequest extends AdRequest {
 
     @Override // com.google.android.gms.ads.AdRequest
     public Bundle getCustomTargeting() {
-        return this.a.zze();
+        return this.f36008a.zze();
     }
 
     public String getPublisherProvidedId() {
-        return this.a.zzm();
+        return this.f36008a.zzm();
     }
 
     @Override // com.google.android.gms.ads.AdRequest
     public final zzdx zza() {
-        return this.a;
+        return this.f36008a;
     }
 }

@@ -4,7 +4,8 @@ import android.os.RemoteException;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes.dex */
 public final class ne6 {
-    public static void a(AtomicReference atomicReference, me6 me6Var) {
+    /* renamed from: a */
+    public static void m15202a(AtomicReference atomicReference, me6 me6Var) {
         Object obj = atomicReference.get();
         if (obj == null) {
             return;

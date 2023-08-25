@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface kn0<S> {
-    void a(S s);
+    /* renamed from: a */
+    void m17647a(S s);
 }

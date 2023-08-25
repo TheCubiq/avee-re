@@ -7,18 +7,21 @@ import java.util.Iterator;
 import java.util.List;
 /* loaded from: classes2.dex */
 public final class tb2 implements gl2 {
-    public final Double p;
+
+    /* renamed from: p */
+    public final Double f27211p;
 
     public tb2(Double d) {
         if (d == null) {
-            this.p = Double.valueOf(Double.NaN);
+            this.f27211p = Double.valueOf(Double.NaN);
         } else {
-            this.p = d;
+            this.f27211p = d;
         }
     }
 
     @Override // com.daaw.gl2
-    public final gl2 d(String str, w07 w07Var, List list) {
+    /* renamed from: d */
+    public final gl2 mo2708d(String str, w07 w07Var, List list) {
         if ("toString".equals(str)) {
             return new wp2(zzi());
         }
@@ -30,13 +33,13 @@ public final class tb2 implements gl2 {
             return true;
         }
         if (obj instanceof tb2) {
-            return this.p.equals(((tb2) obj).p);
+            return this.f27211p.equals(((tb2) obj).f27211p);
         }
         return false;
     }
 
     public final int hashCode() {
-        return this.p.hashCode();
+        return this.f27211p.hashCode();
     }
 
     public final String toString() {
@@ -45,13 +48,13 @@ public final class tb2 implements gl2 {
 
     @Override // com.daaw.gl2
     public final gl2 zzd() {
-        return new tb2(this.p);
+        return new tb2(this.f27211p);
     }
 
     @Override // com.daaw.gl2
     public final Boolean zzg() {
         boolean z = false;
-        if (!Double.isNaN(this.p.doubleValue()) && this.p.doubleValue() != 0.0d) {
+        if (!Double.isNaN(this.f27211p.doubleValue()) && this.f27211p.doubleValue() != 0.0d) {
             z = true;
         }
         return Boolean.valueOf(z);
@@ -59,18 +62,18 @@ public final class tb2 implements gl2 {
 
     @Override // com.daaw.gl2
     public final Double zzh() {
-        return this.p;
+        return this.f27211p;
     }
 
     @Override // com.daaw.gl2
     public final String zzi() {
-        if (Double.isNaN(this.p.doubleValue())) {
+        if (Double.isNaN(this.f27211p.doubleValue())) {
             return "NaN";
         }
-        if (Double.isInfinite(this.p.doubleValue())) {
-            return this.p.doubleValue() > 0.0d ? "Infinity" : "-Infinity";
+        if (Double.isInfinite(this.f27211p.doubleValue())) {
+            return this.f27211p.doubleValue() > 0.0d ? "Infinity" : "-Infinity";
         }
-        BigDecimal stripTrailingZeros = BigDecimal.valueOf(this.p.doubleValue()).stripTrailingZeros();
+        BigDecimal stripTrailingZeros = BigDecimal.valueOf(this.f27211p.doubleValue()).stripTrailingZeros();
         DecimalFormat decimalFormat = new DecimalFormat("0E0");
         decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
         decimalFormat.setMinimumFractionDigits((stripTrailingZeros.scale() > 0 ? stripTrailingZeros.precision() : stripTrailingZeros.scale()) - 1);

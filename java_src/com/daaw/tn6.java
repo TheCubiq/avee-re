@@ -6,17 +6,24 @@ import java.util.List;
 import java.util.Map;
 /* loaded from: classes.dex */
 public final class tn6 {
-    public final ag a;
-    public final Map b = new HashMap();
-    public final Map c = new HashMap();
 
-    public tn6(ag agVar) {
-        this.a = agVar;
+    /* renamed from: a */
+    public final InterfaceC0623ag f27897a;
+
+    /* renamed from: b */
+    public final Map f27898b = new HashMap();
+
+    /* renamed from: c */
+    public final Map f27899c = new HashMap();
+
+    public tn6(InterfaceC0623ag interfaceC0623ag) {
+        this.f27897a = interfaceC0623ag;
     }
 
-    public final List a() {
+    /* renamed from: a */
+    public final List m8955a() {
         ArrayList arrayList = new ArrayList();
-        for (Map.Entry entry : this.b.entrySet()) {
+        for (Map.Entry entry : this.f27898b.entrySet()) {
             int i = 0;
             if (((List) entry.getValue()).size() > 1) {
                 for (String str : (List) entry.getValue()) {
@@ -30,32 +37,35 @@ public final class tn6 {
         return arrayList;
     }
 
-    public final void b(String str) {
-        if (!this.c.containsKey(str)) {
-            this.c.put(str, Long.valueOf(this.a.b()));
+    /* renamed from: b */
+    public final void m8954b(String str) {
+        if (!this.f27899c.containsKey(str)) {
+            this.f27899c.put(str, Long.valueOf(this.f27897a.mo15859b()));
             return;
         }
-        long b = this.a.b();
-        long longValue = ((Long) this.c.remove(str)).longValue();
+        long mo15859b = this.f27897a.mo15859b();
+        long longValue = ((Long) this.f27899c.remove(str)).longValue();
         StringBuilder sb = new StringBuilder();
-        sb.append(b - longValue);
-        d(str, sb.toString());
+        sb.append(mo15859b - longValue);
+        m8952d(str, sb.toString());
     }
 
-    public final void c(String str, String str2) {
-        if (!this.c.containsKey(str)) {
-            this.c.put(str, Long.valueOf(this.a.b()));
+    /* renamed from: c */
+    public final void m8953c(String str, String str2) {
+        if (!this.f27899c.containsKey(str)) {
+            this.f27899c.put(str, Long.valueOf(this.f27897a.mo15859b()));
             return;
         }
-        long b = this.a.b();
-        long longValue = ((Long) this.c.remove(str)).longValue();
-        d(str, str2 + (b - longValue));
+        long mo15859b = this.f27897a.mo15859b();
+        long longValue = ((Long) this.f27899c.remove(str)).longValue();
+        m8952d(str, str2 + (mo15859b - longValue));
     }
 
-    public final void d(String str, String str2) {
-        if (!this.b.containsKey(str)) {
-            this.b.put(str, new ArrayList());
+    /* renamed from: d */
+    public final void m8952d(String str, String str2) {
+        if (!this.f27898b.containsKey(str)) {
+            this.f27898b.put(str, new ArrayList());
         }
-        ((List) this.b.get(str)).add(str2);
+        ((List) this.f27898b.get(str)).add(str2);
     }
 }

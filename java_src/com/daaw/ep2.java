@@ -9,43 +9,48 @@ public final class ep2 extends bp2 implements gp2 {
     }
 
     @Override // com.daaw.gp2
-    public final void C(int i) {
-        Parcel D = D();
-        D.writeInt(0);
-        M(6, D);
+    /* renamed from: C */
+    public final void mo21363C(int i) {
+        Parcel m25952D = m25952D();
+        m25952D.writeInt(0);
+        m25950M(6, m25952D);
     }
 
     @Override // com.daaw.gp2
-    public final void E(int[] iArr) {
-        Parcel D = D();
-        D.writeIntArray(null);
-        M(4, D);
+    /* renamed from: E */
+    public final void mo21362E(int[] iArr) {
+        Parcel m25952D = m25952D();
+        m25952D.writeIntArray(null);
+        m25950M(4, m25952D);
     }
 
     @Override // com.daaw.gp2
-    public final void Y(yd0 yd0Var, String str) {
-        Parcel D = D();
-        dp2.g(D, yd0Var);
-        D.writeString("GMA_SDK");
-        M(2, D);
+    /* renamed from: Y */
+    public final void mo21361Y(yd0 yd0Var, String str) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, yd0Var);
+        m25952D.writeString("GMA_SDK");
+        m25950M(2, m25952D);
     }
 
     @Override // com.daaw.gp2
-    public final void c(int i) {
-        Parcel D = D();
-        D.writeInt(i);
-        M(7, D);
+    /* renamed from: c */
+    public final void mo21360c(int i) {
+        Parcel m25952D = m25952D();
+        m25952D.writeInt(i);
+        m25950M(7, m25952D);
     }
 
     @Override // com.daaw.gp2
-    public final void w(byte[] bArr) {
-        Parcel D = D();
-        D.writeByteArray(bArr);
-        M(5, D);
+    /* renamed from: w */
+    public final void mo21359w(byte[] bArr) {
+        Parcel m25952D = m25952D();
+        m25952D.writeByteArray(bArr);
+        m25950M(5, m25952D);
     }
 
     @Override // com.daaw.gp2
     public final void zzf() {
-        M(3, D());
+        m25950M(3, m25952D());
     }
 }

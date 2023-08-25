@@ -7,33 +7,29 @@ import com.daaw.p72;
 /* loaded from: classes.dex */
 public final class zzado extends zzade {
     public static final Parcelable.Creator<zzado> CREATOR = new p72();
-    public final String q;
-    public final String r;
+
+    /* renamed from: q */
+    public final String f36760q;
+
+    /* renamed from: r */
+    public final String f36761r;
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public zzado(android.os.Parcel r3) {
-        /*
-            r2 = this;
-            java.lang.String r0 = r3.readString()
-            int r1 = com.daaw.it5.a
-            r2.<init>(r0)
-            java.lang.String r0 = r3.readString()
-            r2.q = r0
-            java.lang.String r3 = r3.readString()
-            r2.r = r3
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.internal.ads.zzado.<init>(android.os.Parcel):void");
+    public zzado(Parcel parcel) {
+        super(r0);
+        String readString = parcel.readString();
+        int i = it5.f13991a;
+        this.f36760q = parcel.readString();
+        this.f36761r = parcel.readString();
     }
 
     public zzado(String str, String str2, String str3) {
         super(str);
-        this.q = str2;
-        this.r = str3;
+        this.f36760q = str2;
+        this.f36761r = str3;
     }
 
     public final boolean equals(Object obj) {
@@ -42,7 +38,7 @@ public final class zzado extends zzade {
         }
         if (obj != null && zzado.class == obj.getClass()) {
             zzado zzadoVar = (zzado) obj;
-            if (this.p.equals(zzadoVar.p) && it5.t(this.q, zzadoVar.q) && it5.t(this.r, zzadoVar.r)) {
+            if (this.f36747p.equals(zzadoVar.f36747p) && it5.m19376t(this.f36760q, zzadoVar.f36760q) && it5.m19376t(this.f36761r, zzadoVar.f36761r)) {
                 return true;
             }
         }
@@ -50,24 +46,24 @@ public final class zzado extends zzade {
     }
 
     public final int hashCode() {
-        int hashCode = (this.p.hashCode() + 527) * 31;
-        String str = this.q;
+        int hashCode = (this.f36747p.hashCode() + 527) * 31;
+        String str = this.f36760q;
         int hashCode2 = (hashCode + (str != null ? str.hashCode() : 0)) * 31;
-        String str2 = this.r;
+        String str2 = this.f36761r;
         return hashCode2 + (str2 != null ? str2.hashCode() : 0);
     }
 
     @Override // com.google.android.gms.internal.ads.zzade
     public final String toString() {
-        String str = this.p;
-        String str2 = this.r;
+        String str = this.f36747p;
+        String str2 = this.f36761r;
         return str + ": url=" + str2;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(this.p);
-        parcel.writeString(this.q);
-        parcel.writeString(this.r);
+        parcel.writeString(this.f36747p);
+        parcel.writeString(this.f36760q);
+        parcel.writeString(this.f36761r);
     }
 }

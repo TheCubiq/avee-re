@@ -4,16 +4,20 @@ import java.util.Objects;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class ux6 extends oy6 {
-    public static final ux6 p = new ux6();
+
+    /* renamed from: p */
+    public static final ux6 f29608p = new ux6();
 
     @Override // com.daaw.oy6
-    public final oy6 a(ey6 ey6Var) {
+    /* renamed from: a */
+    public final oy6 mo4398a(ey6 ey6Var) {
         Objects.requireNonNull(ey6Var);
-        return p;
+        return f29608p;
     }
 
     @Override // com.daaw.oy6
-    public final Object b(Object obj) {
+    /* renamed from: b */
+    public final Object mo4397b(Object obj) {
         return "";
     }
 

@@ -9,7 +9,8 @@ public abstract class ee3 extends cp2 implements fe3 {
         super("com.google.android.gms.ads.internal.formats.client.IOnCustomTemplateAdLoadedListener");
     }
 
-    public static fe3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static fe3 m23537g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }
@@ -18,7 +19,8 @@ public abstract class ee3 extends cp2 implements fe3 {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         sd3 qd3Var;
         if (i == 1) {
             IBinder readStrongBinder = parcel.readStrongBinder();
@@ -28,8 +30,8 @@ public abstract class ee3 extends cp2 implements fe3 {
                 IInterface queryLocalInterface = readStrongBinder.queryLocalInterface("com.google.android.gms.ads.internal.formats.client.INativeCustomTemplateAd");
                 qd3Var = queryLocalInterface instanceof sd3 ? (sd3) queryLocalInterface : new qd3(readStrongBinder);
             }
-            dp2.c(parcel);
-            e2(qd3Var);
+            dp2.m24105c(parcel);
+            mo8857e2(qd3Var);
             parcel2.writeNoException();
             return true;
         }

@@ -4,37 +4,52 @@ import com.google.android.gms.internal.ads.zzchu;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class m03 {
-    public final String a;
-    public final JSONObject b;
-    public final String c;
-    public final String d;
-    public final boolean e;
+
+    /* renamed from: a */
+    public final String f17977a;
+
+    /* renamed from: b */
+    public final JSONObject f17978b;
+
+    /* renamed from: c */
+    public final String f17979c;
+
+    /* renamed from: d */
+    public final String f17980d;
+
+    /* renamed from: e */
+    public final boolean f17981e;
 
     public m03(String str, zzchu zzchuVar, String str2, JSONObject jSONObject, boolean z, boolean z2) {
-        this.d = zzchuVar.p;
-        this.b = jSONObject;
-        this.c = str;
-        this.a = str2;
-        this.e = z2;
+        this.f17980d = zzchuVar.f36993p;
+        this.f17978b = jSONObject;
+        this.f17979c = str;
+        this.f17977a = str2;
+        this.f17981e = z2;
     }
 
-    public final String a() {
-        return this.a;
+    /* renamed from: a */
+    public final String m16305a() {
+        return this.f17977a;
     }
 
-    public final String b() {
-        return this.d;
+    /* renamed from: b */
+    public final String m16304b() {
+        return this.f17980d;
     }
 
-    public final String c() {
-        return this.c;
+    /* renamed from: c */
+    public final String m16303c() {
+        return this.f17979c;
     }
 
-    public final JSONObject d() {
-        return this.b;
+    /* renamed from: d */
+    public final JSONObject m16302d() {
+        return this.f17978b;
     }
 
-    public final boolean e() {
-        return this.e;
+    /* renamed from: e */
+    public final boolean m16301e() {
+        return this.f17981e;
     }
 }

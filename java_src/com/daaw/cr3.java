@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class cr3 extends cp2 implements dr3 {
-    public static dr3 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static dr3 m25059g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

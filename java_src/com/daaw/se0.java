@@ -3,68 +3,85 @@ package com.daaw;
 import com.daaw.eo1;
 import com.google.android.exoplayer2.Format;
 /* loaded from: classes.dex */
-public final class se0 implements wv {
-    public final rv0 a = new rv0(10);
-    public sm1 b;
-    public boolean c;
-    public long d;
-    public int e;
-    public int f;
+public final class se0 implements InterfaceC3467wv {
 
-    @Override // com.daaw.wv
-    public void a(rv0 rv0Var) {
-        if (this.c) {
-            int a = rv0Var.a();
-            int i = this.f;
+    /* renamed from: a */
+    public final rv0 f26190a = new rv0(10);
+
+    /* renamed from: b */
+    public sm1 f26191b;
+
+    /* renamed from: c */
+    public boolean f26192c;
+
+    /* renamed from: d */
+    public long f26193d;
+
+    /* renamed from: e */
+    public int f26194e;
+
+    /* renamed from: f */
+    public int f26195f;
+
+    @Override // com.daaw.InterfaceC3467wv
+    /* renamed from: a */
+    public void mo1995a(rv0 rv0Var) {
+        if (this.f26192c) {
+            int m10919a = rv0Var.m10919a();
+            int i = this.f26195f;
             if (i < 10) {
-                int min = Math.min(a, 10 - i);
-                System.arraycopy(rv0Var.a, rv0Var.c(), this.a.a, this.f, min);
-                if (this.f + min == 10) {
-                    this.a.J(0);
-                    if (73 != this.a.x() || 68 != this.a.x() || 51 != this.a.x()) {
-                        this.c = false;
+                int min = Math.min(m10919a, 10 - i);
+                System.arraycopy(rv0Var.f25637a, rv0Var.m10917c(), this.f26190a.f25637a, this.f26195f, min);
+                if (this.f26195f + min == 10) {
+                    this.f26190a.m10921J(0);
+                    if (73 != this.f26190a.m10896x() || 68 != this.f26190a.m10896x() || 51 != this.f26190a.m10896x()) {
+                        this.f26192c = false;
                         return;
                     } else {
-                        this.a.K(3);
-                        this.e = this.a.w() + 10;
+                        this.f26190a.m10920K(3);
+                        this.f26194e = this.f26190a.m10897w() + 10;
                     }
                 }
             }
-            int min2 = Math.min(a, this.e - this.f);
-            this.b.c(rv0Var, min2);
-            this.f += min2;
+            int min2 = Math.min(m10919a, this.f26194e - this.f26195f);
+            this.f26191b.mo10157c(rv0Var, min2);
+            this.f26195f += min2;
         }
     }
 
-    @Override // com.daaw.wv
-    public void b() {
-        this.c = false;
+    @Override // com.daaw.InterfaceC3467wv
+    /* renamed from: b */
+    public void mo1994b() {
+        this.f26192c = false;
     }
 
-    @Override // com.daaw.wv
-    public void c() {
+    @Override // com.daaw.InterfaceC3467wv
+    /* renamed from: c */
+    public void mo1993c() {
         int i;
-        if (this.c && (i = this.e) != 0 && this.f == i) {
-            this.b.a(this.d, 1, i, 0, null);
-            this.c = false;
+        if (this.f26192c && (i = this.f26194e) != 0 && this.f26195f == i) {
+            this.f26191b.mo10159a(this.f26193d, 1, i, 0, null);
+            this.f26192c = false;
         }
     }
 
-    @Override // com.daaw.wv
-    public void d(d00 d00Var, eo1.d dVar) {
-        dVar.a();
-        sm1 a = d00Var.a(dVar.c(), 4);
-        this.b = a;
-        a.d(Format.y(dVar.b(), "application/id3", null, -1, null));
+    @Override // com.daaw.InterfaceC3467wv
+    /* renamed from: d */
+    public void mo1992d(d00 d00Var, eo1.C1208d c1208d) {
+        c1208d.m23336a();
+        sm1 mo11478a = d00Var.mo11478a(c1208d.m23334c(), 4);
+        this.f26191b = mo11478a;
+        mo11478a.mo10156d(Format.m1718y(c1208d.m23335b(), "application/id3", null, -1, null));
     }
 
-    @Override // com.daaw.wv
-    public void e(long j, boolean z) {
+    @Override // com.daaw.InterfaceC3467wv
+    /* renamed from: e */
+    public void mo1991e(long j, boolean z) {
         if (z) {
-            this.c = true;
-            this.d = j;
-            this.e = 0;
-            this.f = 0;
+            this.f26192c = true;
+            this.f26193d = j;
+            this.f26194e = 0;
+            this.f26195f = 0;
         }
     }
 }

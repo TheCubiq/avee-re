@@ -1,242 +1,304 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class x93 {
-    public CharSequence a;
-    public CharSequence b;
-    public CharSequence c;
-    public CharSequence d;
-    public CharSequence e;
-    public byte[] f;
-    public Integer g;
-    public Integer h;
-    public Integer i;
-    public Integer j;
-    public Integer k;
-    public Integer l;
-    public Integer m;
-    public Integer n;
-    public Integer o;
-    public CharSequence p;
-    public CharSequence q;
-    public CharSequence r;
-    public CharSequence s;
-    public CharSequence t;
+
+    /* renamed from: a */
+    public CharSequence f32228a;
+
+    /* renamed from: b */
+    public CharSequence f32229b;
+
+    /* renamed from: c */
+    public CharSequence f32230c;
+
+    /* renamed from: d */
+    public CharSequence f32231d;
+
+    /* renamed from: e */
+    public CharSequence f32232e;
+
+    /* renamed from: f */
+    public byte[] f32233f;
+
+    /* renamed from: g */
+    public Integer f32234g;
+
+    /* renamed from: h */
+    public Integer f32235h;
+
+    /* renamed from: i */
+    public Integer f32236i;
+
+    /* renamed from: j */
+    public Integer f32237j;
+
+    /* renamed from: k */
+    public Integer f32238k;
+
+    /* renamed from: l */
+    public Integer f32239l;
+
+    /* renamed from: m */
+    public Integer f32240m;
+
+    /* renamed from: n */
+    public Integer f32241n;
+
+    /* renamed from: o */
+    public Integer f32242o;
+
+    /* renamed from: p */
+    public CharSequence f32243p;
+
+    /* renamed from: q */
+    public CharSequence f32244q;
+
+    /* renamed from: r */
+    public CharSequence f32245r;
+
+    /* renamed from: s */
+    public CharSequence f32246s;
+
+    /* renamed from: t */
+    public CharSequence f32247t;
 
     public x93() {
     }
 
     public /* synthetic */ x93(gc3 gc3Var, t83 t83Var) {
-        this.a = gc3Var.a;
-        this.b = gc3Var.b;
-        this.c = gc3Var.c;
-        this.d = gc3Var.d;
-        this.e = gc3Var.e;
-        this.f = gc3Var.f;
-        this.g = gc3Var.g;
-        this.h = gc3Var.h;
-        this.i = gc3Var.i;
-        this.j = gc3Var.k;
-        this.k = gc3Var.l;
-        this.l = gc3Var.m;
-        this.m = gc3Var.n;
-        this.n = gc3Var.o;
-        this.o = gc3Var.p;
-        this.p = gc3Var.q;
-        this.q = gc3Var.r;
-        this.r = gc3Var.s;
-        this.s = gc3Var.t;
-        this.t = gc3Var.u;
+        this.f32228a = gc3Var.f11050a;
+        this.f32229b = gc3Var.f11051b;
+        this.f32230c = gc3Var.f11052c;
+        this.f32231d = gc3Var.f11053d;
+        this.f32232e = gc3Var.f11054e;
+        this.f32233f = gc3Var.f11055f;
+        this.f32234g = gc3Var.f11056g;
+        this.f32235h = gc3Var.f11057h;
+        this.f32236i = gc3Var.f11058i;
+        this.f32237j = gc3Var.f11060k;
+        this.f32238k = gc3Var.f11061l;
+        this.f32239l = gc3Var.f11062m;
+        this.f32240m = gc3Var.f11063n;
+        this.f32241n = gc3Var.f11064o;
+        this.f32242o = gc3Var.f11065p;
+        this.f32243p = gc3Var.f11066q;
+        this.f32244q = gc3Var.f11067r;
+        this.f32245r = gc3Var.f11068s;
+        this.f32246s = gc3Var.f11069t;
+        this.f32247t = gc3Var.f11070u;
     }
 
-    public final x93 A(Integer num) {
-        this.l = num;
+    /* renamed from: A */
+    public final x93 m5414A(Integer num) {
+        this.f32239l = num;
         return this;
     }
 
-    public final x93 B(Integer num) {
-        this.k = num;
+    /* renamed from: B */
+    public final x93 m5413B(Integer num) {
+        this.f32238k = num;
         return this;
     }
 
-    public final x93 C(Integer num) {
-        this.j = num;
+    /* renamed from: C */
+    public final x93 m5412C(Integer num) {
+        this.f32237j = num;
         return this;
     }
 
-    public final x93 D(Integer num) {
-        this.o = num;
+    /* renamed from: D */
+    public final x93 m5411D(Integer num) {
+        this.f32242o = num;
         return this;
     }
 
-    public final x93 E(Integer num) {
-        this.n = num;
+    /* renamed from: E */
+    public final x93 m5410E(Integer num) {
+        this.f32241n = num;
         return this;
     }
 
-    public final x93 F(Integer num) {
-        this.m = num;
+    /* renamed from: F */
+    public final x93 m5409F(Integer num) {
+        this.f32240m = num;
         return this;
     }
 
-    public final x93 G(CharSequence charSequence) {
-        this.t = charSequence;
+    /* renamed from: G */
+    public final x93 m5408G(CharSequence charSequence) {
+        this.f32247t = charSequence;
         return this;
     }
 
-    public final x93 H(CharSequence charSequence) {
-        this.a = charSequence;
+    /* renamed from: H */
+    public final x93 m5407H(CharSequence charSequence) {
+        this.f32228a = charSequence;
         return this;
     }
 
-    public final x93 I(Integer num) {
-        this.i = num;
+    /* renamed from: I */
+    public final x93 m5406I(Integer num) {
+        this.f32236i = num;
         return this;
     }
 
-    public final x93 J(Integer num) {
-        this.h = num;
+    /* renamed from: J */
+    public final x93 m5405J(Integer num) {
+        this.f32235h = num;
         return this;
     }
 
-    public final x93 K(CharSequence charSequence) {
-        this.p = charSequence;
+    /* renamed from: K */
+    public final x93 m5404K(CharSequence charSequence) {
+        this.f32243p = charSequence;
         return this;
     }
 
-    public final gc3 L() {
+    /* renamed from: L */
+    public final gc3 m5403L() {
         return new gc3(this);
     }
 
-    public final x93 q(byte[] bArr, int i) {
-        if (this.f == null || it5.t(Integer.valueOf(i), 3) || !it5.t(this.g, 3)) {
-            this.f = (byte[]) bArr.clone();
-            this.g = Integer.valueOf(i);
+    /* renamed from: q */
+    public final x93 m5382q(byte[] bArr, int i) {
+        if (this.f32233f == null || it5.m19376t(Integer.valueOf(i), 3) || !it5.m19376t(this.f32234g, 3)) {
+            this.f32233f = (byte[]) bArr.clone();
+            this.f32234g = Integer.valueOf(i);
         }
         return this;
     }
 
-    public final x93 r(gc3 gc3Var) {
-        CharSequence charSequence = gc3Var.a;
+    /* renamed from: r */
+    public final x93 m5381r(gc3 gc3Var) {
+        CharSequence charSequence = gc3Var.f11050a;
         if (charSequence != null) {
-            this.a = charSequence;
+            this.f32228a = charSequence;
         }
-        CharSequence charSequence2 = gc3Var.b;
+        CharSequence charSequence2 = gc3Var.f11051b;
         if (charSequence2 != null) {
-            this.b = charSequence2;
+            this.f32229b = charSequence2;
         }
-        CharSequence charSequence3 = gc3Var.c;
+        CharSequence charSequence3 = gc3Var.f11052c;
         if (charSequence3 != null) {
-            this.c = charSequence3;
+            this.f32230c = charSequence3;
         }
-        CharSequence charSequence4 = gc3Var.d;
+        CharSequence charSequence4 = gc3Var.f11053d;
         if (charSequence4 != null) {
-            this.d = charSequence4;
+            this.f32231d = charSequence4;
         }
-        CharSequence charSequence5 = gc3Var.e;
+        CharSequence charSequence5 = gc3Var.f11054e;
         if (charSequence5 != null) {
-            this.e = charSequence5;
+            this.f32232e = charSequence5;
         }
-        byte[] bArr = gc3Var.f;
+        byte[] bArr = gc3Var.f11055f;
         if (bArr != null) {
-            v(bArr, gc3Var.g);
+            m5377v(bArr, gc3Var.f11056g);
         }
-        Integer num = gc3Var.h;
+        Integer num = gc3Var.f11057h;
         if (num != null) {
-            this.h = num;
+            this.f32235h = num;
         }
-        Integer num2 = gc3Var.i;
+        Integer num2 = gc3Var.f11058i;
         if (num2 != null) {
-            this.i = num2;
+            this.f32236i = num2;
         }
-        Integer num3 = gc3Var.j;
+        Integer num3 = gc3Var.f11059j;
         if (num3 != null) {
-            this.j = num3;
+            this.f32237j = num3;
         }
-        Integer num4 = gc3Var.k;
+        Integer num4 = gc3Var.f11060k;
         if (num4 != null) {
-            this.j = num4;
+            this.f32237j = num4;
         }
-        Integer num5 = gc3Var.l;
+        Integer num5 = gc3Var.f11061l;
         if (num5 != null) {
-            this.k = num5;
+            this.f32238k = num5;
         }
-        Integer num6 = gc3Var.m;
+        Integer num6 = gc3Var.f11062m;
         if (num6 != null) {
-            this.l = num6;
+            this.f32239l = num6;
         }
-        Integer num7 = gc3Var.n;
+        Integer num7 = gc3Var.f11063n;
         if (num7 != null) {
-            this.m = num7;
+            this.f32240m = num7;
         }
-        Integer num8 = gc3Var.o;
+        Integer num8 = gc3Var.f11064o;
         if (num8 != null) {
-            this.n = num8;
+            this.f32241n = num8;
         }
-        Integer num9 = gc3Var.p;
+        Integer num9 = gc3Var.f11065p;
         if (num9 != null) {
-            this.o = num9;
+            this.f32242o = num9;
         }
-        CharSequence charSequence6 = gc3Var.q;
+        CharSequence charSequence6 = gc3Var.f11066q;
         if (charSequence6 != null) {
-            this.p = charSequence6;
+            this.f32243p = charSequence6;
         }
-        CharSequence charSequence7 = gc3Var.r;
+        CharSequence charSequence7 = gc3Var.f11067r;
         if (charSequence7 != null) {
-            this.q = charSequence7;
+            this.f32244q = charSequence7;
         }
-        CharSequence charSequence8 = gc3Var.s;
+        CharSequence charSequence8 = gc3Var.f11068s;
         if (charSequence8 != null) {
-            this.r = charSequence8;
+            this.f32245r = charSequence8;
         }
-        CharSequence charSequence9 = gc3Var.t;
+        CharSequence charSequence9 = gc3Var.f11069t;
         if (charSequence9 != null) {
-            this.s = charSequence9;
+            this.f32246s = charSequence9;
         }
-        CharSequence charSequence10 = gc3Var.u;
+        CharSequence charSequence10 = gc3Var.f11070u;
         if (charSequence10 != null) {
-            this.t = charSequence10;
+            this.f32247t = charSequence10;
         }
         return this;
     }
 
-    public final x93 s(CharSequence charSequence) {
-        this.d = charSequence;
+    /* renamed from: s */
+    public final x93 m5380s(CharSequence charSequence) {
+        this.f32231d = charSequence;
         return this;
     }
 
-    public final x93 t(CharSequence charSequence) {
-        this.c = charSequence;
+    /* renamed from: t */
+    public final x93 m5379t(CharSequence charSequence) {
+        this.f32230c = charSequence;
         return this;
     }
 
-    public final x93 u(CharSequence charSequence) {
-        this.b = charSequence;
+    /* renamed from: u */
+    public final x93 m5378u(CharSequence charSequence) {
+        this.f32229b = charSequence;
         return this;
     }
 
-    public final x93 v(byte[] bArr, Integer num) {
-        this.f = (byte[]) bArr.clone();
-        this.g = num;
+    /* renamed from: v */
+    public final x93 m5377v(byte[] bArr, Integer num) {
+        this.f32233f = (byte[]) bArr.clone();
+        this.f32234g = num;
         return this;
     }
 
-    public final x93 w(CharSequence charSequence) {
-        this.q = charSequence;
+    /* renamed from: w */
+    public final x93 m5376w(CharSequence charSequence) {
+        this.f32244q = charSequence;
         return this;
     }
 
-    public final x93 x(CharSequence charSequence) {
-        this.r = charSequence;
+    /* renamed from: x */
+    public final x93 m5375x(CharSequence charSequence) {
+        this.f32245r = charSequence;
         return this;
     }
 
-    public final x93 y(CharSequence charSequence) {
-        this.e = charSequence;
+    /* renamed from: y */
+    public final x93 m5374y(CharSequence charSequence) {
+        this.f32232e = charSequence;
         return this;
     }
 
-    public final x93 z(CharSequence charSequence) {
-        this.s = charSequence;
+    /* renamed from: z */
+    public final x93 m5373z(CharSequence charSequence) {
+        this.f32246s = charSequence;
         return this;
     }
 }

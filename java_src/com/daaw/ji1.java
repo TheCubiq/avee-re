@@ -7,29 +7,42 @@ import java.io.Closeable;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface ji1 extends Closeable {
-    Cursor B(String str);
+    /* renamed from: B */
+    Cursor mo18504B(String str);
 
-    void C();
+    /* renamed from: C */
+    void mo18503C();
 
-    String G();
+    /* renamed from: G */
+    String mo18502G();
 
-    boolean H();
+    /* renamed from: H */
+    boolean mo18501H();
 
-    Cursor I(mi1 mi1Var);
+    /* renamed from: I */
+    Cursor mo18500I(mi1 mi1Var);
 
-    void a();
+    /* renamed from: a */
+    void mo18499a();
 
-    boolean f();
+    /* renamed from: f */
+    boolean mo18498f();
 
-    List<Pair<String, String>> g();
+    /* renamed from: g */
+    List<Pair<String, String>> mo18497g();
 
-    void h(String str);
+    /* renamed from: h */
+    void mo18496h(String str);
 
-    ni1 k(String str);
+    /* renamed from: k */
+    ni1 mo18495k(String str);
 
-    void s();
+    /* renamed from: s */
+    void mo18494s();
 
-    void t(String str, Object[] objArr);
+    /* renamed from: t */
+    void mo18493t(String str, Object[] objArr);
 
-    Cursor z(mi1 mi1Var, CancellationSignal cancellationSignal);
+    /* renamed from: z */
+    Cursor mo18492z(mi1 mi1Var, CancellationSignal cancellationSignal);
 }

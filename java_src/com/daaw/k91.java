@@ -6,35 +6,93 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 /* loaded from: classes2.dex */
 public class k91 {
-    public static float B;
-    public static float C;
-    public int a;
-    public int b;
-    public int c;
-    public int d;
-    public int e;
-    public int f;
-    public int g;
-    public int h;
-    public int i;
-    public int j;
-    public int k;
-    public long l;
-    public int m;
-    public float n;
-    public float o;
-    public float p;
-    public boolean q;
-    public Interpolator r;
-    public boolean s;
-    public float t;
-    public float u;
-    public final float v;
-    public static float w = (float) (Math.log(0.75d) / Math.log(0.9d));
-    public static float x = 800.0f;
-    public static float y = 0.4f;
-    public static float z = 1.0f - 0.4f;
-    public static final float[] A = new float[p21.T0];
+
+    /* renamed from: B */
+    public static float f15797B;
+
+    /* renamed from: C */
+    public static float f15798C;
+
+    /* renamed from: a */
+    public int f15803a;
+
+    /* renamed from: b */
+    public int f15804b;
+
+    /* renamed from: c */
+    public int f15805c;
+
+    /* renamed from: d */
+    public int f15806d;
+
+    /* renamed from: e */
+    public int f15807e;
+
+    /* renamed from: f */
+    public int f15808f;
+
+    /* renamed from: g */
+    public int f15809g;
+
+    /* renamed from: h */
+    public int f15810h;
+
+    /* renamed from: i */
+    public int f15811i;
+
+    /* renamed from: j */
+    public int f15812j;
+
+    /* renamed from: k */
+    public int f15813k;
+
+    /* renamed from: l */
+    public long f15814l;
+
+    /* renamed from: m */
+    public int f15815m;
+
+    /* renamed from: n */
+    public float f15816n;
+
+    /* renamed from: o */
+    public float f15817o;
+
+    /* renamed from: p */
+    public float f15818p;
+
+    /* renamed from: q */
+    public boolean f15819q;
+
+    /* renamed from: r */
+    public Interpolator f15820r;
+
+    /* renamed from: s */
+    public boolean f15821s;
+
+    /* renamed from: t */
+    public float f15822t;
+
+    /* renamed from: u */
+    public float f15823u;
+
+    /* renamed from: v */
+    public final float f15824v;
+
+    /* renamed from: w */
+    public static float f15799w = (float) (Math.log(0.75d) / Math.log(0.9d));
+
+    /* renamed from: x */
+    public static float f15800x = 800.0f;
+
+    /* renamed from: y */
+    public static float f15801y = 0.4f;
+
+    /* renamed from: z */
+    public static float f15802z = 1.0f - 0.4f;
+
+    /* renamed from: A */
+    public static final float[] f15796A = new float[p21.f22328T0];
 
     static {
         float f;
@@ -48,7 +106,7 @@ public class k91 {
                 float f7 = 1.0f - f6;
                 f = 3.0f * f6 * f7;
                 f2 = f6 * f6 * f6;
-                float f8 = (((f7 * y) + (z * f6)) * f) + f2;
+                float f8 = (((f7 * f15801y) + (f15802z * f6)) * f) + f2;
                 if (Math.abs(f8 - f4) < 1.0E-5d) {
                     break;
                 } else if (f8 > f4) {
@@ -57,219 +115,259 @@ public class k91 {
                     f3 = f6;
                 }
             }
-            A[i] = f + f2;
+            f15796A[i] = f + f2;
         }
-        A[100] = 1.0f;
-        B = 8.0f;
-        C = 1.0f;
-        C = 1.0f / o(1.0f);
+        f15796A[100] = 1.0f;
+        f15797B = 8.0f;
+        f15798C = 1.0f;
+        f15798C = 1.0f / m17938o(1.0f);
     }
 
     public k91(Context context, Interpolator interpolator) {
         this(context, interpolator, true);
     }
 
-    public k91(Context context, Interpolator interpolator, boolean z2) {
-        this.q = true;
-        this.r = interpolator;
-        this.v = context.getResources().getDisplayMetrics().density * 160.0f;
-        this.u = a(ViewConfiguration.getScrollFriction());
-        this.s = z2;
+    public k91(Context context, Interpolator interpolator, boolean z) {
+        this.f15819q = true;
+        this.f15820r = interpolator;
+        this.f15824v = context.getResources().getDisplayMetrics().density * 160.0f;
+        this.f15823u = m17952a(ViewConfiguration.getScrollFriction());
+        this.f15821s = z;
     }
 
-    public static float o(float f) {
-        float f2 = f * B;
-        return (f2 < 1.0f ? f2 - (1.0f - ((float) Math.exp(-f2))) : ((1.0f - ((float) Math.exp(1.0f - f2))) * 0.63212055f) + 0.36787945f) * C;
+    /* renamed from: o */
+    public static float m17938o(float f) {
+        float f2 = f * f15797B;
+        return (f2 < 1.0f ? f2 - (1.0f - ((float) Math.exp(-f2))) : ((1.0f - ((float) Math.exp(1.0f - f2))) * 0.63212055f) + 0.36787945f) * f15798C;
     }
 
-    public final float a(float f) {
-        return this.v * 386.0878f * f;
+    /* renamed from: a */
+    public final float m17952a(float f) {
+        return this.f15824v * 386.0878f * f;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:15:0x007c, code lost:
-        if (r0 == r7.e) goto L14;
+        if (r0 == r7.f15807e) goto L14;
      */
+    /* renamed from: b */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public boolean b() {
-        /*
-            r7 = this;
-            boolean r0 = r7.q
-            if (r0 == 0) goto L6
-            r0 = 0
-            return r0
-        L6:
-            long r0 = android.view.animation.AnimationUtils.currentAnimationTimeMillis()
-            long r2 = r7.l
-            long r0 = r0 - r2
-            int r1 = (int) r0
-            int r0 = r7.m
-            r2 = 1
-            if (r1 >= r0) goto Lac
-            int r3 = r7.a
-            if (r3 == 0) goto L7f
-            if (r3 == r2) goto L1b
-            goto Lb6
-        L1b:
-            float r1 = (float) r1
-            float r0 = (float) r0
-            float r1 = r1 / r0
-            r0 = 1120403456(0x42c80000, float:100.0)
-            float r3 = r1 * r0
-            int r3 = (int) r3
-            float r4 = (float) r3
-            float r4 = r4 / r0
-            int r5 = r3 + 1
-            float r6 = (float) r5
-            float r6 = r6 / r0
-            float[] r0 = com.daaw.k91.A
-            r3 = r0[r3]
-            r0 = r0[r5]
-            float r1 = r1 - r4
-            float r6 = r6 - r4
-            float r1 = r1 / r6
-            float r0 = r0 - r3
-            float r1 = r1 * r0
-            float r3 = r3 + r1
-            int r0 = r7.b
-            int r1 = r7.d
-            int r1 = r1 - r0
-            float r1 = (float) r1
-            float r1 = r1 * r3
-            int r1 = java.lang.Math.round(r1)
-            int r0 = r0 + r1
-            r7.j = r0
-            int r1 = r7.g
-            int r0 = java.lang.Math.min(r0, r1)
-            r7.j = r0
-            int r1 = r7.f
-            int r0 = java.lang.Math.max(r0, r1)
-            r7.j = r0
-            int r0 = r7.c
-            int r1 = r7.e
-            int r1 = r1 - r0
-            float r1 = (float) r1
-            float r3 = r3 * r1
-            int r1 = java.lang.Math.round(r3)
-            int r0 = r0 + r1
-            r7.k = r0
-            int r1 = r7.i
-            int r0 = java.lang.Math.min(r0, r1)
-            r7.k = r0
-            int r1 = r7.h
-            int r0 = java.lang.Math.max(r0, r1)
-            r7.k = r0
-            int r1 = r7.j
-            int r3 = r7.d
-            if (r1 != r3) goto Lb6
-            int r1 = r7.e
-            if (r0 != r1) goto Lb6
-            goto Lb4
-        L7f:
-            float r0 = (float) r1
-            float r1 = r7.n
-            float r0 = r0 * r1
-            android.view.animation.Interpolator r1 = r7.r
-            if (r1 != 0) goto L8d
-            float r0 = o(r0)
-            goto L91
-        L8d:
-            float r0 = r1.getInterpolation(r0)
-        L91:
-            int r1 = r7.b
-            float r3 = r7.o
-            float r3 = r3 * r0
-            int r3 = java.lang.Math.round(r3)
-            int r1 = r1 + r3
-            r7.j = r1
-            int r1 = r7.c
-            float r3 = r7.p
-            float r0 = r0 * r3
-            int r0 = java.lang.Math.round(r0)
-            int r1 = r1 + r0
-            r7.k = r1
-            goto Lb6
-        Lac:
-            int r0 = r7.d
-            r7.j = r0
-            int r0 = r7.e
-            r7.k = r0
-        Lb4:
-            r7.q = r2
-        Lb6:
-            return r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.k91.b():boolean");
+    public boolean m17951b() {
+        if (this.f15819q) {
+            return false;
+        }
+        int currentAnimationTimeMillis = (int) (AnimationUtils.currentAnimationTimeMillis() - this.f15814l);
+        int i = this.f15815m;
+        if (currentAnimationTimeMillis < i) {
+            int i2 = this.f15803a;
+            if (i2 == 0) {
+                float f = currentAnimationTimeMillis * this.f15816n;
+                Interpolator interpolator = this.f15820r;
+                float m17938o = interpolator == null ? m17938o(f) : interpolator.getInterpolation(f);
+                this.f15812j = this.f15804b + Math.round(this.f15817o * m17938o);
+                this.f15813k = this.f15805c + Math.round(m17938o * this.f15818p);
+            } else if (i2 == 1) {
+                float f2 = currentAnimationTimeMillis / i;
+                int i3 = (int) (f2 * 100.0f);
+                float f3 = i3 / 100.0f;
+                int i4 = i3 + 1;
+                float[] fArr = f15796A;
+                float f4 = fArr[i3];
+                float f5 = f4 + (((f2 - f3) / ((i4 / 100.0f) - f3)) * (fArr[i4] - f4));
+                int i5 = this.f15804b;
+                int round = i5 + Math.round((this.f15806d - i5) * f5);
+                this.f15812j = round;
+                int min = Math.min(round, this.f15809g);
+                this.f15812j = min;
+                this.f15812j = Math.max(min, this.f15808f);
+                int i6 = this.f15805c;
+                int round2 = i6 + Math.round(f5 * (this.f15807e - i6));
+                this.f15813k = round2;
+                int min2 = Math.min(round2, this.f15811i);
+                this.f15813k = min2;
+                int max = Math.max(min2, this.f15810h);
+                this.f15813k = max;
+                if (this.f15812j == this.f15806d) {
+                }
+            }
+            return true;
+        }
+        this.f15812j = this.f15806d;
+        this.f15813k = this.f15807e;
+        this.f15819q = true;
+        return true;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x00a0  */
     /* JADX WARN: Removed duplicated region for block: B:16:0x00a3  */
     /* JADX WARN: Removed duplicated region for block: B:20:0x00aa  */
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public void c(int r17, int r18, int r19, int r20, int r21, int r22, int r23, int r24) {
-        /*
-            Method dump skipped, instructions count: 270
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.k91.c(int, int, int, int, int, int, int, int):void");
+    public void m17950c(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
+        int i9;
+        int i10;
+        if (!this.f15821s || this.f15819q) {
+            i9 = i3;
+        } else {
+            float m17948e = m17948e();
+            float f = this.f15806d - this.f15804b;
+            float f2 = this.f15807e - this.f15805c;
+            float sqrt = (float) Math.sqrt((f * f) + (f2 * f2));
+            float f3 = (f / sqrt) * m17948e;
+            float f4 = (f2 / sqrt) * m17948e;
+            i9 = i3;
+            float f5 = i9;
+            if (Math.signum(f5) == Math.signum(f3)) {
+                i10 = i4;
+                float f6 = i10;
+                if (Math.signum(f6) == Math.signum(f4)) {
+                    i9 = (int) (f5 + f3);
+                    i10 = (int) (f6 + f4);
+                }
+                this.f15803a = 1;
+                this.f15819q = false;
+                float sqrt2 = (float) Math.sqrt((i9 * i9) + (i10 * i10));
+                this.f15822t = sqrt2;
+                double log = Math.log((f15801y * sqrt2) / f15800x);
+                double d = f15799w;
+                Double.isNaN(d);
+                this.f15815m = (int) (Math.exp(log / (d - 1.0d)) * 1000.0d);
+                this.f15814l = AnimationUtils.currentAnimationTimeMillis();
+                this.f15804b = i;
+                this.f15805c = i2;
+                float f7 = sqrt2 != 0.0f ? 1.0f : i9 / sqrt2;
+                float f8 = sqrt2 != 0.0f ? i10 / sqrt2 : 1.0f;
+                double d2 = f15800x;
+                float f9 = f15799w;
+                double d3 = f9;
+                double d4 = f9;
+                Double.isNaN(d4);
+                Double.isNaN(d3);
+                double exp = Math.exp((d3 / (d4 - 1.0d)) * log);
+                Double.isNaN(d2);
+                this.f15808f = i5;
+                this.f15809g = i6;
+                this.f15810h = i7;
+                this.f15811i = i8;
+                float f10 = (int) (d2 * exp);
+                int round = i + Math.round(f7 * f10);
+                this.f15806d = round;
+                int min = Math.min(round, this.f15809g);
+                this.f15806d = min;
+                this.f15806d = Math.max(min, this.f15808f);
+                int round2 = Math.round(f10 * f8) + i2;
+                this.f15807e = round2;
+                int min2 = Math.min(round2, this.f15811i);
+                this.f15807e = min2;
+                this.f15807e = Math.max(min2, this.f15810h);
+            }
+        }
+        i10 = i4;
+        this.f15803a = 1;
+        this.f15819q = false;
+        float sqrt22 = (float) Math.sqrt((i9 * i9) + (i10 * i10));
+        this.f15822t = sqrt22;
+        double log2 = Math.log((f15801y * sqrt22) / f15800x);
+        double d5 = f15799w;
+        Double.isNaN(d5);
+        this.f15815m = (int) (Math.exp(log2 / (d5 - 1.0d)) * 1000.0d);
+        this.f15814l = AnimationUtils.currentAnimationTimeMillis();
+        this.f15804b = i;
+        this.f15805c = i2;
+        if (sqrt22 != 0.0f) {
+        }
+        if (sqrt22 != 0.0f) {
+        }
+        double d22 = f15800x;
+        float f92 = f15799w;
+        double d32 = f92;
+        double d42 = f92;
+        Double.isNaN(d42);
+        Double.isNaN(d32);
+        double exp2 = Math.exp((d32 / (d42 - 1.0d)) * log2);
+        Double.isNaN(d22);
+        this.f15808f = i5;
+        this.f15809g = i6;
+        this.f15810h = i7;
+        this.f15811i = i8;
+        float f102 = (int) (d22 * exp2);
+        int round3 = i + Math.round(f7 * f102);
+        this.f15806d = round3;
+        int min3 = Math.min(round3, this.f15809g);
+        this.f15806d = min3;
+        this.f15806d = Math.max(min3, this.f15808f);
+        int round22 = Math.round(f102 * f8) + i2;
+        this.f15807e = round22;
+        int min22 = Math.min(round22, this.f15811i);
+        this.f15807e = min22;
+        this.f15807e = Math.max(min22, this.f15810h);
     }
 
-    public final void d(boolean z2) {
-        this.q = z2;
+    /* renamed from: d */
+    public final void m17949d(boolean z) {
+        this.f15819q = z;
     }
 
-    public float e() {
-        return this.t - ((this.u * n()) / 2000.0f);
+    /* renamed from: e */
+    public float m17948e() {
+        return this.f15822t - ((this.f15823u * m17939n()) / 2000.0f);
     }
 
-    public final int f() {
-        return this.j;
+    /* renamed from: f */
+    public final int m17947f() {
+        return this.f15812j;
     }
 
-    public final int g() {
-        return this.k;
+    /* renamed from: g */
+    public final int m17946g() {
+        return this.f15813k;
     }
 
-    public final int h() {
-        return this.d;
+    /* renamed from: h */
+    public final int m17945h() {
+        return this.f15806d;
     }
 
-    public final int i() {
-        return this.e;
+    /* renamed from: i */
+    public final int m17944i() {
+        return this.f15807e;
     }
 
-    public final int j() {
-        return this.b;
+    /* renamed from: j */
+    public final int m17943j() {
+        return this.f15804b;
     }
 
-    public final int k() {
-        return this.c;
+    /* renamed from: k */
+    public final int m17942k() {
+        return this.f15805c;
     }
 
-    public final boolean l() {
-        return this.q;
+    /* renamed from: l */
+    public final boolean m17941l() {
+        return this.f15819q;
     }
 
-    public void m(int i, int i2, int i3, int i4, int i5) {
-        this.a = 0;
-        this.q = false;
-        this.m = i5;
-        this.l = AnimationUtils.currentAnimationTimeMillis();
-        this.b = i;
-        this.c = i2;
-        this.d = i + i3;
-        this.e = i2 + i4;
-        this.o = i3;
-        this.p = i4;
-        this.n = 1.0f / this.m;
+    /* renamed from: m */
+    public void m17940m(int i, int i2, int i3, int i4, int i5) {
+        this.f15803a = 0;
+        this.f15819q = false;
+        this.f15815m = i5;
+        this.f15814l = AnimationUtils.currentAnimationTimeMillis();
+        this.f15804b = i;
+        this.f15805c = i2;
+        this.f15806d = i + i3;
+        this.f15807e = i2 + i4;
+        this.f15817o = i3;
+        this.f15818p = i4;
+        this.f15816n = 1.0f / this.f15815m;
     }
 
-    public int n() {
-        return (int) (AnimationUtils.currentAnimationTimeMillis() - this.l);
+    /* renamed from: n */
+    public int m17939n() {
+        return (int) (AnimationUtils.currentAnimationTimeMillis() - this.f15814l);
     }
 }

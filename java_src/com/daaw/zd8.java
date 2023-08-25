@@ -1,11 +1,14 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface zd8 extends be8 {
-    xd8 a();
+    /* renamed from: a */
+    xd8 mo2463a();
 
-    void b(w78 w78Var);
+    /* renamed from: b */
+    void mo2462b(w78 w78Var);
 
-    int c();
+    /* renamed from: c */
+    int mo2461c();
 
     y68 zzbs();
 }

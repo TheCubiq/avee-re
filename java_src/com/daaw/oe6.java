@@ -4,27 +4,31 @@ import javax.annotation.concurrent.GuardedBy;
 /* loaded from: classes.dex */
 public final class oe6 implements cf6 {
     @GuardedBy("this")
-    public rp4 a;
+
+    /* renamed from: a */
+    public rp4 f21527a;
 
     @Override // com.daaw.cf6
-    public final /* bridge */ /* synthetic */ f77 a(df6 df6Var, ye6 ye6Var, Object obj) {
-        return c(df6Var, ye6Var, null);
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ f77 mo13423a(df6 df6Var, ye6 ye6Var, Object obj) {
+        return m14317c(df6Var, ye6Var, null);
     }
 
     @Override // com.daaw.cf6
     /* renamed from: b */
     public final synchronized rp4 zzd() {
-        return this.a;
+        return this.f21527a;
     }
 
-    public final synchronized f77 c(df6 df6Var, ye6 ye6Var, rp4 rp4Var) {
+    /* renamed from: c */
+    public final synchronized f77 m14317c(df6 df6Var, ye6 ye6Var, rp4 rp4Var) {
         jn4 zzb;
         if (rp4Var != null) {
-            this.a = rp4Var;
+            this.f21527a = rp4Var;
         } else {
-            this.a = (rp4) ye6Var.a(df6Var.b).zzh();
+            this.f21527a = (rp4) ye6Var.mo3795a(df6Var.f7039b).zzh();
         }
-        zzb = this.a.zzb();
-        return zzb.i(zzb.j());
+        zzb = this.f21527a.zzb();
+        return zzb.m18383i(zzb.m18382j());
     }
 }

@@ -1,9 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface cy0<T> {
-    boolean a(T t);
+    /* renamed from: a */
+    boolean mo23015a(T t);
 
-    T b();
+    /* renamed from: b */
+    T mo23014b();
 
-    void c(T[] tArr, int i);
+    /* renamed from: c */
+    void mo23013c(T[] tArr, int i);
 }

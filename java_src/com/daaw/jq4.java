@@ -10,7 +10,7 @@ public final class jq4 extends kw4 implements zza {
 
     @Override // com.google.android.gms.ads.internal.client.zza
     public final void onAdClicked() {
-        B0(new jw4() { // from class: com.daaw.iq4
+        m17378B0(new jw4() { // from class: com.daaw.iq4
             @Override // com.daaw.jw4
             public final void zza(Object obj) {
                 ((zza) obj).onAdClicked();

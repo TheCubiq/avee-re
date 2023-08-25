@@ -3,19 +3,23 @@ package com.daaw;
 import android.util.SparseArray;
 /* loaded from: classes.dex */
 public final class pl1 {
-    public final SparseArray<ol1> a = new SparseArray<>();
 
-    public ol1 a(int i) {
-        ol1 ol1Var = this.a.get(i);
+    /* renamed from: a */
+    public final SparseArray<ol1> f23020a = new SparseArray<>();
+
+    /* renamed from: a */
+    public ol1 m13301a(int i) {
+        ol1 ol1Var = this.f23020a.get(i);
         if (ol1Var == null) {
             ol1 ol1Var2 = new ol1(Long.MAX_VALUE);
-            this.a.put(i, ol1Var2);
+            this.f23020a.put(i, ol1Var2);
             return ol1Var2;
         }
         return ol1Var;
     }
 
-    public void b() {
-        this.a.clear();
+    /* renamed from: b */
+    public void m13300b() {
+        this.f23020a.clear();
     }
 }

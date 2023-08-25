@@ -5,14 +5,16 @@ import android.content.Context;
 import android.content.Intent;
 /* loaded from: classes.dex */
 public final class o03 extends BroadcastReceiver {
-    public final /* synthetic */ r03 a;
+
+    /* renamed from: a */
+    public final /* synthetic */ r03 f20908a;
 
     public o03(r03 r03Var) {
-        this.a = r03Var;
+        this.f20908a = r03Var;
     }
 
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
-        this.a.j(3);
+        this.f20908a.m11867j(3);
     }
 }

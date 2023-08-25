@@ -4,190 +4,237 @@ import com.google.android.exoplayer2.Format;
 import java.util.List;
 /* loaded from: classes.dex */
 public abstract class ka1 {
-    public final d31 a;
-    public final long b;
-    public final long c;
 
+    /* renamed from: a */
+    public final d31 f15831a;
+
+    /* renamed from: b */
+    public final long f15832b;
+
+    /* renamed from: c */
+    public final long f15833c;
+
+    /* renamed from: com.daaw.ka1$a */
     /* loaded from: classes.dex */
-    public static abstract class a extends ka1 {
-        public final long d;
-        public final long e;
-        public final List<d> f;
+    public static abstract class AbstractC1927a extends ka1 {
 
-        public a(d31 d31Var, long j, long j2, long j3, long j4, List<d> list) {
+        /* renamed from: d */
+        public final long f15834d;
+
+        /* renamed from: e */
+        public final long f15835e;
+
+        /* renamed from: f */
+        public final List<C1930d> f15836f;
+
+        public AbstractC1927a(d31 d31Var, long j, long j2, long j3, long j4, List<C1930d> list) {
             super(d31Var, j, j2);
-            this.d = j3;
-            this.e = j4;
-            this.f = list;
+            this.f15834d = j3;
+            this.f15835e = j4;
+            this.f15836f = list;
         }
 
-        public long c() {
-            return this.d;
+        /* renamed from: c */
+        public long m17931c() {
+            return this.f15834d;
         }
 
-        public abstract int d(long j);
+        /* renamed from: d */
+        public abstract int mo17925d(long j);
 
-        public final long e(long j, long j2) {
-            List<d> list = this.f;
+        /* renamed from: e */
+        public final long m17930e(long j, long j2) {
+            List<C1930d> list = this.f15836f;
             if (list != null) {
-                return (list.get((int) (j - this.d)).b * 1000000) / this.b;
+                return (list.get((int) (j - this.f15834d)).f15841b * 1000000) / this.f15832b;
             }
-            int d = d(j2);
-            return (d == -1 || j != (c() + ((long) d)) - 1) ? (this.e * 1000000) / this.b : j2 - g(j);
+            int mo17925d = mo17925d(j2);
+            return (mo17925d == -1 || j != (m17931c() + ((long) mo17925d)) - 1) ? (this.f15835e * 1000000) / this.f15832b : j2 - m17928g(j);
         }
 
-        public long f(long j, long j2) {
-            long c = c();
-            long d = d(j2);
-            if (d == 0) {
-                return c;
+        /* renamed from: f */
+        public long m17929f(long j, long j2) {
+            long m17931c = m17931c();
+            long mo17925d = mo17925d(j2);
+            if (mo17925d == 0) {
+                return m17931c;
             }
-            if (this.f == null) {
-                long j3 = this.d + (j / ((this.e * 1000000) / this.b));
-                return j3 < c ? c : d == -1 ? j3 : Math.min(j3, (c + d) - 1);
+            if (this.f15836f == null) {
+                long j3 = this.f15834d + (j / ((this.f15835e * 1000000) / this.f15832b));
+                return j3 < m17931c ? m17931c : mo17925d == -1 ? j3 : Math.min(j3, (m17931c + mo17925d) - 1);
             }
-            long j4 = (d + c) - 1;
-            long j5 = c;
+            long j4 = (mo17925d + m17931c) - 1;
+            long j5 = m17931c;
             while (j5 <= j4) {
                 long j6 = ((j4 - j5) / 2) + j5;
-                long g = g(j6);
-                if (g < j) {
+                long m17928g = m17928g(j6);
+                if (m17928g < j) {
                     j5 = j6 + 1;
-                } else if (g <= j) {
+                } else if (m17928g <= j) {
                     return j6;
                 } else {
                     j4 = j6 - 1;
                 }
             }
-            return j5 == c ? j5 : j4;
+            return j5 == m17931c ? j5 : j4;
         }
 
-        public final long g(long j) {
-            List<d> list = this.f;
-            return sq1.T(list != null ? list.get((int) (j - this.d)).a - this.c : (j - this.d) * this.e, 1000000L, this.b);
+        /* renamed from: g */
+        public final long m17928g(long j) {
+            List<C1930d> list = this.f15836f;
+            return sq1.m10025T(list != null ? list.get((int) (j - this.f15834d)).f15840a - this.f15833c : (j - this.f15834d) * this.f15835e, 1000000L, this.f15832b);
         }
 
-        public abstract d31 h(j41 j41Var, long j);
+        /* renamed from: h */
+        public abstract d31 mo17924h(j41 j41Var, long j);
 
-        public boolean i() {
-            return this.f != null;
+        /* renamed from: i */
+        public boolean mo17927i() {
+            return this.f15836f != null;
         }
     }
 
+    /* renamed from: com.daaw.ka1$b */
     /* loaded from: classes.dex */
-    public static class b extends a {
-        public final List<d31> g;
+    public static class C1928b extends AbstractC1927a {
 
-        public b(d31 d31Var, long j, long j2, long j3, long j4, List<d> list, List<d31> list2) {
+        /* renamed from: g */
+        public final List<d31> f15837g;
+
+        public C1928b(d31 d31Var, long j, long j2, long j3, long j4, List<C1930d> list, List<d31> list2) {
             super(d31Var, j, j2, j3, j4, list);
-            this.g = list2;
+            this.f15837g = list2;
         }
 
-        @Override // com.daaw.ka1.a
-        public int d(long j) {
-            return this.g.size();
+        @Override // com.daaw.ka1.AbstractC1927a
+        /* renamed from: d */
+        public int mo17925d(long j) {
+            return this.f15837g.size();
         }
 
-        @Override // com.daaw.ka1.a
-        public d31 h(j41 j41Var, long j) {
-            return this.g.get((int) (j - this.d));
+        @Override // com.daaw.ka1.AbstractC1927a
+        /* renamed from: h */
+        public d31 mo17924h(j41 j41Var, long j) {
+            return this.f15837g.get((int) (j - this.f15834d));
         }
 
-        @Override // com.daaw.ka1.a
-        public boolean i() {
+        @Override // com.daaw.ka1.AbstractC1927a
+        /* renamed from: i */
+        public boolean mo17927i() {
             return true;
         }
     }
 
+    /* renamed from: com.daaw.ka1$c */
     /* loaded from: classes.dex */
-    public static class c extends a {
-        public final kq1 g;
-        public final kq1 h;
+    public static class C1929c extends AbstractC1927a {
 
-        public c(d31 d31Var, long j, long j2, long j3, long j4, List<d> list, kq1 kq1Var, kq1 kq1Var2) {
+        /* renamed from: g */
+        public final kq1 f15838g;
+
+        /* renamed from: h */
+        public final kq1 f15839h;
+
+        public C1929c(d31 d31Var, long j, long j2, long j3, long j4, List<C1930d> list, kq1 kq1Var, kq1 kq1Var2) {
             super(d31Var, j, j2, j3, j4, list);
-            this.g = kq1Var;
-            this.h = kq1Var2;
+            this.f15838g = kq1Var;
+            this.f15839h = kq1Var2;
         }
 
         @Override // com.daaw.ka1
-        public d31 a(j41 j41Var) {
-            kq1 kq1Var = this.g;
+        /* renamed from: a */
+        public d31 mo17926a(j41 j41Var) {
+            kq1 kq1Var = this.f15838g;
             if (kq1Var != null) {
-                Format format = j41Var.c;
-                return new d31(kq1Var.a(format.p, 0L, format.q, 0L), 0L, -1L);
+                Format format = j41Var.f14244c;
+                return new d31(kq1Var.m17488a(format.f35716p, 0L, format.f35717q, 0L), 0L, -1L);
             }
-            return super.a(j41Var);
+            return super.mo17926a(j41Var);
         }
 
-        @Override // com.daaw.ka1.a
-        public int d(long j) {
-            List<d> list = this.f;
+        @Override // com.daaw.ka1.AbstractC1927a
+        /* renamed from: d */
+        public int mo17925d(long j) {
+            List<C1930d> list = this.f15836f;
             if (list != null) {
                 return list.size();
             }
             if (j != -9223372036854775807L) {
-                return (int) sq1.g(j, (this.e * 1000000) / this.b);
+                return (int) sq1.m10009g(j, (this.f15835e * 1000000) / this.f15832b);
             }
             return -1;
         }
 
-        @Override // com.daaw.ka1.a
-        public d31 h(j41 j41Var, long j) {
-            List<d> list = this.f;
-            long j2 = list != null ? list.get((int) (j - this.d)).a : (j - this.d) * this.e;
-            kq1 kq1Var = this.h;
-            Format format = j41Var.c;
-            return new d31(kq1Var.a(format.p, j, format.q, j2), 0L, -1L);
+        @Override // com.daaw.ka1.AbstractC1927a
+        /* renamed from: h */
+        public d31 mo17924h(j41 j41Var, long j) {
+            List<C1930d> list = this.f15836f;
+            long j2 = list != null ? list.get((int) (j - this.f15834d)).f15840a : (j - this.f15834d) * this.f15835e;
+            kq1 kq1Var = this.f15839h;
+            Format format = j41Var.f14244c;
+            return new d31(kq1Var.m17488a(format.f35716p, j, format.f35717q, j2), 0L, -1L);
         }
     }
 
+    /* renamed from: com.daaw.ka1$d */
     /* loaded from: classes.dex */
-    public static class d {
-        public final long a;
-        public final long b;
+    public static class C1930d {
 
-        public d(long j, long j2) {
-            this.a = j;
-            this.b = j2;
+        /* renamed from: a */
+        public final long f15840a;
+
+        /* renamed from: b */
+        public final long f15841b;
+
+        public C1930d(long j, long j2) {
+            this.f15840a = j;
+            this.f15841b = j2;
         }
     }
 
+    /* renamed from: com.daaw.ka1$e */
     /* loaded from: classes.dex */
-    public static class e extends ka1 {
-        public final long d;
-        public final long e;
+    public static class C1931e extends ka1 {
 
-        public e() {
+        /* renamed from: d */
+        public final long f15842d;
+
+        /* renamed from: e */
+        public final long f15843e;
+
+        public C1931e() {
             this(null, 1L, 0L, 0L, 0L);
         }
 
-        public e(d31 d31Var, long j, long j2, long j3, long j4) {
+        public C1931e(d31 d31Var, long j, long j2, long j3, long j4) {
             super(d31Var, j, j2);
-            this.d = j3;
-            this.e = j4;
+            this.f15842d = j3;
+            this.f15843e = j4;
         }
 
-        public d31 c() {
-            long j = this.e;
+        /* renamed from: c */
+        public d31 m17923c() {
+            long j = this.f15843e;
             if (j <= 0) {
                 return null;
             }
-            return new d31(null, this.d, j);
+            return new d31(null, this.f15842d, j);
         }
     }
 
     public ka1(d31 d31Var, long j, long j2) {
-        this.a = d31Var;
-        this.b = j;
-        this.c = j2;
+        this.f15831a = d31Var;
+        this.f15832b = j;
+        this.f15833c = j2;
     }
 
-    public d31 a(j41 j41Var) {
-        return this.a;
+    /* renamed from: a */
+    public d31 mo17926a(j41 j41Var) {
+        return this.f15831a;
     }
 
-    public long b() {
-        return sq1.T(this.c, 1000000L, this.b);
+    /* renamed from: b */
+    public long m17932b() {
+        return sq1.m10025T(this.f15833c, 1000000L, this.f15832b);
     }
 }

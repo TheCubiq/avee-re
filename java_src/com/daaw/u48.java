@@ -7,20 +7,32 @@ import com.google.android.gms.measurement.internal.zzq;
 import java.util.List;
 /* loaded from: classes2.dex */
 public final class u48 implements Runnable {
-    public final /* synthetic */ String p;
-    public final /* synthetic */ String q;
-    public final /* synthetic */ zzq r;
-    public final /* synthetic */ boolean s;
-    public final /* synthetic */ ox3 t;
-    public final /* synthetic */ x78 u;
+
+    /* renamed from: p */
+    public final /* synthetic */ String f28550p;
+
+    /* renamed from: q */
+    public final /* synthetic */ String f28551q;
+
+    /* renamed from: r */
+    public final /* synthetic */ zzq f28552r;
+
+    /* renamed from: s */
+    public final /* synthetic */ boolean f28553s;
+
+    /* renamed from: t */
+    public final /* synthetic */ ox3 f28554t;
+
+    /* renamed from: u */
+    public final /* synthetic */ x78 f28555u;
 
     public u48(x78 x78Var, String str, String str2, zzq zzqVar, boolean z, ox3 ox3Var) {
-        this.u = x78Var;
-        this.p = str;
-        this.q = str2;
-        this.r = zzqVar;
-        this.s = z;
-        this.t = ox3Var;
+        this.f28555u = x78Var;
+        this.f28550p = str;
+        this.f28551q = str2;
+        this.f28552r = zzqVar;
+        this.f28553s = z;
+        this.f28554t = ox3Var;
     }
 
     @Override // java.lang.Runnable
@@ -30,29 +42,29 @@ public final class u48 implements Runnable {
         ua5 ua5Var;
         Bundle bundle2 = new Bundle();
         try {
-            x78 x78Var = this.u;
-            ua5Var = x78Var.d;
+            x78 x78Var = this.f28555u;
+            ua5Var = x78Var.f32173d;
             if (ua5Var == null) {
-                x78Var.a.i().q().c("Failed to get user properties; not connected to service", this.p, this.q);
-                this.u.a.N().F(this.t, bundle2);
+                x78Var.f25143a.mo3895i().m14160q().m20651c("Failed to get user properties; not connected to service", this.f28550p, this.f28551q);
+                this.f28555u.f25143a.m24045N().m24509F(this.f28554t, bundle2);
                 return;
             }
-            ry0.j(this.r);
-            List<zzkw> a2 = ua5Var.a2(this.p, this.q, this.s, this.r);
+            ry0.m10830j(this.f28552r);
+            List<zzkw> mo8374a2 = ua5Var.mo8374a2(this.f28550p, this.f28551q, this.f28553s, this.f28552r);
             bundle = new Bundle();
-            if (a2 != null) {
-                for (zzkw zzkwVar : a2) {
-                    String str = zzkwVar.t;
+            if (mo8374a2 != null) {
+                for (zzkw zzkwVar : mo8374a2) {
+                    String str = zzkwVar.f37076t;
                     if (str != null) {
-                        bundle.putString(zzkwVar.q, str);
+                        bundle.putString(zzkwVar.f37073q, str);
                     } else {
-                        Long l = zzkwVar.s;
+                        Long l = zzkwVar.f37075s;
                         if (l != null) {
-                            bundle.putLong(zzkwVar.q, l.longValue());
+                            bundle.putLong(zzkwVar.f37073q, l.longValue());
                         } else {
-                            Double d = zzkwVar.v;
+                            Double d = zzkwVar.f37078v;
                             if (d != null) {
-                                bundle.putDouble(zzkwVar.q, d.doubleValue());
+                                bundle.putDouble(zzkwVar.f37073q, d.doubleValue());
                             }
                         }
                     }
@@ -60,17 +72,17 @@ public final class u48 implements Runnable {
             }
             try {
                 try {
-                    this.u.E();
-                    this.u.a.N().F(this.t, bundle);
+                    this.f28555u.m5479E();
+                    this.f28555u.f25143a.m24045N().m24509F(this.f28554t, bundle);
                 } catch (RemoteException e2) {
                     e = e2;
-                    this.u.a.i().q().c("Failed to get user properties; remote exception", this.p, e);
-                    this.u.a.N().F(this.t, bundle);
+                    this.f28555u.f25143a.mo3895i().m14160q().m20651c("Failed to get user properties; remote exception", this.f28550p, e);
+                    this.f28555u.f25143a.m24045N().m24509F(this.f28554t, bundle);
                 }
             } catch (Throwable th) {
                 th = th;
                 bundle2 = bundle;
-                this.u.a.N().F(this.t, bundle2);
+                this.f28555u.f25143a.m24045N().m24509F(this.f28554t, bundle2);
                 throw th;
             }
         } catch (RemoteException e3) {
@@ -78,7 +90,7 @@ public final class u48 implements Runnable {
             e = e3;
         } catch (Throwable th2) {
             th = th2;
-            this.u.a.N().F(this.t, bundle2);
+            this.f28555u.f25143a.m24045N().m24509F(this.f28554t, bundle2);
             throw th;
         }
     }

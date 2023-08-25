@@ -24,25 +24,40 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class fw3 extends RewardedAd {
-    public final String a;
-    public final wv3 b;
-    public final Context c;
-    public final qw3 d = new qw3();
-    public OnAdMetadataChangedListener e;
-    public OnPaidEventListener f;
-    public FullScreenContentCallback g;
+
+    /* renamed from: a */
+    public final String f10031a;
+
+    /* renamed from: b */
+    public final wv3 f10032b;
+
+    /* renamed from: c */
+    public final Context f10033c;
+
+    /* renamed from: d */
+    public final qw3 f10034d = new qw3();
+
+    /* renamed from: e */
+    public OnAdMetadataChangedListener f10035e;
+
+    /* renamed from: f */
+    public OnPaidEventListener f10036f;
+
+    /* renamed from: g */
+    public FullScreenContentCallback f10037g;
 
     public fw3(Context context, String str) {
-        this.c = context.getApplicationContext();
-        this.a = str;
-        this.b = zzay.zza().zzq(context, str, new xm3());
+        this.f10033c = context.getApplicationContext();
+        this.f10031a = str;
+        this.f10032b = zzay.zza().zzq(context, str, new xm3());
     }
 
-    public final void a(zzdx zzdxVar, RewardedAdLoadCallback rewardedAdLoadCallback) {
+    /* renamed from: a */
+    public final void m22213a(zzdx zzdxVar, RewardedAdLoadCallback rewardedAdLoadCallback) {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
-                wv3Var.zzf(zzp.zza.zza(this.c, zzdxVar), new jw3(rewardedAdLoadCallback, this));
+                wv3Var.zzf(zzp.zza.zza(this.f10033c, zzdxVar), new jw3(rewardedAdLoadCallback, this));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);
@@ -52,7 +67,7 @@ public final class fw3 extends RewardedAd {
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final Bundle getAdMetadata() {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
                 return wv3Var.zzb();
             }
@@ -64,29 +79,29 @@ public final class fw3 extends RewardedAd {
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final String getAdUnitId() {
-        return this.a;
+        return this.f10031a;
     }
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final FullScreenContentCallback getFullScreenContentCallback() {
-        return this.g;
+        return this.f10037g;
     }
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final OnAdMetadataChangedListener getOnAdMetadataChangedListener() {
-        return this.e;
+        return this.f10035e;
     }
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final OnPaidEventListener getOnPaidEventListener() {
-        return this.f;
+        return this.f10036f;
     }
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final ResponseInfo getResponseInfo() {
         zzdn zzdnVar = null;
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
                 zzdnVar = wv3Var.zzc();
             }
@@ -99,7 +114,7 @@ public final class fw3 extends RewardedAd {
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final RewardItem getRewardItem() {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f10032b;
             tv3 zzd = wv3Var != null ? wv3Var.zzd() : null;
             return zzd == null ? RewardItem.DEFAULT_REWARD : new gw3(zzd);
         } catch (RemoteException e) {
@@ -110,14 +125,14 @@ public final class fw3 extends RewardedAd {
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final void setFullScreenContentCallback(FullScreenContentCallback fullScreenContentCallback) {
-        this.g = fullScreenContentCallback;
-        this.d.g3(fullScreenContentCallback);
+        this.f10037g = fullScreenContentCallback;
+        this.f10034d.m12015g3(fullScreenContentCallback);
     }
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final void setImmersiveMode(boolean z) {
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
                 wv3Var.zzh(z);
             }
@@ -129,8 +144,8 @@ public final class fw3 extends RewardedAd {
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final void setOnAdMetadataChangedListener(OnAdMetadataChangedListener onAdMetadataChangedListener) {
         try {
-            this.e = onAdMetadataChangedListener;
-            wv3 wv3Var = this.b;
+            this.f10035e = onAdMetadataChangedListener;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
                 wv3Var.zzi(new zzfd(onAdMetadataChangedListener));
             }
@@ -142,8 +157,8 @@ public final class fw3 extends RewardedAd {
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final void setOnPaidEventListener(OnPaidEventListener onPaidEventListener) {
         try {
-            this.f = onPaidEventListener;
-            wv3 wv3Var = this.b;
+            this.f10036f = onPaidEventListener;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
                 wv3Var.zzj(new zzfe(onPaidEventListener));
             }
@@ -156,7 +171,7 @@ public final class fw3 extends RewardedAd {
     public final void setServerSideVerificationOptions(ServerSideVerificationOptions serverSideVerificationOptions) {
         if (serverSideVerificationOptions != null) {
             try {
-                wv3 wv3Var = this.b;
+                wv3 wv3Var = this.f10032b;
                 if (wv3Var != null) {
                     wv3Var.zzl(new zzcdy(serverSideVerificationOptions));
                 }
@@ -168,15 +183,15 @@ public final class fw3 extends RewardedAd {
 
     @Override // com.google.android.gms.ads.rewarded.RewardedAd
     public final void show(Activity activity, OnUserEarnedRewardListener onUserEarnedRewardListener) {
-        this.d.h3(onUserEarnedRewardListener);
+        this.f10034d.m12014h3(onUserEarnedRewardListener);
         if (activity == null) {
             k04.zzj("The activity for show is null, will proceed with show using the context provided when loading the ad.");
         }
         try {
-            wv3 wv3Var = this.b;
+            wv3 wv3Var = this.f10032b;
             if (wv3Var != null) {
-                wv3Var.zzk(this.d);
-                this.b.zzm(nt0.g3(activity));
+                wv3Var.zzk(this.f10034d);
+                this.f10032b.zzm(nt0.m14830g3(activity));
             }
         } catch (RemoteException e) {
             k04.zzl("#007 Could not call remote method.", e);

@@ -1,7 +1,9 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class x98 {
-    public static final x98 a = new x98(false);
+
+    /* renamed from: a */
+    public static final x98 f32258a = new x98(false);
 
     public x98(boolean z) {
     }

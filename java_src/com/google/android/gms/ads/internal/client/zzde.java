@@ -12,8 +12,8 @@ public final class zzde extends bp2 implements zzdg {
 
     @Override // com.google.android.gms.ads.internal.client.zzdg
     public final void zze(zzs zzsVar) {
-        Parcel D = D();
-        dp2.e(D, zzsVar);
-        M(1, D);
+        Parcel m25952D = m25952D();
+        dp2.m24103e(m25952D, zzsVar);
+        m25950M(1, m25952D);
     }
 }

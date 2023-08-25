@@ -6,13 +6,17 @@ import com.google.android.gms.ads.internal.client.zzdq;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface sn3 extends IInterface {
-    String b();
+    /* renamed from: b */
+    String mo10146b();
 
-    void n0(yd0 yd0Var);
+    /* renamed from: n0 */
+    void mo10145n0(yd0 yd0Var);
 
-    void n2(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3);
+    /* renamed from: n2 */
+    void mo10144n2(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3);
 
-    void w2(yd0 yd0Var);
+    /* renamed from: w2 */
+    void mo10143w2(yd0 yd0Var);
 
     boolean zzA();
 

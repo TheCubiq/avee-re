@@ -5,19 +5,22 @@ import java.util.Objects;
 @Deprecated
 /* loaded from: classes.dex */
 public final class da8 {
-    public final d18 a;
+
+    /* renamed from: a */
+    public final d18 f6722a;
 
     @Deprecated
     public da8(Context context, g64 g64Var, byte[] bArr) {
-        this.a = new d18(context, g64Var, null);
+        this.f6722a = new d18(context, g64Var, null);
     }
 
     @Deprecated
-    public final da8 a(final d78 d78Var) {
-        d18 d18Var = this.a;
-        uo4.f(!d18Var.q);
+    /* renamed from: a */
+    public final da8 m24578a(final d78 d78Var) {
+        d18 d18Var = this.f6722a;
+        uo4.m7872f(!d18Var.f6387q);
         Objects.requireNonNull(d78Var);
-        d18Var.f = new iz6() { // from class: com.daaw.bx7
+        d18Var.f6376f = new iz6() { // from class: com.daaw.bx7
             @Override // com.daaw.iz6
             public final Object zza() {
                 return d78.this;
@@ -27,11 +30,12 @@ public final class da8 {
     }
 
     @Deprecated
-    public final da8 b(final zv8 zv8Var) {
-        d18 d18Var = this.a;
-        uo4.f(!d18Var.q);
+    /* renamed from: b */
+    public final da8 m24577b(final zv8 zv8Var) {
+        d18 d18Var = this.f6722a;
+        uo4.m7872f(!d18Var.f6387q);
         Objects.requireNonNull(zv8Var);
-        d18Var.e = new iz6() { // from class: com.daaw.dy7
+        d18Var.f6375e = new iz6() { // from class: com.daaw.dy7
             @Override // com.daaw.iz6
             public final Object zza() {
                 return zv8.this;
@@ -41,10 +45,11 @@ public final class da8 {
     }
 
     @Deprecated
-    public final ga8 c() {
-        d18 d18Var = this.a;
-        uo4.f(!d18Var.q);
-        d18Var.q = true;
+    /* renamed from: c */
+    public final ga8 m24576c() {
+        d18 d18Var = this.f6722a;
+        uo4.m7872f(!d18Var.f6387q);
+        d18Var.f6387q = true;
         return new ga8(d18Var);
     }
 }

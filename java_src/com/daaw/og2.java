@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public interface og2 {
-    gl2 f(String str);
+    /* renamed from: f */
+    gl2 mo2706f(String str);
 
-    void h(String str, gl2 gl2Var);
+    /* renamed from: h */
+    void mo2705h(String str, gl2 gl2Var);
 
     boolean zzt(String str);
 }

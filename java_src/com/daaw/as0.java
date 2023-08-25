@@ -11,60 +11,68 @@ import android.os.Bundle;
 /* loaded from: classes.dex */
 public final class as0 {
 
+    /* renamed from: com.daaw.as0$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static Intent a(Activity activity) {
+    public static class C0669a {
+        /* renamed from: a */
+        public static Intent m27104a(Activity activity) {
             return activity.getParentActivityIntent();
         }
 
-        public static boolean b(Activity activity, Intent intent) {
+        /* renamed from: b */
+        public static boolean m27103b(Activity activity, Intent intent) {
             return activity.navigateUpTo(intent);
         }
 
-        public static boolean c(Activity activity, Intent intent) {
+        /* renamed from: c */
+        public static boolean m27102c(Activity activity, Intent intent) {
             return activity.shouldUpRecreateTask(intent);
         }
     }
 
-    public static Intent a(Activity activity) {
-        Intent a2 = a.a(activity);
-        if (a2 != null) {
-            return a2;
+    /* renamed from: a */
+    public static Intent m27111a(Activity activity) {
+        Intent m27104a = C0669a.m27104a(activity);
+        if (m27104a != null) {
+            return m27104a;
         }
-        String c = c(activity);
-        if (c == null) {
+        String m27109c = m27109c(activity);
+        if (m27109c == null) {
             return null;
         }
-        ComponentName componentName = new ComponentName(activity, c);
+        ComponentName componentName = new ComponentName(activity, m27109c);
         try {
-            return d(activity, componentName) == null ? Intent.makeMainActivity(componentName) : new Intent().setComponent(componentName);
+            return m27108d(activity, componentName) == null ? Intent.makeMainActivity(componentName) : new Intent().setComponent(componentName);
         } catch (PackageManager.NameNotFoundException unused) {
             StringBuilder sb = new StringBuilder();
             sb.append("getParentActivityIntent: bad parentActivityName '");
-            sb.append(c);
+            sb.append(m27109c);
             sb.append("' in manifest");
             return null;
         }
     }
 
-    public static Intent b(Context context, ComponentName componentName) {
-        String d = d(context, componentName);
-        if (d == null) {
+    /* renamed from: b */
+    public static Intent m27110b(Context context, ComponentName componentName) {
+        String m27108d = m27108d(context, componentName);
+        if (m27108d == null) {
             return null;
         }
-        ComponentName componentName2 = new ComponentName(componentName.getPackageName(), d);
-        return d(context, componentName2) == null ? Intent.makeMainActivity(componentName2) : new Intent().setComponent(componentName2);
+        ComponentName componentName2 = new ComponentName(componentName.getPackageName(), m27108d);
+        return m27108d(context, componentName2) == null ? Intent.makeMainActivity(componentName2) : new Intent().setComponent(componentName2);
     }
 
-    public static String c(Activity activity) {
+    /* renamed from: c */
+    public static String m27109c(Activity activity) {
         try {
-            return d(activity, activity.getComponentName());
+            return m27108d(activity, activity.getComponentName());
         } catch (PackageManager.NameNotFoundException e) {
             throw new IllegalArgumentException(e);
         }
     }
 
-    public static String d(Context context, ComponentName componentName) {
+    /* renamed from: d */
+    public static String m27108d(Context context, ComponentName componentName) {
         String string;
         PackageManager packageManager = context.getPackageManager();
         int i = Build.VERSION.SDK_INT;
@@ -89,20 +97,23 @@ public final class as0 {
         return string;
     }
 
-    public static void e(Activity activity) {
-        Intent a2 = a(activity);
-        if (a2 != null) {
-            f(activity, a2);
+    /* renamed from: e */
+    public static void m27107e(Activity activity) {
+        Intent m27111a = m27111a(activity);
+        if (m27111a != null) {
+            m27106f(activity, m27111a);
             return;
         }
         throw new IllegalArgumentException("Activity " + activity.getClass().getSimpleName() + " does not have a parent activity name specified. (Did you forget to add the android.support.PARENT_ACTIVITY <meta-data>  element in your manifest?)");
     }
 
-    public static void f(Activity activity, Intent intent) {
-        a.b(activity, intent);
+    /* renamed from: f */
+    public static void m27106f(Activity activity, Intent intent) {
+        C0669a.m27103b(activity, intent);
     }
 
-    public static boolean g(Activity activity, Intent intent) {
-        return a.c(activity, intent);
+    /* renamed from: g */
+    public static boolean m27105g(Activity activity, Intent intent) {
+        return C0669a.m27102c(activity, intent);
     }
 }

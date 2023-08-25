@@ -1,8 +1,12 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class ch6 implements xe6 {
-    public ri6 a;
-    public String b;
+
+    /* renamed from: a */
+    public ri6 f5820a;
+
+    /* renamed from: b */
+    public String f5821b;
 
     public ch6() {
     }

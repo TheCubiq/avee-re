@@ -1,5 +1,6 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface pd0 {
-    void a();
+    /* renamed from: a */
+    void mo9363a();
 }

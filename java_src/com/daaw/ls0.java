@@ -1,24 +1,29 @@
 package com.daaw;
 
 import android.util.SparseArray;
-import com.daaw.k9;
+import com.daaw.C1923k9;
 import com.google.auto.value.AutoValue;
 @AutoValue
 /* loaded from: classes.dex */
 public abstract class ls0 {
 
     @AutoValue.Builder
+    /* renamed from: com.daaw.ls0$a */
     /* loaded from: classes.dex */
-    public static abstract class a {
-        public abstract ls0 a();
+    public static abstract class AbstractC2112a {
+        /* renamed from: a */
+        public abstract ls0 mo16616a();
 
-        public abstract a b(b bVar);
+        /* renamed from: b */
+        public abstract AbstractC2112a mo16615b(EnumC2113b enumC2113b);
 
-        public abstract a c(c cVar);
+        /* renamed from: c */
+        public abstract AbstractC2112a mo16614c(EnumC2114c enumC2114c);
     }
 
+    /* renamed from: com.daaw.ls0$b */
     /* loaded from: classes.dex */
-    public enum b {
+    public enum EnumC2113b {
         UNKNOWN_MOBILE_SUBTYPE(0),
         GPRS(1),
         EDGE(2),
@@ -41,69 +46,76 @@ public abstract class ls0 {
         LTE_CA(19),
         COMBINED(100);
         
-        public static final SparseArray<b> L;
-        public final int p;
+
+        /* renamed from: L */
+        public static final SparseArray<EnumC2113b> f17690L;
+
+        /* renamed from: p */
+        public final int f17702p;
 
         static {
-            b bVar = UNKNOWN_MOBILE_SUBTYPE;
-            b bVar2 = GPRS;
-            b bVar3 = EDGE;
-            b bVar4 = UMTS;
-            b bVar5 = CDMA;
-            b bVar6 = EVDO_0;
-            b bVar7 = EVDO_A;
-            b bVar8 = RTT;
-            b bVar9 = HSDPA;
-            b bVar10 = HSUPA;
-            b bVar11 = HSPA;
-            b bVar12 = IDEN;
-            b bVar13 = EVDO_B;
-            b bVar14 = LTE;
-            b bVar15 = EHRPD;
-            b bVar16 = HSPAP;
-            b bVar17 = GSM;
-            b bVar18 = TD_SCDMA;
-            b bVar19 = IWLAN;
-            b bVar20 = LTE_CA;
-            SparseArray<b> sparseArray = new SparseArray<>();
-            L = sparseArray;
-            sparseArray.put(0, bVar);
-            sparseArray.put(1, bVar2);
-            sparseArray.put(2, bVar3);
-            sparseArray.put(3, bVar4);
-            sparseArray.put(4, bVar5);
-            sparseArray.put(5, bVar6);
-            sparseArray.put(6, bVar7);
-            sparseArray.put(7, bVar8);
-            sparseArray.put(8, bVar9);
-            sparseArray.put(9, bVar10);
-            sparseArray.put(10, bVar11);
-            sparseArray.put(11, bVar12);
-            sparseArray.put(12, bVar13);
-            sparseArray.put(13, bVar14);
-            sparseArray.put(14, bVar15);
-            sparseArray.put(15, bVar16);
-            sparseArray.put(16, bVar17);
-            sparseArray.put(17, bVar18);
-            sparseArray.put(18, bVar19);
-            sparseArray.put(19, bVar20);
+            EnumC2113b enumC2113b = UNKNOWN_MOBILE_SUBTYPE;
+            EnumC2113b enumC2113b2 = GPRS;
+            EnumC2113b enumC2113b3 = EDGE;
+            EnumC2113b enumC2113b4 = UMTS;
+            EnumC2113b enumC2113b5 = CDMA;
+            EnumC2113b enumC2113b6 = EVDO_0;
+            EnumC2113b enumC2113b7 = EVDO_A;
+            EnumC2113b enumC2113b8 = RTT;
+            EnumC2113b enumC2113b9 = HSDPA;
+            EnumC2113b enumC2113b10 = HSUPA;
+            EnumC2113b enumC2113b11 = HSPA;
+            EnumC2113b enumC2113b12 = IDEN;
+            EnumC2113b enumC2113b13 = EVDO_B;
+            EnumC2113b enumC2113b14 = LTE;
+            EnumC2113b enumC2113b15 = EHRPD;
+            EnumC2113b enumC2113b16 = HSPAP;
+            EnumC2113b enumC2113b17 = GSM;
+            EnumC2113b enumC2113b18 = TD_SCDMA;
+            EnumC2113b enumC2113b19 = IWLAN;
+            EnumC2113b enumC2113b20 = LTE_CA;
+            SparseArray<EnumC2113b> sparseArray = new SparseArray<>();
+            f17690L = sparseArray;
+            sparseArray.put(0, enumC2113b);
+            sparseArray.put(1, enumC2113b2);
+            sparseArray.put(2, enumC2113b3);
+            sparseArray.put(3, enumC2113b4);
+            sparseArray.put(4, enumC2113b5);
+            sparseArray.put(5, enumC2113b6);
+            sparseArray.put(6, enumC2113b7);
+            sparseArray.put(7, enumC2113b8);
+            sparseArray.put(8, enumC2113b9);
+            sparseArray.put(9, enumC2113b10);
+            sparseArray.put(10, enumC2113b11);
+            sparseArray.put(11, enumC2113b12);
+            sparseArray.put(12, enumC2113b13);
+            sparseArray.put(13, enumC2113b14);
+            sparseArray.put(14, enumC2113b15);
+            sparseArray.put(15, enumC2113b16);
+            sparseArray.put(16, enumC2113b17);
+            sparseArray.put(17, enumC2113b18);
+            sparseArray.put(18, enumC2113b19);
+            sparseArray.put(19, enumC2113b20);
         }
 
-        b(int i) {
-            this.p = i;
+        EnumC2113b(int i) {
+            this.f17702p = i;
         }
 
-        public static b a(int i) {
-            return L.get(i);
+        /* renamed from: a */
+        public static EnumC2113b m16613a(int i) {
+            return f17690L.get(i);
         }
 
-        public int b() {
-            return this.p;
+        /* renamed from: b */
+        public int m16612b() {
+            return this.f17702p;
         }
     }
 
+    /* renamed from: com.daaw.ls0$c */
     /* loaded from: classes.dex */
-    public enum c {
+    public enum EnumC2114c {
         MOBILE(0),
         WIFI(1),
         MOBILE_MMS(2),
@@ -124,70 +136,79 @@ public abstract class ls0 {
         VPN(17),
         NONE(-1);
         
-        public static final SparseArray<c> J;
-        public final int p;
+
+        /* renamed from: J */
+        public static final SparseArray<EnumC2114c> f17712J;
+
+        /* renamed from: p */
+        public final int f17724p;
 
         static {
-            c cVar = MOBILE;
-            c cVar2 = WIFI;
-            c cVar3 = MOBILE_MMS;
-            c cVar4 = MOBILE_SUPL;
-            c cVar5 = MOBILE_DUN;
-            c cVar6 = MOBILE_HIPRI;
-            c cVar7 = WIMAX;
-            c cVar8 = BLUETOOTH;
-            c cVar9 = DUMMY;
-            c cVar10 = ETHERNET;
-            c cVar11 = MOBILE_FOTA;
-            c cVar12 = MOBILE_IMS;
-            c cVar13 = MOBILE_CBS;
-            c cVar14 = WIFI_P2P;
-            c cVar15 = MOBILE_IA;
-            c cVar16 = MOBILE_EMERGENCY;
-            c cVar17 = PROXY;
-            c cVar18 = VPN;
-            c cVar19 = NONE;
-            SparseArray<c> sparseArray = new SparseArray<>();
-            J = sparseArray;
-            sparseArray.put(0, cVar);
-            sparseArray.put(1, cVar2);
-            sparseArray.put(2, cVar3);
-            sparseArray.put(3, cVar4);
-            sparseArray.put(4, cVar5);
-            sparseArray.put(5, cVar6);
-            sparseArray.put(6, cVar7);
-            sparseArray.put(7, cVar8);
-            sparseArray.put(8, cVar9);
-            sparseArray.put(9, cVar10);
-            sparseArray.put(10, cVar11);
-            sparseArray.put(11, cVar12);
-            sparseArray.put(12, cVar13);
-            sparseArray.put(13, cVar14);
-            sparseArray.put(14, cVar15);
-            sparseArray.put(15, cVar16);
-            sparseArray.put(16, cVar17);
-            sparseArray.put(17, cVar18);
-            sparseArray.put(-1, cVar19);
+            EnumC2114c enumC2114c = MOBILE;
+            EnumC2114c enumC2114c2 = WIFI;
+            EnumC2114c enumC2114c3 = MOBILE_MMS;
+            EnumC2114c enumC2114c4 = MOBILE_SUPL;
+            EnumC2114c enumC2114c5 = MOBILE_DUN;
+            EnumC2114c enumC2114c6 = MOBILE_HIPRI;
+            EnumC2114c enumC2114c7 = WIMAX;
+            EnumC2114c enumC2114c8 = BLUETOOTH;
+            EnumC2114c enumC2114c9 = DUMMY;
+            EnumC2114c enumC2114c10 = ETHERNET;
+            EnumC2114c enumC2114c11 = MOBILE_FOTA;
+            EnumC2114c enumC2114c12 = MOBILE_IMS;
+            EnumC2114c enumC2114c13 = MOBILE_CBS;
+            EnumC2114c enumC2114c14 = WIFI_P2P;
+            EnumC2114c enumC2114c15 = MOBILE_IA;
+            EnumC2114c enumC2114c16 = MOBILE_EMERGENCY;
+            EnumC2114c enumC2114c17 = PROXY;
+            EnumC2114c enumC2114c18 = VPN;
+            EnumC2114c enumC2114c19 = NONE;
+            SparseArray<EnumC2114c> sparseArray = new SparseArray<>();
+            f17712J = sparseArray;
+            sparseArray.put(0, enumC2114c);
+            sparseArray.put(1, enumC2114c2);
+            sparseArray.put(2, enumC2114c3);
+            sparseArray.put(3, enumC2114c4);
+            sparseArray.put(4, enumC2114c5);
+            sparseArray.put(5, enumC2114c6);
+            sparseArray.put(6, enumC2114c7);
+            sparseArray.put(7, enumC2114c8);
+            sparseArray.put(8, enumC2114c9);
+            sparseArray.put(9, enumC2114c10);
+            sparseArray.put(10, enumC2114c11);
+            sparseArray.put(11, enumC2114c12);
+            sparseArray.put(12, enumC2114c13);
+            sparseArray.put(13, enumC2114c14);
+            sparseArray.put(14, enumC2114c15);
+            sparseArray.put(15, enumC2114c16);
+            sparseArray.put(16, enumC2114c17);
+            sparseArray.put(17, enumC2114c18);
+            sparseArray.put(-1, enumC2114c19);
         }
 
-        c(int i) {
-            this.p = i;
+        EnumC2114c(int i) {
+            this.f17724p = i;
         }
 
-        public static c a(int i) {
-            return J.get(i);
+        /* renamed from: a */
+        public static EnumC2114c m16611a(int i) {
+            return f17712J.get(i);
         }
 
-        public int b() {
-            return this.p;
+        /* renamed from: b */
+        public int m16610b() {
+            return this.f17724p;
         }
     }
 
-    public static a a() {
-        return new k9.b();
+    /* renamed from: a */
+    public static AbstractC2112a m16619a() {
+        return new C1923k9.C1925b();
     }
 
-    public abstract b b();
+    /* renamed from: b */
+    public abstract EnumC2113b mo16618b();
 
-    public abstract c c();
+    /* renamed from: c */
+    public abstract EnumC2114c mo16617c();
 }

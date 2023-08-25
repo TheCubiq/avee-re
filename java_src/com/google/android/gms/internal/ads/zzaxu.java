@@ -3,11 +3,13 @@ package com.google.android.gms.internal.ads;
 import java.util.Objects;
 /* loaded from: classes.dex */
 public abstract class zzaxu implements zzaxn {
-    public final String p;
+
+    /* renamed from: p */
+    public final String f36816p;
 
     public zzaxu(String str) {
         Objects.requireNonNull(str);
-        this.p = str;
+        this.f36816p = str;
     }
 
     @Override // android.os.Parcelable

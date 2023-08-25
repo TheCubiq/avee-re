@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
@@ -29,40 +30,65 @@ import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.Charset;
 /* loaded from: classes.dex */
 public class IconCompat extends CustomVersionedParcelable {
-    public static final PorterDuff.Mode k = PorterDuff.Mode.SRC_IN;
-    public int a;
-    public Object b;
-    public byte[] c;
-    public Parcelable d;
-    public int e;
-    public int f;
-    public ColorStateList g;
-    public PorterDuff.Mode h;
-    public String i;
-    public String j;
 
+    /* renamed from: k */
+    public static final PorterDuff.Mode f1168k = PorterDuff.Mode.SRC_IN;
+
+    /* renamed from: a */
+    public int f1169a;
+
+    /* renamed from: b */
+    public Object f1170b;
+
+    /* renamed from: c */
+    public byte[] f1171c;
+
+    /* renamed from: d */
+    public Parcelable f1172d;
+
+    /* renamed from: e */
+    public int f1173e;
+
+    /* renamed from: f */
+    public int f1174f;
+
+    /* renamed from: g */
+    public ColorStateList f1175g;
+
+    /* renamed from: h */
+    public PorterDuff.Mode f1176h;
+
+    /* renamed from: i */
+    public String f1177i;
+
+    /* renamed from: j */
+    public String f1178j;
+
+    /* renamed from: androidx.core.graphics.drawable.IconCompat$a */
     /* loaded from: classes.dex */
-    public static class a {
-        public static IconCompat a(Object obj) {
-            ty0.f(obj);
-            int d = d(obj);
-            if (d != 2) {
-                if (d != 4) {
-                    if (d != 6) {
+    public static class C0204a {
+        /* renamed from: a */
+        public static IconCompat m29715a(Object obj) {
+            ty0.m8699f(obj);
+            int m29712d = m29712d(obj);
+            if (m29712d != 2) {
+                if (m29712d != 4) {
+                    if (m29712d != 6) {
                         IconCompat iconCompat = new IconCompat(-1);
-                        iconCompat.b = obj;
+                        iconCompat.f1170b = obj;
                         return iconCompat;
                     }
-                    return IconCompat.c(e(obj));
+                    return IconCompat.m29730c(m29711e(obj));
                 }
-                return IconCompat.e(e(obj));
+                return IconCompat.m29728e(m29711e(obj));
             }
-            return IconCompat.g(null, c(obj), b(obj));
+            return IconCompat.m29726g(null, m29713c(obj), m29714b(obj));
         }
 
-        public static int b(Object obj) {
+        /* renamed from: b */
+        public static int m29714b(Object obj) {
             if (Build.VERSION.SDK_INT >= 28) {
-                return c.a(obj);
+                return C0206c.m29706a(obj);
             }
             try {
                 return ((Integer) obj.getClass().getMethod("getResId", new Class[0]).invoke(obj, new Object[0])).intValue();
@@ -71,9 +97,10 @@ public class IconCompat extends CustomVersionedParcelable {
             }
         }
 
-        public static String c(Object obj) {
+        /* renamed from: c */
+        public static String m29713c(Object obj) {
             if (Build.VERSION.SDK_INT >= 28) {
-                return c.b(obj);
+                return C0206c.m29705b(obj);
             }
             try {
                 return (String) obj.getClass().getMethod("getResPackage", new Class[0]).invoke(obj, new Object[0]);
@@ -82,10 +109,11 @@ public class IconCompat extends CustomVersionedParcelable {
             }
         }
 
-        public static int d(Object obj) {
+        /* renamed from: d */
+        public static int m29712d(Object obj) {
             StringBuilder sb;
             if (Build.VERSION.SDK_INT >= 28) {
-                return c.c(obj);
+                return C0206c.m29704c(obj);
             }
             try {
                 return ((Integer) obj.getClass().getMethod("getType", new Class[0]).invoke(obj, new Object[0])).intValue();
@@ -107,9 +135,10 @@ public class IconCompat extends CustomVersionedParcelable {
             }
         }
 
-        public static Uri e(Object obj) {
+        /* renamed from: e */
+        public static Uri m29711e(Object obj) {
             if (Build.VERSION.SDK_INT >= 28) {
-                return c.d(obj);
+                return C0206c.m29703d(obj);
             }
             try {
                 return (Uri) obj.getClass().getMethod("getUri", new Class[0]).invoke(obj, new Object[0]);
@@ -118,194 +147,156 @@ public class IconCompat extends CustomVersionedParcelable {
             }
         }
 
-        public static Drawable f(Icon icon, Context context) {
+        /* renamed from: f */
+        public static Drawable m29710f(Icon icon, Context context) {
             return icon.loadDrawable(context);
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:13:0x002c, code lost:
             if (r0 >= 26) goto L23;
          */
+        /* renamed from: g */
         /*
             Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct add '--show-bad-code' argument
         */
-        public static android.graphics.drawable.Icon g(androidx.core.graphics.drawable.IconCompat r4, android.content.Context r5) {
-            /*
-                int r0 = r4.a
-                r1 = 0
-                r2 = 26
-                switch(r0) {
-                    case -1: goto Lb5;
-                    case 0: goto L8;
-                    case 1: goto L9c;
-                    case 2: goto L91;
-                    case 3: goto L84;
-                    case 4: goto L7b;
-                    case 5: goto L65;
-                    case 6: goto L10;
-                    default: goto L8;
-                }
-            L8:
-                java.lang.IllegalArgumentException r4 = new java.lang.IllegalArgumentException
-                java.lang.String r5 = "Unknown type"
-                r4.<init>(r5)
-                throw r4
-            L10:
-                int r0 = android.os.Build.VERSION.SDK_INT
-                r3 = 30
-                if (r0 < r3) goto L20
-                android.net.Uri r5 = r4.k()
-                android.graphics.drawable.Icon r5 = androidx.core.graphics.drawable.IconCompat.d.a(r5)
-                goto La4
-            L20:
-                if (r5 == 0) goto L4a
-                java.io.InputStream r5 = r4.l(r5)
-                if (r5 == 0) goto L2f
-                android.graphics.Bitmap r5 = android.graphics.BitmapFactory.decodeStream(r5)
-                if (r0 < r2) goto L76
-                goto L6d
-            L2f:
-                java.lang.IllegalStateException r5 = new java.lang.IllegalStateException
-                java.lang.StringBuilder r0 = new java.lang.StringBuilder
-                r0.<init>()
-                java.lang.String r1 = "Cannot load adaptive icon from uri: "
-                r0.append(r1)
-                android.net.Uri r4 = r4.k()
-                r0.append(r4)
-                java.lang.String r4 = r0.toString()
-                r5.<init>(r4)
-                throw r5
-            L4a:
-                java.lang.IllegalArgumentException r5 = new java.lang.IllegalArgumentException
-                java.lang.StringBuilder r0 = new java.lang.StringBuilder
-                r0.<init>()
-                java.lang.String r1 = "Context is required to resolve the file uri of the icon: "
-                r0.append(r1)
-                android.net.Uri r4 = r4.k()
-                r0.append(r4)
-                java.lang.String r4 = r0.toString()
-                r5.<init>(r4)
-                throw r5
-            L65:
-                int r5 = android.os.Build.VERSION.SDK_INT
-                if (r5 < r2) goto L72
-                java.lang.Object r5 = r4.b
-                android.graphics.Bitmap r5 = (android.graphics.Bitmap) r5
-            L6d:
-                android.graphics.drawable.Icon r5 = androidx.core.graphics.drawable.IconCompat.b.b(r5)
-                goto La4
-            L72:
-                java.lang.Object r5 = r4.b
-                android.graphics.Bitmap r5 = (android.graphics.Bitmap) r5
-            L76:
-                android.graphics.Bitmap r5 = androidx.core.graphics.drawable.IconCompat.b(r5, r1)
-                goto La0
-            L7b:
-                java.lang.Object r5 = r4.b
-                java.lang.String r5 = (java.lang.String) r5
-                android.graphics.drawable.Icon r5 = android.graphics.drawable.Icon.createWithContentUri(r5)
-                goto La4
-            L84:
-                java.lang.Object r5 = r4.b
-                byte[] r5 = (byte[]) r5
-                int r0 = r4.e
-                int r1 = r4.f
-                android.graphics.drawable.Icon r5 = android.graphics.drawable.Icon.createWithData(r5, r0, r1)
-                goto La4
-            L91:
-                java.lang.String r5 = r4.i()
-                int r0 = r4.e
-                android.graphics.drawable.Icon r5 = android.graphics.drawable.Icon.createWithResource(r5, r0)
-                goto La4
-            L9c:
-                java.lang.Object r5 = r4.b
-                android.graphics.Bitmap r5 = (android.graphics.Bitmap) r5
-            La0:
-                android.graphics.drawable.Icon r5 = android.graphics.drawable.Icon.createWithBitmap(r5)
-            La4:
-                android.content.res.ColorStateList r0 = r4.g
-                if (r0 == 0) goto Lab
-                r5.setTintList(r0)
-            Lab:
-                android.graphics.PorterDuff$Mode r4 = r4.h
-                android.graphics.PorterDuff$Mode r0 = androidx.core.graphics.drawable.IconCompat.k
-                if (r4 == r0) goto Lb4
-                r5.setTintMode(r4)
-            Lb4:
-                return r5
-            Lb5:
-                java.lang.Object r4 = r4.b
-                android.graphics.drawable.Icon r4 = (android.graphics.drawable.Icon) r4
-                return r4
-            */
-            throw new UnsupportedOperationException("Method not decompiled: androidx.core.graphics.drawable.IconCompat.a.g(androidx.core.graphics.drawable.IconCompat, android.content.Context):android.graphics.drawable.Icon");
+        public static Icon m29709g(IconCompat iconCompat, Context context) {
+            Bitmap bitmap;
+            Icon createWithResource;
+            Bitmap bitmap2;
+            switch (iconCompat.f1169a) {
+                case -1:
+                    return (Icon) iconCompat.f1170b;
+                case 0:
+                default:
+                    throw new IllegalArgumentException("Unknown type");
+                case 1:
+                    bitmap = (Bitmap) iconCompat.f1170b;
+                    createWithResource = Icon.createWithBitmap(bitmap);
+                    break;
+                case 2:
+                    createWithResource = Icon.createWithResource(iconCompat.m29724i(), iconCompat.f1173e);
+                    break;
+                case 3:
+                    createWithResource = Icon.createWithData((byte[]) iconCompat.f1170b, iconCompat.f1173e, iconCompat.f1174f);
+                    break;
+                case 4:
+                    createWithResource = Icon.createWithContentUri((String) iconCompat.f1170b);
+                    break;
+                case 5:
+                    if (Build.VERSION.SDK_INT < 26) {
+                        bitmap2 = (Bitmap) iconCompat.f1170b;
+                        bitmap = IconCompat.m29731b(bitmap2, false);
+                        createWithResource = Icon.createWithBitmap(bitmap);
+                        break;
+                    } else {
+                        bitmap2 = (Bitmap) iconCompat.f1170b;
+                        createWithResource = C0205b.m29707b(bitmap2);
+                        break;
+                    }
+                case 6:
+                    int i = Build.VERSION.SDK_INT;
+                    if (i >= 30) {
+                        createWithResource = C0207d.m29702a(iconCompat.m29722k());
+                        break;
+                    } else if (context == null) {
+                        throw new IllegalArgumentException("Context is required to resolve the file uri of the icon: " + iconCompat.m29722k());
+                    } else {
+                        InputStream m29721l = iconCompat.m29721l(context);
+                        if (m29721l == null) {
+                            throw new IllegalStateException("Cannot load adaptive icon from uri: " + iconCompat.m29722k());
+                        }
+                        bitmap2 = BitmapFactory.decodeStream(m29721l);
+                        break;
+                    }
+            }
+            ColorStateList colorStateList = iconCompat.f1175g;
+            if (colorStateList != null) {
+                createWithResource.setTintList(colorStateList);
+            }
+            PorterDuff.Mode mode = iconCompat.f1176h;
+            if (mode != IconCompat.f1168k) {
+                createWithResource.setTintMode(mode);
+            }
+            return createWithResource;
         }
     }
 
+    /* renamed from: androidx.core.graphics.drawable.IconCompat$b */
     /* loaded from: classes.dex */
-    public static class b {
-        public static Drawable a(Drawable drawable, Drawable drawable2) {
+    public static class C0205b {
+        /* renamed from: a */
+        public static Drawable m29708a(Drawable drawable, Drawable drawable2) {
             return new AdaptiveIconDrawable(drawable, drawable2);
         }
 
-        public static Icon b(Bitmap bitmap) {
+        /* renamed from: b */
+        public static Icon m29707b(Bitmap bitmap) {
             return Icon.createWithAdaptiveBitmap(bitmap);
         }
     }
 
+    /* renamed from: androidx.core.graphics.drawable.IconCompat$c */
     /* loaded from: classes.dex */
-    public static class c {
-        public static int a(Object obj) {
+    public static class C0206c {
+        /* renamed from: a */
+        public static int m29706a(Object obj) {
             return ((Icon) obj).getResId();
         }
 
-        public static String b(Object obj) {
+        /* renamed from: b */
+        public static String m29705b(Object obj) {
             return ((Icon) obj).getResPackage();
         }
 
-        public static int c(Object obj) {
+        /* renamed from: c */
+        public static int m29704c(Object obj) {
             return ((Icon) obj).getType();
         }
 
-        public static Uri d(Object obj) {
+        /* renamed from: d */
+        public static Uri m29703d(Object obj) {
             return ((Icon) obj).getUri();
         }
     }
 
+    /* renamed from: androidx.core.graphics.drawable.IconCompat$d */
     /* loaded from: classes.dex */
-    public static class d {
-        public static Icon a(Uri uri) {
+    public static class C0207d {
+        /* renamed from: a */
+        public static Icon m29702a(Uri uri) {
             return Icon.createWithAdaptiveBitmapContentUri(uri);
         }
     }
 
     public IconCompat() {
-        this.a = -1;
-        this.c = null;
-        this.d = null;
-        this.e = 0;
-        this.f = 0;
-        this.g = null;
-        this.h = k;
-        this.i = null;
+        this.f1169a = -1;
+        this.f1171c = null;
+        this.f1172d = null;
+        this.f1173e = 0;
+        this.f1174f = 0;
+        this.f1175g = null;
+        this.f1176h = f1168k;
+        this.f1177i = null;
     }
 
     public IconCompat(int i) {
-        this.c = null;
-        this.d = null;
-        this.e = 0;
-        this.f = 0;
-        this.g = null;
-        this.h = k;
-        this.i = null;
-        this.a = i;
+        this.f1171c = null;
+        this.f1172d = null;
+        this.f1173e = 0;
+        this.f1174f = 0;
+        this.f1175g = null;
+        this.f1176h = f1168k;
+        this.f1177i = null;
+        this.f1169a = i;
     }
 
-    public static IconCompat a(Icon icon) {
-        return a.a(icon);
+    /* renamed from: a */
+    public static IconCompat m29732a(Icon icon) {
+        return C0204a.m29715a(icon);
     }
 
-    public static Bitmap b(Bitmap bitmap, boolean z) {
+    /* renamed from: b */
+    public static Bitmap m29731b(Bitmap bitmap, boolean z) {
         int min = (int) (Math.min(bitmap.getWidth(), bitmap.getHeight()) * 0.6666667f);
         Bitmap createBitmap = Bitmap.createBitmap(min, min, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(createBitmap);
@@ -334,51 +325,57 @@ public class IconCompat extends CustomVersionedParcelable {
         return createBitmap;
     }
 
-    public static IconCompat c(Uri uri) {
-        pt0.c(uri);
-        return d(uri.toString());
+    /* renamed from: c */
+    public static IconCompat m29730c(Uri uri) {
+        pt0.m13158c(uri);
+        return m29729d(uri.toString());
     }
 
-    public static IconCompat d(String str) {
-        pt0.c(str);
+    /* renamed from: d */
+    public static IconCompat m29729d(String str) {
+        pt0.m13158c(str);
         IconCompat iconCompat = new IconCompat(6);
-        iconCompat.b = str;
+        iconCompat.f1170b = str;
         return iconCompat;
     }
 
-    public static IconCompat e(Uri uri) {
-        pt0.c(uri);
-        return f(uri.toString());
+    /* renamed from: e */
+    public static IconCompat m29728e(Uri uri) {
+        pt0.m13158c(uri);
+        return m29727f(uri.toString());
     }
 
-    public static IconCompat f(String str) {
-        pt0.c(str);
+    /* renamed from: f */
+    public static IconCompat m29727f(String str) {
+        pt0.m13158c(str);
         IconCompat iconCompat = new IconCompat(4);
-        iconCompat.b = str;
+        iconCompat.f1170b = str;
         return iconCompat;
     }
 
-    public static IconCompat g(Resources resources, String str, int i) {
-        pt0.c(str);
+    /* renamed from: g */
+    public static IconCompat m29726g(Resources resources, String str, int i) {
+        pt0.m13158c(str);
         if (i != 0) {
             IconCompat iconCompat = new IconCompat(2);
-            iconCompat.e = i;
+            iconCompat.f1173e = i;
             if (resources != null) {
                 try {
-                    iconCompat.b = resources.getResourceName(i);
+                    iconCompat.f1170b = resources.getResourceName(i);
                 } catch (Resources.NotFoundException unused) {
                     throw new IllegalArgumentException("Icon resource cannot be found");
                 }
             } else {
-                iconCompat.b = str;
+                iconCompat.f1170b = str;
             }
-            iconCompat.j = str;
+            iconCompat.f1178j = str;
             return iconCompat;
         }
         throw new IllegalArgumentException("Drawable resource ID must not be 0");
     }
 
-    public static String q(int i) {
+    /* renamed from: q */
+    public static String m29716q(int i) {
         switch (i) {
             case 1:
                 return "BITMAP";
@@ -397,76 +394,82 @@ public class IconCompat extends CustomVersionedParcelable {
         }
     }
 
-    public int h() {
-        int i = this.a;
+    /* renamed from: h */
+    public int m29725h() {
+        int i = this.f1169a;
         if (i != -1 || Build.VERSION.SDK_INT < 23) {
             if (i == 2) {
-                return this.e;
+                return this.f1173e;
             }
             throw new IllegalStateException("called getResId() on " + this);
         }
-        return a.b(this.b);
+        return C0204a.m29714b(this.f1170b);
     }
 
-    public String i() {
-        int i = this.a;
+    /* renamed from: i */
+    public String m29724i() {
+        int i = this.f1169a;
         if (i != -1 || Build.VERSION.SDK_INT < 23) {
             if (i == 2) {
-                String str = this.j;
-                return (str == null || TextUtils.isEmpty(str)) ? ((String) this.b).split(":", -1)[0] : this.j;
+                String str = this.f1178j;
+                return (str == null || TextUtils.isEmpty(str)) ? ((String) this.f1170b).split(":", -1)[0] : this.f1178j;
             }
             throw new IllegalStateException("called getResPackage() on " + this);
         }
-        return a.c(this.b);
+        return C0204a.m29713c(this.f1170b);
     }
 
-    public int j() {
-        int i = this.a;
-        return (i != -1 || Build.VERSION.SDK_INT < 23) ? i : a.d(this.b);
+    /* renamed from: j */
+    public int m29723j() {
+        int i = this.f1169a;
+        return (i != -1 || Build.VERSION.SDK_INT < 23) ? i : C0204a.m29712d(this.f1170b);
     }
 
-    public Uri k() {
-        int i = this.a;
+    /* renamed from: k */
+    public Uri m29722k() {
+        int i = this.f1169a;
         if (i != -1 || Build.VERSION.SDK_INT < 23) {
             if (i == 4 || i == 6) {
-                return Uri.parse((String) this.b);
+                return Uri.parse((String) this.f1170b);
             }
             throw new IllegalStateException("called getUri() on " + this);
         }
-        return a.e(this.b);
+        return C0204a.m29711e(this.f1170b);
     }
 
-    public InputStream l(Context context) {
+    /* renamed from: l */
+    public InputStream m29721l(Context context) {
         StringBuilder sb;
         String str;
-        Uri k2 = k();
-        String scheme = k2.getScheme();
+        Uri m29722k = m29722k();
+        String scheme = m29722k.getScheme();
         if ("content".equals(scheme) || "file".equals(scheme)) {
             try {
-                return context.getContentResolver().openInputStream(k2);
+                return context.getContentResolver().openInputStream(m29722k);
             } catch (Exception unused) {
                 sb = new StringBuilder();
                 str = "Unable to load image from URI: ";
             }
         } else {
             try {
-                return new FileInputStream(new File((String) this.b));
+                return new FileInputStream(new File((String) this.f1170b));
             } catch (FileNotFoundException unused2) {
                 sb = new StringBuilder();
                 str = "Unable to load image from path: ";
             }
         }
         sb.append(str);
-        sb.append(k2);
+        sb.append(m29722k);
         return null;
     }
 
-    public void m() {
+    /* renamed from: m */
+    public void m29720m() {
         Parcelable parcelable;
-        this.h = PorterDuff.Mode.valueOf(this.i);
-        switch (this.a) {
+        this.f1176h = PorterDuff.Mode.valueOf(this.f1177i);
+        switch (this.f1169a) {
             case -1:
-                parcelable = this.d;
+                parcelable = this.f1172d;
                 if (parcelable == null) {
                     throw new IllegalArgumentException("Invalid icon");
                 }
@@ -476,36 +479,37 @@ public class IconCompat extends CustomVersionedParcelable {
                 return;
             case 1:
             case 5:
-                parcelable = this.d;
+                parcelable = this.f1172d;
                 if (parcelable == null) {
-                    byte[] bArr = this.c;
-                    this.b = bArr;
-                    this.a = 3;
-                    this.e = 0;
-                    this.f = bArr.length;
+                    byte[] bArr = this.f1171c;
+                    this.f1170b = bArr;
+                    this.f1169a = 3;
+                    this.f1173e = 0;
+                    this.f1174f = bArr.length;
                     return;
                 }
                 break;
             case 2:
             case 4:
             case 6:
-                String str = new String(this.c, Charset.forName("UTF-16"));
-                this.b = str;
-                if (this.a == 2 && this.j == null) {
-                    this.j = str.split(":", -1)[0];
+                String str = new String(this.f1171c, Charset.forName("UTF-16"));
+                this.f1170b = str;
+                if (this.f1169a == 2 && this.f1178j == null) {
+                    this.f1178j = str.split(":", -1)[0];
                     return;
                 }
                 return;
             case 3:
-                this.b = this.c;
+                this.f1170b = this.f1171c;
                 return;
         }
-        this.b = parcelable;
+        this.f1170b = parcelable;
     }
 
-    public void n(boolean z) {
-        this.i = this.h.name();
-        switch (this.a) {
+    /* renamed from: n */
+    public void m29719n(boolean z) {
+        this.f1177i = this.f1176h.name();
+        switch (this.f1169a) {
             case -1:
                 if (z) {
                     throw new IllegalArgumentException("Can't serialize Icon created with IconCompat#createFromIcon");
@@ -518,65 +522,67 @@ public class IconCompat extends CustomVersionedParcelable {
             case 5:
                 if (z) {
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                    ((Bitmap) this.b).compress(Bitmap.CompressFormat.PNG, 90, byteArrayOutputStream);
-                    this.c = byteArrayOutputStream.toByteArray();
+                    ((Bitmap) this.f1170b).compress(Bitmap.CompressFormat.PNG, 90, byteArrayOutputStream);
+                    this.f1171c = byteArrayOutputStream.toByteArray();
                     return;
                 }
                 break;
             case 2:
-                this.c = ((String) this.b).getBytes(Charset.forName("UTF-16"));
+                this.f1171c = ((String) this.f1170b).getBytes(Charset.forName("UTF-16"));
                 return;
             case 3:
-                this.c = (byte[]) this.b;
+                this.f1171c = (byte[]) this.f1170b;
                 return;
             case 4:
             case 6:
-                this.c = this.b.toString().getBytes(Charset.forName("UTF-16"));
+                this.f1171c = this.f1170b.toString().getBytes(Charset.forName("UTF-16"));
                 return;
         }
-        this.d = (Parcelable) this.b;
+        this.f1172d = (Parcelable) this.f1170b;
     }
 
     @Deprecated
-    public Icon o() {
-        return p(null);
+    /* renamed from: o */
+    public Icon m29718o() {
+        return m29717p(null);
     }
 
-    public Icon p(Context context) {
+    /* renamed from: p */
+    public Icon m29717p(Context context) {
         if (Build.VERSION.SDK_INT >= 23) {
-            return a.g(this, context);
+            return C0204a.m29709g(this, context);
         }
         throw new UnsupportedOperationException("This method is only supported on API level 23+");
     }
 
     public String toString() {
         int height;
-        if (this.a == -1) {
-            return String.valueOf(this.b);
+        if (this.f1169a == -1) {
+            return String.valueOf(this.f1170b);
         }
         StringBuilder sb = new StringBuilder("Icon(typ=");
-        sb.append(q(this.a));
-        switch (this.a) {
+        sb.append(m29716q(this.f1169a));
+        switch (this.f1169a) {
             case 1:
             case 5:
                 sb.append(" size=");
-                sb.append(((Bitmap) this.b).getWidth());
+                sb.append(((Bitmap) this.f1170b).getWidth());
                 sb.append("x");
-                height = ((Bitmap) this.b).getHeight();
+                height = ((Bitmap) this.f1170b).getHeight();
                 sb.append(height);
                 break;
             case 2:
                 sb.append(" pkg=");
-                sb.append(this.j);
+                sb.append(this.f1178j);
                 sb.append(" id=");
-                sb.append(String.format("0x%08x", Integer.valueOf(h())));
+                sb.append(String.format("0x%08x", Integer.valueOf(m29725h())));
                 break;
             case 3:
                 sb.append(" len=");
-                sb.append(this.e);
-                if (this.f != 0) {
+                sb.append(this.f1173e);
+                if (this.f1174f != 0) {
                     sb.append(" off=");
-                    height = this.f;
+                    height = this.f1174f;
                     sb.append(height);
                     break;
                 }
@@ -584,16 +590,16 @@ public class IconCompat extends CustomVersionedParcelable {
             case 4:
             case 6:
                 sb.append(" uri=");
-                sb.append(this.b);
+                sb.append(this.f1170b);
                 break;
         }
-        if (this.g != null) {
+        if (this.f1175g != null) {
             sb.append(" tint=");
-            sb.append(this.g);
+            sb.append(this.f1175g);
         }
-        if (this.h != k) {
+        if (this.f1176h != f1168k) {
             sb.append(" mode=");
-            sb.append(this.h);
+            sb.append(this.f1176h);
         }
         sb.append(")");
         return sb.toString();

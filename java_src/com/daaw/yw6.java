@@ -4,7 +4,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public abstract class yw6 extends cp2 implements zw6 {
-    public static zw6 g3(IBinder iBinder) {
+    /* renamed from: g3 */
+    public static zw6 m3147g3(IBinder iBinder) {
         if (iBinder == null) {
             return null;
         }

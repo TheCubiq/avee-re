@@ -7,16 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public class bm0 implements oe1 {
-    public transient pe1 a = null;
-    public final List<y41> b = new ArrayList();
+
+    /* renamed from: a */
+    public transient pe1 f4952a = null;
+
+    /* renamed from: b */
+    public final List<y41> f4953b = new ArrayList();
 
     @Override // com.daaw.oe1
-    public pe1 a() {
-        return this.a;
+    /* renamed from: a */
+    public pe1 mo2137a() {
+        return this.f4952a;
     }
 
     @Override // com.daaw.oe1
-    public void b(OutputStream outputStream, String str) {
+    /* renamed from: b */
+    public void mo2136b(OutputStream outputStream, String str) {
         if (str == null) {
             str = "UTF-8";
         }
@@ -24,19 +30,19 @@ public class bm0 implements oe1 {
         bufferedWriter.write("MPCPLAYLIST");
         bufferedWriter.newLine();
         int i = 1;
-        for (y41 y41Var : this.b) {
+        for (y41 y41Var : this.f4953b) {
             bufferedWriter.write(Integer.toString(i));
             bufferedWriter.write(",type,");
-            bufferedWriter.write(y41Var.c());
+            bufferedWriter.write(y41Var.m4133c());
             bufferedWriter.newLine();
             bufferedWriter.write(Integer.toString(i));
             bufferedWriter.write(",filename,");
-            bufferedWriter.write(y41Var.a());
+            bufferedWriter.write(y41Var.m4135a());
             bufferedWriter.newLine();
-            if (y41Var.b() != null) {
+            if (y41Var.m4134b() != null) {
                 bufferedWriter.write(Integer.toString(i));
                 bufferedWriter.write(",subtitle,");
-                bufferedWriter.write(y41Var.b());
+                bufferedWriter.write(y41Var.m4134b());
                 bufferedWriter.newLine();
             }
             i++;
@@ -44,11 +50,13 @@ public class bm0 implements oe1 {
         bufferedWriter.flush();
     }
 
-    public List<y41> c() {
-        return this.b;
+    /* renamed from: c */
+    public List<y41> m25999c() {
+        return this.f4953b;
     }
 
-    public void d(pe1 pe1Var) {
-        this.a = pe1Var;
+    /* renamed from: d */
+    public void m25998d(pe1 pe1Var) {
+        this.f4952a = pe1Var;
     }
 }

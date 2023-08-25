@@ -1,9 +1,11 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class hx2 {
-    public final byte[] a;
+
+    /* renamed from: a */
+    public final byte[] f13046a;
 
     public hx2(byte[] bArr, int i) {
-        this.a = bArr;
+        this.f13046a = bArr;
     }
 }

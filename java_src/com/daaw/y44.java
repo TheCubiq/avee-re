@@ -7,31 +7,41 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class y44 extends zzb {
-    public final y24 c;
-    public final j54 d;
-    public final String e;
-    public final String[] f;
+
+    /* renamed from: c */
+    public final y24 f33350c;
+
+    /* renamed from: d */
+    public final j54 f33351d;
+
+    /* renamed from: e */
+    public final String f33352e;
+
+    /* renamed from: f */
+    public final String[] f33353f;
 
     public y44(y24 y24Var, j54 j54Var, String str, String[] strArr) {
-        this.c = y24Var;
-        this.d = j54Var;
-        this.e = str;
-        this.f = strArr;
-        zzt.zzy().e(this);
+        this.f33350c = y24Var;
+        this.f33351d = j54Var;
+        this.f33352e = str;
+        this.f33353f = strArr;
+        zzt.zzy().m2819e(this);
     }
 
-    public final /* synthetic */ Boolean b() {
-        return Boolean.valueOf(this.d.u(this.e, this.f, this));
+    /* renamed from: b */
+    public final /* synthetic */ Boolean m4127b() {
+        return Boolean.valueOf(this.f33351d.mo10696u(this.f33352e, this.f33353f, this));
     }
 
-    public final String c() {
-        return this.e;
+    /* renamed from: c */
+    public final String m4126c() {
+        return this.f33352e;
     }
 
     @Override // com.google.android.gms.ads.internal.util.zzb
     public final void zza() {
         try {
-            this.d.t(this.e, this.f);
+            this.f33351d.mo10697t(this.f33352e, this.f33353f);
         } finally {
             zzs.zza.post(new x44(this));
         }
@@ -39,10 +49,10 @@ public final class y44 extends zzb {
 
     @Override // com.google.android.gms.ads.internal.util.zzb
     public final f77 zzb() {
-        return (((Boolean) zzba.zzc().b(g93.M1)).booleanValue() && (this.d instanceof s54)) ? z04.e.M(new Callable() { // from class: com.daaw.w44
+        return (((Boolean) zzba.zzc().m23658b(g93.f10483M1)).booleanValue() && (this.f33351d instanceof s54)) ? z04.f34309e.mo20112M(new Callable() { // from class: com.daaw.w44
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return y44.this.b();
+                return y44.this.m4127b();
             }
         }) : super.zzb();
     }

@@ -4,42 +4,34 @@ public final class qn7 extends fs7 implements yt7 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
     public qn7() {
-        /*
-            r1 = this;
-            com.daaw.rn7 r0 = com.daaw.rn7.N()
-            r1.<init>(r0)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.qn7.<init>():void");
+        super(r0);
+        rn7 rn7Var;
+        rn7Var = rn7.zzb;
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public /* synthetic */ qn7(com.daaw.pn7 r1) {
-        /*
-            r0 = this;
-            com.daaw.rn7 r1 = com.daaw.rn7.N()
-            r0.<init>(r1)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.qn7.<init>(com.daaw.pn7):void");
+    public /* synthetic */ qn7(pn7 pn7Var) {
+        super(r1);
+        rn7 rn7Var;
+        rn7Var = rn7.zzb;
     }
 
-    public final qn7 s(xn7 xn7Var) {
-        p();
-        rn7.R((rn7) this.q, xn7Var);
+    /* renamed from: s */
+    public final qn7 m12320s(xn7 xn7Var) {
+        m22313p();
+        rn7.m11135R((rn7) this.f9851q, xn7Var);
         return this;
     }
 
-    public final qn7 t(int i) {
-        p();
-        ((rn7) this.q).zzd = 0;
+    /* renamed from: t */
+    public final qn7 m12319t(int i) {
+        m22313p();
+        ((rn7) this.f9851q).zzd = 0;
         return this;
     }
 }

@@ -9,7 +9,7 @@ import com.google.android.gms.internal.ads.zzchu;
 public final class zzn implements Parcelable.Creator {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
-        int y = y71.y(parcel);
+        int m4034y = y71.m4034y(parcel);
         zzc zzcVar = null;
         IBinder iBinder = null;
         IBinder iBinder2 = null;
@@ -35,91 +35,91 @@ public final class zzn implements Parcelable.Creator {
         boolean z = false;
         int i = 0;
         int i2 = 0;
-        while (parcel.dataPosition() < y) {
-            int r = y71.r(parcel);
-            switch (y71.l(r)) {
+        while (parcel.dataPosition() < m4034y) {
+            int m4041r = y71.m4041r(parcel);
+            switch (y71.m4047l(m4041r)) {
                 case 2:
-                    zzcVar = (zzc) y71.e(parcel, r, zzc.CREATOR);
+                    zzcVar = (zzc) y71.m4054e(parcel, m4041r, zzc.CREATOR);
                     break;
                 case 3:
-                    iBinder = y71.s(parcel, r);
+                    iBinder = y71.m4040s(parcel, m4041r);
                     break;
                 case 4:
-                    iBinder2 = y71.s(parcel, r);
+                    iBinder2 = y71.m4040s(parcel, m4041r);
                     break;
                 case 5:
-                    iBinder3 = y71.s(parcel, r);
+                    iBinder3 = y71.m4040s(parcel, m4041r);
                     break;
                 case 6:
-                    iBinder4 = y71.s(parcel, r);
+                    iBinder4 = y71.m4040s(parcel, m4041r);
                     break;
                 case 7:
-                    str = y71.f(parcel, r);
+                    str = y71.m4053f(parcel, m4041r);
                     break;
                 case 8:
-                    z = y71.m(parcel, r);
+                    z = y71.m4046m(parcel, m4041r);
                     break;
                 case 9:
-                    str2 = y71.f(parcel, r);
+                    str2 = y71.m4053f(parcel, m4041r);
                     break;
                 case 10:
-                    iBinder5 = y71.s(parcel, r);
+                    iBinder5 = y71.m4040s(parcel, m4041r);
                     break;
                 case 11:
-                    i = y71.t(parcel, r);
+                    i = y71.m4039t(parcel, m4041r);
                     break;
                 case 12:
-                    i2 = y71.t(parcel, r);
+                    i2 = y71.m4039t(parcel, m4041r);
                     break;
                 case 13:
-                    str3 = y71.f(parcel, r);
+                    str3 = y71.m4053f(parcel, m4041r);
                     break;
                 case 14:
-                    zzchuVar = (zzchu) y71.e(parcel, r, zzchu.CREATOR);
+                    zzchuVar = (zzchu) y71.m4054e(parcel, m4041r, zzchu.CREATOR);
                     break;
                 case 15:
                 default:
-                    y71.x(parcel, r);
+                    y71.m4035x(parcel, m4041r);
                     break;
                 case 16:
-                    str4 = y71.f(parcel, r);
+                    str4 = y71.m4053f(parcel, m4041r);
                     break;
                 case 17:
-                    zzjVar = (com.google.android.gms.ads.internal.zzj) y71.e(parcel, r, com.google.android.gms.ads.internal.zzj.CREATOR);
+                    zzjVar = (com.google.android.gms.ads.internal.zzj) y71.m4054e(parcel, m4041r, com.google.android.gms.ads.internal.zzj.CREATOR);
                     break;
                 case 18:
-                    iBinder6 = y71.s(parcel, r);
+                    iBinder6 = y71.m4040s(parcel, m4041r);
                     break;
                 case 19:
-                    str5 = y71.f(parcel, r);
+                    str5 = y71.m4053f(parcel, m4041r);
                     break;
                 case 20:
-                    iBinder7 = y71.s(parcel, r);
+                    iBinder7 = y71.m4040s(parcel, m4041r);
                     break;
                 case 21:
-                    iBinder8 = y71.s(parcel, r);
+                    iBinder8 = y71.m4040s(parcel, m4041r);
                     break;
                 case 22:
-                    iBinder9 = y71.s(parcel, r);
+                    iBinder9 = y71.m4040s(parcel, m4041r);
                     break;
                 case 23:
-                    iBinder10 = y71.s(parcel, r);
+                    iBinder10 = y71.m4040s(parcel, m4041r);
                     break;
                 case 24:
-                    str6 = y71.f(parcel, r);
+                    str6 = y71.m4053f(parcel, m4041r);
                     break;
                 case 25:
-                    str7 = y71.f(parcel, r);
+                    str7 = y71.m4053f(parcel, m4041r);
                     break;
                 case 26:
-                    iBinder11 = y71.s(parcel, r);
+                    iBinder11 = y71.m4040s(parcel, m4041r);
                     break;
                 case 27:
-                    iBinder12 = y71.s(parcel, r);
+                    iBinder12 = y71.m4040s(parcel, m4041r);
                     break;
             }
         }
-        y71.k(parcel, y);
+        y71.m4048k(parcel, m4034y);
         return new AdOverlayInfoParcel(zzcVar, iBinder, iBinder2, iBinder3, iBinder4, str, z, str2, iBinder5, i, i2, str3, zzchuVar, str4, zzjVar, iBinder6, str5, iBinder7, iBinder8, iBinder9, iBinder10, str6, str7, iBinder11, iBinder12);
     }
 

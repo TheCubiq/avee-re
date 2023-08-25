@@ -5,16 +5,23 @@ import java.util.HashMap;
 import java.util.Map;
 /* loaded from: classes2.dex */
 public class ki0 {
-    public final Map<String, String> a = new HashMap();
-    public final int b;
-    public final int c;
+
+    /* renamed from: a */
+    public final Map<String, String> f16390a = new HashMap();
+
+    /* renamed from: b */
+    public final int f16391b;
+
+    /* renamed from: c */
+    public final int f16392c;
 
     public ki0(int i, int i2) {
-        this.b = i;
-        this.c = i2;
+        this.f16391b = i;
+        this.f16392c = i2;
     }
 
-    public static String c(String str, int i) {
+    /* renamed from: c */
+    public static String m17732c(String str, int i) {
         if (str != null) {
             String trim = str.trim();
             return trim.length() > i ? trim.substring(0, i) : trim;
@@ -22,30 +29,33 @@ public class ki0 {
         return str;
     }
 
-    public synchronized Map<String, String> a() {
-        return Collections.unmodifiableMap(new HashMap(this.a));
+    /* renamed from: a */
+    public synchronized Map<String, String> m17734a() {
+        return Collections.unmodifiableMap(new HashMap(this.f16390a));
     }
 
-    public final String b(String str) {
+    /* renamed from: b */
+    public final String m17733b(String str) {
         if (str != null) {
-            return c(str, this.c);
+            return m17732c(str, this.f16392c);
         }
         throw new IllegalArgumentException("Custom attribute key must not be null.");
     }
 
-    public synchronized void d(Map<String, String> map) {
+    /* renamed from: d */
+    public synchronized void m17731d(Map<String, String> map) {
         int i = 0;
         for (Map.Entry<String, String> entry : map.entrySet()) {
-            String b = b(entry.getKey());
-            if (this.a.size() >= this.b && !this.a.containsKey(b)) {
+            String m17733b = m17733b(entry.getKey());
+            if (this.f16390a.size() >= this.f16391b && !this.f16390a.containsKey(m17733b)) {
                 i++;
             }
             String value = entry.getValue();
-            this.a.put(b, value == null ? "" : c(value, this.c));
+            this.f16390a.put(m17733b, value == null ? "" : m17732c(value, this.f16392c));
         }
         if (i > 0) {
-            ml0 f = ml0.f();
-            f.k("Ignored " + i + " entries when adding custom keys. Maximum allowable: " + this.b);
+            ml0 m15976f = ml0.m15976f();
+            m15976f.m15971k("Ignored " + i + " entries when adding custom keys. Maximum allowable: " + this.f16391b);
         }
     }
 }

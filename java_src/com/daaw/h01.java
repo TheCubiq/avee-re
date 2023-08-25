@@ -10,8 +10,12 @@ public enum h01 {
     NEVER(4),
     UNRECOGNIZED(-1);
     
-    public static final SparseArray<h01> w;
-    public final int p;
+
+    /* renamed from: w */
+    public static final SparseArray<h01> f11917w;
+
+    /* renamed from: p */
+    public final int f11919p;
 
     static {
         h01 h01Var = DEFAULT;
@@ -21,7 +25,7 @@ public enum h01 {
         h01 h01Var5 = NEVER;
         h01 h01Var6 = UNRECOGNIZED;
         SparseArray<h01> sparseArray = new SparseArray<>();
-        w = sparseArray;
+        f11917w = sparseArray;
         sparseArray.put(0, h01Var);
         sparseArray.put(1, h01Var2);
         sparseArray.put(2, h01Var3);
@@ -31,6 +35,6 @@ public enum h01 {
     }
 
     h01(int i) {
-        this.p = i;
+        this.f11919p = i;
     }
 }

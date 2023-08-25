@@ -4,39 +4,41 @@ import android.content.Context;
 import android.util.AttributeSet;
 import androidx.constraintlayout.widget.ConstraintLayout;
 /* loaded from: classes.dex */
-public class Group extends b {
+public class Group extends AbstractC0181b {
     public Group(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
     }
 
-    @Override // androidx.constraintlayout.widget.b
-    public void g(AttributeSet attributeSet) {
-        super.g(attributeSet);
-        this.t = false;
+    @Override // androidx.constraintlayout.widget.AbstractC0181b
+    /* renamed from: g */
+    public void mo12220g(AttributeSet attributeSet) {
+        super.mo12220g(attributeSet);
+        this.f986t = false;
     }
 
-    @Override // androidx.constraintlayout.widget.b
-    public void i(ConstraintLayout constraintLayout) {
-        ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        bVar.n0.B0(0);
-        bVar.n0.e0(0);
+    @Override // androidx.constraintlayout.widget.AbstractC0181b
+    /* renamed from: i */
+    public void mo29865i(ConstraintLayout constraintLayout) {
+        ConstraintLayout.C0175b c0175b = (ConstraintLayout.C0175b) getLayoutParams();
+        c0175b.f943n0.m12466B0(0);
+        c0175b.f943n0.m12432e0(0);
     }
 
-    @Override // androidx.constraintlayout.widget.b, android.view.View
+    @Override // androidx.constraintlayout.widget.AbstractC0181b, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        c();
+        m29870c();
     }
 
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        c();
+        m29870c();
     }
 
     @Override // android.view.View
     public void setVisibility(int i) {
         super.setVisibility(i);
-        c();
+        m29870c();
     }
 }

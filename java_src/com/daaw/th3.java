@@ -1,16 +1,18 @@
 package com.daaw;
 
-import com.google.android.gms.ads.h5.OnH5AdsEventListener;
+import com.google.android.gms.ads.p003h5.OnH5AdsEventListener;
 /* loaded from: classes.dex */
 public final class th3 extends vh3 {
-    public final OnH5AdsEventListener p;
+
+    /* renamed from: p */
+    public final OnH5AdsEventListener f27648p;
 
     public th3(OnH5AdsEventListener onH5AdsEventListener) {
-        this.p = onH5AdsEventListener;
+        this.f27648p = onH5AdsEventListener;
     }
 
     @Override // com.daaw.zh3
     public final void zzb(String str) {
-        this.p.onH5AdsEvent(str);
+        this.f27648p.onH5AdsEvent(str);
     }
 }

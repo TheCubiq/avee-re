@@ -9,9 +9,10 @@ public final class de3 extends bp2 implements fe3 {
     }
 
     @Override // com.daaw.fe3
-    public final void e2(sd3 sd3Var) {
-        Parcel D = D();
-        dp2.g(D, sd3Var);
-        M(1, D);
+    /* renamed from: e2 */
+    public final void mo8857e2(sd3 sd3Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, sd3Var);
+        m25950M(1, m25952D);
     }
 }

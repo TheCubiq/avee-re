@@ -2,7 +2,8 @@ package com.daaw;
 @Deprecated
 /* loaded from: classes.dex */
 public class yr6 {
-    public void k() {
+    /* renamed from: k */
+    public void mo3375k() {
         throw null;
     }
 }

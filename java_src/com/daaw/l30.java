@@ -7,188 +7,186 @@ import android.view.ViewConfiguration;
 import android.view.ViewParent;
 /* loaded from: classes.dex */
 public abstract class l30 implements View.OnTouchListener, View.OnAttachStateChangeListener {
-    public final float p;
-    public final int q;
-    public final int r;
-    public final View s;
-    public Runnable t;
-    public Runnable u;
-    public boolean v;
-    public int w;
-    public final int[] x = new int[2];
 
+    /* renamed from: p */
+    public final float f16984p;
+
+    /* renamed from: q */
+    public final int f16985q;
+
+    /* renamed from: r */
+    public final int f16986r;
+
+    /* renamed from: s */
+    public final View f16987s;
+
+    /* renamed from: t */
+    public Runnable f16988t;
+
+    /* renamed from: u */
+    public Runnable f16989u;
+
+    /* renamed from: v */
+    public boolean f16990v;
+
+    /* renamed from: w */
+    public int f16991w;
+
+    /* renamed from: x */
+    public final int[] f16992x = new int[2];
+
+    /* renamed from: com.daaw.l30$a */
     /* loaded from: classes.dex */
-    public class a implements Runnable {
-        public a() {
+    public class RunnableC2010a implements Runnable {
+        public RunnableC2010a() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            ViewParent parent = l30.this.s.getParent();
+            ViewParent parent = l30.this.f16987s.getParent();
             if (parent != null) {
                 parent.requestDisallowInterceptTouchEvent(true);
             }
         }
     }
 
+    /* renamed from: com.daaw.l30$b */
     /* loaded from: classes.dex */
-    public class b implements Runnable {
-        public b() {
+    public class RunnableC2011b implements Runnable {
+        public RunnableC2011b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            l30.this.e();
+            l30.this.m17185e();
         }
     }
 
     public l30(View view) {
-        this.s = view;
+        this.f16987s = view;
         view.setLongClickable(true);
         view.addOnAttachStateChangeListener(this);
-        this.p = ViewConfiguration.get(view.getContext()).getScaledTouchSlop();
+        this.f16984p = ViewConfiguration.get(view.getContext()).getScaledTouchSlop();
         int tapTimeout = ViewConfiguration.getTapTimeout();
-        this.q = tapTimeout;
-        this.r = (tapTimeout + ViewConfiguration.getLongPressTimeout()) / 2;
+        this.f16985q = tapTimeout;
+        this.f16986r = (tapTimeout + ViewConfiguration.getLongPressTimeout()) / 2;
     }
 
-    public static boolean h(View view, float f, float f2, float f3) {
+    /* renamed from: h */
+    public static boolean m17182h(View view, float f, float f2, float f3) {
         float f4 = -f3;
         return f >= f4 && f2 >= f4 && f < ((float) (view.getRight() - view.getLeft())) + f3 && f2 < ((float) (view.getBottom() - view.getTop())) + f3;
     }
 
-    public final void a() {
-        Runnable runnable = this.u;
+    /* renamed from: a */
+    public final void m17189a() {
+        Runnable runnable = this.f16989u;
         if (runnable != null) {
-            this.s.removeCallbacks(runnable);
+            this.f16987s.removeCallbacks(runnable);
         }
-        Runnable runnable2 = this.t;
+        Runnable runnable2 = this.f16988t;
         if (runnable2 != null) {
-            this.s.removeCallbacks(runnable2);
+            this.f16987s.removeCallbacks(runnable2);
         }
     }
 
-    public abstract vc1 b();
+    /* renamed from: b */
+    public abstract vc1 mo17188b();
 
-    public abstract boolean c();
+    /* renamed from: c */
+    public abstract boolean mo17187c();
 
-    public boolean d() {
-        vc1 b2 = b();
-        if (b2 == null || !b2.a()) {
+    /* renamed from: d */
+    public boolean mo17186d() {
+        vc1 mo17188b = mo17188b();
+        if (mo17188b == null || !mo17188b.mo7286a()) {
             return true;
         }
-        b2.dismiss();
+        mo17188b.dismiss();
         return true;
     }
 
-    public void e() {
-        a();
-        View view = this.s;
-        if (view.isEnabled() && !view.isLongClickable() && c()) {
+    /* renamed from: e */
+    public void m17185e() {
+        m17189a();
+        View view = this.f16987s;
+        if (view.isEnabled() && !view.isLongClickable() && mo17187c()) {
             view.getParent().requestDisallowInterceptTouchEvent(true);
             long uptimeMillis = SystemClock.uptimeMillis();
             MotionEvent obtain = MotionEvent.obtain(uptimeMillis, uptimeMillis, 3, 0.0f, 0.0f, 0);
             view.onTouchEvent(obtain);
             obtain.recycle();
-            this.v = true;
+            this.f16990v = true;
         }
     }
 
-    public final boolean f(MotionEvent motionEvent) {
-        zu zuVar;
-        View view = this.s;
-        vc1 b2 = b();
-        if (b2 == null || !b2.a() || (zuVar = (zu) b2.k()) == null || !zuVar.isShown()) {
+    /* renamed from: f */
+    public final boolean m17184f(MotionEvent motionEvent) {
+        C3899zu c3899zu;
+        View view = this.f16987s;
+        vc1 mo17188b = mo17188b();
+        if (mo17188b == null || !mo17188b.mo7286a() || (c3899zu = (C3899zu) mo17188b.mo7284k()) == null || !c3899zu.isShown()) {
             return false;
         }
         MotionEvent obtainNoHistory = MotionEvent.obtainNoHistory(motionEvent);
-        i(view, obtainNoHistory);
-        j(zuVar, obtainNoHistory);
-        boolean e = zuVar.e(obtainNoHistory, this.w);
+        m17181i(view, obtainNoHistory);
+        m17180j(c3899zu, obtainNoHistory);
+        boolean mo1890e = c3899zu.mo1890e(obtainNoHistory, this.f16991w);
         obtainNoHistory.recycle();
         int actionMasked = motionEvent.getActionMasked();
-        return e && (actionMasked != 1 && actionMasked != 3);
+        return mo1890e && (actionMasked != 1 && actionMasked != 3);
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:12:0x0017, code lost:
         if (r1 != 3) goto L13;
      */
+    /* renamed from: g */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final boolean g(android.view.MotionEvent r6) {
-        /*
-            r5 = this;
-            android.view.View r0 = r5.s
-            boolean r1 = r0.isEnabled()
-            r2 = 0
-            if (r1 != 0) goto La
-            return r2
-        La:
-            int r1 = r6.getActionMasked()
-            if (r1 == 0) goto L41
-            r3 = 1
-            if (r1 == r3) goto L3d
-            r4 = 2
-            if (r1 == r4) goto L1a
-            r6 = 3
-            if (r1 == r6) goto L3d
-            goto L6d
-        L1a:
-            int r1 = r5.w
-            int r1 = r6.findPointerIndex(r1)
-            if (r1 < 0) goto L6d
-            float r4 = r6.getX(r1)
-            float r6 = r6.getY(r1)
-            float r1 = r5.p
-            boolean r6 = h(r0, r4, r6, r1)
-            if (r6 != 0) goto L6d
-            r5.a()
-            android.view.ViewParent r6 = r0.getParent()
-            r6.requestDisallowInterceptTouchEvent(r3)
-            return r3
-        L3d:
-            r5.a()
-            goto L6d
-        L41:
-            int r6 = r6.getPointerId(r2)
-            r5.w = r6
-            java.lang.Runnable r6 = r5.t
-            if (r6 != 0) goto L52
-            com.daaw.l30$a r6 = new com.daaw.l30$a
-            r6.<init>()
-            r5.t = r6
-        L52:
-            java.lang.Runnable r6 = r5.t
-            int r1 = r5.q
-            long r3 = (long) r1
-            r0.postDelayed(r6, r3)
-            java.lang.Runnable r6 = r5.u
-            if (r6 != 0) goto L65
-            com.daaw.l30$b r6 = new com.daaw.l30$b
-            r6.<init>()
-            r5.u = r6
-        L65:
-            java.lang.Runnable r6 = r5.u
-            int r1 = r5.r
-            long r3 = (long) r1
-            r0.postDelayed(r6, r3)
-        L6d:
-            return r2
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.l30.g(android.view.MotionEvent):boolean");
+    public final boolean m17183g(MotionEvent motionEvent) {
+        View view = this.f16987s;
+        if (view.isEnabled()) {
+            int actionMasked = motionEvent.getActionMasked();
+            if (actionMasked != 0) {
+                if (actionMasked != 1) {
+                    if (actionMasked == 2) {
+                        int findPointerIndex = motionEvent.findPointerIndex(this.f16991w);
+                        if (findPointerIndex >= 0 && !m17182h(view, motionEvent.getX(findPointerIndex), motionEvent.getY(findPointerIndex), this.f16984p)) {
+                            m17189a();
+                            view.getParent().requestDisallowInterceptTouchEvent(true);
+                            return true;
+                        }
+                    }
+                }
+                m17189a();
+            } else {
+                this.f16991w = motionEvent.getPointerId(0);
+                if (this.f16988t == null) {
+                    this.f16988t = new RunnableC2010a();
+                }
+                view.postDelayed(this.f16988t, this.f16985q);
+                if (this.f16989u == null) {
+                    this.f16989u = new RunnableC2011b();
+                }
+                view.postDelayed(this.f16989u, this.f16986r);
+            }
+            return false;
+        }
+        return false;
     }
 
-    public final boolean i(View view, MotionEvent motionEvent) {
-        int[] iArr = this.x;
+    /* renamed from: i */
+    public final boolean m17181i(View view, MotionEvent motionEvent) {
+        int[] iArr = this.f16992x;
         view.getLocationOnScreen(iArr);
         motionEvent.offsetLocation(iArr[0], iArr[1]);
         return true;
     }
 
-    public final boolean j(View view, MotionEvent motionEvent) {
-        int[] iArr = this.x;
+    /* renamed from: j */
+    public final boolean m17180j(View view, MotionEvent motionEvent) {
+        int[] iArr = this.f16992x;
         view.getLocationOnScreen(iArr);
         motionEvent.offsetLocation(-iArr[0], -iArr[1]);
         return true;
@@ -197,19 +195,19 @@ public abstract class l30 implements View.OnTouchListener, View.OnAttachStateCha
     @Override // android.view.View.OnTouchListener
     public boolean onTouch(View view, MotionEvent motionEvent) {
         boolean z;
-        boolean z2 = this.v;
+        boolean z2 = this.f16990v;
         if (z2) {
-            z = f(motionEvent) || !d();
+            z = m17184f(motionEvent) || !mo17186d();
         } else {
-            z = g(motionEvent) && c();
+            z = m17183g(motionEvent) && mo17187c();
             if (z) {
                 long uptimeMillis = SystemClock.uptimeMillis();
                 MotionEvent obtain = MotionEvent.obtain(uptimeMillis, uptimeMillis, 3, 0.0f, 0.0f, 0);
-                this.s.onTouchEvent(obtain);
+                this.f16987s.onTouchEvent(obtain);
                 obtain.recycle();
             }
         }
-        this.v = z;
+        this.f16990v = z;
         return z || z2;
     }
 
@@ -219,11 +217,11 @@ public abstract class l30 implements View.OnTouchListener, View.OnAttachStateCha
 
     @Override // android.view.View.OnAttachStateChangeListener
     public void onViewDetachedFromWindow(View view) {
-        this.v = false;
-        this.w = -1;
-        Runnable runnable = this.t;
+        this.f16990v = false;
+        this.f16991w = -1;
+        Runnable runnable = this.f16988t;
         if (runnable != null) {
-            this.s.removeCallbacks(runnable);
+            this.f16987s.removeCallbacks(runnable);
         }
     }
 }

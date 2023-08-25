@@ -6,14 +6,16 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class hz6 {
     @CheckForNull
-    public static String a(@CheckForNull String str) {
-        if (ry6.b(str)) {
+    /* renamed from: a */
+    public static String m20318a(@CheckForNull String str) {
+        if (ry6.m10824b(str)) {
             return null;
         }
         return str;
     }
 
-    public static String b(@CheckForNull String str, @CheckForNull Object... objArr) {
+    /* renamed from: b */
+    public static String m20317b(@CheckForNull String str, @CheckForNull Object... objArr) {
         int length;
         int length2;
         int indexOf;
@@ -65,11 +67,13 @@ public final class hz6 {
         return sb.toString();
     }
 
-    public static String c(@CheckForNull String str) {
-        return ry6.a(str);
+    /* renamed from: c */
+    public static String m20316c(@CheckForNull String str) {
+        return ry6.m10825a(str);
     }
 
-    public static boolean d(@CheckForNull String str) {
-        return ry6.b(str);
+    /* renamed from: d */
+    public static boolean m20315d(@CheckForNull String str) {
+        return ry6.m10824b(str);
     }
 }

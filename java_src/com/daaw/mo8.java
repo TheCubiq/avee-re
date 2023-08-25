@@ -4,24 +4,39 @@ import java.util.Arrays;
 import org.checkerframework.dataflow.qual.Pure;
 /* loaded from: classes.dex */
 public final class mo8 {
-    public static final mo8 f = new mo8(1, 2, 3, null);
-    public static final th8 g = new th8() { // from class: com.daaw.om8
+
+    /* renamed from: f */
+    public static final mo8 f19049f = new mo8(1, 2, 3, null);
+
+    /* renamed from: g */
+    public static final th8 f19050g = new th8() { // from class: com.daaw.om8
     };
-    public final int a;
-    public final int b;
-    public final int c;
-    public final byte[] d;
-    public int e;
+
+    /* renamed from: a */
+    public final int f19051a;
+
+    /* renamed from: b */
+    public final int f19052b;
+
+    /* renamed from: c */
+    public final int f19053c;
+
+    /* renamed from: d */
+    public final byte[] f19054d;
+
+    /* renamed from: e */
+    public int f19055e;
 
     public mo8(int i, int i2, int i3, byte[] bArr) {
-        this.a = i;
-        this.b = i2;
-        this.c = i3;
-        this.d = bArr;
+        this.f19051a = i;
+        this.f19052b = i2;
+        this.f19053c = i3;
+        this.f19054d = bArr;
     }
 
     @Pure
-    public static int a(int i) {
+    /* renamed from: a */
+    public static int m15870a(int i) {
         if (i != 1) {
             if (i != 9) {
                 return (i == 4 || i == 5 || i == 6 || i == 7) ? 2 : -1;
@@ -32,7 +47,8 @@ public final class mo8 {
     }
 
     @Pure
-    public static int b(int i) {
+    /* renamed from: b */
+    public static int m15869b(int i) {
         if (i != 1) {
             if (i != 16) {
                 if (i != 18) {
@@ -51,7 +67,7 @@ public final class mo8 {
         }
         if (obj != null && mo8.class == obj.getClass()) {
             mo8 mo8Var = (mo8) obj;
-            if (this.a == mo8Var.a && this.b == mo8Var.b && this.c == mo8Var.c && Arrays.equals(this.d, mo8Var.d)) {
+            if (this.f19051a == mo8Var.f19051a && this.f19052b == mo8Var.f19052b && this.f19053c == mo8Var.f19053c && Arrays.equals(this.f19054d, mo8Var.f19054d)) {
                 return true;
             }
         }
@@ -59,20 +75,20 @@ public final class mo8 {
     }
 
     public final int hashCode() {
-        int i = this.e;
+        int i = this.f19055e;
         if (i == 0) {
-            int hashCode = ((((((this.a + 527) * 31) + this.b) * 31) + this.c) * 31) + Arrays.hashCode(this.d);
-            this.e = hashCode;
+            int hashCode = ((((((this.f19051a + 527) * 31) + this.f19052b) * 31) + this.f19053c) * 31) + Arrays.hashCode(this.f19054d);
+            this.f19055e = hashCode;
             return hashCode;
         }
         return i;
     }
 
     public final String toString() {
-        int i = this.a;
-        int i2 = this.b;
-        int i3 = this.c;
-        boolean z = this.d != null;
+        int i = this.f19051a;
+        int i2 = this.f19052b;
+        int i3 = this.f19053c;
+        boolean z = this.f19054d != null;
         return "ColorInfo(" + i + ", " + i2 + ", " + i3 + ", " + z + ")";
     }
 }

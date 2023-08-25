@@ -14,43 +14,86 @@ import com.daaw.r60;
 import com.daaw.x60;
 import java.util.Objects;
 /* loaded from: classes.dex */
-public class s60 extends l70 implements x60.c {
-    public boolean A;
-    public final Paint p;
-    public final Rect q;
-    public final a r;
-    public final r60 s;
-    public final x60 t;
-    public boolean u;
-    public boolean v;
-    public boolean w;
-    public boolean x;
-    public int y;
-    public int z;
+public class s60 extends l70 implements x60.InterfaceC3508c {
 
+    /* renamed from: A */
+    public boolean f25890A;
+
+    /* renamed from: p */
+    public final Paint f25891p;
+
+    /* renamed from: q */
+    public final Rect f25892q;
+
+    /* renamed from: r */
+    public final C2915a f25893r;
+
+    /* renamed from: s */
+    public final r60 f25894s;
+
+    /* renamed from: t */
+    public final x60 f25895t;
+
+    /* renamed from: u */
+    public boolean f25896u;
+
+    /* renamed from: v */
+    public boolean f25897v;
+
+    /* renamed from: w */
+    public boolean f25898w;
+
+    /* renamed from: x */
+    public boolean f25899x;
+
+    /* renamed from: y */
+    public int f25900y;
+
+    /* renamed from: z */
+    public int f25901z;
+
+    /* renamed from: com.daaw.s60$a */
     /* loaded from: classes.dex */
-    public static class a extends Drawable.ConstantState {
-        public a70 a;
-        public byte[] b;
-        public Context c;
-        public cn1<Bitmap> d;
-        public int e;
-        public int f;
-        public r60.a g;
-        public bc h;
-        public Bitmap i;
+    public static class C2915a extends Drawable.ConstantState {
 
-        public a(a70 a70Var, byte[] bArr, Context context, cn1<Bitmap> cn1Var, int i, int i2, r60.a aVar, bc bcVar, Bitmap bitmap) {
+        /* renamed from: a */
+        public a70 f25902a;
+
+        /* renamed from: b */
+        public byte[] f25903b;
+
+        /* renamed from: c */
+        public Context f25904c;
+
+        /* renamed from: d */
+        public cn1<Bitmap> f25905d;
+
+        /* renamed from: e */
+        public int f25906e;
+
+        /* renamed from: f */
+        public int f25907f;
+
+        /* renamed from: g */
+        public r60.InterfaceC2829a f25908g;
+
+        /* renamed from: h */
+        public InterfaceC0832bc f25909h;
+
+        /* renamed from: i */
+        public Bitmap f25910i;
+
+        public C2915a(a70 a70Var, byte[] bArr, Context context, cn1<Bitmap> cn1Var, int i, int i2, r60.InterfaceC2829a interfaceC2829a, InterfaceC0832bc interfaceC0832bc, Bitmap bitmap) {
             Objects.requireNonNull(bitmap, "The first frame of the GIF must not be null");
-            this.a = a70Var;
-            this.b = bArr;
-            this.h = bcVar;
-            this.i = bitmap;
-            this.c = context.getApplicationContext();
-            this.d = cn1Var;
-            this.e = i;
-            this.f = i2;
-            this.g = aVar;
+            this.f25902a = a70Var;
+            this.f25903b = bArr;
+            this.f25909h = interfaceC0832bc;
+            this.f25910i = bitmap;
+            this.f25904c = context.getApplicationContext();
+            this.f25905d = cn1Var;
+            this.f25906e = i;
+            this.f25907f = i2;
+            this.f25908g = interfaceC2829a;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
@@ -69,134 +112,123 @@ public class s60 extends l70 implements x60.c {
         }
     }
 
-    public s60(Context context, r60.a aVar, bc bcVar, cn1<Bitmap> cn1Var, int i, int i2, a70 a70Var, byte[] bArr, Bitmap bitmap) {
-        this(new a(a70Var, bArr, context, cn1Var, i, i2, aVar, bcVar, bitmap));
+    public s60(Context context, r60.InterfaceC2829a interfaceC2829a, InterfaceC0832bc interfaceC0832bc, cn1<Bitmap> cn1Var, int i, int i2, a70 a70Var, byte[] bArr, Bitmap bitmap) {
+        this(new C2915a(a70Var, bArr, context, cn1Var, i, i2, interfaceC2829a, interfaceC0832bc, bitmap));
     }
 
-    public s60(a aVar) {
-        this.q = new Rect();
-        this.x = true;
-        this.z = -1;
-        Objects.requireNonNull(aVar, "GifState must not be null");
-        this.r = aVar;
-        r60 r60Var = new r60(aVar.g);
-        this.s = r60Var;
-        this.p = new Paint();
-        r60Var.o(aVar.a, aVar.b);
-        x60 x60Var = new x60(aVar.c, this, r60Var, aVar.e, aVar.f);
-        this.t = x60Var;
-        x60Var.f(aVar.d);
+    public s60(C2915a c2915a) {
+        this.f25892q = new Rect();
+        this.f25899x = true;
+        this.f25901z = -1;
+        Objects.requireNonNull(c2915a, "GifState must not be null");
+        this.f25893r = c2915a;
+        r60 r60Var = new r60(c2915a.f25908g);
+        this.f25894s = r60Var;
+        this.f25891p = new Paint();
+        r60Var.m11714o(c2915a.f25902a, c2915a.f25903b);
+        x60 x60Var = new x60(c2915a.f25904c, this, r60Var, c2915a.f25906e, c2915a.f25907f);
+        this.f25895t = x60Var;
+        x60Var.m5509f(c2915a.f25905d);
     }
 
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public s60(com.daaw.s60 r12, android.graphics.Bitmap r13, com.daaw.cn1<android.graphics.Bitmap> r14) {
-        /*
-            r11 = this;
-            com.daaw.s60$a r10 = new com.daaw.s60$a
-            com.daaw.s60$a r12 = r12.r
-            com.daaw.a70 r1 = r12.a
-            byte[] r2 = r12.b
-            android.content.Context r3 = r12.c
-            int r5 = r12.e
-            int r6 = r12.f
-            com.daaw.r60$a r7 = r12.g
-            com.daaw.bc r8 = r12.h
-            r0 = r10
-            r4 = r14
-            r9 = r13
-            r0.<init>(r1, r2, r3, r4, r5, r6, r7, r8, r9)
-            r11.<init>(r10)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.s60.<init>(com.daaw.s60, android.graphics.Bitmap, com.daaw.cn1):void");
+    public s60(s60 s60Var, Bitmap bitmap, cn1<Bitmap> cn1Var) {
+        this(new C2915a(r12.f25902a, r12.f25903b, r12.f25904c, cn1Var, r12.f25906e, r12.f25907f, r12.f25908g, r12.f25909h, bitmap));
+        C2915a c2915a = s60Var.f25893r;
     }
 
-    @Override // com.daaw.x60.c
+    @Override // com.daaw.x60.InterfaceC3508c
     @TargetApi(11)
-    public void a(int i) {
+    /* renamed from: a */
+    public void mo5502a(int i) {
         if (getCallback() == null) {
             stop();
-            j();
+            m10677j();
             return;
         }
         invalidateSelf();
-        if (i == this.s.f() - 1) {
-            this.y++;
+        if (i == this.f25894s.m11723f() - 1) {
+            this.f25900y++;
         }
-        int i2 = this.z;
-        if (i2 == -1 || this.y < i2) {
+        int i2 = this.f25901z;
+        if (i2 == -1 || this.f25900y < i2) {
             return;
         }
         stop();
     }
 
     @Override // com.daaw.l70
-    public boolean b() {
+    /* renamed from: b */
+    public boolean mo7215b() {
         return true;
     }
 
     @Override // com.daaw.l70
-    public void c(int i) {
+    /* renamed from: c */
+    public void mo7214c(int i) {
         if (i <= 0 && i != -1 && i != 0) {
             throw new IllegalArgumentException("Loop count must be greater than 0, or equal to GlideDrawable.LOOP_FOREVER, or equal to GlideDrawable.LOOP_INTRINSIC");
         }
         if (i != 0) {
-            this.z = i;
+            this.f25901z = i;
             return;
         }
-        int j = this.s.j();
-        this.z = j != 0 ? j : -1;
+        int m11719j = this.f25894s.m11719j();
+        this.f25901z = m11719j != 0 ? m11719j : -1;
     }
 
-    public byte[] d() {
-        return this.r.b;
+    /* renamed from: d */
+    public byte[] m10683d() {
+        return this.f25893r.f25903b;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
-        if (this.w) {
+        if (this.f25898w) {
             return;
         }
-        if (this.A) {
-            Gravity.apply(x21.F0, getIntrinsicWidth(), getIntrinsicHeight(), getBounds(), this.q);
-            this.A = false;
+        if (this.f25890A) {
+            Gravity.apply(x21.f31784F0, getIntrinsicWidth(), getIntrinsicHeight(), getBounds(), this.f25892q);
+            this.f25890A = false;
         }
-        Bitmap b = this.t.b();
-        if (b == null) {
-            b = this.r.i;
+        Bitmap m5513b = this.f25895t.m5513b();
+        if (m5513b == null) {
+            m5513b = this.f25893r.f25910i;
         }
-        canvas.drawBitmap(b, (Rect) null, this.q, this.p);
+        canvas.drawBitmap(m5513b, (Rect) null, this.f25892q, this.f25891p);
     }
 
-    public r60 e() {
-        return this.s;
+    /* renamed from: e */
+    public r60 m10682e() {
+        return this.f25894s;
     }
 
-    public Bitmap f() {
-        return this.r.i;
+    /* renamed from: f */
+    public Bitmap m10681f() {
+        return this.f25893r.f25910i;
     }
 
-    public int g() {
-        return this.s.f();
+    /* renamed from: g */
+    public int m10680g() {
+        return this.f25894s.m11723f();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable.ConstantState getConstantState() {
-        return this.r;
+        return this.f25893r;
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicHeight() {
-        return this.r.i.getHeight();
+        return this.f25893r.f25910i.getHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicWidth() {
-        return this.r.i.getWidth();
+        return this.f25893r.f25910i.getWidth();
     }
 
     @Override // android.graphics.drawable.Drawable
@@ -204,87 +236,93 @@ public class s60 extends l70 implements x60.c {
         return -2;
     }
 
-    public cn1<Bitmap> h() {
-        return this.r.d;
+    /* renamed from: h */
+    public cn1<Bitmap> m10679h() {
+        return this.f25893r.f25905d;
     }
 
-    public void i() {
-        this.w = true;
-        a aVar = this.r;
-        aVar.h.a(aVar.i);
-        this.t.a();
-        this.t.h();
+    /* renamed from: i */
+    public void m10678i() {
+        this.f25898w = true;
+        C2915a c2915a = this.f25893r;
+        c2915a.f25909h.mo8071a(c2915a.f25910i);
+        this.f25895t.m5514a();
+        this.f25895t.m5507h();
     }
 
     @Override // android.graphics.drawable.Animatable
     public boolean isRunning() {
-        return this.u;
+        return this.f25896u;
     }
 
-    public final void j() {
-        this.t.a();
+    /* renamed from: j */
+    public final void m10677j() {
+        this.f25895t.m5514a();
         invalidateSelf();
     }
 
-    public final void k() {
-        this.y = 0;
+    /* renamed from: k */
+    public final void m10676k() {
+        this.f25900y = 0;
     }
 
-    public final void l() {
-        if (this.s.f() != 1) {
-            if (this.u) {
+    /* renamed from: l */
+    public final void m10675l() {
+        if (this.f25894s.m11723f() != 1) {
+            if (this.f25896u) {
                 return;
             }
-            this.u = true;
-            this.t.g();
+            this.f25896u = true;
+            this.f25895t.m5508g();
         }
         invalidateSelf();
     }
 
-    public final void m() {
-        this.u = false;
-        this.t.h();
+    /* renamed from: m */
+    public final void m10674m() {
+        this.f25896u = false;
+        this.f25895t.m5507h();
     }
 
     @Override // android.graphics.drawable.Drawable
     public void onBoundsChange(Rect rect) {
         super.onBoundsChange(rect);
-        this.A = true;
+        this.f25890A = true;
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setAlpha(int i) {
-        this.p.setAlpha(i);
+        this.f25891p.setAlpha(i);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setColorFilter(ColorFilter colorFilter) {
-        this.p.setColorFilter(colorFilter);
+        this.f25891p.setColorFilter(colorFilter);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean setVisible(boolean z, boolean z2) {
-        this.x = z;
+        this.f25899x = z;
         if (!z) {
-            m();
-        } else if (this.v) {
-            l();
+            m10674m();
+        } else if (this.f25897v) {
+            m10675l();
         }
         return super.setVisible(z, z2);
     }
 
     @Override // android.graphics.drawable.Animatable
     public void start() {
-        this.v = true;
-        k();
-        if (this.x) {
-            l();
+        this.f25897v = true;
+        m10676k();
+        if (this.f25899x) {
+            m10675l();
         }
     }
 
     @Override // android.graphics.drawable.Animatable
     public void stop() {
-        this.v = false;
-        m();
+        this.f25897v = false;
+        m10674m();
     }
 }

@@ -2,6 +2,7 @@ package com.google.android.material.button;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -16,45 +17,85 @@ import android.widget.Button;
 import android.widget.Checkable;
 import android.widget.CompoundButton;
 import androidx.customview.view.AbsSavedState;
+import com.daaw.C2366nu;
+import com.daaw.C2818r4;
+import com.daaw.C2908s3;
+import com.daaw.fu1;
 import com.daaw.gc1;
 import com.daaw.gn0;
 import com.daaw.jc1;
 import com.daaw.k21;
-import com.daaw.nu;
+import com.daaw.m21;
+import com.daaw.mn0;
 import com.daaw.on0;
-import com.daaw.r4;
-import com.daaw.s3;
+import com.daaw.qn0;
 import com.daaw.sk1;
 import com.daaw.w01;
+import com.daaw.xk1;
 import com.daaw.xs1;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 /* loaded from: classes2.dex */
-public class MaterialButton extends s3 implements Checkable, jc1 {
-    public static final int[] F = {16842911};
-    public static final int[] G = {16842912};
-    public static final int H = k21.Widget_MaterialComponents_Button;
-    public int A;
-    public int B;
-    public boolean C;
-    public boolean D;
-    public int E;
-    public final gn0 s;
-    public final LinkedHashSet<a> t;
-    public b u;
-    public PorterDuff.Mode v;
-    public ColorStateList w;
-    public Drawable x;
-    public int y;
-    public int z;
+public class MaterialButton extends C2908s3 implements Checkable, jc1 {
+
+    /* renamed from: F */
+    public static final int[] f37282F = {16842911};
+
+    /* renamed from: G */
+    public static final int[] f37283G = {16842912};
+
+    /* renamed from: H */
+    public static final int f37284H = k21.Widget_MaterialComponents_Button;
+
+    /* renamed from: A */
+    public int f37285A;
+
+    /* renamed from: B */
+    public int f37286B;
+
+    /* renamed from: C */
+    public boolean f37287C;
+
+    /* renamed from: D */
+    public boolean f37288D;
+
+    /* renamed from: E */
+    public int f37289E;
+
+    /* renamed from: s */
+    public final gn0 f37290s;
+
+    /* renamed from: t */
+    public final LinkedHashSet<InterfaceC4036a> f37291t;
+
+    /* renamed from: u */
+    public InterfaceC4037b f37292u;
+
+    /* renamed from: v */
+    public PorterDuff.Mode f37293v;
+
+    /* renamed from: w */
+    public ColorStateList f37294w;
+
+    /* renamed from: x */
+    public Drawable f37295x;
+
+    /* renamed from: y */
+    public int f37296y;
+
+    /* renamed from: z */
+    public int f37297z;
 
     /* loaded from: classes2.dex */
     public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new a();
-        public boolean r;
+        public static final Parcelable.Creator<SavedState> CREATOR = new C4035a();
 
+        /* renamed from: r */
+        public boolean f37298r;
+
+        /* renamed from: com.google.android.material.button.MaterialButton$SavedState$a */
         /* loaded from: classes2.dex */
-        public static class a implements Parcelable.ClassLoaderCreator<SavedState> {
+        public static class C4035a implements Parcelable.ClassLoaderCreator<SavedState> {
             @Override // android.os.Parcelable.Creator
             /* renamed from: a */
             public SavedState createFromParcel(Parcel parcel) {
@@ -79,32 +120,37 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
             if (classLoader == null) {
                 getClass().getClassLoader();
             }
-            b(parcel);
+            m848b(parcel);
         }
 
         public SavedState(Parcelable parcelable) {
             super(parcelable);
         }
 
-        public final void b(Parcel parcel) {
-            this.r = parcel.readInt() == 1;
+        /* renamed from: b */
+        public final void m848b(Parcel parcel) {
+            this.f37298r = parcel.readInt() == 1;
         }
 
         @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i) {
             super.writeToParcel(parcel, i);
-            parcel.writeInt(this.r ? 1 : 0);
+            parcel.writeInt(this.f37298r ? 1 : 0);
         }
     }
 
+    /* renamed from: com.google.android.material.button.MaterialButton$a */
     /* loaded from: classes2.dex */
-    public interface a {
-        void a(MaterialButton materialButton, boolean z);
+    public interface InterfaceC4036a {
+        /* renamed from: a */
+        void mo820a(MaterialButton materialButton, boolean z);
     }
 
+    /* renamed from: com.google.android.material.button.MaterialButton$b */
     /* loaded from: classes2.dex */
-    public interface b {
-        void a(MaterialButton materialButton, boolean z);
+    public interface InterfaceC4037b {
+        /* renamed from: a */
+        void mo813a(MaterialButton materialButton, boolean z);
     }
 
     public MaterialButton(Context context, AttributeSet attributeSet) {
@@ -114,73 +160,31 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
     /* JADX WARN: Illegal instructions before constructor call */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public MaterialButton(android.content.Context r9, android.util.AttributeSet r10, int r11) {
-        /*
-            r8 = this;
-            int r6 = com.google.android.material.button.MaterialButton.H
-            android.content.Context r9 = com.daaw.qn0.c(r9, r10, r11, r6)
-            r8.<init>(r9, r10, r11)
-            java.util.LinkedHashSet r9 = new java.util.LinkedHashSet
-            r9.<init>()
-            r8.t = r9
-            r9 = 0
-            r8.C = r9
-            r8.D = r9
-            android.content.Context r7 = r8.getContext()
-            int[] r2 = com.daaw.m21.N1
-            int[] r5 = new int[r9]
-            r0 = r7
-            r1 = r10
-            r3 = r11
-            r4 = r6
-            android.content.res.TypedArray r0 = com.daaw.xk1.h(r0, r1, r2, r3, r4, r5)
-            int r1 = com.daaw.m21.a2
-            int r1 = r0.getDimensionPixelSize(r1, r9)
-            r8.B = r1
-            int r1 = com.daaw.m21.d2
-            r2 = -1
-            int r1 = r0.getInt(r1, r2)
-            android.graphics.PorterDuff$Mode r2 = android.graphics.PorterDuff.Mode.SRC_IN
-            android.graphics.PorterDuff$Mode r1 = com.daaw.fu1.e(r1, r2)
-            r8.v = r1
-            android.content.Context r1 = r8.getContext()
-            int r2 = com.daaw.m21.c2
-            android.content.res.ColorStateList r1 = com.daaw.mn0.a(r1, r0, r2)
-            r8.w = r1
-            android.content.Context r1 = r8.getContext()
-            int r2 = com.daaw.m21.Y1
-            android.graphics.drawable.Drawable r1 = com.daaw.mn0.d(r1, r0, r2)
-            r8.x = r1
-            int r1 = com.daaw.m21.Z1
-            r2 = 1
-            int r1 = r0.getInteger(r1, r2)
-            r8.E = r1
-            int r1 = com.daaw.m21.b2
-            int r1 = r0.getDimensionPixelSize(r1, r9)
-            r8.y = r1
-            com.daaw.gc1$b r10 = com.daaw.gc1.e(r7, r10, r11, r6)
-            com.daaw.gc1 r10 = r10.m()
-            com.daaw.gn0 r11 = new com.daaw.gn0
-            r11.<init>(r8, r10)
-            r8.s = r11
-            r11.q(r0)
-            r0.recycle()
-            int r10 = r8.B
-            r8.setCompoundDrawablePadding(r10)
-            android.graphics.drawable.Drawable r10 = r8.x
-            if (r10 == 0) goto L84
-            r9 = 1
-        L84:
-            r8.j(r9)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.button.MaterialButton.<init>(android.content.Context, android.util.AttributeSet, int):void");
+    public MaterialButton(Context context, AttributeSet attributeSet, int i) {
+        super(qn0.m12324c(context, attributeSet, i, r6), attributeSet, i);
+        int i2 = f37284H;
+        this.f37291t = new LinkedHashSet<>();
+        this.f37287C = false;
+        this.f37288D = false;
+        Context context2 = getContext();
+        TypedArray m5026h = xk1.m5026h(context2, attributeSet, m21.f18100N1, i, i2, new int[0]);
+        this.f37286B = m5026h.getDimensionPixelSize(m21.f18192a2, 0);
+        this.f37293v = fu1.m22258e(m5026h.getInt(m21.f18216d2, -1), PorterDuff.Mode.SRC_IN);
+        this.f37294w = mn0.m15930a(getContext(), m5026h, m21.f18208c2);
+        this.f37295x = mn0.m15927d(getContext(), m5026h, m21.f18177Y1);
+        this.f37289E = m5026h.getInteger(m21.f18184Z1, 1);
+        this.f37296y = m5026h.getDimensionPixelSize(m21.f18200b2, 0);
+        gn0 gn0Var = new gn0(this, gc1.m21808e(context2, attributeSet, i, i2).m21769m());
+        this.f37290s = gn0Var;
+        gn0Var.m21457q(m5026h);
+        m5026h.recycle();
+        setCompoundDrawablePadding(this.f37286B);
+        m850j(this.f37295x != null);
     }
 
     private String getA11yClassName() {
-        return (b() ? CompoundButton.class : Button.class).getName();
+        return (m858b() ? CompoundButton.class : Button.class).getName();
     }
 
     private int getTextHeight() {
@@ -203,37 +207,44 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
         return Math.min((int) paint.measureText(charSequence), getLayout().getEllipsizedWidth());
     }
 
-    public void a(a aVar) {
-        this.t.add(aVar);
+    /* renamed from: a */
+    public void m859a(InterfaceC4036a interfaceC4036a) {
+        this.f37291t.add(interfaceC4036a);
     }
 
-    public boolean b() {
-        gn0 gn0Var = this.s;
-        return gn0Var != null && gn0Var.p();
+    /* renamed from: b */
+    public boolean m858b() {
+        gn0 gn0Var = this.f37290s;
+        return gn0Var != null && gn0Var.m21458p();
     }
 
-    public final boolean c() {
-        int i = this.E;
+    /* renamed from: c */
+    public final boolean m857c() {
+        int i = this.f37289E;
         return i == 3 || i == 4;
     }
 
-    public final boolean d() {
-        int i = this.E;
+    /* renamed from: d */
+    public final boolean m856d() {
+        int i = this.f37289E;
         return i == 1 || i == 2;
     }
 
-    public final boolean e() {
-        int i = this.E;
+    /* renamed from: e */
+    public final boolean m855e() {
+        int i = this.f37289E;
         return i == 16 || i == 32;
     }
 
-    public final boolean f() {
-        return xs1.E(this) == 1;
+    /* renamed from: f */
+    public final boolean m854f() {
+        return xs1.m4768E(this) == 1;
     }
 
-    public final boolean g() {
-        gn0 gn0Var = this.s;
-        return (gn0Var == null || gn0Var.o()) ? false : true;
+    /* renamed from: g */
+    public final boolean m853g() {
+        gn0 gn0Var = this.f37290s;
+        return (gn0Var == null || gn0Var.m21459o()) ? false : true;
     }
 
     @Override // android.view.View
@@ -247,231 +258,235 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
     }
 
     public int getCornerRadius() {
-        if (g()) {
-            return this.s.b();
+        if (m853g()) {
+            return this.f37290s.m21472b();
         }
         return 0;
     }
 
     public Drawable getIcon() {
-        return this.x;
+        return this.f37295x;
     }
 
     public int getIconGravity() {
-        return this.E;
+        return this.f37289E;
     }
 
     public int getIconPadding() {
-        return this.B;
+        return this.f37286B;
     }
 
     public int getIconSize() {
-        return this.y;
+        return this.f37296y;
     }
 
     public ColorStateList getIconTint() {
-        return this.w;
+        return this.f37294w;
     }
 
     public PorterDuff.Mode getIconTintMode() {
-        return this.v;
+        return this.f37293v;
     }
 
     public int getInsetBottom() {
-        return this.s.c();
+        return this.f37290s.m21471c();
     }
 
     public int getInsetTop() {
-        return this.s.d();
+        return this.f37290s.m21470d();
     }
 
     public ColorStateList getRippleColor() {
-        if (g()) {
-            return this.s.h();
+        if (m853g()) {
+            return this.f37290s.m21466h();
         }
         return null;
     }
 
     public gc1 getShapeAppearanceModel() {
-        if (g()) {
-            return this.s.i();
+        if (m853g()) {
+            return this.f37290s.m21465i();
         }
         throw new IllegalStateException("Attempted to get ShapeAppearanceModel from a MaterialButton which has an overwritten background.");
     }
 
     public ColorStateList getStrokeColor() {
-        if (g()) {
-            return this.s.j();
+        if (m853g()) {
+            return this.f37290s.m21464j();
         }
         return null;
     }
 
     public int getStrokeWidth() {
-        if (g()) {
-            return this.s.k();
+        if (m853g()) {
+            return this.f37290s.m21463k();
         }
         return 0;
     }
 
-    @Override // com.daaw.s3, com.daaw.vl1
+    @Override // com.daaw.C2908s3, com.daaw.vl1
     public ColorStateList getSupportBackgroundTintList() {
-        return g() ? this.s.l() : super.getSupportBackgroundTintList();
+        return m853g() ? this.f37290s.m21462l() : super.getSupportBackgroundTintList();
     }
 
-    @Override // com.daaw.s3, com.daaw.vl1
+    @Override // com.daaw.C2908s3, com.daaw.vl1
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        return g() ? this.s.m() : super.getSupportBackgroundTintMode();
+        return m853g() ? this.f37290s.m21461m() : super.getSupportBackgroundTintMode();
     }
 
-    public void h(a aVar) {
-        this.t.remove(aVar);
+    /* renamed from: h */
+    public void m852h(InterfaceC4036a interfaceC4036a) {
+        this.f37291t.remove(interfaceC4036a);
     }
 
-    public final void i() {
-        if (d()) {
-            sk1.i(this, this.x, null, null, null);
-        } else if (c()) {
-            sk1.i(this, null, null, this.x, null);
-        } else if (e()) {
-            sk1.i(this, null, this.x, null, null);
+    /* renamed from: i */
+    public final void m851i() {
+        if (m856d()) {
+            sk1.m10265i(this, this.f37295x, null, null, null);
+        } else if (m857c()) {
+            sk1.m10265i(this, null, null, this.f37295x, null);
+        } else if (m855e()) {
+            sk1.m10265i(this, null, this.f37295x, null, null);
         }
     }
 
     @Override // android.widget.Checkable
     public boolean isChecked() {
-        return this.C;
+        return this.f37287C;
     }
 
-    public final void j(boolean z) {
-        Drawable drawable = this.x;
+    /* renamed from: j */
+    public final void m850j(boolean z) {
+        Drawable drawable = this.f37295x;
         if (drawable != null) {
-            Drawable mutate = nu.r(drawable).mutate();
-            this.x = mutate;
-            nu.o(mutate, this.w);
-            PorterDuff.Mode mode = this.v;
+            Drawable mutate = C2366nu.m14809r(drawable).mutate();
+            this.f37295x = mutate;
+            C2366nu.m14812o(mutate, this.f37294w);
+            PorterDuff.Mode mode = this.f37293v;
             if (mode != null) {
-                nu.p(this.x, mode);
+                C2366nu.m14811p(this.f37295x, mode);
             }
-            int i = this.y;
+            int i = this.f37296y;
             if (i == 0) {
-                i = this.x.getIntrinsicWidth();
+                i = this.f37295x.getIntrinsicWidth();
             }
-            int i2 = this.y;
+            int i2 = this.f37296y;
             if (i2 == 0) {
-                i2 = this.x.getIntrinsicHeight();
+                i2 = this.f37295x.getIntrinsicHeight();
             }
-            Drawable drawable2 = this.x;
-            int i3 = this.z;
-            int i4 = this.A;
+            Drawable drawable2 = this.f37295x;
+            int i3 = this.f37297z;
+            int i4 = this.f37285A;
             drawable2.setBounds(i3, i4, i + i3, i2 + i4);
         }
         if (z) {
-            i();
+            m851i();
             return;
         }
-        Drawable[] a2 = sk1.a(this);
+        Drawable[] m10273a = sk1.m10273a(this);
         boolean z2 = false;
-        Drawable drawable3 = a2[0];
-        Drawable drawable4 = a2[1];
-        Drawable drawable5 = a2[2];
-        if ((d() && drawable3 != this.x) || ((c() && drawable5 != this.x) || (e() && drawable4 != this.x))) {
+        Drawable drawable3 = m10273a[0];
+        Drawable drawable4 = m10273a[1];
+        Drawable drawable5 = m10273a[2];
+        if ((m856d() && drawable3 != this.f37295x) || ((m857c() && drawable5 != this.f37295x) || (m855e() && drawable4 != this.f37295x))) {
             z2 = true;
         }
         if (z2) {
-            i();
+            m851i();
         }
     }
 
-    public final void k(int i, int i2) {
-        if (this.x == null || getLayout() == null) {
+    /* renamed from: k */
+    public final void m849k(int i, int i2) {
+        if (this.f37295x == null || getLayout() == null) {
             return;
         }
-        if (!d() && !c()) {
-            if (e()) {
-                this.z = 0;
-                if (this.E == 16) {
-                    this.A = 0;
-                    j(false);
+        if (!m856d() && !m857c()) {
+            if (m855e()) {
+                this.f37297z = 0;
+                if (this.f37289E == 16) {
+                    this.f37285A = 0;
+                    m850j(false);
                     return;
                 }
-                int i3 = this.y;
+                int i3 = this.f37296y;
                 if (i3 == 0) {
-                    i3 = this.x.getIntrinsicHeight();
+                    i3 = this.f37295x.getIntrinsicHeight();
                 }
-                int textHeight = (((((i2 - getTextHeight()) - getPaddingTop()) - i3) - this.B) - getPaddingBottom()) / 2;
-                if (this.A != textHeight) {
-                    this.A = textHeight;
-                    j(false);
+                int textHeight = (((((i2 - getTextHeight()) - getPaddingTop()) - i3) - this.f37286B) - getPaddingBottom()) / 2;
+                if (this.f37285A != textHeight) {
+                    this.f37285A = textHeight;
+                    m850j(false);
                 }
                 return;
             }
             return;
         }
-        this.A = 0;
-        int i4 = this.E;
+        this.f37285A = 0;
+        int i4 = this.f37289E;
         if (i4 == 1 || i4 == 3) {
-            this.z = 0;
-            j(false);
+            this.f37297z = 0;
+            m850j(false);
             return;
         }
-        int i5 = this.y;
+        int i5 = this.f37296y;
         if (i5 == 0) {
-            i5 = this.x.getIntrinsicWidth();
+            i5 = this.f37295x.getIntrinsicWidth();
         }
-        int textWidth = (((((i - getTextWidth()) - xs1.I(this)) - i5) - this.B) - xs1.J(this)) / 2;
-        if (f() != (this.E == 4)) {
+        int textWidth = (((((i - getTextWidth()) - xs1.m4760I(this)) - i5) - this.f37286B) - xs1.m4758J(this)) / 2;
+        if (m854f() != (this.f37289E == 4)) {
             textWidth = -textWidth;
         }
-        if (this.z != textWidth) {
-            this.z = textWidth;
-            j(false);
+        if (this.f37297z != textWidth) {
+            this.f37297z = textWidth;
+            m850j(false);
         }
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (g()) {
-            on0.f(this, this.s.f());
+        if (m853g()) {
+            on0.m14140f(this, this.f37290s.m21468f());
         }
     }
 
     @Override // android.widget.TextView, android.view.View
     public int[] onCreateDrawableState(int i) {
         int[] onCreateDrawableState = super.onCreateDrawableState(i + 2);
-        if (b()) {
-            Button.mergeDrawableStates(onCreateDrawableState, F);
+        if (m858b()) {
+            Button.mergeDrawableStates(onCreateDrawableState, f37282F);
         }
         if (isChecked()) {
-            Button.mergeDrawableStates(onCreateDrawableState, G);
+            Button.mergeDrawableStates(onCreateDrawableState, f37283G);
         }
         return onCreateDrawableState;
     }
 
-    @Override // com.daaw.s3, android.view.View
+    @Override // com.daaw.C2908s3, android.view.View
     public void onInitializeAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
         super.onInitializeAccessibilityEvent(accessibilityEvent);
         accessibilityEvent.setClassName(getA11yClassName());
         accessibilityEvent.setChecked(isChecked());
     }
 
-    @Override // com.daaw.s3, android.view.View
+    @Override // com.daaw.C2908s3, android.view.View
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
         accessibilityNodeInfo.setClassName(getA11yClassName());
-        accessibilityNodeInfo.setCheckable(b());
+        accessibilityNodeInfo.setCheckable(m858b());
         accessibilityNodeInfo.setChecked(isChecked());
         accessibilityNodeInfo.setClickable(isClickable());
     }
 
-    @Override // com.daaw.s3, android.widget.TextView, android.view.View
+    @Override // com.daaw.C2908s3, android.widget.TextView, android.view.View
     public void onLayout(boolean z, int i, int i2, int i3, int i4) {
         gn0 gn0Var;
         super.onLayout(z, i, i2, i3, i4);
-        if (Build.VERSION.SDK_INT != 21 || (gn0Var = this.s) == null) {
+        if (Build.VERSION.SDK_INT != 21 || (gn0Var = this.f37290s) == null) {
             return;
         }
-        gn0Var.H(i4 - i2, i3 - i);
+        gn0Var.m21476H(i4 - i2, i3 - i);
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -481,27 +496,27 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
             return;
         }
         SavedState savedState = (SavedState) parcelable;
-        super.onRestoreInstanceState(savedState.a());
-        setChecked(savedState.r);
+        super.onRestoreInstanceState(savedState.m29657a());
+        setChecked(savedState.f37298r);
     }
 
     @Override // android.widget.TextView, android.view.View
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
-        savedState.r = this.C;
+        savedState.f37298r = this.f37287C;
         return savedState;
     }
 
     @Override // android.view.View
     public void onSizeChanged(int i, int i2, int i3, int i4) {
         super.onSizeChanged(i, i2, i3, i4);
-        k(i, i2);
+        m849k(i, i2);
     }
 
-    @Override // com.daaw.s3, android.widget.TextView
+    @Override // com.daaw.C2908s3, android.widget.TextView
     public void onTextChanged(CharSequence charSequence, int i, int i2, int i3) {
         super.onTextChanged(charSequence, i, i2, i3);
-        k(getMeasuredWidth(), getMeasuredHeight());
+        m849k(getMeasuredWidth(), getMeasuredHeight());
     }
 
     @Override // android.view.View
@@ -517,28 +532,28 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
 
     @Override // android.view.View
     public void setBackgroundColor(int i) {
-        if (g()) {
-            this.s.r(i);
+        if (m853g()) {
+            this.f37290s.m21456r(i);
         } else {
             super.setBackgroundColor(i);
         }
     }
 
-    @Override // com.daaw.s3, android.view.View
+    @Override // com.daaw.C2908s3, android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
-        if (g()) {
+        if (m853g()) {
             if (drawable == getBackground()) {
                 getBackground().setState(drawable.getState());
                 return;
             }
-            this.s.s();
+            this.f37290s.m21455s();
         }
         super.setBackgroundDrawable(drawable);
     }
 
-    @Override // com.daaw.s3, android.view.View
+    @Override // com.daaw.C2908s3, android.view.View
     public void setBackgroundResource(int i) {
-        setBackgroundDrawable(i != 0 ? r4.b(getContext(), i) : null);
+        setBackgroundDrawable(i != 0 ? C2818r4.m11783b(getContext(), i) : null);
     }
 
     @Override // android.view.View
@@ -552,36 +567,36 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
     }
 
     public void setCheckable(boolean z) {
-        if (g()) {
-            this.s.t(z);
+        if (m853g()) {
+            this.f37290s.m21454t(z);
         }
     }
 
     @Override // android.widget.Checkable
     public void setChecked(boolean z) {
-        if (b() && isEnabled() && this.C != z) {
-            this.C = z;
+        if (m858b() && isEnabled() && this.f37287C != z) {
+            this.f37287C = z;
             refreshDrawableState();
-            if (this.D) {
+            if (this.f37288D) {
                 return;
             }
-            this.D = true;
-            Iterator<a> it = this.t.iterator();
+            this.f37288D = true;
+            Iterator<InterfaceC4036a> it = this.f37291t.iterator();
             while (it.hasNext()) {
-                it.next().a(this, this.C);
+                it.next().mo820a(this, this.f37287C);
             }
-            this.D = false;
+            this.f37288D = false;
         }
     }
 
     public void setCornerRadius(int i) {
-        if (g()) {
-            this.s.u(i);
+        if (m853g()) {
+            this.f37290s.m21453u(i);
         }
     }
 
     public void setCornerRadiusResource(int i) {
-        if (g()) {
+        if (m853g()) {
             setCornerRadius(getResources().getDimensionPixelSize(i));
         }
     }
@@ -589,153 +604,153 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        if (g()) {
-            this.s.f().V(f);
+        if (m853g()) {
+            this.f37290s.m21468f().m14998V(f);
         }
     }
 
     public void setIcon(Drawable drawable) {
-        if (this.x != drawable) {
-            this.x = drawable;
-            j(true);
-            k(getMeasuredWidth(), getMeasuredHeight());
+        if (this.f37295x != drawable) {
+            this.f37295x = drawable;
+            m850j(true);
+            m849k(getMeasuredWidth(), getMeasuredHeight());
         }
     }
 
     public void setIconGravity(int i) {
-        if (this.E != i) {
-            this.E = i;
-            k(getMeasuredWidth(), getMeasuredHeight());
+        if (this.f37289E != i) {
+            this.f37289E = i;
+            m849k(getMeasuredWidth(), getMeasuredHeight());
         }
     }
 
     public void setIconPadding(int i) {
-        if (this.B != i) {
-            this.B = i;
+        if (this.f37286B != i) {
+            this.f37286B = i;
             setCompoundDrawablePadding(i);
         }
     }
 
     public void setIconResource(int i) {
-        setIcon(i != 0 ? r4.b(getContext(), i) : null);
+        setIcon(i != 0 ? C2818r4.m11783b(getContext(), i) : null);
     }
 
     public void setIconSize(int i) {
         if (i < 0) {
             throw new IllegalArgumentException("iconSize cannot be less than 0");
         }
-        if (this.y != i) {
-            this.y = i;
-            j(true);
+        if (this.f37296y != i) {
+            this.f37296y = i;
+            m850j(true);
         }
     }
 
     public void setIconTint(ColorStateList colorStateList) {
-        if (this.w != colorStateList) {
-            this.w = colorStateList;
-            j(false);
+        if (this.f37294w != colorStateList) {
+            this.f37294w = colorStateList;
+            m850j(false);
         }
     }
 
     public void setIconTintMode(PorterDuff.Mode mode) {
-        if (this.v != mode) {
-            this.v = mode;
-            j(false);
+        if (this.f37293v != mode) {
+            this.f37293v = mode;
+            m850j(false);
         }
     }
 
     public void setIconTintResource(int i) {
-        setIconTint(r4.a(getContext(), i));
+        setIconTint(C2818r4.m11784a(getContext(), i));
     }
 
     public void setInsetBottom(int i) {
-        this.s.v(i);
+        this.f37290s.m21452v(i);
     }
 
     public void setInsetTop(int i) {
-        this.s.w(i);
+        this.f37290s.m21451w(i);
     }
 
     public void setInternalBackground(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
     }
 
-    public void setOnPressedChangeListenerInternal(b bVar) {
-        this.u = bVar;
+    public void setOnPressedChangeListenerInternal(InterfaceC4037b interfaceC4037b) {
+        this.f37292u = interfaceC4037b;
     }
 
     @Override // android.view.View
     public void setPressed(boolean z) {
-        b bVar = this.u;
-        if (bVar != null) {
-            bVar.a(this, z);
+        InterfaceC4037b interfaceC4037b = this.f37292u;
+        if (interfaceC4037b != null) {
+            interfaceC4037b.mo813a(this, z);
         }
         super.setPressed(z);
     }
 
     public void setRippleColor(ColorStateList colorStateList) {
-        if (g()) {
-            this.s.x(colorStateList);
+        if (m853g()) {
+            this.f37290s.m21450x(colorStateList);
         }
     }
 
     public void setRippleColorResource(int i) {
-        if (g()) {
-            setRippleColor(r4.a(getContext(), i));
+        if (m853g()) {
+            setRippleColor(C2818r4.m11784a(getContext(), i));
         }
     }
 
     @Override // com.daaw.jc1
     public void setShapeAppearanceModel(gc1 gc1Var) {
-        if (!g()) {
+        if (!m853g()) {
             throw new IllegalStateException("Attempted to set ShapeAppearanceModel on a MaterialButton which has an overwritten background.");
         }
-        this.s.y(gc1Var);
+        this.f37290s.m21449y(gc1Var);
     }
 
     public void setShouldDrawSurfaceColorStroke(boolean z) {
-        if (g()) {
-            this.s.z(z);
+        if (m853g()) {
+            this.f37290s.m21448z(z);
         }
     }
 
     public void setStrokeColor(ColorStateList colorStateList) {
-        if (g()) {
-            this.s.A(colorStateList);
+        if (m853g()) {
+            this.f37290s.m21483A(colorStateList);
         }
     }
 
     public void setStrokeColorResource(int i) {
-        if (g()) {
-            setStrokeColor(r4.a(getContext(), i));
+        if (m853g()) {
+            setStrokeColor(C2818r4.m11784a(getContext(), i));
         }
     }
 
     public void setStrokeWidth(int i) {
-        if (g()) {
-            this.s.B(i);
+        if (m853g()) {
+            this.f37290s.m21482B(i);
         }
     }
 
     public void setStrokeWidthResource(int i) {
-        if (g()) {
+        if (m853g()) {
             setStrokeWidth(getResources().getDimensionPixelSize(i));
         }
     }
 
-    @Override // com.daaw.s3, com.daaw.vl1
+    @Override // com.daaw.C2908s3, com.daaw.vl1
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        if (g()) {
-            this.s.C(colorStateList);
+        if (m853g()) {
+            this.f37290s.m21481C(colorStateList);
         } else {
             super.setSupportBackgroundTintList(colorStateList);
         }
     }
 
-    @Override // com.daaw.s3, com.daaw.vl1
+    @Override // com.daaw.C2908s3, com.daaw.vl1
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        if (g()) {
-            this.s.D(mode);
+        if (m853g()) {
+            this.f37290s.m21480D(mode);
         } else {
             super.setSupportBackgroundTintMode(mode);
         }
@@ -743,6 +758,6 @@ public class MaterialButton extends s3 implements Checkable, jc1 {
 
     @Override // android.widget.Checkable
     public void toggle() {
-        setChecked(!this.C);
+        setChecked(!this.f37287C);
     }
 }

@@ -1,8 +1,10 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public interface on6 {
-    void a(nn6 nn6Var);
+    /* renamed from: a */
+    void mo7889a(nn6 nn6Var);
 
     @Deprecated
-    String b(nn6 nn6Var);
+    /* renamed from: b */
+    String mo7888b(nn6 nn6Var);
 }

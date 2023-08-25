@@ -10,13 +10,17 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 /* loaded from: classes.dex */
 public final class Scope extends AbstractSafeParcelable implements ReflectedParcelable {
     public static final Parcelable.Creator<Scope> CREATOR = new k32();
-    public final int p;
-    public final String q;
+
+    /* renamed from: p */
+    public final int f36582p;
+
+    /* renamed from: q */
+    public final String f36583q;
 
     public Scope(int i, String str) {
-        ry0.g(str, "scopeUri must not be null or empty");
-        this.p = i;
-        this.q = str;
+        ry0.m10833g(str, "scopeUri must not be null or empty");
+        this.f36582p = i;
+        this.f36583q = str;
     }
 
     public Scope(String str) {
@@ -28,28 +32,29 @@ public final class Scope extends AbstractSafeParcelable implements ReflectedParc
             return true;
         }
         if (obj instanceof Scope) {
-            return this.q.equals(((Scope) obj).q);
+            return this.f36583q.equals(((Scope) obj).f36583q);
         }
         return false;
     }
 
-    public String h() {
-        return this.q;
+    /* renamed from: h */
+    public String m1199h() {
+        return this.f36583q;
     }
 
     public int hashCode() {
-        return this.q.hashCode();
+        return this.f36583q.hashCode();
     }
 
     public String toString() {
-        return this.q;
+        return this.f36583q;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        int a = z71.a(parcel);
-        z71.k(parcel, 1, this.p);
-        z71.q(parcel, 2, h(), false);
-        z71.b(parcel, a);
+        int m2733a = z71.m2733a(parcel);
+        z71.m2723k(parcel, 1, this.f36582p);
+        z71.m2717q(parcel, 2, m1199h(), false);
+        z71.m2732b(parcel, m2733a);
     }
 }

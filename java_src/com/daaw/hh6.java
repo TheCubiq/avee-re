@@ -5,20 +5,24 @@ import java.util.Map;
 import java.util.Set;
 /* loaded from: classes.dex */
 public final class hh6 extends o17 {
-    public final Map p;
+
+    /* renamed from: p */
+    public final Map f12551p;
 
     public hh6(Map map) {
-        this.p = map;
+        this.f12551p = map;
     }
 
     @Override // com.daaw.p17
-    public final /* synthetic */ Object a() {
-        return this.p;
+    /* renamed from: a */
+    public final /* synthetic */ Object mo13759a() {
+        return this.f12551p;
     }
 
     @Override // com.daaw.o17
-    public final Map b() {
-        return this.p;
+    /* renamed from: b */
+    public final Map mo14649b() {
+        return this.f12551p;
     }
 
     @Override // com.daaw.o17, java.util.Map
@@ -28,12 +32,12 @@ public final class hh6 extends o17 {
 
     @Override // java.util.Map
     public final boolean containsValue(Object obj) {
-        return super.e(obj);
+        return super.m14647e(obj);
     }
 
     @Override // com.daaw.o17, java.util.Map
     public final Set entrySet() {
-        return y37.b(this.p.entrySet(), new ty6() { // from class: com.daaw.bf6
+        return y37.m4143b(this.f12551p.entrySet(), new ty6() { // from class: com.daaw.bf6
             @Override // com.daaw.ty6
             public final boolean zza(Object obj) {
                 return ((Map.Entry) obj).getKey() != null;
@@ -43,7 +47,7 @@ public final class hh6 extends o17 {
 
     @Override // java.util.Map
     public final boolean equals(Object obj) {
-        return obj != null && super.g(obj);
+        return obj != null && super.m14646g(obj);
     }
 
     @Override // java.util.Map
@@ -51,22 +55,22 @@ public final class hh6 extends o17 {
         if (obj == null) {
             return null;
         }
-        return (List) this.p.get(obj);
+        return (List) this.f12551p.get(obj);
     }
 
     @Override // java.util.Map
     public final int hashCode() {
-        return super.c();
+        return super.m14648c();
     }
 
     @Override // java.util.Map
     public final boolean isEmpty() {
-        return this.p.isEmpty() || (super.size() == 1 && super.containsKey(null));
+        return this.f12551p.isEmpty() || (super.size() == 1 && super.containsKey(null));
     }
 
     @Override // java.util.Map
     public final Set keySet() {
-        return y37.b(this.p.keySet(), new ty6() { // from class: com.daaw.eg6
+        return y37.m4143b(this.f12551p.keySet(), new ty6() { // from class: com.daaw.eg6
             @Override // com.daaw.ty6
             public final boolean zza(Object obj) {
                 return ((String) obj) != null;

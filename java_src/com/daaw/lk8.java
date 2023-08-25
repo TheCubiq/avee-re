@@ -1,21 +1,27 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class lk8 implements e48 {
-    public static final lk8 q = new lk8();
-    public final e48 p = q48.a(q48.b(new pk8()));
 
-    public static boolean b() {
-        q.zza().zza();
+    /* renamed from: q */
+    public static final lk8 f17493q = new lk8();
+
+    /* renamed from: p */
+    public final e48 f17494p = q48.m12772a(q48.m12771b(new pk8()));
+
+    /* renamed from: b */
+    public static boolean m16887b() {
+        f17493q.zza().zza();
         return true;
     }
 
-    public static boolean c() {
-        return q.zza().zzb();
+    /* renamed from: c */
+    public static boolean m16886c() {
+        return f17493q.zza().zzb();
     }
 
     @Override // com.daaw.e48
     /* renamed from: a */
     public final nk8 zza() {
-        return (nk8) this.p.zza();
+        return (nk8) this.f17494p.zza();
     }
 }

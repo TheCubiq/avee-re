@@ -7,62 +7,64 @@ import android.view.SubMenu;
 import android.view.View;
 /* loaded from: classes.dex */
 public class ph1 extends np0 implements SubMenu {
-    public final oi1 e;
+
+    /* renamed from: e */
+    public final oi1 f22934e;
 
     public ph1(Context context, oi1 oi1Var) {
         super(context, oi1Var);
-        this.e = oi1Var;
+        this.f22934e = oi1Var;
     }
 
     @Override // android.view.SubMenu
     public void clearHeader() {
-        this.e.clearHeader();
+        this.f22934e.clearHeader();
     }
 
     @Override // android.view.SubMenu
     public MenuItem getItem() {
-        return c(this.e.getItem());
+        return m7309c(this.f22934e.getItem());
     }
 
     @Override // android.view.SubMenu
     public SubMenu setHeaderIcon(int i) {
-        this.e.setHeaderIcon(i);
+        this.f22934e.setHeaderIcon(i);
         return this;
     }
 
     @Override // android.view.SubMenu
     public SubMenu setHeaderIcon(Drawable drawable) {
-        this.e.setHeaderIcon(drawable);
+        this.f22934e.setHeaderIcon(drawable);
         return this;
     }
 
     @Override // android.view.SubMenu
     public SubMenu setHeaderTitle(int i) {
-        this.e.setHeaderTitle(i);
+        this.f22934e.setHeaderTitle(i);
         return this;
     }
 
     @Override // android.view.SubMenu
     public SubMenu setHeaderTitle(CharSequence charSequence) {
-        this.e.setHeaderTitle(charSequence);
+        this.f22934e.setHeaderTitle(charSequence);
         return this;
     }
 
     @Override // android.view.SubMenu
     public SubMenu setHeaderView(View view) {
-        this.e.setHeaderView(view);
+        this.f22934e.setHeaderView(view);
         return this;
     }
 
     @Override // android.view.SubMenu
     public SubMenu setIcon(int i) {
-        this.e.setIcon(i);
+        this.f22934e.setIcon(i);
         return this;
     }
 
     @Override // android.view.SubMenu
     public SubMenu setIcon(Drawable drawable) {
-        this.e.setIcon(drawable);
+        this.f22934e.setIcon(drawable);
         return this;
     }
 }

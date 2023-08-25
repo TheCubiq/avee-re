@@ -14,33 +14,52 @@ import java.util.Map;
 import java.util.Objects;
 /* loaded from: classes2.dex */
 public final class h08 implements b18 {
-    public static final Map h = new g6();
-    public static final String[] i = {"key", "value"};
-    public final ContentResolver a;
-    public final Uri b;
-    public final Runnable c;
-    public final ContentObserver d;
-    public final Object e;
-    public volatile Map f;
-    public final List g;
+
+    /* renamed from: h */
+    public static final Map f11934h = new C1370g6();
+
+    /* renamed from: i */
+    public static final String[] f11935i = {"key", "value"};
+
+    /* renamed from: a */
+    public final ContentResolver f11936a;
+
+    /* renamed from: b */
+    public final Uri f11937b;
+
+    /* renamed from: c */
+    public final Runnable f11938c;
+
+    /* renamed from: d */
+    public final ContentObserver f11939d;
+
+    /* renamed from: e */
+    public final Object f11940e;
+
+    /* renamed from: f */
+    public volatile Map f11941f;
+
+    /* renamed from: g */
+    public final List f11942g;
 
     public h08(ContentResolver contentResolver, Uri uri, Runnable runnable) {
         ez7 ez7Var = new ez7(this, null);
-        this.d = ez7Var;
-        this.e = new Object();
-        this.g = new ArrayList();
+        this.f11939d = ez7Var;
+        this.f11940e = new Object();
+        this.f11942g = new ArrayList();
         Objects.requireNonNull(contentResolver);
         Objects.requireNonNull(uri);
-        this.a = contentResolver;
-        this.b = uri;
-        this.c = runnable;
+        this.f11936a = contentResolver;
+        this.f11937b = uri;
+        this.f11938c = runnable;
         contentResolver.registerContentObserver(uri, false, ez7Var);
     }
 
-    public static h08 a(ContentResolver contentResolver, Uri uri, Runnable runnable) {
+    /* renamed from: a */
+    public static h08 m21116a(ContentResolver contentResolver, Uri uri, Runnable runnable) {
         h08 h08Var;
         synchronized (h08.class) {
-            Map map = h;
+            Map map = f11934h;
             h08Var = (h08) map.get(uri);
             if (h08Var == null) {
                 try {
@@ -57,28 +76,30 @@ public final class h08 implements b18 {
         return h08Var;
     }
 
-    public static synchronized void d() {
+    /* renamed from: d */
+    public static synchronized void m21113d() {
         synchronized (h08.class) {
-            for (h08 h08Var : h.values()) {
-                h08Var.a.unregisterContentObserver(h08Var.d);
+            for (h08 h08Var : f11934h.values()) {
+                h08Var.f11936a.unregisterContentObserver(h08Var.f11939d);
             }
-            h.clear();
+            f11934h.clear();
         }
     }
 
-    public final Map b() {
+    /* renamed from: b */
+    public final Map m21115b() {
         Map map;
-        Map map2 = this.f;
+        Map map2 = this.f11941f;
         if (map2 == null) {
-            synchronized (this.e) {
-                map2 = this.f;
+            synchronized (this.f11940e) {
+                map2 = this.f11941f;
                 if (map2 == null) {
                     StrictMode.ThreadPolicy allowThreadDiskReads = StrictMode.allowThreadDiskReads();
                     try {
-                        map = (Map) v08.a(new y08() { // from class: com.daaw.cy7
+                        map = (Map) v08.m7557a(new y08() { // from class: com.daaw.cy7
                             @Override // com.daaw.y08
                             public final Object zza() {
-                                return h08.this.c();
+                                return h08.this.m21114c();
                             }
                         });
                         StrictMode.setThreadPolicy(allowThreadDiskReads);
@@ -89,7 +110,7 @@ public final class h08 implements b18 {
                         StrictMode.setThreadPolicy(allowThreadDiskReads);
                         throw th;
                     }
-                    this.f = map;
+                    this.f11941f = map;
                     map2 = map;
                 }
             }
@@ -97,8 +118,9 @@ public final class h08 implements b18 {
         return map2 != null ? map2 : Collections.emptyMap();
     }
 
-    public final /* synthetic */ Map c() {
-        Cursor query = this.a.query(this.b, i, null, null, null);
+    /* renamed from: c */
+    public final /* synthetic */ Map m21114c() {
+        Cursor query = this.f11936a.query(this.f11937b, f11935i, null, null, null);
         if (query == null) {
             return Collections.emptyMap();
         }
@@ -107,23 +129,24 @@ public final class h08 implements b18 {
             if (count == 0) {
                 return Collections.emptyMap();
             }
-            Map g6Var = count <= 256 ? new g6(count) : new HashMap(count, 1.0f);
+            Map c1370g6 = count <= 256 ? new C1370g6(count) : new HashMap(count, 1.0f);
             while (query.moveToNext()) {
-                g6Var.put(query.getString(0), query.getString(1));
+                c1370g6.put(query.getString(0), query.getString(1));
             }
-            return g6Var;
+            return c1370g6;
         } finally {
             query.close();
         }
     }
 
-    public final void e() {
-        synchronized (this.e) {
-            this.f = null;
-            this.c.run();
+    /* renamed from: e */
+    public final void m21112e() {
+        synchronized (this.f11940e) {
+            this.f11941f = null;
+            this.f11938c.run();
         }
         synchronized (this) {
-            for (p08 p08Var : this.g) {
+            for (p08 p08Var : this.f11942g) {
                 p08Var.zza();
             }
         }
@@ -131,6 +154,6 @@ public final class h08 implements b18 {
 
     @Override // com.daaw.b18
     public final /* bridge */ /* synthetic */ Object zzb(String str) {
-        return (String) b().get(str);
+        return (String) m21115b().get(str);
     }
 }

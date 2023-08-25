@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.zip.GZIPOutputStream;
 /* loaded from: classes2.dex */
 public class xr0 {
-    public static void a(InputStream inputStream, File file) {
+    /* renamed from: a */
+    public static void m4788a(InputStream inputStream, File file) {
         if (inputStream == null) {
             return;
         }
@@ -21,14 +22,14 @@ public class xr0 {
                     int read = inputStream.read(bArr);
                     if (read <= 0) {
                         gZIPOutputStream2.finish();
-                        fh.f(gZIPOutputStream2);
+                        C1279fh.m22661f(gZIPOutputStream2);
                         return;
                     }
                     gZIPOutputStream2.write(bArr, 0, read);
                 } catch (Throwable th) {
                     th = th;
                     gZIPOutputStream = gZIPOutputStream2;
-                    fh.f(gZIPOutputStream);
+                    C1279fh.m22661f(gZIPOutputStream);
                     throw th;
                 }
             }
@@ -37,20 +38,21 @@ public class xr0 {
         }
     }
 
-    public static void b(File file, List<wr0> list) {
+    /* renamed from: b */
+    public static void m4787b(File file, List<wr0> list) {
         for (wr0 wr0Var : list) {
             InputStream inputStream = null;
             try {
-                inputStream = wr0Var.b();
+                inputStream = wr0Var.mo5841b();
                 if (inputStream != null) {
-                    a(inputStream, new File(file, wr0Var.c()));
+                    m4788a(inputStream, new File(file, wr0Var.mo5840c()));
                 }
             } catch (IOException unused) {
             } catch (Throwable th) {
-                fh.f(null);
+                C1279fh.m22661f(null);
                 throw th;
             }
-            fh.f(inputStream);
+            C1279fh.m22661f(inputStream);
         }
     }
 }

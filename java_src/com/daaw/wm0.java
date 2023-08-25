@@ -8,13 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class wm0 {
-    public final Context a;
+
+    /* renamed from: a */
+    public final Context f31322a;
 
     public wm0(Context context) {
-        this.a = context;
+        this.f31322a = context;
     }
 
-    public static n70 b(String str) {
+    /* renamed from: b */
+    public static n70 m6007b(String str) {
         Object obj;
         Object obj2;
         try {
@@ -34,15 +37,16 @@ public final class wm0 {
         }
     }
 
-    public List<n70> a() {
+    /* renamed from: a */
+    public List<n70> m6008a() {
         ArrayList arrayList = new ArrayList();
         try {
-            ApplicationInfo applicationInfo = this.a.getPackageManager().getApplicationInfo(this.a.getPackageName(), 128);
+            ApplicationInfo applicationInfo = this.f31322a.getPackageManager().getApplicationInfo(this.f31322a.getPackageName(), 128);
             Bundle bundle = applicationInfo.metaData;
             if (bundle != null) {
                 for (String str : bundle.keySet()) {
                     if ("GlideModule".equals(applicationInfo.metaData.get(str))) {
-                        arrayList.add(b(str));
+                        arrayList.add(m6007b(str));
                     }
                 }
             }

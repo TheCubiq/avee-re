@@ -9,15 +9,16 @@ public final class ad3 extends bp2 implements cd3 {
     }
 
     @Override // com.daaw.cd3
-    public final IBinder g1(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3, int i) {
-        Parcel D = D();
-        dp2.g(D, yd0Var);
-        dp2.g(D, yd0Var2);
-        dp2.g(D, yd0Var3);
-        D.writeInt(224400000);
-        Parcel I = I(1, D);
-        IBinder readStrongBinder = I.readStrongBinder();
-        I.recycle();
+    /* renamed from: g1 */
+    public final IBinder mo25417g1(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3, int i) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, yd0Var);
+        dp2.m24101g(m25952D, yd0Var2);
+        dp2.m24101g(m25952D, yd0Var3);
+        m25952D.writeInt(224400000);
+        Parcel m25951I = m25951I(1, m25952D);
+        IBinder readStrongBinder = m25951I.readStrongBinder();
+        m25951I.recycle();
         return readStrongBinder;
     }
 }

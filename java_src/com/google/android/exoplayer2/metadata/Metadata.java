@@ -6,15 +6,18 @@ import java.util.Arrays;
 import java.util.List;
 /* loaded from: classes.dex */
 public final class Metadata implements Parcelable {
-    public static final Parcelable.Creator<Metadata> CREATOR = new a();
-    public final Entry[] p;
+    public static final Parcelable.Creator<Metadata> CREATOR = new C3941a();
+
+    /* renamed from: p */
+    public final Entry[] f35771p;
 
     /* loaded from: classes.dex */
     public interface Entry extends Parcelable {
     }
 
+    /* renamed from: com.google.android.exoplayer2.metadata.Metadata$a */
     /* loaded from: classes.dex */
-    public static class a implements Parcelable.Creator<Metadata> {
+    public static class C3941a implements Parcelable.Creator<Metadata> {
         @Override // android.os.Parcelable.Creator
         /* renamed from: a */
         public Metadata createFromParcel(Parcel parcel) {
@@ -29,10 +32,10 @@ public final class Metadata implements Parcelable {
     }
 
     public Metadata(Parcel parcel) {
-        this.p = new Entry[parcel.readInt()];
+        this.f35771p = new Entry[parcel.readInt()];
         int i = 0;
         while (true) {
-            Entry[] entryArr = this.p;
+            Entry[] entryArr = this.f35771p;
             if (i >= entryArr.length) {
                 return;
             }
@@ -43,24 +46,26 @@ public final class Metadata implements Parcelable {
 
     public Metadata(List<? extends Entry> list) {
         if (list == null) {
-            this.p = new Entry[0];
+            this.f35771p = new Entry[0];
             return;
         }
         Entry[] entryArr = new Entry[list.size()];
-        this.p = entryArr;
+        this.f35771p = entryArr;
         list.toArray(entryArr);
     }
 
     public Metadata(Entry... entryArr) {
-        this.p = entryArr == null ? new Entry[0] : entryArr;
+        this.f35771p = entryArr == null ? new Entry[0] : entryArr;
     }
 
-    public Entry a(int i) {
-        return this.p[i];
+    /* renamed from: a */
+    public Entry m1649a(int i) {
+        return this.f35771p[i];
     }
 
-    public int b() {
-        return this.p.length;
+    /* renamed from: b */
+    public int m1648b() {
+        return this.f35771p.length;
     }
 
     @Override // android.os.Parcelable
@@ -75,17 +80,17 @@ public final class Metadata implements Parcelable {
         if (obj == null || Metadata.class != obj.getClass()) {
             return false;
         }
-        return Arrays.equals(this.p, ((Metadata) obj).p);
+        return Arrays.equals(this.f35771p, ((Metadata) obj).f35771p);
     }
 
     public int hashCode() {
-        return Arrays.hashCode(this.p);
+        return Arrays.hashCode(this.f35771p);
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(this.p.length);
-        for (Entry entry : this.p) {
+        parcel.writeInt(this.f35771p.length);
+        for (Entry entry : this.f35771p) {
             parcel.writeParcelable(entry, 0);
         }
     }

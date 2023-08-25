@@ -5,34 +5,40 @@ import com.google.android.gms.ads.internal.client.zzdw;
 import com.google.android.gms.ads.mediation.NetworkExtras;
 /* loaded from: classes.dex */
 public final class zzb {
-    public final zzdw a = new zzdw();
-    public String b;
 
-    public static /* bridge */ /* synthetic */ zzdw a(zzb zzbVar) {
-        return zzbVar.a;
+    /* renamed from: a */
+    public final zzdw f36552a = new zzdw();
+
+    /* renamed from: b */
+    public String f36553b;
+
+    /* renamed from: a */
+    public static /* bridge */ /* synthetic */ zzdw m1224a(zzb zzbVar) {
+        return zzbVar.f36552a;
     }
 
-    public static /* bridge */ /* synthetic */ String b(zzb zzbVar) {
-        return zzbVar.b;
+    /* renamed from: b */
+    public static /* bridge */ /* synthetic */ String m1223b(zzb zzbVar) {
+        return zzbVar.f36553b;
     }
 
     public final zzb zzb(Class cls, Bundle bundle) {
-        this.a.zzr(cls, bundle);
+        this.f36552a.zzr(cls, bundle);
         return this;
     }
 
     public final zzb zzc(NetworkExtras networkExtras) {
-        this.a.zzv(networkExtras);
+        this.f36552a.zzv(networkExtras);
         return this;
     }
 
     public final zzb zzd(Class cls, Bundle bundle) {
-        this.a.zzu(cls, bundle);
+        this.f36552a.zzu(cls, bundle);
         return this;
     }
 
     public final zzb zze(String str) {
-        this.b = str;
+        this.f36553b = str;
         return this;
     }
 }

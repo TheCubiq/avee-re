@@ -28,13 +28,16 @@ public enum ym6 {
     GET_URL_AND_CACHE_KEY("get-url-and-cache-key"),
     PRELOADED_LOADER("preloaded-loader");
     
-    public final String p;
+
+    /* renamed from: p */
+    public final String f33848p;
 
     ym6(String str) {
-        this.p = str;
+        this.f33848p = str;
     }
 
-    public final String a() {
-        return this.p;
+    /* renamed from: a */
+    public final String m3506a() {
+        return this.f33848p;
     }
 }

@@ -4,21 +4,28 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.LockSupport;
 /* loaded from: classes.dex */
 public abstract class e77 extends AtomicReference implements Runnable {
-    public static final Runnable p = new a77(null);
-    public static final Runnable q = new a77(null);
 
-    public abstract Object a();
+    /* renamed from: p */
+    public static final Runnable f8228p = new a77(null);
 
-    public abstract String b();
+    /* renamed from: q */
+    public static final Runnable f8229q = new a77(null);
 
-    public final void c(Thread thread) {
+    /* renamed from: a */
+    public abstract Object mo8452a();
+
+    /* renamed from: b */
+    public abstract String mo8451b();
+
+    /* renamed from: c */
+    public final void m23673c(Thread thread) {
         Runnable runnable = (Runnable) get();
         y67 y67Var = null;
         boolean z = false;
         int i = 0;
         while (true) {
             if (!(runnable instanceof y67)) {
-                if (runnable != q) {
+                if (runnable != f8229q) {
                     break;
                 }
             } else {
@@ -26,7 +33,7 @@ public abstract class e77 extends AtomicReference implements Runnable {
             }
             i++;
             if (i > 1000) {
-                Runnable runnable2 = q;
+                Runnable runnable2 = f8229q;
                 if (runnable == runnable2 || compareAndSet(runnable, runnable2)) {
                     z = Thread.interrupted() || z;
                     LockSupport.park(y67Var);
@@ -41,13 +48,17 @@ public abstract class e77 extends AtomicReference implements Runnable {
         }
     }
 
-    public abstract void d(Throwable th);
+    /* renamed from: d */
+    public abstract void mo8450d(Throwable th);
 
-    public abstract void e(Object obj);
+    /* renamed from: e */
+    public abstract void mo8449e(Object obj);
 
-    public abstract boolean f();
+    /* renamed from: f */
+    public abstract boolean mo8448f();
 
-    public final void g() {
+    /* renamed from: g */
+    public final void m23672g() {
         Runnable runnable = (Runnable) get();
         if (runnable instanceof Thread) {
             y67 y67Var = new y67(this, null);
@@ -56,11 +67,11 @@ public abstract class e77 extends AtomicReference implements Runnable {
                 try {
                     Thread thread = (Thread) runnable;
                     thread.interrupt();
-                    if (((Runnable) getAndSet(p)) == q) {
+                    if (((Runnable) getAndSet(f8228p)) == f8229q) {
                         LockSupport.unpark(thread);
                     }
                 } catch (Throwable th) {
-                    if (((Runnable) getAndSet(p)) == q) {
+                    if (((Runnable) getAndSet(f8228p)) == f8229q) {
                         LockSupport.unpark((Thread) runnable);
                     }
                     throw th;
@@ -74,32 +85,32 @@ public abstract class e77 extends AtomicReference implements Runnable {
         Thread currentThread = Thread.currentThread();
         Object obj = null;
         if (compareAndSet(null, currentThread)) {
-            boolean z = !f();
+            boolean z = !mo8448f();
             if (z) {
                 try {
-                    obj = a();
+                    obj = mo8452a();
                 } catch (Throwable th) {
                     try {
-                        n77.a(th);
-                        if (!compareAndSet(currentThread, p)) {
-                            c(currentThread);
+                        n77.m15480a(th);
+                        if (!compareAndSet(currentThread, f8228p)) {
+                            m23673c(currentThread);
                         }
-                        d(th);
+                        mo8450d(th);
                         return;
                     } catch (Throwable th2) {
-                        if (!compareAndSet(currentThread, p)) {
-                            c(currentThread);
+                        if (!compareAndSet(currentThread, f8228p)) {
+                            m23673c(currentThread);
                         }
-                        e(null);
+                        mo8449e(null);
                         throw th2;
                     }
                 }
             }
-            if (!compareAndSet(currentThread, p)) {
-                c(currentThread);
+            if (!compareAndSet(currentThread, f8228p)) {
+                m23673c(currentThread);
             }
             if (z) {
-                e(obj);
+                mo8449e(obj);
             }
         }
     }
@@ -108,7 +119,7 @@ public abstract class e77 extends AtomicReference implements Runnable {
     public final String toString() {
         String str;
         Runnable runnable = (Runnable) get();
-        if (runnable == p) {
+        if (runnable == f8228p) {
             str = "running=[DONE]";
         } else if (runnable instanceof y67) {
             str = "running=[INTERRUPTED]";
@@ -117,6 +128,6 @@ public abstract class e77 extends AtomicReference implements Runnable {
         } else {
             str = "running=[NOT STARTED YET]";
         }
-        return str + ", " + b();
+        return str + ", " + mo8451b();
     }
 }

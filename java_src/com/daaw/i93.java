@@ -3,7 +3,8 @@ package com.daaw;
 import android.os.StrictMode;
 /* loaded from: classes.dex */
 public final class i93 {
-    public static Object a(iz6 iz6Var) {
+    /* renamed from: a */
+    public static Object m20011a(iz6 iz6Var) {
         StrictMode.ThreadPolicy threadPolicy = StrictMode.getThreadPolicy();
         try {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder(threadPolicy).permitDiskReads().permitDiskWrites().build());

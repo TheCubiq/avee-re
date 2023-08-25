@@ -3,43 +3,104 @@ package com.daaw;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
-import com.daaw.fx;
+import com.daaw.C1336fx;
 import java.util.Queue;
 /* loaded from: classes.dex */
 public final class e60<A, T, Z, R> implements l41, sd1, b51 {
-    public static final Queue<e60<?, ?, ?, ?>> D = tq1.d(0);
-    public fx.c A;
-    public long B;
-    public a C;
-    public final String a = String.valueOf(hashCode());
-    public hi0 b;
-    public Drawable c;
-    public int d;
-    public int e;
-    public int f;
-    public Context g;
-    public cn1<Z> h;
-    public ik0<A, T, Z, R> i;
-    public m41 j;
-    public A k;
-    public Class<R> l;
-    public boolean m;
-    public dz0 n;
-    public pj1<R> o;
-    public q41<? super A, R> p;
-    public float q;
-    public fx r;
-    public g70<R> s;
-    public int t;
-    public int u;
-    public wt v;
-    public Drawable w;
-    public Drawable x;
-    public boolean y;
-    public z41<?> z;
 
+    /* renamed from: D */
+    public static final Queue<e60<?, ?, ?, ?>> f8146D = tq1.m8867d(0);
+
+    /* renamed from: A */
+    public C1336fx.C1339c f8147A;
+
+    /* renamed from: B */
+    public long f8148B;
+
+    /* renamed from: C */
+    public EnumC1163a f8149C;
+
+    /* renamed from: a */
+    public final String f8150a = String.valueOf(hashCode());
+
+    /* renamed from: b */
+    public hi0 f8151b;
+
+    /* renamed from: c */
+    public Drawable f8152c;
+
+    /* renamed from: d */
+    public int f8153d;
+
+    /* renamed from: e */
+    public int f8154e;
+
+    /* renamed from: f */
+    public int f8155f;
+
+    /* renamed from: g */
+    public Context f8156g;
+
+    /* renamed from: h */
+    public cn1<Z> f8157h;
+
+    /* renamed from: i */
+    public ik0<A, T, Z, R> f8158i;
+
+    /* renamed from: j */
+    public m41 f8159j;
+
+    /* renamed from: k */
+    public A f8160k;
+
+    /* renamed from: l */
+    public Class<R> f8161l;
+
+    /* renamed from: m */
+    public boolean f8162m;
+
+    /* renamed from: n */
+    public dz0 f8163n;
+
+    /* renamed from: o */
+    public pj1<R> f8164o;
+
+    /* renamed from: p */
+    public q41<? super A, R> f8165p;
+
+    /* renamed from: q */
+    public float f8166q;
+
+    /* renamed from: r */
+    public C1336fx f8167r;
+
+    /* renamed from: s */
+    public g70<R> f8168s;
+
+    /* renamed from: t */
+    public int f8169t;
+
+    /* renamed from: u */
+    public int f8170u;
+
+    /* renamed from: v */
+    public EnumC3465wt f8171v;
+
+    /* renamed from: w */
+    public Drawable f8172w;
+
+    /* renamed from: x */
+    public Drawable f8173x;
+
+    /* renamed from: y */
+    public boolean f8174y;
+
+    /* renamed from: z */
+    public z41<?> f8175z;
+
+    /* renamed from: com.daaw.e60$a */
     /* loaded from: classes.dex */
-    public enum a {
+    public enum EnumC1163a {
         PENDING,
         RUNNING,
         WAITING_FOR_SIZE,
@@ -50,7 +111,8 @@ public final class e60<A, T, Z, R> implements l41, sd1, b51 {
         PAUSED
     }
 
-    public static void m(String str, Object obj, String str2) {
+    /* renamed from: m */
+    public static void m23715m(String str, Object obj, String str2) {
         if (obj == null) {
             StringBuilder sb = new StringBuilder(str);
             sb.append(" must not be null");
@@ -62,88 +124,93 @@ public final class e60<A, T, Z, R> implements l41, sd1, b51 {
         }
     }
 
-    public static <A, T, Z, R> e60<A, T, Z, R> v(ik0<A, T, Z, R> ik0Var, A a2, hi0 hi0Var, Context context, dz0 dz0Var, pj1<R> pj1Var, float f, Drawable drawable, int i, Drawable drawable2, int i2, Drawable drawable3, int i3, q41<? super A, R> q41Var, m41 m41Var, fx fxVar, cn1<Z> cn1Var, Class<R> cls, boolean z, g70<R> g70Var, int i4, int i5, wt wtVar) {
-        e60<?, ?, ?, ?> poll = D.poll();
+    /* renamed from: v */
+    public static <A, T, Z, R> e60<A, T, Z, R> m23706v(ik0<A, T, Z, R> ik0Var, A a, hi0 hi0Var, Context context, dz0 dz0Var, pj1<R> pj1Var, float f, Drawable drawable, int i, Drawable drawable2, int i2, Drawable drawable3, int i3, q41<? super A, R> q41Var, m41 m41Var, C1336fx c1336fx, cn1<Z> cn1Var, Class<R> cls, boolean z, g70<R> g70Var, int i4, int i5, EnumC3465wt enumC3465wt) {
+        e60<?, ?, ?, ?> poll = f8146D.poll();
         if (poll == null) {
             poll = new e60();
         }
-        poll.q(ik0Var, a2, hi0Var, context, dz0Var, pj1Var, f, drawable, i, drawable2, i2, drawable3, i3, q41Var, m41Var, fxVar, cn1Var, cls, z, g70Var, i4, i5, wtVar);
+        poll.m23711q(ik0Var, a, hi0Var, context, dz0Var, pj1Var, f, drawable, i, drawable2, i2, drawable3, i3, q41Var, m41Var, c1336fx, cn1Var, cls, z, g70Var, i4, i5, enumC3465wt);
         return poll;
     }
 
     @Override // com.daaw.b51
-    public void a(Exception exc) {
-        this.C = a.FAILED;
-        q41<? super A, R> q41Var = this.p;
-        if (q41Var == null || !q41Var.a(exc, (A) this.k, this.o, s())) {
-            y(exc);
+    /* renamed from: a */
+    public void mo21159a(Exception exc) {
+        this.f8149C = EnumC1163a.FAILED;
+        q41<? super A, R> q41Var = this.f8165p;
+        if (q41Var == null || !q41Var.mo12777a(exc, (A) this.f8160k, this.f8164o, m23709s())) {
+            m23703y(exc);
         }
     }
 
     @Override // com.daaw.l41
-    public void b() {
+    /* renamed from: b */
+    public void mo17163b() {
         clear();
-        this.C = a.PAUSED;
+        this.f8149C = EnumC1163a.PAUSED;
     }
 
     @Override // com.daaw.l41
-    public void c() {
-        this.i = null;
-        this.k = null;
-        this.g = null;
-        this.o = null;
-        this.w = null;
-        this.x = null;
-        this.c = null;
-        this.p = null;
-        this.j = null;
-        this.h = null;
-        this.s = null;
-        this.y = false;
-        this.A = null;
-        D.offer(this);
+    /* renamed from: c */
+    public void mo17162c() {
+        this.f8158i = null;
+        this.f8160k = null;
+        this.f8156g = null;
+        this.f8164o = null;
+        this.f8172w = null;
+        this.f8173x = null;
+        this.f8152c = null;
+        this.f8165p = null;
+        this.f8159j = null;
+        this.f8157h = null;
+        this.f8168s = null;
+        this.f8174y = false;
+        this.f8147A = null;
+        f8146D.offer(this);
     }
 
     @Override // com.daaw.l41
     public void clear() {
-        tq1.b();
-        a aVar = this.C;
-        a aVar2 = a.CLEARED;
-        if (aVar == aVar2) {
+        tq1.m8869b();
+        EnumC1163a enumC1163a = this.f8149C;
+        EnumC1163a enumC1163a2 = EnumC1163a.CLEARED;
+        if (enumC1163a == enumC1163a2) {
             return;
         }
-        l();
-        z41<?> z41Var = this.z;
+        m23716l();
+        z41<?> z41Var = this.f8175z;
         if (z41Var != null) {
-            x(z41Var);
+            m23704x(z41Var);
         }
-        if (j()) {
-            this.o.k(p());
+        if (m23718j()) {
+            this.f8164o.mo3963k(m23712p());
         }
-        this.C = aVar2;
+        this.f8149C = enumC1163a2;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // com.daaw.b51
-    public void d(z41<?> z41Var) {
+    /* renamed from: d */
+    public void mo21156d(z41<?> z41Var) {
         if (z41Var == null) {
-            a(new Exception("Expected to receive a Resource<R> with an object of " + this.l + " inside, but instead got null."));
+            mo21159a(new Exception("Expected to receive a Resource<R> with an object of " + this.f8161l + " inside, but instead got null."));
             return;
         }
         Object obj = z41Var.get();
-        if (obj != null && this.l.isAssignableFrom(obj.getClass())) {
-            if (k()) {
-                w(z41Var, obj);
+        if (obj != null && this.f8161l.isAssignableFrom(obj.getClass())) {
+            if (m23717k()) {
+                m23705w(z41Var, obj);
                 return;
             }
-            x(z41Var);
-            this.C = a.COMPLETE;
+            m23704x(z41Var);
+            this.f8149C = EnumC1163a.COMPLETE;
             return;
         }
-        x(z41Var);
+        m23704x(z41Var);
         StringBuilder sb = new StringBuilder();
         sb.append("Expected to receive an object of ");
-        sb.append(this.l);
+        sb.append(this.f8161l);
         sb.append(" but instead got ");
         sb.append(obj != null ? obj.getClass() : "");
         sb.append("{");
@@ -153,232 +220,250 @@ public final class e60<A, T, Z, R> implements l41, sd1, b51 {
         sb.append(z41Var);
         sb.append("}.");
         sb.append(obj == null ? " To indicate failure return a null Resource object, rather than a Resource object containing null data." : "");
-        a(new Exception(sb.toString()));
+        mo21159a(new Exception(sb.toString()));
     }
 
     @Override // com.daaw.l41
-    public boolean e() {
-        return i();
+    /* renamed from: e */
+    public boolean mo17161e() {
+        return mo17159i();
     }
 
     @Override // com.daaw.sd1
-    public void f(int i, int i2) {
+    /* renamed from: f */
+    public void mo10453f(int i, int i2) {
         if (Log.isLoggable("GenericRequest", 2)) {
-            t("Got onSizeReady in " + jl0.a(this.B));
+            m23708t("Got onSizeReady in " + jl0.m18441a(this.f8148B));
         }
-        if (this.C != a.WAITING_FOR_SIZE) {
+        if (this.f8149C != EnumC1163a.WAITING_FOR_SIZE) {
             return;
         }
-        this.C = a.RUNNING;
-        int round = Math.round(this.q * i);
-        int round2 = Math.round(this.q * i2);
-        ip<T> a2 = this.i.f().a(this.k, round, round2);
-        if (a2 == null) {
-            a(new Exception("Failed to load model: '" + this.k + "'"));
+        this.f8149C = EnumC1163a.RUNNING;
+        int round = Math.round(this.f8166q * i);
+        int round2 = Math.round(this.f8166q * i2);
+        InterfaceC1744ip<T> mo3764a = this.f8158i.mo18072f().mo3764a(this.f8160k, round, round2);
+        if (mo3764a == null) {
+            mo21159a(new Exception("Failed to load model: '" + this.f8160k + "'"));
             return;
         }
-        i51<Z, R> b = this.i.b();
+        i51<Z, R> mo18073b = this.f8158i.mo18073b();
         if (Log.isLoggable("GenericRequest", 2)) {
-            t("finished setup for calling load in " + jl0.a(this.B));
+            m23708t("finished setup for calling load in " + jl0.m18441a(this.f8148B));
         }
-        this.y = true;
-        this.A = this.r.g(this.b, round, round2, a2, this.i, this.h, b, this.n, this.m, this.v, this);
-        this.y = this.z != null;
+        this.f8174y = true;
+        this.f8147A = this.f8167r.m22177g(this.f8151b, round, round2, mo3764a, this.f8158i, this.f8157h, mo18073b, this.f8163n, this.f8162m, this.f8171v, this);
+        this.f8174y = this.f8175z != null;
         if (Log.isLoggable("GenericRequest", 2)) {
-            t("finished onSizeReady in " + jl0.a(this.B));
+            m23708t("finished onSizeReady in " + jl0.m18441a(this.f8148B));
         }
     }
 
     @Override // com.daaw.l41
-    public void g() {
-        this.B = jl0.b();
-        if (this.k == null) {
-            a(null);
+    /* renamed from: g */
+    public void mo17160g() {
+        this.f8148B = jl0.m18440b();
+        if (this.f8160k == null) {
+            mo21159a(null);
             return;
         }
-        this.C = a.WAITING_FOR_SIZE;
-        if (tq1.l(this.t, this.u)) {
-            f(this.t, this.u);
+        this.f8149C = EnumC1163a.WAITING_FOR_SIZE;
+        if (tq1.m8859l(this.f8169t, this.f8170u)) {
+            mo10453f(this.f8169t, this.f8170u);
         } else {
-            this.o.e(this);
+            this.f8164o.mo13330e(this);
         }
-        if (!i() && !r() && j()) {
-            this.o.i(p());
+        if (!mo17159i() && !m23710r() && m23718j()) {
+            this.f8164o.mo3965i(m23712p());
         }
         if (Log.isLoggable("GenericRequest", 2)) {
-            t("finished run method in " + jl0.a(this.B));
+            m23708t("finished run method in " + jl0.m18441a(this.f8148B));
         }
     }
 
     @Override // com.daaw.l41
-    public boolean i() {
-        return this.C == a.COMPLETE;
+    /* renamed from: i */
+    public boolean mo17159i() {
+        return this.f8149C == EnumC1163a.COMPLETE;
     }
 
     @Override // com.daaw.l41
     public boolean isCancelled() {
-        a aVar = this.C;
-        return aVar == a.CANCELLED || aVar == a.CLEARED;
+        EnumC1163a enumC1163a = this.f8149C;
+        return enumC1163a == EnumC1163a.CANCELLED || enumC1163a == EnumC1163a.CLEARED;
     }
 
     @Override // com.daaw.l41
     public boolean isRunning() {
-        a aVar = this.C;
-        return aVar == a.RUNNING || aVar == a.WAITING_FOR_SIZE;
+        EnumC1163a enumC1163a = this.f8149C;
+        return enumC1163a == EnumC1163a.RUNNING || enumC1163a == EnumC1163a.WAITING_FOR_SIZE;
     }
 
-    public final boolean j() {
-        m41 m41Var = this.j;
-        return m41Var == null || m41Var.d(this);
+    /* renamed from: j */
+    public final boolean m23718j() {
+        m41 m41Var = this.f8159j;
+        return m41Var == null || m41Var.mo16226d(this);
     }
 
-    public final boolean k() {
-        m41 m41Var = this.j;
-        return m41Var == null || m41Var.h(this);
+    /* renamed from: k */
+    public final boolean m23717k() {
+        m41 m41Var = this.f8159j;
+        return m41Var == null || m41Var.mo16224h(this);
     }
 
-    public void l() {
-        this.C = a.CANCELLED;
-        fx.c cVar = this.A;
-        if (cVar != null) {
-            cVar.a();
-            this.A = null;
+    /* renamed from: l */
+    public void m23716l() {
+        this.f8149C = EnumC1163a.CANCELLED;
+        C1336fx.C1339c c1339c = this.f8147A;
+        if (c1339c != null) {
+            c1339c.m22170a();
+            this.f8147A = null;
         }
     }
 
-    public final Drawable n() {
-        if (this.x == null && this.f > 0) {
-            this.x = this.g.getResources().getDrawable(this.f);
+    /* renamed from: n */
+    public final Drawable m23714n() {
+        if (this.f8173x == null && this.f8155f > 0) {
+            this.f8173x = this.f8156g.getResources().getDrawable(this.f8155f);
         }
-        return this.x;
+        return this.f8173x;
     }
 
-    public final Drawable o() {
-        if (this.c == null && this.d > 0) {
-            this.c = this.g.getResources().getDrawable(this.d);
+    /* renamed from: o */
+    public final Drawable m23713o() {
+        if (this.f8152c == null && this.f8153d > 0) {
+            this.f8152c = this.f8156g.getResources().getDrawable(this.f8153d);
         }
-        return this.c;
+        return this.f8152c;
     }
 
-    public final Drawable p() {
-        if (this.w == null && this.e > 0) {
-            this.w = this.g.getResources().getDrawable(this.e);
+    /* renamed from: p */
+    public final Drawable m23712p() {
+        if (this.f8172w == null && this.f8154e > 0) {
+            this.f8172w = this.f8156g.getResources().getDrawable(this.f8154e);
         }
-        return this.w;
+        return this.f8172w;
     }
 
-    public final void q(ik0<A, T, Z, R> ik0Var, A a2, hi0 hi0Var, Context context, dz0 dz0Var, pj1<R> pj1Var, float f, Drawable drawable, int i, Drawable drawable2, int i2, Drawable drawable3, int i3, q41<? super A, R> q41Var, m41 m41Var, fx fxVar, cn1<Z> cn1Var, Class<R> cls, boolean z, g70<R> g70Var, int i4, int i5, wt wtVar) {
-        Object d;
+    /* renamed from: q */
+    public final void m23711q(ik0<A, T, Z, R> ik0Var, A a, hi0 hi0Var, Context context, dz0 dz0Var, pj1<R> pj1Var, float f, Drawable drawable, int i, Drawable drawable2, int i2, Drawable drawable3, int i3, q41<? super A, R> q41Var, m41 m41Var, C1336fx c1336fx, cn1<Z> cn1Var, Class<R> cls, boolean z, g70<R> g70Var, int i4, int i5, EnumC3465wt enumC3465wt) {
+        Object mo6616d;
         String str;
         String str2;
-        this.i = ik0Var;
-        this.k = a2;
-        this.b = hi0Var;
-        this.c = drawable3;
-        this.d = i3;
-        this.g = context.getApplicationContext();
-        this.n = dz0Var;
-        this.o = pj1Var;
-        this.q = f;
-        this.w = drawable;
-        this.e = i;
-        this.x = drawable2;
-        this.f = i2;
-        this.p = q41Var;
-        this.j = m41Var;
-        this.r = fxVar;
-        this.h = cn1Var;
-        this.l = cls;
-        this.m = z;
-        this.s = g70Var;
-        this.t = i4;
-        this.u = i5;
-        this.v = wtVar;
-        this.C = a.PENDING;
-        if (a2 != null) {
-            m("ModelLoader", ik0Var.f(), "try .using(ModelLoader)");
-            m("Transcoder", ik0Var.b(), "try .as*(Class).transcode(ResourceTranscoder)");
-            m("Transformation", cn1Var, "try .transform(UnitTransformation.get())");
-            if (wtVar.b()) {
-                d = ik0Var.a();
+        this.f8158i = ik0Var;
+        this.f8160k = a;
+        this.f8151b = hi0Var;
+        this.f8152c = drawable3;
+        this.f8153d = i3;
+        this.f8156g = context.getApplicationContext();
+        this.f8163n = dz0Var;
+        this.f8164o = pj1Var;
+        this.f8166q = f;
+        this.f8172w = drawable;
+        this.f8154e = i;
+        this.f8173x = drawable2;
+        this.f8155f = i2;
+        this.f8165p = q41Var;
+        this.f8159j = m41Var;
+        this.f8167r = c1336fx;
+        this.f8157h = cn1Var;
+        this.f8161l = cls;
+        this.f8162m = z;
+        this.f8168s = g70Var;
+        this.f8169t = i4;
+        this.f8170u = i5;
+        this.f8171v = enumC3465wt;
+        this.f8149C = EnumC1163a.PENDING;
+        if (a != null) {
+            m23715m("ModelLoader", ik0Var.mo18072f(), "try .using(ModelLoader)");
+            m23715m("Transcoder", ik0Var.mo18073b(), "try .as*(Class).transcode(ResourceTranscoder)");
+            m23715m("Transformation", cn1Var, "try .transform(UnitTransformation.get())");
+            if (enumC3465wt.m5818b()) {
+                mo6616d = ik0Var.mo6618a();
                 str = "SourceEncoder";
                 str2 = "try .sourceEncoder(Encoder) or .diskCacheStrategy(NONE/RESULT)";
             } else {
-                d = ik0Var.d();
+                mo6616d = ik0Var.mo6616d();
                 str = "SourceDecoder";
                 str2 = "try .decoder/.imageDecoder/.videoDecoder(ResourceDecoder) or .diskCacheStrategy(ALL/SOURCE)";
             }
-            m(str, d, str2);
-            if (wtVar.b() || wtVar.a()) {
-                m("CacheDecoder", ik0Var.e(), "try .cacheDecoder(ResouceDecoder) or .diskCacheStrategy(NONE)");
+            m23715m(str, mo6616d, str2);
+            if (enumC3465wt.m5818b() || enumC3465wt.m5819a()) {
+                m23715m("CacheDecoder", ik0Var.mo6615e(), "try .cacheDecoder(ResouceDecoder) or .diskCacheStrategy(NONE)");
             }
-            if (wtVar.a()) {
-                m("Encoder", ik0Var.c(), "try .encode(ResourceEncoder) or .diskCacheStrategy(NONE/SOURCE)");
+            if (enumC3465wt.m5819a()) {
+                m23715m("Encoder", ik0Var.mo6617c(), "try .encode(ResourceEncoder) or .diskCacheStrategy(NONE/SOURCE)");
             }
         }
     }
 
-    public boolean r() {
-        return this.C == a.FAILED;
+    /* renamed from: r */
+    public boolean m23710r() {
+        return this.f8149C == EnumC1163a.FAILED;
     }
 
-    public final boolean s() {
-        m41 m41Var = this.j;
-        return m41Var == null || !m41Var.a();
+    /* renamed from: s */
+    public final boolean m23709s() {
+        m41 m41Var = this.f8159j;
+        return m41Var == null || !m41Var.mo16227a();
     }
 
-    public final void t(String str) {
+    /* renamed from: t */
+    public final void m23708t(String str) {
         StringBuilder sb = new StringBuilder();
         sb.append(str);
         sb.append(" this: ");
-        sb.append(this.a);
+        sb.append(this.f8150a);
     }
 
-    public final void u() {
-        m41 m41Var = this.j;
+    /* renamed from: u */
+    public final void m23707u() {
+        m41 m41Var = this.f8159j;
         if (m41Var != null) {
-            m41Var.f(this);
+            m41Var.mo16225f(this);
         }
     }
 
-    public final void w(z41<?> z41Var, R r) {
-        boolean s = s();
-        this.C = a.COMPLETE;
-        this.z = z41Var;
-        q41<? super A, R> q41Var = this.p;
-        if (q41Var == null || !q41Var.b(r, (A) this.k, this.o, this.y, s)) {
-            this.o.c(r, this.s.a(this.y, s));
+    /* renamed from: w */
+    public final void m23705w(z41<?> z41Var, R r) {
+        boolean m23709s = m23709s();
+        this.f8149C = EnumC1163a.COMPLETE;
+        this.f8175z = z41Var;
+        q41<? super A, R> q41Var = this.f8165p;
+        if (q41Var == null || !q41Var.mo12776b(r, (A) this.f8160k, this.f8164o, this.f8174y, m23709s)) {
+            this.f8164o.mo5506c(r, this.f8168s.mo6821a(this.f8174y, m23709s));
         }
-        u();
+        m23707u();
         if (Log.isLoggable("GenericRequest", 2)) {
             StringBuilder sb = new StringBuilder();
             sb.append("Resource ready in ");
-            sb.append(jl0.a(this.B));
+            sb.append(jl0.m18441a(this.f8148B));
             sb.append(" size: ");
-            double a2 = z41Var.a();
-            Double.isNaN(a2);
-            sb.append(a2 * 9.5367431640625E-7d);
+            double mo2828a = z41Var.mo2828a();
+            Double.isNaN(mo2828a);
+            sb.append(mo2828a * 9.5367431640625E-7d);
             sb.append(" fromCache: ");
-            sb.append(this.y);
-            t(sb.toString());
+            sb.append(this.f8174y);
+            m23708t(sb.toString());
         }
     }
 
-    public final void x(z41 z41Var) {
-        this.r.k(z41Var);
-        this.z = null;
+    /* renamed from: x */
+    public final void m23704x(z41 z41Var) {
+        this.f8167r.m22173k(z41Var);
+        this.f8175z = null;
     }
 
-    public final void y(Exception exc) {
-        if (j()) {
-            Drawable o = this.k == null ? o() : null;
-            if (o == null) {
-                o = n();
+    /* renamed from: y */
+    public final void m23703y(Exception exc) {
+        if (m23718j()) {
+            Drawable m23713o = this.f8160k == null ? m23713o() : null;
+            if (m23713o == null) {
+                m23713o = m23714n();
             }
-            if (o == null) {
-                o = p();
+            if (m23713o == null) {
+                m23713o = m23712p();
             }
-            this.o.g(exc, o);
+            this.f8164o.mo3967g(exc, m23713o);
         }
     }
 }

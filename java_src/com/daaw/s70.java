@@ -1,18 +1,28 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public class s70 {
-    public static tw1<Integer, Integer, ee0, Boolean> c = new tw1<>();
-    public static final Object d = new Object();
-    public static volatile s70 e = null;
-    public int a = -1;
-    public final l91[] b = new l91[2];
+
+    /* renamed from: c */
+    public static tw1<Integer, Integer, ee0, Boolean> f25949c = new tw1<>();
+
+    /* renamed from: d */
+    public static final Object f25950d = new Object();
+
+    /* renamed from: e */
+    public static volatile s70 f25951e = null;
+
+    /* renamed from: a */
+    public int f25952a = -1;
+
+    /* renamed from: b */
+    public final l91[] f25953b = new l91[2];
 
     public s70() {
         int i = 0;
         while (true) {
-            l91[] l91VarArr = this.b;
+            l91[] l91VarArr = this.f25953b;
             if (i >= l91VarArr.length) {
-                e(this.a, true);
+                m10604e(this.f25952a, true);
                 return;
             } else {
                 l91VarArr[i] = new l91(i);
@@ -21,32 +31,36 @@ public class s70 {
         }
     }
 
-    public static s70 a() {
+    /* renamed from: a */
+    public static s70 m10608a() {
         s70 s70Var;
-        s70 s70Var2 = e;
+        s70 s70Var2 = f25951e;
         if (s70Var2 != null) {
             return s70Var2;
         }
-        synchronized (d) {
-            if (e == null) {
-                e = new s70();
+        synchronized (f25950d) {
+            if (f25951e == null) {
+                f25951e = new s70();
             }
-            s70Var = e;
+            s70Var = f25951e;
         }
         return s70Var;
     }
 
-    public static s70 c() {
-        return e;
+    /* renamed from: c */
+    public static s70 m10606c() {
+        return f25951e;
     }
 
-    public ee0 b() {
-        return d(this.a);
+    /* renamed from: b */
+    public ee0 m10607b() {
+        return m10605d(this.f25952a);
     }
 
-    public l91 d(int i) {
+    /* renamed from: d */
+    public l91 m10605d(int i) {
         if (i >= 0) {
-            l91[] l91VarArr = this.b;
+            l91[] l91VarArr = this.f25953b;
             if (i >= l91VarArr.length) {
                 return null;
             }
@@ -55,45 +69,50 @@ public class s70 {
         return null;
     }
 
-    public void e(int i, boolean z) {
-        i = (i < 0 || i >= this.b.length) ? -1 : -1;
-        c.a(Integer.valueOf(this.a), Integer.valueOf(i), i >= 0 ? this.b[i] : null, Boolean.valueOf(z));
+    /* renamed from: e */
+    public void m10604e(int i, boolean z) {
+        i = (i < 0 || i >= this.f25953b.length) ? -1 : -1;
+        f25949c.m8756a(Integer.valueOf(this.f25952a), Integer.valueOf(i), i >= 0 ? this.f25953b[i] : null, Boolean.valueOf(z));
     }
 
-    public void f(int i, String str) {
+    /* renamed from: f */
+    public void m10603f(int i, String str) {
         if (i >= 0) {
-            l91[] l91VarArr = this.b;
-            if (i < l91VarArr.length && !l91VarArr[i].f.equals(str)) {
-                this.b[i].f = str == null ? "" : new String(str);
-                e(i, true);
+            l91[] l91VarArr = this.f25953b;
+            if (i < l91VarArr.length && !l91VarArr[i].f17150f.equals(str)) {
+                this.f25953b[i].f17150f = str == null ? "" : new String(str);
+                m10604e(i, true);
             }
         }
     }
 
-    public void g(String str) {
-        f(this.a, str);
+    /* renamed from: g */
+    public void m10602g(String str) {
+        m10603f(this.f25952a, str);
     }
 
-    public void h(int i) {
-        this.a = (i < 0 || i >= this.b.length) ? -1 : -1;
-        e(this.a, false);
+    /* renamed from: h */
+    public void m10601h(int i) {
+        this.f25952a = (i < 0 || i >= this.f25953b.length) ? -1 : -1;
+        m10604e(this.f25952a, false);
     }
 
-    public void i(int i, boolean z, String str, sd0 sd0Var) {
+    /* renamed from: i */
+    public void m10600i(int i, boolean z, String str, sd0 sd0Var) {
         if (i >= 0) {
-            l91[] l91VarArr = this.b;
+            l91[] l91VarArr = this.f25953b;
             if (i >= l91VarArr.length) {
                 return;
             }
-            sd0 sd0Var2 = l91VarArr[i].c;
+            sd0 sd0Var2 = l91VarArr[i].f18682c;
             if (sd0Var2 == null || !sd0Var2.equals(sd0Var)) {
-                this.b[i].f = "";
+                this.f25953b[i].f17150f = "";
             }
-            l91[] l91VarArr2 = this.b;
-            l91VarArr2[i].a = z;
-            l91VarArr2[i].b = str;
-            l91VarArr2[i].c = sd0Var;
-            e(i, true);
+            l91[] l91VarArr2 = this.f25953b;
+            l91VarArr2[i].f18680a = z;
+            l91VarArr2[i].f18681b = str;
+            l91VarArr2[i].f18682c = sd0Var;
+            m10604e(i, true);
         }
     }
 }

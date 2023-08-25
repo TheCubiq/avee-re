@@ -1,28 +1,37 @@
 package com.daaw;
 /* loaded from: classes2.dex */
 public final class e78 extends k78 {
-    public final byte[] b;
-    public int c;
-    public int d;
-    public int e;
+
+    /* renamed from: b */
+    public final byte[] f8230b;
+
+    /* renamed from: c */
+    public int f8231c;
+
+    /* renamed from: d */
+    public int f8232d;
+
+    /* renamed from: e */
+    public int f8233e;
 
     public /* synthetic */ e78(byte[] bArr, int i, int i2, boolean z, b78 b78Var) {
         super(null);
-        this.e = Integer.MAX_VALUE;
-        this.b = bArr;
-        this.c = 0;
+        this.f8233e = Integer.MAX_VALUE;
+        this.f8230b = bArr;
+        this.f8231c = 0;
     }
 
-    public final int c(int i) {
-        int i2 = this.e;
-        this.e = 0;
-        int i3 = this.c + this.d;
-        this.c = i3;
+    /* renamed from: c */
+    public final int m23671c(int i) {
+        int i2 = this.f8233e;
+        this.f8233e = 0;
+        int i3 = this.f8231c + this.f8232d;
+        this.f8231c = i3;
         if (i3 > 0) {
-            this.d = i3;
-            this.c = i3 - i3;
+            this.f8232d = i3;
+            this.f8231c = i3 - i3;
         } else {
-            this.d = 0;
+            this.f8232d = 0;
         }
         return i2;
     }

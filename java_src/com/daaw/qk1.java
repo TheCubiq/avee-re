@@ -7,229 +7,269 @@ import com.google.android.exoplayer2.Format;
 import java.util.Collections;
 import java.util.List;
 /* loaded from: classes.dex */
-public final class qk1 extends xa implements Handler.Callback {
-    public final wh1 A;
-    public final k30 B;
-    public boolean C;
-    public boolean D;
-    public int E;
-    public Format F;
-    public uh1 G;
-    public xh1 H;
-    public yh1 I;
-    public yh1 J;
-    public int K;
-    public final Handler y;
-    public final pk1 z;
+public final class qk1 extends AbstractC3517xa implements Handler.Callback {
+
+    /* renamed from: A */
+    public final wh1 f24105A;
+
+    /* renamed from: B */
+    public final k30 f24106B;
+
+    /* renamed from: C */
+    public boolean f24107C;
+
+    /* renamed from: D */
+    public boolean f24108D;
+
+    /* renamed from: E */
+    public int f24109E;
+
+    /* renamed from: F */
+    public Format f24110F;
+
+    /* renamed from: G */
+    public uh1 f24111G;
+
+    /* renamed from: H */
+    public xh1 f24112H;
+
+    /* renamed from: I */
+    public yh1 f24113I;
+
+    /* renamed from: J */
+    public yh1 f24114J;
+
+    /* renamed from: K */
+    public int f24115K;
+
+    /* renamed from: y */
+    public final Handler f24116y;
+
+    /* renamed from: z */
+    public final pk1 f24117z;
 
     public qk1(pk1 pk1Var, Looper looper) {
-        this(pk1Var, looper, wh1.a);
+        this(pk1Var, looper, wh1.f31244a);
     }
 
     public qk1(pk1 pk1Var, Looper looper, wh1 wh1Var) {
         super(3);
-        this.z = (pk1) s6.e(pk1Var);
-        this.y = looper == null ? null : new Handler(looper, this);
-        this.A = wh1Var;
-        this.B = new k30();
+        this.f24117z = (pk1) C2914s6.m10686e(pk1Var);
+        this.f24116y = looper == null ? null : new Handler(looper, this);
+        this.f24105A = wh1Var;
+        this.f24106B = new k30();
     }
 
-    @Override // com.daaw.xa
-    public void A() {
-        this.F = null;
-        J();
-        N();
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: A */
+    public void mo3466A() {
+        this.f24110F = null;
+        m12370J();
+        m12366N();
     }
 
-    @Override // com.daaw.xa
-    public void C(long j, boolean z) {
-        J();
-        this.C = false;
-        this.D = false;
-        if (this.E != 0) {
-            O();
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: C */
+    public void mo3465C(long j, boolean z) {
+        m12370J();
+        this.f24107C = false;
+        this.f24108D = false;
+        if (this.f24109E != 0) {
+            m12365O();
             return;
         }
-        M();
-        this.G.flush();
+        m12367M();
+        this.f24111G.flush();
     }
 
-    @Override // com.daaw.xa
-    public void F(Format[] formatArr, long j) {
+    @Override // com.daaw.AbstractC3517xa
+    /* renamed from: F */
+    public void mo3464F(Format[] formatArr, long j) {
         Format format = formatArr[0];
-        this.F = format;
-        if (this.G != null) {
-            this.E = 1;
+        this.f24110F = format;
+        if (this.f24111G != null) {
+            this.f24109E = 1;
         } else {
-            this.G = this.A.b(format);
+            this.f24111G = this.f24105A.mo6066b(format);
         }
     }
 
-    public final void J() {
-        P(Collections.emptyList());
+    /* renamed from: J */
+    public final void m12370J() {
+        m12364P(Collections.emptyList());
     }
 
-    public final long K() {
-        int i = this.K;
-        if (i == -1 || i >= this.I.d()) {
+    /* renamed from: K */
+    public final long m12369K() {
+        int i = this.f24115K;
+        if (i == -1 || i >= this.f24113I.mo3750d()) {
             return Long.MAX_VALUE;
         }
-        return this.I.b(this.K);
+        return this.f24113I.mo3752b(this.f24115K);
     }
 
-    public final void L(List<ln> list) {
-        this.z.h(list);
+    /* renamed from: L */
+    public final void m12368L(List<C2099ln> list) {
+        this.f24117z.mo1491h(list);
     }
 
-    public final void M() {
-        this.H = null;
-        this.K = -1;
-        yh1 yh1Var = this.I;
+    /* renamed from: M */
+    public final void m12367M() {
+        this.f24112H = null;
+        this.f24115K = -1;
+        yh1 yh1Var = this.f24113I;
         if (yh1Var != null) {
-            yh1Var.m();
-            this.I = null;
+            yh1Var.mo3748m();
+            this.f24113I = null;
         }
-        yh1 yh1Var2 = this.J;
+        yh1 yh1Var2 = this.f24114J;
         if (yh1Var2 != null) {
-            yh1Var2.m();
-            this.J = null;
+            yh1Var2.mo3748m();
+            this.f24114J = null;
         }
     }
 
-    public final void N() {
-        M();
-        this.G.a();
-        this.G = null;
-        this.E = 0;
+    /* renamed from: N */
+    public final void m12366N() {
+        m12367M();
+        this.f24111G.mo16074a();
+        this.f24111G = null;
+        this.f24109E = 0;
     }
 
-    public final void O() {
-        N();
-        this.G = this.A.b(this.F);
+    /* renamed from: O */
+    public final void m12365O() {
+        m12366N();
+        this.f24111G = this.f24105A.mo6066b(this.f24110F);
     }
 
-    public final void P(List<ln> list) {
-        Handler handler = this.y;
+    /* renamed from: P */
+    public final void m12364P(List<C2099ln> list) {
+        Handler handler = this.f24116y;
         if (handler != null) {
             handler.obtainMessage(0, list).sendToTarget();
         } else {
-            L(list);
+            m12368L(list);
         }
     }
 
     @Override // com.daaw.b41
-    public int a(Format format) {
-        return this.A.a(format) ? xa.I(null, format.x) ? 4 : 2 : hq0.l(format.u) ? 1 : 0;
+    /* renamed from: a */
+    public int mo3460a(Format format) {
+        return this.f24105A.mo6067a(format) ? AbstractC3517xa.m5365I(null, format.f35724x) ? 4 : 2 : hq0.m20493l(format.f35721u) ? 1 : 0;
     }
 
     @Override // com.daaw.a41
-    public boolean c() {
-        return this.D;
+    /* renamed from: c */
+    public boolean mo3459c() {
+        return this.f24108D;
     }
 
     @Override // com.daaw.a41
-    public boolean d() {
+    /* renamed from: d */
+    public boolean mo3458d() {
         return true;
     }
 
     @Override // android.os.Handler.Callback
     public boolean handleMessage(Message message) {
         if (message.what == 0) {
-            L((List) message.obj);
+            m12368L((List) message.obj);
             return true;
         }
         throw new IllegalStateException();
     }
 
     @Override // com.daaw.a41
-    public void q(long j, long j2) {
+    /* renamed from: q */
+    public void mo3457q(long j, long j2) {
         boolean z;
-        if (this.D) {
+        if (this.f24108D) {
             return;
         }
-        if (this.J == null) {
-            this.G.b(j);
+        if (this.f24114J == null) {
+            this.f24111G.mo8184b(j);
             try {
-                this.J = this.G.c();
+                this.f24114J = this.f24111G.mo16073c();
             } catch (vh1 e) {
-                throw qz.a(e, x());
+                throw C2802qz.m11927a(e, m5348x());
             }
         }
         if (getState() != 2) {
             return;
         }
-        if (this.I != null) {
-            long K = K();
+        if (this.f24113I != null) {
+            long m12369K = m12369K();
             z = false;
-            while (K <= j) {
-                this.K++;
-                K = K();
+            while (m12369K <= j) {
+                this.f24115K++;
+                m12369K = m12369K();
                 z = true;
             }
         } else {
             z = false;
         }
-        yh1 yh1Var = this.J;
+        yh1 yh1Var = this.f24114J;
         if (yh1Var != null) {
-            if (yh1Var.j()) {
-                if (!z && K() == Long.MAX_VALUE) {
-                    if (this.E == 2) {
-                        O();
+            if (yh1Var.m11437j()) {
+                if (!z && m12369K() == Long.MAX_VALUE) {
+                    if (this.f24109E == 2) {
+                        m12365O();
                     } else {
-                        M();
-                        this.D = true;
+                        m12367M();
+                        this.f24108D = true;
                     }
                 }
-            } else if (this.J.q <= j) {
-                yh1 yh1Var2 = this.I;
+            } else if (this.f24114J.f3671q <= j) {
+                yh1 yh1Var2 = this.f24113I;
                 if (yh1Var2 != null) {
-                    yh1Var2.m();
+                    yh1Var2.mo3748m();
                 }
-                yh1 yh1Var3 = this.J;
-                this.I = yh1Var3;
-                this.J = null;
-                this.K = yh1Var3.a(j);
+                yh1 yh1Var3 = this.f24114J;
+                this.f24113I = yh1Var3;
+                this.f24114J = null;
+                this.f24115K = yh1Var3.mo3753a(j);
                 z = true;
             }
         }
         if (z) {
-            P(this.I.c(j));
+            m12364P(this.f24113I.mo3751c(j));
         }
-        if (this.E == 2) {
+        if (this.f24109E == 2) {
             return;
         }
-        while (!this.C) {
+        while (!this.f24107C) {
             try {
-                if (this.H == null) {
-                    xh1 d = this.G.d();
-                    this.H = d;
-                    if (d == null) {
+                if (this.f24112H == null) {
+                    xh1 mo16072d = this.f24111G.mo16072d();
+                    this.f24112H = mo16072d;
+                    if (mo16072d == null) {
                         return;
                     }
                 }
-                if (this.E == 1) {
-                    this.H.l(4);
-                    this.G.e(this.H);
-                    this.H = null;
-                    this.E = 2;
+                if (this.f24109E == 1) {
+                    this.f24112H.m11435l(4);
+                    this.f24111G.mo16071e(this.f24112H);
+                    this.f24112H = null;
+                    this.f24109E = 2;
                     return;
                 }
-                int G = G(this.B, this.H, false);
-                if (G == -4) {
-                    if (this.H.j()) {
-                        this.C = true;
+                int m5367G = m5367G(this.f24106B, this.f24112H, false);
+                if (m5367G == -4) {
+                    if (this.f24112H.m11437j()) {
+                        this.f24107C = true;
                     } else {
-                        xh1 xh1Var = this.H;
-                        xh1Var.u = this.B.a.L;
-                        xh1Var.o();
+                        xh1 xh1Var = this.f24112H;
+                        xh1Var.f32717u = this.f24106B.f15633a.f35711L;
+                        xh1Var.m21350o();
                     }
-                    this.G.e(this.H);
-                    this.H = null;
-                } else if (G == -3) {
+                    this.f24111G.mo16071e(this.f24112H);
+                    this.f24112H = null;
+                } else if (m5367G == -3) {
                     return;
                 }
             } catch (vh1 e2) {
-                throw qz.a(e2, x());
+                throw C2802qz.m11927a(e2, m5348x());
             }
         }
     }

@@ -7,39 +7,43 @@ import android.os.IBinder;
 import android.os.IInterface;
 /* loaded from: classes.dex */
 public final class je5 implements ServiceConnection {
-    public final int a;
-    public final /* synthetic */ pa b;
 
-    public je5(pa paVar, int i) {
-        this.b = paVar;
-        this.a = i;
+    /* renamed from: a */
+    public final int f15066a;
+
+    /* renamed from: b */
+    public final /* synthetic */ AbstractC2527pa f15067b;
+
+    public je5(AbstractC2527pa abstractC2527pa, int i) {
+        this.f15067b = abstractC2527pa;
+        this.f15066a = i;
     }
 
     @Override // android.content.ServiceConnection
     public final void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         Object obj;
-        pa paVar = this.b;
+        AbstractC2527pa abstractC2527pa = this.f15067b;
         if (iBinder == null) {
-            pa.D(paVar, 16);
+            AbstractC2527pa.m13563D(abstractC2527pa, 16);
             return;
         }
-        obj = paVar.n;
+        obj = abstractC2527pa.f22749n;
         synchronized (obj) {
-            pa paVar2 = this.b;
+            AbstractC2527pa abstractC2527pa2 = this.f15067b;
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.google.android.gms.common.internal.IGmsServiceBroker");
-            paVar2.o = (queryLocalInterface == null || !(queryLocalInterface instanceof ud0)) ? new e62(iBinder) : (ud0) queryLocalInterface;
+            abstractC2527pa2.f22750o = (queryLocalInterface == null || !(queryLocalInterface instanceof ud0)) ? new e62(iBinder) : (ud0) queryLocalInterface;
         }
-        this.b.E(0, null, this.a);
+        this.f15067b.m13562E(0, null, this.f15066a);
     }
 
     @Override // android.content.ServiceConnection
     public final void onServiceDisconnected(ComponentName componentName) {
         Object obj;
-        obj = this.b.n;
+        obj = this.f15067b.f22749n;
         synchronized (obj) {
-            this.b.o = null;
+            this.f15067b.f22750o = null;
         }
-        Handler handler = this.b.l;
-        handler.sendMessage(handler.obtainMessage(6, this.a, 1));
+        Handler handler = this.f15067b.f22747l;
+        handler.sendMessage(handler.obtainMessage(6, this.f15066a, 1));
     }
 }

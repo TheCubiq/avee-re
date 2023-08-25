@@ -9,11 +9,12 @@ public final class ai2 extends ls7 implements yt7 {
     static {
         ai2 ai2Var = new ai2();
         zzb = ai2Var;
-        ls7.C(ai2.class, ai2Var);
+        ls7.m16597C(ai2.class, ai2Var);
     }
 
     @Override // com.daaw.ls7
-    public final Object I(int i, Object obj, Object obj2) {
+    /* renamed from: I */
+    public final Object mo1768I(int i, Object obj, Object obj2) {
         int i2 = i - 1;
         if (i2 != 0) {
             if (i2 != 2) {
@@ -28,7 +29,7 @@ public final class ai2 extends ls7 implements yt7 {
                 }
                 return new ai2();
             }
-            return ls7.z(zzb, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဉ\u0000\u0002ဉ\u0001", new Object[]{"zzd", "zze", "zzf"});
+            return ls7.m16573z(zzb, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဉ\u0000\u0002ဉ\u0001", new Object[]{"zzd", "zze", "zzf"});
         }
         return (byte) 1;
     }

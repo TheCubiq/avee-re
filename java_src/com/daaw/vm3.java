@@ -12,14 +12,30 @@ import org.json.JSONException;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class vm3 {
-    public final List a;
-    public final List b;
-    public final List c;
-    public final List d;
-    public final List e;
-    public final List f;
-    public final String g;
-    public final String h;
+
+    /* renamed from: a */
+    public final List f30321a;
+
+    /* renamed from: b */
+    public final List f30322b;
+
+    /* renamed from: c */
+    public final List f30323c;
+
+    /* renamed from: d */
+    public final List f30324d;
+
+    /* renamed from: e */
+    public final List f30325e;
+
+    /* renamed from: f */
+    public final List f30326f;
+
+    /* renamed from: g */
+    public final String f30327g;
+
+    /* renamed from: h */
+    public final String f30328h;
 
     public vm3(JSONObject jSONObject) {
         if (k04.zzm(2)) {
@@ -31,10 +47,10 @@ public final class vm3 {
         for (int i2 = 0; i2 < jSONArray.length(); i2++) {
             try {
                 um3 um3Var = new um3(jSONArray.getJSONObject(i2));
-                "banner".equalsIgnoreCase(um3Var.v);
+                "banner".equalsIgnoreCase(um3Var.f29210v);
                 arrayList.add(um3Var);
                 if (i < 0) {
-                    Iterator it = um3Var.c.iterator();
+                    Iterator it = um3Var.f29191c.iterator();
                     while (true) {
                         if (it.hasNext()) {
                             if (((String) it.next()).equals("com.google.ads.mediation.admob.AdMobAdapter")) {
@@ -50,35 +66,35 @@ public final class vm3 {
             }
         }
         jSONArray.length();
-        this.a = Collections.unmodifiableList(arrayList);
-        this.g = jSONObject.optString("qdata");
+        this.f30321a = Collections.unmodifiableList(arrayList);
+        this.f30327g = jSONObject.optString("qdata");
         jSONObject.optInt("fs_model_type", -1);
         jSONObject.optLong("timeout_ms", -1L);
         JSONObject optJSONObject = jSONObject.optJSONObject("settings");
         if (optJSONObject == null) {
-            this.b = null;
-            this.c = null;
-            this.d = null;
-            this.e = null;
-            this.f = null;
-            this.h = null;
+            this.f30322b = null;
+            this.f30323c = null;
+            this.f30324d = null;
+            this.f30325e = null;
+            this.f30326f = null;
+            this.f30328h = null;
             return;
         }
         optJSONObject.optLong("ad_network_timeout_millis", -1L);
         zzt.zzg();
-        this.b = wm3.a(optJSONObject, "click_urls");
+        this.f30322b = wm3.m5979a(optJSONObject, "click_urls");
         zzt.zzg();
-        this.c = wm3.a(optJSONObject, "imp_urls");
+        this.f30323c = wm3.m5979a(optJSONObject, "imp_urls");
         zzt.zzg();
-        this.d = wm3.a(optJSONObject, "downloaded_imp_urls");
+        this.f30324d = wm3.m5979a(optJSONObject, "downloaded_imp_urls");
         zzt.zzg();
-        this.e = wm3.a(optJSONObject, "nofill_urls");
+        this.f30325e = wm3.m5979a(optJSONObject, "nofill_urls");
         zzt.zzg();
-        this.f = wm3.a(optJSONObject, "remote_ping_urls");
+        this.f30326f = wm3.m5979a(optJSONObject, "remote_ping_urls");
         optJSONObject.optBoolean("render_in_browser", false);
         optJSONObject.optLong("refresh", -1L);
-        zzcdd h = zzcdd.h(optJSONObject.optJSONArray("rewards"));
-        this.h = h != null ? h.p : null;
+        zzcdd m1095h = zzcdd.m1095h(optJSONObject.optJSONArray("rewards"));
+        this.f30328h = m1095h != null ? m1095h.f36977p : null;
         optJSONObject.optBoolean("use_displayed_impression", false);
         optJSONObject.optBoolean("allow_pub_rendered_attribution", false);
         optJSONObject.optBoolean("allow_pub_owned_ad_view", false);

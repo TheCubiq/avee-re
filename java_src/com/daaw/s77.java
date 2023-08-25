@@ -8,28 +8,34 @@ import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public final class s77 extends i67 {
     @CheckForNull
-    public f77 w;
+
+    /* renamed from: w */
+    public f77 f25968w;
     @CheckForNull
-    public ScheduledFuture x;
+
+    /* renamed from: x */
+    public ScheduledFuture f25969x;
 
     public s77(f77 f77Var) {
         Objects.requireNonNull(f77Var);
-        this.w = f77Var;
+        this.f25968w = f77Var;
     }
 
-    public static f77 F(f77 f77Var, long j, TimeUnit timeUnit, ScheduledExecutorService scheduledExecutorService) {
+    /* renamed from: F */
+    public static f77 m10592F(f77 f77Var, long j, TimeUnit timeUnit, ScheduledExecutorService scheduledExecutorService) {
         s77 s77Var = new s77(f77Var);
         p77 p77Var = new p77(s77Var);
-        s77Var.x = scheduledExecutorService.schedule(p77Var, j, timeUnit);
-        f77Var.f(p77Var, g67.INSTANCE);
+        s77Var.f25969x = scheduledExecutorService.schedule(p77Var, j, timeUnit);
+        f77Var.mo6515f(p77Var, g67.INSTANCE);
         return s77Var;
     }
 
     @Override // com.daaw.c57
     @CheckForNull
-    public final String e() {
-        f77 f77Var = this.w;
-        ScheduledFuture scheduledFuture = this.x;
+    /* renamed from: e */
+    public final String mo7361e() {
+        f77 f77Var = this.f25968w;
+        ScheduledFuture scheduledFuture = this.f25969x;
         if (f77Var != null) {
             String str = "inputFuture=[" + f77Var.toString() + "]";
             if (scheduledFuture != null) {
@@ -45,13 +51,14 @@ public final class s77 extends i67 {
     }
 
     @Override // com.daaw.c57
-    public final void g() {
-        v(this.w);
-        ScheduledFuture scheduledFuture = this.x;
+    /* renamed from: g */
+    public final void mo7360g() {
+        m25601v(this.f25968w);
+        ScheduledFuture scheduledFuture = this.f25969x;
         if (scheduledFuture != null) {
             scheduledFuture.cancel(false);
         }
-        this.w = null;
-        this.x = null;
+        this.f25968w = null;
+        this.f25969x = null;
     }
 }

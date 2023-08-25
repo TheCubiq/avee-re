@@ -9,26 +9,27 @@ import javax.annotation.CheckForNull;
 public abstract class r27 extends x37 {
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final void clear() {
-        d().clear();
+        mo10814d().clear();
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public abstract boolean contains(@CheckForNull Object obj);
 
-    public abstract Map d();
+    /* renamed from: d */
+    public abstract Map mo10814d();
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final boolean isEmpty() {
-        return d().isEmpty();
+        return mo10814d().isEmpty();
     }
 
     @Override // com.daaw.x37, java.util.AbstractSet, java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final boolean removeAll(Collection collection) {
         Objects.requireNonNull(collection);
         try {
-            return y37.d(this, collection);
+            return y37.m4141d(this, collection);
         } catch (UnsupportedOperationException unused) {
-            return y37.e(this, collection.iterator());
+            return y37.m4140e(this, collection.iterator());
         }
     }
 
@@ -41,7 +42,7 @@ public abstract class r27 extends x37 {
         } catch (UnsupportedOperationException unused) {
             int size = collection.size();
             if (size < 3) {
-                k07.a(size, "expectedSize");
+                k07.m18089a(size, "expectedSize");
                 i = size + 1;
             } else if (size < 1073741824) {
                 double d = size;
@@ -56,12 +57,12 @@ public abstract class r27 extends x37 {
                     hashSet.add(((Map.Entry) obj).getKey());
                 }
             }
-            return d().keySet().retainAll(hashSet);
+            return mo10814d().keySet().retainAll(hashSet);
         }
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
     public final int size() {
-        return d().size();
+        return mo10814d().size();
     }
 }

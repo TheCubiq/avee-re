@@ -9,9 +9,10 @@ public final class ud3 extends bp2 implements wd3 {
     }
 
     @Override // com.daaw.wd3
-    public final void V0(nd3 nd3Var) {
-        Parcel D = D();
-        dp2.g(D, nd3Var);
-        M(1, D);
+    /* renamed from: V0 */
+    public final void mo6154V0(nd3 nd3Var) {
+        Parcel m25952D = m25952D();
+        dp2.m24101g(m25952D, nd3Var);
+        m25950M(1, m25952D);
     }
 }

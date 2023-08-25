@@ -10,18 +10,18 @@ public final class h23 implements Comparator {
     public final /* bridge */ /* synthetic */ int compare(Object obj, Object obj2) {
         t13 t13Var = (t13) obj;
         t13 t13Var2 = (t13) obj2;
-        if (t13Var.d() >= t13Var2.d()) {
-            if (t13Var.d() > t13Var2.d()) {
+        if (t13Var.m9652d() >= t13Var2.m9652d()) {
+            if (t13Var.m9652d() > t13Var2.m9652d()) {
                 return 1;
             }
-            if (t13Var.b() >= t13Var2.b()) {
-                if (t13Var.b() > t13Var2.b()) {
+            if (t13Var.m9654b() >= t13Var2.m9654b()) {
+                if (t13Var.m9654b() > t13Var2.m9654b()) {
                     return 1;
                 }
-                float a = (t13Var.a() - t13Var.d()) * (t13Var.c() - t13Var.b());
-                float a2 = (t13Var2.a() - t13Var2.d()) * (t13Var2.c() - t13Var2.b());
-                if (a <= a2) {
-                    return a < a2 ? 1 : 0;
+                float m9655a = (t13Var.m9655a() - t13Var.m9652d()) * (t13Var.m9653c() - t13Var.m9654b());
+                float m9655a2 = (t13Var2.m9655a() - t13Var2.m9652d()) * (t13Var2.m9653c() - t13Var2.m9654b());
+                if (m9655a <= m9655a2) {
+                    return m9655a < m9655a2 ? 1 : 0;
                 }
             }
         }

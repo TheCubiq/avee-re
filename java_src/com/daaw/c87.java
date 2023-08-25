@@ -3,21 +3,25 @@ package com.daaw;
 import java.io.OutputStream;
 /* loaded from: classes.dex */
 public final class c87 {
-    public final OutputStream a;
+
+    /* renamed from: a */
+    public final OutputStream f5623a;
 
     public c87(OutputStream outputStream) {
-        this.a = outputStream;
+        this.f5623a = outputStream;
     }
 
-    public static c87 b(OutputStream outputStream) {
+    /* renamed from: b */
+    public static c87 m25510b(OutputStream outputStream) {
         return new c87(outputStream);
     }
 
-    public final void a(dn7 dn7Var) {
+    /* renamed from: a */
+    public final void m25511a(dn7 dn7Var) {
         try {
-            dn7Var.h(this.a);
+            dn7Var.m20482h(this.f5623a);
         } finally {
-            this.a.close();
+            this.f5623a.close();
         }
     }
 }

@@ -9,144 +9,165 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 /* loaded from: classes.dex */
 public class d41 implements GLSurfaceView.Renderer {
-    public final y31 a;
-    public Context c;
-    public sg0 e;
-    public f61 b = null;
-    public boolean d = false;
-    public long f = System.currentTimeMillis();
+
+    /* renamed from: a */
+    public final y31 f6519a;
+
+    /* renamed from: c */
+    public Context f6521c;
+
+    /* renamed from: e */
+    public sg0 f6523e;
+
+    /* renamed from: b */
+    public f61 f6520b = null;
+
+    /* renamed from: d */
+    public boolean f6522d = false;
+
+    /* renamed from: f */
+    public long f6524f = System.currentTimeMillis();
 
     public d41(Context context, Resources resources, sg0 sg0Var) {
-        this.c = null;
-        this.c = context;
-        this.e = sg0Var;
+        this.f6521c = null;
+        this.f6521c = context;
+        this.f6523e = sg0Var;
         y31 y31Var = new y31(sg0Var);
-        this.a = y31Var;
-        y31Var.P(resources);
-        d();
+        this.f6519a = y31Var;
+        y31Var.m4214P(resources);
+        m24653d();
     }
 
-    public g40 a() {
-        return this.a.C();
+    /* renamed from: a */
+    public g40 m24656a() {
+        return this.f6519a.m4227C();
     }
 
-    public int b() {
-        return this.a.D();
+    /* renamed from: b */
+    public int m24655b() {
+        return this.f6519a.m4226D();
     }
 
-    public void c(vn vnVar, od0 od0Var) {
-        f61 f61Var = this.b;
+    /* renamed from: c */
+    public void m24654c(C3355vn c3355vn, od0 od0Var) {
+        f61 f61Var = this.f6520b;
         if (f61Var != null) {
-            f61Var.p0(vnVar, od0Var);
+            f61Var.m22891p0(c3355vn, od0Var);
         }
     }
 
-    public void d() {
-        vn a = VisualizerViewCore.y.a(null);
-        if (a != null) {
-            g(a);
+    /* renamed from: d */
+    public void m24653d() {
+        C3355vn m6692a = VisualizerViewCore.f3831y.m6692a(null);
+        if (m6692a != null) {
+            m24650g(m6692a);
         }
     }
 
-    public void e() {
-        f61 f61Var = this.b;
+    /* renamed from: e */
+    public void m24652e() {
+        f61 f61Var = this.f6520b;
         if (f61Var != null) {
-            f61Var.l();
+            f61Var.mo2451l();
         }
     }
 
-    public void f(vn vnVar) {
-        f61 f61Var = this.b;
+    /* renamed from: f */
+    public void m24651f(C3355vn c3355vn) {
+        f61 f61Var = this.f6520b;
         if (f61Var != null) {
-            f61Var.t0(vnVar);
+            f61Var.m22887t0(c3355vn);
         }
     }
 
-    public void g(vn vnVar) {
-        if (this.b == null) {
-            this.b = tv1.i().e(0, false, "");
+    /* renamed from: g */
+    public void m24650g(C3355vn c3355vn) {
+        if (this.f6520b == null) {
+            this.f6520b = tv1.m8771i().m8775e(0, false, "");
         }
-        this.b.t0(vnVar);
-        f61 f61Var = this.b;
+        this.f6520b.m22887t0(c3355vn);
+        f61 f61Var = this.f6520b;
         if (f61Var != null) {
-            f61Var.l();
+            f61Var.mo2451l();
         }
-        this.e.f();
+        this.f6523e.mo2871f();
     }
 
-    public void h(f61 f61Var) {
-        this.b = f61Var;
+    /* renamed from: h */
+    public void m24649h(f61 f61Var) {
+        this.f6520b = f61Var;
         if (f61Var != null) {
-            f61Var.l();
+            f61Var.mo2451l();
         }
-        this.e.f();
+        this.f6523e.mo2871f();
     }
 
-    public void i(int i, int i2) {
+    /* renamed from: i */
+    public void m24648i(int i, int i2) {
         if (i2 <= 0) {
-            this.a.U(i);
+            this.f6519a.m4209U(i);
             return;
         }
-        tv e = this.b.e(i2);
-        if (e != null) {
-            e.U(i);
+        AbstractC3118tv mo7693e = this.f6520b.mo7693e(i2);
+        if (mo7693e != null) {
+            mo7693e.m8797U(i);
         }
     }
 
     @Override // android.opengl.GLSurfaceView.Renderer
     public void onDrawFrame(GL10 gl10) {
-        if (this.d && this.a.u.y()) {
-            f61 f61Var = this.b;
-            f40 a = VisualizerViewCore.B.a(null);
+        if (this.f6522d && this.f6519a.f33263u.m4161y()) {
+            f61 f61Var = this.f6520b;
+            f40 m6692a = VisualizerViewCore.f3817B.m6692a(null);
             GLES20.glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
             GLES20.glClear(16640);
             GLES20.glTexParameteri(3553, 10241, 9729);
             GLES20.glTexParameteri(3553, 10240, 9729);
             boolean z = true;
-            this.a.T(1);
-            y31 y31Var = this.a;
-            if (a != null) {
-                y31Var.N(a.c, a.a, a.b);
+            this.f6519a.m4210T(1);
+            y31 y31Var = this.f6519a;
+            if (m6692a != null) {
+                y31Var.m4216N(m6692a.f9088c, m6692a.f9086a, m6692a.f9087b);
             } else {
-                y31Var.N(-1, -1, -1);
+                y31Var.m4216N(-1, -1, -1);
             }
-            VisualizerViewCore.A.a(Float.valueOf(this.a.d()), Float.valueOf(this.a.g()));
+            VisualizerViewCore.f3816A.m10862a(Float.valueOf(this.f6519a.mo2887d()), Float.valueOf(this.f6519a.mo2884g()));
             if (f61Var != null) {
-                f61Var.y(this.a, null, null);
-            }
-            if (f61Var != null) {
-                f61Var.s0(a != null, (a == null || !a.d) ? false : false, a != null ? a.e : null);
+                f61Var.mo2435y(this.f6519a, null, null);
             }
             if (f61Var != null) {
-                f61Var.B(this.a, null);
+                f61Var.m22888s0(m6692a != null, (m6692a == null || !m6692a.f9089d) ? false : false, m6692a != null ? m6692a.f9090e : null);
             }
-            this.a.M();
-            this.a.i(null);
-            if (f61Var == null || a == null || f61Var.l0() == null) {
+            if (f61Var != null) {
+                f61Var.mo2460B(this.f6519a, null);
+            }
+            this.f6519a.m4217M();
+            this.f6519a.mo2882i(null);
+            if (f61Var == null || m6692a == null || f61Var.m22895l0() == null) {
                 return;
             }
-            int[] l0 = f61Var.l0();
-            VisualizerViewCore.C.a(l0, Integer.valueOf(f61Var.n0()), Integer.valueOf(f61Var.m0()), l0);
+            int[] m22895l0 = f61Var.m22895l0();
+            VisualizerViewCore.f3818C.m8756a(m22895l0, Integer.valueOf(f61Var.m22893n0()), Integer.valueOf(f61Var.m22894m0()), m22895l0);
         }
     }
 
     @Override // android.opengl.GLSurfaceView.Renderer
     public void onSurfaceChanged(GL10 gl10, int i, int i2) {
-        lz1.c("onSurfaceChanged: " + i + " ; " + i2);
-        this.a.Q(dx0.e(), i, i2);
-        f61 f61Var = this.b;
+        lz1.m16363c("onSurfaceChanged: " + i + " ; " + i2);
+        this.f6519a.m4213Q(dx0.m23837e(), i, i2);
+        f61 f61Var = this.f6520b;
         if (f61Var != null) {
-            f61Var.l();
+            f61Var.mo2451l();
         }
     }
 
     @Override // android.opengl.GLSurfaceView.Renderer
     public void onSurfaceCreated(GL10 gl10, EGLConfig eGLConfig) {
-        this.d = true;
-        this.a.R();
-        f61 f61Var = this.b;
+        this.f6522d = true;
+        this.f6519a.m4212R();
+        f61 f61Var = this.f6520b;
         if (f61Var != null) {
-            f61Var.l();
+            f61Var.mo2451l();
         }
     }
 }

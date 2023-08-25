@@ -9,7 +9,9 @@ import java.util.Objects;
 import javax.annotation.CheckForNull;
 /* loaded from: classes.dex */
 public abstract class t17 extends AbstractCollection implements Serializable {
-    public static final Object[] p = new Object[0];
+
+    /* renamed from: p */
+    public static final Object[] f26903p = new Object[0];
 
     @Override // java.util.AbstractCollection, java.util.Collection
     @Deprecated
@@ -33,20 +35,24 @@ public abstract class t17 extends AbstractCollection implements Serializable {
     public abstract boolean contains(@CheckForNull Object obj);
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public int d(Object[] objArr, int i) {
+    /* renamed from: d */
+    public int mo2850d(Object[] objArr, int i) {
         throw null;
     }
 
-    int e() {
+    /* renamed from: e */
+    int mo5648e() {
         throw new UnsupportedOperationException();
     }
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public int f() {
+    /* renamed from: f */
+    public int mo5647f() {
         throw new UnsupportedOperationException();
     }
 
-    public y17 h() {
+    /* renamed from: h */
+    public y17 mo2849h() {
         throw null;
     }
 
@@ -55,11 +61,13 @@ public abstract class t17 extends AbstractCollection implements Serializable {
     public abstract c47 iterator();
 
     /* JADX INFO: Access modifiers changed from: package-private */
-    public abstract boolean k();
+    /* renamed from: k */
+    public abstract boolean mo5646k();
 
     /* JADX INFO: Access modifiers changed from: package-private */
     @CheckForNull
-    public Object[] m() {
+    /* renamed from: m */
+    public Object[] mo5645m() {
         return null;
     }
 
@@ -83,7 +91,7 @@ public abstract class t17 extends AbstractCollection implements Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final Object[] toArray() {
-        return toArray(p);
+        return toArray(f26903p);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection
@@ -92,15 +100,15 @@ public abstract class t17 extends AbstractCollection implements Serializable {
         int size = size();
         int length = objArr.length;
         if (length < size) {
-            Object[] m = m();
-            if (m != null) {
-                return Arrays.copyOfRange(m, f(), e(), objArr.getClass());
+            Object[] mo5645m = mo5645m();
+            if (mo5645m != null) {
+                return Arrays.copyOfRange(mo5645m, mo5647f(), mo5648e(), objArr.getClass());
             }
             objArr = (Object[]) Array.newInstance(objArr.getClass().getComponentType(), size);
         } else if (length > size) {
             objArr[size] = null;
         }
-        d(objArr, 0);
+        mo2850d(objArr, 0);
         return objArr;
     }
 }

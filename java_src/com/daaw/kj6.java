@@ -13,17 +13,26 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes.dex */
 public final class kj6 {
-    public static kj6 d;
-    public final Context a;
-    public final zzcl b;
-    public final AtomicReference c = new AtomicReference();
+
+    /* renamed from: d */
+    public static kj6 f16416d;
+
+    /* renamed from: a */
+    public final Context f16417a;
+
+    /* renamed from: b */
+    public final zzcl f16418b;
+
+    /* renamed from: c */
+    public final AtomicReference f16419c = new AtomicReference();
 
     public kj6(Context context, zzcl zzclVar) {
-        this.a = context;
-        this.b = zzclVar;
+        this.f16417a = context;
+        this.f16418b = zzclVar;
     }
 
-    public static zzcl a(Context context) {
+    /* renamed from: a */
+    public static zzcl m17699a(Context context) {
         try {
             return zzck.asInterface((IBinder) context.getClassLoader().loadClass("com.google.android.gms.ads.internal.client.LiteSdkInfo").getConstructor(Context.class).newInstance(context));
         } catch (ClassCastException | ClassNotFoundException | IllegalAccessException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
@@ -32,34 +41,37 @@ public final class kj6 {
         }
     }
 
-    public static kj6 d(Context context) {
+    /* renamed from: d */
+    public static kj6 m17696d(Context context) {
         synchronized (kj6.class) {
-            kj6 kj6Var = d;
+            kj6 kj6Var = f16416d;
             if (kj6Var != null) {
                 return kj6Var;
             }
             Context applicationContext = context.getApplicationContext();
-            long longValue = ((Long) hb3.b.e()).longValue();
+            long longValue = ((Long) hb3.f12352b.m16137e()).longValue();
             zzcl zzclVar = null;
             if (longValue > 0 && longValue <= 224400003) {
-                zzclVar = a(applicationContext);
+                zzclVar = m17699a(applicationContext);
             }
             kj6 kj6Var2 = new kj6(applicationContext, zzclVar);
-            d = kj6Var2;
+            f16416d = kj6Var2;
             return kj6Var2;
         }
     }
 
-    public final an3 b() {
-        return (an3) this.c.get();
+    /* renamed from: b */
+    public final an3 m17698b() {
+        return (an3) this.f16419c.get();
     }
 
-    public final zzchu c(int i, boolean z, int i2) {
+    /* renamed from: c */
+    public final zzchu m17697c(int i, boolean z, int i2) {
         zzt.zzp();
-        boolean zzA = zzs.zzA(this.a);
+        boolean zzA = zzs.zzA(this.f16417a);
         zzchu zzchuVar = new zzchu(224400000, i2, true, zzA);
-        if (((Boolean) hb3.c.e()).booleanValue()) {
-            zzcl zzclVar = this.b;
+        if (((Boolean) hb3.f12353c.m16137e()).booleanValue()) {
+            zzcl zzclVar = this.f16418b;
             zzen zzenVar = null;
             if (zzclVar != null) {
                 try {
@@ -73,40 +85,32 @@ public final class kj6 {
     }
 
     /* JADX WARN: Removed duplicated region for block: B:11:0x001e  */
+    /* renamed from: e */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void e(com.daaw.an3 r4) {
-        /*
-            r3 = this;
-            com.daaw.ma3 r0 = com.daaw.hb3.a
-            java.lang.Object r0 = r0.e()
-            java.lang.Boolean r0 = (java.lang.Boolean) r0
-            boolean r0 = r0.booleanValue()
-            r1 = 0
-            if (r0 == 0) goto L23
-            com.google.android.gms.ads.internal.client.zzcl r0 = r3.b
-            if (r0 != 0) goto L15
-        L13:
-            r0 = r1
-            goto L19
-        L15:
-            com.daaw.an3 r0 = r0.getAdapterCreator()     // Catch: android.os.RemoteException -> L13
-        L19:
-            java.util.concurrent.atomic.AtomicReference r2 = r3.c
-            if (r0 != 0) goto L1e
-            goto L1f
-        L1e:
-            r4 = r0
-        L1f:
-            com.daaw.jj6.a(r2, r1, r4)
-            return
-        L23:
-            java.util.concurrent.atomic.AtomicReference r0 = r3.c
-            com.daaw.jj6.a(r0, r1, r4)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.kj6.e(com.daaw.an3):void");
+    public final void m17695e(an3 an3Var) {
+        an3 adapterCreator;
+        if (!((Boolean) hb3.f12351a.m16137e()).booleanValue()) {
+            jj6.m18473a(this.f16419c, null, an3Var);
+            return;
+        }
+        zzcl zzclVar = this.f16418b;
+        if (zzclVar != null) {
+            try {
+                adapterCreator = zzclVar.getAdapterCreator();
+            } catch (RemoteException unused) {
+            }
+            AtomicReference atomicReference = this.f16419c;
+            if (adapterCreator != null) {
+                an3Var = adapterCreator;
+            }
+            jj6.m18473a(atomicReference, null, an3Var);
+        }
+        adapterCreator = null;
+        AtomicReference atomicReference2 = this.f16419c;
+        if (adapterCreator != null) {
+        }
+        jj6.m18473a(atomicReference2, null, an3Var);
     }
 }

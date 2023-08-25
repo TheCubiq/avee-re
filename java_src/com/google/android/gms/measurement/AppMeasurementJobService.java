@@ -9,50 +9,56 @@ import com.daaw.s88;
 @TargetApi(24)
 /* loaded from: classes2.dex */
 public final class AppMeasurementJobService extends JobService implements p88 {
-    public s88 p;
 
-    public final s88 a() {
-        if (this.p == null) {
-            this.p = new s88(this);
+    /* renamed from: p */
+    public s88 f37051p;
+
+    /* renamed from: a */
+    public final s88 m1086a() {
+        if (this.f37051p == null) {
+            this.f37051p = new s88(this);
         }
-        return this.p;
+        return this.f37051p;
     }
 
     @Override // com.daaw.p88
-    public final boolean b(int i) {
+    /* renamed from: b */
+    public final boolean mo1083b(int i) {
         throw new UnsupportedOperationException();
     }
 
     @Override // com.daaw.p88
-    public final void c(Intent intent) {
+    /* renamed from: c */
+    public final void mo1082c(Intent intent) {
     }
 
     @Override // com.daaw.p88
     @TargetApi(24)
-    public final void d(JobParameters jobParameters, boolean z) {
+    /* renamed from: d */
+    public final void mo1081d(JobParameters jobParameters, boolean z) {
         jobFinished(jobParameters, false);
     }
 
     @Override // android.app.Service
     public void onCreate() {
         super.onCreate();
-        a().e();
+        m1086a().m10522e();
     }
 
     @Override // android.app.Service
     public void onDestroy() {
-        a().f();
+        m1086a().m10521f();
         super.onDestroy();
     }
 
     @Override // android.app.Service
     public void onRebind(Intent intent) {
-        a().g(intent);
+        m1086a().m10520g(intent);
     }
 
     @Override // android.app.job.JobService
     public boolean onStartJob(JobParameters jobParameters) {
-        a().i(jobParameters);
+        m1086a().m10518i(jobParameters);
         return true;
     }
 
@@ -63,7 +69,7 @@ public final class AppMeasurementJobService extends JobService implements p88 {
 
     @Override // android.app.Service
     public boolean onUnbind(Intent intent) {
-        a().j(intent);
+        m1086a().m10517j(intent);
         return true;
     }
 }

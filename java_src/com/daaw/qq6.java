@@ -7,17 +7,21 @@ import android.webkit.WebView;
 import org.json.JSONObject;
 /* loaded from: classes.dex */
 public final class qq6 {
-    public static final qq6 a = new qq6();
 
-    public static final qq6 a() {
-        return a;
+    /* renamed from: a */
+    public static final qq6 f24263a = new qq6();
+
+    /* renamed from: a */
+    public static final qq6 m12283a() {
+        return f24263a;
     }
 
-    public final void b(WebView webView, String str, Object... objArr) {
+    /* renamed from: b */
+    public final void m12282b(WebView webView, String str, Object... objArr) {
         String obj;
         if (webView == null) {
             String concat = "The WebView is null for ".concat(str);
-            if (qp6.a.booleanValue()) {
+            if (qp6.f24234a.booleanValue()) {
                 TextUtils.isEmpty(concat);
                 return;
             }
@@ -59,23 +63,28 @@ public final class qq6 {
         }
     }
 
-    public final void c(WebView webView) {
-        b(webView, "finishSession", new Object[0]);
+    /* renamed from: c */
+    public final void m12281c(WebView webView) {
+        m12282b(webView, "finishSession", new Object[0]);
     }
 
-    public final void d(WebView webView, JSONObject jSONObject) {
-        b(webView, "init", jSONObject);
+    /* renamed from: d */
+    public final void m12280d(WebView webView, JSONObject jSONObject) {
+        m12282b(webView, "init", jSONObject);
     }
 
-    public final void e(WebView webView, float f) {
-        b(webView, "setDeviceVolume", Float.valueOf(f));
+    /* renamed from: e */
+    public final void m12279e(WebView webView, float f) {
+        m12282b(webView, "setDeviceVolume", Float.valueOf(f));
     }
 
-    public final void f(WebView webView, String str) {
-        b(webView, "setNativeViewHierarchy", str);
+    /* renamed from: f */
+    public final void m12278f(WebView webView, String str) {
+        m12282b(webView, "setNativeViewHierarchy", str);
     }
 
-    public final void g(WebView webView, String str, JSONObject jSONObject, JSONObject jSONObject2, JSONObject jSONObject3) {
-        b(webView, "startSession", str, jSONObject, jSONObject2, jSONObject3);
+    /* renamed from: g */
+    public final void m12277g(WebView webView, String str, JSONObject jSONObject, JSONObject jSONObject2, JSONObject jSONObject3) {
+        m12282b(webView, "startSession", str, jSONObject, jSONObject2, jSONObject3);
     }
 }

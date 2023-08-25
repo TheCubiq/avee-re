@@ -1,4 +1,4 @@
 package com.daaw;
 /* loaded from: classes2.dex */
-public interface xr1<T> extends yw<T, yr1> {
+public interface xr1<T> extends InterfaceC3756yw<T, yr1> {
 }

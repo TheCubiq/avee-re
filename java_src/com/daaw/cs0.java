@@ -12,334 +12,403 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import androidx.appcompat.view.menu.i;
+import androidx.appcompat.view.menu.C0082e;
+import androidx.appcompat.view.menu.C0086g;
+import androidx.appcompat.view.menu.InterfaceC0091i;
+import androidx.appcompat.view.menu.InterfaceC0093j;
+import androidx.appcompat.view.menu.SubMenuC0098l;
+import androidx.recyclerview.widget.C0451k;
 import androidx.recyclerview.widget.RecyclerView;
-import com.daaw.y;
+import com.daaw.C3654y;
 import com.google.android.material.internal.NavigationMenuItemView;
 import com.google.android.material.internal.NavigationMenuView;
 import com.google.android.material.internal.ParcelableSparseArray;
 import java.util.ArrayList;
 /* loaded from: classes2.dex */
-public class cs0 implements androidx.appcompat.view.menu.i {
-    public Drawable A;
-    public int B;
-    public int C;
-    public int D;
-    public boolean E;
-    public int G;
-    public int H;
-    public int I;
-    public NavigationMenuView p;
-    public LinearLayout q;
-    public i.a r;
-    public androidx.appcompat.view.menu.e s;
-    public int t;
-    public c u;
-    public LayoutInflater v;
-    public int w;
-    public boolean x;
-    public ColorStateList y;
-    public ColorStateList z;
-    public boolean F = true;
-    public int J = -1;
-    public final View.OnClickListener K = new a();
+public class cs0 implements InterfaceC0091i {
 
+    /* renamed from: A */
+    public Drawable f6127A;
+
+    /* renamed from: B */
+    public int f6128B;
+
+    /* renamed from: C */
+    public int f6129C;
+
+    /* renamed from: D */
+    public int f6130D;
+
+    /* renamed from: E */
+    public boolean f6131E;
+
+    /* renamed from: G */
+    public int f6133G;
+
+    /* renamed from: H */
+    public int f6134H;
+
+    /* renamed from: I */
+    public int f6135I;
+
+    /* renamed from: p */
+    public NavigationMenuView f6138p;
+
+    /* renamed from: q */
+    public LinearLayout f6139q;
+
+    /* renamed from: r */
+    public InterfaceC0091i.InterfaceC0092a f6140r;
+
+    /* renamed from: s */
+    public C0082e f6141s;
+
+    /* renamed from: t */
+    public int f6142t;
+
+    /* renamed from: u */
+    public C0996c f6143u;
+
+    /* renamed from: v */
+    public LayoutInflater f6144v;
+
+    /* renamed from: w */
+    public int f6145w;
+
+    /* renamed from: x */
+    public boolean f6146x;
+
+    /* renamed from: y */
+    public ColorStateList f6147y;
+
+    /* renamed from: z */
+    public ColorStateList f6148z;
+
+    /* renamed from: F */
+    public boolean f6132F = true;
+
+    /* renamed from: J */
+    public int f6136J = -1;
+
+    /* renamed from: K */
+    public final View.OnClickListener f6137K = new View$OnClickListenerC0994a();
+
+    /* renamed from: com.daaw.cs0$a */
     /* loaded from: classes2.dex */
-    public class a implements View.OnClickListener {
-        public a() {
+    public class View$OnClickListenerC0994a implements View.OnClickListener {
+        public View$OnClickListenerC0994a() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             boolean z = true;
-            cs0.this.K(true);
-            androidx.appcompat.view.menu.g itemData = ((NavigationMenuItemView) view).getItemData();
+            cs0.this.m25028K(true);
+            C0086g itemData = ((NavigationMenuItemView) view).getItemData();
             cs0 cs0Var = cs0.this;
-            boolean O = cs0Var.s.O(itemData, cs0Var, 0);
-            if (itemData != null && itemData.isCheckable() && O) {
-                cs0.this.u.G(itemData);
+            boolean m30258O = cs0Var.f6141s.m30258O(itemData, cs0Var, 0);
+            if (itemData != null && itemData.isCheckable() && m30258O) {
+                cs0.this.f6143u.m24998G(itemData);
             } else {
                 z = false;
             }
-            cs0.this.K(false);
+            cs0.this.m25028K(false);
             if (z) {
-                cs0.this.c(false);
+                cs0.this.mo25024c(false);
             }
         }
     }
 
+    /* renamed from: com.daaw.cs0$b */
     /* loaded from: classes2.dex */
-    public static class b extends l {
-        public b(View view) {
+    public static class C0995b extends AbstractC1005l {
+        public C0995b(View view) {
             super(view);
         }
     }
 
+    /* renamed from: com.daaw.cs0$c */
     /* loaded from: classes2.dex */
-    public class c extends RecyclerView.g<l> {
-        public final ArrayList<e> c = new ArrayList<>();
-        public androidx.appcompat.view.menu.g d;
-        public boolean e;
+    public class C0996c extends RecyclerView.AbstractC0380g<AbstractC1005l> {
 
-        public c() {
-            E();
+        /* renamed from: c */
+        public final ArrayList<InterfaceC0998e> f6150c = new ArrayList<>();
+
+        /* renamed from: d */
+        public C0086g f6151d;
+
+        /* renamed from: e */
+        public boolean f6152e;
+
+        public C0996c() {
+            m25000E();
         }
 
-        public int A() {
-            int i = cs0.this.q.getChildCount() == 0 ? 0 : 1;
-            for (int i2 = 0; i2 < cs0.this.u.d(); i2++) {
-                if (cs0.this.u.f(i2) == 0) {
+        /* renamed from: A */
+        public int m25004A() {
+            int i = cs0.this.f6139q.getChildCount() == 0 ? 0 : 1;
+            for (int i2 = 0; i2 < cs0.this.f6143u.mo497d(); i2++) {
+                if (cs0.this.f6143u.mo4978f(i2) == 0) {
                     i++;
                 }
             }
             return i;
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.g
+        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
         /* renamed from: B */
-        public void m(l lVar, int i) {
-            int f = f(i);
-            if (f != 0) {
-                if (f == 1) {
-                    ((TextView) lVar.a).setText(((g) this.c.get(i)).a().getTitle());
+        public void mo496m(AbstractC1005l abstractC1005l, int i) {
+            int mo4978f = mo4978f(i);
+            if (mo4978f != 0) {
+                if (mo4978f == 1) {
+                    ((TextView) abstractC1005l.f1947a).setText(((C1000g) this.f6150c.get(i)).m24989a().getTitle());
                     return;
-                } else if (f != 2) {
+                } else if (mo4978f != 2) {
                     return;
                 } else {
-                    f fVar = (f) this.c.get(i);
-                    lVar.a.setPadding(0, fVar.b(), 0, fVar.a());
+                    C0999f c0999f = (C0999f) this.f6150c.get(i);
+                    abstractC1005l.f1947a.setPadding(0, c0999f.m24990b(), 0, c0999f.m24991a());
                     return;
                 }
             }
-            NavigationMenuItemView navigationMenuItemView = (NavigationMenuItemView) lVar.a;
-            navigationMenuItemView.setIconTintList(cs0.this.z);
+            NavigationMenuItemView navigationMenuItemView = (NavigationMenuItemView) abstractC1005l.f1947a;
+            navigationMenuItemView.setIconTintList(cs0.this.f6148z);
             cs0 cs0Var = cs0.this;
-            if (cs0Var.x) {
-                navigationMenuItemView.setTextAppearance(cs0Var.w);
+            if (cs0Var.f6146x) {
+                navigationMenuItemView.setTextAppearance(cs0Var.f6145w);
             }
-            ColorStateList colorStateList = cs0.this.y;
+            ColorStateList colorStateList = cs0.this.f6147y;
             if (colorStateList != null) {
                 navigationMenuItemView.setTextColor(colorStateList);
             }
-            Drawable drawable = cs0.this.A;
-            xs1.v0(navigationMenuItemView, drawable != null ? drawable.getConstantState().newDrawable() : null);
-            g gVar = (g) this.c.get(i);
-            navigationMenuItemView.setNeedsEmptyIcon(gVar.b);
-            navigationMenuItemView.setHorizontalPadding(cs0.this.B);
-            navigationMenuItemView.setIconPadding(cs0.this.C);
+            Drawable drawable = cs0.this.f6127A;
+            xs1.m4694v0(navigationMenuItemView, drawable != null ? drawable.getConstantState().newDrawable() : null);
+            C1000g c1000g = (C1000g) this.f6150c.get(i);
+            navigationMenuItemView.setNeedsEmptyIcon(c1000g.f6157b);
+            navigationMenuItemView.setHorizontalPadding(cs0.this.f6128B);
+            navigationMenuItemView.setIconPadding(cs0.this.f6129C);
             cs0 cs0Var2 = cs0.this;
-            if (cs0Var2.E) {
-                navigationMenuItemView.setIconSize(cs0Var2.D);
+            if (cs0Var2.f6131E) {
+                navigationMenuItemView.setIconSize(cs0Var2.f6130D);
             }
-            navigationMenuItemView.setMaxLines(cs0.this.G);
-            navigationMenuItemView.e(gVar.a(), 0);
+            navigationMenuItemView.setMaxLines(cs0.this.f6133G);
+            navigationMenuItemView.mo348e(c1000g.m24989a(), 0);
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.g
+        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
         /* renamed from: C */
-        public l o(ViewGroup viewGroup, int i) {
+        public AbstractC1005l mo495o(ViewGroup viewGroup, int i) {
             if (i == 0) {
                 cs0 cs0Var = cs0.this;
-                return new i(cs0Var.v, viewGroup, cs0Var.K);
+                return new C1002i(cs0Var.f6144v, viewGroup, cs0Var.f6137K);
             } else if (i != 1) {
                 if (i != 2) {
                     if (i != 3) {
                         return null;
                     }
-                    return new b(cs0.this.q);
+                    return new C0995b(cs0.this.f6139q);
                 }
-                return new j(cs0.this.v, viewGroup);
+                return new C1003j(cs0.this.f6144v, viewGroup);
             } else {
-                return new k(cs0.this.v, viewGroup);
+                return new C1004k(cs0.this.f6144v, viewGroup);
             }
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.g
+        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
         /* renamed from: D */
-        public void t(l lVar) {
-            if (lVar instanceof i) {
-                ((NavigationMenuItemView) lVar.a).D();
+        public void mo24995t(AbstractC1005l abstractC1005l) {
+            if (abstractC1005l instanceof C1002i) {
+                ((NavigationMenuItemView) abstractC1005l.f1947a).m351D();
             }
         }
 
-        public final void E() {
-            if (this.e) {
+        /* renamed from: E */
+        public final void m25000E() {
+            if (this.f6152e) {
                 return;
             }
-            this.e = true;
-            this.c.clear();
-            this.c.add(new d());
+            this.f6152e = true;
+            this.f6150c.clear();
+            this.f6150c.add(new C0997d());
             int i = -1;
-            int size = cs0.this.s.G().size();
+            int size = cs0.this.f6141s.m30262G().size();
             boolean z = false;
             int i2 = 0;
             for (int i3 = 0; i3 < size; i3++) {
-                androidx.appcompat.view.menu.g gVar = cs0.this.s.G().get(i3);
-                if (gVar.isChecked()) {
-                    G(gVar);
+                C0086g c0086g = cs0.this.f6141s.m30262G().get(i3);
+                if (c0086g.isChecked()) {
+                    m24998G(c0086g);
                 }
-                if (gVar.isCheckable()) {
-                    gVar.t(false);
+                if (c0086g.isCheckable()) {
+                    c0086g.m30196t(false);
                 }
-                if (gVar.hasSubMenu()) {
-                    SubMenu subMenu = gVar.getSubMenu();
+                if (c0086g.hasSubMenu()) {
+                    SubMenu subMenu = c0086g.getSubMenu();
                     if (subMenu.hasVisibleItems()) {
                         if (i3 != 0) {
-                            this.c.add(new f(cs0.this.I, 0));
+                            this.f6150c.add(new C0999f(cs0.this.f6135I, 0));
                         }
-                        this.c.add(new g(gVar));
-                        int size2 = this.c.size();
+                        this.f6150c.add(new C1000g(c0086g));
+                        int size2 = this.f6150c.size();
                         int size3 = subMenu.size();
                         boolean z2 = false;
                         for (int i4 = 0; i4 < size3; i4++) {
-                            androidx.appcompat.view.menu.g gVar2 = (androidx.appcompat.view.menu.g) subMenu.getItem(i4);
-                            if (gVar2.isVisible()) {
-                                if (!z2 && gVar2.getIcon() != null) {
+                            C0086g c0086g2 = (C0086g) subMenu.getItem(i4);
+                            if (c0086g2.isVisible()) {
+                                if (!z2 && c0086g2.getIcon() != null) {
                                     z2 = true;
                                 }
-                                if (gVar2.isCheckable()) {
-                                    gVar2.t(false);
+                                if (c0086g2.isCheckable()) {
+                                    c0086g2.m30196t(false);
                                 }
-                                if (gVar.isChecked()) {
-                                    G(gVar);
+                                if (c0086g.isChecked()) {
+                                    m24998G(c0086g);
                                 }
-                                this.c.add(new g(gVar2));
+                                this.f6150c.add(new C1000g(c0086g2));
                             }
                         }
                         if (z2) {
-                            x(size2, this.c.size());
+                            m24994x(size2, this.f6150c.size());
                         }
                     }
                 } else {
-                    int groupId = gVar.getGroupId();
+                    int groupId = c0086g.getGroupId();
                     if (groupId != i) {
-                        i2 = this.c.size();
-                        z = gVar.getIcon() != null;
+                        i2 = this.f6150c.size();
+                        z = c0086g.getIcon() != null;
                         if (i3 != 0) {
                             i2++;
-                            ArrayList<e> arrayList = this.c;
-                            int i5 = cs0.this.I;
-                            arrayList.add(new f(i5, i5));
+                            ArrayList<InterfaceC0998e> arrayList = this.f6150c;
+                            int i5 = cs0.this.f6135I;
+                            arrayList.add(new C0999f(i5, i5));
                         }
-                    } else if (!z && gVar.getIcon() != null) {
-                        x(i2, this.c.size());
+                    } else if (!z && c0086g.getIcon() != null) {
+                        m24994x(i2, this.f6150c.size());
                         z = true;
                     }
-                    g gVar3 = new g(gVar);
-                    gVar3.b = z;
-                    this.c.add(gVar3);
+                    C1000g c1000g = new C1000g(c0086g);
+                    c1000g.f6157b = z;
+                    this.f6150c.add(c1000g);
                     i = groupId;
                 }
             }
-            this.e = false;
+            this.f6152e = false;
         }
 
-        public void F(Bundle bundle) {
-            androidx.appcompat.view.menu.g a;
+        /* renamed from: F */
+        public void m24999F(Bundle bundle) {
+            C0086g m24989a;
             View actionView;
             ParcelableSparseArray parcelableSparseArray;
-            androidx.appcompat.view.menu.g a2;
+            C0086g m24989a2;
             int i = bundle.getInt("android:menu:checked", 0);
             if (i != 0) {
-                this.e = true;
-                int size = this.c.size();
+                this.f6152e = true;
+                int size = this.f6150c.size();
                 int i2 = 0;
                 while (true) {
                     if (i2 >= size) {
                         break;
                     }
-                    e eVar = this.c.get(i2);
-                    if ((eVar instanceof g) && (a2 = ((g) eVar).a()) != null && a2.getItemId() == i) {
-                        G(a2);
+                    InterfaceC0998e interfaceC0998e = this.f6150c.get(i2);
+                    if ((interfaceC0998e instanceof C1000g) && (m24989a2 = ((C1000g) interfaceC0998e).m24989a()) != null && m24989a2.getItemId() == i) {
+                        m24998G(m24989a2);
                         break;
                     }
                     i2++;
                 }
-                this.e = false;
-                E();
+                this.f6152e = false;
+                m25000E();
             }
             SparseArray sparseParcelableArray = bundle.getSparseParcelableArray("android:menu:action_views");
             if (sparseParcelableArray != null) {
-                int size2 = this.c.size();
+                int size2 = this.f6150c.size();
                 for (int i3 = 0; i3 < size2; i3++) {
-                    e eVar2 = this.c.get(i3);
-                    if ((eVar2 instanceof g) && (a = ((g) eVar2).a()) != null && (actionView = a.getActionView()) != null && (parcelableSparseArray = (ParcelableSparseArray) sparseParcelableArray.get(a.getItemId())) != null) {
+                    InterfaceC0998e interfaceC0998e2 = this.f6150c.get(i3);
+                    if ((interfaceC0998e2 instanceof C1000g) && (m24989a = ((C1000g) interfaceC0998e2).m24989a()) != null && (actionView = m24989a.getActionView()) != null && (parcelableSparseArray = (ParcelableSparseArray) sparseParcelableArray.get(m24989a.getItemId())) != null) {
                         actionView.restoreHierarchyState(parcelableSparseArray);
                     }
                 }
             }
         }
 
-        public void G(androidx.appcompat.view.menu.g gVar) {
-            if (this.d == gVar || !gVar.isCheckable()) {
+        /* renamed from: G */
+        public void m24998G(C0086g c0086g) {
+            if (this.f6151d == c0086g || !c0086g.isCheckable()) {
                 return;
             }
-            androidx.appcompat.view.menu.g gVar2 = this.d;
-            if (gVar2 != null) {
-                gVar2.setChecked(false);
+            C0086g c0086g2 = this.f6151d;
+            if (c0086g2 != null) {
+                c0086g2.setChecked(false);
             }
-            this.d = gVar;
-            gVar.setChecked(true);
+            this.f6151d = c0086g;
+            c0086g.setChecked(true);
         }
 
-        public void H(boolean z) {
-            this.e = z;
+        /* renamed from: H */
+        public void m24997H(boolean z) {
+            this.f6152e = z;
         }
 
-        public void I() {
-            E();
-            i();
+        /* renamed from: I */
+        public void m24996I() {
+            m25000E();
+            m28714i();
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.g
-        public int d() {
-            return this.c.size();
+        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+        /* renamed from: d */
+        public int mo497d() {
+            return this.f6150c.size();
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.g
-        public long e(int i) {
+        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+        /* renamed from: e */
+        public long mo504e(int i) {
             return i;
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.g
-        public int f(int i) {
-            e eVar = this.c.get(i);
-            if (eVar instanceof f) {
+        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0380g
+        /* renamed from: f */
+        public int mo4978f(int i) {
+            InterfaceC0998e interfaceC0998e = this.f6150c.get(i);
+            if (interfaceC0998e instanceof C0999f) {
                 return 2;
             }
-            if (eVar instanceof d) {
+            if (interfaceC0998e instanceof C0997d) {
                 return 3;
             }
-            if (eVar instanceof g) {
-                return ((g) eVar).a().hasSubMenu() ? 1 : 0;
+            if (interfaceC0998e instanceof C1000g) {
+                return ((C1000g) interfaceC0998e).m24989a().hasSubMenu() ? 1 : 0;
             }
             throw new RuntimeException("Unknown item type.");
         }
 
-        public final void x(int i, int i2) {
+        /* renamed from: x */
+        public final void m24994x(int i, int i2) {
             while (i < i2) {
-                ((g) this.c.get(i)).b = true;
+                ((C1000g) this.f6150c.get(i)).f6157b = true;
                 i++;
             }
         }
 
-        public Bundle y() {
+        /* renamed from: y */
+        public Bundle m24993y() {
             Bundle bundle = new Bundle();
-            androidx.appcompat.view.menu.g gVar = this.d;
-            if (gVar != null) {
-                bundle.putInt("android:menu:checked", gVar.getItemId());
+            C0086g c0086g = this.f6151d;
+            if (c0086g != null) {
+                bundle.putInt("android:menu:checked", c0086g.getItemId());
             }
             SparseArray<? extends Parcelable> sparseArray = new SparseArray<>();
-            int size = this.c.size();
+            int size = this.f6150c.size();
             for (int i = 0; i < size; i++) {
-                e eVar = this.c.get(i);
-                if (eVar instanceof g) {
-                    androidx.appcompat.view.menu.g a = ((g) eVar).a();
-                    View actionView = a != null ? a.getActionView() : null;
+                InterfaceC0998e interfaceC0998e = this.f6150c.get(i);
+                if (interfaceC0998e instanceof C1000g) {
+                    C0086g m24989a = ((C1000g) interfaceC0998e).m24989a();
+                    View actionView = m24989a != null ? m24989a.getActionView() : null;
                     if (actionView != null) {
                         ParcelableSparseArray parcelableSparseArray = new ParcelableSparseArray();
                         actionView.saveHierarchyState(parcelableSparseArray);
-                        sparseArray.put(a.getItemId(), parcelableSparseArray);
+                        sparseArray.put(m24989a.getItemId(), parcelableSparseArray);
                     }
                 }
             }
@@ -347,335 +416,393 @@ public class cs0 implements androidx.appcompat.view.menu.i {
             return bundle;
         }
 
-        public androidx.appcompat.view.menu.g z() {
-            return this.d;
+        /* renamed from: z */
+        public C0086g m24992z() {
+            return this.f6151d;
         }
     }
 
+    /* renamed from: com.daaw.cs0$d */
     /* loaded from: classes2.dex */
-    public static class d implements e {
+    public static class C0997d implements InterfaceC0998e {
     }
 
+    /* renamed from: com.daaw.cs0$e */
     /* loaded from: classes2.dex */
-    public interface e {
+    public interface InterfaceC0998e {
     }
 
+    /* renamed from: com.daaw.cs0$f */
     /* loaded from: classes2.dex */
-    public static class f implements e {
-        public final int a;
-        public final int b;
+    public static class C0999f implements InterfaceC0998e {
 
-        public f(int i, int i2) {
-            this.a = i;
-            this.b = i2;
+        /* renamed from: a */
+        public final int f6154a;
+
+        /* renamed from: b */
+        public final int f6155b;
+
+        public C0999f(int i, int i2) {
+            this.f6154a = i;
+            this.f6155b = i2;
         }
 
-        public int a() {
-            return this.b;
+        /* renamed from: a */
+        public int m24991a() {
+            return this.f6155b;
         }
 
-        public int b() {
-            return this.a;
-        }
-    }
-
-    /* loaded from: classes2.dex */
-    public static class g implements e {
-        public final androidx.appcompat.view.menu.g a;
-        public boolean b;
-
-        public g(androidx.appcompat.view.menu.g gVar) {
-            this.a = gVar;
-        }
-
-        public androidx.appcompat.view.menu.g a() {
-            return this.a;
+        /* renamed from: b */
+        public int m24990b() {
+            return this.f6154a;
         }
     }
 
+    /* renamed from: com.daaw.cs0$g */
     /* loaded from: classes2.dex */
-    public class h extends androidx.recyclerview.widget.k {
-        public h(RecyclerView recyclerView) {
+    public static class C1000g implements InterfaceC0998e {
+
+        /* renamed from: a */
+        public final C0086g f6156a;
+
+        /* renamed from: b */
+        public boolean f6157b;
+
+        public C1000g(C0086g c0086g) {
+            this.f6156a = c0086g;
+        }
+
+        /* renamed from: a */
+        public C0086g m24989a() {
+            return this.f6156a;
+        }
+    }
+
+    /* renamed from: com.daaw.cs0$h */
+    /* loaded from: classes2.dex */
+    public class C1001h extends C0451k {
+        public C1001h(RecyclerView recyclerView) {
             super(recyclerView);
         }
 
-        @Override // androidx.recyclerview.widget.k, com.daaw.w
-        public void g(View view, y yVar) {
-            super.g(view, yVar);
-            yVar.d0(y.b.a(cs0.this.u.A(), 0, false));
+        @Override // androidx.recyclerview.widget.C0451k, com.daaw.C3388w
+        /* renamed from: g */
+        public void mo161g(View view, C3654y c3654y) {
+            super.mo161g(view, c3654y);
+            c3654y.m4331d0(C3654y.C3656b.m4282a(cs0.this.f6143u.m25004A(), 0, false));
         }
     }
 
+    /* renamed from: com.daaw.cs0$i */
     /* loaded from: classes2.dex */
-    public static class i extends l {
-        public i(LayoutInflater layoutInflater, ViewGroup viewGroup, View.OnClickListener onClickListener) {
+    public static class C1002i extends AbstractC1005l {
+        public C1002i(LayoutInflater layoutInflater, ViewGroup viewGroup, View.OnClickListener onClickListener) {
             super(layoutInflater.inflate(a21.design_navigation_item, viewGroup, false));
-            this.a.setOnClickListener(onClickListener);
+            this.f1947a.setOnClickListener(onClickListener);
         }
     }
 
+    /* renamed from: com.daaw.cs0$j */
     /* loaded from: classes2.dex */
-    public static class j extends l {
-        public j(LayoutInflater layoutInflater, ViewGroup viewGroup) {
+    public static class C1003j extends AbstractC1005l {
+        public C1003j(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             super(layoutInflater.inflate(a21.design_navigation_item_separator, viewGroup, false));
         }
     }
 
+    /* renamed from: com.daaw.cs0$k */
     /* loaded from: classes2.dex */
-    public static class k extends l {
-        public k(LayoutInflater layoutInflater, ViewGroup viewGroup) {
+    public static class C1004k extends AbstractC1005l {
+        public C1004k(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             super(layoutInflater.inflate(a21.design_navigation_item_subheader, viewGroup, false));
         }
     }
 
+    /* renamed from: com.daaw.cs0$l */
     /* loaded from: classes2.dex */
-    public static abstract class l extends RecyclerView.c0 {
-        public l(View view) {
+    public static abstract class AbstractC1005l extends RecyclerView.AbstractC0376c0 {
+        public AbstractC1005l(View view) {
             super(view);
         }
     }
 
-    public void A(int i2) {
-        this.t = i2;
+    /* renamed from: A */
+    public void m25038A(int i) {
+        this.f6142t = i;
     }
 
-    public void B(Drawable drawable) {
-        this.A = drawable;
-        c(false);
+    /* renamed from: B */
+    public void m25037B(Drawable drawable) {
+        this.f6127A = drawable;
+        mo25024c(false);
     }
 
-    public void C(int i2) {
-        this.B = i2;
-        c(false);
+    /* renamed from: C */
+    public void m25036C(int i) {
+        this.f6128B = i;
+        mo25024c(false);
     }
 
-    public void D(int i2) {
-        this.C = i2;
-        c(false);
+    /* renamed from: D */
+    public void m25035D(int i) {
+        this.f6129C = i;
+        mo25024c(false);
     }
 
-    public void E(int i2) {
-        if (this.D != i2) {
-            this.D = i2;
-            this.E = true;
-            c(false);
+    /* renamed from: E */
+    public void m25034E(int i) {
+        if (this.f6130D != i) {
+            this.f6130D = i;
+            this.f6131E = true;
+            mo25024c(false);
         }
     }
 
-    public void F(ColorStateList colorStateList) {
-        this.z = colorStateList;
-        c(false);
+    /* renamed from: F */
+    public void m25033F(ColorStateList colorStateList) {
+        this.f6148z = colorStateList;
+        mo25024c(false);
     }
 
-    public void G(int i2) {
-        this.G = i2;
-        c(false);
+    /* renamed from: G */
+    public void m25032G(int i) {
+        this.f6133G = i;
+        mo25024c(false);
     }
 
-    public void H(int i2) {
-        this.w = i2;
-        this.x = true;
-        c(false);
+    /* renamed from: H */
+    public void m25031H(int i) {
+        this.f6145w = i;
+        this.f6146x = true;
+        mo25024c(false);
     }
 
-    public void I(ColorStateList colorStateList) {
-        this.y = colorStateList;
-        c(false);
+    /* renamed from: I */
+    public void m25030I(ColorStateList colorStateList) {
+        this.f6147y = colorStateList;
+        mo25024c(false);
     }
 
-    public void J(int i2) {
-        this.J = i2;
-        NavigationMenuView navigationMenuView = this.p;
+    /* renamed from: J */
+    public void m25029J(int i) {
+        this.f6136J = i;
+        NavigationMenuView navigationMenuView = this.f6138p;
         if (navigationMenuView != null) {
-            navigationMenuView.setOverScrollMode(i2);
+            navigationMenuView.setOverScrollMode(i);
         }
     }
 
-    public void K(boolean z) {
-        c cVar = this.u;
-        if (cVar != null) {
-            cVar.H(z);
+    /* renamed from: K */
+    public void m25028K(boolean z) {
+        C0996c c0996c = this.f6143u;
+        if (c0996c != null) {
+            c0996c.m24997H(z);
         }
     }
 
-    public final void L() {
-        int i2 = (this.q.getChildCount() == 0 && this.F) ? this.H : 0;
-        NavigationMenuView navigationMenuView = this.p;
-        navigationMenuView.setPadding(0, i2, 0, navigationMenuView.getPaddingBottom());
+    /* renamed from: L */
+    public final void m25027L() {
+        int i = (this.f6139q.getChildCount() == 0 && this.f6132F) ? this.f6134H : 0;
+        NavigationMenuView navigationMenuView = this.f6138p;
+        navigationMenuView.setPadding(0, i, 0, navigationMenuView.getPaddingBottom());
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public void b(androidx.appcompat.view.menu.e eVar, boolean z) {
-        i.a aVar = this.r;
-        if (aVar != null) {
-            aVar.b(eVar, z);
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: b */
+    public void mo25025b(C0082e c0082e, boolean z) {
+        InterfaceC0091i.InterfaceC0092a interfaceC0092a = this.f6140r;
+        if (interfaceC0092a != null) {
+            interfaceC0092a.mo24218b(c0082e, z);
         }
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public void c(boolean z) {
-        c cVar = this.u;
-        if (cVar != null) {
-            cVar.I();
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: c */
+    public void mo25024c(boolean z) {
+        C0996c c0996c = this.f6143u;
+        if (c0996c != null) {
+            c0996c.m24996I();
         }
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public boolean d() {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: d */
+    public boolean mo25023d() {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public boolean e(androidx.appcompat.view.menu.e eVar, androidx.appcompat.view.menu.g gVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: e */
+    public boolean mo17564e(C0082e c0082e, C0086g c0086g) {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public boolean f(androidx.appcompat.view.menu.e eVar, androidx.appcompat.view.menu.g gVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: f */
+    public boolean mo17563f(C0082e c0082e, C0086g c0086g) {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
     public int getId() {
-        return this.t;
+        return this.f6142t;
     }
 
-    public void h(View view) {
-        this.q.addView(view);
-        NavigationMenuView navigationMenuView = this.p;
+    /* renamed from: h */
+    public void m25022h(View view) {
+        this.f6139q.addView(view);
+        NavigationMenuView navigationMenuView = this.f6138p;
         navigationMenuView.setPadding(0, 0, 0, navigationMenuView.getPaddingBottom());
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public void i(Context context, androidx.appcompat.view.menu.e eVar) {
-        this.v = LayoutInflater.from(context);
-        this.s = eVar;
-        this.I = context.getResources().getDimensionPixelOffset(f11.design_navigation_separator_vertical_padding);
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: i */
+    public void mo17562i(Context context, C0082e c0082e) {
+        this.f6144v = LayoutInflater.from(context);
+        this.f6141s = c0082e;
+        this.f6135I = context.getResources().getDimensionPixelOffset(f11.design_navigation_separator_vertical_padding);
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public void j(Parcelable parcelable) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: j */
+    public void mo25021j(Parcelable parcelable) {
         if (parcelable instanceof Bundle) {
             Bundle bundle = (Bundle) parcelable;
             SparseArray<Parcelable> sparseParcelableArray = bundle.getSparseParcelableArray("android:menu:list");
             if (sparseParcelableArray != null) {
-                this.p.restoreHierarchyState(sparseParcelableArray);
+                this.f6138p.restoreHierarchyState(sparseParcelableArray);
             }
             Bundle bundle2 = bundle.getBundle("android:menu:adapter");
             if (bundle2 != null) {
-                this.u.F(bundle2);
+                this.f6143u.m24999F(bundle2);
             }
             SparseArray sparseParcelableArray2 = bundle.getSparseParcelableArray("android:menu:header");
             if (sparseParcelableArray2 != null) {
-                this.q.restoreHierarchyState(sparseParcelableArray2);
+                this.f6139q.restoreHierarchyState(sparseParcelableArray2);
             }
         }
     }
 
-    public void k(px1 px1Var) {
-        int l2 = px1Var.l();
-        if (this.H != l2) {
-            this.H = l2;
-            L();
+    /* renamed from: k */
+    public void m25020k(px1 px1Var) {
+        int m12949l = px1Var.m12949l();
+        if (this.f6134H != m12949l) {
+            this.f6134H = m12949l;
+            m25027L();
         }
-        NavigationMenuView navigationMenuView = this.p;
-        navigationMenuView.setPadding(0, navigationMenuView.getPaddingTop(), 0, px1Var.i());
-        xs1.i(this.q, px1Var);
+        NavigationMenuView navigationMenuView = this.f6138p;
+        navigationMenuView.setPadding(0, navigationMenuView.getPaddingTop(), 0, px1Var.m12952i());
+        xs1.m4721i(this.f6139q, px1Var);
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public boolean l(androidx.appcompat.view.menu.l lVar) {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: l */
+    public boolean mo25019l(SubMenuC0098l subMenuC0098l) {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.i
-    public Parcelable m() {
+    @Override // androidx.appcompat.view.menu.InterfaceC0091i
+    /* renamed from: m */
+    public Parcelable mo25018m() {
         Bundle bundle = new Bundle();
-        if (this.p != null) {
+        if (this.f6138p != null) {
             SparseArray<Parcelable> sparseArray = new SparseArray<>();
-            this.p.saveHierarchyState(sparseArray);
+            this.f6138p.saveHierarchyState(sparseArray);
             bundle.putSparseParcelableArray("android:menu:list", sparseArray);
         }
-        c cVar = this.u;
-        if (cVar != null) {
-            bundle.putBundle("android:menu:adapter", cVar.y());
+        C0996c c0996c = this.f6143u;
+        if (c0996c != null) {
+            bundle.putBundle("android:menu:adapter", c0996c.m24993y());
         }
-        if (this.q != null) {
+        if (this.f6139q != null) {
             SparseArray<? extends Parcelable> sparseArray2 = new SparseArray<>();
-            this.q.saveHierarchyState(sparseArray2);
+            this.f6139q.saveHierarchyState(sparseArray2);
             bundle.putSparseParcelableArray("android:menu:header", sparseArray2);
         }
         return bundle;
     }
 
-    public androidx.appcompat.view.menu.g n() {
-        return this.u.z();
+    /* renamed from: n */
+    public C0086g m25017n() {
+        return this.f6143u.m24992z();
     }
 
-    public int o() {
-        return this.q.getChildCount();
+    /* renamed from: o */
+    public int m25016o() {
+        return this.f6139q.getChildCount();
     }
 
-    public View p(int i2) {
-        return this.q.getChildAt(i2);
+    /* renamed from: p */
+    public View m25015p(int i) {
+        return this.f6139q.getChildAt(i);
     }
 
-    public Drawable q() {
-        return this.A;
+    /* renamed from: q */
+    public Drawable m25014q() {
+        return this.f6127A;
     }
 
-    public int r() {
-        return this.B;
+    /* renamed from: r */
+    public int m25013r() {
+        return this.f6128B;
     }
 
-    public int s() {
-        return this.C;
+    /* renamed from: s */
+    public int m25012s() {
+        return this.f6129C;
     }
 
-    public int t() {
-        return this.G;
+    /* renamed from: t */
+    public int m25011t() {
+        return this.f6133G;
     }
 
-    public ColorStateList u() {
-        return this.y;
+    /* renamed from: u */
+    public ColorStateList m25010u() {
+        return this.f6147y;
     }
 
-    public ColorStateList v() {
-        return this.z;
+    /* renamed from: v */
+    public ColorStateList m25009v() {
+        return this.f6148z;
     }
 
-    public androidx.appcompat.view.menu.j w(ViewGroup viewGroup) {
-        if (this.p == null) {
-            NavigationMenuView navigationMenuView = (NavigationMenuView) this.v.inflate(a21.design_navigation_menu, viewGroup, false);
-            this.p = navigationMenuView;
-            navigationMenuView.setAccessibilityDelegateCompat(new h(this.p));
-            if (this.u == null) {
-                this.u = new c();
+    /* renamed from: w */
+    public InterfaceC0093j m25008w(ViewGroup viewGroup) {
+        if (this.f6138p == null) {
+            NavigationMenuView navigationMenuView = (NavigationMenuView) this.f6144v.inflate(a21.design_navigation_menu, viewGroup, false);
+            this.f6138p = navigationMenuView;
+            navigationMenuView.setAccessibilityDelegateCompat(new C1001h(this.f6138p));
+            if (this.f6143u == null) {
+                this.f6143u = new C0996c();
             }
-            int i2 = this.J;
-            if (i2 != -1) {
-                this.p.setOverScrollMode(i2);
+            int i = this.f6136J;
+            if (i != -1) {
+                this.f6138p.setOverScrollMode(i);
             }
-            this.q = (LinearLayout) this.v.inflate(a21.design_navigation_item_header, (ViewGroup) this.p, false);
-            this.p.setAdapter(this.u);
+            this.f6139q = (LinearLayout) this.f6144v.inflate(a21.design_navigation_item_header, (ViewGroup) this.f6138p, false);
+            this.f6138p.setAdapter(this.f6143u);
         }
-        return this.p;
+        return this.f6138p;
     }
 
-    public View x(int i2) {
-        View inflate = this.v.inflate(i2, (ViewGroup) this.q, false);
-        h(inflate);
+    /* renamed from: x */
+    public View m25007x(int i) {
+        View inflate = this.f6144v.inflate(i, (ViewGroup) this.f6139q, false);
+        m25022h(inflate);
         return inflate;
     }
 
-    public void y(boolean z) {
-        if (this.F != z) {
-            this.F = z;
-            L();
+    /* renamed from: y */
+    public void m25006y(boolean z) {
+        if (this.f6132F != z) {
+            this.f6132F = z;
+            m25027L();
         }
     }
 
-    public void z(androidx.appcompat.view.menu.g gVar) {
-        this.u.G(gVar);
+    /* renamed from: z */
+    public void m25005z(C0086g c0086g) {
+        this.f6143u.m24998G(c0086g);
     }
 }

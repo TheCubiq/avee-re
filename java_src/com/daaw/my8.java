@@ -9,17 +9,19 @@ public abstract class my8 extends wx2 implements tz8 {
         super("com.google.android.gms.common.internal.ICertData");
     }
 
-    public static tz8 I(IBinder iBinder) {
+    /* renamed from: I */
+    public static tz8 m15656I(IBinder iBinder) {
         IInterface queryLocalInterface = iBinder.queryLocalInterface("com.google.android.gms.common.internal.ICertData");
         return queryLocalInterface instanceof tz8 ? (tz8) queryLocalInterface : new gx8(iBinder);
     }
 
     @Override // com.daaw.wx2
-    public final boolean D(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: D */
+    public final boolean mo5540D(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
             yd0 zzd = zzd();
             parcel2.writeNoException();
-            sr3.e(parcel2, zzd);
+            sr3.m9939e(parcel2, zzd);
         } else if (i != 2) {
             return false;
         } else {

@@ -6,7 +6,8 @@ public final class pa7 extends cf7 {
     }
 
     @Override // com.daaw.cf7
-    public final /* bridge */ /* synthetic */ Object a(xt7 xt7Var) {
-        return new oo7(((mj7) xt7Var).P().j());
+    /* renamed from: a */
+    public final /* bridge */ /* synthetic */ Object mo2495a(xt7 xt7Var) {
+        return new oo7(((mj7) xt7Var).m16007P().m3415j());
     }
 }

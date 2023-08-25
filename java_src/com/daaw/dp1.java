@@ -9,10 +9,12 @@ public enum dp1 implements Executor {
     INSTANCE;
     
     @SuppressLint({"ThreadPoolCreation"})
-    public static final Handler q = new Handler(Looper.getMainLooper());
+
+    /* renamed from: q */
+    public static final Handler f7599q = new Handler(Looper.getMainLooper());
 
     @Override // java.util.concurrent.Executor
     public void execute(Runnable runnable) {
-        q.post(runnable);
+        f7599q.post(runnable);
     }
 }

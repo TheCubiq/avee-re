@@ -1,12 +1,16 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class d03 implements Runnable {
-    public final /* synthetic */ as2 p;
-    public final /* synthetic */ k03 q;
+
+    /* renamed from: p */
+    public final /* synthetic */ as2 f6338p;
+
+    /* renamed from: q */
+    public final /* synthetic */ k03 f6339q;
 
     public d03(k03 k03Var, as2 as2Var) {
-        this.q = k03Var;
-        this.p = as2Var;
+        this.f6339q = k03Var;
+        this.f6338p = as2Var;
     }
 
     @Override // java.lang.Runnable

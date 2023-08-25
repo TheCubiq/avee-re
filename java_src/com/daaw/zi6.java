@@ -1,74 +1,53 @@
 package com.daaw;
+
+import com.google.android.gms.ads.internal.client.zzba;
+import com.google.android.gms.ads.internal.zzt;
 /* loaded from: classes.dex */
 public final class zi6 implements o67 {
-    public final /* synthetic */ a74 a;
-    public final /* synthetic */ op6 b;
-    public final /* synthetic */ cq5 c;
+
+    /* renamed from: a */
+    public final /* synthetic */ a74 f35119a;
+
+    /* renamed from: b */
+    public final /* synthetic */ op6 f35120b;
+
+    /* renamed from: c */
+    public final /* synthetic */ cq5 f35121c;
 
     public zi6(a74 a74Var, op6 op6Var, cq5 cq5Var) {
-        this.a = a74Var;
-        this.b = op6Var;
-        this.c = cq5Var;
+        this.f35119a = a74Var;
+        this.f35120b = op6Var;
+        this.f35121c = cq5Var;
     }
 
     /* JADX WARN: Code restructure failed: missing block: B:11:0x0052, code lost:
-        if (r8.a.d().T != false) goto L14;
+        if (r8.f35119a.mo6421d().f27673T != false) goto L14;
      */
     @Override // com.daaw.o67
+    /* renamed from: a */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final /* bridge */ /* synthetic */ void a(java.lang.Object r9) {
-        /*
-            r8 = this;
-            r4 = r9
-            java.lang.String r4 = (java.lang.String) r4
-            com.daaw.a74 r9 = r8.a
-            com.daaw.th6 r9 = r9.d()
-            boolean r9 = r9.k0
-            if (r9 != 0) goto L14
-            com.daaw.op6 r9 = r8.b
-            r0 = 0
-            r9.c(r4, r0)
-            return
-        L14:
-            com.daaw.eq5 r9 = new com.daaw.eq5
-            com.daaw.ag r0 = com.google.android.gms.ads.internal.zzt.zzB()
-            long r1 = r0.a()
-            com.daaw.a74 r0 = r8.a
-            com.daaw.wh6 r0 = r0.v()
-            java.lang.String r3 = r0.b
-            com.daaw.qz3 r0 = com.google.android.gms.ads.internal.zzt.zzo()
-            com.daaw.a74 r5 = r8.a
-            android.content.Context r5 = r5.getContext()
-            boolean r0 = r0.x(r5)
-            r5 = 1
-            r6 = 2
-            if (r0 != 0) goto L54
-            com.daaw.y83 r0 = com.daaw.g93.J5
-            com.daaw.e93 r7 = com.google.android.gms.ads.internal.client.zzba.zzc()
-            java.lang.Object r0 = r7.b(r0)
-            java.lang.Boolean r0 = (java.lang.Boolean) r0
-            boolean r0 = r0.booleanValue()
-            if (r0 == 0) goto L55
-            com.daaw.a74 r0 = r8.a
-            com.daaw.th6 r0 = r0.d()
-            boolean r0 = r0.T
-            if (r0 == 0) goto L55
-        L54:
-            r5 = 2
-        L55:
-            r0 = r9
-            r0.<init>(r1, r3, r4, r5)
-            com.daaw.cq5 r0 = r8.c
-            r0.u(r9)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.zi6.a(java.lang.Object):void");
+    public final /* bridge */ /* synthetic */ void mo2151a(Object obj) {
+        String str = (String) obj;
+        if (!this.f35119a.mo6421d().f27701k0) {
+            this.f35120b.m14098c(str, null);
+            return;
+        }
+        long mo15860a = zzt.zzB().mo15860a();
+        String str2 = this.f35119a.mo6398v().f31252b;
+        int i = 1;
+        if (!zzt.zzo().m11899x(this.f35119a.getContext())) {
+            if (((Boolean) zzba.zzc().m23658b(g93.f10457J5)).booleanValue()) {
+            }
+            this.f35121c.m25118u(new eq5(mo15860a, str2, str, i));
+        }
+        i = 2;
+        this.f35121c.m25118u(new eq5(mo15860a, str2, str, i));
     }
 
     @Override // com.daaw.o67
-    public final void b(Throwable th) {
+    /* renamed from: b */
+    public final void mo2150b(Throwable th) {
     }
 }

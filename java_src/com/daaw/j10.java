@@ -10,7 +10,8 @@ import java.nio.channels.ReadableByteChannel;
 /* loaded from: classes.dex */
 public class j10 {
     @SuppressLint({"LambdaLast"})
-    public static void a(ReadableByteChannel readableByteChannel, FileChannel fileChannel) {
+    /* renamed from: a */
+    public static void m19175a(ReadableByteChannel readableByteChannel, FileChannel fileChannel) {
         try {
             if (Build.VERSION.SDK_INT <= 23) {
                 InputStream newInputStream = Channels.newInputStream(readableByteChannel);

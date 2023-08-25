@@ -3,7 +3,9 @@ package com.daaw;
 import java.util.List;
 /* loaded from: classes.dex */
 public interface rx1 {
-    void b(List<String> list);
+    /* renamed from: b */
+    void mo10849b(List<String> list);
 
-    void f(List<String> list);
+    /* renamed from: f */
+    void mo10848f(List<String> list);
 }

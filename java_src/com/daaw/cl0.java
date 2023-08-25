@@ -1,54 +1,73 @@
 package com.daaw;
 
-import com.daaw.h9;
+import com.daaw.C1517h9;
 import com.google.auto.value.AutoValue;
 @AutoValue
 /* loaded from: classes.dex */
 public abstract class cl0 {
 
     @AutoValue.Builder
+    /* renamed from: com.daaw.cl0$a */
     /* loaded from: classes.dex */
-    public static abstract class a {
-        public abstract cl0 a();
+    public static abstract class AbstractC0968a {
+        /* renamed from: a */
+        public abstract cl0 mo20935a();
 
-        public abstract a b(Integer num);
+        /* renamed from: b */
+        public abstract AbstractC0968a mo20934b(Integer num);
 
-        public abstract a c(long j);
+        /* renamed from: c */
+        public abstract AbstractC0968a mo20933c(long j);
 
-        public abstract a d(long j);
+        /* renamed from: d */
+        public abstract AbstractC0968a mo20932d(long j);
 
-        public abstract a e(ls0 ls0Var);
+        /* renamed from: e */
+        public abstract AbstractC0968a mo20931e(ls0 ls0Var);
 
-        public abstract a f(byte[] bArr);
+        /* renamed from: f */
+        public abstract AbstractC0968a mo20930f(byte[] bArr);
 
-        public abstract a g(String str);
+        /* renamed from: g */
+        public abstract AbstractC0968a mo20929g(String str);
 
-        public abstract a h(long j);
+        /* renamed from: h */
+        public abstract AbstractC0968a mo20928h(long j);
     }
 
-    public static a a() {
-        return new h9.b();
+    /* renamed from: a */
+    public static AbstractC0968a m25254a() {
+        return new C1517h9.C1519b();
     }
 
-    public static a i(String str) {
-        return a().g(str);
+    /* renamed from: i */
+    public static AbstractC0968a m25253i(String str) {
+        return m25254a().mo20929g(str);
     }
 
-    public static a j(byte[] bArr) {
-        return a().f(bArr);
+    /* renamed from: j */
+    public static AbstractC0968a m25252j(byte[] bArr) {
+        return m25254a().mo20930f(bArr);
     }
 
-    public abstract Integer b();
+    /* renamed from: b */
+    public abstract Integer mo20942b();
 
-    public abstract long c();
+    /* renamed from: c */
+    public abstract long mo20941c();
 
-    public abstract long d();
+    /* renamed from: d */
+    public abstract long mo20940d();
 
-    public abstract ls0 e();
+    /* renamed from: e */
+    public abstract ls0 mo20939e();
 
-    public abstract byte[] f();
+    /* renamed from: f */
+    public abstract byte[] mo20938f();
 
-    public abstract String g();
+    /* renamed from: g */
+    public abstract String mo20937g();
 
-    public abstract long h();
+    /* renamed from: h */
+    public abstract long mo20936h();
 }

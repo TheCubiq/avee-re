@@ -1,85 +1,124 @@
 package com.daaw;
 /* loaded from: classes.dex */
 public final class mo6 {
-    public final long a;
-    public final boolean b;
-    public final int c;
-    public final String d;
-    public final String e;
-    public final String f;
-    public final String g;
-    public final String h;
-    public final String i;
-    public final String j;
-    public final int k;
-    public final int l;
-    public final int m;
+
+    /* renamed from: a */
+    public final long f19036a;
+
+    /* renamed from: b */
+    public final boolean f19037b;
+
+    /* renamed from: c */
+    public final int f19038c;
+
+    /* renamed from: d */
+    public final String f19039d;
+
+    /* renamed from: e */
+    public final String f19040e;
+
+    /* renamed from: f */
+    public final String f19041f;
+
+    /* renamed from: g */
+    public final String f19042g;
+
+    /* renamed from: h */
+    public final String f19043h;
+
+    /* renamed from: i */
+    public final String f19044i;
+
+    /* renamed from: j */
+    public final String f19045j;
+
+    /* renamed from: k */
+    public final int f19046k;
+
+    /* renamed from: l */
+    public final int f19047l;
+
+    /* renamed from: m */
+    public final int f19048m;
 
     public /* synthetic */ mo6(ko6 ko6Var, lo6 lo6Var) {
-        this.k = ko6.p(ko6Var);
-        this.a = ko6.u(ko6Var) - ko6.t(ko6Var);
-        this.b = ko6.n(ko6Var);
-        this.l = ko6.q(ko6Var);
-        this.m = ko6.r(ko6Var);
-        this.c = ko6.s(ko6Var);
-        this.d = ko6.E(ko6Var);
-        this.e = ko6.g(ko6Var);
-        this.f = ko6.h(ko6Var);
-        this.g = ko6.i(ko6Var);
-        this.h = ko6.k(ko6Var);
-        this.i = ko6.j(ko6Var);
-        this.j = ko6.f(ko6Var);
+        this.f19046k = ko6.m17579p(ko6Var);
+        this.f19036a = ko6.m17574u(ko6Var) - ko6.m17575t(ko6Var);
+        this.f19037b = ko6.m17581n(ko6Var);
+        this.f19047l = ko6.m17578q(ko6Var);
+        this.f19048m = ko6.m17577r(ko6Var);
+        this.f19038c = ko6.m17576s(ko6Var);
+        this.f19039d = ko6.m17595E(ko6Var);
+        this.f19040e = ko6.m17588g(ko6Var);
+        this.f19041f = ko6.m17587h(ko6Var);
+        this.f19042g = ko6.m17586i(ko6Var);
+        this.f19043h = ko6.m17584k(ko6Var);
+        this.f19044i = ko6.m17585j(ko6Var);
+        this.f19045j = ko6.m17589f(ko6Var);
     }
 
-    public final int a() {
-        return this.c;
+    /* renamed from: a */
+    public final int m15884a() {
+        return this.f19038c;
     }
 
-    public final long b() {
-        return this.a;
+    /* renamed from: b */
+    public final long m15883b() {
+        return this.f19036a;
     }
 
-    public final String c() {
-        return this.d;
+    /* renamed from: c */
+    public final String m15882c() {
+        return this.f19039d;
     }
 
-    public final String d() {
-        return this.j;
+    /* renamed from: d */
+    public final String m15881d() {
+        return this.f19045j;
     }
 
-    public final String e() {
-        return this.e;
+    /* renamed from: e */
+    public final String m15880e() {
+        return this.f19040e;
     }
 
-    public final String f() {
-        return this.f;
+    /* renamed from: f */
+    public final String m15879f() {
+        return this.f19041f;
     }
 
-    public final String g() {
-        return this.g;
+    /* renamed from: g */
+    public final String m15878g() {
+        return this.f19042g;
     }
 
-    public final String h() {
-        return this.i;
+    /* renamed from: h */
+    public final String m15877h() {
+        return this.f19044i;
     }
 
-    public final String i() {
-        return this.h;
+    /* renamed from: i */
+    public final String m15876i() {
+        return this.f19043h;
     }
 
-    public final boolean j() {
-        return this.b;
+    /* renamed from: j */
+    public final boolean m15875j() {
+        return this.f19037b;
     }
 
-    public final int k() {
-        return this.k;
+    /* renamed from: k */
+    public final int m15874k() {
+        return this.f19046k;
     }
 
-    public final int l() {
-        return this.l;
+    /* renamed from: l */
+    public final int m15873l() {
+        return this.f19047l;
     }
 
-    public final int m() {
-        return this.m;
+    /* renamed from: m */
+    public final int m15872m() {
+        return this.f19048m;
     }
 }

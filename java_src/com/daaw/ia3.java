@@ -11,12 +11,21 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 /* loaded from: classes.dex */
 public final class ia3 {
-    public eo a;
-    public bo b;
-    public Cdo c;
-    public ga3 d;
 
-    public static boolean g(Context context) {
+    /* renamed from: a */
+    public C1203eo f13397a;
+
+    /* renamed from: b */
+    public C0875bo f13398b;
+
+    /* renamed from: c */
+    public AbstractServiceConnectionC1116do f13399c;
+
+    /* renamed from: d */
+    public ga3 f13400d;
+
+    /* renamed from: g */
+    public static boolean m20002g(Context context) {
         PackageManager packageManager = context.getPackageManager();
         if (packageManager == null) {
             return false;
@@ -27,58 +36,64 @@ public final class ia3 {
         if (queryIntentActivities != null && resolveActivity != null) {
             for (int i = 0; i < queryIntentActivities.size(); i++) {
                 if (resolveActivity.activityInfo.name.equals(queryIntentActivities.get(i).activityInfo.name)) {
-                    return resolveActivity.activityInfo.packageName.equals(n08.a(context));
+                    return resolveActivity.activityInfo.packageName.equals(n08.m15611a(context));
                 }
             }
         }
         return false;
     }
 
-    public final eo a() {
-        bo boVar = this.b;
-        if (boVar == null) {
-            this.a = null;
-        } else if (this.a == null) {
-            this.a = boVar.c(null);
+    /* renamed from: a */
+    public final C1203eo m20008a() {
+        C0875bo c0875bo = this.f13398b;
+        if (c0875bo == null) {
+            this.f13397a = null;
+        } else if (this.f13397a == null) {
+            this.f13397a = c0875bo.m25969c(null);
         }
-        return this.a;
+        return this.f13397a;
     }
 
-    public final void b(Activity activity) {
-        String a;
-        if (this.b == null && (a = n08.a(activity)) != null) {
+    /* renamed from: b */
+    public final void m20007b(Activity activity) {
+        String m15611a;
+        if (this.f13398b == null && (m15611a = n08.m15611a(activity)) != null) {
             o08 o08Var = new o08(this, null);
-            this.c = o08Var;
-            bo.a(activity, a, o08Var);
+            this.f13399c = o08Var;
+            C0875bo.m25971a(activity, m15611a, o08Var);
         }
     }
 
-    public final void c(bo boVar) {
-        this.b = boVar;
-        boVar.e(0L);
-        ga3 ga3Var = this.d;
+    /* renamed from: c */
+    public final void m20006c(C0875bo c0875bo) {
+        this.f13398b = c0875bo;
+        c0875bo.m25967e(0L);
+        ga3 ga3Var = this.f13400d;
         if (ga3Var != null) {
             ga3Var.zza();
         }
     }
 
-    public final void d() {
-        this.b = null;
-        this.a = null;
+    /* renamed from: d */
+    public final void m20005d() {
+        this.f13398b = null;
+        this.f13397a = null;
     }
 
-    public final void e(ga3 ga3Var) {
-        this.d = ga3Var;
+    /* renamed from: e */
+    public final void m20004e(ga3 ga3Var) {
+        this.f13400d = ga3Var;
     }
 
-    public final void f(Activity activity) {
-        Cdo cdo = this.c;
-        if (cdo == null) {
+    /* renamed from: f */
+    public final void m20003f(Activity activity) {
+        AbstractServiceConnectionC1116do abstractServiceConnectionC1116do = this.f13399c;
+        if (abstractServiceConnectionC1116do == null) {
             return;
         }
-        activity.unbindService(cdo);
-        this.b = null;
-        this.a = null;
-        this.c = null;
+        activity.unbindService(abstractServiceConnectionC1116do);
+        this.f13398b = null;
+        this.f13397a = null;
+        this.f13399c = null;
     }
 }

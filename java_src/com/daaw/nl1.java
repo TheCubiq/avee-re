@@ -1,202 +1,270 @@
 package com.daaw;
 
 import android.util.Pair;
-import com.daaw.c1;
+import com.daaw.C0908c1;
 /* loaded from: classes.dex */
 public abstract class nl1 {
-    public static final nl1 a = new a();
 
+    /* renamed from: a */
+    public static final nl1 f20215a = new C2313a();
+
+    /* renamed from: com.daaw.nl1$a */
     /* loaded from: classes.dex */
-    public static class a extends nl1 {
+    public static class C2313a extends nl1 {
         @Override // com.daaw.nl1
-        public int b(Object obj) {
+        /* renamed from: b */
+        public int mo14379b(Object obj) {
             return -1;
         }
 
         @Override // com.daaw.nl1
-        public b g(int i, b bVar, boolean z) {
+        /* renamed from: g */
+        public C2314b mo14378g(int i, C2314b c2314b, boolean z) {
             throw new IndexOutOfBoundsException();
         }
 
         @Override // com.daaw.nl1
-        public int h() {
+        /* renamed from: h */
+        public int mo14377h() {
             return 0;
         }
 
         @Override // com.daaw.nl1
-        public c m(int i, c cVar, boolean z, long j) {
+        /* renamed from: m */
+        public C2315c mo14376m(int i, C2315c c2315c, boolean z, long j) {
             throw new IndexOutOfBoundsException();
         }
 
         @Override // com.daaw.nl1
-        public int n() {
+        /* renamed from: n */
+        public int mo14375n() {
             return 0;
         }
     }
 
+    /* renamed from: com.daaw.nl1$b */
     /* loaded from: classes.dex */
-    public static final class b {
-        public Object a;
-        public Object b;
-        public int c;
-        public long d;
-        public long e;
-        public c1 f;
+    public static final class C2314b {
 
-        public int a(int i) {
-            return this.f.c[i].a;
+        /* renamed from: a */
+        public Object f20216a;
+
+        /* renamed from: b */
+        public Object f20217b;
+
+        /* renamed from: c */
+        public int f20218c;
+
+        /* renamed from: d */
+        public long f20219d;
+
+        /* renamed from: e */
+        public long f20220e;
+
+        /* renamed from: f */
+        public C0908c1 f20221f;
+
+        /* renamed from: a */
+        public int m15071a(int i) {
+            return this.f20221f.f5363c[i].f5366a;
         }
 
-        public long b(int i, int i2) {
-            c1.a aVar = this.f.c[i];
-            if (aVar.a != -1) {
-                return aVar.d[i2];
+        /* renamed from: b */
+        public long m15070b(int i, int i2) {
+            C0908c1.C0909a c0909a = this.f20221f.f5363c[i];
+            if (c0909a.f5366a != -1) {
+                return c0909a.f5369d[i2];
             }
             return -9223372036854775807L;
         }
 
-        public int c() {
-            return this.f.a;
+        /* renamed from: c */
+        public int m15069c() {
+            return this.f20221f.f5361a;
         }
 
-        public int d(long j) {
-            return this.f.a(j);
+        /* renamed from: d */
+        public int m15068d(long j) {
+            return this.f20221f.m25690a(j);
         }
 
-        public int e(long j) {
-            return this.f.b(j);
+        /* renamed from: e */
+        public int m15067e(long j) {
+            return this.f20221f.m25689b(j);
         }
 
-        public long f(int i) {
-            return this.f.b[i];
+        /* renamed from: f */
+        public long m15066f(int i) {
+            return this.f20221f.f5362b[i];
         }
 
-        public long g() {
-            return this.f.d;
+        /* renamed from: g */
+        public long m15065g() {
+            return this.f20221f.f5364d;
         }
 
-        public long h() {
-            return dd.b(this.d);
+        /* renamed from: h */
+        public long m15064h() {
+            return C1075dd.m24526b(this.f20219d);
         }
 
-        public long i() {
-            return this.d;
+        /* renamed from: i */
+        public long m15063i() {
+            return this.f20219d;
         }
 
-        public int j(int i) {
-            return this.f.c[i].a();
+        /* renamed from: j */
+        public int m15062j(int i) {
+            return this.f20221f.f5363c[i].m25688a();
         }
 
-        public int k(int i, int i2) {
-            return this.f.c[i].b(i2);
+        /* renamed from: k */
+        public int m15061k(int i, int i2) {
+            return this.f20221f.f5363c[i].m25687b(i2);
         }
 
-        public long l() {
-            return dd.b(this.e);
+        /* renamed from: l */
+        public long m15060l() {
+            return C1075dd.m24526b(this.f20220e);
         }
 
-        public boolean m(int i) {
-            return !this.f.c[i].c();
+        /* renamed from: m */
+        public boolean m15059m(int i) {
+            return !this.f20221f.f5363c[i].m25686c();
         }
 
-        public boolean n(int i, int i2) {
-            c1.a aVar = this.f.c[i];
-            return (aVar.a == -1 || aVar.c[i2] == 0) ? false : true;
+        /* renamed from: n */
+        public boolean m15058n(int i, int i2) {
+            C0908c1.C0909a c0909a = this.f20221f.f5363c[i];
+            return (c0909a.f5366a == -1 || c0909a.f5368c[i2] == 0) ? false : true;
         }
 
-        public b o(Object obj, Object obj2, int i, long j, long j2) {
-            return p(obj, obj2, i, j, j2, c1.f);
+        /* renamed from: o */
+        public C2314b m15057o(Object obj, Object obj2, int i, long j, long j2) {
+            return m15056p(obj, obj2, i, j, j2, C0908c1.f5360f);
         }
 
-        public b p(Object obj, Object obj2, int i, long j, long j2, c1 c1Var) {
-            this.a = obj;
-            this.b = obj2;
-            this.c = i;
-            this.d = j;
-            this.e = j2;
-            this.f = c1Var;
+        /* renamed from: p */
+        public C2314b m15056p(Object obj, Object obj2, int i, long j, long j2, C0908c1 c0908c1) {
+            this.f20216a = obj;
+            this.f20217b = obj2;
+            this.f20218c = i;
+            this.f20219d = j;
+            this.f20220e = j2;
+            this.f20221f = c0908c1;
             return this;
         }
     }
 
+    /* renamed from: com.daaw.nl1$c */
     /* loaded from: classes.dex */
-    public static final class c {
-        public Object a;
-        public long b;
-        public long c;
-        public boolean d;
-        public boolean e;
-        public int f;
-        public int g;
-        public long h;
-        public long i;
-        public long j;
+    public static final class C2315c {
 
-        public long a() {
-            return dd.b(this.h);
+        /* renamed from: a */
+        public Object f20222a;
+
+        /* renamed from: b */
+        public long f20223b;
+
+        /* renamed from: c */
+        public long f20224c;
+
+        /* renamed from: d */
+        public boolean f20225d;
+
+        /* renamed from: e */
+        public boolean f20226e;
+
+        /* renamed from: f */
+        public int f20227f;
+
+        /* renamed from: g */
+        public int f20228g;
+
+        /* renamed from: h */
+        public long f20229h;
+
+        /* renamed from: i */
+        public long f20230i;
+
+        /* renamed from: j */
+        public long f20231j;
+
+        /* renamed from: a */
+        public long m15055a() {
+            return C1075dd.m24526b(this.f20229h);
         }
 
-        public long b() {
-            return this.h;
+        /* renamed from: b */
+        public long m15054b() {
+            return this.f20229h;
         }
 
-        public long c() {
-            return dd.b(this.i);
+        /* renamed from: c */
+        public long m15053c() {
+            return C1075dd.m24526b(this.f20230i);
         }
 
-        public long d() {
-            return this.j;
+        /* renamed from: d */
+        public long m15052d() {
+            return this.f20231j;
         }
 
-        public c e(Object obj, long j, long j2, boolean z, boolean z2, long j3, long j4, int i, int i2, long j5) {
-            this.a = obj;
-            this.b = j;
-            this.c = j2;
-            this.d = z;
-            this.e = z2;
-            this.h = j3;
-            this.i = j4;
-            this.f = i;
-            this.g = i2;
-            this.j = j5;
+        /* renamed from: e */
+        public C2315c m15051e(Object obj, long j, long j2, boolean z, boolean z2, long j3, long j4, int i, int i2, long j5) {
+            this.f20222a = obj;
+            this.f20223b = j;
+            this.f20224c = j2;
+            this.f20225d = z;
+            this.f20226e = z2;
+            this.f20229h = j3;
+            this.f20230i = j4;
+            this.f20227f = i;
+            this.f20228g = i2;
+            this.f20231j = j5;
             return this;
         }
     }
 
-    public int a(boolean z) {
-        return o() ? -1 : 0;
+    /* renamed from: a */
+    public int m15082a(boolean z) {
+        return m15073o() ? -1 : 0;
     }
 
-    public abstract int b(Object obj);
+    /* renamed from: b */
+    public abstract int mo14379b(Object obj);
 
-    public int c(boolean z) {
-        if (o()) {
+    /* renamed from: c */
+    public int m15081c(boolean z) {
+        if (m15073o()) {
             return -1;
         }
-        return n() - 1;
+        return mo14375n() - 1;
     }
 
-    public final int d(int i, b bVar, c cVar, int i2, boolean z) {
-        int i3 = f(i, bVar).c;
-        if (k(i3, cVar).g == i) {
-            int e = e(i3, i2, z);
-            if (e == -1) {
+    /* renamed from: d */
+    public final int m15080d(int i, C2314b c2314b, C2315c c2315c, int i2, boolean z) {
+        int i3 = m15078f(i, c2314b).f20218c;
+        if (m15075k(i3, c2315c).f20228g == i) {
+            int m15079e = m15079e(i3, i2, z);
+            if (m15079e == -1) {
                 return -1;
             }
-            return k(e, cVar).f;
+            return m15075k(m15079e, c2315c).f20227f;
         }
         return i + 1;
     }
 
-    public int e(int i, int i2, boolean z) {
+    /* renamed from: e */
+    public int m15079e(int i, int i2, boolean z) {
         if (i2 == 0) {
-            if (i == c(z)) {
+            if (i == m15081c(z)) {
                 return -1;
             }
             return i + 1;
         } else if (i2 != 1) {
             if (i2 == 2) {
-                return i == c(z) ? a(z) : i + 1;
+                return i == m15081c(z) ? m15082a(z) : i + 1;
             }
             throw new IllegalStateException();
         } else {
@@ -204,57 +272,68 @@ public abstract class nl1 {
         }
     }
 
-    public final b f(int i, b bVar) {
-        return g(i, bVar, false);
+    /* renamed from: f */
+    public final C2314b m15078f(int i, C2314b c2314b) {
+        return mo14378g(i, c2314b, false);
     }
 
-    public abstract b g(int i, b bVar, boolean z);
+    /* renamed from: g */
+    public abstract C2314b mo14378g(int i, C2314b c2314b, boolean z);
 
-    public abstract int h();
+    /* renamed from: h */
+    public abstract int mo14377h();
 
-    public final Pair<Integer, Long> i(c cVar, b bVar, int i, long j) {
-        return j(cVar, bVar, i, j, 0L);
+    /* renamed from: i */
+    public final Pair<Integer, Long> m15077i(C2315c c2315c, C2314b c2314b, int i, long j) {
+        return m15076j(c2315c, c2314b, i, j, 0L);
     }
 
-    public final Pair<Integer, Long> j(c cVar, b bVar, int i, long j, long j2) {
-        s6.c(i, 0, n());
-        m(i, cVar, false, j2);
+    /* renamed from: j */
+    public final Pair<Integer, Long> m15076j(C2315c c2315c, C2314b c2314b, int i, long j, long j2) {
+        C2914s6.m10688c(i, 0, mo14375n());
+        mo14376m(i, c2315c, false, j2);
         if (j == -9223372036854775807L) {
-            j = cVar.b();
+            j = c2315c.m15054b();
             if (j == -9223372036854775807L) {
                 return null;
             }
         }
-        int i2 = cVar.f;
-        long d = cVar.d() + j;
+        int i2 = c2315c.f20227f;
+        long m15052d = c2315c.m15052d() + j;
         while (true) {
-            long i3 = f(i2, bVar).i();
-            if (i3 == -9223372036854775807L || d < i3 || i2 >= cVar.g) {
+            long m15063i = m15078f(i2, c2314b).m15063i();
+            if (m15063i == -9223372036854775807L || m15052d < m15063i || i2 >= c2315c.f20228g) {
                 break;
             }
-            d -= i3;
+            m15052d -= m15063i;
             i2++;
         }
-        return Pair.create(Integer.valueOf(i2), Long.valueOf(d));
+        return Pair.create(Integer.valueOf(i2), Long.valueOf(m15052d));
     }
 
-    public final c k(int i, c cVar) {
-        return l(i, cVar, false);
+    /* renamed from: k */
+    public final C2315c m15075k(int i, C2315c c2315c) {
+        return m15074l(i, c2315c, false);
     }
 
-    public final c l(int i, c cVar, boolean z) {
-        return m(i, cVar, z, 0L);
+    /* renamed from: l */
+    public final C2315c m15074l(int i, C2315c c2315c, boolean z) {
+        return mo14376m(i, c2315c, z, 0L);
     }
 
-    public abstract c m(int i, c cVar, boolean z, long j);
+    /* renamed from: m */
+    public abstract C2315c mo14376m(int i, C2315c c2315c, boolean z, long j);
 
-    public abstract int n();
+    /* renamed from: n */
+    public abstract int mo14375n();
 
-    public final boolean o() {
-        return n() == 0;
+    /* renamed from: o */
+    public final boolean m15073o() {
+        return mo14375n() == 0;
     }
 
-    public final boolean p(int i, b bVar, c cVar, int i2, boolean z) {
-        return d(i, bVar, cVar, i2, z) == -1;
+    /* renamed from: p */
+    public final boolean m15072p(int i, C2314b c2314b, C2315c c2315c, int i2, boolean z) {
+        return m15080d(i, c2314b, c2315c, i2, z) == -1;
     }
 }

@@ -11,21 +11,22 @@ public abstract class zzbq extends cp2 implements zzbr {
     }
 
     @Override // com.daaw.cp2
-    public final boolean M(int i, Parcel parcel, Parcel parcel2, int i2) {
+    /* renamed from: M */
+    public final boolean mo1346M(int i, Parcel parcel, Parcel parcel2, int i2) {
         if (i == 1) {
-            yd0 I = yd0.a.I(parcel.readStrongBinder());
+            yd0 m3857I = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
             String readString = parcel.readString();
             String readString2 = parcel.readString();
-            dp2.c(parcel);
-            boolean zzf = zzf(I, readString, readString2);
+            dp2.m24105c(parcel);
+            boolean zzf = zzf(m3857I, readString, readString2);
             parcel2.writeNoException();
-            dp2.d(parcel2, zzf);
+            dp2.m24104d(parcel2, zzf);
         } else if (i != 2) {
             return false;
         } else {
-            yd0 I2 = yd0.a.I(parcel.readStrongBinder());
-            dp2.c(parcel);
-            zze(I2);
+            yd0 m3857I2 = yd0.AbstractBinderC3691a.m3857I(parcel.readStrongBinder());
+            dp2.m24105c(parcel);
+            zze(m3857I2);
             parcel2.writeNoException();
         }
         return true;

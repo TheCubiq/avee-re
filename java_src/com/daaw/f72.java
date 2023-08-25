@@ -4,31 +4,37 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 /* loaded from: classes2.dex */
 public final class f72<T> implements c82<T> {
-    public final CountDownLatch a = new CountDownLatch(1);
+
+    /* renamed from: a */
+    public final CountDownLatch f9211a = new CountDownLatch(1);
 
     public /* synthetic */ f72(i62 i62Var) {
     }
 
-    public final void a() {
-        this.a.await();
+    /* renamed from: a */
+    public final void m22877a() {
+        this.f9211a.await();
     }
 
     @Override // com.daaw.zt0
-    public final void b() {
-        this.a.countDown();
+    /* renamed from: b */
+    public final void mo1920b() {
+        this.f9211a.countDown();
     }
 
     @Override // com.daaw.gu0
-    public final void c(Exception exc) {
-        this.a.countDown();
+    /* renamed from: c */
+    public final void mo5820c(Exception exc) {
+        this.f9211a.countDown();
     }
 
-    public final boolean d(long j, TimeUnit timeUnit) {
-        return this.a.await(j, timeUnit);
+    /* renamed from: d */
+    public final boolean m22876d(long j, TimeUnit timeUnit) {
+        return this.f9211a.await(j, timeUnit);
     }
 
     @Override // com.daaw.ku0
     public final void onSuccess(T t) {
-        this.a.countDown();
+        this.f9211a.countDown();
     }
 }

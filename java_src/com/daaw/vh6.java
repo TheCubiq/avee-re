@@ -3,7 +3,9 @@ package com.daaw;
 import android.util.JsonReader;
 /* loaded from: classes.dex */
 public final class vh6 {
-    public String a;
+
+    /* renamed from: a */
+    public String f30234a;
 
     public vh6(JsonReader jsonReader) {
         char c;
@@ -32,10 +34,11 @@ public final class vh6 {
             }
         }
         jsonReader.endObject();
-        this.a = str;
+        this.f30234a = str;
     }
 
-    public final String a() {
-        return this.a;
+    /* renamed from: a */
+    public final String m7141a() {
+        return this.f30234a;
     }
 }

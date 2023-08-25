@@ -5,199 +5,230 @@ import java.io.InterruptedIOException;
 import java.util.Arrays;
 /* loaded from: classes.dex */
 public final class rz8 implements k09 {
-    public final xp8 b;
-    public final long c;
-    public long d;
-    public int f;
-    public int g;
-    public byte[] e = new byte[65536];
-    public final byte[] a = new byte[4096];
+
+    /* renamed from: b */
+    public final xp8 f25735b;
+
+    /* renamed from: c */
+    public final long f25736c;
+
+    /* renamed from: d */
+    public long f25737d;
+
+    /* renamed from: f */
+    public int f25739f;
+
+    /* renamed from: g */
+    public int f25740g;
+
+    /* renamed from: e */
+    public byte[] f25738e = new byte[65536];
+
+    /* renamed from: a */
+    public final byte[] f25734a = new byte[4096];
 
     static {
-        k63.b("media3.extractor");
+        k63.m18024b("media3.extractor");
     }
 
     public rz8(xp8 xp8Var, long j, long j2) {
-        this.b = xp8Var;
-        this.d = j;
-        this.c = j2;
+        this.f25735b = xp8Var;
+        this.f25737d = j;
+        this.f25736c = j2;
     }
 
     @Override // com.daaw.k09, com.daaw.xp8
-    public final int a(byte[] bArr, int i, int i2) {
-        int m = m(bArr, i, i2);
-        if (m == 0) {
-            m = n(bArr, i, i2, 0, true);
+    /* renamed from: a */
+    public final int mo1980a(byte[] bArr, int i, int i2) {
+        int m10810m = m10810m(bArr, i, i2);
+        if (m10810m == 0) {
+            m10810m = m10809n(bArr, i, i2, 0, true);
         }
-        p(m);
-        return m;
+        m10807p(m10810m);
+        return m10810m;
     }
 
     @Override // com.daaw.k09
-    public final int b(int i) {
-        int o = o(1);
-        if (o == 0) {
-            o = n(this.a, 0, Math.min(1, 4096), 0, true);
+    /* renamed from: b */
+    public final int mo5665b(int i) {
+        int m10808o = m10808o(1);
+        if (m10808o == 0) {
+            m10808o = m10809n(this.f25734a, 0, Math.min(1, 4096), 0, true);
         }
-        p(o);
-        return o;
+        m10807p(m10808o);
+        return m10808o;
     }
 
     @Override // com.daaw.k09
-    public final void c(int i) {
-        k(i, false);
+    /* renamed from: c */
+    public final void mo5664c(int i) {
+        m10812k(i, false);
     }
 
     @Override // com.daaw.k09
-    public final boolean e(byte[] bArr, int i, int i2, boolean z) {
-        int m = m(bArr, i, i2);
-        while (m < i2 && m != -1) {
-            m = n(bArr, i, i2, m, z);
+    /* renamed from: e */
+    public final boolean mo5663e(byte[] bArr, int i, int i2, boolean z) {
+        int m10810m = m10810m(bArr, i, i2);
+        while (m10810m < i2 && m10810m != -1) {
+            m10810m = m10809n(bArr, i, i2, m10810m, z);
         }
-        p(m);
-        return m != -1;
+        m10807p(m10810m);
+        return m10810m != -1;
     }
 
     @Override // com.daaw.k09
-    public final int f(byte[] bArr, int i, int i2) {
+    /* renamed from: f */
+    public final int mo5662f(byte[] bArr, int i, int i2) {
         int min;
-        q(i2);
-        int i3 = this.g;
-        int i4 = this.f;
+        m10806q(i2);
+        int i3 = this.f25740g;
+        int i4 = this.f25739f;
         int i5 = i3 - i4;
         if (i5 == 0) {
-            min = n(this.e, i4, i2, 0, true);
+            min = m10809n(this.f25738e, i4, i2, 0, true);
             if (min == -1) {
                 return -1;
             }
-            this.g += min;
+            this.f25740g += min;
         } else {
             min = Math.min(i2, i5);
         }
-        System.arraycopy(this.e, this.f, bArr, i, min);
-        this.f += min;
+        System.arraycopy(this.f25738e, this.f25739f, bArr, i, min);
+        this.f25739f += min;
         return min;
     }
 
     @Override // com.daaw.k09
-    public final boolean h(byte[] bArr, int i, int i2, boolean z) {
-        if (k(i2, z)) {
-            System.arraycopy(this.e, this.f - i2, bArr, i, i2);
+    /* renamed from: h */
+    public final boolean mo5661h(byte[] bArr, int i, int i2, boolean z) {
+        if (m10812k(i2, z)) {
+            System.arraycopy(this.f25738e, this.f25739f - i2, bArr, i, i2);
             return true;
         }
         return false;
     }
 
     @Override // com.daaw.k09
-    public final void i(byte[] bArr, int i, int i2) {
-        e(bArr, i, i2, false);
+    /* renamed from: i */
+    public final void mo5660i(byte[] bArr, int i, int i2) {
+        mo5663e(bArr, i, i2, false);
     }
 
     @Override // com.daaw.k09
-    public final void j(byte[] bArr, int i, int i2) {
-        h(bArr, i, i2, false);
+    /* renamed from: j */
+    public final void mo5659j(byte[] bArr, int i, int i2) {
+        mo5661h(bArr, i, i2, false);
     }
 
-    public final boolean k(int i, boolean z) {
-        q(i);
-        int i2 = this.g - this.f;
+    /* renamed from: k */
+    public final boolean m10812k(int i, boolean z) {
+        m10806q(i);
+        int i2 = this.f25740g - this.f25739f;
         while (i2 < i) {
-            i2 = n(this.e, this.f, i, i2, z);
+            i2 = m10809n(this.f25738e, this.f25739f, i, i2, z);
             if (i2 == -1) {
                 return false;
             }
-            this.g = this.f + i2;
+            this.f25740g = this.f25739f + i2;
         }
-        this.f += i;
+        this.f25739f += i;
         return true;
     }
 
-    public final boolean l(int i, boolean z) {
-        int o = o(i);
-        while (o < i && o != -1) {
-            o = n(this.a, -o, Math.min(i, o + 4096), o, false);
+    /* renamed from: l */
+    public final boolean m10811l(int i, boolean z) {
+        int m10808o = m10808o(i);
+        while (m10808o < i && m10808o != -1) {
+            m10808o = m10809n(this.f25734a, -m10808o, Math.min(i, m10808o + 4096), m10808o, false);
         }
-        p(o);
-        return o != -1;
+        m10807p(m10808o);
+        return m10808o != -1;
     }
 
-    public final int m(byte[] bArr, int i, int i2) {
-        int i3 = this.g;
+    /* renamed from: m */
+    public final int m10810m(byte[] bArr, int i, int i2) {
+        int i3 = this.f25740g;
         if (i3 == 0) {
             return 0;
         }
         int min = Math.min(i3, i2);
-        System.arraycopy(this.e, 0, bArr, i, min);
-        r(min);
+        System.arraycopy(this.f25738e, 0, bArr, i, min);
+        m10805r(min);
         return min;
     }
 
-    public final int n(byte[] bArr, int i, int i2, int i3, boolean z) {
+    /* renamed from: n */
+    public final int m10809n(byte[] bArr, int i, int i2, int i3, boolean z) {
         if (Thread.interrupted()) {
             throw new InterruptedIOException();
         }
-        int a = this.b.a(bArr, i + i3, i2 - i3);
-        if (a == -1) {
+        int mo1980a = this.f25735b.mo1980a(bArr, i + i3, i2 - i3);
+        if (mo1980a == -1) {
             if (i3 == 0 && z) {
                 return -1;
             }
             throw new EOFException();
         }
-        return i3 + a;
+        return i3 + mo1980a;
     }
 
-    public final int o(int i) {
-        int min = Math.min(this.g, i);
-        r(min);
+    /* renamed from: o */
+    public final int m10808o(int i) {
+        int min = Math.min(this.f25740g, i);
+        m10805r(min);
         return min;
     }
 
-    public final void p(int i) {
+    /* renamed from: p */
+    public final void m10807p(int i) {
         if (i != -1) {
-            this.d += i;
+            this.f25737d += i;
         }
     }
 
-    public final void q(int i) {
-        int i2 = this.f + i;
-        int length = this.e.length;
+    /* renamed from: q */
+    public final void m10806q(int i) {
+        int i2 = this.f25739f + i;
+        int length = this.f25738e.length;
         if (i2 > length) {
-            this.e = Arrays.copyOf(this.e, it5.P(length + length, 65536 + i2, i2 + 524288));
+            this.f25738e = Arrays.copyOf(this.f25738e, it5.m19416P(length + length, 65536 + i2, i2 + 524288));
         }
     }
 
-    public final void r(int i) {
-        int i2 = this.g - i;
-        this.g = i2;
-        this.f = 0;
-        byte[] bArr = this.e;
+    /* renamed from: r */
+    public final void m10805r(int i) {
+        int i2 = this.f25740g - i;
+        this.f25740g = i2;
+        this.f25739f = 0;
+        byte[] bArr = this.f25738e;
         byte[] bArr2 = i2 < bArr.length + (-524288) ? new byte[65536 + i2] : bArr;
         System.arraycopy(bArr, i, bArr2, 0, i2);
-        this.e = bArr2;
+        this.f25738e = bArr2;
     }
 
     @Override // com.daaw.k09
-    public final void u(int i) {
-        l(i, false);
+    /* renamed from: u */
+    public final void mo5658u(int i) {
+        m10811l(i, false);
     }
 
     @Override // com.daaw.k09
     public final long zzd() {
-        return this.c;
+        return this.f25736c;
     }
 
     @Override // com.daaw.k09
     public final long zze() {
-        return this.d + this.f;
+        return this.f25737d + this.f25739f;
     }
 
     @Override // com.daaw.k09
     public final long zzf() {
-        return this.d;
+        return this.f25737d;
     }
 
     @Override // com.daaw.k09
     public final void zzj() {
-        this.f = 0;
+        this.f25739f = 0;
     }
 }

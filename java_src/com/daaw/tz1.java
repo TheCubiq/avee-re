@@ -8,77 +8,70 @@ import java.util.Map;
 import java.util.WeakHashMap;
 /* loaded from: classes.dex */
 public final class tz1 {
-    public final Map<BasePendingResult<?>, Boolean> a = Collections.synchronizedMap(new WeakHashMap());
-    public final Map<tj1<?>, Boolean> b = Collections.synchronizedMap(new WeakHashMap());
 
-    public final <TResult> void b(tj1<TResult> tj1Var, boolean z) {
-        this.b.put(tj1Var, Boolean.valueOf(z));
-        tj1Var.a().b(new rz1(this, tj1Var));
+    /* renamed from: a */
+    public final Map<BasePendingResult<?>, Boolean> f28287a = Collections.synchronizedMap(new WeakHashMap());
+
+    /* renamed from: b */
+    public final Map<tj1<?>, Boolean> f28288b = Collections.synchronizedMap(new WeakHashMap());
+
+    /* renamed from: b */
+    public final <TResult> void m8667b(tj1<TResult> tj1Var, boolean z) {
+        this.f28288b.put(tj1Var, Boolean.valueOf(z));
+        tj1Var.m9082a().mo11248b(new rz1(this, tj1Var));
     }
 
     /* JADX WARN: Removed duplicated region for block: B:10:0x0018  */
+    /* renamed from: c */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
     */
-    public final void c(int r4, java.lang.String r5) {
-        /*
-            r3 = this;
-            java.lang.StringBuilder r0 = new java.lang.StringBuilder
-            java.lang.String r1 = "The connection to Google Play services was lost"
-            r0.<init>(r1)
-            r1 = 1
-            if (r4 != r1) goto L10
-            java.lang.String r4 = " due to service disconnection."
-        Lc:
-            r0.append(r4)
-            goto L16
-        L10:
-            r2 = 3
-            if (r4 != r2) goto L16
-            java.lang.String r4 = " due to dead object exception."
-            goto Lc
-        L16:
-            if (r5 == 0) goto L20
-            java.lang.String r4 = " Last reason for disconnect: "
-            r0.append(r4)
-            r0.append(r5)
-        L20:
-            com.google.android.gms.common.api.Status r4 = new com.google.android.gms.common.api.Status
-            r5 = 20
-            java.lang.String r0 = r0.toString()
-            r4.<init>(r5, r0)
-            r3.f(r1, r4)
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.daaw.tz1.c(int, java.lang.String):void");
+    public final void m8666c(int i, String str) {
+        String str2;
+        StringBuilder sb = new StringBuilder("The connection to Google Play services was lost");
+        if (i != 1) {
+            str2 = i == 3 ? " due to dead object exception." : " due to dead object exception.";
+            if (str != null) {
+                sb.append(" Last reason for disconnect: ");
+                sb.append(str);
+            }
+            m8663f(true, new Status(20, sb.toString()));
+        }
+        str2 = " due to service disconnection.";
+        sb.append(str2);
+        if (str != null) {
+        }
+        m8663f(true, new Status(20, sb.toString()));
     }
 
-    public final void d() {
-        f(false, z70.G);
+    /* renamed from: d */
+    public final void m8665d() {
+        m8663f(false, z70.f34530G);
     }
 
-    public final boolean e() {
-        return (this.a.isEmpty() && this.b.isEmpty()) ? false : true;
+    /* renamed from: e */
+    public final boolean m8664e() {
+        return (this.f28287a.isEmpty() && this.f28288b.isEmpty()) ? false : true;
     }
 
-    public final void f(boolean z, Status status) {
+    /* renamed from: f */
+    public final void m8663f(boolean z, Status status) {
         HashMap hashMap;
         HashMap hashMap2;
-        synchronized (this.a) {
-            hashMap = new HashMap(this.a);
+        synchronized (this.f28287a) {
+            hashMap = new HashMap(this.f28287a);
         }
-        synchronized (this.b) {
-            hashMap2 = new HashMap(this.b);
+        synchronized (this.f28288b) {
+            hashMap2 = new HashMap(this.f28288b);
         }
         for (Map.Entry entry : hashMap.entrySet()) {
             if (z || ((Boolean) entry.getValue()).booleanValue()) {
-                ((BasePendingResult) entry.getKey()).b(status);
+                ((BasePendingResult) entry.getKey()).m1191b(status);
             }
         }
         for (Map.Entry entry2 : hashMap2.entrySet()) {
             if (z || ((Boolean) entry2.getValue()).booleanValue()) {
-                ((tj1) entry2.getKey()).d(new l3(status));
+                ((tj1) entry2.getKey()).m9079d(new C2009l3(status));
             }
         }
     }

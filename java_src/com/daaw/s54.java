@@ -8,119 +8,148 @@ import com.google.android.gms.ads.internal.zzt;
 import java.io.IOException;
 /* loaded from: classes.dex */
 public final class s54 extends j54 implements o24 {
-    public p24 s;
-    public String t;
-    public boolean u;
-    public boolean v;
-    public y44 w;
-    public long x;
-    public long y;
+
+    /* renamed from: s */
+    public p24 f25880s;
+
+    /* renamed from: t */
+    public String f25881t;
+
+    /* renamed from: u */
+    public boolean f25882u;
+
+    /* renamed from: v */
+    public boolean f25883v;
+
+    /* renamed from: w */
+    public y44 f25884w;
+
+    /* renamed from: x */
+    public long f25885x;
+
+    /* renamed from: y */
+    public long f25886y;
 
     public s54(y24 y24Var, x24 x24Var) {
         super(y24Var);
         Context context = y24Var.getContext();
-        p24 n64Var = x24Var.m ? new n64(context, x24Var, (y24) this.r.get()) : new l44(context, x24Var, (y24) this.r.get());
-        this.s = n64Var;
-        n64Var.M(this);
+        p24 n64Var = x24Var.f32034m ? new n64(context, x24Var, (y24) this.f14367r.get()) : new l44(context, x24Var, (y24) this.f14367r.get());
+        this.f25880s = n64Var;
+        n64Var.mo13743M(this);
     }
 
-    public static final String y(String str) {
-        return "cache:".concat(String.valueOf(d04.j(str)));
+    /* renamed from: y */
+    public static final String m10693y(String str) {
+        return "cache:".concat(String.valueOf(d04.m24822j(str)));
     }
 
-    public static String z(String str, Exception exc) {
+    /* renamed from: z */
+    public static String m10692z(String str, Exception exc) {
         String canonicalName = exc.getClass().getCanonicalName();
         String message = exc.getMessage();
         return str + "/" + canonicalName + ":" + message;
     }
 
-    public final void A(long j) {
+    /* renamed from: A */
+    public final void m10705A(long j) {
         zzs.zza.postDelayed(new Runnable() { // from class: com.daaw.q54
             @Override // java.lang.Runnable
             public final void run() {
-                s54.this.x();
+                s54.this.m10694x();
             }
         }, j);
     }
 
     @Override // com.daaw.j54, com.daaw.p31
-    public final void a() {
-        p24 p24Var = this.s;
+    /* renamed from: a */
+    public final void mo10704a() {
+        p24 p24Var = this.f25880s;
         if (p24Var != null) {
-            p24Var.M(null);
-            this.s.I();
+            p24Var.mo13743M(null);
+            this.f25880s.mo13747I();
         }
     }
 
     @Override // com.daaw.o24
-    public final void c(int i) {
+    /* renamed from: c */
+    public final void mo9570c(int i) {
     }
 
     @Override // com.daaw.o24
-    public final void d(String str, Exception exc) {
+    /* renamed from: d */
+    public final void mo9569d(String str, Exception exc) {
         k04.zzk("Precache exception", exc);
-        zzt.zzo().t(exc, "VideoStreamExoPlayerCache.onException");
+        zzt.zzo().m11903t(exc, "VideoStreamExoPlayerCache.onException");
     }
 
     @Override // com.daaw.o24
-    public final void e(final boolean z, final long j) {
-        final y24 y24Var = (y24) this.r.get();
+    /* renamed from: e */
+    public final void mo9568e(final boolean z, final long j) {
+        final y24 y24Var = (y24) this.f14367r.get();
         if (y24Var != null) {
-            z04.e.execute(new Runnable() { // from class: com.daaw.r54
+            z04.f34309e.execute(new Runnable() { // from class: com.daaw.r54
                 @Override // java.lang.Runnable
                 public final void run() {
-                    y24.this.m0(z, j);
+                    y24.this.mo4237m0(z, j);
                 }
             });
         }
     }
 
     @Override // com.daaw.o24
-    public final void f(String str, Exception exc) {
+    /* renamed from: f */
+    public final void mo9567f(String str, Exception exc) {
         k04.zzk("Precache error", exc);
-        zzt.zzo().t(exc, "VideoStreamExoPlayerCache.onError");
+        zzt.zzo().m11903t(exc, "VideoStreamExoPlayerCache.onError");
     }
 
     @Override // com.daaw.o24
-    public final void g(int i, int i2) {
+    /* renamed from: g */
+    public final void mo9566g(int i, int i2) {
     }
 
     @Override // com.daaw.j54
-    public final void h() {
+    /* renamed from: h */
+    public final void mo10703h() {
         synchronized (this) {
-            this.u = true;
+            this.f25882u = true;
             notify();
-            a();
+            mo10704a();
         }
-        String str = this.t;
+        String str = this.f25881t;
         if (str != null) {
-            j(this.t, y(str), "externalAbort", "Programmatic precache abort.");
+            m18856j(this.f25881t, m10693y(str), "externalAbort", "Programmatic precache abort.");
         }
     }
 
     @Override // com.daaw.j54
-    public final void o(int i) {
-        this.s.K(i);
+    /* renamed from: o */
+    public final void mo10702o(int i) {
+        this.f25880s.mo13745K(i);
     }
 
     @Override // com.daaw.j54
-    public final void p(int i) {
-        this.s.L(i);
+    /* renamed from: p */
+    public final void mo10701p(int i) {
+        this.f25880s.mo13744L(i);
     }
 
     @Override // com.daaw.j54
-    public final void q(int i) {
-        this.s.N(i);
+    /* renamed from: q */
+    public final void mo10700q(int i) {
+        this.f25880s.mo13742N(i);
     }
 
     @Override // com.daaw.j54
-    public final void r(int i) {
-        this.s.O(i);
+    /* renamed from: r */
+    public final void mo10699r(int i) {
+        this.f25880s.mo13741O(i);
     }
 
     @Override // com.daaw.j54
-    public final boolean s(String str) {
-        return t(str, new String[]{str});
+    /* renamed from: s */
+    public final boolean mo10698s(String str) {
+        return mo10697t(str, new String[]{str});
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -137,7 +166,8 @@ public final class s54 extends j54 implements o24 {
     /* JADX WARN: Type inference failed for: r5v3 */
     /* JADX WARN: Type inference failed for: r6v19 */
     @Override // com.daaw.j54
-    public final boolean t(String str, String[] strArr) {
+    /* renamed from: t */
+    public final boolean mo10697t(String str, String[] strArr) {
         String str2;
         String str3;
         s54 s54Var;
@@ -152,59 +182,59 @@ public final class s54 extends j54 implements o24 {
         long j7;
         s54 s54Var2 = this;
         String str5 = str;
-        s54Var2.t = str5;
-        String y = y(str);
+        s54Var2.f25881t = str5;
+        String m10693y = m10693y(str);
         String str6 = "error";
         try {
             Uri[] uriArr = new Uri[strArr.length];
             for (int i = 0; i < strArr.length; i++) {
                 uriArr[i] = Uri.parse(strArr[i]);
             }
-            s54Var2.s.G(uriArr, s54Var2.q);
-            y24 y24Var = (y24) s54Var2.r.get();
+            s54Var2.f25880s.mo13749G(uriArr, s54Var2.f14366q);
+            y24 y24Var = (y24) s54Var2.f14367r.get();
             if (y24Var != null) {
-                y24Var.t(y, s54Var2);
+                y24Var.mo4236t(m10693y, s54Var2);
             }
-            ag zzB = zzt.zzB();
-            long a = zzB.a();
-            long longValue = ((Long) zzba.zzc().b(g93.w)).longValue();
-            long longValue2 = ((Long) zzba.zzc().b(g93.v)).longValue() * 1000;
-            long intValue = ((Integer) zzba.zzc().b(g93.u)).intValue();
-            boolean booleanValue = ((Boolean) zzba.zzc().b(g93.F1)).booleanValue();
+            InterfaceC0623ag zzB = zzt.zzB();
+            long mo15860a = zzB.mo15860a();
+            long longValue = ((Long) zzba.zzc().m23658b(g93.f10863w)).longValue();
+            long longValue2 = ((Long) zzba.zzc().m23658b(g93.f10852v)).longValue() * 1000;
+            long intValue = ((Integer) zzba.zzc().m23658b(g93.f10841u)).intValue();
+            boolean booleanValue = ((Boolean) zzba.zzc().m23658b(g93.f10413F1)).booleanValue();
             long j8 = -1;
             while (true) {
                 synchronized (this) {
                     try {
-                        if (zzB.a() - a > longValue2) {
+                        if (zzB.mo15860a() - mo15860a > longValue2) {
                             throw new IOException("Timeout reached. Limit: " + longValue2 + " ms");
-                        } else if (s54Var2.u) {
+                        } else if (s54Var2.f25882u) {
                             throw new IOException("Abort requested before buffering finished. ");
                         } else {
-                            if (s54Var2.v) {
+                            if (s54Var2.f25883v) {
                                 break;
-                            } else if (!s54Var2.s.V()) {
+                            } else if (!s54Var2.f25880s.mo13734V()) {
                                 throw new IOException("ExoPlayer was released during preloading.");
                             } else {
-                                long e0 = s54Var2.s.e0();
-                                if (e0 > 0) {
-                                    long a0 = s54Var2.s.a0();
-                                    if (a0 != j8) {
+                                long mo13725e0 = s54Var2.f25880s.mo13725e0();
+                                if (mo13725e0 > 0) {
+                                    long mo13729a0 = s54Var2.f25880s.mo13729a0();
+                                    if (mo13729a0 != j8) {
                                         try {
                                             j = intValue;
-                                            j7 = e0;
+                                            j7 = mo13725e0;
                                             j2 = longValue2;
                                             j4 = longValue;
-                                            str4 = y;
+                                            str4 = m10693y;
                                         } catch (Throwable th) {
                                             th = th;
                                             s54Var = this;
                                             str2 = str;
-                                            str3 = y;
+                                            str3 = m10693y;
                                         }
                                         try {
-                                            n(str, y, a0, j7, a0 > 0, booleanValue ? s54Var2.s.E() : -1L, booleanValue ? s54Var2.s.c0() : -1L, booleanValue ? s54Var2.s.F() : -1L, p24.X(), p24.Z());
-                                            j6 = a0;
-                                            j5 = e0;
+                                            m18852n(str, m10693y, mo13729a0, j7, mo13729a0 > 0, booleanValue ? s54Var2.f25880s.mo13751E() : -1L, booleanValue ? s54Var2.f25880s.mo13727c0() : -1L, booleanValue ? s54Var2.f25880s.mo13750F() : -1L, p24.m13732X(), p24.m13730Z());
+                                            j6 = mo13729a0;
+                                            j5 = mo13725e0;
                                             str2 = j7;
                                         } catch (Throwable th2) {
                                             th = th2;
@@ -217,9 +247,9 @@ public final class s54 extends j54 implements o24 {
                                                 e = e;
                                                 String str7 = str6;
                                                 k04.zzj("Failed to preload url " + str2 + " Exception: " + e.getMessage());
-                                                zzt.zzo().t(e, "VideoStreamExoPlayerCache.preload");
-                                                a();
-                                                s54Var.j(str2, str3, str7, z(str7, e));
+                                                zzt.zzo().m11903t(e, "VideoStreamExoPlayerCache.preload");
+                                                mo10704a();
+                                                s54Var.m18856j(str2, str3, str7, m10692z(str7, e));
                                                 return false;
                                             }
                                         }
@@ -227,21 +257,21 @@ public final class s54 extends j54 implements o24 {
                                         j = intValue;
                                         j2 = longValue2;
                                         j4 = longValue;
-                                        str4 = y;
-                                        j5 = e0;
+                                        str4 = m10693y;
+                                        j5 = mo13725e0;
                                         j6 = j8;
                                         str2 = intValue;
                                     }
-                                    s54Var = (a0 > j5 ? 1 : (a0 == j5 ? 0 : -1));
+                                    s54Var = (mo13729a0 > j5 ? 1 : (mo13729a0 == j5 ? 0 : -1));
                                     if (s54Var >= 0) {
-                                        l(str, str4, j5);
+                                        m18854l(str, str4, j5);
                                         break;
                                     }
                                     try {
                                         s54 s54Var3 = this;
                                         str2 = str;
                                         str3 = str4;
-                                        if (s54Var3.s.b0() >= j && a0 > 0) {
+                                        if (s54Var3.f25880s.mo13728b0() >= j && mo13729a0 > 0) {
                                             break;
                                         }
                                         j3 = j4;
@@ -255,7 +285,7 @@ public final class s54 extends j54 implements o24 {
                                     j = intValue;
                                     j2 = longValue2;
                                     str2 = str5;
-                                    str3 = y;
+                                    str3 = m10693y;
                                     s54Var = s54Var2;
                                     j3 = longValue;
                                     r1 = j8;
@@ -276,14 +306,14 @@ public final class s54 extends j54 implements o24 {
                     } catch (Throwable th5) {
                         th = th5;
                         str2 = str5;
-                        str3 = y;
+                        str3 = m10693y;
                         s54Var = s54Var2;
                     }
                 }
                 longValue = j3;
                 s54Var2 = s54Var;
                 str5 = str2;
-                y = str3;
+                m10693y = str3;
                 intValue = j;
                 longValue2 = j2;
                 j8 = r1;
@@ -292,48 +322,50 @@ public final class s54 extends j54 implements o24 {
         } catch (Exception e2) {
             e = e2;
             str2 = str5;
-            str3 = y;
+            str3 = m10693y;
             s54Var = s54Var2;
         }
     }
 
     @Override // com.daaw.j54
-    public final boolean u(String str, String[] strArr, y44 y44Var) {
-        this.t = str;
-        this.w = y44Var;
-        String y = y(str);
+    /* renamed from: u */
+    public final boolean mo10696u(String str, String[] strArr, y44 y44Var) {
+        this.f25881t = str;
+        this.f25884w = y44Var;
+        String m10693y = m10693y(str);
         try {
             Uri[] uriArr = new Uri[strArr.length];
             for (int i = 0; i < strArr.length; i++) {
                 uriArr[i] = Uri.parse(strArr[i]);
             }
-            this.s.G(uriArr, this.q);
-            y24 y24Var = (y24) this.r.get();
+            this.f25880s.mo13749G(uriArr, this.f14366q);
+            y24 y24Var = (y24) this.f14367r.get();
             if (y24Var != null) {
-                y24Var.t(y, this);
+                y24Var.mo4236t(m10693y, this);
             }
-            this.x = zzt.zzB().a();
-            this.y = -1L;
-            A(0L);
+            this.f25885x = zzt.zzB().mo15860a();
+            this.f25886y = -1L;
+            m10705A(0L);
             return true;
         } catch (Exception e) {
             String message = e.getMessage();
             k04.zzj("Failed to preload url " + str + " Exception: " + message);
-            zzt.zzo().t(e, "VideoStreamExoPlayerCache.preload");
-            a();
-            j(str, y, "error", z("error", e));
+            zzt.zzo().m11903t(e, "VideoStreamExoPlayerCache.preload");
+            mo10704a();
+            m18856j(str, m10693y, "error", m10692z("error", e));
             return false;
         }
     }
 
-    public final p24 v() {
+    /* renamed from: v */
+    public final p24 m10695v() {
         synchronized (this) {
-            this.v = true;
+            this.f25883v = true;
             notify();
         }
-        this.s.M(null);
-        p24 p24Var = this.s;
-        this.s = null;
+        this.f25880s.mo13743M(null);
+        p24 p24Var = this.f25880s;
+        this.f25880s = null;
         return p24Var;
     }
 
@@ -348,7 +380,8 @@ public final class s54 extends j54 implements o24 {
     /* JADX WARN: Type inference failed for: r2v25 */
     /* JADX WARN: Type inference failed for: r2v26, types: [com.daaw.s54] */
     /* JADX WARN: Type inference failed for: r2v30 */
-    public final /* synthetic */ void x() {
+    /* renamed from: x */
+    public final /* synthetic */ void m10694x() {
         String str;
         s54 s54Var;
         s54 s54Var2;
@@ -360,49 +393,49 @@ public final class s54 extends j54 implements o24 {
         long j2;
         String str2;
         long j3;
-        String y = y(this.t);
+        String m10693y = m10693y(this.f25881t);
         String str3 = "error";
         try {
-            y83 y83Var = g93.v;
+            y83 y83Var = g93.f10852v;
             zzc = zzba.zzc();
-            longValue = ((Long) zzc.b(y83Var)).longValue() * 1000;
-            intValue = ((Integer) zzba.zzc().b(g93.u)).intValue();
-            s54Var = ((Boolean) zzba.zzc().b(g93.F1)).booleanValue();
+            longValue = ((Long) zzc.m23658b(y83Var)).longValue() * 1000;
+            intValue = ((Integer) zzba.zzc().m23658b(g93.f10841u)).intValue();
+            s54Var = ((Boolean) zzba.zzc().m23658b(g93.f10413F1)).booleanValue();
             try {
             } catch (Throwable th) {
                 th = th;
             }
         } catch (Exception e) {
             e = e;
-            str = y;
+            str = m10693y;
             s54Var = this;
         }
         synchronized (this) {
             try {
-                int i = ((zzt.zzB().a() - this.x) > longValue ? 1 : ((zzt.zzB().a() - this.x) == longValue ? 0 : -1));
+                int i = ((zzt.zzB().mo15860a() - this.f25885x) > longValue ? 1 : ((zzt.zzB().mo15860a() - this.f25885x) == longValue ? 0 : -1));
                 if (i <= 0) {
                     try {
-                        if (this.u) {
+                        if (this.f25882u) {
                             throw new IOException("Abort requested before buffering finished. ");
                         }
-                        if (!this.v) {
-                            if (!this.s.V()) {
+                        if (!this.f25883v) {
+                            if (!this.f25880s.mo13734V()) {
                                 throw new IOException("ExoPlayer was released during preloading.");
                             }
-                            long e0 = this.s.e0();
-                            if (e0 > 0) {
-                                long a0 = this.s.a0();
-                                if (a0 != this.y) {
+                            long mo13725e0 = this.f25880s.mo13725e0();
+                            if (mo13725e0 > 0) {
+                                long mo13729a0 = this.f25880s.mo13729a0();
+                                if (mo13729a0 != this.f25886y) {
                                     try {
                                         j2 = intValue;
-                                        str2 = y;
+                                        str2 = m10693y;
                                         try {
-                                            n(this.t, y, a0, e0, a0 > 0, s54Var != 0 ? this.s.E() : -1L, s54Var != 0 ? this.s.c0() : -1L, s54Var != 0 ? this.s.F() : -1L, p24.X(), p24.Z());
+                                            m18852n(this.f25881t, m10693y, mo13729a0, mo13725e0, mo13729a0 > 0, s54Var != 0 ? this.f25880s.mo13751E() : -1L, s54Var != 0 ? this.f25880s.mo13727c0() : -1L, s54Var != 0 ? this.f25880s.mo13750F() : -1L, p24.m13732X(), p24.m13730Z());
                                             s54Var = this;
-                                            j = a0;
+                                            j = mo13729a0;
                                             try {
-                                                s54Var.y = j;
-                                                j3 = e0;
+                                                s54Var.f25886y = j;
+                                                j3 = mo13725e0;
                                                 s54Var = s54Var;
                                             } catch (Throwable th2) {
                                                 th = th2;
@@ -418,19 +451,19 @@ public final class s54 extends j54 implements o24 {
                                     } catch (Throwable th4) {
                                         th = th4;
                                         s54Var = this;
-                                        str = y;
+                                        str = m10693y;
                                     }
                                 } else {
-                                    j = a0;
+                                    j = mo13729a0;
                                     j2 = intValue;
-                                    str2 = y;
+                                    str2 = m10693y;
                                     s54Var = this;
-                                    j3 = e0;
+                                    j3 = mo13725e0;
                                 }
                                 if (j >= j3) {
-                                    s54Var.l(s54Var.t, str2, j3);
+                                    s54Var.m18854l(s54Var.f25881t, str2, j3);
                                 } else {
-                                    int i2 = (s54Var.s.b0() > j2 ? 1 : (s54Var.s.b0() == j2 ? 0 : -1));
+                                    int i2 = (s54Var.f25880s.mo13728b0() > j2 ? 1 : (s54Var.f25880s.mo13728b0() == j2 ? 0 : -1));
                                     s54Var3 = s54Var;
                                     if (i2 >= 0) {
                                         s54Var3 = s54Var;
@@ -442,18 +475,18 @@ public final class s54 extends j54 implements o24 {
                             } else {
                                 s54Var3 = this;
                             }
-                            s54Var3.A(((Long) zzba.zzc().b(g93.w)).longValue());
+                            s54Var3.m10705A(((Long) zzba.zzc().m23658b(g93.f10863w)).longValue());
                             return;
                         }
                         s54Var2 = this;
-                        zzt.zzy().f(s54Var2.w);
+                        zzt.zzy().m2818f(s54Var2.f25884w);
                     } catch (Throwable th5) {
                         th = th5;
                         str3 = zzc;
                         str = i;
                     }
                 } else {
-                    str = y;
+                    str = m10693y;
                     s54Var = this;
                     try {
                         throw new IOException("Timeout reached. Limit: " + longValue + " ms");
@@ -464,7 +497,7 @@ public final class s54 extends j54 implements o24 {
                 }
             } catch (Throwable th7) {
                 th = th7;
-                str = y;
+                str = m10693y;
                 s54Var = this;
             }
             try {
@@ -472,12 +505,12 @@ public final class s54 extends j54 implements o24 {
             } catch (Exception e2) {
                 e = e2;
                 String str4 = str3;
-                k04.zzj("Failed to preload url " + s54Var.t + " Exception: " + e.getMessage());
-                zzt.zzo().t(e, "VideoStreamExoPlayerCache.preload");
-                a();
-                s54Var.j(s54Var.t, str, str4, z(str4, e));
+                k04.zzj("Failed to preload url " + s54Var.f25881t + " Exception: " + e.getMessage());
+                zzt.zzo().m11903t(e, "VideoStreamExoPlayerCache.preload");
+                mo10704a();
+                s54Var.m18856j(s54Var.f25881t, str, str4, m10692z(str4, e));
                 s54Var2 = s54Var;
-                zzt.zzy().f(s54Var2.w);
+                zzt.zzy().m2818f(s54Var2.f25884w);
             }
         }
     }

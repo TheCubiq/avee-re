@@ -7,10 +7,12 @@ import com.google.android.gms.ads.internal.zzt;
 import java.util.concurrent.Callable;
 /* loaded from: classes.dex */
 public final class k46 implements i76 {
-    public final g77 a;
+
+    /* renamed from: a */
+    public final g77 f15678a;
 
     public k46(g77 g77Var) {
-        this.a = g77Var;
+        this.f15678a = g77Var;
     }
 
     @Override // com.daaw.i76
@@ -20,11 +22,11 @@ public final class k46 implements i76 {
 
     @Override // com.daaw.i76
     public final f77 zzb() {
-        return this.a.M(new Callable() { // from class: com.daaw.j46
+        return this.f15678a.mo20112M(new Callable() { // from class: com.daaw.j46
             @Override // java.util.concurrent.Callable
             public final Object call() {
                 Bundle bundle = new Bundle();
-                if (((Boolean) zzba.zzc().b(g93.H)).booleanValue()) {
+                if (((Boolean) zzba.zzc().m23658b(g93.f10431H)).booleanValue()) {
                     Debug.MemoryInfo memoryInfo = new Debug.MemoryInfo();
                     Debug.getMemoryInfo(memoryInfo);
                     bundle.putString("debug_info_dalvik_private_dirty", Integer.toString(memoryInfo.dalvikPrivateDirty));
@@ -41,7 +43,7 @@ public final class k46 implements i76 {
                 bundle.putLong("runtime_free", runtime.freeMemory());
                 bundle.putLong("runtime_max", runtime.maxMemory());
                 bundle.putLong("runtime_total", runtime.totalMemory());
-                bundle.putInt("web_view_count", zzt.zzo().a());
+                bundle.putInt("web_view_count", zzt.zzo().m11922a());
                 return new l46(bundle);
             }
         });

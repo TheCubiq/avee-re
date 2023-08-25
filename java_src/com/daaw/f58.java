@@ -5,50 +5,56 @@ import com.google.android.gms.measurement.internal.zzq;
 import java.util.concurrent.atomic.AtomicReference;
 /* loaded from: classes2.dex */
 public final class f58 implements Runnable {
-    public final /* synthetic */ AtomicReference p;
-    public final /* synthetic */ zzq q;
-    public final /* synthetic */ x78 r;
+
+    /* renamed from: p */
+    public final /* synthetic */ AtomicReference f9141p;
+
+    /* renamed from: q */
+    public final /* synthetic */ zzq f9142q;
+
+    /* renamed from: r */
+    public final /* synthetic */ x78 f9143r;
 
     public f58(x78 x78Var, AtomicReference atomicReference, zzq zzqVar) {
-        this.r = x78Var;
-        this.p = atomicReference;
-        this.q = zzqVar;
+        this.f9143r = x78Var;
+        this.f9141p = atomicReference;
+        this.f9142q = zzqVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         AtomicReference atomicReference;
         ua5 ua5Var;
-        synchronized (this.p) {
+        synchronized (this.f9141p) {
             try {
             } catch (RemoteException e) {
-                this.r.a.i().q().b("Failed to get app instance id", e);
-                atomicReference = this.p;
+                this.f9143r.f25143a.mo3895i().m14160q().m20652b("Failed to get app instance id", e);
+                atomicReference = this.f9141p;
             }
-            if (!this.r.a.F().p().i(vb2.ANALYTICS_STORAGE)) {
-                this.r.a.i().x().a("Analytics storage consent denied; will not get app instance id");
-                this.r.a.I().C(null);
-                this.r.a.F().g.b(null);
-                this.p.set(null);
-                this.p.notify();
+            if (!this.f9143r.f25143a.m24053F().m17174p().m25423i(vb2.ANALYTICS_STORAGE)) {
+                this.f9143r.f25143a.mo3895i().m14154x().m20653a("Analytics storage consent denied; will not get app instance id");
+                this.f9143r.f25143a.m24050I().m13719C(null);
+                this.f9143r.f25143a.m24053F().f17005g.m20166b(null);
+                this.f9141p.set(null);
+                this.f9141p.notify();
                 return;
             }
-            x78 x78Var = this.r;
-            ua5Var = x78Var.d;
+            x78 x78Var = this.f9143r;
+            ua5Var = x78Var.f32173d;
             if (ua5Var == null) {
-                x78Var.a.i().q().a("Failed to get app instance id");
-                this.p.notify();
+                x78Var.f25143a.mo3895i().m14160q().m20653a("Failed to get app instance id");
+                this.f9141p.notify();
                 return;
             }
-            ry0.j(this.q);
-            this.p.set(ua5Var.w0(this.q));
-            String str = (String) this.p.get();
+            ry0.m10830j(this.f9142q);
+            this.f9141p.set(ua5Var.mo8363w0(this.f9142q));
+            String str = (String) this.f9141p.get();
             if (str != null) {
-                this.r.a.I().C(str);
-                this.r.a.F().g.b(str);
+                this.f9143r.f25143a.m24050I().m13719C(str);
+                this.f9143r.f25143a.m24053F().f17005g.m20166b(str);
             }
-            this.r.E();
-            atomicReference = this.p;
+            this.f9143r.m5479E();
+            atomicReference = this.f9141p;
             atomicReference.notify();
         }
     }
