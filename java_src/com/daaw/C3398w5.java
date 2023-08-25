@@ -80,8 +80,8 @@ public class C3398w5 implements pc0 {
     @Override // com.daaw.zc0
     /* renamed from: o */
     public void mo2492o(C3239un c3239un) {
-        c3239un.m7993L("vectorRelativeToCenter", this.f30892f, "misc");
-        c3239un.m7993L("useRandomVectorInstead", this.f30891e, "misc");
+        c3239un.add_Checkbox("vectorRelativeToCenter", this.f30892f, "misc");
+        c3239un.add_Checkbox("useRandomVectorInstead", this.f30891e, "misc");
         c3239un.m7990O("vectorAngle", m6530c(), "misc", 0.0f, 360.0f);
         c3239un.m7990O("vectorAngleZ", m6529j(), "misc", -1.0f, 1.0f);
     }

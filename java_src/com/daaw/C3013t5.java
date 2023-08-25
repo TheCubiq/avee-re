@@ -82,8 +82,8 @@ public class C3013t5 implements pc0 {
     @Override // com.daaw.zc0
     /* renamed from: o */
     public void mo2492o(C3239un c3239un) {
-        c3239un.m7993L("verticalOrientation", m9524q(), "misc");
-        c3239un.m7993L("useRandomVectorInstead", this.f27007e, "misc");
+        c3239un.add_Checkbox("verticalOrientation", m9524q(), "misc");
+        c3239un.add_Checkbox("useRandomVectorInstead", this.f27007e, "misc");
         c3239un.m7990O("vectorAngle", m9526c(), "misc", 0.0f, 360.0f);
         c3239un.m7990O("vectorAngleZ", m9525j(), "misc", -1.0f, 1.0f);
     }

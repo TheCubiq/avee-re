@@ -707,8 +707,8 @@ public class yv0 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         c3239un.m7950p0(m8790j(R.string.title_particles));
         od0Var.mo14380a(this.f34143j0.m6757j());
         c3239un.m7968g0("customImage", this.f34143j0.m6757j(), "appearance", c60.f5521m ? f34113s0 : f34112r0);
@@ -716,16 +716,16 @@ public class yv0 extends AbstractC3118tv {
         c3239un.m7982W("CountLimit", m3199i0(), "1_overall", 1, 5000);
         c3239un.m7990O("particleScale", this.f34121N, "appearance", 0.25f, 8.0f);
         c3239un.m7990O("spawnTime", this.f34118K, "behaviour", 0.005f, 0.05f);
-        c3239un.m7993L("mirrorX", this.f34126S, "1_overall");
-        c3239un.m7993L("mirrorY", this.f34125R, "1_overall");
+        c3239un.add_Checkbox("mirrorX", this.f34126S, "1_overall");
+        c3239un.add_Checkbox("mirrorY", this.f34125R, "1_overall");
         c3239un.m7990O("perspectiveDepth", this.f34128U, "1_overall", 0.0f, 1000.0f);
         c3239un.m7990O("perspectiveFov", this.f34129V, "1_overall", 30.0f, 180.0f);
-        C3239un m7999F = c3239un.m7999F("SpawnArea", C2913s5.m10709b(this.f34117J), "1_overall", C2913s5.f25863a);
+        C3239un m7999F = c3239un.add_Dropdown("SpawnArea", C2913s5.m10709b(this.f34117J), "1_overall", C2913s5.f25863a);
         pc0 pc0Var = this.f34117J;
         if (pc0Var != null) {
             pc0Var.mo2492o(m7999F);
         }
-        C3239un m7999F2 = c3239un.m7999F("MeasureOverallSpeed", "", "behaviour", new String[0]);
+        C3239un m7999F2 = c3239un.add_Dropdown("MeasureOverallSpeed", "", "behaviour", new String[0]);
         xn0 xn0Var = this.f34124Q;
         if (xn0Var != null) {
             xn0Var.m4955r(m7999F2);
@@ -734,7 +734,7 @@ public class yv0 extends AbstractC3118tv {
         if (ae0Var != null) {
             ae0Var.mo2492o(c3239un);
         }
-        C3239un m7999F3 = c3239un.m7999F("ForceField", e30.m23779b(this.f34127T), "1_overall", e30.f8073a);
+        C3239un m7999F3 = c3239un.add_Dropdown("ForceField", e30.m23779b(this.f34127T), "1_overall", e30.f8073a);
         qd0 qd0Var = this.f34127T;
         if (qd0Var != null) {
             qd0Var.mo2492o(m7999F3);

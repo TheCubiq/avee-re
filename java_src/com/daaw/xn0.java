@@ -165,7 +165,7 @@ public class xn0 {
 
     /* renamed from: o */
     public void m4958o(C3239un c3239un) {
-        c3239un.m7999F("measureWhat", this.f32822a, "misc", wn0.f31384c);
+        c3239un.add_Dropdown("measureWhat", this.f32822a, "misc", wn0.f31384c);
         if (this.f32822a.equals("Nothing")) {
             return;
         }
@@ -175,7 +175,7 @@ public class xn0 {
 
     /* renamed from: p */
     public void m4957p(C3239un c3239un) {
-        c3239un.m7999F("measureWhat", this.f32822a, "misc", new String[]{"Nothing", "BeatCamShakeMore", "BeatCamShakeLess", "BeatRandomShake", "ConstantShakeMore", "ConstantShake", "TrackPosition"});
+        c3239un.add_Dropdown("measureWhat", this.f32822a, "misc", new String[]{"Nothing", "BeatCamShakeMore", "BeatCamShakeLess", "BeatRandomShake", "ConstantShakeMore", "ConstantShake", "TrackPosition"});
         if (this.f32822a.equals("Nothing")) {
             return;
         }
@@ -185,7 +185,7 @@ public class xn0 {
 
     /* renamed from: q */
     public void m4956q(C3239un c3239un) {
-        c3239un.m7999F("measureWhat", this.f32822a, "misc", wn0.f31384c);
+        c3239un.add_Dropdown("measureWhat", this.f32822a, "misc", wn0.f31384c);
         if (this.f32822a.equals("Nothing")) {
             return;
         }
@@ -195,7 +195,7 @@ public class xn0 {
 
     /* renamed from: r */
     public void m4955r(C3239un c3239un) {
-        c3239un.m7999F("measureWhat", this.f32822a, "misc", wn0.f31384c);
+        c3239un.add_Dropdown("measureWhat", this.f32822a, "misc", wn0.f31384c);
         if (this.f32822a.equals("Nothing")) {
             return;
         }

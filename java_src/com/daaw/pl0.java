@@ -274,10 +274,10 @@ public class pl0 extends ok1 {
 
     @Override // com.daaw.ok1, com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
         super.m14213d0(c3239un);
         c3239un.m7950p0(m8790j(R.string.title_app_logo));
-        c3239un.m7993L("visible", this.f28126k, "0_general");
+        c3239un.add_Checkbox("visible", this.item_visibility, "0_general");
         c3239un.m7944s0("visible", "pb", "AppLogo");
         c3239un.m7985T("color", f80.m22868f(this.f23014T), "0_general");
         if (f23009X.m5753a(this, Boolean.FALSE).booleanValue()) {

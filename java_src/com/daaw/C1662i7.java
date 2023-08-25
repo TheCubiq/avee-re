@@ -68,9 +68,9 @@ public class C1662i7 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
         c3239un.m7950p0(m8790j(R.string.title_audio_data_provider));
-        c3239un.m7999F("sampleProvider", ma1.m16144b(this.f13322G, "Spectrum"), "0_general", ma1.f18688a);
+        c3239un.add_Dropdown("sampleProvider", ma1.m16144b(this.f13322G, "Spectrum"), "0_general", ma1.f18688a);
         fe0 fe0Var = this.f13322G;
         if (fe0Var != null) {
             fe0Var.mo2492o(c3239un);

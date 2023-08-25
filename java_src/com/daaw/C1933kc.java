@@ -420,7 +420,7 @@ public class C1933kc extends AbstractC3118tv {
         super.mo2442t(c3239un);
         super.m8781u(c3239un);
         m8800R(1.0f, 1.0f);
-        m17824f0(C1268fc.m22807a(c3239un.m7967h("blendModeContent").m8003B(), 2));
+        m17824f0(BlendMode.m22807a(c3239un.m7967h("blendModeContent").m8003B(), 2));
         m17821i0(c3239un.m7947r("color", -16777216));
         m17819k0(c3239un.m7947r("sourceCompositionIndex", 1));
         this.f16146U.m6768C(c3239un.m7940w("MaskImage", C3376vv.f30615t[0]));
@@ -515,22 +515,22 @@ public class C1933kc extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         super.m8813A(c3239un);
         c3239un.m7950p0(m8790j(R.string.title_blur_effect));
-        c3239un.m7999F("blendModeContent", C1268fc.m22806b(this.f16141P), "1_appearance", C1268fc.f9420a);
+        c3239un.add_Dropdown("blendModeContent", BlendMode.m22806b(this.f16141P), "1_appearance", BlendMode.f9420a);
         c3239un.m7985T("color", this.f16136K, "1_appearance");
         c3239un.m7982W("sourceCompositionIndex", this.f16142Q, "1_appearance", 1, 5);
         od0Var.mo14380a(this.f16146U.m6757j());
         c3239un.m7970f0("MaskImage", this.f16146U.m6757j(), "1_appearance", C3376vv.f30615t);
         c3239un.m7990O("blurRadius", this.f16133H, "2_blur", 0.0f, 3.0f);
         c3239un.m7990O("blurMultiplier", this.f16134I, "2_blur", 1.0f, 6.0f);
-        c3239un.m7993L("showUnblurredContent", m17826d0(), "1_appearance");
-        c3239un.m7993L("showUnblurredContentUnder", m17825e0(), "1_appearance");
-        c3239un.m7960k0("1layerScale", this.f16137L[0], "2_blur", 0.0f, 10.0f);
-        c3239un.m7960k0("2layerScale", this.f16137L[1], "2_blur", 0.0f, 10.0f);
-        c3239un.m7960k0("3layerScale", this.f16137L[2], "2_blur", 0.0f, 10.0f);
+        c3239un.add_Checkbox("showUnblurredContent", m17826d0(), "1_appearance");
+        c3239un.add_Checkbox("showUnblurredContentUnder", m17825e0(), "1_appearance");
+        c3239un.add_Vec2Slider("1layerScale", this.f16137L[0], "2_blur", 0.0f, 10.0f);
+        c3239un.add_Vec2Slider("2layerScale", this.f16137L[1], "2_blur", 0.0f, 10.0f);
+        c3239un.add_Vec2Slider("3layerScale", this.f16137L[2], "2_blur", 0.0f, 10.0f);
         c3239un.m7985T("1layerColor", this.f16138M[0], "2_blur");
         c3239un.m7985T("2layerColor", this.f16138M[1], "2_blur");
         c3239un.m7985T("3layerColor", this.f16138M[2], "2_blur");

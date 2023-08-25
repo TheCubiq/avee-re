@@ -53,7 +53,7 @@ public abstract class AbstractC3118tv {
     public int f28125j = 0;
 
     /* renamed from: k */
-    public boolean f28126k = true;
+    public boolean item_visibility = false;
 
     /* renamed from: l */
     public xn0 f28127l = xn0.m4972a();
@@ -186,7 +186,7 @@ public abstract class AbstractC3118tv {
     /* renamed from: A */
     public void m8813A(C3239un c3239un) {
         c3239un.m7990O("rotation", this.f28128m * 360.0f, "0_general", 0.0f, 300.0f);
-        this.f28127l.m4958o(c3239un.m7999F("measureRot", "", "0_general", new String[0]));
+        this.f28127l.m4958o(c3239un.add_Dropdown("measureRot", "", "0_general", new String[0]));
     }
 
     /* renamed from: B */
@@ -312,12 +312,12 @@ public abstract class AbstractC3118tv {
 
     /* renamed from: V */
     public void m8796V(boolean z) {
-        this.f28126k = z;
+        this.item_visibility = z;
     }
 
     /* renamed from: W */
     public boolean mo5088W() {
-        return this.f28126k;
+        return this.item_visibility;
     }
 
     /* renamed from: X */
@@ -369,7 +369,7 @@ public abstract class AbstractC3118tv {
         }
         c3239un.m8000E(mo2456h());
         c3239un.m7946r0(m8791i());
-        mo2434z(c3239un, od0Var);
+        generalItemGen(c3239un, od0Var);
         return true;
     }
 
@@ -458,8 +458,8 @@ public abstract class AbstractC3118tv {
     /* renamed from: t */
     public void mo2442t(C3239un c3239un) {
         this.f28121f = c3239un.m8004A();
-        m8796V(c3239un.m7955n("visible", true));
-        m8807J(C1268fc.m22807a(c3239un.m7967h("blendMode").m8002C(C1268fc.m22806b(this.f28116a)), this.f28116a));
+        m8796V(c3239un.m7955n("visible", false));
+        m8807J(BlendMode.m22807a(c3239un.m7967h("blendMode").m8002C(BlendMode.m22806b(this.f28116a)), this.f28116a));
         mo8803O(c3239un.m7937z("position", new bs1(0.5f, 0.5f)));
         String[] strArr = C3661y2.f33224a;
         this.f28130o = c3239un.m7941v("anchorX", strArr, 0);
@@ -495,20 +495,20 @@ public abstract class AbstractC3118tv {
     }
 
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
         c3239un.m7983V("_id", this.f28120e, "");
-        c3239un.m7948q0(this.f28121f);
-        c3239un.m7993L("visible", this.f28126k, "0_general");
-        c3239un.m7999F("blendMode", C1268fc.m22806b(this.f28124i), "0_general", C1268fc.f9420a);
-        c3239un.m7960k0("position", new bs1(this.f28132q, this.f28133r), "0_general", -1.0f, 1.0f);
+        c3239un.add_Tag(this.f28121f);
+        c3239un.add_Checkbox("visible", this.item_visibility, "0_general");
+        c3239un.add_Dropdown("blendMode", BlendMode.m22806b(this.f28124i), "0_general", BlendMode.f9420a);
+        c3239un.add_Vec2Slider("position", new bs1(this.f28132q, this.f28133r), "0_general", -1.0f, 1.0f);
         String m4254a = C3661y2.m4254a(this.f28130o, 0);
         String[] strArr = C3661y2.f33224a;
         c3239un.m7956m0("anchorX", m4254a, "0_general", strArr);
         c3239un.m7956m0("anchorY", C3661y2.m4254a(this.f28131p, 0), "0_general", strArr);
-        this.f28129n.m4957p(c3239un.m7999F("MeasurePos", "", "0_general", new String[0]));
-        c3239un.m7960k0("alignmentPosition", new bs1(this.f28134s, this.f28135t), "0_general", 0.0f, 1.0f);
-        c3239un.m7993L("scaleIsUniform", this.f28114A, "0_general");
-        c3239un.m7960k0("scale", new bs1(this.f28139x, this.f28140y), "0_general", 0.0f, 2.0f);
-        this.f28141z.m4956q(c3239un.m7999F("measureScale", "", "0_general", new String[0]));
+        this.f28129n.m4957p(c3239un.add_Dropdown("MeasurePos", "", "0_general", new String[0]));
+        c3239un.add_Vec2Slider("alignmentPosition", new bs1(this.f28134s, this.f28135t), "0_general", 0.0f, 1.0f);
+        c3239un.add_Checkbox("scaleIsUniform", this.f28114A, "0_general");
+        c3239un.add_Vec2Slider("scale", new bs1(this.f28139x, this.f28140y), "0_general", 0.0f, 2.0f);
+        this.f28141z.m4956q(c3239un.add_Dropdown("measureScale", "", "0_general", new String[0]));
     }
 }

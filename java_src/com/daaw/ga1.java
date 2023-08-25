@@ -475,7 +475,7 @@ public class ga1 implements fe0, rd0 {
             c3239un.m7990O("higherHz", this.f10954h, "1_spectrumHz", 300.0f, 18000.0f);
             c3239un.m7990O("hzLinearFactor", this.f10933K, "1_spectrumHz", 0.0f, 1.0f);
             c3239un.m7990O("freqShift", this.f10957k, "1_spectrumHz", 0.0f, 1.0f);
-            c3239un.m7993L("mirrorSamples", this.f10965s, "1_spectrum");
+            c3239un.add_Checkbox("mirrorSamples", this.f10965s, "1_spectrum");
             c3239un.m7982W("repeatSamples", this.f10966t, "1_spectrum", 1, 6);
             c3239un.m7982W("starAndEndGap", this.f10955i, "1_spectrum", 0, 30);
             c3239un.m7990O("smooth", this.f10967u, "1_spectrum", 0.1f, 1.0f);

@@ -512,13 +512,13 @@ public class ha1 implements fe0, rd0 {
         public void mo2492o(C3239un c3239un) {
             synchronized (this.f12249W) {
                 c3239un.m7982W("audioDurationMs", this.f12253a, "1_AudioCapture", 20, 300);
-                c3239un.m7993L("highQualityAudioCapture", this.f12255b, "1_AudioCapture");
+                c3239un.add_Checkbox("highQualityAudioCapture", this.f12255b, "1_AudioCapture");
                 c3239un.m7982W("sampleOutCount", this.f12266k, "2_spectrum", 0, 512);
                 c3239un.m7990O("lowerHz", this.f12261f, "2_spectrumHz", 0.0f, 300.0f);
                 c3239un.m7990O("higherHz", this.f12262g, "2_spectrumHz", 300.0f, 18000.0f);
                 c3239un.m7990O("hzLinearFactor", this.f12234H, "2_spectrumHz", 0.0f, 1.0f);
                 c3239un.m7990O("freqShift", this.f12265j, "2_spectrumHz", 0.0f, 1.0f);
-                c3239un.m7993L("mirrorSamples", this.f12273r, "2_spectrum");
+                c3239un.add_Checkbox("mirrorSamples", this.f12273r, "2_spectrum");
                 c3239un.m7982W("repeatSamples", this.f12274s, "2_spectrum", 1, 6);
                 c3239un.m7982W("starAndEndGap", this.f12263h, "2_spectrum", 0, 30);
                 c3239un.m7990O("smooth", this.f12275t, "2_spectrum", 0.1f, 1.0f);

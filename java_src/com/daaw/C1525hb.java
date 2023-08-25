@@ -206,8 +206,8 @@ public class C1525hb extends AbstractC0559a {
         c3239un.m7996I("ColorTo", this.f12330m, "appearance");
         c3239un.m7990O("lifetime", this.f12325h, "behaviour", 0.1f, 10.0f);
         c3239un.m7990O("fadeInAndOutTime", this.f12326i, "appearance", 0.0f, 0.5f);
-        c3239un.m7960k0("gravity", this.f12327j, "behaviour", -300.0f, 300.0f);
-        c3239un.m7993L("velocityAngle", this.f12328k, "appearance");
+        c3239un.add_Vec2Slider("gravity", this.f12327j, "behaviour", -300.0f, 300.0f);
+        c3239un.add_Checkbox("velocityAngle", this.f12328k, "appearance");
         c3239un.m7990O("sizeAspectRatio", this.f12335r, "appearance", 0.1f, 10.0f);
         c3239un.m7990O("startSize", this.f12336s, "appearance", 0.0f, 20.0f);
         c3239un.m7990O("fadeInSize", this.f12337t, "appearance", 0.0f, 20.0f);

@@ -130,6 +130,6 @@ public class bb1 extends xa1 {
     public void mo2492o(C3239un c3239un) {
         super.mo2492o(c3239un);
         c3239un.m7990O("barWidth", this.f4592h, "misc", 0.0f, 2.0f);
-        c3239un.m7993L("mirror", this.f4593i, "misc");
+        c3239un.add_Checkbox("mirror", this.f4593i, "misc");
     }
 }

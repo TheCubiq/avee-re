@@ -1,7 +1,7 @@
 package com.daaw;
 /* renamed from: com.daaw.fc */
 /* loaded from: classes.dex */
-public class C1268fc {
+public class BlendMode {
 
     /* renamed from: a */
     public static final String[] f9420a = {"Alpha", "PreMulAlpha", "Screen", "Add", "AddAlpha"};
@@ -69,25 +69,22 @@ public class C1268fc {
 
     /* renamed from: b */
     public static String m22806b(int i) {
-        if (i != 0) {
-            if (i != 1) {
-                if (i != 2) {
-                    if (i != 3) {
-                        if (i != 4) {
-                            if (i != 5) {
-                                lz1.m16363c("unknown instance type");
-                                return "Alpha";
-                            }
-                            return "AddAlpha";
-                        }
-                        return "PreMulAlpha";
-                    }
-                    return "Over";
-                }
+        switch (i) {
+            case 0:
+                return "Alpha";
+            case 1:
+                return "Screen";
+            case 2:
                 return "Add";
-            }
-            return "Screen";
+            case 3:
+                return "Over";
+            case 4:
+                return "PreMulAlpha";
+            case 5:
+                return "AddAlpha";
+            default:
+                lz1.m16363c("unknown instance type");
+                return "Alpha";
         }
-        return "Alpha";
     }
 }

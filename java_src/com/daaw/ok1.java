@@ -241,8 +241,8 @@ public class ok1 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         super.m8813A(c3239un);
         c3239un.m7950p0(m8790j(R.string.title_text));
         c3239un.m7966h0("text", this.f21605H, "appearance");

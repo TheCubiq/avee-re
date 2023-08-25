@@ -330,7 +330,7 @@ public class v51 extends AbstractC3118tv {
     public void mo2442t(C3239un c3239un) {
         super.mo2442t(c3239un);
         super.m8781u(c3239un);
-        m7437l0(C1268fc.m22807a(c3239un.m7967h("blendModeContent").m8002C("Add"), this.f29877H));
+        m7437l0(BlendMode.m22807a(c3239un.m7967h("blendModeContent").m8002C("Add"), this.f29877H));
         m7436m0(c3239un.m7947r("color", -1));
         m7428u0(c3239un.m7940w("targetImage", "composition:1"));
         m7435n0(c3239un.m7955n("showUnblurredContent", false));
@@ -393,16 +393,16 @@ public class v51 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         super.m8813A(c3239un);
         c3239un.m7950p0(m8790j(R.string.title_rgb_split_effect));
-        c3239un.m7999F("blendModeContent", C1268fc.m22806b(this.f29877H), "1_appearance", C1268fc.f9420a);
+        c3239un.add_Dropdown("blendModeContent", BlendMode.m22806b(this.f29877H), "1_appearance", BlendMode.f9420a);
         c3239un.m7986S("color", this.f29876G, "1_appearance");
         od0Var.mo14380a(m7438k0());
         c3239un.m7970f0("targetImage", m7438k0(), "1_appearance", f29875Y);
-        c3239un.m7993L("showUnblurredContent", m7443f0(), "1_appearance");
-        c3239un.m7993L("showUnblurredContentUnder", m7442g0(), "1_appearance");
+        c3239un.add_Checkbox("showUnblurredContent", m7443f0(), "1_appearance");
+        c3239un.add_Checkbox("showUnblurredContentUnder", m7442g0(), "1_appearance");
         c3239un.m7979Z("splitMultiplier", this.f29881L, "2_splitEffect", 0.0f, 6.0f);
         c3239un.m7977b0("splitAmount", this.f29882M, "2_splitEffect", -0.5f, 0.5f);
         c3239un.m7986S("splitColor0", m7441h0(), "2_splitEffect");

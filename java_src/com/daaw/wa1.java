@@ -143,7 +143,7 @@ public class wa1 extends xa1 {
     public void mo2492o(C3239un c3239un) {
         super.mo2492o(c3239un);
         c3239un.m7990O("barWidth", this.f31093h, "misc", 0.0f, 2.0f);
-        c3239un.m7993L("barWidthAffectedByShape", this.f31095j, "b");
-        c3239un.m7993L("mirror", this.f31094i, "b");
+        c3239un.add_Checkbox("barWidthAffectedByShape", this.f31095j, "b");
+        c3239un.add_Checkbox("mirror", this.f31094i, "b");
     }
 }

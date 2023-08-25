@@ -455,19 +455,19 @@ public class ze0 extends xe0 {
 
     @Override // com.daaw.xe0, com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
-        c3239un.m7993L("keepAspectRatio", this.f34976U, "1_image");
-        c3239un.m7993L("blurredBorder", this.f34975T, "1_image");
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
+        c3239un.add_Checkbox("keepAspectRatio", this.f34976U, "1_image");
+        c3239un.add_Checkbox("blurredBorder", this.f34975T, "1_image");
         c3239un.m7950p0(m8790j(R.string.title_image));
         c3239un.m7996I("Color", this.f34968M, "2_color");
         c3239un.m7996I("ColorTo", this.f34969N, "2_color");
-        this.f34970O.m4958o(c3239un.m7999F("MeasureColorBlend", "", "2_color", new String[0]));
+        this.f34970O.m4958o(c3239un.add_Dropdown("MeasureColorBlend", "", "2_color", new String[0]));
         c3239un.m7979Z("saturation", this.f34971P, "2_color", 0.0f, 1.0f);
-        c3239un.m7993L("blurEnabled", this.f34972Q, "blur");
+        c3239un.add_Checkbox("blurEnabled", this.f34972Q, "blur");
         c3239un.m7982W("blurDivider", this.f34973R, "blur", 0, 10);
         c3239un.m7982W("blurRadius", this.f34974S, "blur", 1, 25);
-        C3239un m7999F = c3239un.m7999F("Shape", pa1.m13537b(this.f34977V), "1_image", pa1.f22766c);
+        C3239un m7999F = c3239un.add_Dropdown("Shape", pa1.m13537b(this.f34977V), "1_image", pa1.f22766c);
         ge0 ge0Var = this.f34977V;
         if (ge0Var != null) {
             ge0Var.mo2492o(m7999F);

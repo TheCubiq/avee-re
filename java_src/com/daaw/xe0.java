@@ -171,20 +171,20 @@ public abstract class xe0 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         super.m8813A(c3239un);
         od0Var.mo14380a(this.f32598G.m6757j());
         c3239un.m7970f0("customImage", this.f32598G.m6757j(), "1_image", C3376vv.f30614s);
-        this.f32600I.m4958o(c3239un.m7999F("measureAnimationSpeed", "", "1_image", new String[0]));
+        this.f32600I.m4958o(c3239un.add_Dropdown("measureAnimationSpeed", "", "1_image", new String[0]));
         c3239un.m7981X("generatedAlbumArtHint", this.f32598G.m6760g(), "generatedAlbumArt", 0, 7);
-        c3239un.m7993L("generatedAlbumArtHintShiftHue", (this.f32598G.m6760g() & 1) != 0, "generatedAlbumArt");
-        c3239un.m7993L("generatedAlbumArtHintNoText", (this.f32598G.m6760g() & 2) != 0, "generatedAlbumArt");
-        c3239un.m7993L("generatedAlbumArtHintForceGen", (this.f32598G.m6760g() & 4) != 0, "generatedAlbumArt");
+        c3239un.add_Checkbox("generatedAlbumArtHintShiftHue", (this.f32598G.m6760g() & 1) != 0, "generatedAlbumArt");
+        c3239un.add_Checkbox("generatedAlbumArtHintNoText", (this.f32598G.m6760g() & 2) != 0, "generatedAlbumArt");
+        c3239un.add_Checkbox("generatedAlbumArtHintForceGen", (this.f32598G.m6760g() & 4) != 0, "generatedAlbumArt");
         c3239un.m7985T("generatedAlbumArtColor", this.f32598G.m6756k(), "generatedAlbumArt");
-        c3239un.m7993L("keepAspectRatioAndCropToFit", this.f32598G.m6755l(), "1_image");
-        c3239un.m7993L("colorKeyEnabled", this.f32598G.m6759h(), "2_ColorKey");
-        c3239un.m7993L("autoDetectColorKey", this.f32598G.m6758i().f33565b, "2_ColorKey");
+        c3239un.add_Checkbox("keepAspectRatioAndCropToFit", this.f32598G.m6755l(), "1_image");
+        c3239un.add_Checkbox("colorKeyEnabled", this.f32598G.m6759h(), "2_ColorKey");
+        c3239un.add_Checkbox("autoDetectColorKey", this.f32598G.m6758i().f33565b, "2_ColorKey");
         c3239un.m7984U("colorKey", this.f32598G.m6758i().f33564a, "2_ColorKey");
         c3239un.m7990O("transparencyStrength", this.f32598G.m6758i().f33566c, "2_ColorKey", 0.0f, 4.0f);
         c3239un.m7990O("opacityStrength", this.f32598G.m6758i().f33567d, "2_ColorKey", 0.0f, 4.0f);

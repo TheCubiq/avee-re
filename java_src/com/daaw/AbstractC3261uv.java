@@ -169,6 +169,6 @@ public abstract class AbstractC3261uv<T extends AbstractC3118tv, ChildC extends 
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
     }
 }

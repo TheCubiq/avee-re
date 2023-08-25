@@ -74,8 +74,8 @@ public class C3290v5 implements pc0 {
     @Override // com.daaw.zc0
     /* renamed from: o */
     public void mo2492o(C3239un c3239un) {
-        c3239un.m7993L("use3dVectorInstead", this.f29874f, "misc");
-        c3239un.m7993L("useRandomVectorInstead", this.f29873e, "misc");
+        c3239un.add_Checkbox("use3dVectorInstead", this.f29874f, "misc");
+        c3239un.add_Checkbox("useRandomVectorInstead", this.f29873e, "misc");
         c3239un.m7990O("vectorAngle", m7455c(), "misc", 0.0f, 360.0f);
         c3239un.m7990O("vectorAngleZ", m7454j(), "misc", -1.0f, 1.0f);
     }

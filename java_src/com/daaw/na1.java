@@ -351,15 +351,15 @@ public class na1 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         super.m8813A(c3239un);
         c3239un.m7950p0(m8790j(R.string.title_segment));
-        c3239un.m7993L("flipInput", this.f19753J, "1_bars");
+        c3239un.add_Checkbox("flipInput", this.f19753J, "1_bars");
         c3239un.m7990O("heightScale", this.f19754K, "1_bars", -10.0f, 10.0f);
         c3239un.m7990O("minHeightScale", this.f19755L, "1_bars", -0.03f, 0.03f);
         c3239un.m7990O("maxHeightScale", this.f19756M, "1_bars", 0.1f, 1.0f);
-        C3239un m7999F = c3239un.m7999F("ShapePath", pa1.m13537b(this.f19752I), "1_bars", c60.f5521m ? pa1.f22765b : pa1.f22764a);
+        C3239un m7999F = c3239un.add_Dropdown("ShapePath", pa1.m13537b(this.f19752I), "1_bars", c60.f5521m ? pa1.f22765b : pa1.f22764a);
         ge0 ge0Var = this.f19752I;
         if (ge0Var != null) {
             ge0Var.mo2492o(m7999F);
@@ -371,12 +371,12 @@ public class na1 extends AbstractC3118tv {
         c3239un.m7982W("audioProviderIndex", this.f19766W, "2_Behavior", 1, 4);
         String m3958b = ya1.m3958b(this.f19750G);
         String[] strArr = ya1.f33444a;
-        C3239un m7999F2 = c3239un.m7999F("Segment1", m3958b, "1_bars", strArr);
+        C3239un m7999F2 = c3239un.add_Dropdown("Segment1", m3958b, "1_bars", strArr);
         he0 he0Var = this.f19750G;
         if (he0Var != null) {
             he0Var.mo2492o(m7999F2);
         }
-        C3239un m7999F3 = c3239un.m7999F("Segment2", ya1.m3958b(this.f19751H), "1_bars", strArr);
+        C3239un m7999F3 = c3239un.add_Dropdown("Segment2", ya1.m3958b(this.f19751H), "1_bars", strArr);
         he0 he0Var2 = this.f19751H;
         if (he0Var2 != null) {
             he0Var2.mo2492o(m7999F3);

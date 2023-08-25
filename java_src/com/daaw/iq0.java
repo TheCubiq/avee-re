@@ -333,15 +333,15 @@ public class iq0 extends AbstractC3118tv {
 
     @Override // com.daaw.AbstractC3118tv
     /* renamed from: z */
-    public void mo2434z(C3239un c3239un, od0 od0Var) {
-        super.mo2434z(c3239un, od0Var);
+    public void generalItemGen(C3239un c3239un, od0 od0Var) {
+        super.generalItemGen(c3239un, od0Var);
         super.m8813A(c3239un);
         c3239un.m7950p0(m8790j(R.string.title_mirror_effect));
         od0Var.mo14380a(m19500b0());
         c3239un.m7970f0("TargetImage", m19500b0(), "1_appearance", f13913M);
         String[] strArr = f13914N;
         c3239un.m7956m0("mirrorMode", br1.m25908a(strArr, m19501a0(), strArr[0]), "1_appearance", strArr);
-        c3239un.m7993L("flipMirror", m19502Z(), "1_appearance");
+        c3239un.add_Checkbox("flipMirror", m19502Z(), "1_appearance");
         c3239un.m7985T("color", this.f13915G, "1_appearance");
     }
 }

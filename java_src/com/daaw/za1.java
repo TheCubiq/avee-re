@@ -259,8 +259,8 @@ public class za1 extends xa1 implements t40<Integer, float[], int[], Boolean>, u
     /* renamed from: o */
     public void mo2492o(C3239un c3239un) {
         super.mo2492o(c3239un);
-        c3239un.m7993L("mirror", this.f34654O, "b");
-        c3239un.m7993L("flipEveryOther", this.f34655P, "b");
+        c3239un.add_Checkbox("mirror", this.f34654O, "b");
+        c3239un.add_Checkbox("flipEveryOther", this.f34655P, "b");
     }
 
     @Override // com.daaw.t40

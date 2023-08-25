@@ -138,7 +138,7 @@ public class C3239un {
     }
 
     /* renamed from: F */
-    public C3239un m7999F(String str, String str2, String str3, String[] strArr) {
+    public C3239un add_Dropdown(String str, String str2, String str3, String[] strArr) {
         return m7998G(str, str2, str3, strArr, false);
     }
 
@@ -204,7 +204,7 @@ public class C3239un {
     }
 
     /* renamed from: L */
-    public void m7993L(String str, boolean z, String str2) {
+    public void add_Checkbox(String str, boolean z, String str2) {
         try {
             JSONObject jSONObject = new JSONObject();
             jSONObject.put("v", z ? 1 : 0);
@@ -559,7 +559,7 @@ public class C3239un {
     }
 
     /* renamed from: k0 */
-    public void m7960k0(String str, bs1 bs1Var, String str2, float f, float f2) {
+    public void add_Vec2Slider(String str, bs1 bs1Var, String str2, float f, float f2) {
         m7962j0(str, bs1Var, str2, "f2 " + f + " " + f2, null);
     }
 
@@ -668,7 +668,7 @@ public class C3239un {
     }
 
     /* renamed from: q0 */
-    public void m7948q0(String str) {
+    public void add_Tag(String str) {
         m7966h0("tag", str, "0_general");
     }
 
