@@ -1,0 +1,56 @@
+package com.daaw;
+
+import android.os.Bundle;
+import android.os.IInterface;
+import com.google.android.gms.ads.internal.client.zzdq;
+import java.util.List;
+/* loaded from: classes.dex */
+public interface sn3 extends IInterface {
+    String b();
+
+    void n0(yd0 yd0Var);
+
+    void n2(yd0 yd0Var, yd0 yd0Var2, yd0 yd0Var3);
+
+    void w2(yd0 yd0Var);
+
+    boolean zzA();
+
+    boolean zzB();
+
+    double zze();
+
+    float zzf();
+
+    float zzg();
+
+    float zzh();
+
+    Bundle zzi();
+
+    zzdq zzj();
+
+    nc3 zzk();
+
+    vc3 zzl();
+
+    yd0 zzm();
+
+    yd0 zzn();
+
+    yd0 zzo();
+
+    String zzp();
+
+    String zzq();
+
+    String zzr();
+
+    String zzs();
+
+    String zzt();
+
+    List zzv();
+
+    void zzx();
+}

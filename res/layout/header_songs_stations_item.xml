@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?containerBackgroundDark" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <HorizontalScrollView android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/group5" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                <TextView android:textSize="10.0sp" android:textColor="?containerFGw" android:id="@id/txt5" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_Sort" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/btn5" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_sort3" android:scaleType="center" android:tint="?containerFG" android:layout_above="@id/txt5" android:layout_centerHorizontal="true" android:color="@color/text_color_m1" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/group7" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                <TextView android:textSize="10.0sp" android:textColor="?containerFGw" android:id="@id/txt7" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_ViewLayout" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/btn7" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_layout" android:scaleType="center" android:tint="?containerFG" android:layout_above="@id/txt7" android:layout_centerHorizontal="true" android:color="@color/text_color_m1" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/group6" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                <TextView android:textSize="10.0sp" android:textColor="?containerFGw" android:id="@id/txt6" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_showAlbumArtInstead" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/btn6" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_visual3" android:scaleType="center" android:tint="?containerFG" android:layout_above="@id/txt6" android:layout_centerHorizontal="true" android:color="@color/text_color_m1" />
+            </RelativeLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <include layout="@layout/ad_container" />
+</LinearLayout>

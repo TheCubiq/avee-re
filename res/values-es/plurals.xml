@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="albums_count">
+        <item quantity="other">%d álbumes</item>
+        <item quantity="one">1 álbum</item>
+    </plurals>
+    <plurals name="audio_bass_x">
+        <item quantity="other">Bajo %d</item>
+        <item quantity="one">Bajo %d</item>
+    </plurals>
+    <plurals name="audio_stereo_balance_x">
+        <item quantity="other">%d%%</item>
+        <item quantity="one">%d%%</item>
+    </plurals>
+    <plurals name="audio_treble_x">
+        <item quantity="other">Agudos %d</item>
+        <item quantity="one">Agudos %d</item>
+    </plurals>
+    <plurals name="audio_volume_x">
+        <item quantity="other">%d%%</item>
+        <item quantity="one">%d%%</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notificaciones nuevas</item>
+        <item quantity="one">%d notificación nueva</item>
+    </plurals>
+    <plurals name="playback_crossFade_x_sec">
+        <item quantity="other">%.1f seg</item>
+        <item quantity="one">%.1f seg</item>
+    </plurals>
+    <plurals name="showing_x_of_y_items3_item_count">
+        <item quantity="other">%d elementos</item>
+        <item quantity="one">1 elemento</item>
+    </plurals>
+    <plurals name="store_subscription_interval_m">
+        <item quantity="other">%d Meses</item>
+        <item quantity="one">Mensual</item>
+    </plurals>
+    <plurals name="store_subscription_interval_unknown">
+        <item quantity="other">%1$d%2$s</item>
+        <item quantity="one">%1$d%2$s</item>
+    </plurals>
+    <plurals name="store_subscription_interval_y">
+        <item quantity="other">%d Años</item>
+        <item quantity="one">Anual</item>
+    </plurals>
+    <plurals name="vis_customization_composition_x">
+        <item quantity="other">Composición %d</item>
+    </plurals>
+    <plurals name="vis_progress_x">
+        <item quantity="other">%.1f%%</item>
+    </plurals>
+    <plurals name="x_items_about_to_added">
+        <item quantity="other">%d elementos están a punto de agregarse</item>
+        <item quantity="one">1 elemento está a punto de ser agregado</item>
+    </plurals>
+    <plurals name="x_items_added_to_playlist">
+        <item quantity="other">%d elementos agregados a la lista de reproducción</item>
+        <item quantity="one">1 elemento agregado a la lista de reproducción</item>
+    </plurals>
+    <plurals name="x_items_added_to_queue">
+        <item quantity="other">%d elementos agregados a la cola</item>
+        <item quantity="one">1 elemento añadido a la cola</item>
+    </plurals>
+    <plurals name="x_items_found_playlist_scan">
+        <item quantity="other">%d nuevas listas de reproducción encontradas</item>
+        <item quantity="one">1 nueva lista de reproducción encontrada</item>
+    </plurals>
+    <plurals name="x_items_opened_in_queue">
+        <item quantity="other">%d elementos abiertos en cola</item>
+        <item quantity="one">1 elemento abierto en cola</item>
+    </plurals>
+    <plurals name="x_items_removed_from_queue">
+        <item quantity="other">%d elementos eliminados de la cola</item>
+        <item quantity="one">1 elemento eliminado de la cola</item>
+    </plurals>
+    <plurals name="x_items_saved_in_playlist">
+        <item quantity="other">%d elementos guardados en la lista de reproducción</item>
+        <item quantity="one">1 elemento guardado en la lista de reproducción</item>
+    </plurals>
+    <plurals name="x_items_shuffled">
+        <item quantity="other">%d elementos mezclados</item>
+        <item quantity="one">1 elemento barajado</item>
+    </plurals>
+</resources>

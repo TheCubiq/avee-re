@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layoutMediaControlsContainer" android:clickable="true" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/player_controls_height_plus10" android:layout_alignParentBottom="true">
+        <View android:id="@id/viewMediaControlsBg" android:background="?mediaControlsBackground" android:layout_width="fill_parent" android:layout_height="@dimen/player_controls_height" android:layout_alignParentBottom="true" />
+        <View android:background="@drawable/actionbar_shadow_2x_up" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_above="@id/viewMediaControlsBg" />
+    </RelativeLayout>
+    <include layout="@layout/media_controls_narrow" />
+    <include layout="@layout/media_controls" />
+</RelativeLayout>

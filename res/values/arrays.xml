@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_appLang_entries">
+        <item>English</item>
+        <item>Deutsch</item>
+        <item>Español</item>
+        <item>Русский</item>
+        <item>हिन्दी</item>
+        <item>Indonesian</item>
+    </string-array>
+    <string-array name="pref_appLang_values">
+        <item>en</item>
+        <item>de</item>
+        <item>es</item>
+        <item>ru</item>
+        <item>hi</item>
+        <item>in</item>
+    </string-array>
+    <string-array name="pref_appTheme_entries">
+        <item>Monochrome</item>
+        <item>Void</item>
+        <item>Blue-White</item>
+        <item>Purple-Pink</item>
+        <item>Nightly</item>
+        <item>Street</item>
+        <item>Libra</item>
+        <item>Angst</item>
+        <item>Wilted</item>
+        <item>Deception</item>
+    </string-array>
+    <string-array name="pref_appTheme_values">
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+</resources>

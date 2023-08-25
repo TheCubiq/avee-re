@@ -1,0 +1,151 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Image</h2>
+<!---->
+    <p>
+<pre>Displays album art, image from file or URL.
+
+If no custom path is set it, album art will be displayed, if no album art exists generated art will be displayed (i.e. artist and title name with color background). Animated GIFs are supported and GIFs transparency by using the color key.</pre>
+</p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt>General element properties</dt>
+<dd>
+<p>See <a href="local://customization_general">General Properties</a>.</p>
+</dd>
+
+<hr>
+
+<dt id="customImage">Custom Image</dt>
+<dd>
+<p>Image to be displayed.</p>
+</dd>
+<dt id="measureAnimationSpeed">Measure Animation Speed</dt>
+<dd>
+<p>Speed of animation, used for GIF images.</p>
+</dd>
+<dt id="keepAspectRatioAndCropToFit">Keep Aspect Ratio And Crop To Fit</dt>
+<dd>
+<p>If set, don't stretch the image, crop to fill the desired dimension. This property overrides <value>KeepAspectRatio</value>.</p>
+</dd>
+<dt id="keepAspectRatio">Keep Aspect Ratio</dt>
+<dd>
+<p>If set, don't stretch the image, fit the desired dimensions. </p>
+</dd>
+<dt id="blurredBorder">Blurred Border</dt>
+<dd>
+<p>If image cannot be fitted into desired dimensions, fill empty areas with a blurred image.</p>
+</dd>
+<dt id="Shape">Shape</dt>
+<dd>
+<p>Specify to display image in other shapes than a rectangle.</p>
+</dd>
+<dt id="MaskImage">Mask Image</dt>
+<dd>
+<p>Image or Composition used to mask out areas of <value>CustomImage</value>.</p>
+</dd>
+<dt id="maskMode">Mask Mode</dt>
+<dd>
+<p>If <value>MaskImage</value> is used, specify what color components to interpret as masked out.</p>
+</dd>
+
+<hr>
+
+<dt id="Color">Color</dt>
+<dd>
+<p>Color of the image.</p>
+</dd>
+<dt id="ColorTo">Color To</dt>
+<dd>
+<p>If <value>MeasureColorBlend</value> is used, the second color to blend <value>Color</value> to.</p>
+</dd>
+<dt id="MeasureColorBlend">Measure Color Blend</dt>
+<dd>
+<p>Value to specify color blending between <value>Color</value> and <value>ColorTo</value>.</p>
+</dd>
+
+<hr>
+
+<dt id="colorKeyEnabled">Color Key Enabled</dt>
+<dd>
+<p>If image has no transparency/alpha, enable to use a specific color key instead.</p>
+</dd>
+<dt id="autoDetectColorKey">Auto Detect Color Key</dt>
+<dd>
+<p>If set, tries to detect color key by looking at image border colors.</p>
+</dd>
+<dt id="colorKey">ColorKey</dt>
+<dd>
+<p>Manually set the color used for transparency.</p>
+</dd>
+<dt id="transparencyStrength">Transparency Strength</dt>
+<dd>
+<p>Boost the transparent parts of the image.</p>
+</dd>
+<dt id="opacityStrength">Opacity Strength</dt>
+<dd>
+<p>Boost the opaque parts of the image.</p>
+</dd>
+
+<hr>
+
+<dt id="blurEnabled">BlurEnabled</dt>
+<dd>
+<p>If set, blurs the entire image.</p>
+</dd>
+<dt id="blurDivider">BlurDivider</dt>
+<dd>
+<p>Helps to increase the <value>BlurRadius</value> value.</p>
+</dd>
+<dt id="blurRadius">BlurRadius</dt>
+<dd>
+<p>Amount of the blur.</p>
+</dd>
+
+<hr>
+
+<dt id="generatedAlbumArtHintShiftHue">Generated Album Art Hint Shift Hue</dt>
+<dd>
+<p>Shifts hue for default image. (used when <value>CustomImage</value> is not set)</p>
+</dd>
+<dt id="generatedAlbumArtHintNoText">Generated Album Art Hint No Text</dt>
+<dd>
+<p>Hide text on default image. (used when <value>CustomImage</value> is not set)</p>
+</dd>
+<dt id="generatedAlbumArtHintForceGen">Generated Album Art Hint Force Gen</dt>
+<dd>
+<p>If set, force to show default image.</p>
+</dd>
+<dt id="generatedAlbumArtColor">Generated Album Art Color</dt>
+<dd>
+<p>Color to use for default image. (used when <value>CustomImage</value> is not set)</p>
+</dd>
+
+</dl>
+<!---->
+</div>
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

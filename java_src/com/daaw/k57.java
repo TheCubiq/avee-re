@@ -1,0 +1,17 @@
+package com.daaw;
+/* loaded from: classes.dex */
+public final class k57 extends l57 {
+    public k57(f77 f77Var, ey6 ey6Var) {
+        super(f77Var, ey6Var);
+    }
+
+    @Override // com.daaw.l57
+    public final /* synthetic */ Object E(Object obj, Object obj2) {
+        return ((ey6) obj).apply(obj2);
+    }
+
+    @Override // com.daaw.l57
+    public final void F(Object obj) {
+        h(obj);
+    }
+}

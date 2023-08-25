@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="raw" name="customization_general">@raw/customization_general_lv</item>
+    <item type="raw" name="element_app_logo">@raw/element_app_logo_lv</item>
+</resources>

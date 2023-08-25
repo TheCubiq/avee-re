@@ -1,0 +1,66 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Text</h2>
+
+<!---->
+    <p>
+<pre>Displays static text and various variables.
+
+It can be used to show track artist, title, time and other values.</pre>
+</p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt id="text">Text</dt>
+<dd>
+<p>Text to display.<br><br>Text enclosed in "{}" will be recognized as a variable that will be replaced by it's according value.<br>List of varible names:<br><br>
+    {TimeCurrent}<br>
+    {TimeRemaining}<br>
+    {TimeLength}<br>
+    {Artist}<br>
+    {ArtistOrTitle}<br>
+    {Title}<br>
+    {Album}<br>
+    {Fps}<br>
+    {FrameTime}<br>
+    {ArtistAndTitle}</p>
+</dd>
+<dt id="color">Color</dt>
+<dd>
+<p>Color of the text.</p>
+</dd>
+<dt id="fontSize">FontSize</dt>
+<dd>
+<p>Font size of the text.</p>
+</dd>
+<dt id="typeFace">TypeFace</dt>
+<dd>
+<p>Specify font to use.</p>
+</dd>
+</dl>
+<!---->
+</div>
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

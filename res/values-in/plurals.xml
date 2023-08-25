@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="albums_count">
+        <item quantity="other">%d album</item>
+        <item quantity="one">%d album</item>
+    </plurals>
+    <plurals name="audio_bass_x">
+        <item quantity="other">Bass %d</item>
+    </plurals>
+    <plurals name="audio_stereo_balance_x">
+        <item quantity="other">%d%%</item>
+    </plurals>
+    <plurals name="audio_treble_x">
+        <item quantity="other">Tiga kali lipat %d</item>
+    </plurals>
+    <plurals name="audio_volume_x">
+        <item quantity="other">%d%%</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d notifikasi baru</item>
+        <item quantity="one">%d notifikasi baru</item>
+    </plurals>
+    <plurals name="playback_crossFade_x_sec">
+        <item quantity="other">%.1f detik</item>
+    </plurals>
+    <plurals name="showing_x_of_y_items3_item_count">
+        <item quantity="other">%d elemen</item>
+        <item quantity="one">%d elemen</item>
+    </plurals>
+    <plurals name="store_subscription_interval_m">
+        <item quantity="other">%d Bulan</item>
+        <item quantity="one">Bulanan</item>
+    </plurals>
+    <plurals name="store_subscription_interval_unknown">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="store_subscription_interval_y">
+        <item quantity="other">%d Tahun</item>
+        <item quantity="one">Tahunan</item>
+    </plurals>
+    <plurals name="vis_customization_composition_x">
+        <item quantity="other">Komposisi %d</item>
+    </plurals>
+    <plurals name="vis_progress_x">
+        <item quantity="other">%.1f%%</item>
+    </plurals>
+    <plurals name="x_items_about_to_added">
+        <item quantity="other">%d elemen akan ditambahkan</item>
+        <item quantity="one">%d elemen akan ditambahkan</item>
+    </plurals>
+    <plurals name="x_items_added_to_playlist">
+        <item quantity="other">%d elemen ditambahkan ke daftar putar</item>
+        <item quantity="one">%d elemen ditambahkan ke daftar putar</item>
+    </plurals>
+    <plurals name="x_items_added_to_queue">
+        <item quantity="other">%d elemen ditambahkan ke antrean</item>
+        <item quantity="one">%d elemen ditambahkan ke antrian</item>
+    </plurals>
+    <plurals name="x_items_found_playlist_scan">
+        <item quantity="other">%d daftar putar baru ditemukan</item>
+        <item quantity="one">%d daftar putar baru ditemukan</item>
+    </plurals>
+    <plurals name="x_items_opened_in_queue">
+        <item quantity="other">%d elemen dibuka dalam antrian</item>
+        <item quantity="one">%d elemen dibuka dalam antrian</item>
+    </plurals>
+    <plurals name="x_items_removed_from_queue">
+        <item quantity="other">%d elemen dihapus dari antrean</item>
+        <item quantity="one">%d elemen dihapus dari antrian</item>
+    </plurals>
+    <plurals name="x_items_saved_in_playlist">
+        <item quantity="other">%d elemen disimpan dalam daftar putar</item>
+        <item quantity="one">%d elemen disimpan dalam daftar putar</item>
+    </plurals>
+    <plurals name="x_items_shuffled">
+        <item quantity="other">%d elemen diacak</item>
+        <item quantity="one">%d elemen dikocok</item>
+    </plurals>
+</resources>

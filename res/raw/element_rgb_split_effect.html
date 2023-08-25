@@ -1,0 +1,92 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Rgb Split Effect</h2>
+
+<!---->
+    <p>
+<pre>Offsets RGB channels of target composition/image.
+
+Helps to create chromatic aberration effect. It's possible to split in any other colors than Red, Green, Blue.
+
+</pre>
+    </p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt>General element properties</dt>
+<dd>
+<p>See <a href="local://customization_general">General Properties</a>.</p>
+</dd>
+
+<hr>
+
+<dt id="blendModeContent">Blend Mode Content</dt>
+<dd>
+<p>Blend mode for displaying original content (before blurring). Used when <value>ShowUnblurredContent</value> or <value>ShowUnblurredContentUnder</value> is set.</p>
+</dd>
+<dt id="TargetImage">Target Image</dt>
+<dd>
+<p>Specify Image or Composition used as input.</p>
+</dd>
+<dt id="color">Color</dt>
+<dd>
+<p>Tint of the effect.</p>
+</dd>
+<dt id="showUnblurredContent">Show Unblurred Content</dt>
+<dd>
+<p>Show original content (before blurring) over the blur.</p>
+</dd>
+<dt id="showUnblurredContentUnder">Show Unblurred Content Under</dt>
+<dd>
+<p>Show original content (before blurring) under the blur.</p>
+</dd>
+
+<hr>
+
+<dt id="splitMultiplier">SplitMultiplier</dt>
+<dd>
+<p>Boosts <value>SplitAmount</value> property.</p>
+</dd>
+<dt id="splitAmount">Split Amount</dt>
+<dd>
+<p>Amount of the color offset split effect.</p>
+</dd>
+<dt id="splitColor0">Split Color 0</dt>
+<dd>
+<p>First color component to offset.</p>
+</dd>
+<dt id="splitColor1">Split Color 1</dt>
+<dd>
+<p>Second color component.<br><br>Note that the first and third component is actually offsetted, the second stays in place. If you want to split only two colors like red and cyan, set this color component to black.</p>
+</dd>
+<dt id="splitColor2">Split Color 2</dt>
+<dd>
+<p>Third color component to offset.</p>
+</dd>
+</dl>
+<!---->
+</div>
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

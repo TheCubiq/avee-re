@@ -1,0 +1,161 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Audio Provider</h2>
+
+<!---->
+    <p>
+<pre>Processes and provides audio data for other elements.
+
+Segments/Bars elements values depend on output from this element. All "Beat" variables are also provided by this element. 
+</pre>
+</p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt id="sampleProvider">Sample Provider</dt>
+<dd>
+<p>Specify the subtype of the audio provider.</p>
+<!--2-->
+<div class="pborder">
+<h6>Spectrum</h6>
+<dl>
+<dt id="sampleOutCount">Sample Out Count</dt>
+<dd>
+<p>Spectrum values output count.</p>
+</dd>
+<dt id="mirrorSamples">Mirror Samples</dt>
+<dd>
+<p>If set, the second half of values are mirrored.</p>
+</dd>
+<dt id="repeatSamples">Repeat Samples</dt>
+<dd>
+<p>Specify times values are repeated across <value>SampleOutCount</value></p>
+</dd>
+<dt id="starAndEndGap">Star And End Gap</dt>
+<dd>
+<p>Inserts zero values at the start and the end of the output.</p>
+</dd>
+<dt id="smooth">Smooth</dt>
+<dd>
+<p>Controls audio reaction smoothness.</p>
+</dd>
+<dt id="preSmooth">Pre Smooth</dt>
+<dd>
+<p>Controls audio reaction smoothness. This is experimental property, very similar to <value>Smooth</value>.</p>
+</dd>
+<dt id="filterRadius">Filter Radius</dt>
+<dd>
+<p>Spread of the filter to make individual values stand out.</p>
+</dd>
+<dt id="filterStrength">Filter Strength</dt>
+<dd>
+<p>Strength of the filter to make individual values stand out.</p>
+</dd>
+<dt id="aWeight">AWeight</dt>
+<dd>
+<p>Incresing this will silence values of lower frequencies. (i.e. silences bass).</p>
+</dd>
+<dt id="outputMultiplier">Output Multiplier</dt>
+<dd>
+<p>Boosts output values.</p>
+</dd>
+
+<hr>
+
+<dt id="lowerHz">Lower Hz</dt>
+<dd>
+<p>Frequency of the first spectrum value.</p>
+</dd>
+<dt id="higherHz">Higher Hz</dt>
+<dd>
+<p>Frequency of the last spectrum value.</p>
+</dd>
+<dt id="hzLinearFactor">Hz Linear Factor</dt>
+<dd>
+<p>Controls spread of lower frequency values. Decreasing this value will make bass values more dominant on a spectrum.</p>
+</dd>
+<dt id="freqShift">Freq Shift</dt>
+<dd>
+<p>Shifts output values forward/backward.</p>
+</dd>
+
+<hr>
+
+<dt id="beatSmooth">Beat Smooth</dt>
+<dd>
+<p>Controls "Beat" variables reaction smoothness.<br><br>Beat Range can be imagined as a "box" on audio spectrum bars, defined by left, right, bottom and top sides, as more bars lie inside a box - beat value increases.</p>
+</dd>
+<dt id="beatRangeBarFirst">Beat Range Bar First</dt>
+<dd>
+<p>Index of first spectrum bar (left of the "box") for beat detection. Setting lower value makes Beat react to bass more, higher value to treble more.</p>
+</dd>
+<dt id="beatRangeBarLast">Beat Range Bar Last</dt>
+<dd>
+<p>Index of last spectrum bar (right of the "box") for beat detection. Setting lower value makes Beat react to bass more, higher value to treble more.</p>
+</dd>
+<dt id="beatRangeValueLower">Beat Range Value Lower</dt>
+<dd>
+<p>Lowest spectrum bar value (bottom of the "box") for beat detection.</p>
+</dd>
+<dt id="beatRangeValueHigher">Beat Range Value Higher</dt>
+<dd>
+<p>Highest spectrum bar value (top of the "box") for beat detection.</p>
+</dd>
+
+<hr>
+
+<dt id="fftSize">FFT Size</dt>
+<dd>
+<p>Input audio samples count for spectrum processing, defined as 2 to the power. (e.g. 2 ^ 10 = 1024)</p>
+</dd>
+</dl>
+</div>
+<!--2-->
+<hr>
+<!--2-->
+<div class="pborder">
+<h6>Waveform</h6>
+<dl>
+<dt id="sampleOutCountPower">Sample Out Count Power</dt>
+<dd>
+<p>Audio values output count, defined as 2 to the power. (e.g. 2 ^ 8 = 256)</p>
+</dd>
+
+<hr>
+
+<dt id="inputSize">Input Size</dt>
+<dd>
+<p>Input audio sample count, defined as 2 to the power. (e.g. 2 ^ 8 = 256)</p>
+</dd>
+</dl>
+</div>
+<!--2-->
+</dd>
+</dl>
+
+</div>
+
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

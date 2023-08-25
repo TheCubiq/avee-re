@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_top" android:checkableBehavior="none">
+        <item android:icon="@drawable/ic_library_2_s" android:id="@id/menu_lib" android:title="@string/menu_library" />
+        <item android:icon="@drawable/ic_playlist4" android:id="@id/menu_queue" android:title="@string/menu_queue" />
+        <item android:icon="@drawable/ic_visual2" android:id="@id/menu_visual" android:title="@string/menu_visualizer" />
+    </group>
+    <group android:id="@id/menu_bottom" android:checkableBehavior="none">
+        <item android:icon="@drawable/ic_timer3" android:id="@id/menu_sleep_timer" android:title="@string/menu_sleep_timer" app:actionLayout="@layout/drawer_layout_switch" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_lock_rot3" android:id="@id/menu_lock_orient" android:title="@string/menu_lock_orientation" app:actionLayout="@layout/drawer_layout_switch" />
+        <item android:icon="@drawable/ic_eq" android:id="@id/menu_equalizer" android:title="@string/audio_equalizer" />
+        <item android:icon="@drawable/ic_settings" android:id="@id/menu_settings" android:title="@string/menu_settings" />
+        <item android:icon="@drawable/ic_web" android:id="@id/menu_web" android:title="@string/menu_web" />
+        <item android:icon="@drawable/ic_mail" android:id="@id/menu_contact" android:title="@string/menu_contact" />
+        <item android:icon="@drawable/ic_coin" android:id="@id/menu_premium" android:title="@string/menu_premium" />
+        <item android:enabled="false" android:id="@id/spacer1" android:visible="true" android:title=" " />
+        <item android:enabled="false" android:id="@id/spacer2" android:visible="true" android:title="  " />
+    </group>
+</menu>
