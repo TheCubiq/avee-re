@@ -15,7 +15,7 @@ public class BlendMode {
     public static final String typeName1 = "Screen";
     public static final String typeName2 = "Add";
     public static final String typeName5 = "AddAlpha";
-    public static final String[] useableModes = {typeName0, typeName4, typeName1, typeName2, typeName5};
+    public static final String[] useableModes = {typeName0, typeName4, typeName1, typeName2, typeName5, typeName3};
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     public static int create(String str, int i) {
