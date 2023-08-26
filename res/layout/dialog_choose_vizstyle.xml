@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:padding="0.0dip" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/dialog_border" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <GridLayout android:id="@id/gridLayoutElements" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="5" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/btnSaveToFile" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/white_alpha_1" android:id="@id/txt1" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vis_action_saveToFile" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                    <ImageView android:id="@id/btn1" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_save5" android:scaleType="center" android:layout_above="@id/txt1" android:layout_centerHorizontal="true" android:color="@color/white_alpha_1" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/btnLoadFromFile" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/white_alpha_1" android:id="@id/txt2" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vis_action_loadFromFile" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                    <ImageView android:id="@id/btn2" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_load5" android:scaleType="center" android:layout_above="@id/txt2" android:layout_centerHorizontal="true" android:color="@color/white_alpha_1" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/btnDuplicate" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/white_alpha_1" android:id="@id/txt3" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vis_action_duplicate" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                    <ImageView android:id="@id/btn3" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_duplicate" android:scaleType="center" android:layout_above="@id/txt3" android:layout_centerHorizontal="true" android:color="@color/white_alpha_1" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/btnRemove" android:background="?android:selectableItemBackground" android:padding="4.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="48.0dip">
+                    <TextView android:textSize="10.0sp" android:textColor="@color/white_alpha_1" android:id="@id/btnRemoveTxt" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vis_action_remove" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                    <ImageView android:id="@id/btnRemoveIcon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_close" android:scaleType="center" android:layout_above="@id/btnRemoveTxt" android:layout_centerHorizontal="true" android:color="@color/white_alpha_1" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="0.0dip" layout="@layout/ad_footer_280" />
+    </LinearLayout>
+</ScrollView>

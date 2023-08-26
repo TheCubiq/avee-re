@@ -1,0 +1,232 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Particles</h2>
+
+<!---->
+    <p>
+<pre>Displays field of particles.
+
+Particles will behave 2D or 3D, depending on "perspectiveDepth" property.
+</pre>
+    </p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt>General element properties</dt>
+<dd>
+<p>See <a href="local://customization_general">General Properties</a>.</p>
+</dd>
+
+<hr>
+
+<dt id="color">Color</dt>
+<dd>
+<p>Base color of the particles, color is also affected by <value>ColorFrom</value> and <value>ColorTo</value></p>
+</dd>
+<dt id="CountLimit">Count Limit</dt>
+<dd>
+<p>Maximum limit of particles can exist at any given time.</p>
+</dd>
+<dt id="mirrorX">Mirror X</dt>
+<dd>
+<p>Mirrors all particles horizontally.</p>
+</dd>
+<dt id="mirrorY">Mirror Y</dt>
+<dd>
+<p>Mirrors all particles vertically.</p>
+</dd>
+<dt id="perspectiveDepth">Perspective Depth</dt>
+<dd>
+<p>If set above <value>0</value>, particles will behave 3D, this value specifying 3D area depth. If set to <value>0</value> or below, particles behave 2D with no depth movement.</p>
+</dd>
+<dt id="perspectiveFov">Perspective Fov</dt>
+<dd>
+<p>Specify field of view angle. Used for 3D particles.</p>
+</dd>
+<dt id="SpawnArea">Spawn Area</dt>
+<dd>
+<p>Specify area in which particles appear.</p>
+<!--2-->
+<div class="pborder">
+<h6>HorizontalLine</h6>
+<dl>
+<dt id="verticalOrientation">Vertical Orientation</dt>
+<dd>
+<p>If set, acts as a vertical line.</p>
+</dd>
+<dt id="useRandomVectorInstead">Use Random Vector Instead</dt>
+<dd>
+<p>If set, particles will be spawned in random directions. This property overrides <value>VectorAngle</value>.</p>
+</dd>
+<dt id="vectorAngle">Vector Angle</dt>
+<dd>
+<p>Specify direction in degrees of particles when spawned.</p>
+</dd>
+<dt id="vectorAngleZ">Vector Angle Z</dt>
+<dd>
+<p>Specify Z direction of particles when spawned. This value is combined with <value>VectorAngle</value> to create a 3D vector. Used for 3D particles.</p>
+</dd>
+</dl>
+</div>
+<!--2-->
+<!--2-->
+<div class="pborder">
+<h6>Rectangle</h6>
+<dl>
+<dt id="vectorRelativeToCenter">Vector Relative To Center</dt>
+<dd>
+<p>If set, particles will be spawned outwards from the center. Useful for 2D particles. This property overrides <value>UseRandomVectorInstead</value> and <value>VectorAngle</value>.</p>
+</dd>
+<dt id="useRandomVectorInstead">Use Random Vector Instead</dt>
+<dd>
+<p>If set, particles will be spawned in random directions. This property overrides <value>VectorAngle</value>.</p>
+</dd>
+<dt id="vectorAngle">Vector Angle</dt>
+<dd>
+<p>Specify direction in degrees of particles when spawned.</p>
+</dd>
+<dt id="vectorAngleZ">Vector Angle Z</dt>
+<dd>
+<p>Specify Z direction of particles when spawned. This value is combined with <value>VectorAngle</value> to create a 3D vector. Used for 3D particles.</p>
+</dd>
+</dl>
+</div>
+<!--2-->
+</dd>
+<dt id="ForceField">Force Field</dt>
+<dd>
+<p>Force field that affects particle movement.</p>
+</dd>
+
+<hr>
+
+<dt id="customImage">Custom Image</dt>
+<dd>
+<p>Image used for particles.</p>
+</dd>
+<dt id="particleScale">Particle Scale</dt>
+<dd>
+<p>Base scale of the particles. Scale is also affected by <value>StartSize</value>, <value>FadeInSize</value>, <value>EndSize</value>, <value>EndSizeRandom</value>.</p>
+</dd>
+<dt id="trailLength">Trail Length</dt>
+<dd>
+<p>Stretches particles relative to its speed. Used to simulate motion blur.</p>
+</dd>
+<dt id="ColorFrom">Color From</dt>
+<dd>
+<p>Particle color is randomly blended between <value>ColorFrom</value> and <value>ColorTo</value>, when a particle is spawned.</p>
+</dd>
+<dt id="ColorTo">Color To</dt>
+<dd>
+<p>Particle color is randomly blended between <value>ColorFrom</value> and <value>ColorTo</value>, when a particle is spawned.</p>
+</dd>
+<dt id="fadeInAndOutTime">Fade In And Out Time</dt>
+<dd>
+<p>Time between Start-Fade and Fade-End stages. Particle size changes is 3 stages: <value>StartSize</value> to <value>FadeInSize</value> to <value>EndSize</value>.</p>
+</dd>
+<dt id="velocityAngle">Velocity Angle</dt>
+<dd>
+<p>If set, a particle will align itself to what direction it is moving.</p>
+</dd>
+<dt id="sizeAspectRatio">Size Aspect Ratio</dt>
+<dd>
+<p>Set to <value>1.0</value> for square particles, other values to make wide particles.</p>
+</dd>
+<dt id="startSize">Start Size</dt>
+<dd>
+<p>Particles size at spawn time.</p>
+</dd>
+<dt id="fadeInSize">Fade In Size</dt>
+<dd>
+<p>Particle size at the Fade time. Happens after time specified in <value>FadeInAndOutTime</value>.</p>
+</dd>
+<dt id="endSize">End Size</dt>
+<dd>
+<p>Particle size at end of lifetime.</p>
+</dd>
+<dt id="endSizeRandom">End Size Random</dt>
+<dd>
+<p>Adds random component to size values. This value is added to <value>StartSize</value>, <value>FadeInSize</value> and <value>EndSize</value>.</p>
+</dd>
+<dt id="endSizeZFactor">End Size Z Factor</dt>
+<dd>
+<p>Affects particle size relative to its depth.<br>This is absolute property and has no clear purpose anymore, use <value>PerspectiveDepth</value> and <value>PerspectiveFov</value> for 3D particles instead.</p>
+</dd>
+<dt id="nearCameraFadeOutDistance">Near Camera Fade Out Distance</dt>
+<dd>
+<p>Fade out particles at a distance when near the camera. Used for 3D particles.</p>
+</dd>
+
+<hr>
+
+<dt id="spawnTime">Spawn Time</dt>
+<dd>
+<p>Time between every new particle is spawned. A lower value will spawn more particles.</p>
+</dd>
+<dt id="MeasureOverallSpeed">Measure Overall Speed</dt>
+<dd>
+<p>Variable component of particle speed. Total speed is defined by combining: <value>MeasureOverallSpeed</value>+<value>Speed</value>+<value>SpeedRandom</value>.</p>
+</dd>
+<dt id="Speed">Speed</dt>
+<dd>
+<p>Speed of the particles. Total speed is defined by combining: <value>MeasureOverallSpeed</value>+<value>Speed</value>+<value>SpeedRandom</value>.</p>
+</dd>
+<dt id="speedRandom">Speed Random</dt>
+<dd>
+<p>Random speed component of the particles. Total speed is defined by combining: <value>MeasureOverallSpeed</value>+<value>Speed</value>+<value>SpeedRandom</value>.</p>
+</dd>
+<dt id="lifetime">Lifetime</dt>
+<dd>
+<p>Total time particle exists after spawned.</p>
+</dd>
+<dt id="gravity">Gravity</dt>
+<dd>
+<p>Defines gravity force that affects particle movement.</p>
+</dd>
+
+<!-- <h5>Wave Behaviour</h5> -->
+<hr>
+
+<dt id="sideSineWaveFreq">Side Sine Wave Freq</dt>
+<dd>
+<p>Speed/Frequency of wave movement.</p>
+</dd>
+<dt id="sideSineWaveFreqRandom">Side Sine Wave Freq Random</dt>
+<dd>
+<p>Random Speed/Frequency component of wave movement.</p>
+</dd>
+<dt id="sideSineWaveMag">Side Sine Wave Mag</dt>
+<dd>
+<p>Magnitude of wave movement.<br><br>If the magnitude is set, particles will move/swing back and forth to sides.</p>
+</dd>
+<dt id="sideSineWaveMagRandom">Side Sine Wave Mag Random</dt>
+<dd>
+<p>Random magnitude component of wave movement.<br><br>If the magnitude is set, particles will move/swing back and forth to sides.</p>
+</dd>
+</dl>
+<!---->
+</div>
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

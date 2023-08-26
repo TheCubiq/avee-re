@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="@string/preference_cat_premium">
+        <CheckBoxPreference android:enabled="false" android:clickable="false" android:title="@string/pref_disableHeaderAds" android:key="pref_disableHeaderAds" android:summary="@string/pref_disableHeaderAds2" android:defaultValue="false" />
+        <CheckBoxPreference android:enabled="false" android:title="@string/pref_alwaysHideAppLogo" android:key="pref_alwaysHideAppLogo" android:summary="@string/pref_alwaysHideAppLogo2" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="@string/preference_cat_interface">
+        <com.daaw.avee.Common.ListPreferenceCompat android:entries="@array/pref_appTheme_entries" android:title="@string/pref_appTheme" android:key="pref_appTheme" android:summary="%s" android:defaultValue="@string/pref_appTheme_default" android:dialogTitle="@string/pref_appTheme" android:entryValues="@array/pref_appTheme_values" />
+        <CheckBoxPreference android:title="@string/pref_toolButtonsShowTexts" android:key="pref_toolButtonsShowTexts" android:summary="@string/pref_toolButtonsShowTexts2" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="@string/preference_cat_behaviour">
+        <CheckBoxPreference android:title="@string/pref_resumeWhenHeadsetPluggedIn" android:key="pref_resumeWhenHeadsetPluggedIn" android:summary="@string/pref_resumeWhenHeadsetPluggedIn2" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_visControlsTimeout" android:key="pref_visControlsTimeout" android:summary="@string/pref_visControlsTimeout2" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/pref_fadePlayPause" android:key="pref_fadePlayPause" android:summary="@string/pref_fadePlayPause2" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_hold_exit" android:key="pref_hold_exit" android:summary="@string/pref_hold_exit2" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_resumePlayingAfterAudioFocusGained" android:key="pref_resumePlayingAfterAudioFocusGained" android:summary="@string/pref_resumePlayingAfterAudioFocusGained2" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="@string/preference_cat_misc">
+        <EditTextPreference android:title="@string/pref_playlistDefaultPath_txt1" android:key="pref_playlistDefaultPath" android:summary="%s" android:defaultValue="@string/pref_playlistDefaultPath_txt2" />
+        <CheckBoxPreference android:title="@string/pref_highQualityBlur_txt1" android:key="pref_highQualityBlur" android:summary="@string/pref_highQualityBlur_txt2" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/pref_alwaysQualityEdges" android:key="pref_alwaysQualityEdges" android:summary="@string/pref_alwaysQualityEdges2" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="@string/preference_cat_troubleshooting">
+        <EditTextPreference android:maxLength="4" android:title="@string/pref_audioVisOffset_txt1" android:key="pref_audioVisOffset" android:summary="%d" android:defaultValue="10" android:inputType="numberSigned" />
+        <CheckBoxPreference android:title="@string/pref_enableNewestFeatures" android:key="pref_enableNewestFeatures" android:summary="@string/pref_enableNewestFeatures2" android:defaultValue="true" />
+        <Preference android:title="@string/pref_resetTips_txt1" android:key="pref_resetTips" android:summary="@string/pref_resetTips_txt2" />
+        <Preference android:title="@string/pref_pref_clear_cache" android:key="pref_clearCache" android:summary="@string/pref_pref_clear_cache2" />
+        <Preference android:title="@string/pref_reset_txt1" android:key="pref_resetToDefault" android:summary="@string/pref_reset_txt2" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="@string/preference_cat_legal">
+        <Preference android:title="@string/pref_fontsLicenses" android:key="pref_fontsLicenses" />
+        <Preference android:title="@string/pref_openSourceLicenses" android:key="pref_openSourceLicenses" />
+        <Preference android:title="@string/pref_eula" android:key="pref_eula" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/viewItemBg" android:background="?listItemBackground" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/design_height_q"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/btnItemMore" android:background="?android:selectableItemBackground" android:padding="0.0dip" android:layout_width="@dimen/design_height_q" android:layout_height="fill_parent" android:src="@drawable/ic_visual1" android:tint="@color/white_alpha_2" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:color="@color/white_alpha_2" />
+    <RelativeLayout android:id="@id/collapsible" android:paddingLeft="0.0dip" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@id/btnItemMore" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true">
+        <TextView android:textSize="@dimen/textSizeM3" android:textStyle="bold" android:textColor="@color/white_alpha_2" android:ellipsize="end" android:id="@id/txtItemLine1" android:paddingLeft="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+        <TextView android:textSize="@dimen/textSizeM3" android:textStyle="bold" android:textColor="@color/white_alpha_2" android:ellipsize="end" android:id="@id/txtItemLine2" android:paddingLeft="9.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_below="@id/txtItemLine1" />
+    </RelativeLayout>
+</RelativeLayout>

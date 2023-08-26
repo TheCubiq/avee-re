@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/layoutCheckOptions" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:id="@id/radioGroupOptions" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/radioViewSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_view_small_list" />
+        <RadioButton android:id="@id/radioViewMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_view_medium_list" />
+        <RadioButton android:id="@id/radioViewLarge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_view_large_list" />
+    </RadioGroup>
+    <Space android:id="@id/space" android:layout_width="10.0dip" android:layout_height="12.0dip" />
+    <CheckBox android:id="@id/chkShowArt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/toolbar_showAlbumArtInstead" />
+</LinearLayout>

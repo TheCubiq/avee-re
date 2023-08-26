@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView1" android:background="@color/black_alpha_2" android:padding="0.0dip" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fadeScrollbars="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/tab1" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView android:gravity="left" android:id="@id/recyclerViewItems" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/actionsElements" android:paddingLeft="0.0dip" android:paddingTop="16.0dip" android:paddingRight="0.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageButton android:textSize="@dimen/textSizeM2" android:textColor="@color/white_alpha_0" android:layout_gravity="center_horizontal" android:id="@id/btnExpandReset" android:background="@drawable/border_item_background_round_light" android:padding="0.0dip" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_turn_back" android:text="@string/vis_action_add_element" />
+                <ImageButton android:textSize="@dimen/textSizeM2" android:textColor="@color/white_alpha_0" android:layout_gravity="center_horizontal" android:id="@id/btnExpandAdd" android:background="@drawable/border_item_background_round_light" android:padding="0.0dip" android:visibility="visible" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_add3" android:text="@string/vis_action_add_element" />
+            </LinearLayout>
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <GridLayout android:layout_gravity="center_horizontal" android:id="@id/expandAddElements" android:paddingTop="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" android:columnCount="2" />
+                <GridLayout android:layout_gravity="center_horizontal" android:id="@id/expandReset" android:paddingTop="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" android:columnCount="2">
+                    <Button android:textSize="@dimen/textSizeM4" android:textColor="@color/white_alpha_0" android:id="@id/btnReset" android:background="@drawable/border_item_background_light" android:layout_width="wrap_content" android:layout_height="@dimen/design_height_q" android:layout_margin="4.0dip" android:text="@string/vis_customization_reset"
+                      xmlns:android="http://schemas.android.com/apk/res/android" />
+                </GridLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

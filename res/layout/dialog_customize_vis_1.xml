@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/black_alpha_2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/view1RootView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ScrollView android:id="@id/scrollView2" android:padding="0.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fadeScrollbars="false">
+            <RelativeLayout android:orientation="vertical" android:id="@id/tab2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageButton android:id="@id/btnBack" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_tree_arrow_left_0" android:tint="@color/white" android:layout_alignParentLeft="true" />
+                <ImageButton android:id="@id/btnInfo" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_info3_s" android:tint="@color/white" android:layout_alignParentRight="true" />
+                <ImageButton android:id="@id/btnResetElement" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_turn_back" android:tint="@color/white" android:layout_toLeftOf="@id/btnInfo" />
+                <TextView android:textSize="@dimen/textSizeM0" android:textColor="@color/white_alpha_1" android:gravity="center_vertical" android:id="@id/txtElementTitle" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="" android:layout_toRightOf="@id/btnBack" />
+                <Spinner android:textSize="@dimen/textSizeM3" android:gravity="right" android:id="@id/spinnerVersion" android:padding="0.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_margin="0.0dip" android:layout_toLeftOf="@id/btnResetElement" android:layout_toRightOf="@id/txtElementTitle" />
+                <View android:orientation="horizontal" android:id="@id/row1Gap" android:background="@color/white_alpha_2" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/txtElementTitle" />
+                <LinearLayout android:orientation="vertical" android:id="@id/linearLayoutContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/row1Gap" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/dialog_customize_vis_2" />
+</LinearLayout>

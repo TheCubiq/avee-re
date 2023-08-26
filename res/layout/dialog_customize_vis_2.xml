@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/propertyViewRoot" android:background="@drawable/background_round_border" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:padding="0.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fadeScrollbars="false"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:orientation="vertical" android:id="@id/tab2" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:orientation="vertical" android:id="@id/layoutPropertyContent" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageButton android:id="@id/btnClose" android:background="?android:selectableItemBackground" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="48.0dip" android:src="@drawable/ic_tree_arrow_left_0" android:tint="@color/white_alpha_0" android:layout_below="@id/layoutPropertyContent" android:layout_centerHorizontal="true" android:rotation="-90.0" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
