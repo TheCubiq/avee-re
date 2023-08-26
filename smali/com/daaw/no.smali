@@ -2821,7 +2821,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "c"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2841,7 +2843,7 @@
 
     check-cast v2, Landroid/widget/ImageButton;
 
-    const v1, 0x7f08012e
+    const v1, 0x7f080129
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
