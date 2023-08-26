@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
     @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
+        Toast.makeText(this, "Cubiq 🤍", 1).show();
         super.onCreate(bundle);
         instanceWeak = new WeakReference<>(this);
         AppPermissions.isPermissionsGranted(getApplicationContext(), this);

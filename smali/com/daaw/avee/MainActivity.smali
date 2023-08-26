@@ -1680,6 +1680,16 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 5
 
+    const/4 v0, 0x1
+
+    const-string v1, "Cubiq \uD83E\uDD0D"
+
+    invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
     .line 277
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 

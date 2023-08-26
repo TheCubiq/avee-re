@@ -39,7 +39,7 @@ public class IAP2Design {
     static WeakEventR1<Purchase, Boolean> verifyDeveloperPayload = new WeakEventR1<>();
     static WeakEventR2<Purchase, Boolean, Boolean> onPremium = new WeakEventR2<>();
     static WeakEventR1<Boolean, Boolean> onPurchasedSuccessfully = new WeakEventR1<>();
-    public static boolean premium = false;
+    public static boolean premium = true;
     private final List<Object> listenerRefHolder = new LinkedList();
     private UpdateListener mUpdateListener = new UpdateListener();
 

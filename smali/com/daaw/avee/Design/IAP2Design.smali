@@ -94,7 +94,7 @@
 
     sput-object v0, Lcom/daaw/avee/Design/IAP2Design;->onPurchasedSuccessfully:Lcom/daaw/avee/Common/Events/WeakEventR1;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 62
     sput-boolean v0, Lcom/daaw/avee/Design/IAP2Design;->premium:Z
