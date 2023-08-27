@@ -111,63 +111,61 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 15
+    .locals 16
 
-    const/16 v0, 0x9
+    const/16 v0, 0xC
 
     new-array v0, v0, [Ljava/lang/String;
 
     const-string v1, "internalres:white"
-
     const/4 v2, 0x0
-
     aput-object v1, v0, v2
 
     const-string v3, "internalres:black"
-
     const/4 v4, 0x1
-
     aput-object v3, v0, v4
 
     const-string v5, "internalres:particle_circle_blur4"
-
     const/4 v6, 0x2
-
     aput-object v5, v0, v6
 
     const-string v7, "internalres:vignette80"
-
     const/4 v8, 0x3
-
     aput-object v7, v0, v8
 
     const-string v9, "internalres:rainbow128"
-
     const/4 v10, 0x4
-
     aput-object v9, v0, v10
 
     const-string v9, "internalres:particle_blur01_more"
-
     const/4 v11, 0x5
-
     aput-object v9, v0, v11
 
     const-string v9, "internalres:lens_flare"
-
     const/4 v12, 0x6
-
     aput-object v9, v0, v12
 
     const-string v9, "internalres:lens_flare_2"
-
     const/4 v13, 0x7
+    aput-object v9, v0, v13
 
+    # (test) add new assets
+
+    const-string v9, "internalres:anim128_g_m10_15"
+    const/16 v13, 0x8
+    aput-object v9, v0, v13
+
+    const-string v9, "internalres:snowflake"
+    const/16 v13, 0x9
+    aput-object v9, v0, v13
+
+    const-string v9, "internalres:year2018"
+    const/16 v13, 0xA
     aput-object v9, v0, v13
 
     const-string v9, "composition:0"
 
-    const/16 v14, 0x8
+    const/16 v14, 0xB
 
     aput-object v9, v0, v14
 

@@ -35,7 +35,8 @@ public class ElementImageLoader implements ImageLoadedListener {
     Func1<IRenderState, AlbumArtRequest> onRequestValueForNullCb;
     Func2<RenderState, Bitmap, Bitmap> processBitmapCb;
     Func2<RenderState, Bitmap, Bitmap> processBitmapSecondaryCb;
-    public static final String[] internalImages = {"internalres:white", "internalres:black", "internalres:particle_circle_blur4", "internalres:vignette80", "internalres:rainbow128", "internalres:particle_blur01_more", "internalres:lens_flare", "internalres:lens_flare_2", "composition:0"};
+    public static final String[] internalImages = {"internalres:white", "internalres:black", "internalres:particle_circle_blur4", "internalres:vignette80", "internalres:rainbow128", "internalres:particle_blur01_more", "internalres:lens_flare", "internalres:lens_flare_2", "internalres:anim128_g_m10_15", "composition:0"};
+    // smali: added more items (internalres:anim128_g_m10_15, internalres:snowflake, internalres:year2018)
     public static final String[] internalMaskImages = {"internalres:transparent", "internalres:white", "internalres:black", "internalres:particle_circle_blur4", "internalres:particle_blur01", "internalres:particle_blur_inv", "internalres:vignette80", "composition:0"};
     static Ref<Bitmap> bitmapTmp = new Ref<>(null);
     private IAtlasTexture atlasTex1 = null;
