@@ -18,7 +18,6 @@
 ## todo's:
 
 ### ⏰ (!!!)
-
     ➕ LiquifyEffect (predefined shader)
     ➕ ShaderItem Element (lets you use custom shaders)
     ⏺ Visualizer On Save Name
