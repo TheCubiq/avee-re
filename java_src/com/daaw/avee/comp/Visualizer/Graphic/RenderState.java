@@ -776,6 +776,9 @@ public class RenderState implements IRenderState {
             VShaderProgram loadShader9 = loadShader(resources, R.raw.buffer_motion_blur_vert, R.raw.buffer_motion_blur_frag);
             this.motionBlurEffectShader = loadShader9;
             Assert.assertNotNull(loadShader9);
+
+            // todo: new shaders here - liquify 
+
             this.bufferRenderer_atlasBuffer = null;
             this.bufferRenderer_atlasBufferCustomVPMat = null;
             this.bufferRenderer_atlasBufferFxLight = null;
