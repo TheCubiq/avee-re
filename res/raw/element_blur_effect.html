@@ -1,0 +1,93 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Blur Effect</h2>
+
+<!---->
+    <p>
+<pre>Displays blurred version of input composition/image.
+
+Usually "Show Unblurred Content" is set to overlay original unblurred input content on top of blurred one.</pre>
+    </p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt>General element properties</dt>
+<dd>
+<p>See <a href="local://customization_general">General Properties</a>.</p>
+</dd>
+
+<hr>
+
+<dt id="blendModeContent">Blend Mode Content</dt>
+<dd>
+<p>Blend mode for displaying original content (before blurring). Used when <value>ShowUnblurredContent</value> or <value>ShowUnblurredContentUnder</value> is set.</p>
+</dd>
+<dt id="color">Color</dt>
+<dd>
+<p>Tint of the blur.</p>
+</dd>
+<dt id="sourceCompositionIndex">Source Composition Index</dt>
+<dd>
+<p>Index of Composition for use as input.</p>
+</dd>
+<dt id="MaskImage">Mask Image</dt>
+<dd>
+<p>Image used to mask out areas.</p>
+</dd>
+<dt id="showUnblurredContent">Show Unblurred Content</dt>
+<dd>
+<p>Show original content (before blurring) over the blur.</p>
+</dd>
+<dt id="showUnblurredContentUnder">Show Unblurred Content Under</dt>
+<dd>
+<p>Show original content (before blurring) under the blur.</p>
+</dd>
+
+<hr>
+
+<dt id="blurRadius">Blur Radius</dt>
+<dd>
+<p>Amount of blur.</p>
+</dd>
+<dt id="blurMultiplier">Blur Multiplier</dt>
+<dd>
+<p>Boosts <value>BlurRadius</value> property.</p>
+</dd>
+<dt id="1layerScale">1 Layer Scale</dt>
+<dd>
+<p>Adjusts scale of blurred content.</p>
+</dd>
+<dt id="2layerScale">2 LayerScale</dt>
+<dd>
+<p>If set above <value>0</value>, shows second layer of blurred content. Adjusts scale of blurred content. </p>
+</dd>
+<dt id="3layerScale">3 Layer Scale</dt>
+<dd>
+<p>If set above <value>0</value>, shows third layer of blurred content. Adjusts scale of blurred content. </p>
+</dd>
+</dl>
+<!---->
+</div>
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

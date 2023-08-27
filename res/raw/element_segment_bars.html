@@ -1,0 +1,95 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<h2>Segments / Bars</h2>
+
+<!---->
+    <p>
+<pre>Displays series of segments/lines/bars that react to audio.
+
+Represents values of Audio Provider output. The count of segments is also controlled by Audio Provider. 
+</pre>
+    </p>
+<h4>Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt>General element properties</dt>
+<dd>
+<p>See <a href="local://customization_general">General Properties</a>.</p>
+</dd>
+
+<hr>
+
+<dt id="flipInput">Flip Input</dt>
+<dd>
+<p>Flips values between start and end.</p>
+</dd>
+<dt id="heightScale">Height Scale</dt>
+<dd>
+<p>Adjusts height values. Final height is usually defined by <value>HeightScale</value> + <value>BarHeightMultiplier</value> (located at <value>Segment1/2</value>).</p>
+</dd>
+<dt id="minHeightScale">Min Height Scale</dt>
+<dd>
+<p>Minimal heigh value allowed.</p>
+</dd>
+<dt id="ShapePath">Shape Path</dt>
+<dd>
+<p>Defines shape of the bars/line.<br><br><value>HorizontalLine</value> - straight line<br><value>Circle</value> - circle or arc<br><value>SiddedPolygon</value> - triangle, rectangle, pentagon,..<br><value>Letter</value> - Letter (A-Z) and numbers. The character shown is the first letter of artist or song name currently opened.</p>
+</dd>
+<dt id="colorBlendOffset">Color Blend Offset</dt>
+<dd>
+<p>Shifts center point of blending colors (<value>ColorFrom</value>, <value>ColorTo</value>).</p>
+</dd>
+<dt id="Segment1">Segment 1</dt>
+<dd>
+<p>Set the first segment renderer (e.g. Bars or Line). Bars/Line will be laid out along the specified <value>ShapePath</value>.<br><br>See <a href="local://customization_segment_renderers">Segment Renderers</a>.</p>
+</dd>
+<dt id="Segment2">Segment 2</dt>
+<dd>
+<p>Set the second segment renderer. Usually used to more effectively create different looking bars. Same can be achieved by adding another "Bars" element.<br><br>See <a href="local://customization_segment_renderers">Segment Renderers</a>.</p>
+</dd>
+
+<hr>
+
+<dt id="softness">Softness</dt>
+<dd>
+<p>Softens/smooths height values.</p>
+</dd>
+<dt id="reactionDelay">Reaction Delay</dt>
+<dd>
+<p>Delays reaction to audio by taking values of older frames.</p>
+</dd>
+<dt id="reactionAccumulatedDelay">Reaction Accumulated Delay</dt>
+<dd>
+<p>Delays reaction to audio by taking average values of older frames.</p>
+</dd>
+<dt id="audioProviderIndex">Audio Provider Index</dt>
+<dd>
+<p>If there are multiple "AudioProvider" elements, specify which to use as input.</p>
+</dd>
+</dl>
+<!---->
+</div>
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>

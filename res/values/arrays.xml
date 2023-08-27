@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dialog_folders_menu">
+        <item>Delete</item>
+        <item>Info</item>
+    </string-array>
+    <string-array name="pref_appTheme_entries">
+        <item>Blue-White</item>
+        <item>Purple-Pink</item>
+        <item>Nightly</item>
+        <item>Street</item>
+        <item>Libra</item>
+        <item>Angst</item>
+        <item>Wilted</item>
+        <item>Deception</item>
+    </string-array>
+    <string-array name="pref_appTheme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="pref_playbackEngine_entries">
+        <item>@string/musicSys_native</item>
+        <item>@string/musicSys_exo</item>
+    </string-array>
+    <string-array name="pref_playbackEngine_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>

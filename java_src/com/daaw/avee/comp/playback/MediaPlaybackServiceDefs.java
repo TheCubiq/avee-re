@@ -1,0 +1,44 @@
+package com.daaw.avee.comp.playback;
+/* loaded from: classes.dex */
+public interface MediaPlaybackServiceDefs {
+    public static final String ACTION_HEADSET_PLUGGED_IN = "ACTION_HEADSET_PLUGGED_IN";
+    public static final String ACTIVITY_AND_SERVICE_EXIT_ACTION = "ACTIVITY_AND_SERVICE_EXIT_ACTION";
+    public static final String APP_WIDGET_UPDATE_ACTION = "APP_WIDGET_UPDATE_ACTION";
+    public static final String AUDIO_BECOMING_NOISY_ACTION = "AUDIO_BECOMING_NOISY_ACTION";
+    public static final int CLEAR = -1;
+    public static final String CROSS_FADE_VALUE_ACTION = "CROSS_FADE_VALUE_ACTION";
+    public static final String EXIT_ACTION = "EXIT_ACTION";
+    public static final String EXTRA_ARG_1 = "EXTRA_ARG_1";
+    public static final String EXTRA_ARG_2 = "EXTRA_ARG_2";
+    public static final String EXTRA_ARG_3 = "EXTRA_ARG_3";
+    public static final String EXTRA_ARG_4 = "EXTRA_ARG_4";
+    public static final int FIRST = 0;
+    public static final String HEADSET_ASSIST_ACTION = "HEADSET_ASSIST_ACTION";
+    public static final int LAST = 3;
+    public static final Class<?> MediaServiceClass = MediaPlaybackService.class;
+    public static final int NEXT = 2;
+    public static final String NEXT_ACTION = "NEXT_ACTION";
+    public static final String NONE_ACTION = "NONE_ACTION";
+    public static final String NOTIFICATION_CHANNEL_NAME = "Playback Service";
+    public static final int NOW = 1;
+    public static final String PAUSE_ACTION = "PAUSE_ACTION";
+    public static final String PLAY_ACTION = "PLAY_ACTION";
+    public static final String PLAY_DATA_SOURCE_ACTION = "PLAY_DATA_SOURCE_ACTION";
+    public static final String PREVIOUS_ACTION = "PREVIOUS_ACTION";
+    public static final int REPEAT_ALL = 2;
+    public static final int REPEAT_CURRENT = 1;
+    public static final String REPEAT_MODE_ACTION = "REPEAT_MODE_ACTION";
+    public static final int REPEAT_NONE = 0;
+    public static final String SEEK_ACTION = "SEEK_ACTION";
+    public static final String SET_MUTE_ACTION = "SET_MUTE_ACTION";
+    public static final int SHUFFLE_NONE = 0;
+    public static final int SHUFFLE_NORMAL = 1;
+    public static final String STOP_ACTION = "STOP_ACTION";
+    public static final String TIMEOUT_DISABLE_ACTION = "TIMEOUT_DISABLE_ACTION";
+    public static final String TOGGLE_MUTE_ACTION = "TOGGLE_MUTE_ACTION";
+    public static final String TOGGLE_PAUSE_ACTION = "TOGGLE_PAUSE_ACTION";
+    public static final String VIDEO_SCALING_MODE_ACTION = "VIDEO_SCALING_MODE_ACTION";
+    public static final String VOLUME_ACTION = "VOLUME_ACTION";
+    public static final String VOLUME_PERCENTAGE_ACTION = "VOLUME_PERCENTAGE_ACTION";
+    public static final String VOLUME_STEREO_BALANCE_ACTION = "VOLUME_STEREO_BALANCE_ACTION";
+}

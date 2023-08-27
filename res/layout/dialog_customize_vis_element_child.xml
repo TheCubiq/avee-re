@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/elementRoot" android:background="?listItemBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/textSizeM3" android:textColor="@color/white_alpha_2" android:gravity="center_vertical" android:id="@id/title" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentTop="true" />
+    <androidx.appcompat.widget.AppCompatSpinner android:textSize="@dimen/textSizeM3" android:gravity="right" android:id="@id/spinnerType" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.0dip" android:layout_toRightOf="@id/title" android:layout_alignTop="@id/title" android:layout_alignBottom="@id/title" android:layout_alignParentRight="true" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/linearLayoutContent" android:paddingLeft="25.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_below="@id/title" />
+    <View android:orientation="vertical" android:id="@id/row1Gap" android:background="@color/white_alpha_25" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="0.5dip" android:layout_height="0.0dip" android:layout_marginLeft="16.0dip" android:layout_marginBottom="4.0dip" android:layout_alignTop="@id/linearLayoutContent" android:layout_alignBottom="@id/linearLayoutContent" />
+</RelativeLayout>

@@ -1,0 +1,2644 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "v": "AudioProvider",
+          "objType": "AudioProvider",
+          "ver": "10",
+          "_name": "Audio Provider",
+          "sampleProvider": {
+            "v": "Spectrum2",
+            "t": "_child Waveform Spectrum Spectrum2",
+            "o": 0,
+            "tag": "0_general"
+          },
+          "audioDurationMs": {
+            "v": 60,
+            "t": "i 20 300",
+            "o": 1,
+            "tag": "1_AudioCapture"
+          },
+          "highQualityAudioCapture": {
+            "v": 0,
+            "t": "b",
+            "o": 2,
+            "tag": "1_AudioCapture"
+          },
+          "sampleOutCount": {
+            "v": 64,
+            "t": "i 0 512",
+            "o": 3,
+            "tag": "2_spectrum"
+          },
+          "lowerHz": {
+            "v": 20,
+            "t": "f 0.0 300.0",
+            "o": 4,
+            "tag": "2_spectrumHz"
+          },
+          "higherHz": {
+            "v": 16230,
+            "t": "f 300.0 18000.0",
+            "o": 5,
+            "tag": "2_spectrumHz"
+          },
+          "hzLinearFactor": {
+            "v": 0.15000000596046448,
+            "t": "f 0.0 1.0",
+            "o": 6,
+            "tag": "2_spectrumHz"
+          },
+          "freqShift": {
+            "v": 0,
+            "t": "f 0.0 1.0",
+            "o": 7,
+            "tag": "2_spectrumHz"
+          },
+          "mirrorSamples": {
+            "v": 0,
+            "t": "b",
+            "o": 8,
+            "tag": "2_spectrum"
+          },
+          "repeatSamples": {
+            "v": 1,
+            "t": "i 1 6",
+            "o": 9,
+            "tag": "2_spectrum"
+          },
+          "starAndEndGap": {
+            "v": 1,
+            "t": "i 0 30",
+            "o": 10,
+            "tag": "2_spectrum"
+          },
+          "smooth": {
+            "v": 1,
+            "t": "f 0.1 1.0",
+            "o": 11,
+            "tag": "2_spectrum"
+          },
+          "filterRadius": {
+            "v": 8,
+            "t": "i 0 20",
+            "o": 12,
+            "tag": "2_spectrum"
+          },
+          "filterStrength": {
+            "v": 1.1920000314712524,
+            "t": "f 0.1 2.0",
+            "o": 13,
+            "tag": "2_spectrum"
+          },
+          "beatSmooth": {
+            "v": 0.4000000059604645,
+            "t": "f 0.1 1.0",
+            "o": 14,
+            "tag": "beat"
+          },
+          "beatRangeBarFirst": {
+            "v": 0,
+            "t": "f 0.0 1.0",
+            "o": 15,
+            "tag": "beat"
+          },
+          "beatRangeBarLast": {
+            "v": 0.20000000298023224,
+            "t": "f 0.0 1.0",
+            "o": 16,
+            "tag": "beat"
+          },
+          "beatRangeValueLower": {
+            "v": 0.699999988079071,
+            "t": "f 0.0 50.0",
+            "o": 17,
+            "tag": "beat"
+          },
+          "beatRangeValueHigher": {
+            "v": 35,
+            "t": "f 0.0 100.0",
+            "o": 18,
+            "tag": "beat"
+          },
+          "lowerFreqMagnitude": {
+            "v": 0.20000000298023224,
+            "t": "f 0.0 1.0",
+            "o": 19,
+            "tag": "2_spectrum"
+          },
+          "outputMultiplier": {
+            "v": 0.753000020980835,
+            "t": "f 0.1 3.0",
+            "o": 20,
+            "tag": "2_spectrum"
+          }
+        },
+        {
+          "v": "BlurEffect",
+          "objType": "BlurEffect",
+          "ver": "10",
+          "_id": {
+            "v": 272,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "Alpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.500000 0.500000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.500000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 0,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "1.000000 1.000000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "_name": "Blur Effect",
+          "blendModeContent": {
+            "v": "Alpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 13,
+            "tag": "1_appearance"
+          },
+          "color": {
+            "v": -16777216,
+            "t": "crgba",
+            "o": 14,
+            "tag": "1_appearance"
+          },
+          "sourceCompositionIndex": {
+            "v": 1,
+            "t": "i 1 5",
+            "o": 15,
+            "tag": "1_appearance"
+          },
+          "MaskImage": {
+            "v": "composition:2",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 16,
+            "tag": "1_appearance"
+          },
+          "blurRadius": {
+            "v": 2.549999952316284,
+            "t": "f 0.0 3.0",
+            "o": 17,
+            "tag": "2_blur"
+          },
+          "blurMultiplier": {
+            "v": 4.125,
+            "t": "f 1.0 6.0",
+            "o": 18,
+            "tag": "2_blur"
+          },
+          "showUnblurredContent": {
+            "v": 0,
+            "t": "b",
+            "o": 19,
+            "tag": "1_appearance"
+          },
+          "showUnblurredContentUnder": {
+            "v": 1,
+            "t": "b",
+            "o": 20,
+            "tag": "1_appearance"
+          },
+          "1layerScale": {
+            "v": "1.000000 1.000000",
+            "t": "f2 0.0 10.0",
+            "o": 21,
+            "tag": "2_blur"
+          },
+          "2layerScale": {
+            "v": "0.000000 0.000000",
+            "t": "f2 0.0 10.0",
+            "o": 22,
+            "tag": "2_blur"
+          },
+          "3layerScale": {
+            "v": "0.000000 0.000000",
+            "t": "f2 0.0 10.0",
+            "o": 23,
+            "tag": "2_blur"
+          },
+          "1layerColor": {
+            "v": -723724,
+            "t": "crgba",
+            "o": 24,
+            "tag": "2_blur"
+          },
+          "2layerColor": {
+            "v": -1,
+            "t": "crgba",
+            "o": 25,
+            "tag": "2_blur"
+          },
+          "3layerColor": {
+            "v": -1,
+            "t": "crgba",
+            "o": 26,
+            "tag": "2_blur"
+          }
+        },
+        {
+          "v": "Image",
+          "objType": "Image",
+          "ver": "10",
+          "_id": {
+            "v": 273,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "PreMulAlpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.500000 0.500000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "ConstantShakeMore",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.20000000298023224,
+              "t": "f 0.0 2.0",
+              "o": 1,
+              "tag": "misc"
+            },
+            "B": {
+              "v": 0.20000000298023224,
+              "t": "f 0.0 2.0",
+              "o": 2,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.500000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 0,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "1.000000 1.000000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "ConstantShakeRotMore",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.10000000149011612,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Amount"
+            },
+            "B": {
+              "v": 0.10000000149011612,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Speed"
+            }
+          },
+          "customImage": {
+            "v": "composition:3",
+            "t": "img internalres:white internalres:black internalres:particle_circle_blur4 internalres:vignette80 internalres:rainbow128 internalres:particle_blur01_more internalres:lens_flare internalres:lens_flare_2 composition:0",
+            "o": 13,
+            "tag": "1_image"
+          },
+          "measureAnimationSpeed": {
+            "v": "",
+            "t": "_child",
+            "o": 14,
+            "tag": "1_image",
+            "measureWhat": {
+              "v": "TotalTimeAndBeat",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Speed"
+            },
+            "B": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Beat Amount"
+            }
+          },
+          "generatedAlbumArtHint": {
+            "v": 0,
+            "t": "ih 0 7",
+            "o": 15,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintShiftHue": {
+            "v": 0,
+            "t": "b",
+            "o": 16,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintNoText": {
+            "v": 0,
+            "t": "b",
+            "o": 17,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintForceGen": {
+            "v": 0,
+            "t": "b",
+            "o": 18,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtColor": {
+            "v": -1,
+            "t": "crgba",
+            "o": 19,
+            "tag": "generatedAlbumArt"
+          },
+          "keepAspectRatioAndCropToFit": {
+            "v": 0,
+            "t": "b",
+            "o": 20,
+            "tag": "1_image"
+          },
+          "colorKeyEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 21,
+            "tag": "2_ColorKey"
+          },
+          "autoDetectColorKey": {
+            "v": 1,
+            "t": "b",
+            "o": 22,
+            "tag": "2_ColorKey"
+          },
+          "colorKey": {
+            "v": -16711936,
+            "t": "crgb_hl",
+            "o": 23,
+            "tag": "2_ColorKey"
+          },
+          "transparencyStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 24,
+            "tag": "2_ColorKey"
+          },
+          "opacityStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 25,
+            "tag": "2_ColorKey"
+          },
+          "keepAspectRatio": {
+            "v": 1,
+            "t": "b",
+            "o": 26,
+            "tag": "1_image"
+          },
+          "blurredBorder": {
+            "v": 1,
+            "t": "b",
+            "o": 27,
+            "tag": "1_image"
+          },
+          "_name": "Image",
+          "Color": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 28,
+            "tag": "2_color"
+          },
+          "ColorTo": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 29,
+            "tag": "2_color"
+          },
+          "MeasureColorBlend": {
+            "v": "",
+            "t": "_child",
+            "o": 30,
+            "tag": "2_color",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "saturation": {
+            "v": "Constant 1.0 1.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 31,
+            "tag": "2_color"
+          },
+          "blurEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 32,
+            "tag": "blur"
+          },
+          "blurDivider": {
+            "v": 5,
+            "t": "i 0 10",
+            "o": 33,
+            "tag": "blur"
+          },
+          "blurRadius": {
+            "v": 7,
+            "t": "i 1 25",
+            "o": 34,
+            "tag": "blur"
+          },
+          "Shape": {
+            "v": "None",
+            "t": "_child None Circle SidedPolygon",
+            "o": 35,
+            "tag": "1_image"
+          },
+          "MaskImage": {
+            "v": "",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 36,
+            "tag": "1_image"
+          },
+          "maskMode": {
+            "v": "Transparency",
+            "t": "sel Transparency TransparencyAndBlacks TransparencyAndWhites InvertedTransparency",
+            "o": 37,
+            "tag": "1_image"
+          }
+        },
+        {
+          "v": "AppLogo",
+          "objType": "AppLogo",
+          "ver": "10",
+          "typeFace": {
+            "v": "internal_3",
+            "t": "passet internal_0:2131230884 internal_1:2131230885 internal_2:2131230886 internal_3:2131230887",
+            "o": 0,
+            "tag": "appearance"
+          },
+          "_name": "AppLogo",
+          "visible": {
+            "v": 1,
+            "t": "pb",
+            "o": 1,
+            "tag": "0_general",
+            "hint": "AppLogo"
+          },
+          "color": {
+            "v": -1869574000,
+            "t": "crgba",
+            "o": 2,
+            "tag": "0_general"
+          }
+        }
+      ],
+      "v": "Composition",
+      "objType": "Composition",
+      "ver": "10",
+      "_name": "Composition",
+      "introBlendMode": {
+        "v": "Alpha",
+        "t": "sel Alpha AddAlpha",
+        "o": 0,
+        "tag": "2_introOutro"
+      },
+      "introFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 1,
+        "tag": "2_introOutro"
+      },
+      "outroFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 2,
+        "tag": "2_introOutro"
+      },
+      "introFadeColor": {
+        "v": -553648128,
+        "t": "crgba",
+        "o": 3,
+        "tag": "2_introOutro"
+      }
+    },
+    {
+      "elements": [
+        {
+          "v": "Image",
+          "objType": "Image",
+          "ver": "10",
+          "_id": {
+            "v": 275,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "Alpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.500000 0.500000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.500000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 0,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "1.000000 1.000000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "customImage": {
+            "v": "",
+            "t": "img internalres:white internalres:black internalres:particle_circle_blur4 internalres:vignette80 internalres:rainbow128 internalres:particle_blur01_more internalres:lens_flare internalres:lens_flare_2 composition:0",
+            "o": 13,
+            "tag": "1_image"
+          },
+          "measureAnimationSpeed": {
+            "v": "",
+            "t": "_child",
+            "o": 14,
+            "tag": "1_image",
+            "measureWhat": {
+              "v": "TotalTimeAndBeat",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Speed"
+            },
+            "B": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Beat Amount"
+            }
+          },
+          "generatedAlbumArtHint": {
+            "v": 0,
+            "t": "ih 0 7",
+            "o": 15,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintShiftHue": {
+            "v": 0,
+            "t": "b",
+            "o": 16,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintNoText": {
+            "v": 0,
+            "t": "b",
+            "o": 17,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintForceGen": {
+            "v": 0,
+            "t": "b",
+            "o": 18,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtColor": {
+            "v": -1,
+            "t": "crgba",
+            "o": 19,
+            "tag": "generatedAlbumArt"
+          },
+          "keepAspectRatioAndCropToFit": {
+            "v": 0,
+            "t": "b",
+            "o": 20,
+            "tag": "1_image"
+          },
+          "colorKeyEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 21,
+            "tag": "2_ColorKey"
+          },
+          "autoDetectColorKey": {
+            "v": 1,
+            "t": "b",
+            "o": 22,
+            "tag": "2_ColorKey"
+          },
+          "colorKey": {
+            "v": -16711936,
+            "t": "crgb_hl",
+            "o": 23,
+            "tag": "2_ColorKey"
+          },
+          "transparencyStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 24,
+            "tag": "2_ColorKey"
+          },
+          "opacityStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 25,
+            "tag": "2_ColorKey"
+          },
+          "keepAspectRatio": {
+            "v": 1,
+            "t": "b",
+            "o": 26,
+            "tag": "1_image"
+          },
+          "blurredBorder": {
+            "v": 1,
+            "t": "b",
+            "o": 27,
+            "tag": "1_image"
+          },
+          "_name": "Image",
+          "Color": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 28,
+            "tag": "2_color"
+          },
+          "ColorTo": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 29,
+            "tag": "2_color"
+          },
+          "MeasureColorBlend": {
+            "v": "",
+            "t": "_child",
+            "o": 30,
+            "tag": "2_color",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "saturation": {
+            "v": "Constant 1.0 1.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 31,
+            "tag": "2_color"
+          },
+          "blurEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 32,
+            "tag": "blur"
+          },
+          "blurDivider": {
+            "v": 5,
+            "t": "i 0 10",
+            "o": 33,
+            "tag": "blur"
+          },
+          "blurRadius": {
+            "v": 7,
+            "t": "i 1 25",
+            "o": 34,
+            "tag": "blur"
+          },
+          "Shape": {
+            "v": "None",
+            "t": "_child None Circle SidedPolygon",
+            "o": 35,
+            "tag": "1_image"
+          },
+          "MaskImage": {
+            "v": "",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 36,
+            "tag": "1_image"
+          },
+          "maskMode": {
+            "v": "Transparency",
+            "t": "sel Transparency TransparencyAndBlacks TransparencyAndWhites InvertedTransparency",
+            "o": 37,
+            "tag": "1_image"
+          }
+        }
+      ],
+      "v": "Composition",
+      "objType": "Composition",
+      "ver": "10",
+      "_name": "Composition",
+      "introBlendMode": {
+        "v": "Alpha",
+        "t": "sel Alpha AddAlpha",
+        "o": 0,
+        "tag": "2_introOutro"
+      },
+      "introFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 1,
+        "tag": "2_introOutro"
+      },
+      "outroFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 2,
+        "tag": "2_introOutro"
+      },
+      "introFadeColor": {
+        "v": -553648128,
+        "t": "crgba",
+        "o": 3,
+        "tag": "2_introOutro"
+      }
+    },
+    {
+      "elements": [
+        {
+          "v": "Image",
+          "objType": "Image",
+          "ver": "10",
+          "_id": {
+            "v": 276,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "Alpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.500000 0.500000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "ConstantShakeMore",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.20000000298023224,
+              "t": "f 0.0 2.0",
+              "o": 1,
+              "tag": "misc"
+            },
+            "B": {
+              "v": 0.20000000298023224,
+              "t": "f 0.0 2.0",
+              "o": 2,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.500000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 1,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "0.800000 0.400000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "ConstantShakeRotMore",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.10000000149011612,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Amount"
+            },
+            "B": {
+              "v": 0.10000000149011612,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Speed"
+            }
+          },
+          "customImage": {
+            "v": "internalres:white",
+            "t": "img internalres:white internalres:black internalres:particle_circle_blur4 internalres:vignette80 internalres:rainbow128 internalres:particle_blur01_more internalres:lens_flare internalres:lens_flare_2 composition:0",
+            "o": 13,
+            "tag": "1_image"
+          },
+          "measureAnimationSpeed": {
+            "v": "",
+            "t": "_child",
+            "o": 14,
+            "tag": "1_image",
+            "measureWhat": {
+              "v": "TotalTimeAndBeat",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Speed"
+            },
+            "B": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Beat Amount"
+            }
+          },
+          "generatedAlbumArtHint": {
+            "v": 0,
+            "t": "ih 0 7",
+            "o": 15,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintShiftHue": {
+            "v": 0,
+            "t": "b",
+            "o": 16,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintNoText": {
+            "v": 0,
+            "t": "b",
+            "o": 17,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintForceGen": {
+            "v": 0,
+            "t": "b",
+            "o": 18,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtColor": {
+            "v": 16777215,
+            "t": "crgba",
+            "o": 19,
+            "tag": "generatedAlbumArt"
+          },
+          "keepAspectRatioAndCropToFit": {
+            "v": 0,
+            "t": "b",
+            "o": 20,
+            "tag": "1_image"
+          },
+          "colorKeyEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 21,
+            "tag": "2_ColorKey"
+          },
+          "autoDetectColorKey": {
+            "v": 1,
+            "t": "b",
+            "o": 22,
+            "tag": "2_ColorKey"
+          },
+          "colorKey": {
+            "v": -16711936,
+            "t": "crgb_hl",
+            "o": 23,
+            "tag": "2_ColorKey"
+          },
+          "transparencyStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 24,
+            "tag": "2_ColorKey"
+          },
+          "opacityStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 25,
+            "tag": "2_ColorKey"
+          },
+          "keepAspectRatio": {
+            "v": 0,
+            "t": "b",
+            "o": 26,
+            "tag": "1_image"
+          },
+          "blurredBorder": {
+            "v": 1,
+            "t": "b",
+            "o": 27,
+            "tag": "1_image"
+          },
+          "_name": "Image",
+          "Color": {
+            "v": "0.000000 0.000000 0.431373 1.000000",
+            "t": "chsla4f",
+            "o": 28,
+            "tag": "2_color"
+          },
+          "ColorTo": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 29,
+            "tag": "2_color"
+          },
+          "MeasureColorBlend": {
+            "v": "",
+            "t": "_child",
+            "o": 30,
+            "tag": "2_color",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "saturation": {
+            "v": "Constant 1.0 1.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 31,
+            "tag": "2_color"
+          },
+          "blurEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 32,
+            "tag": "blur"
+          },
+          "blurDivider": {
+            "v": 5,
+            "t": "i 0 10",
+            "o": 33,
+            "tag": "blur"
+          },
+          "blurRadius": {
+            "v": 7,
+            "t": "i 1 25",
+            "o": 34,
+            "tag": "blur"
+          },
+          "Shape": {
+            "v": "None",
+            "t": "_child None Circle SidedPolygon",
+            "o": 35,
+            "tag": "1_image"
+          },
+          "MaskImage": {
+            "v": "",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 36,
+            "tag": "1_image"
+          },
+          "maskMode": {
+            "v": "Transparency",
+            "t": "sel Transparency TransparencyAndBlacks TransparencyAndWhites InvertedTransparency",
+            "o": 37,
+            "tag": "1_image"
+          }
+        }
+      ],
+      "v": "Composition",
+      "objType": "Composition",
+      "ver": "10",
+      "_name": "Composition",
+      "introBlendMode": {
+        "v": "Alpha",
+        "t": "sel Alpha AddAlpha",
+        "o": 0,
+        "tag": "2_introOutro"
+      },
+      "introFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 1,
+        "tag": "2_introOutro"
+      },
+      "outroFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 2,
+        "tag": "2_introOutro"
+      },
+      "introFadeColor": {
+        "v": -553648128,
+        "t": "crgba",
+        "o": 3,
+        "tag": "2_introOutro"
+      }
+    },
+    {
+      "elements": [
+        {
+          "v": "Bars",
+          "objType": "Bars",
+          "ver": "10",
+          "_id": {
+            "v": 278,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "PreMulAlpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.000000 -0.200000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.500000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 1,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "0.800000 0.500000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "_name": "Bars\/Segments",
+          "flipInput": {
+            "v": 0,
+            "t": "b",
+            "o": 13,
+            "tag": "1_bars"
+          },
+          "heightScale": {
+            "v": 3,
+            "t": "f -10.0 10.0",
+            "o": 14,
+            "tag": "1_bars"
+          },
+          "minHeightScale": {
+            "v": 0.006000000052154064,
+            "t": "f -0.03 0.03",
+            "o": 15,
+            "tag": "1_bars"
+          },
+          "maxHeightScale": {
+            "v": 1,
+            "t": "f 0.1 1.0",
+            "o": 16,
+            "tag": "1_bars"
+          },
+          "ShapePath": {
+            "v": "HorizontalLine",
+            "t": "_child HorizontalLine Circle SidedPolygon Letter",
+            "o": 17,
+            "tag": "1_bars"
+          },
+          "colorBlendOffset": {
+            "v": "Constant 0.0 0.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 18,
+            "tag": "1_bars"
+          },
+          "softness": {
+            "v": 2,
+            "t": "i 0 20",
+            "o": 19,
+            "tag": "2_Behavior"
+          },
+          "reactionDelay": {
+            "v": 0,
+            "t": "i 0 9",
+            "o": 20,
+            "tag": "2_Behavior"
+          },
+          "reactionAccumulatedDelay": {
+            "v": 0,
+            "t": "i 0 9",
+            "o": 21,
+            "tag": "2_Behavior"
+          },
+          "audioProviderIndex": {
+            "v": 1,
+            "t": "i 1 4",
+            "o": 22,
+            "tag": "2_Behavior"
+          },
+          "Segment1": {
+            "v": "Bars",
+            "t": "_child None Bars Line SharpBars RoundBars",
+            "o": 23,
+            "tag": "1_bars",
+            "colorFrom": {
+              "v": -1,
+              "t": "crgba",
+              "o": 0,
+              "tag": "misc"
+            },
+            "colorTo": {
+              "v": -1,
+              "t": "crgba",
+              "o": 1,
+              "tag": "misc"
+            },
+            "fixedHeight": {
+              "v": 0,
+              "t": "f -50.0 50.0",
+              "o": 2,
+              "tag": "misc"
+            },
+            "barHeightMultiplier": {
+              "v": 1,
+              "t": "f -2.0 2.0",
+              "o": 3,
+              "tag": "misc"
+            },
+            "barWidth": {
+              "v": 0.6000000238418579,
+              "t": "f 0.0 2.0",
+              "o": 4,
+              "tag": "misc"
+            },
+            "barWidthAffectedByShape": {
+              "v": 0,
+              "t": "b",
+              "o": 5,
+              "tag": "b"
+            },
+            "mirror": {
+              "v": 0,
+              "t": "b",
+              "o": 6,
+              "tag": "b"
+            }
+          },
+          "Segment2": {
+            "v": "None",
+            "t": "_child None Bars Line SharpBars RoundBars",
+            "o": 24,
+            "tag": "1_bars"
+          }
+        },
+        {
+          "v": "Bars",
+          "objType": "Bars",
+          "ver": "10",
+          "_id": {
+            "v": 279,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "PreMulAlpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.000000 0.000000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.100000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 1,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "0.800000 0.500000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "_name": "Bars\/Segments",
+          "flipInput": {
+            "v": 0,
+            "t": "b",
+            "o": 13,
+            "tag": "1_bars"
+          },
+          "heightScale": {
+            "v": 3,
+            "t": "f -10.0 10.0",
+            "o": 14,
+            "tag": "1_bars"
+          },
+          "minHeightScale": {
+            "v": 0.006000000052154064,
+            "t": "f -0.03 0.03",
+            "o": 15,
+            "tag": "1_bars"
+          },
+          "maxHeightScale": {
+            "v": 1,
+            "t": "f 0.1 1.0",
+            "o": 16,
+            "tag": "1_bars"
+          },
+          "ShapePath": {
+            "v": "HorizontalLine",
+            "t": "_child HorizontalLine Circle SidedPolygon Letter",
+            "o": 17,
+            "tag": "1_bars"
+          },
+          "colorBlendOffset": {
+            "v": "Constant 0.0 0.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 18,
+            "tag": "1_bars"
+          },
+          "softness": {
+            "v": 2,
+            "t": "i 0 20",
+            "o": 19,
+            "tag": "2_Behavior"
+          },
+          "reactionDelay": {
+            "v": 0,
+            "t": "i 0 9",
+            "o": 20,
+            "tag": "2_Behavior"
+          },
+          "reactionAccumulatedDelay": {
+            "v": 0,
+            "t": "i 0 9",
+            "o": 21,
+            "tag": "2_Behavior"
+          },
+          "audioProviderIndex": {
+            "v": 1,
+            "t": "i 1 4",
+            "o": 22,
+            "tag": "2_Behavior"
+          },
+          "Segment1": {
+            "v": "Bars",
+            "t": "_child None Bars Line SharpBars RoundBars",
+            "o": 23,
+            "tag": "1_bars",
+            "colorFrom": {
+              "v": -1,
+              "t": "crgba",
+              "o": 0,
+              "tag": "misc"
+            },
+            "colorTo": {
+              "v": -1,
+              "t": "crgba",
+              "o": 1,
+              "tag": "misc"
+            },
+            "fixedHeight": {
+              "v": 0,
+              "t": "f -50.0 50.0",
+              "o": 2,
+              "tag": "misc"
+            },
+            "barHeightMultiplier": {
+              "v": -1,
+              "t": "f -2.0 2.0",
+              "o": 3,
+              "tag": "misc"
+            },
+            "barWidth": {
+              "v": 0.6000000238418579,
+              "t": "f 0.0 2.0",
+              "o": 4,
+              "tag": "misc"
+            },
+            "barWidthAffectedByShape": {
+              "v": 0,
+              "t": "b",
+              "o": 5,
+              "tag": "b"
+            },
+            "mirror": {
+              "v": 0,
+              "t": "b",
+              "o": 6,
+              "tag": "b"
+            }
+          },
+          "Segment2": {
+            "v": "None",
+            "t": "_child None Bars Line SharpBars RoundBars",
+            "o": 24,
+            "tag": "1_bars"
+          }
+        },
+        {
+          "v": "Image",
+          "objType": "Image",
+          "ver": "10",
+          "_id": {
+            "v": 280,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "Alpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "-0.350000 0.150000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.000000 0.000000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 1,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "0.700000 0.010000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "customImage": {
+            "v": "internalres:white",
+            "t": "img internalres:white internalres:black internalres:particle_circle_blur4 internalres:vignette80 internalres:rainbow128 internalres:particle_blur01_more internalres:lens_flare internalres:lens_flare_2 composition:0",
+            "o": 13,
+            "tag": "1_image"
+          },
+          "measureAnimationSpeed": {
+            "v": "",
+            "t": "_child",
+            "o": 14,
+            "tag": "1_image",
+            "measureWhat": {
+              "v": "TotalTimeAndBeat",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Speed"
+            },
+            "B": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Beat Amount"
+            }
+          },
+          "generatedAlbumArtHint": {
+            "v": 0,
+            "t": "ih 0 7",
+            "o": 15,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintShiftHue": {
+            "v": 0,
+            "t": "b",
+            "o": 16,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintNoText": {
+            "v": 0,
+            "t": "b",
+            "o": 17,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintForceGen": {
+            "v": 0,
+            "t": "b",
+            "o": 18,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtColor": {
+            "v": 16777215,
+            "t": "crgba",
+            "o": 19,
+            "tag": "generatedAlbumArt"
+          },
+          "keepAspectRatioAndCropToFit": {
+            "v": 0,
+            "t": "b",
+            "o": 20,
+            "tag": "1_image"
+          },
+          "colorKeyEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 21,
+            "tag": "2_ColorKey"
+          },
+          "autoDetectColorKey": {
+            "v": 1,
+            "t": "b",
+            "o": 22,
+            "tag": "2_ColorKey"
+          },
+          "colorKey": {
+            "v": -16711936,
+            "t": "crgb_hl",
+            "o": 23,
+            "tag": "2_ColorKey"
+          },
+          "transparencyStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 24,
+            "tag": "2_ColorKey"
+          },
+          "opacityStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 25,
+            "tag": "2_ColorKey"
+          },
+          "keepAspectRatio": {
+            "v": 0,
+            "t": "b",
+            "o": 26,
+            "tag": "1_image"
+          },
+          "blurredBorder": {
+            "v": 1,
+            "t": "b",
+            "o": 27,
+            "tag": "1_image"
+          },
+          "_name": "Image",
+          "Color": {
+            "v": "0.000000 0.000000 0.643137 0.631373",
+            "t": "chsla4f",
+            "o": 28,
+            "tag": "2_color"
+          },
+          "ColorTo": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 29,
+            "tag": "2_color"
+          },
+          "MeasureColorBlend": {
+            "v": "",
+            "t": "_child",
+            "o": 30,
+            "tag": "2_color",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "saturation": {
+            "v": "Constant 1.0 1.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 31,
+            "tag": "2_color"
+          },
+          "blurEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 32,
+            "tag": "blur"
+          },
+          "blurDivider": {
+            "v": 5,
+            "t": "i 0 10",
+            "o": 33,
+            "tag": "blur"
+          },
+          "blurRadius": {
+            "v": 7,
+            "t": "i 1 25",
+            "o": 34,
+            "tag": "blur"
+          },
+          "Shape": {
+            "v": "None",
+            "t": "_child None Circle SidedPolygon",
+            "o": 35,
+            "tag": "1_image"
+          },
+          "MaskImage": {
+            "v": "",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 36,
+            "tag": "1_image"
+          },
+          "maskMode": {
+            "v": "Transparency",
+            "t": "sel Transparency TransparencyAndBlacks TransparencyAndWhites InvertedTransparency",
+            "o": 37,
+            "tag": "1_image"
+          }
+        },
+        {
+          "v": "Image",
+          "objType": "Image",
+          "ver": "10",
+          "_id": {
+            "v": 281,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "Alpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "-0.350000 0.150000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "center",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.000000 0.000000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 1,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "0.000000 0.010000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "TrackPosition",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.699999988079071,
+              "t": "f -1.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Amount"
+            },
+            "B": {
+              "v": 0,
+              "t": "f -1.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Amount"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "customImage": {
+            "v": "internalres:white",
+            "t": "img internalres:white internalres:black internalres:particle_circle_blur4 internalres:vignette80 internalres:rainbow128 internalres:particle_blur01_more internalres:lens_flare internalres:lens_flare_2 composition:0",
+            "o": 13,
+            "tag": "1_image"
+          },
+          "measureAnimationSpeed": {
+            "v": "",
+            "t": "_child",
+            "o": 14,
+            "tag": "1_image",
+            "measureWhat": {
+              "v": "TotalTimeAndBeat",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Speed"
+            },
+            "B": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Beat Amount"
+            }
+          },
+          "generatedAlbumArtHint": {
+            "v": 0,
+            "t": "ih 0 7",
+            "o": 15,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintShiftHue": {
+            "v": 0,
+            "t": "b",
+            "o": 16,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintNoText": {
+            "v": 0,
+            "t": "b",
+            "o": 17,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintForceGen": {
+            "v": 0,
+            "t": "b",
+            "o": 18,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtColor": {
+            "v": 16777215,
+            "t": "crgba",
+            "o": 19,
+            "tag": "generatedAlbumArt"
+          },
+          "keepAspectRatioAndCropToFit": {
+            "v": 0,
+            "t": "b",
+            "o": 20,
+            "tag": "1_image"
+          },
+          "colorKeyEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 21,
+            "tag": "2_ColorKey"
+          },
+          "autoDetectColorKey": {
+            "v": 1,
+            "t": "b",
+            "o": 22,
+            "tag": "2_ColorKey"
+          },
+          "colorKey": {
+            "v": -16711936,
+            "t": "crgb_hl",
+            "o": 23,
+            "tag": "2_ColorKey"
+          },
+          "transparencyStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 24,
+            "tag": "2_ColorKey"
+          },
+          "opacityStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 25,
+            "tag": "2_ColorKey"
+          },
+          "keepAspectRatio": {
+            "v": 0,
+            "t": "b",
+            "o": 26,
+            "tag": "1_image"
+          },
+          "blurredBorder": {
+            "v": 1,
+            "t": "b",
+            "o": 27,
+            "tag": "1_image"
+          },
+          "_name": "Image",
+          "Color": {
+            "v": "0.000000 0.000000 1.000000 0.933333",
+            "t": "chsla4f",
+            "o": 28,
+            "tag": "2_color"
+          },
+          "ColorTo": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 29,
+            "tag": "2_color"
+          },
+          "MeasureColorBlend": {
+            "v": "",
+            "t": "_child",
+            "o": 30,
+            "tag": "2_color",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "saturation": {
+            "v": "Constant 1.0 1.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 31,
+            "tag": "2_color"
+          },
+          "blurEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 32,
+            "tag": "blur"
+          },
+          "blurDivider": {
+            "v": 5,
+            "t": "i 0 10",
+            "o": 33,
+            "tag": "blur"
+          },
+          "blurRadius": {
+            "v": 7,
+            "t": "i 1 25",
+            "o": 34,
+            "tag": "blur"
+          },
+          "Shape": {
+            "v": "None",
+            "t": "_child None Circle SidedPolygon",
+            "o": 35,
+            "tag": "1_image"
+          },
+          "MaskImage": {
+            "v": "",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 36,
+            "tag": "1_image"
+          },
+          "maskMode": {
+            "v": "Transparency",
+            "t": "sel Transparency TransparencyAndBlacks TransparencyAndWhites InvertedTransparency",
+            "o": 37,
+            "tag": "1_image"
+          }
+        },
+        {
+          "v": "Image",
+          "objType": "Image",
+          "ver": "10",
+          "_id": {
+            "v": 282,
+            "t": "ih",
+            "o": 0,
+            "tag": ""
+          },
+          "visible": {
+            "v": 1,
+            "t": "b",
+            "o": 1,
+            "tag": "0_general"
+          },
+          "blendMode": {
+            "v": "PreMulAlpha",
+            "t": "_child Alpha PreMulAlpha Screen Add AddAlpha",
+            "o": 2,
+            "tag": "0_general"
+          },
+          "position": {
+            "v": "0.500000 0.500000",
+            "t": "f2 -1.0 1.0",
+            "o": 3,
+            "tag": "0_general"
+          },
+          "anchorX": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 4,
+            "tag": "0_general"
+          },
+          "anchorY": {
+            "v": "unset",
+            "t": "sel unset start center end",
+            "o": 5,
+            "tag": "0_general"
+          },
+          "MeasurePos": {
+            "v": "",
+            "t": "_child",
+            "o": 6,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing BeatCamShakeMore BeatCamShakeLess BeatRandomShake ConstantShakeMore ConstantShake TrackPosition",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "alignmentPosition": {
+            "v": "0.500000 0.500000",
+            "t": "f2 0.0 1.0",
+            "o": 7,
+            "tag": "0_general"
+          },
+          "scaleIsUniform": {
+            "v": 1,
+            "t": "b",
+            "o": 8,
+            "tag": "0_general"
+          },
+          "scale": {
+            "v": "0.400000 0.400000",
+            "t": "f2 0.0 2.0",
+            "o": 9,
+            "tag": "0_general"
+          },
+          "measureScale": {
+            "v": "",
+            "t": "_child",
+            "o": 10,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "rotation": {
+            "v": 0,
+            "t": "f 0.0 300.0",
+            "o": 11,
+            "tag": "0_general"
+          },
+          "measureRot": {
+            "v": "",
+            "t": "_child",
+            "o": 12,
+            "tag": "0_general",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "customImage": {
+            "v": "",
+            "t": "img internalres:white internalres:black internalres:particle_circle_blur4 internalres:vignette80 internalres:rainbow128 internalres:particle_blur01_more internalres:lens_flare internalres:lens_flare_2 composition:0",
+            "o": 13,
+            "tag": "1_image"
+          },
+          "measureAnimationSpeed": {
+            "v": "",
+            "t": "_child",
+            "o": 14,
+            "tag": "1_image",
+            "measureWhat": {
+              "v": "TotalTimeAndBeat",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            },
+            "A": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 1,
+              "tag": "misc",
+              "hint": "Speed"
+            },
+            "B": {
+              "v": 0.5,
+              "t": "f 0.0 1.0",
+              "o": 2,
+              "tag": "misc",
+              "hint": "Beat Amount"
+            }
+          },
+          "generatedAlbumArtHint": {
+            "v": 4,
+            "t": "ih 0 7",
+            "o": 15,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintShiftHue": {
+            "v": 0,
+            "t": "b",
+            "o": 16,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintNoText": {
+            "v": 0,
+            "t": "b",
+            "o": 17,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtHintForceGen": {
+            "v": 1,
+            "t": "b",
+            "o": 18,
+            "tag": "generatedAlbumArt"
+          },
+          "generatedAlbumArtColor": {
+            "v": 16777215,
+            "t": "crgba",
+            "o": 19,
+            "tag": "generatedAlbumArt"
+          },
+          "keepAspectRatioAndCropToFit": {
+            "v": 0,
+            "t": "b",
+            "o": 20,
+            "tag": "1_image"
+          },
+          "colorKeyEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 21,
+            "tag": "2_ColorKey"
+          },
+          "autoDetectColorKey": {
+            "v": 1,
+            "t": "b",
+            "o": 22,
+            "tag": "2_ColorKey"
+          },
+          "colorKey": {
+            "v": -16711936,
+            "t": "crgb_hl",
+            "o": 23,
+            "tag": "2_ColorKey"
+          },
+          "transparencyStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 24,
+            "tag": "2_ColorKey"
+          },
+          "opacityStrength": {
+            "v": 1,
+            "t": "f 0.0 4.0",
+            "o": 25,
+            "tag": "2_ColorKey"
+          },
+          "keepAspectRatio": {
+            "v": 0,
+            "t": "b",
+            "o": 26,
+            "tag": "1_image"
+          },
+          "blurredBorder": {
+            "v": 1,
+            "t": "b",
+            "o": 27,
+            "tag": "1_image"
+          },
+          "_name": "Image",
+          "Color": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 28,
+            "tag": "2_color"
+          },
+          "ColorTo": {
+            "v": "1.000000 1.000000 1.000000 1.000000",
+            "t": "chsla4f",
+            "o": 29,
+            "tag": "2_color"
+          },
+          "MeasureColorBlend": {
+            "v": "",
+            "t": "_child",
+            "o": 30,
+            "tag": "2_color",
+            "measureWhat": {
+              "v": "Nothing",
+              "t": "_child Nothing Beat TotalTime TotalTimeBackward TotalTimeWhenPlaying TotalTimeAndBeat TrackPosition BeatRandomShake BeatCamShakeRotMore BeatCamShakeRotLess ConstantShakeRotMore ConstantShakeRotLess BeatTriggerAnim",
+              "o": 0,
+              "tag": "misc"
+            }
+          },
+          "saturation": {
+            "v": "Constant 1.0 1.0",
+            "t": "mvarf 0.0 1.0",
+            "o": 31,
+            "tag": "2_color"
+          },
+          "blurEnabled": {
+            "v": 0,
+            "t": "b",
+            "o": 32,
+            "tag": "blur"
+          },
+          "blurDivider": {
+            "v": 5,
+            "t": "i 0 10",
+            "o": 33,
+            "tag": "blur"
+          },
+          "blurRadius": {
+            "v": 7,
+            "t": "i 1 25",
+            "o": 34,
+            "tag": "blur"
+          },
+          "Shape": {
+            "v": "None",
+            "t": "_child None Circle SidedPolygon",
+            "o": 35,
+            "tag": "1_image"
+          },
+          "MaskImage": {
+            "v": "",
+            "t": "img internalres:transparent internalres:white internalres:black internalres:particle_circle_blur4 internalres:particle_blur01 internalres:particle_blur_inv internalres:vignette80 composition:0",
+            "o": 36,
+            "tag": "1_image"
+          },
+          "maskMode": {
+            "v": "Transparency",
+            "t": "sel Transparency TransparencyAndBlacks TransparencyAndWhites InvertedTransparency",
+            "o": 37,
+            "tag": "1_image"
+          }
+        }
+      ],
+      "v": "Composition",
+      "objType": "Composition",
+      "ver": "10",
+      "_name": "Composition",
+      "introBlendMode": {
+        "v": "Alpha",
+        "t": "sel Alpha AddAlpha",
+        "o": 0,
+        "tag": "2_introOutro"
+      },
+      "introFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 1,
+        "tag": "2_introOutro"
+      },
+      "outroFadeDuration": {
+        "v": 0,
+        "t": "f 0.0 10.0",
+        "o": 2,
+        "tag": "2_introOutro"
+      },
+      "introFadeColor": {
+        "v": -553648128,
+        "t": "crgba",
+        "o": 3,
+        "tag": "2_introOutro"
+      }
+    }
+  ],
+  "ver": "10",
+  "template": 3,
+  "objType": "Root"
+}

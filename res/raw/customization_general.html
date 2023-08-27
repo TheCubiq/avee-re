@@ -1,0 +1,91 @@
+<html><head><link rel="stylesheet" href="style.css"><style></style></head><body>
+<div class="col">
+<!-- <h2>Segments renders</h2> -->
+
+<!---->
+    <!-- <p> -->
+<!-- <pre> -->
+<!-- </pre> -->
+    <!-- </p> -->
+<h4>General Properties</h4>
+<hr>
+<!---->
+<dl>
+<dt id="visible">Visible</dt>
+<dd>
+<p>If not set, the element will be hidden, useful to temporary hide elements.</p>
+</dd>
+<dt id="blendMode">BlendMode</dt>
+<dd>
+<p>Blending mode for displaying this element.<br><br><value>Alpha</value> - alpha blending<br><value>Screen</value> - multiplies the inverse, result is always lighter<br><value>Add</value> - linear dodge (add)<br><value>PreMulAlpha</value> - premultiplied alpha blending<br><value>AddAlpha</value> - linear dodge (add) by alpha strength</p>
+</dd>
+<dt id="position">Position</dt>
+<dd>
+<p>Specifies X,Y position of the element. The position is also affected by <value>MeasurePos</value>, <value>AnchorX/Y</value> and <value>AlignmentPosition</value>.<br><br>X: <value>0.0</value>, Y: <value>0.0</value> corresponds to upper left corner.<br>X: <value>0.5</value>, Y: <value>0.5</value> corresponds to the middle of the screen.<br>X: <value>1.0</value>, Y: <value>1.0</value> corresponds to lower right corner.</p>
+</dd>
+<dt id="anchorX">Anchor X</dt>
+<dd>
+<p>Alternative to <value>Position</value> property. Allows setting element to common positions before adding <value>Position</value> value.<br>It's helpful where more complex positioning is required, e.g if creating progress bars.<br><br><value>unset</value> - use default value<br><value>start</value> - left<br><value>center</value> - center<br><value>end</value> - right</p>
+</dd>
+<dt id="anchorY">Anchor Y</dt>
+<dd>
+<p>Alternative to <value>Position</value> property. Allows setting element to common positions before adding <value>Position</value> value.<br>It's helpful where more complex positioning is required, e.g if creating progress bars.<br><br><value>unset</value> - use default value<br><value>start</value> - top<br><value>center</value> - center<br><value>end</value> - bottom</p>
+</dd>
+<dt id="MeasurePos">MeasurePos</dt>
+<dd>
+<p>Variable component of the <value>Position</value> property.</p>
+</dd>
+<dt id="alignmentPosition">AlignmentPosition</dt>
+<dd>
+<p>Specify which point on this element is positioned by <value>Position</value> or relevant position properties.<br><br>For example, to position element in the center of the screen, you would set this property to X: <value>0.5</value>, Y: <value>0.5</value> and <value>Position</value> to also X: <value>0.5</value>, Y: <value>0.5</value>, so this element center is aligned to screen center.</p>
+</dd>
+<dt id="scaleIsUniform">Scale Is Uniform</dt>
+<dd>
+<p>If set, the element will always keep its aspect ratio. Disable to let element fill the screen - used for backgrounds.</p>
+</dd>
+<dt id="scale">Scale</dt>
+<dd>
+<p>Specify dimensions of the element.</p>
+</dd>
+<dt id="measureScale">Measure Scale</dt>
+<dd>
+<p>Variable component of the <value>Scale</value> property.</p>
+</dd>
+
+<h5>Additional general properties</h5>
+<hr>
+
+<dt id="rotation">Rotation</dt>
+<dd>
+<p>Rotation/Angle of the element.</p>
+</dd>
+<dt id="measureRot">Measure Rot</dt>
+<dd>
+<p>Variable component of the <value>Rotation</value> property.</p>
+</dd>
+</dl>
+<!---->
+</div>
+
+
+<style media="screen" type="text/css">
+
+.container {
+width:100%;
+}
+.container div {
+width:100%;
+}
+.container .header {
+padding: 2px;
+cursor: pointer;
+}
+.container .content {
+display: none;
+}
+
+</style>
+
+
+</body>
+</html>
