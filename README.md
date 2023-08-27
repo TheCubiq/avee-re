@@ -25,4 +25,5 @@
 
 ### 📝(one day lol)
 
-    can't think of anything rn, feel free to ask in the[issues](https://github.com/TheCubiq/avee-re/issues) tab 🤍
+>   can't think of anything rn, feel free to ask in the 
+[issues](https://github.com/TheCubiq/avee-re/issues) tab 🤍
