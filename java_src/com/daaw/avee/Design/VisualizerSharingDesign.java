@@ -75,7 +75,9 @@ public class VisualizerSharingDesign extends DesignBase {
                 File GetVisualizerFolderFromIdentifier = AppPreferences.GetVisualizerFolderFromIdentifier(visualizerThemeInfo.id);
                 String SavePackedFileToPublicDirectory = VisualizerSharingDesign.this.SavePackedFileToPublicDirectory(visualizerChooseDialog.getActivity(), str, str2, ".viz", serializePretty, Arrays.asList(GetVisualizerFolderFromIdentifier != null ? GetVisualizerFolderFromIdentifier.listFiles() : new File[0]));
                 UtilsFileSys.scanFile(activity, SavePackedFileToPublicDirectory);
-                String str3 = "Saved visualizer in " + str + "s";
+                // String str3 = "Saved visualizer in " + str + "s";
+                String str3 = "Saved as " + str2 + " in " + str + "s";
+
                 VisualizerExporterDesign.showFileSavedNotification(2, activity, str3, Uri.parse(SavePackedFileToPublicDirectory), UtilsFileSys.extractFilename(SavePackedFileToPublicDirectory), "text/plain");
                 Intent intent = new Intent("android.intent.action.VIEW");
                 intent.setDataAndType(Uri.parse(SavePackedFileToPublicDirectory), "text/plain");

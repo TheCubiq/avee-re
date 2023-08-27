@@ -12,8 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_src/com/daaw/avee/Design/VisualizerSharingDesign.java" beforeDir="false" afterPath="$PROJECT_DIR$/java_src/com/daaw/avee/Design/VisualizerSharingDesign.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/layout/dialog_choose_vizstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/layout/dialog_choose_vizstyle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerSharingDesign$1.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerSharingDesign$1.smali" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
