@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="?containerBackground" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:recyclerviewfastscroller="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <View android:id="@id/viewStatusBarBg" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/status_bar_height" android:layout_alignParentTop="true" />
-    <View android:id="@id/viewActionBarBg" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height" android:layout_below="@id/viewStatusBarBg" />
-    <View android:id="@id/viewActionBarBgSkin" android:background="#00000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height" android:layout_below="@id/viewStatusBarBg" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerViewItems" android:background="@color/transparent" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_below="@id/viewActionBarBg" android:layout_alignParentBottom="true" app:fastScrollEnabled="true" app:fastScrollHorizontalThumbDrawable="@drawable/listview_thumb_drawable" app:fastScrollHorizontalTrackDrawable="@drawable/listview_line_drawable" app:fastScrollVerticalThumbDrawable="@drawable/listview_thumb_drawable" app:fastScrollVerticalTrackDrawable="@drawable/listview_line_drawable" />
-    <View android:background="@drawable/actionbar_shadow_2x" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_below="@id/viewActionBarBg" />
-</RelativeLayout>

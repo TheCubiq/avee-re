@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_search_2_s" android:id="@id/action_bar_search" android:title="@string/menu_search" app:actionViewClass="android.widget.SearchView" app:showAsAction="always" />
-    <item android:icon="@drawable/ic_grid9_2_unique1" android:id="@id/action_bar_viz_btn0" android:visible="false" android:title="@string/menu_viz_chooser" app:showAsAction="always" />
-    <item android:icon="@drawable/ic_pencil_unique1" android:id="@id/action_bar_viz_btn1" android:visible="false" android:title="@string/menu_viz_customize" app:showAsAction="always" />
-    <item android:icon="@drawable/ic_save3_unique1" android:id="@id/action_bar_viz_btn5" android:visible="false" android:title="@string/menu_viz_export_video" app:showAsAction="always" />
-</menu>

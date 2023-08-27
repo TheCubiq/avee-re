@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:paddingLeft="8.0dip" android:paddingTop="0.0dip" android:paddingRight="8.0dip" android:paddingBottom="0.0dip" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:id="@id/layoutCheckOptions" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <RadioGroup android:id="@id/radioGroupOptions" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-        <Space android:id="@id/space" android:layout_width="10.0dip" android:layout_height="12.0dip" />
-    </LinearLayout>
-</ScrollView>

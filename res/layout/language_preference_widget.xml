@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_web" android:layout_marginEnd="4.0dip" app:tint="@color/black" />
-</FrameLayout>
