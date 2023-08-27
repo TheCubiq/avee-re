@@ -18,15 +18,26 @@
 .end method
 
 .method public static d(Ljava/lang/String;)V
-    .locals 1
+    .locals 2
 
     .line 26
-    invoke-static {}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->getInstance()Lcom/google/firebase/crashlytics/FirebaseCrashlytics;
+    # invoke-static {}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->getInstance()Lcom/google/firebase/crashlytics/FirebaseCrashlytics;
+    # move-result-object v0
+    # invoke-virtual {v0, p0}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->log(Ljava/lang/String;)V
+    
+    # modify the str string str = "debug: " + str
+    # const-string v0, "info: "
+    # invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    # move-result-object p0
+    
+    # # EventsGlobalTextNotifier.onTextMsg.invoke(str); <- toast logger
+    # const v0, 0x0
+    # sget-object v0, Lcom/daaw/avee/EventsGlobal/EventsGlobalTextNotifier;->onTextMsg:Lcom/daaw/avee/Common/Events/WeakEvent1;
+    # invoke-virtual {v0, p0}, Lcom/daaw/avee/Common/Events/WeakEvent1;->invoke(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->log(Ljava/lang/String;)V
-
+    # Log.d("cubiq-info", p0); <- logcat logger
+    const-string v1, "cubiq-info"
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     return-void
 .end method
 
@@ -155,14 +166,18 @@
 .end method
 
 .method public static w(Ljava/lang/String;)V
-    .locals 1
+    .locals 3
 
     .line 21
-    invoke-static {}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->getInstance()Lcom/google/firebase/crashlytics/FirebaseCrashlytics;
+    # invoke-static {}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->getInstance()Lcom/google/firebase/crashlytics/FirebaseCrashlytics;
 
-    move-result-object v0
+    # move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->log(Ljava/lang/String;)V
+    # invoke-virtual {v0, p0}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->log(Ljava/lang/String;)V´
+    
+    # Log.d("cubiq-dbg", p0); <- logcat logger
+    const-string v1, "cubiq-dbg"
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

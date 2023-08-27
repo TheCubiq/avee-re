@@ -1,6 +1,8 @@
 package com.daaw.avee.Common;
 
 import android.util.Log;
+
+import com.daaw.avee.EventsGlobal.EventsGlobalTextNotifier;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 /* loaded from: classes.dex */
 public class tlog {
@@ -12,7 +14,10 @@ public class tlog {
     }
 
     public static void w(String str) {
-        FirebaseCrashlytics.getInstance().log(str);
+        // FirebaseCrashlytics.getInstance().log(str);
+        // 
+        // EventsGlobalTextNotifier.onTextMsg.invoke(str);´
+        Log.d("cubiq-dbg", str);
     }
 
     public static void d(String str) {
