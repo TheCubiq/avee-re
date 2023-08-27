@@ -7,6 +7,7 @@ public class ElementsFactory {
     public static final String typeNameNone = "None";
     public static final String[] typeNames = {RootElement.typeName, LogoMark2.typeName, TextElement.typeName, "Bars", ParticlesElement.typeName, ImageElement.typeName, AudioDataProviderElement.typeName, "BlurEffect", RgbSplitEffectElement.typeName, MotionBlurEffectElement.typeName, MirrorEffectElement.typeName};
     public static final String[] typeNamesAddable = {Composition.typeName, TextElement.typeName, "Bars", ParticlesElement.typeName, ImageElement.typeName, AudioDataProviderElement.typeName, "BlurEffect", RgbSplitEffectElement.typeName, MotionBlurEffectElement.typeName, MirrorEffectElement.typeName};
+    // smali: added AppLogo and Liquify (Applogo works out of the box)
 
     public static Element create(String str, String str2, Element element) {
         if (getTypeName(element).equals(str)) {
@@ -87,6 +88,9 @@ public class ElementsFactory {
                 }
                 break;
         }
+
+        // this is where the new elements are added
+
         switch (c) {
             case 0:
             case 1:

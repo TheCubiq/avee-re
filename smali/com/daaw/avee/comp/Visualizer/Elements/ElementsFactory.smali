@@ -20,74 +20,54 @@
     new-array v0, v0, [Ljava/lang/String;
 
     const-string v1, "Root"
-
     const/4 v2, 0x0
-
     aput-object v1, v0, v2
 
     const-string v1, "AppLogo"
-
     const/4 v3, 0x1
-
     aput-object v1, v0, v3
 
     const-string v1, "Text"
-
     const/4 v4, 0x2
-
     aput-object v1, v0, v4
 
     const-string v5, "Bars"
-
     const/4 v6, 0x3
-
     aput-object v5, v0, v6
 
     const-string v7, "Particles"
-
     const/4 v8, 0x4
-
     aput-object v7, v0, v8
 
     const-string v9, "Image"
-
     const/4 v10, 0x5
-
     aput-object v9, v0, v10
 
     const-string v11, "AudioProvider"
-
     const/4 v12, 0x6
-
     aput-object v11, v0, v12
 
     const-string v13, "BlurEffect"
-
     const/4 v14, 0x7
-
     aput-object v13, v0, v14
 
     const-string v15, "RgbSplitEffect"
-
     const/16 v16, 0x8
-
     aput-object v15, v0, v16
 
     const-string v17, "MotionBlurEffect"
-
     const/16 v18, 0x9
-
     aput-object v17, v0, v18
 
     const-string v19, "MirrorEffect"
-
     const/16 v14, 0xa
-
     aput-object v19, v0, v14
 
     .line 15
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNames:[Ljava/lang/String;
 
+    const/16 v14, 0xc
+    
     new-array v0, v14, [Ljava/lang/String;
 
     const-string v14, "Composition"
@@ -113,6 +93,14 @@
     aput-object v17, v0, v16
 
     aput-object v19, v0, v18
+
+    const-string v1, "AppLogo"
+    const/16 v14, 0xa
+    aput-object v1, v0, v14
+
+    const-string v1, "LiquidEffect"
+    const/16 v15, 0xb
+    aput-object v1, v0, v15
 
     .line 29
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNamesAddable:[Ljava/lang/String;
@@ -333,6 +321,8 @@
     move-result-object p0
 
     invoke-static {p0}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
+
+
 
     return-object p2
 
