@@ -12,9 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/java_src/com/daaw/avee/Design/VisualizerSharingDesign.java" beforeDir="false" afterPath="$PROJECT_DIR$/java_src/com/daaw/avee/Design/VisualizerSharingDesign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/layout/dialog_choose_vizstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/layout/dialog_choose_vizstyle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerSharingDesign$1.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerSharingDesign$1.smali" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,22 +62,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="815" y="265" key="AndroidProcessChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693145676310" />
-    <state width="1869" height="307" key="GridCell.Tab.0.bottom" timestamp="1693148944805">
+    <state x="689" y="218" key="FileChooserDialogImpl" timestamp="1693185684989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="307" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693148944805" />
-    <state width="1869" height="307" key="GridCell.Tab.0.center" timestamp="1693148944805">
+    <state x="689" y="218" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693185684989" />
+    <state width="1869" height="26" key="GridCell.Tab.0.bottom" timestamp="1693181844001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="307" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693148944805" />
-    <state width="1869" height="307" key="GridCell.Tab.0.left" timestamp="1693148944804">
+    <state width="1869" height="26" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693181844001" />
+    <state width="1869" height="26" key="GridCell.Tab.0.center" timestamp="1693181844000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="307" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693148944804" />
-    <state width="1869" height="307" key="GridCell.Tab.0.right" timestamp="1693148944805">
+    <state width="1869" height="26" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693181844000" />
+    <state width="1869" height="26" key="GridCell.Tab.0.left" timestamp="1693181844000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="307" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693148944805" />
+    <state width="1869" height="26" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693181844000" />
+    <state width="1869" height="26" key="GridCell.Tab.0.right" timestamp="1693181844001">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="26" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693181844001" />
     <state width="1869" height="307" key="GridCell.Tab.1.bottom" timestamp="1693148944805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -95,5 +98,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1869" height="307" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693148944805" />
+    <state x="345" y="78" key="SettingsEditor" timestamp="1693182779796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="345" y="78" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693182779796" />
   </component>
 </project>
