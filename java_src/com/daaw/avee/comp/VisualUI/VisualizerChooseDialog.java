@@ -5,10 +5,12 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -33,6 +35,7 @@ public class VisualizerChooseDialog extends DialogFragment {
     private ViewGroup btnRemove;
     private ImageView btnRemoveIcon;
     private TextView btnRemoveTxt;
+    private EditText textCustomVizName;
     GridLayout gridLayout;
     GridLayout gridLayout1;
     public static WeakEvent3<VisualizerChooseDialog, Integer, Intent> onActivityResult = new WeakEvent3<>();
@@ -107,9 +110,20 @@ public class VisualizerChooseDialog extends DialogFragment {
         });
         this.btnRemoveTxt = (TextView) inflate.findViewById(R.id.btnRemoveTxt);
         this.btnRemoveIcon = (ImageView) inflate.findViewById(R.id.btnRemoveIcon);
+
+        this.textCustomVizName = (EditText) inflate.findViewById(R.id.textCustomVizName);
         ((ViewGroup) inflate.findViewById(R.id.btnSaveToFile)).setOnClickListener(new View.OnClickListener() { // from class: com.daaw.avee.comp.VisualUI.VisualizerChooseDialog.4
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
+
+                // get the text from the edit text                
+                String text = VisualizerChooseDialog.this.textCustomVizName.getText().toString();
+                // if the text is empty, set it to "empty"
+                if (text.isEmpty()) {
+                    text = "empty";
+                }
+
+
                 WeakEvent2<VisualizerChooseDialog, VisualizerThemeInfo> weakEvent2 = VisualizerChooseDialog.onSaveToFileVisTemplateAction;
                 VisualizerChooseDialog visualizerChooseDialog = VisualizerChooseDialog.this;
                 weakEvent2.invoke(visualizerChooseDialog, visualizerChooseDialog.currentSelectedSkinTheme);
