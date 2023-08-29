@@ -123,6 +123,7 @@ public class VisualizerChooseDialog extends DialogFragment {
                     text = "empty";
                 }
 
+                Log.d("cubiq-dialogName", text);
 
                 WeakEvent2<VisualizerChooseDialog, VisualizerThemeInfo> weakEvent2 = VisualizerChooseDialog.onSaveToFileVisTemplateAction;
                 VisualizerChooseDialog visualizerChooseDialog = VisualizerChooseDialog.this;
