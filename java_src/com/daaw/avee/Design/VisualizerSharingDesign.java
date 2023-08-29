@@ -76,14 +76,18 @@ public class VisualizerSharingDesign extends DesignBase {
                 String SavePackedFileToPublicDirectory = VisualizerSharingDesign.this.SavePackedFileToPublicDirectory(visualizerChooseDialog.getActivity(), str, str2, ".viz", serializePretty, Arrays.asList(GetVisualizerFolderFromIdentifier != null ? GetVisualizerFolderFromIdentifier.listFiles() : new File[0]));
                 UtilsFileSys.scanFile(activity, SavePackedFileToPublicDirectory);
                 // String str3 = "Saved visualizer in " + str + "s";
-                String str3 = "Saved as " + str2 + " in " + str + "s";
+                // String str3 = "Saved as " + str2 + " in " + str + "s";
+                
+                String extractedFilename = UtilsFileSys.extractFilename(SavePackedFileToPublicDirectory);
+ 
+                String str3 = "Saved as " + extractedFilename + " in " + str + "s";
 
-                VisualizerExporterDesign.showFileSavedNotification(2, activity, str3, Uri.parse(SavePackedFileToPublicDirectory), UtilsFileSys.extractFilename(SavePackedFileToPublicDirectory), "text/plain");
+                VisualizerExporterDesign.showFileSavedNotification(2, activity, str3, Uri.parse(SavePackedFileToPublicDirectory), extractedFilename, "text/plain");
                 Intent intent = new Intent("android.intent.action.VIEW");
                 intent.setDataAndType(Uri.parse(SavePackedFileToPublicDirectory), "text/plain");
                 PendingIntent activity2 = PendingIntent.getActivity(activity, 0, intent, 0);
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(activity);
-                builder.setContentTitle(UtilsFileSys.extractFilename(SavePackedFileToPublicDirectory)).setContentText(str3).setSmallIcon(R.drawable.ic_save5).setContentIntent(activity2).setLocalOnly(true).setAutoCancel(true);
+                builder.setContentTitle(extractedFilename).setContentText(str3).setSmallIcon(R.drawable.ic_save5).setContentIntent(activity2).setLocalOnly(true).setAutoCancel(true);
                 ((NotificationManager) activity.getSystemService("notification")).notify(2, builder.build());
                 EventsGlobalTextNotifier.onTextMsg.invoke(str3);
             }

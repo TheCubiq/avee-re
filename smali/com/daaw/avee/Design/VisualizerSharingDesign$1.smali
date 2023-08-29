@@ -146,6 +146,13 @@
     .line 136
     invoke-static {v6, v7}, Lcom/daaw/avee/Common/UtilsFileSys;->scanFile(Landroid/content/Context;Ljava/lang/String;)V
 
+    # String extractedFilename = UtilsFileSys.extractFilename(SavePackedFileToPublicDirectory);
+
+    .line 137
+    invoke-static {v7}, Lcom/daaw/avee/Common/UtilsFileSys;->extractFilename(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
     .line 138
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -159,7 +166,7 @@
     
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, " in "
 
@@ -183,9 +190,11 @@
     move-result-object v3
 
     .line 144
-    invoke-static {v7}, Lcom/daaw/avee/Common/UtilsFileSys;->extractFilename(Ljava/lang/String;)Ljava/lang/String;
+    # invoke-static {v7}, Lcom/daaw/avee/Common/UtilsFileSys;->extractFilename(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    # use the v12 variable instead of calling the method again
+
+    move-object v4, v12
 
     const-string v5, "text/plain"
 
@@ -233,9 +242,11 @@
     invoke-direct {v2, v6}, Landroidx/core/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
     .line 159
-    invoke-static {v7}, Lcom/daaw/avee/Common/UtilsFileSys;->extractFilename(Ljava/lang/String;)Ljava/lang/String;
+    # invoke-static {v7}, Lcom/daaw/avee/Common/UtilsFileSys;->extractFilename(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    # use the v12 variable instead of calling the method yet again
+
+    move-object v3, v12
 
     invoke-virtual {v2, v3}, Landroidx/core/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
 
