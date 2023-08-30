@@ -2033,6 +2033,9 @@ public final class R {
         public static final int btnPrev = 0x7f09007f;
         public static final int btnRemove = 0x7f090080;
         public static final int btnRemoveIcon = 0x7f090081;
+
+        public static final int textCustomVizName = 0x7f090300;
+
         public static final int btnRemoveTxt = 0x7f090082;
         public static final int btnRepeatAll = 0x7f090083;
         public static final int btnRepeatOnce = 0x7f090084;

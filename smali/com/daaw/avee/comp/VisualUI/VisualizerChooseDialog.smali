@@ -132,6 +132,8 @@
 
 .field private btnRemoveTxt:Landroid/widget/TextView;
 
+.field private textCustomVizName:Landroid/widget/EditText;
+
 .field private currentSelectedSkinTheme:Lcom/daaw/avee/comp/Common/VisualizerThemeInfo;
 
 .field gridLayout:Landroid/widget/GridLayout;
@@ -296,6 +298,21 @@
 
     return-void
 .end method
+
+# public EditText getTextCustomVizName() {
+#    return this.textCustomVizName;
+# }
+.method public getTextCustomVizName()Landroid/widget/EditText;
+    .locals 1
+
+    .line 38
+    iget-object v0, p0, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->textCustomVizName:Landroid/widget/EditText;
+
+    #v0=(Reference);
+    return-object v0
+.end method
+
+
 
 .method public static createAndShowDialog(Landroid/app/Activity;)Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;
     .locals 2
@@ -553,6 +570,20 @@
     check-cast p2, Landroid/widget/ImageView;
 
     iput-object p2, p0, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->btnRemoveIcon:Landroid/widget/ImageView;
+
+    # ref textCustomVizName
+
+    const p2, 0x7f090300
+
+    .line 169
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/EditText;
+
+    iput-object p2, p0, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->textCustomVizName:Landroid/widget/EditText;
+
 
     const p2, 0x7f090088
 
