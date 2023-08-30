@@ -15,7 +15,7 @@
 .method static constructor <clinit>()V
     .locals 20
 
-    const/16 v0, 0xb
+    const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -98,9 +98,9 @@
     const/16 v14, 0xa
     aput-object v1, v0, v14
 
-    const-string v1, "LiquidEffect"
-    const/16 v15, 0xb
-    aput-object v1, v0, v15
+    # const-string v1, "LiquidEffect"
+    # const/16 v15, 0xb
+    # aput-object v1, v0, v15
 
     .line 29
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNamesAddable:[Ljava/lang/String;
