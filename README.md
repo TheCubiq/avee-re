@@ -7,6 +7,7 @@
 
 * [X] 🔓😶 ([821dc82](https://github.com/TheCubiq/avee-re/commit/821dc826780fb53006b15a27843e5887d19c082c))
 * [X] ✨"Over" blend mode ([59d7154](https://github.com/TheCubiq/avee-re/commit/59d715495a5ceab7d4075bc73418406602446cda))
+* [X] ⏺ Visualizer On Save Name ([6756e45](https://github.com/TheCubiq/avee-re/commit/6756e456662e2acfdd063eae45b882ad69e5152f))
 
 ### 🧪tests:
 
@@ -15,15 +16,15 @@
 * [X] 📝 Debug Log ([6e55cad](https://github.com/TheCubiq/avee-re/commit/6e55cad6ff3448c5f6d53701452a6d946d3b6f94))
 * [X] 🎞 Comp "c" ([0591934](https://github.com/TheCubiq/avee-re/commit/05919347178810dd4b14a91fbe0e496522976f1a))
 
-## todo's:
+## todos:
 
 ### ⏰ (!!!)
+
     ➕ LiquifyEffect (predefined shader)
     ➕ ShaderItem Element (lets you use custom shaders)
-    ⏺ Visualizer On Save Name
     🔧 Feature toggler menu
 
 ### 📝(one day lol)
 
->   can't think of anything rn, feel free to ask in the 
-[issues](https://github.com/TheCubiq/avee-re/issues) tab 🤍
+> can't think of anything rn, feel free to ask in the
+> [issues](https://github.com/TheCubiq/avee-re/issues) tab 🤍
