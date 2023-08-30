@@ -15,7 +15,7 @@
 .method static constructor <clinit>()V
     .locals 20
 
-    const/16 v0, 0xa
+    const/16 v0, 0xb
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -66,7 +66,7 @@
     .line 15
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNames:[Ljava/lang/String;
 
-    const/16 v14, 0xc
+    const/16 v14, 0xb
     
     new-array v0, v14, [Ljava/lang/String;
 
