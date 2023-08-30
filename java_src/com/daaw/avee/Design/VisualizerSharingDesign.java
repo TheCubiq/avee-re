@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.widget.EditText;
 import androidx.core.app.NotificationCompat;
 import com.daaw.avee.Common.Events.WeakEvent2;
 import com.daaw.avee.Common.Events.WeakEvent3;
@@ -71,7 +72,14 @@ public class VisualizerSharingDesign extends DesignBase {
                 }
                 String serializePretty = prefThemeCustomizationDataOrTemplateData.serializePretty();
                 String str = Environment.DIRECTORY_DOWNLOADS;
-                String str2 = "visualizer_" + visualizerThemeInfo.id;
+
+                // custom name for file                
+                String textVizName = visualizerChooseDialog.getTextCustomVizName().getText().toString();
+                
+                if (textVizName.isEmpty()) {
+                    textVizName = "visualizer_" + visualizerThemeInfo.id;
+                }
+                
                 File GetVisualizerFolderFromIdentifier = AppPreferences.GetVisualizerFolderFromIdentifier(visualizerThemeInfo.id);
                 String SavePackedFileToPublicDirectory = VisualizerSharingDesign.this.SavePackedFileToPublicDirectory(visualizerChooseDialog.getActivity(), str, str2, ".viz", serializePretty, Arrays.asList(GetVisualizerFolderFromIdentifier != null ? GetVisualizerFolderFromIdentifier.listFiles() : new File[0]));
                 UtilsFileSys.scanFile(activity, SavePackedFileToPublicDirectory);

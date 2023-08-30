@@ -57,6 +57,10 @@ public class VisualizerChooseDialog extends DialogFragment {
         instanceWeak = new WeakReference<>(this);
     }
 
+    public EditText getTextCustomVizName() {
+        return this.textCustomVizName;
+    }
+
     public static VisualizerChooseDialog createAndShowDialog(Activity activity) {
         VisualizerChooseDialog newInstance = newInstance();
         UtilsUI.showDialogSafe(newInstance, "VisualizerChooseDialog", new ContextData(activity));

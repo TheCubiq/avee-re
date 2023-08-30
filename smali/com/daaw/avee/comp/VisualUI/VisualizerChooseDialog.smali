@@ -290,8 +290,19 @@
     return-object p0
 .end method
 
-# for textCustomVizName field
-.method static synthetic access$1000(Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;)Landroid/widget/EditText;
+.method static synthetic access$200(Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;[Landroid/view/View;Landroid/view/View;Lcom/daaw/avee/comp/Common/VisualizerThemeInfo;)V
+    .locals 0
+
+    .line 38
+    invoke-direct {p0, p1, p2, p3}, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->setSelectedTemplate([Landroid/view/View;Landroid/view/View;Lcom/daaw/avee/comp/Common/VisualizerThemeInfo;)V
+
+    return-void
+.end method
+
+# public EditText getTextCustomVizName() {
+#    return this.textCustomVizName;
+# }
+.method public getTextCustomVizName()Landroid/widget/EditText;
     .locals 1
 
     .line 38
@@ -301,14 +312,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;[Landroid/view/View;Landroid/view/View;Lcom/daaw/avee/comp/Common/VisualizerThemeInfo;)V
-    .locals 0
 
-    .line 38
-    invoke-direct {p0, p1, p2, p3}, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->setSelectedTemplate([Landroid/view/View;Landroid/view/View;Lcom/daaw/avee/comp/Common/VisualizerThemeInfo;)V
-
-    return-void
-.end method
 
 .method public static createAndShowDialog(Landroid/app/Activity;)Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;
     .locals 2

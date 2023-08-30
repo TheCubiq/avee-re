@@ -83,6 +83,39 @@
     sget-object v1, Landroid/os/Environment;->DIRECTORY_DOWNLOADS:Ljava/lang/String;
 
     .line 125
+
+    # // custom name for file mod omg cubiq you did it <3
+    # String textVizName = ((EditText) visualizerChooseDialog.getActivity().findViewById(R.id.textCustomVizName)).getText().toString();
+
+    move-object/from16 v2, p1
+
+    invoke-virtual {v2}, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->getTextCustomVizName()Landroid/widget/EditText;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    # # if (textVizName.isEmpty()) {
+    # #     textVizName = "visualizer_" + visualizerThemeInfo.id;
+    # # }
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v3
+
+    move-object v10, v2
+
+
+    if-eqz v3, :cond_3
+
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,6 +131,13 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v10
+
+    .line 128
+
+    :cond_3   
+
+
+
 
     .line 127
     iget v0, v0, Lcom/daaw/avee/comp/Common/VisualizerThemeInfo;->id:I

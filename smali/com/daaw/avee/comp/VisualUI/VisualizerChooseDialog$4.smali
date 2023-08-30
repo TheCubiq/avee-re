@@ -36,54 +36,54 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 5
+    .locals 2
 
-    # // get the text from the edit text
-    # String text = VisualizerChooseDialog.this.textCustomVizName.getText().toString();   
+    # # // get the text from the edit text
+    # # String text = VisualizerChooseDialog.this.textCustomVizName.getText().toString();   
    
     
-    .line 173
+    # .line 173
 
-    iget-object v0, p0, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog$4;->this$0:Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;
+    # iget-object v0, p0, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog$4;->this$0:Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;
 
-    # access1000
+    # # access1000
 
-    invoke-static {v0}, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->access$1000(Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;)Landroid/widget/EditText;
+    # invoke-static {v0}, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->access$1000(Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;)Landroid/widget/EditText;
 
-    move-result-object v0
+    # move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    # invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    move-result-object v0
+    # move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    # invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    # move-result-object v0
 
-    # // if the text is empty, set it to "empty"
-    # if (text.isEmpty()) {
-    #     text = "empty";
-    # }
+    # # // if the text is empty, set it to "empty"
+    # # if (text.isEmpty()) {
+    # #     text = "empty";
+    # # }
 
-    const/4 v2, 0x0
+    # const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    # invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v2
+    # move-result v2
 
-    # // if the text is empty, set v0 to "empty" instead
+    # # // if the text is empty, set v0 to "empty" instead
 
-    if-eqz v2, :cond_0
+    # if-eqz v2, :cond_0
 
-    const-string v0, "empty"
+    # const-string v0, "empty"
 
-    :cond_0
+    # :cond_0
 
-    # log the text (log.d("cubiq-dialogName", str);)
+    # # log the text (log.d("cubiq-dialogName", str);)
 
-    const-string v2, "cubiq-dialogName"
+    # const-string v2, "cubiq-dialogName"
 
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    # invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 175
     sget-object p1, Lcom/daaw/avee/comp/VisualUI/VisualizerChooseDialog;->onSaveToFileVisTemplateAction:Lcom/daaw/avee/Common/Events/WeakEvent2;
