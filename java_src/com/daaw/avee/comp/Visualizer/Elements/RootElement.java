@@ -221,8 +221,8 @@ public class RootElement extends ElementGroup<Composition, CustomComposition, Cu
             }
             composition.onRenderOffscreenContent(renderState);
             composition.onRender(renderState, frameBuffer);
-            renderState.setCompositionResult(i, composition.getCompositionFrameBuffer());
         }
+        renderState.setCompositionResult(i, composition.getCompositionFrameBuffer());
     }
 
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
