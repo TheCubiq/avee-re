@@ -242,7 +242,10 @@
 
     const-string v0, "text"
 
-    const-string v1, "{ArtistOrTitle}"
+    # const-string v1, "{ArtistOrTitle}"
+    # this.text instead (as it's always already generated)
+
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/TextElement;->text:Ljava/lang/String;
 
     .line 121
     invoke-virtual {p1, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

@@ -66,7 +66,7 @@
     .line 15
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNames:[Ljava/lang/String;
 
-    const/16 v14, 0xb
+    const/16 v14, 0xc
     
     new-array v0, v14, [Ljava/lang/String;
 
@@ -98,9 +98,9 @@
     const/16 v14, 0xa
     aput-object v1, v0, v14
 
-    # const-string v1, "LiquidEffect"
-    # const/16 v15, 0xb
-    # aput-object v1, v0, v15
+    const-string v1, "StatText"
+    const/16 v15, 0xb
+    aput-object v1, v0, v15
 
     .line 29
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNamesAddable:[Ljava/lang/String;
@@ -409,6 +409,13 @@
     :pswitch_a
     return-object v0
 
+    :pswitch_b
+    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/FpsTextElement;
+
+    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/FpsTextElement;-><init>()V
+
+    return-object p0
+
     :sswitch_data_0
     .sparse-switch
         -0x7e6b0039 -> :sswitch_b
@@ -428,7 +435,7 @@
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_a
-        :pswitch_a
+        :pswitch_b
         :pswitch_9
         :pswitch_8
         :pswitch_7
