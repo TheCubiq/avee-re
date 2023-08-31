@@ -66,7 +66,7 @@
     .line 15
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNames:[Ljava/lang/String;
 
-    const/16 v14, 0xc
+    const/16 v14, 0xd
     
     new-array v0, v14, [Ljava/lang/String;
 
@@ -100,6 +100,10 @@
 
     const-string v1, "StatText"
     const/16 v15, 0xb
+    aput-object v1, v0, v15
+
+    const-string v1, "DummyElement"
+    const/16 v15, 0xc
     aput-object v1, v0, v15
 
     .line 29
@@ -288,6 +292,19 @@
 
     goto :goto_0
 
+    :sswitch_c
+    const-string v0, "DummyElement"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/16 p1, 0xc
+
+    goto :goto_0
+
     :sswitch_b
     const-string v0, "AudioProvider"
 
@@ -416,6 +433,13 @@
 
     return-object p0
 
+    :pswitch_c
+    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
+
+    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;-><init>()V
+
+    return-object p0
+
     :sswitch_data_0
     .sparse-switch
         -0x7e6b0039 -> :sswitch_b
@@ -430,6 +454,7 @@
         0x461e5a50 -> :sswitch_2
         0x5264d9c1 -> :sswitch_1
         0x5754e14e -> :sswitch_0
+        0x55a7f954 -> :sswitch_c
     .end sparse-switch
 
     :pswitch_data_0
@@ -446,6 +471,7 @@
         :pswitch_2
         :pswitch_1
         :pswitch_0
+        :pswitch_c
     .end packed-switch
 .end method
 
@@ -570,6 +596,18 @@
 
     .line 125
     :cond_b
+
+    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
+
+    if-eqz v0, :cond_d
+
+    const-string p0, "DummyElement"
+
+    return-object p0
+
+    .line 125
+    :cond_d
+
     instance-of p0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/MirrorEffectElement;
 
     if-eqz p0, :cond_c
