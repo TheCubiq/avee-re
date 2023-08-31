@@ -128,7 +128,7 @@
 
     if-nez v1, :cond_1
 
-    return-void
+    goto :goto_3
 
     .line 280
     :cond_1
@@ -174,6 +174,10 @@
     invoke-virtual {v0, p1, p2}, Lcom/daaw/avee/comp/Visualizer/Elements/Composition;->onRender(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lmdesl/graphics/glutils/FrameBuffer;)V
 
     .line 292
+
+
+    :goto_3
+    
     invoke-virtual {v0}, Lcom/daaw/avee/comp/Visualizer/Elements/Composition;->getCompositionFrameBuffer()Lcom/daaw/avee/comp/Visualizer/Graphic/VFrameBuffer;
 
     move-result-object p2
