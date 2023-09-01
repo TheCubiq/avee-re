@@ -91,9 +91,6 @@ public class DummyElement extends Element {
         super.onApplyCustomization(customPropertiesList);
         super.onApplyCustomizationAdditional(customPropertiesList);
         setTargetImage(customPropertiesList.getPropertyString("TargetImage", "composition:1"));
-        setMirrorMode(Utils.StringToIndex(mirrorModes, customPropertiesList.getPropertySelectString("mirrorMode", mirrorModes[0])));
-        setFlipMirror(customPropertiesList.getPropertyBool("flipMirror", false));
-        setColor2(customPropertiesList.getPropertyInt(TtmlNode.ATTR_TTS_COLOR, -1));
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -104,9 +101,6 @@ public class DummyElement extends Element {
         customPropertiesList.setCustomizationName("Dummy Element");
         iDependencyResourceCounter.PutDependencyResourceName(getTargetImage());
         customPropertiesList.putPropertyStringAsImage("TargetImage", getTargetImage(), "1_appearance", internalImages);
-        customPropertiesList.putSelectString("mirrorMode", Utils.IndexToString(mirrorModes, getMirrorMode(), mirrorModes[0]), "1_appearance", mirrorModes);
-        customPropertiesList.putPropertyBool("flipMirror", getFlipMirror(), "1_appearance");
-        customPropertiesList.putPropertyIntAsCRGBA(TtmlNode.ATTR_TTS_COLOR, this.color2, "1_appearance");
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -155,111 +149,8 @@ public class DummyElement extends Element {
         super.onRender(renderState, frameBuffer);
         RectF measureDrawRect = measureDrawRect(renderState.getRes().getMeter());
         createRotationAndVpMat(renderState, this.vpMatTmp, measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRot(renderState.getRes().getMeter()));
-        Vec2f vec2f = new Vec2f(0.0f, 0.0f);
-        Vec2f vec2f2 = new Vec2f(1.0f, 0.0f);
         VShaderBinder bufferRenderer_atlasBufferVPMat = renderState.res.getBufferRenderer_atlasBufferVPMat();
-        RenderPassData renderPassData = new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), bufferRenderer_atlasBufferVPMat, this.shaderOnBindAction);
-        int i = this.mirrorMode;
-        if (i == 0) {
-            float centerX = measureDrawRect.centerX();
-            if (this.flipMirror) {
-                vec2f.x = 0.0f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 0.5f;
-                vec2f2.y = 0.0f;
-            } else {
-                vec2f.x = 1.0f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 0.5f;
-                vec2f2.y = 0.0f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.left, measureDrawRect.top, centerX, measureDrawRect.top, centerX, measureDrawRect.bottom, measureDrawRect.left, measureDrawRect.bottom, 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-            if (this.flipMirror) {
-                vec2f.x = 0.5f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 0.0f;
-                vec2f2.y = 0.0f;
-            } else {
-                vec2f.x = 0.5f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 0.0f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, centerX, measureDrawRect.top, measureDrawRect.right, measureDrawRect.top, measureDrawRect.right, measureDrawRect.bottom, centerX, measureDrawRect.bottom, 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-        } else if (i == 1) {
-            if (this.flipMirror) {
-                vec2f.x = 0.0f;
-                vec2f.y = 0.0f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 0.5f;
-            } else {
-                vec2f.x = 0.0f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 0.5f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.left, measureDrawRect.top, measureDrawRect.right, measureDrawRect.top, measureDrawRect.right, measureDrawRect.centerY(), measureDrawRect.left, measureDrawRect.centerY(), 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-            if (this.flipMirror) {
-                vec2f.x = 0.0f;
-                vec2f.y = 0.5f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 0.0f;
-            } else {
-                vec2f.x = 0.0f;
-                vec2f.y = 0.5f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 1.0f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.left, measureDrawRect.centerY(), measureDrawRect.right, measureDrawRect.centerY(), measureDrawRect.right, measureDrawRect.bottom, measureDrawRect.left, measureDrawRect.bottom, 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-        } else if (i == 2) {
-            if (this.flipMirror) {
-                vec2f.x = 0.0f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 0.5f;
-                vec2f2.y = 0.5f;
-            } else {
-                vec2f.x = 1.0f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 0.5f;
-                vec2f2.y = 0.5f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.left, measureDrawRect.top, measureDrawRect.centerX(), measureDrawRect.top, measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRect.left, measureDrawRect.centerY(), 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-            if (this.flipMirror) {
-                vec2f.x = 0.5f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 0.0f;
-                vec2f2.y = 0.5f;
-            } else {
-                vec2f.x = 0.5f;
-                vec2f.y = 1.0f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 0.5f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.centerX(), measureDrawRect.top, measureDrawRect.right, measureDrawRect.top, measureDrawRect.right, measureDrawRect.centerY(), measureDrawRect.centerX(), measureDrawRect.centerY(), 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-            if (this.flipMirror) {
-                vec2f.x = 0.0f;
-                vec2f.y = 0.5f;
-                vec2f2.x = 0.5f;
-                vec2f2.y = 1.0f;
-            } else {
-                vec2f.x = 1.0f;
-                vec2f.y = 0.5f;
-                vec2f2.x = 0.5f;
-                vec2f2.y = 1.0f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.left, measureDrawRect.centerY(), measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRect.centerX(), measureDrawRect.bottom, measureDrawRect.left, measureDrawRect.bottom, 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-            if (this.flipMirror) {
-                vec2f.x = 0.5f;
-                vec2f.y = 0.5f;
-                vec2f2.x = 0.0f;
-                vec2f2.y = 1.0f;
-            } else {
-                vec2f.x = 0.5f;
-                vec2f.y = 0.5f;
-                vec2f2.x = 1.0f;
-                vec2f2.y = 1.0f;
-            }
-            renderState.getBufferRenderer().drawRectangle0123(renderState, measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRect.right, measureDrawRect.centerY(), measureDrawRect.right, measureDrawRect.bottom, measureDrawRect.centerX(), measureDrawRect.bottom, 0.0f, this.color2, vec2f, vec2f2, renderPassData);
-        }
+        // gotta actually change it to drawRectangleWHBottom instead.. -> scale measure
+        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), bufferRenderer_atlasBufferVPMat, this.shaderOnBindAction));
     }
 }
