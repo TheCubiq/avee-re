@@ -109,7 +109,7 @@ public class TextElement extends Element {
     public void onApplyCustomization(CustomPropertiesList customPropertiesList) {
         super.onApplyCustomization(customPropertiesList);
         super.onApplyCustomizationAdditional(customPropertiesList);
-        setText(customPropertiesList.getPropertyString(MimeTypes.BASE_TYPE_TEXT, MeasureDefs.textArtistOrTitle));
+        setText(customPropertiesList.getPropertyString(MimeTypes.BASE_TYPE_TEXT, this.text));
         setColor(customPropertiesList.getPropertyInt(TtmlNode.ATTR_TTS_COLOR, -1));
         setFontSize(customPropertiesList.getPropertyInt(TtmlNode.ATTR_TTS_FONT_SIZE, 30));
         setCustomFontPath(customPropertiesList.getPropertyString("typeFace", ""));

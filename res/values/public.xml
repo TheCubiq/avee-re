@@ -2793,6 +2793,10 @@
     <public type="raw" name="visualizer_7" id="0x7f0f0030" />
     <public type="raw" name="visualizer_8" id="0x7f0f0031" />
     <public type="raw" name="visualizer_9" id="0x7f0f0032" />
+    
+    <public type="raw" name="buffer_fisheye_frag" id="0x7f0f0033" />
+    <public type="raw" name="buffer_fisheye_vert" id="0x7f0f0034" />
+    
     <public type="string" name="abc_action_bar_home_description" id="0x7f100000" />
     <public type="string" name="abc_action_bar_up_description" id="0x7f100001" />
     <public type="string" name="abc_action_menu_overflow_description" id="0x7f100002" />

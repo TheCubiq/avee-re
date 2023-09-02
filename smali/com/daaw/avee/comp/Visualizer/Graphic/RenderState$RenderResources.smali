@@ -70,6 +70,8 @@
 
 .field private bufferRenderer_RgbSplitEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
 
+.field private bufferRenderer_FishEyeEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+
 .field private bufferRenderer_atlasBuffer:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
 
 .field private bufferRenderer_atlasBufferCustomVPMat:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
@@ -95,6 +97,8 @@
 .field private motionBlurEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
 
 .field private rgbSplitEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+.field private fishEyeEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
 
 .field public final visualizationData:Lcom/daaw/avee/comp/Visualizer/InternalVisualizationDataProvider;
 
@@ -350,6 +354,15 @@
 
     .line 828
     iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_RgbSplitEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+
+    return-object v0
+.end method
+
+.method public getBufferRenderer_FishEyeEffect()Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    .locals 1
+
+    # .line 828
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_FishEyeEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
 
     return-object v0
 .end method
@@ -1134,6 +1147,27 @@
 
     .line 1038
     invoke-static {v3}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/Object;)V
+  
+
+    iget-object v3, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->fishEyeEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    invoke-direct {v1, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->disposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    move-result-object v3
+
+    iput-object v3, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->fishEyeEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    const v5, 0x7f0f0034
+
+    const v4, 0x7f0f0033
+
+    invoke-virtual {v1, v0, v5, v4}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->loadShader(Landroid/content/res/Resources;II)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    move-result-object v3
+
+    iput-object v3, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->fishEyeEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    invoke-static {v3}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/Object;)V
 
     .line 1040
     iget-object v3, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->motionBlurEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
@@ -1171,6 +1205,9 @@
 
     .line 1047
     iput-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_RgbSplitEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    
+    # .line 104
+    iput-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_FishEyeEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
 
     .line 1048
     iput-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_MotionBlurEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
@@ -1249,6 +1286,18 @@
     move-result-object v0
 
     iput-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_RgbSplitEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    
+    
+    # .line 1061
+    iget-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer:Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;
+
+    iget-object v3, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->fishEyeEffectShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    invoke-virtual {v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;->CreateShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer_FishEyeEffect:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
 
     .line 1062
     iget-object v0, v1, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer:Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;
