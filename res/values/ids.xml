@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <item type="id" name="textCustomVizName" />
+
+
     <item type="id" name="accessibility_action_clickable_span" />
     <item type="id" name="accessibility_custom_action_0" />
     <item type="id" name="accessibility_custom_action_1" />
