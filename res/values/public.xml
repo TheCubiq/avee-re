@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <public type="id" name="textCustomVizName" id="0x7f090300" />
+    
     <public type="anim" name="abc_fade_in" id="0x7f010000" />
     <public type="anim" name="abc_fade_out" id="0x7f010001" />
     <public type="anim" name="abc_grow_fade_in_from_bottom" id="0x7f010002" />
@@ -1974,9 +1977,6 @@
     <public type="id" name="btnResetElement" id="0x7f090086" />
     <public type="id" name="btnResetValue" id="0x7f090087" />
     <public type="id" name="btnSaveToFile" id="0x7f090088" />
-
-    <public type="id" name="textCustomVizName" id="0x7f090300" />
-
     <public type="id" name="btnStartTime" id="0x7f090089" />
     <public type="id" name="btnStopExport" id="0x7f09008a" />
     <public type="id" name="btnSwitchScreen" id="0x7f09008b" />
@@ -2792,6 +2792,10 @@
     <public type="raw" name="visualizer_7" id="0x7f0f0030" />
     <public type="raw" name="visualizer_8" id="0x7f0f0031" />
     <public type="raw" name="visualizer_9" id="0x7f0f0032" />
+    
+    <public type="raw" name="buffer_fisheye_frag" id="0x7f0f0033" />
+    <public type="raw" name="buffer_fisheye_vert" id="0x7f0f0034" />
+    
     <public type="string" name="abc_action_bar_home_description" id="0x7f100000" />
     <public type="string" name="abc_action_bar_up_description" id="0x7f100001" />
     <public type="string" name="abc_action_menu_overflow_description" id="0x7f100002" />

@@ -17,6 +17,17 @@
 .field private flipMirror:Z
 
 .field private mirrorMode:I
+.field private effectShaderOnBindAction:Lcom/daaw/avee/Common/Action3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/daaw/avee/Common/Action3<",
+            "Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;",
+            "Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;",
+            "Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private shaderOnBindAction:Lcom/daaw/avee/Common/Action3;
     .annotation system Ldalvik/annotation/Signature;
@@ -190,6 +201,31 @@
     return-object v0
 .end method
 
+.method private setupFrameBuffer(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)V
+    .locals 3
+
+    const/16 v0, 0x2601
+
+    const/16 v1, 0xde1
+
+    const/16 v2, 0x2801
+
+    .line 501
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/16 v2, 0x2800
+
+    .line 502
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/4 v0, 0x1
+
+    .line 504
+    invoke-virtual {p1, v0}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->setTextureWrapping(I)V
+
+    return-void
+.end method
+
 .method protected markNeedReCreateGLResources()V
     .locals 1
 
@@ -226,48 +262,6 @@
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setTargetImage(Ljava/lang/String;)V
-
-    .line 120
-    sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorModes:[Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    const-string v2, "mirrorMode"
-
-    invoke-virtual {p1, v2, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertySelectString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 121
-    sget-object v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorModes:[Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lcom/daaw/avee/Common/Utils;->StringToIndex([Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setMirrorMode(I)V
-
-    const-string v0, "flipMirror"
-
-    .line 122
-    invoke-virtual {p1, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyBool(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setFlipMirror(Z)V
-
-    const-string v0, "color"
-
-    const/4 v1, -0x1
-
-    .line 124
-    invoke-virtual {p1, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyInt(Ljava/lang/String;I)I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setColor2(I)V
 
     return-void
 .end method
@@ -353,7 +347,7 @@
     .line 131
     invoke-super {p0, p1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->onReadCustomizationAdditional(Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;)V
 
-    const-string v0, "Dummy Element"
+    const-string v0, "Dummy Element omg"
 
     .line 133
     invoke-virtual {p1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->setCustomizationName(Ljava/lang/String;)V
@@ -378,46 +372,6 @@
 
     invoke-virtual {p1, v2, p2, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsImage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 140
-    sget-object p2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorModes:[Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->getMirrorMode()I
-
-    move-result v0
-
-    sget-object v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorModes:[Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-static {p2, v0, v2}, Lcom/daaw/avee/Common/Utils;->IndexToString([Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 141
-    sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorModes:[Ljava/lang/String;
-
-    const-string v2, "mirrorMode"
-
-    invoke-virtual {p1, v2, p2, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putSelectString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
-
-    .line 142
-    invoke-virtual {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->getFlipMirror()Z
-
-    move-result p2
-
-    const-string v0, "flipMirror"
-
-    invoke-virtual {p1, v0, p2, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyBool(Ljava/lang/String;ZLjava/lang/String;)V
-
-    .line 144
-    iget p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->color2:I
-
-    const-string v0, "color"
-
-    invoke-virtual {p1, v0, p2, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGBA(Ljava/lang/String;ILjava/lang/String;)V
-
     return-void
 .end method
 
@@ -436,7 +390,26 @@
     invoke-virtual {v0, v15, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;->onRender(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lmdesl/graphics/glutils/FrameBuffer;)V
 
     .line 199
+
+
+    iget-object v0, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->targetImageLoader:Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;
+
+    invoke-virtual {v0, v15}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;->getTexture(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)Lcom/daaw/avee/comp/Visualizer/Graphic/IAtlasTexture;
+
+    move-result-object v13
+
+    if-nez v13, :cond_0
+
+    # .line 428
     invoke-super/range {p0 .. p2}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->onRender(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lmdesl/graphics/glutils/FrameBuffer;)V
+
+    return-void
+
+    # .line 433
+    :cond_0
+
+
+    invoke-virtual/range {p0 .. p1}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->onRenderCheckResources(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)V
 
     .line 204
     invoke-virtual/range {p1 .. p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->getRes()Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;
@@ -481,19 +454,26 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->createRotationAndVpMat(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lcom/daaw/avee/comp/Visualizer/Graphic/VMatrix;FFF)V
 
+
+    invoke-direct/range {p0 .. p1}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setupFrameBuffer(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)V
+
+    invoke-super/range {p0 .. p2}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->onRender(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lmdesl/graphics/glutils/FrameBuffer;)V
+    
     .line 215
     iget-object v4, v15, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->res:Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;
 
-    invoke-virtual {v4}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->getBufferRenderer_atlasBufferVPMat()Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    invoke-virtual {v4}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->getBufferRenderer_FishEyeEffect()Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
 
     move-result-object v4
 
     .line 218
     iget-object v5, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->targetImageLoader:Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;
 
-    invoke-virtual {v5, v15}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;->getTexture(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)Lcom/daaw/avee/comp/Visualizer/Graphic/IAtlasTexture;
+    # invoke-virtual {v5, v15}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;->getTexture(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)Lcom/daaw/avee/comp/Visualizer/Graphic/IAtlasTexture;
 
-    move-result-object v5
+    # move-result-object v5
+
+    move-object/from16 v5, v13
 
     .line 221
     new-instance v13, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;
@@ -503,6 +483,7 @@
     move-result v7
 
     iget-object v8, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderOnBindAction:Lcom/daaw/avee/Common/Action3;
+    # iget-object v8, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->effectShaderOnBindAction:Lcom/daaw/avee/Common/Action3;
 
     invoke-direct {v13, v7, v5, v4, v8}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;-><init>(ILcom/daaw/avee/comp/Visualizer/Graphic/IAtlasTexture;Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;Lcom/daaw/avee/Common/Action3;)V
 
@@ -522,11 +503,28 @@
 
     # renderPassData already in v13
 
-    move-object v11, v13
+    # Vec2f.zero()
+
+    invoke-static {}, Lcom/daaw/avee/Common/Vec2f;->zero()Lcom/daaw/avee/Common/Vec2f;
+
+    move-result-object v11
+
+    # Vec2f.one()
+
+    invoke-static {}, Lcom/daaw/avee/Common/Vec2f;->one()Lcom/daaw/avee/Common/Vec2f;
+
+    move-result-object v12
+
+
+
+
+
+    # move-object v11, v13
 
     # drawFullscreenQuad(float left, float top, int color, Vec2f from, Vec2f to, RenderPassData renderPassData)
 
-    invoke-virtual/range {v7 .. v11}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
+    # invoke-virtual/range {v7 .. v13}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
+    invoke-virtual/range {v7 .. v13}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/Common/Vec2f;Lcom/daaw/avee/Common/Vec2f;Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
 
 
 

@@ -116,6 +116,9 @@
 
 .field public static final visualizer_9:I = 0x7f0f0032
 
+.field public static final buffer_fisheye_frag:I = 0x7f0f0033
+
+.field public static final buffer_fisheye_vert:I = 0x7f0f0034
 
 # direct methods
 .method private constructor <init>()V
