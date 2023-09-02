@@ -19,34 +19,31 @@ uniform vec3 splitColor0;
 uniform vec3 splitColor1;
 uniform vec3 splitColor2;
 
-
-
-vec2 GLCoord2TextureCoord(vec2 glCoord) {
-    return glCoord * vec2(1.0, -1.0) / 2.0 + vec2(0.5, 0.5);
-}
 void main() {
 
-    vec2 vPosition = (vTexCoord - vec2(0.5, 0.5));
-    vPosition.y *= -1.0;
+    //vec2 vTexCoordOffset = vec2(0.003, 0.003);
 
-    float b = 1280.0 / 720.0;
-    float scale = dirAmount.x; // Set your uniform value here
+	vec4 color0 = texture2D(u_texture,vTexCoord+dirAmount);
+	vec4 color1 = texture2D(u_texture,vTexCoord);
+	vec4 color2 = texture2D(u_texture,vTexCoord-dirAmount);
+	//vec4 color2 = texture2D(u_texture2,vTexCoord);
 
-    float _A = 2.0;
-    float _B = 4.0 - b;
-    float _F = dirAmount.y;
-    float L = length(vec3(vPosition.xy / scale, _F));
+//color1.r = color0.r;
+//color1.g = 0.0;
+//color1.b = color2.b;
 
-    vec2 vMapping = vPosition.xy * _F / L;
-    vMapping = vMapping * vec2(_A, _B);
+vec4 finalColor;// = vec4(1.0, 1.0, 1.0, 1.0);
 
-    vMapping = GLCoord2TextureCoord(vMapping / scale);
+finalColor.r = (color0.r * splitColor0.r) + (color1.r * splitColor1.r) + (color2.r * splitColor2.r);
+finalColor.g = (color0.g * splitColor0.g) + (color1.g * splitColor1.g) + (color2.g * splitColor2.g);
+finalColor.b = (color0.b * splitColor0.b) + (color1.b * splitColor1.b) + (color2.b * splitColor2.b);
 
-    vec4 textureColor = texture2D(u_texture, vMapping);
+finalColor.a = (color0.a + color1.a + color2.a) * (1.0 / 3.0);
 
-    if (vMapping.x > 0.99 || vMapping.x < 0.01 || vMapping.y > 0.99 || vMapping.y < 0.01) {
-        textureColor = vec4(0.0, 0.0, 0.0, 1.0);
-    }
+	//color1 = vColor * color1;
+	//color1.a = color1.a * (maskadd + (color2.a * maskmul));
 
-    gl_FragColor = textureColor;
+	//color1.a = color1.a * color2.a;
+	gl_FragColor = finalColor;
+	//gl_FragColor = vec4(1.0, 0.0, 0.0 ,1.0);
 }
