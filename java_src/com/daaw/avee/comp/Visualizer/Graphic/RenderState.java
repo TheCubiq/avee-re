@@ -823,18 +823,24 @@ public class RenderState implements IRenderState {
             return null;
         }
 
+        // todo:
+
+        public VShaderBinder createCustomShaderBinder(VShaderProgram shaderProgram) {
+            return this.bufferRenderer.CreateShaderBinder(shaderProgram);
+        }
+
 
         // load shader from string data
 
-        public VShaderProgram loadShaderFromString(String str, String str2) {
+        public VShaderProgram loadShaderFromString(String vert, String frag) {
             try {
-                VShaderProgram vShaderProgram = new VShaderProgram(str, str2);
+                VShaderProgram vShaderProgram = new VShaderProgram(vert, frag);
                 if (vShaderProgram.getLog().length() != 0) {
                     tlog.w(vShaderProgram.getLog());
                 }
                 return vShaderProgram;
             } catch (Exception e) {
-                tlog.w("(" + str + "; " + str2 + ") Resources loading error: " + e.getMessage());
+                tlog.w("(" + vert + "; " + frag + ") Resources loading error: " + e.getMessage());
                 return null;
             }
         }

@@ -7,6 +7,7 @@ import com.daaw.avee.Common.Vec2f;
 import com.daaw.avee.comp.Visualizer.CustomPropertiesList;
 import com.daaw.avee.comp.Visualizer.Elements.Base.Element;
 import com.daaw.avee.comp.Visualizer.Elements.Base.ElementImageLoader;
+import com.daaw.avee.comp.Visualizer.Elements.Base.MVariableFloat;
 import com.daaw.avee.comp.Visualizer.Graphic.IRenderState;
 import com.daaw.avee.comp.Visualizer.Graphic.RenderPassData;
 import com.daaw.avee.comp.Visualizer.Graphic.RenderState;
@@ -27,6 +28,9 @@ public class DummyElement extends Element {
     private String shaderFrag;
     private String shaderVert;
 
+    private MVariableFloat u_value1;
+    private MVariableFloat u_value2;
+
     private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
     ElementImageLoader targetImageLoader;
     public final VMatrix vpMatTmp;
@@ -41,10 +45,15 @@ public class DummyElement extends Element {
         this.vpMatTmp = new VMatrix();
         this.shaderVert = "customVertShaderHere";
         this.shaderFrag = "customFragShaderHere";
+
+        this.u_value1 = MVariableFloat.CreateConstantFloat(6.0f);
+        this.u_value2 = MVariableFloat.CreateConstantFloat(6.0f);
+
         this.shaderOnBindAction = new Action3<RenderState, VShaderProgram, RenderPassData>() { // from class: com.daaw.avee.comp.Visualizer.Elements.DummyElement.2
             @Override // com.daaw.avee.Common.Action3
             public void onInvoke(RenderState renderState, VShaderProgram vShaderProgram, RenderPassData renderPassData) {
                 vShaderProgram.setUniformMatrix("u_projView", false, DummyElement.this.vpMatTmp.getObj());
+                vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(renderState.getRes().getMeter()));
             }
         };
         setBlendMode(4);
@@ -74,6 +83,8 @@ public class DummyElement extends Element {
         setTargetImage(customPropertiesList.getPropertyString("TargetImage", "composition:1"));
         this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", this.shaderVert);
         this.shaderFrag = customPropertiesList.getPropertyString("ShaderFrag", this.shaderFrag);
+        this.u_value1 = customPropertiesList.getPropertyMVariableFloat("u_value1", this.u_value1);
+        this.u_value2 = customPropertiesList.getPropertyMVariableFloat("u_value2", this.u_value2);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -86,6 +97,8 @@ public class DummyElement extends Element {
         customPropertiesList.putPropertyStringAsImage("TargetImage", getTargetImage(), "1_appearance", internalImages);
         customPropertiesList.putPropertyStringAsTxtPr("ShaderVertex", this.shaderVert, "2_shaderThing");
         customPropertiesList.putPropertyStringAsTxtPr("ShaderFrag", this.shaderVert, "2_shaderThing");
+        customPropertiesList.putPropertyMVariableFloat("u_value1", this.u_value1, "3_variables", 0.0f, 6.0f);
+        customPropertiesList.putPropertyMVariableFloat("u_value2", this.u_value2, "3_variables", 0.0f, 6.0f);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -134,8 +147,15 @@ public class DummyElement extends Element {
         super.onRender(renderState, frameBuffer);
         RectF measureDrawRect = measureDrawRect(renderState.getRes().getMeter());
         createRotationAndVpMat(renderState, this.vpMatTmp, measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRot(renderState.getRes().getMeter()));
-        VShaderBinder bufferRenderer_atlasBufferVPMat = renderState.res.getBufferRenderer_atlasBufferVPMat();
+        
+        
+        // todo:
+        
+        // VShaderBinder bufferRenderer_atlasBufferVPMat = renderState.res.getBufferRenderer_atlasBufferVPMat();
         // gotta actually change it to drawRectangleWHBottom instead.. -> scale measure
-        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), bufferRenderer_atlasBufferVPMat, this.shaderOnBindAction));
+        // renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), bufferRenderer_atlasBufferVPMat, this.shaderOnBindAction));
+        
+        VShaderBinder customShaderBinder = renderState.res.createCustomShaderBinder(renderState.res.loadShaderFromString(this.shaderVert, this.shaderFrag));
+        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), customShaderBinder, this.shaderOnBindAction));
     }
 }

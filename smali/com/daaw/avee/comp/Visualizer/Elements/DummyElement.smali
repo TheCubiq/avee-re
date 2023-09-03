@@ -13,6 +13,10 @@
 .field private shaderFrag:Ljava/lang/String;
 .field private shaderVert:Ljava/lang/String;
 
+.field public u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+.field public u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+
 .field private effectShaderOnBindAction:Lcom/daaw/avee/Common/Action3;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -63,7 +67,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x4
 
@@ -90,6 +94,35 @@
     const-string v2, "customFragShaderHere"
 
     iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
+
+
+
+    # this.u_value1 = MVariableFloat.CreateConstantFloat(6.0f);´
+
+    const/high16 v3, 0x40c00000    # 6.0f
+
+    .line 68
+    invoke-static {v3}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+
+
+    # this.u_value2 = MVariableFloat.CreateConstantFloat(6.0f);
+
+    const/high16 v3, 0x40c00000    # 6.0f
+
+    .line 68
+    invoke-static {v3}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+
 
     .line 184
     new-instance v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement$2;
@@ -218,7 +251,7 @@
 .end method
 
 .method protected onApplyCustomization(Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;)V
-    .locals 3
+    .locals 8
 
     .line 113
     invoke-super {p0, p1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->onApplyCustomization(Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;)V
@@ -237,9 +270,14 @@
 
     invoke-virtual {p0, v0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setTargetImage(Ljava/lang/String;)V
 
-    # this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", "shaderThing");
 
-    # const-string v0, "shaderThing"
+
+
+
+
+    # this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", "shader_[disabled]");
+
+    # const-string v0, "shader_[disabled]"
 
     # this.shaderVert insted 
 
@@ -253,9 +291,9 @@
 
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
 
-    # this.shaderFrag = customPropertiesList.getPropertyString("ShaderFragment", "shaderThing");
+    # this.shaderFrag = customPropertiesList.getPropertyString("ShaderFragment", "shader_[disabled]");
 
-    # const-string v0, "shaderThing"
+    # const-string v0, "shader_[disabled]"
 
     iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
 
@@ -266,6 +304,38 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
+
+
+
+    # this.u_value1 = customPropertiesList.getPropertyMVariableFloat("u_value1", this.u_value1);
+
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    const-string v1, "value1"
+
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    # this.u_value2 = customPropertiesList.getPropertyMVariableFloat("u_value2", this.u_value2);
+
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    const-string v1, "value2"
+
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    
+
+
+
 
     return-void
 .end method
@@ -343,7 +413,7 @@
 .end method
 
 .method protected onReadCustomization(Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;Lcom/daaw/avee/comp/Visualizer/IDependencyResourceCounter;)V
-    .locals 4
+    .locals 8
 
     .line 130
     invoke-super {p0, p1, p2}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->onReadCustomization(Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;Lcom/daaw/avee/comp/Visualizer/IDependencyResourceCounter;)V
@@ -366,7 +436,7 @@
     .line 137
     invoke-virtual {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->getTargetImage()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v3
 
     sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->internalImages:[Ljava/lang/String;
 
@@ -374,23 +444,57 @@
 
     const-string v2, "TargetImage"
 
-    invoke-virtual {p1, v2, p2, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsImage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v3, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsImage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+    iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
 
-    const-string v0, "shaderThing"
+    const-string v0, "customShaderDisabled"
 
     const-string v1, "shaderFragment"
 
-    invoke-virtual {p1, v1, p2, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v3, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+    iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
 
-    const-string v0, "shaderThing"
+    const-string v0, "customShaderDisabled"
 
     const-string v1, "shaderVertex"
 
-    invoke-virtual {p1, v1, p2, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v3, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+
+
+    # customPropertiesList.putPropertyMVariableFloat("u_value1", this.u_value1, "3_variables", 0.0f, 6.0f);
+
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    const-string v1, "value1"
+
+    const-string v3, "variables"
+
+    const/high16 v4, 0xc1200000    # -10.0f
+    
+    const/high16 v5, 0x41200000    # 10.0f
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
+
+    # customPropertiesList.putPropertyMVariableFloat("value2", this.u_value2, "3_variables", 0.0f, 6.0f);
+
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    const-string v1, "value2"
+
+    const-string v3, "variables"
+
+    const/high16 v4, 0xc1200000    # -10.0f
+    
+    const/high16 v5, 0x41200000    # 10.0f
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
 
 
     return-void
