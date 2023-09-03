@@ -20,11 +20,11 @@ import mdesl.graphics.glutils.FrameBuffer;
 /* loaded from: classes.dex */
 public class DummyElement extends Element {
     public static final String[] internalImages = {"composition:0"};
-    public static final String[] mirrorModes = {"Horizontal", "Vertical", "HorizontalAndVertical"};
     public static final String typeName = "DummyElement";
-    private int color2;
-    private boolean flipMirror;
-    private int mirrorMode;
+
+    private String shaderFrag;
+    private String shaderVert;
+
     private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
     ElementImageLoader targetImageLoader;
     public final VMatrix vpMatTmp;
@@ -36,9 +36,6 @@ public class DummyElement extends Element {
 
     public DummyElement() {
         super(4, 1.0f, 1.0f);
-        this.color2 = -1;
-        this.mirrorMode = 0;
-        this.flipMirror = false;
         this.vpMatTmp = new VMatrix();
         this.shaderOnBindAction = new Action3<RenderState, VShaderProgram, RenderPassData>() { // from class: com.daaw.avee.comp.Visualizer.Elements.DummyElement.2
             @Override // com.daaw.avee.Common.Action3
@@ -63,26 +60,6 @@ public class DummyElement extends Element {
 
     public String getTargetImage() {
         return this.targetImageLoader.getCustomImagePath();
-    }
-
-    public void setColor2(int i) {
-        this.color2 = i;
-    }
-
-    public void setMirrorMode(int i) {
-        this.mirrorMode = i;
-    }
-
-    public int getMirrorMode() {
-        return this.mirrorMode;
-    }
-
-    public void setFlipMirror(boolean z) {
-        this.flipMirror = z;
-    }
-
-    public boolean getFlipMirror() {
-        return this.flipMirror;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */

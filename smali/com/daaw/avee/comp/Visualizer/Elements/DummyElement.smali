@@ -6,17 +6,13 @@
 # static fields
 .field public static final internalImages:[Ljava/lang/String;
 
-.field public static final mirrorModes:[Ljava/lang/String;
-
 .field public static final typeName:Ljava/lang/String; = "DummyElement"
 
 
 # instance fields
-.field private color2:I
+.field private shaderFrag:Ljava/lang/String;
+.field private shaderVert:Ljava/lang/String;
 
-.field private flipMirror:Z
-
-.field private mirrorMode:I
 .field private effectShaderOnBindAction:Lcom/daaw/avee/Common/Action3;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -63,27 +59,6 @@
     .line 32
     sput-object v1, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->internalImages:[Ljava/lang/String;
 
-    const/4 v1, 0x3
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const-string v2, "Horizontal"
-
-    aput-object v2, v1, v3
-
-    const-string v2, "Vertical"
-
-    aput-object v2, v1, v0
-
-    const/4 v0, 0x2
-
-    const-string v2, "HorizontalAndVertical"
-
-    aput-object v2, v1, v0
-
-    .line 36
-    sput-object v1, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorModes:[Ljava/lang/String;
-
     return-void
 .end method
 
@@ -96,19 +71,6 @@
 
     .line 55
     invoke-direct {p0, v0, v1, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;-><init>(IFF)V
-
-    const/4 v2, -0x1
-
-    .line 43
-    iput v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->color2:I
-
-    const/4 v2, 0x0
-
-    .line 48
-    iput v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorMode:I
-
-    .line 49
-    iput-boolean v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->flipMirror:Z
 
     .line 51
     new-instance v2, Lcom/daaw/avee/comp/Visualizer/Graphic/VMatrix;
@@ -515,54 +477,12 @@
 
     move-result-object v12
 
-
-
-
-
     # move-object v11, v13
 
     # drawFullscreenQuad(float left, float top, int color, Vec2f from, Vec2f to, RenderPassData renderPassData)
 
     # invoke-virtual/range {v7 .. v13}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
     invoke-virtual/range {v7 .. v13}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/Common/Vec2f;Lcom/daaw/avee/Common/Vec2f;Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
-
-
-
-
-
-
-
-
-
-
-
-
-    return-void
-.end method
-
-.method public setColor2(I)V
-    .locals 0
-
-    .line 90
-    iput p1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->color2:I
-
-    return-void
-.end method
-
-.method public setFlipMirror(Z)V
-    .locals 0
-
-    .line 104
-    iput-boolean p1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->flipMirror:Z
-
-    return-void
-.end method
-
-.method public setMirrorMode(I)V
-    .locals 0
-
-    .line 94
-    iput p1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->mirrorMode:I
 
     return-void
 .end method

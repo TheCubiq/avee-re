@@ -815,7 +815,7 @@ public class RenderState implements IRenderState {
             }
         }
 
-        private VShaderProgram disposeShader(VShaderProgram vShaderProgram) {
+        public VShaderProgram disposeShader(VShaderProgram vShaderProgram) {
             if (vShaderProgram != null) {
                 vShaderProgram.dispose();
                 return null;
@@ -823,7 +823,23 @@ public class RenderState implements IRenderState {
             return null;
         }
 
-        VShaderProgram loadShader(Resources resources, int i, int i2) {
+
+        // load shader from string data
+
+        public VShaderProgram loadShaderFromString(String str, String str2) {
+            try {
+                VShaderProgram vShaderProgram = new VShaderProgram(str, str2);
+                if (vShaderProgram.getLog().length() != 0) {
+                    tlog.w(vShaderProgram.getLog());
+                }
+                return vShaderProgram;
+            } catch (Exception e) {
+                tlog.w("(" + str + "; " + str2 + ") Resources loading error: " + e.getMessage());
+                return null;
+            }
+        }
+
+        public VShaderProgram loadShader(Resources resources, int i, int i2) {
             try {
                 VShaderProgram vShaderProgram = new VShaderProgram(UtilsFileSys.readResource(resources, i), UtilsFileSys.readResource(resources, i2));
                 if (vShaderProgram.getLog().length() != 0) {
