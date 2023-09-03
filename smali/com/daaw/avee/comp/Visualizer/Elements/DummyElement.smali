@@ -78,6 +78,18 @@
     invoke-direct {v2}, Lcom/daaw/avee/comp/Visualizer/Graphic/VMatrix;-><init>()V
 
     iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->vpMatTmp:Lcom/daaw/avee/comp/Visualizer/Graphic/VMatrix;
+    
+    # this.shaderVert = "customVertShaderHere";
+
+    const-string v2, "customVertShaderHere"
+
+    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+
+    # this.shaderFrag = "customFragShaderHere";
+
+    const-string v2, "customFragShaderHere"
+
+    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
 
     .line 184
     new-instance v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement$2;
@@ -225,6 +237,36 @@
 
     invoke-virtual {p0, v0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->setTargetImage(Ljava/lang/String;)V
 
+    # this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", "shaderThing");
+
+    # const-string v0, "shaderThing"
+
+    # this.shaderVert insted 
+
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+
+    const-string v1, "ShaderVertex"
+
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+
+    # this.shaderFrag = customPropertiesList.getPropertyString("ShaderFragment", "shaderThing");
+
+    # const-string v0, "shaderThing"
+
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
+    const-string v1, "ShaderFragment"
+
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -333,6 +375,23 @@
     const-string v2, "TargetImage"
 
     invoke-virtual {p1, v2, p2, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsImage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+
+    iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
+    const-string v0, "shaderThing"
+
+    const-string v1, "shaderFragment"
+
+    invoke-virtual {p1, v1, p2, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+
+    const-string v0, "shaderThing"
+
+    const-string v1, "shaderVertex"
+
+    invoke-virtual {p1, v1, p2, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
 
     return-void
 .end method

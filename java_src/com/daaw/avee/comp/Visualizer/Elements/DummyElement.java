@@ -16,6 +16,8 @@ import com.daaw.avee.comp.Visualizer.Graphic.VShaderProgram;
 import com.daaw.avee.comp.Visualizer.ICompositionDependencies;
 import com.daaw.avee.comp.Visualizer.IDependencyResourceCounter;
 import com.google.android.exoplayer2.text.ttml.TtmlNode;
+import com.google.android.exoplayer2.util.MimeTypes;
+
 import mdesl.graphics.glutils.FrameBuffer;
 /* loaded from: classes.dex */
 public class DummyElement extends Element {
@@ -37,6 +39,8 @@ public class DummyElement extends Element {
     public DummyElement() {
         super(4, 1.0f, 1.0f);
         this.vpMatTmp = new VMatrix();
+        this.shaderVert = "customVertShaderHere";
+        this.shaderFrag = "customFragShaderHere";
         this.shaderOnBindAction = new Action3<RenderState, VShaderProgram, RenderPassData>() { // from class: com.daaw.avee.comp.Visualizer.Elements.DummyElement.2
             @Override // com.daaw.avee.Common.Action3
             public void onInvoke(RenderState renderState, VShaderProgram vShaderProgram, RenderPassData renderPassData) {
@@ -68,6 +72,8 @@ public class DummyElement extends Element {
         super.onApplyCustomization(customPropertiesList);
         super.onApplyCustomizationAdditional(customPropertiesList);
         setTargetImage(customPropertiesList.getPropertyString("TargetImage", "composition:1"));
+        this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", this.shaderVert);
+        this.shaderFrag = customPropertiesList.getPropertyString("ShaderFrag", this.shaderFrag);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -78,6 +84,8 @@ public class DummyElement extends Element {
         customPropertiesList.setCustomizationName("Dummy Element");
         iDependencyResourceCounter.PutDependencyResourceName(getTargetImage());
         customPropertiesList.putPropertyStringAsImage("TargetImage", getTargetImage(), "1_appearance", internalImages);
+        customPropertiesList.putPropertyStringAsTxtPr("ShaderVertex", this.shaderVert, "2_shaderThing");
+        customPropertiesList.putPropertyStringAsTxtPr("ShaderFrag", this.shaderVert, "2_shaderThing");
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
