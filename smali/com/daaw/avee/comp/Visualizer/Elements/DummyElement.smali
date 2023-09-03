@@ -490,10 +490,6 @@
     .line 218
     iget-object v5, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->targetImageLoader:Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;
 
-    # invoke-virtual {v5, v15}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/ElementImageLoader;->getTexture(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;)Lcom/daaw/avee/comp/Visualizer/Graphic/IAtlasTexture;
-
-    # move-result-object v5
-
     move-object/from16 v5, v13
 
     .line 221
@@ -504,43 +500,24 @@
     move-result v7
 
     iget-object v8, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderOnBindAction:Lcom/daaw/avee/Common/Action3;
-    # iget-object v8, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->effectShaderOnBindAction:Lcom/daaw/avee/Common/Action3;
 
     invoke-direct {v13, v7, v5, v4, v8}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;-><init>(ILcom/daaw/avee/comp/Visualizer/Graphic/IAtlasTexture;Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;Lcom/daaw/avee/Common/Action3;)V
-
-    # instead of drawRectangle0123 we use drawFullscreenQuad
-
-    # gathering the arguments: 
 
     iget v8, v14, Landroid/graphics/RectF;->left:F
 
     iget v9, v14, Landroid/graphics/RectF;->top:F
 
-    # iget v10, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->color2:I
-
     const/4 v10, -0x1 # white
 
     move-object/from16 v7, p1
-
-    # renderPassData already in v13
-
-    # Vec2f.zero()
 
     invoke-static {}, Lcom/daaw/avee/Common/Vec2f;->zero()Lcom/daaw/avee/Common/Vec2f;
 
     move-result-object v11
 
-    # Vec2f.one()
-
     invoke-static {}, Lcom/daaw/avee/Common/Vec2f;->one()Lcom/daaw/avee/Common/Vec2f;
 
     move-result-object v12
-
-    # move-object v11, v13
-
-    # drawFullscreenQuad(float left, float top, int color, Vec2f from, Vec2f to, RenderPassData renderPassData)
-
-    # invoke-virtual/range {v7 .. v13}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
     invoke-virtual/range {v7 .. v13}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->drawFullscreenQuad(FFILcom/daaw/avee/Common/Vec2f;Lcom/daaw/avee/Common/Vec2f;Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
 
     return-void
