@@ -147,48 +147,48 @@
     .line 80
     :cond_0
     :goto_1
-    iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;->attributes:[Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;
+    # iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;->attributes:[Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;
 
-    array-length p3, p2
+    # array-length p3, p2
 
-    if-ge p1, p3, :cond_2
+    # if-ge p1, p3, :cond_2
 
-    .line 81
-    aget-object p2, p2, p1
+    # .line 81
+    # aget-object p2, p2, p1
 
-    iget p2, p2, Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;->location:I
+    # iget p2, p2, Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;->location:I
 
-    if-gez p2, :cond_1
+    # if-gez p2, :cond_1
 
-    .line 82
-    new-instance p2, Ljava/lang/StringBuilder;
+    # .line 82
+    # new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    # invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p3, "ERROR attribute not found "
+    # const-string p3, "ERROR attribute not found "
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    # invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p3, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;->attributes:[Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;
+    # iget-object p3, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;->attributes:[Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;
 
-    aget-object p3, p3, p1
+    # aget-object p3, p3, p1
 
-    iget-object p3, p3, Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;->name:Ljava/lang/String;
+    # iget-object p3, p3, Lcom/daaw/avee/comp/Visualizer/Graphic/VVertexAttrib;->name:Ljava/lang/String;
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    # invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    # invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    # move-result-object p2
 
-    invoke-static {p2}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
+    # invoke-static {p2}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
 
-    :cond_1
-    add-int/lit8 p1, p1, 0x1
+    # :cond_1
+    # add-int/lit8 p1, p1, 0x1
 
-    goto :goto_1
+    # goto :goto_1
 
-    :cond_2
+    # :cond_2
     return-void
 .end method
 

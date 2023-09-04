@@ -2452,75 +2452,75 @@
 .method public persist(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
     .locals 5
 
-    const/4 v0, 0x3
+    # const/4 v0, 0x3
 
-    new-array v0, v0, [Ljava/lang/Object;
+    # new-array v0, v0, [Ljava/lang/Object;
 
-    .line 95
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
+    # .line 95
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
-    move-result-object v1
+    # move-result-object v1
 
-    const/4 v2, 0x0
+    # const/4 v2, 0x0
 
-    aput-object v1, v0, v2
+    # aput-object v1, v0, v2
 
-    .line 96
-    invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
+    # .line 96
+    # invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
 
-    move-result-object v1
+    # move-result-object v1
 
-    const/4 v2, 0x1
+    # const/4 v2, 0x1
 
-    aput-object v1, v0, v2
+    # aput-object v1, v0, v2
 
-    .line 97
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
+    # .line 97
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
-    move-result-object v1
+    # move-result-object v1
 
-    const/4 v2, 0x2
+    # const/4 v2, 0x2
 
-    aput-object v1, v0, v2
+    # aput-object v1, v0, v2
 
-    const-string v1, "SQLiteEventStore"
+    # const-string v1, "SQLiteEventStore"
 
-    const-string v2, "Storing event with priority=%s, name=%s for destination %s"
+    # const-string v2, "Storing event with priority=%s, name=%s for destination %s"
 
-    .line 92
-    invoke-static {v1, v2, v0}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    # .line 92
+    # invoke-static {v1, v2, v0}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 98
-    invoke-static {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$$Lambda$5;->lambdaFactory$(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;
+    # .line 98
+    # invoke-static {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$$Lambda$5;->lambdaFactory$(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;
 
-    move-result-object v0
+    # move-result-object v0
 
-    .line 99
-    invoke-direct {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
+    # .line 99
+    # invoke-direct {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
-    move-result-object v0
+    # move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    # check-cast v0, Ljava/lang/Long;
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    # invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
+    # move-result-wide v0
 
-    const-wide/16 v2, 0x1
+    # const-wide/16 v2, 0x1
 
-    cmp-long v4, v0, v2
+    # cmp-long v4, v0, v2
 
-    if-gez v4, :cond_0
+    # if-gez v4, :cond_0
 
     const/4 p1, 0x0
 
-    return-object p1
+    # return-object p1
 
-    .line 155
-    :cond_0
-    invoke-static {v0, v1, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->create(JLcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
+    # .line 155
+    # :cond_0
+    # invoke-static {v0, v1, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->create(JLcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
 
-    move-result-object p1
+    # move-result-object p1
 
     return-object p1
 .end method
