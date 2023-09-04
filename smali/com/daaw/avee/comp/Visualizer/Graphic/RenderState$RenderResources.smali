@@ -505,6 +505,26 @@
     return v0
 .end method
 
+# public VShaderBinder createCustomShaderBinder(VShaderProgram shaderProgram) {
+#     return this.bufferRenderer.CreateShaderBinder(shaderProgram);
+# }
+
+.method public createCustomShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    .locals 1
+
+    .line 1105
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer:Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;
+
+    invoke-virtual {v0, p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;->CreateShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+
+
+
 # public VShaderProgram loadShaderFromString(String str, String str2) {
 #             try {
 #                 VShaderProgram vShaderProgram = new VShaderProgram(str, str2);
