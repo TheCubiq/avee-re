@@ -68,31 +68,19 @@
 
     # vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(renderState.getRes().getMeter()));
     
+     # : renderState.getRes().getMeter()
+    invoke-virtual {p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->getRes()Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;
+    move-result-object v1
+    invoke-interface {v1}, Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;->getMeter()Lcom/daaw/avee/comp/Visualizer/Meter;
+    move-result-object v1
 
     # DummyElement.this.u_value1.getValueAsFloat(v1)
-
-    iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement$2;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
-
-    iget-object v3, v3, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
-     # : renderState.getRes().getMeter()
-
-    invoke-virtual {p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->getRes()Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;->getMeter()Lcom/daaw/avee/comp/Visualizer/Meter;
-
-    move-result-object v1
-
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement$2;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
     invoke-virtual {v3, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->getValueAsFloat(Lcom/daaw/avee/comp/Visualizer/Meter;)F
-
     move-result v3
-
     # vShaderProgram.setUniformf("u_value1", v1);
-
     const-string v0, "u_value1"
-
     invoke-virtual {p2, v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;F)V
 
 
@@ -101,28 +89,38 @@
 
     .line 188
 
-    iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement$2;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
-
-    iget-object v3, v3, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
-    # : renderState.getRes().getMeter()
-
-    invoke-virtual {p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->getRes()Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;->getMeter()Lcom/daaw/avee/comp/Visualizer/Meter;
-
-    move-result-object v1
-
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
     invoke-virtual {v3, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->getValueAsFloat(Lcom/daaw/avee/comp/Visualizer/Meter;)F
-
     move-result v3
-
-    # vShaderProgram.setUniformf("u_value2", v1);
-
     const-string v0, "u_value2"
+    invoke-virtual {p2, v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;F)V
 
+
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value3:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    invoke-virtual {v3, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->getValueAsFloat(Lcom/daaw/avee/comp/Visualizer/Meter;)F
+    move-result v3
+    const-string v0, "u_value3"
+    invoke-virtual {p2, v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;F)V
+
+
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value4:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    invoke-virtual {v3, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->getValueAsFloat(Lcom/daaw/avee/comp/Visualizer/Meter;)F
+    move-result v3
+    const-string v0, "u_value4"
+    invoke-virtual {p2, v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;F)V
+
+
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value5:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    invoke-virtual {v3, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->getValueAsFloat(Lcom/daaw/avee/comp/Visualizer/Meter;)F
+    move-result v3
+    const-string v0, "u_value5"
+    invoke-virtual {p2, v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;F)V
+
+
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value6:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    invoke-virtual {v3, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->getValueAsFloat(Lcom/daaw/avee/comp/Visualizer/Meter;)F
+    move-result v3
+    const-string v0, "u_value6"
     invoke-virtual {p2, v0, v3}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;F)V
 
 

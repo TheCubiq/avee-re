@@ -18,6 +18,10 @@
 
 .field public u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 .field public u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+.field public u_value3:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+.field public u_value4:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+.field public u_value5:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+.field public u_value6:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
 # private VShaderProgram loadedShader;
 # private boolean reloadShader;
@@ -158,6 +162,22 @@
     iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
 
+    # u_value3 (0f)
+
+    const v3, 0x0
+
+    invoke-static {v3}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value3:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value4:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value5:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value6:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    
 
     .line 184
     new-instance v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement$2;
@@ -365,32 +385,57 @@
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
 
 
-
+    # todo: prettier with a loop..
 
     # this.u_value1 = customPropertiesList.getPropertyMVariableFloat("u_value1", this.u_value1);
-
     iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
     const-string v1, "value1"
-
     invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
     move-result-object v0
-
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
+
     # this.u_value2 = customPropertiesList.getPropertyMVariableFloat("u_value2", this.u_value2);
-
     iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
     const-string v1, "value2"
-
     invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
     move-result-object v0
-
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
+
+    # this.u_value3 = customPropertiesList.getPropertyMVariableFloat("u_value3", this.u_value3);
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value3:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value3"
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    move-result-object v0
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value3:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+
+    # this.u_value4 = customPropertiesList.getPropertyMVariableFloat("u_value4", this.u_value4);
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value4:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value4"
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    move-result-object v0
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value4:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+
+    # this.u_value5 = customPropertiesList.getPropertyMVariableFloat("u_value5", this.u_value5);
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value5:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value5"
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    move-result-object v0
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value5:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+
+    # this.u_value6 = customPropertiesList.getPropertyMVariableFloat("u_value6", this.u_value6);
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value6:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value6"
+    invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    move-result-object v0
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value6:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    
+    
     
     # this.reloadShader = true;
 
@@ -553,35 +598,48 @@
 
 
     # customPropertiesList.putPropertyMVariableFloat("u_value1", this.u_value1, "3_variables", 0.0f, 6.0f);
-
     iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
     const-string v1, "value1"
-
     const-string v3, "variables"
+    # const/high16 v4, 0xc1200000    # -10.0f
+    # const/high16 v5, 0x41200000    # 10.0f
 
-    const/high16 v4, 0xc1200000    # -10.0f
-    
-    const/high16 v5, 0x41200000    # 10.0f
+    const/high16 v4, 0xbf800000    # -1.0f
+    const/high16 v5, 0x3f800000    # 1.0f
 
     move-object v0, p1
-
     invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
 
-    # customPropertiesList.putPropertyMVariableFloat("value2", this.u_value2, "3_variables", 0.0f, 6.0f);
 
+    # value2
     iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
-
     const-string v1, "value2"
+    # const-string v3, "variables"
+    # const/high16 v4, 0xc1200000    # -10.0f
+    # const/high16 v5, 0x41200000    # 10.0f
+    invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
 
-    const-string v3, "variables"
 
-    const/high16 v4, 0xc1200000    # -10.0f
-    
-    const/high16 v5, 0x41200000    # 10.0f
+    # value3
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value3:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value3"
+    invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
 
-    move-object v0, p1
 
+    # value4
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value4:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value4"
+    invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
+
+
+    # value5
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value5:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value5"
+    invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
+
+    # value5
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value6:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+    const-string v1, "value6"
     invoke-virtual/range {v0 .. v5}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyMVariableFloat(Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;Ljava/lang/String;FF)V
 
 
