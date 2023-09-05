@@ -815,13 +815,18 @@ public class RenderState implements IRenderState {
             }
         }
 
-        public VShaderProgram disposeShader(VShaderProgram vShaderProgram) {
+        private VShaderProgram disposeShader(VShaderProgram vShaderProgram) {
             if (vShaderProgram != null) {
                 vShaderProgram.dispose();
                 return null;
             }
             return null;
         }
+
+        public VShaderProgram safeDisposeShader(VShaderProgram vShaderProgram) {
+            return disposeShader(vShaderProgram);
+        }
+
 
         // todo:
 

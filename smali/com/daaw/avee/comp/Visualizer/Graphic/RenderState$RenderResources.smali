@@ -174,6 +174,22 @@
     return-object p1
 .end method
 
+# public VShaderProgram safeDisposeShader(VShaderProgram vShaderProgram) {
+#     return disposeShader(vShaderProgram);
+# }
+
+.method public safeDisposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+    .locals 1
+
+    .line 1080
+    invoke-direct {p0, p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->disposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+
 
 # virtual methods
 .method public getAtlasBufferFxLightShader()Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;

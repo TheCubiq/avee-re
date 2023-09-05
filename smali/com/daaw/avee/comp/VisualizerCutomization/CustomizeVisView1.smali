@@ -899,7 +899,18 @@
 
     move-result v4
 
-    const/high16 v7, 0x42200000    # 40.0f
+    # slider steps
+
+    # const/high16 v7, 0x42200000    # 40.0f
+
+    # const/high16 v7, 0x42c80000    # 100.0f
+
+    # const/high16 v7, 0x447a0000    # 1000.0f
+
+    # 400.0f
+
+    const/high16 v7, 0x43c80000   # 400.0f
+
 
     const/high16 v8, 0x42c80000    # 100.0f
 

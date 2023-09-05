@@ -1,6 +1,8 @@
 package com.daaw.avee.comp.Visualizer.Elements;
 
 import android.graphics.RectF;
+import android.opengl.GLES20;
+
 import com.daaw.avee.Common.Action3;
 import com.daaw.avee.Common.Utils;
 import com.daaw.avee.Common.Vec2f;
@@ -8,6 +10,7 @@ import com.daaw.avee.comp.Visualizer.CustomPropertiesList;
 import com.daaw.avee.comp.Visualizer.Elements.Base.Element;
 import com.daaw.avee.comp.Visualizer.Elements.Base.ElementImageLoader;
 import com.daaw.avee.comp.Visualizer.Elements.Base.MVariableFloat;
+import com.daaw.avee.comp.Visualizer.Graphic.IAtlasTexture;
 import com.daaw.avee.comp.Visualizer.Graphic.IRenderState;
 import com.daaw.avee.comp.Visualizer.Graphic.RenderPassData;
 import com.daaw.avee.comp.Visualizer.Graphic.RenderState;
@@ -30,6 +33,9 @@ public class DummyElement extends Element {
 
     private MVariableFloat u_value1;
     private MVariableFloat u_value2;
+
+    private VShaderProgram loadedShader;
+    private boolean reloadShader;
 
     private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
     ElementImageLoader targetImageLoader;
@@ -85,6 +91,7 @@ public class DummyElement extends Element {
         this.shaderFrag = customPropertiesList.getPropertyString("ShaderFrag", this.shaderFrag);
         this.u_value1 = customPropertiesList.getPropertyMVariableFloat("u_value1", this.u_value1);
         this.u_value2 = customPropertiesList.getPropertyMVariableFloat("u_value2", this.u_value2);
+        this.reloadShader = true;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -142,20 +149,32 @@ public class DummyElement extends Element {
     }
 
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
-    public void onRender(RenderState renderState, FrameBuffer frameBuffer) {
+     public void onRender(RenderState renderState, FrameBuffer frameBuffer) {
         this.targetImageLoader.onRender(renderState, frameBuffer);
-        super.onRender(renderState, frameBuffer);
+        IAtlasTexture texture = this.targetImageLoader.getTexture(renderState);
+        if (texture == null) {
+            super.onRender(renderState, frameBuffer);
+            return;
+        }
+        onRenderCheckResources(renderState);
         RectF measureDrawRect = measureDrawRect(renderState.getRes().getMeter());
         createRotationAndVpMat(renderState, this.vpMatTmp, measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRot(renderState.getRes().getMeter()));
-        
-        
-        // todo:
-        
-        // VShaderBinder bufferRenderer_atlasBufferVPMat = renderState.res.getBufferRenderer_atlasBufferVPMat();
-        // gotta actually change it to drawRectangleWHBottom instead.. -> scale measure
-        // renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), bufferRenderer_atlasBufferVPMat, this.shaderOnBindAction));
-        
-        VShaderBinder customShaderBinder = renderState.res.createCustomShaderBinder(renderState.res.loadShaderFromString(this.shaderVert, this.shaderFrag));
-        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), customShaderBinder, this.shaderOnBindAction));
+        setupFrameBuffer(renderState);
+        super.onRender(renderState, frameBuffer);
+        RenderState.RenderResources renderResources = renderState.res;
+
+        // todo: convert to smali
+        if (this.loadedShader == null || this.reloadShader ){
+            this.reloadShader = false;
+            this.loadedShader = renderResources.safeDisposeShader(this.loadedShader);
+            this.loadedShader = renderResources.loadShaderFromString(this.shaderVert, this.shaderFrag);
+        }
+        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, Vec2f.zero(), Vec2f.one(), new RenderPassData(getBlendMode(), texture, this.loadedShader != null ? renderResources.createCustomShaderBinder(this.loadedShader) : null, this.shaderOnBindAction));
+    }
+
+    private void setupFrameBuffer(RenderState renderState) {
+        GLES20.glTexParameteri(3553, 10241, 9729);
+        GLES20.glTexParameteri(3553, 10240, 9729);
+        renderState.setTextureWrapping(1);
     }
 }

@@ -13,21 +13,18 @@
 .field private shaderFrag:Ljava/lang/String;
 .field private shaderVert:Ljava/lang/String;
 
+.field private enableCustomFrag:Z
+.field private enableCustomVert:Z
+
 .field public u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 .field public u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
+# private VShaderProgram loadedShader;
+# private boolean reloadShader;
 
-.field private effectShaderOnBindAction:Lcom/daaw/avee/Common/Action3;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/daaw/avee/Common/Action3<",
-            "Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;",
-            "Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;",
-            "Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private loadedShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+.field private reloadShader:Z
+
 
 .field private shaderOnBindAction:Lcom/daaw/avee/Common/Action3;
     .annotation system Ldalvik/annotation/Signature;
@@ -83,24 +80,60 @@
 
     iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->vpMatTmp:Lcom/daaw/avee/comp/Visualizer/Graphic/VMatrix;
     
+    # Context appContext = PlayerCore.s().getAppContext().getResources()
+
+    invoke-static {}, Lcom/daaw/avee/PlayerCore;->s()Lcom/daaw/avee/PlayerCore;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/daaw/avee/PlayerCore;->getAppContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    # this.shaderVert = UtilsFileSys.readResource(resources, R.raw.buffer_fisheye_vert);
+
+    const v3, 0x7f0f0034
+
+    invoke-static {v2, v3}, Lcom/daaw/avee/Common/UtilsFileSys;->readResource(Landroid/content/res/Resources;I)Ljava/lang/String;
+
+    move-result-object v3
     # this.shaderVert = "customVertShaderHere";
 
-    const-string v2, "customVertShaderHere"
+    # const-string v2, "customVertShaderHere"
 
-    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
 
     # this.shaderFrag = "customFragShaderHere";
 
-    const-string v2, "customFragShaderHere"
+    # const-string v2, "customFragShaderHere"
 
-    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+    const v3, 0x7f0f0033
+
+    invoke-static {v2, v3}, Lcom/daaw/avee/Common/UtilsFileSys;->readResource(Landroid/content/res/Resources;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
+    # this.enableCustomVert = false;
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomVert:Z
+
+    iput-boolean v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomFrag:Z
 
 
 
 
     # this.u_value1 = MVariableFloat.CreateConstantFloat(6.0f);´
 
-    const/high16 v3, 0x40c00000    # 6.0f
+    # const/high16 v3, 0x40c00000    # 6.0f
+    const v3, 0x40accccd    # 5.4
 
     .line 68
     invoke-static {v3}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
@@ -113,7 +146,9 @@
 
     # this.u_value2 = MVariableFloat.CreateConstantFloat(6.0f);
 
-    const/high16 v3, 0x40c00000    # 6.0f
+    # const/high16 v3, 0x40c00000    # 6.0f
+
+    const v3, 0x40000000    # 2.0f
 
     .line 68
     invoke-static {v3}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
@@ -275,6 +310,18 @@
 
 
 
+    # iget-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomVert:Z
+
+    # const-string v1, "customVertex"
+
+    # invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyBool(Ljava/lang/String;Z)Z
+
+    # move-result v0
+
+    # iput-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomVert:Z
+    
+
+
     # this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", "shader_[disabled]");
 
     # const-string v0, "shader_[disabled]"
@@ -291,6 +338,18 @@
 
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
 
+    
+    # iget-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomFrag:Z
+
+    # const-string v1, "customFragment"
+
+    # invoke-virtual {p1, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyBool(Ljava/lang/String;Z)Z
+
+    # move-result v0
+
+    # iput-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomFrag:Z
+    
+    
     # this.shaderFrag = customPropertiesList.getPropertyString("ShaderFragment", "shader_[disabled]");
 
     # const-string v0, "shader_[disabled]"
@@ -333,7 +392,11 @@
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
     
+    # this.reloadShader = true;
 
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->reloadShader:Z
 
 
 
@@ -446,17 +509,42 @@
 
     invoke-virtual {p1, v2, v3, v1, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsImage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
+    
+    # # enableCustomFrag
+
+    # iget-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomFrag:Z
+
+    # const-string v1, "shader"
+
+    # const-string v2, "customFragment"
+
+    # invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyBool(Ljava/lang/String;ZLjava/lang/String;)V
+
+    
+    
     iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
 
-    const-string v0, "customShaderDisabled"
+    const-string v0, "shader"
 
     const-string v1, "shaderFragment"
 
     invoke-virtual {p1, v1, v3, v0}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+
+
+    # iget-boolean v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->enableCustomVert:Z
+
+    # const-string v1, "shader"
+
+    # const-string v2, "customVertex"
+
+    # invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyBool(Ljava/lang/String;ZLjava/lang/String;)V
+
+
+
     iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
 
-    const-string v0, "customShaderDisabled"
+    const-string v0, "shader"
 
     const-string v1, "shaderVertex"
 
@@ -501,7 +589,7 @@
 .end method
 
 .method public onRender(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lmdesl/graphics/glutils/FrameBuffer;)V
-    .locals 24
+    .locals 16
 
     move-object/from16 v6, p0
 
@@ -597,36 +685,85 @@
 
     # VShaderBinder customShaderBinder = renderState.res.createCustomShaderBinder(renderState.res.loadShaderFromString(this.shaderVert, this.shaderFrag));
 
-    # move-object/from16 v6, p0
+    move-object/from16 v6, p0
 
     iget-object v5, v15, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;->res:Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;
 
-    iget-object v4, v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+    # iget-object v4, v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
 
-    iget-object v6, v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+    # iget-object v6, v0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
 
-    invoke-virtual {v5, v4, v6}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->loadShaderFromString(Ljava/lang/String;Ljava/lang/String;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+    # invoke-virtual {v5, v4, v6}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->loadShaderFromString(Ljava/lang/String;Ljava/lang/String;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
 
-    move-result-object v4
+    # move-result-object v9
 
 
-    # check if v4 is not null
+
+
+
+    # if (this.loadedShader == null || this.reloadShader ){
+    #     this.reloadShader = false;
+    #     this.loadedShader = renderResources.safeDisposeShader(this.loadedShader);
+    #     this.loadedShader = renderResources.loadShaderFromString(this.shaderVert, this.shaderFrag);
+    # }´
+
+    iget-object v4, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->loadedShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {v5, v4}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->createCustomShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    iget-boolean v4, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->reloadShader:Z
 
-    move-result-object v4
+    if-nez v4, :cond_1
 
     goto :goto_0
 
     :cond_1
-
-    # just for test, set v4 to null 
+    
 
     const/4 v4, 0x0
 
+    iput-boolean v4, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->reloadShader:Z
+
+    iget-object v4, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->loadedShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    # invoke-interface {v5, v4}, Lcom/daaw/avee/comp/Visualizer/Graphic/IRenderState$IRenderResources;->safeDisposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    invoke-virtual {v5, v4}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->safeDisposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    move-result-object v4
+
+    iput-object v4, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->loadedShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+
+    iget-object v4, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderVert:Ljava/lang/String;
+
+    iget-object v7, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->shaderFrag:Ljava/lang/String;
+
+    invoke-virtual {v5, v4, v7}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->loadShaderFromString(Ljava/lang/String;Ljava/lang/String;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    move-result-object v9
+
+    iput-object v9, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->loadedShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    # tlog.d("shaderReload")
+    const-string v9, "shaderReload"
+
+    invoke-static {v9}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
+
     :goto_0
+
+    iget-object v9, v6, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->loadedShader:Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    # check if v4 is not null
+    const/4 v4, 0x0
+
+    if-eqz v9, :cond_2
+
+    invoke-virtual {v5, v9}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->createCustomShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+
+    move-result-object v4
+
+    :cond_2
 
     # test pass, didn't crash
 

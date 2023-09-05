@@ -1,4 +1,4 @@
-
+// Cubiq - FOV Effect
 precision mediump float;
 precision mediump int;
 precision lowp sampler2D;
@@ -33,11 +33,11 @@ void main() {
     vPosition.y *= -1.0;
 
     float b = 1280.0 / 720.0;
-    float scale = u_value1; // Set your uniform value here
+    float scale = u_value1 / 5.0; // Set your uniform value here
 
     float _A = 2.0;
     float _B = 4.0 - b;
-    float _F = u_value2;
+    float _F = u_value2 / 10.0;
     float L = length(vec3(vPosition.xy / scale, _F));
 
     vec2 vMapping = vPosition.xy * _F / L;
