@@ -2,3 +2,4 @@
 /dist
 /gen
 *.iml
+/.idea/workspace.xml
