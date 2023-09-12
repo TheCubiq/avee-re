@@ -1,11 +1,16 @@
 package com.daaw.avee.comp.Visualizer.Elements;
 
+import android.content.res.Resources;
 import android.graphics.RectF;
 import android.opengl.GLES20;
 
+import com.AOSPutils.UtilsFileSys;
+import com.daaw.avee.PlayerCore;
+import com.daaw.avee.R;
 import com.daaw.avee.Common.Action3;
 import com.daaw.avee.Common.Utils;
 import com.daaw.avee.Common.Vec2f;
+import com.daaw.avee.Common.tlog;
 import com.daaw.avee.comp.Visualizer.CustomPropertiesList;
 import com.daaw.avee.comp.Visualizer.Elements.Base.Element;
 import com.daaw.avee.comp.Visualizer.Elements.Base.ElementImageLoader;
@@ -19,6 +24,7 @@ import com.daaw.avee.comp.Visualizer.Graphic.VShaderBinder;
 import com.daaw.avee.comp.Visualizer.Graphic.VShaderProgram;
 import com.daaw.avee.comp.Visualizer.ICompositionDependencies;
 import com.daaw.avee.comp.Visualizer.IDependencyResourceCounter;
+import com.daaw.avee.comp.Visualizer.Meter;
 import com.google.android.exoplayer2.text.ttml.TtmlNode;
 import com.google.android.exoplayer2.util.MimeTypes;
 
@@ -27,18 +33,18 @@ import mdesl.graphics.glutils.FrameBuffer;
 public class DummyElement extends Element {
     public static final String[] internalImages = {"composition:0"};
     public static final String typeName = "DummyElement";
-
-    private String shaderFrag;
-    private String shaderVert;
-
-    private MVariableFloat u_value1;
-    private MVariableFloat u_value2;
-
     private VShaderProgram loadedShader;
     private boolean reloadShader;
-
+    public String shaderFrag;
     private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
+    public String shaderVert;
     ElementImageLoader targetImageLoader;
+    public MVariableFloat u_value1;
+    public MVariableFloat u_value2;
+    public MVariableFloat u_value3;
+    public MVariableFloat u_value4;
+    public MVariableFloat u_value5;
+    public MVariableFloat u_value6;
     public final VMatrix vpMatTmp;
 
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
@@ -46,20 +52,43 @@ public class DummyElement extends Element {
         return typeName;
     }
 
+    public void initCustomShader() {
+        Resources resources = PlayerCore.s().getAppContext().getResources();
+        this.shaderVert = UtilsFileSys.readResource(resources, R.raw.buffer_fisheye_vert);
+        this.shaderFrag = UtilsFileSys.readResource(resources, R.raw.buffer_fisheye_frag);
+    }
+
+    public boolean isShaderEditable() {
+        return true;
+    }
+
     public DummyElement() {
         super(4, 1.0f, 1.0f);
         this.vpMatTmp = new VMatrix();
-        this.shaderVert = "customVertShaderHere";
-        this.shaderFrag = "customFragShaderHere";
 
-        this.u_value1 = MVariableFloat.CreateConstantFloat(6.0f);
-        this.u_value2 = MVariableFloat.CreateConstantFloat(6.0f);
+        initCustomShader();
 
+        this.u_value1 = MVariableFloat.CreateConstantFloat(5.4f);
+        this.u_value2 = MVariableFloat.CreateConstantFloat(2.0f);
+        MVariableFloat CreateConstantFloat = MVariableFloat.CreateConstantFloat(0.0f);
+        this.u_value3 = CreateConstantFloat;
+        this.u_value4 = CreateConstantFloat;
+        this.u_value5 = CreateConstantFloat;
+        this.u_value6 = CreateConstantFloat;
         this.shaderOnBindAction = new Action3<RenderState, VShaderProgram, RenderPassData>() { // from class: com.daaw.avee.comp.Visualizer.Elements.DummyElement.2
             @Override // com.daaw.avee.Common.Action3
             public void onInvoke(RenderState renderState, VShaderProgram vShaderProgram, RenderPassData renderPassData) {
                 vShaderProgram.setUniformMatrix("u_projView", false, DummyElement.this.vpMatTmp.getObj());
-                vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(renderState.getRes().getMeter()));
+                // vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(renderState.getRes().getMeter()));´
+
+                Meter meter = renderState.getRes().getMeter();
+                vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(meter));
+                vShaderProgram.setUniformf("u_value2", DummyElement.this.u_value2.getValueAsFloat(meter));
+                vShaderProgram.setUniformf("u_value3", DummyElement.this.u_value3.getValueAsFloat(meter));
+                vShaderProgram.setUniformf("u_value4", DummyElement.this.u_value4.getValueAsFloat(meter));
+                vShaderProgram.setUniformf("u_value5", DummyElement.this.u_value5.getValueAsFloat(meter));
+                vShaderProgram.setUniformf("u_value6", DummyElement.this.u_value6.getValueAsFloat(meter));
+
             }
         };
         setBlendMode(4);
@@ -89,8 +118,14 @@ public class DummyElement extends Element {
         setTargetImage(customPropertiesList.getPropertyString("TargetImage", "composition:1"));
         this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", this.shaderVert);
         this.shaderFrag = customPropertiesList.getPropertyString("ShaderFrag", this.shaderFrag);
-        this.u_value1 = customPropertiesList.getPropertyMVariableFloat("u_value1", this.u_value1);
-        this.u_value2 = customPropertiesList.getPropertyMVariableFloat("u_value2", this.u_value2);
+
+        this.u_value1 = customPropertiesList.getPropertyMVariableFloat("value1", this.u_value1);
+        this.u_value2 = customPropertiesList.getPropertyMVariableFloat("value2", this.u_value2);
+        this.u_value3 = customPropertiesList.getPropertyMVariableFloat("value3", this.u_value3);
+        this.u_value4 = customPropertiesList.getPropertyMVariableFloat("value4", this.u_value4);
+        this.u_value5 = customPropertiesList.getPropertyMVariableFloat("value5", this.u_value5);
+        this.u_value6 = customPropertiesList.getPropertyMVariableFloat("value6", this.u_value6);
+
         this.reloadShader = true;
     }
 
@@ -102,10 +137,18 @@ public class DummyElement extends Element {
         customPropertiesList.setCustomizationName("Dummy Element");
         iDependencyResourceCounter.PutDependencyResourceName(getTargetImage());
         customPropertiesList.putPropertyStringAsImage("TargetImage", getTargetImage(), "1_appearance", internalImages);
-        customPropertiesList.putPropertyStringAsTxtPr("ShaderVertex", this.shaderVert, "2_shaderThing");
-        customPropertiesList.putPropertyStringAsTxtPr("ShaderFrag", this.shaderVert, "2_shaderThing");
-        customPropertiesList.putPropertyMVariableFloat("u_value1", this.u_value1, "3_variables", 0.0f, 6.0f);
-        customPropertiesList.putPropertyMVariableFloat("u_value2", this.u_value2, "3_variables", 0.0f, 6.0f);
+        
+        if (isShaderEditable()) {
+            customPropertiesList.putPropertyStringAsTxtPr("shaderFragment", this.shaderFrag, "shader");
+            customPropertiesList.putPropertyStringAsTxtPr("shaderVertex", this.shaderVert, "shader");
+        }
+
+        customPropertiesList.putPropertyMVariableFloat("value1", this.u_value1, "variables", -1.0f, 1.0f);
+        customPropertiesList.putPropertyMVariableFloat("value2", this.u_value2, "variables", -1.0f, 1.0f);
+        customPropertiesList.putPropertyMVariableFloat("value3", this.u_value3, "variables", -1.0f, 1.0f);
+        customPropertiesList.putPropertyMVariableFloat("value4", this.u_value4, "variables", -1.0f, 1.0f);
+        customPropertiesList.putPropertyMVariableFloat("value5", this.u_value5, "variables", -1.0f, 1.0f);
+        customPropertiesList.putPropertyMVariableFloat("value6", this.u_value6, "variables", -1.0f, 1.0f);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -163,12 +206,13 @@ public class DummyElement extends Element {
         super.onRender(renderState, frameBuffer);
         RenderState.RenderResources renderResources = renderState.res;
 
-        // todo: convert to smali
-        if (this.loadedShader == null || this.reloadShader ){
+        if (this.loadedShader == null || this.reloadShader) {
             this.reloadShader = false;
             this.loadedShader = renderResources.safeDisposeShader(this.loadedShader);
             this.loadedShader = renderResources.loadShaderFromString(this.shaderVert, this.shaderFrag);
+            tlog.d("shaderReload");
         }
+        VShaderProgram vShaderProgram = this.loadedShader;
         renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, Vec2f.zero(), Vec2f.one(), new RenderPassData(getBlendMode(), texture, this.loadedShader != null ? renderResources.createCustomShaderBinder(this.loadedShader) : null, this.shaderOnBindAction));
     }
 

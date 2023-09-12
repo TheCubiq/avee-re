@@ -66,7 +66,7 @@
     .line 15
     sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNames:[Ljava/lang/String;
 
-    const/16 v14, 0xd
+    const/16 v14, 0xe
     
     new-array v0, v14, [Ljava/lang/String;
 
@@ -104,6 +104,10 @@
 
     const-string v1, "DummyElement"
     const/16 v15, 0xc
+    aput-object v1, v0, v15
+
+    const-string v1, "ColorCorrection"
+    const/16 v15, 0xd
     aput-object v1, v0, v15
 
     .line 29
@@ -305,6 +309,19 @@
 
     goto :goto_0
 
+    :sswitch_d
+    const-string v0, "ColorCorrection"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/16 p1, 0xd
+
+    goto :goto_0
+
     :sswitch_b
     const-string v0, "AudioProvider"
 
@@ -439,6 +456,13 @@
     invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;-><init>()V
 
     return-object p0
+    
+    :pswitch_d
+    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;
+
+    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;-><init>()V
+
+    return-object p0
 
     :sswitch_data_0
     .sparse-switch
@@ -455,6 +479,7 @@
         0x5264d9c1 -> :sswitch_1
         0x5754e14e -> :sswitch_0
         0x55a7f954 -> :sswitch_c
+        0x72704301 -> :sswitch_d
     .end sparse-switch
 
     :pswitch_data_0
@@ -472,6 +497,7 @@
         :pswitch_1
         :pswitch_0
         :pswitch_c
+        :pswitch_d
     .end packed-switch
 .end method
 
@@ -607,6 +633,17 @@
 
     .line 125
     :cond_d
+    
+    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;
+
+    if-eqz v0, :cond_e
+
+    const-string p0, "ColorCorrection"
+
+    return-object p0
+
+    .line 125
+    :cond_e
 
     instance-of p0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/MirrorEffectElement;
 
