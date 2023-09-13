@@ -23,10 +23,10 @@
 
 # public HashMap<String, MVariableFloat> u_values
 
-.field public u_values:Ljava/util/HashMap;
+.field public u_values:Ljava/util/LinkedHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashMap",
+            "Ljava/util/LinkedHashMap",
             "<",
             "Ljava/lang/String;",
             "Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;",
@@ -35,12 +35,13 @@
     .end annotation
 .end field
 
+
 # public HashMap<String, float[]> valueProperties
 
-.field public valueProperties:Ljava/util/HashMap;
+.field public valueProperties:Ljava/util/LinkedHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashMap",
+            "Ljava/util/LinkedHashMap",
             "<",
             "Ljava/lang/String;",
             "[F",
@@ -112,14 +113,14 @@
     invoke-direct {p0, v0, v1, v1}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;-><init>(IFF)V
 
     
-    new-instance v2, Ljava/util/HashMap;
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/HashMap;
+    new-instance v2, Ljava/util/LinkedHashMap;
+    invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
     
-    new-instance v2, Ljava/util/HashMap;
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+    new-instance v2, Ljava/util/LinkedHashMap;
+    invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/LinkedHashMap;
 
 
     # init u_values as new HashMap<String, MVariableFloat>()
@@ -430,9 +431,9 @@
 
 
 
-    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
@@ -456,7 +457,7 @@
 
 
     .line 130
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3 # u_values.get(propertyName)
 
@@ -466,7 +467,7 @@
     
     move-result-object v3 # variableFloat
 
-    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -697,12 +698,12 @@
 
 
 
-    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/LinkedHashMap;
 
-    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
     # keyset
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
     move-result-object v1
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
     move-result-object v1
@@ -746,7 +747,7 @@
 
     # Get the float array 
 
-    invoke-virtual {v2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4 # float[]
 
@@ -760,7 +761,7 @@
 
     const-string v7, "variables"
 
-    invoke-virtual {v0, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -1061,10 +1062,10 @@
 
     # u_values.put(propertyName, variableFloat);
 
-    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
     
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
 
     # float[] properties = {defaultValue, minValue, maxValue};
@@ -1081,9 +1082,9 @@
 
     # valueProperties.put(propertyName, properties);
 
-    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     
     return-void

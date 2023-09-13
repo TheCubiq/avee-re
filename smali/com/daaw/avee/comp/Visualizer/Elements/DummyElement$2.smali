@@ -130,9 +130,9 @@
     #     vShaderProgram.setUniformf(uniformName, value);
     # }
 
-    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/HashMap;
+    iget-object v3, v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
     move-result-object v4
 
@@ -161,7 +161,7 @@
 
     move-result-object v6 # uniformName
 
-    invoke-virtual {v3, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
