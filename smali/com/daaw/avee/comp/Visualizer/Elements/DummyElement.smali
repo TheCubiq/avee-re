@@ -38,10 +38,10 @@
 
 # public HashMap<String, float[]> valueProperties
 
-.field public valueProperties:Ljava/util/LinkedHashMap;
+.field public valueProperties:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/LinkedHashMap",
+            "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
             "[F",
@@ -118,9 +118,9 @@
     iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
     
-    new-instance v2, Ljava/util/LinkedHashMap;
-    invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
-    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/LinkedHashMap;
+    new-instance v2, Ljava/util/HashMap;
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
 
 
     # init u_values as new HashMap<String, MVariableFloat>()
@@ -698,7 +698,7 @@
 
 
 
-    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/LinkedHashMap;
+    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
 
     iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
 
@@ -747,7 +747,7 @@
 
     # Get the float array 
 
-    invoke-virtual {v2, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4 # float[]
 
@@ -1082,9 +1082,9 @@
 
     # valueProperties.put(propertyName, properties);
 
-    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
 
-    invoke-virtual {v1, p1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     
     return-void
