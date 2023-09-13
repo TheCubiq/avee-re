@@ -128,3 +128,24 @@
 
     return-void
 .end method
+
+.method public initCustomValues()V
+
+    .locals 5
+
+    # addValueWithProperties("value1", 0.0f, -1.0f, 1.0f);
+
+    const-string v0, "colorIntensity"
+    const/4 v1, 0x0
+    const/high16 v2, 0xbf800000    # -1.0f
+    const/high16 v3, 0x3f800000    # 1.0f
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+
+    const-string v0, "testVar2"
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+
+    const-string v0, "testVar3"
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+    
+    return-void
+.end method

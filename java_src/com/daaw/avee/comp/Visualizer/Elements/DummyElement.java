@@ -4,6 +4,9 @@ import android.content.res.Resources;
 import android.graphics.RectF;
 import android.opengl.GLES20;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.AOSPutils.UtilsFileSys;
 import com.daaw.avee.PlayerCore;
 import com.daaw.avee.R;
@@ -36,15 +39,13 @@ public class DummyElement extends Element {
     private VShaderProgram loadedShader;
     private boolean reloadShader;
     public String shaderFrag;
-    private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
     public String shaderVert;
+    private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
     ElementImageLoader targetImageLoader;
-    public MVariableFloat u_value1;
-    public MVariableFloat u_value2;
-    public MVariableFloat u_value3;
-    public MVariableFloat u_value4;
-    public MVariableFloat u_value5;
-    public MVariableFloat u_value6;
+
+    public Map<String, MVariableFloat> u_values = new HashMap<>();
+    public Map<String, float[]> valueProperties = new HashMap<>();
+
     public final VMatrix vpMatTmp;
 
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
@@ -58,6 +59,20 @@ public class DummyElement extends Element {
         this.shaderFrag = UtilsFileSys.readResource(resources, R.raw.buffer_fisheye_frag);
     }
 
+    public void initCustomValues() {
+        addValueWithProperties("value1", 0.0f, -1.0f, 1.0f);
+        addValueWithProperties("value2", 0.0f, -1.0f, 1.0f);
+    }
+
+    private void addValueWithProperties(String propertyName, float defaultValue, float minValue, float maxValue) {
+        MVariableFloat variableFloat = MVariableFloat.CreateConstantFloat(defaultValue);
+
+        u_values.put(propertyName, variableFloat);
+
+        float[] properties = {defaultValue, minValue, maxValue};
+        valueProperties.put(propertyName, properties);
+    }
+
     public boolean isShaderEditable() {
         return true;
     }
@@ -68,13 +83,7 @@ public class DummyElement extends Element {
 
         initCustomShader();
 
-        this.u_value1 = MVariableFloat.CreateConstantFloat(5.4f);
-        this.u_value2 = MVariableFloat.CreateConstantFloat(2.0f);
-        MVariableFloat CreateConstantFloat = MVariableFloat.CreateConstantFloat(0.0f);
-        this.u_value3 = CreateConstantFloat;
-        this.u_value4 = CreateConstantFloat;
-        this.u_value5 = CreateConstantFloat;
-        this.u_value6 = CreateConstantFloat;
+        initCustomValues();
         this.shaderOnBindAction = new Action3<RenderState, VShaderProgram, RenderPassData>() { // from class: com.daaw.avee.comp.Visualizer.Elements.DummyElement.2
             @Override // com.daaw.avee.Common.Action3
             public void onInvoke(RenderState renderState, VShaderProgram vShaderProgram, RenderPassData renderPassData) {
@@ -82,12 +91,13 @@ public class DummyElement extends Element {
                 // vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(renderState.getRes().getMeter()));´
 
                 Meter meter = renderState.getRes().getMeter();
-                vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(meter));
-                vShaderProgram.setUniformf("u_value2", DummyElement.this.u_value2.getValueAsFloat(meter));
-                vShaderProgram.setUniformf("u_value3", DummyElement.this.u_value3.getValueAsFloat(meter));
-                vShaderProgram.setUniformf("u_value4", DummyElement.this.u_value4.getValueAsFloat(meter));
-                vShaderProgram.setUniformf("u_value5", DummyElement.this.u_value5.getValueAsFloat(meter));
-                vShaderProgram.setUniformf("u_value6", DummyElement.this.u_value6.getValueAsFloat(meter));
+                // vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(meter));
+
+                for (String propertyName : DummyElement.this.u_values.keySet()) {
+                    String uniformName = "u_" + propertyName;
+                    float value = u_values.get(propertyName).getValueAsFloat(meter);
+                    vShaderProgram.setUniformf(uniformName, value);
+                }
 
             }
         };
@@ -118,14 +128,10 @@ public class DummyElement extends Element {
         setTargetImage(customPropertiesList.getPropertyString("TargetImage", "composition:1"));
         this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", this.shaderVert);
         this.shaderFrag = customPropertiesList.getPropertyString("ShaderFrag", this.shaderFrag);
-
-        this.u_value1 = customPropertiesList.getPropertyMVariableFloat("value1", this.u_value1);
-        this.u_value2 = customPropertiesList.getPropertyMVariableFloat("value2", this.u_value2);
-        this.u_value3 = customPropertiesList.getPropertyMVariableFloat("value3", this.u_value3);
-        this.u_value4 = customPropertiesList.getPropertyMVariableFloat("value4", this.u_value4);
-        this.u_value5 = customPropertiesList.getPropertyMVariableFloat("value5", this.u_value5);
-        this.u_value6 = customPropertiesList.getPropertyMVariableFloat("value6", this.u_value6);
-
+        for (String propertyName : u_values.keySet()) {
+            MVariableFloat variableFloat = customPropertiesList.getPropertyMVariableFloat(propertyName, u_values.get(propertyName));
+            u_values.put(propertyName, variableFloat);
+        }
         this.reloadShader = true;
     }
 
@@ -143,12 +149,14 @@ public class DummyElement extends Element {
             customPropertiesList.putPropertyStringAsTxtPr("shaderVertex", this.shaderVert, "shader");
         }
 
-        customPropertiesList.putPropertyMVariableFloat("value1", this.u_value1, "variables", -1.0f, 1.0f);
-        customPropertiesList.putPropertyMVariableFloat("value2", this.u_value2, "variables", -1.0f, 1.0f);
-        customPropertiesList.putPropertyMVariableFloat("value3", this.u_value3, "variables", -1.0f, 1.0f);
-        customPropertiesList.putPropertyMVariableFloat("value4", this.u_value4, "variables", -1.0f, 1.0f);
-        customPropertiesList.putPropertyMVariableFloat("value5", this.u_value5, "variables", -1.0f, 1.0f);
-        customPropertiesList.putPropertyMVariableFloat("value6", this.u_value6, "variables", -1.0f, 1.0f);
+        for (String propertyName : u_values.keySet()) {
+            float[] properties = valueProperties.get(propertyName);
+            // float defaultValue = properties[0];
+            float minValue = properties[1];
+            float maxValue = properties[2];
+    
+            customPropertiesList.putPropertyMVariableFloat(propertyName, u_values.get(propertyName), "variables", minValue, maxValue);
+        }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
