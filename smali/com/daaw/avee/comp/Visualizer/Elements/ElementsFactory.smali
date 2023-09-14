@@ -143,6 +143,10 @@
     const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    const-string v1, "TwirlEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/TwirlEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 17
     return-void
 .end method
