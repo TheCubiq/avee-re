@@ -724,25 +724,25 @@
 
     # t.log("addValueWithProperties: " + propertyName);
 
-    # init string builder
+    # # init string builder
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    # new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    # invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    # append string
+    # # append string
 
-    const-string v3, "addValueWithProperties: "
+    # const-string v3, "addValueWithProperties: "
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    # invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    # invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    # invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    # move-result-object v4
 
-    invoke-static {v4}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
+    # invoke-static {v4}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
 
 
     # Get the float array 
