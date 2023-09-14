@@ -64,7 +64,7 @@ public class DummyElement extends Element {
         addValueWithProperties("value2", 0.0f, -1.0f, 1.0f);
     }
 
-    private void addValueWithProperties(String propertyName, float defaultValue, float minValue, float maxValue) {
+    public void addValueWithProperties(String propertyName, float defaultValue, float minValue, float maxValue) {
         MVariableFloat variableFloat = MVariableFloat.CreateConstantFloat(defaultValue);
 
         u_values.put(propertyName, variableFloat);
