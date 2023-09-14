@@ -4,662 +4,648 @@
 
 
 # static fields
-.field public static final typeNameNone:Ljava/lang/String; = "None"
+.field public static typeNameNone:Ljava/lang/String; = "None"
 
-.field public static final typeNames:[Ljava/lang/String;
+# private static final Map<String, Class<? extends Element>> elementTypes = new LinkedHashMap<>();
+.field private static elementTypes:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class",
+            "<+",
+            "Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;",
+            ">;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final typeNamesAddable:[Ljava/lang/String;
+
+# .field public static final addableTypeNamesArray:[Ljava/lang/String;
 
 
-# direct methods
+# static {
+#         elementTypes.put(typeNameNone, null);
+# }
+
 .method static constructor <clinit>()V
-    .locals 20
+    .locals 3
 
-    const/16 v0, 0xb
+    # getAddableTypeNames().toArray(new String[0]);
 
-    new-array v0, v0, [Ljava/lang/String;
+    # const/4 v0, 0x0
+    # new-array v0,v0, [Ljava/lang/String;
+    
+    # invoke-static {}, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->getAddableTypeNames()Ljava/util/Set;
+    # move-result-object v1
+
+    # invoke-interface {v1, v0}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    # move-result-object v0
+
+    # check-cast v0, [Ljava/lang/String;
+
+    # # Store the resulting array in the addableTypeNamesArray field
+    # sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->addableTypeNamesArray:[Ljava/lang/String;
+
+
+    .line 18
+    new-instance v0, Ljava/util/LinkedHashMap;
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    # invoke-static {v0}, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->access$002(Ljava/util/Map;)Ljava/util/Map;´
+    sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->elementTypes:Ljava/util/Map;
+
+    .line 19
+    sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->elementTypes:Ljava/util/Map;
+
+    sget-object v1, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNameNone:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    # elementTypes.put("Root", RootElement.class);
+    # elementTypes.put("StatText", FpsTextElement.class);
+    # elementTypes.put("AppLogo", LogoMark2.class);
+    # elementTypes.put("AudioProvider", AudioDataProviderElement.class);
+    # elementTypes.put("Text", TextElement.class);
+    # elementTypes.put("Bars", SegmentElement.class);
+    # elementTypes.put("Particles", ParticlesElement.class);
+    # elementTypes.put("BlurEffect", BlurStackEffectElement.class);
+    # elementTypes.put("Image", ImageElement.class);
+    # elementTypes.put("RgbSplitEffect", RgbSplitEffectElement.class);
+    # elementTypes.put("MotionBlurEffect", MotionBlurEffectElement.class);
+    # elementTypes.put("DummyElement", DummyElement.class);
+    # elementTypes.put("ColorCorrection", ColorCorrectionElement.class);
+    # elementTypes.put("MirrorEffect", MirrorEffectElement.class);
 
     const-string v1, "Root"
-    const/4 v2, 0x0
-    aput-object v1, v0, v2
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/RootElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "AppLogo"
-    const/4 v3, 0x1
-    aput-object v1, v0, v3
+    # composition
+
+    const-string v1, "Composition"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/Composition;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "Text"
-    const/4 v4, 0x2
-    aput-object v1, v0, v4
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/TextElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v5, "Bars"
-    const/4 v6, 0x3
-    aput-object v5, v0, v6
+    const-string v1, "Bars"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/SegmentElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v7, "Particles"
-    const/4 v8, 0x4
-    aput-object v7, v0, v8
+    const-string v1, "Particles"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/ParticlesElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v9, "Image"
-    const/4 v10, 0x5
-    aput-object v9, v0, v10
+    const-string v1, "Image"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/ImageElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v11, "AudioProvider"
-    const/4 v12, 0x6
-    aput-object v11, v0, v12
+    const-string v1, "AudioProvider"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/AudioDataProviderElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v13, "BlurEffect"
-    const/4 v14, 0x7
-    aput-object v13, v0, v14
+    const-string v1, "BlurEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/BlurStackEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v15, "RgbSplitEffect"
-    const/16 v16, 0x8
-    aput-object v15, v0, v16
+    const-string v1, "RgbSplitEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v17, "MotionBlurEffect"
-    const/16 v18, 0x9
-    aput-object v17, v0, v18
+    const-string v1, "MotionBlurEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/MotionBlurEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v19, "MirrorEffect"
-    const/16 v14, 0xa
-    aput-object v19, v0, v14
-
-    .line 15
-    sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNames:[Ljava/lang/String;
-
-    const/16 v14, 0xe
-    
-    new-array v0, v14, [Ljava/lang/String;
-
-    const-string v14, "Composition"
-
-    aput-object v14, v0, v2
-
-    aput-object v1, v0, v3
-
-    aput-object v5, v0, v4
-
-    aput-object v7, v0, v6
-
-    aput-object v9, v0, v8
-
-    aput-object v11, v0, v10
-
-    aput-object v13, v0, v12
-
-    const/4 v1, 0x7
-
-    aput-object v15, v0, v1
-
-    aput-object v17, v0, v16
-
-    aput-object v19, v0, v18
+    const-string v1, "MirrorEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/MirrorEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "AppLogo"
-    const/16 v14, 0xa
-    aput-object v1, v0, v14
-
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/LogoMark2;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    
     const-string v1, "StatText"
-    const/16 v15, 0xb
-    aput-object v1, v0, v15
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/FpsTextElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "DummyElement"
-    const/16 v15, 0xc
-    aput-object v1, v0, v15
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "ColorCorrection"
-    const/16 v15, 0xd
-    aput-object v1, v0, v15
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
-    sput-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNamesAddable:[Ljava/lang/String;
-
+    .line 17
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
-
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# public static Element create(String typeName, String str2, Element element) {
+#     Class<? extends Element> elementType = elementTypes.get(typeName);
+#     if (elementType == null) {
+#         tlog.w("Unknown typeName: " + typeName);
+#         return element;
+#     }
+#     if (elementType.isInstance(element)) {
+#         return element;
+#     }
+#     try {
+#         return elementType.getDeclaredConstructor().newInstance();
+#     } catch (Exception e) {
+#         tlog.w("Failed to create element for typeName: " + typeName);
+#         return element;
+#     }
+# }
 
 .method public static create(Ljava/lang/String;Ljava/lang/String;Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;)Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;
-    .locals 1
 
-    .line 45
-    invoke-static {p2}, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->getTypeName(Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;)Ljava/lang/String;
+    .locals 9
 
-    move-result-object p1
+    .line 23
+    sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->elementTypes:Ljava/util/Map;
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    if-eqz p1, :cond_0
+    check-cast v0, Ljava/lang/Class;
 
-    return-object p2
+
+    # # elementType == null
+    # if-eqz v0, :cond_0
+
+    #     # tlog.w("Unknown typeName: " + typeName);
+    #     # init stringbuilder
+
+    #     new-instance v1, Ljava/lang/StringBuilder;
+    #     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    #     const-string v2, "Unknown typeName: "
+
+    #     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    #     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    #     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    #     move-result-object v1
+
+    #     invoke-static {v1}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
+
+    #     return-object p2
+
+    # :cond_0
+
+
+    # invoke-virtual {v0, p2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    # move-result v1
+
+    # # elementType.isInstance(element)
+
+    # if-nez v1, :cond_1
+    #     return-object p2
+    # :cond_1
+
+    # # try {
+
+    # :try_start_1
+        
+    #     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredConstructor()Ljava/lang/reflect/Constructor;
+
+    #     move-result-object v1
+
+    #     const/4 v2, 0x0
+
+    #     new-array v2, v2, [Ljava/lang/Object;
+
+    #     invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    #     move-result-object v1
+
+    #     check-cast v1, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;
+
+    #     return-object v1
+
+    # :try_end_1
+    # .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    # :catch_0
+    # move-exception v1
+
+    # # tlog.w("Failed to create element for typeName: " + typeName);
+
+    # new-instance v2, Ljava/lang/StringBuilder;
+
+    # invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    # const-string v3, "Failed to create element for typeName: "
+
+    # invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    # invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    # invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    # move-result-object v2
+
+    # invoke-static {v2}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V´
+
+
+
+
+
+
+
+
+
+    # use cleaner method:
+
+    # if (elementType != null && !elementType.isInstance(element)) {
+    #     try {
+    #         element = elementType.getDeclaredConstructor().newInstance();
+    #     } catch (Exception e) {
+    #         tlog.w("Failed to create element for typeName: " + typeName);
+    #     }
+    # } else if (elementType == null) {
+    #     tlog.w("Unknown typeName: " + typeName);
+    # }
+
+    # return element;
+
+    if-nez v0, :cond_0
+
+    # tlog.w("Unknown typeName: " + typeName);
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unknown typeName: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
 
     :cond_0
-    const/4 p1, -0x1
+    
+    invoke-virtual {v0, p2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
-    .line 47
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    move-result v1
 
-    move-result v0
+    if-nez v1, :cond_1
 
-    sparse-switch v0, :sswitch_data_0
+    :try_start_1
+        
+        # invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredConstructor()Ljava/lang/reflect/Constructor;´
 
-    goto/16 :goto_0
+        const/4 v1, 0x0
 
-    :sswitch_0
-    const-string v0, "MotionBlurEffect"
+        new-array v2, v1, [Ljava/lang/Class;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+        invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    move-result v0
+        move-result-object v1
 
-    if-eqz v0, :cond_1
+        const/4 v2, 0x0
 
-    const/16 p1, 0xa
+        new-array v2, v2, [Ljava/lang/Object;
 
-    goto/16 :goto_0
+        invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    :sswitch_1
-    const-string v0, "StatText"
+        move-result-object v1
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+        check-cast v1, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;
 
-    move-result v0
+        return-object v1
 
-    if-eqz v0, :cond_1
+    :try_end_1
 
-    const/4 p1, 0x1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto/16 :goto_0
+    :catch_0
 
-    :sswitch_2
-    const-string v0, "MirrorEffect"
+    move-exception v1
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    # tlog.w("Failed to create element for typeName: " + typeName);
 
-    move-result v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/16 p1, 0xb
+    const-string v3, "Failed to create element for typeName: "
 
-    goto :goto_0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :sswitch_3
-    const-string v0, "AppLogo"
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v2
 
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x2
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v0, "Particles"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x6
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string v0, "BlurEffect"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/16 p1, 0x8
-
-    goto :goto_0
-
-    :sswitch_6
-    const-string v0, "Image"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x7
-
-    goto :goto_0
-
-    :sswitch_7
-    const-string v0, "RgbSplitEffect"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/16 p1, 0x9
-
-    goto :goto_0
-
-    :sswitch_8
-    const-string v0, "Text"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x4
-
-    goto :goto_0
-
-    :sswitch_9
-    const-string v0, "None"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :sswitch_a
-    const-string v0, "Bars"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x5
-
-    goto :goto_0
-
-    :sswitch_c
-    const-string v0, "DummyElement"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/16 p1, 0xc
-
-    goto :goto_0
-
-    :sswitch_d
-    const-string v0, "ColorCorrection"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/16 p1, 0xd
-
-    goto :goto_0
-
-    :sswitch_b
-    const-string v0, "AudioProvider"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x3
+    invoke-static {v2}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
 
     :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 79
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "unknown typeName: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
-
-
 
     return-object p2
 
-    .line 76
-    :pswitch_0
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/MirrorEffectElement;
 
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/MirrorEffectElement;-><init>()V
 
-    return-object p0
-
-    .line 74
-    :pswitch_1
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/MotionBlurEffectElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/MotionBlurEffectElement;-><init>()V
-
-    return-object p0
-
-    .line 72
-    :pswitch_2
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;-><init>()V
-
-    return-object p0
-
-    .line 69
-    :pswitch_3
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/BlurStackEffectElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/BlurStackEffectElement;-><init>()V
-
-    return-object p0
-
-    .line 67
-    :pswitch_4
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/ImageElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/ImageElement;-><init>()V
-
-    return-object p0
-
-    .line 65
-    :pswitch_5
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/ParticlesElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/ParticlesElement;-><init>()V
-
-    return-object p0
-
-    .line 63
-    :pswitch_6
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/SegmentElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/SegmentElement;-><init>()V
-
-    return-object p0
-
-    .line 61
-    :pswitch_7
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/TextElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/TextElement;-><init>()V
-
-    return-object p0
-
-    .line 59
-    :pswitch_8
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/AudioDataProviderElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/AudioDataProviderElement;-><init>()V
-
-    return-object p0
-
-    .line 57
-    :pswitch_9
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/LogoMark2;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/LogoMark2;-><init>()V
-
-    return-object p0
-
-    :pswitch_a
-    return-object v0
-
-    :pswitch_b
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/FpsTextElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/FpsTextElement;-><init>()V
-
-    return-object p0
-
-    :pswitch_c
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;-><init>()V
-
-    return-object p0
-    
-    :pswitch_d
-    new-instance p0, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;
-
-    invoke-direct {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;-><init>()V
-
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7e6b0039 -> :sswitch_b
-        0x1f7ae0 -> :sswitch_a
-        0x252358 -> :sswitch_9
-        0x27b94d -> :sswitch_8
-        0x423ae5e -> :sswitch_7
-        0x437b93b -> :sswitch_6
-        0xbc988f8 -> :sswitch_5
-        0xc23828d -> :sswitch_4
-        0x33e2534c -> :sswitch_3
-        0x461e5a50 -> :sswitch_2
-        0x5264d9c1 -> :sswitch_1
-        0x5754e14e -> :sswitch_0
-        0x55a7f954 -> :sswitch_c
-        0x72704301 -> :sswitch_d
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_a
-        :pswitch_b
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_c
-        :pswitch_d
-    .end packed-switch
 .end method
 
-.method public static getTypeName(Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;)Ljava/lang/String;
-    .locals 1
 
+# public static String getTypeName(Element element) {
+#     if (element == null) {
+#         return typeNameNone;
+#     }
+#     for (Map.Entry<String, Class<? extends Element>> entry : elementTypes.entrySet()) {
+#         if (entry.getValue() != null && entry.getValue().isInstance(element)) {
+#             return entry.getKey();
+#         }
+#     }
+#     tlog.w("Unknown instance type");
+#     return "unk";
+# }
+
+# convert once again to smali, without comments 
+
+.method public static getTypeName(Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;)Ljava/lang/String;
+
+    .locals 5
+
+    .line 28
     if-nez p0, :cond_0
 
-    const-string p0, "None"
+    sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNameNone:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 
-    .line 103
     :cond_0
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RootElement;
 
-    if-eqz v0, :cond_1
+    sget-object v0, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->elementTypes:Ljava/util/Map;
 
-    const-string p0, "Root"
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    return-object p0
+    move-result-object v0
 
-    .line 105
-    :cond_1
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/FpsTextElement;
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    const-string p0, "StatText"
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
+    move-result v1
 
-    .line 107
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Class;
+
+    if-eqz v2, :goto_0
+
+    invoke-virtual {v2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :goto_0
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+
     :cond_2
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/LogoMark2;
 
-    if-eqz v0, :cond_3
+    const-string v0, "Unknown instance type"
 
-    const-string p0, "AppLogo"
+    invoke-static {v0}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
 
-    return-object p0
+    const-string v0, "unk"
 
-    .line 109
-    :cond_3
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/AudioDataProviderElement;
+    return-object v0
 
-    if-eqz v0, :cond_4
+.end method
 
-    const-string p0, "AudioProvider"
 
-    return-object p0
+# public static Set<String> getAddableTypeNames() {
+#     Set<String> addableTypeNames = new LinkedHashSet<>();
+#     for (String typeName : elementTypes.keySet()) {
+#         if (!typeName.equals(typeNameNone) && isTypeAddable(typeName)) {
+#             addableTypeNames.add(typeName);
+#         }
+#     }
+#     return addableTypeNames;
+# }
 
-    .line 111
-    :cond_4
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/TextElement;
 
-    if-eqz v0, :cond_5
+.method public static getAddableTypeNames()Ljava/util/Set;
 
-    const-string p0, "Text"
+    .locals 8
 
-    return-object p0
+    .line 34
+    new-instance v0, Ljava/util/LinkedHashSet;
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 113
-    :cond_5
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/SegmentElement;
+    .line 35
+    sget-object v1, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->elementTypes:Ljava/util/Map;
 
-    if-eqz v0, :cond_6
+    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
-    const-string p0, "Bars"
+    move-result-object v1
 
-    return-object p0
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    .line 115
-    :cond_6
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/ParticlesElement;
+    move-result-object v1
 
-    if-eqz v0, :cond_7
+    :goto_0
 
-    const-string p0, "Particles"
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
+    move-result v2
 
-    .line 117
-    :cond_7
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/BlurEffectElement;
+    if-eqz v2, :cond_1
 
-    if-eqz v0, :cond_8
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string p0, "BlurEffect"
+    move-result-object v2
 
-    return-object p0
+    check-cast v2, Ljava/lang/String;
 
-    .line 119
-    :cond_8
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/ImageElement;
+    sget-object v3, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNameNone:Ljava/lang/String;
 
-    if-eqz v0, :cond_9
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string p0, "Image"
+    move-result v3
 
-    return-object p0
+    if-nez v3, :goto_0
 
-    .line 121
-    :cond_9
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
+    invoke-static {v2}, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->isTypeAddable(Ljava/lang/String;)Z
 
-    if-eqz v0, :cond_a
+    move-result v3
 
-    const-string p0, "RgbSplitEffect"
+    if-eqz v3, :goto_0
 
-    return-object p0
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 123
-    :cond_a
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/MotionBlurEffectElement;
+    goto :goto_0
 
-    if-eqz v0, :cond_b
+    :cond_1
 
-    const-string p0, "MotionBlurEffect"
+    return-object v0
 
-    return-object p0
 
-    .line 125
-    :cond_b
+.end method
 
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;
 
-    if-eqz v0, :cond_d
+# #  private static boolean isTypeAddable(String typeName) {
+# #     String[] notAllowedTypes = {"Composition", "StatText", "DummyElement", "ColorCorrection"};
+# #     for (String notAllowedType : notAllowedTypes) {
+# #         if (typeName.equals(notAllowedType)) {
+# #             return false;
+# #         }
+# #     }
+# #     return true;
+# # }
 
-    const-string p0, "DummyElement"
+.method private static isTypeAddable(Ljava/lang/String;)Z
 
-    return-object p0
+    .locals 8
 
-    .line 125
-    :cond_d
+    .line 40
     
-    instance-of v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement;
 
-    if-eqz v0, :cond_e
+    const/16 v0, 0x1
+    new-array v0, v0, [Ljava/lang/String;
 
-    const-string p0, "ColorCorrection"
+    # const/4 v1, 0x0
+    # const-string v2, "Composition"
+    # aput-object v2, v0, v1
 
-    return-object p0
+    # const/4 v1, 0x1
+    # const-string v2, "StatText"
+    # aput-object v2, v0, v1
 
-    .line 125
-    :cond_e
+    # const/4 v1, 0x2
+    # const-string v2, "DummyElement"
+    # aput-object v2, v0, v1
 
-    instance-of p0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/MirrorEffectElement;
+    # const/4 v1, 0x3
+    # const-string v2, "ColorCorrection"
+    # aput-object v2, v0, v1
 
-    if-eqz p0, :cond_c
+    const/4 v1, 0x0
+    const-string v2, "Root"
+    aput-object v2, v0, v1
 
-    const-string p0, "MirrorEffect"
 
-    return-object p0
+    # for (String notAllowedType : notAllowedTypes) {
+    #     if (typeName.equals(notAllowedType)) {
+    #         return false;
+    #     }
+    # }
 
-    :cond_c
-    const-string p0, "unknown instance type"
 
-    .line 128
-    invoke-static {p0}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
+    move-object v1, v0
 
-    const-string p0, "unk"
+    array-length v2, v1
 
-    return-object p0
+    move v3, v2
+
+    const/4 v2, 0x0
+
+    move v4, v2
+
+    :goto_0
+
+    if-ge v4, v3, :cond_1
+
+    aget-object v2, v1, v4
+
+    move-object v5, v2
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {p0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+
+    add-int/lit8 v2, v4, 0x1
+
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_1
+
+
+
+
+    const/4 v0, 0x1
+    return v0
+
+.end method
+
+
+# getAddableTypeNamesArray()  (string[])
+
+.method public static getAddableTypeNamesArray()[Ljava/lang/String;
+
+    .locals 3
+
+    .line 46
+
+    invoke-static {}, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->getAddableTypeNames()Ljava/util/Set;
+
+    move-result-object v0
+
+    # new String[0]
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    # invoke-interface {v0}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    return-object v0
+
 .end method

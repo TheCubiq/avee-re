@@ -117,7 +117,14 @@
 
     iget-object v2, p0, Lcom/daaw/avee/Design/VisualizerDesign$38$1$1;->val$readCustomization:Lcom/daaw/avee/comp/Visualizer/CustomScene;
 
-    sget-object v3, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->typeNamesAddable:[Ljava/lang/String;
+    # sget-object v3, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->addableTypeNamesArray:[Ljava/lang/String;´
+
+    # ElementsFactory.getAddableTypeNamesArray() instead :
+
+    invoke-static {}, Lcom/daaw/avee/comp/Visualizer/Elements/ElementsFactory;->getAddableTypeNamesArray()[Ljava/lang/String;
+
+    move-result-object v3
+
 
     invoke-static {v0, v1, v2, v3}, Lcom/daaw/avee/comp/VisualizerCutomization/CustomizeVisDialog;->createAndShowCustomizeVisDialog(Lcom/daaw/avee/ContextData;Ljava/lang/Integer;Lcom/daaw/avee/comp/Visualizer/CustomScene;[Ljava/lang/String;)Lcom/daaw/avee/comp/VisualizerCutomization/CustomizeVisDialog;
 
