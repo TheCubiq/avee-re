@@ -6,7 +6,6 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="cubiq" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
@@ -15,11 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apktool.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apktool.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_src/com/daaw/avee/comp/Visualizer/Elements/Base/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/java_src/com/daaw/avee/comp/Visualizer/Elements/Base/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement$2.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement$2.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/avee_1.2.101.code-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/avee_1.2.101.code-workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/ColorCorrectionElement.smali" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +164,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali</url>
-          <line>521</line>
+          <line>635</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="java-line">

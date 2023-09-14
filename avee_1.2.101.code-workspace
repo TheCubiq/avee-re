@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "res/raw"
+		},
+		{
+			"path": "../../../../../../Downloads/vizzyshaders"
 		}
 	],
 	"settings": {
