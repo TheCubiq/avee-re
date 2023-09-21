@@ -88,6 +88,8 @@
 
 .field public static final totalTimeBackward:Ljava/lang/String; = "TotalTimeBackward"
 
+.field public static final TotalTimeAndBack:Ljava/lang/String; = "TotalTimeAndBack"
+
 .field public static final totalTimeWhenPlaying:Ljava/lang/String; = "TotalTimeWhenPlaying"
 
 .field public static final trackPosition:Ljava/lang/String; = "TrackPosition"
@@ -97,7 +99,7 @@
 .method static constructor <clinit>()V
     .locals 22
 
-    const/16 v0, 0xe
+    const/16 v0, 0xf
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -185,10 +187,23 @@
 
     aput-object v21, v0, v16
 
+    # TotalTimeAndBack
+
+    const/16 v16, 0xe
+
+    const-string v21, "TotalTimeAndBack"
+
+    aput-object v21, v0, v16
+
+
     .line 86
     sput-object v0, Lcom/daaw/avee/comp/Common/MeasureDefs;->measures1dMVar:[Ljava/lang/String;
 
+    const/16 v15, 0xd
+
     new-array v0, v15, [Ljava/lang/String;
+
+    const/16 v15, 0xc
 
     const-string v16, "Constant"
 
@@ -226,10 +241,15 @@
 
     aput-object v16, v0, v20
 
+    const-string v16, "TotalTimeAndBack"
+
+    aput-object v16, v0, v15
+
+
     .line 103
     sput-object v0, Lcom/daaw/avee/comp/Common/MeasureDefs;->measures2dMVar:[Ljava/lang/String;
 
-    const/16 v0, 0xd
+    const/16 v0, 0xe
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -272,6 +292,14 @@
     const-string v16, "BeatTriggerAnim"
 
     aput-object v16, v0, v15
+
+    const/16 v15, 0xd
+
+    const-string v16, "TotalTimeAndBack"
+
+    aput-object v16, v0, v15
+
+    const/16 v15, 0xc
 
     .line 118
     sput-object v0, Lcom/daaw/avee/comp/Common/MeasureDefs;->measures1d:[Ljava/lang/String;
