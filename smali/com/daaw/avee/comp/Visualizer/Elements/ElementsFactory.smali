@@ -284,33 +284,18 @@
 
     # return element;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    # tlog.w("Unknown typeName: " + typeName);
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Unknown typeName: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
-
-    :cond_0
     
+    # if-eqz p2, :cond_1
+
     invoke-virtual {v0, p2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
+
 
     :try_start_1
         
@@ -363,6 +348,28 @@
     invoke-static {v2}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
 
     :cond_1
+
+    :cond_0
+
+    
+    # tlog.w("Unknown typeName: " + typeName);
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unknown typeName: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/daaw/avee/Common/tlog;->d(Ljava/lang/String;)V
+    return-object p2
 
     return-object p2
 
