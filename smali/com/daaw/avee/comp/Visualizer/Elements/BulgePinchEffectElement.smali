@@ -8,7 +8,7 @@
 
 # .field private static textBlendMode:I = 0x4
 
-.field public static final typeName:Ljava/lang/String; = "bulgePinchEffect"
+.field public static final typeName:Ljava/lang/String; = "BulgePinchEffect"
 
 
 # direct methods
