@@ -47,7 +47,7 @@
 
 # virtual methods
 .method public onInvoke(Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState;Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;Lcom/daaw/avee/comp/Visualizer/Graphic/RenderPassData;)V
-    .locals 5
+    .locals 12
 
     .line 374
     iget-object p3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
@@ -127,31 +127,25 @@
 
     move-result-object p1
 
-    aget p1, p1, v0
-
-    iget-object p3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
-
-    invoke-static {p3}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->access$300(Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;)[F
-
-    move-result-object p3
+    aget v7, p1, v0
 
     const/4 v1, 0x1
 
-    aget p3, p3, v1
-
-    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
-
-    invoke-static {v2}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->access$300(Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;)[F
-
-    move-result-object v2
+    aget v8, p1, v1
 
     const/4 v3, 0x2
 
-    aget v2, v2, v3
+    aget v9, p1, v3
 
-    const-string v4, "splitColor0"
+    const v11, 0x3 
 
-    invoke-virtual {p2, v4, p1, p3, v2}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFF)V
+    aget v10, p1, v11
+
+
+    move-object v5, p2
+    const-string v6, "splitColor0"
+
+    invoke-virtual/range {v5 .. v10}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFFF)V
 
     .line 389
     iget-object p1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
@@ -160,27 +154,29 @@
 
     move-result-object p1
 
-    aget p1, p1, v0
+    aget v7, p1, v0
 
-    iget-object p3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
+    const/4 v1, 0x1
 
-    invoke-static {p3}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->access$400(Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;)[F
+    aget v8, p1, v1
 
-    move-result-object p3
+    const/4 v3, 0x2
 
-    aget p3, p3, v1
+    aget v9, p1, v3
 
-    iget-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
+    const v11, 0x3 
 
-    invoke-static {v2}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->access$400(Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;)[F
+    aget v10, p1, v11
 
-    move-result-object v2
 
-    aget v2, v2, v3
+    move-object v5, p2
 
-    const-string v4, "splitColor1"
+    const-string v6, "splitColor1"
 
-    invoke-virtual {p2, v4, p1, p3, v2}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFF)V
+    invoke-virtual/range {v5 .. v10}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFFF)V
+
+
+    # invoke-virtual {p2, v4, p1, p3, v2}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFF)V
 
     .line 390
     iget-object p1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
@@ -189,27 +185,30 @@
 
     move-result-object p1
 
-    aget p1, p1, v0
+    aget v7, p1, v0
 
-    iget-object p3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
+    const/4 v1, 0x1
 
-    invoke-static {p3}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->access$500(Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;)[F
+    aget v8, p1, v1
 
-    move-result-object p3
+    const/4 v3, 0x2
 
-    aget p3, p3, v1
+    aget v9, p1, v3
 
-    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6;->this$0:Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;
+    const v11, 0x3 
 
-    invoke-static {v0}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->access$500(Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;)[F
+    aget v10, p1, v11
 
-    move-result-object v0
 
-    aget v0, v0, v3
+    move-object v5, p2
 
-    const-string v1, "splitColor2"
 
-    invoke-virtual {p2, v1, p1, p3, v0}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFF)V
+    const-string v6, "splitColor2"
+
+    invoke-virtual/range {v5 .. v10}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFFF)V
+
+
+    # invoke-virtual {p2, v1, p1, p3, v0}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->setUniformf(Ljava/lang/String;FFF)V
 
     return-void
 .end method

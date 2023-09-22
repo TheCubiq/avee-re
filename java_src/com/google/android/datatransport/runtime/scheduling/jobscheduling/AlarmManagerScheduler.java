@@ -43,22 +43,22 @@ public class AlarmManagerScheduler implements WorkScheduler {
 
     @Override // com.google.android.datatransport.runtime.scheduling.jobscheduling.WorkScheduler
     public void schedule(TransportContext transportContext, int i) {
-        Uri.Builder builder = new Uri.Builder();
-        builder.appendQueryParameter(BACKEND_NAME, transportContext.getBackendName());
-        builder.appendQueryParameter(EVENT_PRIORITY, String.valueOf(PriorityMapping.toInt(transportContext.getPriority())));
-        if (transportContext.getExtras() != null) {
-            builder.appendQueryParameter(EXTRAS, Base64.encodeToString(transportContext.getExtras(), 0));
-        }
-        Intent intent = new Intent(this.context, AlarmManagerSchedulerBroadcastReceiver.class);
-        intent.setData(builder.build());
-        intent.putExtra(ATTEMPT_NUMBER, i);
-        if (isJobServiceOn(intent)) {
-            Logging.d(LOG_TAG, "Upload for context %s is already scheduled. Returning...", transportContext);
-            return;
-        }
-        long nextCallTime = this.eventStore.getNextCallTime(transportContext);
-        long scheduleDelay = this.config.getScheduleDelay(transportContext.getPriority(), nextCallTime, i);
-        Logging.d(LOG_TAG, "Scheduling upload for context %s in %dms(Backend next call timestamp %d). Attempt %d", transportContext, Long.valueOf(scheduleDelay), Long.valueOf(nextCallTime), Integer.valueOf(i));
-        this.alarmManager.set(3, this.clock.getTime() + scheduleDelay, PendingIntent.getBroadcast(this.context, 0, intent, 0));
+        // Uri.Builder builder = new Uri.Builder();
+        // builder.appendQueryParameter(BACKEND_NAME, transportContext.getBackendName());
+        // builder.appendQueryParameter(EVENT_PRIORITY, String.valueOf(PriorityMapping.toInt(transportContext.getPriority())));
+        // if (transportContext.getExtras() != null) {
+        //     builder.appendQueryParameter(EXTRAS, Base64.encodeToString(transportContext.getExtras(), 0));
+        // }
+        // Intent intent = new Intent(this.context, AlarmManagerSchedulerBroadcastReceiver.class);
+        // intent.setData(builder.build());
+        // intent.putExtra(ATTEMPT_NUMBER, i);
+        // if (isJobServiceOn(intent)) {
+        //     Logging.d(LOG_TAG, "Upload for context %s is already scheduled. Returning...", transportContext);
+        //     return;
+        // }
+        // long nextCallTime = this.eventStore.getNextCallTime(transportContext);
+        // long scheduleDelay = this.config.getScheduleDelay(transportContext.getPriority(), nextCallTime, i);
+        // Logging.d(LOG_TAG, "Scheduling upload for context %s in %dms(Backend next call timestamp %d). Attempt %d", transportContext, Long.valueOf(scheduleDelay), Long.valueOf(nextCallTime), Integer.valueOf(i));
+        // this.alarmManager.set(3, this.clock.getTime() + scheduleDelay, PendingIntent.getBroadcast(this.context, 0, intent, 0));
     }
 }

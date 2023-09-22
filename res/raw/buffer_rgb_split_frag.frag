@@ -15,9 +15,9 @@ uniform sampler2D u_texture2;
 
 uniform vec2 dirAmount;
 
-uniform vec3 splitColor0;
-uniform vec3 splitColor1;
-uniform vec3 splitColor2;
+uniform vec4 splitColor0;
+uniform vec4 splitColor1;
+uniform vec4 splitColor2;
 
 void main() {
 
@@ -38,7 +38,9 @@ finalColor.r = (color0.r * splitColor0.r) + (color1.r * splitColor1.r) + (color2
 finalColor.g = (color0.g * splitColor0.g) + (color1.g * splitColor1.g) + (color2.g * splitColor2.g);
 finalColor.b = (color0.b * splitColor0.b) + (color1.b * splitColor1.b) + (color2.b * splitColor2.b);
 
-finalColor.a = (color0.a + color1.a + color2.a) * (1.0 / 3.0);
+float maskmul = 1.0/3.0;
+
+finalColor.a = (color0.a * splitColor0.a + color1.a * splitColor1.a + color2.a * splitColor2.a);
 
 	//color1 = vColor * color1;
 	//color1.a = color1.a * (maskadd + (color2.a * maskmul));

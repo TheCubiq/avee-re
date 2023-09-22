@@ -33,6 +33,7 @@ public abstract class Element {
     private static SegmentRendererLine highlightRender0 = (SegmentRendererLine) new SegmentRendererLine().setColor(-1, -1, -1);
     protected String defaultMeasurePosMeasure = MeasureDefs.Nothing;
     protected String tagName = "";
+    private String elemDesc = "";
     private boolean glResourcesCreated = false;
     private int blendMode = 0;
     private int gradualLoadingIndex = 0;
@@ -372,6 +373,7 @@ public abstract class Element {
     /* JADX INFO: Access modifiers changed from: protected */
     public void onApplyCustomization(CustomPropertiesList customPropertiesList) {
         this.tagName = customPropertiesList.getTagName();
+        this.elemDesc = customPropertiesList.getPropertyString("elementDescription", this.elemDesc);
         setVisible(customPropertiesList.getPropertyBool("visible", true));
         setBlendMode(BlendMode.create(customPropertiesList.getChild("blendMode").getTypeName(BlendMode.getTypeName(this.defaultBlendMode)), this.defaultBlendMode));
         setPosition(customPropertiesList.getPropertyVec2f("position", new Vec2f(0.5f, 0.5f)));
@@ -388,6 +390,7 @@ public abstract class Element {
     public void onReadCustomization(CustomPropertiesList customPropertiesList, IDependencyResourceCounter iDependencyResourceCounter) {
         customPropertiesList.putPropertyIntAsHidden("_id", this.elementId, "");
         customPropertiesList.setTagName(this.tagName);
+        customPropertiesList.putPropertyStringAsTxtPr("elementDescription", this.elemDesc, "0_general");
         customPropertiesList.putPropertyBool("visible", this.visible, "0_general");
         customPropertiesList.putEmptyChild("blendMode", BlendMode.getTypeName(this.blendMode), "0_general", BlendMode.useableModes);
         customPropertiesList.putPropertyVec2fAsRange("position", new Vec2f(this.posX, this.posY), "0_general", -1.0f, 1.0f);

@@ -158,7 +158,10 @@
 .end method
 
 .method private disposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
     .locals 0
+
+    # first check if p1 exists
 
     if-eqz p1, :cond_0
 
@@ -170,6 +173,22 @@
 
     return-object p1
 .end method
+
+# public VShaderProgram safeDisposeShader(VShaderProgram vShaderProgram) {
+#     return disposeShader(vShaderProgram);
+# }
+
+.method public safeDisposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+    .locals 1
+
+    .line 1080
+    invoke-direct {p0, p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->disposeShader(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 
 
 # virtual methods
@@ -502,7 +521,103 @@
     return v0
 .end method
 
-.method loadShader(Landroid/content/res/Resources;II)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+# public VShaderBinder createCustomShaderBinder(VShaderProgram shaderProgram) {
+#     return this.bufferRenderer.CreateShaderBinder(shaderProgram);
+# }
+
+.method public createCustomShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+    .locals 1
+
+    .line 1105
+    iget-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources;->bufferRenderer:Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;
+
+    invoke-virtual {v0, p1}, Lcom/daaw/avee/comp/Visualizer/Graphic/BufferRenderer;->CreateShaderBinder(Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderBinder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+
+
+
+# public VShaderProgram loadShaderFromString(String str, String str2) {
+#             try {
+#                 VShaderProgram vShaderProgram = new VShaderProgram(str, str2);
+#                 if (vShaderProgram.getLog().length() != 0) {
+#                     tlog.w(vShaderProgram.getLog());
+#                 }
+#                 return vShaderProgram;
+#             } catch (Exception e) {
+#                 tlog.w("Resources loading error: " + e.getMessage());
+#                 return null;
+#             }
+#         }
+
+.method public loadShaderFromString(Ljava/lang/String;Ljava/lang/String;)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+    .locals 2
+
+    .line 1088
+    :try_start_0
+    new-instance v0, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
+
+    invoke-direct {v0, p1, p2}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1089
+    invoke-virtual {v0}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->getLog()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 1090
+    invoke-virtual {v0}, Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;->getLog()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    return-object v0
+
+    :catch_0
+    move-exception v2
+
+    .line 1093
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "Resources loading error: "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/daaw/avee/Common/tlog;->w(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+.end method
+
+
+.method public loadShader(Landroid/content/res/Resources;II)Lcom/daaw/avee/comp/Visualizer/Graphic/VShaderProgram;
     .locals 2
 
     .line 1092

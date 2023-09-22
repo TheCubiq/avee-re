@@ -1,12 +1,24 @@
 package com.daaw.avee.comp.Visualizer.Elements;
 
+import android.content.res.Resources;
 import android.graphics.RectF;
+import android.opengl.GLES20;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.AOSPutils.UtilsFileSys;
+import com.daaw.avee.PlayerCore;
+import com.daaw.avee.R;
 import com.daaw.avee.Common.Action3;
 import com.daaw.avee.Common.Utils;
 import com.daaw.avee.Common.Vec2f;
+import com.daaw.avee.Common.tlog;
 import com.daaw.avee.comp.Visualizer.CustomPropertiesList;
 import com.daaw.avee.comp.Visualizer.Elements.Base.Element;
 import com.daaw.avee.comp.Visualizer.Elements.Base.ElementImageLoader;
+import com.daaw.avee.comp.Visualizer.Elements.Base.MVariableFloat;
+import com.daaw.avee.comp.Visualizer.Graphic.IAtlasTexture;
 import com.daaw.avee.comp.Visualizer.Graphic.IRenderState;
 import com.daaw.avee.comp.Visualizer.Graphic.RenderPassData;
 import com.daaw.avee.comp.Visualizer.Graphic.RenderState;
@@ -15,18 +27,25 @@ import com.daaw.avee.comp.Visualizer.Graphic.VShaderBinder;
 import com.daaw.avee.comp.Visualizer.Graphic.VShaderProgram;
 import com.daaw.avee.comp.Visualizer.ICompositionDependencies;
 import com.daaw.avee.comp.Visualizer.IDependencyResourceCounter;
+import com.daaw.avee.comp.Visualizer.Meter;
 import com.google.android.exoplayer2.text.ttml.TtmlNode;
+import com.google.android.exoplayer2.util.MimeTypes;
+
 import mdesl.graphics.glutils.FrameBuffer;
 /* loaded from: classes.dex */
 public class DummyElement extends Element {
     public static final String[] internalImages = {"composition:0"};
-    public static final String[] mirrorModes = {"Horizontal", "Vertical", "HorizontalAndVertical"};
     public static final String typeName = "DummyElement";
-    private int color2;
-    private boolean flipMirror;
-    private int mirrorMode;
+    private VShaderProgram loadedShader;
+    private boolean reloadShader;
+    public String shaderFrag;
+    public String shaderVert;
     private Action3<RenderState, VShaderProgram, RenderPassData> shaderOnBindAction;
     ElementImageLoader targetImageLoader;
+
+    public Map<String, MVariableFloat> u_values = new HashMap<>();
+    public Map<String, float[]> valueProperties = new HashMap<>();
+
     public final VMatrix vpMatTmp;
 
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
@@ -34,16 +53,52 @@ public class DummyElement extends Element {
         return typeName;
     }
 
+    public void initCustomShader() {
+        Resources resources = PlayerCore.s().getAppContext().getResources();
+        this.shaderVert = UtilsFileSys.readResource(resources, R.raw.buffer_fisheye_vert);
+        this.shaderFrag = UtilsFileSys.readResource(resources, R.raw.buffer_fisheye_frag);
+    }
+
+    public void initCustomValues() {
+        addValueWithProperties("value1", 0.0f, -1.0f, 1.0f);
+        addValueWithProperties("value2", 0.0f, -1.0f, 1.0f);
+    }
+
+    public void addValueWithProperties(String propertyName, float defaultValue, float minValue, float maxValue) {
+        MVariableFloat variableFloat = MVariableFloat.CreateConstantFloat(defaultValue);
+
+        u_values.put(propertyName, variableFloat);
+
+        float[] properties = {defaultValue, minValue, maxValue};
+        valueProperties.put(propertyName, properties);
+    }
+
+    public boolean isShaderEditable() {
+        return true;
+    }
+
     public DummyElement() {
         super(4, 1.0f, 1.0f);
-        this.color2 = -1;
-        this.mirrorMode = 0;
-        this.flipMirror = false;
         this.vpMatTmp = new VMatrix();
+
+        initCustomShader();
+
+        initCustomValues();
         this.shaderOnBindAction = new Action3<RenderState, VShaderProgram, RenderPassData>() { // from class: com.daaw.avee.comp.Visualizer.Elements.DummyElement.2
             @Override // com.daaw.avee.Common.Action3
             public void onInvoke(RenderState renderState, VShaderProgram vShaderProgram, RenderPassData renderPassData) {
                 vShaderProgram.setUniformMatrix("u_projView", false, DummyElement.this.vpMatTmp.getObj());
+                // vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(renderState.getRes().getMeter()));´
+
+                Meter meter = renderState.getRes().getMeter();
+                // vShaderProgram.setUniformf("u_value1", DummyElement.this.u_value1.getValueAsFloat(meter));
+
+                for (String propertyName : DummyElement.this.u_values.keySet()) {
+                    String uniformName = "u_" + propertyName;
+                    float value = u_values.get(propertyName).getValueAsFloat(meter);
+                    vShaderProgram.setUniformf(uniformName, value);
+                }
+
             }
         };
         setBlendMode(4);
@@ -65,32 +120,19 @@ public class DummyElement extends Element {
         return this.targetImageLoader.getCustomImagePath();
     }
 
-    public void setColor2(int i) {
-        this.color2 = i;
-    }
-
-    public void setMirrorMode(int i) {
-        this.mirrorMode = i;
-    }
-
-    public int getMirrorMode() {
-        return this.mirrorMode;
-    }
-
-    public void setFlipMirror(boolean z) {
-        this.flipMirror = z;
-    }
-
-    public boolean getFlipMirror() {
-        return this.flipMirror;
-    }
-
     /* JADX INFO: Access modifiers changed from: protected */
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
     public void onApplyCustomization(CustomPropertiesList customPropertiesList) {
         super.onApplyCustomization(customPropertiesList);
         super.onApplyCustomizationAdditional(customPropertiesList);
         setTargetImage(customPropertiesList.getPropertyString("TargetImage", "composition:1"));
+        this.shaderVert = customPropertiesList.getPropertyString("ShaderVertex", this.shaderVert);
+        this.shaderFrag = customPropertiesList.getPropertyString("ShaderFrag", this.shaderFrag);
+        for (String propertyName : u_values.keySet()) {
+            MVariableFloat variableFloat = customPropertiesList.getPropertyMVariableFloat(propertyName, u_values.get(propertyName));
+            u_values.put(propertyName, variableFloat);
+        }
+        this.reloadShader = true;
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -101,6 +143,20 @@ public class DummyElement extends Element {
         customPropertiesList.setCustomizationName("Dummy Element");
         iDependencyResourceCounter.PutDependencyResourceName(getTargetImage());
         customPropertiesList.putPropertyStringAsImage("TargetImage", getTargetImage(), "1_appearance", internalImages);
+        
+        if (isShaderEditable()) {
+            customPropertiesList.putPropertyStringAsTxtPr("shaderFragment", this.shaderFrag, "shader");
+            customPropertiesList.putPropertyStringAsTxtPr("shaderVertex", this.shaderVert, "shader");
+        }
+
+        for (String propertyName : u_values.keySet()) {
+            float[] properties = valueProperties.get(propertyName);
+            // float defaultValue = properties[0];
+            float minValue = properties[1];
+            float maxValue = properties[2];
+    
+            customPropertiesList.putPropertyMVariableFloat(propertyName, u_values.get(propertyName), "variables", minValue, maxValue);
+        }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -144,13 +200,33 @@ public class DummyElement extends Element {
     }
 
     @Override // com.daaw.avee.comp.Visualizer.Elements.Base.Element
-    public void onRender(RenderState renderState, FrameBuffer frameBuffer) {
+     public void onRender(RenderState renderState, FrameBuffer frameBuffer) {
         this.targetImageLoader.onRender(renderState, frameBuffer);
-        super.onRender(renderState, frameBuffer);
+        IAtlasTexture texture = this.targetImageLoader.getTexture(renderState);
+        if (texture == null) {
+            super.onRender(renderState, frameBuffer);
+            return;
+        }
+        onRenderCheckResources(renderState);
         RectF measureDrawRect = measureDrawRect(renderState.getRes().getMeter());
         createRotationAndVpMat(renderState, this.vpMatTmp, measureDrawRect.centerX(), measureDrawRect.centerY(), measureDrawRot(renderState.getRes().getMeter()));
-        VShaderBinder bufferRenderer_atlasBufferVPMat = renderState.res.getBufferRenderer_atlasBufferVPMat();
-        // gotta actually change it to drawRectangleWHBottom instead.. -> scale measure
-        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, new RenderPassData(getBlendMode(), this.targetImageLoader.getTexture(renderState), bufferRenderer_atlasBufferVPMat, this.shaderOnBindAction));
+        setupFrameBuffer(renderState);
+        super.onRender(renderState, frameBuffer);
+        RenderState.RenderResources renderResources = renderState.res;
+
+        if (this.loadedShader == null || this.reloadShader) {
+            this.reloadShader = false;
+            this.loadedShader = renderResources.safeDisposeShader(this.loadedShader);
+            this.loadedShader = renderResources.loadShaderFromString(this.shaderVert, this.shaderFrag);
+            tlog.d("shaderReload");
+        }
+        VShaderProgram vShaderProgram = this.loadedShader;
+        renderState.drawFullscreenQuad(measureDrawRect.left, measureDrawRect.top, -1, Vec2f.zero(), Vec2f.one(), new RenderPassData(getBlendMode(), texture, this.loadedShader != null ? renderResources.createCustomShaderBinder(this.loadedShader) : null, this.shaderOnBindAction));
+    }
+
+    private void setupFrameBuffer(RenderState renderState) {
+        GLES20.glTexParameteri(3553, 10241, 9729);
+        GLES20.glTexParameteri(3553, 10240, 9729);
+        renderState.setTextureWrapping(1);
     }
 }

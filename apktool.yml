@@ -1,5 +1,5 @@
 !!brut.androlib.apk.ApkInfo
-apkFileName: avee_1.2.101.apk
+apkFileName: avee-re_v0.0.4-test5.apk
 doNotCompress:
 - resources.arsc
 - META-INF/androidx.activity_activity.version

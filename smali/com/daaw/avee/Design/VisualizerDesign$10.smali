@@ -439,19 +439,76 @@
 
     mul-float v3, v3, v5
 
-    rem-float/2addr v3, v9
+    rem-float/2addr v3, v9   # v3 = v3 % 1.0f
 
     iget v2, v2, Lcom/daaw/avee/Common/Vec2f;->y:F
 
     mul-float v5, v5, v2
 
-    rem-float/2addr v5, v9
+    rem-float/2addr v5, v9  # v5 = v5 % 1.0f
 
     invoke-direct {v1, v3, v5}, Lcom/daaw/avee/Common/Vec2f;-><init>(FF)V
 
     return-object v1
 
     :cond_c
+
+    # TotalTimeAndBack
+    const-string v8, "TotalTimeAndBack"
+
+    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_TTaB
+
+
+    new-instance v1, Lcom/daaw/avee/Common/Vec2f;
+    # v3 * sin(v5)
+
+
+    # rem-float/2addr v3, v9  # v3 = v3 % 1.0f
+
+    # sinus function
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    float-to-double v3, v5
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+    move-result-wide v3
+    double-to-float v3, v3
+
+    iget v8, v2, Lcom/daaw/avee/Common/Vec2f;->x:F
+    mul-float v3, v8, v3    # v3 = v3 * v5
+
+
+
+
+
+
+    # v2 * sin(v5)
+
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    float-to-double v5, v5
+    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
+    move-result-wide v5
+    double-to-float v5, v5
+
+    iget v8, v2, Lcom/daaw/avee/Common/Vec2f;->y:F
+    mul-float v5, v8, v5    # v5 = v5 * v2
+    # rem-float/2addr v5, v9  # v5 = v5 % 1.0f
+
+    # cosinus function
+
+
+    invoke-direct {v1, v3, v5}, Lcom/daaw/avee/Common/Vec2f;-><init>(FF)V
+    return-object v1
+
+    :cond_TTaB
+
+
     const-string v8, "TotalTimeBackward"
 
     .line 300

@@ -150,7 +150,8 @@ public class IAP2Design {
             @Override // com.daaw.avee.Common.Events.WeakEvent2.Handler
             public void invoke(Integer num, ContextData contextData) {
                 if (num.intValue() == 4) {
-                    IAP2Design.this.showStore(contextData);
+                    Context appContext = PlayerCore.s().getAppContext();
+                    Toast.makeText(appContext, "Love. Cubiq 🤍", Toast.LENGTH_SHORT).show();
                 }
             }
         }, this.listenerRefHolder);

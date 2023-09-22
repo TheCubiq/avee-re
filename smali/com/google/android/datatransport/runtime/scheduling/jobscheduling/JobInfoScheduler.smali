@@ -198,198 +198,198 @@
 .method public schedule(Lcom/google/android/datatransport/runtime/TransportContext;I)V
     .locals 13
 
-    .line 94
-    new-instance v0, Landroid/content/ComponentName;
+    # .line 94
+    # new-instance v0, Landroid/content/ComponentName;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->context:Landroid/content/Context;
+    # iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->context:Landroid/content/Context;
 
-    const-class v2, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoSchedulerService;
+    # const-class v2, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoSchedulerService;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    # invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 95
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->context:Landroid/content/Context;
+    # .line 95
+    # iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->context:Landroid/content/Context;
 
-    const-string v2, "jobscheduler"
+    # const-string v2, "jobscheduler"
 
-    .line 96
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    # .line 96
+    # invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v1
+    # move-result-object v1
 
-    check-cast v1, Landroid/app/job/JobScheduler;
+    # check-cast v1, Landroid/app/job/JobScheduler;
 
-    .line 97
-    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->getJobId(Lcom/google/android/datatransport/runtime/TransportContext;)I
+    # .line 97
+    # invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->getJobId(Lcom/google/android/datatransport/runtime/TransportContext;)I
 
-    move-result v2
+    # move-result v2
 
-    .line 99
-    invoke-direct {p0, v1, v2, p2}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->isJobServiceOn(Landroid/app/job/JobScheduler;II)Z
+    # .line 99
+    # invoke-direct {p0, v1, v2, p2}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->isJobServiceOn(Landroid/app/job/JobScheduler;II)Z
 
-    move-result v3
+    # move-result v3
 
-    const-string v4, "JobInfoScheduler"
+    # const-string v4, "JobInfoScheduler"
 
-    if-eqz v3, :cond_0
+    # if-eqz v3, :cond_0
 
-    const-string p2, "Upload for context %s is already scheduled. Returning..."
+    # const-string p2, "Upload for context %s is already scheduled. Returning..."
 
-    .line 100
-    invoke-static {v4, p2, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+    # .line 100
+    # invoke-static {v4, p2, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
-    return-void
+    # return-void
 
-    .line 105
-    :cond_0
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
+    # .line 105
+    # :cond_0
+    # iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
-    invoke-interface {v3, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;->getNextCallTime(Lcom/google/android/datatransport/runtime/TransportContext;)J
+    # invoke-interface {v3, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;->getNextCallTime(Lcom/google/android/datatransport/runtime/TransportContext;)J
 
-    move-result-wide v11
+    # move-result-wide v11
 
-    .line 108
-    iget-object v5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
+    # .line 108
+    # iget-object v5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
-    new-instance v6, Landroid/app/job/JobInfo$Builder;
+    # new-instance v6, Landroid/app/job/JobInfo$Builder;
 
-    invoke-direct {v6, v2, v0}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
+    # invoke-direct {v6, v2, v0}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    .line 111
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
+    # .line 111
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
-    move-result-object v7
+    # move-result-object v7
 
-    move-wide v8, v11
+    # move-wide v8, v11
 
-    move v10, p2
+    # move v10, p2
 
-    .line 109
-    invoke-virtual/range {v5 .. v10}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->configureJob(Landroid/app/job/JobInfo$Builder;Lcom/google/android/datatransport/Priority;JI)Landroid/app/job/JobInfo$Builder;
+    # .line 109
+    # invoke-virtual/range {v5 .. v10}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->configureJob(Landroid/app/job/JobInfo$Builder;Lcom/google/android/datatransport/Priority;JI)Landroid/app/job/JobInfo$Builder;
 
-    move-result-object v0
+    # move-result-object v0
 
-    .line 115
-    new-instance v3, Landroid/os/PersistableBundle;
+    # .line 115
+    # new-instance v3, Landroid/os/PersistableBundle;
 
-    invoke-direct {v3}, Landroid/os/PersistableBundle;-><init>()V
+    # invoke-direct {v3}, Landroid/os/PersistableBundle;-><init>()V
 
-    const-string v5, "attemptNumber"
+    # const-string v5, "attemptNumber"
 
-    .line 116
-    invoke-virtual {v3, v5, p2}, Landroid/os/PersistableBundle;->putInt(Ljava/lang/String;I)V
+    # .line 116
+    # invoke-virtual {v3, v5, p2}, Landroid/os/PersistableBundle;->putInt(Ljava/lang/String;I)V
 
-    .line 117
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
+    # .line 117
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
-    move-result-object v5
+    # move-result-object v5
 
-    const-string v6, "backendName"
+    # const-string v6, "backendName"
 
-    invoke-virtual {v3, v6, v5}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    # invoke-virtual {v3, v6, v5}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 118
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
+    # .line 118
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
-    move-result-object v5
+    # move-result-object v5
 
-    invoke-static {v5}, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->toInt(Lcom/google/android/datatransport/Priority;)I
+    # invoke-static {v5}, Lcom/google/android/datatransport/runtime/util/PriorityMapping;->toInt(Lcom/google/android/datatransport/Priority;)I
 
-    move-result v5
+    # move-result v5
 
-    const-string v6, "priority"
+    # const-string v6, "priority"
 
-    invoke-virtual {v3, v6, v5}, Landroid/os/PersistableBundle;->putInt(Ljava/lang/String;I)V
+    # invoke-virtual {v3, v6, v5}, Landroid/os/PersistableBundle;->putInt(Ljava/lang/String;I)V
 
-    .line 119
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
+    # .line 119
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
-    move-result-object v5
+    # move-result-object v5
 
-    const/4 v6, 0x0
+    # const/4 v6, 0x0
 
-    if-eqz v5, :cond_1
+    # if-eqz v5, :cond_1
 
-    .line 120
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
+    # .line 120
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
-    move-result-object v5
+    # move-result-object v5
 
-    invoke-static {v5, v6}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    # invoke-static {v5, v6}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    move-result-object v5
+    # move-result-object v5
 
-    const-string v7, "extras"
+    # const-string v7, "extras"
 
-    invoke-virtual {v3, v7, v5}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    # invoke-virtual {v3, v7, v5}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
-    :cond_1
-    invoke-virtual {v0, v3}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
+    # .line 122
+    # :cond_1
+    # invoke-virtual {v0, v3}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
 
-    const/4 v3, 0x5
+    # const/4 v3, 0x5
 
-    new-array v3, v3, [Ljava/lang/Object;
+    # new-array v3, v3, [Ljava/lang/Object;
 
-    aput-object p1, v3, v6
+    # aput-object p1, v3, v6
 
-    const/4 v5, 0x1
+    # const/4 v5, 0x1
 
-    .line 128
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    # .line 128
+    # invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    # move-result-object v2
 
-    aput-object v2, v3, v5
+    # aput-object v2, v3, v5
 
-    const/4 v2, 0x2
+    # const/4 v2, 0x2
 
-    iget-object v5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
+    # iget-object v5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
-    .line 129
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
+    # .line 129
+    # invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
-    move-result-object p1
+    # move-result-object p1
 
-    invoke-virtual {v5, p1, v11, v12, p2}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->getScheduleDelay(Lcom/google/android/datatransport/Priority;JI)J
+    # invoke-virtual {v5, p1, v11, v12, p2}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;->getScheduleDelay(Lcom/google/android/datatransport/Priority;JI)J
 
-    move-result-wide v5
+    # move-result-wide v5
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    # invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    # move-result-object p1
 
-    aput-object p1, v3, v2
+    # aput-object p1, v3, v2
 
-    const/4 p1, 0x3
+    # const/4 p1, 0x3
 
-    .line 130
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    # .line 130
+    # invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    # move-result-object v2
 
-    aput-object v2, v3, p1
+    # aput-object v2, v3, p1
 
-    const/4 p1, 0x4
+    # const/4 p1, 0x4
 
-    .line 131
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    # .line 131
+    # invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p2
+    # move-result-object p2
 
-    aput-object p2, v3, p1
+    # aput-object p2, v3, p1
 
-    const-string p1, "Scheduling upload for context %s with jobId=%d in %dms(Backend next call timestamp %d). Attempt %d"
+    # const-string p1, "Scheduling upload for context %s with jobId=%d in %dms(Backend next call timestamp %d). Attempt %d"
 
-    .line 124
-    invoke-static {v4, p1, v3}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    # .line 124
+    # invoke-static {v4, p1, v3}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 133
-    invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+    # .line 133
+    # invoke-virtual {v0}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
-    move-result-object p1
+    # move-result-object p1
 
-    invoke-virtual {v1, p1}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
+    # invoke-virtual {v1, p1}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
 
     return-void
 .end method

@@ -6,22 +6,12 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="avee" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-    <option name="LOGCAT_FORMAT_STRING" value="%4$c/%5$s: %6$s" />
+    <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avee_1.2.101.code-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/avee_1.2.101.code-workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/raw/buffer_rgb_split_frag.frag" beforeDir="false" afterPath="$PROJECT_DIR$/res/raw/buffer_rgb_split_frag.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/values/public.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/values/public.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/Design/GeneralDesign.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/Design/GeneralDesign.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/R$raw.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/R$raw.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Graphic/RenderState$RenderResources.smali" afterDir="false" />
-    </list>
+    <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,15 +27,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DEBUGGABLE_DEVICE" value="samsung-sm_g998b-R5CR818223N" />
+    <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
     <property name="DEBUGGABLE_PROCESS" value="com.daaw.avee" />
     <property name="DEBUGGER_ID" value="Java" />
     <property name="ResourceManagerPrefKey.ResourceType" value="LAYOUT" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/res/layout" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\kubaj\programovani\re\android\AveePlayer\androidStudio\avee_1.2.101\res\layout" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -69,54 +64,63 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="216" y="88" key="#Plugins/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693238029751" />
-    <state x="-1105" y="265" key="AndroidProcessChooserDialog" timestamp="1693604397456">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="804" y="1345" key="AndroidProcessChooserDialog" timestamp="1694700778911">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state x="-1105" y="265" key="AndroidProcessChooserDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604397456" />
+    <state x="804" y="1345" key="AndroidProcessChooserDialog/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694700778911" />
+    <state x="-1105" y="265" key="AndroidProcessChooserDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693673021500" />
     <state x="815" y="265" key="AndroidProcessChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524453030" />
     <state x="689" y="218" key="FileChooserDialogImpl" timestamp="1693185684989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="218" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693185684989" />
-    <state width="1869" height="470" key="GridCell.Tab.0.bottom" timestamp="1693604464167">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="650" height="331" key="GridCell.Tab.0.bottom" timestamp="1694705009135">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464167" />
+    <state width="650" height="331" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694705009135" />
+    <state width="1869" height="630" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638139" />
     <state width="1869" height="526" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478689" />
-    <state width="1869" height="470" key="GridCell.Tab.0.center" timestamp="1693604464166">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="650" height="331" key="GridCell.Tab.0.center" timestamp="1694705009134">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464166" />
+    <state width="650" height="331" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694705009134" />
+    <state width="1869" height="630" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638138" />
     <state width="1869" height="526" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478689" />
-    <state width="1869" height="470" key="GridCell.Tab.0.left" timestamp="1693604464166">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="650" height="331" key="GridCell.Tab.0.left" timestamp="1694705009134">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464166" />
+    <state width="650" height="331" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694705009134" />
+    <state width="1869" height="630" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638138" />
     <state width="1869" height="526" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478688" />
-    <state width="1869" height="470" key="GridCell.Tab.0.right" timestamp="1693604464166">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="650" height="331" key="GridCell.Tab.0.right" timestamp="1694705009134">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464166" />
+    <state width="650" height="331" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694705009134" />
+    <state width="1869" height="630" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638138" />
     <state width="1869" height="526" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478689" />
-    <state width="1869" height="470" key="GridCell.Tab.1.bottom" timestamp="1693604464167">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1301" height="253" key="GridCell.Tab.1.bottom" timestamp="1694704972563">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464167" />
+    <state width="1301" height="253" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694704972563" />
+    <state width="1869" height="630" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638139" />
     <state width="1869" height="526" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478690" />
-    <state width="1869" height="470" key="GridCell.Tab.1.center" timestamp="1693604464167">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1301" height="253" key="GridCell.Tab.1.center" timestamp="1694704972563">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464167" />
+    <state width="1301" height="253" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694704972563" />
+    <state width="1869" height="630" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638139" />
     <state width="1869" height="526" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478690" />
-    <state width="1869" height="470" key="GridCell.Tab.1.left" timestamp="1693604464167">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1301" height="253" key="GridCell.Tab.1.left" timestamp="1694704972563">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464167" />
+    <state width="1301" height="253" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694704972563" />
+    <state width="1869" height="630" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638139" />
     <state width="1869" height="526" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478689" />
-    <state width="1869" height="470" key="GridCell.Tab.1.right" timestamp="1693604464167">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1301" height="253" key="GridCell.Tab.1.right" timestamp="1694704972563">
+      <screen x="-11" y="1080" width="1920" height="1040" />
     </state>
-    <state width="1869" height="470" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693604464167" />
+    <state width="1301" height="253" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694704972563" />
+    <state width="1869" height="630" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693707638139" />
     <state width="1869" height="526" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693524478690" />
     <state x="440" y="203" key="IDE.errors.dialog" timestamp="1693239352387">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -126,37 +130,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="345" y="78" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693239431146" />
-    <state x="428" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1693489503373">
+    <state x="626" y="103" width="1176" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1695327374126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="626" y="103" width="1176" height="840" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1695327374126" />
+    <state x="-1196" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1693830107874">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1196" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693830107874" />
+    <state x="417" y="1173" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1694700797869">
+      <screen x="-11" y="1080" width="1920" height="1040" />
+    </state>
+    <state x="417" y="1173" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694700797869" />
+    <state x="-1492" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1693673052820" />
     <state x="428" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693489503373" />
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1693239375864">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1232" y="336" key="edit.logcat.filter.dialog.dimensions" timestamp="1693871363314">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1232" y="336" key="edit.logcat.filter.dialog.dimensions/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-1920.0.1920.1040" timestamp="1693871363314" />
+    <state x="1039" y="1082" width="779" height="1038" key="find.popup" timestamp="1694700470952">
+      <screen x="-11" y="1080" width="1920" height="1040" />
+    </state>
+    <state x="1039" y="1082" width="779" height="1038" key="find.popup/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694700470952" />
+    <state x="528" y="1085" width="840" height="1034" key="search.everywhere.popup" timestamp="1694700742342">
+      <screen x="-11" y="1080" width="1920" height="1040" />
+    </state>
+    <state x="528" y="1085" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040/-11.1080.1920.1040@-11.1080.1920.1040" timestamp="1694700742342" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1693239375864" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/FpsTextElement.smali</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/TextElement.smali</url>
-          <line>566</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/TextElement.smali</url>
-          <line>919</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali</url>
-          <line>380</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerDesign$38$1$1.smali</url>
+          <line>119</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

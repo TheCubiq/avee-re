@@ -74,6 +74,9 @@
 
 .field private scaleY:F
 
+# Element Description (for UI)
+.field private elemDesc:Ljava/lang/String;
+
 .field protected tagName:Ljava/lang/String;
 
 .field protected visible:Z
@@ -159,6 +162,8 @@
 
     .line 60
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->tagName:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->elemDesc:Ljava/lang/String;
 
     const/4 v0, 0x0
 
@@ -1443,6 +1448,20 @@
 
     iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->tagName:Ljava/lang/String;
 
+    # this.elemDesc = customPropertiesList.getPropertyString("elementDescription", this.elemDesc);
+    
+    .line 549
+
+    const-string v0, "elementDescription"
+
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->elemDesc:Ljava/lang/String;
+    
+    invoke-virtual {p1, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->getPropertyString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->elemDesc:Ljava/lang/String;
+
     const-string v0, "visible"
 
     const/4 v1, 0x1
@@ -1668,6 +1687,18 @@
     iget-object p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->tagName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->setTagName(Ljava/lang/String;)V
+
+
+    # customPropertiesList.putPropertyStringAsTxtPr("elementDescription", this.elemDesc, "0_general");
+
+    const-string v0, "elementDescription"
+
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->elemDesc:Ljava/lang/String;
+
+    const-string v2, "0_general"
+
+    invoke-virtual {p1, v0, v1, v2}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyStringAsTxtPr(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
 
     .line 582
     iget-boolean p2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/Base/Element;->visible:Z

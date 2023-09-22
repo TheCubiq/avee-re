@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/elementRoot" android:background="?android:selectableItemBackground" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/elementRoot"
+  android:background="?android:selectableItemBackground" android:padding="0.0dip"
+  android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/textSizeM3" android:textColor="@color/white_alpha_2" android:gravity="center_vertical" android:id="@id/title" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="" android:layout_alignParentTop="true" />
-    <TextView android:textSize="@dimen/textSizeM3" android:textColor="@color/white_alpha_2" android:gravity="center_vertical" android:id="@id/txtValue" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+  <TextView android:textSize="@dimen/textSizeM3" android:textColor="@color/white_alpha_2"
+    android:gravity="center_vertical" android:id="@id/title" android:padding="8.0dip"
+    android:layout_width="wrap_content" android:layout_height="40.0dip" android:text=""
+    android:layout_alignParentTop="true" />
+
+  <TextView
+      android:id="@id/txtValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentRight="true"
+      android:layout_toRightOf="@id/title"
+      android:ellipsize="end"
+      android:gravity="center_vertical|end"
+      android:maxLines="1"
+      android:padding="8.0dip"
+      android:singleLine="false"
+      android:text=" "
+      android:textColor="@color/white_alpha_2"
+      android:textSize="@dimen/textSizeM3" />
+
 </RelativeLayout>
