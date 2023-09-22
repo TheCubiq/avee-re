@@ -116,7 +116,7 @@
     
 
     const/high16 v1, 0x40000000    #def 2.0f
-    const/high16 v3, 0x40000000    #def 2.0f
+    const/high16 v3, 0x40800000    #def 4.0f
     const-string v0, "aspectRatio"
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
     
