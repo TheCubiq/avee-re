@@ -46,7 +46,7 @@
 
 # virtual methods
 .method public invoke(Ljava/lang/Integer;Lcom/daaw/avee/ContextData;)V
-    .locals 1
+    .locals 5
 
     .line 169
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -57,9 +57,20 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lcom/daaw/avee/Design/IAP2Design$8;->this$0:Lcom/daaw/avee/Design/IAP2Design;
+    invoke-static {}, Lcom/daaw/avee/PlayerCore;->s()Lcom/daaw/avee/PlayerCore;
+    move-result-object v0
+    invoke-virtual {v0}, Lcom/daaw/avee/PlayerCore;->getAppContext()Landroid/content/Context;
+    move-result-object v0
 
-    invoke-static {p1, p2}, Lcom/daaw/avee/Design/IAP2Design;->access$200(Lcom/daaw/avee/Design/IAP2Design;Lcom/daaw/avee/ContextData;)V
+    const-string v1, "Love, Cubiq \uD83E\uDD0D"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     :cond_0
     return-void
