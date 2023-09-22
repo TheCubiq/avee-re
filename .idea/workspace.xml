@@ -11,17 +11,7 @@
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avee_1.2.101.code-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/avee_1.2.101.code-workspace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/raw/buffer_rgb_split_frag.frag" beforeDir="false" afterPath="$PROJECT_DIR$/res/raw/buffer_rgb_split_frag.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerDesign$10.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/Design/VisualizerDesign$10.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Common/MeasureDefs.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Common/MeasureDefs.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/DummyElement.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/ElementsFactory.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/ElementsFactory.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement$6.smali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement.smali" beforeDir="false" afterPath="$PROJECT_DIR$/smali/com/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement.smali" afterDir="false" />
-    </list>
+    <list default="true" id="451b5f4f-c88f-491d-82b1-eb7929f0c74b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
