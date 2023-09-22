@@ -13,6 +13,18 @@
 .field public shaderFrag:Ljava/lang/String;
 .field public shaderVert:Ljava/lang/String;
 
+.field public valueCategories:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "[F",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # .field public u_value1:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 # .field public u_value2:Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
@@ -121,6 +133,12 @@
     new-instance v2, Ljava/util/HashMap;
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
     iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+
+
+    
+    new-instance v2, Ljava/util/HashMap;
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+    iput-object v2, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueCategories:Ljava/util/HashMap;
 
 
     # init u_values as new HashMap<String, MVariableFloat>()
@@ -761,6 +779,22 @@
 
     const-string v7, "variables"
 
+    # try to get category from valueCategories
+
+    iget-object v6, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueCategories:Ljava/util/HashMap;
+
+    invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/String;
+
+    if-eqz v6, :cond_1
+
+    move-object v7, v6
+
+    :cond_1
+
     invoke-virtual {v0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -1048,8 +1082,6 @@
 .end method
 
 
-# private void addValueWithProperties(String propertyName, float defaultValue, float minValue, float maxValue) {
-
 .method public addValueWithProperties(Ljava/lang/String;FFF)V
     .locals 8
 
@@ -1086,9 +1118,142 @@
 
     invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    
+
     return-void
 .end method
+
+.method public addValueWithPropertiesCat(Ljava/lang/String;FFFLjava/lang/String;)V
+    .locals 8
+
+
+    # document parameters 
+    
+    .param p1, "propertyName"    # Ljava/lang/String;
+
+    .param p2, "defaultValue"    # F
+
+    .param p3, "minValue"    # F
+
+    .param p4, "maxValue"    # F
+
+    .param p5, "category"    # Ljava/lang/String;
+
+
+    # MVariableFloat variableFloat = MVariableFloat.CreateConstantFloat(defaultValue);
+
+    invoke-static {p2}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v0
+
+
+    # u_values.put(propertyName, variableFloat);
+
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
+
+    
+    invoke-virtual {v1, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+
+    # float[] properties = {defaultValue, minValue, maxValue};
+
+    const/4 v1, 0x3
+    new-array v2, v1, [F
+
+    const/4 v1, 0x0
+    aput p2, v2, v1
+    const/4 v1, 0x1
+    aput p3, v2, v1
+    const/4 v1, 0x2
+    aput p4, v2, v1
+
+    # valueProperties.put(propertyName, properties);
+
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "variables"
+
+    if-eqz p5, :cond_0
+
+    move-object v0, p5
+
+    :cond_0
+
+    iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueCategories:Ljava/util/HashMap;
+
+    
+
+    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# .method public addValueWithPropertiesAndCat(Ljava/lang/String;FFFLjava/lang/String;)V
+#     .locals 8
+
+#     # MVariableFloat variableFloat = MVariableFloat.CreateConstantFloat(defaultValue);
+
+#     invoke-static {p2}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+#     move-result-object v0
+
+
+#     # u_values.put(propertyName, variableFloat);
+
+#     iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->u_values:Ljava/util/LinkedHashMap;
+
+    
+#     invoke-virtual {v1, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+#     # instead of creating an array, we can use a list
+
+#     # List<String> properties = new ArrayList<>();
+#     #     properties.add(String.valueOf(defaultValue));
+#     #     properties.add(String.valueOf(minValue));
+#     #     properties.add(String.valueOf(maxValue));
+#     #     properties.add(category);
+
+#     new-instance v2, Ljava/util/ArrayList;
+
+#     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+#     invoke-static {p2}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+#     move-result-object v1
+#     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+#     invoke-static {p3}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+#     move-result-object v1
+#     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+#     invoke-static {p4}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+#     move-result-object v1
+#     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+#     # category = category == null ? "variables" : category;
+    
+#     const-string v1, "variables"
+
+#     if-eqz p5, :cond_0
+
+#     move-object v1, p5
+
+#     :cond_0
+
+#         # properties.add(category);
+#     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+
+#     iget-object v1, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+
+#     invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    
+#     return-void
+# .end method
+
+
 
 .method public initCustomValues()V
 
@@ -1097,18 +1262,24 @@
     # addValueWithProperties("value1", 0.0f, -1.0f, 1.0f);
 
     const-string v0, "value1"
-    const/4 v1, 0x0
+    const/4 v1, 0x0 # also to be used as null
     const/high16 v2, 0xbf800000    # -1.0f
     const/high16 v3, 0x3f800000    # 1.0f
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
 
     const-string v0, "value2"
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+
     const-string v0, "value3"
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+
     const-string v0, "value4"
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+
     const-string v0, "value5"
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
+
+    const-string v0, "value6"
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->addValueWithProperties(Ljava/lang/String;FFF)V
 
     return-void
