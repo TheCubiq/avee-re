@@ -147,6 +147,50 @@
     const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/TwirlEffectElement;
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    const-string v1, "LiquifyEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/LiquifyEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "Kaleidoscope"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/Kaleidoscope;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "FOV"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/FOVElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "ZoomBlurEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/ZoomBlurEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "PixelEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/PixelEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "3DBox"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/Box3DElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "EdgeEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/EdgeEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "GodraysEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/GodraysEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "Spherify"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/SpherifyEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "CurveEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/CurveEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "BulgePinchEffect"
+    const-class v2, Lcom/daaw/avee/comp/Visualizer/Elements/BulgePinchEffectElement;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     .line 17
     return-void
 .end method
