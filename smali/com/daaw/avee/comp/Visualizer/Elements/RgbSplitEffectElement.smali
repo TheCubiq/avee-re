@@ -877,7 +877,10 @@
 
     const-string v2, "splitColor0"
 
-    invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGB(Ljava/lang/String;ILjava/lang/String;)V
+    # invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGB(Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v3, ""
+    invoke-virtual {p1, v2, v0, v1, v3}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGBA(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 283
     invoke-virtual {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->getSplitColor1()I
@@ -886,7 +889,9 @@
 
     const-string v2, "splitColor1"
 
-    invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGB(Ljava/lang/String;ILjava/lang/String;)V
+    # invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGB(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1, v3}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGBA(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
 
     .line 284
     invoke-virtual {p0}, Lcom/daaw/avee/comp/Visualizer/Elements/RgbSplitEffectElement;->getSplitColor2()I
@@ -895,7 +900,9 @@
 
     const-string v2, "splitColor2"
 
-    invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGB(Ljava/lang/String;ILjava/lang/String;)V
+    # invoke-virtual {p1, v2, v0, v1}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGB(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p1, v2, v0, v1, v3}, Lcom/daaw/avee/comp/Visualizer/CustomPropertiesList;->putPropertyIntAsCRGBA(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
 
     return-void
 .end method
