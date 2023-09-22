@@ -1,13 +1,20 @@
 {
 	"folders": [
 		{
+			"name": "avee_1.2.101",
 			"path": "."
 		},
 		{
-			"path": "res/raw"
+			"name": "Elements",
+			"path": "smali/com/daaw/avee/comp/Visualizer/Elements"
 		},
 		{
+			"name": "vizzyshaders",
 			"path": "../../../../../../Downloads/vizzyshaders"
+		},
+		{
+			"name": "raw",
+			"path": "res/raw"
 		}
 	],
 	"settings": {
