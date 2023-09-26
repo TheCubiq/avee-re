@@ -475,9 +475,27 @@
 
 
     .line 130
-    invoke-virtual {v0, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    # invoke-virtual {v0, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3 # u_values.get(propertyName)
+    # move-result-object v3 # u_values.get(propertyName)
+
+    # instead get the defaultValue from this.valueProperties
+
+    iget-object v3, p0, Lcom/daaw/avee/comp/Visualizer/Elements/DummyElement;->valueProperties:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3 # valueProperties.get(propertyName)
+
+    check-cast v3, [F
+
+    const v4, 0x0
+
+    aget v3, v3, v4 # arr[0]
+
+    invoke-static {v3}, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;->CreateConstantFloat(F)Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
+
+    move-result-object v3 # defaultValue
 
     check-cast v3, Lcom/daaw/avee/comp/Visualizer/Elements/Base/MVariableFloat;
 
