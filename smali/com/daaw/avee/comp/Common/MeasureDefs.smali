@@ -90,6 +90,8 @@
 
 .field public static final TotalTimeAndBack:Ljava/lang/String; = "TotalTimeAndBack"
 
+.field public static final TotalTimeAndBackRot:Ljava/lang/String; = "TotalTimeAndBackRot"
+
 .field public static final totalTimeWhenPlaying:Ljava/lang/String; = "TotalTimeWhenPlaying"
 
 .field public static final trackPosition:Ljava/lang/String; = "TrackPosition"
@@ -99,7 +101,7 @@
 .method static constructor <clinit>()V
     .locals 22
 
-    const/16 v0, 0xf
+    const/16 v0, 0x10
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -195,15 +197,20 @@
 
     aput-object v21, v0, v16
 
+    const/16 v16, 0xf
+
+    const-string v21, "TotalTimeAndBackRot"
+
+    aput-object v21, v0, v16
+
 
     .line 86
     sput-object v0, Lcom/daaw/avee/comp/Common/MeasureDefs;->measures1dMVar:[Ljava/lang/String;
 
-    const/16 v15, 0xd
+    const/16 v15, 0xe
 
     new-array v0, v15, [Ljava/lang/String;
 
-    const/16 v15, 0xc
 
     const-string v16, "Constant"
 
@@ -241,15 +248,27 @@
 
     aput-object v16, v0, v20
 
+    const/16 v15, 0xc
+
     const-string v16, "TotalTimeAndBack"
 
     aput-object v16, v0, v15
+
+    const/16 v15, 0xd
+
+    # 0xd
+
+    const-string v16, "TotalTimeAndBackRot"
+
+    aput-object v16, v0, v15
+
+    const/16 v15, 0xc
 
 
     .line 103
     sput-object v0, Lcom/daaw/avee/comp/Common/MeasureDefs;->measures2dMVar:[Ljava/lang/String;
 
-    const/16 v0, 0xe
+    const/16 v0, 0xf
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -296,6 +315,12 @@
     const/16 v15, 0xd
 
     const-string v16, "TotalTimeAndBack"
+
+    aput-object v16, v0, v15
+
+    const/16 v15, 0xe
+
+    const-string v16, "TotalTimeAndBackRot"
 
     aput-object v16, v0, v15
 

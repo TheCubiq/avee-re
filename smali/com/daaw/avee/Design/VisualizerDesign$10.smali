@@ -508,6 +508,53 @@
 
     :cond_TTaB
 
+     # TotalTimeAndBackRot
+
+    const-string v8, "TotalTimeAndBackRot"
+
+    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_TTaBRot
+
+    new-instance v1, Lcom/daaw/avee/Common/Vec2f;
+    # v3 * sin(v5)
+
+
+    # rem-float/2addr v3, v9  # v3 = v3 % 1.0f
+
+    # sinus function
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    
+    
+    iget v8, v2, Lcom/daaw/avee/Common/Vec2f;->y:F
+
+    # mul v8 by 10
+
+    const/high16 v9, 0x41200000    # 10.0f
+
+    mul-float v8, v8, v9    # v8 = v8 * v9
+
+    mul-float v5, v8, v5    # v3 = v3 * v5
+
+    float-to-double v3, v5
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+    move-result-wide v3
+    double-to-float v3, v3
+
+
+    iget v8, v2, Lcom/daaw/avee/Common/Vec2f;->x:F
+    mul-float v3, v8, v3
+
+    const v5, 0x0
+
+    invoke-direct {v1, v3, v5}, Lcom/daaw/avee/Common/Vec2f;-><init>(FF)V
+    return-object v1
+
+    :cond_TTaBRot
 
     const-string v8, "TotalTimeBackward"
 
